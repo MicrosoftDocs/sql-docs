@@ -21,7 +21,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  Upgrading DQS databases schema does not impact your existing data in the DQS databases (knowledge bases, data quality projects, and exported results in the DQS_STAGING_DATA database). However, you must back up your DQS databases before upgrading DQS databases schema to prevent any accidental data loss during the schema upgrade. For information about backing up DQS databases, see [Backing Up and Restoring DQS Databases](../backing-up-and-restoring-dqs-databases.md).  
   
 > [!NOTE]  
->  Most of the SQL Server updates will require an upgrade to the DQS databases schema. For information about the SQL Server updates that will require an upgrade to the DQS databases schema, see the chart in step 1.A in [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](http://go.microsoft.com/fwlink/?LinkID=251565).  
+>  Most of the SQL Server updates will require an upgrade to the DQS databases schema. For information about the SQL Server updates that will require an upgrade to the DQS databases schema, see the chart in step 1.A in [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
 ## Prerequisites  
   
@@ -54,7 +54,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## Next Steps  
  Log on to the upgraded Data Quality Server from a Data Quality Client application.  
   
- For more information about upgrading DQS databases schema after installing SQL Server updates and associated troubleshooting steps, see [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](http://go.microsoft.com/fwlink/?LinkID=251565).  
+ For more information about upgrading DQS databases schema after installing SQL Server updates and associated troubleshooting steps, see [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
 ## See Also  
  [Install Data Quality Services](install-data-quality-services.md)   

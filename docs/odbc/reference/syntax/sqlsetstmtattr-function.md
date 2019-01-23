@@ -28,7 +28,7 @@ manager: craigg
  **Summary**  
  **SQLSetStmtAttr** sets attributes related to a statement.  
   
-> [!NOTE]  
+> [!NOTE]
 >  For more information about what the Driver Manager maps this function to when an ODBC 3*.x* application is working with an ODBC 2*.x* driver, see [Mapping Replacement Functions for Backward Compatibility of Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## Syntax  
@@ -36,10 +36,10 @@ manager: craigg
 ```  
   
 SQLRETURN SQLSetStmtAttr(  
-     SQLHSTMT      StatementHandle,  
-     SQLINTEGER    Attribute,  
-     SQLPOINTER    ValuePtr,  
-     SQLINTEGER    StringLength);  
+     SQLHSTMT      StatementHandle,  
+     SQLINTEGER    Attribute,  
+     SQLPOINTER    ValuePtr,  
+     SQLINTEGER    StringLength);  
 ```  
   
 ## Arguments  
@@ -118,10 +118,10 @@ SQLRETURN SQLSetStmtAttr(
   
  The format of information set with *ValuePtr* depends on the specified *Attribute*. **SQLSetStmtAttr** accepts attribute information in one of two different formats: a character string or an integer value. The format of each is noted in the attribute's description. This format applies to the information returned for each attribute in **SQLGetStmtAttr**. Character strings pointed to by the *ValuePtr* argument of **SQLSetStmtAttr** have a length of *StringLength*.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The ability to set statement attributes at the connection level by calling **SQLSetConnectAttr** has been deprecated in ODBC 3*.x*. ODBC 3*.x* applications should never set statement attributes at the connection level. ODBC 3*.x* statement attributes cannot be set at the connection level, with the exception of the SQL_ATTR_METADATA_ID and SQL_ATTR_ASYNC_ENABLE attributes, which are both connection attributes and statement attributes, and can be set at either the connection level or the statement level.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  ODBC 3*.x* drivers need only support this functionality if they should work with ODBC 2*.x* applications that set ODBC 2*.x* statement options at the connection level. For more information, see "Setting Statement Options on the Connection Level" under [SQLSetConnectOption Mapping](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) in Appendix G: Driver Guidelines for Backward Compatibility.  
   
 ## Statement Attributes That Set Descriptor Fields  

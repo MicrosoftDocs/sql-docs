@@ -19,7 +19,7 @@ ms.author: maggies
   
 ### To save a report to a report server  
   
-1.  From the Report Builder button, click **Save**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save**. The **Save As**_\<Report Item>_ dialog box opens.  
   
     > [!NOTE]  
     >  If you are resaving a report, it is automatically resaved to its previous location. Use the Save As option to change location.  
@@ -34,7 +34,7 @@ ms.author: maggies
   
 ### To save a report as a different name  
   
-1.  From the Report Builder button, click **Save As**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save As**. The **Save As**_\<Report Item>_ dialog box opens.  
   
 2.  Browse to the report server location or to the file share where you want to save the report.  
   

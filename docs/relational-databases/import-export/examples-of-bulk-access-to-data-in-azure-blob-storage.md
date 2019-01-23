@@ -25,16 +25,16 @@ The `BULK INSERT` and `OPENROWSET` statements can directly access a file in Azur
 
 Bulk access to Azure blob storage from SQL Server, requires at least [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  All the paths to the container and to the files on blob are `CASE SENSITIVE`. If not correct, it might return error like "Cannot bulk load. The file "file.csv" does not exist or you don't have file access rights."
-"
+> "
 
 
 ## Create the credential   
    
 All of the examples below require a database scoped credential referencing a shared access signature.   
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  The external data source must be created with a database scoped credential that uses the `SHARED ACCESS SIGNATURE` identity. To create a shared access signature for your storage account, see the **Shared access signature** property on the storage account property page, in the Azure portal. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For more information on credentials, see [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
 Create a database scoped credential using the `IDENTITY` which must be `SHARED ACCESS SIGNATURE`. Use the secret from your Azure portal. For example:  

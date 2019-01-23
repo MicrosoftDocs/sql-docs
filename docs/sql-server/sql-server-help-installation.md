@@ -201,7 +201,7 @@ When you press F1 or click **Help** or the **?** icon in a dialog box in SSMS or
 1. Point to **Set Help Preference** on the Help menu, and choose either **Launch in Browser** or **Launch in Help Viewer**. 
 2. Press F1, or click **Help** or **?** in dialog boxes where they are available, to see context-sensitive online topics in the chosen environment.
 
->  [!NOTE]
+> [!NOTE]
 >  F1 help only works when you are online. There are no offline sources for F1 help. 
 
 ## Systems without internet access

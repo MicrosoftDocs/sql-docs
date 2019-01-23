@@ -61,7 +61,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 6.  From the **Edit** menu, click **Paste**.  
   
-7.  From the **File** menu, click **Save***table name*.  
+7.  From the **File** menu, click **Save**_table name_.  
   
 8.  In the **Choose Name** dialog box, type a name for the new table and click **OK**.  
   

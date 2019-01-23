@@ -1,6 +1,7 @@
 ---
-title: "Failover Clustering and Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Combine failover clustering with availability groups"
+description: "Enhance your high availability and disaster recoverability by combining the features of a SQL Server failover cluster instance and an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "07/02/2017"
 ms.prod: sql
 ms.reviewer: ""

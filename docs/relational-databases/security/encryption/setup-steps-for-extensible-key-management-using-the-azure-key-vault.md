@@ -63,7 +63,7 @@ SQL Server Version  |Redistributable Install Link
      Install and start the [latest Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 or higher). Sign in to your Azure account with the following command:  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      The statement returns:  
@@ -77,14 +77,14 @@ SQL Server Version  |Redistributable Install Link
     ```  
   
     > [!NOTE]  
-    >  If you have multiple subscriptions and want to specify a specific one to use for the vault, then use `Get-AzureRmSubscription` to see the subscriptions and `Select-AzureRmSubscription` to choose the correct subscription. Otherwise, PowerShell will select one for you by default.  
+    >  If you have multiple subscriptions and want to specify a specific one to use for the vault, then use `Get-AzSubscription` to see the subscriptions and `Select-AzSubscription` to choose the correct subscription. Otherwise, PowerShell will select one for you by default.  
   
 2.  **Create a new resource group**  
   
      All Azure resources created via Azure Resource Manager must be contained in resource groups. Create a resource group to house your key vault. This example uses `ContosoDevRG`. Choose your own **unique** resource group and key vault name as all key vault names are globally unique.  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      The statement returns:  
@@ -103,10 +103,10 @@ SQL Server Version  |Redistributable Install Link
   
 3.  **Create a Key Vault**  
   
-     The `New-AzureRmKeyVault` cmdlet requires a resource group name, a key vault name, and a geographic location. For example, for a key vault named `ContosoDevKeyVault`, type:  
+     The `New-AzKeyVault` cmdlet requires a resource group name, a key vault name, and a geographic location. For example, for a key vault named `ContosoDevKeyVault`, type:  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -146,15 +146,15 @@ SQL Server Version  |Redistributable Install Link
     > [!IMPORTANT]  
     >  The Azure Active Directory service principal must have at least the `get`, `wrapKey`, and `unwrapKey` permissions for the key vault.  
   
-     As shown below, use the **Client ID** from Part I for the `ServicePrincipalName` parameter. The `Set-AzureRmKeyVaultAccessPolicy` runs silently with no output if it runs successfully.  
+     As shown below, use the **Client ID** from Part I for the `ServicePrincipalName` parameter. The `Set-AzKeyVaultAccessPolicy` runs silently with no output if it runs successfully.  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Call the `Get-AzureRmKeyVault` cmdlet to confirm the permissions. In the statement output under 'Access Policies,' you should see your AAD application name listed as another tenant that has access to this key vault.  
+     Call the `Get-AzKeyVault` cmdlet to confirm the permissions. In the statement output under 'Access Policies,' you should see your AAD application name listed as another tenant that has access to this key vault.  
   
        
 5.  **Generate an Asymmetric Key in the Key Vault**  

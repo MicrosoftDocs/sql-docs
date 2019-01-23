@@ -305,6 +305,6 @@ manager: craigg
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## See Also  
- [Microsoft SQL Server 2000 Index Defragmentation Best Practices](http://technet.microsoft.com/library/cc966523.aspx)  
+ [Microsoft SQL Server 2000 Index Defragmentation Best Practices](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

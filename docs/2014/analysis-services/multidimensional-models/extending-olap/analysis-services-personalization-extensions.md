@@ -37,7 +37,7 @@ manager: craigg
  When starting the service, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] loads the required assemblies and determines which classes have the <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> custom attribute.  
   
 > [!NOTE]  
->  The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] defines custom attributes as a way to describe your code and affect run-time behavior. For more information, see the topic, "[Attributes Overview](http://go.microsoft.com/fwlink/?LinkId=82929)," in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Developer's Guide on MSDN.  
+>  The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] defines custom attributes as a way to describe your code and affect run-time behavior. For more information, see the topic, "[Attributes Overview](https://go.microsoft.com/fwlink/?LinkId=82929)," in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Developer's Guide on MSDN.  
   
  For all classes with the <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> custom attribute, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] invokes their default constructors. Invoking all the constructors at startup provides a common location from which to build new objects and that is independent of any user activity.  
   

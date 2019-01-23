@@ -23,7 +23,7 @@ manager: craigg
   
 -   Use a stored access policy to manage shared access signatures for a container or its blobs. The stored access policy gives you an additional measure of control over your shared access signatures and also provides a straightforward means to revoke them.  
   
- For more information, see [Manage Access to Windows Azure Storage Resources](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ For more information, see [Manage Access to Windows Azure Storage Resources](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## Create Storage Account  
  To create a storage account on the Windows Azure Management Portal, follow these steps:  
@@ -52,7 +52,7 @@ manager: craigg
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  To create a container programmatically, you can also use REST APIs. For more information, see [Create Container](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) and also [Windows Azure Storage Services REST API Reference](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  To create a container programmatically, you can also use REST APIs. For more information, see [Create Container](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) and also [Windows Azure Storage Services REST API Reference](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Next Lesson:**  
   

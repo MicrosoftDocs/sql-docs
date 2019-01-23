@@ -70,7 +70,7 @@ manager: craigg
   
 -   This procedure must be run by a user with sysadmin permissions, the same permissions required to create a UCP.  
   
--   All managed instances of SQL Server must be removed from the UCP. Note that the UCP is a managed instance of SQL Server. For more information, see [How to: Remove an Instance of SQL Server from the SQL Server Utility](http://go.microsoft.com/fwlink/?LinkId=169392).  
+-   All managed instances of SQL Server must be removed from the UCP. Note that the UCP is a managed instance of SQL Server. For more information, see [How to: Remove an Instance of SQL Server from the SQL Server Utility](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use this procedure to remove a SQL Server UCP from the SQL Server Utility. After the operation is complete, a UCP can be created on the instance of SQL Server again.  
   

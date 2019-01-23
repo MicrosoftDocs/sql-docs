@@ -47,7 +47,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  The expression cannot be of type **text**, **ntext**, or **image** because these types cannot be implicitly converted to **varchar** or **nvarchar**.  
   
  *time_zone*  
- Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13.00'. The range is +14 to -14 (in hours). The expression is interpreted in local time for the specified time_zone.  
+ Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to -14 (in hours). The expression is interpreted in local time for the specified time_zone.  
   
 > [!NOTE]  
 >  If expression is a character string, it must be in the format {+|-}TZH:THM.  

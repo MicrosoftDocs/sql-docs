@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio FAQ | Microsoft Docs
-description: Frequently asked questions (FAQ) for Azure Data Studio.
-ms.custom: "tools|sos"
+title: FAQ
+titleSuffix: Azure Data Studio
+description: Frequently asked questions (FAQ) about Azure Data Studio.
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio

@@ -37,9 +37,9 @@ manager: craigg
 ## Server Message Block Protocol  
  Servers in the perimeter network should have all unnecessary protocols disabled, including server message block (SMB). Web servers and Domain Name System (DNS) servers do not require SMB. This protocol should be disabled to counter the threat of user enumeration.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Disabling Server Message Block will block the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Windows Cluster service from accessing the remote file share. Do not disable SMB if you do or plan to do one of the following:  
->   
+> 
 >  -   Use Windows Cluster Node and File Share Majority Quorum mode  
 > -   Specify an SMB file share as the data directory during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation  
 > -   Create a database file on an SMB file share  

@@ -66,7 +66,7 @@ manager: craigg
   
 ## See Also  
  [Replication Agent Security Model](replication-agent-security-model.md)   
- [Secure a Replication Topology](secure-a-replication-topology.md)   
+ [Secure a Replication Topology](view-and-modify-replication-security-settings.md)   
  [Secure the Publisher](secure-the-publisher.md)  
   
   

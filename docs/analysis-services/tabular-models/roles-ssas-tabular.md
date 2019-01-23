@@ -1,5 +1,5 @@
 ---
-title: "Roles | Microsoft Docs"
+title: "Analysis Services tabular model roles | Microsoft Docs"
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services

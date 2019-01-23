@@ -16,7 +16,7 @@ ms.author: maggies
 
 # Export Reports (Report Builder and SSRS)
 
-  You can export a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report to another file format, such as PowerPoint, Image, PDF, [!INCLUDE[ofprword](../../includes/ofprword-md.md)], or [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] or export the report by generating an Atom service document, listing the Atom-compliant data feeds available from the report. You can export your report from Report Builder, Report Designer ([!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]), or the report server.  
+  You can export a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report to another file format, such as PowerPoint, Image, PDF, [!INCLUDE[ofprword](../../includes/ofprword-md.md)], or [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] or export the report by generating an Atom service document, listing the Atom-compliant data feeds available from the report. You can export your report from Report Builder, Report Designer ( [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]), or the report server.  
   
  Export a report to do the following:  
   

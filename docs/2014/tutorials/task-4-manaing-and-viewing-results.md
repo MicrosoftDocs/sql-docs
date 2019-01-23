@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 4: Manaing and Viewing Results
-  In this task, you review the results of computer-assisted cleansing and also perform interactive cleansing on the supplier data. See [Interactive Cleansing Stage](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) for more details.  
+  In this task, you review the results of computer-assisted cleansing and also perform interactive cleansing on the supplier data. See [Interactive Cleansing Stage](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) for more details.  
   
 1.  Select **Contact Email** domain from the list of domains.  
   

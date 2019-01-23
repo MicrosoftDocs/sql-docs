@@ -1,8 +1,8 @@
 ---
-title: "Automatic seeding for secondary replicas (SQL Server) | Microsoft Docs"
-description: "Use automatic seeding to initialize secondary replicas."
+title: "Use automatic seeding to initialize a secondary replica for an availability group"
+description: "Use automatic seeding to initialize secondary replicas as part of an Always On availability group with SQL 2016 and greater."
 services: data-lake-analytics
-ms.custom: ""
+ms.custom: "seodec18"
 ms.date: "11/27/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg
 ---
-# Automatic seeding for secondary replicas
+# Use automatic seeding to initialize a secondary replica for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a SQL Server Always On availability group is to use backup, copy, and restore. SQL Server 2016 introduces a new feature to initialize a secondary replica - *automatic seeding*. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This new feature can be used either during the initial creation of an availability group or when a database is added to one. Automatic seeding is in all editions of SQL Server that support Always On availability groups, and can be used with both traditional availability groups and [distributed availability groups](distributed-availability-groups.md).
@@ -202,7 +202,7 @@ Automatic seeding adds new extended events for tracking state change, failures, 
 For example, the following script creates an extended events session that captures events related to automatic seeding.
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,

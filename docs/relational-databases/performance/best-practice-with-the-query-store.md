@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, best practices"
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -153,7 +153,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 |Query Wait Statistics|Analyze wait categories that are most active in a database, and which queries contribute most to the selected wait category.<br />Use this view to analyze wait statistics and identify queries that may be impacting user experience across your applications.<br /><br />**Applies to:** Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Tracked Queries|Track the execution of the most important queries in real time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|
   
-> [!TIP]  
+> [!TIP]
 > For a detailed description how to use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to identify the top resource consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  When you identify a query with sub-optimal performance, your action depends on the nature of the problem.  
@@ -162,7 +162,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > The above graphic may feature different shapes for specific query plans, with the following meanings for each possible status:<br />  
 > |Shape|Meaning|  
 > |-------------------|-------------|
@@ -323,17 +323,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> Avoid renaming databases if you have queries with Forced Plans  
 
- Execution plans reference objects using three-part names `database.schema.object`.   
+Execution plans reference objects using three-part names `database.schema.object`.   
 
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
 
-##  <a name="Recovery"></a> Use trace flags on mission critical servers to improve recovery from disaster
+##  <a name="Recovery"></a> Use trace flags on mission critical servers
  
-The global trace flags 7745 and 7752 can be used to improve performance of Query Store during High Availability and Disaster Recovery scenarios. For more information, refer to [Trace Flags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+The global trace flags 7745 and 7752 can be used to improve availability of databases using Query Store. For more information, refer to [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-Trace flag 7745 will prevent the default behavior where Query Store writes data to disk before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be shut down.
+-  Trace flag 7745 will prevent the default behavior where Query Store writes data to disk before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be shut down. This means that Query Store data that has been collected but not been yet persisted to disk will be lost. 
   
-Trace flag 7752 enables asynchronous load of Query Store, and also allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run queries before Query Store has been fully loaded. Default Query Store behavior prevents queries from running before the Query Store has been recovered.
+-  Trace flag 7752 enables asynchronous load of Query Store. This allows a database to become online and queries to be executed before the Query Store has been fully recovered. The default behavior is to do synchoronous load of Query Store. The default behavior prevents queries from executing before the Query Store has been recovered but also prevents any queries from being missed in the data collection.
 
 > [!IMPORTANT]
 > If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible. 

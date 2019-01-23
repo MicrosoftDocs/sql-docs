@@ -1,21 +1,28 @@
 ---
-title: Submit Spark Job on SQL Server big data clusters in Azure Data Studio 
-description: Submit Spark Job on SQL Server big data clusters in Azure Data Studio
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Run Spark jobs in Azure Data Studio 
+titleSuffix: SQL Server 2019 big data clusters
+description: Submit Spark jobs on SQL Server big data clusters in Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ""
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
+ms.prod: sql
+ms.technology: big-data-cluster
 ---
-# Submit Spark Job on SQL Server big data clusters in Azure Data Studio
 
-One of the key scenarios is the ability to submit Spark job for SQL Server 2019 CTP 2.1. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server 2019 big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
+# Submit Spark jobs on SQL Server big data clusters in Azure Data Studio
 
-## Prerequisite 
-Install big data tools for SQL Server and connect to a big data cluster before you can submit Spark job. For installation details, refer to link [Deploy big data Tools](deploy-big-data-tools.md).
+One of the key scenarios for big data clusters is the ability to submit Spark jobs for SQL Server 2019 preview. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server 2019 big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
+
+## Prerequisites
+
+- [SQL Server 2019 big data tools](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+   - **kubectl**
+
+- [Connect Azure Data Studio to the HDFS/Spark gateway of your big data cluster](connect-to-big-data-cluster.md).
 
 ## Open Spark job submission dialog
 There are several ways to open Spark job submission dialog. The ways include Dashboard, Context Menu in Object Explorer, and Command Palate.

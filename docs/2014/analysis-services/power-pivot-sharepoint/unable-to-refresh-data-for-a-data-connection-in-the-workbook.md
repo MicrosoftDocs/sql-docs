@@ -57,7 +57,7 @@ manager: craigg
   
  To work around this problem, join the computer to the same domain as the PowerPivot server, or install a domain controller on your local computer. The second solution, installing the domain controller, will require you to create local domain accounts for all services and users. You will need to configure service accounts and SharePoint permissions for the accounts you define.  
   
- Installing a domain controller on your computer is useful if your objective is to use PowerPivot for SharePoint in an offline state. For detailed instructions on how to use PowerPivot offline, see the blog entry for "Taking your PowerPivot server off the network" on [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ Installing a domain controller on your computer is useful if your objective is to use PowerPivot for SharePoint in an offline state. For detailed instructions on how to use PowerPivot offline, see the blog entry for "Taking your PowerPivot server off the network" on [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Scenario 4: Unstable server**  
   

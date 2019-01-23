@@ -1,6 +1,7 @@
 ---
-title: "Change the HADR Cluster Context of Server Instance (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Change which cluster manages the metadata for replicas in an availability group"
+description: "When doing a cross-cluster migration, change which cluster manages the metadata for availability replicas within an Always On availability group by changing the HADR cluster context for an instance of SQL Server."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Change the HADR Cluster Context of Server Instance (SQL Server)
+# Change which cluster manages the metadata for replicas in an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

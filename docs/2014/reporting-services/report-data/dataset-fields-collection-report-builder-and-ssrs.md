@@ -77,9 +77,9 @@ manager: craigg
   
 -   **Data source** The data types supported by the version of the type of data source to which you are connecting.  
   
-     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include `int`, `datetime`, and `varchar`. Data types introduced by [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] added support for `date`, `time`, `datetimetz`, and `datetime2`. For more information, see [Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include `int`, `datetime`, and `varchar`. Data types introduced by [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] added support for `date`, `time`, `datetimetz`, and `datetime2`. For more information, see [Data Types (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Data provider or data processing extension** The data types supported by the version of the data provider of the data processing extension you select when you connect to the data source. Data providers based on the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] use data types supported by the CLR. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider data types, see [Data Type Mappings (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) and [Working with Base Types](http://go.microsoft.com/fwlink/?LinkId=112177) on MSDN.  
+-   **Data provider or data processing extension** The data types supported by the version of the data provider of the data processing extension you select when you connect to the data source. Data providers based on the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] use data types supported by the CLR. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider data types, see [Data Type Mappings (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) and [Working with Base Types](https://go.microsoft.com/fwlink/?LinkId=112177) on MSDN.  
   
      For example, typical data types supported by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] include `Int32` and `String`. Calendar dates and times are supported by the `DateTime` structure. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 introduced support for the `DateTimeOffset` structure for dates with a time zone offset.  
   
@@ -97,7 +97,7 @@ manager: craigg
     |`DateTimeTZ`|`DateTimeOffset`|Date and time with time zone offset|  
     |`DateTime2`|`DateTime`|Date and time with fractional milliseconds|  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types, see [Data Types (Database Engine)](http://go.microsoft.com/fwlink/?linkid=98362) and [Date and Time Data Types and Functions (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types, see [Data Types (Database Engine)](https://go.microsoft.com/fwlink/?linkid=98362) and [Date and Time Data Types and Functions (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
   
  For more information about including references to a dataset field from an expression, see [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   

@@ -42,7 +42,7 @@ manager: craigg
  [Reporting Services Concepts &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Reporting Services Reports &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Getting Started with Report Builder](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Designing and Implementing Reports Using Report Builder 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Getting Started with Report Builder](https://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Designing and Implementing Reports Using Report Builder 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

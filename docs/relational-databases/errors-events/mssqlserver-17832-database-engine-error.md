@@ -46,7 +46,7 @@ To resolve this problem, increase the **MaxTokenSize** value of the server compu
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-**To change the MaxTokenSize** **on the server computer**  
+**To change the MaxTokenSize on the server computer**  
   
 1.  On the **Start** menu, click **Run**.  
   

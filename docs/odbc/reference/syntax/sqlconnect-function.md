@@ -33,13 +33,13 @@ manager: craigg
 ```  
   
 SQLRETURN SQLConnect(  
-     SQLHDBC        ConnectionHandle,  
-     SQLCHAR *      ServerName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      UserName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      Authentication,  
-     SQLSMALLINT    NameLength3);  
+     SQLHDBC        ConnectionHandle,  
+     SQLCHAR *      ServerName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      UserName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      Authentication,  
+     SQLSMALLINT    NameLength3);  
 ```  
   
 ## Arguments  

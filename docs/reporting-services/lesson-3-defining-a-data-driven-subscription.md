@@ -55,8 +55,9 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 1. Select **Using the following credentials**.
 2. Select **Windows user name and password**.
 3.  In **User Name** and **Password**, type your domain user name and password. Include both the domain and user account when specifying **User Name**.
-    > [!NOTE]  
-    > Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.
+
+> [!NOTE]  
+> Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.
 
 ## Query      
 1.  In the query box, type the following query:  

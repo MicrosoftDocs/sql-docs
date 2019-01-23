@@ -1,6 +1,7 @@
 ---
-title: "Configure Replication for Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure replication with availability groups"
+description: "Configure replication with your Always On availability group." 
+ms.custom: "seodec18"
 ms.date: "07/09/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Configure Replication for Always On Availability Groups (SQL Server)
+# Configure replication with Always On availability groups
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -211,7 +212,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **To create and configure an availability group**  
   

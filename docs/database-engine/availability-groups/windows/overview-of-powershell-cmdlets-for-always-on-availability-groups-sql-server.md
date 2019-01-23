@@ -1,6 +1,7 @@
 ---
-title: "Overview of PowerShell Cmdlets for Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Overview of PowerShell Cmdlets for availability groups"
+description: "A reference for the different PowerShell cmdlets available to manage Always On availability groups. "
+ms.custom: "seodec18"
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Overview of PowerShell Cmdlets for Always On Availability Groups (SQL Server)
+# Overview of PowerShell Cmdlets for Always On Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell is a task-based command-line shell and scripting language designed especially for system administration. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provides a set of PowerShell cmdlets in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that enable you to deploy, manage, and monitor availability groups, availability replicas, and availability databases.  

@@ -1,19 +1,21 @@
 ---
-title: SQL Server machine learning and programming extensions documentation | Microsoft Docs
+title: R and Python machine learning and programming extensions documentation - SQL Server Machine Learning
 description: R and Python in SQL Server, with built-in data science modeling and machine learning algorithms for enterprise data analysis at scale.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/10/2018  
+ms.date: 01/09/2019
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
+# SQL Server Machine Learning
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-# SQL Server Machine Learning and Programming Extensions Documentation
+
+## SQL Server Machine Learning and Programming Extensions Documentation
 
 Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network. 
 
@@ -27,7 +29,8 @@ In SQL Server 2019, Java code execution uses the same extensibility framework as
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sql-server-2017"
-# SQL Server Machine Learning R and Python Documentation
+
+## SQL Server Machine Learning R and Python Documentation
 
 Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network. 
 
@@ -64,6 +67,6 @@ Learn how to use R and Python external libraries and languages on resident, rela
 | [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | R | Distributed and parallel processing for R tasks: data transformation, exploration, visualization, statistical and predictive analytics. |
 | [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | Functions based on Microsoft's AI algorithms, adapted for R. |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | R | Imports data from OLAP cube.s |
-| [sqlRUtils]() | R | Helper functions for encapsulating R and T-SQL. |
+| [sqlRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | R | Helper functions for encapsulating R and T-SQL. |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Python | Distributed and parallel processing for Python tasks: data transformation, exploration, visualization, statistical and predictive analytics.  | 
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Python | Functions based on Microsoft's AI algorithms, adapted for Python.  |

@@ -1,7 +1,8 @@
 ---
-title: Extensibility APIs for Azure Data Studio | Microsoft Docs
-description: Extensibility APIs for Azure Data Studio
-ms.custom: "tools|sos"
+title: Extensibility APIs
+titleSuffix: Azure Data Studio
+description: Learn about the extensibility APIs for Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql

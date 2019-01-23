@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 6: Setting Synonyms
-  In this task, you set two domain values, **USA** and **United States**, of the **Country** domain as synonyms with **United States** as the leading value. Since the **Use Leading Values** option was selected when creating the **Country** domain, any **USA** values for the **Country** domain will be output as **United States** (as United States is the leading value). See [Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx) for more details.  
+  In this task, you set two domain values, **USA** and **United States**, of the **Country** domain as synonyms with **United States** as the leading value. Since the **Use Leading Values** option was selected when creating the **Country** domain, any **USA** values for the **Country** domain will be output as **United States** (as United States is the leading value). See [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) for more details.  
   
 1.  Select **Country** from the list of domains.  
   

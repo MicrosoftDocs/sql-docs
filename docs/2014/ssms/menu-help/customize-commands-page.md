@@ -8,7 +8,6 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.vs.customizecom.f1"
-  - "vs.customize.commands"
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
@@ -35,5 +34,3 @@ manager: craigg
   
 ## See Also  
  [Customize Menus and Shortcut Keys](../customize-menus-and-shortcut-keys.md)  
-  
-  

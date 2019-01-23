@@ -26,11 +26,11 @@ manager: craigg
      The XML Report element specifies the schema namespace. For example, the following Report element specifies the namespace for Report Designer and the namespace for the report definition.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     The report definition namespace is specified by the following URL: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
+     The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
 ### How to: Identify the RDL Schema Version of Report Designer  
   
@@ -49,11 +49,11 @@ manager: craigg
      The XML Report element specifies the schema namespace. For example, the following Report element specifies the namespace for Report Designer and the namespace for the report definition.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     The report definition namespace is specified by the following URL: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ### How to: Identify the RDL Schema Version on the Report Server  
   
@@ -67,13 +67,13 @@ manager: craigg
   
     ```  
     <xsd:schema   
-    targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  
   
-     The report definition namespace is specified by the following URL: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ## See Also  
  [Upgrade Reports](../install-windows/upgrade-reports.md)   

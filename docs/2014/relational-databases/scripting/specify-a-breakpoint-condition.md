@@ -7,8 +7,6 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.breakpt.condition"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint conditions"
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
@@ -42,5 +40,3 @@ manager: craigg
 ## See Also  
  [Specify a Hit Count](specify-a-hit-count.md)   
  [Specify a Breakpoint Action](specify-a-breakpoint-action.md)  
-  
-  

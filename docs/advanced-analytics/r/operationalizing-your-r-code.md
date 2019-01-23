@@ -1,5 +1,6 @@
 ---
-title: Operationalize R code in SQL Server Machine Learning Services | Microsoft Docs
+title: Operationalize R code using stored procedures - SQL Server Machine Learning Services
+description: Embed R language code in a SQL Server stored procedure to make it available to any client application having access to a SQL Server database.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -37,7 +38,7 @@ Of course, converting your R code in SQL is easier if some optimizations are don
 
 + [Converting R code for use in R Services](converting-r-code-for-use-in-sql-server.md)
 
-+ [Generating an R stored procedure by using sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Use sqlrutils helper functions](ref-r-sqlrutils.md)
 
 ## Integrate R and Python with applications
 

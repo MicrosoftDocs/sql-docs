@@ -47,7 +47,7 @@ manager: craigg
 -   [Modifying or Uninstalling a Completed Instance of SQL Server.](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep Cluster Support  
- Beginning in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supports clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in command line installations. For more information, see [What is Sysprep?](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
+ Beginning in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supports clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in command line installations. For more information, see [What is Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
   
 #### To Prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster (Unattended)  
   
@@ -317,7 +317,7 @@ manager: craigg
 -   [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## See Also  
- [What is Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [How does Windows SysPrepWork](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [What is Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [How does Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

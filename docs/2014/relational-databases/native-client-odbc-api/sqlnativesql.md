@@ -19,7 +19,7 @@ manager: craigg
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver satisfies **SQLNativeSql** requests without visiting the server. The function efficiently tests the syntax of SQL statements. Syntax checking does not determine if identifiers or the results of expressions in the SQL statements are valid, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native SQL returned by **SQLNativeSql** can fail to run.  
   
 ## See Also  
- [SQLNativeSql Function](http://go.microsoft.com/fwlink/?LinkID=59358)   
+ [SQLNativeSql Function](https://go.microsoft.com/fwlink/?LinkID=59358)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

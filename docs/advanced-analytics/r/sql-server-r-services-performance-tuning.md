@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services Performance Tuning | Microsoft Docs
+title: SQL Server R Services Performance Tuning - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 

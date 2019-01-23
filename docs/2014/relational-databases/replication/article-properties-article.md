@@ -115,7 +115,7 @@ manager: craigg
   
 ### Resolver tab  
  **Use the default resolver**  
- If you select the default resolver, conflicts are resolved based on the priority assigned to each Subscriber or the first change written to the Publisher, depending on the type of subscriptions used. For more information, see [Detect and Resolve Merge Replication Conflicts](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+ If you select the default resolver, conflicts are resolved based on the priority assigned to each Subscriber or the first change written to the Publisher, depending on the type of subscriptions used. For more information, see [Detect and Resolve Merge Replication Conflicts](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Use a custom resolver (registered at the Distributor)**  
  If you choose to use an article resolver (either one supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)] or one you have written), you must select a resolver from the list-box. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

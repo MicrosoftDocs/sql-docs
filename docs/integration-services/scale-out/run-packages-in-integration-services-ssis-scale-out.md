@@ -112,7 +112,7 @@ To set the default execution mode for packages to **Scale Out**, do the followin
 
 After you set this default execution mode, you no longer have to specify the **@runinscaleout** parameter when you call the `[catalog].[create_execution]` stored procedure. Packages are run in Scale Out automatically. 
 
-![Exe mode](media\exe-mode.PNG)
+![Exe mode](media/exe-mode.PNG)
 
 To switch the default execution mode back so that packages no longer run by default in Scale Out mode, set  **Server-wide Default execution mode** to **Server**.
 

@@ -1,12 +1,15 @@
 ---
-title: Use kubectl to monitor a SQL Server big data cluster | Microsoft Docs
+title: Use kubectl to monitor/troubleshoot
+titleSuffix: SQL Server 2019 big data clusters
 description: This article provide useful kubectl commands for monitoring and troubleshooting a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/15/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # Kubectl commands for monitoring and troubleshooting SQL Server big data clusters

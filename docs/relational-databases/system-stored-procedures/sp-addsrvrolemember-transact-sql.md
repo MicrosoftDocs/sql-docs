@@ -38,10 +38,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## Arguments  
- [ @loginame **=** ] **'***login***'**  
+ [ @loginame **=** ] **'**_login_**'**  
  Is the name of the login being added to the fixed server role. *login* is **sysname**, with no default. *login* can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows login. If the Windows login has not already been granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], access is automatically granted.  
   
- [ @rolename **=** ] **'***role***'**  
+ [ @rolename **=** ] **'**_role_**'**  
  Is the name of the fixed server role to which the login is being added. *role* is **sysname**, with a default of NULL, and must be one of the following values:  
   
 -   sysadmin  

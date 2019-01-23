@@ -19,7 +19,7 @@ manager: craigg
   
  **Alerting administrators**-Permissions must include the Manage Alert SharePoint permission. By default only the Full Control permission level includes this permission for sites created with the Team Site site template. If you use other site templates, you will see different lists of default SharePoint groups. You can add the Manage Alert permission to one of the built-in permission levels or create a custom permission level with the permission required to support alerting administrators that view and delete data alerts.  
   
- To learn more about SharePoint permissions, see [User permissions and permission levels (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx).  
+ To learn more about SharePoint permissions, see [User permissions and permission levels (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx).  
   
 ### To grant permissions  
   

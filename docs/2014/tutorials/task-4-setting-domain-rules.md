@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 4: Setting Domain Rules
-  In this task, you create a rule for the **Contact Email** domain to verify if the email address ends with **@adventure-works.com**. See [Creating a Domain Rule](http://msdn.microsoft.com/library/hh510397.aspx) topic for more details on the page.  
+  In this task, you create a rule for the **Contact Email** domain to verify if the email address ends with **@adventure-works.com**. See [Creating a Domain Rule](https://msdn.microsoft.com/library/hh510397.aspx) topic for more details on the page.  
   
 1.  Click **Contact Email** in the **Domain list**.  
   

@@ -94,7 +94,7 @@ manager: craigg
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## See Also  
- [SQLGetDiagField Function](http://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField Function](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

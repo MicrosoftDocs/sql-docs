@@ -37,7 +37,7 @@ manager: craigg
   
 2.  The import bulk copies in the data from the export file.  
   
- There is a sample application in the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs that can be used to test exporting and importing DACs and databases. For instructions on how to download and use the sample, see [Database Import and Export for Windows Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ There is a sample application in the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs that can be used to test exporting and importing DACs and databases. For instructions on how to download and use the sample, see [Database Import and Export for Windows Azure SQL Database](https://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ## SQL Server Utility  
  If you import a DAC to a managed instance of the Database Engine, the imported DAC is incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the utility control point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  

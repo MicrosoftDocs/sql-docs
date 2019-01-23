@@ -1,5 +1,5 @@
 ---
-title: Create data features using T-SQL functions (Python in SQL Server Machine Learning)   | Microsoft Docs
+title: Create data features using T-SQL functions and Python - SQL Server Machine Learning
 description: Tutorial showing how to add calculations to stored procedures for use in Python machine learning models.
 ms.prod: sql
 ms.technology: machine-learning
@@ -32,7 +32,7 @@ You'll use one custom T-SQL function, _fnCalculateDistance_, to compute the dist
     In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expand **Programmability**, expand **Functions** and then **Scalar-valued functions**.
     Right-click _fnCalculateDistance_, and select **Modify** to open the [!INCLUDE[tsql](../../includes/tsql-md.md)] script in a new query window.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function that calculates the direct distance between two geographical coordinates
     RETURNS float
@@ -68,7 +68,7 @@ To add the computed value to a table that can be used for training the model, yo
   
     This function is a table-valued function that takes multiple columns as inputs, and outputs a table with multiple feature columns.  The purpose of this function is to create a feature set for use in building a model. The function _fnEngineerFeatures_ calls the previously created T-SQL function, _fnCalculateDistance_, to get the direct distance between pickup and dropoff locations.
   
-    ```
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (
     @passenger_count int = 0,
     @trip_distance float = 0,
@@ -93,7 +93,7 @@ To add the computed value to a table that can be used for training the model, yo
   
 2. To verify that this function works, you can use it to calculate the geographical distance for those trips where the metered distance was 0 but the pick-up and drop-off locations were different.
   
-    ```
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance

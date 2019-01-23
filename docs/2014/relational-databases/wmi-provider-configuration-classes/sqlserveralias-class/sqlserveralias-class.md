@@ -31,6 +31,6 @@ manager: craigg
  **Note:** The [SqlServerAlias Class](sqlserveralias-class.md) inherits the `Put` method from the Provider class. However, it does not return any results as indicated by the `Provider::Put` method. For more information, see the WMI documentation.  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

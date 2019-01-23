@@ -33,7 +33,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## Arguments  
  [**@publisher** = ] **'***publisher***'**  
- Is the name of the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher to which the job belongs. *publisher* is **sysname**, with no default.  
+ Is the name of the non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher to which the job belongs. *publisher* is **sysname**, with no default.  
   
 ## Result Sets  
   

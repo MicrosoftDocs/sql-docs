@@ -119,7 +119,7 @@ manager: craigg
   
 -   All application pages, tools, errors, warnings, and messages that originate from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] will appear in the language used by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instance in one of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] languages.  
   
--   Application pages that you open on a SharePoint site, the Report Viewer Web Part, and Report Builder will appear in one of the supported languages for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in. To view the list of supported languages, go to [SQL Server Downloads](http://msdn.microsoft.com/sql/downloads/) and find the download page for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in.  
+-   Application pages that you open on a SharePoint site, the Report Viewer Web Part, and Report Builder will appear in one of the supported languages for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in. To view the list of supported languages, go to [SQL Server Downloads](https://msdn.microsoft.com/sql/downloads/) and find the download page for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in.  
   
 -   SharePoint sites, SharePoint Central Administration, online help, and messages are available in the languages supported by Office Server products.  
   
@@ -134,12 +134,12 @@ manager: craigg
 |Scale-out your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint deployment by adding additional report servers.|[Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment Topologies for SQL Server BI Features in SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)  .|  
 |Add additional SharePoint web front-ends that have the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components installed for viewing and report items.|[Add an Additional Reporting Services Web Front-end to a Farm](install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configure e-mail for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerting and subscription features.|[Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
-|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services Tips, Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkId=221297).|  
   
 ## See Also  
  [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
  [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Quiz: Configuring SSRS 2012 for SharePoint Integration](http://go.microsoft.com/fwlink/?LinkId=306443)  
+ [Quiz: Configuring SSRS 2012 for SharePoint Integration](https://go.microsoft.com/fwlink/?LinkId=306443)  
   
   

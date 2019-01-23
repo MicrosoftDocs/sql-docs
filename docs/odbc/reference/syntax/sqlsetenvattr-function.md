@@ -33,10 +33,10 @@ manager: craigg
 ```  
   
 SQLRETURN SQLSetEnvAttr(  
-     SQLHENV      EnvironmentHandle,  
-     SQLINTEGER   Attribute,  
-     SQLPOINTER   ValuePtr,  
-     SQLINTEGER   StringLength);  
+     SQLHENV      EnvironmentHandle,  
+     SQLINTEGER   Attribute,  
+     SQLPOINTER   ValuePtr,  
+     SQLINTEGER   StringLength);  
 ```  
   
 ## Arguments  

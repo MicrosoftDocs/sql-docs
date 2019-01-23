@@ -93,7 +93,7 @@ manager: craigg
  The following table provides information about general configuration settings that appear in the first part of the file. Settings are presented in the order in which they appear in the configuration file. The last column of the table indicates if the setting applies to a Native mode report server **(N)** or a SharePoint mode report server **(S)** or both.  
   
 > [!NOTE]  
->  In this topic, "maximum integer" refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  In this topic, "maximum integer" refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
@@ -125,7 +125,7 @@ manager: craigg
  `URLReservations` defines HTTP access to the Report Server Web service and Report Manager for the current instance. URLs are reserved and stored in HTTP.SYS when you configure the report server.  
   
 > [!WARNING]  
->  For SharePoint mode, URL reservations are configured in SharePoint Central Administration. For more information, see [Configure alternate access mapping (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  For SharePoint mode, URL reservations are configured in SharePoint Central Administration. For more information, see [Configure alternate access mapping (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Do not modify URL reservations in the configuration file directly. Always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager or the Report Server WMI provider to create or modify URL reservations for a Native mode report server. If you modify the values in the configuration file, you might corrupt the reservation, which will cause server errors at run time or leave orphan reservations in HTTP.SYS that are not removed if you uninstall the software. For more information, see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md) and [URLs in Configuration Files  &#40;SSRS Configuration Manager&#41;](../install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -416,8 +416,8 @@ manager: craigg
 |-------------|-----------------|  
 |**MaxConnections**|Specifies the maximum number of connections to Bing Maps Web Services.|  
 |**Timeout**|Specifies the timeout in seconds to wait for a response from Bing Maps Web Services.|  
-|**AppID**|Specifies the application identifier (AppID) to use for Bing Maps Web Services. `(Default)` specifies the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default AppID.<br /><br /> For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371) and [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=151372).<br /><br /> Do not change this value unless you must specify a custom AppID for your own Bing Maps license agreement. When you change the AppID, you do not have to restart [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for the change to take effect.|  
-|**CacheLevel**|Specifies a value from the HttpRequestCacheLevel Enumeration of System.Net.Cache. The default value is `Default`. For more information, see [HttpRequestCacheLevel Enumeration](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Specifies the application identifier (AppID) to use for Bing Maps Web Services. `(Default)` specifies the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default AppID.<br /><br /> For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371) and [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=151372).<br /><br /> Do not change this value unless you must specify a custom AppID for your own Bing Maps license agreement. When you change the AppID, you do not have to restart [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for the change to take effect.|  
+|**CacheLevel**|Specifies a value from the HttpRequestCacheLevel Enumeration of System.Net.Cache. The default value is `Default`. For more information, see [HttpRequestCacheLevel Enumeration](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Default Configuration File for a Native Mode Report Server  
  The rsreportserver.config file is installed to the following location by default:  

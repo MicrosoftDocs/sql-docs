@@ -48,10 +48,10 @@ manager: craigg
   
 -   The [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database installed to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   A report installed on your report server. This tutorial uses the sample report, Company Sales 2012. For more information about sample reports, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   A report installed on your report server. This tutorial uses the sample report, Company Sales 2012. For more information about sample reports, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  The samples are not installed automatically during setup, but you can install them at any time. For information about samples, see [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  The samples are not installed automatically during setup, but you can install them at any time. For information about samples, see [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
  **Estimated time to complete the tutorial:** 30 minutes  
   

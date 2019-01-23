@@ -1,4 +1,4 @@
-- name: Overview)
+- name: Overview
   href: xml-transact-sql.md
 - name: xml_schema_namespace
   href: xml-schema-namespace.md

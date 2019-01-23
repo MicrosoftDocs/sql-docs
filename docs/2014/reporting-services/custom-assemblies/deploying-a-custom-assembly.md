@@ -59,6 +59,6 @@ manager: craigg
   
 ## See Also  
  [Using Custom Assemblies with Reports](using-custom-assemblies-with-reports.md)   
- [Working with Assemblies and the Global Assembly Cache](http://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Working with Assemblies and the Global Assembly Cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

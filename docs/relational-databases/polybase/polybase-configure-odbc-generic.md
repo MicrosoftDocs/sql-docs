@@ -27,13 +27,13 @@ First download and install the ODBC driver of the data source you want to connec
 
 ![PolyBase scale-out groups](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-  > **IMPORTANT!**
-  >
-  > In order to improve query performance make sure that the driver has connection pooling enabled. This can be accomplished from the "ODBC Data Source Administrator".
-
+> **IMPORTANT!**
+> 
+> In order to improve query performance make sure that the driver has connection pooling enabled. This can be accomplished from the "ODBC Data Source Administrator".
+> 
 > **Note**
 > 
->The name of the driver (example circled above) will need to be specified when creating the external data source (Step 3 below).
+> The name of the driver (example circled above) will need to be specified when creating the external data source (Step 3 below).
 
 ## Create an External Table
 

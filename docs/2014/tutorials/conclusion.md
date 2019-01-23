@@ -19,6 +19,6 @@ manager: craigg
   
 ## For more information:  
   
- [Enterprise Information Management (EIM): Bringing together SSIS, DQS, and MDS (Video)](http://go.microsoft.com/fwlink/?LinkId=258672)  
+ [Enterprise Information Management (EIM): Bringing together SSIS, DQS, and MDS (Video)](https://go.microsoft.com/fwlink/?LinkId=258672)  
   
   

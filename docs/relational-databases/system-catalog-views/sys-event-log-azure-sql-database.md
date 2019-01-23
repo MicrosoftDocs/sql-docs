@@ -95,7 +95,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### Interval start_time and end_time  
- An event is included in an aggregation interval when the event occurs *on* or *after***start_time** and *before***end_time** for that interval. For example, an event occurring exactly at `2012-10-30 19:25:00.0000000` would be included only in the second interval shown below:  
+ An event is included in an aggregation interval when the event occurs *on* or _after_**start_time** and _before_**end_time** for that interval. For example, an event occurring exactly at `2012-10-30 19:25:00.0000000` would be included only in the second interval shown below:  
   
 ```  
 start_time                    end_time  

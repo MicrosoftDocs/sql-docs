@@ -24,7 +24,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # Deploy a Data-tier Application
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Deploy a data-tier application (DAC) from a DAC package to an existing instance of the database engine or Azure SQL Database  using a wizard or a PowerShell script. 
   
  The deployment process registers a DAC instance by storing the DAC definition in the **msdb** system database (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]); creates a database, then populates that database with all the database objects defined in the DAC.  
@@ -33,8 +33,7 @@ manager: craigg
 ## Deploy the same DAC package multiple times 
  You can deploy the same DAC package to a single instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] multiple times, but you must run the deployments one at a time. The DAC instance name specified for each deployment must be unique within the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-## Managed instances  
- If you deploy a DAC to a managed instance of the Database Engine, the deployed DAC is incorporated into the **SQL Server Utility** the next time the utility collection set is sent from the instance to the utility control point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
+ If you deploy a DAC to an instance of the Database Engine, the deployed DAC is incorporated into the **SQL Server Utility** the next time the utility collection set is sent from the instance to the utility control point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
 ###  Database Options and Settings  
  By default, the database created during the deployment will have all of the default settings from the CREATE DATABASE statement, except:  

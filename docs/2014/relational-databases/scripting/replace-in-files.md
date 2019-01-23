@@ -7,9 +7,6 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.findreplace.replaceinfiles"
-  - "vs.replaceinfiles"
 helpviewer_keywords: 
   - "Replace in Files dialog box"
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
@@ -152,5 +149,3 @@ manager: craigg
   
 ## See Also  
  [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

@@ -25,7 +25,7 @@ manager: craigg
   
  You can change the chart type after you have created it. For more information, see [Change a Chart Type &#40;Report Builder and SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Examples of many of these types of charts are available as sample reports. For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Examples of many of these types of charts are available as sample reports. For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Chart type|Display ratio data|Display stock data|Display linear data|Display multi-value data|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  

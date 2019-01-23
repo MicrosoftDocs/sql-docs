@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ---
 # Install the Stand-Alone Version of Report Builder (Report Builder)
-  You can install Report Builder from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack on the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) or a location such as public folder to which the ReportBuilder3_x86.msi, the Windows Installer Package for Report Builder, has been downloaded.  
+  You can install Report Builder from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) or a location such as public folder to which the ReportBuilder3_x86.msi, the Windows Installer Package for Report Builder, has been downloaded.  
   
  You can also perform a command line installation of Report Builder and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that Report Builder provides: RBINSTALLDIR and REPORTSERVERURL. RBINSTALLDIR specifies the root installation folder for Report Builder. REPORTSERVERURL specifies the default report server that Report Builder uses to save reports on the server.  
   
@@ -24,7 +24,7 @@ manager: craigg
   
 ### To install Report Builder from the download site  
   
-1.  Go to [Microsoft SQL Server 2012 Report Builder](http://go.microsoft.com/fwlink/?LinkID=219138) and locate the Report Builder section of the Web page.  
+1.  Go to [Microsoft SQL Server 2012 Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138) and locate the Report Builder section of the Web page.  
   
 2.  Click **X86 Package**.  
   
@@ -100,7 +100,7 @@ manager: craigg
   
 ### To install Report Builder from the command line  
   
-1.  Go to [Microsoft SQL Server 2012 Report Builder](http://go.microsoft.com/fwlink/?LinkID=219138) and locate the Report Builder section.  
+1.  Go to [Microsoft SQL Server 2012 Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138) and locate the Report Builder section.  
   
 2.  Click **X86 Package**.  
   

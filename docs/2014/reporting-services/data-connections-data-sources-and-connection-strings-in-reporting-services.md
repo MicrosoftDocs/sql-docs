@@ -71,7 +71,7 @@ manager: craigg
   
 -   ODBC  
   
--   Microsoft BI Semantic Model for Power View : On a SharePoint site that has been configured for a PowerPivot gallery and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Microsoft BI Semantic Model for Power View : On a SharePoint site that has been configured for a PowerPivot gallery and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   

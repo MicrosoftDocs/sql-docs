@@ -112,7 +112,7 @@ manager: craigg
   
 #### Viewing a Sample Custom Resolver  
   
-1.  A sample is available in the SQL Server 2000 sample files. Download the **sql2000samples.cab** from [Updated Samples for SQL Server 2000 Service Pack 3](http://www.microsoft.com/download/details.aspx?id=8560). This downloads 8 files amounting to 6.9 MB.  
+1.  A sample is available in the SQL Server 2000 sample files. Download the **sql2000samples.cab** from [Updated Samples for SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). This downloads 8 files amounting to 6.9 MB.  
   
 2.  Extract the files from downloaded compressed .cab file.  
   

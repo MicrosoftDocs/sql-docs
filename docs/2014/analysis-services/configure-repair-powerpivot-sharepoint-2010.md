@@ -157,7 +157,7 @@ manager: craigg
 ### Install ADO.NET Data Services 3.5 SP1  
  ADO.NET Data Services is required for a data feed export of SharePoint lists. SharePoint 2010 does not include this component in the PrerequisiteInstaller program, so you must install it manually.  
   
-1.  Go to the hardware and software requirements documentation for SharePoint 2010, [Determine Hardware and Software Requirements (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Go to the hardware and software requirements documentation for SharePoint 2010, [Determine Hardware and Software Requirements (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
 2.  In Installing software prerequisites, find the link for ADO.NET Data Services 3.5 that corresponds to the operating system you are using.  
   

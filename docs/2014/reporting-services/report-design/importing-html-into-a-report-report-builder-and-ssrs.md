@@ -55,8 +55,6 @@ manager: craigg
   
     -   Relative CSS length units are ignored and not supported. Unsupported units include em, ex, px,%,rem.  
   
-     For more information on CSS units, see: [CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
-  
 -   color  
   
 -   padding, padding-bottom, padding-top, padding-right, padding-left  

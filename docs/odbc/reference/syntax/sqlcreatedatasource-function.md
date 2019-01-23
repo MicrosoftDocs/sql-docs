@@ -33,8 +33,8 @@ manager: craigg
 ```  
   
 BOOL SQLCreateDataSource(  
-     HWND    hwnd,  
-     LPSTR   lpszDS);  
+     HWND    hwnd,  
+     LPSTR   lpszDS);  
 ```  
   
 ## Arguments  

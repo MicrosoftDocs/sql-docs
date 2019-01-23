@@ -91,7 +91,7 @@ manager: craigg
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     For more information on using PowerShell, see [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     For more information on using PowerShell, see [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx).  
   
 #### Install Web Parts Using STSADM.exe  
   

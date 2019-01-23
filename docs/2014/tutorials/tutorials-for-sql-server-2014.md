@@ -26,9 +26,9 @@ manager: craigg
   
  If you are using a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] server, you have the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] data providers installed. In order for the tutorials to work, you will either need the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sample databases that work with those providers, or you need the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] data providers that work with the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] version of the sample databases.  
   
--   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] samples to use with tutorials, go to [Samples for SQL Server](http://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) on CodePlex.  
+-   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] samples to use with tutorials, go to [Samples for SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) on CodePlex.  
   
--   To download a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] reports to use with [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] tutorials, go to [Image Files for HelloWorldPicnic Sample Model in PowerPivot and Power View](http://www.microsoft.com/download/details.aspx?id=26719).  
+-   To download a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] reports to use with [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] tutorials, go to [Image Files for HelloWorldPicnic Sample Model in PowerPivot and Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] is a feature of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
@@ -37,7 +37,7 @@ manager: craigg
   
 -   To download [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) on CodePlex.  
   
--   To see a list of [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] tutorials, go to [Tutorials](http://msdn.microsoft.com/library/ms167593.aspx) in MSDN library.  
+-   To see a list of [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] tutorials, go to [Tutorials](https://msdn.microsoft.com/library/ms167593.aspx) in MSDN library.  
   
 ## In This Section  
  Tutorials are available for these [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] technologies.  

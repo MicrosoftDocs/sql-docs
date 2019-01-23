@@ -1,8 +1,9 @@
 ---
-title: Azure Data Studio SQL Server 2019 extension (preview) | Microsoft Docs
+title: SQL Server 2019 extension (preview)
+titleSuffix: Azure Data Studio
 description: SQL Server 2019 Preview extension for Azure Data Studio
-ms.custom: "tools|sos"
-ms.date: "11/06/2018"
+ms.custom: "seodec18"
+ms.date: "01/10/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -24,9 +25,9 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|November 6, 2018 |0.8.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|November 6, 2018 |0.8.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|November 6, 2018 |0.8.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051167)|January 09, 2019 |0.9.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051166)|January 09, 2019 |0.9.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051165)|January 09, 2019 |0.9.1
 
 1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 
@@ -35,6 +36,8 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 1. Select **Reload** to enable the extension (only required the first time you install an extension).
 
 1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
+
+1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
 
 ## Release Notes (v0.8.0)
 *Notebooks*:

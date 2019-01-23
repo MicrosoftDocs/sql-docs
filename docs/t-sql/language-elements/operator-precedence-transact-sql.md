@@ -24,7 +24,7 @@ manager: craigg
 
   When a complex expression has multiple operators, operator precedence determines the sequence in which the operations are performed. The order of execution can significantly affect the resulting value.  
   
- Operators have the precedence levels shown in the following table. An operator on higher levels is evaluated before an operator on a lower level.  
+ Operators have the precedence levels shown in the following table. An operator on higher levels is evaluated before an operator on a lower level (in the following table, 1 is the highest level and 8 is the lowest level).
   
 |Level|Operators|  
 |-----------|---------------|  

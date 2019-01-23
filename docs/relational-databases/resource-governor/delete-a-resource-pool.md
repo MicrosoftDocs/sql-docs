@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Resource Governor, resource pool delete"
   - "resource pools [SQL Server], delete"
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Delete a Resource Pool

@@ -1,5 +1,5 @@
 ---
-title: "Configure Default Field Set for Power View Reports | Microsoft Docs"
+title: "Configure default field set for Power View reports in Analysis Services | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

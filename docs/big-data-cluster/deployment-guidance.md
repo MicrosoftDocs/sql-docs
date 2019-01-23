@@ -1,12 +1,15 @@
 ---
-title: How to deploy SQL Server big data clusters on Kubernetes | Microsoft Docs
+title: How to deploy
+titleSuffix: SQL Server 2019 big data clusters
 description: Learn how to deploy SQL Server 2019 big data clusters (preview) on Kubernetes.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # How to deploy SQL Server big data clusters on Kubernetes
@@ -21,7 +24,7 @@ SQL Server big data cluster can be deployed as docker containers on a Kubernetes
 
 ## <a id="prereqs"></a> Kubernetes cluster prerequisites
 
-SQL Server big data cluster requires a minimum v1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Latest versions of minikube and AKS are at least 1.10. For AKS, you will need to use `--kubernetes-version` parameter to specify a version different than default.
+SQL Server big data clusters require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
 
 > [!NOTE]
 > Note that the client and server Kubernetes versions should be +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -32,20 +35,22 @@ If you already have a Kubernetes cluster that meets above prerequisites, then yo
 
 You can choose to deploy Kubernetes in any of three ways:
 
-| Deploy Kubernetes on: | Description |
-|---|---|
-| **Minikube** | A single-node Kubernetes cluster in a VM. |
-| **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. |
-| **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** |
-
-For guidance on configuring one of these Kubernetes cluster options for a SQL Server big data cluster, see one of the following articles:
-
-   - [Configure Minikube](deploy-on-minikube.md)
-   - [Configure Kubernetes on Azure Kubernetes Service](deploy-on-aks.md)
-   - [Configure Kubernetes on multiple machines with kubeadm](deploy-with-kubeadm.md)
-   
+| Deploy Kubernetes on: | Description | Link |
+|---|---|---|
+| **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
+| **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
+| **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
+  
 > [!TIP]
 > For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
+## Deploy SQL Server 2019 big data tools
+
+Before deploying SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
+- **mssqlctl**
+- **kubectl**
+- **Azure Data Studio**
+- **SQL Server 2019 extension**
 
 ## <a id="deploy"></a> Deploy SQL Server big data cluster
 
@@ -58,7 +63,7 @@ To deploy a big data cluster in Azure with all default configurations for a dev/
 
 [Quickstart: Deploy SQL Server big data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
-If you want to customize your big data cluster configuration according to your workload needs, follow the next set of instructions.
+If you want to customize your deployment of big data cluster according to your workload needs, follow the instructions in the remainder of this article.
 
 ## Verify kubernetes configuration
 
@@ -68,46 +73,7 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
-## <a id="mssqlctl"></a> Install mssqlctl
-
-**mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
-
-> [!IMPORTANT]
-> If you installed a previous release, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
-
-### Windows mssqlctl installation
-
-1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
-
-   > [!TIP] 
-   > When installing Python3, select to add Python to your path. If you do not, you can later find where pip3 is located and manually add it to your path.
-
-1. Install **mssqlctl** with the following command:
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
-
-### Linux mssqlctl installation
-
-On Linux, you must install the **python3** and **python3-pip** packages and then upgrade pip. This installs the latest 3.5 version of Python and pip. The following example shows how these commands would work for Ubuntu (for other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
-
-1. Install the necessary Python packages:
-
-   ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
-   ```
-
-1. Install **mssqlctl** with the following command:
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
-
-## Define environment variables
+## <a id="env"></a> Define environment variables
 
 The cluster configuration can be customized using a set of environment variables that are passed to the `mssqlctl create cluster` command. Most of the environment variables are optional with default values as per below. Note that there are environment variables like credentials that require user input.
 
@@ -116,7 +82,7 @@ The cluster configuration can be customized using a set of environment variables
 | **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Y').  |
 | **CLUSTER_NAME** | Yes | N/A | The name of the Kubernetes namespace to deploy SQLServer big data cluster into. |
 | **CLUSTER_PLATFORM** | Yes | N/A | The platform the Kubernetes cluster is deployed. Can be `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP2.0 only valued allowed is 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.2 only valued allowed is 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | The number of data pool replicas to build out. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | The number of storage pool replicas to build out. |
 | **DOCKER_REGISTRY** | Yes | TBD | The private registry where the images used to deploy the cluster are stored. |
@@ -246,14 +212,14 @@ When the deployment finishes, the output notifies you of success:
 
 ## <a id="masterip"></a> Get the SQL Server Master instance and SQL Server big data cluster IP addresses
 
-After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the SQL Server big data cluster IP. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well. You can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the SQL Server big data cluster IP. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well. You can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777/portal**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 
 ### AKS
 
 If you are using AKS, Azure provides the Azure LoadBalancer service. Run following command:
 
 ```bash
-kubectl get svc service-master-pool-lb -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
 kubectl get svc service-security-lb -n <your-cluster-name>
 kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
@@ -277,7 +243,7 @@ kubectl get svc -n <your-cluster-name>
 
 Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of **mssqlctl** that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
 
-1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-databse.md). For HDFS, you [can copy the data out with **curl**](data-ingestion-curl.md).
+1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy the data out with **curl**](data-ingestion-curl.md).
 
 1. Delete the old cluster with the `mssqlctl delete cluster` command.
 
@@ -288,7 +254,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
 1. Install the latest version of **mssqlctl**.
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
    > [!IMPORTANT]
@@ -339,10 +305,10 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
 
    | Service | Description |
    |---|---|
-   | **service-master-pool-lb**<br/>**service-master-pool-nodeport** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
+   | **endpoint-master-pool** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
    | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Supports tools and clients that manage the cluster. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777)|
-   | **service-security-lb**<br/>**service-security-nodeport** | Provides access to the HDFS/Spark Gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **service-security-lb**<br/>**service-security-nodeport** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
 
    > [!NOTE]
    > The service names can vary depending on your Kubernetes environment. When deploying on Azure Kubernetes Service (AKS), the service names end with **-lb**. For minikube and kubeadm deployments, the service names end with **-nodeport**.
@@ -354,4 +320,4 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
 
 ## Next steps
 
-After successfully deploying SQL Server big data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and try out some of the new capabilities and learn [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+Try out some of the new capabilities and learn [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).

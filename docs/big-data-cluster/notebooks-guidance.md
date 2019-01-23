@@ -1,32 +1,37 @@
 ---
-title: How to use notebooks in SQL Server 2019 preview | Microsoft Docs
-description:
+title: Run notebooks in Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: This article explains how to run Jupyter Notebooks in Azure Data Studio conneected to a SQL Server 2019 big data cluster.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # How to use notebooks in SQL Server 2019 preview
 
-This article describes how to launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
+This article describes how to launch Jupyter Notebooks on a big data cluster and how to start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
 ## Prerequisites
 
 To use notebooks, you must install the following prerequisites:
 
 - [A SQL Server 2019 big data cluster](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [The SQL Server 2019 extension (preview)](../azure-data-studio/sql-server-2019-extension.md).
+- [SQL Server 2019 big data tools](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+   - **kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Connect to the Hadoop Gateway Knox end point
 
-You can connect to different end points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark Gateway end point.
-In Azure Data Studio (preview), press F1, and click **New Connection** and you can connect to your HDFS/Spark Gateway end point.
+You can connect to different end points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark gateway end point.
+In Azure Data Studio (preview), press F1, and click **New Connection** and you can connect to your HDFS/Spark gateway end point.
 
 ![image1](media/notebooks-guidance/image1.png)
 
@@ -75,7 +80,7 @@ When you select one of these kernels, we will install that kernel in the virtual
 |Spark Kernel|For writing Scala code using Spark compute from the cluster.
 |Python Kernel|For writing Python code for local development.
 
-The `Attach to` provides the context for the Kernel to attach. When you are connected to the HDFS/Spark Gateway (Knox) end point the default `Attach to` is that end point of the cluster.
+The `Attach to` provides the context for the Kernel to attach. When you are connected to the HDFS/Spark gateway (Knox) end point the default `Attach to` is that end point of the cluster.
 
 ![image8](media/notebooks-guidance/image8.png)
 

@@ -1,17 +1,20 @@
 ---
-title: Export Spark machine learning models with MLeap | SQL Server
-description: Export Spark machine learning models with MLeap
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: Export Spark ML models with MLeap
+titleSuffix: SQL Server 2019 big data clusters
+description: Learn how to export Spark machine learning models with MLeap.
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-ms.custom: ""
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
-# Export models using Mleap
+# Export Spark machine learning models with MLeap
+
 A typical machine learning scenario involves model training on Spark and scoring outside of Spark. Export models in a portable format such that it can be used outside Spark. [MLeap](https://github.com/combust/mleap) is one such model exchange format. It allows Spark machine learning pipelines and models to be exported as portable formats and used in any JVM-based system with the `Mleap` runtime.
 
 This guide demonstrates how you can export your spark models using Mleap. The steps are summarized below and detailed with code in the following section.
@@ -22,8 +25,7 @@ This guide demonstrates how you can export your spark models using Mleap. The st
 4. To validate, we'll import the `Mleap` bundle back again and use that to score in Spark.
 
 ## Step 1 - Start by creating a Spark model
-Run [Training and Creating machine learning model with Spark] (train-and-create-machinelearning-models-with-spark.md) to create training/test sets and model, and persist to HDFS storage. The model should be exported as `AdultCensus.mml` under the `spark_ml` directory.
-
+Run [Training and Creating machine learning model with Spark](train-and-create-machinelearning-models-with-spark.md) to create training/test sets and model, and persist to HDFS storage. The model should be exported as `AdultCensus.mml` under the `spark_ml` directory.
 
 ## Step 2 - Import the training\test data and the Model
 
@@ -44,7 +46,6 @@ model = PipelineModel.load(model_fs)
 print("Model is " , model)
 print("Model stages", model.stages)
 ```
-
 
 ## Step 3 - Export the model as `Mleap` bundle
 

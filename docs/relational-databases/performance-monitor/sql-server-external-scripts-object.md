@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "External Scripts object"
   - "SQLServer:External Scripts"
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, External Scripts Object

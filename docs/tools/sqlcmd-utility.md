@@ -32,10 +32,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > For SQL Server 2014 and lower, see [sqlcmd Utility](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
-).
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
- > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
+> For SQL Server 2014 and lower, see [sqlcmd Utility](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
+> ).
+> 
+> For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
 
  The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files through a variety of available modes:
 
@@ -147,10 +150,10 @@ sqlcmd
  **-C**  
  This switch is used by the client to configure it to implicitly trust the server certificate without validation. This option is equivalent to the ADO.NET option `TRUSTSERVERCERTIFICATE = true`.  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  Issues a `USE` *db_name* statement when you start **sqlcmd**. This option sets the **sqlcmd** scripting variable SQLCMDDBNAME. This parameter specifies the initial database. The default is your login's default-database property. If the database does not exist, an error message is generated and **sqlcmd** exits.  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable SQLCMDLOGINTIMEOUT. The default time-out for login to **sqlcmd** is eight seconds. When using the **-G** option to connect to SQL Database or SQL Data Warehouse and authenticate using Azure Active Directory, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message. A value of 0 specifies time-out to be infinite.
   
  **-E**  
@@ -234,23 +237,23 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
   >There is a known issue when using the `-G` and `-U` option with SQLCMD, where putting the `-U` option before the `-G` option may cause authentication to fail. Always start with the `-G` option followed by the `-U` option.
 
     
- **-H** *workstation_name*  
+ **-H** _workstation_name_  
  A workstation name. This option sets the **sqlcmd** scripting variable SQLCMDWORKSTATION. The workstation name is listed in the **hostname** column of the **sys.sysprocesses** catalog view and can be returned using the stored procedure **sp_who**. If this option is not specified, the default is the current computer name. This name can be used to identify different **sqlcmd** sessions.  
 
 
 **-j**
 Prints raw error messages to the screen.
   
- **-K** *application_intent*  
+ **-K** _application_intent_  
  Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, the sqlcmd utility will not support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replica (Always On Availability Groups)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
-**-M** *multisubnet_failover*  
+**-M** _multisubnet_failover_  
  Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [Listeners, Client Connectivity, Application Failover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](https://msdn.microsoft.com/library/ff878253.aspx). 
   
  **-N**  
  This switch is used by the client to request an encrypted connection.  
   
- **-P** *password*  
+ **-P** _password_  
  Is a user-specified password. Passwords are case-sensitive. If the -U option is used and the **-P** option is not used, and the SQLCMDPASSWORD environment variable has not been set, **sqlcmd** prompts the user for a password. We do not recommend the use of the null password, but you can specify the null password by using a pair of contiguous double-quotation marks for the parameter value:
 
 - **-P ""**
@@ -293,7 +296,7 @@ We recommend that you use a strong password.
 > [!NOTE]  
 >  The OSQLSERVER environment variable has been kept for backward compatibility. The SQLCMDSERVER environment variable takes precedence over the OSQLSERVER environment variable; this means that **sqlcmd** and **osql** can be used next to each other without interference and that old scripts will continue to work.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Is the login name or contained database user name. For contained database users, you must provide the database name option (-d).  
   
 > [!NOTE]  
@@ -303,18 +306,18 @@ We recommend that you use a strong password.
   
  If the **-U** option is used with the **-E** option (described later in this article), an error message is generated. If the **-U** option is followed by more than one argument, an error message is generated and the program exits.  
   
- **-z** *new_password*  
+ **-z** _new_password_  
  Change password:  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *new_password*  
+ **-Z** _new_password_  
  Change password and exit:  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Input/Output Options**  
-  **-f** *codepage* | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
+  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Windows code page.  
   
  Code-page conversion rules:  
@@ -329,7 +332,7 @@ We recommend that you use a strong password.
   
  Enter **chcp** at the command prompt to verify the code page of Cmd.exe.  
   
- **-i** *input_file*[**,**_input\_file2_...]  
+ **-i** _input_file_[**,**_input\_file2_...]  
  Identifies the file that contains a batch of SQL statements or stored procedures. Multiple files may be specified that will be read and processed in order. Do not use any spaces between file names. **sqlcmd** will first check to see whether all the specified files exist. If one or more files do not exist, **sqlcmd** will exit. The -i and the -Q/-q options are mutually exclusive.  
   
  Path examples:  
@@ -344,7 +347,7 @@ We recommend that you use a strong password.
   
  This option may be used more than once: **-i**_input\_file_ **-I**_I input_file._  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  Identifies the file that receives output from **sqlcmd**.  
   
  If **-u** is specified, the *output_file* is stored in Unicode format. If the file name is not valid, an error message is generated, and **sqlcmd** exits. **sqlcmd** does not support concurrent writing of multiple **sqlcmd** processes to the same file. The file output will be corrupted or incorrect. See the **-f** switch is also relevant to file formats. This file will be created if it does not exist. A file of the same name from a prior **sqlcmd** session will be overwritten. The file specified here is not the **stdout** file. If a **stdout** file is specified, this file will not be used.  
@@ -374,7 +377,7 @@ We recommend that you use a strong password.
  **-I**  
  Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- **-q "** *cmdline query* **"**  
+ **-q "** _cmdline query_ **"**  
  Executes a query when **sqlcmd** starts, but does not exit **sqlcmd** when the query has finished running. Multiple-semicolon-delimited queries can be executed. Use quotation marks around the query, as shown in the following example.  
   
  At the command prompt, type:  
@@ -388,7 +391,7 @@ We recommend that you use a strong password.
   
  If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this article.  
   
- **-Q "** *cmdline query* **"**  
+ **-Q "** _cmdline query_ **"**  
  Executes a query when **sqlcmd** starts and then immediately exits **sqlcmd**. Multiple-semicolon-delimited queries can be executed.  
   
  Use quotation marks around the query, as shown in the following example.  
@@ -404,13 +407,13 @@ We recommend that you use a strong password.
   
  If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this article.  
   
- **-t** *query_timeout*  
+ **-t** _query_timeout_  
  Specifies the number of seconds before a command (or SQL statement) times out. This option sets the **sqlcmd** scripting variable SQLCMDSTATTIMEOUT. If a *time_out* value is not specified, the command does not time out. The *query**time_out* must be a number between 1 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message.  
   
 > [!NOTE]  
 >  The actual time out value may vary from the specified *time_out* value by several seconds.  
   
- **-vvar =**  *value*[ **var =** *value*...]  
+ **-vvar =**  _value_[ **var =** _value_...]  
  Creates a **sqlcmd**scripting variable that can be used in a **sqlcmd** script. Enclose the value in quotation marks if the value contains spaces. You can specify multiple _**var**_=**"**_values_**"** values. If there are errors in any of the values specified, **sqlcmd** generates an error message and then exits.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
@@ -421,22 +424,22 @@ We recommend that you use a strong password.
  Causes **sqlcmd** to ignore scripting variables. This parameter is useful when a script contains many INSERT statements that may contain strings that have the same format as regular variables, such as $(*variable_name*).  
   
  **Formatting Options**  
-  **-h** *headers*  
+  **-h** _headers_  
  Specifies the number of rows to print between the column headings. The default is to print headings one time for each set of query results. This option sets the **sqlcmd** scripting variable SQLCMDHEADERS. Use **-1** to specify that headers not be printed. Any value that is not valid causes **sqlcmd** to generate an error message and then exit.  
   
  **-k** [**1** | **2**]  
  Removes all control characters, such as tabs and new line characters from the output. This parameter preserves column formatting when data is returned. If 1 is specified, the control characters are replaced by a single space. If 2 is specified, consecutive control characters are replaced by a single space. **-k** is the same as **-k1**.  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  Specifies the column-separator character. The default is a blank space. This option sets the **sqlcmd** scripting variable SQLCMDCOLSEP. To use characters that have special meaning to the operating system such as the ampersand (&), or semicolon (;), enclose the character in quotation marks ("). The column separator can be any 8-bit character.  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  Specifies the screen width for output. This option sets the **sqlcmd** scripting variable SQLCMDCOLWIDTH. The column width must be a number greater than 8 and less than 65536. If the specified column width does not fall into that range, **sqlcmd** generates an error message. The default width is 80 characters. When an output line exceeds the specified column width, it wraps on to the next line.  
   
  **-W**  
  This option removes trailing spaces from a column. Use this option together with the **-s** option when preparing data that is to be exported to another application. Cannot be used with the **-y** or **-Y** options.  
   
- **-y** *variable_length_type_display_width*  
+ **-y** _variable_length_type_display_width_  
  Sets the **sqlcmd** scripting variable `SQLCMDMAXVARTYPEWIDTH`. The default is 256. It limits the number of characters that are returned for the large variable length data types:  
   
 -   **varchar(max)**  
@@ -462,18 +465,18 @@ We recommend that you use a strong password.
 > [!IMPORTANT]  
 >  Use the **-y 0** option with extreme caution because it may cause serious performance issues on both the server and the network, depending on the size of data returned.  
   
- **-Y** *fixed_length_type_display_width*  
+ **-Y** _fixed_length_type_display_width_  
  Sets the **sqlcmd** scripting variable `SQLCMDMAXFIXEDTYPEWIDTH`. The default is 0 (unlimited). Limits the number of characters that are returned for the following data types:  
   
--   **char(** *n* **)**, where 1<=n<=8000  
+-   **char(** _n_ **)**, where 1<=n<=8000  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **nchar(n** _n_ **)**, where 1<=n<=4000  
   
--   **varchar(n** *n* **)**, where 1<=n<=8000  
+-   **varchar(n** _n_ **)**, where 1<=n<=8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar(n** _n_ **)**, where 1<=n<=4000  
   
--   **varbinary(n** *n* **)**, where 1<=n\<=4000  
+-   **varbinary(n** _n_ **)**, where 1<=n\<=4000  
   
 -   **variant**  
   
@@ -483,19 +486,19 @@ We recommend that you use a strong password.
   
  If the **sqlcmd** script contains an incorrect comment, syntax error, or is missing a scripting variable, ERRORLEVEL returned is 1.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  Controls which error messages are sent to **stdout**. Messages that have a severity level greater than or equal to this level are sent. When this value is set to **-1**, all messages including informational messages, are sent. Spaces are not allowed between the **-m** and **-1**. For example, **-m-1** is valid, and **-m -1** is not.  
   
  This option also sets the **sqlcmd** scripting variable SQLCMDERRORLEVEL. This variable has a default of 0.  
   
- **-V** *error_severity_level*  
+ **-V** _error_severity_level_  
  Controls the severity level that is used to set the ERRORLEVEL variable. Error messages that have severity levels greater than or equal to this value set ERRORLEVEL. Values that are less than 0 are reported as 0. Batch and CMD files can be used to test the value of the ERRORLEVEL variable.  
   
  **Miscellaneous Options**  
-  **-a** *packet_size*  
+  **-a** _packet_size_  
  Requests a packet of a different size. This option sets the **sqlcmd** scripting variable SQLCMDPACKETSIZE. *packet_size* must be a value between 512 and 32767. The default = 4096. A larger packet size can enhance performance for execution of scripts that have lots of SQL statements between GO commands. You can request a larger packet size. However, if the request is denied, **sqlcmd** uses the server default for packet size.  
   
- **-c** *batch_terminator*  
+ **-c** _batch_terminator_  
  Specifies the batch terminator. By default, commands are terminated and sent to  SQL Server  by typing the word "GO" on a line by itself. When you reset the batch terminator, do not use Transact-SQL reserved keywords or characters that have special meaning to the operating system, even if they are preceded by a backslash.  
   
  **-L**[**c**]  
@@ -536,7 +539,7 @@ We recommend that you use a strong password.
   
 -   **ED**  
   
--   **!!** *command*  
+-   **!!** _command_  
   
  If the **-X** option is specified, it prevents environment variables from being passed on to **sqlcmd**. It also prevents the startup script specified by using the SQLCMDINI scripting variable from being executed. For more information about **sqlcmd** scripting variables, see [Use sqlcmd with Scripting Variables](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
@@ -687,10 +690,10 @@ We recommend that you use a strong password.
  **STDOUT**  
  Switches error output to the **stdout** stream. If this has been redirected, the target to which the stream has been redirected will receive the error output.  
   
- **:Out \<** *filename* **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _filename_ **>**| **STDERR**| **STDOUT**  
  Creates and redirects all query results to the file specified by *file name*, to **stderr** or to **stdout**. By default, output is sent to **stdout**. If the file already exists, it is truncated to zero bytes. The **Out** command can appear multiple times in a script.  
   
- **:Perftrace \<** *filename* **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _filename_ **>**| **STDERR**| **STDOUT**  
  Creates and redirects all performance trace information to the file specified by *file name*, to **stderr** or to **stdout**. By default performance trace output is sent to **stdout**. If the file already exists, it is truncated to zero bytes. The **Perftrace** command can appear multiple times in a script.  
   
  **Execution Control Commands**  
@@ -753,13 +756,13 @@ We recommend that you use a strong password.
  GO signals both the end of a batch and the execution of any cached Transact-SQL statements. The batch is executed multiple times as separate batches. You cannot declare a variable more than once in a single batch.
   
  **Miscellaneous Commands**  
-  **:r \<** *filename* **>**  
+  **:r \<** _filename_ **>**  
  Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<**_filename_**>**into the statement cache.  
   
  If the file contains Transact-SQL statements that are not followed by **GO**, you must enter **GO** on the line that follows **:r**.  
   
 > [!NOTE]  
->  **\<** *filename* **>** is read relative to the startup directory in which **sqlcmd** was run.  
+>  **\<** _filename_ **>** is read relative to the startup directory in which **sqlcmd** was run.  
   
  The file will be read and executed after a batch terminator is encountered. You can issue multiple **:r** commands. The file may include any **sqlcmd** command. This includes the batch terminator **GO**.  
   
@@ -769,7 +772,7 @@ We recommend that you use a strong password.
  **:Serverlist**  
  Lists the locally configured servers and the names of the servers broadcasting on the network.  
   
- **:Connect**  *server_name*[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  _server_name_[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  Connects to an instance of  SQL Server . Also closes the current connection.  
   
  Time-out options:  
@@ -922,7 +925,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 
 ## Feedback
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

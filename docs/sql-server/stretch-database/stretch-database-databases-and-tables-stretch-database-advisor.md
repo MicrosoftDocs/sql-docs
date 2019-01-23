@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "identifying databases for Stretch Database"
   - "identifying tables for Stretch Database"
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Identify databases and tables for Stretch Database with Data Migration Assistant

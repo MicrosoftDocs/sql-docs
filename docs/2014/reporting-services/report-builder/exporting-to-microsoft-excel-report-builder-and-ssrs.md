@@ -22,9 +22,9 @@ manager: craigg
 > [!IMPORTANT]  
 >  To avoid an error message when exporting a report that is larger than 10MB to Excel, install the latest service pack for [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. The issue was fixed is SP2.  
 >   
->  For more information about the issue, see [FIX: SSRS 2012 cannot export a report that is larger than 10 MB to Excel format](http://go.microsoft.com/fwlink/p/?LinkId=402513)  
+>  For more information about the issue, see [FIX: SSRS 2012 cannot export a report that is larger than 10 MB to Excel format](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
->  To obtain the latest service pack for [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], see [How to obtain the latest service pack for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
+>  To obtain the latest service pack for [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], see [How to obtain the latest service pack for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
 >  When you define a parameter of type `String`, the user is presented with a text box that can take any value. If a report parameter is not tied to a query parameter and the parameter values are included in the report, it is possible for a report user to type expression syntax, script, or a URL into the parameter value, and render the report to Excel. If another user then views the report and clicks the rendered parameter contents, the user may inadvertently execute the malicious script or link.  

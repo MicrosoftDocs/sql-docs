@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 11/06/2018
+ms.date: 01/09/2019
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -14,6 +14,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
 
 **Try SQL Server 2019!**
@@ -21,79 +24,82 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.1
+## CTP 2.2
 
-Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1.
+Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.2.
 
-- [Big Data Clusters](#bigdatacluster)
-  - Deploy Python and R apps
-- [Database Engine](#databaseengine)
-  - Intelligent query processing adds scalar UDF inlining
-  - Truncation error message improved to include table and column names, and truncated value
-  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
-  - Use derived table or view aliases in graph match queries
-  - Improved diagnostic data for stats blocking
-  - Hybrid Buffer Pool
-  - Static data masking
-- [Tools](#tools)
-  - Azure Data Studio
-
-## CTP 2.0 
-
-Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0.
-
-- [Big Data Clusters](#bigdatacluster)
-  - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
-  - Access your big data from HDFS
-  - Run Advanced analytics and machine learning with Spark
-  - Use Spark streaming to data to SQL data pools
-  - Use Azure Data Studio to run Query books that provide a notebook experience
+- [Big data clusters](#bigdatacluster)
+  - Use SparkR from Azure Data Studio on a big data cluster
 
 - [Database engine](#databaseengine)
-  - UTF-8 support
-  - Resumable online index create allows index create to resume after interruption
-  - Clustered columnstore online index build and rebuild
-  - Always Encrypted with secure enclaves
-  - Intelligent query processing
-  - Java language programmability extension
-  - SQL Graph features
-  - Database scoped configuration setting for online and resumable DDL operations
-  - Always On Availability Groups - secondary replica connection redirection
-  - Data discovery and classification - natively built into SQL Server
-  - Expanded support for persistent memory devices
-  - Support for columnstore statistics in `DBCC CLONEDATABASE`
-  - New options added to `sp_estimate_data_compression_savings`
-  - SQL Server Machine Learning Services failover clusters
-  - Lightweight query profiling infrastructure enabled by default
-  - New PolyBase connectors
-  - New `sys.dm_db_page_info` system function returns page information
+  - Use UTF-8 character encoding with SQL Server Replication.
+
+## Previous CTPs
+
+Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+
+- [Big data clusters](#bigdatacluster) 
+  - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes (CTP 2.0)
+  - Access your big data from HDFS (CTP 2.0)
+  - Run Advanced analytics and machine learning with Spark (CTP 2.0)
+  - Use Spark streaming to data to SQL data pools (CTP 2.0)
+  - Use Azure Data Studio to run Query books that provide a notebook experience (CTP 2.0)
+  - Deploy Python and R apps (CTP 2.1)
+
+- [Database engine](#databaseengine)
+  - UTF-8 support (CTP 2.0)
+  - Resumable online index create allows index create to resume after interruption (CTP 2.0)
+  - Clustered columnstore online index build and rebuild (CTP 2.0)
+  - Always Encrypted with secure enclaves (CTP 2.0)
+  - Intelligent query processing (CTP 2.0)
+  - Java language programmability extension (CTP 2.0)
+  - SQL Graph features (CTP 2.0)
+  - Database scoped configuration setting for online and resumable DDL operations (CTP 2.0)
+  - Always On Availability Groups - secondary replica connection redirection (CTP 2.0)
+  - Data discovery and classification - natively built into SQL Server (CTP 2.0)
+  - Expanded support for persistent memory devices (CTP 2.0)
+  - Support for columnstore statistics in `DBCC CLONEDATABASE` (CTP 2.0)
+  - New options added to `sp_estimate_data_compression_savings` (CTP 2.0)
+  - SQL Server Machine Learning Services failover clusters (CTP 2.0)
+  - Lightweight query profiling infrastructure enabled by default (CTP 2.0)
+  - New PolyBase connectors (CTP 2.0)
+  - New `sys.dm_db_page_info` system function returns page information (CTP 2.0)
+  - Intelligent query processing adds scalar UDF inlining (CTP 2.1)
+  - Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
+  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup (CTP 2.1)
+  - Use derived table or view aliases in graph match queries (CTP 2.1)
+  - Improved diagnostic data for stats blocking (CTP 2.1)
+  - Hybrid Buffer Pool (CTP 2.1)
+  - Static data masking (CTP 2.1)
 
 - [SQL Server on Linux](#sqllinux)
-  - Replication support
-  - Support for the Microsoft Distributed Transaction Coordinator (MSDTC)
-  - Always On Availability Group on Docker containers with Kubernetes
-  - OpenLDAP support for third-party AD providers
-  - Machine Learning on Linux
-  - New container registry
-  - New RHEL-based container images
-  - Memory pressure notification
+  - Replication support (CTP 2.0)
+  - Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)
+  - Always On Availability Group on Docker containers with Kubernetes (CTP 2.0)
+  - OpenLDAP support for third-party AD providers (CTP 2.0)
+  - Machine Learning on Linux (CTP 2.0)
+  - New container registry (CTP 2.0)
+  - New RHEL-based container images (CTP 2.0)
+  - Memory pressure notification (CTP 2.0)
 
 - [Master Data Services](#mds)
-  - Silverlight controls replaced
+  - Silverlight controls replaced (CTP 2.0)
 
 - [Security](#security)
-  - Certificate management in SQL Server Configuration Manager
+  - Certificate management in SQL Server Configuration Manager (CTP 2.0)
 
 - [Tools](#tools)
-  - SQL Server Management Studio (SSMS) 18.0 (preview)
-  - Azure Data Studio
+  - SQL Server Management Studio (SSMS) 18.0 (preview) (CTP 2.0)
+  - Azure Data Studio (CTP 2.0)
+  - Azure Data Studio (CTP 2.1)
 
 Continue reading for more details about these features.
 
-## <a id="bigdatacluster"></a>Big Data Clusters
+## <a id="bigdatacluster"></a>Big data clusters
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
+- Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.1)
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)
@@ -101,17 +107,17 @@ Continue reading for more details about these features.
 - Use Spark streaming to data to SQL data pools (CTP 2.0)
 - Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md). (CTP 2.0)
  
-[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
+[!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> Database Engine
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the Database Engine
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
 
 ### Scalar UDF inlining (CTP 2.1)
 
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
-For more information, see [Scalar UDF inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md)
+For more information, see [Scalar UDF inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md).
 
 ### Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
 
@@ -119,29 +125,25 @@ The error message ID 8152 `String or binary data would be truncated` is familiar
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
-The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. For CTP 2.1, this is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
-
-### UTF-8 support (CTP 2.1)
-
-Added support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
+The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. For CTP 2.1 and CTP 2.2, this is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
 
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
-SQL Server 2019 preview provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution.  Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution.  Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
 
 ### Static data masking (CTP 2.1)
 
-SQL Server 2019 preview introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases. Static data masking helps create a sanitized copy of databases where all sensitive information has been altered in a way that makes the copy sharable with non-production users. Static data masking can be used for development, testing, analytics and business reporting, compliance, troubleshooting, and any other scenario where specific data cannot be copied to different environments.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases. Static data masking helps create a sanitized copy of databases where all sensitive information has been altered in a way that makes the copy sharable with non-production users. Static data masking can be used for development, testing, analytics and business reporting, compliance, troubleshooting, and any other scenario where specific data cannot be copied to different environments.
 
 Static data masking operates at the column level. Select which columns to mask, and for each column selected, specify a masking function. Static data masking copies the database and then applies the specified masking functions to the columns.
 
 #### Static data masking vs. dynamic data masking
 
-Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in SQL Server 2017. The following table compares these two solutions:
+Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The following table compares these two solutions:
 
-|Static data masking |Dynamic data masking
-|:----|:----
-|Happens on a copy of the database <br/><br/>Original data not retrievable<br/><br/>Mask occurs at the storage level<br/><br/>All users have access to the same masked data<br/><br/>Geared toward continuous team-wide access|Happens on the original database<br/><br/>Original data intact<br/><br/>Mask occurs on-the-fly at query time<br/><br/>Mask varies based on user permission <br/><br/>Geared toward punctual user-specific access
+|Static data masking |Dynamic data masking|
+|:----|:----|
+|Happens on a copy of the database <br/><br/>Original data not retrievable<br/><br/>Mask occurs at the storage level<br/><br/>All users have access to the same masked data<br/><br/>Geared toward continuous team-wide access|Happens on the original database<br/><br/>Original data intact<br/><br/>Mask occurs on-the-fly at query time<br/><br/>Mask varies based on user permission <br/><br/>Geared toward punctual user-specific access|
 
 ### Database compatibility level (CTP 2.0)
 
@@ -151,13 +153,19 @@ Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user dat
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
 
-### UTF-8 support (CTP 2.0)
+### UTF-8 support (CTP 2.2)
 
 Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. 
 
-For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
+For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
 This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with Latin strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
+
+For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
+
+CTP 2.1 Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
+
+CTP 2.2 Adds support to use UTF-8 character encoding with SQL Server Replication.
 
 ### Resumable online index create (CTP 2.0)
 
@@ -199,7 +207,7 @@ Expands upon Always Encrypted with in-place encryption and rich computations. Th
 
 Cryptographic operations include the encryption of columns, and the rotating of column encryption keys. These operations can now be issued by using [!INCLUDE[tsql](../includes/tsql-md.md)], and they do not require that data be moved out of the database. Secure enclaves provide Always Encrypted to a broader set of scenarios that have both of the following requirements:  
 
-- The demand that sensitive data are protected from high-privilege, yet unauthorized users, including database administrators, system administrators,  cloud operators, or malware.
+- The demand that sensitive data are protected from high-privilege, yet unauthorized users, including database administrators, system administrators, cloud operators, or malware.
 - The requirement that rich computations on protected data be supported within the database system.
 
 For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
@@ -232,12 +240,11 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 ### <a id="programmability"></a> Java language programmability extensions (CTP 2.0)
 
-- **Java language extension (preview)**: Use the Java language extension to execute Java code in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
+- **Java language extension (preview)**: Use the Java language extension to execute Java code in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.
 
 ### <a id="sqlgraph"></a> SQL Graph features
 
 - **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on SQL Server 2019 preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
-
 
 - **Match support in `MERGE` DML (CTP 2.0)** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
@@ -253,12 +260,11 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
   - `WHEN_SUPPPORTED` option allows supported operations online or resumable and run index unsupported operations offline or non-resumable.
   - `OFF` option allows the current behavior of executing all index operations offline and non-resumable unless explicitly specified in the DDL statement.
 
-To override the default setting, include the ONLINE or RESUMABLE option in the index create and rebuild commands.  
+To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands.  
 
 Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
-More information:
-For more information on index resumable operations see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+For more information on index resumable operations, see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Always On Availability Groups - more synchronous replicas  (CTP 2.0)
 
@@ -297,7 +303,7 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
     - Persistent memory is occasionally referred to informally as *pmem* on some non-Microsoft websites.
 
 > [!NOTE]
-> For this preview release, enlightenment of files on persistent memory devices is only available on Linux. SQL Server on Windows supports persistent memory devices starting with SQL Server 2016.
+> For this preview release, enlightenment of files on persistent memory devices is only available on Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Windows supports persistent memory devices starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
 
 ### Hybrid buffer pool (CTP 2.1)
 
@@ -307,11 +313,11 @@ For more information, see [Hybrid buffer pool](../database-engine/configure-wind
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
 
-`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
 
 ### New options added to sp_estimate_data_compression_savings (CTP 2.0)
 
-`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. SQL Server 2019 introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
 ### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling (CTP 2.0)
 
@@ -323,9 +329,9 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ### Lightweight query profiling infrastructure enabled by default (CTP 2.0)
 
-The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling mechanisms. Lightweight profiling is now enabled by default. It was introduced in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-For more information on lightweight profiling, see [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+For more information on lightweight profiling, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
 
 ### <a id="polybase"></a>New PolyBase connectors
 
@@ -347,9 +353,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 
-### CTP 2.0 
-
-- **Replication support**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
+- **Replication support (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
   Create the following types of publications:
   - Transactional
@@ -358,15 +362,15 @@ FROM sys.dm_exec_requests AS d
 
   Configure replication [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
+- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
 
-- **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor.
+- **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, and a health monitor.
 
-- **OpenLDAP support for third-party AD providers**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
+- **OpenLDAP support for third-party AD providers (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
-- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux (CTP 2.0)**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-- **New container registry**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
+- **New container registry (CTP 2.1)**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
 
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
@@ -399,19 +403,19 @@ FROM sys.dm_exec_requests AS d
   - Analyze data in an integrated notebook experience built on Jupyter. (CTP 2.0)
   - Enhance your experience with custom theming and extensions.(CTP 2.0)
   - And explore your Azure resources with a built-in subscription and resource browser. (CTP 2.0)
-  - Supports scenarios using SQL Server Big Data Cluster. (CTP 2.0)
+  - Supports scenarios using SQL Server big data cluster. (CTP 2.0)
 
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 
-  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].(CTP 2.0)
-  - Support for Always Encrypted with secure enclaves.(CTP 2.0)
-  - Smaller download size.(CTP 2.0)
-  - Now based on the Visual Studio 2017 Isolated Shell.(CTP 2.0)
-  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).(CTP 2.0)
+  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. (CTP 2.0)
+  - Support for Always Encrypted with secure enclaves. (CTP 2.0)
+  - Smaller download size. (CTP 2.0)
+  - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
+  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 
 ## Other services
 
-As of CTP 2.1, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
+As of CTP 2.2, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)

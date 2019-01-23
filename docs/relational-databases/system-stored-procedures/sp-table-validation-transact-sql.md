@@ -91,7 +91,7 @@ sp_table_validation [ @table = ] 'table'
   
  When doing a checksum, the structure of the table must be identical between the two servers; that is, the tables must have the same columns existing in the same order, same data types and lengths, and same NULL/NOT NULL conditions. For example, if the Publisher did a CREATE TABLE, then an ALTER TABLE to add columns, but the script applied at the Subscriber is a simple CREATE table, the structure is NOT the same. If you are not certain that the structure of the two tables is identical, look at [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) and confirm that the offset in each table is the same.  
   
- Floating point values are likely to generate checksum differences if character-mode **bcp** was used, which is the case if the publication has non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subscribers. These are due to minor and unavoidable differences in precision when doing conversion to and from character mode.  
+ Floating point values are likely to generate checksum differences if character-mode **bcp** was used, which is the case if the publication has non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subscribers. These are due to minor and unavoidable differences in precision when doing conversion to and from character mode.  
   
 ## Permissions  
  To execute **sp_table_validation**, you must have SELECT permissions on the table being validated.  

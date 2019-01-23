@@ -101,6 +101,6 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481), on blogs.msdn.com.  
+-   Blog entry, [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481), on blogs.msdn.com.  
   
   

@@ -27,7 +27,7 @@ manager: craigg
  An FCI can leverage [Always On Availability Groups](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)to provide remote disaster recovery at the database level. For more information, see [Failover Clustering and Always On Availability Groups (;SQL Server);](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
->  Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], Always On Failover Cluster Instances supports Clustered Shared Volumes (CSV) in both [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] and [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](http://technet.microsoft.com/library/dd759255.aspx).  
+>  Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], Always On Failover Cluster Instances supports Clustered Shared Volumes (CSV) in both [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] and [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/dd759255.aspx).  
   
  **In this Topic:**  
   
@@ -147,7 +147,7 @@ manager: craigg
 |----------------------------|---------------|  
 |Describes how to install a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI.|[Create a New SQL Server Failover Cluster (;Setup);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Describes how to upgrade to a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] failover cluster.|[Upgrade a SQL Server Failover Cluster](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Describes Windows Failover Clustering Concepts and provides links to tasks related to Windows Failover Clustering|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Overview of Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Overview of Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Describes Windows Failover Clustering Concepts and provides links to tasks related to Windows Failover Clustering|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Overview of Failover Clusters](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Overview of Failover Clusters](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Describes the distinctions in concepts between nodes in an FCI and replicas within an availability group and considerations for using an FCI to host a replica for an availability group.|[Failover Clustering and Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

@@ -66,7 +66,7 @@ manager: craigg
  When you specify prompted credentials, each user who accesses the report must enter a user name and password to retrieve the data. This option is recommended for reports that contain confidential data. Prompted credentials can be for a Windows account or a database login. If the database server does not recognize the credentials that you provide, or if the specified user does not has not been granted permission to retrieve the data, the connection fails.  
   
 ### No Credentials  
- Credentials are not required for this data source. To run this report on the report server, the unattended execution account must be configured. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Credentials are not required for this data source. To run this report on the report server, the unattended execution account must be configured. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## See Also  
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   

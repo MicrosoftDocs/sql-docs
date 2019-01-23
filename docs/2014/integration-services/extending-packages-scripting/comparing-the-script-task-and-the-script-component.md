@@ -48,6 +48,6 @@ manager: craigg
 ## See Also  
  [Extending the Package with the Script Task](task/extending-the-package-with-the-script-task.md)   
  [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
- [Consume Web Services in SSIS using Scripts (Curated Answer)](http://go.microsoft.com/fwlink/?LinkId=321996)  
+ [Consume Web Services in SSIS using Scripts (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321996)  
   
   

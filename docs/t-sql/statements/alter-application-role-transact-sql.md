@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ALTER APPLICATION ROLE statement"
   - "application roles [SQL Server], modifying"
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER APPLICATION ROLE (Transact-SQL)

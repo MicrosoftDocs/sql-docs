@@ -1,6 +1,7 @@
 ---
-title: "Prereqs, Restrictions, Recommendations - Always On Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "Prerequisites, Restrictions, and Recommendations for availability groups"
+description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "06/05/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -20,7 +21,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Prereqs, Restrictions, Recommendations - Always On Availability Groups
+# Prerequisites, Restrictions, and Recommendations for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This article describes considerations for deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations for host computers, Windows Server failover clusters (WSFC), server instances, and availability groups. For each of these components security considerations and required permissions, if any, are indicated.  

@@ -69,7 +69,7 @@ manager: craigg
  Specifies an optional `Title` property for the report in the target library. This is a standard property for all items stored in a library. Users can specify whether to show or hide this property when viewing library contents on a SharePoint site.  
   
  Path  
- Specifies a fully qualified URL to the SharePoint library, including the SharePoint Web application and site. For example: http://mySharePointWeb/MySite/MyDocLib; where "http://mySharePointWeb" indicates the Web application, "MySite" is the SharePoint site, and "MyDocLib" is the SharePoint library where the report will be delivered.  
+ Specifies a fully qualified URL to the SharePoint library, including the SharePoint Web application and site. For example: <http://mySharePointWeb/MySite/MyDocLib>; where "<http://mySharePointWeb>" indicates the Web application, "MySite" is the SharePoint site, and "MyDocLib" is the SharePoint library where the report will be delivered.  
   
  You cannot specify a page, site, or list. The target container must be a library in the same site or farm.  
   

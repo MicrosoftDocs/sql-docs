@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "REVOKE statement, server permissions"
   - "servers [SQL Server], permissions"
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Server Permissions (Transact-SQL)

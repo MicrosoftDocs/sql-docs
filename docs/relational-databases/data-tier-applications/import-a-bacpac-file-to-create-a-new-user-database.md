@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  The import bulk copies in the data from the export file.  
   
 ## SQL Server Utility  
- If you import a DAC to a managed instance of the Database Engine, the imported DAC is incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the utility control point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
+ If you import a DAC to an instance of the Database Engine, the imported DAC is incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the utility control point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
 ## Database Options and Settings  
  By default, the database created during the import will have all of the default settings from the CREATE DATABASE statement, except that the database collation and compatibility level are set to the values defined in the DAC export file. A DAC export file uses the values from the original database.  
@@ -53,7 +53,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  We recommend that you do not import a DAC export file from unknown or untrusted sources. Such files could contain malicious code that might execute unintended Transact-SQL code or cause errors by modifying the schema. Before you use an export file from an unknown or untrusted source, unpack the DAC and examine the code, like stored procedures and other user-defined code. For more information about how to perform these checks, see [Validate a DAC Package](validate-a-dac-package.md).  
   
 ## Security  
- To improve security, SQL Server Authentication logins are stored in a DAC export file without a password. When the file is imported, the login is created as a disabled login with a generated password. To enable the logins, log in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This is not needed for Windows Authentication logins because their passwords are not managed by SQL Server.  
+ To improve security, SQL Server Authentication logins are stored in a DAC export file without a password. When the file is imported, the login is created as a disabled login with a generated password. To enable the logins, sign in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This is not needed for Windows Authentication logins because their passwords are not managed by SQL Server.  
   
 ## Permissions  
  A DAC can only be imported by members of the **sysadmin** or **serveradmin** fixed server roles, or by logins that are in the **dbcreator** fixed server role and have ALTER ANY LOGIN permissions. The built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account named **sa** can also import a DAC. Importing a DAC with logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires membership in the loginmanager or serveradmin roles. Importing a DAC without logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires membership in the dbmanager or serveradmin roles.  
@@ -95,9 +95,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   **Import from local disk** - Click **Browse...** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
   
--   **Import from Azure** - Imports a BACPAC file from a Microsoft Azure container. You must connect to an Microsoft Azure container to validate this option. Note that this option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.  
+-   **Import from Azure** - Imports a BACPAC file from a Microsoft Azure container. You must connect to a Microsoft Azure container to validate this option. Note that the Import from Azure option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.  
   
-     When browsing Azure, you will be able to switch between containers within a single account. You must specify a single .bacpac file to continue the import operation. Note that you can sort columns by **Name**, **Size**, or **Date Modified**.  
+     When browsing Azure, you will be able to switch between containers within a single account. You must specify a single .bacpac file to continue the import operation. You can sort columns by **Name**, **Size**, or **Date Modified**.  
   
      To continue, specify the .bacpac file to import, and then click **Open**.  
   
@@ -116,7 +116,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  **For an Azure SQL Database:**  
   
- - **[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** provides step by step instructions using the Azure portal, PowerShell, SSMS or SqlPackage.  
+ - **[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** provides step by step instructions using the Azure portal, PowerShell, SSMS, or SqlPackage.  
  - Consult **[SQL Database options and performance: Understand what's available in each service tier](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** for a detailed look at the different service tiers.  
 
 ### Validation Page  

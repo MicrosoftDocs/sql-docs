@@ -46,6 +46,6 @@ manager: craigg
  [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering Report Items &#40;Report Builder and SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Reporting Services Device Information Settings](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [Reporting Services Device Information Settings](https://go.microsoft.com/fwlink/?LinkId=102515)  
   
   

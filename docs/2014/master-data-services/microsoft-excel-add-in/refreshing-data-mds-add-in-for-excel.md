@@ -29,7 +29,7 @@ manager: craigg
   
 -   If an attribute value has changed in the MDS repository, the value in the worksheet is updated with value from the MDS repository. The cell color does not change.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   In the active worksheet, if non-managed data exists in rows beneath the MDS-managed data, the non-managed data may be overwritten. This occurs when you refresh the sheet and new rows of MDS-managed data, which overlap with the non-managed data, are added.  
 > -   When you refresh, comments on MDS-managed cells are deleted.  
   

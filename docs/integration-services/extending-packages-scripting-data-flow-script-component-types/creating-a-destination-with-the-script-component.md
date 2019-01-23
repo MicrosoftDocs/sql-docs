@@ -95,7 +95,7 @@ manager: craigg
 ## Examples  
  The examples that follow demonstrate code that is required in the **ScriptMain** class to create a destination component.  
   
-> [!NOTE]  
+> [!NOTE]
 >  These examples use the **Person.Address** table in the **AdventureWorks** sample database and pass its first and fourth columns, the **int*AddressID*** and **nvarchar(30)City** columns, through the data flow. The same data is used in the source, transformation, and destination samples in this section. Additional prerequisites and assumptions are documented for each example.  
   
 ### ADO.NET Destination Example  

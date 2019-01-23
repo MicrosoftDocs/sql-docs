@@ -16,7 +16,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
 This article describes all the aspects of transactions that are specific to memory-optimized tables and natively compiled stored procedures.  
   
 The transaction isolation levels in SQL Server apply differently to memory-optimized tables versus disk-based tables, and the underlying mechanisms are different. An understanding of the differences helps the programmer design a high throughput system. The goal of transaction integrity is shared in all cases.  
@@ -24,9 +23,6 @@ The transaction isolation levels in SQL Server apply differently to memory-optim
 For error conditions specific to transactions on memory-optimized tables, jump to the section [Conflict Detection and Retry Logic](#confdetretry34ni).
   
 For general information, see [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-<a name="pessvoptim22ni"/>  
   
 ## Pessimistic versus Optimistic  
   
@@ -38,8 +34,6 @@ The functional differences are due to pessimistic versus optimistic approaches t
   - Error 1205, a deadlock, cannot occur for a memory-optimized table.  
   
 The optimistic approach is less overhead and is usually more efficient, partly because transaction conflicts are uncommon in most applications. The main functional difference between the pessimistic and optimistic approaches is that if a conflict occurs, in the pessimistic approach you wait, while in the optimistic approach one of the transactions fails and needs to be retried by the client. The functional differences are bigger when the REPEATABLE READ isolation level is in force, and are biggest for the SERIALIZABLE level.  
-  
-<a name="txninitmodes24ni"/>  
   
 ## Transaction Initiation Modes  
   
@@ -54,8 +48,6 @@ SQL Server has the following modes for transaction initiation:
 - **Implicit** - When SET IMPLICIT_TRANSACTION ON is in force. Perhaps a better name would have been IMPLICIT_BEGIN_TRANSACTION, because all this option does is implicitly perform the equivalent of an explicit BEGIN TRANSACTION before each UPDATE statement if 0 = @@trancount. Therefore it is up to your T-SQL code to eventually issue an explicit COMMIT TRANSACTION.   
   
 - **ATOMIC BLOCK** - All statements in ATOMIC blocks always run as part of a single transaction. Either the actions of the atomic block as a whole are committed on success, or the actions are all rolled back when a failure occurs. Each natively compiled stored procedure requires an ATOMIC block.  
-  
-<a name="codeexamexpmode25ni"/>  
   
 ### Code Example with Explicit Mode  
   
@@ -81,10 +73,9 @@ BEGIN TRANSACTION;  -- Explicit transaction.
 SELECT * FROM  
            dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
       JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
-     
 COMMIT TRANSACTION;
 ```
-  
+
 The need for the `WITH (SNAPSHOT)` hint can be avoided through the use of the database option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. When this option is set to `ON`, access to a memory-optimized table under a lower isolation level is automatically elevated to SNAPSHOT isolation.  
 
 ```sql
@@ -92,15 +83,11 @@ ALTER DATABASE CURRENT
     SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
 ```
 
-<a name="rowver28ni"/>  
-  
 ## Row Versioning  
   
 Memory-optimized tables use a highly sophisticated row versioning system that makes the optimistic approach efficient, even at the most strict isolation level of SERIALIZABLE. For details see [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 Disk-based tables indirectly have a row versioning system when READ_COMMITTED_SNAPSHOT or the SNAPSHOT isolation level is in effect. This system is based on tempdb, while memory-optimized data structures have row versioning built in, for maximum efficiency.  
-  
-<a name="confdegreeiso30ni"/>  
   
 ## Isolation Levels 
   
@@ -114,11 +101,6 @@ The following table lists the possible levels of transaction isolation, in seque
 | REPEATABLE READ | Supported for memory-optimized tables. The guarantee provided by REPEATABLE READ isolation is that, at commit time, no concurrent transaction has updated any of the rows read by this transaction. <br/><br/> Because of the optimistic model, concurrent transactions are not prevented from updating rows read by this transaction. Instead, at commit time this transaction validated that REPEATABLE READ isolation has not been violated. If it has, this transaction is rolled back and must be retried. | 
 | SERIALIZABLE | Supported for memory-optimized tables. <br/><br/> Named *Serializable* because the isolation is so strict that it is almost a bit like having the transactions run in series rather than concurrently. | 
 
-
-
-
-<a name="txnphaslife32ni"/>  
-  
 ## Transaction Phases and Lifetime  
   
 When a memory-optimized table is involved, the lifetime of a transaction progresses through the phases as displayed in the following image:
@@ -144,8 +126,6 @@ Descriptions of the phases follow.
   
 As always, you should try to keep your transactional units of work as minimal and brief as is valid for your data needs.  
   
-<a name="confdetretry34ni"/>  
-  
 ## Conflict Detection and Retry Logic 
 
 There are two kinds of transaction-related error conditions that cause a transaction to fail and roll back. In most cases, once such a failure occurs, the transaction needs to be retried, similar to when a deadlock occurs.
@@ -162,15 +142,12 @@ The following are the error conditions that can cause transactions to fail when 
 | **41301** | Dependency failure: a dependency was taken on another transaction that later failed to commit. | This transaction (Tx1) took a dependency on another transaction (Tx2) while that transaction (Tx2) was in its validation or commit processing phase, by reading data that was written by Tx2. Tx2 subsequently failed to commit. Most common causes for Tx2 to fail to commit are repeatable read (41305) and serializable (41325) validation failures; a less common cause is log IO failure. |
 | **41823** and **41840** | Quota for user data in memory-optimized tables and table variables was reached. | Error 41823 applies to SQL Server Express/Web/Standard Edition, as well as standalone databases in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. Error 41840 applies to elastic pools in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> In most cases these errors indicate that the maximum user data size was reached, and the way to resolve the error is to delete data from memory-optimized tables. However, there are rare cases where this error is transient. We therefore recommend to retry when first encountering these errors.<br/><br/> Like the other errors in this list, errors 41823 and 41840 cause the active transaction to abort. |
 | **41839** | Transaction exceeded the maximum number of commit dependencies. |**Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Later versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] do not have a limit on the number of commit dependencies.<br/><br/> There is a limit on the number of transactions a given transaction (Tx1) can depend on. Those transactions are the outgoing dependencies. In addition, there is a limit on the number of transactions that can depend on a given transaction (Tx1). These transactions are the incoming dependencies. The limit for both is 8. <br/><br/> The most common case for this failure is where there is a large number of read transactions accessing data written by a single write transaction. The likelihood of hitting this condition increases if the read transactions are all performing large scans of the same data and if validation or commit processing of the write transaction takes long, for example the write transaction performs large scans under serializable isolation (increases length of the validation phase) or the transaction log is placed on a slow log IO device (increases length of commit processing). If the read transactions are performing large scans and they are expected to access only few rows, an index might be missing. Similarly, if the write transaction uses serializable isolation and is performing large scans but is expected to access only few rows, this is also an indication of a missing index. <br/><br/> The limit on number of commit dependencies can be lifted by using Trace Flag **9926**. Use this trace flag only if you are still hitting this error condition after confirming that there are no missing indexes, as it could mask these issues in the above-mentioned cases. Another caution is that complex dependency graphs, where each transaction has a large number of incoming as well as outgoing dependencies, and individual transactions have many layers of dependencies, can lead to inefficiencies in the system.  |
- 
   
 ### Retry Logic 
 
 When a transaction fails due to any of the above-mentioned conditions, the transaction should be retried.
   
 Retry logic can be implemented at the client or server side. The general recommendation is to implement retry logic on the client side, as it is more efficient, and allows you to deal with result sets returned by the transaction before the failure occurs.  
-  
-<a name="retrytsqlcodeexam35ni"/>  
   
 #### Retry T-SQL Code Example  
   
@@ -232,17 +209,13 @@ GO
 --  EXECUTE usp_update_salesorder_dates;
 ```
 
-
-<a name="crossconttxn38ni"/>  
-  
 ## Cross-Container Transaction  
-  
   
 A transaction is called a cross-container transaction if it:  
   
 - Accesses a memory-optimized table from interpreted Transact-SQL; or  
-- Executes a native proc when a transaction is already open (XACT_STATE() = 1).  
-  
+- Executes a native proc when a transaction is already open (XACT_STATE() = 1). 
+
 The term "cross-container" derives from the fact that the transaction runs across the two transaction management containers, one for disk-based tables and one for memory-optimized tables.  
   
 Within a single cross-container transaction, different isolation levels can be used for accessing disk-based and memory-optimized tables. This difference is expressed through explicit table hints such as WITH (SERIALIZABLE) or through the database option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT, which implicitly elevates the isolation level for memory-optimized table to snapshot if the TRANSACTION ISOLATION LEVEL is configured as READ COMMITTED or READ UNCOMMITTED.  
@@ -279,20 +252,13 @@ COMMIT TRANSACTION;
 go
 ```
 
-
-<a name="limitations40ni"/>  
-  
 ## Limitations  
-  
   
 - Cross-database transactions are not supported for memory-optimized tables. If a transaction accesses a memory-optimized table, the transaction cannot access any other database, except for:  
   - tempdb database.  
   - Read-only from the master database.  
   
 - Distributed transactions are not supported: When BEGIN DISTRIBUTED TRANSACTION  is used, the transaction cannot access a memory-optimized table.  
-  
-  
-<a name="natcompstorprocs42ni"/>  
   
 ## Natively Compiled Stored Procedures  
   
@@ -302,8 +268,6 @@ go
 - No explicit transaction control statements are allowed within the body of a native proc. BEGIN TRANSACTION, ROLLBACK TRANSACTION, and so on, are all disallowed.  
   
 - For more information about transaction control with ATOMIC blocks, see [Atomic Blocks](atomic-blocks-in-native-procedures.md)  
-  
-<a name="othertxnlinks44ni"/>  
   
 ## Other Transaction Links  
   

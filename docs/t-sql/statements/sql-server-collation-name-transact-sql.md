@@ -65,7 +65,7 @@ SELECT * FROM sys.fn_helpcollations()
 WHERE name LIKE 'SQL%';  
 ```  
 
->  [!NOTE]  
+> [!NOTE]
 >  For Sort Order ID 80, use any of the Window collations with the code page of 1250, and binary order. For example: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.  
   
 ## See Also  

@@ -1,5 +1,6 @@
 ---
-title: Create graphs and plots using SQL and R (walkthrough) | Microsoft Docs
+title: Create graphs and plots using SQL and R functions- SQL Server Machine Learning
+description: Tutorial showing how to create graphs and plots using R language functions on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

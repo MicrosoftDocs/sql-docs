@@ -32,9 +32,9 @@ manager: craigg
   
 -   **Oracle Authentication**: If you select this option, you must type the **User Name** and **Password** for the user in the Oracle database you are connecting to.  
   
-> [!NOTE]  
+> [!NOTE]
 >  A user must have the following privileges granted in the Oracle database to be a log-mining user.  
->   
+> 
 >  -   SELECT on \<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
@@ -48,7 +48,7 @@ manager: craigg
 > -   SELECT on ALL OBJECTS  
 > -   SELECT on DBA OBJECTS  
 > -   SELECT on ALL TABLES  
->   
+> 
 >  If any of these privileges cannot be granted to a V$xxx, then grant them to the V_S$xxx.  
   
  **Test Connection**  

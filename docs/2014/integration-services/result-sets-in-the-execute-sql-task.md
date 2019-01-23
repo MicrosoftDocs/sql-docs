@@ -54,7 +54,7 @@ manager: craigg
   
  An XML result set can map only to a variable with the `String` or `Object` data type. If the variable has the `String` data type, the Execute SQL task returns a string and the XML source can consume the XML data. If the variable has the `Object` data type, the Execute SQL task returns a Document Object Model (DOM) object.  
   
- A **Full result set** must map to a variable of the `Object` data type. The return result is a rowset object. You can use a Foreach Loop container to extract the table row values that are stored in the Object variable into package variables, and then use a Script Task to write the data stored in packages variables to a file. For a demonstration on how to do this using a Foreach Loop container and a Script Task, see the CodePlex sample, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com.  
+ A **Full result set** must map to a variable of the `Object` data type. The return result is a rowset object. You can use a Foreach Loop container to extract the table row values that are stored in the Object variable into package variables, and then use a Script Task to write the data stored in packages variables to a file. For a demonstration on how to do this using a Foreach Loop container and a Script Task, see the CodePlex sample, [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com.  
   
  The following table summarizes the data types of variables that can be mapped to result sets.  
   
@@ -89,6 +89,6 @@ manager: craigg
   
 ## Related Content  
   
--   CodePlex sample, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com  
+-   CodePlex sample, [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2018"
+ms.date: "12/06/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -21,33 +21,14 @@ helpviewer_keywords:
   - "names [SQL Server], logins"
   - "modifying login accounts"
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER LOGIN (Transact-SQL)
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
-::: moniker-end
-
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
-::: moniker-end
-
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
-::: moniker-end
-
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
-::: moniker-end
-
-  Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login account.  
+Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login account.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -222,22 +203,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### C. Changing the password of a login when logged in as the login 
+ If you are attempting to change the password of the login that you're currently logged in with and you do not have the `ALTER ANY LOGIN` permission you must specify the `OLD_PASSWORD` option.    
   
-### C. Changing the name of a login  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### D. Changing the name of a login  
  The following example changes the name of login `Mary5` to `John2`.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### D. Mapping a login to a credential  
+### E. Mapping a login to a credential  
  The following example maps the login `John2` to the credential `Custodian04`.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### E. Mapping a login to an Extensible Key Management credential  
+### F. Mapping a login to an Extensible Key Management credential  
  The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.  
   
   
@@ -346,7 +334,7 @@ ALTER LOGIN login_name
   
 ## Remarks  
   
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to  authenticate a connection and server-level firewall rules are temporarily  cached in each database. This cache is periodically refreshed. To force a  refresh of the authentication cache and make sure that a database has the  latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL&#41;] (../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to  authenticate a connection and server-level firewall rules are temporarily  cached in each database. This cache is periodically refreshed. To force a  refresh of the authentication cache and make sure that a database has the  latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## Permissions  
  Requires ALTER ANY LOGIN permission.  
@@ -772,7 +760,7 @@ ALTER LOGIN login_name
   
 ## Remarks  
   
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to  authenticate a connection and server-level firewall rules are temporarily  cached in each database. This cache is periodically refreshed. To force a  refresh of the authentication cache and make sure that a database has the  latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL&#41;] (../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to  authenticate a connection and server-level firewall rules are temporarily  cached in each database. This cache is periodically refreshed. To force a  refresh of the authentication cache and make sure that a database has the  latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## Permissions  
  Requires ALTER ANY LOGIN permission.  

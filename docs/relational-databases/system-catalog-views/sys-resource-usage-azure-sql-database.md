@@ -27,11 +27,11 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  This feature is in a preview state. Do not take a dependency on the specific implementation of this feature because the feature might be changed or removed in a future release.  
->   
+> 
 >  While in a preview state, the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] operations team might turn data collection off and on for this DMV:  
->   
+> 
 >  -   When turned on, the DMV returns current data as it is aggregated.  
 > -   When turned off, the DMV returns historical data, which might be stale.  
   

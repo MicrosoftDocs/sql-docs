@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Cursor Manager by Type object"
   - "SQLServer:Cursor Manager by Type"
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Cursor Manager by Type Object

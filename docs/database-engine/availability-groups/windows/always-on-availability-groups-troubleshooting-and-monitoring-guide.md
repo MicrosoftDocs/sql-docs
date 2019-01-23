@@ -1,6 +1,7 @@
 ---
-title: "Always On Availability Groups troubleshooting and monitoring guide (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "A reference for monitoring and troubleshooting Always On availability groups"
+description: "This guide serves as a reference page to help you get started on monitoring and troubleshooting some of the common issues found with Always On availability groups."
+ms.custom: "ag-guide, seodec18"
 ms.date: "05/10/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +17,6 @@ manager: craigg
  
  Because availability groups are an integrated technology, many problems you encounter may be symptoms of other issues in your database system. Some issues are caused by settings within an availability group, such as an availability database being suspended. Other issues can include problems with other aspects of SQL Server, such as SQL Server settings, database file deployments, and systemic performance issues unrelated to availability. Still other problems can exist outside of SQL Server, such as network I/O, TCP/IP, Active Directory, and Windows Server Failover Clustering (WSFC) issues. Often, problems that surface in an availability group, replica, or database require you to troubleshoot multiple technologies to identify the root cause.  
   
-
   
 ##  <a name="BKMK_SCENARIOS"></a> Troubleshooting scenarios  
  The following table contains links to the common troubleshooting scenarios for availability groups. They are categorized by their scenario types, such as configuration, client connectivity, failover, and performance.  

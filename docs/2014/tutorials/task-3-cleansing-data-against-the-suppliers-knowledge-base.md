@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 3: Cleansing Data against the Suppliers Knowledge Base
-  In this task, you run the computer-assisted cleansing process. DQS uses advanced algorithms and confidence levels based on the threshold values specified to analyze the data against the selected knowledge base, and then cleanse it. See [Cleansing Data Using DQS (Internal) Knowledge](http://msdn.microsoft.com/library/hh213061.aspx) for more details.  
+  In this task, you run the computer-assisted cleansing process. DQS uses advanced algorithms and confidence levels based on the threshold values specified to analyze the data against the selected knowledge base, and then cleanse it. See [Cleansing Data Using DQS (Internal) Knowledge](https://msdn.microsoft.com/library/hh213061.aspx) for more details.  
   
 1.  Click **Start** to start the computer-assisted cleansing process.  
   

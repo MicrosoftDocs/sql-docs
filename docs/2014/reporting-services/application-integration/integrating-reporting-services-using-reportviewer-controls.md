@@ -38,6 +38,6 @@ manager: craigg
   
 ## See Also  
  [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)   
- [Create SSRS Reports Using Visual Studio (Curated Answer)](http://go.microsoft.com/fwlink/?LinkId=321991)  
+ [Create SSRS Reports Using Visual Studio (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321991)  
   
   

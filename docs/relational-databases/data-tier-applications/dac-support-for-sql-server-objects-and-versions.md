@@ -15,7 +15,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # DAC Support For SQL Server Objects and Versions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A data-tier application (DAC) supports the most commonly used [!INCLUDE[ssDE](../../includes/ssde-md.md)] objects.  
   
  **In This Topic**  
@@ -24,7 +24,7 @@ manager: craigg
 > [!IMPORTANT]
 > This article is valid for SQL Server 2012, but not for SQL Server 2014 or later.
 > For DAC articles about SQL 2012 and earlier, see the following links:
->
+> 
 > - https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ee240739(v=sql.105)
 > - https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh753459(v=sql.110)
 

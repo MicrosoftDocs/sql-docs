@@ -119,6 +119,6 @@ use <cdc-enabled-database-name>
   
 ## Related Content  
   
--   Blog entry, [Processing Modes for the CDC Source](http://go.microsoft.com/fwlink/?LinkId=242541), on mattmasson.com.  
+-   Blog entry, [Processing Modes for the CDC Source](https://go.microsoft.com/fwlink/?LinkId=242541), on mattmasson.com.  
   
   

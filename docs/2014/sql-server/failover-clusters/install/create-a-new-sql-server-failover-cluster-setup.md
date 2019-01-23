@@ -60,7 +60,7 @@ manager: craigg
   
  For more information about remote installation, see [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- For more information about installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in a Windows failover cluster, see [How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ For more information about installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in a Windows failover cluster, see [How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## Prerequisites  
  Before you begin, review the following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online topics:  

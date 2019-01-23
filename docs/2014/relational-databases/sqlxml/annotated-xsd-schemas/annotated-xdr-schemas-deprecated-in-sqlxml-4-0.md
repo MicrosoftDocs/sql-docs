@@ -17,7 +17,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Annotated XDR Schemas (Deprecated in SQLXML 4.0)
-  Annotated XDR schemas are deprecated. No future development work will be done on this feature. Avoid using this feature in new development work. Instead, use annotated XSD schemas. You can convert existing annotated XDR schemas to XSD schemas. For more information, see [Converting Annotated XDR Schemas to Equivalent XSD Schemas &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). For information about the deprecated XDR schemas, see the [SQL Server 2008 documentation](http://go.microsoft.com/fwlink/?LinkId=202011).  
+  Annotated XDR schemas are deprecated. No future development work will be done on this feature. Avoid using this feature in new development work. Instead, use annotated XSD schemas. You can convert existing annotated XDR schemas to XSD schemas. For more information, see [Converting Annotated XDR Schemas to Equivalent XSD Schemas &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). For information about the deprecated XDR schemas, see the [SQL Server 2008 documentation](https://go.microsoft.com/fwlink/?LinkId=202011).  
   
 ## See Also  
  [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  

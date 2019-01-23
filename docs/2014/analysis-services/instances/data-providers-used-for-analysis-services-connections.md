@@ -38,7 +38,7 @@ manager: craigg
   
  The major build number of the initial release of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is 12.0.2000.9.  
   
- For more information about getting version and build information, see [How to determine the version and edition of SQL Server and its components](http://support.microsoft.com/kb/321185).  
+ For more information about getting version and build information, see [How to determine the version and edition of SQL Server and its components](https://support.microsoft.com/kb/321185).  
   
 ##  <a name="bkmk_LibUpdate"></a> How to determine the version of the Analysis Services data providers  
  Data providers are installed with Analysis Services, as well as by client applications that routinely connect to Analysis Services databases, such as Excel.  
@@ -68,7 +68,7 @@ manager: craigg
   
 #### Find the data providers on the download site  
   
-1.  Go to the [Microsoft download center](http://go.microsoft.com/fwlink/p/?LinkID=296473).  
+1.  Go to the [Microsoft download center](https://go.microsoft.com/fwlink/p/?LinkID=296473).  
   
 2.  Expand **Install Instructions**.  
   

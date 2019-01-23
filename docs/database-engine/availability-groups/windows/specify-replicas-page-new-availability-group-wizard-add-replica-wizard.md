@@ -183,9 +183,9 @@ manager: craigg
  **Subnet**  
  If you selected **DHCP** as the network mode, use the **Subnet** drop list to select an address for the subnet that hosts the availability replicas of the availability group.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  After you define an availability group listener, we strongly recommend that you do the following:  
->   
+> 
 >  -   Ask your network administrator to reserve the listener's IP address for its exclusive use. Give the listener's DNS host name to application developers to use in connection strings when requesting client connections to this availability group.  
 > -   Give the listener's DNS host name to application developers to use in connection strings when requesting client connections to this availability group.  
   

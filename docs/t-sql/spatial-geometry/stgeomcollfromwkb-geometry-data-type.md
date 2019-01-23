@@ -44,7 +44,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  CLR return type: **SqlGeometry**  
   
 ## Remarks  
- The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MulitPoint**, depending on the corresponding WKB input.  
+ The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MultiPoint**, depending on the corresponding WKB input.  
   
  This method will throw a FormatException  exception if the input is not well-formatted.  
   

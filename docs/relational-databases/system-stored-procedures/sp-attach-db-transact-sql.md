@@ -42,10 +42,10 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***dbnam* **'**  
+ [ **@dbname=** ] **'**_dbnam_ **'**  
  Is the name of the database to be attached to the server. The name must be unique. *dbname* is **sysname**, with a default of NULL.  
   
- [ **@filename1=** ] **'***filename_n***'**  
+ [ **@filename1=** ] **'**_filename_n_**'**  
  Is the physical name, including path, of a database file. *filename_n* is **nvarchar(260)**, with a default of NULL. Up to 16 file names can be specified. The parameter names start at **@filename1** and increment to **@filename16**. The file name list must include at least the primary file. The primary file contains the system tables that point to other files in the database. The list must also include any files that were moved after the database was detached.  
   
 > [!NOTE]  

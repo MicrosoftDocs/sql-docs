@@ -1,20 +1,23 @@
 ---
-title: Train and create machine learning models with Spark 
-description: Use PySpark to train and create machine learning models with Spark | SQL Server
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: Train/Create ML models with Spark 
+titleSuffix: SQL Server 2019 big data clusters
+description: Use PySpark to train and create machine learning models with Spark on SQL Server big data clusters (preview).
 author: lgongmsft
 ms.author: shivprashant
+ms.manager: craigg
 ms.reviewer: jroth
-ms.custom: ""
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # Train and Create machine learning models with Spark
+
 Spark in SQL Server big data cluster enables AI and machine learning. The example demonstrates how to training a machine learning model using Python in Spark (PySpark) using data stored in HDFS. 
 
-The example is a step by step guide with code snippets that can be used from an Azure Data Studio Notebook and each cell run one step at a time. For more information on how to connect with Spark from notebook refer [here] (notebooks-guidance.md)
+The example is a step by step guide with code snippets that can be used from an Azure Data Studio Notebook and each cell run one step at a time. For more information on how to connect with Spark from notebook refer [here](notebooks-guidance.md)
 
 In the example:
 
@@ -28,11 +31,9 @@ In the example:
 
 E2E machine learning involves several additional steps, e.g, data exploration, feature selection and principal component analysis, model selection. Many of these steps are ignored here for brevity.
 
-
 ## Step 1 - Understanding the data and prediction desired
 
 This example uses adult census income data from [here]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ). In `AdultCensusIncome.csv`, each row represents income range and other characteristics like age, hours-per-week, education, occupation etc for a given adult. Build a model that can predict if the income range. The model will take age and hours-per-week as features and predict if the income would be >50 K or <50 K. 
-
 
 ## Step 2 - Upload the data to HDFS and basic explorations on data
 From Azure Data Studio connect to the HDFS/Spark gateway, and create a directory called `spark_ml` under HDFS. 
@@ -81,7 +82,6 @@ data = data_all.select(select_cols)
 
 ```
 
-
 ## Step 4 - Split as training and test set
 
 Use 75% of rows to train the model and rest of the 25% to evaluate the model. Additionally, persist the train and test data sets to HDFS storage. The step is not necessary,but shown to demonstrate saving and loading with ORC format. Other formats, for example, `Parquet `may also be used.
@@ -105,9 +105,8 @@ print("train and test datasets saved to {} and {}".format(train_data_path, test_
 
 ```
 
-
 ## Step 5 - Put together a pipeline and build a model
-[Spark ML pipeline] ( https://spark.apache.org/docs/2.3.1/ml-pipeline.html ) allow to sequence all steps as a workflow and make it easier to experiment with various algorithms and their parameters. The following code first constructs the stages and then puts these stages together in Ml pipeline.  LogisticRegression is used to create the model.
+[Spark ML pipeline](https://spark.apache.org/docs/2.3.1/ml-pipeline.html) allow to sequence all steps as a workflow and make it easier to experiment with various algorithms and their parameters. The following code first constructs the stages and then puts these stages together in Ml pipeline.  LogisticRegression is used to create the model.
 
 ```python
 from pyspark.ml import Pipeline, PipelineModel
@@ -207,6 +206,6 @@ assert str(model2) == str(model)
 print("loaded model from {}".format(model_fs))
 ```
 
-## References
-1. For getting started with PySpark notebooks refer [here.](notebooks-guidance.md)
+## Next steps
 
+For more information on how to get started with PySpark notebooks, see [How to use notebooks](notebooks-guidance.md).

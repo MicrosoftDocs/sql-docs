@@ -58,7 +58,7 @@ manager: craigg
  Contains information about how using nonadministrative Windows accounts or the Local System account for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent service can affect multiserver environments.  
   
  [Set Encryption Options on Target Servers](set-encryption-options-on-target-servers.md)  
- Contains information about setting the MsxEncryptChannelOptions[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent registry subkey on target servers.  
+ Contains information about setting the MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent registry subkey on target servers.  
   
  [Manage Jobs Across an Enterprise](manage-jobs-across-an-enterprise.md)  
  Contains information about checking job status, changing target servers for jobs, synchronizing target server clocks, and polling master servers for their current job status.  

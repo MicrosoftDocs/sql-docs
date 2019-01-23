@@ -1,6 +1,6 @@
 ﻿---
-title: "SQL Server 2017 Analysis Services backward compatibility  | Microsoft Docs"
-ms.date: 05/08/2018
+title: "SQL Server 2017 Analysis Services backward compatibility | Microsoft Docs"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -16,7 +16,7 @@ manager: kfile
 This article describes changes in feature availability and behavior between the current release and the previous release.
 
 ## Deprecated features
-A *deprecated feature* will be discontinued from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. It's recommended you discontinue using deprecated features in new and existing projects to maintain compatibility with future releases.
+A *deprecated feature* will be discontinued from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. It's recommended you discontinue using deprecated features in new and existing projects to maintain compatibility with future releases. Documentation is not updated for deprecated features.
 
 The following features are deprecated in this release:
   

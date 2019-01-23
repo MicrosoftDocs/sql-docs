@@ -52,7 +52,7 @@ manager: craigg
  [Removing a Data Processing Extension](removing-a-data-processing-extension.md)  
  Describes how to remove a data processing extension from a report server or Report Designer.  
   
- For a sample of a fully implemented data processing extension, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For a sample of a fully implemented data processing extension, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Reporting Services Extensions](../reporting-services-extensions.md)   

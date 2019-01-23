@@ -1,6 +1,7 @@
 ---
-title: "Availability replica does not have a healthy role | Microsoft Docs"
-ms.custom: ""
+title: "Availability replica does not have a healthy role for an availability group"
+description: "Identify possible causes for why a replica does not have a healthy role within an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability replica does not have a healthy role
+# Availability replica does not have a healthy role for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  

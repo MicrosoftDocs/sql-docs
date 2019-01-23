@@ -18,7 +18,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 
   Lists all the event session definitions that exist in the current database, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-> [!NOTE]  
+> [!NOTE]
 >  The similar catalog view named `sys.server_event_sessions` applies only to [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||  

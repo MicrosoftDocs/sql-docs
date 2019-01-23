@@ -1,24 +1,23 @@
 ---
 title: "SQL Server documentation include files | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/15/2018"
+ms.date: 01/19/2019
 ms.prod: sql
-ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology:
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
-
 # SQL Server include files for versioning and applies-to
 
-References in the documentation can be easily modified without changing the actual text of individual articles by using include files in Markdown. There are three types of include files in the SQL content world: SQL version, applies-to, and referential text. **SQL version includes** are used to indicate the version of SQL being discussed, such as SQL Server 2016 or 2017. The **applies-to includes** indicate what SQL products and services the document applies to, such as SQL Server on Linux or Azure SQL Database. **Referential text includes** don't fall in the other two categories, such as the "Get Help" include, a list of links that customers can use to get help with SQL.
+References in the documentation can be easily modified without changing the actual text of individual articles by using include files in Markdown. There are three types of include files in the SQL content world: SQL version, applies-to, and referential text. **SQL Server version** include files are used to indicate the version of SQL being discussed, such as SQL Server 2016 or 2017. The **applies-to** include files indicate what SQL products and services the document applies to, such as SQL Server on Linux or Azure SQL Database. **Referential text** include files don't fall in the other two categories, such as the "Get Help" include, a list of links that customers can use to get help with SQL Server.
 
-This article is meant to be used as a reference point for just the first two types of includes. You can browse the complete list of include files in the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
+This article is meant to be used as a reference point for just the first two types of include files. You can browse the complete list of include files in the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
-## SQL Server version includes
+## SQL Server version include files
 
 SQL Content writers frequently need to include the name of the product and version of SQL Server. This way, if something changes in the name, the include file is updated instead of manually updating the value in every single article. These include files are used as placeholders for product names but have not been consistently used in all SQL documentation. SQL Server vNext refers to a future release of SQL that does not yet have a version number and is the exception to this.  
 
@@ -36,9 +35,9 @@ SQL Content writers frequently need to include the name of the product and versi
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## SQL Server (non-version-specific)
+## SQL Server Applies-to (non-version-specific)
 
-These applies-to includes omit the version of SQL Server.
+These applies-to include files omit the version of SQL Server.
 
 | File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|
@@ -58,11 +57,11 @@ These applies-to includes omit the version of SQL Server.
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## SQL Server (version-specific)
+## SQL Server Applies-to (version-specific)
 
-These applies-to includes specify which versions of SQL the documentation applies to.
+These applies-to include files specify which versions of SQL the documentation applies to.
 
- File Name| Markdown Example |Image|
+| File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -102,9 +101,9 @@ These applies-to includes specify which versions of SQL the documentation applie
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## Analysis Services
+## Analysis Services Applies-to
 
-These applies-to includes are used with Analysis Services documentation.
+These applies-to include files are used with Analysis Services documentation.
 
 | File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|
@@ -119,9 +118,9 @@ These applies-to includes are used with Analysis Services documentation.
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## Reporting Services
+## Reporting Services Applies-to
 
-These applies-to includes are used with Reporting Services documentation.
+These applies-to include files are used with Reporting Services documentation.
 
 | File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|

@@ -1,6 +1,8 @@
 ---
-title: "Availability Group Properties: New Availability Group (General Page) | Microsoft Docs"
-ms.custom: ""
+title: "Availability Group Properties: New Availability Group (General Page)"
+titleSuffix: SQL Server
+description: "A description of the various properties found on the 'General' page of the 'New Availability Group' wizard in SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

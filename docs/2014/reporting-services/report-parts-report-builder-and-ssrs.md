@@ -21,7 +21,7 @@ manager: craigg
   
  The report part that you add to your report maintains a relationship to the instance of the report part on the site or server by means of a unique ID. After you add report parts from a site or server to a report, you can modify them, independent of the original report part on the site or server. You can accept updates that others have made to the report part on the site or server, and you can save the modified report part back to the site or server, either adding a new report part or writing over the original, if you have sufficient permissions.  
   
- To quickly get started with report parts, see the videos [Report Builder 3 Report Parts in SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) and [How Do I: Create Reusable Report Parts with SQL Server Report Builder](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ To quickly get started with report parts, see the videos [Report Builder 3 Report Parts in SQL Server 2008 R2](https://technet.microsoft.com/edge/Video/ff711300) and [How Do I: Create Reusable Report Parts with SQL Server Report Builder](https://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Life Cycle of a Report Part  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -146,7 +146,7 @@ manager: craigg
  [Report Parts and Datasets in Report Builder](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Troubleshoot Report Parts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Managing Report Parts](report-design/managing-report-parts.md)   
- [Report Builder 3 Report Parts in SQL Server 2008 R2 (video)](http://technet.microsoft.com/edge/Video/ff711300)   
- [How Do I: Create Reusable Report Parts with SQL Server Report Builder (video)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [Report Builder 3 Report Parts in SQL Server 2008 R2 (video)](https://technet.microsoft.com/edge/Video/ff711300)   
+ [How Do I: Create Reusable Report Parts with SQL Server Report Builder (video)](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

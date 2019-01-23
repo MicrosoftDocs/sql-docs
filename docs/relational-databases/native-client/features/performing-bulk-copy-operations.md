@@ -93,7 +93,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   **ISupportErrorInfo**  
   
- The provider-specific properties SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS, and SSPROP_FASTLOADKEEPIDENTITY control behaviors of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider bulk-copy rowset. The properties are specified in the *rgProperties* member of an *rgPropertySets***IOpenRowset**parameter member.  
+ The provider-specific properties SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS, and SSPROP_FASTLOADKEEPIDENTITY control behaviors of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider bulk-copy rowset. The properties are specified in the *rgProperties* member of an _rgPropertySets_**IOpenRowset**parameter member.  
   
 |Property ID|Description|  
 |-----------------|-----------------|  

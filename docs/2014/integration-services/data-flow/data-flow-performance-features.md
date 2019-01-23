@@ -124,7 +124,7 @@ manager: craigg
  If you have to create multiple aggregations in a data flow, consider creating multiple aggregations that use one Aggregate transformation instead of creating multiple transformations. This approach improves performance when one aggregation is a subset of another aggregation because the transformation can optimize internal storage and scan incoming data only once. For example, if an aggregation uses a GROUP BY clause and an AVG aggregation, combining them into one transformation can improve performance. However, performing multiple aggregations within one Aggregate transformation serializes the aggregation operations, and therefore might not improve performance when multiple aggregations must be computed independently.  
   
 #### Fuzzy Lookup and Fuzzy Grouping Transformations  
- For information about optimizing the performance of the Fuzzy Lookup and Fuzzy Grouping transformations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+ For information about optimizing the performance of the Fuzzy Lookup and Fuzzy Grouping transformations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
 #### Lookup Transformation  
  Minimize the size of the reference data in memory by entering a SELECT statement that looks up only the columns that you need. This option performs better than selecting an entire table or view, which returns a large amount of unnecessary data.  
@@ -137,7 +137,7 @@ manager: craigg
   
  Typically, the slowest components in the Slowly Changing Dimension transformation are the OLE DB Command transformations that perform UPDATEs against a single row at a time. Therefore, the most effective way to improve the performance of the Slowly Changing Dimension transformation is to replace the OLE DB Command transformations. You can replace these transformations with destination components that save all rows to be updated to a staging table. Then, you can add an Execute SQL task that performs a single set-based Transact-SQL UPDATE against all rows at the same time.  
   
- Advanced users can design a custom data flow for slowly changing dimension processing that is optimized for large dimensions. For a discussion and example of this approach, see the section, "Unique dimension scenario," in the white paper, [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
+ Advanced users can design a custom data flow for slowly changing dimension processing that is optimized for large dimensions. For a discussion and example of this approach, see the section, "Unique dimension scenario," in the white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### Destinations  
  To achieve better performance with destinations, consider using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination and testing the destination's performance.  
@@ -160,35 +160,35 @@ manager: craigg
 ## Related Content  
  **Articles and Blog Posts**  
   
--   Technical article, [SQL Server 2005 Integration Services: A Strategy for Performance](http://go.microsoft.com/fwlink/?LinkId=98899), on technet.microsoft.com  
+-   Technical article, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), on technet.microsoft.com  
   
--   Technical article, [Integration Services: Performance Tuning Techniques](http://go.microsoft.com/fwlink/?LinkId=98900), on technet.microsoft.com  
+-   Technical article, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), on technet.microsoft.com  
   
 -   Technical article, [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), on sqlcat.com  
   
--   Technical article, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=220816), on msdn.microsoft.com.  
+-   Technical article, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=220816), on msdn.microsoft.com.  
   
--   Technical article, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](http://go.microsoft.com/fwlink/?LinkId=220817), on msdn.microsoft.com.  
+-   Technical article, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](https://go.microsoft.com/fwlink/?LinkId=220817), on msdn.microsoft.com.  
   
--   Technical article, [Top 10 SQL Server Integration Services Best Practices](http://go.microsoft.com/fwlink/?LinkId=220818), on sqlcat.com.  
+-   Technical article, [Top 10 SQL Server Integration Services Best Practices](https://go.microsoft.com/fwlink/?LinkId=220818), on sqlcat.com.  
   
--   Technical article and sample, [The "Balanced Data Distributor" for SSIS](http://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
+-   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
   
--   Blog post, [Troubleshooting SSIS Package Performance Issues](http://go.microsoft.com/fwlink/?LinkId=238156), on blogs.msdn.com  
+-   Blog post, [Troubleshooting SSIS Package Performance Issues](https://go.microsoft.com/fwlink/?LinkId=238156), on blogs.msdn.com  
   
  **Videos**  
   
--   Video series, [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   Video series, [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video, [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686901.aspx), on technet.microsoft.com  
+-   Video, [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx), on technet.microsoft.com  
   
--   Video, [Understanding SSIS Data Flow Buffers (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686905.aspx), on technet.microsoft.com  
+-   Video, [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx), on technet.microsoft.com  
   
--   Video, [Microsoft SQL Server Integration Services Performance Design Patterns](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), on channel9.msdn.com.  
+-   Video, [Microsoft SQL Server Integration Services Performance Design Patterns](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), on channel9.msdn.com.  
   
--   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](http://go.microsoft.com/fwlink/?LinkId=217660), on sqlcat.com.  
+-   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://go.microsoft.com/fwlink/?LinkId=217660), on sqlcat.com.  
   
--   Video, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  
+-   Video, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  
   
 ## See Also  
  [Troubleshooting Tools for Package Development](../troubleshooting/troubleshooting-tools-for-package-development.md)   

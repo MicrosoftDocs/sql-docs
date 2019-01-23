@@ -62,7 +62,7 @@ manager: craigg
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Adding a Bar Chart to a Report (Report Builder)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adding a Bar Chart to a Report](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Tutorial: Adding a Bar Chart to a Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Adding a Bar Chart to a Report](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

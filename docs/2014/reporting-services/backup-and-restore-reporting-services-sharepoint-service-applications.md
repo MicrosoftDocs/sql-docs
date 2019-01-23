@@ -63,9 +63,9 @@ manager: craigg
   
  For more information, see the following topics in the SharePoint documentation:  
   
- [Back up a service application (SharePoint Foundation 2010) in the SharePoint documenttation](http://msdn.microsoft.com/library/ee748601.aspx).  
+ [Back up a service application (SharePoint Foundation 2010) in the SharePoint documenttation](https://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Back up a service application (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Back up a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### Verify Execution Account and Database Authentication  
  **Execution Account:** To verify if your service application is using an execution account:  
@@ -115,7 +115,7 @@ manager: craigg
   
  For more information, see the following topics in the SharePoint documentation:  
   
- [Restore a service application (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
+ [Restore a service application (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
  [Restore a service application (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
   

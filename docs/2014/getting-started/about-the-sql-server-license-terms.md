@@ -59,7 +59,7 @@ manager: craigg
 |Russian|RUS|1049|  
   
 ## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Licensing Options  
- For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web site.  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web site.  
   
 ## See Also  
  [Licensing Considerations for SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

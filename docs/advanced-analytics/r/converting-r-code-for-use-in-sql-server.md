@@ -1,5 +1,6 @@
 ---
-title: Convert R code for use in SQL Server Machine Learning Services | Microsoft Docs"
+title: Convert R code for stored procedures - SQL Server Machine Learning Services
+description: Migrate R code to a SQL Server stored procedure for solution deployment and data access to relational data on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -68,7 +69,7 @@ How much you change your code depends on whether you intend to submit the R code
 
     For example, the following scalar input `@model_name` contains the model name, which is also output in its own column in the results:
 
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
     ``` 
 
@@ -137,7 +138,7 @@ How much you change your code depends on whether you intend to submit the R code
 
     Then, use the **sqlrutils** package to generate the input and outputs in the correct format. The **sqlrutils** package generates the complete stored procedure code for you, and can also register the stored procedure in the database. 
 
-    For more information and examples, see [SqlRUtils](../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md).
+    For more information and examples, see [sqlrutils (SQL)](ref-r-sqlrutils.md).
 
 **Integrate with other workflows**
 

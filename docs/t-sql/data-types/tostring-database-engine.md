@@ -45,7 +45,7 @@ string ToString  ( )
 **CLR return type:String**
   
 ## Remarks  
-Returns the logical location in the hierarchy. For example, `/2/1/` represents the fourth row ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) in the following hierarchical structure of a file system:
+Returns the logical location in the hierarchy. For example, `/2/1/` represents the fourth row ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) in the following hierarchical structure of a file system:
   
 ```sql
 /        C:\  

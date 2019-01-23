@@ -29,7 +29,7 @@ manager: craigg
 ## Administrators  
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- Also, see the following topics in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Also, see the following topics in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Plan for Map Report Support](../../2014/reporting-services/plan-for-map-report-support.md)  
   
@@ -40,9 +40,9 @@ manager: craigg
   
  For example, participate in discussion groups to talk with an online group of experienced Report Builder users, including Reporting Services Most Valued Professionals (MVPs), who willingly share their time to answer questions and provide solutions, tips, and expertise.  
   
- Read what the Reporting Services team members have to say in the [Reporting Services team blog](http://go.microsoft.com/fwlink/?LinkId=118788).
+ Read what the Reporting Services team members have to say in the [Reporting Services team blog](https://go.microsoft.com/fwlink/?LinkId=118788).
   
- If you still haven't found an answer, [send feedback](http://go.microsoft.com/fwlink/?LinkId=118791).  
+ If you still haven't found an answer, [send feedback](https://go.microsoft.com/fwlink/?LinkId=118791).  
   
 ## See Also  
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  

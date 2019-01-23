@@ -24,9 +24,10 @@ Connection pooling enables an application to use a connection from a pool of con
   
  In addition to performance gains, the connection pooling architecture enables an environment and its associated connections to be used by multiple components in a single process. This means that stand-alone components in the same process can interact with each other without being aware of each other. A connection in a connection pool can be used repeatedly by multiple components.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Connection pooling can be used by an ODBC application exhibiting ODBC 2.*x* behavior, as long as the application can call *SQLSetEnvAttr*. When using connection pooling, the application must not execute SQL statements that change the database or the context of the database, such as changing the \<*database**name*>, which changes the catalog used by a data source.  
-  
+
+
  An ODBC driver must be fully thread-safe, and connections must not have thread affinity to support connection pooling. This means the driver is able to handle a call on any thread at any time and is able to connect on one thread, to use the connection on another thread, and to disconnect on a third thread.  
   
  The connection pool is maintained by the Driver Manager. Connections are drawn from the pool when the application calls **SQLConnect** or **SQLDriverConnect** and are returned to the pool when the application calls **SQLDisconnect**. The size of the pool grows dynamically, based on the requested resource allocations. It shrinks based on the inactivity timeout: If a connection is inactive for a period of time (it has not been used in a connection), it is removed from the pool. The size of the pool is limited only by memory constraints and limits on the server.  

@@ -20,7 +20,7 @@ manager: craigg
   
  ![rs_SparklineExample](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- To quickly get started with sparklines, see [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) and the videos [How to: Create a Sparkline in a Table](http://go.microsoft.com/fwlink/?LinkId=197092) and [Sparklines, Bar Charts, and Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) .  
+ To quickly get started with sparklines, see [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) and the videos [How to: Create a Sparkline in a Table](https://go.microsoft.com/fwlink/?LinkId=197092) and [Sparklines, Bar Charts, and Indicators in Report Builder](https://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  You can publish sparklines and data bars with their parent table, matrix, or list, separately from a report as a report part. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -107,7 +107,7 @@ manager: craigg
 ## See Also  
  [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
- [Sparklines, Bar Charts, and Indicators in Report Builder (video)](http://technet.microsoft.com/bi/video/ff877165)   
- [How to: Create a Sparkline in a Table (video)](http://go.microsoft.com/fwlink/?LinkId=197092)  
+ [Sparklines, Bar Charts, and Indicators in Report Builder (video)](https://technet.microsoft.com/bi/video/ff877165)   
+ [How to: Create a Sparkline in a Table (video)](https://go.microsoft.com/fwlink/?LinkId=197092)  
   
   

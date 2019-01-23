@@ -44,7 +44,7 @@ DataControl.Handler = String
   
  The name of the default handler is **MSDFMAP.Handler**, and its default parameter is a customization file named **MSDFMAP.INI**. Use this property to invoke alternate customization files created by your server administrator.  
   
- The alternative to setting the **Handler** property is to specify a handler and parameters in the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property; that is, "**Handler=***handlerName,parameter1,parameter2,...;*".  
+ The alternative to setting the **Handler** property is to specify a handler and parameters in the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property; that is, "**Handler=**_handlerName,parameter1,parameter2,...;_".  
   
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

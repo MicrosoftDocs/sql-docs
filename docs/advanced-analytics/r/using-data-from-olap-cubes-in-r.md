@@ -1,5 +1,5 @@
 ---
-title: Using data from OLAP cubes in R (SQL Server Machine Learning) | Microsoft Docs
+title: Using data from OLAP cubes in R - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 

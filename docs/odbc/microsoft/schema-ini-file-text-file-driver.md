@@ -89,7 +89,7 @@ n=ColumnNametype [#]
 ```  
   
 ## Remarks  
- The following table describes each part of the **Col***n* entry.  
+ The following table describes each part of the **Col**_n_ entry.  
   
 |Parameter|Description|  
 |---------------|-----------------|  

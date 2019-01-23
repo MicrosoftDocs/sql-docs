@@ -8,6 +8,7 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.subscription.synchhistory.f1"
+  - "sql12.rep.monitor.subscription.downlevelsynchhistory.f1"
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
@@ -90,7 +91,7 @@ manager: craigg
   
 ## See Also  
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   

@@ -34,10 +34,10 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## Arguments  
- [ **@database=**]  **'***database***'**  
+ [ **@database=**]  **'**_database_**'**  
  Is the name of the distribution database. *database* is **sysname**, with no default.  
   
- [ **@property=**]  **'***property***'**  
+ [ **@property=**]  **'**_property_**'**  
  Is the property to change for the given database. *property* is **sysname**, and can be one of these values.  
   
 |Value|Description|  
@@ -47,7 +47,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Minimum distribution retention period.|  
 |NULL (default)|All available *property* values are printed.|  
   
- [ **@value=**]  **'***value***'**  
+ [ **@value=**]  **'**_value_**'**  
  Is the new value for the specified property. *value* is **nvarchar(255)**, with a default of NULL.  
   
 ## Return Code Values  

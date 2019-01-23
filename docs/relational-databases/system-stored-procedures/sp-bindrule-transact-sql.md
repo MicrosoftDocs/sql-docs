@@ -40,10 +40,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## Arguments  
- [ **@rulename=**] **'***rule***'**  
+ [ **@rulename=**] **'**_rule_**'**  
  Is the name of a rule created by the CREATE RULE statement. *rule* is **nvarchar(776)**, with no default.  
   
- [ **@objname=**] **'***object_name***'**  
+ [ **@objname=**] **'**_object_name_**'**  
  Is the table and column, or the alias data type to which the rule is to be bound. A rule cannot be bound to a **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR user-defined type, or **timestamp**column. A rule cannot be bound to a computed column.  
   
  *object_name* is **nvarchar(776)** with no default. If *object_name* is a one-part name, it is resolved as an alias data type. If it is a two- or three-part name, it is first resolved as a table and column; if this resolution fails, it is resolved as an alias data type. By default, existing columns of the alias data type inherit *rule* unless a rule has been bound directly to the column.  
@@ -54,7 +54,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Rules created on expressions that use alias data types can be bound to columns or alias data types, but fail to compile when they are referenced. Avoid using rules created on alias data types.  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+ [ **@futureonly=** ] **'**_futureonly_flag_**'**  
  Is used only when binding a rule to an alias data type. *future_only_flag* is **varchar(15)** with a default of NULL. This parameter when set to **futureonly** prevents existing columns of an alias data type from inheriting the new rule. If *futureonly_flag* is NULL, the new rule is bound to any columns of the alias data type that currently have no rule or that are using the existing rule of the alias data type.  
   
 ## Return Code Values  

@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "converting int ACSII code to character"
+  - "converting int ASCII code to character"
   - "control characters"
   - "tab"
   - "ASCII conversions"

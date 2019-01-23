@@ -1,5 +1,5 @@
 ---
-title: Use R code profiling functions (SQL Server Machine Learning) | Microsoft Docs
+title: Use R code profiling functions - SQL Server Machine Learning Services
 description: Improve performance and get faster results on R computations on SQL Server by using R profiling functions to return information about internal function calls.
 ms.prod: sql
 ms.technology: machine-learning
@@ -16,7 +16,7 @@ manager: cgronlun
 In addition to using SQL Server resources and tools to monitor R script execution, you can use performance tools provided by other R packages to get more information about internal function calls. 
 
 > [!TIP]
-> This article provides basic resources to get you started. For expert guidance, we recommend the *Performance* section in ["Advanced R" by Hadley Wickham](https://adv-r.had.co.nz).
+> This article provides basic resources to get you started. For expert guidance, we recommend the *Performance* section in ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz).
 
 ## Using RPROF
 
@@ -26,7 +26,7 @@ In general, the *rprof* function works by writing out the call stack to a file, 
 
 To use R profiling in your code, you call this function and specify its parameters, including the name of the location of the log file that will be written. Profiling can be turned on and off in your code. The following syntax illustrates basic usage: 
 
-```r
+```R
 # Specify profiling output file.
 varOutputFile <- "C:/TEMP/run001.log")
 Rprof(varOutputFile)
@@ -59,4 +59,4 @@ The documentation for Microsoft R Open, which is installed by default, includes 
 ## See also
 
 + [utils R package](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ ["Advanced R" by Hadley Wickham](https://adv-r.had.co.nz)
++ ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz)

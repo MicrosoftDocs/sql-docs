@@ -1,5 +1,5 @@
 ---
-title: Performance for SQL Server R Services - data optimization | Microsoft Docs
+title: Performance tuning for data optimization - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 

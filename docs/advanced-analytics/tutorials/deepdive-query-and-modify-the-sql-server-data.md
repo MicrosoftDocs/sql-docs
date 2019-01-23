@@ -1,5 +1,6 @@
 ---
-title: Query and modify the SQL Server data (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Query and modify the SQL Server data using RevoScaleR - SQL Server Machine Learning
+description: Tutorial walkthrough on how to query and modify data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -34,7 +35,7 @@ rxGetVarInfo(data = sqlFraudDS)
 
 **Results**
 
-```
+```R
 Var 1: custID, Type: integer
 Var 2: gender, Type: integer
 Var 3: state, Type: integer
@@ -108,7 +109,7 @@ Mapping the column to abbreviations before using it as a factor actually improve
 
     **Results**
     
-    ```
+    ```R
     Var 1: custID, Type: integer
     Var 2: gender  2 factor levels: Male Female
     Var 3: state   51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY

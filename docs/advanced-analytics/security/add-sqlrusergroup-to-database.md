@@ -1,6 +1,6 @@
 ---
-title: Add SQLRUserGroup as a database user (SQL Server Machine Learning) | Microsoft Docs
-description: For loopback connections using implied authentication, add SQLRUserGroup as a database user so that a worker account can log in to the server, for identity conversion back to the calling user.
+title: Add SQLRUserGroup as a SQL Server Login - SQL Server Machine Learning Services
+description: For loopback connections using implied authentication, add SQLRUserGroup as a SQL Server login so that a worker account can log in to the server, for identity conversion back to the calling user.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,10 +10,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Add SQLRUserGroup as a database user
+# Add SQLRUserGroup as a SQL Server login
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Create a database login for [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a [loop back connection](../../advanced-analytics/concepts/security.md#implied-authentication) in your script specifies a *trusted connection*, and the identity used to execute an object contains your code is a Windows user account.
+Create a SQL Server login for [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a [loop back connection](../../advanced-analytics/concepts/security.md#implied-authentication) in your script specifies a *trusted connection*, and the identity used to execute an object contains your code is a Windows user account.
 
 Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current Windows user has a login. For external processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts do not have a login by default.
 

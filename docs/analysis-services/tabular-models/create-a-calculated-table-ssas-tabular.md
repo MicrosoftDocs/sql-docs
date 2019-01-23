@@ -1,6 +1,6 @@
 ---
 title: "Create a calculated table in Analysis Services tabular models | Microsoft Docs"
-ms.date: 05/07/2018
+ms.date: 12/19/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -14,12 +14,12 @@ manager: kfile
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   A *calculated table* is a computed object, based on either a DAX query or expression, derived from all or part of other tables in the same model.  
   
- A common design problem that calculated tables can solve is surfacing a role-playing dimension in a specific context so that you can expose it as a query structure in client applications.  You might recall that  a role-playing dimension  is simply a table surfaced in multiple  contexts -- a classic example is the Date table, manifested as OrderDate, ShipDate, or DueDate, depending on the foreign key relationship. By creating a calculated table for ShipDate explicitly, you get a standalone table that is available for queries, as fully operable as any other table.  
+ A common design problem that calculated tables can solve is surfacing a role-playing dimension in a specific context so that you can expose it as a query structure in client applications.  You might recall that  a role-playing dimension  is simply a table surfaced in multiple  contexts -- a classic example is the Date table, manifested as OrderDate, ShipDate, or DueDate, depending on the foreign key relationship. By creating a calculated table for ShipDate explicitly, you get a standalone table that is available for queries, as fully operable as any other table. Another use includes configuring a filtered rowset, a subset, or superset of columns from other existing tables. This allows you to keep the original table intact while creating variations of that table to support specific scenarios.  
   
- A second use for a calculated table includes configuring a filtered rowset or a subset or superset of columns from other existing tables. This allows you to keep the original table intact while creating variations of that table to support specific scenarios.  
-  
- Using calculated tables to best advantage will require that you know at least some DAX. As you work with expressions for your table, it might help to know that a calculated table  contains a single partition with a DAXSource, where the expression is a DAX expression.  
-There is one CalculatedTableColumn for each column returned by the expression, where the SourceColumn is the name of the column returned (similar to DataColumns on non-calculated tables).  
+ Using calculated tables to best advantage will require that you know at least some DAX. As you work with expressions for your table, it might help to know that a calculated table contains a single partition with a DAXSource, where the expression is a DAX expression.  
+There is one CalculatedTableColumn for each column returned by the expression, where the SourceColumn is the name of the column returned (similar to DataColumns on non-calculated tables). 
+
+At least one table must already exist before you can create a calculated table. If you are creating a calculated table as a standalone computed table object, you can first create a table by importing from a file data source (csv, xls, xml). The file you import from can have a single column and single value. You can then hide that table. 
   
 ## How to create a calculated table  
   

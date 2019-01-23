@@ -91,7 +91,7 @@ ms.technology:
                                               <ul class="noBullet">
                                               <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation/"><strong>On-premises</strong></a></li>
                                               <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>On an Azure VM</strong></a></li>
-                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-2017/"><strong>What's new</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-ver15/"><strong>What's new</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -308,7 +308,7 @@ ms.technology:
                                                           <li><a class="barLink" href="/sql/relational-databases/database-features/">Relational database concepts</a></li>
                                                             <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">Connect with client applications on premises</a></li>
                                                             <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB connectivity libraries</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB applications</a></li>
+                                                            <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview">Azure SQL DB applications</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

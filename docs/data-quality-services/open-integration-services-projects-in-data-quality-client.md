@@ -45,7 +45,7 @@ manager: craigg
   
 3.  In the **Open project** screen, you can identify an Integration Services project in either of the following ways:  
   
-    1.  **Project Name**: Integration Services projects are listed using the following naming terminology: "Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}." Every time you successfully run the same package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], a new project is listed in the **Open project** screen.  
+    1.  **Project Name**: Integration Services projects are listed using the following naming terminology: "Package.DQS Cleansing_*\<DATE>\<TIME>*_{GUID}." Every time you successfully run the same package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], a new project is listed in the **Open project** screen.  
   
     2.  **Project Type**: Integration Services projects have **SSIS** as the project type in the **Open project** screen.  
   

@@ -68,7 +68,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. Large string data types nvarchar(max) and varchar(max) cannot be used. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `FREETEXT` predicate.  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -82,7 +82,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  Because "parameter sniffing" does not work across conversion, use **nvarchar** for better performance. In the example, declare `@SearchWord` as `nvarchar(30)`.  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -99,7 +99,7 @@ WHERE FREETEXT(Description, @SearchWord);
  LANGUAGE *language_term*  
  Is the language whose resources will be used for word breaking, stemming, and thesaurus and stopword removal as part of the query. This parameter is optional and can be specified as a string, integer, or hexadecimal value corresponding to the locale identifier (LCID) of a language. If *language_term* is specified, the language it represents will be applied to all elements of the search condition. If no value is specified, the column full-text language is used.  
   
- If documents of different languages are stored together as binary large objects (BLOBs) in a single column, the locale identifier (LCID) of a given document determines what language is used to index its content. When querying such a column, specifying *LANGUAGE**language_term* can increase the probability of a good match.  
+ If documents of different languages are stored together as binary large objects (BLOBs) in a single column, the locale identifier (LCID) of a given document determines what language is used to index its content. When querying such a column, specifying *LANGUAGE language_term* can increase the probability of a good match.  
   
  When specified as a string, *language_term* corresponds to the **alias** column value in he [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) compatibility view.  The string must be enclosed in single quotation marks, as in '*language_term*'. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hexadecimal value of the LCID. The hexadecimal value must not exceed eight digits, including leading zeros.  
   
@@ -128,7 +128,7 @@ Full-text queries using FREETEXT are less precise than those full-text queries u
 ### A. Using FREETEXT to search for words containing specified character values  
  The following example searches for all documents containing the words related to vital, safety, components.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Title  
@@ -140,7 +140,7 @@ GO
 ### B. Using FREETEXT with variables  
  The following example uses a variable instead of a specific search term.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord nvarchar(30);  

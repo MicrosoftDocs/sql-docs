@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "decryption [SQL Server]"
   - "cryptography [SQL Server], certificates"
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

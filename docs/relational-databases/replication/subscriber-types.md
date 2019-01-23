@@ -36,6 +36,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

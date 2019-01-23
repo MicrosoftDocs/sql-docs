@@ -42,16 +42,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication  
   
- [ **@login** = ] **'***login***'**  
+ [ **@login** = ] **'**_login_**'**  
  Is the name of the Windows account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login being changed. *login* is **nvarchar(257)**, with no default  
   
- [ **@password** = ] **'***password***'**  
+ [ **@password** = ] **'**_password_**'**  
  Is the new password to be stored for the specified *login*. *password* is **sysname**, with no default.  
   
 > [!NOTE]  
 >  After changing a replication password, you must stop and restart each agent that uses the password before the change takes effect for that agent.  
   
- [ **@server** = ] **'***server***'**  
+ [ **@server** = ] **'**_server_**'**  
  Is the server connection for which the stored password is being changed. *server* is **sysname**, and can be one of these values:  
   
 |Value|Description|  

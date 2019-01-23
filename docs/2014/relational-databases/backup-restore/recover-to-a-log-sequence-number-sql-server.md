@@ -58,11 +58,11 @@ manager: craigg
 ## Transact-SQL Syntax for Restoring to an LSN  
  By using a [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statement, you can stop at or immediately before the LSN, as follows:  
   
--   Use the WITH STOPATMARK **='**lsn:*<lsn_number>***'** clause, where lsn:*\<lsnNumber>* is a string that specifies that the log record that contains the specified LSN is the recovery point.  
+-   Use the WITH STOPATMARK **='**lsn:_<lsn_number>_**'** clause, where lsn:*\<lsnNumber>* is a string that specifies that the log record that contains the specified LSN is the recovery point.  
   
      STOPATMARK roll forwards to the LSN and includes that log record in the roll forward.  
   
--   Use the WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'** clause, where lsn:*\<lsnNumber>* is a string that specifies that the log record immediately before the log record that contains the specified LSN number is the recovery point.  
+-   Use the WITH STOPBEFOREMARK **='**lsn:_<lsn_number>_**'** clause, where lsn:*\<lsnNumber>* is a string that specifies that the log record immediately before the log record that contains the specified LSN number is the recovery point.  
   
      STOPBEFOREMARK rolls forward to the LSN and excludes that log record from the roll forward.  
   

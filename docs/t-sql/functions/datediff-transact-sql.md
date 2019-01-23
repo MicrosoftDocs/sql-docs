@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 This function returns the count (as a signed integer value) of the specified datepart boundaries crossed between the specified *startdate* and *enddate*.
   
@@ -90,7 +90,7 @@ See *startdate*.
   
 ## Return Value  
   
--   Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
+Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
   
 For a return value out of range for **int** (-2,147,483,648 to +2,147,483,647), `DATEDIFF` returns an error.  For **millisecond**, the maximum difference between *startdate* and *enddate* is 24 days, 20 hours, 31 minutes and 23.647 seconds. For **second**, the maximum difference is 68 years, 19 days, 3 hours, 14 minutes and 7 seconds.
   
@@ -125,7 +125,9 @@ Use `DATEDIFF` in the `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` and `ORDER 
   
 `DATEDIFF` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
-Specifying SET DATEFIRST has no effect on `DATEDIFF`. `DATEDIFF` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
+Specifying `SET DATEFIRST` has no effect on `DATEDIFF`. `DATEDIFF` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
+
+`DATEDIFF` may overflow with a precision of **minute** or higher if the difference between *enddate* and *startdate* returns a value that is out of range for **int**.
   
 ## Examples  
 These examples use different types of expressions as arguments for the *startdate* and *enddate* parameters.

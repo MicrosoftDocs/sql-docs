@@ -87,7 +87,7 @@ manager: craigg
   
  The DAC port is assigned dynamically by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] during startup. When connecting to the default instance, the DAC avoids using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) request to the SQL Server Browser Service when connecting. It first connects over TCP port 1434. If that fails, it makes an SSRP call to get the port. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser is not listening for SSRP requests, the connection request returns an error. Refer to the error log to find the port number DAC is listening on. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to accept remote administration connections, the DAC must be initiated with an explicit port number:  
   
- **sqlcmd -S tcp:***\<server>,\<port>*  
+ **sqlcmd -S tcp:**_\<server>,\<port>_  
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log lists the port number for the DAC, which is 1434 by default. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to accept local DAC connections only, connect using the loopback adapter using the following command:  
   

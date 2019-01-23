@@ -1,7 +1,7 @@
 ---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/11/2018"
+ms.date: 01/09/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,6 +17,7 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Management Architecture Guide
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## Windows Virtual Memory Manager  
@@ -64,7 +65,10 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 > [!NOTE]
 > Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](https://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](https://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
 
+<a name="changes-to-memory-management-starting-2012-11x-gm"></a>
+
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+
 In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
 -  **Single-page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. THe buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
 -  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.

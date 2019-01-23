@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
   - "ALTER SYMMETRIC KEY statement"
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)

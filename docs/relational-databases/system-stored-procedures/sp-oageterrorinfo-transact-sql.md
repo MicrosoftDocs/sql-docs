@@ -41,16 +41,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Is either the object token of an OLE object that was previously created by using **sp_OACreate** or it is NULL. If *objecttoken* is specified, error information for that object is returned. If NULL is specified, the error information for the entire batch is returned.  
   
- *source* **OUTPUT**  
+ _source_ **OUTPUT**  
  Is the source of the error information. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *description* **OUTPUT**  
+ _description_ **OUTPUT**  
  Is the description of the error. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *helpfile* **OUTPUT**  
+ _helpfile_ **OUTPUT**  
  Is the help file for the OLE object. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *helpid* **OUTPUT**  
+ _helpid_ **OUTPUT**  
  Is the help file context ID. If specified, it must be a local **int** variable.  
   
 > [!NOTE]  

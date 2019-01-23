@@ -1,7 +1,7 @@
 ﻿---
 title: "bcp Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2018"
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -32,6 +32,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # bcp Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 > For using bcp on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
 > 
@@ -103,8 +106,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
 </pre></td></tr></table>  
-  
-## Arguments  
+
+## Arguments
+
  _**data\_file**_<a name="data_file"></a>  
  Is the full path of the data file. When data is bulk imported into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the data file contains the data to be copied into the specified table or view. When data is bulk exported from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the data file contains the data copied from the table or view. The path can have from 1 through 255 characters. The data file can contain a maximum of 2^63 - 1 rows.  
   
@@ -424,8 +428,9 @@ Performs the bulk-copy operation using the native (database) data types of the d
   
  **-x**<a name="x"></a>  
  Used with the **format** and **-f** *format_file* options, generates an XML-based format file instead of the default non-XML format file. The **-x** does not work when importing or exporting data. It generates an error if used without both **format** and **-f** *format_file*.  
-  
+
 ## Remarks<a name="remarks"></a>
+
  The **bcp** 13.0 client is installed when you install [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] tools. If tools are installed for both [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], depending on the order of values of the PATH environment variable, you might be using the earlier **bcp** client instead of the **bcp** 13.0 client. This environment variable defines the set of directories used by Windows to search for executable files. To discover which version you are using, run the **bcp /v** command at the Windows Command Prompt. For information about how to set the command path in the PATH environment variable, see Windows Help.  
  
 The bcp utility can also be downloaded separately from the [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).  Select either `ENU\x64\MsSqlCmdLnUtils.msi` or `ENU\x86\MsSqlCmdLnUtils.msi`.
@@ -438,16 +443,19 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
  For information on preparing data for bulk import or export operations, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
  For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
-  
-## Native Data File Support  
+
+## Native Data File Support
+
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the **bcp** utility supports native data files compatible with [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
-  
-## Computed Columns and timestamp Columns  
+
+## Computed Columns and timestamp Columns
+
  Values in the data file being imported for computed or **timestamp** columns are ignored, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns values. If the data file does not contain values for the computed or **timestamp** columns in the table, use a format file to specify that the computed or **timestamp** columns in the table should be skipped when importing data; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns values for the column.  
   
  Computed and **timestamp** columns are bulk copied from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a data file as usual.  
-  
-## Specifying Identifiers That Contain Spaces or Quotation Marks  
+
+## Specifying Identifiers That Contain Spaces or Quotation Marks
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers can include characters such as embedded spaces and quotation marks. Such identifiers must be treated as follows:  
   
 -   When you specify an identifier or file name that includes a space or quotation mark at the command prompt, enclose the identifier in quotation marks ("").  
@@ -465,8 +473,9 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
     -   Specify the **-q** option, or  
   
     -   Enclose the owner, table, or view name in brackets ([]) inside the quotation marks.  
-  
-## Data Validation  
+
+## Data Validation
+
  **bcp** now enforces data validation and data checks that might cause scripts to fail if they are executed on invalid data in a data file. For example, **bcp** now verifies that:  
   
 -   The native representation of **float** or **real** data types are valid.  
@@ -474,8 +483,9 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
 -   Unicode data has an even-byte length.  
   
  Forms of invalid data that could be bulk imported in earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might fail to load now; whereas, in earlier versions, the failure did not occur until a client tried to access the invalid data. The added validation minimizes surprises when querying the data after bulk load.  
-  
-## Bulk Exporting or Importing SQLXML Documents  
+
+## Bulk Exporting or Importing SQLXML Documents
+
  To bulk export or import SQLXML data, use one of the following data types in your format file.  
   
 |Data type|Effect|  
@@ -483,8 +493,9 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
 |SQLCHAR or SQLVARYCHAR|The data is sent in the client code page or in the code page implied by the collation). The effect is the same as specifying the **-c** switch without specifying a format file.|  
 |SQLNCHAR or SQLNVARCHAR|The data is sent as Unicode. The effect is the same as specifying the **-w** switch without specifying a format file.|  
 |SQLBINARY or SQLVARYBIN|The data is sent without any conversion.|  
-  
-## Permissions  
+
+## Permissions
+
  A **bcp out** operation requires SELECT permission on the source table.  
   
  A **bcp in** operation minimally requires SELECT/INSERT permissions on the target table. In addition, ALTER TABLE permission is required if any of the following is true:  
@@ -503,8 +514,9 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
   
 > [!NOTE]
 > Requiring ALTER TABLE permission on the target table was new in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. This new requirement might cause **bcp** scripts that do not enforce triggers and constraint checks to fail if the user account lacks ALTER table permissions for the target table.
-  
-## Character Mode (-c) and Native Mode (-n) Best Practices  
+
+## Character Mode (-c) and Native Mode (-n) Best Practices
+
  This section has recommendations for to character mode (-c) and native mode (-n).  
   
 -   (Administrator/User) When possible, use native format (-n) to avoid the separator issue. Use the native format to export and import using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Export data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the -c or -w option if the data will be imported to a non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
@@ -512,8 +524,9 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
 -   (Administrator) Verify data when using BCP OUT. For example, when you use BCP OUT, BCP IN, and then BCP OUT verify that the data is properly exported and the terminator values are not used as part of some data value. Please consider overriding the default terminators (using -t and -r options) with random hexadecimal values to avoid conflicts between terminator values and data values.  
   
 -   (User) Use a long and unique terminator (any sequence of bytes or characters) to minimize the possibility of a conflict with the actual string value. This can be done by using the -t and -r options.  
-  
-## Examples  
+
+## Examples
+
  This section contains the following examples:  
  
 -   A. Identify **bcp** utility version
@@ -536,6 +549,7 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
 
 
 ### **Example Test Conditions**
+
 The examples below make use of the `WideWorldImporters` sample database for SQL Server (starting 2016) and Azure SQL Database.  `WideWorldImporters` can be downloaded from [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  See [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) for the syntax to restore the sample database.  Except where specified otherwise, the examples assume that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  A directory named `D:\BCP` will be used in many of the examples.
 
 The script below creates an empty copy of the `WideWorldImporters.Warehouse.StockItemTransactions` table and then adds a primary key constraint.  Run the following T-SQL script in SQL Server Management Studio (SSMS)
@@ -690,24 +704,25 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 ```  
 bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
 ```  
-  
-## Additional Examples  
+
+## Additional Examples
+
 |The following topics contain examples of using bcp: |
 |---|
-|Data Formats for Bulk Import or Bulk Export (SQL Server)<br />&emsp;&#9679;&emsp;[Use Native Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Character Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Unicode Native Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Unicode Character Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[Specify Field and Row Terminators (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[Keep Nulls or Use Default Values During Bulk Import (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[Keep Identity Values When Bulk Importing Data (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />Format Files for Importing or Exporting Data (SQL Server))<br />&emsp;&#9679;&emsp;[Create a Format File (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Bulk Import Data (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Skip a Table Column (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Skip a Data Field (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Map Table Columns to Data-File Fields (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[Examples of Bulk Import and Export of XML Documents (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
+|Data Formats for Bulk Import or Bulk Export (SQL Server)<br />&emsp;&#9679;&emsp;[Use Native Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Character Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Unicode Native Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use Unicode Character Format to Import or Export Data (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[Specify Field and Row Terminators (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[Keep Nulls or Use Default Values During Bulk Import (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[Keep Identity Values When Bulk Importing Data (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />Format Files for Importing or Exporting Data (SQL Server))<br />&emsp;&#9679;&emsp;[Create a Format File (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Bulk Import Data (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Skip a Table Column (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Skip a Data Field (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Use a Format File to Map Table Columns to Data-File Fields (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[Examples of Bulk Import and Export of XML Documents (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
-## See Also  
+## See Also
+
  [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
-  
-  
+ [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+
 ## Feedback
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

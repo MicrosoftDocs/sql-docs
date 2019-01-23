@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-
+ms.technology: replication
 ms.topic: "reference"
 helpviewer_keywords: 
   - "replication [SQL Server], planning"
@@ -79,7 +78,7 @@ manager: craigg
   
  The following topics provide information on security:  
   
--   [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+-   [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
 -   [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

@@ -51,22 +51,32 @@
   items:
   - name: R
     items:
+    - name: Verify R exists in SQL Server
+      href: tutorials/quickstart-r-verify.md
     - name: Hello World in R and SQL
-      href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+      href: tutorials/quickstart-r-run-using-tsql.md
     - name: Handle inputs and outputs
-      href: tutorials/rtsql-working-with-inputs-and-outputs.md
+      href: tutorials/quickstart-r-inputs-and-outputs.md
     - name: Handle data types and objects
-      href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+      href: tutorials/quickstart-r-data-types-and-objects.md
     - name: Using R functions
-      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
+      href: tutorials/quickstart-r-functions.md
     - name: Create a predictive model
-      href: tutorials/rtsql-create-a-predictive-model-r.md
-    - name: Predict and plot from model
-      href: tutorials/rtsql-predict-and-plot-from-model.md
+      href: tutorials/quickstart-r-create-predictive-model.md
+    - name: Predict from model
+      href: tutorials/quickstart-r-predict-from-model.md
   - name: Python
     items:
-    - name: Run Python using T-SQL
-      href: tutorials/run-python-using-t-sql.md
+    - name: Verify Python exists in SQL Server 
+      href: tutorials/quickstart-python-verify.md
+    - name: Hello World in Python and SQL
+      href: tutorials/quickstart-python-run-using-t-sql.md
+    - name: Handle inputs and outputs
+      href: tutorials/quickstart-python-inputs-and-outputs.md
+    - name: Python data structures and SQL
+      href: tutorials/quickstart-python-data-structures.md
+    - name: Train and use your first model
+      href: tutorials/quickstart-python-train-score-in-tsql.md 
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -78,30 +88,12 @@
       href: tutorials/demo-data-iris-in-sql.md
     - name: NYC Taxi data set
       href: tutorials/demo-data-nyctaxi-in-sql.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Train and use your first model
-      href: tutorials/train-score-using-python-in-tsql.md 
-    - name: Create a Python model using revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md  
-    - name: Learn in-database analytics
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: 1 - Data exploration
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - Feature engineering
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - Train and deploy
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - Predictions
-        href: tutorials/sqldev-py6-operationalize-the-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
     - name: Create partition-based models
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: In-database analytics for SQL developers
+    - name: R for SQL developers
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
       - name: 1 - Data exploration
@@ -112,7 +104,7 @@
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
       - name: 4 - Predictions
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: In-database analytics for data scientists
+    - name: SQL for R data scientists
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
       - name: 1 - Data exploration
@@ -156,6 +148,22 @@
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Send custom R using rxExec 
         href: tutorials/r-tutorial-custom-r-functions.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Create a Python model using revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md  
+    - name: Python for SQL developers
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: 1 - Data exploration
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: 2 - Feature engineering
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: 3 - Train and deploy
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: 4 - Predictions
+        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Samples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
@@ -179,8 +187,6 @@
       href: r/installing-and-managing-r-packages.md
     - name: Get package information
       href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: Install new Python packages
-      href: python/install-additional-python-packages-on-sql-server.md
     - name: Install new R packages
       href: r/install-additional-r-packages-on-sql-server.md
       items:
@@ -199,6 +205,8 @@
         href: r/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages
         href: r/packages-installed-in-user-libraries.md
+    - name: Install new Python packages
+      href: python/install-additional-python-packages-on-sql-server.md
   - name: Data exploration and modeling
     items:
     - name: R-to-SQL data type conversions 
@@ -276,20 +284,20 @@
   items:
   - name: R packages
     items:
-    - name: olapR
-      href: r/ref-r-olapr.md
-    - name: MicrosoftML
-      href: r/ref-r-microsoftml.md
     - name: RevoScaleR
       href: r/ref-r-revoscaler.md
+    - name: MicrosoftML
+      href: r/ref-r-microsoftml.md
+    - name: olapR
+      href: r/ref-r-olapr.md
     - name: sqlrutils
       href: r/ref-r-sqlrutils.md
   - name: Python packages
     items:
-    - name: microsoftml
-      href: python/ref-py-microsoftml.md
     - name: revoscalepy
       href: python/ref-py-revoscalepy.md
+    - name: microsoftml
+      href: python/ref-py-microsoftml.md
 - name: Resources
   items:
   - name: Release notes

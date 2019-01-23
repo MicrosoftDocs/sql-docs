@@ -25,7 +25,7 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|DUP_KEY|  
-|Message Text|CREATE UNIQUE INDEX terminated because a duplicate key was found for object name '%.*ls' and index name '%.\*ls'.  The duplicate key value is %ls.|  
+|Message Text|CREATE UNIQUE INDEX terminated because a duplicate key was found for object name '%.\*ls' and index name '%.\*ls'.  The duplicate key value is %ls.|  
   
 ## Explanation  
 This error occurs when you attempt to create a unique index and more than one row in the table contains the specified duplicate value. A unique index is created when you create an index and specify the UNIQUE keyword, or when you create a UNIQUE constraint. The table cannot contain any rows that have duplicate values in the columns defined in the index or constraint.  

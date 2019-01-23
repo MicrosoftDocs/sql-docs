@@ -26,15 +26,17 @@
         href: deploy-install-mssqlctl.md
 - name: Tutorials
   items:
-  - name: 1_Query HDFS data
+  - name: 1_Load sample data
+    href: tutorial-load-sample-data.md
+  - name: 2_Query HDFS data
     href: tutorial-query-hdfs-storage-pool.md
-  - name: 2_Query Oracle data
+  - name: 3_Query Oracle data
     href: tutorial-query-oracle.md
-  - name: 3_Load data pool with SQL
+  - name: 4_Load data pool with SQL
     href: tutorial-data-pool-ingest-sql.md
-  - name: 4_Load data pool with Spark
+  - name: 5_Load data pool with Spark
     href: tutorial-data-pool-ingest-spark.md
-  - name: 5_Run a Spark notebook
+  - name: 6_Run a Spark notebook
     href: tutorial-notebook-spark.md
 - name: Concepts
   items:
@@ -56,14 +58,16 @@
   items:
   - name: Data virtualization
     items:
-    - name: Virtualize external data
+    - name: Virtualize relational data
       href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+    - name: Virtualize CSV data
+      href: ../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: Data ingestion
     items:
     - name: Load data with curl
       href: data-ingestion-curl.md
     - name: Restore a database
-      href: data-ingestion-restore-databse.md
+      href: data-ingestion-restore-database.md
   - name: Big Data/Machine Learning
     items:
     - name: Data wrangling using PROSE Code Accelerator

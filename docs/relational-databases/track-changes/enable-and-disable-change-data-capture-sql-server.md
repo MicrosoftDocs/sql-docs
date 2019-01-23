@@ -1,6 +1,6 @@
 ---
 title: "Enable and Disable Change Data Capture (SQL Server) | Microsoft Docs"
-ms.date: "03/06/2017"
+ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,7 +17,7 @@ ms.author: jroth
 manager: craigg
 ---
 # Enable and Disable Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   This topic describes how to enable and disable change data capture for a database and a table.  
   
 ## Enable Change Data Capture for a Database  

@@ -1,5 +1,6 @@
 ---
-title: Define and use compute contexts (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Define and use RevoScaleR compute contexts - SQL Server Machine Learning
+description: Tutorial walkthrough on how to define a compute context using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -68,7 +69,7 @@ This section walks you through each part.
     
    If you want to manually create a specific directory for sharing, you can add a line like the following:
 
-    ```
+    ```R
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 

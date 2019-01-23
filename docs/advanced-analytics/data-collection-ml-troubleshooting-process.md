@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot data collection for machine learning - SQL Server
+title: Troubleshoot data collection for machine learning - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -43,7 +43,7 @@ It's possible to upgrade the R Server components separately from the SQL Server 
 
 The easiest way to determine the R version is to get the runtime properties by running a statement such as the following:
 
-```SQL
+```sql
 exec sp_execute_external_script
        @language = N'R'
        , @script = N'
@@ -100,7 +100,7 @@ The R console displays the version information on startup. For example, the foll
 
 There are several ways to get the Python version. The easiest way is to run this statement from Management Studio or any other SQL query tool:
 
-```SQL
+```sql
 -- Get Python runtime properties:
 exec sp_execute_external_script
        @language = N'Python'

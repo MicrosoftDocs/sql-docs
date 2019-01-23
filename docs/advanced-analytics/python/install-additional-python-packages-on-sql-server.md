@@ -1,6 +1,6 @@
 ---
-title: Install new Python packages on SQL Server Machine Learning | Microsoft Docs
-description: Add new Python packages to SQL Server 2017 Machine Learning Services (In-Database), and Machine Learning Server (Standalone)
+title: Install new Python language packages -  SQL Server Machine Learning
+description: Add new Python packages to SQL Server 2017 Machine Learning Services (In-Database), and Machine Learning Server (Standalone).
 ms.prod: sql
 ms.technology: machine-learning
 

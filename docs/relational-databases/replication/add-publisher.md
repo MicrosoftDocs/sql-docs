@@ -24,15 +24,15 @@ manager: craigg
  **Add**  
  Click to select a type of Publisher to add, which launches the **Connect to Server** dialog box. The options are:  
   
--   **Add SQL Server Publisher...**  
+-   **Add SQL Server Publisher…**  
   
      Connect to the Publisher using the **Connect to Server** dialog box.  
   
--   **Add Oracle Publisher...**  
+-   **Add Oracle Publisher…**  
   
      Connect to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
   
--   **Specify a Distributor and Add Its Publishers...**  
+-   **Specify a Distributor and Add Its Publishers…**  
   
      Connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with one or more Publishers using the **Connect to Server** dialog box.  
   
@@ -64,6 +64,6 @@ manager: craigg
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

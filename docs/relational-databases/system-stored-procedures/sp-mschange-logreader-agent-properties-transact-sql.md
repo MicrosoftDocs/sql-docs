@@ -39,10 +39,10 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+ [ **@publisher** = ] **'**_publisher_**'**  
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+ [ **@publisher_db=** ] **'**_publisher_db_**'**  
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
  [ **@publisher_security_mode**= ] *publisher_security_mode*  
@@ -52,19 +52,19 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  **1** specifies Windows Authentication.  
   
- [ **@publisher_login**= ] **'***publisher_login***'**  
+ [ **@publisher_login**= ] **'**_publisher_login_**'**  
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with no default. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the Windows account specified in *job_login* will be used when connecting to the Publisher.  
   
- [ **@publisher_password**= ] **'***publisher_password***'**  
+ [ **@publisher_password**= ] **'**_publisher_password_**'**  
  Is the password used when connecting to the Publisher. *publisher_password* is **sysname**, with no default.  
   
- [ **@job_login**= ] **'***job_login***'**  
+ [ **@job_login**= ] **'**_job_login_**'**  
  Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with no default. *This cannot be changed for a non-*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
   
- [ **@job_password**= ] **'***job_password***'**  
+ [ **@job_password**= ] **'**_job_password_**'**  
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with no default.  
   
- [ **@publisher_type**= ] **'***publisher_type***'**  
+ [ **@publisher_type**= ] **'**_publisher_type_**'**  
  Specifies the Publisher type when the Publisher is not running in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  

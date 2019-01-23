@@ -1,10 +1,10 @@
 ---
-title: Standalone R Server or Machine Learning Server installation in SQL Server | Microsoft Docs
+title: Standalone R Server or Machine Learning Server installation - SQL Server Machine Learning Services
 description: Overview introduction to standalone R Server and Machine Learning Server in SQL Server Setup
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/01/2018  
+ms.date: 12/18/2018  
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
@@ -26,12 +26,12 @@ SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following 
 
 | Component | Description |
 |-----------|-------------|
-| R packages | [**RevoScaleR**](ref-r-revoscaler.md) is the primary library for scalable R with functions for data manipulation, transformation, visualization, and analysis.  <br/>[**MicrosoftML**](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](ref-r-sqlrutils.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md) offers web service deployment (in SQL Server 2017 only). <br/>[**olapR**](how-to-create-mdx-queries-using-olapr.md) is for specifying MDX queries in R.|
+| R packages | [**RevoScaleR**](ref-r-revoscaler.md) is the primary library for scalable R with functions for data manipulation, transformation, visualization, and analysis.  <br/>[**MicrosoftML**](ref-r-microsoftml.md) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](ref-r-sqlrutils.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md) offers web service deployment (in SQL Server 2017 only). <br/>[**olapR**](ref-r-olapr.md) is for specifying MDX queries in R.|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) is Microsoft's open-source distribution of R. The package and interpreter are included. Always use the version of MRO bundled in setup. |
 | R tools | R console windows and command prompts are standard tools in an R distribution. Find them at \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
 | R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data. Look for them at \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets and \library\RevoScaleR. |
 | Python packages | [**revoscalepy**](../python/ref-py-revoscalepy.md) is the primary library for scalable Python with functions for data manipulation, transformation, visualization, and analysis. <br/>[**microsoftml**](../python/ref-py-microsoftml.md) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis.  |
-| Python tools | The built-in Python command line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
+| Python tools | The built-in Python command-line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
 | Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
 | Pre-trained models in R and Python | Pre-trained models are created for specific use cases and maintained by the data science engineering team at Microsoft. You can use the pre-trained models as-is to score positive-negative sentiment in text, or detect features in images, using new data inputs that you provide. Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. For more information, see [Install pretrained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
@@ -75,6 +75,14 @@ Choose the best language for the task. R is best for statistical computations th
 ### Step 4: Operationalize your solution
 
 Standalone servers can use the [operationalization](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) functionality of the non-SQL-branded [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). You can configure a standalone server for operationalization, which gives you these benefits: deploy and host your code as web services, run diagnostics, test web service capacity.
+
+### Step 5: Maintain your server
+
+SQL Server releases cumulative updates on a regular basis. Applying the cumulative updates adds security and functional enhancements to an existing installation. 
+
+Descriptions of new or changed functionality can be found in the [CAB Downloads](../install/sql-ml-cab-downloads.md) article and on the web pages for [SQL Server 2016 cumulative updates](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions) and [SQL Server 2017 cumulative updates](https://support.microsoft.com/help/4047329). 
+
+For more information on how to apply updates to an existing instance, see [Apply updates](../install/sql-machine-learning-standalone-windows-install.md#apply-cu) in the installation instructions.
 
 ## See also
 

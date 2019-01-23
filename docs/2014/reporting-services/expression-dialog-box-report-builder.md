@@ -24,7 +24,7 @@ manager: craigg
 ## Expression Constructs  
  Expressions begin with an equal sign (=) and can include constants, literals, operators, and references to built-in fields, built-in collections, built-in functions, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] run-time library functions, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common language runtime classes, and custom functions. The following list describes the categories and values you can add to an expression.  
   
- **Set expression for:**  *\<PropertyName>*  
+ **Set expression for:**  _\<PropertyName>_  
  The name of the property that you are defining an expression for. You can also set this property, by name, in the Properties pane.  
   
  **Constants**  
@@ -38,7 +38,7 @@ manager: craigg
  **Parameters**  
  Provides a list of report parameters.  
   
- **Fields(** *\<selected Dataset>* **)**  
+ **Fields(** _\<selected Dataset>_ **)**  
  Displays the list of fields for the dataset selected in the Datasets category. Double-click a field to copy the field to the **Expression** box.  
   
  **Datasets**  

@@ -135,10 +135,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  This example reads from a file that is named `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

@@ -20,6 +20,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Add Columns to a Table (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
   This topic describes how to add new columns to a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -52,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     > [!NOTE]  
     >  The default values for your column properties are added when you create a new column, but you can change them in the **Column Properties** tab.  
   
-6.  When you are finished adding columns, from the **File** menu, choose **Save** *table name*.  
+6.  When you are finished adding columns, from the **File** menu, choose **Save** _table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

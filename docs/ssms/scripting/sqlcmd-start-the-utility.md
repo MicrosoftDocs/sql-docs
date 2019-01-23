@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ### Start the sqlcmd utility and connect to a named instance of SQL Server  
   
-1.  Open a Command Prompt window, and type **sqlcmd -S***myServer\instanceName*. Replace *myServer\instanceName* with the name of the computer and the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you want to connect to.  
+1.  Open a Command Prompt window, and type **sqlcmd -S**_myServer\instanceName_. Replace *myServer\instanceName* with the name of the computer and the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you want to connect to.  
   
 2.  Press ENTER.  
   

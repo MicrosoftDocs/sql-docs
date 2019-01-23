@@ -1,6 +1,6 @@
 ---
 title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
-description:
+description: This page details the steps for using the Create external table wizard for relational Data sources
 author: Abiola
 ms.author: aboke
 manager: craigg
@@ -11,7 +11,7 @@ ms.technology: polybase
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 
-# Use the Data External Table wizard with external tables
+# Use the External Table Wizard with relational data sources
 
 One of the key scenarios for SQL Server 2019 CTP 2.0 is the ability to virtualize data. This process allows the data to stay in its original location. You can *virtualize* the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This process minimizes the need for ETL processes. This process is possible with the use of PolyBase connectors. For more information on data virtualization, see [Get started with PolyBase](polybase-guide.md).
 

@@ -1136,9 +1136,9 @@ Ownership and permission problems on the URL can interfere with a backup operati
 The example performs a COPY_ONLY backup of `Sales` to the Microsoft Azure Blob storage service.  The storage Account name is `mystorageaccount`.  The container is called `myfirstcontainer`.  A stored access policy has been created with read, write, delete, and list rights.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy.  For information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Microsoft Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   

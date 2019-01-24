@@ -27,7 +27,7 @@ You can enter "(local)" when you are using the same computer as SQL Server. You 
 For more information about server names for different types of networks, see the SQL Server installation documentation in SQL Server Books Online.
 
 ### Authentication Mode
-Selects the authentication mode from one of the following:
+You can select the following authentication options from the Authentication Mode dropdown:
 - **SQL Server Authentication:** Authentication to SQL Server using login ID and password
 - **Windows Authentication:** Authentication to SQL Server using the currently logged-in user's account
 - **Active Directory - Password:** Active Directory authentication to Azure SQL DB using login ID and password
@@ -41,7 +41,7 @@ If you use a trusted connection, you can specify a service principal name (SPN) 
 >  When connecting to Azure SQL DB, using SPNs with **Active Directory - Integrated** authentication option is not supported.
 
 ### Login ID
-Specifies the SQL Server or Azure Active Directory login ID to use for the connection if **Authentication Mode** is set to **SQL Server Authentication** or **Active Directory - Password**. Otherwise, the **Login ID** box is disabled.
+Specifies the SQL Server or Azure Active Directory login ID to use for the connection. The Login ID text box is only enabled if **Authentication Mode** is set to **SQL Server Authentication** or **Active Directory - Password**.
 
 ### Password
 Specifies the password for the SQL Server or Azure Active Directory login ID used for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory - Password**. Otherwise, the **Password** box is disabled.
@@ -50,7 +50,7 @@ Specifies the password for the SQL Server or Azure Active Directory login ID use
 Displays or hides the **Options** group. The **Options** button is enabled if **Server** has a value.
 
 ### Change Password
-When this checkbox is selected, displays the **New Password** and **Confirm New Password** boxes.
+When this checkbox is selected, **New Password** and **Confirm New Password** boxes are enabled.
 
 > [!NOTE]  
 >  Using this option to change password used for **Active Directory - Password** authentication option is not supported.

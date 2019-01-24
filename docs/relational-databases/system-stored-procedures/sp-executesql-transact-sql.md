@@ -56,7 +56,7 @@ sp_executesql [ @stmt = ] statement
  Each parameter included in \@stmt must have a corresponding entry in both the \@params parameter definition list and the parameter values list.  
   
  [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
- Is one string that contains the definitions of all parameters that have been embedded in \@stmt. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in \@stmtmust be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in \@stmt does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
+ Is one string that contains the definitions of all parameters that have been embedded in \@stmt. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in \@stmt must be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in \@stmt does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
   
  [ \@param1= ] '*value1*'  
  Is a value for the first parameter that is defined in the parameter string. The value can be a Unicode constant or a Unicode variable. There must be a parameter value supplied for every parameter included in \@stmt. The values are not required when the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in \@stmt has no parameters.  

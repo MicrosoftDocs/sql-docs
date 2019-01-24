@@ -27,19 +27,19 @@ This article serves as a guide to walk through the debugging process of such iss
 
 ## Introduction
 
-It helps to first understand the Kerberos protocol at a high-level. There are three actors involved:
+It helps to first understand the Kerberos protocol at a high level. There are three actors involved:
 
 1. Kerberos client (SQL Server)
 1. Secured resource (HDFS, MR2, YARN, Job History, etc.)
 1. Key distribution center (referred to as a domain controller in Active Directory)
 
-Each one of Hadoop's secured resources is registered with the **Key Distribution Center (KDC)** with a unique **Service Principal Name (SPN)** as part of the Kerberization process of the Hadoop cluster. The goal is for the client to obtain a temporary user ticket, called a **Ticket Granting Ticket (TGT)**, in order to request another temporary ticket, called a **Service Ticket (ST)**, from the KDC against the particular SPN that it wants to access.  
+Each Hadoop secured resource is registered in the **Key Distribution Center (KDC)** with a unique **Service Principal Name (SPN)** when Kerberos is configured on the Hadoop cluster. The goal is for the client to obtain a temporary user ticket, called a **Ticket Granting Ticket (TGT)**, in order to request another temporary ticket, called a **Service Ticket (ST)**, from the KDC against the particular SPN that it wants to access.  
 
 In PolyBase, when authentication is requested against any Kerberos-secured resource, the following four-round-trip handshake takes place:
 
-1. SQL Server connects to the KDC and obtains a TGT for the user. The TGT is encrypted using the KDC's private key.
-1. SQL Server calls the Hadoop secured resource (e.g. HDFS) and determines which SPN it needs a ST for.
-1. SQL Server goes back to the KDC, passes the TGT back, and requests a ST to access that particular secured resource. The ST is encrypted using the secured service's private key.
+1. SQL Server connects to the KDC and obtains a TGT for the user. The TGT is encrypted using the KDC private key.
+1. SQL Server calls the Hadoop secured resource, HDFS,  and determines which SPN it needs an ST for.
+1. SQL Server goes back to the KDC, passes the TGT back, and requests an ST to access that particular secured resource. The ST is encrypted using the secured service's private key.
 1. SQL Server forwards the ST to Hadoop and gets authenticated to have a session created against that service.
 
 ![](./media/polybase-sqlserver.png)
@@ -63,7 +63,7 @@ These files are located under:
 
 For example, the default for SQL Server 2016 is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Update **core-site.xml**, add the three properties below. Set the values set according to the environment:
+Update **core-site.xml**, add the three properties below. Set the values according to the environment:
 
 ```xml
 <property>
@@ -207,9 +207,9 @@ If the tool was run and the file properties of the target path were *not* printe
 
 ### MIT KDC  
 
-All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available in the cluster (for example, nn, dn, rm, yarn, spnego, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC's private key.  
+All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If Kerberos is properly configured on the Hadoop cluster, there should be one SPN for each one of the services available in the cluster (for example: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC private key.  
 
-Also consider using the [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) tool to verify the admin credentials on the KDC locally. An example usage would be: *kinit identity@MYREALM.COM*. A prompt for a password indicates the identity exists.  
+Also consider using [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) to verify the admin credentials on the KDC locally. An example usage would be: `kinit identity@MYREALM.COM`. A prompt for a password indicates the identity exists.  
 The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includes all of the requests for tickets including the client IP that made the request. There should be two requests from the SQL Server machine's IP wherein the tool was run: first for the TGT from the Authenticating Server as an **AS\_REQ**, followed by a **TGS\_REQ** for the ST from the Ticket Granting Server.
 
 ```bash
@@ -220,7 +220,7 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which inclu
 
 ### Active Directory 
 
-In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available (e.g. nn, dn, rm, yarn, spnego, etc.)
+In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If Kerberos is properly configured on the Hadoop cluster, there is one SPN for each one of the services available (for example: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
 
 ### General debugging tips
 
@@ -232,7 +232,7 @@ If you are still having issues accessing Kerberos, follow the steps below to deb
 
     - Write your own java program
       or
-    - Use `HdfsBridge` class (open source code will be available soon) from PolyBase installation folder
+    - Use `HdfsBridge` class (open-source code will be available soon) from PolyBase installation folder
     - If you are using java `-classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020` `admin_user C:\temp\kerberos_pass.txt` make sure the `admin_user` value only includes the user name - not any domain part.
 
 2. If you can’t access Kerberos HDFS data from outside PolyBase:
@@ -240,7 +240,7 @@ If you are still having issues accessing Kerberos, follow the steps below to deb
     - Make sure the user exists in domain account and use the same user account while trying to access HDFS.
 
 3. For active directory Kerberos, make sure you can see cached ticket using `klist` command on Windows.
-    - Login into PolyBase machine and run  `klist` and `klist tgt` in command prompt to see if the KDC, username and encryption types are correct.
+    - Log in into PolyBase machine and run  `klist` and `klist tgt` in command prompt to see if the KDC, username, and encryption types are correct.
 
 4.	If KDC can only support AES256, make sure [JCE policy files](http://www.oracle.com/technetwork/java/javase/downloads/index.html) are installed.
 

@@ -474,8 +474,6 @@ column_name <data_type>
  IDENTITY  
  Indicates that the new column is an identity column. When a new row is added to the table, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides a unique, incremental value for the column. Identity columns are typically used with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. Both the seed and increment or neither must be specified. If neither is specified, the default is (1,1).  
   
- In a memory-optimized table, the only allowed value for both *seed* and *increment* is 1; (1,1) is the default for *seed* and *increment*.  
-  
  *seed*  
  Is the value used for the very first row loaded into the table.  
   

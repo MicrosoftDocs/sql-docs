@@ -48,7 +48,7 @@ Issues with authentication fall into one or more of the above four steps. To hel
 
 ## Troubleshooting
 
-PolyBase has multiple configuration XMLs containing properties of the Hadoop cluster. Namely, these are the following files:
+PolyBase has the following configuration XML files containing properties of the Hadoop cluster:
 
 - core-site.xml
 - hdfs-site.xml
@@ -59,11 +59,11 @@ PolyBase has multiple configuration XMLs containing properties of the Hadoop clu
 
 These files are located under:
 
-\\[System Drive\\]:{install path}\\{instance}\\{name}\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf
+`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-For example, the default for SQL Server 2016, for instance, would be "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf".
+For example, the default for SQL Server 2016 is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Update one of the PolyBase configuration files, **core-site.xml**, with the three properties below with the values set according to the environment:
+Update **core-site.xml**, add the three properties below. Set the values set according to the environment:
 
 ```xml
 <property>
@@ -93,10 +93,10 @@ The tool runs independently of SQL Server, so it does not need to be running, no
 
 | Argument | Description|
 | --- | --- |
-| *Name Node Address* | The IP or FQDN of the name node. This refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL.|
-| *Name Node Port* | The port of the name node. This refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. This is typically 8020. |
-| *Service Principal* | The admin service principal to your KDC. This should match what you use as your "IDENTITY" argument in your CREATE DATABASE SCOPED CREDENTIAL T-SQL.|
-| *Service Password* | Instead of typing your password at the console, store it in a file and pass the file path here. The contents of the file should match what you use as your "SECRET" argument in your CREATE DATABASE SCOPED CREDENTIAL T-SQL. |
+| *Name Node Address* | The IP or FQDN of the name node. Refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL.|
+| *Name Node Port* | The port of the name node. Refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. For example, 8020. |
+| *Service Principal* | The admin service principal to your KDC. Matches the "IDENTITY" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
+| *Service Password* | Instead of typing your password at the console, store it in a file and pass the file path here. The contents of the file should match what you use as your "SECRET" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
 | *Remote HDFS file path (optional) * | The path of an existing file to access. If not specified, the root "/" will be used. |
 
 ## Example
@@ -111,7 +111,7 @@ The following excerpts are from an MIT KDC. You may refer to complete sample out
 
 ## Checkpoint 1
 
-There should be a hex dump of a ticket with Server Principal = krbtgt/*MYREALM.COM@MYREALM.COM*. This indicates SQL Server successfully authenticated against the KDC and received a TGT. If not, the problem lies strictly between SQL Server and the KDC, and not Hadoop.
+There should be a hex dump of a ticket with `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM`. It indicates that SQL Server successfully authenticated against the KDC and received a TGT. If not, the problem lies strictly between SQL Server and the KDC, and not Hadoop.
 
 PolyBase does **not** support trust relationships between AD and MIT and must be configured against the same KDC as configured in the Hadoop cluster. In such environments, manually creating a service account on that KDC and using that to perform authentication will work.
 
@@ -180,7 +180,7 @@ A second hex dump indicates that SQL Server successfully used the TGT and acquir
 
 ## Checkpoint 4
 
-Finally, the file properties of the target path should be printed along with a confirmation message. This indicates SQL Server was authenticated by Hadoop using the ST and a session was granted to access the secured resource.
+Finally, the file properties of the target path should be printed along with a confirmation message. The file properties confirm SQL Server was authenticated by Hadoop using the ST and a session was granted to access the secured resource.
 
 Reaching this point confirms that: (i) the three actors are able to communicate correctly, (ii) the core-site.xml and jaas.conf are correct, and (iii) your KDC recognized your credentials.
 
@@ -197,8 +197,8 @@ If the tool was run and the file properties of the target path were *not* printe
 | --- | --- |
 | org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS".|
 |javax.security.auth.login.LoginException<br>Client not found in Kerberos database  (6) - CLIENT_NOT_FOUND |	The admin Service Principal supplied does not exist in the realm specified in core-site.xml.|
-| javax.security.auth.login.LoginException<br> Checksum failed |	Admin Service Principal exists, but bad password. |
-| Native config name: C:\Windows\krb5.ini<br>Loaded from native config | This is not an exception, but it indicates that Java's krb5LoginModule detected custom client configurations on your machine. Check your custom client settings as they may be causing the issue. |
+| javax.security.auth.login.LoginException<br> Checksum failed |Admin Service Principal exists, but bad password. |
+| Native config name: C:\Windows\krb5.ini<br>Loaded from native config | This message indicates that Java's krb5LoginModule detected custom client configurations on your machine. Check your custom client settings as they may be causing the issue. |
 | javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Add the property "hadoop.security.auth_to_local" to core-site.xml with the appropriate rules per the Hadoop cluster. |
 | java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |	Authentication against the KDC was successful, but it failed to access the Hadoop name node. Check the name node IP and port. Verify the firewall is disabled on Hadoop. |
 | java.io.FileNotFoundException<br>File does not exist: /test/data.csv |	Authentication was successful, but the location specified does not exist. Check the path or test with root "/" first. |
@@ -207,7 +207,7 @@ If the tool was run and the file properties of the target path were *not* printe
 
 ### MIT KDC  
 
-All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available in the cluster (e.g. nn, dn, rm, yarn, spnego, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC's private key.  
+All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available in the cluster (for example, nn, dn, rm, yarn, spnego, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC's private key.  
 
 Also consider using the [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) tool to verify the admin credentials on the KDC locally. An example usage would be: *kinit identity@MYREALM.COM*. A prompt for a password indicates the identity exists.  
 The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includes all of the requests for tickets including the client IP that made the request. There should be two requests from the SQL Server machine's IP wherein the tool was run: first for the TGT from the Authenticating Server as an **AS\_REQ**, followed by a **TGS\_REQ** for the ST from the Ticket Granting Server.
@@ -224,13 +224,13 @@ In Active Directory, the SPNs can be viewed by browsing to Control Panel > Activ
 
 ### General debugging tips
 
-It is helpful to have some java experience to look into the logs and debug the Kerberos issues which are completely independent of SQL server PolyBase feature.
+It is helpful to have some java experience to look into the logs and debug the Kerberos issues, which are independent of SQL server PolyBase feature.
 
 If you are still having issues accessing Kerberos, follow the steps below to debug:
 
-1. Make sure you can access the Kerberos HDFS data from outside SQL server. To do this you can either: 
+1. Make sure you can access the Kerberos HDFS data from outside SQL server. You can either: 
 
-    - Write your own simple java program
+    - Write your own java program
       or
     - Use `HdfsBridge` class (open source code will be available soon) from PolyBase installation folder
     - If you are using java `-classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020` `admin_user C:\temp\kerberos_pass.txt` make sure the `admin_user` value only includes the user name - not any domain part.

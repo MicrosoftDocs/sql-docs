@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 6-4: Deploy the Lesson 6 package
 
-Deploying the package involves adding the package to the SSISDB catalog in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on an instance of SQL Server. In this lesson, you add the Lesson 6 package to the SSISDB catalog, set the new parameter, and execute the package. For this lesson, you use SQL Server Management Studio to add the Lesson 6 package to the SSISDB catalog, and deploy the package. After deploying the package, you modify the parameter to point to a new location then execute the package.   
+Deploying the package involves adding the package to the SSISDB catalog in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on an instance of SQL Server. In this lesson, you add the Lesson 6 package to the SSISDB catalog, set the new parameter, and execute the package. For this lesson, you use SQL Server Management Studio to add the Lesson 6 package to the SSISDB catalog, and deploy the package. After deploying the package, you modify the parameter to point to a new location and then run the package.   
 In this task, you:  
 
 1. Add the package to the SSISDB catalog in the SSIS node in SQL Server.  

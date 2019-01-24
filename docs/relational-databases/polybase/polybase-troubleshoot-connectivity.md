@@ -222,25 +222,27 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which inclu
 
 In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available (e.g. nn, dn, rm, yarn, spnego, etc.)
 
-### General Debugging Tips
+### General debugging tips
 
-If you are still having some issues accessing Kerberos. Below are some steps that can be used to debug: 
+It is helpful to have some java experience to look into the logs and debug the Kerberos issues which are completely independent of SQL server PolyBase feature.
 
-1.	Always make sure, you can access the Kerberos HDFS data from outside SQL server.
-    - You can write your own simple java program or 
-    - use HdfsBridge class( open source code will be available soon) from PolyBase installation folder.
-    - If you are using java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt. Make sure the admin_user does not include any domain part which means use just username.
+If you are still having issues accessing Kerberos, follow the steps below to debug:
 
-2.	If you can’t access Kerberos HDFS data  from outside PolyBase:
-    - There are two types of Kerberos authentication: Active directory Kerberos authentication, MIT Kerberos authentication.
-    - Make sure user exist in domain account and you use same user account while trying to access HDFS.
-    - Customer/CSS is expected to have some java experience to look into the logs and debug the Kerberos issues which is completely independent of SQL server PolyBase feature.
+1. Make sure you can access the Kerberos HDFS data from outside SQL server. To do this you can either: 
 
-3.	For active directory Kerberos, make sure you can see cached ticket using klist command on windows.
-    - Login into PolyBase machine and run  ‘klist’ and ‘klist tgt’ in command prompt to see if the KDC, username and encryption types are correct.
+    - Write your own simple java program
+      or
+    - Use `HdfsBridge` class (open source code will be available soon) from PolyBase installation folder
+    - If you are using java `-classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020` `admin_user C:\temp\kerberos_pass.txt` make sure the `admin_user` value only includes the user name - not any domain part.
 
-4.	If for any reason, KDC can only support AES256, make sure JCE policy files are installed. They can be found here: 
-https://www.oracle.com/technetwork/java/javase/downloads/index.html
+2. If you can’t access Kerberos HDFS data from outside PolyBase:
+    - There are two types of Kerberos authentication: Active directory Kerberos authentication, and MIT Kerberos authentication.
+    - Make sure the user exists in domain account and use the same user account while trying to access HDFS.
+
+3. For active directory Kerberos, make sure you can see cached ticket using `klist` command on Windows.
+    - Login into PolyBase machine and run  `klist` and `klist tgt` in command prompt to see if the KDC, username and encryption types are correct.
+
+4.	If KDC can only support AES256, make sure [JCE policy files](http://www.oracle.com/technetwork/java/javase/downloads/index.html) are installed.
 
 ## See also
 

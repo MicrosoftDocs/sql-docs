@@ -3,7 +3,7 @@
   items: 
     - name: Securing SQL Server
       href: securing-sql-server.md  
-  name: How-to
+- name: How-to
   items:
     - name: Secure SQL Server
       items:

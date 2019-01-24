@@ -15,9 +15,9 @@ manager: "mbarwin"
 # Connect Using Azure Active Directory Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and SQL Data Warehouse with federated identities in Azure AD using a username and password, Windows Integrated Authentication, or an Azure AD access token. The PHP drivers for SQL Server offer partial support for these features.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and SQL Data Warehouse with federated identities in Azure AD, using username and password, Windows Integrated Authentication, or an Azure AD access token. The PHP drivers for SQL Server offer partial support for these features.
 
-To use Azure AD, use the **Authentication** or **AccessToken** keywords (they are mutually exclusive), as shown in the following table. For more technical details please refer to [Using Azure Active Directory with the ODBC Driver](../../connect/odbc/using-azure-active-directory.md).
+To use Azure AD, use the **Authentication** or **AccessToken** keywords (they are mutually exclusive), as shown in the following table. For more technical details, refer to [Using Azure Active Directory with the ODBC Driver](../../connect/odbc/using-azure-active-directory.md).
 
 |Keyword|Values|Description|
 |-|-|-|
@@ -26,11 +26,11 @@ To use Azure AD, use the **Authentication** or **AccessToken** keywords (they ar
 |**Authentication**|Not set (default)|Authentication mode determined by other keywords. For more information, see [Connection Options](../../connect/php/connection-options.md). |
 ||`SqlPassword`|Directly authenticate to a SQL Server instance (which may be an Azure instance) using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 ||`ActiveDirectoryPassword`|Authenticate with an Azure Active Directory identity using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
-||`ActiveDirectoryMsi`|Authenticate using either a system-assigned managed identity or a user-assigned managed identity. For an overview and tutorials please refer to [What is managed idenitities for Azure resources?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
+||`ActiveDirectoryMsi`|Authenticate using either a system-assigned managed identity or a user-assigned managed identity. For an overview and tutorials, refer to [What is managed identities for Azure resources?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
 
-The **Authentication** keyword affects the connection security settings. If it is set in the connection string, then by default the **Encrypt** keyword is set to true, so the client will request encryption. Moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true (**false** by default). This is distinguished from the old, and less secure, login method, in which the server certificate is not validated unless encryption is specifically requested in the connection string.
+The **Authentication** keyword affects the connection security settings. If it is set in the connection string, then by default the **Encrypt** keyword is set to true, which means the client will request encryption. Moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true (**false** by default). This feature is distinguished from the old, less secure login method, in which the server certificate is validated only when encryption is specifically requested in the connection string.
 
-When using Azure AD with the PHP drivers for SQL Server on Windows, you may be asked to install the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=41950) (required for ODBC 13.1 but not for ODBC 17+).
+When using Azure AD with the PHP drivers for SQL Server on Windows, you may be asked to install the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=41950) (not required for ODBC 17+).
 
 #### Limitations
 
@@ -157,7 +157,7 @@ if ($conn === false) {
 ```
 
 ## Example
-The following examples show how to connect using managed idenitities for Azure resources
+The following examples show how to connect using managed identities for Azure resources
 
 ### Using the system-assigned managed identity with SQLSRV driver
 
@@ -239,4 +239,4 @@ try {
 ## See Also
 [Using Azure Active Directory with the ODBC Driver](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
 
-[What is managed idenitities for Azure resources?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+[What is managed identities for Azure resources?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

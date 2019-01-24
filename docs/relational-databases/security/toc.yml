@@ -15,11 +15,11 @@
         - name: Data discovery & classification
           href: sql-data-discovery-and-classification.md
         - name: SQL Server Connector troubleshooting
-          href: sql-server-connector-maintenance-troubleshooting.md
+          href: encryption/sql-server-connector-maintenance-troubleshooting.md
     - name: Authentication Access
       items:
         - name: Determine effective permissions
-          href: determining-effective-database-engine-permissions.md
+          href: authentication-access/determining-effective-database-engine-permissions.md
         - name: Create a login
           href: authentication-access/create-a-login.md
         - name: Create a database user
@@ -80,7 +80,7 @@
     - name: Secure Azure SQL Database
       items:
         - name: SQL Server connector with encryption
-          href: use-sql-server-connector-with-sql-encryption-features.md
+          href: encryption/use-sql-server-connector-with-sql-encryption-features.md
         - name: Bring your own key
           href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
         - name: Rotate TDE BYOK keys
@@ -88,7 +88,7 @@
         - name: Remove TDE protector
           href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
         - name: EKM using Azure Key Vault
-          href: setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+          href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
     - name: Auditing
       items:
         - name: Create server audit specification
@@ -180,20 +180,18 @@
            href: auditing/sql-server-audit-database-engine.md
            items:
              - name: Action gropus and actions
-               href: sql-server-audit-action-groups-and-actions.md
+               href: auditing/sql-server-audit-action-groups-and-actions.md
              - name: Audit records
-               href: sql-server-audit-records.md    
+               href: auditing/sql-server-audit-records.md    
 - name: Tutorials
   items:
-    - name: Always Encrypted
-      items:
-        - name: Always Encrypted with secure enclaves using SSMS
-          href: tutorial-getting-started-with-always-encrypted-enclaves.md
+    - name: Always Encrypted with secure enclaves using SSMS
+      href: tutorial-getting-started-with-always-encrypted-enclaves.md
 - name: Reference
   items:
     - name: Permissions or Securables page
       href: permissions-or-securables-page.md
     - name: Always Encrypted Wizard
-      href: always-encrypted-wizard.md
+      href: encryption/always-encrypted-wizard.md
 
   

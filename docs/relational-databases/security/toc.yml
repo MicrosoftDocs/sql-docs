@@ -167,22 +167,22 @@
            items:
              - name: Bring your own key
                href: https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
-        - name: Encryption keys
-          href: encryption/sql-server-and-database-encryption-keys-database-engine.md
-          items:
-            - name: Service master key
-              href: encryption/service-master-key.md
-            - name: Extensible key management (EKM)
-              href: encryption/extensible-key-management-ekm.md
-            - name: EKM using Azure Key Vault
-              href: extensible-key-management-using-azure-key-vault-sql-server.md
-        - name: Auditing
-          href: auditing/sql-server-audit-database-engine.md
-          items:
-            - name: Action gropus and actions
-              href: sql-server-audit-action-groups-and-actions.md
-            - name: Audit records
-              href: sql-server-audit-records.md    
+         - name: Encryption keys
+           href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+           items:
+             - name: Service master key
+               href: encryption/service-master-key.md
+             - name: Extensible key management (EKM)
+               href: encryption/extensible-key-management-ekm.md
+             - name: EKM using Azure Key Vault
+               href: extensible-key-management-using-azure-key-vault-sql-server.md
+         - name: Auditing
+           href: auditing/sql-server-audit-database-engine.md
+           items:
+             - name: Action gropus and actions
+               href: sql-server-audit-action-groups-and-actions.md
+             - name: Audit records
+               href: sql-server-audit-records.md    
 - name: Tutorials
   items:
     - name: Always Encrypted

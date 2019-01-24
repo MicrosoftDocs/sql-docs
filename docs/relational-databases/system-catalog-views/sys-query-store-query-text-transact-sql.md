@@ -1,7 +1,7 @@
 ---
 title: "sys.query_store_query_text (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/29/2018"
+ms.date: "01/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -33,8 +33,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**query_text_id**|**bigint**|Primary key.|  
 |**query_sql_text**|**nvarchar(max)**|SQL text of the query, as provided by the user. Includes whitespaces, hints and comments.|  
 |**statement_sql_handle**|**vabinary(64)**|SQL handle of the individual query.|  
-|**is_part_of_encrypted_module**|**bit**|Query text is a part of an encrypted module.|  
-|**has_restricted_text**|**bit**|Query text contains a password or other unmentionable words.|  
+|**is_part_of_encrypted_module**|**bit**|Query text is a part of an encrypted module.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**has_restricted_text**|**bit**|Query text contains a password or other unmentionable words.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

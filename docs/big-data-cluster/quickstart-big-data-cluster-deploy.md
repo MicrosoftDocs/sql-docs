@@ -231,6 +231,8 @@ az group delete -n <resource group name>
 
 ## Next steps
 
+The deployment script configured Azure Kubernetes Service and also deployed a SQL Server 2019 big data cluster. You can also choose to customize future deployments through manual installations. To learn more about how big data clusters are deployed as well as how to customize deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
+
 Now that the SQL Server big data cluster is deployed, you can load sample data and explore the tutorials:
 
 > [!div class="nextstepaction"]

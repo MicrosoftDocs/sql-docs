@@ -47,13 +47,13 @@
               href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
             - name: Configure with PowerShell 
               href: encryption/configure-always-encrypted-using-powershell.md
-            - name: Create & store Column Master Keys
+            - name: Create & store column master keys
               href: encryption/create-and-store-column-master-keys-always-encrypted.md
-            - name: Configure Keys with PowerShell
+            - name: Configure keys with PowerShell
               href: encryption/configure-always-encrypted-keys-using-powershell.md
-            - name: Rotate Keys with PowerShell
+            - name: Rotate keys with PowerShell
               href: encryption/rotate-always-encrypted-keys-using-powershell.md
-            - name: Configure Column Encryption with PowerShell
+            - name: Configure column encryption with PowerShell
               href: encryption/configure-column-encryption-using-powershell.md
             - name: Migrate sensitive data
               href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
@@ -63,17 +63,17 @@
           href: encryption/move-a-tde-protected-database-to-another-sql-server.md
         - name: Enable TDE with EKM
           href: encryption/enable-tde-on-sql-server-using-ekm.md
-        - name: Back up Service Master Key
+        - name: Back up service master key
           href: encryption/back-up-the-service-master-key.md
-        - name: Restore Service Master Key
+        - name: Restore service master key
           href: encryption/restore-the-service-master-key.md
-        - name: Create a Database Master Key
+        - name: Create a database master key
           href: encryption/create-a-database-master-key.md
-        - name: Back up a Database Master Key
+        - name: Back up a database master key
           href: encryption/back-up-a-database-master-key.md
-        - name: Restore a Database Master Key
+        - name: Restore a database master Key
           href: encryption/restore-a-database-master-key.md
-        - name: Create identical Symmetric Keys on two servers
+        - name: Create identical symmetric Keys on two servers
           href: encryption/create-identical-symmetric-keys-on-two-servers.md
         - name: Encrypt a column of data
           href: encryption/encrypt-a-column-of-data.md
@@ -95,7 +95,7 @@
           href: auditing/create-a-server-audit-and-server-audit-specification.md
         - name: Create database audit specification
           href: auditing/create-a-server-audit-and-database-audit-specification.md
-        - name: View a SQL Server audit log
+        - name: View audit log
           href: auditing/view-a-sql-server-audit-log.md
         - name: Write audit events to Windows log
           href: auditing/write-sql-server-audit-events-to-the-security-log.md
@@ -167,15 +167,15 @@ items:
         items:
           - name: Bring your own key
             href: https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
-          - name: EKM using Azure Key Vault
-            href: extensible-key-management-using-azure-key-vault-sql-server.md
-     - name: Database encryption keys
+     - name: Encryption keys
        href: encryption/sql-server-and-database-encryption-keys-database-engine.md
        items:
          - name: Service master key
            href: encryption/service-master-key.md
          - name: Extensible key management (EKM)
            href: encryption/extensible-key-management-ekm.md
+         - name: EKM using Azure Key Vault
+           href: extensible-key-management-using-azure-key-vault-sql-server.md
      - name: Auditing
        href: auditing/sql-server-audit-database-engine.md
        items:
@@ -187,7 +187,7 @@ items:
   items:
     - name: Always Encrypted
       items:
-        - name: Getting Started with Always Encrypted with secure enclaves using SSMS
+        - name: Always Encrypted with secure enclaves using SSMS
           href: tutorial-getting-started-with-always-encrypted-enclaves.md
 - name: Reference
   items:

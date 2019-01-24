@@ -1,4 +1,3 @@
-
 - name: Overview
   href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
   items: 
@@ -175,7 +174,7 @@
              - name: Extensible key management (EKM)
                href: encryption/extensible-key-management-ekm.md
              - name: EKM using Azure Key Vault
-               href: extensible-key-management-using-azure-key-vault-sql-server.md
+               href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
          - name: Auditing
            href: auditing/sql-server-audit-database-engine.md
            items:

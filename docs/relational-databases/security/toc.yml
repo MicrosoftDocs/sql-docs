@@ -99,90 +99,90 @@
           href: auditing/view-a-sql-server-audit-log.md
         - name: Write audit events to Windows log
           href: auditing/write-sql-server-audit-events-to-the-security-log.md
-name: Concepts
-items:
-  - name: Protecting SQL Server Intellectual Property 
-    href: protecting-your-sql-server-intellectual-property.md
-    items:
-      - name: SQL injection
-        href: sql-injection.md
-      - name: TRUSTWORTHY databse property
-        href: trustworthy-database-property.md
-      - name: Password policy
-        href: password-policy.md
-      - name: Strong passwords
-        href: strong-passwords.md
-      - name: Row-Level Security
-        href: row-level-security.md
-      - name: Static Data Masking 
-        href: static-data-masking.md
-      - name: Certificates and asymmetric keys
-        href: sql-server-certificates-and-asymmetric-keys.md
-  - name: Authentication Access 
-    href: authentication-access/getting-started-with-database-engine-permissions.md
-    items:
-      - name: Principals
-        href: authentication-access/principals-database-engine.md
-      - name: Server-level roles
-        href: authentication-access/server-level-roles.md
-      - name: Database-level roles
-        href: authentication-access/database-level-roles.md
-      - name: Application rolkes
-        href: authentication-access/application-roles.md
-      - name: Credentials
-        href: authentication-access/credentials-database-engine.md
-      - name: Securables
-        href: securables.md
-      - name: Contained database users
-        href: contained-database-users-making-your-database-portable.md
-      - name: Authentication mode
-        href: choose-an-authentication-mode.md
-      - name: Metadata visibility
-        href: metadata-visibility-configuration.md
-      - name: Permissions
-        href: permissions-database-engine.md
-      - name: Permissions hierarchy
-        href: permissions-hierarchy-database-engine.md
-  - name: Encryption
-    href: encryption/sql-server-encryption.md
-    items:
-      - name: Hierarchy
-        href: encryption/encryption-hierarchy.md
-      - name: Always Encrypted
-        href: encryption/always-encrypted-database-engine.md
-        items:
-          - name: Always Encrypted with Secure Enclaves
-            href: encryption/always-encrypted-enclaves.md
-          - name: Key management
-            href: encryption/overview-of-key-management-for-always-encrypted.md
-          - name: Cryptography
-            href: encryption/always-encrypted-cryptography.md
-          - name: Client development
-            href: encryption/always-encrypted-client-development.md
-          - name: 
-      - name: Transparent Data Encryption (TDE)
-        href: encryption/transparent-data-encryption.md
-      - name: TDE with Azure SQL Database
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
-        items:
-          - name: Bring your own key
-            href: https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
-     - name: Encryption keys
-       href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+- name: Concepts
+  items:
+     - name: Protecting SQL Server Intellectual Property 
+       href: protecting-your-sql-server-intellectual-property.md
        items:
-         - name: Service master key
-           href: encryption/service-master-key.md
-         - name: Extensible key management (EKM)
-           href: encryption/extensible-key-management-ekm.md
-         - name: EKM using Azure Key Vault
-           href: extensible-key-management-using-azure-key-vault-sql-server.md
-     - name: Auditing
-       href: auditing/sql-server-audit-database-engine.md
+         - name: SQL injection
+           href: sql-injection.md
+         - name: TRUSTWORTHY databse property
+           href: trustworthy-database-property.md
+         - name: Password policy
+           href: password-policy.md
+         - name: Strong passwords
+           href: strong-passwords.md
+         - name: Row-Level Security
+           href: row-level-security.md
+         - name: Static Data Masking 
+           href: static-data-masking.md
+         - name: Certificates and asymmetric keys
+           href: sql-server-certificates-and-asymmetric-keys.md
+     - name: Authentication Access 
+       href: authentication-access/getting-started-with-database-engine-permissions.md
        items:
-         - name: Action gropus and actions
-           href: sql-server-audit-action-groups-and-actions.md
-         - name: Audit records
-           href: sql-server-audit-records.md    
+         - name: Principals
+           href: authentication-access/principals-database-engine.md
+         - name: Server-level roles
+           href: authentication-access/server-level-roles.md
+         - name: Database-level roles
+           href: authentication-access/database-level-roles.md
+         - name: Application rolkes
+           href: authentication-access/application-roles.md
+         - name: Credentials
+           href: authentication-access/credentials-database-engine.md
+         - name: Securables
+           href: securables.md
+         - name: Contained database users
+           href: contained-database-users-making-your-database-portable.md
+         - name: Authentication mode
+           href: choose-an-authentication-mode.md
+         - name: Metadata visibility
+           href: metadata-visibility-configuration.md
+         - name: Permissions
+           href: permissions-database-engine.md
+         - name: Permissions hierarchy
+           href: permissions-hierarchy-database-engine.md
+     - name: Encryption
+       href: encryption/sql-server-encryption.md
+       items:
+         - name: Hierarchy
+           href: encryption/encryption-hierarchy.md
+         - name: Always Encrypted
+           href: encryption/always-encrypted-database-engine.md
+           items:
+             - name: Always Encrypted with Secure Enclaves
+               href: encryption/always-encrypted-enclaves.md
+             - name: Key management
+               href: encryption/overview-of-key-management-for-always-encrypted.md
+             - name: Cryptography
+               href: encryption/always-encrypted-cryptography.md
+             - name: Client development
+               href: encryption/always-encrypted-client-development.md
+             - name: 
+         - name: Transparent Data Encryption (TDE)
+           href: encryption/transparent-data-encryption.md
+         - name: TDE with Azure SQL Database
+           href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+           items:
+             - name: Bring your own key
+               href: https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+        - name: Encryption keys
+          href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+          items:
+            - name: Service master key
+              href: encryption/service-master-key.md
+            - name: Extensible key management (EKM)
+              href: encryption/extensible-key-management-ekm.md
+            - name: EKM using Azure Key Vault
+              href: extensible-key-management-using-azure-key-vault-sql-server.md
+        - name: Auditing
+          href: auditing/sql-server-audit-database-engine.md
+          items:
+            - name: Action gropus and actions
+              href: sql-server-audit-action-groups-and-actions.md
+            - name: Audit records
+              href: sql-server-audit-records.md    
 - name: Tutorials
   items:
     - name: Always Encrypted

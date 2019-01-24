@@ -1,7 +1,7 @@
 ---
 title: "RESTORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/02/2018"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -37,8 +37,8 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], RESTORE statement"
   - "RESTORE LOG, see RESTORE statement"
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
@@ -161,7 +161,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   
@@ -716,7 +716,7 @@ For other supported RESTORE commands, see:
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
 
 > [!IMPORTANT]
-> To restore from Azure SQL Database Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore).
+> To restore from Azure SQL Database Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
   
 ## Syntax  
   

@@ -19,7 +19,7 @@ manager: craigg
   For more info about backup, see [Backup Stretch-enabled databases](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md).
 
 > [!TIP]
-> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../database-engine/sql-server-business-continuity-dr.md).
 
 ## Restore your SQL Server data
 To recover from hardware failure or corruption, restore the Stretch-enabled SQL Server database from a backup. You can continue to use the SQL Server restore methods that you currently use. For more info, see [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).

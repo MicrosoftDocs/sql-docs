@@ -129,19 +129,19 @@ WHERE ProductModelID=7;
   
 |Prefix|URI|  
 |------------|---------|  
-|xs|https://www.w3.org/2001/XMLSchema|  
-|xsi|https://www.w3.org/2001/XMLSchema-instance|  
-|xdt|https://www.w3.org/2004/07/xpath-datatypes|  
-|fn|https://www.w3.org/2004/07/xpath-functions|  
+|xs|http://www.w3.org/2001/XMLSchema|  
+|xsi|http://www.w3.org/2001/XMLSchema-instance|  
+|xdt|http://www.w3.org/2004/07/xpath-datatypes|  
+|fn|http://www.w3.org/2004/07/xpath-functions|  
 |(no prefix)|`urn:schemas-microsoft-com:xml-sql`|  
 |sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|`https://www.w3.org/XML/1998/namespace`|  
+|xml|`http://www.w3.org/XML/1998/namespace`|  
 |(no prefix)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  Every database you create has the **sys** XML schema collection. It reserves these schemas so they can be accessed from any user-created XML schema collection.  
   
 > [!NOTE]  
->  This implementation does not support the `local` prefix as described in the XQuery specification in https://www.w3.org/2004/07/xquery-local-functions.  
+>  This implementation does not support the `local` prefix as described in the XQuery specification in http://www.w3.org/2004/07/xquery-local-functions.  
   
 ## See Also  
  [XQuery Basics](../xquery/xquery-basics.md)  

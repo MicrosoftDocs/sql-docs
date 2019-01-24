@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted with Secure Enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "01/09/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -13,6 +13,7 @@ manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Configure Always Encrypted with secure enclaves
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends the existing [Always Encrypted](always-encrypted-database-engine.md) feature to enable richer functionality on sensitive data while keeping the data confidential.
@@ -20,14 +21,14 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 To setup Always Encrypted with secure enclaves, use the following workflow:
 
 1. Configure Host Guardian Service (HGS) attestation.
-2. Install [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] on the SQL Server computer.
+2. Install [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] on the SQL Server computer.
 3. Install tools on the client/development computer.
 4. Configure the enclave type in your SQL Server instance.
 5. Provision enclave-enabled keys.
 6. Encrypt columns that contain sensitive data.
 
->[!NOTE]
->For a step-by-step tutorial on how to set up a test environment and try the functionality of Always Encrypted with secure enclaves in SSMS, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+> [!NOTE]
+> For a step-by-step tutorial on how to set up a test environment and try the functionality of Always Encrypted with secure enclaves in SSMS, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## Configure your environment
 
@@ -39,7 +40,7 @@ The computer running SQL Server needs the following operating system and SQL Ser
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] or later
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] or later
 
 *Windows*:
 
@@ -128,7 +129,7 @@ On the client/development computer:
    ```
 
     > [!NOTE]
-    > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. They need to be enabled using the above statement after each restart of your SQL Server instance.
+    > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]. They need to be enabled using the above statement after each restart of your SQL Server instance.
 
 ## Provision enclave-enabled keys
 
@@ -217,8 +218,8 @@ This can be also done using Azure portal. For details, see [Manage your key vaul
 
 
 ```powershell
-Import-Module AzureRM
-Connect-AzureRmAccount
+Import-Module Az
+Connect-AzAccount
 
 # User values
 $SubscriptionId = "<Azure SubscriptionId>"
@@ -228,16 +229,16 @@ $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
 
 # Set the context to the specified subscription.
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
 
 # Grant yourself permissions needed to create and use the column master key.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 
 # Create a column master key in Azure Key Vault.
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"

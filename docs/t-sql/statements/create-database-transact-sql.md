@@ -41,11 +41,11 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||
 ---
 # CREATE DATABASE
 
-Creates a new database. 
+Creates a new database.
 
 Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Click a product!
 
@@ -66,12 +66,11 @@ In the following row, click whichever product name you are interested in. The cl
 
 In SQL Server, this statement creates a new database and the files used and their filegroups. It can also be used to create a database snapshot, or attach database files to create a database from the detached files of another database. 
 
-
 ## Syntax  
 
 Create a database.  
 
-```  
+```
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -158,7 +157,8 @@ CREATE DATABASE database_snapshot_name
 [;]  
 ```  
   
-## Arguments  
+## Arguments
+
  *database_name*  
  Is the name of the new database. Database names must be unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -452,7 +452,8 @@ CREATE DATABASE database_snapshot_name
   
  For more information, see "Database Snapshots" in the Remarks section.  
   
-## Remarks  
+## Remarks
+
  The [master database](../../relational-databases/databases/master-database.md) should be backed up whenever a user database is created, modified, or dropped.  
   
  The CREATE DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.  
@@ -476,14 +477,16 @@ Some database features depend on features or capabilities present in the file sy
 - Database snapshot creation
 - Memory Optimized Data filegroup
    
-## Database Files and Filegroups  
+## Database Files and Filegroups
+
  Every database has at least two files, a *primary file* and a *transaction log file*, and at least one filegroup. A maximum of 32,767 files and 32,767 filegroups can be specified for each database.  
   
  When you create a database, make the data files as large as possible based on the maximum amount of data you expect in the database  
   
  We recommend that you use a Storage Area Network (SAN), iSCSI-based network, or locally attached disk for the storage of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database files, because this configuration optimizes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and reliability.  
   
-## Database Snapshots  
+## Database Snapshots
+
  You can use the CREATE DATABASE statement to create a read-only, static view, a *database snapshot* of the *source database*. A database snapshot is transactionally consistent with the source database as it existed at the time when the snapshot was created. A source database can have multiple snapshots.  
   
 > [!NOTE]  
@@ -495,20 +498,24 @@ Some database features depend on features or capabilities present in the file sy
   
  For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-## Database Options  
+## Database Options
+
  Several database options are automatically set whenever you create a database. For a list of these options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-## The model Database and Creating New Databases  
+## The model Database and Creating New Databases
+
  All user-defined objects in the [model database](../../relational-databases/databases/model-database.md) are copied to all newly created databases. You can add any objects, such as tables, views, stored procedures, data types, and so on, to the model database to be included in all newly created databases.  
   
  When a CREATE DATABASE *database_name* statement is specified without additional size parameters, the primary data file is made the same size as the primary file in the model database.  
   
  Unless FOR ATTACH is specified, each new database inherits the database option settings from the model database. For example, the database option auto shrink is set to **true** in model and in any new databases you create. If you change the options in the model database, these new option settings are used in any new databases you create. Changing operations in the model database does not affect existing databases. If FOR ATTACH is specified on the CREATE DATABASE statement, the new database inherits the database option settings of the original database.  
   
-## Viewing Database Information  
+## Viewing Database Information
+
  You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
-## Permissions  
+## Permissions
+
  Requires CREATE DATABASE, CREATE ANY DATABASE, or ALTER ANY DATABASE permission.  
   
  To maintain control over disk use on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], permission to create databases is typically limited to a few login accounts.  
@@ -522,7 +529,8 @@ GRANT CREATE DATABASE TO [Fay];
 GO  
 ```  
   
-### Permissions on Data and Log Files  
+### Permissions on Data and Log Files
+
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permissions are set on the data and log files of each database. The following permissions are set whenever the following operations are applied to a database:  
   
 |||  
@@ -538,7 +546,8 @@ GO
   
 ## Examples  
   
-### A. Creating a database without specifying files  
+### A. Creating a database without specifying files
+
  The following example creates the database `mytest` and creates a corresponding primary and transaction log file. Because the statement has no \<filespec> items, the primary database file is the size of the model database primary file. The transaction log is set to the larger of these values: 512KB or 25% the size of the primary data file. Because MAXSIZE is not specified, the files can grow to fill all available disk space. This example also demonstrates how to drop the database named `mytest` if it exists, before creating the `mytest` database.  
   
 ```sql  
@@ -556,7 +565,8 @@ WHERE name = N'mytest';
 GO  
 ```  
   
-### B. Creating a database that specifies the data and transaction log files  
+### B. Creating a database that specifies the data and transaction log files
+
  The following example creates the database `Sales`. Because the keyword PRIMARY is not used, the first file (`Sales_dat`) becomes the primary file. Because neither MB nor KB is specified in the SIZE parameter for the `Sales_dat` file, it uses MB and is allocated in megabytes. The `Sales_log` file is allocated in megabytes because the `MB` suffix is explicitly stated in the `SIZE` parameter.  
   
 ```sql  
@@ -578,7 +588,8 @@ LOG ON
 GO  
 ```  
   
-### C. Creating a database by specifying multiple data and transaction log files  
+### C. Creating a database by specifying multiple data and transaction log files
+
  The following example creates the database `Archive` that has three `100-MB` data files and two `100-MB` transaction log files. The primary file is the first file in the list and is explicitly specified with the `PRIMARY` keyword. The transaction log files are specified following the `LOG ON` keywords. Note the extensions used for the files in the `FILENAME` option: `.mdf` is used for primary data files, `.ndf` is used for the secondary data files, and `.ldf` is used for transaction log files. This example places the database on the `D:` drive instead of with the `master` database.  
   
 ```sql  
@@ -616,7 +627,8 @@ LOG ON
 GO  
 ```  
   
-### D. Creating a database that has filegroups  
+### D. Creating a database that has filegroups
+
  The following example creates the database `Sales` that has the following filegroups:  
   
 -   The primary filegroup with the files `Spri1_dat` and `Spri2_dat`. The FILEGROWTH increments for these files are specified as `15%`.  
@@ -673,7 +685,8 @@ LOG ON
 GO  
 ```  
   
-### E. Attaching a database  
+### E. Attaching a database
+
  The following example detaches the database `Archive` created in example D, and then attaches it by using the `FOR ATTACH` clause. `Archive` was defined to have multiple data and log files. However, because the location of the files has not changed since they were created, only the primary file has to be specified in the `FOR ATTACH` clause. Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], any full-text files that are part of the database that is being attached will be attached with the database.  
   
 ```sql  
@@ -687,7 +700,8 @@ CREATE DATABASE Archive
 GO  
 ```  
   
-### F. Creating a database snapshot  
+### F. Creating a database snapshot
+
  The following example creates the database snapshot `sales_snapshot0600`. Because a database snapshot is read-only, a log file cannot be specified. In conformance with the syntax, every file in the source database is specified, and filegroups are not specified.  
   
  The source database for this example is the `Sales` database created in example D.  
@@ -706,7 +720,8 @@ AS SNAPSHOT OF Sales ;
 GO  
 ```  
   
-### G. Creating a database and specifying a collation name and options  
+### G. Creating a database and specifying a collation name and options
+
  The following example creates the database `MyOptionsTest`. A collation name is specified and the `TRUSTYWORTHY` and `DB_CHAINING` options are set to `ON`.  
   
 ```sql  
@@ -726,7 +741,8 @@ WHERE name = N'MyOptionsTest';
 GO  
 ```  
   
-### H. Attaching a full-text catalog that has been moved  
+### H. Attaching a full-text catalog that has been moved
+
  The following example attaches the full-text catalog `AdvWksFtCat` along with the `AdventureWorks2012` data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.  
   
 ```sql  
@@ -745,7 +761,8 @@ FOR ATTACH;
 GO  
 ```  
   
-### I. Creating a database that specifies a row filegroup and two FILESTREAM filegroups  
+### I. Creating a database that specifies a row filegroup and two FILESTREAM filegroups
+
  The following example creates the `FileStreamDB` database. The database is created with one row filegroup and two FILESTREAM filegroups. Each filegroup contains one file:  
   
 -   `FileStreamDB_data` contains row data. It contains one file, `FileStreamDB_data.mdf` with the default path.  
@@ -803,7 +820,8 @@ LOG ON
 GO  
 ```  
   
-### J. Creating a database that has a FILESTREAM filegroup with multiple files  
+### J. Creating a database that has a FILESTREAM filegroup with multiple files
+
  The following example creates the `BlobStore1` database. The database is created with one row filegroup and one FILESTREAM filegroup, `FS`. The FILESTREAM filegroup contains two files, `FS1` and `FS2`. Then the database is altered by adding a third file, `FS3`, to the FILESTREAM filegroup.  
   
 ```sql  
@@ -852,7 +870,8 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## See Also  
+## See Also
+
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -884,6 +903,7 @@ In Azure SQL Database logical server, this statement can be used with an Azure S
 ## Syntax 
 
 ### Create a database
+
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 {  
@@ -963,7 +983,7 @@ Specifies the maximum size of the database. MAXSIZE must be valid for the specif
 
 **DTU-based model for single and pooled databases on a logical server**
 
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** | 
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|
@@ -994,21 +1014,25 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 **vCore-based model for single and pooled databases on a logical server**
 
 **General Purpose service tier - Generation 4 compute platform**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |Max data size (GB)|1024|1024|1536|3072|4096|4096|
 
 **General Purpose service tier - Generation 5 compute platform**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Max data size (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
 **Business Critical service tier - Generation 4 compute platform**
+
 |Performance level|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Max data size (GB)|1024|1024|1024|1024|1024|1024|
 
 **Business Critical service tier - Generation 5 compute platform**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Max data size (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -1018,16 +1042,19 @@ If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. Fo
 **vCore-based model for databases in a managed instance**
 
 **General Purpose service tier - Generation 4 compute platform**
+
 |MAXSIZE|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |
 |Max data size (TB)|8|8|8|
 
 **General Purpose service tier - Generation 5 compute platform**
+
 |MAXSIZE|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|
 |Max data size (TB)|8|8|8|8|8|
 
 The following rules apply to MAXSIZE and EDITION arguments:  
+
 - If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, if the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 250 MB.  
 - If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
 
@@ -1101,7 +1128,8 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
   
  For more information, see [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
   
-## Permissions  
+## Permissions
+
 To create a database, a login must be one of the following: 
   
 - The server-level principal login  
@@ -1112,14 +1140,16 @@ To create a database, a login must be one of the following:
   
 ## Examples
   
-### Simple Example  
+### Simple Example
+
  A simple example for creating a database.  
   
 ```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
-### Simple Example with Edition  
+### Simple Example with Edition
+
  A simple example for creating a standard database.  
   
 ```sql  
@@ -1127,7 +1157,8 @@ CREATE DATABASE TestDB2
 ( EDITION = 'GeneralPurpose' );  
 ```  
   
-### Example with Additional Options  
+### Example with Additional Options
+
  An example using multiple options.  
   
 ```sql  
@@ -1136,7 +1167,8 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ( MAXSIZE = 500 MB, EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_GEN4_8' ) ;  
 ```  
   
-### Creating a Copy  
+### Creating a Copy
+
  An example creating a copy of a database.  
   
 **Applies to:** Single and pooled databases only.
@@ -1156,7 +1188,8 @@ Creates new database in pool named S3M100:
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
-### Creating a Copy of a Database on Another Server  
+### Creating a Copy of a Database on Another Server
+
 The following example creates a copy of the db_original database, named db_copy in the P2 performance level for a single database.  This is true regardless of whether db_original is in an elastic pool or a performance level for a single database.  
   
 **Applies to:** Single and pooled databases only.
@@ -1242,7 +1275,8 @@ The following are `CREATE DATABASE` limitations:
    > [!TIP]
    > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi). after `CREATE DATABASE` to set database options and to add files.  
 
-## Permissions  
+## Permissions
+
 To create a database, a login must be one of the following: 
   
 - The server-level principal login  
@@ -1251,7 +1285,8 @@ To create a database, a login must be one of the following:
   
 ## Examples
   
-### Simple Example  
+### Simple Example
+
  A simple example for creating a database.  
   
 ```sql  
@@ -1300,7 +1335,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```  
   
-## Arguments  
+## Arguments
+
 *database_name*  
 The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
@@ -1326,24 +1362,27 @@ The maximum allowable size for rowstore data in the database. Data stored in row
 SERVICE_OBJECTIVE  
 Specifies the performance level. For more information about service objectives for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [Performance Tiers](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
-## General Remarks  
+## General Remarks
+
 Use [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) to see the database properties.  
   
 Use [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw) to change the max size, or service objective values later.   
 
 SQL Data Warehouse is set to COMPATIBILITY_LEVEL 130 and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
-## Permissions  
+## Permissions
+
 Required permissions:  
   
 -   Server level principal login, created by the provisioning process, or  
   
 -   Member of the `dbmanager` database role.  
   
-## Error Handling  
+## Error Handling
 If the size of the database reaches MAXSIZE you will receive error code 40544. When this occurs, you cannot insert and update data, or create new objects (such as tables, stored procedures, views, and functions). You can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
   
-## Limitations and Restrictions  
+## Limitations and Restrictions
+
 You must be connected to the master database to create a new database.  
   
 The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.
@@ -1352,7 +1391,8 @@ You cannot change the database collation after the database is created.
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
   
-### A. Simple example  
+### A. Simple example
+
 A simple example for creating a data warehouse database. This creates the database with the smallest max size which is 10240 GB, the default collation which is SQL_Latin1_General_CP1_CI_AS, and the smallest compute power which is DW100.  
   
 ```  
@@ -1360,7 +1400,8 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');  
 ```  
   
-### B. Create a data warehouse database with all the options  
+### B. Create a data warehouse database with all the options
+
 An example of creating a 10 terabyte data warehouse using all the options.  
   
 ```  
@@ -1368,7 +1409,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## See Also  
+## See Also
+
 [ALTER DATABASE &#40;Azure SQL Data Warehouse&#40;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw)
 [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
@@ -1438,7 +1480,8 @@ WITH (
   
  If AUTOGROW is OFF, an error will be returned to the user for any action that would increase the log size on an individual Compute node beyond *log_size*.  
   
-## Permissions  
+## Permissions
+
  Requires the **CREATE ANY DATABASE** permission in the master database, or membership in the **sysadmin** fixed server role.  
   
  The following example provides the permission to create a database to the database user Fay.  
@@ -1450,10 +1493,12 @@ GRANT CREATE ANY DATABASE TO [Fay];
 GO  
 ```  
   
-## General Remarks  
+## General Remarks
+
  Databases are created with database compatibility level 120, which is the compatibility level for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. This ensures the database will be able to use all of the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] functionality that PDW uses.  
   
-## Limitations and Restrictions  
+## Limitations and Restrictions
+
  The CREATE DATABASE statement is not allowed in an explicit transaction. For more information, see [Statements](../../t-sql/statements/statements.md).  
   
  For information on minimum and maximum constraints on databases, see "Minimum and Maximum Values" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -1466,15 +1511,18 @@ GO
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logs the size of (*log_size* / number of Compute nodes).  
   
-## Locking  
+## Locking
+
  Takes a shared lock on the DATABASE object.  
   
-## Metadata  
+## Metadata
+
  After this operation succeeds, an entry for this database will appear in the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)metadata views.  
   
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### A. Basic database creation examples  
+### A. Basic database creation examples
+
  The following example creates the database `mytest` with a storage allocation of 100 GB per Compute node for replicated tables, 500 GB per appliance for distributed tables, and 100 GB per appliance for the transaction log. In this example, AUTOGROW is off by default.  
   
 ```  
@@ -1496,7 +1544,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB);  
 ```  
   
-### B. Creating a database with partial gigabyte sizes  
+### B. Creating a database with partial gigabyte sizes
+
  The following example creates the database `mytest`, with AUTOGROW off, a storage allocation of 1.5 GB per Compute node for replicated tables, 5.25 GB per appliance for distributed tables, and 10 GB per appliance for the transaction log.  
   
 ```  
@@ -1507,7 +1556,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## See Also  
+## See Also
+
  [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   

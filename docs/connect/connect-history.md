@@ -8,7 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-manager: kenvh
+manager: craigg
 ---
 # Driver history for Microsoft SQL Server
 
@@ -88,7 +88,7 @@ These components are still supported in the current release of MDAC/WDAC, but th
 
 * **SQLOLEDB:** The Microsoft OLE DB Provider for SQL Server (SQLOLEDB), which supports access to Microsoft SQL Server, has been deprecated. Its connectivity to future versions of SQL Server may not be supported. The ability to connect to versions earlier than SQL Server 7 will be removed from the operating system after Windows 7. New applications should use the Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL), which supports new SQL Server features. Existing applications should migrate to the Microsoft OLE DB Driver for SQL Server as well for better performance, reliability, and supportability. For more information, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).
 * **SQLODBC:** The Microsoft SQL Server ODBC Driver (SQLODBC), which supports access to Microsoft SQL Server, has been deprecated. Its connectivity to future versions of SQL Server may not be supported. The ability to connect to versions earlier than SQL Server 7 will be removed from the operating system after Windows 7. New applications should use the Microsoft ODBC Driver for SQL Server on Windows, which supports new SQL Server features. Existing applications should migrate to the Microsoft ODBC Driver for SQL Server as well for better performance, reliability, and supportability. For relevant information, see [Updating an Application to SQL Server Native Client from MDAC](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).
-* **Microsoft Jet Database Engine 4.0:** Starting with version 2.6, MDAC no longer contains Jet components. In other words, MDAC 2.6, 2.7, and 2.8 do not contain Microsoft Jet, the Microsoft Jet OLE DB Provider, the ODBC Desktop Database Drivers, or Jet Data Access Objects (DAO). The Microsoft Jet Database Engine 4.0 components entered a state of functional deprecation and sustained engineering, and have not received feature level enhancements since becoming a part of Microsoft Windows in Windows 2000.
+* **Microsoft Jet Database Engine 4.0:** Starting with version 2.6, MDAC no longer contains Jet components. In other words, MDAC 2.6, 2.7, and 2.8 do not contain Microsoft Jet, the Microsoft Jet OLE DB Provider, the ODBC Desktop Database Drivers, or Jet Data Access Objects (DAO). 
 
   There is no 64-bit version of the Jet Database Engine, the Jet OLEDB Driver, the Jet ODBC Drivers, or Jet DAO available. For more information, see [KB article 957570](https://support.microsoft.com/kb/957570). On 64-bit versions of Windows, 32-bit Jet runs under the Windows WOW64 subsystem. For more information on WOW64, see the [MSDN WOW64 documentation](/windows/desktop/WinProg64/wow64-implementation-details). Native 64-bit applications cannot communicate with the 32-bit Jet drivers running in WOW64.
 
@@ -137,3 +137,7 @@ The following components are considered obsolete:
 * **Embedded SQL (E-SQL):** E-SQL is a SQL Server-specific programming model that enables Transact-SQL statements to be embedded in Visual C code. No feature enhancements have been made to the E-SQL since SQL Server 6.5. Its final release was with SQL Server 2000, and it will not be ported to the 64-bit Windows operating system.
 * **Data Access Objects (DAO):** DAO provides access to JET (Access) databases. This API can be used from Microsoft Visual Basic, Microsoft Visual C++, and scripting languages. It was included with Microsoft Office 2000 and Office XP. DAO 3.6 is the final version of this technology. It will not be available on the 64-bit Windows operating system.
 * **Remote Data Objects (RDO):** RDO was designed specifically to access remote ODBC relational data sources, and made it easier to use ODBC without complex application code. It was included with Microsoft Visual Basic versions 4, 5, and 6. RDO version 2.0 was the final version of this technology.
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

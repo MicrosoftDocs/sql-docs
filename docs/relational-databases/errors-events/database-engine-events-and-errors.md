@@ -1,7 +1,7 @@
 ---
 title: "Database Engine Events and Errors | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/27/2018"
+ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-
 # Database Engine Errors
-The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view. 
 
+The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view.
 
 ## Errors -2 to 999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	[-2](mssqlserver-neg2-database-engine-error.md)	|		|		|	Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. (Microsoft SQL Server, Error: -2).	|
@@ -921,7 +921,7 @@ The table contains error message numbers and the description, which is the text 
 |	1846	|	16	|	No	|	Cannot find SQL Volume Shadow Copy (VSS) Writer component for database '%ls' while creating auto-recovered VSS snapshot for online DBCC check.	|
 |	1847	|	16	|	No	|	The current version of the operating system doesn't support auto-recovered Volume Shadow Copy (VSS) snapshots.	|
 |	1848	|	16	|	No	|	Volume Shadow Copy Service (VSS) failed to create an auto-recovered snapshot of database '%ls' for online DBCC check.	|
-|	1849	|	16	|	No	|	CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABSE to add FILESTREAM filegroups and files.	|
+|	1849	|	16	|	No	|	CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABASE to add FILESTREAM filegroups and files.	|
 |	1901	|	16	|	No	|	Cannot create index or statistics '%.*ls' on view '%.*ls' because key column '%.*ls' is imprecise, computed and not persisted. Consider removing reference to column in view index or statistics key or changing column to be precise. If column is computed in base table consider marking it PERSISTED there.	|
 |	1902	|	16	|	No	|	Cannot create more than one clustered index on %S_MSG '%.*ls'. Drop the existing clustered index '%.*ls' before creating another.	|
 |	[1904](mssqlserver-1904-database-engine-error.md)	|	16	|	No	|	The %S_MSG '%.*ls' on table '%.*ls' has %d column names in %S_MSG key list. The maximum limit for index or statistics key column list is %d.	|
@@ -1030,10 +1030,10 @@ The table contains error message numbers and the description, which is the text 
 |	2117	|	16	|	No	|	Cannot %S_MSG INSTEAD OF trigger '%.*ls' on %S_MSG '%.*ls' because the %S_MSG has a FILESTREAM column.	|
 |	2201	|	16	|	No	|	%sDerivation from "anySimpleType" by restriction is not permitted, and derivation by restriction from a type derived from "anySimpleType" by extension is allowed only if no constraining facets are specified.	|
 |	2202	|	16	|	No	|	%sAn error has occurred while compiling the query. To obtain more detailed information about the error, the query must be run by a user with EXECUTE permissions on the xml schema collection used in the query.	|
-|	2203	|	16	|	No	|	%sOnly 'https://www.w3.org/2001/XMLSchema#decimal?', 'https://www.w3.org/2001/XMLSchema#boolean?' or 'node()*' expressions allowed as predicates, found '%ls'	|
-|	2204	|	16	|	No	|	%sOnly 'https://www.w3.org/2001/XMLSchema#boolean?' or 'node()*' expressions allowed in conditions and with logical operators, found '%ls'	|
+|	2203	|	16	|	No	|	%sOnly 'http://www.w3.org/2001/XMLSchema#decimal?', 'http://www.w3.org/2001/XMLSchema#boolean?' or 'node()*' expressions allowed as predicates, found '%ls'	|
+|	2204	|	16	|	No	|	%sOnly 'http://www.w3.org/2001/XMLSchema#boolean?' or 'node()*' expressions allowed in conditions and with logical operators, found '%ls'	|
 |	2205	|	16	|	No	|	%s"%ls" was expected.	|
-|	2206	|	16	|	No	|	%sNamespace prefix 'xml' can only be associated with the URI 'https://www.w3.org/XML/1998/namespace' and this URI cannot be used with other prefixes.	|
+|	2206	|	16	|	No	|	%sNamespace prefix 'xml' can only be associated with the URI 'http://www.w3.org/XML/1998/namespace' and this URI cannot be used with other prefixes.	|
 |	2207	|	16	|	No	|	%sOnly non-document nodes can be inserted. Found "%ls".	|
 |	2208	|	16	|	No	|	%sThe URI that starts with '%ls' is too long. Maximum allowed length is %d characters.	|
 |	2209	|	16	|	No	|	%sSyntax error near '%ls'	|
@@ -1116,7 +1116,7 @@ The table contains error message numbers and the description, which is the text 
 |	2309	|	16	|	No	|	%sThe value of "%ls" is not a valid number.	|
 |	2310	|	16	|	No	|	%sThe attribute "%ls" is declared more than once.	|
 |	2311	|	16	|	No	|	%sThe attribute "%ls" is declared more than once within "%ls".	|
-|	2312	|	16	|	No	|	%sThe value of attribute '%ls' does not conform to the type definition 'https://www.w3.org/2001/XMLSchema#%ls': '%ls'.	|
+|	2312	|	16	|	No	|	%sThe value of attribute '%ls' does not conform to the type definition 'http://www.w3.org/2001/XMLSchema#%ls': '%ls'.	|
 |	2313	|	16	|	No	|	%sThe attribute "%ls" cannot have a value of "%ls".	|
 |	2314	|	16	|	No	|	%sThe attribute "%ls" cannot have a negative value.	|
 |	2315	|	16	|	No	|	%sThe attribute "%ls" should have a string value.	|
@@ -2652,7 +2652,7 @@ The table contains error message numbers and the description, which is the text 
 |	5904	|	17	|	Yes	|	Unable to issue checkpoint: there are not enough locks available. Background checkpoint process will remain suspended until locks are available. To free up locks, list transactions and their locks, and terminate transactions with the highest number of locks.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-# Errors 6000 to 6999
+## Errors 6000 to 6999
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
@@ -3039,7 +3039,7 @@ The table contains error message numbers and the description, which is the text 
 |	6869	|	16	|	No	|	Attempt to redefine namespace prefix '%.*ls'	|
 |	6870	|	16	|	No	|	Prefix '%.*ls' used in WITH XMLNAMESPACES clause contains an invalid XML identifier. '%c'(0x%04X) is the first character at fault.	|
 |	6871	|	16	|	No	|	Prefix '%.*ls' used in WITH XMLNAMESPACES is reserved and cannot be used as a user-defined prefix.	|
-|	6872	|	16	|	No	|	XML namespace prefix 'xml' can only be associated with the URI https://www.w3.org/XML/1998/namespace. This URI cannot be used with other prefixes.	|
+|	6872	|	16	|	No	|	XML namespace prefix 'xml' can only be associated with the URI http://www.w3.org/XML/1998/namespace. This URI cannot be used with other prefixes.	|
 |	6873	|	16	|	No	|	Redefinition of 'xsi' XML namespace prefix is not supported with ELEMENTS XSINIL option of FOR XML.	|
 |	6874	|	16	|	No	|	Empty URI is not allowed in WITH XMLNAMESPACES clause.	|
 |	6875	|	16	|	No	|	URI '%.*ls' used in WITH XMLNAMESPACES is invalid. '%c'(0x%04X) is the first character at fault.	|
@@ -4171,11 +4171,11 @@ The table contains error message numbers and the description, which is the text 
 |	9304	|	16	|	No	|	%sThis version of the server only supports XQuery version '1.0'.	|
 |	9305	|	16	|	No	|	%sOnly type names followed by '?' are supported in the target of 'instance of'.	|
 |	9306	|	16	|	No	|	%sThe target of 'replace value of' cannot be a union type, found '%ls'.	|
-|	9308	|	16	|	No	|	%sThe argument of '%ls' must be of a single numeric primitive type or 'https://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'. Found argument of type '%ls'.	|
-|	9309	|	16	|	No	|	%sThe target of 'replace value of' cannot be 'https://www.w3.org/2001/XMLSchema#anySimpleType', found '%ls'.	|
+|	9308	|	16	|	No	|	%sThe argument of '%ls' must be of a single numeric primitive type or 'http://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'. Found argument of type '%ls'.	|
+|	9309	|	16	|	No	|	%sThe target of 'replace value of' cannot be 'http://www.w3.org/2001/XMLSchema#anySimpleType', found '%ls'.	|
 |	9310	|	16	|	No	|	%sThe 'with' clause of 'replace value of' cannot contain constructed XML.	|
 |	9311	|	16	|	No	|	%sHeterogeneous sequences are not allowed in '%ls', found '%ls' and '%ls'.	|
-|	9312	|	16	|	No	|	%s'%ls' is not supported on simple typed or 'https://www.w3.org/2001/XMLSchema#anyType' elements, found '%ls'.	|
+|	9312	|	16	|	No	|	%s'%ls' is not supported on simple typed or 'http://www.w3.org/2001/XMLSchema#anyType' elements, found '%ls'.	|
 |	9313	|	16	|	No	|	%sThis version of the server does not support multiple expressions or expressions mixed with strings in an attribute constructor.	|
 |	9314	|	16	|	No	|	%sCannot implicitly atomize or apply 'fn:data()' to complex content elements, found type '%ls' within inferred type '%ls'.	|
 |	9315	|	16	|	No	|	%sOnly constant expressions are supported for the name expression of computed element and attribute constructors.	|
@@ -4195,7 +4195,7 @@ The table contains error message numbers and the description, which is the text 
 |	9330	|	16	|	No	|	%sOnly comparable types are allowed in '%ls', found '%ls'.	|
 |	9331	|	16	|	No	|	%sSyntax error near '%ls', expected '%ls' or '%ls'.	|
 |	9332	|	16	|	No	|	%sSyntax error near '%ls', expected 'where', '(stable) order by' or 'return'.	|
-|	9333	|	16	|	No	|	%s'//' followed by 'self', 'parent' or 'descendant-or-self' axes is not supported when it encounters simple typed or 'https://www.w3.org/2001/XMLSchema#anyType' elements, found '%ls'.	|
+|	9333	|	16	|	No	|	%s'//' followed by 'self', 'parent' or 'descendant-or-self' axes is not supported when it encounters simple typed or 'http://www.w3.org/2001/XMLSchema#anyType' elements, found '%ls'.	|
 |	9334	|	16	|	No	|	%sThe 'form' attribute cannot be specified on a local attribute or element definition that has the 'ref' attribute. Location: '%ls'.	|
 |	9335	|	16	|	No	|	%sThe XQuery syntax '%ls' is not supported.	|
 |	9336	|	16	|	No	|	%sThe XML Schema syntax '%ls' is not supported.	|
@@ -4265,10 +4265,10 @@ The table contains error message numbers and the description, which is the text 
 |	9461	|	16	|	No	|	XML %ls starting with '%.*ls' is %d characters long, which exceeds the limit. Maximum allowed length is %d characters.	|
 |	9462	|	16	|	No	|	XML parsing: line %d, character %d, not all chunks of value have been read	|
 |	9463	|	16	|	No	|	XML parsing: line %d, character %d, xml:space has a non-legal value	|
-|	9464	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace prefix 'xml' can only be associated with the URI https://www.w3.org/XML/1998/namespace. This URI cannot be used with other prefixes.	|
+|	9464	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace prefix 'xml' can only be associated with the URI http://www.w3.org/XML/1998/namespace. This URI cannot be used with other prefixes.	|
 |	9465	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace prefix 'xmlns' is reserved for use by XML.	|
-|	9466	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace xml namespace URI (https://www.w3.org/XML/1998/namespace) must be assigned only to prefix 'xml'.	|
-|	9467	|	16	|	No	|	XML parsing: line %d, character %d, xmlns namespace URI (https://www.w3.org/2000/xmlns/) is reserved and must not be used.	|
+|	9466	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace xml namespace URI (http://www.w3.org/XML/1998/namespace) must be assigned only to prefix 'xml'.	|
+|	9467	|	16	|	No	|	XML parsing: line %d, character %d, xmlns namespace URI (http://www.w3.org/2000/xmlns/) is reserved and must not be used.	|
 |	9480	|	16	|	No	|	XML parsing: line %d, character %d, unsupported xml	|
 |	9500	|	16	|	No	|	The data type '%.*ls' used in the VALUE method is invalid.	|
 |	9501	|	16	|	No	|	XQuery: Unable to resolve sql:variable('%.*ls'). The variable must be declared as a scalar TSQL variable.	|
@@ -5352,7 +5352,7 @@ The table contains error message numbers and the description, which is the text 
 |	13409	|	10	|	No	|	Collation '%ls' will be removed in a future version of SQL Server. Avoid using this collation in new development work, and plan to modify applications that currently use it.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-# Errors 14,000 to 14,999
+## Errors 14,000 to 14,999
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
@@ -9059,12 +9059,7 @@ The table contains error message numbers and the description, which is the text 
 |	[41399](mssqlserver-41399-database-engine-error.md)	|		|		|	The sort operation is too complex. Consult SQL Server Books Online for more information.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-
-
-
 ## See Also
-[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
-[Cause and Resolution of Database Engine Errors](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
 
-  
-  
+[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
+[Cause and Resolution of Database Engine Errors](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)

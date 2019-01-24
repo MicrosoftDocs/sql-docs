@@ -37,7 +37,7 @@ manager: craigg
   
      Returns a list of the catalogs contained in a linked server.  
   
- After you have a linked server name and a catalog name, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports getting information from the catalog by using a two-part name of *linked_server_name***.***catalog* for *CatalogName* on the following ODBC catalog functions:  
+ After you have a linked server name and a catalog name, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports getting information from the catalog by using a two-part name of _linked_server_name_**.**_catalog_ for *CatalogName* on the following ODBC catalog functions:  
   
 -   **SQLColumnPrivileges**  
   
@@ -51,7 +51,7 @@ manager: craigg
   
 -   **SQLTables**  
   
- The two-part *linked_server_name***.***catalog* is also supported for *FKCatalogName* and *PKCatalogName* on [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ The two-part _linked_server_name_**.**_catalog_ is also supported for *FKCatalogName* and *PKCatalogName* on [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  Using SQLLinkedServers and SQLLinkedCatalogs requires the following files:  
   

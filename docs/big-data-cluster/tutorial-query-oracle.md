@@ -7,6 +7,8 @@ ms.author: jroth
 manager: craigg
 ms.date: 12/12/2018
 ms.topic: tutorial
+ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 

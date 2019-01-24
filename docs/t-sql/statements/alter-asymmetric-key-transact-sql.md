@@ -55,7 +55,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  Changes the protection of the private key.  
   
- ENCRYPTION BY PASSWORD **='***stongPassword***'**  
+ ENCRYPTION BY PASSWORD **='***strongPassword***'**  
  Specifies a new password for protecting the private key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this option is omitted, the private key will be encrypted by the database master key.  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  

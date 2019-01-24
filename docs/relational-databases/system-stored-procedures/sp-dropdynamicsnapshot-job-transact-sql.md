@@ -35,13 +35,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication from which the filtered data snapshot job is being removed. *publication* is **sysname**, with no default.  
   
- [ **@dynamic_snapshot_jobname**= ] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**= ] **'**_dynamic_snapshot_jobname_**'**  
  Is the name of the filtered data snapshot job being removed. *dynamic_snapshot_jobname*is sysname, and if it is not supplied defaults to whatever job name is associated with *dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**= ] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**= ] **'**_dynamic_snapshot_jobid_**'**  
  Is an identifier for the filtered data snapshot job being removed. *dynamic_snapshot_jobid*is **uniqueidentifier**, with default of NULL.  
   
 > [!IMPORTANT]  

@@ -57,7 +57,7 @@ manager: craigg
   
  The maximum distance limit allows the construction of the buffer to be as flexible as possible.  
   
- The error between the theorectical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ The error between the theoretical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
 ## Examples  
  The following example creates a `LineString``geography` instance. It then uses `STBuffer()` to return the region within 1 meter of the instance.  

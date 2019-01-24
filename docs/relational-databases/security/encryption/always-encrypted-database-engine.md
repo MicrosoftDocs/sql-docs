@@ -118,7 +118,7 @@ Use the [Always Encrypted Wizard](../../../relational-databases/security/encrypt
 >  For a video that includes using the wizard, see [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
 1.	Connect to an existing database that contains tables with columns you wish to encrypt using the **Object Explorer** of Management Studio, or create a new database, create one or more tables with columns to encrypt, and connect to it.
-2.	Right-click your database, point to **Tasks**, and then click** Encrypt Columns** to open the **Always Encrypted Wizard**.
+2.	Right-click your database, point to **Tasks**, and then click **Encrypt Columns** to open the **Always Encrypted Wizard**.
 3.	Review the **Introduction** page, and then click **Next**.
 4.	On the **Column Selection** page, expand the tables, and select the columns that you want to encrypt.
 5.	For each column selected for encryption, set the **Encryption Type** to either *Deterministic* or *Randomized*.

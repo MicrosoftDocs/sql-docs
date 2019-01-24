@@ -70,7 +70,7 @@ manager: craigg
   
     -   For merge replication, it can be more efficient to use business logic handlers. For more information, see [Execute Business Logic During Merge Synchronization](../merge/execute-business-logic-during-merge-synchronization.md).  
   
-     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify the Processing Order of Merge Articles](../merge/specify-the-processing-order-of-merge-articles.md).  
+     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify Merge Replication properties](../publish/specify-merge-replication-properties.md).  
   
 -   Limit the use of Large Object (LOB) data types.  
   
@@ -110,7 +110,7 @@ manager: craigg
   
      When large amounts of changes need to be sent to Subscribers, reinitializing them with a new snapshot might be faster than using replication to move the individual changes. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
-     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [ View Information and Perform Tasks using Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## Snapshot Considerations  
   

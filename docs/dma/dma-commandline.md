@@ -2,7 +2,7 @@
 title: "Run Data Migration Assistant from the command line (SQL Server) | Microsoft Docs"
 description: Learn how to run Data Migration Assistant from the command line to assess SQL Server databases for migration
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -117,24 +117,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ```
 
 ## Azure SQL Database SKU recommendations using the CLI
-
-> [!IMPORTANT]
-> SKU recommendations for Azure SQL Database are currently available for migrations from SQL Server 2016 or later.
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

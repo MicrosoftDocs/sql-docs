@@ -34,6 +34,6 @@ manager: craigg
  Learn how to use merge replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
 ## See Also  
- [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
+ [SQL Server Replication Security](security/view-and-modify-replication-security-settings.md)  
   
   

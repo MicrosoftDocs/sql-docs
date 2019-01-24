@@ -45,7 +45,7 @@ manager: craigg
   
 3.  If the **TCP Dynamic Ports** dialog box contains **0**, indicating the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is listening on dynamic ports, delete the 0.  
   
-4.  In the **IP***n* **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**.  
+4.  In the **IP**_n_ **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**.  
   
 5.  In the console pane, click **SQL Server Services**.  
   

@@ -129,9 +129,9 @@ snapshot [ -?]
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
 
  > [!NOTE]  
- >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
   
- For more information, see [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-FieldDelimiter** _field_delimiter_  
  Is the character or character sequence that marks the end of a field in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk-copy data file. The default is \n\<x$3>\n.  
@@ -198,7 +198,7 @@ snapshot [ -?]
 >  Do not change the packet size unless you are certain that it will improve performance. For most applications, the default packet size is best.  
 
 **-PrefetchTables** [ **0**| **1**]  
- Optional parameter that specifies if the table objects will be prefetched and cached.  The default behavior is to prefetch certain table properties using SMO component based on an internal calculation.  This parameter can be helpful in scenarions where SMO prefetch operation takes considerable longer to run. If this parameter is not used, this decision is made at runtime based on the percentage of tables that are added as articles to the publication.  
+ Optional parameter that specifies if the table objects will be prefetched and cached.  The default behavior is to prefetch certain table properties using SMO component based on an internal calculation.  This parameter can be helpful in scenarios where SMO prefetch operation takes considerable longer to run. If this parameter is not used, this decision is made at runtime based on the percentage of tables that are added as articles to the publication.  
   
 |OutputVerboseLevel value|Description|  
 |------------------------------|-----------------|  

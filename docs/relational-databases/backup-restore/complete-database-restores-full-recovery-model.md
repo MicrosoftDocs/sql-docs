@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "full recovery model [SQL Server], performing restores"
   - "log backups [SQL Server["
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Complete Database Restores (Full Recovery Model)

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "backing up master keys [SQL Server]"
   - "database master key [SQL Server], exporting"
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # BACKUP MASTER KEY (Transact-SQL)

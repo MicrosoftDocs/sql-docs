@@ -43,6 +43,6 @@ manager: craigg
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   
- [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
+ [SQL Server Replication Security](security/view-and-modify-replication-security-settings.md)  
   
   

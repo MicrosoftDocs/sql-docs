@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CREATE CREDENTIAL statement"
   - "credentials [SQL Server], CREATE CREDENTIAL statement"
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

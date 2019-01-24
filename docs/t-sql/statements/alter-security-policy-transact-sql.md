@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER SECURITY POLICY statement"
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
@@ -75,7 +75,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  You cannot ALTER the operation for which a block predicate will be applied, because the operation is used to uniquely identify the predicate. Instead, you must drop the predicate and add a new one for the new operation.  
   
  WITH ( STATE = { ON | OFF } )  
- Enables or disables the security policy from enforcing its security predicates against the target tables. If not specified the security policy being created is disabled.  
+ Enables or disables the security policy from enforcing its security predicates against the target tables. If not specified the security policy being created is enabled.  
   
  NOT FOR REPLICATION  
  Indicates that the security policy should not be executed when a replication agent modifies the target object. For more information, see [Control the Behavior of Triggers and Constraints During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  

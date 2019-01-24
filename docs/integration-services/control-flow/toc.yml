@@ -101,8 +101,9 @@
     href: execute-sql-server-agent-job-task.md
   - name: Execute SQL Task
     href: execute-sql-task.md
-  - name: MERGE in Integration Services Packages
-    href: merge-in-integration-services-packages.md
+    items:
+    - name: MERGE in Integration Services Packages
+      href: merge-in-integration-services-packages.md
   - name: Execute T-SQL Statement Task
     href: execute-t-sql-statement-task.md
   - name: Expression Task

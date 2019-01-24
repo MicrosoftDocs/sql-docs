@@ -56,7 +56,7 @@ UPDATE ( column )
  IF UPDATE returns the TRUE value in INSERT actions because the columns have either explicit values or implicit (NULL) values inserted.  
   
 > [!NOTE]  
->  The IF UPDATE(*colum*n) clause functions the same as an IF, IF...ELSE, or WHILE clause and can use the BEGIN...END block. For more information, see [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
+>  The IF UPDATE(*column*) clause functions the same as an IF, IF...ELSE, or WHILE clause and can use the BEGIN...END block. For more information, see [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) can be used anywhere inside the body of a [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger.  
   

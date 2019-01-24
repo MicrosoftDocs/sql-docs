@@ -26,7 +26,7 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="1" maxOccurs="2">  
@@ -60,7 +60,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="0" maxOccurs="unbounded">  

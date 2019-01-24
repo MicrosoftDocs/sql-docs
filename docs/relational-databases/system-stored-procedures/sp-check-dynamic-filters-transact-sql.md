@@ -43,7 +43,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+ [ **@publication**= ] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 ## Result Sets  

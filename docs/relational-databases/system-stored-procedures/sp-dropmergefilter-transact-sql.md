@@ -34,13 +34,13 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@filtername=**] **'***filtername***'**  
+ [ **@filtername=**] **'**_filtername_**'**  
  Is the name of the filter to be dropped. *filtername* is **sysname**, with no default.  
   
  [ **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  

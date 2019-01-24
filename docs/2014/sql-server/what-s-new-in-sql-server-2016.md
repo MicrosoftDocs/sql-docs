@@ -33,8 +33,6 @@ manager: craigg
   
 -   [What's New &#40;Integration Services&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
--   [What's New &#40;Replication&#41;](../relational-databases/replication/what-s-new-replication.md)  
-  
 -   [What's New &#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
   
 ## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)

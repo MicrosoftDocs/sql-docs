@@ -364,7 +364,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo pcs status 
    ```
 
-   The following examples shows the results when Pacemaker has succesfully started a clustered instance of SQL Server. 
+   The following examples shows the results when Pacemaker has successfully started a clustered instance of SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

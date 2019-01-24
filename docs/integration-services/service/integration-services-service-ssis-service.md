@@ -154,6 +154,28 @@ manager: craigg
   
 8.  Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Service.  
 
+### Event logged when permissions are missing
+
+If the service account of the SQL Server Agent doesn't have the Integration Services DCOM **[Launch and Activation Permissions]**, the following event is added to the system event logs when the SQL Server Agent executes the SSIS package jobs:
+
+```
+Log Name: System
+Source: **Microsoft-Windows-DistributedCOM**
+Date: 1/9/2019 5:42:13 PM
+Event ID: **10016**
+Task Category: None
+Level: Error
+Keywords: Classic
+User: NT SERVICE\SQLSERVERAGENT
+Computer: testmachine
+Description:
+The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+and APPID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487193-2804545603-1466107430) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```
+
 ## Configure the service
  
 When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the setup process creates and installs the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. This configuration file contains the following settings:  
@@ -181,7 +203,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -226,7 +248,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  

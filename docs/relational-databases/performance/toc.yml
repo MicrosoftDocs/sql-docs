@@ -94,6 +94,8 @@
         href: tuning-database-using-workload-from-query-store.md
       - name: Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations
         href: performance-improvements-using-dta-recommendations.md
+    - name: Performance Dashboard
+      href: performance-dashboard.md
   - name: Upgrading Databases by using the Query Tuning Assistant
     href: upgrade-dbcompat-using-qta.md
   - name: Monitoring Performance by Using the Query Store

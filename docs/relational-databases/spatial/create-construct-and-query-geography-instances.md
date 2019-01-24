@@ -226,41 +226,44 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the default SRID of 4326, which maps to the WGS 84 spatial reference system, when using methods on **geography** instances. If you use data from a spatial reference system other than WGS 84 (or SRID 4326), you will need to determine the specific SRID for your geography spatial data.  
   
 ##  <a name="examples"></a> Examples  
- The following examples show how to add and query geography data.  
+The following examples show how to add and query geography data.  
   
--   The first example creates a table with an identity column and a `geography` column `GeogCol1`. A third column renders the `geography` column into its Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation, and uses the `STAsText()` method. Two rows are then inserted: one row contains a `LineString` instance of `geography`, and one row contains a `Polygon` instance.  
+### Example A. 
+This example creates a table with an identity column and a `geography` column `GeogCol1`. A third column renders the `geography` column into its Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation, and uses the `STAsText()` method. Two rows are then inserted: one row contains a `LineString` instance of `geography`, and one row contains a `Polygon` instance.  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeogCol1 geography,   
-        GeogCol2 AS GeogCol1.STAsText() );  
-    GO  
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeogCol1 geography,   
+    GeogCol2 AS GeogCol1.STAsText()
+   );  
+GO  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
-    GO  
-    ```  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
+GO  
+```  
   
--   The second example uses the `STIntersection()` method to return the points where the two previously inserted `geography` instances intersect.  
+### Example B.
+This example uses the `STIntersection()` method to return the points where the two previously inserted `geography` instances intersect.  
   
-    ```  
-    DECLARE @geog1 geography;  
-    DECLARE @geog2 geography;  
-    DECLARE @result geography;  
+```sql  
+DECLARE @geog1 geography;  
+DECLARE @geog2 geography;  
+DECLARE @result geography;  
   
-    SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geog1.STIntersection(@geog2);  
-    SELECT @result.STAsText();  
-    ```  
+SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geog1.STIntersection(@geog2);  
+SELECT @result.STAsText();  
+```  
   
 ## See Also  
  [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

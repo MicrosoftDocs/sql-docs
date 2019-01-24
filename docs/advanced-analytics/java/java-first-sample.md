@@ -222,7 +222,7 @@ The entire tree must have permissions, from root parent to the last subfolder.
    + Click **Object Types** and make sure *Built-in security principles* and *Groups* are selected.
    + Click **Locations** to select the local computer name at the top of the list.
 5. Enter **SQLRUserGroup**, check the name, and then click OK to add the group.
-6. Enter **ALL APPLCIATION PACKAGES**, check the name, and then click OK to add. If the name doesn't resolve, revisit the Locations step. The SID is local to your machine.
+6. Enter **ALL APPLICATION PACKAGES**, check the name, and then click OK to add. If the name doesn't resolve, revisit the Locations step. The SID is local to your machine.
 
 Make sure both security identities have 'Read and Execute' permissions on the folder and "pkg" subfolder.
 

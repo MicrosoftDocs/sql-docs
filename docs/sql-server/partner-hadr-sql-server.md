@@ -2,13 +2,10 @@
 title: SQL Server high availability and disaster recovery partners | Microsoft Docs
 description: Lists of third-party partners with solutions to monitor Server.
 services: sql-server
-documentationcenter: NA
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: ""
 ms.date: 09/17/2017    
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg

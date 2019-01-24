@@ -73,7 +73,7 @@ manager: craigg
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, select **Save***table_name*.  
+8.  On the **File** menu, select **Save**_table_name_.  
   
 #### To specify a fill factor in an index by using Object Explorer  
   

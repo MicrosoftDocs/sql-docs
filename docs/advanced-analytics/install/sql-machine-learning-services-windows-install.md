@@ -4,13 +4,14 @@ description: R in SQL Server or Python on SQL Server installation steps for SQL 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/01/2018  
+ms.date: 01/17/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
 # Install SQL Server Machine Learning Services on Windows
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Starting in SQL Server 2017, R and Python support for in-database analytics is provided in **SQL Server Machine Learning Services**, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
@@ -170,8 +171,8 @@ Use the following steps to verify that all components used to launch external sc
     ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
-	OutputDataSet <- InputDataSet;
-	',
+    OutputDataSet <- InputDataSet;
+    ',
     @input_data_1 =N'SELECT 1 AS hello'
     WITH RESULT SETS (([hello] int not null));
     GO
@@ -182,8 +183,8 @@ Use the following steps to verify that all components used to launch external sc
     ```sql
     EXEC sp_execute_external_script  @language =N'Python',
     @script=N'
-	OutputDataSet = InputDataSet;
-	',
+    OutputDataSet = InputDataSet;
+    ',
     @input_data_1 =N'SELECT 1 AS hello'
     WITH RESULT SETS (([hello] int not null));
     GO
@@ -196,6 +197,13 @@ Use the following steps to verify that all components used to launch external sc
     | hello |
     |----|
     | 1|
+
+
+<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
+Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
+due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
+I will inform HeidiSteen  [GeneMi, 2019/01/17]
+-->
 
 
 > [!NOTE]

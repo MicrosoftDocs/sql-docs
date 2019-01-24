@@ -34,7 +34,7 @@ The ADO API Reference describes the functionality of the ADO application program
   
  For each operation within a class (that is, a method or property call), there is a declaration to call the operation directly (that is, the "raw" form of the operation), and a declaration to call the raw operation and throw a COM error if the operation fails to execute successfully. If the operation is a property, there is usually a compiler directive that creates an alternative syntax for the operation that has syntax like Visual Basic.  
   
- Operations that retrieve the value of a property have names of the form, **Get***Property*. Operations that set the value of a property have names of the form, **Put***Property*. Operations that set the value of a property with a pointer to an ADO object have names of the form, **PutRef***Property*.  
+ Operations that retrieve the value of a property have names of the form, **Get**_Property_. Operations that set the value of a property have names of the form, **Put**_Property_. Operations that set the value of a property with a pointer to an ADO object have names of the form, **PutRef**_Property_.  
   
  You can get or set a property with calls of these forms:  
   
@@ -59,16 +59,17 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- The compiler will generate the appropriate **Get***-*, **Put**-, or **PutRef***Property* call based on what alternative syntax is declared and whether the property is being read or written.  
+ The compiler will generate the appropriate **Get**_-_, **Put**-, or **PutRef**_Property_ call based on what alternative syntax is declared and whether the property is being read or written.  
   
  The **__declspec(property...)** compiler directive can only declare **get**, **put**, or **get** and **put** alternative syntax for a function. Read-only operations only have a **get** declaration; write-only operations only have a **put** declaration; operations that are both read and write have both **get** and **put** declarations.  
   
- Only two declarations are possible with this directive; however, each property may have three property functions: **Get***Property*, **Put***Property*, and **PutRef***Property*. In that case, only two forms of the property have the alternative syntax.  
+ Only two declarations are possible with this directive; however, each property may have three property functions: **Get**_Property_, **Put**_Property_, and **PutRef**_Property_. In that case, only two forms of the property have the alternative syntax.  
   
- For example, the **Command** object **ActiveConnection** property is declared with an alternative syntax for **Get***ActiveConnection* and **PutRef***ActiveConnection*. The **PutRef**- syntax is a good choice because in practice, you will typically want to put an open **Connection** object (that is, a **Connection** object pointer) in this property. On the other hand, the **Recordset** object has **Get**-, **Put**-, and **PutRef***ActiveConnection* operations, but no alternative syntax.  
+ For example, the **Command** object **ActiveConnection** property is declared with an alternative syntax for **Get**_ActiveConnection_ and **PutRef**_ActiveConnection_. The **PutRef**- syntax is a good choice because in practice, you will typically want to put an open **Connection** object (that is, a **Connection** object pointer) in this property. On the other hand, the **Recordset** object has **Get**-, **Put**-, and **PutRef**_ActiveConnection_ operations, but no alternative syntax.  
   
 ## Collections, the GetItem Method, and the Item Property  
- ADO defines several collections, including **Fields**, **Parameters**, **Properties**, and **Errors**. In Visual C++, the **GetItem(***index***)** method returns a member of the collection. *Index* is a **Variant**, the value of which is either a numeric index of the member in the collection, or a string containing the name of the member.  
+
+ ADO defines several collections, including **Fields**, **Parameters**, **Properties**, and **Errors**. In Visual C++, the **GetItem(_index_)** method returns a member of the collection. *Index* is a **Variant**, the value of which is either a numeric index of the member in the collection, or a string containing the name of the member.  
   
  The **__declspec(property...)** compiler directive declares the **Item** property as an alternative syntax to each collection's fundamental **GetItem()** method. The alternative syntax uses square brackets and looks similar to an array reference. In general, the two forms look like the following:  
   
@@ -78,7 +79,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- For example, assign a value to a field of a **Recordset** object, named ***rs***, derived from the **authors** table of the **pubs** database. Use the **Item()** property to access the third **Field** of the **Recordset** object **Fields** collection (collections are indexed from zero; assume the third field is named ***au_fname***). Then call the **Value()** method on the **Field** object to assign a string value.  
+ For example, assign a value to a field of a **Recordset** object, named **_rs_**, derived from the **authors** table of the **pubs** database. Use the **Item()** property to access the third **Field** of the **Recordset** object **Fields** collection (collections are indexed from zero; assume the third field is named **_au\_fname_**). Then call the **Value()** method on the **Field** object to assign a string value.  
   
  This can be expressed in Visual Basic in the following four ways (the last two forms are unique to Visual Basic; other languages do not have equivalents):  
   
@@ -427,7 +428,7 @@ cn.Close
 End Sub  
 ```
   
- This Visual C++ example demonstrates the **Get**/**Put**/**PutRef***Property*.  
+ This Visual C++ example demonstrates the **Get**/**Put**/**PutRef**_Property_.  
   
 #### Notes  
  The following notes correspond to commented sections in the code example.  

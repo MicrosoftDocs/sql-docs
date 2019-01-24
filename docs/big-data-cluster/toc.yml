@@ -69,7 +69,7 @@
     - name: Load data with curl
       href: data-ingestion-curl.md
     - name: Restore a database
-      href: data-ingestion-restore-databse.md
+      href: data-ingestion-restore-database.md
   - name: Big Data/Machine Learning
     items:
     - name: Data wrangling using PROSE Code Accelerator

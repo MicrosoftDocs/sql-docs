@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], Database Master Key"
   - "database master key [SQL Server], creating"
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

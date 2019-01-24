@@ -65,7 +65,7 @@ manager: craigg
   
  0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth's circumference)  
   
- The error between the theorectical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the *tolerance* parameter. For more information on extents, see [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ The error between the theoretical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the *tolerance* parameter. For more information on extents, see [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
  This method is not precise.  
   

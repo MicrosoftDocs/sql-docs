@@ -5,9 +5,10 @@ description: This tutorial demonstrates how to load sample data into a SQL Serve
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
@@ -104,7 +105,7 @@ The following steps describe how to use a Linux client to load the sample data i
 1. Run the bootstrap script.
 
    ```bash
-   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
 ## Next steps

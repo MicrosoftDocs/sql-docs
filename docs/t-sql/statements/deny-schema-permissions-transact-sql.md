@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], schemas"
   - "DENY statement, schemas"
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Schema Permissions (Transact-SQL)

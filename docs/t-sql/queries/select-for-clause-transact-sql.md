@@ -1,7 +1,7 @@
 ---
 title: "FOR Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
+ms.date: "01/08/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -24,22 +24,22 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # SELECT - FOR Clause (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Use the FOR clause to specify one of the following options for query results.  
+Use the FOR clause to specify one of the following options for query results.
   
 -   Allow updates while viewing query results in a browse mode cursor by specifying **FOR BROWSE**.  
   
 -   Format query results as XML by specifying **FOR XML**.  
   
 -   Format query results as JSON by specifying **FOR JSON**.  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -78,20 +78,21 @@ JSON
         [ , WITHOUT_ARRAY_WRAPPER ]  
     ]  
   
-}  
-```  
+}
+```
   
-## FOR BROWSE  
+## FOR BROWSE
+
  BROWSE  
  Specifies that updates be allowed while viewing the data in a DB-Library browse mode cursor. A table can be browsed in an application if the table includes a **timestamp** column, the table has a unique index, and the FOR BROWSE option is at the end of the SELECT statements sent to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!NOTE]  
->  You cannot use the \<lock_hint> HOLDLOCK in a SELECT statement that includes the FOR BROWSE option.
+> [!NOTE]
+> You cannot use the \<lock_hint> HOLDLOCK in a SELECT statement that includes the FOR BROWSE option.
   
  FOR BROWSE cannot appear in SELECT statements that are joined by the UNION operator.  
   
-> [!NOTE]  
->  When the unique index key columns of a table are nullable, and the table is on the inner side of an outer join, the index is not supported by browse mode.  
+> [!NOTE]
+> When the unique index key columns of a table are nullable, and the table is on the inner side of an outer join, the index is not supported by browse mode.  
   
  The browse mode lets you scan the rows in your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table and update the data in your table one row at a time. To access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table in your application in the browse mode, you must use one of the following two options:  
   
@@ -149,8 +150,7 @@ JSON
     FROM tleft   
     RIGHT JOIN tright   
     ON tleft.c1 = tright.c1   
-    WHERE tright.c1 <> 2 ;  
-  
+    WHERE tright.c1 <> 2 ;
     ```  
   
      Notice the following output in the Results pane:  
@@ -165,14 +165,15 @@ JSON
   
  After you run the SELECT query to access the tables in the browse mode, the result set of the SELECT query contains two null values for the c1 column in the tleft table because of the definition of the right outer join statement. Therefore, in the result set, you cannot distinguish between the null values that came from the table and the null values that the right outer join statement introduced. You might receive incorrect results if you must ignore the null values from the result set.  
   
-> [!NOTE]  
->  If the columns that are included in the unique index do not accept null values, all the null values in the result set were introduced by the right outer join statement.  
+> [!NOTE]
+> If the columns that are included in the unique index do not accept null values, all the null values in the result set were introduced by the right outer join statement.  
   
-## FOR XML  
+## FOR XML
+
  XML  
  Specifies that the results of a query are to be returned as an XML document. One of the following XML modes must be specified: RAW, AUTO, EXPLICIT. For more information about XML data and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
- RAW [ **('***ElementName***')** ]  
+ RAW [ **('**_ElementName_**')** ]  
  Takes the query result and transforms each row in the result set into an XML element with a generic identifier \<row /> as the element tag. You can optionally specify a name for the row element. The resulting XML output uses the specified *ElementName* as the row element generated for each row. For more information, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
   
  AUTO  
@@ -184,10 +185,26 @@ JSON
  XMLDATA  
  Returns inline XDR schema, but does not add the root element to the result. If XMLDATA is specified, XDR schema is appended to the document.  
   
-> [!IMPORTANT]  
->  The XMLDATA directive is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICIT mode. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
- XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
+> [!IMPORTANT]
+> The XMLDATA directive is **deprecated**. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICIT mode. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
+_Suppress unwanted line breaks:_ You might use SQL Server Management Studio (SSMS) to issue a query that uses the FOR XML clause. Sometimes a large amount of XML is returned and displayed in one grid cell. The XML string could be longer than one SSMS grid cell can hold on a single line. In these cases, SSMS might insert line break characters between long segments of the whole XML string. Such line breaks might occur in the middle of a substring that should not be split across lines. You can prevent the line breaks by using a cast AS XMLDATA. This solution can also apply when you use FOR JSON PATH. The technique is discussed on Stack Overflow, and is shown in the following Transact-SQL sample SELECT statement:
+
+- [Using SQL Server FOR XML: Convert Result Datatype to Text/varchar/string whatever?](https://stackoverflow.com/questions/5655332/using-sql-server-for-xml-convert-result-datatype-to-text-varchar-string-whate/5658758#5658758)
+
+    ```sql
+    SELECT CAST(
+        (SELECT column1, column2
+            FROM my_table
+            FOR XML PATH('')
+        )
+            AS VARCHAR(MAX)
+    ) AS XMLDATA ;
+    ```
+
+<!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
+
+ XMLSCHEMA [ **('**_TargetNameSpaceURI_**')** ]  
  Returns inline XSD schema. You can optionally specify a target namespace URI when you specify this directive, which returns the specified namespace in the schema. For more information, see [Generate an Inline XSD Schema](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
   
  ELEMENTS  
@@ -199,7 +216,7 @@ JSON
  ABSENT  
  Indicates that for null column values, corresponding XML elements will not be added in the XML result. Specify this option only with ELEMENTS.  
   
- PATH [ **('***ElementName***')** ]  
+ PATH [ **('**_ElementName_**')** ]  
  Generates a \<row> element wrapper for each row in the result set. You can optionally specify an element name for the \<row> element wrapper. If an empty string is provided, such as FOR XML PATH (**''**) ), a wrapper element is not generated. Using PATH may provide a simpler alternative to queries written using the EXPLICIT directive. For more information, see [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
   
  BINARY BASE64  
@@ -208,7 +225,7 @@ JSON
  TYPE  
  Specifies that the query returns results as **xml** type. For more information, see [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_RootName_**')** ]  
  Specifies that a single top-level element be added to the resulting XML. You can optionally specify the root element name to generate. If the optional root name is not specified, the default \<root> element is added.  
   
  For more info, see [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -228,7 +245,8 @@ ORDER BY LastName, FirstName
 FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;  
 ```  
   
-## FOR JSON  
+## FOR JSON
+
  JSON  
  Specify FOR JSON to return the results of a query formatted as JSON text. You also have to specify one of the following JSON modes : AUTO or PATH. For more information about the **FOR JSON** clause, see [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
@@ -243,7 +261,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  Include null values in the JSON output by specifying the **INCLUDE_NULL_VALUES** option with the **FOR JSON** clause. If you don't specify this option, the output does not include JSON properties for null values in the query results. For more info and examples, see [Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_RootName_**')** ]  
  Add a single, top-level element to the JSON output by specifying the **ROOT** option with the **FOR JSON** clause. If you don't specify the **ROOT** option, the JSON output doesn't have a root element. For more info and examples, see [Add a Root Node to JSON Output with the ROOT Option &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  
@@ -251,7 +269,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  For more info, see [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
-## See Also  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  
+## See Also
+
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+

@@ -96,13 +96,13 @@ manager: craigg
   
 6.  Under the **Index key columns** tab, click **Add...**.  
   
-7.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the index.  
+7.  In the **Select Columns from**_table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.  
   
 8.  Click **OK**.  
   
 9. Under the **Included columns** tab, click **Add...**.  
   
-10. In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the index as nonkey columns.  
+10. In the **Select Columns from**_table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index as nonkey columns.  
   
 11. Click **OK**.  
   

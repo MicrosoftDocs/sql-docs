@@ -38,16 +38,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication that contains the article. *publication* is **sysname**, with a default of NULL.  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article whose property is to be changed. *article* is **sysname**, with a default of NULL.  
   
- [ **@property=**] **'***property***'**  
+ [ **@property=**] **'**_property_**'**  
  Is an article property to change. *property* is **nvarchar(100)**.  
   
- [ **@value=**] **'***value***'**  
+ [ **@value=**] **'**_value_**'**  
  Is the new value of the article property. *value* is **nvarchar(255)**.  
   
  This table describes the properties of articles and the values for those properties.  
@@ -108,7 +108,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x100000000**|Use this option to replicate the FILESTREAM attribute if it is specified on **varbinary(max)** columns. Do not specify this option if you are replicating tables to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Subscribers. Replicating tables that have FILESTREAM columns to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Subscribers is not supported, regardless of how this schema option is set.<br /><br /> See related option **0x800000000**.|  
 ||**0x200000000**|Converts date and time data types (**date**, **time**, **datetimeoffset**, and **datetime2**) that were introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to data types that are supported on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0x400000000**|Replicates the compression option for data and indexes. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-||**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> See related option **0x100000000**.|  
+||**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> See related option **0x100000000**.|  
 ||**0x1000000000**|Converts common language runtime (CLR) user-defined types (UDTs) larger than 8000 bytes to **varbinary(max)** so that columns of type UDT can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x2000000000**|Converts the **hierarchyid** data type to **varbinary(max)** so that columns of type **hierarchyid** can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information about how to use **hierarchyid** columns in replicated tables, see [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Replicates any filtered indexes on the table. For more information about filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
@@ -149,7 +149,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  See the Remarks section for the properties that, when changed, require the generation of a new snapshot.  
   
- [ **@force_reinit_subscription=]***force_reinit_subscription*  
+ [ **@force_reinit_subscription=]**_force_reinit_subscription_  
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit** with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
@@ -158,7 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  See the Remarks section for the properties that, when changed, require that all existing subscriptions be reinitialized.  
   
- [ **@publisher**= ] **'***publisher***'**  
+ [ **@publisher**= ] **'**_publisher_**'**  
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

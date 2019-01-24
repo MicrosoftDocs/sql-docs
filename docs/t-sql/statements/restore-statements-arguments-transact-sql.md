@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "RESTORE statement, arguments"
   - "RESTORE statement"
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # RESTORE Statements - Arguments (Transact-SQL)
@@ -128,7 +128,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> }
  Is the logical name, which must follow the rules for identifiers, of the backup device(s) created by **sp_addumpdevice** from which the database is restored. If supplied as a variable (**@**_logical\_backup\_device\_name\_var_), the backup device name can be specified either as a string constant (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Allows backups to be restored from the named disk or tape device. The device types of disk and tape should be specified with the actual name (for example, complete path and file name) of the device: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` or `TAPE ='\\\\.\TAPE0'`. If specified as a variable (**@**_physical\_backup\_device\_name\_var_), the device name can be specified either as a string constant (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') or as a variable of character string data type, except for the **ntext** or **text** data types.  
+ Allows backups to be restored from the named disk or tape device. The device types of disk and tape should be specified with the actual name (for example, complete path and file name) of the device: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` or `TAPE ='\\\\.\TAPE0'`. If specified as a variable (**@**_physical\_backup\_device\_name\_var_), the device name can be specified either as a string constant (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
  If using a network server with a UNC name (which must contain machine name), specify a device type of disk. For more information about how to use UNC names, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -399,7 +399,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 ##### Monitoring Options  
  These options enable you to monitor the transfer of data transfer from the backup device.  
   
- STATS [ **=** *percentage* ]  
+ STATS [ **=** _percentage_ ]  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Displays a message each time another percentage completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed (approximately).  

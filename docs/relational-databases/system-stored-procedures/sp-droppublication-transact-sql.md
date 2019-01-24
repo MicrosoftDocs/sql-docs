@@ -33,7 +33,7 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the name of the publication to be dropped. *publication* is **sysname**, with no default. If **all** is specified, all publications are dropped from the publication database, except for those with subscriptions.  
   
  [ **@ignore_distributor =** ] *ignore_distributor*  

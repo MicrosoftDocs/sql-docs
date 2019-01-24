@@ -1,147 +1,147 @@
 - name: Overview
   href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
   items: 
-    - name: Securing SQL Server
-      href: securing-sql-server.md  
+  - name: Securing SQL Server
+    href: securing-sql-server.md  
 - name: How-to
   items:
-    - name: Secure SQL Server
-      items:
-        - name: Surface area configuration
-          href: surface-area-configuration.md
-        - name: SQL Vulnerability Assessment tool
-          href: sql-vulnerability-assessment.md
-        - name: Data discovery & classification
-          href: sql-data-discovery-and-classification.md
-        - name: SQL Server Connector troubleshooting
-          href: encryption/sql-server-connector-maintenance-troubleshooting.md
+  - name: Secure SQL Server
+    items:
+    - name: Surface area configuration
+      href: surface-area-configuration.md
+    - name: SQL Vulnerability Assessment tool
+      href: sql-vulnerability-assessment.md
+    - name: Data discovery & classification
+      href: sql-data-discovery-and-classification.md
+    - name: SQL Server Connector troubleshooting
+      href: encryption/sql-server-connector-maintenance-troubleshooting.md
     - name: Authentication Access
       items:
-        - name: Determine effective permissions
-          href: authentication-access/determining-effective-database-engine-permissions.md
-        - name: Create a login
-          href: authentication-access/create-a-login.md
-        - name: Create a database user
-          href: authentication-access/create-a-database-user.md
-        - name: Create a database schema
-          href: authentication-access/create-a-database-schema.md
-        - name: Join a role
-          href: authentication-access/join-a-role.md
-        - name: Grant permission to a principal
-          href: authentication-access/grant-a-permission-to-a-principal.md
-        - name: Create a server role
-          href: authentication-access/create-a-server-role.md
-        - name: Create an application rolke
-          href: authentication-access/create-an-application-role.md
-        - name: Create a credential
-          href: authentication-access/create-a-credential.md
+      - name: Determine effective permissions
+        href: authentication-access/determining-effective-database-engine-permissions.md
+      - name: Create a login
+        href: authentication-access/create-a-login.md
+      - name: Create a database user
+        href: authentication-access/create-a-database-user.md
+      - name: Create a database schema
+        href: authentication-access/create-a-database-schema.md
+      - name: Join a role
+        href: authentication-access/join-a-role.md
+      - name: Grant permission to a principal
+        href: authentication-access/grant-a-permission-to-a-principal.md
+      - name: Create a server role
+        href: authentication-access/create-a-server-role.md
+      - name: Create an application rolke
+        href: authentication-access/create-an-application-role.md
+      - name: Create a credential
+        href: authentication-access/create-a-credential.md
     - name: Encryption
       items:
-        - name: Choose an algorithm
-          href: encryption/choose-an-encryption-algorithm.md
-        - name: Configure Always Enecrypted with Secure Enclaves
-          href: encryption/configure-always-encrypted-enclaves.md
-          items:
-            - name: Configure with SQL Server Management Studio
-              href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
-            - name: Configure with PowerShell 
-              href: encryption/configure-always-encrypted-using-powershell.md
-            - name: Create & store column master keys
-              href: encryption/create-and-store-column-master-keys-always-encrypted.md
-            - name: Configure keys with PowerShell
-              href: encryption/configure-always-encrypted-keys-using-powershell.md
-            - name: Rotate keys with PowerShell
-              href: encryption/rotate-always-encrypted-keys-using-powershell.md
-            - name: Configure column encryption with PowerShell
-              href: encryption/configure-column-encryption-using-powershell.md
-            - name: Migrate sensitive data
-              href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-            - name: Develop aplications with .NET Framework
-              href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md            
-        - name: Move a TDE protected database
-          href: encryption/move-a-tde-protected-database-to-another-sql-server.md
-        - name: Enable TDE with EKM
-          href: encryption/enable-tde-on-sql-server-using-ekm.md
-        - name: Back up service master key
-          href: encryption/back-up-the-service-master-key.md
-        - name: Restore service master key
-          href: encryption/restore-the-service-master-key.md
-        - name: Create a database master key
-          href: encryption/create-a-database-master-key.md
-        - name: Back up a database master key
-          href: encryption/back-up-a-database-master-key.md
-        - name: Restore a database master Key
-          href: encryption/restore-a-database-master-key.md
-        - name: Create identical symmetric Keys on two servers
-          href: encryption/create-identical-symmetric-keys-on-two-servers.md
-        - name: Encrypt a column of data
-          href: encryption/encrypt-a-column-of-data.md
+      - name: Choose an algorithm
+        href: encryption/choose-an-encryption-algorithm.md
+      - name: Configure Always Enecrypted with Secure Enclaves
+        href: encryption/configure-always-encrypted-enclaves.md
+        items:
+        - name: Configure with SQL Server Management Studio
+          href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
+        - name: Configure with PowerShell 
+          href: encryption/configure-always-encrypted-using-powershell.md
+        - name: Create & store column master keys
+          href: encryption/create-and-store-column-master-keys-always-encrypted.md
+        - name: Configure keys with PowerShell
+          href: encryption/configure-always-encrypted-keys-using-powershell.md
+        - name: Rotate keys with PowerShell
+          href: encryption/rotate-always-encrypted-keys-using-powershell.md
+        - name: Configure column encryption with PowerShell
+          href: encryption/configure-column-encryption-using-powershell.md
+        - name: Migrate sensitive data
+          href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+        - name: Develop aplications with .NET Framework
+          href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md            
+      - name: Move a TDE protected database
+        href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+      - name: Enable TDE with EKM
+        href: encryption/enable-tde-on-sql-server-using-ekm.md
+      - name: Back up service master key
+        href: encryption/back-up-the-service-master-key.md
+      - name: Restore service master key
+        href: encryption/restore-the-service-master-key.md
+      - name: Create a database master key
+        href: encryption/create-a-database-master-key.md
+      - name: Back up a database master key
+        href: encryption/back-up-a-database-master-key.md
+      - name: Restore a database master Key
+        href: encryption/restore-a-database-master-key.md
+      - name: Create identical symmetric Keys on two servers
+        href: encryption/create-identical-symmetric-keys-on-two-servers.md
+      - name: Encrypt a column of data
+        href: encryption/encrypt-a-column-of-data.md
     - name: Secure Azure SQL Database
       items:
-        - name: SQL Server connector with encryption
-          href: encryption/use-sql-server-connector-with-sql-encryption-features.md
-        - name: Bring your own key
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
-        - name: Rotate TDE BYOK keys
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
-        - name: Remove TDE protector
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
-        - name: EKM using Azure Key Vault
-          href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+      - name: SQL Server connector with encryption
+        href: encryption/use-sql-server-connector-with-sql-encryption-features.md
+      - name: Bring your own key
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: Rotate TDE BYOK keys
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: Remove TDE protector
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: EKM using Azure Key Vault
+        href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
     - name: Auditing
       items:
-        - name: Create server audit specification
-          href: auditing/create-a-server-audit-and-server-audit-specification.md
-        - name: Create database audit specification
-          href: auditing/create-a-server-audit-and-database-audit-specification.md
-        - name: View audit log
-          href: auditing/view-a-sql-server-audit-log.md
-        - name: Write audit events to Windows log
-          href: auditing/write-sql-server-audit-events-to-the-security-log.md
+      - name: Create server audit specification
+        href: auditing/create-a-server-audit-and-server-audit-specification.md
+      - name: Create database audit specification
+        href: auditing/create-a-server-audit-and-database-audit-specification.md
+      - name: View audit log
+        href: auditing/view-a-sql-server-audit-log.md
+      - name: Write audit events to Windows log
+        href: auditing/write-sql-server-audit-events-to-the-security-log.md
 - name: Concepts
   items:
      - name: Protecting SQL Server Intellectual Property 
        href: protecting-your-sql-server-intellectual-property.md
        items:
-         - name: SQL injection
-           href: sql-injection.md
-         - name: TRUSTWORTHY databse property
-           href: trustworthy-database-property.md
-         - name: Password policy
-           href: password-policy.md
-         - name: Strong passwords
-           href: strong-passwords.md
-         - name: Row-Level Security
-           href: row-level-security.md
-         - name: Static Data Masking 
-           href: static-data-masking.md
-         - name: Certificates and asymmetric keys
-           href: sql-server-certificates-and-asymmetric-keys.md
+       - name: SQL injection
+         href: sql-injection.md
+       - name: TRUSTWORTHY databse property
+         href: trustworthy-database-property.md
+       - name: Password policy
+         href: password-policy.md
+       - name: Strong passwords
+         href: strong-passwords.md
+       - name: Row-Level Security
+         href: row-level-security.md
+       - name: Static Data Masking 
+         href: static-data-masking.md
+       - name: Certificates and asymmetric keys
+         href: sql-server-certificates-and-asymmetric-keys.md
      - name: Authentication Access 
        href: authentication-access/getting-started-with-database-engine-permissions.md
        items:
-         - name: Principals
-           href: authentication-access/principals-database-engine.md
-         - name: Server-level roles
-           href: authentication-access/server-level-roles.md
-         - name: Database-level roles
-           href: authentication-access/database-level-roles.md
-         - name: Application roles
-           href: authentication-access/application-roles.md
-         - name: Credentials
-           href: authentication-access/credentials-database-engine.md
-         - name: Securables
-           href: securables.md
-         - name: Contained database users
-           href: contained-database-users-making-your-database-portable.md
-         - name: Authentication mode
-           href: choose-an-authentication-mode.md
-         - name: Metadata visibility
-           href: metadata-visibility-configuration.md
-         - name: Permissions
-           href: permissions-database-engine.md
-         - name: Permissions hierarchy
-           href: permissions-hierarchy-database-engine.md
+       - name: Principals
+         href: authentication-access/principals-database-engine.md
+       - name: Server-level roles
+         href: authentication-access/server-level-roles.md
+       - name: Database-level roles
+         href: authentication-access/database-level-roles.md
+       - name: Application roles
+         href: authentication-access/application-roles.md
+       - name: Credentials
+         href: authentication-access/credentials-database-engine.md
+       - name: Securables
+         href: securables.md
+       - name: Contained database users
+         href: contained-database-users-making-your-database-portable.md
+       - name: Authentication mode
+         href: choose-an-authentication-mode.md
+       - name: Metadata visibility
+         href: metadata-visibility-configuration.md
+       - name: Permissions
+         href: permissions-database-engine.md
+       - name: Permissions hierarchy
+         href: permissions-hierarchy-database-engine.md
      - name: Encryption
        href: encryption/sql-server-encryption.md
        items:
@@ -150,38 +150,37 @@
          - name: Always Encrypted
            href: encryption/always-encrypted-database-engine.md
            items:
-             - name: Always Encrypted with Secure Enclaves
-               href: encryption/always-encrypted-enclaves.md
-             - name: Key management
-               href: encryption/overview-of-key-management-for-always-encrypted.md
-             - name: Cryptography
-               href: encryption/always-encrypted-cryptography.md
-             - name: Client development
-               href: encryption/always-encrypted-client-development.md
-             - name: 
+           - name: Always Encrypted with Secure Enclaves
+             href: encryption/always-encrypted-enclaves.md
+           - name: Key management
+             href: encryption/overview-of-key-management-for-always-encrypted.md
+           - name: Cryptography
+             href: encryption/always-encrypted-cryptography.md
+           - name: Client development
+             href: encryption/always-encrypted-client-development.md
          - name: Transparent Data Encryption (TDE)
            href: encryption/transparent-data-encryption.md
          - name: TDE with Azure SQL Database
            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
            items:
-             - name: Bring your own key
-               href: https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+           - name: Bring your own key
+             href: https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
          - name: Encryption keys
            href: encryption/sql-server-and-database-encryption-keys-database-engine.md
            items:
-             - name: Service master key
-               href: encryption/service-master-key.md
-             - name: Extensible key management (EKM)
-               href: encryption/extensible-key-management-ekm.md
-             - name: EKM using Azure Key Vault
-               href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+           - name: Service master key
+             href: encryption/service-master-key.md
+           - name: Extensible key management (EKM)
+             href: encryption/extensible-key-management-ekm.md
+           - name: EKM using Azure Key Vault
+             href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
          - name: Auditing
            href: auditing/sql-server-audit-database-engine.md
            items:
-             - name: Action gropus and actions
-               href: auditing/sql-server-audit-action-groups-and-actions.md
-             - name: Audit records
-               href: auditing/sql-server-audit-records.md    
+           - name: Action gropus and actions
+             href: auditing/sql-server-audit-action-groups-and-actions.md
+           - name: Audit records
+             href: auditing/sql-server-audit-records.md    
 - name: Tutorials
   items:
     - name: Always Encrypted with secure enclaves using SSMS

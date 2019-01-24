@@ -79,7 +79,7 @@ Use the following steps to run the deployment script. This script will create an
    | **Controller user** | Username for the controller user (default: **admin**). |
 
    > [!IMPORTANT]
-   > Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 21 persistent volume claims. When choosing an Azure virtual machine size and number of nodes, make sure that total number of disks that can be attached across the nodes is greater than or equal to 21. For example, the [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) machine size supports 16 attached disks, so three nodes means that 48 disks can be attached.
+   > The default **Standard_L4s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 21. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 21 persistent volume claims. For example, the [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) machine size supports 16 attached disks, so three nodes means that 48 disks can be attached.
 
    > [!NOTE]
    > The `sa` account is a system administrator on the SQL Server master instance that gets created during setup. After creating deployment, the `MSSQL_SA_PASSWORD` environment variable is discoverable by running `echo $MSSQL_SA_PASSWORD` in the master instance container. For security purposes, change your `sa` password on the master instance after deployment. For more information, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -230,6 +230,8 @@ az group delete -n <resource group name>
 ```
 
 ## Next steps
+
+The deployment script configured Azure Kubernetes Service and also deployed a SQL Server 2019 big data cluster. You can also choose to customize future deployments through manual installations. To learn more about how big data clusters are deployed as well as how to customize deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
 
 Now that the SQL Server big data cluster is deployed, you can load sample data and explore the tutorials:
 

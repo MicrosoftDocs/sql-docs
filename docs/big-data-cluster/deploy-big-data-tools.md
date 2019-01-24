@@ -14,7 +14,7 @@ ms.custom: seodec18
 
 # Install SQL Server 2019 big data tools
 
-This article describes the client tools that should be installed for creating, managing, and using SQL Server 2019 big data clusters (preview).
+This article describes the client tools that should be installed for creating, managing, and using SQL Server 2019 big data clusters (preview). The following section provides a list of tools and links to installation instructions. Before deploying a big data cluster, configure the tools marked required on Windows or Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -58,5 +58,10 @@ The previous table provides all of the common tools that are used with big data 
 The remaining tools are only required in certain scenarios. **Azure CLI** can be used to manage Azure services associated with AKS deployments. **mssql-cli** is an optional but useful tool that allows you to connect to the SQL Server master instance in the cluster and run queries from the command line. And **sqlcmd** and **curl** are required if you plan to install sample data with the GitHub script.
 
 ## Next steps
+
+After configuring the tools, deploy a SQL Server 2019 big data cluster to Kubernetes in the Cloud or on-premises. For more information, see the following deployment articles:
+
+- [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+- [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
 
 For More info about big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

@@ -15,6 +15,8 @@ manager: craigg
 # SQL Server Login Dialog Box (OLEDB)
 When you call an OLEDB connection without specifying enough information for the driver to connect to a SQL Server, the OLEDB driver displays the **SQL Server Login** dialog box.
 
+![Screenshot of SQL Server Login Dialog Box](./media/sql-server-login-dialog.png)
+
 ## Options
 
 ### Server

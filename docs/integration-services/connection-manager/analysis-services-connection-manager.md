@@ -35,7 +35,7 @@ manager: craigg
 -   If you are connecting to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], specify the authentication mode.  
 
 > [!NOTE]    
->  If you use SSIS in Azure Data Factory (ADF) and want to connect to Azure Analysis Services (AAS) instance, you can not use an account with Multi-Factor Authentication (MFA) enabled, but must use a service principal instead. See [here](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal) to create one, select **Use a specific user name and password** to log on to the server in your connection manager, and enter your Application ID/Key as User name/Password. Finally, you must also install the required client libraries on your Azure-SSIS Integration Runtime (IR) via custom setup, see **AAS** example in [Customizing your SSIS IR](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+>  If you use SSIS in Azure Data Factory (ADF) and want to connect to Azure Analysis Services (AAS) instance, you can not use an account with Multi-Factor Authentication (MFA) enabled, but must use a service principal instead. See [here](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal) to create one, select **Use a specific user name and password** to log on to the server in your connection manager, and enter your Application ID/Key as User name/Password.
   
 -   Indicate whether the connection that is created from the connection manager is retained at run time.  
   

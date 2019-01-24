@@ -15,7 +15,7 @@ manager: craigg
 # Lesson 6-3: Test the Lesson 6 package
 At run time, your package gets the value for the **Directory** property from the **VarFolderName** parameter.  
   
-To verify the package updates the **Directory** property, execute the package. Because you copied three sample data files to the new directory, the data flow runs three times.
+To verify that the package updates the **Directory** property, execute the package. Because you copied three sample data files to the new directory, the data flow runs three times.
   
 ## Check the package layout  
 Before you test the package, verify that the control and data flows in the Lesson 6 package are similar to the objects shown in the following diagrams:   

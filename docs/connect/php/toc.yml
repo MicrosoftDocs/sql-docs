@@ -94,6 +94,14 @@
         href: cursor-types-pdo-sqlsrv-driver.md
     - name: "How to: Retrieve Date and Time Type as Strings Using the SQLSRV Driver"
       href: how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
+    - name: "How to: Retrieve Date and Time Type as PHP Datetime Objects Using the PDO_SQLSRV Driver"
+      href: how-to-retrieve-date-and-time-type-as-objects-using-the-pdo-sqlsrv-driver.md
+    - name: Formatting Decimal Strings and Money Values
+      href: formatting-decimal-strings-and-money-values.md
+      - name: Formatting Decimal Strings and Money Values (SQLSRV Driver)
+        href: formatting-decimals-sqlsrv-driver.md
+      - name: Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)
+        href: formatting-decimals-sqlsrv-driver.md
   - name: Updating Data
     href: updating-data-microsoft-drivers-for-php-for-sql-server.md
     items:

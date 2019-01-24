@@ -16,3 +16,7 @@
   href: system-requirements-for-oledb-driver-for-sql-server.md
 - name: When to Use OLE DB Driver for SQL Server
   href: when-to-use-oledb-driver-for-sql-server.md
+- name: Help Topics
+  items:
+  - name: SQL Server Login Dialog
+    href: sql-server-login-dialog.md

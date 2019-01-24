@@ -126,7 +126,7 @@
            href: authentication-access/server-level-roles.md
          - name: Database-level roles
            href: authentication-access/database-level-roles.md
-         - name: Application rolkes
+         - name: Application roles
            href: authentication-access/application-roles.md
          - name: Credentials
            href: authentication-access/credentials-database-engine.md

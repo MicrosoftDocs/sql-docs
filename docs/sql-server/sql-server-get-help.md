@@ -24,6 +24,9 @@ The [User Voice](https://feedback.azure.com/forums/908035-sql-server) is also a 
 ## I want to make a suggestion about SQL Server Management Studio
 The SQL Server Management Studio (SSMS) team also closely monitors the SQL Server [User Voice](https://feedback.azure.com/forums/908035-sql-server) so if you have any issues to report, or suggestions to make, the User Voice is the best place to do so. 
 
+## I want to make a suggestion about Azure Data Studio
+The Azure Data Studio team closely monitors issues and feature requests on [Azure Data Studio Github](https://github.com/microsoft/azuredatastudio/issues). Please submit an issue or feature request here, and you can see when the issue/feature will be fixed or added.
+
 ## I want to access the SQL Server technical documentation offline
 If you would like to view the SQL Server documentation on an offline system, you have two options to do so. You can either create a PDF wherever you are in the SQL Server technical documentation, or you can download the offline content using [SQL Server offline Help Viewer](sql-server-help-installation.md). 
 
@@ -63,20 +66,22 @@ There are many MSDN forums that can help you with your SQL Server questions.
 - [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Warehouse](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
 
-### Developer Communities
-There are a few developer communities that can help you with your SQL Server issues as well. 
+### Social media and communities
+There are a few communities that can help you with your SQL Server issues. 
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
-
-### Social Media
-There are a few social media outlets that can reach the SQL team as well. 
-
 - [Reddit](https://www.reddit.com/r/SQLServer/)
+- [Get help from the community with the the #sqlhelp hash tag on twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
+
+### Updates via Twitter
+There are a few Twitter accounts that provide updates about SQL Server. 
+
 - [SQL Docs Twitter](https://twitter.com/sqldocs)
 - [SQL Tiger Team Twitter](https://twitter.com/mssqltiger)
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
+
 
 ## I want to contribute to SQL Server documentation
 

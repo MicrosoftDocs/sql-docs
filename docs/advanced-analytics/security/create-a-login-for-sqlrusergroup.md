@@ -47,7 +47,7 @@ You can work around the connection error by creating a login for  **SQLServerRUs
     + The name of the group that's associated with the Launchpad service for the _default instance_ is always **SQLRUserGroup**, regardless of whether you installed R or Python or both. Select this account for the default instance only.
     + If you are using a _named instance_, the instance name is appended to the name of the default worker group name, `SQLRUserGroup`. For example, if your instance is named "MLTEST", the default user group name for this instance would be **SQLRUserGroupMLTest**.
  
- ![Example of groups on server](media/implied-auth-login5.png "Example of groups on server")
+    ![Example of groups on server](media/implied-auth-login5.png "Example of groups on server")
    
 5. Click **OK** to close the advanced search dialog box.
 

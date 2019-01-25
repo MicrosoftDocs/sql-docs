@@ -44,7 +44,7 @@ The following example shows how to connect using **SqlPassword** and **ActiveDir
 // First connect to a local SQL Server instance by setting Authentication to SqlPassword
 $serverName = "myserver.mydomain";
 
-$connectionInfo = array( "UID"=>$myusername, "PWD"=>$mypassword, "Authentication"=>'SqlPassword' );
+$connectionInfo = array("UID"=>$myusername, "PWD"=>$mypassword, "Authentication"=>'SqlPassword');
 
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
@@ -200,16 +200,16 @@ if ($conn === false) {
 
 A user-assigned managed identity is created as a standalone Azure resource. Through a 
 create process, Azure creates an identity in the Azure AD tenant that's trusted by the
-subscription in use. After the identity is created, the identity can be assigned to one or more Azure service instances. Copy the `Object ID` of this identity and set it as the UID parameter in the connection string. 
+subscription in use. After the identity is created, the identity can be assigned to one or more Azure service instances. Copy the `Object ID` of this identity and set it as the user name in the connection string. 
 
-Therefore, when connecting using the user-assigned managed identity, set the UID but not the PWD.
+Therefore, when connecting using the user-assigned managed identity, provide the Object ID as the user name but omit the password.
 
 ```php
 <?php
 
 $azureServer = 'myazureserver.database.windows.net';
 $azureDatabase = 'myazuredatabase';
-$azureUser = '2d68f56e-9547-4dae-aee8-f3g28ab9674x';    // a fake Object ID of the identity
+$azureUser = '2d68f56e-9547-4dae-aee8-f3g28ab9674x';    // Object ID of the identity
 $connectionInfo = "Database = $azureDatabase; Authentication = ActiveDirectoryMsi;";
 
 try {

@@ -86,7 +86,7 @@ $server = 'myServer';
 $username = 'myuser';
 $password = 'mypassword'
 
-$conn = new PDO( "sqlsrv:server=$server; Database = $database", $username, $password);
+$conn = new PDO("sqlsrv:server=$server; Database = $database", $username, $password);
 $conn->setAttribute(PDO::SQLSRV_ATTR_FORMAT_DECIMALS, true);
 $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
 

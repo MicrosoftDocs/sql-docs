@@ -33,11 +33,11 @@ For example, assuming the connection is successful and $conn a valid PHP resourc
 <?php
 $server = 'myserver';
 $databaseName = 'mydatabase';
-$uid = 'myusername';
-$pwd = 'mypasword';
+$username = 'myusername';
+$passwd = 'mypasword';
 $tableName = 'mytable';
 
-$conn = new PDO("sqlsrv:Server = $server; Database = $databaseName", $uid, $pwd);
+$conn = new PDO("sqlsrv:Server = $server; Database = $databaseName", $username, $passwd);
 
 // To set the connection attribute
 $conn->setAttribute(PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE, true);
@@ -61,7 +61,7 @@ This example shows how to set the statement attribute:
 <?php
 $database = "test";
 $server = "(local)";
-$conn = new PDO( "sqlsrv:server = $server; Database = $database", "", "");
+$conn = new PDO("sqlsrv:server = $server; Database = $database", "", "");
 $query = "SELECT DateTimeCol FROM myTable";
 $stmt = $conn->prepare($query);
 $stmt->setAttribute(PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE, true);
@@ -83,7 +83,7 @@ Alternatively, the user can set the statement attribute as an option:
 <?php
 $database = "test";
 $server = "(local)";
-$conn = new PDO( "sqlsrv:server = $server; Database = $database", "", "");
+$conn = new PDO("sqlsrv:server = $server; Database = $database", "", "");
 
 $dateObj = null;
 $query = "SELECT DateTimeCol FROM aTable";
@@ -123,4 +123,5 @@ unset($conn);
 
 ## See Also
 [Retrieving Data](../../connect/php/retrieving-data.md)
+
 [Retrieve Date and Time Type as Strings Using the SQLSRV Driver](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)

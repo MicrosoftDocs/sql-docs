@@ -18,5 +18,7 @@
   href: when-to-use-oledb-driver-for-sql-server.md
 - name: Help Topics
   items:
-  - name: SQL Server Login Dialog
-    href: sql-server-login-dialog.md
+    - name: SQL Server Login Dialog
+      href: sql-server-login-dialog.md
+    - name: Universal Data Link (UDL) Configuration
+      href: data-link-pages.md

@@ -141,7 +141,9 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|ARD: R/W APD: R/W IRD: R/W IPD: R/W|ARD: Null ptr APD: Null ptr IRD: Null ptr IPD: Null ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|ARD: R/W APD: R/W IRD: Unused IPD: Unused|ARD: Null ptr APD: Null ptr IRD: Unused IPD: Unused|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ARD: R/W APD: R/W IRD: Unused IPD: Unused|ARD: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: Unused<br /><br /> IPD: Unused|  
+
 SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: 0 APD: 0 IRD: D IPD: 0|  
+
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|ARD: Unused APD: Unused IRD: R/W IPD: R/W|ARD: Unused APD: Unused IRD: Null ptr IPD: Null ptr|  
   
  [1]   These fields are defined only when the IPD is automatically populated by the driver. If not, they are undefined. If an application attempts to set these fields, SQLSTATE HY091 (Invalid descriptor field identifier) will be returned.  

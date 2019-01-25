@@ -16,10 +16,12 @@ manager: craigg
 For support developing SQL Server database solutions, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with development solutions for Microsoft SQL Server.
 
 ## Our development partners
+
 | Partner | Description | Links |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL is an intelligent SQL integrated development environment empowering database developers and database administrators to create high-performing SQL code on all major database platforms including SQL Server from a single interface.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. enables developer community with the flexibility in choosing programming languages, frameworks and services with use of proper toolset. Using Click2Cloud's toolkit, developers can create 'SQL on Linux' containers and attach it to an application, while still enabling the secure, multi-tenant architecture. The containers can be independently deployed on any cloud based container platform.|[Marketplace][click2cloud_marketplace]<br>[Website][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Video][click2cloud_youtube] |
+
 ## Next steps
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][management_partners], and [monitoring partners][monitor_partners].
 

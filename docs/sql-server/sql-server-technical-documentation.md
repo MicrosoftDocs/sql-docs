@@ -41,6 +41,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 -->
 
 ::: moniker range="= sqlallproducts-allversions"
+
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 Release Notes](../sql-server/sql-server-ver15-release-notes.md)        |
@@ -51,12 +52,15 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 ::: moniker-end
 
 ::: moniker range="= sql-server-ver15"
+
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 Release Notes](../sql-server/sql-server-ver15-release-notes.md)        |
+
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
@@ -66,9 +70,11 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
+
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
+
 ::: moniker-end
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

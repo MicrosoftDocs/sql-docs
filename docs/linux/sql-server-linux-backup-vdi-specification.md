@@ -292,6 +292,7 @@ For more information, see "Abnormal Termination" earlier in this document.
 | |**NOERROR** |The function succeeded.
 | |**VD_E_PROTOCOL** |The virtual device set is not currently open.
 | |**VD_E_INVALID** |The pBuffer is not a valid address.
+
 Remarks	The process that invokes the GetBufferHandle function is responsible for invoking ClientVirtualDevice::CompleteCommand when the data transfer is complete.
 
 ## ClientVirtualDeviceSet::MapBufferHandle

@@ -40,6 +40,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## Table Returned
+
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID of the session. Not nullable.|

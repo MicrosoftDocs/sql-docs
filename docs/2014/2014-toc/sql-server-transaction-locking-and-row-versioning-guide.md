@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Transaction Locking and Row Versioning Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/14/2017"
+ms.date: 01/24/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -146,7 +146,7 @@ CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
 INSERT INTO TestBatch VALUES (2, 'bbb');  
-INSERT INTO TestBatch VALUSE (3, 'ccc');  -- Syntax error.  
+INSERT INTO TestBatch VALUES (3, 'ccc');  -- Syntax error.  
 GO  
 SELECT * FROM TestBatch;  -- Returns no rows.  
 GO  

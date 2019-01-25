@@ -288,6 +288,7 @@ For descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;
   
 ### Discontinued RESTORE Keywords  
 The following keywords were discontinued in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
+
 |Discontinued keyword|Replaced by...|Example of replacement keyword|  
 |--------------------------|------------------|------------------------------------|  
 |LOAD|RESTORE|`RESTORE DATABASE`|  

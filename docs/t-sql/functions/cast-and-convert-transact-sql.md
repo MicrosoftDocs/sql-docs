@@ -60,6 +60,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
 |Original	|int	|decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  

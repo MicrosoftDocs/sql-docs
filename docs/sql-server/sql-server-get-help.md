@@ -66,21 +66,22 @@ There are many MSDN forums that can help you with your SQL Server questions.
 - [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Warehouse](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
 
-### Developer Communities
-There are a few developer communities that can help you with your SQL Server issues as well. 
+### Social media and communities
+There are a few communities that can help you with your SQL Server issues. 
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
-
-### Social Media
-There are a few social media outlets that can reach the SQL team as well. 
-
 - [Reddit](https://www.reddit.com/r/SQLServer/)
+- [Get help from the community with the the #sqlhelp hash tag on twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
+
+### Updates via Twitter
+There are a few Twitter accounts that provide updates about SQL Server. 
+
 - [SQL Docs Twitter](https://twitter.com/sqldocs)
 - [SQL Tiger Team Twitter](https://twitter.com/mssqltiger)
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
-- [The #sqlhelp hash tag](https://twitter.com/hashtag/sqlhelp?src=hash) ([here's how it works](https://www.brentozar.com/archive/2009/12/i-need-sqlhelp/))
+
 
 ## I want to contribute to SQL Server documentation
 

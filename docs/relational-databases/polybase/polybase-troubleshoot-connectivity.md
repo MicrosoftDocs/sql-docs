@@ -232,8 +232,13 @@ If you are still having issues accessing Kerberos, follow the steps below to deb
 
     - Write your own java program
       or
-    - Use `HdfsBridge` class (open-source code will be available soon) from PolyBase installation folder
-    - If you are using java `-classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020` `admin_user C:\temp\kerberos_pass.txt` make sure the `admin_user` value only includes the user name - not any domain part.
+    - Use `HdfsBridge` class from PolyBase installation folder. For example:
+
+      ```java
+      -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt
+      ```
+
+     In the example above, `admin_user` includes only the user name - not any domain part.
 
 2. If you can’t access Kerberos HDFS data from outside PolyBase:
     - There are two types of Kerberos authentication: Active directory Kerberos authentication, and MIT Kerberos authentication.

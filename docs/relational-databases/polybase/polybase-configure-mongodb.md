@@ -136,6 +136,7 @@ Object address will be flattened as below:
 * Nested field restaurant.address.zipcode becomes restaurant.address_zipcode
 
 Array grades will be flattened as below:
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |A |2|

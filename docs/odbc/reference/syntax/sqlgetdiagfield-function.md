@@ -228,10 +228,13 @@ GeneMi , 2019/01/19
 - - - - - - - - - - - - - -
 
 n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+
 |*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 
 -statement*|"GRANT"|SQL_DIAG_GRANT|  
+
 |*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+
 -->
 
 ## Sequence of Status Records

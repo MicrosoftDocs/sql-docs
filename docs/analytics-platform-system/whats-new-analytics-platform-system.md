@@ -25,6 +25,7 @@ APS CU7.3 improves query performance with common subexpression elimination in SQ
 We have released a new version of Informatica connectors for APS that works with Informatica version 10.2.0. The new connectors can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### Supported Versions
+
 | APS Version | Informatica PowerCenter | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |

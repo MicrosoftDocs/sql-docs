@@ -32,6 +32,7 @@ The last few downloads are provided for the unlikely event that you experience i
 |15.7.1|[SSDT for VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
 |15.7.0|[SSDT for VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
 |15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
+
 <br>
 
 |SSDT release| Visual Studio 2015|
@@ -39,11 +40,13 @@ The last few downloads are provided for the unlikely event that you experience i
 |17.4|[SSDT for VS2015 17.4](https://go.microsoft.com/fwlink/?linkid=863440)|
 |17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+
 <br>
 
 |SSDT release| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+
 <br>
 
 

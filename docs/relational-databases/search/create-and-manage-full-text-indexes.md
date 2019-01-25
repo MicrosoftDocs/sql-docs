@@ -45,6 +45,7 @@ For more info, see [Populate Full-Text Indexes](../../relational-databases/searc
 
 ##  <a name="view"></a> View the properties of a full-text index
 ### View the properties of a full-text index with Transact-SQL
+
 |Catalog or Dynamic Management View|Description|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Returns a row for each full-text catalog to full-text index reference.|  

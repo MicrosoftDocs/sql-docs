@@ -44,6 +44,7 @@ The proper migration strategy depends on certain parameters of the original [!IN
 | **_Availability Groups? (Y/N)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **Cluster uses SQL FCI only**         | [Scenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **Cluster uses standalone instances** | [Scenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+
 \* Excluding Availability Group listener names
 
 ## Scenario 1: Windows Cluster with SQL Server Availability Groups and no Failover Cluster Instances (FCIs)

@@ -86,7 +86,7 @@ When selected, data that is passed through the connection will be encrypted.
 When selected, the server's certificate will not be validated to have the correct hostname of the server and be issued by a trusted certificate authority.
 
 > [!NOTE]  
-When using one of the legacy authentication modes, namely **Windows Authentication** or **SQL Server Authentication**, Trust server certificate option is applicable **only** when **Use strong encryption for data** is enabled. However, when using one of the newer authentication modes, Trust server certificate option is considered **regardless of encryption settings**. This new behavior was introduced for improvement in security.
+> When using one of the legacy authentication modes, namely **Windows Authentication** or **SQL Server Authentication**, Trust server certificate option is applicable **only** when **Use strong encryption for data** is enabled. However, when using one of the newer authentication modes, Trust server certificate option is considered **regardless of encryption settings**. This new behavior was introduced for improvement in security.
 
 ## See Also
 [Release notes for the Microsoft OLE DB Driver for SQL Server](release-notes-for-oledb-driver-for-sql-server.md)

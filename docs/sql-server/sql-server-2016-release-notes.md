@@ -34,6 +34,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 The SQL Server 2016 SP2 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP2.
 
 Performance and Scale related improvements included in SQL Server 2016 SP2.
+
 |Feature|Description|More information|
 |	---	|	---	|	---	|
 |Improved Distribution DB cleanup procedure	|	An oversized distribution database tables caused blocking and deadlock situation. An improved cleanup procedure aims to eliminate some of these blocking or deadlock scenarios.	|	[KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)	|
@@ -48,6 +49,7 @@ Performance and Scale related improvements included in SQL Server 2016 SP2.
 |Improved Auto Statistics Update for Incremental Statistics	|	 In certain scenarios, when a number of data changes happened across multiple partitions in a table in a way that the total modification counter for incremented statistics exceeds the auto update threshold, but none of the individual partitions exceed the auto update threshold, statistics update may be delayed until much more modifications happen in the table. This behavior is corrected under trace flag 11024.	|		|
 
 Supportability and Diagnostics related improvements included in SQL Server 2016 SP2.
+
 |Feature |Description	|More information	|
 |	---	|	---	|	---	|
 |Full DTC support for databases in an Availability Group	|	Cross-databases transactions for databases which are part of an Availability Group are currently not supported for SQL Server 2016. With SQL Server 2016 SP2, we are introducing full support for distributed transactions with Availability Group Databases.	|		|

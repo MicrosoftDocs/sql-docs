@@ -24,6 +24,9 @@ The [User Voice](https://feedback.azure.com/forums/908035-sql-server) is also a 
 ## I want to make a suggestion about SQL Server Management Studio
 The SQL Server Management Studio (SSMS) team also closely monitors the SQL Server [User Voice](https://feedback.azure.com/forums/908035-sql-server) so if you have any issues to report, or suggestions to make, the User Voice is the best place to do so. 
 
+## I want to make a suggestion about Azure Data Studio
+The Azure Data Studio team closely monitors issues and feature requests on [Azure Data Studio Github](https://github.com/microsoft/azuredatastudio/issues). Please submit an issue or feature request here, and you can see when the issue/feature will be fixed or added.
+
 ## I want to access the SQL Server technical documentation offline
 If you would like to view the SQL Server documentation on an offline system, you have two options to do so. You can either create a PDF wherever you are in the SQL Server technical documentation, or you can download the offline content using [SQL Server offline Help Viewer](sql-server-help-installation.md). 
 

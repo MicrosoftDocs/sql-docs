@@ -80,6 +80,7 @@ There are a few social media outlets that can reach the SQL team as well.
 - [SQL Tiger Team Twitter](https://twitter.com/mssqltiger)
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
+- [The #sqlhelp hash tag](https://twitter.com/hashtag/sqlhelp?src=hash) ([here's how it works](https://www.brentozar.com/archive/2009/12/i-need-sqlhelp/))
 
 ## I want to contribute to SQL Server documentation
 

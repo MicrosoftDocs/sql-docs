@@ -91,6 +91,7 @@ An expression specifying the name of the database property to return. *property*
 |Updateability|Indicates whether data can be modified.|READ_ONLY: Database supports data reads but not data modifications.<br /><br /> READ_WRITE: Database supports data reads and modifications.<br /><br /> Base data type: **nvarchar(128)**|  
 |UserAccess|Indicates which users can access the database.|SINGLE_USER: Only one db_owner, dbcreator, or sysadmin user at a time<br /><br /> RESTRICTED_USER: Only members of db_owner, dbcreator, or sysadmin roles<br /><br /> MULTI_USER: All users<br /><br /> Base data type: **nvarchar(128)**|  
 |Version|Internal version number of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code with which the database was created. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Version number: Database is open.<br /><br /> NULL: Database has not started.<br /><br /> Base data type: **int**| 
+
 <br/>   
 
 > [!NOTE]  

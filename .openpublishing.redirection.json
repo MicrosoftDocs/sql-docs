@@ -246,6 +246,11 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/security/add-sqlrusergroup-to-database.md",
+            "redirect_url": "/sql/advanced-analytics/security/create-a-login-for-sqlrusergroup.md",
+            "redirect_document_id": true
+        }, 
+        {
             "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
             "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2017",
             "redirect_document_id": false

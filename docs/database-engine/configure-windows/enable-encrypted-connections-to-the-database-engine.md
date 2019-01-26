@@ -83,15 +83,14 @@ manager: craigg
 > [!NOTE]
 > To ensure secure connectivity between client and server, configure the client to request encrypted connections. More details are explained [later in this article](#client-request-encrypt-connect-23h).
 
-
-
 ### Wildcard Certificates  
 Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client support wildcard certificates. Other clients might not support wildcard certificates. For more information, see the client documentation. Wildcard certificate cannot be selected by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> To configure the client to request encrypted connections  
+<a name="client-request-encrypt-connect-23h"/></a>
+## <a name="ConfigureClientConnections"></a> To configure the client to request encrypted connections  
   
 1.  Copy either the original certificate or the exported certificate file to the client computer.  
   
@@ -101,7 +100,7 @@ Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [
   
 4.  On the **Flags** page, in the **Force protocol encryption** box, click **Yes**.  
   
-##  <a name="EncryptConnection"></a> To encrypt a connection from SQL Server Management Studio  
+## <a name="EncryptConnection"></a> To encrypt a connection from SQL Server Management Studio  
   
 1.  On the Object Explorer toolbar, click **Connect**, and then click **Database Engine**.  
   

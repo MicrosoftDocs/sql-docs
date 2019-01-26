@@ -25,7 +25,7 @@ manager: craigg
   
 -   getNextException() returns the next SQLServerException object or null if there are no more exception objects to return.
 
--   getSQLServerError() returns SQLServerError object containing detailed info about exception as received from SQL Server. This method returns null if no server error has occurred.
+-   getSQLServerError() returns the SQLServerError object containing detailed info about exception as received from SQL Server. This method returns null if no server error has occurred.
 
 The following methods of SQLServerError class can be used to obtain additional details about the error generated from the server.
 

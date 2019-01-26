@@ -107,8 +107,8 @@ Specific projects that require either of the preceding features need to explicit
 
 ### Working with Azure Active Directory Authentication:
 
-- JDBC Driver version 7.2.0 - Dependency versions: Ada4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) and their dependencies
-- JDBC Driver version 7.0.0 - Dependency versions: Ada4j (version 1.6.0) and its dependencies
+- JDBC Driver version 7.2.0 - Dependency versions: Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) and their dependencies
+- JDBC Driver version 7.0.0 - Dependency versions: Adal4j (version 1.6.0) and its dependencies
 - JDBC Driver version 6.4.0 - Dependency versions: Adal4j (version 1.4.0) and its dependencies
 - JDBC Driver version 6.2.2 - Dependency versions: Adal4j (version 1.4.0) and its dependencies
 - JDBC Driver version 6.0.0 - Dependency versions: Adal4j (version 1.3.0), and its dependencies. In this version of the driver, you can connect by using _ActiveDirectoryIntegrated_ Authentication Mode only on a Windows operating system and by using sqljdbc_auth.dll and Active Directory Authentication Library for SQL Server (ADALSQL.DLL).

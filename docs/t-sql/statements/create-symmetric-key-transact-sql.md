@@ -39,11 +39,8 @@ manager: craigg
 CREATE SYMMETRIC KEY key_name   
     [ AUTHORIZATION owner_name ]  
     [ FROM PROVIDER provider_name ]  
-    WITH 
-      [
-          <key_options> [ , ... n ]  
-        | ENCRYPTION BY <encrypting_mechanism> [ , ... n ] 
-      ]
+    WITH <key_options> [ , ... n ]
+    ENCRYPTION BY <encrypting_mechanism> [ , ... n ] 
   
 <key_options> ::=  
       KEY_SOURCE = 'pass_phrase'  

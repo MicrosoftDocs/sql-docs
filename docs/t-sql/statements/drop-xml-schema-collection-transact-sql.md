@@ -43,18 +43,18 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
  Identifies the relational schema name. If not specified, the default relational schema is assumed.  
   
  *sql_identifier*  
- Is the name of the XML schema collection to drop.  
+ Name of the XML schema collection to drop.  
   
 ## Remarks  
- Dropping an XML schema collection is a transactional operation. This means when you drop an XML schema collection inside a transaction and later roll back the transaction, the XML schema collection is not dropped.  
+ Dropping an XML schema collection is a transactional operation. When you drop an XML schema collection inside a transaction and later roll back the transaction, the XML schema collection isn't dropped.  
   
- You can't drop an XML schema collection when it is in use. This means that the collection being dropped cannot be any of the following:  
+ You can't drop an XML schema collection when it's in use. So, the collection being dropped can't be any of the following:  
   
 -   Associated with any **xml** type parameter or column.  
   
 -   Specified in any table constraints.  
   
--   Referenced in a schema-bound function or stored procedure. For example, the following function will lock the XML schema collection `MyCollection` because the function specifies `WITH SCHEMABINDING`. If you remove it, there is no lock on the XML SCHEMA COLLECTION.  
+-   Referenced in a schema-bound function or stored procedure. For example, the following function locks the XML schema collection `MyCollection` because the function specifies `WITH SCHEMABINDING`. If you remove it, there's no lock on the XML SCHEMA COLLECTION.  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  

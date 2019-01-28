@@ -63,12 +63,12 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 >  This option is not available in a contained database.  
   
 ## Remarks  
- Enabling a trigger does not re-create it. A disabled trigger still exists as an object in the current database, but does not fire. Enabling a trigger causes it to fire when any [!INCLUDE[tsql](../../includes/tsql-md.md)] statements on which it was originally programmed are executed. Triggers are disabled by using [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). DML triggers defined on tables can be also be disabled or enabled by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+ Enabling a trigger doesn't re-create it. A disabled trigger still exists as an object in the current database, but doesn't fire. Enabling a trigger causes it to fire when any [!INCLUDE[tsql](../../includes/tsql-md.md)] statements on which it was originally programmed are run. Triggers are disabled by using [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). DML triggers defined on tables can also be disabled or enabled by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## Permissions  
  To enable a DML trigger, at a minimum, a user must have ALTER permission on the table or view on which the trigger was created.  
   
- To enable a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, a user must have CONTROL SERVER permission on the server. To enable a DDL trigger with database scope (ON DATABASE), at a minimum, a user must have ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
+ To enable a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, a user needs CONTROL SERVER permission on the server. To enable a DDL trigger with database scope (ON DATABASE), at a minimum, a user needs ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
   
 ## Examples  
   
@@ -83,7 +83,7 @@ GO
 ```  
   
 ### B. Enabling a DDL trigger  
- The following example creates a DDL trigger `safety` with database scope, and then disable and enables it.  
+ The following example creates a DDL trigger `safety` with database scope, and then disables and enables it.  
   
 ```  
 CREATE TRIGGER safety   

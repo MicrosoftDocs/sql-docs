@@ -78,7 +78,8 @@ These objects will be created in this section:
     CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH ( 
     LOCATION = odbc://<ODBC server address>[:<port>],
-    CONNECTION_OPTIONS = 'SSL=0;sslAllowInvalidCertificates=1;Driver={<Name of Installed Driver>};HOST=%s;AUTHMECH=0',
+    CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
+    ServerNode = <name of server  address>:<Port>',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = credential_name
     );

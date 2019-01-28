@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2018"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -44,7 +44,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />logical server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />standalone database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -259,11 +259,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />logical server \*_**|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />standalone database/elastic pool \*_**|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## Azure SQL Database logical server
+## Azure SQL Database standalone database/elastic pool
   
 ## Syntax 
   
@@ -279,7 +279,7 @@ CREATE LOGIN login_name
 
 ## Arguments  
 *login_name*  
-Specifies the name of the login that is created. Azure SQL Database logical server supports only SQL logins. 
+Specifies the name of the login that is created. Azure SQL Database standalone database/elastic pool supports only SQL logins. 
 
 PASSWORD **='**password**'*  
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password. 
@@ -317,7 +317,7 @@ Only the server-level principal login (created by the provisioning process) or m
 
 ## Logins
 - Must have **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role. Only Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in the securityadmin  permission can execute this command
-- Must be a member of Azure AD within the same directory used for Azure SQL logical server
+- Must be a member of Azure AD within the same directory used for Azure SQL Database server
   
 ## After creating a login  
 After creating a login, the login can connect to SQL Database but only has the permissions granted to the **public** role. Consider performing some of the following activities. 
@@ -375,7 +375,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -551,7 +551,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -663,7 +663,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

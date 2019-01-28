@@ -1,7 +1,7 @@
 ---
 title: "System Databases | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -19,6 +19,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Databases
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following system databases.  
   
@@ -31,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |[tempdb Database](../../relational-databases/databases/tempdb-database.md)|Is a workspace for holding temporary objects or intermediate result sets.|  
 
 > [!IMPORTANT]
-> For Azure SQL Database logical server, only master Database and tempdb Database apply. For the concept of a logical server and logical master database, see [What is an Azure SQL logical server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb Database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). For Azure SQL Database Managed Instance, all system databases apply. For more information on Managed Instances in Azure SQL Database, see [What is a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> For Azure SQL Database standalone databases and elastic pools, only master Database and tempdb Database apply. For more information, see [What is an Azure SQL Database server](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb Database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). For Azure SQL Database Managed Instance, all system databases apply. For more information on Managed Instances in Azure SQL Database, see [What is a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## Modifying System Data  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support users directly updating the information in system objects such as system tables, system stored procedures, and catalog views. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a complete set of administrative tools that let users fully administer their system and manage all users and objects in a database. These include the following:  

@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "1/10/2019"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -48,7 +48,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />logical server](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />standalone database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
@@ -1280,11 +1280,11 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* SQL Database<br />logical server \*_** &nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* SQL Database<br />standalone database/elastic pool \*_** &nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-## Azure SQL Database logical server
+## Azure SQL Database standalone database/elastic pool
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -2070,7 +2070,7 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />Managed Instance \*_** &nbsp;|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />Managed Instance \*_** &nbsp;|
 
 
 

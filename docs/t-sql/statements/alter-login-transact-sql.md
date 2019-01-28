@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/06/2018"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -41,7 +41,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />logical server](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />standalone database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -279,11 +279,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />logical server \*_**|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />standalone database/elastic pool \*_**|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## Azure SQL Database logical server
+## Azure SQL Database standalone database/elastic pool
 
 ## SQL Server
  
@@ -440,7 +440,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -705,7 +705,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -866,7 +866,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

@@ -171,6 +171,8 @@
         href: using-basic-data-types.md
       - name: Using Spatial Datatypes
         href: use-spatial-datatypes.md
+      - name: Using Sql_variant Data Type
+        href: using-sql-variant-datatype.md
       - name: Understanding Transactions
         href: understanding-transactions.md
       - name: Working with a Connection

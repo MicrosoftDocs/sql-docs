@@ -40,7 +40,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
 ## Arguments  
  *schema_name*  
- Is the name of the schema to which the trigger belongs. *schema_name* cannot be specified for DDL or logon triggers.  
+ Is the name of the schema to which the trigger belongs. *schema_name* can't be specified for DDL or logon triggers.  
   
  *trigger_name*  
  Is the name of the trigger to be enabled.  

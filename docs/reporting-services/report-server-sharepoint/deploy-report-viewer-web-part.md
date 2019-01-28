@@ -17,7 +17,7 @@ ms.author: maghan
 
 The Report Viewer web part is a custom web part that can be used to view SQL Server Reporting Services (native mode) reports within your SharePoint site. You can use the web part to view, navigate, print, and export reports on a report server. The Report Viewer web part is associated with report definition (.rdl) files that are processed by a SQL Server Reporting Services report server or a Power BI Report Server. This Report Viewer web part cannot be used with Power BI reports hosted in Power BI Report Server.
 
-Use the following instructions to manually deploy the solution package that add the Report Viewer web part to a SharePoint Server 2013 or SharePoint Server 2016 environment. Deploying the solution is a required step for configuring the web part.
+Use the following instructions to manually deploy the solution package that add the Report Viewer web part to a SharePoint Server 2013, SharePoint Server 2016, or SharePoint Server 2019 environment. Deploying the solution is a required step for configuring the web part.
 
 **The Report Viewer web part is a standalone solution package and is not associated with SharePoint integrated mode for SQL Server Reporting Services.**
 
@@ -29,6 +29,7 @@ Use the following instructions to manually deploy the solution package that add 
 >
 
 **Support SharePoint Server versions:**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -64,7 +65,7 @@ This section shows you how to deploy the solution package to your SharePoint far
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 and 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}

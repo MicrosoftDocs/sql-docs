@@ -54,6 +54,8 @@
       href: polybase-troubleshooting.md
     - name: Kerberos connectivity
       href: polybase-troubleshoot-connectivity.md
+    - name: PolyBase FAQ
+      href: polybase-faq.md  
 - name: Reference
   items:
   - name: Transact-SQL reference

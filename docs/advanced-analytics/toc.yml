@@ -257,8 +257,8 @@
       href: security/sql-server-launchpad-service-account.md
     - name: Configure firewall
       href: security/firewall-configuration.md
-    - name: Add SQLRUserGroup as a database user
-      href: security/add-sqlrusergroup-to-database.md
+    - name: Create a login for SQLRUserGroup
+      href: security/create-a-login-for-sqlrusergroup.md
   - name: Administration
     items:
     - name: Manage integration

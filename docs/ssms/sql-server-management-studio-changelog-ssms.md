@@ -308,7 +308,7 @@ If there is no *preview 5* or *preview 6* label it indicates the change appeared
   - Fixed crash while using Job Activity Monitor (with filters)
 
 - **Managed Instance support**
-  - Improved/polished the support for Managed Instances: disabled unsupported options in UI and and a fix to the View Audit Logs option to handle URL audit target.
+  - Improved/polished the support for Managed Instances: disabled unsupported options in UI and a fix to the View Audit Logs option to handle URL audit target.
   - "Generate and Publish scripts" wizard scripts unsupported CREATE DATABASE clauses
   - Live Query Statistics was disabled for CL instances
   - Database properties->Files was incorrectly scripting ALTER DB ADD FILE

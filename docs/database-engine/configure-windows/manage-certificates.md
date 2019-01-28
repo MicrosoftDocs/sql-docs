@@ -51,7 +51,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
  
 ##  <a name="provision-failover-cluster-cert"></a> To install a certificate in a Failover Cluster configuration  
   
-1. In SQL Server Configuration Manager, in the console pane, expand SQL Server Network Configuration”.
+1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.
   
 2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then choose **Properties**. 
 

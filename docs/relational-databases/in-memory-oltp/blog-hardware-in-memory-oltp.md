@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 In-Memory OLTP uses memory and disk in different ways than traditional disk-based tables. The  performance improvement you will see with In-Memory OLTP depends the hardware you use. In this blog post we discuss a number of general hardware considerations, and provide generic guidelines for hardware to use with In-Memory OLTP.
 
 > [!NOTE]
-> This article was a blog published on August 1, 2013, by the Microsoft SQL Server 2014 team. The blog webpage is being retired, and this article is a rough capture of the blog text. Documentation articles that used to link to the blog now link this this article. This article is not being maintained. This article may be excluded from the Table of Contents.
+> This article was a blog published on August 1, 2013, by the Microsoft SQL Server 2014 team. The blog webpage is being retired, and this article is a rough capture of the blog text. Documentation articles that used to link to the blog now link this article. This article is not being maintained. This article may be excluded from the Table of Contents.
 > 
 > [SQL Server In-Memory-OLTP](index.md)
 

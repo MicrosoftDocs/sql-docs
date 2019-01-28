@@ -80,7 +80,6 @@ There are a few Twitter accounts that provide updates about SQL Server.
 - [SQL Docs Twitter](https://twitter.com/sqldocs)
 - [SQL Tiger Team Twitter](https://twitter.com/mssqltiger)
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
-- [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
 
 ## I want to contribute to SQL Server documentation

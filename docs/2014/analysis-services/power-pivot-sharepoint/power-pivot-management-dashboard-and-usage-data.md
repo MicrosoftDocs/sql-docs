@@ -61,7 +61,7 @@ manager: craigg
 ### Change the current service application.  
  To change current PowerPivot service application in the management dashboard:  
   
-1.  At the top of the PowerPivot management dashboard, note the name of the current service application, for example **Default PowerPivot Serivce Application**.  
+1.  At the top of the PowerPivot management dashboard, note the name of the current service application, for example **Default PowerPivot Service Application**.  
   
 2.  In the **Actions** dashboard, click **List Service Applications**.  
   

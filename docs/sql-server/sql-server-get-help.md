@@ -72,7 +72,7 @@ There are a few communities that can help you with your SQL Server issues.
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Reddit](https://www.reddit.com/r/SQLServer/)
-- [Get help from the community with the the #sqlhelp hash tag on twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
+- [Get help from the community with the #sqlhelp hash tag on twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
 
 ### Updates via Twitter
 There are a few Twitter accounts that provide updates about SQL Server. 

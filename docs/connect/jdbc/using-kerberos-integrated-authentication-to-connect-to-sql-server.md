@@ -188,6 +188,34 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 
 The username property does not require REALM if user belongs to the default_realm set in krb5.conf file. When `userName` and `password` is set along with `integratedSecurity=true;` and `authenticationScheme=JavaKerberos;` property, the connection is established with value of userName as Kerberos Principal along with the password supplied.
 
+## Using Kerberos authentication from Unix Machines on the same Domain
+
+This guide assumes a working Kerberos setup already exists. Run the following code on a Windows machine with working Kerberos authentication to verify if the aforementioned is true. The code will print "Authentication Scheme: KERBEROS" to console if successful. No additional run-time flags, dependencies, or driver settings are required outside of the ones provided. The same block of code can be run on Linux to verify successful connections.
+
+```java
+SQLServerDataSource ds = new SQLServerDataSource();
+ds.setServerName("/*SQL Server Name*/");
+ds.setPortNumber(1433); //change if necessary
+ds.setIntegratedSecurity(true);
+ds.setAuthenticationScheme("JavaKerberos");
+ds.setDatabaseName("master"); //change if necessary
+
+try (Connection c = ds.getConnection(); Statement s = c.createStatement()) {
+	try (ResultSet rs = s.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
+		while (rs.next()) {
+			System.out.println("Authentication Scheme: " + rs.getString(1));
+		}
+	}
+}
+```
+
+1. Domain Join the Unix agent to the same domain as the server.
+2. (Optional) Set the default Kerberos ticket location, this is most conveniently done by setting the `KRB5CCNAME` environment variable.
+3. Get the Kerberos ticket, either by generating a new one or placing an existing one in the default Kerberos ticket location. To generate a ticket, simply use a terminal and initialize the ticket via `kinit USER@DOMAIN.AD` where "USER" and "DOMAIN.AD" is the principal and domain respectively. E.g: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. The ticket will be generated in the default ticket location or in the KERB5CCNAME path if set.
+4. The terminal will prompt for a password, enter the password.
+5. Verify the credentials in the ticket via `klist` and confirm the credentials are the ones you intend to use for authentication.
+6. Run the above sample code and confirm that Kerberos Authentication was successful.
+
 ## See Also
 
 [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

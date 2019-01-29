@@ -29,6 +29,7 @@ Multidimensional Expressions (MDX) can be used to manipulate the data in a varie
 |[Understanding Pass Order and Solve Order &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|Details the concepts of solve order, and how this feature affects MDX expressions, statements, and scripts.|  
 
 <!-- ??
+
 |[Script for Search and Replace] function on the analysis of multidimensional data.|
 
 GeneMi is removing this commented row because it is unclear what article its link meant to link to.

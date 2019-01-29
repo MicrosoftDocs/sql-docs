@@ -572,6 +572,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 1000 to 1999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	1001	|	16	|	No	|	Line %d: Length or precision specification %d is invalid.	|
@@ -1003,6 +1004,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 2000 to 2999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	2002	|	16	|	No	|	Cannot create a procedure for replication with group number greater than one.	|
@@ -1375,6 +1377,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 3000 - 3999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	3002	|	16	|	No	|	Cannot BACKUP or RESTORE a database snapshot.	|
@@ -1815,6 +1818,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 4000 to 4999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	4001	|	10	|	No	|	Client sends a sp_reset_connection while there is still pending requests, server is disconnecting.	|
@@ -3149,6 +3153,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 7000 to 7999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	7000	|	16	|	No	|	OPENXML document handle parameter must be of data type int.	|
@@ -3592,6 +3597,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 8000 to 8999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	8001	|	16	|	No	|	The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Meta-information is invalid for the Sql Variant parameter.	|

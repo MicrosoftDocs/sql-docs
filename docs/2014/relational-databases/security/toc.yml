@@ -54,7 +54,7 @@
     - name: Auditing
       items:
         - name: Create a server audit
-          href: auditing/create-a-server-audit-and-audit-specification.md
+          href: auditing/create-a-server-audit-and-server-audit-specification.md
         - name: Create a database audit
           href: auditing/create-a-server-audit-and-database-audit-specification.md
         - name: View an audit log

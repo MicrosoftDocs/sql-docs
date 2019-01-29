@@ -203,11 +203,19 @@ After the database on the secondary of the second availability group is in a res
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> Fail over to a secondary availability group  
-Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
 
+Only manual failover is supported at this time. To manually fail over a distributed availability group:
+
+1. Set the distribute availability group to synchronous commit. This ensures that data is not lost.
+1. Wait until the distributed availability group is synchronized.
+1. On the global primary replica, set the distributed availability group role to `SECONDARY`.
+1. Test failover readiness.
+1. Failover the primary availability group.
+
+The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
 
 1. Set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
     
@@ -236,8 +244,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
 
       ```  
    >[!NOTE]
-   >Similarly to regular availability groups, the synchronization status between two availability groups replicas part of a distributed      availability group, depends on the availability mode of both replicas. For example, for synchronous commit to occur, both the  current primary availability group and the secondary availability group must be configured with synchronous_commit availability mode.  
-
+   >In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For synchronous commit mode, both the current primary availability group, and the current secondary availability group must have `SYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the script above on both the global primary replica, and the forwarder.
 
 1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the global primary, which is the primary replica of the primary availability group. 
     

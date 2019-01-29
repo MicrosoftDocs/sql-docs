@@ -140,6 +140,8 @@
   items:
   - name: Partition Processing Destination Custom Properties
     href: partition-processing-destination-custom-properties.md
+- name: Power Query Source
+  href: power-query-source.md
 - name: Raw File Source
   href: raw-file-source.md
 - name: Raw File Destination

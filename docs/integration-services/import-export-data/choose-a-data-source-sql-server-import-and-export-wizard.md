@@ -69,6 +69,6 @@ For info about how to connect to a data source that's not listed here, see [The 
 ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

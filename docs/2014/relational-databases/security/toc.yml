@@ -60,7 +60,7 @@
         - name: View an audit log
           href: auditing/view-a-sql-server-audit-log.md
         - name: Write audit to windows log
-          href: auditing/write-sql-server-audit-to-the-security-log.md
+          href: auditing/write-sql-server-audit-events-to-the-security-log.md
 - name: Concepts
   items:
     - name: Protecting SQL Server Intellectual Property

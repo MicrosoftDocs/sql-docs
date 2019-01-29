@@ -47,8 +47,8 @@ Finally, on **Columns** tab, you can edit the output column info.
 ## Configure the Power Query Connection Manager
 
 When designing your data flow with Power Query Source on SSDT, you can create a new Power Query Connection Manager in the following ways:
-1.	Indirectly create it on **Connection Managers** tab of Power Query Source after selecting **Add**/**Detect Data Source** button and selecting **<New connection...>** from the dropdown menu as described above.
-2.	Directly create it by right-clicking on **Connection Managers** panel of your package and selecting **New Connection...** from the dropdown menu.
+- Indirectly create it on **Connection Managers** tab of Power Query Source after selecting **Add**/**Detect Data Source** button and selecting **<New connection...>** from the dropdown menu as described above.
+- Directly create it by right-clicking on **Connection Managers** panel of your package and selecting **New Connection...** from the dropdown menu.
 
 ![PQ Source Connection Managers Panel Add](media/power-query-source/pq-source-connection-managers-panel-add.png)
 

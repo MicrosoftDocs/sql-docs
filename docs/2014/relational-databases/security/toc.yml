@@ -109,7 +109,7 @@
         - name: Service master key
           href: encryption/service-master-key.md
         - name: SQL Server and database encryption keys
-          href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+          href: encryption/sql-server-and-database-encryption-keys-database-engine.md 
         - name: Transparent Data Encryption (TDE)
           href: encryption/transparent-data-encryption.md 
         - name: TDE with Azure SQL Database

@@ -24,7 +24,7 @@ One of the key scenarios for SQL Server Big Data Clusters is the ability to subm
 ## Link SQL Server Big Data Cluster
 1. Open the IntelliJ IDEA tool.
 
-2. If you are using self-signed certificate, please disable SSL certification validation from **Tools** menu, select **Azure**, **Experimental**, then **Disable SSL Certificate Validation**.
+2. If you are using self-signed certificate, please disable SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
 
     ![link SQL Server Big Data Cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 

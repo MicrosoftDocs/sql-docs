@@ -30,7 +30,7 @@ manager: craigg
 # ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Alters a partition function by splitting or merging its boundary values. By executing ALTER PARTITION FUNCTION, one partition of any table or index that uses the partition function can be split into two partitions, or two partitions can be merged into one less partition.  
+  Alters a partition function by splitting or merging its boundary values. Running an ALTER PARTITION FUNCTION statement can split one table partition or index that uses the partition function into two partitions. The statement can also merge two partitions into one less partition.  
   
 > [!CAUTION]  
 >  More than one table or index can use the same partition function. ALTER PARTITION FUNCTION affects all of them in a single transaction.  
@@ -53,28 +53,30 @@ ALTER PARTITION FUNCTION partition_function_name()
  Is the name of the partition function to be modified.  
   
  SPLIT RANGE ( *boundary_value* )  
- Adds one partition to the partition function. *boundary_value* determines the range of the new partition, and must differ from the existing boundary ranges of the partition function. Based on *boundary_value*, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] splits one of the existing ranges into two. Of these two, the one where the new *boundary_value* resides is considered the new partition.  
+ Adds one partition to the partition function. *boundary_value* determines the range of the new partition, and must differ from the existing boundary ranges of the partition function. Based on *boundary_value*, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] splits one of the existing ranges into two. Of these two ranges, the one where the new *boundary_value* is found is considered the new partition.  
   
- A filegroup must exist online and be marked by the partition scheme that uses the partition function as NEXT USED to hold the new partition. Filegroups are allocated to partitions in a CREATE PARTITION SCHEME statement. If a CREATE PARTITION SCHEME statement allocates more filegroups than necessary (fewer partitions are created in the CREATE PARTITION FUNCTION statement than filegroups to hold them), then there are unassigned filegroups, and one of them is marked NEXT USED by the partition scheme. This filegroup will hold the new partition. If there are no filegroups marked NEXT USED by the partition scheme, you must use ALTER PARTITION SCHEME to either add a filegroup, or designate an existing one, to hold the new partition. A filegroup that already holds partitions can be designated to hold additional partitions. Because a partition function can participate in more than one partition scheme, all the partition schemes that use the partition function to which you are adding partitions must have a NEXT USED filegroup. Otherwise, ALTER PARTITION FUNCTION fails with an error that displays the partition scheme or schemes that lack a NEXT USED filegroup.  
+ A filegroup must exist online. And, the partition scheme that uses the partition function as NEXT USED to hold the new partition must mark the filegroup. Filegroups are assigned to partitions in a CREATE PARTITION SCHEME statement. The CREATE PARTITION FUNCTION statement creates fewer partitions than filegroups to hold them. A CREATE PARTITION SCHEME statement may set aside more filegroups than needed. If that happens, then filegroups end up unassigned and one of the filegroups is marked NEXT USED by the partition scheme. This filegroup holds the new partition. If there are no filegroups marked NEXT USED by the partition scheme, you must use an ALTER PARTITION SCHEME statement. 
+
+ The ALTER PARTITION SCHEME statement can either add a filegroup, or select an existing one, to hold the new partition. You can designate a filegroup that already holds partitions to hold additional partitions. A partition function can participate in more than one partition scheme. For this reason, all the partition schemes that use the partition function to which you're adding partitions must have a NEXT USED filegroup. Otherwise, the ALTER PARTITION FUNCTION statement fails with an error that displays the partition scheme or schemes that lack a NEXT USED filegroup.  
   
- If you create all the partitions in the same filegroup, that filegroup is initially assigned to be the NEXT USED filegroup automatically. However, after a split operation is performed, there is no longer a designated NEXT USED filegroup. You must explicitly assign the filegroup to be the NEXT USED filegroup by using ALTER PARTITION SCHEME or a subsequent split operation will fail.  
+ If you create all the partitions in the same filegroup, that filegroup is initially assigned to be the NEXT USED filegroup automatically. However, after a split operation is run, there's no longer a selected NEXT USED filegroup. Explicitly assign the filegroup to be the NEXT USED filegroup by using ALTER PARTITION SCHEME or an upcoming split operation will fail.  
   
 > [!NOTE]  
->  Limitations with columnstore index: Only empty partitions can be split in when a columnstore index exists on the table. You will need to drop or disable the columnstore index before performing this operation  
+>  Limitations with columnstore index: Only empty partitions can be split in when a columnstore index exists on the table. You will need to drop or disable the columnstore index before performing this operation.  
   
  MERGE [ RANGE ( *boundary_value*) ]  
- Drops a partition and merges any values that exist in the partition into one of the remaining partitions. RANGE (*boundary_value*) must be an existing boundary value, into which the values from the dropped partition are merged. The filegroup that originally held *boundary_value* is removed from the partition scheme unless it is used by a remaining partition, or is marked with the NEXT USED property. The merged partition resides in the filegroup that originally did not hold *boundary_value*. *boundary_value* is a constant expression that can reference variables (including user-defined type variables) or functions (including user-defined functions). It cannot reference a [!INCLUDE[tsql](../../includes/tsql-md.md)] expression. *boundary_value* must either match or be implicitly convertible to the data type of its corresponding partitioning column, and cannot be truncated during implicit conversion in a way that the size and scale of the value does not match that of its corresponding *input_parameter_type*.  
+ Drops a partition and merges any values that exist in the partition into one of the remaining partitions. RANGE (*boundary_value*) must be an existing boundary value, into which the values from the dropped partition are merged. The filegroup that originally held *boundary_value* is removed from the partition scheme unless it's used by a remaining partition, or is marked with the NEXT USED property. The merged partition resides in the filegroup that originally did not hold *boundary_value*. *boundary_value* is a constant expression that can reference variables (including user-defined type variables) or functions (including user-defined functions). It can't reference a [!INCLUDE[tsql](../../includes/tsql-md.md)] expression. *boundary_value* must either match or be implicitly convertible to the data type of its corresponding partitioning column, and can't be truncated during implicit conversion in a way that the size and scale of the value doesn't match that of its corresponding *input_parameter_type*.  
   
 > [!NOTE]  
->  Limitations with columnstore index: Two nonempty partitions containing a columnstore index cannot be merged. You will need to drop or disable the columnstore index before performing this operation  
+>  Limitations with columnstore index: Two nonempty partitions containing a columnstore index can't be merged. You will need to drop or disable the columnstore index before performing this operation  
   
 ## Best Practices  
- Always keep empty partitions at both ends of the partition range to guarantee that the partition split (before loading new data) and partition merge (after unloading old data) do not incur any data movement. Avoid splitting or merging populated partitions. This can be extremely inefficient, as this may cause as much as four times more log generation, and may also cause severe locking.  
+ Always keep empty partitions at both ends of the partition range to guarantee that the partition split (before loading new data) and partition merge (after unloading old data) don't incur any data movement. Avoid splitting or merging populated partitions. Splitting or merging populated partitions can be inefficient, as the split or merge may cause as much as four times more log generation, and may also cause severe locking.  
   
 ## Limitations and Restrictions  
  ALTER PARTITION FUNCTION repartitions any tables and indexes that use the function in a single atomic operation. However, this operation occurs offline, and depending on the extent of repartitioning, may be resource-intensive.  
   
- ALTER PARTITION FUNCTION can only be used for splitting one partition into two, or merging two partitions into one. To change the way a table is otherwise partitioned (for example, from 10 partitions to 5 partitions), you can exercise any of the following options. Depending on the configuration of your system, these options can vary in resource consumption:  
+ ALTER PARTITION FUNCTION can only be used for splitting one partition into two, or merging two partitions into one. To change the way a table is otherwise partitioned (for example, from 10 partitions to five partitions), you can exercise any of the following options. Depending on the configuration of your system, these options can vary in resource consumption:  
   
 -   Create a new partitioned table with the desired partition function, and then insert the data from the old table into the new table by using an INSERT INTO...SELECT FROM statement.  
   
@@ -85,13 +87,13 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   Drop and rebuild an existing partitioned index by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE INDEX statement with the DROP EXISTING = ON clause.  
   
--   Perform a sequence of ALTER PARTITION FUNCTION statements.  
+-   Run a sequence of ALTER PARTITION FUNCTION statements.  
   
  All filegroups that are affected by ALTER PARTITION FUNCTION must be online.  
   
- ALTER PARTITION FUNCTION fails when there is a disabled clustered index on any tables that use the partition function.  
+ ALTER PARTITION FUNCTION fails when there's a disabled clustered index on any tables that use the partition function.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. Changes to a partition function in the publication database must be manually applied in the subscription database.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't provide replication support for modifying a partition function. Changes to a partition function in the publication database must be manually applied in the subscription database.  
   
 ## Permissions  
  Any one of the following permissions can be used to execute ALTER PARTITION FUNCTION:  

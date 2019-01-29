@@ -103,10 +103,10 @@ SET <optionspec>
  Enables hardware threads to be associated with CPUs.  
   
  CPU = { AUTO | \<CPU_range_spec> }  
- Distributes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] worker threads to each CPU within the specified range. CPUs outside the specified range will not have assigned threads.  
+ Distributes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] worker threads to each CPU within the specified range. CPUs outside the specified range won't have assigned threads.  
   
  AUTO  
- Specifies that no thread is assigned a CPU. The operating system can freely move threads among CPUs based on the server workload. This is the default and recommended setting.  
+ Specifies that no thread is assigned a CPU. The operating system can freely move threads among CPUs based on the server workload. This setting is the default and is recommended.  
   
  \<CPU_range_spec> ::=  
  Specifies the CPU or range of CPUs to assign threads to.  
@@ -128,10 +128,10 @@ SET <optionspec>
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  DIAGNOSTICS LOG  
- Starts or stops logging diagnostic data captured by the sp_server_diagnostics procedure, and sets SQLDIAG log configuration parameters such as the log file rollover count, log file size, and file location. For more information, see [View and Read Failover Cluster Instance Diagnostics Log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
+ Starts or stops logging diagnostic data that the sp_server_diagnostics procedure captures. This argument also sets SQLDIAG log configuration parameters such as the log file rollover count, log file size, and file location. For more information, see [View and Read Failover Cluster Instance Diagnostics Log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
  ON  
- Starts [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] logging diagnostic data in the location specified in the PATH file option. This is the default.  
+ Starts [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] logging diagnostic data in the location specified in the PATH file option. This argument is the default.  
   
  OFF  
  Stops logging diagnostic data.  
@@ -143,7 +143,7 @@ SET <optionspec>
  Maximum size in megabytes to which each diagnostic log can grow. The default is 100 MB.  
   
  MAX_FILES = { 'max_file_count' | DEFAULT }  
- Maximum number of diagnostic log files that can be stored on the computer before they are recycled for new diagnostic logs.  
+ Maximum number of diagnostic log files that can be stored on the computer before they're recycled for new diagnostic logs.  
   
  **\<failover_cluster_property> ::=**  
   
@@ -168,13 +168,13 @@ SQLDUMPEREDUMPFLAGS
  The location where the SQLDumper utility stores the dump files. For more information, see [SQL Server Dumper Utility Knowledgebase article](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- The time-out value in milliseconds for the SQLDumper utility to generate a dump in case of a SQL Server failure. The default value is 0, which means there is no time limit to complete the dump. For more information, see [SQL Server Dumper Utility Knowledgebase article](https://go.microsoft.com/fwlink/?LinkId=206173).  
+ The time-out value in milliseconds for the SQLDumper utility to generate a dump if a SQL Server failure occurs. The default value is 0, which means there's no time limit to complete the dump. For more information, see [SQL Server Dumper Utility Knowledgebase article](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  The conditions under which the SQL Server failover cluster instance should failover  or restart. The default value is 3, which means that the SQL Server resource will failover or restart on critical server errors. For more information about this and other failure condition levels, see [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
- The time-out value for how long the SQL Server Database Engine resource DLL should wait for the server health information before it considers the instance of SQL Server as unresponsive. The time-out value is expressed in milliseconds. The default is 60000 milliseconds (60 seconds).  
+ The time-out value for how long the SQL Server Database Engine resource DLL should wait for the server health information before it considers the instance of SQL Server as unresponsive. The time-out value is expressed in milliseconds. The default is 60,000 milliseconds (60 seconds).  
   
  **\<hadr_cluster_context> ::=**  
   
@@ -183,14 +183,14 @@ SQLDUMPEREDUMPFLAGS
  HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
  Switches the HADR cluster context of the server instance to the specified Windows Server Failover Cluster (WSFC). The *HADR cluster context* determines what WSFC manages the metadata for availability replicas hosted by the server instance. Use the SET HADR CLUSTER CONTEXT option only during a cross-cluster migration of [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] or higher version on a new WSFC r.  
   
- You can switch the HADR cluster context only from the local WSFC to a remote WSFC and then back from the remote WSFC to the local WSFC. The HADR cluster context can be switched to a remote cluster only when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not hosting any availability replicas.  
+ You can switch the HADR cluster context only from the local WSFC to a remote WSFC. Then, you may choose to switch back from the remote WSFC to the local WSFC. The HADR cluster context can be switched to a remote cluster only when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isn't hosting any availability replicas.  
   
- A remote HADR cluster context can be switched back to the local cluster at any time. However, the context cannot be switched again as long as the server instance is hosting any availability replicas.  
+ A remote HADR cluster context can be switched back to the local cluster at any time. However, the context can't be switched again as long as the server instance is hosting any availability replicas. 
   
  To identify the destination cluster, specify one of the following values:  
   
  *windows_cluster*  
- The network name of a WSFC. You can specify either the short name or the full domain name. To find the target IP address of a short name, ALTER SERVER CONFIGURATION uses DNS resolution. Under some situations, a short name could cause confusion, and DNS could return the wrong IP address. Therefore, we recommend that you specify the full domain name.  
+ The network name of a WSFC. You can specify either the short name or the full domain name. To find the target IP address of a short name, ALTER SERVER CONFIGURATION uses DNS resolution. In some circumstances, a short name could cause confusion, and DNS could return the wrong IP address. We recommend that you specify the full domain name.  
   
   > [!NOTE] 
   > A cross-cluster migration using this setting is no longer supported. To perform a cross-cluster migration, use a Distributed Availability Group or some other method such as log shipping. 
@@ -205,18 +205,18 @@ SQLDUMPEREDUMPFLAGS
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Enables the buffer pool extension option. This option extends the size of the buffer pool by using nonvolatile storage such as solid-state drives (SSD) to persist clean data pages in the pool. For more information about this feature, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).The buffer pool extension is not available in every SQL Server edition. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Enables the buffer pool extension option. This option extends the size of the buffer pool by using nonvolatile storage. Nonvolatile storage such as solid-state drives (SSD) persist clean data pages in the pool. For more information about this feature, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).The buffer pool extension isn't available in every SQL Server edition. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  FILENAME = 'os_file_path_and_name'  
- Defines the directory path and name of the buffer pool extension cache file. The file extension must be specified as .BPE. You must turn off BUFFER POOL EXTENSION before you can modify FILENAME.  
+ Defines the directory path and name of the buffer pool extension cache file. The file extension must be specified as .BPE. Turn off BUFFER POOL EXTENSION before you modify FILENAME.  
   
  SIZE = *size* [ **KB** | MB | GB ]  
  Defines the size of the cache. The default size specification is KB. The minimum size is the size of Max Server Memory. The maximum limit is 32 times the size of Max Server Memory. For more information about Max Server Memory, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- You must turn BUFFER POOL EXTENSION off before you can modify the size of the file. To specify a size that is smaller than the current size, the instance of SQL Server must be restarted to reclaim memory. Otherwise, the specified size must be the same as or larger than the current size.  
+ Turn off BUFFER POOL EXTENSION before you modify the size of the file. To specify a size that is smaller than the current size, the instance of SQL Server must be restarted to reclaim memory. Otherwise, the specified size must be the same as or larger than the current size.  
   
  OFF  
- Disables the buffer pool extension option. You must disable the buffer pool extension option before you modify any associated parameters such as the size or name of the file. When this option is disabled, all related configuration information is removed from the registry.  
+ Disables the buffer pool extension option. Disable the buffer pool extension option before you modify any associated parameters such as the size or name of the file. When this option is disabled, all related configuration information is removed from the registry.  
   
 > [!WARNING]  
 >  Disabling the buffer pool extension might have a negative impact server performance because the buffer pool is significantly reduced in size.  
@@ -238,20 +238,20 @@ SQLDUMPEREDUMPFLAGS
 > 3) Re-start the SQL Server instance.  
 > 4) Start the instance of SQL Server Agent.  
   
-**More Information:** If an ALTER SERVER CONFIGURATION with SET SOFTNUMA command is executed before the SQL Server service is restarted, then when the SQL Server Agent service is stopped, it will execute a T-SQL RECONFIGURE command that will revert the SOFTNUMA settings back to what they were before the ALTER SERVER CONFIGURATION. 
+**More Information:** If you run the ALTER SERVER CONFIGURATION with SET SOFTNUMA command before the SQL Server service restarts, then when the SQL Server Agent service stops, it runs a T-SQL RECONFIGURE command that reverts the SOFTNUMA settings back to what they were before the ALTER SERVER CONFIGURATION. 
   
 ## General Remarks  
- This statement does not require a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unless explicitly stated otherwise. In the case of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, it does not require a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource.  
+ This statement doesn't require a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unless explicitly stated otherwise. If it's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, it doesn't require a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource.  
   
 ## Limitations and Restrictions  
- This statement does not support DDL triggers.  
+ This statement doesn't support DDL triggers.  
   
 ## Permissions  
  Requires ALTER SETTINGS permissions for the process affinity option. ALTER SETTINGS and VIEW SERVER STATE permissions for the diagnostic log and failover cluster property options, and CONTROL SERVER permission for the HADR cluster context option.  
   
  Requires ALTER SERVER STATE permission for the buffer pool extension option.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. Therefore, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
   
 ## Examples  
   
@@ -264,7 +264,7 @@ SQLDUMPEREDUMPFLAGS
 |[Setting the buffer pool extension](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
   
 ###  <a name="Affinity"></a> Setting process affinity  
- The examples in this section show how to set process affinity to CPUs and NUMA nodes. The examples assume that the server contains 256 CPUs that are arranged into four groups of 16 NUMA nodes each. Threads are not assigned to any NUMA node or CPU.  
+ The examples in this section show how to set process affinity to CPUs and NUMA nodes. The examples assume that the server contains 256 CPUs that are arranged into four groups of 16 NUMA nodes each. Threads aren't assigned to any NUMA node or CPU.  
   
 -   Group 0: NUMA nodes 0 through 3, CPUs 0 to 63  
 -   Group 1: NUMA nodes 4 through 7, CPUs 64 to 127  
@@ -296,7 +296,7 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 ```  
   
 #### D. Setting affinity to CPU 0 on a system that has two CPUs  
- The following example sets the affinity to `CPU=0` on a computer that has two CPUs. Before the following statement is executed the internal affinity bitmask is 00.  
+ The following example sets the affinity to `CPU=0` on a computer that has two CPUs. Before the following statement is executed, the internal affinity bitmask is 00.  
   
 ```  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  

@@ -35,9 +35,9 @@ The type of a **geometry** instance is null. Returns 0 if the instance is not nu
  CLR type: **SqlBoolean**  
   
 ## Remarks  
- `IsNull` can be used to test whether a **geometry** instance is null. This can produce somewhat confusing results, returning 0 if the instance is not null, but null if the instance is null.  
+ `IsNull` can be used to test whether a **geometry** instance is null. `IsNull` returns 0 if the instance isn't null, but null if the instance is null.  
   
- This method is primarily used by the SQL Server infrastructure; it is not recommended that you use `IsNull` to test whether an instance is null.  
+ This method is primarily used by the SQL Server infrastructure; it isn't recommended that you use `IsNull` to test whether an instance is null.  
   
 
 ## See Also  

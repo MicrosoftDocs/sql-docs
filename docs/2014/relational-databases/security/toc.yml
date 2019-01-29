@@ -75,8 +75,7 @@
         - name: Row-level security
           href: row-level-security.md
         - name: Certificates and asymmetric keys
-          href:   href: 
-
+          href: sql-server-certificates-and-asymmetric-keys.md
     - name: Authentication Access
       items:
         - name: Principals
@@ -109,7 +108,7 @@
         - name: Service master key
           href: encryption/service-master-key.md
         - name: SQL Server and database encryption keys
-          href: encryption/sql-server-and-database-encryption-keys-database-engine.md 
+          href: encryption/sql-server-and-database-encryption-keys-database-engine.md
         - name: Transparent Data Encryption (TDE)
           href: encryption/transparent-data-encryption.md 
         - name: TDE with Azure SQL Database

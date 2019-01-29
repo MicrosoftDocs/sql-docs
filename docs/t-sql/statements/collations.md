@@ -93,7 +93,7 @@ FROM fn_helpcollations();
 -   When restoring or attaching a database, the default collation of the database and the collation of any **char**, **varchar**, and **text** columns or parameters in the database must be supported by the operating system.  
   
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance server collation is **SQL_Latin1_General_CP1_CI_AS** and cannot be changed.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance server collation is **SQL_Latin1_General_CP1_CI_AS** and cannot be changed.
 
 > [!NOTE]
 > Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. Data loss during code page translations is not reported.  

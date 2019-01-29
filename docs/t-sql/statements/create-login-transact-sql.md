@@ -44,7 +44,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />standalone database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -259,11 +259,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />standalone database/elastic pool \*_**|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />single database/elastic pool \*_**|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## Azure SQL Database standalone database/elastic pool
+## Azure SQL Database single database/elastic pool
   
 ## Syntax 
   
@@ -279,7 +279,7 @@ CREATE LOGIN login_name
 
 ## Arguments  
 *login_name*  
-Specifies the name of the login that is created. Azure SQL Database standalone database/elastic pool supports only SQL logins. 
+Specifies the name of the login that is created. Azure SQL Database single database/elastic pool supports only SQL logins. 
 
 PASSWORD **='**password**'*  
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password. 
@@ -375,16 +375,16 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## Azure SQL Database Managed Instance
+## Azure SQL Database managed instance
 
 ## Syntax 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -395,7 +395,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 ```  
 
 > [!IMPORTANT]
-> Azure AD logins for SQL Database Managed Instance is in **public preview**. This is introduced with the syntax **FROM EXTERNAL PROVIDER**.
+> Azure AD logins for SQL Database managed instance is in **public preview**. This is introduced with the syntax **FROM EXTERNAL PROVIDER**.
 
 ## Arguments
 *login_name*  
@@ -417,10 +417,10 @@ Used to recreate a login. Applies to SQL Server authentication logins only. Spec
 - Passwords are case-sensitive.
 - New syntax is introduced for the creation of server-level principals mapped to Azure AD accounts (**FROM EXTERNAL PROVIDER**)
 - When **FROM EXTERNAL PROVIDER** is specified:
-    - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL Managed Instance.
+    - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL managed instance.
     - The **PASSWORD** option cannot be used.
     - Currently, the first Azure AD login must be created by the standard SQL Server account (non Azure AD) that is a `sysadmin` using the syntax above.
-        - When creating an Azure AD login using an Azure AD admin for the SQL Database Managed Instance, the following error occurs:</br>
+        - When creating an Azure AD login using an Azure AD admin for the SQL Database managed instance, the following error occurs:</br>
         `Msg 15247, Level 16, State 1, Line 1
         User does not have permission to perform this action.`
         - This is a known limitation for **public preview** and will be fixed at a later date.
@@ -437,14 +437,14 @@ Only the server-level principal login (created by the provisioning process) or m
 By default, the standard permission granted to a newly created Azure AD login in master is:
 - **CONNECT SQL** and **VIEW ANY DATABASE**.
 
-### SQL Database Managed Instance Logins
+### SQL Database managed instance Logins
 
 - Must have **ALTER ANY LOGIN** permission on the server or membership in the one of the fixed server roles `securityadmin` or `sysadmin`. Only an Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in one of those roles can execute the create command.
 - If the login is a SQL Principal, only logins that are part of the `sysadmin` role can use the create command to create logins for an Azure AD account.
-- Must be a member of Azure AD within the same directory used for Azure SQL Managed Instance.
+- Must be a member of Azure AD within the same directory used for Azure SQL managed instance.
 
 ## After creating a login  
-After creating a login, the login can connect to a SQL Database Managed Instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities. 
+After creating a login, the login can connect to a SQL Database managed instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities. 
   
 - To create an Azure AD user from an Azure AD login, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
 - To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](../../t-sql/statements/grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, and [GRANT](grant-transact-sql.md) statement.
@@ -551,7 +551,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -663,7 +663,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />standalone database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

@@ -1,5 +1,5 @@
 ---
-title: "Managed Instance Details (SQL Server Utility) | Microsoft Docs"
+title: "Managed instance details (SQL Server Utility) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -11,10 +11,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ---
-# Managed Instance Details (SQL Server Utility)
-  Information in the Managed Instances view of Utility Explorer provides utilization data for individual instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance level, for a computer, for database files and log files, and at the level of storage volumes. You can also view property details for individual managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+# Managed instance details (SQL Server Utility)
+
+  Information in the Managed instances view of Utility Explorer provides utilization data for individual instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance level, for a computer, for database files and log files, and at the level of storage volumes. You can also view property details for individual managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## UIElement List  
+## UIElement List
+
  List view  
  The list view in the top pane displays data about individual instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] listed in rows by ComputerName\InstanceName.  
   

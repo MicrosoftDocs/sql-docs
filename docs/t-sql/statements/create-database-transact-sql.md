@@ -56,7 +56,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL Database<br />standalone database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\* SQL Server \*_** | [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -890,15 +890,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />standalone database/elastic pool \*_**  | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />single database/elastic pool \*_**  | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## Azure SQL Database standalone database/elastic pool
+## Azure SQL Database single database/elastic pool
 
 ## Overview
 
-In Azure SQL Database standalone database/elastic pool, this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
+In Azure SQL Database single database/elastic pool, this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
 
 ## Syntax 
 
@@ -970,7 +970,7 @@ EDITION
  
 Specifies the service tier of the database. 
 
-Single and pooled databases on a standalone database/elastic pool. The available values are: 'basic', 'standard', 'premium', 'GeneralPurpose', 'BusinessCritical', and 'Hyperscale'. 
+Single and pooled databases on a single database/elastic pool. The available values are: 'basic', 'standard', 'premium', 'GeneralPurpose', 'BusinessCritical', and 'Hyperscale'. 
   
 When EDITION is specified but MAXSIZE is not specified, MAXSIZE is set to the most restrictive size that the edition supports.  
   
@@ -1060,13 +1060,13 @@ The following rules apply to MAXSIZE and EDITION arguments:
 
 SERVICE_OBJECTIVE
 
-- **For standalone and pooled databases**
+- **For single and pooled databases**
 
   - Specifies the performance level. Available values for service objective are:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,	`GP_Gen5_4`,	`GP_Gen5_8`,	`GP_Gen5_16`,	`GP_Gen5_24`,	`GP_Gen5_32`,	`GP_Gen5_48`,	`GP_Gen5_80`, `BC_Gen5_2`,	`BC_Gen5_4`,	`BC_Gen5_8`,	`BC_Gen5_16`,	`BC_Gen5_24`,	`BC_Gen5_32`,	`BC_Gen5_48`,	`BC_Gen5_80`. 
- - **For standalone databases in the Hyperscale service tier**
+ - **For single databases in the Hyperscale service tier**
   Specifies the performance level. Available values for service objective are:  `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,	`HS_Gen5_4`,	`HS_Gen5_8`,	`HS_Gen5_16`,	`HS_Gen5_24`,	`HS_Gen5_32`,	`HS_Gen5_48`,	`HS_Gen5_80`. 
  
-- **For databases on a Managed Instance**
+- **For databases on a managed instance**
 
   Specifies the performance level. Available values for service objective are:  `GP_GEN4_8`, `GP_GEN4_16`, `GP_Gen5_8`, `GP_Gen5_16`,	`GP_Gen5_24`,	`GP_Gen5_32`,	`GP_Gen5_40`. 
 
@@ -1230,15 +1230,15 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />standalone database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />Managed Instance \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />managed instance \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## Azure SQL Database Managed Instance
+## Azure SQL Database managed instance
 
 ## Overview
 
-In Azure SQL Database Managed Instance, this statement is used to create a database. When creating a database on a Managed Instance, you specify the database name and collation. 
+In Azure SQL Database managed instance, this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation. 
 
 ## Syntax
 
@@ -1247,7 +1247,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```
 > [!IMPORTANT]
-> To add files or set containment for a database in a Managed Instance, use the [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) statement.
+> To add files or set containment for a database in a managed instance, use the [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) statement.
   
 ## Arguments  
   
@@ -1303,7 +1303,7 @@ See [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />standalone database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1421,7 +1421,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />standalone database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 

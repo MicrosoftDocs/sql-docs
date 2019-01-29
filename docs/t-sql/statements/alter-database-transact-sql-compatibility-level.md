@@ -51,8 +51,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100| 
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] standalone database/elastic pool|12|130|150, 140, 130, 120, 110, 100|  
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance|12|130|150, 140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database/elastic pool|12|130|150, 140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  

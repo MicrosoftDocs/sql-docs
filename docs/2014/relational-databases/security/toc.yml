@@ -31,6 +31,26 @@
       items:
         - name: Choose an algorithm
           href: encryption/choose-an-encryption-algorithm.md
+        - name: Enable TDE using EKM
+          href: encryption/enable-tde-on-sql-server-using-ekm.md
+        - name: Move a TDE protected database to another SQL Server
+          href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+        - name: EKM with Azure Key Vault
+          href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+        - name: Back up service master key
+          href: encryption/back-up-the-service-master-key.md
+        - name: Restore service master key
+          href: encryption/restore-the-service-master-key.md
+        - name: Create a database master key
+          href: encryption/create-a-database-master-key.md
+        - name: Back up database master key
+          href: encryption/back-up-a-database-master-key.md
+        - name: Restore database master key
+          href: encryption/restore-a-database-master-key.md
+        - name: Create identical symmetric keys on two servers
+          href: encryption/create-identical-symmetric-keys-on-two-servers.md
+        - name: Encrypt a column of data
+          href: encryption/encrypt-a-column-of-data.md
     - name: Auditing
       items:
         - name: Create a server audit
@@ -52,7 +72,12 @@
           href: password-policy.md
         - name: Strong passwords
           href: strong-passwords.md
-    - name: Authentcation Access
+        - name: Row-level security
+          href: row-level-security.md
+        - name: Certificates and asymmetric keys
+          href:   href: 
+
+    - name: Authentication Access
       items:
         - name: Principals
           href: authentication-access/principals-database-engine.md
@@ -78,7 +103,26 @@
           href: permissions-hierarchy-database-engine.md
     - name: Encryption
       href: encryption/sql-server-encryption.md
+      items:
+        - name: Encryption hierarchy
+          href: encryption/encryption-hierarchy.md
+        - name: Service master key
+          href: encryption/service-master-key.md
+        - name: SQL Server and database encryption keys
+          href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+        - name: Transparent Data Encryption (TDE)
+          href: encryption/transparent-data-encryption.md 
+        - name: TDE with Azure SQL Database
+          href: dbengine-transparent-data-encryption-with-azure-sql-database.md
+        - name: Extensible Key Management (EKM)
+          href: encryption/extensible-key-management-ekm.md
     - name: Auditing
+      href: auditing/sql-server-audit-database-engine.md
+      items:
+        - name: Audit Action Groups and Actions
+          href: auditing/sql-server-audit-action-groups-and-actions.md
+        - name: Audit records
+          href: auditing/sql-server-audit-records.md
 - name: Reference
   items:
     - name: Permissions or Securables Page

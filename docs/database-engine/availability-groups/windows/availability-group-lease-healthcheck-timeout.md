@@ -147,6 +147,13 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | Timeout setting | Purpose | Between | Uses | IsAlive & LooksAlive | Causes | Outcome | FCI or HADR | Default Value |
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ | :-----------| :------------ | 
+ | Lease timeout | Prevent splitbrain | Primary to Cluster | [Windows event objects](/windows/desktop/Sync/event-objects)| OS hang, </br> low virtual memory, </br> generating dump, </br> pegged CPU, </br> WSFC down (loss of quorum) | AG resource offline-online, failover | HADR | 20000 |
+ | Session timeout | To inform of lack of communication | Secondary to Primary | [TCP Sockets (messages sent via DBM endpoint)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Used in neither | Network communication, </br> Issues on secondary - down, OS hang, resource contention | Secondary - DISCONNECTED | HADR | 10000|
+ |HealthCheck timeout | Get SQL Server / AG going again | Cluster to Primary | T-SQL [sp_server_diagnostics](../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, </br> OS hang, </br> low virtual memory, </br> working set trim, </br>, generating dump, WSFC (loss of quroum), </br> scheduler issues (dead locked schedulers)| AG resouce Offline-oline or Failover, </br> FCI restart/failover | FCI & HADR | 30000|
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; | &nbsp; | 
 
 ## See Also    
 

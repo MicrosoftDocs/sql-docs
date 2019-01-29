@@ -246,6 +246,11 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/security/add-sqlrusergroup-to-database.md",
+            "redirect_url": "/sql/advanced-analytics/security/create-a-login-for-sqlrusergroup.md",
+            "redirect_document_id": true
+        }, 
+        {
             "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
             "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2017",
             "redirect_document_id": false
@@ -258,6 +263,11 @@
         {
             "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
             "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-server/failover-clusters/high-availability-solutions-sql-server.md",
+            "redirect_url": "/sql/database-engine/sql-server-business-continuity-dr",
             "redirect_document_id": false
         },
         {

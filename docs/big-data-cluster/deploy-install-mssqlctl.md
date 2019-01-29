@@ -29,9 +29,15 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 
 1. Open a new Windows PowerShell session so that it gets the latest path with Python in it.
 
-2. Install **mssqlctl** with the following command:
+1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
 
-   ```bash
+   ```powershell
+   pip3 uninstall mssqlctl
+   ```
+
+1. Install **mssqlctl** with the following command:
+
+   ```powershell
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
@@ -52,16 +58,22 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    ```bash
    sudo -H pip3 install --upgrade pip
    ```
-   
+
+1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
 1. Install **mssqlctl** with the following command:
 
    ```bash
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-   
+
    > [!NOTE]
    > The `--user` switch installs mssqlctl to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./mssqlctl` from there.
-   
+
 ## Next steps
 
 For more information about big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

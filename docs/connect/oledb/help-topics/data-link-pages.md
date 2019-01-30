@@ -48,4 +48,4 @@ The Connection tab is provider-specific and displays only the connection propert
 
 
 > [!NOTE]  
->  For more general Data Link connection information, see the [Data Link API Overview](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms718102(v=vs.85)).
+>  For more general Data Link connection information, see the [Data Link API Overview](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)).

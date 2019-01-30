@@ -30,7 +30,7 @@ The name of an instance of SQL Server on your network. Select a server\instance 
 
 You can enter "(local)" when you are using the same computer as SQL Server. You can then connect to a local instance of SQL Server, even when running a non-networked version of SQL Server.
 
-For more information about server names for different types of networks, see [SQL Server installation](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server).
+For more information about server names for different types of networks, see [SQL Server installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server).
 
 ### Authentication Mode
 You can select the following authentication options from the drop-down list:

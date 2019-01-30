@@ -12,7 +12,7 @@ author: "yitam"
 ms.author: "v-yitam"
 manager: "mbarwin"
 ---
-# How to: Retrieve Date and Time Type as PHP DateTime Objects Using the PDO_SQLSRV Driver
+# How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This feature, added in version 5.6.0, is only valid when using the PDO_SQLSRV driver for the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
@@ -20,14 +20,14 @@ This feature, added in version 5.6.0, is only valid when using the PDO_SQLSRV dr
 ### To retrieve date and time types as DateTime objects
 
 When using PDO_SQLSRV, date and time types (**smalldatetime**, **datetime**, **date**, **time**, **datetime2**, and **datetimeoffset**) are by default returned as strings. Neither PDO::ATTR_STRINGIFY_FETCHES nor PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE attribute has
-any effect. In order to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects, set the connection or statement attribute `PDO_STMT_OPTION_FETCHES_DATETIME_TYPE` to **true** (it is **false** by default).
+any effect. In order to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects, set the connection or statement attribute `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` to **true** (it is **false** by default).
 
 > [!NOTE]
 > This connection or statement attribute only applies to regular fetching of date and
 > time types because DateTime objects cannot be specified as output parameters.
 
 ## Example
-For example, assuming the connection is successful and $conn a valid PHP resource object:
+The following examples omit error checking for clarity. This one shows how to set the connection attribute:
 
 ```php
 <?php
@@ -77,7 +77,7 @@ unset($conn);
 ```
 
 ## Example
-Alternatively, the user can set the statement attribute as an option:
+Alternatively, the statement attribute can be set as an option:
 
 ```php
 <?php
@@ -124,4 +124,4 @@ unset($conn);
 ## See Also
 [Retrieving Data](../../connect/php/retrieving-data.md)
 
-[Retrieve Date and Time Type as Strings Using the SQLSRV Driver](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)
+[Retrieve Date and Time Types as Strings Using the SQLSRV Driver](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)

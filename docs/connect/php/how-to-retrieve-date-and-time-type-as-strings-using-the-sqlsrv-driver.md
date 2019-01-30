@@ -14,22 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
-# How to: Retrieve Date and Time Type as Strings Using the SQLSRV Driver
+# How to: Retrieve Date and Time Types as Strings Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-This feature, added in version 1.1, is only valid when using the SQLSRV driver for the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. It is an error to use the ReturnDatesAsStrings connection option with the PDO_SQLSRV driver.
+When using the SQLSRV driver for the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can retrieve date and time types (**smalldatetime**, **datetime**, **date**, **time**, **datetime2**, and **datetimeoffset**) as strings by specifying the following option in the connection string or at the statement level:
 
-You can retrieve date and time types (**datetime**, **date**, **time**, **datetime2**, and **datetimeoffset**) as strings by specifying an option in the connection string.
+```
+'ReturnDatesAsStrings'=>true
+```
 
-### To retrieve date and time types as strings
+The default is **false**, which means that **smalldatetime**, **datetime**, **Date**, **Time**, **DateTime2**, and **DateTimeOffset** types will be returned as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects. If this option is set at the statement level, it overrides the connection level setting.
 
--   Use the following connection option:
-
-    ```
-    'ReturnDatesAsStrings'=>true
-    ```
-
-    The default is **false**, which means that **smalldatetime**, **datetime**, **Date**, **Time**, **DateTime2**, and **DateTimeOffset** types will be returned as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects.
+The PDO_SQLSRV driver returns date and time types as strings by default. To retrieve them as PHP DateTime objects, see [How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-objects-using-the-pdo-sqlsrv-driver.md)
 
 ## Example
 The following example shows the syntax specifying to retrieve date and time types as strings.
@@ -145,7 +141,7 @@ if ($stmt === false) {
 
 sqlsrv_fetch($stmt);
 
-// retrieve date as string
+// retrieve date as a DateTime object, then convert to string using PHP's date_format function
 $date = sqlsrv_get_field($stmt, 0);
 
 if ($date === false) {
@@ -160,7 +156,7 @@ sqlsrv_close($conn);
 ```
 
 ## Example
-The ReturnDatesAsStrings option is added to the statement level starting with version 5.6.0. The statement option overrides the corresponding connection option.
+The ReturnDatesAsStrings option at the statement level overrides the corresponding connection option.
 
 ```php
 <?php
@@ -193,4 +189,4 @@ sqlsrv_close($conn);
 ## See Also
 [Retrieving Data](../../connect/php/retrieving-data.md)
 
-[How to: Retrieve Date and Time Type as PHP Datetime Objects Using the PDO_SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-objects-using-the-pdo-sqlsrv-driver.md)
+[How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-objects-using-the-pdo-sqlsrv-driver.md)

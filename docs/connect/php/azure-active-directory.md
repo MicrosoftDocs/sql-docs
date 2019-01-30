@@ -15,7 +15,7 @@ manager: "mbarwin"
 # Connect Using Azure Active Directory Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and SQL Data Warehouse with federated identities in Azure AD, using username and password, Windows Integrated Authentication, or an Azure AD access token. The PHP drivers for SQL Server offer partial support for these features.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and SQL Data Warehouse with federated identities in Azure AD using a username and password, Windows Integrated Authentication, or an Azure AD access token. The PHP drivers for SQL Server offer partial support for these features.
 
 To use Azure AD, use the **Authentication** or **AccessToken** keywords (they are mutually exclusive), as shown in the following table. For more technical details, refer to [Using Azure Active Directory with the ODBC Driver](../../connect/odbc/using-azure-active-directory.md).
 
@@ -117,7 +117,25 @@ try {
 ```
 
 ## Example
-The following examples show how to connect using Azure AD Access Token with the PDO_SQLSRV and SQLSRV drivers respectively.
+The following examples show how to connect using Azure AD Access Token with the SQLSRV and PDO_SQLSRV drivers respectively.
+
+### SQLSRV driver
+
+```php
+<?php
+// Using an access token to connect: do not use UID or PWD connection options
+// Assume $accToken is the valid byte string extracted from an OAuth JSON response
+$connectionInfo = array("Database"=>$azureAdDatabase, "AccessToken"=>$accToken);
+$conn = sqlsrv_connect($azureAdServer, $connectionInfo);
+if ($conn === false) {
+    echo "Could not connect with Azure AD Access Token.\n";
+    print_r(sqlsrv_errors());
+} else {
+    echo "Connected successfully with Azure AD Access Token.\n";
+    sqlsrv_close($conn);
+}
+?>
+```
 
 ### PDO_SQLSRV driver
 
@@ -138,26 +156,8 @@ try {
 ?>
 ```
 
-### SQLSRV driver
-
-```php
-<?php
-// Using an access token to connect: do not use UID or PWD connection options
-// Assume $accToken is the valid byte string extracted from an OAuth JSON response
-$connectionInfo = array("Database"=>$azureAdDatabase, "AccessToken"=>$accToken);
-$conn = sqlsrv_connect($azureAdServer, $connectionInfo);
-if ($conn === false) {
-    echo "Could not connect with Azure AD Access Token.\n";
-    print_r(sqlsrv_errors());
-} else {
-    echo "Connected successfully with Azure AD Access Token.\n";
-    sqlsrv_close($conn);
-}
-?>
-```
-
 ## Example
-The following examples show how to connect using managed identities for Azure resources
+The following examples show how to connect using managed identities for Azure resources.
 
 ### Using the system-assigned managed identity with SQLSRV driver
 
@@ -198,8 +198,7 @@ if ($conn === false) {
 
 ### Using the user-assigned managed identity with PDO_SQLSRV driver
 
-A user-assigned managed identity is created as a standalone Azure resource. Through a 
-create process, Azure creates an identity in the Azure AD tenant that's trusted by the
+A user-assigned managed identity is created as a standalone Azure resource. Azure creates an identity in the Azure AD tenant that's trusted by the
 subscription in use. After the identity is created, the identity can be assigned to one or more Azure service instances. Copy the `Object ID` of this identity and set it as the user name in the connection string. 
 
 Therefore, when connecting using the user-assigned managed identity, provide the Object ID as the user name but omit the password.

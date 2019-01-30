@@ -49,9 +49,9 @@ Specific projects that require either of the preceding features need to explicit
 </dependency>
 
 <dependency>
-	<groupId>com.microsoft.rest</groupId>
-	<artifactId>client-runtime</artifactId>
-	<version>1.6.5</version>
+    <groupId>com.microsoft.rest</groupId>
+    <artifactId>client-runtime</artifactId>
+    <version>1.6.5</version>
 </dependency>
 ```
 
@@ -59,34 +59,34 @@ Specific projects that require either of the preceding features need to explicit
 
 ```xml
 <dependency>
-	<groupId>com.microsoft.sqlserver</groupId>
-	<artifactId>mssql-jdbc</artifactId>
-	<version>7.2.0.jre11</version>
-	<scope>compile</scope>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.2.0.jre11</version>
+    <scope>compile</scope>
 </dependency>
 
 <dependency>
-	<groupId>com.microsoft.azure</groupId>
-	<artifactId>adal4j</artifactId>
-	<version>1.6.3</version>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>adal4j</artifactId>
+    <version>1.6.3</version>
 </dependency>
 
 <dependency>
-	<groupId>com.microsoft.rest</groupId>
-	<artifactId>client-runtime</artifactId>
-	<version>1.6.5</version>
+    <groupId>com.microsoft.rest</groupId>
+    <artifactId>client-runtime</artifactId>
+    <version>1.6.5</version>
 </dependency>
 
 <dependency>
-	<groupId>com.microsoft.azure</groupId>
-	<artifactId>azure-keyvault</artifactId>
-	<version>1.2.0</version>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-keyvault</artifactId>
+    <version>1.2.0</version>
 </dependency>
 
 <dependency>
-	<groupId>com.microsoft.azure</groupId>
-	<artifactId>azure-keyvault-webkey</artifactId>
-	<version>1.2.0</version>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-keyvault-webkey</artifactId>
+    <version>1.2.0</version>
 </dependency>
 ```
 

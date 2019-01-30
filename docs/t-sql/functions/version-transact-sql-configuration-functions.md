@@ -72,7 +72,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > We are aware of an issue where the product version reported by @@VERSION is incorrect for Azure SQL Database. 
 > The version of the SQL Server database engine run by Azure SQL Database is always ahead of the on-premises version of SQL Server, and includes the latest security fixes. This means that the patch level is always on par with or ahead of the on-premises version of SQL Server, and that the latest features available in SQL Server are available in Azure SQL Database.
 >
-> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for standalone databases and '8' for managed instances in Azure SQL Database. 
+> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for single databases/elastic pools and '8' for managed instances in Azure SQL Database. 
 >
 > We will update the documentation once this issue is resolved.
 

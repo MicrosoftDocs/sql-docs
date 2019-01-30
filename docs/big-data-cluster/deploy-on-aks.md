@@ -76,7 +76,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --generate-ssh-keys \
     --node-vm-size Standard_L4s \
     --node-count 3 \
-    --kubernetes-version 1.10.8
+    --kubernetes-version 1.10.9
     ```
 
    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. So in the example above, there are **3** VMs of size **Standard_L4s** used for the agent nodes of your AKS cluster.

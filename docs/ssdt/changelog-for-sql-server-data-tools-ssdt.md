@@ -26,13 +26,13 @@ Release date: January 28, 2019
 
 ### What's New?
 **SSIS:**
-1. Add Power Query Source (Preview) for SSIS 2017.
-2. Add support for SSIS 2012 back.
-3. Add Oracle source and destination for SSIS 2019.
+1. Add Power Query Source (Preview) for SSIS in ADF 2017.
+2. Add support for SQL Server 2012 back.
+3. Add Oracle source and destination for SQL Server 2019.
 4. Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions.
 5. Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1.
 6. Fix an issue that, in some cases, saving the package causes Visual Studio to crash. 
-7. Fix an issue that, in some cases, the package cannot be executed when protection level is EncryptSensitiveWithPassword and target server version is earlier than SQL 2017.
+7. Fix an issue that, in some cases, the package cannot be executed when protection level is EncryptSensitiveWithPassword and target server version is earlier than SQL Server 2017.
 8. Fix an issue that annotations with default font are not displayed in SSDT.
 9. ISDeploymentWizard supports SQL auth, Azure Active Directory integrated auth, and Azure Active Directory password auth in command-line mode.
 

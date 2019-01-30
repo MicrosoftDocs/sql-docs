@@ -283,7 +283,7 @@ For minimum and maximum limits, see [SQL Data Warehouse capacity limits](https:/
 ### Determining the number of table partitions
 Each user-defined table is divided into multiple smaller tables which are stored in separate locations called distributions. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] uses 60 distributions. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the number of distributions depends on the number of Compute nodes.
  
-Each distribution contains all table partitions. For example, if there are 60 distributions and four table partitions, there will be 320 partitions. If the table is a clustered columnstore index, there will be one columnstore index per partition which means you will have 320 columnstore indexes.
+Each distribution contains all table partitions. For example, if there are 60 distributions and four table partitions plus one empty partition, there will be 300 partitions (5 x 60= 300). If the table is a clustered columnstore index, there will be one columnstore index per partition which means you will have 300 columnstore indexes.
 
 We recommend using fewer table partitions to ensure each columnstore index has enough rows to take advantage of the benefits of columnstore indexes. For further guidance, see [Partitioning tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) and [Indexing tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 

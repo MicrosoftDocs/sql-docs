@@ -54,7 +54,7 @@ SET ARITHABORT ON
  Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues.  
   
 > [!WARNING]  
->  The default ARITHABORT setting for [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is ON. Client applications setting ARITHABORT to OFF can receive different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query can execute fast in management studio but slow in the application. When troubleshooting queries with [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], always match the client ARITHABORT setting.  
+>  The default ARITHABORT setting for [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is ON. Client applications setting ARITHABORT to OFF might receive different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query might execute fast in management studio but slow in the application. When troubleshooting queries with [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], always match the client ARITHABORT setting.  
   
  If SET ARITHABORT and SET ANSI WARNINGS are ON, these error conditions cause the query to terminate.  
   
@@ -90,7 +90,7 @@ SELECT @ARITHABORT AS ARITHABORT;
  Requires membership in the **public** role.  
   
 ## Examples  
- The following example demonstrates the divide-by-zero and overflow errors that have both `SET ARITHABORT` settings.  
+ The following example demonstrates the divide-by-zero and overflow errors that have `SET ARITHABORT` settings.  
   
 ```  
 -- SET ARITHABORT  

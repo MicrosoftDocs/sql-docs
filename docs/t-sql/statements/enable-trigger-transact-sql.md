@@ -63,7 +63,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 >  This option is not available in a contained database.  
   
 ## Remarks  
- Enabling a trigger doesn't re-create it. A disabled trigger still exists as an object in the current database, but doesn't fire. Enabling a trigger causes it to fire when any [!INCLUDE[tsql](../../includes/tsql-md.md)] statements on which it was originally programmed are run. Triggers are disabled by using [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). DML triggers defined on tables can also be disabled or enabled by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+ Enabling a trigger doesn't re-create it. A disabled trigger still exists as an object in the current database, but doesn't fire. To enable a trigger, causes it to fire when any [!INCLUDE[tsql](../../includes/tsql-md.md)] statements on which it was originally programmed are run. Triggers are disabled by using [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). DML triggers defined on tables can also be disabled or enabled by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## Permissions  
  To enable a DML trigger, at a minimum, a user must have ALTER permission on the table or view on which the trigger was created.  

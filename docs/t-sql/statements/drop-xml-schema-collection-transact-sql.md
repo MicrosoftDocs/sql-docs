@@ -48,7 +48,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ## Remarks  
  Dropping an XML schema collection is a transactional operation. When you drop an XML schema collection inside a transaction and later roll back the transaction, the XML schema collection isn't dropped.  
   
- You can't drop an XML schema collection when it's in use. So, the collection being dropped can't be any of the following:  
+ You can't drop an XML schema collection when it's in use. So, the collection being dropped can't be in any of the following conditions:  
   
 -   Associated with any **xml** type parameter or column.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Using Kerberos Integrated Authentication to Connect to SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -194,22 +194,21 @@ This guide assumes a working Kerberos setup already exists. Run the following co
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
-ds.setServerName("/*SQL Server Name*/");
-ds.setPortNumber(1433); //change if necessary
+ds.setServerName("<server>");
+ds.setPortNumber(1433); // change if necessary
 ds.setIntegratedSecurity(true);
 ds.setAuthenticationScheme("JavaKerberos");
-ds.setDatabaseName("master"); //change if necessary
+ds.setDatabaseName("<database>");
 
-try (Connection c = ds.getConnection(); Statement s = c.createStatement()) {
-	try (ResultSet rs = s.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
-		while (rs.next()) {
-			System.out.println("Authentication Scheme: " + rs.getString(1));
-		}
-	}
+try (Connection c = ds.getConnection(); Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
+    while (rs.next()) {
+        System.out.println("Authentication Scheme: " + rs.getString(1));
+    }
 }
 ```
 
-1. Domain join the Unix agent to the same domain as the server.
+1. Domain join the client machine to the same domain as the server.
 2. (Optional) Set the default Kerberos ticket location, this is most conveniently done by setting the `KRB5CCNAME` environment variable.
 3. Get the Kerberos ticket, either by generating a new one or placing an existing one in the default Kerberos ticket location. To generate a ticket, simply use a terminal and initialize the ticket via `kinit USER@DOMAIN.AD` where "USER" and "DOMAIN.AD" is the principal and domain respectively. E.g: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. The ticket will be generated in the default ticket location or in the `KRB5CCNAME` path if set.
 4. The terminal will prompt for a password, enter the password.

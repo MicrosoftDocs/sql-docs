@@ -59,7 +59,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+> |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
@@ -704,15 +704,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* SQL Database<br />managed instance \*_**<br />&nbsp;|
 
 &nbsp;
 
-## Azure SQL Database Managed Instance
+## Azure SQL Database managed instance
 
-Use this statement with a database in Azure SQL Database Managed Instance.
+Use this statement with a database in Azure SQL Database managed instance.
 
-## Syntax for databases in a Managed Instance
+## Syntax for databases in a managed instance
 
 ```  
 ALTER DATABASE database_name   

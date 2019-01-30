@@ -24,14 +24,14 @@ The **Intelligent query processing** feature family includes features with broad
 
 ## Adaptive query processing
 
-The adaptive query processing feature family includes query processing improvements that adapt optimization strategies to your application workload's runtime conditions. These improvements included: 
-- Batch mode adaptive joins
-- Memory grant feedback
-- Interleaved execution for multi-statement table-valued functions (MSTVFs)
+The feature family for adaptive query processing includes query processing improvements that adapt optimization strategies to your application workload's runtime conditions. These improvements are included: 
+- Batch mode adaptive joins.
+- Memory grant feedback.
+- Interleaved run for multistatement table-valued functions (MSTVFs).
 
 ### Batch mode adaptive joins
 
-This feature allows your plan to dynamically switch to a better join strategy during execution using a single cached plan.
+This feature allows your plan to dynamically switch to a better join strategy during run by using a single cached plan.
 
 For more information on batch mode adaptive joins, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
 
@@ -40,92 +40,102 @@ For more information on batch mode adaptive joins, see [Adaptive query processin
 > [!NOTE]
 > Row mode memory grant feedback is a public preview feature.  
 
-This feature recalculates the actual memory required for a query and then updates the grant value for the cached plan, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
+This feature recalculates the actual memory required for a query. Then it updates the grant value for the cached plan. It reduces excessive memory grants that impact concurrency. It also fixes underestimated memory grants that cause expensive spills to disk.
 
 For more information on memory grant feedback, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
 
-### Interleaved execution for multi-statement table-valued functions (MSTVFs)
+### Interleaved run for MSTVFs
 
-With interleaved execution, the actual row counts from the function are used to make better-informed downstream query plan decisions. For more information on multi-statement table-valued functions (MSTVFs), see [Table-Valued Functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+With interleaved run, the actual row counts from the function are used to make better-informed downstream query plan decisions. For more information on multistatement table-valued functions (MSTVFs), see [Table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
-For more information on interleaved execution, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
+For more information on interleaved run, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
 
 ## Table variable deferred compilation
 
 > [!NOTE]
 > Table variable deferred compilation is a public preview feature.  
 
-Table variable deferred compilation improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations.
+Table variable deferred compilation improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations.
 
-With table variable deferred compilation, compilation of a statement that references a table variable is deferred until the first actual execution of the statement. This deferred compilation behavior is identical to the behavior of temporary tables, and this change results in the use of actual cardinality instead of the original one-row guess. To enable the public preview of table variable deferred compilation in Azure SQL Database, enable database compatibility level 150 for the database you are connected to when executing the query.
+Table variable deferred compilation defers compilation of a statement that references a table variable until the first actual run of the statement. This deferred compilation behavior is the same as that of temporary tables. This change results in the use of actual cardinality instead of the original one-row guess. 
+
+You can enable the public preview of table variable deferred compilation in Azure SQL Database. To do that, enable database compatibility level 150 for the database you're connected to when you run the query.
 
 For more information, see [Table variable deferred compilation](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
 
 ## Scalar UDF inlining
 
 > [!NOTE]
-> Scalar UDF inlining is a public preview feature.  
+> Scalar user-defined function (UDF) inlining is a public preview feature.  
 
-Scalar UDF inlining automatically transforms [scalar user-defined functions (UDF)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+Scalar UDF inlining automatically transforms [scalar UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions and embeds them in the calling SQL query. This transformation improves the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs. It results in efficient, set-oriented, and parallel plans instead of inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
-For more information, see [Scalar UDF Inlining](../user-defined-functions/scalar-udf-inlining.md).
+For more information, see [Scalar UDF inlining](../user-defined-functions/scalar-udf-inlining.md).
 
 ## Approximate query processing
 
 > [!NOTE]
-> APPROX_COUNT_DISTINCT is a public preview feature.  
+> **APPROX_COUNT_DISTINCT** is a public preview feature.  
 
-Approximate query processing is a new family of features that are designed to provide aggregations across large data sets where responsiveness is more critical than absolute precision.  An example might be calculating a COUNT(DISTINCT()) across 10 billion rows, for display on a dashboard.  In this case, absolute precision is not important, but responsiveness is critical. The new APPROX_COUNT_DISTINCT aggregate function returns the approximate number of unique non-null values in a group.
+Approximate query processing is a new feature family that provides aggregations across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important. But responsiveness is critical. The new **APPROX_COUNT_DISTINCT** aggregate function returns the approximate number of unique non-null values in a group.
 
 For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/functions/approx-count-distinct-transact-sql.md).
 
-## Batch Mode on Rowstore 
+## Batch mode on rowstore 
 
 > [!NOTE]
-> Batch Mode on Rowstore is a public preview feature.  
+> Batch mode on rowstore is a public preview feature.  
 
 ### Background
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced a new feature for accelerating analytical workloads: columnstore indexes. We have expanded the use cases and improved the performance of columnstore indexes in each subsequent release. Until now, we have surfaced and documented all these capabilities as a single feature: You create columnstore indexes on your tables, and your analytical workload "just goes faster". Under the covers, however, there are two related but distinct sets of technologies:
-- **Columnstore** indexes allow analytical queries to access only the data in the columns they need. The columnstore format also allows much more effective compression than what you get with page compression in traditional "rowstore" indexes. 
-- **Batch mode** processing allows query operators to process data more efficiently by working on a batch of rows at a time, instead of one row at a time. A number of other scalability improvements are tied to batch mode processing. For more information on batch mode, see [Execution Modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced a new feature to accelerate analytical workloads: columnstore indexes. We expanded the use cases and improved the performance of columnstore indexes in each subsequent release. Until now, we surfaced and documented all these capabilities as a single feature. You create columnstore indexes on your tables. And your analytical workload goes faster. However, there are two related but distinct sets of technologies:
+- With **Columnstore** indexes, analytical queries can access only the data in the columns they need. Page compression in the columnstore format is also more effective than compression than in traditional **rowstore** indexes. 
+- With **Batch mode** processing, query operators can process data more efficiently. They work on a batch of rows instead of one row at a time. A number of other scalability improvements are tied to batch mode processing. For more information on batch mode, see [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 The two sets of features work together to improve I/O and CPU utilization:
-- Columnstore indexes allow more of your data to fit in memory, and thus reduce the need for I/O.
+- By using columnstore indexes, more of your data fits in memory. That reduces the need for I/O.
 - Batch mode processing uses CPU more efficiently.
 
-The two technologies take advantage of each other whenever possible. For example, batch mode aggregates can be evaluated as part of a columnstore index scan. We also process columnstore data compressed using run-length encoding much more efficiently with batch mode joins and batch mode aggregates. 
+The two technologies take advantage of each other whenever possible. For example, batch mode aggregates can be evaluated as part of a columnstore index scan. We also process columnstore data that's compressed by using run-length encoding much more efficiently with batch mode joins and batch mode aggregates. 
  
-The two features are already usable independently: you can get row mode plans that use columnstore indexes, and you can get batch mode plans that use only rowstore indexes. But since in most cases you get the best results when the two features are used together, SQL's query optimizer has until now considered batch mode processing only for queries that involve at least one table with a columnstore index.
+The two features are already usable independently:
+* You can get row mode plans that use columnstore indexes.
+* You can get batch mode plans that use only rowstore indexes. 
+In most cases, you get the best results when the two features are used together. So SQL's query optimizer has until now considered batch mode processing only for queries that involve at least one table with a columnstore index.
 
-For some applications, columnstore indexes are not a viable option because the application uses some other feature that is not supported with columnstore indexes (triggers are not supported on tables with clustered columnstore indexes, for example). More importantly, columnstore indexes adds overhead for DELETE and UPDATE statements, because in-place modifications are not compatible with columnstore compression. For some hybrid transactional-analytical workloads, the benefit that columnstore indexes would bring for analytical queries is outweighed by the overhead on a workload's transactional aspects. Such scenarios can get improved CPU utilization from batch mode processing alone, which is why the **batch mode on rowstore** feature will consider batch mode for all queries, regardless of the indexes involved.
+For some applications, columnstore indexes aren't a viable option. The application uses some other feature that isn't supported with columnstore indexes. For example, triggers aren't supported on tables with clustered columnstore indexes. In-place modifications aren't compatible with columnstore compression. So, more importantly, columnstore indexes add overhead for **DELETE** and **UPDATE** statements. 
 
-### What workloads may benefit from batch mode on rowstore
+For some hybrid transactional-analytical workloads, the overhead on a workload's transactional aspects outweighs the benefits oft columnstore indexes. Such scenarios can improve CPU utilization from batch mode processing alone. That's why the **batch mode on rowstore** feature considers batch mode for all queries, regardless of the indexes involved.
 
-The following workloads may benefit from batch mode on rowstore:
-1. A significant part of the workload consists of analytical queries (as a rule of thumb, queries with operators such as joins or aggregates processing hundreds of thousands of rows or more), **AND**
-2. The workload is CPU bound (if the bottleneck is IO, it is still recommended to consider a columnstore index, if possible), **AND**
-3. Creating a columnstore index adds too much overhead to the transactional part of your workload **OR** creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
+### What workloads might benefit from batch mode on rowstore
+
+The following workloads might benefit from batch mode on rowstore:
+1. A significant part of the workload consists of analytical queries. Usually, these queries have operators like joins or aggregates that process hundreds of thousands of rows or more, **and**
+2. The workload is CPU bound. If the bottleneck is IO, we still recommend that you consider a columnstore index, if possible, **and**
+3. Creating a columnstore index adds too much overhead to the transactional part of your workload, **or**
+4. Creating a columnstore index isn't feasible because your application depends on a feature that's not yet supported with columnstore indexes.
 
 > [!NOTE]
-> Batch mode on rowstore can only help by reducing CPU consumption. If your bottleneck is IO-related, and data is not already cached ("cold" cache), batch mode on rowstore will NOT improve elapsed time. Similarly, if there is not enough memory on the machine to cache all data, a performance improvement is unlikely.
+> Batch mode on rowstore can only help by reducing CPU consumption. If your bottleneck is IO-related, and data isn't already cached, **cold cache**, batch mode on rowstore won't improve elapsed time. Similarly, if there isn't enough memory on the machine to cache all the data, a performance improvement is unlikely.
 
-### What changes with batch mode on rowstore
+### What changes with batch mode on rowstore?
 
-Other than moving to compatibility level 150, you don't have to change anything on your side in order to enable batch mode on rowstore for candidate workloads.
+Other than moving to compatibility level 150, you don't have to change anything on your side to enable batch mode on rowstore for candidate workloads.
 
-Even if a query does not involve any table with a columnstore index, the query processor now uses heuristics to decide whether to consider batch mode. The heuristics consist of:
+Even if a query doesn't involve any table with a columnstore index, the query processor now uses heuristics to decide whether to consider batch mode. The heuristics consist of these checks:
 1. An initial check of table sizes, operators used, and estimated cardinalities in the input query.
-2. Additional checkpoints, as the optimizer discovers new, cheaper plans for the query. If these alternative plans do not make significant use of batch mode, the optimizer will stop exploring batch mode alternatives.
+2. Additional checkpoints, as the optimizer discovers new, cheaper plans for the query. If these alternative plans don't make significant use of batch mode, the optimizer stops exploring batch mode alternatives.
 
-If batch mode on rowstore is used, in the query execution plan you will see the actual execution mode as "batch mode" used by the scan operator for on-disk heaps and B-tree indexes.  This batch mode scan  can evaluate batch mode bitmap filters.  You may also see other batch mode operators in the plan, such as hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
+If batch mode on rowstore is used, in the query run plan, you see the actual run mode as **batch mode**. It's used by the scan operator for on-disk heaps and B-tree indexes. This batch mode scan can evaluate batch mode bitmap filters. You might also see other batch mode operators in the plan. Examples are hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
 
 ### Remarks
 
-1. There is no guarantee that query plans will use batch mode. The query optimizer may decide that batch mode does not look beneficial for the query. 
-2. As the query optimizer's search space is changing, there is no guarantee that if you get a row mode plan, it will be the same as the plan you get in a lower compatibility level. There is also no guarantee that if you get a batch mode plan, it will be the same as the plan you'd get with a columnstore index. 
-3. Plans may also change in subtle ways for queries that mix columnstore and rowstore indexes, because of the new batch mode rowstore scan.
-4. Current limitations for the new batch mode on rowstore scan: It will not kick in for in-memory OLTP tables, or for any index other than on-disk heaps and B-trees. It will also not kick in if a LOB column is fetched or filtered. This limitation includes sparse column sets, and XML columns.
+1. Query plans don't always use batch mode. The query optimizer might decide that batch mode isn't beneficial for the query. 
+2. The query optimizer's search space is changing. So if you get a row mode plan, it might not be the same as the plan you get in a lower compatibility level. And if you get a batch mode plan, it might not be the same as the plan you get with a columnstore index. 
+3. Plans might also change for queries that mix columnstore and rowstore indexes because of the new batch mode rowstore scan.
+4. These are current limitations for the new batch mode on rowstore scan: 
+ * It doesn't kick in for in-memory OLTP tables, or for any index other than on-disk heaps and B-trees. 
+  * It will also not kick in if a LOB column is fetched or filtered. This limitation includes sparse column sets, and XML columns.
 5. There are queries for which batch mode is not used even with columnstore indexes (for example queries involving cursors), and these same exclusions extend to batch mode on rowstore as well.
 
 ### Configuring batch mode on rowstore

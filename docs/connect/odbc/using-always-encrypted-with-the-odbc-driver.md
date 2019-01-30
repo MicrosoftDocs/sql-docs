@@ -411,6 +411,7 @@ Setting the `SQL_COPT_SS_CEKEYSTOREPROVIDER` connection attribute enables a clie
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -445,6 +446,7 @@ Getting this connection attribute enables a client application to determine the 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -471,6 +473,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | Argument | Description |
 |:---|:---|
 |`name`|[Input] Upon Set, the name of the provider to which the data is sent. Ignored upon Get. Null-terminated, wide-character string.|
@@ -483,6 +486,7 @@ A `SQLSetConnectAttr` call using the `SQL_COPT_SS_CEKEYSTOREDATA` attribute writ
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`| [Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -502,6 +506,7 @@ A call to `SQLGetConnectAttr` using the `SQL_COPT_SS_CEKEYSTOREDATA` attribute r
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|

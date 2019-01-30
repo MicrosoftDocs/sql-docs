@@ -11,11 +11,11 @@ ms.topic: reference
 ms.author: "v-beaziz"
 author: bazizi
 ---
+# Universal Data Link (UDL) Configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-# Universal Data Link (UDL) Configuration
 ## Connection Tab
 Use the Connection tab to specify how to connect to your data using the Microsoft OLE DB Driver for SQL Server.
 

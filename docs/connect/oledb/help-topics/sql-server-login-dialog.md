@@ -11,11 +11,11 @@ ms.topic: reference
 ms.author: "v-beaziz"
 author: bazizi
 ---
+# SQL Server Login Dialog Box (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-# SQL Server Login Dialog Box (OLE DB)
 When you attempt to connect without specifying enough information for the driver to connect, the OLE DB driver displays the **SQL Server Login** dialog box.
 
 > [!NOTE]  

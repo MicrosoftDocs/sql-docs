@@ -62,7 +62,7 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 -   Before failing over an AG, verify that the synchronization state of the failover target is SYNCHRONIZED.  
 
-  > [WARNING]
+  > [!WARNING]
   > Installing a new instance or new version of SQL Server to a server that has an older version of SQL Server installed  may inadvertently **cause an outage for any availability group that is hosted by the older version of SQL Server.** This is because during the installation of the instance or version of SQL Server, the SQL Server high availability module (RHS.EXE) gets upgraded. This results in a temporary interruption of your existing availability groups in the primary role on the server. Therefore, it is highly recommended that you do one of the following when installing a newer version of SQL Server to a system already hosting an older version of SQL Server with an availability group:
   > - Install the new version of SQL Server during a maintenance window. 
   > - Failover the availability group to the secondary replica so it is not primary during the installation of the new SQL Server instance. 

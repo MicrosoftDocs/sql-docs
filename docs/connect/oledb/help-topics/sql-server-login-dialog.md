@@ -62,7 +62,7 @@ Specifies the new password.
 Specifies the new password a second time, for confirmation.
 
 ### Database
-Specifies the default database to use on the connection. This setting overrides the default database specified for the login on the server. If no database is specified, the connection uses the default database specified for the login on the server.
+Select or type the default database to use on the connection. This setting overrides the default database specified for the login on the server. If no database is specified, the connection uses the default database specified for the login on the server.
 
 ### Mirror Server
 Specifies the name of the failover partner of the database to be mirrored.

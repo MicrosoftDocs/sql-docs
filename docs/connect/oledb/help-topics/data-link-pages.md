@@ -34,8 +34,8 @@ The Connection tab is provider-specific and displays only the connection propert
 |Allow saving password|Allows the password to be saved with the connection string. Whether the password is included in the connection string depends on the functionality of the calling application. <br/><br/>**NOTE:** If saved, the password is returned and saved unmasked and unencrypted.|
 |Use strong encryption for data|When checked, data that is passed through the connection will be encrypted.|
 |Trust server certificate|When checked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.|
-|Select the database|Type the database name that you want to access.|
-|Attach a database file as a database name|Attach an SQL database file as a database name. Type the database name to use for the attached SQL database file.<br/><br/>For SQL Server versions 6.5 and earlier, type the database file name to attach. Then type the name of the single-file database file. To browse for the file, click the button.|
+|Select the database|Select or type the database name that you want to access.|
+|Attach a database file as a database name|Attach an SQL database file as a database name. Type the database name to use for the attached SQL database file.|
 |Change Password|Displays Change SQL Server Password dialog. |
 |Test Connection|Click to attempt a connection to the specified data source. If the connection fails, ensure that the settings are correct. For example, spelling errors and case sensitivity can cause failed connections.|
 

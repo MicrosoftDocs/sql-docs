@@ -35,7 +35,7 @@ The Connection tab is provider-specific and displays only the connection propert
 |Use strong encryption for data|When checked, data that is passed through the connection will be encrypted.|
 |Trust server certificate|When checked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.|
 |Select the database|Select or type the database name that you want to access.|
-|Attach a database file as a database name|Attach an SQL database file as a database name. Type the database name to use for the attached SQL database file.|
+|Attach a database file as a database name|Specifies the name of the primary file for an attachable database. This database is attached and used as the default database for the data source. In the first textbox under this section, type the database name to use for the attached database file.<br/><br/>Type the full path to the database file to be attached in text box labeled `Using the filename`, or click on the `...` button to browse for the database file.|
 |Change Password|Displays Change SQL Server Password dialog. |
 |Test Connection|Click to attempt a connection to the specified data source. If the connection fails, ensure that the settings are correct. For example, spelling errors and case sensitivity can cause failed connections.|
 

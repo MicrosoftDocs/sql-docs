@@ -1,7 +1,7 @@
 ---
 title: "Connecting using Azure Active Directory Authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/21/2019"
+ms.date: "01/29/2019"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,39 +16,99 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article provides information on how to develop Java applications to use the Azure Active Directory authentication feature with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.
+This article provides information on how to develop Java applications to use the Azure Active Directory authentication feature with Microsoft JDBC Driver for SQL Server.
 
 You can use Azure Active Directory (AAD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL DB. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
-Two new connection properties have been added to support Azure Active Directory Authentication:
-*	**authentication**:  Use this property to indicate which SQL authentication method to use for connection. Possible values are: **ActiveDirectoryIntegrated**, **ActiveDirectoryPassword**, **SqlPassword**, and the default **NotSpecified**.
-	* Use 'authentication=ActiveDirectoryIntegrated' to connect to a SQL Database using integrated Windows authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation
-Services (ADFS) with AAD in the cloud. Once this is set up as well as a Kerberos ticket, you can access Azure SQL DB without being prompted for credentials when you're logged in a domain joined machine. 
-	* Use 'authentication=ActiveDirectoryPassword' to connect to a SQL Database using an Azure AD principal name and password.
-	* Use 'authentication=SqlPassword' to connect to a SQL Server using userName/user and password properties.
-	* Use 'authentication=NotSpecified' or leave it as default when none of these authentication methods are needed.
+Connection properties to support Azure Active Directory Authentication in Microsoft JDBC Driver for SQL Server are as under:
+*	**authentication**:  Use this property to indicate which SQL authentication method to use for connection. 
+Possible values are: 
+    * **ActiveDirectoryMSI**
+        * Supported since driver version **v7.2**, `authentication=ActiveDirectoryMSI` can be used to connect to an Azure SQL Database/Data Warehouse from inside of an Azure Resource with "Identity" support enabled. Optionally, **msiClientId** can also be specified in Connection/DataSource properties along with this authentication mode, which must contain Client ID of Managed Service Identity to be used to acquire **accessToken** for establishing connection.
+    * **ActiveDirectoryIntegrated**
+        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Data Warehouse using integrated authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it is set up, you can connect by either adding native library 'sqljdbc_auth.dll' to application class path on Windows OS, or setting up a Kerberos ticket for cross-platform authentication support. You will be able to access Azure SQL DB/DW without being prompted for credentials when you're logged in a domain joined machine.
+    * **ActiveDirectoryPassword**
+        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD principal name and password.
+    * **SqlPassword**
+        * Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
+    * **NotSpecified**
+        * Use `authentication=NotSpecified` or leave it as default when none of these authentication methods are needed.
 
-*	**accessToken**: Use this property to connect to a SQL database using an access token. accessToken can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection URL.  
+*	**accessToken**: Use this connection property to connect to a SQL Database using an access token. accessToken can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It cannot be used in the connection URL.  
 
 For more information, see the authentication property on the [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) page.  
 
 
 ## Client Setup Requirements
-Please make sure that the following components are installed on the client machine:
+For **ActiveDirectoryMSI** authentication, below components must be installed on the client machine:
+* Java 8 or above
+* Microsoft JDBC Driver 7.2 (or higher) for SQL Server
+* Client Environment must be an Azure Resource and must have "Identity" feature support enabled.
+* A contained database user representing your Azure Resource's System Assigned Managed Identity or User Assigned Managed Identity, or one of the groups, your MSI belong to, must exist in the target database, and must have the CONNECT permission.
+
+For other authentication modes, below components must be installed on the client machine:
 * Java 7 or above
-*	Microsoft JDBC Driver 6.0 (or higher) for SQL Server
-*	If you're using the access token-based authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. For more information, see **Connecting using Access Token** section.
-*	If you're using the ActiveDirectoryPassword authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see **Connecting using ActiveDirectoryPassword Authentication Mode** section.
-*	If you're using the ActiveDirectoryIntegrated mode, you need azure-activedirectory-library-for-java and its dependencies. For more information, see **Connecting using ActiveDirectoryIntegrated Authentication Mode** section.
-	
+* Microsoft JDBC Driver 6.0 (or higher) for SQL Server
+* If you're using the access token-based authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. For more information, see **Connecting using Access Token** section.
+* If you're using the **ActiveDirectoryPassword** authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see **Connecting using ActiveDirectoryPassword Authentication Mode** section.
+* If you're using the **ActiveDirectoryIntegrated** mode, you need azure-activedirectory-library-for-java and its dependencies. For more information, see **Connecting using ActiveDirectoryIntegrated Authentication Mode** section.
+
+## Connecting using ActiveDirectoryMSI Authentication Mode
+The following example shows how to use `authentication=ActiveDirectoryMSI` mode. Run this example from inside an Azure Resource, e,g an Azure Virtual Machine, App Service, or a Function App that is federated with Azure Active Directory.
+
+Replace the server/database name with your server/database name in the following lines before executing the example:
+
+```java
+ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+ds.setDatabaseName("demo"); // replace with your database name
+//Optional
+ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+```
+
+The example to use ActiveDirectoryMSI authentication mode:
+
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AAD_MSI {
+    public static void main(String[] args) throws Exception {
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database name
+        ds.setAuthentication("ActiveDirectoryMSI");
+        // Optional
+        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+
+Running this example on an Azure Virtual Machine fetches access token from _System Assigned Managed Identity_ or _User Assigned Managed Identity_ (if **msiClientId** is specified) and establishes a connection using fetched access token. If a connection is established, you should see the following message:
+
+```bash
+You have successfully logged on as: <your MSI username>
+```
+
 ## Connecting using ActiveDirectoryIntegrated Authentication Mode
- With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrated Authentication using a Kerberos ticket on multiple platforms (Windows/Linux and Mac).
+With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrated Authentication using a Kerberos ticket on multiple platforms (Windows, Linux, and macOS).
 For more information, see [Set Kerberos ticket on Windows, Linux And Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) for more details. Alternatively, on Windows, sqljdbc_auth.dll can also be used for ActiveDirectoryIntegrated Authentication with JDBC Driver.
 
 > [!NOTE]
 >  If you are using an older version of the driver, check this [link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 
 
-The following example shows how to use 'authentication=ActiveDirectoryIntegrated' mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups, you belong to, must exist in the database, and must have the CONNECT permission. 
+The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups, you belong to, must exist in the database, and must have the CONNECT permission. 
 
 Before building and running the example, on the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
 
@@ -76,9 +136,8 @@ public class AADIntegrated {
         ds.setAuthentication("ActiveDirectoryIntegrated");
 
         try (Connection connection = ds.getConnection(); 
-                Statement stmt = connection.createStatement();) {
-            
-            ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()");
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
             if (rs.next()) {
                 System.out.println("You have successfully logged on as: " + rs.getString(1));
             }
@@ -86,7 +145,9 @@ public class AADIntegrated {
     }
 }
 ```
+
 Running this example on a client machine automatically uses your Kerberos ticket and no password is required. If a connection is established, you should see the following message:
+
 ```
 You have successfully logged on as: <your domain user name>
 ```
@@ -149,7 +210,7 @@ Access to a Windows domain-joined machine to query your Kerberos Domain Controll
   - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 ## Connecting using ActiveDirectoryPassword Authentication Mode
-The following example shows how to use 'authentication=ActiveDirectoryPassword' mode.
+The following example shows how to use `authentication=ActiveDirectoryPassword` mode.
 
 Before building and running the example:
 1.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
@@ -184,9 +245,8 @@ public class AADUserPassword {
         ds.setAuthentication("ActiveDirectoryPassword");
         
         try (Connection connection = ds.getConnection(); 
-                Statement stmt = connection.createStatement();) {
-            
-            ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()");
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
             if (rs.next()) {
                 System.out.println("You have successfully logged on as: " + rs.getString(1));
             }
@@ -203,12 +263,12 @@ You have successfully logged on as: <your user name>
 > A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
 
 ## Connecting using Access Token
-Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to SQL Azure Database.
+Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Data Warehouse.
 
 > [!NOTE] 
 > **accessToken** can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection string.
 
-The example below contains a simple Java application that connects to Azure SQL Database using access token-based authentication. Before building and running the example, perform the following steps:
+The example below contains a simple Java application that connects to Azure SQL Database/Data Warehouse using access token-based authentication. Before building and running the example, perform the following steps:
 1.	Create an application account in Azure Active Directory for your service.
 	1. Sign in to the Azure portal.
 	2. Click on Azure Active Directory in the left-hand navigation.
@@ -274,9 +334,8 @@ public class AADTokenBased {
         ds.setAccessToken(accessToken);
 
         try (Connection connection = ds.getConnection(); 
-                Statement stmt = connection.createStatement();) {
-
-            ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()");
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
             if (rs.next()) {
                 System.out.println("You have successfully logged on as: " + rs.getString(1));
             }
@@ -286,7 +345,8 @@ public class AADTokenBased {
 ``` 
 
 If the connection is successful, you should see the following message as output:
-```java
+
+```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>	
 ``` 

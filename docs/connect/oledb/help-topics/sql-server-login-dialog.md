@@ -11,9 +11,9 @@ ms.topic: reference
 ms.author: "v-beaziz"
 author: bazizi
 ---
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 # SQL Server Login Dialog Box (OLE DB)
 When you attempt to connect without specifying enough information for the driver to connect, the OLE DB driver displays the **SQL Server Login** dialog box.
@@ -21,7 +21,7 @@ When you attempt to connect without specifying enough information for the driver
 > [!NOTE]  
 > SQL Server Login Dialog can be suppressed by setting `DBPROP_INIT_PROMPT` property of the `DBPROPSET_DBINIT` property set to `NO_PROMPT`. For more information about other possible options please view [this](https://technet.microsoft.com/en-ca/ms714342(v=vs.80)) documentation page.
 
-![Screenshot of SQL Server Login Dialog Box](./media/sql-server-login-dialog.png)
+![Screenshot of SQL Server Login Dialog Box](../media/sql-server-login-dialog.png)
 
 ## Options
 

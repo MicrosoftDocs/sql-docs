@@ -19,6 +19,6 @@
 - name: Help Topics
   items:
     - name: SQL Server Login Dialog
-      href: sql-server-login-dialog.md
+      href: ./help-topics/sql-server-login-dialog.md
     - name: Universal Data Link (UDL) Configuration
-      href: data-link-pages.md
+      href: ./help-topics/data-link-pages.md

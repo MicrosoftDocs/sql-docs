@@ -1,5 +1,5 @@
 ---
-title: "Retrieve Date and Time Type as Strings Using the SQLSRV Driver | Microsoft Docs"
+title: "Retrieve Date and Time Types as Strings Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/11/2019"
 ms.prod: sql
@@ -29,7 +29,7 @@ You can retrieve date and time types (**datetime**, **date**, **time**, **dateti
     'ReturnDatesAsStrings'=>true
     ```
 
-    The default is **false**, which means that **datetime**, **Date**, **Time**, **DateTime2**, and **DateTimeOffset** types will be returned as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects.
+    The default is **false**, which means that **smalldatetime**, **datetime**, **Date**, **Time**, **DateTime2**, and **DateTimeOffset** types will be returned as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects.
 
 ## Example
 The following example shows the syntax specifying to retrieve date and time types as strings.

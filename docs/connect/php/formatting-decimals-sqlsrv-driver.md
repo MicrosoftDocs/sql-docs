@@ -18,7 +18,7 @@ manager: "mbarwin"
 To preserve accuracy, [decimal or numeric types](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) are always fetched as strings with exact precisions and scales. If any value is less than 1, the leading zero is missing. It is the same with money and smallmoney fields as they are decimal fields with a fixed scale equal to 4.
 
 ## Add leading zeroes if missing
-Beginning with version 5.6.0, the option `FormatDecimals` is added to sqlsrv connection and statement levels, which allows the user to format decimal strings. This option expects a boolean value (true or false) and only affects the decimal or numeric types of the fetched results. In other words, the `FormatDecimals` option has no effect on other operations like insertion or update.
+Beginning with version 5.6.0, the option `FormatDecimals` is added to sqlsrv connection and statement levels, which allows the user to format decimal strings. This option expects a boolean value (true or false) and only affects the formatting of decimal or numeric values in the fetched results. In other words, the `FormatDecimals` option has no effect on other operations like insertion or update.
 
 By default, `FormatDecimals` is **false**. If set to true, the leading zeroes to decimal strings will be added for any decimal value less than 1.
 
@@ -62,7 +62,7 @@ sqlsrv_close($conn);
 ```
 
 ## Example
-If a decimal or numeric field is returned as the [output parameter](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), the returned value will be regarded as a regular varchar string. However, if either SQLSRV_SQLTYPE_DECIMAL or SQLSRV_SQLTYPE_NUMERIC is specified, you can set `FormatDecimals` to true to ensure there is no missing leading zeroes for the numerical string value. For more information, please read [How to: Retrieve Output Parameters Using the SQLSRV Driver](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+If a decimal or numeric field is returned as the [output parameter](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), the returned value will be regarded as a regular varchar string. However, if either SQLSRV_SQLTYPE_DECIMAL or SQLSRV_SQLTYPE_NUMERIC is specified, you can set `FormatDecimals` to true to ensure there is no missing leading zero for the numerical string value. For more information, please read [How to: Retrieve Output Parameters Using the SQLSRV Driver](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
 The following example shows how to format the output parameter of a stored procedure that returns a decimal(8,4) value.
 

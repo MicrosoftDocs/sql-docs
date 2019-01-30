@@ -1,5 +1,5 @@
 ---
-title: "How to: Retrieve Date and Time Type as PHP DateTime Objects Using the PDO_SQLSRV Driver | Microsoft Docs"
+title: "How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/11/2019"
 ms.prod: sql
@@ -19,7 +19,7 @@ This feature, added in version 5.6.0, is only valid when using the PDO_SQLSRV dr
 
 ### To retrieve date and time types as DateTime objects
 
-When using PDO_SQLSRV, date and time types (**datetime**, **date**, **time**, **datetime2**, and **datetimeoffset**) are by default returned as strings. Neither PDO::ATTR_STRINGIFY_FETCHES nor PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE attribute has
+When using PDO_SQLSRV, date and time types (**smalldatetime**, **datetime**, **date**, **time**, **datetime2**, and **datetimeoffset**) are by default returned as strings. Neither PDO::ATTR_STRINGIFY_FETCHES nor PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE attribute has
 any effect. In order to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects, set the connection or statement attribute `PDO_STMT_OPTION_FETCHES_DATETIME_TYPE` to **true** (it is **false** by default).
 
 > [!NOTE]

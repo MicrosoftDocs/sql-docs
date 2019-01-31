@@ -149,10 +149,10 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetDelay \<= CrossSubnetDelay 
   
  | Timeout setting | Purpose | Between | Uses | IsAlive & LooksAlive | Causes | Outcome 
- | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ 
- | Lease timeout </br> Default: 20000 | Prevent splitbrain | Primary to Cluster </br> HADR | [Windows event objects](/windows/desktop/Sync/event-objects)| Used in both | OS hang, low virtual memory, generating dump, pegged CPU, WSFC down (loss of quorum) | AG resource offline-online, failover |  
- | Session timeout </br> Default: 10000 | To inform of lack of communication | Secondary to Primary </br> HADR | [TCP Sockets (messages sent via DBM endpoint)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Used in neither | Network communication, </br> Issues on secondary - down, OS hang, resource contention | Secondary - DISCONNECTED | 
- |HealthCheck timeout  </br> Default: 30000 | Get SQL Server / AG going again | Cluster to Primary </br> FCI & HADR | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, OS hang, low virtual memory, working set trim, generating dump, WSFC (loss of quroum), scheduler issues (dead locked schedulers)| AG resouce Offline-oline or Failover, FCI restart/failover |  
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | Lease timeout </br> **Default: 20000** | Prevent splitbrain | Primary to Cluster </br> (HADR) | [Windows event objects](/windows/desktop/Sync/event-objects)| Used in both | OS hang, low virtual memory, generating dump, pegged CPU, WSFC down (loss of quorum) | AG resource offline-online, failover |  
+ | Session timeout </br> **Default: 10000** | To inform of lack of communication | Secondary to Primary </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Used in neither | Network communication, </br> Issues on secondary - down, OS hang, resource contention | Secondary - DISCONNECTED | 
+ |HealthCheck timeout  </br> **Default: 30000** | Get SQL Server / AG going again | Cluster to Primary </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, OS hang, low virtual memory, working set trim, generating dump, WSFC (loss of quroum), scheduler issues (dead locked schedulers)| AG resouce Offline-oline or Failover, FCI restart/failover |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## See Also    

@@ -27,7 +27,8 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Note: This applies only to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
+> [!NOTE]
+> This applies only to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
   
  Returns information about the network bandwidth used by each database in a **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 database server**, . Each row returned for a given database summarizes a single direction and class of usage over a one-hour period.  
   

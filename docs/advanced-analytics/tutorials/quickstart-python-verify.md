@@ -40,7 +40,7 @@ You can confirm that Machine Learning Services (is enabled for your SQL Server i
     EXECUTE sp_execute_external_script
     @language =N'Python',
     @script=N'import sys
-	print(sys.version)';
+    print(sys.version)';
     GO
     ```
 

@@ -29,17 +29,17 @@ Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnover
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(***n***)**|**char(n)**|  
-|**character varying(***n***)**|**varchar(n)**|  
+|**character(**_n_**)**|**char(n)**|  
+|**character varying(**_n_**)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[**(***n***)**] for *n* = 1-7|**real**|  
-|**float**[**(***n***)**] for *n* = 8-15|**float**|  
+|**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
+|**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(***n***)**|**nchar(n)**|  
-|**national char(***n***)**|**nchar(n)**|  
-|**national character varying(***n***)**|**nvarchar(n)**|  
-|**national char varying(***n***)**|**nvarchar(n)**|  
+|**national character(**_n_**)**|**nchar(n)**|  
+|**national char(**_n_**)**|**nchar(n)**|  
+|**national character varying(**_n_**)**|**nvarchar(n)**|  
+|**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   

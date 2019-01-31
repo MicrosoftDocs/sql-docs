@@ -23,12 +23,16 @@ The [User Voice](https://feedback.azure.com/forums/908035-sql-server) is also a 
 
 ## I want to give feedback about SQL Server documentation
 The best way to reach the SQL Server content team is through Git Issues. If you have something to share -  an idea, a suggestion, feedback, anything! You can do so at [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+
+![New Git Issue](media/sql-server-get-help/new-git-issue.png)
+
+
 Additionally, some of our content areas have Git Issues enabled at the bottom of the page. If you need to give feedback on that page, just select the "Content feedback" option: 
 
 ![Git Issue content feedback](media/sql-server-get-help/git-issues.png)
 
 
-The SQL Server content team also frequently solicits survey feedback. If you have some time to spare, please share your experiences with us at [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey). 
+The SQL Server content team also frequently solicits survey feedback. If you have some time to spare, please share your experiences with us at [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey).
 
 
 ## I want to make a suggestion about SQL Server Management Studio

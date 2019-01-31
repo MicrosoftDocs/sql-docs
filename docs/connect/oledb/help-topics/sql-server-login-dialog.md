@@ -16,12 +16,12 @@ author: bazizi
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-When you attempt to connect without specifying enough information for the driver to connect, the OLE DB driver displays the **SQL Server Login** dialog box.
+When you attempt to connect without specifying enough information, the OLE DB driver displays the **SQL Server Login** dialog box.
 
 > [!NOTE]  
 > SQL Server Login Dialog prompting behavior is controlled by the `DBPROP_INIT_PROMPT` initialization property. For more information, see:
-> - [Initialization and Authorization Properties](https://docs.microsoft.com/sql/connect/oledb/ole-db-data-source-objects/initialization-and-authorization-properties)
-> - [OLE DB Programmer's Guide](https://docs.microsoft.com/previous-versions/windows/desktop/ms714342(v=vs.85))
+> - [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties)
+> - [OLE DB Programmer's Guide](https://go.microsoft.com/fwlink/?linkid=2067702&clcid=0x409)
 
 ![Screenshot of SQL Server Login Dialog Box](../media/sql-server-login-dialog.png)
 
@@ -32,7 +32,7 @@ The name of an instance of SQL Server on your network. Select a server\instance 
 
 You can enter "(local)" when you are using the same computer as SQL Server. You can then connect to a local instance of SQL Server, even when running a non-networked version of SQL Server.
 
-For more information about server names for different types of networks, see [SQL Server installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server).
+For more information about server names for different types of networks, see [SQL Server Installation](https://go.microsoft.com/fwlink/?linkid=2067541&clcid=0x409).
 
 ### Authentication Mode
 You can select the following authentication options from the drop-down list:
@@ -88,4 +88,4 @@ When checked, data that is passed through the connection will be encrypted.
 When checked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.
 
 > [!NOTE]  
-> When using `Windows Authentication` or `SQL Server Authentication`, `Trust server certificate` is considered only when the `Use strong encryption for data` option is enabled.
+> When using `Windows Authentication` or `SQL Server Authentication` modes, **Trust server certificate** is considered only when the **Use strong encryption for data** option is enabled.

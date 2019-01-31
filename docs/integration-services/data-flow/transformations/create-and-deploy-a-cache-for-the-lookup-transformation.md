@@ -88,7 +88,7 @@ ms.author: chugu
   
 5.  Deploy the package to the file system. For more information, see [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
-## See Also  
+## See also  
  [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

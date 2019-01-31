@@ -281,7 +281,7 @@ Stop a running package from the **Running Packages** folder by right-clicking th
 ### Packages Stored in the File System  
  The backup of packages that are saved to the file system should be included in the plan for backing up the file system of the server. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service configuration file, which has the default name MsDtsSrvr.ini.xml, lists the folders on the server that the service monitors. You should make sure these folders are backed up. Additionally, packages may be stored in other folders on the server and you should make sure to include these folders in the backup.  
 
-## See Also  
+## See also  
  [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

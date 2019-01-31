@@ -50,7 +50,7 @@ ms.author: chugu
   
      For more information about using the CDC splitter see CDC Components for Microsoft SQL Server Integration Services.  
   
-## See Also  
+## See also  
  [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
   
   

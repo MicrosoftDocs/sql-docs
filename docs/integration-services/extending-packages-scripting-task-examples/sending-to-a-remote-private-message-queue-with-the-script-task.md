@@ -100,7 +100,7 @@ public class ScriptMain
 }  
 ```  
   
-## See Also  
+## See also  
  [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  
   
   

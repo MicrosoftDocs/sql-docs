@@ -115,7 +115,7 @@ ms.author: chugu
   
  For information about these properties and how to edit them, see [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
-## See Also  
+## See also  
  [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [How to View the CDC Instance Properties](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [How to Edit the CDC Instance Properties](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   

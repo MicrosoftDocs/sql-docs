@@ -44,7 +44,7 @@ ms.author: chugu
   
  If you select this option, the **Create InfoSource for Master Data** dialog box opens. You use the **Create InfoSource for Master Data** dialog box to create the new InfoSource. For more information about this dialog box, see [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).  
   
-## See Also  
+## See also  
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

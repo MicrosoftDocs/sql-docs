@@ -90,7 +90,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Working with the Oracle CDC Service](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## See Also  
+## See also  
  [How to Manage a Local CDC Service](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
  [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   

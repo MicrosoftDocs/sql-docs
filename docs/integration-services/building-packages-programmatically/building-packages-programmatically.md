@@ -93,7 +93,7 @@ ms.author: chugu
   
 -   Blog entry, [Performance profiling your custom extensions](https://go.microsoft.com/fwlink/?LinkId=238831), on blogs.msdn.com.  
 
-## See Also  
+## See also  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

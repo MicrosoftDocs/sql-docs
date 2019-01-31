@@ -321,7 +321,7 @@ ms.author: chugu
  **XmlSchemaCollectionsList**  
  Click to open the **Select XML Schema Collections** dialog box.  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Transfer SQL Server Objects Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   

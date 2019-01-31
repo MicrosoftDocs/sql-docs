@@ -26,7 +26,7 @@ ms.author: chugu
   
  Click **Next** to open the [Finish](../../integration-services/change-data-capture/finish.md) page.  
   
-## See Also  
+## See also  
  [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   

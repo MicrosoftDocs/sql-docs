@@ -112,7 +112,7 @@ ms.author: chugu
   
 -   [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
-## See Also  
+## See also  
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

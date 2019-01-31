@@ -48,7 +48,7 @@ ms.author: chugu
   
 11. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [ODBC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
  [ODBC Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
  [ODBC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  

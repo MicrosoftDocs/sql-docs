@@ -277,7 +277,7 @@ ms.author: chugu
   
 9. Run the package.  
   
-## See Also  
+## See also  
  [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

@@ -55,7 +55,7 @@ ms.author: chugu
   
 -   Right-click an object and then click **Delete**. 
  
-## See Also  
+## See also  
  [Integration Services Tasks](../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services Containers](../integration-services/control-flow/integration-services-containers.md)   
  [Precedence Constraints](../integration-services/control-flow/precedence-constraints.md)   

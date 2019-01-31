@@ -50,7 +50,7 @@ ms.author: chugu
  **Properties**  
  All output properties listed are read-only except **Name** and **Description**.  
   
-## See Also  
+## See also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

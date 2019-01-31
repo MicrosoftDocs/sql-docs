@@ -293,7 +293,7 @@ ms.author: chugu
  Create a new variable.  
   
  **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
-## See Also  
+## See also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
   

@@ -79,7 +79,7 @@ ms.author: chugu
   
 13. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
-## See Also  
+## See also  
  [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

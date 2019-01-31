@@ -253,7 +253,7 @@ ms.author: chugu
 ## Related Content  
  Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
   
-## See Also  
+## See also  
  [Data in Data Flows](../../integration-services/data-flow/data-in-data-flows.md)  
   
   

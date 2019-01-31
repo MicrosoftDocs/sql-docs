@@ -174,7 +174,7 @@ ms.author: chugu
  **Token delimiters**  
  The transformation provides a default set of delimiters for tokenizing data, but you can add or remove delimiters as needed by editing the list.  
   
-## See Also  
+## See also  
  [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

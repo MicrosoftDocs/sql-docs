@@ -186,7 +186,7 @@ Public Overrides  Sub CloseLog()
 End Sub  
 ```  
  
-## See Also  
+## See also  
  [Creating a Custom Log Provider](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
  [Developing a User Interface for a Custom Log Provider](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   

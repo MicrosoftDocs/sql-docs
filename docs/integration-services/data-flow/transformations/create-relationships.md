@@ -46,7 +46,7 @@ ms.author: chugu
  **Similarity Output Alias**  
  Specify the name for a new output column that contains the similarity scores for the selected column. If you leave this value empty, the output column is not created.  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Fuzzy Lookup Transformation Editor &#40;Columns Tab&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Lookup Transformation Editor &#40;Columns Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   

@@ -34,7 +34,7 @@ ms.author: chugu
 |LobChunckSize|Integer|The chunk size allocation for LOB columns.|  
 ||||  
   
-## See Also  
+## See also  
  [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
  [ODBC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   

@@ -100,7 +100,7 @@ ListPrice >= 500
 @LPrice >= 500  
 ```  
   
-## See Also  
+## See also  
  [&#62; &#40;Greater Than&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
  [&#60; &#40;Less Than&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#60;= &#40;Less Than or Equal To&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   

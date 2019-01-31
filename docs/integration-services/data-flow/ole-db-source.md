@@ -223,7 +223,7 @@ ms.author: chugu
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
+## See also  
  [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  

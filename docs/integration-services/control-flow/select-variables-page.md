@@ -35,7 +35,7 @@ ms.author: chugu
  **Type**  
  Specifies the data type of a variable.  
   
-## See Also  
+## See also  
  [Script Task Editor &#40;Script Page&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

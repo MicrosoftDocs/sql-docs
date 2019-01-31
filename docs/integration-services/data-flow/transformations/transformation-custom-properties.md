@@ -624,7 +624,7 @@ ms.author: chugu
   
  For more information, see [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## See Also  
+## See also  
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [Path Properties](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   

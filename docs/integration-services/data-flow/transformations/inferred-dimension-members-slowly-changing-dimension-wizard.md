@@ -35,7 +35,7 @@ ms.author: chugu
  **Inferred member indicator**  
  If you have chosen to use a Boolean column to indicate inferred members as described above, select the column from the list.  
   
-## See Also  
+## See also  
  [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

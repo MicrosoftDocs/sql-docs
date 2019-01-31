@@ -50,7 +50,7 @@ ms.author: chugu
   
  For more information, see [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
-## See Also  
+## See also  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

@@ -78,7 +78,7 @@ ms.author: chugu
  **Iobject - Remove**  
  Remove the association between the InfoObject and the data flow column for the current row. To remove this association, click **Remove**.  
   
-## See Also  
+## See also  
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

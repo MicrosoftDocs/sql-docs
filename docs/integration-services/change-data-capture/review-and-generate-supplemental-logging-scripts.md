@@ -51,7 +51,7 @@ ms.author: chugu
   
 2.  Give the file a name and click **Save** to save the file.  
   
-## See Also  
+## See also  
  [How to Edit the CDC Instance Properties](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   

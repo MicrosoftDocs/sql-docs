@@ -196,7 +196,7 @@ Failure to put in the security items will result in the job failing and an error
     > [!TIP]  
     >  When you name the schedule, consider using a name that is unique and descriptive so you can more easily distinguish the schedule from other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent schedules.  
 
-## See Also  
+## See also  
  [Execution of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
 
 ## External Resources  

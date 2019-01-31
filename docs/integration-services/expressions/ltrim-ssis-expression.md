@@ -62,7 +62,7 @@ LTRIM(FirstName)
 LTRIM(@FirstName)  
 ```  
   
-## See Also  
+## See also  
  [RTRIM &#40;SSIS Expression&#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
  [TRIM &#40;SSIS Expression&#41;](../../integration-services/expressions/trim-ssis-expression.md)   
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

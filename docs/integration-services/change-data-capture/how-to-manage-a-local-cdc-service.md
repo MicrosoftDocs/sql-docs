@@ -54,7 +54,7 @@ ms.author: chugu
   
          You can also right-click the CDC service where you want to edit the properties and select **Properties**.  
   
-## See Also  
+## See also  
  [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

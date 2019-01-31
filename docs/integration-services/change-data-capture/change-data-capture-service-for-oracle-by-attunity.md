@@ -78,7 +78,7 @@ The Microsoft Change Data Capture Designer and Service for Oracle by Attunity fo
   
 -   [Change Data Capture Service for Oracle by Attunity How to Guide](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## See Also  
+## See also  
  [Working with the Oracle CDC Service](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
   

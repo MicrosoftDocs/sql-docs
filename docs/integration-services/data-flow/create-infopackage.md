@@ -55,7 +55,7 @@ ms.author: chugu
  **Save & Activate**  
  Save and activate the new InfoPackage.  
   
-## See Also  
+## See also  
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

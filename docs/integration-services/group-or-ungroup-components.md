@@ -57,7 +57,7 @@ ms.author: chugu
   
 5.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [Add or Delete a Task or a Container in a Control Flow](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Connect Tasks and Containers by Using a Default Precedence Constraint](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   

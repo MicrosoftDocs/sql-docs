@@ -163,7 +163,7 @@ ms.author: chugu
     }  
     ```  
   
-## See Also  
+## See also  
  [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

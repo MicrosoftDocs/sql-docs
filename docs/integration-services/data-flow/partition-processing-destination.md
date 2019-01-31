@@ -176,5 +176,5 @@ ms.author: chugu
  **Browse (...)**  
  Select a path for the error log.  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

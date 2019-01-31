@@ -92,7 +92,7 @@ ms.author: chugu
  **Configure error output**  
  Specify how to handle errors by using the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box.  
   
-## See Also  
+## See also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

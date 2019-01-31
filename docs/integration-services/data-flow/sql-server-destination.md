@@ -197,7 +197,7 @@ ms.author: chugu
  **Order columns**  
  Type the names of the sort columns. Each column can be sorted in ascending or descending order. If you use multiple sort columns, delimit the list with commas.  
   
-## See Also  
+## See also  
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   
   

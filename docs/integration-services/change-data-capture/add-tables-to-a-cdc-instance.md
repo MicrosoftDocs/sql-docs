@@ -45,7 +45,7 @@ ms.author: chugu
 > [!NOTE]  
 >  You can view the list of tables in the viewer. When using the viewer the information is read only. The viewer also includes a list of the captured columns in the table. For information on how to access the viewer, see [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## See Also  
+## See also  
  [How to Edit the CDC Instance Properties](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Select Oracle Tables for Capturing Changes](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  

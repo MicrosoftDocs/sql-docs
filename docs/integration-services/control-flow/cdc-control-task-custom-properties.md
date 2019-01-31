@@ -30,7 +30,7 @@ ms.author: chugu
 |StateTable|String|Specifies the name of the table where the CDC context state is stored. This table must be accessible using the connection configured for this component. This table must include varchar columns called **name** and **state**. (The **state** column must have at least 256 characters).<br /><br /> This property is applicable only when **AutomaticStatePersistence** is set to **true**.|  
 |CommandTimeout|integer|This value indicates the timeout (in seconds) to use when communicating with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This value is used where the response time from the database is very slow and the default value (30 seconds) is not enough.|  
   
-## See Also  
+## See also  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   

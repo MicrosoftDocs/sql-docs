@@ -30,7 +30,7 @@ ms.author: chugu
 |Edit an Oracle CDC Service-login to use for updating the registration of the service in MSXDBCDC.|`db_datareader` and `db_datawriter` roles on MSXDBCDC|  
 |Delete an Oracle CDC Service-login to use for updating the registration of the service in MSXDBCDC.|`db_datareader` and `db_datawriter` roles on MSXDBCDC|  
   
-## See Also  
+## See also  
  [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)   
  [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   

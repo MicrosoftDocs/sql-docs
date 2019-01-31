@@ -83,7 +83,7 @@ Module Module1
 End Module  
 ```
   
-## See Also  
+## See also  
  [Adding Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
   
   

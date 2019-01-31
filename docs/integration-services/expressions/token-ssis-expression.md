@@ -97,7 +97,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## See Also  
+## See also  
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

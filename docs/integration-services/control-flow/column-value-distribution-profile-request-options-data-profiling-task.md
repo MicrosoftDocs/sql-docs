@@ -99,7 +99,7 @@ ms.author: chugu
  **FrequentValueThreshold**  
  Specify the threshold (by using a value between 0 and 1) above which the column value should be reported. This option is disabled when you select **AllValues** as the **ValueDistributionOption**. The default value of this option is 0.001.  
   
-## See Also  
+## See also  
  [Data Profiling Task Editor &#40;General Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

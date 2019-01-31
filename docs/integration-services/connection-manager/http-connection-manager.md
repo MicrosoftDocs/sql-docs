@@ -126,7 +126,7 @@ ms.author: chugu
  **Remove**  
  Select an address, and then remove it by clicking **Remove**.  
   
-## See Also  
+## See also  
  [Web Service Task](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

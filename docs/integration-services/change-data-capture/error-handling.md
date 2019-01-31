@@ -110,7 +110,7 @@ ms.author: chugu
 ### Handling Unexpected Oracle CDC Instance Failures  
  The Oracle CDC Service monitors its CDC Instance subprocesses. When a CDC Instance subprocess aborts, the CDC Service disables it in the MSXDBCDC.dbo.xdbcdc_databases table and updates its cdc.xdbcdc_state status to ABORTED. In this case, the standard Windows Error Reporting dialog box is used to report this error for further analysis.  
   
-## See Also  
+## See also  
  [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [The Oracle CDC Instance](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   

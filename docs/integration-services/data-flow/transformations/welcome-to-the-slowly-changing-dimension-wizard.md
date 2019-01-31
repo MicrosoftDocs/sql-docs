@@ -26,7 +26,7 @@ ms.author: chugu
  **Don't show this page again**  
  Skip the welcome page the next time you open the wizard.  
   
-## See Also  
+## See also  
  [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

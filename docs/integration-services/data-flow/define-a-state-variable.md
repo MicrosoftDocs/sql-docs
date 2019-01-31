@@ -82,7 +82,7 @@ ms.author: chugu
   
  If you are not using the CDC Control task with Automatic State Persistence then you must load the variable value from persistent storage where its value was saved the last time the package ran and to write it back to the persistent storage when the processing of the current processing range was completed.  
   
-## See Also  
+## See also  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   

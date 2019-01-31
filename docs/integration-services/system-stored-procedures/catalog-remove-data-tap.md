@@ -58,7 +58,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 -   The user does not have MODIFY permissions.  
   
-## See Also  
+## See also  
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)   
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   

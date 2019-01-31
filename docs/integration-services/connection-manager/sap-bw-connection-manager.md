@@ -145,7 +145,7 @@ ms.author: chugu
  **Test Connection**  
  Test the connection using the values that you have provided. After clicking **Test Connection**, a message box appears and indicates whether the connection succeeded or failed.  
   
-## See Also  
+## See also  
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

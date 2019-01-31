@@ -63,7 +63,7 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## See Also  
+## See also  
  [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

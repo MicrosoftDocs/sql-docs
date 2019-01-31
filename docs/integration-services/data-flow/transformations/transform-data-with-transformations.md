@@ -56,7 +56,7 @@ ms.author: chugu
   
 -   [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## See Also  
+## See also  
  [Data Flow Task](../../../integration-services/control-flow/data-flow-task.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Connect Components with Paths](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   

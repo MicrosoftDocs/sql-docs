@@ -53,7 +53,7 @@ ms.author: chugu
  **No InfoPackage Start (Only Wait)**  
  Specify that the destination does not trigger an InfoPackage, but just waits for notification that the SAP Netweaver BW system has started loading the data.  
   
-## See Also  
+## See also  
  [SAP BW Destination Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW Destination Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
  [SAP BW Destination Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   

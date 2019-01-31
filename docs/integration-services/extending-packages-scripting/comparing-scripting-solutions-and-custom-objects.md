@@ -33,7 +33,7 @@ ms.author: chugu
   
 -   If the implementation will change over time, consider using a custom object. Custom objects can be developed and deployed separately from the parent package, whereas an update made to a scripting solution requires the redeployment of the whole package.  
   
-## See Also  
+## See also  
  [Extending Packages with Custom Objects](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
   
   

@@ -84,7 +84,7 @@ ms.author: chugu
  **Merge Input 2**  
  Select the column to merge as Merge Input 2.  
   
-## See Also  
+## See also  
  [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   

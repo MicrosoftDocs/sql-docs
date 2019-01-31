@@ -37,7 +37,7 @@ ms.author: chugu
 ### Saving Settings  
  You override the <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI.SaveSettings%2A> method to copy the values selected by the user from the controls to the properties of the enumerator when the user closes the editor.  
   
-## See Also  
+## See also  
  [Creating a Custom Foreach Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
  [Coding a Custom Foreach Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
   

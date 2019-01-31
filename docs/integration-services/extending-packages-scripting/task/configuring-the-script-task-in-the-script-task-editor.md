@@ -57,7 +57,7 @@ ms.author: chugu
 ## Expressions Page of the Script Task Editor  
  On the **Expressions** page of the **Script Task Editor**, you can use expressions to provide values for the properties of the Script task listed above and for many other task properties. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
-## See Also  
+## See also  
  [Coding and Debugging the Script Task](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
   
   

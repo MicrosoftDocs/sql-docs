@@ -140,7 +140,7 @@ ms.author: chugu
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## See Also  
+## See also  
  [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   

@@ -600,7 +600,7 @@ Use the **Select SMO Enumeration** dialog box to specify the [!INCLUDE[ssNoVersi
   
  To avoid negative consequences of nondeterminative timing of parallel execution of tasks in the loop, the package should be configured to run only one executable at a time. For example, if a package can run multiple tasks concurrently, a Foreach Loop container that enumerates files in the folder, retrieves the file names, and then uses an Execute SQL task to insert the file names into a table may incur write conflicts when two instances of the Execute SQL task attempt to write at the same time. For more information, see [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## See Also  
+## See also  
  [Control Flow](../../integration-services/control-flow/control-flow.md)   
  [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)  
   

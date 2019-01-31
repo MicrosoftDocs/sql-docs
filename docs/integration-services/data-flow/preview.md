@@ -49,7 +49,7 @@ ms.author: chugu
   
  There are no other options in this dialog box.  
   
-## See Also  
+## See also  
  [SAP BW Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

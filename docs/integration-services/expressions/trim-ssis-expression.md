@@ -57,7 +57,7 @@ TRIM("   New York   ")
 TRIM(FirstName + " "+ LastName)  
 ```  
   
-## See Also  
+## See also  
  [LTRIM &#40;SSIS Expression&#41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
  [RTRIM &#40;SSIS Expression&#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

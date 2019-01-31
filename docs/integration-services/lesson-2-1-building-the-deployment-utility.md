@@ -61,7 +61,7 @@ Before you can build the deployment utility, you must modify the properties of t
 ## Next Task in Lesson  
 [Step 2: Verifying the Deployment Bundle](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-## See Also  
+## See also  
 [Create a Deployment Utility](../integration-services/packages/create-a-deployment-utility.md)  
   
   

@@ -95,7 +95,7 @@ End Sub
   
  Now when the user executes the package, after selecting the "My Custom Component Log Entry" in the **Logging** dialog box, the log will contain an entry clearly labeled as "User::My Custom Component Log Entry." This new log entry contains the text of the SQL statement, the timestamp, and any additional data logged by the developer.  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Logging](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

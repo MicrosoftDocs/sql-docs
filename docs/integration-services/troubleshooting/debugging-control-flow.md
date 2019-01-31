@@ -158,6 +158,6 @@ ms.author: chugu
  **Hit Count**  
  Specify the number of hits at which to trigger a break. This option is not available if the breakpoint is always in effect.  
   
-## See Also  
+## See also  
  [Troubleshooting Tools for Package Development](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Debug a Script by Setting Breakpoints in a Script Task and Script Component](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

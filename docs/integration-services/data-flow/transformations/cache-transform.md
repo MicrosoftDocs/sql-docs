@@ -70,7 +70,7 @@ ms.author: chugu
  **Edit**  
  Modify an existing connection.  
   
-## See Also  
+## See also  
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)  
   

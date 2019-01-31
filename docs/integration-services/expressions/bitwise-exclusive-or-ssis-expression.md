@@ -90,7 +90,7 @@ ReorderPoint ^ SafetyStockLevel
   
  00000110  
   
-## See Also  
+## See also  
  [&#124;&#124; &#40;Logical OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)   
  [&#124; &#40;Bitwise Inclusive OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
  [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   

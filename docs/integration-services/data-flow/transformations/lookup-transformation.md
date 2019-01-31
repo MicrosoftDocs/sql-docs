@@ -271,7 +271,7 @@ ms.author: chugu
 ### External Resources  
  Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
-## See Also  
+## See also  
  [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   

@@ -108,7 +108,7 @@ You can set most properties of tasks and containers by using the **Properties** 
   
 8.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  

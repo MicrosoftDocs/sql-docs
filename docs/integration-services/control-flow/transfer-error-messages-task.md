@@ -124,7 +124,7 @@ ms.author: chugu
 > [!NOTE]  
 >  You must specify the **SourceConnection** before you can select error messages to copy.  
   
-## See Also  
+## See also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
   

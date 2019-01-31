@@ -90,7 +90,7 @@ ms.author: chugu
  **Destination Column**  
  View each available destination column, whether it is mapped or not.  
   
-## See Also  
+## See also  
  [Flat File Source](../../integration-services/data-flow/flat-file-source.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   

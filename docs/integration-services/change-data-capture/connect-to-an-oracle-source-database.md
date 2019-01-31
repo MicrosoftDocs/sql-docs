@@ -63,7 +63,7 @@ ms.author: chugu
   
  After you finish entering information on this page, click **Next** to [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md).  
   
-## See Also  
+## See also  
  [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)  
   

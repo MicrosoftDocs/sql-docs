@@ -53,7 +53,7 @@ ms.author: chugu
  **Arrow buttons**  
  Select a file or folder, and then use the arrow buttons to move it up or down to specify the sequence of access.  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

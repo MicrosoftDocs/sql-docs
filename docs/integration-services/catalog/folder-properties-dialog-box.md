@@ -34,7 +34,7 @@ ms.author: chugu
   
 5.  Click **OK** to accept the changes and close the **Folders Properties** dialog box.  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Server](../integration-services-ssis-packages.md)   
  [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   

@@ -124,7 +124,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  For more information, see [Connecting to Data Sources in the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
-## See Also  
+## See also  
  [Coding and Debugging the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

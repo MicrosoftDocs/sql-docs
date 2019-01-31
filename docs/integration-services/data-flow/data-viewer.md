@@ -39,7 +39,7 @@ ms.author: chugu
  **Copy Data**  
  Copy data in the current buffer to the Clipboard.  
   
-## See Also  
+## See also  
  [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

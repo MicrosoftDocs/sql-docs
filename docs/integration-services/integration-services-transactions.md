@@ -155,7 +155,7 @@ It is possible for a package to include unrelated transactions in an [!INCLUDE[s
   
 -   Blog entry, [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783), on www.mssqltips.com  
   
-## See Also  
+## See also  
  [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
  [Multiple Transactions](https://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   

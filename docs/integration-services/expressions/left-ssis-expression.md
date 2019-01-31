@@ -55,7 +55,7 @@ LEFT(character_expression,number)
 LEFT("Mountain Bike", 8)  
 ```  
   
-## See Also  
+## See also  
  [RIGHT &#40;SSIS Expression&#41;](../../integration-services/expressions/right-ssis-expression.md)   
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

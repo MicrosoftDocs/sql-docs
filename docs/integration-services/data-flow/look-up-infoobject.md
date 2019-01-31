@@ -76,7 +76,7 @@ ms.author: chugu
   
  When the list of available InfoObjects appears, select the InfoObject that you want, and the destination will populate the associated options with the required values.  
   
-## See Also  
+## See also  
  [Create InfoCube for Transaction Data](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Create InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

@@ -85,7 +85,7 @@ ms.author: chugu
   
  The same master password must also be used when other instances of the same service are configured on other nodes on a cluster in high-availability configuration. If you lose or modify the master password, all log mining passwords stored in Oracle CDC Instance databases must be re-entered using the CDC Designer console.  
   
-## See Also  
+## See also  
  [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

@@ -89,7 +89,7 @@ ms.author: chugu
  **Unit Field**  
  Specify the units that the InfoObject will use.  
   
-## See Also  
+## See also  
  [Create InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

@@ -135,7 +135,7 @@ ms.author: chugu
   
 -   [Preview](../../integration-services/data-flow/preview.md)  
   
-## See Also  
+## See also  
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

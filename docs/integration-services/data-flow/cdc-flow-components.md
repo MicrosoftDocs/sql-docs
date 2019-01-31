@@ -212,7 +212,7 @@ A message is displayed after you install the components. Click **Yes** when prom
   
 -   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
   
-## See Also  
+## See also  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
   

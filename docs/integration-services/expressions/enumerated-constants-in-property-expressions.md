@@ -599,7 +599,7 @@ ms.author: chugu
 ## Related Tasks  
  [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## See Also  
+## See also  
  [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)   

@@ -479,7 +479,7 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-## See Also  
+## See also  
  [Developing a Custom Source Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
  [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   

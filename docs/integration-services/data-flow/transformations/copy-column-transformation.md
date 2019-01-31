@@ -56,7 +56,7 @@ ms.author: chugu
  **Output Alias**  
  Type an alias for each new output column. The default is **Copy of**, followed by the name of the input column; however, you can choose any unique, descriptive name.  
   
-## See Also  
+## See also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

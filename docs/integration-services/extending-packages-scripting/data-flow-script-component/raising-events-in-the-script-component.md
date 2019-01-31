@@ -40,7 +40,7 @@ ms.author: chugu
   
  `myMetaData.FireError(...)`  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Event Handlers](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   

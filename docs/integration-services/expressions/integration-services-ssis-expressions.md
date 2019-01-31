@@ -66,7 +66,7 @@ ms.author: chugu
 ## Related Content  
  Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
-## See Also  
+## See also  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

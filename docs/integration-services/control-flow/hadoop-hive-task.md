@@ -35,7 +35,7 @@ ms.author: chugu
 |**HadoopScriptFilePath**|When the value of **SourceType** is **ScriptFile**, specify the script file path on Hadoop.|  
 |**TimeoutInMinutes**|Specify a timeout value in minutes. The Hadoop job stops if it has not finished before the timeout elapses. Specify 0 to schedule the Hadoop job to run asynchronously.|  
   
-## See Also  
+## See also  
  [Hadoop Connection Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

@@ -50,7 +50,7 @@ ms.author: chugu
   
 -   [Integration Services Transformations](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md)  
   
   

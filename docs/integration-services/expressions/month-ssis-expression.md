@@ -64,7 +64,7 @@ MONTH(ModifiedDate)
 MONTH(GETDATE())  
 ```  
   
-## See Also  
+## See also  
  [DATEADD &#40;SSIS Expression&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;SSIS Expression&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART &#40;SSIS Expression&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   

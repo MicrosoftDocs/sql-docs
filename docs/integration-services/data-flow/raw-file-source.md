@@ -57,7 +57,7 @@ ms.author: chugu
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
 ## Raw File Source Editor (Columns Page)
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
-## See Also  
+## See also  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   

@@ -42,7 +42,7 @@ ms.author: chugu
 > [!NOTE]  
 >  When you have permission to perform an operation on the server, you also have permission to view information about the operation. Row-level security is enforced; only rows that you have permission to view are displayed.  
   
-## See Also  
+## See also  
  [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

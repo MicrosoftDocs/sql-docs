@@ -122,7 +122,7 @@ Use the **For Loop** page of the **For Loop Editor** dialog box to configure a l
  The [!INCLUDE[ssIS](../../includes/ssis-md.md)] expression grammar provides a complete set of operators and functions for implementing complex expressions used for evaluation, initialization, or assignment. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
   
-## See Also  
+## See also  
  [Control Flow](../../integration-services/control-flow/control-flow.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   

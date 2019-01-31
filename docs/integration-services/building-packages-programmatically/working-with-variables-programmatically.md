@@ -226,7 +226,7 @@ End Module
 ## Configuration Files  
  If a configuration file includes a custom variable, the variable can be updated at run time. What this means is that when the package runs, the value of the variable originally in the package is replaced with a new value from the configuration file. This replacement technique is useful when a package is deployed to multiple servers that require different variable values. For example, a variable can specify the number of times a **Foreach Loop** container repeats its workflow, or list the recipients that an event handler sends e-mail to when an error is raised, or change the number of errors that can occur before the package fails. These variables are dynamically provided in configuration files for each environment. Therefore, only variables that are read/write are allowed in configuration files. For more information, see [Create Package Configurations](../../integration-services/packages/create-package-configurations.md).  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
  [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

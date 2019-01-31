@@ -428,7 +428,7 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-## See Also  
+## See also  
  [Error Handling in Data](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Using Error Outputs](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   

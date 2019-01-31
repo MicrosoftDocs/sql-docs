@@ -37,7 +37,7 @@ ms.author: chugu
   
  After you configure these options, select the **Columns** tab to map source columns to destination columns in the data flow.  
   
-## See Also  
+## See also  
  [Hadoop Connection Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [HDFS File Destination](../../integration-services/data-flow/hdfs-file-destination.md)  
   

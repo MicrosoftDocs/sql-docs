@@ -211,7 +211,7 @@ ms.author: chugu
  **Token delimiters**  
  Specify the delimiters that the transformation uses to tokenize column values.  
   
-## See Also  
+## See also  
  [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

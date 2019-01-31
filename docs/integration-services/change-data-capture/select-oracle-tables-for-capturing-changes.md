@@ -42,7 +42,7 @@ ms.author: chugu
 > [!NOTE]  
 >  If you select a table that includes a non-supported data type, you will see an error message and the table will not be included.  
   
-## See Also  
+## See also  
  [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   

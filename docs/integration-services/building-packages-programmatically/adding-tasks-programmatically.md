@@ -410,7 +410,7 @@ End Module
 ## External Resources  
  Blog entry, [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
 
-## See Also  
+## See also  
  [Connecting Tasks Programmatically](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   

@@ -69,7 +69,7 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## See Also  
+## See also  
  [LEFT &#40;SSIS Expression&#41;](../../integration-services/expressions/left-ssis-expression.md)   
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

@@ -41,7 +41,7 @@ ms.author: chugu
 |**End date column**|Select the column in the dimension table to contain the end date.|  
 |**Variable to set date values**|Select a date variable from the list.|  
   
-## See Also  
+## See also  
  [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

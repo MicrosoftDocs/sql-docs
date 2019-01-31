@@ -59,7 +59,7 @@ LN(Length)
 LN(@Length)   
 ```  
   
-## See Also  
+## See also  
  [LOG &#40;SSIS Expression&#41;](../../integration-services/expressions/log-ssis-expression.md)   
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

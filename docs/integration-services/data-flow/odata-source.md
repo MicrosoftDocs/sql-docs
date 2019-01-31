@@ -141,7 +141,7 @@ To discover the data types of columns in your data source, check the `https://<O
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
+## See also  
  [OData Connection Manager](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

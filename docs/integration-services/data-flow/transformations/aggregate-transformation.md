@@ -234,7 +234,7 @@ ms.author: chugu
  **Auto extend factor**  
  Use a value between 1 and 100 to specify the percentage by which memory can be extended during the aggregation. By default, the value of this option is **25%**.  
   
-## See Also  
+## See also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

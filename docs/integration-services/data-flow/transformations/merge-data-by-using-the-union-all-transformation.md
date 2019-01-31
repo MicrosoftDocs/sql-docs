@@ -52,7 +52,7 @@ ms.author: chugu
   
 9. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services Paths](../../../integration-services/data-flow/integration-services-paths.md)   

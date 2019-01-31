@@ -243,7 +243,7 @@ To open Help, press F1.
   
 -   Blog entry, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661), on blogs.msdn.com.  
   
-## See Also  
+## See also  
  [Referencing Other Assemblies in Scripting Solutions](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
  [Configuring the Script Task in the Script Task Editor](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   

@@ -52,7 +52,7 @@ ms.author: chugu
 ### View Script  
  Click **View Script** to view a read-only version of the setup script. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator can copy this script into the SQL Server Management Console to edit it, if necessary. For more information about the Prepare SQL Server Script, see [Prepare SQL Server for Oracle CDC-View Script](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md).  
   
-## See Also  
+## See also  
  [How to Work with CDC Services](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [How to Prepare SQL Server for CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

@@ -98,7 +98,7 @@ ms.author: chugu
   
 15. To save the updated package, click **Save** on the **File** menu.  
   
-## See Also  
+## See also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

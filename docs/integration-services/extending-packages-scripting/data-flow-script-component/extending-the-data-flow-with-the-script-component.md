@@ -68,7 +68,7 @@ ms.author: chugu
  [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  These simple examples explain and demonstrate a few possible uses for the Script component.  
   
-## See Also  
+## See also  
  [Script Component](../../../integration-services/data-flow/transformations/script-component.md)   
  [Comparing the Script Task and the Script Component](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   

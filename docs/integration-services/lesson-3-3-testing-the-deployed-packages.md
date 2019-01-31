@@ -101,7 +101,7 @@ The top-level folders within the Stored Packages folder are the user-defined fol
   
     The query returns 21 rows of data. The return result consists of the rows from the XML data file, orders.xml. Each row is a summary by country/region; the row lists the name of a country/region, the number of orders for each country/region and the dates of the newest and oldest orders.  
   
-## See Also  
+## See also  
 [dtexec Utility](../integration-services/packages/dtexec-utility.md)  
   
   

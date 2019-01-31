@@ -182,7 +182,7 @@ Packages use connection managers to connect to data sources such as files, relat
   
 -   [Create Packages in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## See Also  
+## See also  
  [Integration Services User Interface](../integration-services/integration-services-user-interface.md)  
   
   

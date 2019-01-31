@@ -63,7 +63,7 @@ ms.author: chugu
   
  **Delete**  
  Select a connection, and then delete it by using the **Delete** button.  
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

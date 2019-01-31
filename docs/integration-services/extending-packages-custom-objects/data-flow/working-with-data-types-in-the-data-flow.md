@@ -153,7 +153,7 @@ ms.author: chugu
 > [!NOTE]  
 >  The <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> method does not return a value for the DT_DBTIMESTAMPOFFSET data type, and a <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> occurs. You must convert the DT_DBTIMESTAMPOFFSET data type to one of the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data type. For a list of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data types, see the table in the previous section, "Mapping between Integration Services and Managed Data Types." For information about converting data types, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
-## See Also  
+## See also  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>   

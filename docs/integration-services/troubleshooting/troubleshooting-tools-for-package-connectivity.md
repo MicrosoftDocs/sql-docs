@@ -66,7 +66,7 @@ ms.author: chugu
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## See Also  
+## See also  
  [Troubleshooting Tools for Package Development](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

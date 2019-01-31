@@ -89,7 +89,7 @@ ms.author: chugu
   
  In the Unpivot scenario described in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), the Pivot Key Value Column Name is **Product** and designates the new **Product** column into which the **Ham**, **Soda**, **Milk**, **Beer**, and **Chips** columns are unpivoted.  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   

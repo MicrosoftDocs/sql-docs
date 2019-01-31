@@ -70,7 +70,7 @@ ms.author: chugu
   
 -   VARRAY  
   
-## See Also  
+## See also  
  [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [The Oracle CDC Instance](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   

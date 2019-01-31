@@ -59,7 +59,7 @@ ms.author: chugu
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
+## See also  
  [SAP BW Destination Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW Destination Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
  [SAP BW Destination Editor &#40;Advanced Page&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   

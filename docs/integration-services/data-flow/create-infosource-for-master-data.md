@@ -70,7 +70,7 @@ ms.author: chugu
  **Save & Activate**  
  Save and activate the new InfoSource.  
   
-## See Also  
+## See also  
  [Create InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

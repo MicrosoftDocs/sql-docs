@@ -216,7 +216,7 @@ ms.author: chugu
  **Output Alias**  
  Specify an alternate name to use for the output column.  
   
-## See Also  
+## See also  
  [Raw File Source](../../integration-services/data-flow/raw-file-source.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   

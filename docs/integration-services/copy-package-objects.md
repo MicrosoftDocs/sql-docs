@@ -59,7 +59,7 @@ ms.author: chugu
   
 6.  Right-click in the **Connection Managers** area and click **Paste**.  
   
-## See Also  
+## See also  
  [Control Flow](../integration-services/control-flow/control-flow.md)   
  [Data Flow](../integration-services/data-flow/data-flow.md)   
  [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md)   

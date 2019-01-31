@@ -60,7 +60,7 @@ ms.author: chugu
   
 -   Membership to the **sysadmin** server role.  
   
-## See Also  
+## See also  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   

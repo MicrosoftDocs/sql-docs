@@ -66,7 +66,7 @@ ms.author: chugu
   
 15. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services Paths](../../../integration-services/data-flow/integration-services-paths.md)   

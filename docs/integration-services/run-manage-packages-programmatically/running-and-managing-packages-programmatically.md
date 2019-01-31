@@ -74,7 +74,7 @@ ms.author: chugu
  [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Discusses how to create, configure, and save [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages programmatically.  
   
-## See Also  
+## See also  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

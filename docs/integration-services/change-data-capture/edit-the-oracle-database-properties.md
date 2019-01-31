@@ -40,7 +40,7 @@ ms.author: chugu
   
  You can view the Oracle database properties in the viewer. When using the viewer the information is read only. The viewer also includes a list of the captured columns in the table. For information on how to access the viewer, see [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## See Also  
+## See also  
  [How to Manage a CDC Service from the CDC Designer Console](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [Connect to Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  

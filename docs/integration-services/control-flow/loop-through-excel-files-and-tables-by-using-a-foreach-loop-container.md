@@ -91,7 +91,7 @@ ms.author: chugu
   
 9. Create tasks in the Foreach Loop container that use the Excel connection manager to perform the same operations on each Excel table in the specified workbook. If you use a Script Task to examine the enumerated table name or to work with each table, remember to add the string variable to the ReadOnlyVariables property of the Script task.  
   
-## See Also  
+## See also  
  [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md)   

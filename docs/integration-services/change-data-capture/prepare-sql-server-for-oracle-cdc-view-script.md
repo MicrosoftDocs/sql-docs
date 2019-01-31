@@ -26,7 +26,7 @@ ms.author: chugu
  **Copy**  
  Copies the script to the clipboard. You can then paste the script into the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run them and create the MSXDBCDC database.  
   
-## See Also  
+## See also  
  [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

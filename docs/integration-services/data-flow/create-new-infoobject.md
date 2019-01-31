@@ -150,7 +150,7 @@ ms.author: chugu
  **Remove**  
  Remove the selected InfoObject from the **Attributes** list.  
   
-## See Also  
+## See also  
  [Create InfoCube for Transaction Data](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Create InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

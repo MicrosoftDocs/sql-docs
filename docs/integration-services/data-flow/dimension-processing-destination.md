@@ -163,7 +163,7 @@ ms.author: chugu
  **Browse (...)**  
  Select a path for the error log.  
   
-## See Also  
+## See also  
  [Data Flow](../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

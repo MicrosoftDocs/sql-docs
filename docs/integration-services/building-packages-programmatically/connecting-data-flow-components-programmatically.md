@@ -118,7 +118,7 @@ Module Module1
 End Module  
 ```  
   
-## See Also  
+## See also  
  [Selecting Input Columns Programmatically](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   

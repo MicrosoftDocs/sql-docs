@@ -102,7 +102,7 @@ ListPrice != 500
 @LPrice != 500  
 ```  
   
-## See Also  
+## See also  
  [== &#40;Equal&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
  [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

@@ -54,7 +54,7 @@ ms.author: chugu
  **Output Column**  
  Provide a unique name for each output column. The default is the name of the selected external (source) column. However, you can enter any unique, descriptive name. [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer will display the **Output Column** names for the columns when you configure downstream components that consume data from this source.  
   
-## See Also  
+## See also  
  [SAP BW Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [SAP BW Source Editor &#40;Advanced Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

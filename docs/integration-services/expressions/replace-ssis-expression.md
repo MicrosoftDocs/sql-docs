@@ -74,7 +74,7 @@ REPLACE(Product, "Bike","")
 REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")  
 ```  
   
-## See Also  
+## See also  
  [SUBSTRING &#40;SSIS Expression&#41;](../../integration-services/expressions/substring-ssis-expression.md)   
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

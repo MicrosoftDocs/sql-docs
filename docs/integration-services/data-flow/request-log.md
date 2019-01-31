@@ -57,7 +57,7 @@ ms.author: chugu
  **Message**  
  Displays the message text that is associated with the logged event.  
   
-## See Also  
+## See also  
  [SAP BW Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

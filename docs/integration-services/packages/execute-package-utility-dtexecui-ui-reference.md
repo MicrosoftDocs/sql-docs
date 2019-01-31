@@ -367,7 +367,7 @@ ms.author: chugu
  **Close**  
  Click to close the **Execute Package Utility** dialog box.  
   
-## See Also  
+## See also  
  [dtexec Utility](../../integration-services/packages/dtexec-utility.md)  
   
   

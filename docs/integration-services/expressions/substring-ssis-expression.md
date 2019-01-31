@@ -89,7 +89,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## See Also  
+## See also  
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

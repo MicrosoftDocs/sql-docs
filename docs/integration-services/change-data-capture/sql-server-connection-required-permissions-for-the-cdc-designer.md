@@ -32,7 +32,7 @@ ms.author: chugu
 |Get deployment scripts.|`db_datareader` and `db_datawriter` roles on MSXDBCDC<br /><br /> `db_owner` role on the relatedCDC database|  
 |Change configuration and add/remove capture instances.|`db_datareader` and `db_datawriter` roles on MSXDBCDC<br /><br /> `db_owner` role on the related CDC database|  
   
-## See Also  
+## See also  
  [Access the CDC Designer Console](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
  [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   

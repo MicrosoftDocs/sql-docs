@@ -165,7 +165,7 @@ ms.author: chugu
 ###  <a name="script"></a> Scripting the Options in the Execute Package Dialog Box  
  While you are in the **Execute Package** dialog box, you can also use the **Script** button on the toolbar to write [!INCLUDE[tsql](../../includes/tsql-md.md)] code for you. The generated script calls the stored procedures [catalog.start_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) with the same options that you have selected in the **Execute Package** dialog box. The script appears in a new script window in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
 
-## See Also  
+## See also  
  [dtexec Utility](../../integration-services/packages/dtexec-utility.md)   
 [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   

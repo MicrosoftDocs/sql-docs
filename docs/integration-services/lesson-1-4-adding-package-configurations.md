@@ -131,7 +131,7 @@ Check the project's current Deployment Model, and set it to **Package Deployment
 ## Next Task in Lesson  
 [Step 5: Testing the Updated Packages](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## See Also  
+## See also  
 [Package Configurations](../integration-services/packages/package-configurations.md)  
 [Create Package Configurations](../integration-services/packages/create-package-configurations.md)  
 [Access to Files Used by Packages](../integration-services/security/security-overview-integration-services.md#files)  

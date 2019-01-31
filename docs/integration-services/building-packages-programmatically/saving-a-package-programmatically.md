@@ -35,7 +35,7 @@ ms.author: chugu
 > [!IMPORTANT]  
 >  The methods of the <xref:Microsoft.SqlServer.Dts.Runtime.Application> class for working with the SSIS Package Store only support "." or the server name for the local server. You cannot use "(local)" or "localhost".  
   
-## See Also  
+## See also  
  [Save Packages](../../integration-services/save-packages.md)  
   
   

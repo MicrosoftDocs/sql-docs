@@ -107,7 +107,7 @@ ms.author: chugu
   
 -   **Expression**  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md)   
  [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)   

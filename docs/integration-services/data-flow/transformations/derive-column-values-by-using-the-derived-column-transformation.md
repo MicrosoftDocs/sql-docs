@@ -56,7 +56,7 @@ ms.author: chugu
   
 12. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
  [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

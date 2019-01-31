@@ -40,7 +40,7 @@ ms.author: chugu
  **Analysis Services project**  
  Select an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project from the list.  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

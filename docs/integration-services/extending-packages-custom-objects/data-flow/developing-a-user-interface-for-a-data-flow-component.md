@@ -279,7 +279,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```
   
-## See Also  
+## See also  
  [Creating a Custom Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   

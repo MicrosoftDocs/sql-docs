@@ -128,7 +128,7 @@ ms.author: chugu
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
+## See also  
  [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   

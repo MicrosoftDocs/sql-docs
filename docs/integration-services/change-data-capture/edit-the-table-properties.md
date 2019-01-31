@@ -48,7 +48,7 @@ ms.author: chugu
   
  After you finish entering the information in this dialog box, click **OK** to accept the changes.  
   
-## See Also  
+## See also  
  [How to Edit the CDC Instance Properties](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Make Changes to the Tables Selected for Capturing Changes](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   

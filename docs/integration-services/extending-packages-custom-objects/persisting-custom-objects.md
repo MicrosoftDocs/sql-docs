@@ -150,7 +150,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 }  
 ```  
  
-## See Also  
+## See also  
  [Developing Custom Objects for Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [Building, Deploying, and Debugging Custom Objects](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   

@@ -33,7 +33,7 @@ ms.author: chugu
  **\<property name>**  
  Click the ellipsis to open the **Expression Builder** dialog box. For more information, see [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
  [System Variables](../../integration-services/system-variables.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)  

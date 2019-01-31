@@ -55,7 +55,7 @@ ms.author: chugu
   
  When the list of available process chains appears, select the chain that you want, and the source will populate the associated options with the required values.  
   
-## See Also  
+## See also  
  [SAP BW Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

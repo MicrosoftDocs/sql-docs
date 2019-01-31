@@ -181,7 +181,7 @@ ms.author: chugu
  **UseDirectoryIfExists**  
  Indicates whether the **Create directory** operation uses an existing directory with the specified name instead of creating a new directory.  
   
-## See Also  
+## See also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
   

@@ -36,7 +36,7 @@ ms.author: chugu
   
  **Note**: You can click **View Script** to view a read-only version of the setup script. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator can copy this script into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Console to edit and execute it, if necessary.  
   
-## See Also  
+## See also  
  [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

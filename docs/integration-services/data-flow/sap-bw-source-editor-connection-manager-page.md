@@ -121,7 +121,7 @@ ms.author: chugu
  **Request ID**  
  Enter the Request ID that is associated with the extraction.  
   
-## See Also  
+## See also  
  [SAP BW Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [SAP BW Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [SAP BW Source Editor &#40;Advanced Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

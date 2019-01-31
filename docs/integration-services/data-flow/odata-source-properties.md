@@ -28,5 +28,5 @@ When you right-click **OData Source** in the data flow and click **Properties**,
 |ResourcePath|Use this property when you need to specify a full resource path, rather than just selecting a collection name. This property is used when **UseResourcePath** is True.|  
 |UseResourcePath|When set to True, the **ResourcePath** value is appended to the base URL to determine the OData feed location. When set to False, the **CollectionName** value is used.<br /><br /> **Default:** False|  
   
-## See Also
+## See also
 [OData Source](odata-source.md)

@@ -62,7 +62,7 @@ ms.author: chugu
  **Reset**  
  Lets you reset the status of the specified Request ID to "G - Green", after prompting you for confirmation. This can be useful when a problem has occurred, and the SAP Netweaver BW system has flagged the request with a yellow or red status.  
   
-## See Also  
+## See also  
  [SAP BW Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [SAP BW Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   

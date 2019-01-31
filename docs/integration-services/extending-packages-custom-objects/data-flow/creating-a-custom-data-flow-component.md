@@ -80,7 +80,7 @@ Public Class BasicComponent
 End Class  
 ```  
   
-## See Also  
+## See also  
  [Developing a User Interface for a Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
   
   

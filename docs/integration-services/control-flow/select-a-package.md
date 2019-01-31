@@ -56,7 +56,7 @@ ms.author: chugu
  **File name**  
  Provide the path of a package or click the browse button **(...)** and locate the package.  
   
-## See Also  
+## See also  
  [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  
   
   

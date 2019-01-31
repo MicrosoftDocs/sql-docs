@@ -38,7 +38,7 @@ ms.author: chugu
  **Delete**  
  Select a property, and then click **Delete**.  
   
-## See Also  
+## See also  
  [Expressions Page](../../integration-services/expressions/expressions-page.md)   
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
  [System Variables](../../integration-services/system-variables.md)   

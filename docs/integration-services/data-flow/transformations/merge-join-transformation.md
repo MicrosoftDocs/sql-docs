@@ -84,7 +84,7 @@ ms.author: chugu
  **Output Alias**  
  Type an alias for each output column. The default is the name of the input column; however, you can choose any unique, descriptive name.  
   
-## See Also  
+## See also  
  [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

@@ -77,7 +77,7 @@ ms.author: chugu
  **Test**  
  After configuring the MSMQ connection manager, confirm that the connection is viable by clicking **Test**.  
   
-## See Also  
+## See also  
  [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)   
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

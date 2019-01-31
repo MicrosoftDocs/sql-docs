@@ -48,7 +48,7 @@ ms.author: chugu
   
      For information about the Advanced Connection Properties dialog box, see [Advanced Connection Properties](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
-## See Also  
+## See also  
  [Create the SQL Server Change Database](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
  [SQL Server Connection Required Permissions for the CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   

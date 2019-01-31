@@ -40,7 +40,7 @@ ms.author: chugu
   
  Click **Stop All Instances** to stop the change data capture for all instances in the service.  
   
-## See Also  
+## See also  
  [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [How to Manage a CDC Service from the CDC Designer Console](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  

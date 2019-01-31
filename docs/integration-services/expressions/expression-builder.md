@@ -44,7 +44,7 @@ ms.author: chugu
 |**Evaluated value**|Lists the evaluation result of the expression.|  
 |**Evaluate Expression**|Click **Evaluate Expression** to view the evaluation result of the expression.|  
   
-## See Also  
+## See also  
  [Expressions Page](../../integration-services/expressions/expressions-page.md)   
  [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md)   
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   

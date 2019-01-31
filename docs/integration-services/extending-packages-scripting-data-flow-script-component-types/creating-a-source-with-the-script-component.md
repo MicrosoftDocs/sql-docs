@@ -384,7 +384,7 @@ ms.author: chugu
     }  
     ```  
   
-## See Also  
+## See also  
  [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [Developing a Custom Source Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
   

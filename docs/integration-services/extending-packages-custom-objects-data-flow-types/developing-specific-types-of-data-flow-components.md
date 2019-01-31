@@ -47,7 +47,7 @@ ms.author: chugu
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>  
  Contains the unmanaged classes and interfaces of the data flow task. The developer uses these, and the managed <xref:Microsoft.SqlServer.Dts.Pipeline> namespace, when building a data flow programmatically or creating custom data flow components.  
   
-## See Also  
+## See also  
  [Comparing Scripting Solutions and Custom Objects](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
  [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
   

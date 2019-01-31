@@ -78,7 +78,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## See Also  
+## See also  
  [DATEADD &#40;SSIS Expression&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;SSIS Expression&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DAY &#40;SSIS Expression&#41;](../../integration-services/expressions/day-ssis-expression.md)   

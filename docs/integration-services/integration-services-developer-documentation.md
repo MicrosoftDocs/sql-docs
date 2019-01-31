@@ -82,7 +82,7 @@ ms.author: chugu
   
 -   CodePlex samples, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
   
-## See Also  
+## See also  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

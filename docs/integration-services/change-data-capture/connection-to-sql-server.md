@@ -43,7 +43,7 @@ ms.author: chugu
   
 -   **Advanced**: Click **Advanced** and type any additional connection properties into the Advanced Connection Properties dialog box, if necessary.  
   
-## See Also  
+## See also  
  [SQL Server Connection Required Permissions for the CDC Service](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
   

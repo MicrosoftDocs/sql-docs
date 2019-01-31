@@ -52,7 +52,7 @@ ms.author: chugu
   
          For information on how to enter the credentials for a login that has write permission to the MSXDBCDC database, such the **db_owner** database role, see [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) and [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
-## See Also  
+## See also  
  [Work with CDC Services](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

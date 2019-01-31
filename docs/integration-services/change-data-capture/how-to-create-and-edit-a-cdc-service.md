@@ -58,7 +58,7 @@ ms.author: chugu
   
 5.  Click **OK** in the Connect to Oracle dialog box. Both dialog boxes close and the service is updated and registered.  
   
-## See Also  
+## See also  
  [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

@@ -50,7 +50,7 @@ ms.author: chugu
   
 10. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)   
  [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   

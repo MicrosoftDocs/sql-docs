@@ -104,7 +104,7 @@ ms.author: chugu
   
 11. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

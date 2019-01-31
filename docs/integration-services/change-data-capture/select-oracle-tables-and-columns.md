@@ -47,7 +47,7 @@ ms.author: chugu
   
  After you [Select Oracle Tables for Capturing Changes](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md) and/or [Make Changes to the Tables Selected for Capturing Changes](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md) using the correct dialog boxes, click **Next** to [Generate and Run the Supplemental Logging Script](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md).  
   
-## See Also  
+## See also  
  [How to Create the SQL Server Change Database Instance](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)   
  [Add Tables to a CDC Instance](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   

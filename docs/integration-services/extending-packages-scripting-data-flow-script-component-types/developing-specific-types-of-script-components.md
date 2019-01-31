@@ -43,7 +43,7 @@ ms.author: chugu
  [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
  Explains and demonstrates how to create a data flow destination by using the Script component.  
   
-## See Also  
+## See also  
  [Comparing Scripting Solutions and Custom Objects](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
  [Developing Specific Types of Data Flow Components](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
   

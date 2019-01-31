@@ -39,7 +39,7 @@ ms.author: chugu
 |&#124;&#124;|Logical OR|Left to right|  
 |? :|Conditional expression|Right to left|  
   
-## See Also  
+## See also  
  [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

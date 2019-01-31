@@ -151,7 +151,7 @@ ms.author: chugu
  **MaxNumberOfViolations**  
  Specify the maximum number of inclusion violations to report in the output. The default value of this property is 100. This option is disabled when **Exact** is selected as the **InclusionThresholdSetting**.  
   
-## See Also  
+## See also  
  [Data Profiling Task Editor &#40;General Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

@@ -24,7 +24,7 @@ ms.author: chugu
   
  To choose specific objects for transfer, select the check box in the first column for the row in the grid where the object is listed.  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
  [Transfer Jobs Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
  [Transfer Logins Task Editor &#40;Logins Page&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   

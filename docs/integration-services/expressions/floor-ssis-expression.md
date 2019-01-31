@@ -59,7 +59,7 @@ FLOOR(0.00)
   
  Returns 0.00  
   
-## See Also  
+## See also  
  [CEILING &#40;SSIS Expression&#41;](../../integration-services/expressions/ceiling-ssis-expression.md)   
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

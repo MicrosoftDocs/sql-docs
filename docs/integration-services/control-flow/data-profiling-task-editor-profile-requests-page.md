@@ -144,7 +144,7 @@ ms.author: chugu
   
 -   [Value Inclusion Profile Request Options &#40;Data Profiling Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## See Also  
+## See also  
  [Data Profiling Task Editor &#40;General Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

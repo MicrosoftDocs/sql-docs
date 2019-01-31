@@ -71,6 +71,6 @@ ms.author: chugu
  **Test**  
  Test the connection manager settings.  
   
-## See Also  
+## See also  
  [Web Service Task](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

@@ -135,7 +135,7 @@ ms.author: chugu
  **WindowStyle**  
  Specify the window style in which to run the process.  
   
-## See Also  
+## See also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
   

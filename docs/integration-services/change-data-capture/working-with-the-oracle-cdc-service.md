@@ -258,7 +258,7 @@ ms.author: chugu
   
  **Note**: Any parameter that contains spaces or double quotes must be wrapped with double quotes ("). Embedded double quotation marks must be doubled (for example to use **"A#B" D** as a password enter **""A#B"" D"**).  
   
-## See Also  
+## See also  
  [How to Use the CDC Service Command-Line Interface](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
  [How to Prepare SQL Server for CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

@@ -196,7 +196,7 @@ ms.author: chugu
  **Apply**  
  Apply the error handling option to the selected cells.  
   
-## See Also  
+## See also  
  [DataReader Destination](../../integration-services/data-flow/datareader-destination.md)   
  [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  

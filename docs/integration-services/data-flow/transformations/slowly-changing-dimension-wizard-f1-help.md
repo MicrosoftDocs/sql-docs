@@ -43,7 +43,7 @@ ms.author: chugu
  [Finish the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
  Displays the configuration options selected by the user.  
   
-## See Also  
+## See also  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)   
  [Configure Outputs Using the Slowly Changing Dimension Wizard](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   

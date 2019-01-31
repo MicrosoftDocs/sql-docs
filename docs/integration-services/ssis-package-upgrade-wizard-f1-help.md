@@ -250,7 +250,7 @@ In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], in Object Explorer, c
   
 In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and then expand the **SSIS Packages** node to see the upgraded packages.  
   
-## See Also  
+## See also  
  [Upgrade Integration Services Packages](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   

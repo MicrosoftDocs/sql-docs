@@ -107,7 +107,7 @@ The following screen shot shows the **Save SSIS Package** page of the wizard if 
 ## What's next?  
  After you specify additional options for saving the package, the next page is **Complete the Wizard**. On this page, you review the choices that you made in the wizard, and then you start the operation. For more info, see [Complete the Wizard](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
-## See Also  
+## See also  
 [Save Packages](../../integration-services/save-packages.md)  
 [Run Integration Services (SSIS) Packages](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

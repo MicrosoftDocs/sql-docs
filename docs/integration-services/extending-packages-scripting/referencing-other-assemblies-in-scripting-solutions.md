@@ -80,7 +80,7 @@ ms.author: chugu
   
  For more information about the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], see the MSDN Library.  
   
-## See Also  
+## See also  
  [Extending Packages with Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

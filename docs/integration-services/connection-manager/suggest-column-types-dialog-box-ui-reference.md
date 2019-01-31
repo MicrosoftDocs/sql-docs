@@ -41,7 +41,7 @@ ms.author: chugu
  **Percent padding**  
  Type or select the percentage of the column lengths by which to increase the length of columns for character data types. The percentage must be an integer.  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
  [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

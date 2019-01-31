@@ -74,7 +74,7 @@ ms.author: chugu
 |SQLISService_273|Indicates that the configuration file could not be read or is not valid.|  
 |SQLISService_274|Indicates that the registry entry that contains the location of the configuration file does not exist or is empty.|  
   
-## See Also  
+## See also  
  [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md)  
   
   

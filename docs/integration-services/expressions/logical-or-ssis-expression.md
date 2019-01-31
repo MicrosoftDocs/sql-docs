@@ -61,7 +61,7 @@ StandardCost < 300 || ListPrice > 500
 StandardCost < @SPrice || ListPrice > @LPrice  
 ```  
   
-## See Also  
+## See also  
  [&#124; &#40;Bitwise Inclusive OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
  [^ &#40;Bitwise Exclusive OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
  [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md)   

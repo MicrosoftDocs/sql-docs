@@ -35,7 +35,7 @@ ms.author: chugu
   
  For more information about logging, see [Integration Services &#40;SSIS&#41; Logging](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Logging](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

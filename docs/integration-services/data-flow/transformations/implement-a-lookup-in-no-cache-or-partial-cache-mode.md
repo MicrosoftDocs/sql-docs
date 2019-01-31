@@ -105,7 +105,7 @@ ms.author: chugu
   
 14. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
-## See Also  
+## See also  
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

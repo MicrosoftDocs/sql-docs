@@ -269,7 +269,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ### Video  
  This [video on TechNet](https://technet.microsoft.com/sqlserver/dn600163) demonstrates how to add/use data taps in SQL Server 2012 SSISDB catalog that help with debugging packages programmatically and capturing the partial results at the runtime. It also discusses how to list/ remove these data taps and best practices for using data taps in SSIS packages.  
  
-## See Also  
+## See also  
  [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)  
   
   

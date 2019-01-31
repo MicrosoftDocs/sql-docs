@@ -49,7 +49,7 @@ ms.author: chugu
   
 6.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-## See Also  
+## See also  
  [Connect Components in a Data Flow](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
  [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  

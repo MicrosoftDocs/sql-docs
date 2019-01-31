@@ -62,7 +62,7 @@ ms.author: chugu
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)   

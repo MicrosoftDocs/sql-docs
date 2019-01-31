@@ -37,7 +37,7 @@ ms.author: chugu
   
  The New Oracle CDC Service dialog box opens.  
   
-## See Also  
+## See also  
  [How to Work with CDC Services](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

@@ -128,7 +128,7 @@ ms.author: chugu
  **StoredProceduresList**  
  Select which user-defined stored procedures in the **master** database on the source server should be copied to the destination **master** database. This option is only available when **TransferAllStoredProcedures** is set to **False**.  
   
-## See Also  
+## See also  
  [Transfer SQL Server Objects Task](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  

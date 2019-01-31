@@ -67,7 +67,7 @@ select
   
  **Next topic:** [Apply the Changes to the Destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-## See Also  
+## See also  
  [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Split a Dataset by Using the Conditional Split Transformation](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   

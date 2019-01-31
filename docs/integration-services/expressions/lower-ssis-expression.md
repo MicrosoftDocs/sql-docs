@@ -61,7 +61,7 @@ LOWER(SUBSTRING(Color, 2, 15))
 LOWER(@CityName)  
 ```  
   
-## See Also  
+## See also  
  [UPPER &#40;SSIS Expression&#41;](../../integration-services/expressions/upper-ssis-expression.md)   
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

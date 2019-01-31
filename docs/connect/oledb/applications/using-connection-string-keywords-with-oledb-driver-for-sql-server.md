@@ -2,7 +2,7 @@
 title: "Using Connection String Keywords with OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Using connection string keywords with OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

@@ -22,9 +22,9 @@ manager: craigg
 # ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the database name that is specified by the user in the database connection string. This is the database that is specified by using the **sqlcmd-d** option (USE *database*) or the ODBC data source expression (initial catalog =*databasename*).  
+  Returns the database name specified by the user in the database connection string. This database is specified by using the **sqlcmd-d** option (USE *database*). It can also be specified with the Open Database Connectivity (ODBC) data source expression (initial catalog =*databasename*).  
   
- This database is not the same as the default user database.  
+ This database is different from the default user database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -36,11 +36,11 @@ ORIGINAL_DB_NAME ()
 ```  
   
 ## Remarks  
- If the initial database is not specified, the function returns an empty string.  
+ If the initial database isn't specified, the function returns an empty string.  
   
 ## See Also  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [osql Utility](../../tools/osql-utility.md)   
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

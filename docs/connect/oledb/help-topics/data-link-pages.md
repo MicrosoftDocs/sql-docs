@@ -40,11 +40,13 @@ The Connection tab is provider-specific and displays only the connection propert
 |Test Connection|Click to attempt a connection to the specified data source. If the connection fails, ensure that the settings are correct. For example, spelling errors and case sensitivity can cause failed connections.|
 
 ## Advanced Tab
+Use the Advanced tab to view and set additional initialization properties.
+
 ![Screenshot of OLE DB Data Link Pages - Advanced Tab](../media/data-link-pages-advanced-tab.png)
 
 |Option|Description|
 |---   |---        |
-| Connect timeout | Specifies the amount of time (in seconds) that Microsoft OLE DB Driver for SQL Server waits for initialization to complete. If initialization times out, an error is returned and the connection is not created.|
+| Connect timeout | Specifies the amount of time (in seconds) that the Microsoft OLE DB Driver for SQL Server waits for initialization to complete. If initialization times out, an error is returned and the connection is not created.|
 
 
 > [!NOTE]  

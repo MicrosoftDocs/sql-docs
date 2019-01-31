@@ -19,7 +19,9 @@ author: bazizi
 When you attempt to connect without specifying enough information for the driver to connect, the OLE DB driver displays the **SQL Server Login** dialog box.
 
 > [!NOTE]  
-> SQL Server Login Dialog can be suppressed by setting `DBPROP_INIT_PROMPT` property of the `DBPROPSET_DBINIT` property set to `NO_PROMPT`. For more information about other possible options please view [this](https://technet.microsoft.com/en-ca/ms714342(v=vs.80)) documentation page.
+> SQL Server Login Dialog prompting behavior is controlled by the `DBPROP_INIT_PROMPT` initialization property. For more information, see:
+> - [Initialization and Authorization Properties](https://docs.microsoft.com/sql/connect/oledb/ole-db-data-source-objects/initialization-and-authorization-properties)
+> - [OLE DB Programmer's Guide](https://docs.microsoft.com/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![Screenshot of SQL Server Login Dialog Box](../media/sql-server-login-dialog.png)
 
@@ -44,10 +46,10 @@ You can select the following authentication options from the drop-down list:
 If you use a trusted connection, you can specify a service principal name (SPN) for the server.
 
 ### Login ID
-Specifies the login ID to use for the connection. The Login ID text box is only enabled if `Authentication Mode` is set to `SQL Server Authentication` or `Active Directory - Password`. Otherwise, the **Login ID** box is disabled.
+Specifies the login ID to use for the connection. The Login ID text box is only enabled if `Authentication Mode` is set to `SQL Server Authentication` or `Active Directory - Password`.
 
 ### Password
-Specifies the password used for the connection if `Authentication Mode` is set to `SQL Server Authentication` or `Active Directory - Password`. Otherwise, the **Password** box is disabled.
+Specifies the password used for the connection. The password text box is only enabled if `Authentication Mode` is set to `SQL Server Authentication` or `Active Directory - Password`.
 
 ### Options
 Displays or hides the **Options** group. The **Options** button is enabled if **Server** has a value.
@@ -74,10 +76,10 @@ Optionally, you can specify an SPN for the mirror server. The SPN for the mirror
 Specifies the national language to use for SQL Server system messages. The computer running SQL Server must have the language installed. This setting overrides the default language specified for the login on the server. If no language is specified, the connection uses the default language specified for the login on the server.
 
 ### Application Name
-(Optional) Specifies the application name to be stored in the **program_name** column in the row for this connection in **sys.sysprocesses**.
+Specifies the application name to be stored in the **program_name** column in the row for this connection in **sys.sysprocesses**.
 
 ### Workstation ID
-(Optional) Specifies the workstation ID to be stored in the **hostname** column in the row for this connection in **sys.sysprocesses**.
+Specifies the workstation ID to be stored in the **hostname** column in the row for this connection in **sys.sysprocesses**.
 
 ### Use strong encryption for data
 When checked, data that is passed through the connection will be encrypted.
@@ -86,4 +88,4 @@ When checked, data that is passed through the connection will be encrypted.
 When checked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.
 
 > [!NOTE]  
-> When using `Windows Authentication` or `SQL Server Authentication`, Trust server certificate option is applicable **only** when **Use strong encryption for data** is enabled. However, when using `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `Access Token` or `SqlPassword` authentication options, Trust server certificate option is considered **regardless of encryption settings**. This new behavior was introduced to improve security.
+> When using `Windows Authentication` or `SQL Server Authentication`, `Trust server certificate` is considered only when the `Use strong encryption for data` option is enabled.

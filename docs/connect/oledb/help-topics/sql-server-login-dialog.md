@@ -20,7 +20,7 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 
 > [!NOTE]  
 > SQL Server Login Dialog prompting behavior is controlled by the `DBPROP_INIT_PROMPT` initialization property. For more information, see:
-> - [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties)
+> - [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 > - [OLE DB Programmer's Guide](https://go.microsoft.com/fwlink/?linkid=2067702&clcid=0x409)
 
 ![Screenshot of SQL Server Login Dialog Box](../media/sql-server-login-dialog.png)

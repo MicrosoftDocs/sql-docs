@@ -270,4 +270,4 @@
       - name: Azure Key Vault sample version 6.2.2
         href: azure-key-vault-sample-version-6.2.2.md
       - name: Azure Key Vault sample version 7.0.0
-        href: azure-key-vault-sample-version-7-0-0.md
+        href: azure-key-vault-sample.md

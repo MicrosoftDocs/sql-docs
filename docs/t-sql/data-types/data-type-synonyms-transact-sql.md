@@ -29,17 +29,17 @@ Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnover
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** *n* **)**|**char(n)**|  
-|**character varying(** *n* **)**|**varchar(n)**|  
+|**character(***n***)**|**char(n)**|  
+|**character varying(***n***)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
 |**float**[**(***n***)**] for *n* = 1-7|**real**|  
 |**float**[**(***n***)**] for *n* = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(** *n* **)**|**nchar(n)**|  
-|**national char(** *n* **)**|**nchar(n)**|  
-|**national character varying(** *n* **)**|**nvarchar(n)**|  
-|**national char varying(** *n* **)**|**nvarchar(n)**|  
+|**national character(***n***)**|**nchar(n)**|  
+|**national char(***n***)**|**nchar(n)**|  
+|**national character varying(***n***)**|**nvarchar(n)**|  
+|**national char varying(***n***)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   

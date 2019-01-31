@@ -30,6 +30,8 @@ manager: craigg
 
 -   Under database compatibility level 130, implicit conversions from **datetime** to **datetime2** data types show improved accuracy by accounting for the fractional milliseconds, resulting in different converted values. Use explicit casting to datetime2 datatype whenever a mixed comparison scenario between datetime and datetime2 datatypes exists. For more information, refer to this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
 
+-   Under database compatibility level 130, operations that perform implicit conversions between certain numeric and datetime data types show improved accuracy and can result in different converted values. This includes usage of functions that require calculations such as for example, DATEDIFF and ROUND. For more information, refer to this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
+
 ## <a name="previous-versions"></a> Previous Versions  
 
 For information about breaking changes in SQL Server version 2014, and in some earlier versions, see [Breaking Changes to Database Engine Features in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14).

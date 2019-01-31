@@ -31,7 +31,7 @@
         href: authentication-access/grant-a-permission-to-a-principal.md
       - name: Create a server role
         href: authentication-access/create-a-server-role.md
-      - name: Create an application rolke
+      - name: Create an application role
         href: authentication-access/create-an-application-role.md
       - name: Create a credential
         href: authentication-access/create-a-credential.md
@@ -39,7 +39,7 @@
       items:
       - name: Choose an algorithm
         href: encryption/choose-an-encryption-algorithm.md
-      - name: Configure Always Enecrypted with Secure Enclaves
+      - name: Configure Always Encrypted with Secure Enclaves
         href: encryption/configure-always-encrypted-enclaves.md
         items:
         - name: Configure with SQL Server Management Studio
@@ -70,9 +70,9 @@
         href: encryption/create-a-database-master-key.md
       - name: Back up a database master key
         href: encryption/back-up-a-database-master-key.md
-      - name: Restore a database master Key
+      - name: Restore a database master key
         href: encryption/restore-a-database-master-key.md
-      - name: Create identical symmetric Keys on two servers
+      - name: Create identical symmetric keys on two servers
         href: encryption/create-identical-symmetric-keys-on-two-servers.md
       - name: Encrypt a column of data
         href: encryption/encrypt-a-column-of-data.md
@@ -105,7 +105,7 @@
        items:
        - name: SQL injection
          href: sql-injection.md
-       - name: TRUSTWORTHY databse property
+       - name: TRUSTWORTHY database property
          href: trustworthy-database-property.md
        - name: Password policy
          href: password-policy.md
@@ -164,7 +164,7 @@
            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
            items:
            - name: Bring your own key
-             href: https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+             href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
          - name: Encryption keys
            href: encryption/sql-server-and-database-encryption-keys-database-engine.md
            items:

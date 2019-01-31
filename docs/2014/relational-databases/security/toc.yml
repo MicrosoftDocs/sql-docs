@@ -13,13 +13,13 @@
       items:
         - name: Create a login
           href: authentication-access/create-a-login.md
-        - name: Create a database User
+        - name: Create a database user
           href: authentication-access/create-a-database-user.md
         - name: Create a database schema
           href: authentication-access/create-a-database-schema.md
         - name: Join a role
           href: authentication-access/join-a-role.md
-        - name: Grant a permission to a rincipal
+        - name: Grant a permission to a principal
           href: authentication-access/grant-a-permission-to-a-principal.md
         - name: Create a server role
           href: authentication-access/create-a-server-role.md

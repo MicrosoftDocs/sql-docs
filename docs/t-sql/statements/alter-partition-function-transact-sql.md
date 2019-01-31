@@ -71,7 +71,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 >  Limitations with columnstore index: Two nonempty partitions containing a columnstore index can't be merged. You will need to drop or disable the columnstore index before performing this operation  
   
 ## Best Practices  
- Always keep empty partitions at both ends of the partition range. Keep the partitions at both ends to guarantee that the partition split at the beginning and the partition merge at the end don't incur any data movement. Avoid splitting or merging populated partitions. Splitting or merging populated partitions can be inefficient. They can be inefficient because the split or merge may cause as much as four times more log generation, and may also cause severe locking.  
+ Always keep empty partitions at both ends of the partition range. Keep the partitions at both ends to guarantee that the partition split and the partition merge don't incur any data movement. Avoid splitting or merging populated partitions. Splitting or merging populated partitions can be inefficient. They can be inefficient because the split or merge may cause as much as four times more log generation, and may also cause severe locking.  
   
 ## Limitations and Restrictions  
  ALTER PARTITION FUNCTION repartitions any tables and indexes that use the function in a single atomic operation. However, this operation occurs offline, and depending on the extent of repartitioning, may be resource-intensive.  

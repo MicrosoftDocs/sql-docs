@@ -36,9 +36,9 @@ For more information about server names for different types of networks, see [SQ
 
 ### Authentication Mode
 You can select the following authentication options from the drop-down list:
-- `Windows Authentication:` Authentication to SQL Server using the currently logged-in user's account
+- `Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials
 - `SQL Server Authentication:` Authentication to SQL Server using login ID and password
-- `Active Directory - Integrated:` Integrated authentication using the currently logged-in user's account
+- `Active Directory - Integrated:` Integrated authentication using the currently logged-in user's Windows account credentials
 - `Active Directory - Password:` Active Directory authentication using login ID and password
 
 
@@ -55,7 +55,7 @@ Specifies the password used for the connection. The password text box is only en
 Displays or hides the **Options** group. The **Options** button is enabled if **Server** has a value.
 
 ### Change Password
-Enables **New Password** and **Confirm New Password** text boxes.
+When checked, enables **New Password** and **Confirm New Password** text boxes.
 
 ### New Password
 Specifies the new password.

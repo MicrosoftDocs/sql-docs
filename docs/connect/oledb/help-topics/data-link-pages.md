@@ -25,13 +25,13 @@ The Connection tab is provider-specific and displays only the connection propert
 
 |Option|Description|
 |---   |---        |
-|Select or enter a server name|Select a server name from the drop-down list, or type the location of the server where the database you want to access is located. Selecting the database on the server is a separate action. Refresh the list by clicking Refresh.
+|Select or enter a server name|Select a server name from the drop-down list, or type the location of the server where the database you want to access is located. Selecting the database on the server is a separate action. Update the list by clicking "Refresh".
 |Enter information to sign in to the server|You can select the following authentication options from this drop-down list: <ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's account</li><li>`SQL Server Authentication:` Authentication to SQL Server using login ID and password</li><li>`Active Directory - Integrated:` Integrated authentication using the currently logged-in user's account</li><li>`Active Directory - Password:` Active Directory authentication using login ID and password</li></ul>|
 |Server SPN|If you use a trusted connection, you can specify a service principal name (SPN) for the server.|
 |User name|Type the User ID to use for authentication when you sign in to the data source.|
 |Password|Type the password to use for authentication when you sign in to the data source.|
-|Blank password|Enables the specified provider to use a blank password in the connection string.|
-|Allow saving password|Allows the password to be saved with the connection string. Whether the password is included in the connection string depends on the functionality of the calling application. <br/><br/>**NOTE:** If saved, the password is returned and saved unmasked and unencrypted.|
+|Blank password|When checked, enables the specified provider to use a blank password in the connection string.|
+|Allow saving password|When checked, allows the password to be saved with the connection string. Whether the password is included in the connection string depends on the functionality of the calling application. <br/><br/>**NOTE:** If saved, the password is returned and saved unmasked and unencrypted.|
 |Use strong encryption for data|When checked, data that is passed through the connection will be encrypted.|
 |Trust server certificate|When checked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.|
 |Select the database|Select or type the database name that you want to access.|

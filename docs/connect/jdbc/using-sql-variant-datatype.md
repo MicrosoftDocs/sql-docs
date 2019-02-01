@@ -18,7 +18,7 @@ manager: craigg
 
 As of version 6.3.0, the JDBC driver supports the sql_variant datatype. Sql_variant is also supported when using features such as Table Values Parameters and BulkCopy with some limitations mentioned later on this page. Note that not all data types can be stored in the sql_variant data type. For a list of supported data types with sql_variant, check the SQL Server [Docs](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql).
 ###  Populating and retrieving a table:
-Assuming one has a table with sql_variant column as:
+Assuming one has a table with a sql_variant column as:
 
 ```
 CREATE TABLE sampleTable (col1 sql_variant)  

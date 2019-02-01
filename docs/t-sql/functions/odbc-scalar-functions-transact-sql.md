@@ -69,9 +69,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |Function|Description|  
 |--------------|-----------------|  
-|BIT_LENGTH( string_exp ) (ODBC 3.0)|Returns the length in bits of the string expression.<br /><br /> Returns the internal size of the given data type. Uses the given data type, and, for example, doesn't convert string_exp to string.|  
+|BIT_LENGTH( string_exp ) (ODBC 3.0)|Returns the length in bits of the string expression.<br /><br /> Returns the internal size of the given data type, without converting string_exp to string.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Returns a character string that is the result of concatenating string_exp2 to string_exp1. The resulting string is DBMS-dependent. For example, if the column represented by string_exp1 contained a NULL value, DB2 would return NULL but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] would return the non-NULL string.|  
-|OCTET_LENGTH( string_exp ) (ODBC 3.0)|Returns the length in bytes of the string expression. The result is the smallest integer not less than the number of bits divided by 8.<br /><br /> Returns the internal size of the given data type. Uses the given data type, and, for example, doesn't convert string_exp to string.|  
+|OCTET_LENGTH( string_exp ) (ODBC 3.0)|Returns the length in bytes of the string expression. The result is the smallest integer not less than the number of bits divided by 8.<br /><br /> Returns the internal size of the given data type, without converting string_exp to string.|  
   
 ### Numeric Function  
   

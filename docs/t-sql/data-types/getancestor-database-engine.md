@@ -68,7 +68,7 @@ WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;
 ```  
   
 ### B. Returning the grandchildren of a parent  
-`GetAncestor(2)` returns the employees that are two levels down in the hierarchy from the current node. These are the grandchildren of the current node. The following example uses `GetAncestor(2)`.
+`GetAncestor(2)` returns the employees that are two levels down in the hierarchy from the current node. These employees are the grandchildren of the current node. The following example uses `GetAncestor(2)`.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -93,8 +93,8 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;  
 ```  
   
-### D. Returning a hierarchy level if a table is not present  
-`GetAncestor` returns the selected level in the hierarchy even if a table is not present. For example the following code designates a current employee and returns the `hierarchyid` of the ancestor of the current employee without reference to a table.
+### D. Returning a hierarchy level if a table isn't present  
+`GetAncestor` returns the selected level in the hierarchy even if a table isn't present. For example, the following code specifies a current employee and returns the `hierarchyid` of the ancestor of the current employee without reference to a table.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid ;  
@@ -116,5 +116,4 @@ this.GetAncestor(1)
 [hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

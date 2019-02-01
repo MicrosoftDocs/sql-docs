@@ -27,9 +27,9 @@ manager: craigg
 # DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Deletes the whole XML schema collection and all of its components.  
+Deletes the whole XML schema collection and all of its components.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -39,16 +39,16 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## Arguments  
- *relational_schema*  
- Identifies the relational schema name. If not specified, the default relational schema is assumed.  
+*relational_schema*  
+Identifies the relational schema name. If not specified, the default relational schema is assumed.  
   
- *sql_identifier*  
- Name of the XML schema collection to drop.  
+*sql_identifier*  
+Name of the XML schema collection to drop.  
   
 ## Remarks  
- Dropping an XML schema collection is a transactional operation. When you drop an XML schema collection inside a transaction and later roll back the transaction, the XML schema collection isn't dropped.  
+Dropping an XML schema collection is a transactional operation. When you drop an XML schema collection inside a transaction and later roll back the transaction, the XML schema collection isn't dropped.  
   
- You can't drop an XML schema collection when it's in use. So, the collection being dropped can't be in any of the following conditions:  
+You can't drop an XML schema collection when it's in use. So, the collection being dropped can't be in any of the following conditions:  
   
 -   Associated with any **xml** type parameter or column.  
   
@@ -69,10 +69,10 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## Permissions  
- To drop an XML SCHEMA COLLECTION requires DROP permission on the collection.  
+To drop an XML SCHEMA COLLECTION requires DROP permission on the collection.  
   
 ## Examples  
- The following example shows removing an XML schema collection.  
+The following example shows removing an XML schema collection.  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  

@@ -30,7 +30,7 @@ Modifies global configuration settings for the current server in [!INCLUDE[ssNoV
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
+
 ```  
 ALTER SERVER CONFIGURATION  
 SET <optionspec>   
@@ -170,8 +170,8 @@ The location where the SQLDumper utility stores the dump files. For more informa
 SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
 The time-out value in milliseconds for the SQLDumper utility to generate a dump if a SQL Server failure occurs. The default value is 0, which means there's no time limit to complete the dump. For more information, see [SQL Server Dumper Utility Knowledgebase article](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
-FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
-The conditions under which the SQL Server failover cluster instance should fail over or restart. The default value is 3, which means that the SQL Server resource will fail over or restart on critical server errors. For more information about this and other failure condition levels, see [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
+ FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
+ The conditions under which the SQL Server failover cluster instance should fail over  or restart. The default value is 3, which means that the SQL Server resource will fail over or restart on critical server errors. For more information about this and other failure condition levels, see [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
 HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
 The time-out value for how long the SQL Server Database Engine resource DLL should wait for the server health information before it considers the instance of SQL Server as unresponsive. The time-out value is expressed in milliseconds. The default is 60,000 milliseconds (60 seconds).  

@@ -67,7 +67,7 @@ cs.execute();
 ```    
 
 ### Limitations of sql_variant:
-1- If using TVP to populate a table with a `datetime`/`smalldatetime`/`date` value stored in sql_variant, calling `getDateTime()`/`getSmallDateTime()`/`getDate()` on resultset does not work and throws the following exception:     
+1- If using TVP to populate a table with a `datetime`/`smalldatetime`/`date` value stored in a sql_variant, calling `getDateTime()`/`getSmallDateTime()`/`getDate()` on a resultset does not work and throws the following exception:     
    `Java.lang.String cannot be cast to java.sql.Timestamp`
 
 Workaround: use `getString()` or `getObject()` instead. 

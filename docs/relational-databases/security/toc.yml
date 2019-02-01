@@ -15,8 +15,8 @@
       href: sql-data-discovery-and-classification.md
     - name: SQL Server Connector troubleshooting
       href: encryption/sql-server-connector-maintenance-troubleshooting.md
-    - name: Authentication Access
-      items:
+  - name: Authentication Access
+    items:
       - name: Determine effective permissions
         href: authentication-access/determining-effective-database-engine-permissions.md
       - name: Create a login
@@ -35,8 +35,8 @@
         href: authentication-access/create-an-application-role.md
       - name: Create a credential
         href: authentication-access/create-a-credential.md
-    - name: Encryption
-      items:
+  - name: Encryption
+    items:
       - name: Choose an algorithm
         href: encryption/choose-an-encryption-algorithm.md
       - name: Configure Always Encrypted with Secure Enclaves
@@ -76,8 +76,8 @@
         href: encryption/create-identical-symmetric-keys-on-two-servers.md
       - name: Encrypt a column of data
         href: encryption/encrypt-a-column-of-data.md
-    - name: Secure Azure SQL Database
-      items:
+  - name: Secure Azure SQL Database
+    items:
       - name: SQL Server connector with encryption
         href: encryption/use-sql-server-connector-with-sql-encryption-features.md
       - name: Bring your own key
@@ -88,8 +88,8 @@
         href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
       - name: EKM using Azure Key Vault
         href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
-    - name: Auditing
-      items:
+  - name: Auditing
+    items:
       - name: Create server audit specification
         href: auditing/create-a-server-audit-and-server-audit-specification.md
       - name: Create database audit specification
@@ -174,9 +174,9 @@
              href: encryption/extensible-key-management-ekm.md
            - name: EKM using Azure Key Vault
              href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
-         - name: Auditing
-           href: auditing/sql-server-audit-database-engine.md
-           items:
+     - name: Auditing
+       href: auditing/sql-server-audit-database-engine.md
+        items:
            - name: Action gropus and actions
              href: auditing/sql-server-audit-action-groups-and-actions.md
            - name: Audit records

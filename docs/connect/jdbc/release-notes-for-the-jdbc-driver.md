@@ -29,7 +29,7 @@ Microsoft JDBC Driver 7.2 for SQL Server is now compatible with Java Development
 
 Microsoft JDBC Driver 7.2 for SQL Server now supports Active Directory Managed Service Identity (MSI) authentication mode. This mode of authentication is applicable on Azure Resources with support for "Identity" feature enabled. Both types of Managed System Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection.
 
-More details and sample application to use this authentication mode can be found here: [Connecting using Azure Active Directory Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+More details and a sample application to use this authentication mode can be found here: [Connecting using Azure Active Directory Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
 
 ### OSGi support
 

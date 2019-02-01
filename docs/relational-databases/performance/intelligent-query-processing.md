@@ -24,7 +24,7 @@ The intelligent query processing (QP) feature family includes features with broa
 
 ## Adaptive query processing
 
-The feature family for adaptive query processing includes query processing improvements that adapt optimization strategies to your application workload's runtime conditions. These improvements are included: 
+The adaptive query processing feature family includes the following query processing improvements. These improvements adapt optimization strategies to your application workload's runtime conditions: 
 - Batch mode adaptive joins.
 - Memory grant feedback.
 - Interleaved run for multi-statement table-valued functions (MSTVFs).
@@ -68,7 +68,7 @@ For more information, see [Table variable deferred compilation](../../t-sql/data
 > [!NOTE]
 > Scalar user-defined function (UDF) inlining is a public preview feature.  
 
-Scalar UDF inlining automatically transforms [scalar UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions. It embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs. It results in efficient, set-oriented, parallel plans instead of inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+Scalar UDF inlining automatically transforms [scalar UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions. It embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs. The results are efficient, set-oriented, and parallel instead of inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
 For more information, see [Scalar UDF inlining](../user-defined-functions/scalar-udf-inlining.md).
 
@@ -102,11 +102,11 @@ The two features are independently usable:
 * You get row mode plans that use columnstore indexes.
 * You get batch mode plans that use only rowstore indexes. 
 
-You usually get the best results when you use the two features together. Until now, SQL's query optimizer considered batch mode processing only for queries that involve at least one table with a columnstore index.
+You usually get the best results when you use the two features together. So until now, SQL's query optimizer considered batch mode processing only for queries that involve at least one table with a columnstore index.
 
-Columnstore indexes aren't a good option for some applications. An application might use some other feature that isn't supported with columnstore indexes. For example, triggers aren't supported on tables with clustered columnstore indexes. In-place modifications aren't compatible with columnstore compression. More importantly, columnstore indexes add overhead for **DELETE** and **UPDATE** statements. 
+Columnstore indexes aren't a good option for some applications. An application might use some other feature that isn't supported with columnstore indexes. For example, in-place modifications aren't compatible with columnstore compression. So triggers aren't supported on tables with clustered columnstore indexes. More importantly, columnstore indexes add overhead for **DELETE** and **UPDATE** statements. 
 
-For some hybrid transactional-analytical workloads, the overhead on a workload's transactional aspects outweighs the benefits of columnstore indexes. Such scenarios can improve CPU use from batch mode processing alone. That's why the batch mode on rowstore feature considers batch mode for all queries, no matter which indexes are involved.
+For some hybrid transactional-analytical workloads, the overhead on a workload's transactional aspects outweighs the benefits of columnstore indexes. Such scenarios can improve CPU use from batch mode processing alone. That's why the batch mode on rowstore feature considers batch mode for all queries. It doesn't matter which indexes are involved.
 
 ### Workloads that might benefit from batch mode on rowstore
 
@@ -135,7 +135,7 @@ If batch mode on rowstore is used, in the query run plan, you see the actual run
 2. The query optimizer's search space is changing. So if you get a row mode plan, it might not be the same as the plan you get in a lower compatibility level. And if you get a batch mode plan, it might not be the same as the plan you get with a columnstore index. 
 3. Plans might also change for queries that mix columnstore and rowstore indexes because of the new batch mode rowstore scan.
 4. There are current limitations for the new batch mode on rowstore scan: 
-    * It doesn't kick in for in-memory OLTP tables or for any index other than on-disk heaps and B-trees. 
+    * It won't kick in for in-memory OLTP tables or for any index other than on-disk heaps and B-trees. 
     * It also won't kick in if a large object (LOB) column is fetched or filtered. This limitation includes sparse column sets and XML columns.
 5. There are queries that batch mode isn't used for even with columnstore indexes. Examples are queries that involve cursors. These same exclusions also extend to batch mode on rowstore.
 
@@ -162,7 +162,7 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
 
-You can also disable batch mode on rowstore for a specific query by using the **DISALLOW_BATCH_MODE** query hint. An example is as follows:
+You can also disable batch mode on rowstore for a specific query by using the **DISALLOW_BATCH_MODE** query hint. See the following example:
 
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER

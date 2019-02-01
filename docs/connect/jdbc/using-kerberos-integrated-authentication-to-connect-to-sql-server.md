@@ -190,7 +190,7 @@ The username property does not require REALM if user belongs to the default_real
 
 ## Using Kerberos authentication from Unix Machines on the same Domain
 
-This guide assumes a working Kerberos setup already exists. Run the following code on a Windows machine with working Kerberos authentication to verify if the aforementioned is true. The code will print "Authentication Scheme: KERBEROS" to console if successful. No additional run-time flags, dependencies, or driver settings are required outside of the ones provided. The same block of code can be run on Linux to verify successful connections.
+This guide assumes a working Kerberos setup already exists. Run the following code on a Windows machine with working Kerberos authentication to verify if the aforementioned is true. The code will print "Authentication Scheme: KERBEROS" to the console if successful. No additional run-time flags, dependencies, or driver settings are required outside of the ones provided. The same block of code can be run on Linux to verify successful connections.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

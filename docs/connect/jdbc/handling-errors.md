@@ -27,7 +27,7 @@ manager: craigg
 
 -   getSQLServerError() returns the SQLServerError object containing detailed info about the exception as received from SQL Server. This method returns null if no server error has occurred.
 
-The following methods of SQLServerError class can be used to obtain additional details about the error generated from the server.
+The following methods of the SQLServerError class can be used to obtain additional details about the error generated from the server.
 
 -   SQLServerError.getErrorMessage() returns the error message as received from the server.
 

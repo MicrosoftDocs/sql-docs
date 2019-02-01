@@ -72,7 +72,7 @@ cs.execute();
 
 Workaround: use `getString()` or `getObject()` instead. 
     
-2- Using TVP to populate a table and sending null value in sql_variant is not supported and throws exception.      
+2- Using TVP to populate a table and sending a null value in a sql_variant is not supported and throws an exception.      
 `Inserting null value with column type sql_variant in TVP is not supported.`
 
 ## See Also

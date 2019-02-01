@@ -176,7 +176,7 @@
              href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
      - name: Auditing
        href: auditing/sql-server-audit-database-engine.md
-        items:
+       items:
            - name: Action gropus and actions
              href: auditing/sql-server-audit-action-groups-and-actions.md
            - name: Audit records

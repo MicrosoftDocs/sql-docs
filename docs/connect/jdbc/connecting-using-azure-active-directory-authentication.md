@@ -32,7 +32,7 @@ Possible values are:
     * **SqlPassword**
         * Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
     * **NotSpecified**
-        * Use `authentication=NotSpecified` or leave it as default when none of these authentication methods are needed.
+        * Use `authentication=NotSpecified` or leave it as the default when none of these authentication methods are needed.
 
 *	**accessToken**: Use this connection property to connect to a SQL Database using an access token. accessToken can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It cannot be used in the connection URL.  
 

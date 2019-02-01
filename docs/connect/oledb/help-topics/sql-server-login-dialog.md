@@ -21,7 +21,7 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 > [!NOTE]  
 > SQL Server Login Dialog prompting behavior is controlled by the `DBPROP_INIT_PROMPT` initialization property. For more information, see:
 > - [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [OLE DB Programmer's Guide](https://go.microsoft.com/fwlink/?linkid=2067702&clcid=0x409)
+> - [OLE DB Programmer's Guide](https://go.microsoft.com/fwlink/?linkid=2067702)
 
 ![Screenshot of SQL Server Login Dialog Box](../media/sql-server-login-dialog.png)
 
@@ -32,7 +32,7 @@ The name of an instance of SQL Server on your network. Select a server\instance 
 
 You can enter "(local)" when you are using the same computer as SQL Server. You can then connect to a local instance of SQL Server, even when running a non-networked version of SQL Server.
 
-For more information about server names for different types of networks, see [SQL Server Installation](https://go.microsoft.com/fwlink/?linkid=2067541&clcid=0x409).
+For more information about server names for different types of networks, see [SQL Server Installation](https://go.microsoft.com/fwlink/?linkid=2067541).
 
 ### Authentication Mode
 You can select the following authentication options from the drop-down list:

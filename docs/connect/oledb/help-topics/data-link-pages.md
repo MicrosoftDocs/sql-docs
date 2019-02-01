@@ -50,4 +50,4 @@ Use the Advanced tab to view and set additional initialization properties.
 
 
 > [!NOTE]  
->  For more general Data Link connection information, see the [Data Link API Overview](https://go.microsoft.com/fwlink/?linkid=2067432&clcid=0x409).
+>  For more general Data Link connection information, see the [Data Link API Overview](https://go.microsoft.com/fwlink/?linkid=2067432).

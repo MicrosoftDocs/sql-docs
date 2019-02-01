@@ -11,12 +11,12 @@ ms.topic: reference
 ms.author: "v-beaziz"
 author: bazizi
 ---
-# Universal Data Link (UDL) Configuration
+# Universal Data Link (UDL) configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-## Connection Tab
+## Connection tab
 Use the Connection tab to specify how to connect to your data using the Microsoft OLE DB Driver for SQL Server.
 
 ![Screenshot of OLE DB Data Link Pages - Connection Tab](../media/data-link-pages-connection-tab.png)
@@ -39,7 +39,7 @@ The Connection tab is provider-specific and displays only the connection propert
 |Change Password|Displays Change SQL Server Password dialog. |
 |Test Connection|Click to attempt a connection to the specified data source. If the connection fails, ensure that the settings are correct. For example, spelling errors and case sensitivity can cause failed connections.|
 
-## Advanced Tab
+## Advanced tab
 Use the Advanced tab to view and set additional initialization properties.
 
 ![Screenshot of OLE DB Data Link Pages - Advanced Tab](../media/data-link-pages-advanced-tab.png)

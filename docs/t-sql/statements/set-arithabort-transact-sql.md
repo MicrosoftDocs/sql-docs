@@ -58,7 +58,7 @@ Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF ca
   
 When SET ARITHABORT and SET ANSI WARNINGS are ON, these error conditions cause the query to end.  
   
-When SET ARITHABORT is ON and SET ANSI WARNINGS is OFF, these error conditions cause the batch to end. If the errors occur in a transaction, the transaction is rolled back. If SET ARITHABORT is OFF and one of these errors occurs, a warning message appears and the result of the arithmetic operation is NULL.  
+When SET ARITHABORT is ON and SET ANSI WARNINGS is OFF, these error conditions cause the batch to end. If the errors occur in a transaction, the transaction is rolled back. When SET ARITHABORT is OFF and one of these errors occurs, a warning message appears and the result of the arithmetic operation is NULL.  
   
 If SET ARITHABORT and SET ANSI WARNINGS are OFF and one of these errors occurs, a warning message appears, and the result of the arithmetic operation is NULL.  
   
@@ -67,11 +67,11 @@ If SET ARITHABORT and SET ANSI WARNINGS are OFF and one of these errors occurs, 
   
 Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON when the database compatibility level is set to 90 or higher. If the database compatibility level is set to 80 or earlier, the ARITHABORT option must be explicitly set to ON.  
   
-During expression evaluation, when SET ARITHABORT is OFF and an INSERT, DELETE, or UPDATE statement encounters an arithmetic, overflow, divide-by-zero, or domain error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserts or updates a NULL value. If the target column isn't nullable, the insert or update action fails and the user sees an error.  
+For expression evaluation, if SET ARITHABORT is OFF and an INSERT, UPDATE, or DELETE statement comes across an arithmetic, overflow, divide-by-zero, or domain error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserts or updates a NULL value. If the target column isn't nullable, the insert or update action fails and the user sees an error.  
   
 When either SET ARITHABORT or SET ARITHIGNORE is OFF and SET ANSI_WARNINGS is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still returns an error message when encountering divide-by-zero or overflow errors.  
   
-If SET ARITHABORT is OFF and an abort error occurs during the evaluation of the Boolean condition of an IF statement, the FALSE branch executes.
+When SET ARITHABORT is OFF and an abort error occurs during the evaluation of the Boolean condition of an IF statement, the FALSE branch executes.
   
 SET ARITHABORT must be ON when you're creating or changing indexes on computed columns or indexed views. If SET ARITHABORT is OFF, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views fail.
   

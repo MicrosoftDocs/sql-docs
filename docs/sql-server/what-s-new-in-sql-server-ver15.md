@@ -26,7 +26,10 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 ## CTP 2.3
 
-Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. <!--In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3.-->
+Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3.
+
+- [Database engine](#databaseengine)
+  - Improved Indirect Checkpoint Scalability
 
 ## Previous CTPs
 
@@ -106,6 +109,10 @@ Continue reading for more details about these features.
 ## <a id="databaseengine"></a> Database Engine
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
+
+### Improved Indirect Checkpoint Scalability (CTP 2.3)
+
+In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
 
 ### Scalar UDF inlining (CTP 2.1)
 

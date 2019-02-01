@@ -108,7 +108,7 @@ For more information, see [Set Kerberos ticket on Windows, Linux And Mac](https:
 > [!NOTE]
 >  If you are using an older version of the driver, check this [link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 
 
-The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups, you belong to, must exist in the database, and must have the CONNECT permission. 
+The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups you belong to, must exist in the database and must have the CONNECT permission. 
 
 Before building and running the example, on the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
 

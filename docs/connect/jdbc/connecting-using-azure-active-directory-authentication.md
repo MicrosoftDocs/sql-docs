@@ -21,7 +21,7 @@ This article provides information on how to develop Java applications to use the
 You can use Azure Active Directory (AAD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL DB. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
 Connection properties to support Azure Active Directory Authentication in Microsoft JDBC Driver for SQL Server are as under:
-*	**authentication**:  Use this property to indicate which SQL authentication method to use for connection. 
+*	**authentication**:  Use this property to indicate which SQL authentication method to use for the connection. 
 Possible values are: 
     * **ActiveDirectoryMSI**
         * Supported since driver version **v7.2**, `authentication=ActiveDirectoryMSI` can be used to connect to an Azure SQL Database/Data Warehouse from inside of an Azure Resource with "Identity" support enabled. Optionally, **msiClientId** can also be specified in the Connection/DataSource properties along with this authentication mode, which must contain the Client ID of a Managed Service Identity to be used to acquire the **accessToken** for establishing the connection.

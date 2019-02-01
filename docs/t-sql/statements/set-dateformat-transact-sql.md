@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Sets the order of the month, day, and year date parts for interpreting **date**, **smalldatetime**, **datetime**, **datetime2**, and **datetimeoffset** character strings.  
+  Sets the order of the month, day, and year date parts for interpreting date character strings. These strings are of type **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset**.  
   
  For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   

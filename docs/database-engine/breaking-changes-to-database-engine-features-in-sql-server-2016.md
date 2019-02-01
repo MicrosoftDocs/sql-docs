@@ -26,11 +26,11 @@ manager: craigg
   
 -   The *TimeStamp* column of `sys.fn_virtualfilestats` has expanded from an **int** to a **bigint** data type.  
 
--   The MD2, MD4, MD5, SHA, and SHA1 algorithms are not available under compatibility level 130. Using the MD2, MD4, MD5, SHA, or SHA1 hash algorithms **is not recommended**, but can be done by setting the database compatibility level to a value lower than 130.  
+-   The MD2, MD4, MD5, SHA, and SHA1 algorithms are not available under compatibility level 130. Using the MD2, MD4, MD5, SHA, or SHA1 hash algorithm **is not recommended**, but can be done by setting the database compatibility level to a value lower than 130.  
 
--   Under database compatibility level 130, implicit conversions from **datetime** to **datetime2** data types show improved accuracy by accounting for the fractional milliseconds, resulting in different converted values. Use explicit casting to datetime2 datatype whenever a mixed comparison scenario between datetime and datetime2 datatypes exists. For more information, refer to this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
+-   Under database compatibility level 130, implicit conversions from **datetime** to **datetime2** data types show improved accuracy by accounting for the fractional milliseconds, resulting in different converted values. Use explicit casting to datetime2 datatype whenever a mixed comparison scenario between datetime and datetime2 datatypes exists. For more information, see this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
 
--   Under database compatibility level 130, operations that perform implicit conversions between certain numeric and datetime data types show improved accuracy and can result in different converted values. This includes usage of functions that require calculations such as for example, DATEDIFF and ROUND. For more information, refer to this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
+-   Under database compatibility level 130, operations that perform implicit conversions between certain numeric and datetime data types show improved accuracy and can result in different converted values. This includes usage of functions that require calculations such as, for example, `DATEDIFF` and `ROUND`. For more information, see this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
 
 ## <a name="previous-versions"></a> Previous Versions  
 

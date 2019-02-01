@@ -46,7 +46,7 @@ For **ActiveDirectoryMSI** authentication, the below components must be installe
 * Client Environment must be an Azure Resource and must have "Identity" feature support enabled.
 * A contained database user representing your Azure Resource's System Assigned Managed Identity or User Assigned Managed Identity, or one of the groups your MSI belongs to, must exist in the target database and must have the CONNECT permission.
 
-For other authentication modes, below components must be installed on the client machine:
+For other authentication modes, the below components must be installed on the client machine:
 * Java 7 or above
 * Microsoft JDBC Driver 6.0 (or higher) for SQL Server
 * If you're using the access token-based authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. For more information, see **Connecting using Access Token** section.

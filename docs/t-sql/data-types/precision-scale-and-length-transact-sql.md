@@ -83,4 +83,3 @@ Scale is greater than 6 and integral part (`precision-scale = 41`) is greater th
 [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
-  

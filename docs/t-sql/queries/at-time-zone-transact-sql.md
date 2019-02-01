@@ -164,4 +164,3 @@ FOR SYSTEM_TIME AS OF @ASOF;
  [Date and Time Types](../../t-sql/data-types/date-and-time-types.md)   
  [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
-  

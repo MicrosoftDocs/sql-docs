@@ -108,5 +108,3 @@ SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;
 ## See Also  
  [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
-  
-

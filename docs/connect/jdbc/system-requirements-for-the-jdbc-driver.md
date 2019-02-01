@@ -112,7 +112,7 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
   
   The JDBC Driver 6.2 includes two JAR class libraries in each installation package: **mssql-jdbc-6.2.2.jre7.jar**, and **mssql-jdbc-6.2.2.jre8.jar**. 
   
- The JDBC Driver 6.2 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 5.0, 6.0, 7.0, and 8.0.
+ The JDBC Driver 6.2 is designed to work with and be supported by all major Java virtual machines, but is tested only on Sun JRE 5.0, 6.0, 7.0, and 8.0.
   
  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server:  
   
@@ -135,7 +135,7 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
   
   The JDBC Drivers 6.0 and 4.2 include two JAR class libraries in each installation package: **sqljdbc41.jar**, and **sqljdbc42.jar**. 
   
- The JDBC Drivers 6.0 and 4.2 are designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 5.0, 6.0, 7.0, and 8.0.
+ The JDBC Drivers 6.0 and 4.2 are designed to work with and be supported by all major Java virtual machines, but is tested only on Sun JRE 5.0, 6.0, 7.0, and 8.0.
   
  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server:  
   
@@ -152,7 +152,7 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
 |---------|-----------------|  
 |sqljdbc41.jar|**sqljdbc41.jar** class library provides support for JDBC 4.0 API. It includes all of the features of the JDBC 4.0 driver as well as the JDBC 4.0 API methods. JDBC 4.1 is not supported (throws an exception "SQLFeatureNotSupportedException").<br /><br /> **sqljdbc41.jar** class library requires a Java Runtime Environment (JRE) 7.0. Using **sqljdbc41.jar** on JRE 6.0 and 5.0 throws an exception.<br /><br /> 
   
- The JDBC driver is designed to work with and be supported by all major Java virtual machines, but is tested on OpenJDK 5.0, 6.0 and 7.0.
+ The JDBC driver is designed to work with and be supported by all major Java virtual machines, but is tested on Sun JRE 5.0, 6.0 and 7.0.
   
  The following summarizes support provided by the JAR file included with Microsoft JDBC Driver 4.1 for SQL Server.  
   

@@ -40,7 +40,7 @@ For more information, see the authentication property on the [Setting the Connec
 
 
 ## Client Setup Requirements
-For **ActiveDirectoryMSI** authentication, below components must be installed on the client machine:
+For **ActiveDirectoryMSI** authentication, the below components must be installed on the client machine:
 * Java 8 or above
 * Microsoft JDBC Driver 7.2 (or higher) for SQL Server
 * Client Environment must be an Azure Resource and must have "Identity" feature support enabled.

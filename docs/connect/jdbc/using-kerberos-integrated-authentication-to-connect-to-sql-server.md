@@ -209,7 +209,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 ```
 
 1. Domain join the client machine to the same domain as the server.
-2. (Optional) Set the default Kerberos ticket location, this is most conveniently done by setting the `KRB5CCNAME` environment variable.
+2. (Optional) Set the default Kerberos ticket location. This is most conveniently done by setting the `KRB5CCNAME` environment variable.
 3. Get the Kerberos ticket, either by generating a new one or placing an existing one in the default Kerberos ticket location. To generate a ticket, simply use a terminal and initialize the ticket via `kinit USER@DOMAIN.AD` where "USER" and "DOMAIN.AD" is the principal and domain respectively. E.g: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. The ticket will be generated in the default ticket location or in the `KRB5CCNAME` path if set.
 4. The terminal will prompt for a password, enter the password.
 5. Verify the credentials in the ticket via `klist` and confirm the credentials are the ones you intend to use for authentication.

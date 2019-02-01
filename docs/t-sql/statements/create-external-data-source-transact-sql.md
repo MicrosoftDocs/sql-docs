@@ -162,7 +162,7 @@ For Azure Data Lake Store, location specifies the URI for connecting to your Azu
 
 
 **SHARD_MAP_MANAGER**   
- For SHARD_MAP_MANAGER, specifies the logical server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
+ For SHARD_MAP_MANAGER, specifies the SQL Database server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -183,7 +183,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 For a step-by-step tutorial, see [Getting started with elastic queries for sharding (horizontal partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
 **RDBMS**   
-For RDBMS, specifies the logical server name of the remote database in Azure SQL Database.  
+For RDBMS, specifies the SQL Database server name of the remote database in Azure SQL Database.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -399,7 +399,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## Examples: Azure SQL Database
 
 ### E. Create a Shard map manager external data source
-To create an external data source to reference a SHARD_MAP_MANAGER, specify the logical server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
+To create an external data source to reference a SHARD_MAP_MANAGER, specify the SQL Database server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -419,7 +419,7 @@ WITH (
 ```
 
 ### F. Create an RDBMS external data source
-To create an external data source to reference a RDBMS, specifies the logical server name of the remote database in Azure SQL Database.
+To create an external data source to reference a RDBMS, specifies the SQL Database server name of the remote database in Azure SQL Database.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';

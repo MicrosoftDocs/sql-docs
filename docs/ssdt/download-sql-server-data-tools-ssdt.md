@@ -46,8 +46,8 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.0) ](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
-> - Before installing SSDT for Visual Studio 2017 (15.8.2), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
-> - SSDT for Visual Studio 2017 (15.8.2) doesn't support designing packages that contain Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
+> - Before installing SSDT for Visual Studio 2017 (15.9.0), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
+> - SSDT for Visual Studio 2017 since 15.8.2 doesn't support designing packages that contain Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
 
 
@@ -55,7 +55,7 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
   
 Release number: 15.9.0  
 Build Number: 14.0.16186.0  
-Release date: Janaury 28, 2019  
+Release date: January 28, 2019  
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

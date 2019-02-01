@@ -95,7 +95,7 @@ public class AAD_MSI {
 }
 ```
 
-Running this example on an Azure Virtual Machine fetches access token from _System Assigned Managed Identity_ or _User Assigned Managed Identity_ (if **msiClientId** is specified) and establishes a connection using fetched access token. If a connection is established, you should see the following message:
+Running this example on an Azure Virtual Machine fetches an access token from _System Assigned Managed Identity_ or _User Assigned Managed Identity_ (if **msiClientId** is specified) and establishes a connection using the fetched access token. If a connection is established, you should see the following message:
 
 ```bash
 You have successfully logged on as: <your MSI username>

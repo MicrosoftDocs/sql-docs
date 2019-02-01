@@ -1,7 +1,7 @@
 ---
 title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/19/2019
+ms.date: 02/01/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters specified in the third argument.
 
@@ -139,5 +139,4 @@ The results are:
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-
+ [String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

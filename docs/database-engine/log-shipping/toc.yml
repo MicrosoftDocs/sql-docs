@@ -1,24 +1,28 @@
 - name: Overview
   href: about-log-shipping-sql-server.md
-- name: Configure Log Shipping
-  href: configure-log-shipping-sql-server.md
-- name: Add a Secondary Database to a Log Shipping Configuration
-  href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-- name: Remove a Secondary Database from a Log Shipping Configuration
-  href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-- name: Remove Log Shipping
-  href: remove-log-shipping-sql-server.md
-- name: View the Log Shipping Report (SQL Server Management Studio)
-  href: view-the-log-shipping-report-sql-server-management-studio.md
-- name: Monitor Log Shipping (Transact-SQL)
-  href: monitor-log-shipping-transact-sql.md
-- name: Fail Over to a Log Shipping Secondary
-  href: fail-over-to-a-log-shipping-secondary-sql-server.md
-- name: Change Roles Between Primary and Secondary Log Shipping Servers
-  href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
-- name: Log Shipping and Replication
-  href: log-shipping-and-replication-sql-server.md
-- name: Log Shipping Tables and Stored Procedures
-  href: log-shipping-tables-and-stored-procedures.md
-- name: Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)
-  href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+- name: How-to
+  items:
+    - name: Configure Log Shipping
+      href: configure-log-shipping-sql-server.md
+    - name: Add a secondary database
+      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+    - name: Remove a secondary database
+      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+    - name: Remove Log Shipping
+      href: remove-log-shipping-sql-server.md
+    - name: View the Log Shipping Report 
+      href: view-the-log-shipping-report-sql-server-management-studio.md
+    - name: Monitor Log Shipping 
+      href: monitor-log-shipping-transact-sql.md
+    - name: Fail Over to secondary
+      href: fail-over-to-a-log-shipping-secondary-sql-server.md
+    - name: Change roles between Servers
+      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+- name: Concepts
+  items:
+    - name: Log Shipping and Replication
+      href: log-shipping-and-replication-sql-server.md
+    - name: Log Shipping Tables and Stored Procedures
+      href: log-shipping-tables-and-stored-procedures.md
+    - name: Upgrading Log Shipping to SQL Server 2016 
+      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md

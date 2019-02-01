@@ -177,7 +177,7 @@
      - name: Auditing
        href: auditing/sql-server-audit-database-engine.md
        items:
-           - name: Action gropus and actions
+           - name: Action groups and actions
              href: auditing/sql-server-audit-action-groups-and-actions.md
            - name: Audit records
              href: auditing/sql-server-audit-records.md    

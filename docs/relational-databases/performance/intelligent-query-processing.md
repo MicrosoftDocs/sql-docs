@@ -40,7 +40,7 @@ For more information on batch mode adaptive joins, see [Adaptive query processin
 > [!NOTE]
 > Row mode memory grant feedback is a public preview feature.  
 
-This feature recalculates the actual memory required for a query. Then it updates the grant value for the cached plan. It reduces excessive memory grants that impact concurrency. It also fixes underestimated memory grants that cause expensive spills to disk.
+This feature recalculates the actual memory required for a query. Then it updates the grant value for the cached plan. It reduces excessive memory grants that impact concurrency. This feature also fixes underestimated memory grants that cause expensive spills to disk.
 
 For more information on memory grant feedback, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
 
@@ -59,7 +59,7 @@ Table variable deferred compilation improves plan quality and overall performanc
 
 Table variable deferred compilation defers compilation of a statement that references a table variable until the first actual run of the statement. This deferred compilation behavior is the same as that of temporary tables. This change results in the use of actual cardinality instead of the original one-row guess. 
 
-You can enable the public preview of table variable deferred compilation in Azure SQL Database. To do that, enable database compatibility level 150 for the database you're connected to when you run the query.
+You can enable the public preview of table variable deferred compilation in Azure SQL Database. To do that, enable compatibility level 150 for the database you're connected to when you run the query.
 
 For more information, see [Table variable deferred compilation](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 
@@ -68,7 +68,7 @@ For more information, see [Table variable deferred compilation](../../t-sql/data
 > [!NOTE]
 > Scalar user-defined function (UDF) inlining is a public preview feature.  
 
-Scalar UDF inlining automatically transforms [scalar UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions and embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs. It results in efficient, set-oriented, parallel plans instead of inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+Scalar UDF inlining automatically transforms [scalar UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions. It embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs. It results in efficient, set-oriented, parallel plans instead of inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
 For more information, see [Scalar UDF inlining](../user-defined-functions/scalar-udf-inlining.md).
 
@@ -77,7 +77,7 @@ For more information, see [Scalar UDF inlining](../user-defined-functions/scalar
 > [!NOTE]
 > **APPROX_COUNT_DISTINCT** is a public preview feature.  
 
-Approximate query processing is a new feature family that provides aggregations across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important, but responsiveness is critical. The new **APPROX_COUNT_DISTINCT** aggregate function returns the approximate number of unique non-null values in a group.
+Approximate query processing is a new feature family. It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important, but responsiveness is critical. The new **APPROX_COUNT_DISTINCT** aggregate function returns the approximate number of unique non-null values in a group.
 
 For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/functions/approx-count-distinct-transact-sql.md).
 
@@ -89,10 +89,10 @@ For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/fun
 ### Background
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced a new feature to accelerate analytical workloads: columnstore indexes. We expanded the use cases and improved the performance of columnstore indexes in each subsequent release. Until now, we surfaced and documented all these capabilities as a single feature. You create columnstore indexes on your tables. And your analytical workload goes faster. However, there are two related but distinct sets of technologies:
-- With **Columnstore** indexes, analytical queries access only the data in the columns they need. Page compression in the columnstore format is also more effective than compression in traditional **rowstore** indexes. 
-- With **Batch mode** processing, query operators process data more efficiently. They work on a batch of rows instead of one row at a time. A number of other scalability improvements are tied to batch mode processing. For more information on batch mode, see [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
+- With **columnstore** indexes, analytical queries access only the data in the columns they need. Page compression in the columnstore format is also more effective than compression in traditional **rowstore** indexes. 
+- With **batch mode** processing, query operators process data more efficiently. They work on a batch of rows instead of one row at a time. A number of other scalability improvements are tied to batch mode processing. For more information on batch mode, see [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
-The two sets of features work together to improve input/output (I/O) and CPU utilization:
+The two sets of features work together to improve input/output (I/O) and CPU use:
 - By using columnstore indexes, more of your data fits in memory. That reduces the need for I/O.
 - Batch mode processing uses CPU more efficiently.
 
@@ -102,11 +102,11 @@ The two features are independently usable:
 * You get row mode plans that use columnstore indexes.
 * You get batch mode plans that use only rowstore indexes. 
 
-In most cases, you get the best results when you use the two features together. Until now, SQL's query optimizer considered batch mode processing only for queries that involve at least one table with a columnstore index.
+You usually get the best results when you use the two features together. Until now, SQL's query optimizer considered batch mode processing only for queries that involve at least one table with a columnstore index.
 
-For some applications, columnstore indexes aren't a viable option. The application uses some other feature that isn't supported with columnstore indexes. For example, triggers aren't supported on tables with clustered columnstore indexes. In-place modifications aren't compatible with columnstore compression. More importantly, columnstore indexes add overhead for **DELETE** and **UPDATE** statements. 
+Columnstore indexes aren't a good option for some applications. An application might use some other feature that isn't supported with columnstore indexes. For example, triggers aren't supported on tables with clustered columnstore indexes. In-place modifications aren't compatible with columnstore compression. More importantly, columnstore indexes add overhead for **DELETE** and **UPDATE** statements. 
 
-For some hybrid transactional-analytical workloads, the overhead on a workload's transactional aspects outweighs the benefits of columnstore indexes. Such scenarios can improve CPU utilization from batch mode processing alone. That's why the batch mode on rowstore feature considers batch mode for all queries, regardless of the indexes involved.
+For some hybrid transactional-analytical workloads, the overhead on a workload's transactional aspects outweighs the benefits of columnstore indexes. Such scenarios can improve CPU use from batch mode processing alone. That's why the batch mode on rowstore feature considers batch mode for all queries, no matter which indexes are involved.
 
 ### Workloads that might benefit from batch mode on rowstore
 

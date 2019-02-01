@@ -51,7 +51,7 @@ For other authentication modes, the below components must be installed on the cl
 * Microsoft JDBC Driver 6.0 (or higher) for SQL Server
 * If you're using the access token-based authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. For more information, see the **Connecting using Access Token** section.
 * If you're using the **ActiveDirectoryPassword** authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see the **Connecting using ActiveDirectoryPassword Authentication Mode** section.
-* If you're using the **ActiveDirectoryIntegrated** mode, you need azure-activedirectory-library-for-java and its dependencies. For more information, see **Connecting using ActiveDirectoryIntegrated Authentication Mode** section.
+* If you're using the **ActiveDirectoryIntegrated** mode, you need azure-activedirectory-library-for-java and its dependencies. For more information, see the **Connecting using ActiveDirectoryIntegrated Authentication Mode** section.
 
 ## Connecting using ActiveDirectoryMSI Authentication Mode
 The following example shows how to use `authentication=ActiveDirectoryMSI` mode. Run this example from inside an Azure Resource, e,g an Azure Virtual Machine, App Service, or a Function App that is federated with Azure Active Directory.

@@ -178,8 +178,24 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
-/TargetReadinessConfiguration=.\AALAB03-2K8.xml
+/TargetReadinessConfiguration=.\Config.xml
 
+```
+Configuration file contents:
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <SourceConnections>
+    <SourceConnection>connection string 1</SourceConnection>
+    <SourceConnection>connection string 2</SourceConnection>
+    <!-- ... -->
+    <SourceConnection>connection string n</SourceConnection>
+  </SourceConnections>
+  <AssessmentResultJson>path\to\file.json</AssessmentResultJson>
+  <FeatureDiscoveryReportJson>path\to\featurediscoveryreport.json</FeatureDiscoveryReportJson>
+  <OverwriteResult>true</OverwriteResult> <!-- or false -->
+</TargetReadinessConfiguration>
 ```
 
 ## Azure SQL Database SKU recommendations using the CLI

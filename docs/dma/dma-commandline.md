@@ -116,6 +116,68 @@ Catalog=DatabaseName3;Integrated Security=true"
 /AssessmentResultJson="C:\\Results\\test2016.json"
 ```
 
+**Single-database Target Readiness assessment using Windows authentication**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+```
+
+**Single-database Target Readiness assessment using SQL Server authentication**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateRecommendations 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json" 
+
+```
+
+**Multiple-database Target Readiness assessment**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
+/AssessmentOverwriteResult  
+/AssessmentResultJson="C:\Results\test2016.json"
+
+```
+
+**Target Readiness assessment for all databases on a server using Windows authentication**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**Target Readiness assessment by importing feature collection report created earlier**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/ImportFeatureDiscoveryReportJson="c:\temp\feature_report.json" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**Target Readiness assessment by providing configuration file**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/TargetReadinessConfiguration=.\AALAB03-2K8.xml
+
+```
+
 ## Azure SQL Database SKU recommendations using the CLI
 
 ```

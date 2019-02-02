@@ -47,7 +47,11 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentOverwriteResult`     | Overwrite the result file    | N
 |`/AssessmentResultJson`     | Full path to the JSON result file     | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
 |`/AssessmentResultCsv`    | Full path to the CSV result file   | Y <br>(Either AssessmentResultJson or AssessmentResultCsv is required)
-
+|`/Action`    | Use SkuRecommendation to get SKU recommendations, use AssessTargetReadiness to perform target readiness assessment.   | N
+|`/SourceConnections`    | Space delimited list of connection strings. Database name (Initial Catalog) is optional. If no database name is provided, then all databases on the source are assessed.   | Y <br>(Required if Action is 'AssessTargetReadiness')
+|`/TargetReadinessConfiguration`    | Full path to the XML file describing values for the name, source connections and result file.   | Y <br>(Either TargetReadinessConfiguration or SourceConnections is required)
+|`/FeatureDiscoveryReportJson`    | Path to the feature discovery JSON report. If this file is generated, then it can be used to run target readiness assessment again without connecting to source.   | N
+|`/ImportFeatureDiscoveryReportJson`    | Path to the feature discovery JSON report created earlier. Instead of source connections, this file will be used.   | N
 
 ## Examples of assessments using the CLI
 

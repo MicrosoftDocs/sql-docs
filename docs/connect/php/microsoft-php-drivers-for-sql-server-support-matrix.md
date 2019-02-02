@@ -26,7 +26,7 @@ manager: ""
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|:-:|-|
-|Microsoft PHP Drivers 5.6 for SQL Server|5.6|February 11, 2024|
+|Microsoft PHP Drivers 5.6 for SQL Server|5.6|TOFIX, 2024|
 |Microsoft PHP Drivers 5.3 for SQL Server|5.3|July 20, 2023|
 |Microsoft PHP Drivers 5.2 for SQL Server|5.2|February 9, 2023|
 |Microsoft PHP Drivers 4.3 for SQL Server|4.3|July 6, 2022|

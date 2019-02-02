@@ -27,9 +27,9 @@ Versions 3.1 and later of the Microsoft PHP Drivers for SQL Server are officiall
 For information about how to download and install the latest stable PHP binaries, see [the PHP web site](https://php.net).  The Microsoft Drivers for PHP for SQL Server require the following versions of PHP:
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; PHP version|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
-|:---:|---|---|---|---|---|---|---|---|
-|7.3|7.3.0+ | | | | | | | |
-|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>| | | | | | |
+|:---:|---|---|---|---|---|---|---|
+|7.3|7.3.0+ | | | | | | |
+|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>| | | | |
 |7.1|7.1.0+ |7.1.0+ |7.1.0+ |7.1.0+ |       |        |        |
 |7.0|       |7.0.0+ |7.0.0+ |7.0.0+ |7.0.0+ |        |        |
 |5.6|       |       |       |       |       |5.6.4+  |        |
@@ -46,8 +46,6 @@ For information about how to download and install the latest stable PHP binaries
 
     > [!NOTE]  
     > Microsoft provides support only for IIS.  
-
--   Version 5.3 of the Microsoft Drivers for PHP for SQL Server will be the last to support PHP 7.0.
 
 ## ODBC Driver
 

@@ -28,6 +28,7 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 - Dropped support for PHP 7.0
 - Dropped support for Ubuntu 17.10
 - Support for Azure AD Access Token (in Linux and macOS, requires ODBC Driver 17.2+ and unixODBC 2.3.6+)
+- Support for Authentication with Azure AD using Managed Identity for Azure Resources (requires ODBC Driver 17.3+)
 - New fetch functionalities:
   - New PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE flag for pdo_sqlsrv to return datetime as objects
   - Add ReturnDatesAsStrings option to statement level for sqlsrv

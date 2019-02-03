@@ -32,7 +32,7 @@ Describes an [Error](../../../ado/reference/ado-api/error-object.md) object.
 ## Applies To  
  [Error Object](../../../ado/reference/ado-api/error-object.md)  
   
-## See Also  
+## See also  
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [HelpContext, HelpFile Properties](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   

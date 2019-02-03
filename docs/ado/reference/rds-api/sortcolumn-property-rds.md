@@ -42,7 +42,7 @@ DataControl.SortColumn = String
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Sort Property](../../../ado/reference/ado-api/sort-property.md)   
  [SortDirection Property (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

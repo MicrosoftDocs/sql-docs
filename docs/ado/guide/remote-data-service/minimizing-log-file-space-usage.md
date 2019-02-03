@@ -39,7 +39,7 @@ A log file may fill quickly (thus halting the server) if there is a large volume
   
  For more information about the **Truncate on Checkpoint** feature, see the Microsoft SQL Server documentation.  
   
-## See Also  
+## See also  
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

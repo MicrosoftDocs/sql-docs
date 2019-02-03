@@ -82,7 +82,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  When using WHERE clauses, parameters can not use the SQL data types for text, ntext and image or an error will result that contains the following description: `Invalid operator for data type`.  
   
-## See Also  
+## See also  
  [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
  [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)

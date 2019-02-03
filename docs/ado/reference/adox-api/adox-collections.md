@@ -27,7 +27,7 @@ ms.author: genemi
 |[Users](../../../ado/reference/adox-api/users-collection-adox.md)|Contains all stored **User** objects of a catalog or group.|  
 |[Views](../../../ado/reference/adox-api/views-collection-adox.md)|Contains all **View** objects of a catalog.|  
   
-## See Also  
+## See also  
  [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX Object Model](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADOX Objects](../../../ado/reference/adox-api/adox-objects.md)   

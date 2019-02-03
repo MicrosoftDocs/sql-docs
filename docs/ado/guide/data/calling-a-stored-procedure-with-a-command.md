@@ -126,5 +126,5 @@ End Function
 'EndNewConnection  
 ```  
   
-## See Also  
+## See also  
  [Knowledge Base article 117500](https://go.microsoft.com/fwlink/?LinkId=117500)

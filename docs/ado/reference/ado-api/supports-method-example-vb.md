@@ -155,6 +155,6 @@ End Sub
 'EndSupports2VB  
 ```  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports Method](../../../ado/reference/ado-api/supports-method.md)

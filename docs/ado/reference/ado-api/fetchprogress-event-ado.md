@@ -46,6 +46,6 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
 > [!NOTE]
 >  To use **FetchProgress** with Microsoft Visual Basic, Visual Basic 6.0 or later is required.  
   
-## See Also  
+## See also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)

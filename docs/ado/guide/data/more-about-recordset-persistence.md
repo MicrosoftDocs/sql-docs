@@ -71,7 +71,7 @@ dc.SQL = "c:\yourFile.adtg"
 dc.Refresh  
 ```  
   
-## See Also  
+## See also  
  [GetString Method (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Microsoft OLE DB Persistence Provider (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   

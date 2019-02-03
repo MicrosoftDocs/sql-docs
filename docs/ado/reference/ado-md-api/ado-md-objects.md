@@ -39,7 +39,7 @@ ms.author: genemi
   
  Many ADO MD objects can be contained in a corresponding collection. For example, a [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) object can be contained in a [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) collection of a **Catalog**. For more information, see [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md).  
   
-## See Also  
+## See also  
  [ADO MD API Reference](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD Code Examples](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md)   

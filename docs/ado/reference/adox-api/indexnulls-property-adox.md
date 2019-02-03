@@ -32,5 +32,5 @@ Indicates whether records that have null values in their index fields have index
 ## Applies To  
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## See Also  
+## See also  
  [IndexNulls Property Example (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)

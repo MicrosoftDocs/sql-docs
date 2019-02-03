@@ -29,5 +29,5 @@ Indicates the number of levels between the [Level](../../../ado/reference/ado-md
 ## Applies To  
  [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
   
-## See Also  
+## See also  
  [LevelDepth Property (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)

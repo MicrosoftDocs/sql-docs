@@ -150,6 +150,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source Property (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

@@ -49,7 +49,7 @@ Represents the data at the intersection of axis coordinates contained in a cells
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Axis Example (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Positions Collection (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

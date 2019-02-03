@@ -54,7 +54,7 @@ ADO for Windows Foundation Classes (ADO/WFC) builds on the ADO event model and p
   
 7.  When you are finished processing, remove your handler from the list of ADO/WFC event handlers. Use the method with a name such as **removeOn**_EventName_(*handler*).  
   
-## See Also  
+## See also  
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO - WFC Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Event Parameters](../../../ado/guide/data/event-parameters.md)   

@@ -33,7 +33,7 @@ Indicates the number of members for which the current [Member](../../../ado/refe
 ## Applies To  
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Children Property (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count Property (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Members Collection (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

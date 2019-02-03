@@ -37,7 +37,7 @@ Indicates the text of a command to be issued against a provider.
 ## Applies To  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## See Also  
+## See also  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VC++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Requery Method](../../../ado/reference/ado-api/requery-method.md)   

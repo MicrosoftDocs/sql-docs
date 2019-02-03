@@ -127,6 +127,6 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Akiko Yokomoto    3 Silver Ct. Walnut Creek CA**   
-## See Also  
+## See also  
  [Field Object](../../../ado/reference/ado-api/field-object.md)   
  [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

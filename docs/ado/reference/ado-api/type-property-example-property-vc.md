@@ -209,6 +209,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

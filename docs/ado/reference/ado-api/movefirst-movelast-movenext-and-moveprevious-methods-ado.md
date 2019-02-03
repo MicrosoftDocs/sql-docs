@@ -54,7 +54,7 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VC++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   

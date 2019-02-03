@@ -55,7 +55,7 @@ End Sub
 ' EndOwnersVB  
 ```  
   
-## See Also  
+## See also  
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetObjectOwner Method (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [SetObjectOwner Method](../../../ado/reference/adox-api/setobjectowner-method.md)

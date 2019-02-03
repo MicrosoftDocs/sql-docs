@@ -37,7 +37,7 @@ Parameters.Delete Index
 ## Applies To  
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## See Also  
+## See also  
  [Delete Method (ADO Fields Collection)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Delete Method (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord Method (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

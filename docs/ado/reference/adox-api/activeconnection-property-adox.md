@@ -34,7 +34,7 @@ Indicates the ADO [Connection](../../../ado/reference/ado-api/connection-object-
 ## Applies To  
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## See Also  
+## See also  
  [Catalog ActiveConnection Property Example (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Command and CommandText Properties Example (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Connection Close Method, Table Type Property Example (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

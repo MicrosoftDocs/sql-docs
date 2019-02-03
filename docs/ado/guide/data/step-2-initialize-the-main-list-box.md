@@ -43,7 +43,7 @@ End Sub
   
  The Recordset object, `grs`, is opened on the children of the Record, `grec`. Then `lstMain` is populated with the file names of the resources published to the URL.  
   
-## See Also  
+## See also  
  [Internet Publishing Scenario](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Step 1: Set Up the Visual Basic Project](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
  [Step 3: Populate the Fields List Box](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

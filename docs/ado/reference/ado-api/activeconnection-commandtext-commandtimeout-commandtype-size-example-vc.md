@@ -204,7 +204,7 @@ Authors With  25  Percent Royalty
         899-46-2035, Anne Ringer  
 ```  
   
-## See Also  
+## See also  
  [ActiveConnection Property (ADO)](../../../ado/reference/ado-api/activeconnection-property-ado.md)   
  [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout Property (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   

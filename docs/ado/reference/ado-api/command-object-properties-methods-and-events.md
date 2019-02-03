@@ -49,5 +49,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

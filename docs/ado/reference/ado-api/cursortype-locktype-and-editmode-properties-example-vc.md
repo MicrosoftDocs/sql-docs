@@ -155,7 +155,7 @@ void PrintComError(_com_error &e) {
  **EditMode = adEditNone**  
 **After Edit:**   
  **EditMode = adEditInProgress**   
-## See Also  
+## See also  
  [CursorType Property (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [EditMode Property](../../../ado/reference/ado-api/editmode-property.md)   
  [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   

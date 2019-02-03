@@ -156,5 +156,5 @@ public void addOnWillMove(RecordsetEventHandler handler)
 public void removeOnWillMove(RecordsetEventHandler handler)  
 ```  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

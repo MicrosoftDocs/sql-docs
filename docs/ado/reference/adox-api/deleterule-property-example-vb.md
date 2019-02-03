@@ -78,6 +78,6 @@ End Sub
 ' EndDeleteRuleVB  
 ```  
   
-## See Also  
+## See also  
  [DeleteRule Property (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

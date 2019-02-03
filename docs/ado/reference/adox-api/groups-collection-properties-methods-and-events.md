@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Groups Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)

@@ -177,6 +177,6 @@ This example uses the [MoveFirst](../../../ado/reference/ado-api/movefirst-movel
 <!-- EndMoveFirstVBS -->  
 ```  
   
-## See Also  
+## See also  
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

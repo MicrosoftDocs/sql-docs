@@ -45,7 +45,7 @@ Run time: DataControl.URL="Server"
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [URL Property Example (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

@@ -34,7 +34,7 @@ Specifies a name for the [Recordset](../../../ado/reference/ado-api/recordset-ob
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Microsoft Data Shaping Service for OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
  [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

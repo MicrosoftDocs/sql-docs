@@ -117,6 +117,6 @@ End Sub
 'EndUpdateBatchVB  
 ```  
   
-## See Also  
+## See also  
  [CancelBatch Method (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch Method](../../../ado/reference/ado-api/updatebatch-method.md)

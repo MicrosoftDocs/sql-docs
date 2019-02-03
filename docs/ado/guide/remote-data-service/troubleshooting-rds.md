@@ -31,7 +31,7 @@ ms.author: genemi
   
 -   [Minimizing Log File Space Usage](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
   
-## See Also  
+## See also  
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

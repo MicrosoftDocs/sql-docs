@@ -108,6 +108,6 @@ End Sub
 'EndPreparedVB  
 ```  
   
-## See Also  
+## See also  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared Property (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

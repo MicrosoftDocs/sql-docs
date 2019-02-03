@@ -125,6 +125,6 @@ End Sub
 'EndBeginTransVB  
 ```  
   
-## See Also  
+## See also  
  [BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -70,5 +70,5 @@ Represents a stream of binary data or text.
   
 -   [Stream Object Properties, Methods, and Events](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Records and Streams](../../../ado/guide/data/records-and-streams.md)

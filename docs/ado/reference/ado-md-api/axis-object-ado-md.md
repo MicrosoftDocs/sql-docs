@@ -36,7 +36,7 @@ Represents a positional or filter axis of a cellset, containing selected members
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Axis Example (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Axes Collection (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Positions Collection (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

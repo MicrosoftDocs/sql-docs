@@ -26,6 +26,6 @@ Indicates the number of dimensions on an [axis](../../../ado/reference/ado-md-ap
 ## Applies To  
  [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Axis Example (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

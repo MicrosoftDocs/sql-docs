@@ -74,7 +74,7 @@ ms.author: genemi
 |[Write](../../../ado/reference/ado-api/write-method.md)|Writes binary data to a **Stream** object.|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Writes a specified text string to a **Stream** object.|  
   
-## See Also  
+## See also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

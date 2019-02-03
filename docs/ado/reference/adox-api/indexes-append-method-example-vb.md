@@ -74,7 +74,7 @@ End Sub
 ' EndCreateIndexVB  
 ```  
   
-## See Also  
+## See also  
  [Append Method (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Indexes Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

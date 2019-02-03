@@ -207,6 +207,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## See Also  
+## See also  
  [AddNew Method (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

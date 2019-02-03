@@ -48,7 +48,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## See Also  
+## See also  
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

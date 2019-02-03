@@ -132,5 +132,5 @@ End Sub
   
  **This is the end of the tutorial.**  
   
-## See Also  
+## See also  
  [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   

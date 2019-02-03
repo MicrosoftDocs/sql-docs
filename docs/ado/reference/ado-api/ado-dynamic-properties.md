@@ -32,7 +32,7 @@ Dynamic properties can be added to the [Properties](../../../ado/reference/ado-a
 |[Unique Table, Unique Schema, Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Unique Table** Specifies the name of the base table upon which updates, insertions, and deletions are allowed.<br /><br /> **Unique Schema** Specifies the schema, or name of the owner of the table.<br /><br /> **Unique Catalog** Specifies the catalog, or name of the database that contains the table.|  
 |[Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Specifies whether the **UpdateBatch** method is followed by an implicit **Resync** method operation, and if so, the scope of that operation.|  
   
-## See Also  
+## See also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO Enumerated Constants](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

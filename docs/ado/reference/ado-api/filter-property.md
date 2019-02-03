@@ -95,7 +95,7 @@ The following table summarizes the effects of **adFilterPendingRecords** in diff
 
 [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also
+## See also
 
 [Filter and RecordCount Properties Example (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
 [Filter and RecordCount Properties Example (VC++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)

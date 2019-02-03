@@ -25,5 +25,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Hierarchies Collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)

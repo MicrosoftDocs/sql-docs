@@ -103,6 +103,6 @@ int main() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ Extensions Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)

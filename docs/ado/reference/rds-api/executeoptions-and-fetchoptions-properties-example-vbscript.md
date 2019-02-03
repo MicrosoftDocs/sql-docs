@@ -163,7 +163,7 @@ End Sub
 <!-- EndExecuteOptionsRuntimeVBS -->  
 ```  
   
-## See Also  
+## See also  
  [ExecuteOptions Property (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions Property (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
 

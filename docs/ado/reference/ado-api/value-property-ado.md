@@ -42,7 +42,7 @@ ADO allows setting and returning long binary data with the **Value** property.
 |-|-|-|  
 |[Field Object](../../../ado/reference/ado-api/field-object.md)|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
   
-## See Also
+## See also
 
 [Value Property Example (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
 [Value Property Example (VC++)](../../../ado/reference/ado-api/value-property-example-vc.md) 

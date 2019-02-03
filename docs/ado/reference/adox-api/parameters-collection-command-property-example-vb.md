@@ -69,7 +69,7 @@ End Sub
 ' EndParametersVB  
 ```  
   
-## See Also  
+## See also  
  [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command Property (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   

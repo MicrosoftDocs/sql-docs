@@ -31,6 +31,6 @@ Dim rs as New ADODB.Recordset
 End Function  
 ```  
   
-## See Also  
+## See also  
  [Step 4: Server Returns the Recordset (RDS Tutorial)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

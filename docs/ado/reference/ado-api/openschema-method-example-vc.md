@@ -187,5 +187,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [OpenSchema Method](../../../ado/reference/ado-api/openschema-method.md)

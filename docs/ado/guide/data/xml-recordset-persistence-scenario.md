@@ -106,6 +106,6 @@ In this scenario, you will create an Active Server Pages (ASP) application that 
   
  Close the default.htm file and save it to the same folder where you saved XMLResponse.asp. Using Internet Explorer 4.0 or later, open the URL https://*sqlserver*/XMLPersist/default.htm and observe the results. The data is displayed in a bound DHTML table. Now open the URL https:// *sqlserver* /XMLPersist/XMLResponse.asp and observe the results. The XML is displayed.  
   
-## See Also  
+## See also  
  [Save Method](../../../ado/reference/ado-api/save-method.md)   
  [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

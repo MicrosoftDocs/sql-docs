@@ -139,6 +139,6 @@ Update(CADORecordBinding *binding)
 |**adFldBadStatus**|12|When updating, invalid status parameter.|
 |**adFldDefault**|13|When updating, a default value was used.|
 
-## See Also
+## See also
  [Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md)
  [Visual C++ Extensions Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)

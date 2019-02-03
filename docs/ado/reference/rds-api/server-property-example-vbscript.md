@@ -170,7 +170,7 @@ End Sub
 <!-- EndServerRuntimeVBS -->  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Server Property (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
 

@@ -37,7 +37,7 @@ Indicates a bookmark that uniquely identifies the current record in a [Recordset
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [BOF, EOF, and Bookmark Properties Example (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF, EOF, and Bookmark Properties Example (VC++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
  [Supports Method](../../../ado/reference/ado-api/supports-method.md)

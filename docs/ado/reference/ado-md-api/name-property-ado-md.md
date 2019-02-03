@@ -40,7 +40,7 @@ Indicates the name of an object.
 |[Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
 |[Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
   
-## See Also  
+## See also  
  [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Caption Property (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description Property (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   

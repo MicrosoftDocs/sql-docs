@@ -59,7 +59,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## Applies To  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## See Also  
+## See also  
  [Open and Close Methods Example (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open and Close Methods Example (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open and Close Methods Example (VC++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

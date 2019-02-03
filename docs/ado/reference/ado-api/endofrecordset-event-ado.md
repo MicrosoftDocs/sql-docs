@@ -46,6 +46,6 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
  This event handler is called when an attempt is made to move past the end of the **Recordset** object, perhaps as a result of calling **MoveNext**. However, while in this event, you could retrieve more records from a database and append them to the end of the **Recordset**. In that case, set *fMoreData* to VARIANT_TRUE, and return from **EndOfRecordset**. Then call **MoveNext** again to access the newly retrieved records.  
   
-## See Also  
+## See also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)

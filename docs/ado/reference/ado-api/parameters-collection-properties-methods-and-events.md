@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

@@ -35,5 +35,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)

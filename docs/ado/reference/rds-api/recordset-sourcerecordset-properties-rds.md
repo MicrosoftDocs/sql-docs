@@ -49,7 +49,7 @@ Recordset = DataControl.Recordset
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [Recordset and SourceRecordset Properties Example (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
  [CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Query Method (RDS)](../../../ado/reference/rds-api/query-method-rds.md)

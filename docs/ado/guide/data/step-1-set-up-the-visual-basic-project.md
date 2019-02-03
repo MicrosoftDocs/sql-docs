@@ -30,6 +30,6 @@ In this scenario, it is assumed that you have Microsoft Visual Basic 6.0, ADO 2.
   
 3.  Add a TextBox control to Form1. Set its Name property to **txtDetails**.  
   
-## See Also  
+## See also  
  [Internet Publishing Scenario](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Step 2: Initialize the Main List Box](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

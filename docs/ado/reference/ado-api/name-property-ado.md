@@ -41,6 +41,6 @@ Indicates the name of an object.
 |[Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field Object](../../../ado/reference/ado-api/field-object.md)|  
 |[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## See Also  
+## See also  
  [Attributes and Name Properties Example (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Attributes and Name Properties Example (VC++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

@@ -43,5 +43,5 @@ The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explo
   
 3.  To use these files, open your project in Visual J++. From the **Project** menu, choose **Add To Project**. Select **Files**, and add all of the .JAVA files generated in the trustlib\msado15 directory to your project.  
   
-## See Also  
+## See also  
  [ADO Java Class Wrappers](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

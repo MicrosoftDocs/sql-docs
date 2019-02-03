@@ -57,7 +57,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
  You must set the *adStatus* parameter to **adStatusUnwantedEvent** for each possible *adReason* value in order to completely stop event notification for any event that includes an *adReason* parameter.  
   
-## See Also  
+## See also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

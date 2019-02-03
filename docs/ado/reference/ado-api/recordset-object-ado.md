@@ -70,7 +70,7 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 -   [Recordset Object Properties, Methods, and Events](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

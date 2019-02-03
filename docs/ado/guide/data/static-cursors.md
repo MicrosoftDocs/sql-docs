@@ -21,7 +21,7 @@ The static cursor always displays the result set as it was when the cursor was f
   
  If your application does not need to detect data changes and requires scrolling, the static cursor is the best choice. Use the **adOpenStatic CursorTypeEnum** to indicate that you want to use a static cursor in ADO.  
   
-## See Also  
+## See also  
  [Forward-Only Cursors](../../../ado/guide/data/forward-only-cursors.md)   
  [Keyset Cursors](../../../ado/guide/data/keyset-cursors.md)   
  [Dynamic Cursors](../../../ado/guide/data/dynamic-cursors.md)

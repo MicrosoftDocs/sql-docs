@@ -29,6 +29,6 @@ Indicates the formatted display of a [cell](../../../ado/reference/ado-md-api/ce
 ## Applies To  
  [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Value Property (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)

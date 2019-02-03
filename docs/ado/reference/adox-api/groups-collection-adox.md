@@ -45,6 +45,6 @@ Contains all stored [Group](../../../ado/reference/adox-api/group-object-adox.md
   
 -   [Groups Collection Properties, Methods, and Events](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

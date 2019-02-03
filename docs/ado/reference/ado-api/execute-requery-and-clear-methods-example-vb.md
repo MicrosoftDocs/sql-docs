@@ -161,7 +161,7 @@ End Sub
 'EndExecuteVB  
 ```  
   
-## See Also  
+## See also  
  [Clear Method (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

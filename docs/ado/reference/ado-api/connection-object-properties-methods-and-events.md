@@ -67,5 +67,5 @@ ms.author: genemi
   
  [WillExecute Event](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -35,5 +35,5 @@ rs2.Open "SHAPE {select * from Employees} " & _
 > [!NOTE]
 >  You cannot append columns to an existing **Recordset**, reshape a parameterized **Recordset** or the **Recordset** objects in any intervening COMPUTE clause, or perform aggregate operations on any **Recordset** descendant from the **Recordset** being reshaped. The **Recordset** being reshaped and the new shape command must both use the same [Connection](../../../ado/reference/ado-api/connection-object-ado.md).  
   
-## See Also  
+## See also  
  [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)

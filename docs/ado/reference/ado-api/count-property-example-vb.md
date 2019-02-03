@@ -90,5 +90,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## See Also  
+## See also  
  [Count Property (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

@@ -42,5 +42,5 @@ _bstr_t GetSQLState( );
 __declspec(property(get=GetSQLState)) _bstr_t SQLState;  
 ```  
   
-## See Also  
+## See also  
  [Error Object](../../../ado/reference/ado-api/error-object.md)

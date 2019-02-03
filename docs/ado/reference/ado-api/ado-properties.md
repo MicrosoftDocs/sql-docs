@@ -90,7 +90,7 @@ ms.author: genemi
 |[Value](../../../ado/reference/ado-api/value-property-ado.md)|Indicates the value assigned to a **Field**, **Parameter**, or **Property** object.|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Indicates the ADO version number.|  
   
-## See Also  
+## See also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

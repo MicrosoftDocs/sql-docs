@@ -103,5 +103,5 @@ public void addOnWillExecute(ConnectionEventHandler handler)
 public void removeOnWillExecute(ConnectionEventHandler handler)  
 ```  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

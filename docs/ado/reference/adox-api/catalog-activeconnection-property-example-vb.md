@@ -59,7 +59,7 @@ End Sub
 Attribute VB_Name = "Catalog"  
 ```  
   
-## See Also  
+## See also  
  [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   

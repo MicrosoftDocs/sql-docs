@@ -204,6 +204,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [CancelBatch Method (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch Method](../../../ado/reference/ado-api/updatebatch-method.md)

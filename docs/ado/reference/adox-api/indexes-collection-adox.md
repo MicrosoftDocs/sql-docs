@@ -39,6 +39,6 @@ Contains all [Index](../../../ado/reference/adox-api/index-object-adox.md) objec
   
 -   [Indexes Collection Properties, Methods, and Events](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Indexes Append Method Example (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

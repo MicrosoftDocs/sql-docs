@@ -39,7 +39,7 @@ Contains all [View](../../../ado/reference/adox-api/view-object-adox.md) objects
   
 -   [Views Collection Properties, Methods, and Events](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Views and Fields Collections Example (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [Views Append Method Example (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Views Collection, CommandText Property Example (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   

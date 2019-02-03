@@ -116,7 +116,7 @@ DataControl.Server=""
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [Server Property Example (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Connect Property (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [SQL Property](../../../ado/reference/rds-api/sql-property.md)   

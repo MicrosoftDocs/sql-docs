@@ -44,5 +44,5 @@ The Microsoft OLE DB Persistence Provider enables you to save a [Recordset](../.
 
  When a stream is used to open a **Recordset,** there should be no parameters specified other than the *Source* parameter of the **Open** method.
 
-## See Also
+## See also
 [Microsoft OLE DB Persistence Provider (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

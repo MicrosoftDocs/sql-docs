@@ -134,7 +134,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Item Property (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## See Also  
+## See also  
  [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

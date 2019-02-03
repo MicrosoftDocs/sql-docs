@@ -78,7 +78,7 @@ Contains all the [Parameter](../../../ado/reference/ado-api/parameter-object.md)
   
 -   [Parameters Collection Properties, Methods, and Events](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)

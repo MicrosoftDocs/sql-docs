@@ -67,7 +67,7 @@ End Sub
 ' EndCreateProcedureVB  
 ```  
   
-## See Also  
+## See also  
  [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append Method (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

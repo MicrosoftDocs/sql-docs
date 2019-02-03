@@ -32,6 +32,6 @@ Indicates, in a hierarchical [Recordset](../../../ado/reference/ado-api/recordse
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [StayInSync Property Example (VB)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
  [Microsoft Data Shaping Service for OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)

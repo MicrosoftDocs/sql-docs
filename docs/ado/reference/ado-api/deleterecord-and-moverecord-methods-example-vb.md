@@ -142,7 +142,7 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## See Also  
+## See also  
  [DeleteRecord Method (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Flush Method (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren Method (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   

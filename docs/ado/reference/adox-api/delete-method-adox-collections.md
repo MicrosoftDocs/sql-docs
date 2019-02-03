@@ -58,6 +58,6 @@ Collection.Delete Name
 |[Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Tables Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
 |[Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
-## See Also  
+## See also  
  [Procedures Delete Method Example (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views Delete Method Example (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

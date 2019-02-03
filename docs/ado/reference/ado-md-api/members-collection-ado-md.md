@@ -42,6 +42,6 @@ Contains the [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Members Example (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

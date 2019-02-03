@@ -70,6 +70,6 @@ When a [Record](../../../ado/reference/ado-api/record-object-ado.md) object is o
 |RESOURCE_DISPLAYNAME|AdVarWChar|Read-only. Indicates the display name of the resource.|  
 |RESOURCE_ISROOT|AdBoolean|Read-only. True if the resource is the root of a collection or structured document.|  
   
-## See Also  
+## See also  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

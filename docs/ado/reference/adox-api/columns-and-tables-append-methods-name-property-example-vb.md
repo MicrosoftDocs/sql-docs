@@ -60,7 +60,7 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## See Also  
+## See also  
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append Method (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   

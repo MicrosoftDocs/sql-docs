@@ -61,7 +61,7 @@ This is the formal grammar for creating any shape command:
 |\<string>|unicode-char [unicode-char...]|  
 |\<expression>|A Visual Basic for Applications expression whose operands are other non-CALC columns in the same row.|  
   
-## See Also  
+## See also  
  [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Data Shaping Overview](../../../ado/guide/data/data-shaping-overview.md)   
  [Required Providers for Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   

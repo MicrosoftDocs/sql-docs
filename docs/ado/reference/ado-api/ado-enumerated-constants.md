@@ -71,7 +71,7 @@ To assist in debugging, the ADO enumerations list a value for each constant. How
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|Specifies the format when retrieving a **Recordset** as a string. Specifies the transaction attributes of a **Connection** object.|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|Specifies the transaction attributes of a **Connection** object.|  
   
-## See Also  
+## See also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

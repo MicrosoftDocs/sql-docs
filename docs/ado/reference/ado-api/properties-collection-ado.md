@@ -33,6 +33,6 @@ Contains all the [Property](../../../ado/reference/ado-api/property-object-ado.m
   
 -   [Properties Collection Properties, Methods, and Events](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

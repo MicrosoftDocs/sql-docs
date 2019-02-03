@@ -25,7 +25,7 @@ ms.author: genemi
 |[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Creates client-side proxies to custom business objects located on the middle tier.<br /><br /> The **DataSpace** object is safe for scripting.|  
 |[IRDSService Interface (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Exposes the [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) method, which is used to return a pointer to the requested interface on a more capable version of the object.|  
   
-## See Also  
+## See also  
  [RDS API Reference](../../../ado/reference/rds-api/rds-api-reference.md)
 
 

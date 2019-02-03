@@ -180,5 +180,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Status Property (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

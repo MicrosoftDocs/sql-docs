@@ -40,7 +40,7 @@ Cellset.Open Source, ActiveConnection
 ## Applies To  
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [ActiveConnection Property (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
  [Close Method (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   

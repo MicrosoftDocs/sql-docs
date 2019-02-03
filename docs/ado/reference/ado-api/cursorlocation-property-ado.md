@@ -41,5 +41,5 @@ Indicates the location of the cursor service.
 |-|-|  
 |[Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## See Also  
+## See also  
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

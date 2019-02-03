@@ -81,6 +81,6 @@ End Sub
 'EndMaxRecordsVB  
 ```  
   
-## See Also  
+## See also  
  [MaxRecords Property (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

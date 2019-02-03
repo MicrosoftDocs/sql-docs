@@ -58,7 +58,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Provides the necessary connection information for the **RDS.DataControl** to connect to SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Sets or returns the query string used to retrieve the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   
-## See Also  
+## See also  
  [Address Book Command Buttons](../../../ado/guide/remote-data-service/address-book-command-buttons.md)
 
 

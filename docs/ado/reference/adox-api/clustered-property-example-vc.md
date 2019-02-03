@@ -81,6 +81,6 @@ void ClusteredX() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Clustered Property (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

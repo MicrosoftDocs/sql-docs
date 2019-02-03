@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Indexes Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

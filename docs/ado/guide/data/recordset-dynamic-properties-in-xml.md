@@ -42,5 +42,5 @@ The following Recordset provider-specific properties (from the Client Cursor Eng
   
  These properties are saved in the schema section as attributes of the element definition for the Recordset being persisted. These attributes are defined in the rowset schema namespace and must have the prefix "rs:".  
   
-## See Also  
+## See also  
  [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -40,5 +40,5 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
 ## Applies To  
  [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
   
-## See Also  
+## See also  
  [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

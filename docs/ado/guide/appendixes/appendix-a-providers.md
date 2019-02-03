@@ -66,7 +66,7 @@ This section addresses three kinds of providers: data providers, service provide
 ## Provider Commands
  For each provider listed here, if your applications allow users to enter SQL statements as the provider commands, you must always validate the user input and be vigilant of possible hacker attacks using potentially dangerous SQL statements, such as `DROP TABLE t1`, as part of the user input.
 
-## See Also
+## See also
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
  [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)

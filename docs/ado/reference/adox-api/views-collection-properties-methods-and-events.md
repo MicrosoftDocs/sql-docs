@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

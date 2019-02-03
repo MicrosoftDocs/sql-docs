@@ -88,6 +88,6 @@ End Sub
 'EndNextRecordsetVB  
 ```  
   
-## See Also  
+## See also  
  [NextRecordset Method (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -75,7 +75,7 @@ Represents a row from a [Recordset](../../../ado/reference/ado-api/recordset-obj
   
 -   [Record Object Properties, Methods, and Events](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Records and Streams](../../../ado/guide/data/records-and-streams.md)   

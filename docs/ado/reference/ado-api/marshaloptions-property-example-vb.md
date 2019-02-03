@@ -125,6 +125,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## See Also  
+## See also  
  [MarshalOptions Property (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

@@ -27,5 +27,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)

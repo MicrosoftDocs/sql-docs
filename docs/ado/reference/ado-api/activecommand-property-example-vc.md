@@ -214,6 +214,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## See Also  
+## See also  
  [ActiveCommand Property (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

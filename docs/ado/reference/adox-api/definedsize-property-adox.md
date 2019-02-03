@@ -34,5 +34,5 @@ Indicates the stated maximum size of the column.
 ## Applies To  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## See Also  
+## See also  
  [DefinedSize Property Example (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)

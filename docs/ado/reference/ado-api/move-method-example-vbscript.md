@@ -176,6 +176,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## See Also  
+## See also  
  [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

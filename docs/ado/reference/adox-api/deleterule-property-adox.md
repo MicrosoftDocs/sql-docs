@@ -32,5 +32,5 @@ Indicates the action performed when a primary key is deleted.
 ## Applies To  
  [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## See Also  
+## See also  
  [DeleteRule Property Example (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)

@@ -44,6 +44,6 @@ Indicates the data source or object represented by the [Record](../../../ado/ref
 ## Applies To  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## See Also  
+## See also  
  [Source Property (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source Property (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

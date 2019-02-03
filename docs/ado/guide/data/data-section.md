@@ -78,5 +78,5 @@ The data section defines the data of the rowset along with any pending updates, 
   
  An update always contains the entire original row data followed by the changed row data. The changed row may contain all the columns or only those columns that have actually changed. In the previous example, the row for Shipper 2 is not changed, and only the Phone column has changed values for Shipper 3 and is therefore the only column included in the changed row. The inserted rows for Shippers 12, 13, and 14 are batched together under one rs:insert tag. Note that deleted rows can also be batched together, although this is not shown in the previous example.  
   
-## See Also  
+## See also  
  [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

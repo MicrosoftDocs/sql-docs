@@ -119,7 +119,7 @@ BODY {
 <!-- EndConnectVBS -->  
 ```  
   
-## See Also  
+## See also  
  [Connect Property (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
 
 

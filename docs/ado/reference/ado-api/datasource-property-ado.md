@@ -37,5 +37,5 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset.
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [DataMember Property](../../../ado/reference/ado-api/datamember-property.md)

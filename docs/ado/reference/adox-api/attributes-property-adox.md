@@ -30,5 +30,5 @@ Describes column characteristics.
   
 - [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## See Also  
+## See also  
  [Attributes Property Example (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)

@@ -46,7 +46,7 @@ recordset.Seek KeyValues, SeekOption
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Seek Method and Index Property Example (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Seek Method and Index Property Example (VC++)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find Method (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   

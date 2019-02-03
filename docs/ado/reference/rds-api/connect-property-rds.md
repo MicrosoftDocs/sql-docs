@@ -43,7 +43,7 @@ Run time: DataControl.Connect = "ConnectionString"
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [Connect Property Example (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
  [Query Method (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Refresh Method (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   

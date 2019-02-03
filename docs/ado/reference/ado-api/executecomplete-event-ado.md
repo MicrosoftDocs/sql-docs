@@ -51,6 +51,6 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
 ## Remarks  
  An **ExecuteComplete** event may occur due to the **Connection.**[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md), **Command.**[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md), **Recordset.**[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), **Recordset.**[Requery](../../../ado/reference/ado-api/requery-method.md), or **Recordset.**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) methods.  
   
-## See Also  
+## See also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)

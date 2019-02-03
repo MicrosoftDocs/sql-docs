@@ -31,6 +31,6 @@ Indicates which records of the [Recordset](../../../ado/reference/ado-api/record
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [MarshalOptions Property Example (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
  [MarshalOptions Property Example (VC++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   

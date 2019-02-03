@@ -39,6 +39,6 @@ Catalog.Create ConnectString
 ## Applies To  
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## See Also  
+## See also  
  [Create Method Example (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
  [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

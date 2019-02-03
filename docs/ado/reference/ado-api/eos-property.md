@@ -28,6 +28,6 @@ Indicates whether the current position is at the end of the [stream](../../../ad
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [EOS and LineSeparator Properties and SkipLine Method Example (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

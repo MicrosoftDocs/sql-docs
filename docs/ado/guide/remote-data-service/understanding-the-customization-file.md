@@ -60,7 +60,7 @@ identifier
   
 -   The **logs** section is used whenever the **DataFactory** is in operation.  
   
-## See Also  
+## See also  
  [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

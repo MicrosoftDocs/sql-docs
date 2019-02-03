@@ -60,7 +60,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 |-|-|  
 |[Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## See Also  
+## See also  
  [GetPermissions and SetPermissions Methods Example (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

@@ -161,7 +161,7 @@ End Sub
 <!-- EndCreateRecordsetVBS -->  
 ```  
   
-## See Also  
+## See also  
  [CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 

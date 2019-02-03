@@ -31,6 +31,6 @@ To assist debugging, the ADOX enumerated constants list a value for each constan
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|Specifies the rule to follow when a **Key** is deleted.|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|Specifies the sort sequence for an indexed column.|  
   
-## See Also  
+## See also  
  [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -117,7 +117,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Description Property](../../../ado/reference/ado-api/description-property.md)   
  [Error Object](../../../ado/reference/ado-api/error-object.md)   
  [HelpContext, HelpFile Properties](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   

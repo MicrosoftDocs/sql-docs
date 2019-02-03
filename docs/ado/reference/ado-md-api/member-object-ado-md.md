@@ -87,7 +87,7 @@ Represents a member of a level in a cube, the children of a member of a level, o
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Members Collection (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -424,7 +424,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  For details regarding specific implementation and functional information about the Microsoft OLE DB Provider for ODBC, see the [OLE DB Programmer's Reference](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) or visit the Data Access and Storage Developer Center Web site on MSDN.
 
-## See Also
+## See also
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
  [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -57,7 +57,7 @@ recordset.Move NumRecords, Start
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Move Method Example (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Move Method Example (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Move Method Example (VC++)](../../../ado/reference/ado-api/move-method-example-vc.md)   

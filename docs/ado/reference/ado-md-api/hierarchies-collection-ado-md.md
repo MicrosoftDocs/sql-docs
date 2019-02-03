@@ -33,7 +33,7 @@ Contains the set of [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-obje
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/hierarchies-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)

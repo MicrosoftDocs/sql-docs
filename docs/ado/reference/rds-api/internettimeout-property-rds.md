@@ -34,7 +34,7 @@ Indicates the number of milliseconds to wait before a request times out.
 |-|-|  
 |[DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
   
-## See Also  
+## See also  
  [InternetTimeout Property Example (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout Property Example (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  

@@ -32,6 +32,6 @@ Indicates the type of data contained in the [Stream](../../../ado/reference/ado-
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [RecordType Property (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

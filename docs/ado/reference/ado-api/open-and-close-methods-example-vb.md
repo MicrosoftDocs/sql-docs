@@ -95,7 +95,7 @@ End Sub
 'EndOpenVB  
 ```  
   
-## See Also  
+## See also  
  [Close Method (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

@@ -40,7 +40,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveRecord Method (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

@@ -45,7 +45,7 @@ Record.DeleteRecord Source, Async
 ## Applies To  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## See Also  
+## See also  
  [Delete Method (ADO Fields Collection)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Delete Method (ADO Parameters Collection)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Delete Method (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

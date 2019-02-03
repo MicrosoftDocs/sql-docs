@@ -105,5 +105,5 @@ void OpenConnectionWithStringX() {
 }  
 ```  
   
-## See Also  
+## See also  
  [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

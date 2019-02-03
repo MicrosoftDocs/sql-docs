@@ -29,5 +29,5 @@ rsXML.Save xDOM, adPersistADO   'Save Recordset directly into a DOM tree.
 ...  
 ```  
   
-## See Also  
+## See also  
  [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

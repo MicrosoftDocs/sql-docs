@@ -78,7 +78,7 @@ End Sub
   
  When `DC1.CancelUpdate` executes, it discards any edits that a user has made to an employee record on the data grid since the last query or update. It restores the original values.  
   
-## See Also  
+## See also  
  [Address Book Navigation Buttons](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 

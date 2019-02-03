@@ -40,5 +40,5 @@ The following table lists the [RDS.DataControl](../../../ado/reference/rds-api/d
 |**IDS_UpdatesFailed**|4098 -2146824190 0x800A1002|Unable to update database.|
 |**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|DataControl **URL** property requires the system file Urlmon.dll, which cannot be found.|
 
-## See Also
+## See also
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

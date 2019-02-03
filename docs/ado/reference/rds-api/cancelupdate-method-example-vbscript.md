@@ -111,7 +111,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## See Also  
+## See also  
  [CancelUpdate Method (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
 
 

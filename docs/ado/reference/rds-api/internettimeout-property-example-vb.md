@@ -69,7 +69,7 @@ End Sub
 'EndInternetTimeoutVB  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [InternetTimeout Property (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)

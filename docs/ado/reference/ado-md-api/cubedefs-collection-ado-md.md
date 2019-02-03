@@ -33,7 +33,7 @@ Contains the [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.m
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/cubedefs-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

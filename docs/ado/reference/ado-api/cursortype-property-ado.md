@@ -49,7 +49,7 @@ Indicates the type of cursor used in a [Recordset](../../../ado/reference/ado-ap
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [CursorType, LockType, and EditMode Properties Example (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType, LockType, and EditMode Properties Example (VC++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Supports Method](../../../ado/reference/ado-api/supports-method.md)

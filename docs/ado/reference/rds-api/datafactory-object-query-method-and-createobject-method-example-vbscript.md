@@ -130,7 +130,7 @@ to bring back a Recordset. </H4>
 <!-- EndDataFactoryVBS -->  
 ```  
   
-## See Also  
+## See also  
  [CreateObject Method (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   

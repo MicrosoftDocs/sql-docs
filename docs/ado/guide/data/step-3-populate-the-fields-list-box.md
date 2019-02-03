@@ -50,7 +50,7 @@ End Sub
   
  No code is implemented if the resource is a structured document.  
   
-## See Also  
+## See also  
  [Internet Publishing Scenario](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Step 2: Initialize the Main List Box](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
  [Step 4: Populate the Details Text Box](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

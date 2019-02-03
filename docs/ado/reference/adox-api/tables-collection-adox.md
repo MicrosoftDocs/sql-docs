@@ -41,7 +41,7 @@ Contains all [Table](../../../ado/reference/adox-api/table-object-adox.md) objec
   
 -   [Tables Collection Properties, Methods, and Events](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Catalog ActiveConnection Property Example (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Columns and Tables Append Methods, Name Property Example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Connection Close Method, Table Type Property Example (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

@@ -77,7 +77,7 @@ End Sub
 ' EndCreateAutoIncrColumnVB  
 ```  
   
-## See Also  
+## See also  
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append Method (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

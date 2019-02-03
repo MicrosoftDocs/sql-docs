@@ -58,7 +58,7 @@ object.AppendChunk Data
 |-|-|  
 |[Field Object](../../../ado/reference/ado-api/field-object.md)|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## See Also  
+## See also  
  [AppendChunk and GetChunk Methods Example (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk and GetChunk Methods Example (VC++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   

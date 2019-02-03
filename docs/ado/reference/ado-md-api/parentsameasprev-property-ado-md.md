@@ -29,5 +29,5 @@ Indicates whether the parent of this position [member](../../../ado/reference/ad
 ## Applies To  
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## See Also  
+## See also  
  [DrilledDown Property (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)

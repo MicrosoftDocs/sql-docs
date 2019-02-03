@@ -141,7 +141,7 @@ End Sub
 'EndAppendChunkVB  
 ```  
   
-## See Also  
+## See also  
  [AppendChunk Method (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field Object](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk Method (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   

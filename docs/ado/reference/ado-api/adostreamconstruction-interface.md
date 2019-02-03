@@ -66,5 +66,5 @@ adoStrConstruct->put_Stream(pUnk);
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## See Also  
+## See also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)

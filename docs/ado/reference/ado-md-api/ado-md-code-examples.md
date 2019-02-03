@@ -22,7 +22,7 @@ Use the following code examples to learn how to use the ADO MD objects, methods,
   
 -   [ADO MD Code Examples in Visual Basic, Scripting Edition](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## See Also  
+## See also  
  [ADO MD API Reference](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [ADO MD Enumerated Constants](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

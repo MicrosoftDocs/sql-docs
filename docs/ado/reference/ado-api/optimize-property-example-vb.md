@@ -80,6 +80,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## See Also  
+## See also  
  [Field Object](../../../ado/reference/ado-api/field-object.md)   
  [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

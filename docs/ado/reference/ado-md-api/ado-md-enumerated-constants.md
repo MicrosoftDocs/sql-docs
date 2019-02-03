@@ -22,7 +22,7 @@ To assist debugging, the ADO MD enumerated constants list a value for each const
   
 -   [MemberTypeEnum](../../../ado/reference/ado-md-api/membertypeenum.md)  
   
-## See Also  
+## See also  
  [ADO MD API Reference](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD Code Examples](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md)   

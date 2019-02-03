@@ -34,6 +34,6 @@ ms.author: genemi
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Specifies the owner of an object in a catalog.|  
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Specifies the permissions for group or user on an object.|  
   
-## See Also  
+## See also  
  [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

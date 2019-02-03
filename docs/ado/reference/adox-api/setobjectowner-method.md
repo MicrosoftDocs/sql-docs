@@ -46,6 +46,6 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
 ## Applies To  
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## See Also  
+## See also  
  [GetObjectOwner and SetObjectOwner Methods Example (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [GetObjectOwner Method (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)

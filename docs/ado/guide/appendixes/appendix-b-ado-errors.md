@@ -24,7 +24,7 @@ See the following topics for more information about particular error messages:
 
 -   [Internet Information Services Error Codes](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
 
-## See Also
+## See also
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)
  [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)

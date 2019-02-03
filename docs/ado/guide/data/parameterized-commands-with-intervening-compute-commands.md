@@ -23,5 +23,5 @@ A typical parameterized shape APPEND command has a clause that creates a parent 
   
  The typical use for this feature is to invoke the aggregate function and grouping abilities of shapeCOMPUTE commands to create intervening **Recordset** objects with analytical information about the child **Recordset**. Furthermore, because this is a parameterized shape command, each time a chapter column of the parent is accessed, a new child **Recordset** may be retrieved. Because the intervening levels are derived from the child, they also will be recomputed.  
   
-## See Also  
+## See also  
  [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)

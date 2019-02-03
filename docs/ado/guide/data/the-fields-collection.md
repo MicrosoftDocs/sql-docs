@@ -107,5 +107,5 @@ objField = objRecordset.Fields(0)
   
  The usage of the **Fields Append** method differs between the **Recordset** object and the **Record** object. For more information about the **Record** object, see [Records and Streams](../../../ado/guide/data/records-and-streams.md).  
   
-## See Also  
+## See also  
  [Fabricating Hierarchical Recordsets](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)

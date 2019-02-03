@@ -116,7 +116,7 @@ End Sub
 ' EndGroupVB  
 ```  
   
-## See Also  
+## See also  
  [Append Method (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append Method (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

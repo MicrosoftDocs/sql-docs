@@ -33,5 +33,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)

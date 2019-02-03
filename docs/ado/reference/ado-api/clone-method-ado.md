@@ -78,7 +78,7 @@ rsNew.Filter = rsOriginal.Filter
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Clone Method Example (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Clone Method Example (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Clone Method Example (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

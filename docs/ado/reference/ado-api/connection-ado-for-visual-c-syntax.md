@@ -70,5 +70,5 @@ WillConnect(BSTR *ConnectionString, BSTR *UserID, BSTR *Password, long *Options,
 WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, long *Options, EventStatusEnum *adStatus, _ADOCommand *pCommand, _ADORecordset *pRecordset, _ADOConnection *pConnection)  
 ```  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

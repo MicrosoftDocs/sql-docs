@@ -26,7 +26,7 @@ Indicates the source for the data in the [cellset](../../../ado/reference/ado-md
 ## Applies To  
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [ActiveConnection Property (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
  [Open Method (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

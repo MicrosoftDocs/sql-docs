@@ -18,6 +18,6 @@ In addition to the provider errors returned in the [Error](../../../ado/referenc
 
  For the list of ADO error codes, see [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md).
 
-## See Also
+## See also
  [Error Object](../../../ado/reference/ado-api/error-object.md)
  [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)

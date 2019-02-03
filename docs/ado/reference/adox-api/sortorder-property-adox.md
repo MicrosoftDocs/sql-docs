@@ -32,7 +32,7 @@ Indicates the sort sequence for the column (index columns only).
 ## Applies To  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## See Also  
+## See also  
  [SortOrder Property Example (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

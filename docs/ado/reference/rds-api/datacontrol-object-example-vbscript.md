@@ -176,7 +176,7 @@ End Sub
 <!-- EndDataControlRuntimeVBS -->  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

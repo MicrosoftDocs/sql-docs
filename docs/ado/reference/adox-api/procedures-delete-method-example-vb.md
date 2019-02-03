@@ -48,7 +48,7 @@ End Sub
 ' EndDeleteProcedureVB  
 ```  
   
-## See Also  
+## See also  
  [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Delete Method (ADOX Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   

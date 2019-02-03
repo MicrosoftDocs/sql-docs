@@ -31,7 +31,7 @@ Uniquely identifies a [position](../../../ado/reference/ado-md-api/position-obje
 ## Applies To  
  [Position Object (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Item Property (ADO MD Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Ordinal Property (ADO MD Cell)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)

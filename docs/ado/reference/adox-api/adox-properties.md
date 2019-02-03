@@ -43,6 +43,6 @@ ms.author: genemi
 |[Unique](../../../ado/reference/adox-api/unique-property-adox.md)|Indicates whether the index keys must be unique.|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Indicates the action performed when a primary key is updated.|  
   
-## See Also  
+## See also  
  [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

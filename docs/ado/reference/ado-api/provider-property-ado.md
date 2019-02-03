@@ -34,7 +34,7 @@ Indicates the name of the provider for a [Connection](../../../ado/reference/ado
 ## Applies To  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## See Also  
+## See also  
  [Provider and DefaultDatabase Properties Example (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider and DefaultDatabase Properties Example (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   

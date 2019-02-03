@@ -251,5 +251,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## See Also  
+## See also  
  [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)

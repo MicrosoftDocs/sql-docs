@@ -36,7 +36,7 @@ ms.author: genemi
   
 -   [DataFactory Object (RDSServer) Properties, Methods, and Events](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [DataFactory Object, Query Method, and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

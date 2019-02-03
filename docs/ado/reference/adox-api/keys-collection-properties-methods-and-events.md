@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

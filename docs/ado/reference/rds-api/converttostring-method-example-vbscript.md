@@ -87,7 +87,7 @@ MIME Encoded RS: <BR>
 <!-- EndConvertToStringVBS -->  
 ```  
   
-## See Also  
+## See also  
  [ConvertToString Method (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 

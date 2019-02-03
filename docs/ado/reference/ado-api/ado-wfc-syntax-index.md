@@ -42,6 +42,6 @@ The ADO Language Reference uses the Microsoft Visual Basic programming language 
   
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   
-## See Also  
+## See also  
  [Handling ADO Events](../../../ado/guide/data/handling-ado-events.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

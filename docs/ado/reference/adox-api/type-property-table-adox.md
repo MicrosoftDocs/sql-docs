@@ -30,7 +30,7 @@ Indicates the type of a table.
 ## Applies To  
  [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
   
-## See Also  
+## See also  
  [Catalog ActiveConnection Property Example (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Connection Close Method, Table Type Property Example (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Type Property (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   

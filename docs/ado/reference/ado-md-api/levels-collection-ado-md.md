@@ -33,7 +33,7 @@ Contains the [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) o
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/levels-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

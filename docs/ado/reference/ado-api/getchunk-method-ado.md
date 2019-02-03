@@ -51,7 +51,7 @@ variable = field.GetChunk(Size)
 ## Applies To  
  [Field Object](../../../ado/reference/ado-api/field-object.md)  
   
-## See Also  
+## See also  
  [AppendChunk and GetChunk Methods Example (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk and GetChunk Methods Example (VC++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [AppendChunk Method (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   

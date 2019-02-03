@@ -34,6 +34,6 @@ Indicates the scale of a numeric value in the column.
 ## Applies To  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## See Also  
+## See also  
  [ADOX Code Example: NumericScale and Precision Properties Example (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type Property (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

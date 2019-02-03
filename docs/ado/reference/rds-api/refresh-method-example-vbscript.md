@@ -168,7 +168,7 @@ End Sub
 <!-- EndRefreshVBS -->  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ExecuteOptions Property (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions Property (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   

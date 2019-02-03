@@ -34,7 +34,7 @@ Indicates the operational type or data type of a [Parameter](../../../ado/refere
 |-|-|-|  
 |[Field Object](../../../ado/reference/ado-api/field-object.md)|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## See Also  
+## See also  
  [Type Property Example (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Type Property Example (Property) (VC++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType Property (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   

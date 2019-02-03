@@ -152,6 +152,6 @@ BODY {
 <!-- EndGetRowsJS -->  
 ```  
   
-## See Also  
+## See also  
  [GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -45,7 +45,7 @@ Contains all stored [User](../../../ado/reference/adox-api/user-object-adox.md) 
   
 -   [Users Collection Properties, Methods, and Events](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [GetPermissions and SetPermissions Methods Example (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)

@@ -140,7 +140,7 @@ Sub Window_OnLoad()
 End Sub  
 ```  
   
-## See Also  
+## See also  
  [CreateObject Method (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 

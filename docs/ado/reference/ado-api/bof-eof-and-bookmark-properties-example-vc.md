@@ -199,7 +199,7 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## See Also  
+## See also  
  [BOF, EOF Properties (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Bookmark Property (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

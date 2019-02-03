@@ -66,7 +66,7 @@ Indicates the name of the object.
 |[Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
 |[Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## See Also  
+## See also  
  [Columns and Tables Append Methods, Name Property Example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog Property Example (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

@@ -30,7 +30,7 @@ Use the information in this section to set up your server and use RDS quickly. T
   
 -   [Troubleshooting RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## See Also  
+## See also  
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)

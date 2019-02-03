@@ -129,5 +129,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

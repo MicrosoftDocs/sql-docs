@@ -149,7 +149,7 @@ Use the following code examples to learn how to use the ADO methods, properties,
   
 -   [Version Property Example](../../../ado/reference/ado-api/version-property-example-vb.md)  
   
-## See Also  
+## See also  
  [ADO Code Examples VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

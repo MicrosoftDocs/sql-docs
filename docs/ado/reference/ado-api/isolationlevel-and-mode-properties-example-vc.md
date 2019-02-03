@@ -237,6 +237,6 @@ void PrintComError(_com_error &e) {
 **Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean -  trad_cook**  
 **Fifty Years in Buckingham Palace Kitchens -  trad_cook**  
 **Sushi, Anyone? -  trad_cook**   
-## See Also  
+## See also  
  [IsolationLevel Property](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode Property (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

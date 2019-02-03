@@ -39,7 +39,7 @@ InfoMessage pError, adStatus, pConnection
  *pConnection*  
  A [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object. The connection for which the warning occurred. For example, warnings can occur when opening a **Connection** object or executing a [Command](../../../ado/reference/ado-api/command-object-ado.md) on a **Connection**.  
   
-## See Also  
+## See also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

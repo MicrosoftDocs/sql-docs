@@ -26,7 +26,7 @@ The Windows SDK contains several sample applications that demonstrate the use of
 
  The ADO documentation also contains code examples in multiple languages, which are included as topics within this online help. For more information about these examples, see [ADO Code Examples](../../../ado/reference/ado-api/ado-code-examples.md).
 
-## See Also
+## See also
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)
  [ADO Code Examples](../../../ado/reference/ado-api/ado-code-examples.md)

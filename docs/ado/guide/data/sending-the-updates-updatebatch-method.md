@@ -48,5 +48,5 @@ The following code opens a Recordset in batch mode by setting the LockType prope
   
  If you are editing the current record or adding a new record when you call the UpdateBatch method, ADO will automatically call the Update method to save any pending changes to the current record before transmitting the batched changes to the provider.  
   
-## See Also  
+## See also  
  [Batch Mode](../../../ado/guide/data/batch-mode.md)

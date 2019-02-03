@@ -54,5 +54,5 @@ cn.Properties("Data Provider") = "MSDASQL"
 
  For more information about data shaping, see [Data Shaping](../../../ado/guide/data/data-shaping-overview.md).
 
-## See Also
+## See also
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

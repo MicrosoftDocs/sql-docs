@@ -42,7 +42,7 @@ Dim obj As New Key
   
 -   [Key Object Properties, Methods, and Events](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

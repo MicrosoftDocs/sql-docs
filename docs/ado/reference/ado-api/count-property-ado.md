@@ -41,7 +41,7 @@ Indicates the number of objects in a collection.
 |[Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## See Also  
+## See also  
  [Count Property Example (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Count Property Example (VC++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

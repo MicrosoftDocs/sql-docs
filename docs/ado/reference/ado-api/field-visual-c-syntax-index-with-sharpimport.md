@@ -73,5 +73,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## See Also  
+## See also  
  [Field Object](../../../ado/reference/ado-api/field-object.md)

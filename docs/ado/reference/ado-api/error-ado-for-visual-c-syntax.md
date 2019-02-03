@@ -27,5 +27,5 @@ get_Source(BSTR *pbstr)
 get_SQLState(BSTR *pbstr)  
 ```  
   
-## See Also  
+## See also  
  [Error Object](../../../ado/reference/ado-api/error-object.md)

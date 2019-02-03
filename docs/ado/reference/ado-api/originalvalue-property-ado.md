@@ -35,7 +35,7 @@ Indicates the value of a [Field](../../../ado/reference/ado-api/field-object.md)
 ## Applies To  
  [Field Object](../../../ado/reference/ado-api/field-object.md)  
   
-## See Also  
+## See also  
  [OriginalValue and UnderlyingValue Properties Example (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [OriginalValue and UnderlyingValue Properties Example (VC++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [UnderlyingValue Property](../../../ado/reference/ado-api/underlyingvalue-property.md)

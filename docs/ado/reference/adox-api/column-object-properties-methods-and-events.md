@@ -41,5 +41,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

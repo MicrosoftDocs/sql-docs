@@ -101,6 +101,6 @@ End Sub
 'EndStateVB  
 ```  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

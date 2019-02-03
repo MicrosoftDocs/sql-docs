@@ -34,5 +34,5 @@ public static void main( String args[])
 }  
 ```  
   
-## See Also  
+## See also  
  [Using the Microsoft SDK for Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)

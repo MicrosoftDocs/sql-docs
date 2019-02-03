@@ -67,7 +67,7 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [SubmitChanges Method (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

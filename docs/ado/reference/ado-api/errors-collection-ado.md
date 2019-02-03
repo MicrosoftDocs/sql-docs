@@ -39,6 +39,6 @@ Contains all the [Error](../../../ado/reference/ado-api/error-object.md) objects
   
 -   [Errors Collection Properties, Methods, and Events](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Error Object](../../../ado/reference/ado-api/error-object.md)   
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

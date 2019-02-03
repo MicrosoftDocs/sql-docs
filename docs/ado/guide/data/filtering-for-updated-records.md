@@ -48,5 +48,5 @@ Before you call UpdateBatch, you can use the Recordset Filter property to view o
 'EndFilterPend  
 ```  
   
-## See Also  
+## See also  
  [Batch Mode](../../../ado/guide/data/batch-mode.md)

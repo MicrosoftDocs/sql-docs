@@ -80,7 +80,7 @@ End Sub
   
  In contrast, you need to set *adStatus* to **adStatusUnwantedEvent** only one time to request that an event handler without an **adReason** parameter stop receiving event notifications.  
   
-## See Also  
+## See also  
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [How Event Handlers Work Together](../../../ado/guide/data/how-event-handlers-work-together.md)   

@@ -44,6 +44,6 @@ This index is a cross-reference to the ADO Language Reference based on Microsoft
   
 -   [Stream object](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## See Also  
+## See also  
  [ADO for Visual C++ Syntax Index with #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

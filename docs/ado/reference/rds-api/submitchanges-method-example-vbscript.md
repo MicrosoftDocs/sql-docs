@@ -110,7 +110,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SubmitChanges Method (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

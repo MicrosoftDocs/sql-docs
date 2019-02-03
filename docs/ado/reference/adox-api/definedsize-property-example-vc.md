@@ -156,6 +156,6 @@ int main() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize Property (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

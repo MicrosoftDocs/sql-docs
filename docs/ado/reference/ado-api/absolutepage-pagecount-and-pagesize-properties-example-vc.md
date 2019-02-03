@@ -172,7 +172,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## See Also  
+## See also  
  [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize Property (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

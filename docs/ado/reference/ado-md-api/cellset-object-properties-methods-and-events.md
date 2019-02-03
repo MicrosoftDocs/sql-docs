@@ -37,5 +37,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

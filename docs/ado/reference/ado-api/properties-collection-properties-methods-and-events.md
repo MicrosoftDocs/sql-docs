@@ -25,5 +25,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

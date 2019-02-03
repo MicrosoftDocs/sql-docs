@@ -108,7 +108,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DateCreated Property (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified Property (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   

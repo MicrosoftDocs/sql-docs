@@ -29,6 +29,6 @@ Indicates the name of the level of a [member](../../../ado/reference/ado-md-api/
 ## Applies To  
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
  [Name Property (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

@@ -31,7 +31,7 @@ Uniquely identifies a [cell](../../../ado/reference/ado-md-api/cell-object-ado-m
 ## Applies To  
  [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Axis Example (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Item Property (ADO MD Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   

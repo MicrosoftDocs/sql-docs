@@ -58,7 +58,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## Applies To  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## See Also  
+## See also  
  [Append and CreateParameter Methods Example (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Append and CreateParameter Methods Example (VC++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   

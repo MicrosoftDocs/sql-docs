@@ -88,7 +88,7 @@ End Sub
 ' EndDateCreatedVB  
 ```  
   
-## See Also  
+## See also  
  [DateCreated Property (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified Property (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
  [Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   

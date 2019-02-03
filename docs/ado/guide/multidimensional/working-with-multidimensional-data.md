@@ -71,7 +71,7 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
   
  Cellsets, cells, axes, and positions are all represented in ADO MD by corresponding objects: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md), and [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
-## See Also  
+## See also  
  [ADO MD Object Model](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Overview of Multidimensional Schemas and Data](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

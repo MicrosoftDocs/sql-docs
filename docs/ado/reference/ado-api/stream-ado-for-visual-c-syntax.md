@@ -53,5 +53,5 @@ get_Type(StreamTypeEnum *pType)
 put_Type(StreamTypeEnum Type)  
 ```  
   
-## See Also  
+## See also  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

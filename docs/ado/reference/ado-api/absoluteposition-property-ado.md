@@ -41,7 +41,7 @@ Indicates the ordinal position of a [Recordset](../../../ado/reference/ado-api/r
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [AbsolutePosition and CursorLocation Properties Example (VB)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
  [AbsolutePosition and CursorLocation Properties Example (VC++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   

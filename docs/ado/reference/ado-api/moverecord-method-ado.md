@@ -67,7 +67,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## Applies To  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## See Also  
+## See also  
  [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

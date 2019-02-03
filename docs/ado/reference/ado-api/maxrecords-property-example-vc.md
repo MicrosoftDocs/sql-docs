@@ -170,6 +170,6 @@ void PrintComError(_com_error &e) {
 **Prolonged Data Deprivation: Four Case Studies ---   19.99**  
 **Sushi, Anyone? ---   14.99**  
 **Fifty Years in Buckingham Palace Kitchens ---   11.95**   
-## See Also  
+## See also  
  [MaxRecords Property (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

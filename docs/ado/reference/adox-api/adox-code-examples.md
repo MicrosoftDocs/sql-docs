@@ -23,7 +23,7 @@ Use the following code examples to learn how to use the ADOX objects, methods, p
   
 -   [ADOX Code Examples in Microsoft Visual C++](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
   
-## See Also  
+## See also  
  [Catalog ActiveConnection Property Example (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Columns and Tables Append Methods, Name Property Example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Command and CommandText Properties Example (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   

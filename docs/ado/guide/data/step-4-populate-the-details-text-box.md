@@ -40,6 +40,6 @@ End Sub
   
  This code populates `lstDetails` with the fields and values of the simple record passed to `recFields`. If the resource is a text file, a text Stream is opened from the resource record. The code determines whether the character set is ASCII and copies the Stream contents into `txtDetails`.  
   
-## See Also  
+## See also  
  [Internet Publishing Scenario](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Step 3: Populate the Fields List Box](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

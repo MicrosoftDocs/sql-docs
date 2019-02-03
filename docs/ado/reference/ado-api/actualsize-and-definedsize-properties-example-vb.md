@@ -81,7 +81,7 @@ End Sub
 'EndActualSizeVB  
 ```  
   
-## See Also  
+## See also  
  [ActualSize Property (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize Property](../../../ado/reference/ado-api/definedsize-property.md)   
  [Field Object](../../../ado/reference/ado-api/field-object.md)

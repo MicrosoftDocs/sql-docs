@@ -58,6 +58,6 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
 ## Remarks  
  A **WillChangeField** or **FieldChangeComplete** event may occur when setting the [Value](../../../ado/reference/ado-api/value-property-ado.md) property and calling the [Update](../../../ado/reference/ado-api/update-method.md) method with field and value array parameters.  
   
-## See Also  
+## See also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)

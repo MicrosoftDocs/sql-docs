@@ -39,7 +39,7 @@ Contains all [Procedure](../../../ado/reference/adox-api/procedure-object-adox.m
   
 -   [Indexes Collection Properties, Methods, and Events](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Command and CommandText Properties Example (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameters Collection, Command Property Example (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Procedures Append Method Example (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   

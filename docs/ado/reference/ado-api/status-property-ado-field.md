@@ -41,6 +41,6 @@ Indicates the status of a [Field](../../../ado/reference/ado-api/field-object.md
 ## Applies To  
  [Field Object](../../../ado/reference/ado-api/field-object.md)  
   
-## See Also  
+## See also  
  [Status Property Example (Field) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Status Property Example (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

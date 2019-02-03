@@ -66,7 +66,7 @@ record.Fields.Update
 |-|-|  
 |[Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## See Also  
+## See also  
  [Update and CancelUpdate Methods Example (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update and CancelUpdate Methods Example (VC++)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [AddNew Method (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

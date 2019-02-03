@@ -37,7 +37,7 @@ DataControl.CancelUpdate
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [CancelUpdate Method Example (VBScript)](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)   
  [Address Book Command Buttons](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Cancel Method (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

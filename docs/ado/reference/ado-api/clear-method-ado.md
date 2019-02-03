@@ -35,7 +35,7 @@ Errors.Clear
 ## Applies To  
  [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
-## See Also  
+## See also  
  [Execute, Requery, and Clear Methods Example (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [Execute, Requery, and Clear Methods Example (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [Execute, Requery, and Clear Methods Example (VC++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   

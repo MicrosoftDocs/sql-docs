@@ -49,7 +49,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## Applies To  
  [IRDSService Interface (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
   
-## See Also  
+## See also  
  [RDS Methods](../../../ado/reference/rds-api/rds-methods.md)
 
 

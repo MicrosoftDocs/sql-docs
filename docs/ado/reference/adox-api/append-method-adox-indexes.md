@@ -41,7 +41,7 @@ Indexes.Append Index [,Columns]
 ## Applies To  
  [Indexes Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
-## See Also  
+## See also  
  [Indexes Append Method Example (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append Method (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

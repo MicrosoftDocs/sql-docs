@@ -53,5 +53,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## See Also  
+## See also  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

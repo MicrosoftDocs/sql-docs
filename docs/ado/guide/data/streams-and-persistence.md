@@ -154,7 +154,7 @@ function GetRs()
 ...  
 ```  
   
-## See Also  
+## See also  
  [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save Method](../../../ado/reference/ado-api/save-method.md)

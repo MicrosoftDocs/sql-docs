@@ -33,7 +33,7 @@ ms.author: genemi
   
  Each object can be contained in its corresponding collection. For example, a **Table** object can be contained in a [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) collection. For more information, see [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md) or a specific collection topic.  
   
-## See Also  
+## See also  
  [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md)   
  [ADOX Object Model](../../../ado/reference/adox-api/adox-object-model.md)   

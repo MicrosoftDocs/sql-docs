@@ -33,6 +33,6 @@ Indicates the date the object was last modified.
 |-|-|-|  
 |[Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## See Also  
+## See also  
  [DateCreated and DateModified Properties Example (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateCreated Property (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)

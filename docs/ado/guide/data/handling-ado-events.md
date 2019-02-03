@@ -39,7 +39,7 @@ The ADO event model supports certain synchronous and asynchronous ADO operations
   
 -   [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
-## See Also  
+## See also  
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [ADO Events](../../../ado/reference/ado-api/ado-events.md)   

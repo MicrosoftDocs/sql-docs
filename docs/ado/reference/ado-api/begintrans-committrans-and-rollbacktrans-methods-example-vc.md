@@ -260,6 +260,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## See Also  
+## See also  
  [BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Update Method](../../../ado/reference/ado-api/update-method.md)

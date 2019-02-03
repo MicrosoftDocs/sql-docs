@@ -90,7 +90,7 @@ Attribute VB_Name = "Save"
 Attribute VB_Name = "Save"  
 ```  
   
-## See Also  
+## See also  
  [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [More About Recordset Persistence](../../../ado/guide/data/more-about-recordset-persistence.md)   

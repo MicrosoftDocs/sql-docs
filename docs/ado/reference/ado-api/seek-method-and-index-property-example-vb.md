@@ -109,7 +109,7 @@ End Sub
 'EndSeekVB  
 ```  
   
-## See Also  
+## See also  
  [Index Property](../../../ado/reference/ado-api/index-property.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek Method](../../../ado/reference/ado-api/seek-method.md)

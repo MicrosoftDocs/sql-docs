@@ -69,7 +69,7 @@ rs.CursorLocation = adUseClient
 "Remote Server=https://yourServer"  
 ```  
   
-## See Also  
+## See also  
  [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Customization File UserList Section](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

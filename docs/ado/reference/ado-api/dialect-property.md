@@ -30,5 +30,5 @@ Indicates the dialect of the [CommandText](../../../ado/reference/ado-api/comman
 ## Applies To  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## See Also  
+## See also  
  [Execute Method (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)

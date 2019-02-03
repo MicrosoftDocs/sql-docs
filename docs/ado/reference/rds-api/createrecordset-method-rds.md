@@ -98,7 +98,7 @@ object.CreateRecordset(ColumnInfos)
 |-|-|  
 |[DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## See Also  
+## See also  
  [CreateRecordset Method Example (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [CreateRecordset Method Example (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
  [CreateObject Method (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)

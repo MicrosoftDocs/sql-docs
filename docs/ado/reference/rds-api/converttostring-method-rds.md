@@ -47,7 +47,7 @@ DataFactory.ConvertToString(Recordset)
 ## Applies To  
  [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## See Also  
+## See also  
  [ConvertToString Method Example (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [ConvertToString Method Example (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 

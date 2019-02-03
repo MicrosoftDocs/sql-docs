@@ -135,7 +135,7 @@ body {
 <!-- EndAppendJS -->  
 ```  
   
-## See Also  
+## See also  
  [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field Object](../../../ado/reference/ado-api/field-object.md)   

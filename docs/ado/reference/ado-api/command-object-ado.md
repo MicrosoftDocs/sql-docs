@@ -70,7 +70,7 @@ objCmd(0)
   
 -   [Command Object Properties, Methods, and Events](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

@@ -26,5 +26,5 @@ Indicates the value of the current [cell](../../../ado/reference/ado-md-api/cell
 ## Applies To  
  [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## See Also  
+## See also  
  [FormattedValue Property (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)

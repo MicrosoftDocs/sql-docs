@@ -114,7 +114,7 @@ End Sub
 'EndRefreshVB  
 ```  
   
-## See Also  
+## See also  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

@@ -54,6 +54,6 @@ array = recordset.GetRows(Rows, Start, Fields )
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [GetRows Method Example (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
  [GetRows Method Example (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   

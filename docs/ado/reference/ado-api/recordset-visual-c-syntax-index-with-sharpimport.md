@@ -197,5 +197,5 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
     StayInSync;  
 ```  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

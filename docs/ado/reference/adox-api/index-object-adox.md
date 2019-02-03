@@ -55,7 +55,7 @@ Dim obj As New Index
   
 -   [Index Object Properties, Methods, and Events](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Indexes Append Method Example (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [IndexNulls Property Example (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [PrimaryKey and Unique Properties Example (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   

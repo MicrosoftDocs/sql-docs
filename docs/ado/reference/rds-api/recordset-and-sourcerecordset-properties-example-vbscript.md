@@ -121,7 +121,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 <!-- EndRecordsetVBS -->  
 ```  
   
-## See Also  
+## See also  
  [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Recordset, SourceRecordset Properties (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
 

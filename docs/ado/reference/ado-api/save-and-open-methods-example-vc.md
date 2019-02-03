@@ -254,7 +254,7 @@ bool FileExists() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save Method](../../../ado/reference/ado-api/save-method.md)

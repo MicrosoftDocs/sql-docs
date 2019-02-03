@@ -25,7 +25,7 @@ Indicates whether parameter names should be passed to the provider.
 ## Applies To  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## See Also  
+## See also  
  [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandStream Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

@@ -49,7 +49,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ## Applies To  
  [Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
-## See Also  
+## See also  
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append Method (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

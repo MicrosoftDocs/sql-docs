@@ -46,7 +46,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ## Applies To  
  [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## See Also  
+## See also  
  [DataFactory Object, Query Method, and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

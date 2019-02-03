@@ -67,7 +67,7 @@ End Sub
 'EndNumericScaleVB  
 ```  
   
-## See Also  
+## See also  
  [Field Object](../../../ado/reference/ado-api/field-object.md)   
  [NumericScale Property (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)   

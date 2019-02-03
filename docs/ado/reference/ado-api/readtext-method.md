@@ -45,5 +45,5 @@ String = Stream.ReadText ( NumChars)
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [Read Method](../../../ado/reference/ado-api/read-method.md)

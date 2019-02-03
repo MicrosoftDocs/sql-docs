@@ -30,5 +30,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

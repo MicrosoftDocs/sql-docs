@@ -119,5 +119,5 @@ Specifies the type of ADO run-time error.
 ## Applies To  
  [Number Property (ADO)](../../../ado/reference/ado-api/number-property-ado.md)  
   
-## See Also  
+## See also  
  [ADO Error Codes](../../../ado/guide/appendixes/ado-error-codes.md)

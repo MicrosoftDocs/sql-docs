@@ -78,6 +78,6 @@ End Sub
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## See Also  
+## See also  
  [OpenSchema Method](../../../ado/reference/ado-api/openschema-method.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

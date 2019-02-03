@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)

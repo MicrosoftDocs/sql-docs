@@ -128,6 +128,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version Property (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

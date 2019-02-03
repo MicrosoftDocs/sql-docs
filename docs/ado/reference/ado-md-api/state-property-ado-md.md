@@ -29,6 +29,6 @@ Indicates the current state of the cellset.
 ## Applies To  
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Close Method (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
  [Open Method (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

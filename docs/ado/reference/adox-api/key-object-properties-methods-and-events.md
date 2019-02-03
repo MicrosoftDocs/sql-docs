@@ -33,5 +33,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

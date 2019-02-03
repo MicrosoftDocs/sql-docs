@@ -47,5 +47,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT Val)  
 ```  
   
-## See Also  
+## See also  
  [Field Object](../../../ado/reference/ado-api/field-object.md)

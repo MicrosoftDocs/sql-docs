@@ -30,5 +30,5 @@ Indicates the binary character to be used as the line separator in text [Stream]
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

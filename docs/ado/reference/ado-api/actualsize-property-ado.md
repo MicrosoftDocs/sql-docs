@@ -30,7 +30,7 @@ Indicates the actual length of a field's value in bytes.
 ## Applies To  
  [Field Object](../../../ado/reference/ado-api/field-object.md)  
   
-## See Also  
+## See also  
  [ActualSize and DefinedSize Properties Example (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize and DefinedSize Properties Example (VC++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [DefinedSize Property](../../../ado/reference/ado-api/definedsize-property.md)

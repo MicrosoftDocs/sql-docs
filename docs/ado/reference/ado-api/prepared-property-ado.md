@@ -32,6 +32,6 @@ Indicates whether to save a compiled version of a [Command](../../../ado/referen
 ## Applies To  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## See Also  
+## See also  
  [Prepared Property Example (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared Property Example (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

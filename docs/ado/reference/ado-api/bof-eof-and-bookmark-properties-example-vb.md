@@ -129,7 +129,7 @@ End Sub
 Attribute VB_Name = "BOF"  
 ```  
   
-## See Also  
+## See also  
  [BOF, EOF Properties (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Bookmark Property (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

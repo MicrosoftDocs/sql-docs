@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Tables Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

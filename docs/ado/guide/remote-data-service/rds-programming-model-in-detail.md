@@ -64,7 +64,7 @@ The following are key elements of the RDS programming model:
 > [!NOTE]
 >  Microsoft Internet Explorer provides two additional events to RDS: **onDataSetChanged**, which indicates that the **Recordset** is functional but still retrieving rows, and **onDataSetComplete**, which indicates that the **Recordset** has finished retrieving rows.  
   
-## See Also  
+## See also  
  [RDS Programming Model with Objects](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

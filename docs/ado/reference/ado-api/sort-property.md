@@ -46,7 +46,7 @@ Indicates one or more field names on which the [Recordset](../../../ado/referenc
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Sort Property Example (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [Sort Property Example (VC++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

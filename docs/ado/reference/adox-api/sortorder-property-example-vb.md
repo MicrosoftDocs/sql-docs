@@ -130,7 +130,7 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## See Also  
+## See also  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

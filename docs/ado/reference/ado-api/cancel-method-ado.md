@@ -50,7 +50,7 @@ object.Cancel
 |[Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
-## See Also  
+## See also  
  [Cancel Method Example (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
  [Cancel Method Example (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Cancel Method Example (VC++)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   

@@ -49,7 +49,7 @@ Creates the proxy for the target business object and returns a pointer to it. Th
 ## Applies To  
  [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
   
-## See Also  
+## See also  
  [DataFactory Object, Query Method, and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [DataSpace Object and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
  [CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)

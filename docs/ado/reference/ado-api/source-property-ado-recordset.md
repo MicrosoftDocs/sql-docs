@@ -40,7 +40,7 @@ Indicates the data source for a [Recordset](../../../ado/reference/ado-api/recor
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Source Property Example (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Source Property (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source Property (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)

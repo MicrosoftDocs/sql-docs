@@ -39,5 +39,5 @@ Contains all the [Field](../../../ado/reference/ado-api/field-object.md) objects
   
 -   [Fields Collection Properties, Methods, and Events](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Field Object](../../../ado/reference/ado-api/field-object.md)

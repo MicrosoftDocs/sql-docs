@@ -76,7 +76,7 @@ public com.ms.wfc.data.Error getItem(String s)
 public int getCount()  
 ```  
   
-## See Also  
+## See also  
  [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

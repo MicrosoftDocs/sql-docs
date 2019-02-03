@@ -44,7 +44,7 @@ Represents a parameter or argument associated with a [Command](../../../ado/refe
   
 -   [Parameter Object Properties, Methods, and Events](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

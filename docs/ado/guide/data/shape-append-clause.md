@@ -114,7 +114,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [Intervening Shape COMPUTE Clauses](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## See Also  
+## See also  
  [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
  [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)

@@ -32,6 +32,6 @@ Indicates the ADO version number.
 ## Applies To  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## See Also  
+## See also  
  [Version Property Example (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Version Property Example (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

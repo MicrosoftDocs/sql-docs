@@ -71,5 +71,5 @@ enum ObjectStateEnum GetState( );
 __declspec(property(get=GetState)) enum ObjectStateEnum State;  
 ```  
   
-## See Also  
+## See also  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

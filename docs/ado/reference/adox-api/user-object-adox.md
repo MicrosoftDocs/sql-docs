@@ -40,7 +40,7 @@ Represents a user account that has access permissions within a secured database.
   
 -   [User Object Properties, Methods, and Events](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [GetPermissions and SetPermissions Methods Example (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Groups Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

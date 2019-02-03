@@ -36,7 +36,7 @@ Indicates the scale of numeric values in a [Parameter](../../../ado/reference/ad
 |-|-|  
 |[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Field Object](../../../ado/reference/ado-api/field-object.md)|  
   
-## See Also  
+## See also  
  [NumericScale and Precision Properties Example (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale and Precision Properties Example (VC++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Precision Property (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

@@ -41,5 +41,5 @@ Specifies the relative position of two records represented by their bookmarks.
 ## Applies To  
  [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
-## See Also  
+## See also  
  [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)

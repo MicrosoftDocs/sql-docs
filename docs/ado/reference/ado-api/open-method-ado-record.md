@@ -70,7 +70,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## Applies To  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## See Also  
+## See also  
  [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open Method (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   

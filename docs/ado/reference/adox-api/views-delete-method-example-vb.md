@@ -47,6 +47,6 @@ End Sub
 ' EndDeleteViewVB  
 ```  
   
-## See Also  
+## See also  
  [Delete Method (ADOX Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

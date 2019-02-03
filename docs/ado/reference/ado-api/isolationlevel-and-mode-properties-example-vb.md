@@ -109,7 +109,7 @@ End Sub
 'EndIsolationLevelVB  
 ```  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel Property](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode Property (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

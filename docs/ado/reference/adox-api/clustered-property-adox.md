@@ -34,5 +34,5 @@ Indicates whether the index is clustered.
 ## Applies To  
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## See Also  
+## See also  
  [Clustered Property Example (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)

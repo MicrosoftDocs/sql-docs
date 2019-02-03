@@ -46,7 +46,7 @@ Represents a column of data with a common data type.
   
 -   [Field Object Properties, Methods, and Events](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

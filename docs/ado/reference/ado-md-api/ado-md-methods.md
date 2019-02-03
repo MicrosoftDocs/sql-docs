@@ -22,7 +22,7 @@ ms.author: genemi
 |[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)|Retrieves an ADO MD schema object (dimension, hierarchy, level, or member) by its unique name.|  
 |[Open](../../../ado/reference/ado-md-api/open-method-ado-md.md)|Retrieves the results of a multidimensional query and returns the results to a cellset.|  
   
-## See Also  
+## See also  
  [ADO MD API Reference](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD Code Examples](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md)   

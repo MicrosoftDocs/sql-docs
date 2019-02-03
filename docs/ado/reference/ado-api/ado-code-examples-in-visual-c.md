@@ -139,7 +139,7 @@ Use the following code examples to learn how to use the ADO methods, properties,
   
 -   [ADO Events Model Example](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   
-## See Also  
+## See also  
  [ADO Code Examples in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO Code Examples VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

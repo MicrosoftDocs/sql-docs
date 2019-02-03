@@ -34,7 +34,7 @@ Contains the [Position](../../../ado/reference/ado-md-api/position-object-ado-md
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

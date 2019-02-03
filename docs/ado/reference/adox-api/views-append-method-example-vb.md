@@ -55,7 +55,7 @@ End Sub
 ' EndCreateViewVB  
 ```  
   
-## See Also  
+## See also  
  [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append Method (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

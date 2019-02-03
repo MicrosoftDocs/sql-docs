@@ -39,7 +39,7 @@ ms.author: genemi
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Called just before a pending command executes on this connection and affords the user an opportunity to examine and modify the pending execution parameters.|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|The **WillMove** event is called *before* a pending operation changes the current position in the **Recordset**.|  
   
-## See Also  
+## See also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

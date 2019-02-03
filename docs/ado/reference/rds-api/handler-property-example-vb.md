@@ -72,7 +72,7 @@ End Sub
 'EndHandlerVB  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Handler Property (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 

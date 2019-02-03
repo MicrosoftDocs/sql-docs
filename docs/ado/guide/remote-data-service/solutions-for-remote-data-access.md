@@ -36,7 +36,7 @@ ms.author: genemi
 ## The Solution  
  RDS defines a programming model - the sequence of activities necessary to gain access to and update a data source - to gain access to data through an intermediary, such as Internet Information Services (IIS). The programming model summarizes the entire functionality of RDS.  
   
-## See Also  
+## See also  
  [Basic RDS Programming Model](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   

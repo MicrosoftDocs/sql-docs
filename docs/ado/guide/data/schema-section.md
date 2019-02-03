@@ -168,5 +168,5 @@ The schema section is required. As the previous example shows, ADO writes out de
   
  For further information about the OLE DB constructs available for use within the schema of an XML document for OLE DB, see the definition of "urn:schemas-microsoft-com:rowset" and the OLE DB Programmer's Guide.  
   
-## See Also  
+## See also  
  [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

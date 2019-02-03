@@ -45,7 +45,7 @@ Views.Append Name, Command
 ## Applies To  
  [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## See Also  
+## See also  
  [Views Append Method Example (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append Method (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

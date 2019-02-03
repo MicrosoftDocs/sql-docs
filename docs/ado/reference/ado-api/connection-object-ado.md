@@ -88,7 +88,7 @@ cnn. "parameter"
   
 -   [Connection Object Properties, Methods, and Events](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

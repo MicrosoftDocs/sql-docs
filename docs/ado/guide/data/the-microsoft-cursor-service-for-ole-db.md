@@ -21,5 +21,5 @@ When you select a client-side cursor, or set the **CursorLocation** property to 
   
  The Cursor Service enables support for batch updating in all cases. It also simulates more capable cursor types, such as dynamic cursors, when a data provider can only supply less capable cursors, such as static cursors.  
   
-## See Also  
+## See also  
  [Microsoft Cursor Service for OLE DB (ADO Service Component)](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)

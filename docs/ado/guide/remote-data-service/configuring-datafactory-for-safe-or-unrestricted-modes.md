@@ -31,7 +31,7 @@ ms.author: genemi
   
  After running handsafe.reg, you must stop and restart the World Wide Web Publishing Service on the Web server by typing the following commands in a Command Prompt window: "NET STOP W3SVC" and "NET START W3SVC".  
   
-## See Also  
+## See also  
  [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

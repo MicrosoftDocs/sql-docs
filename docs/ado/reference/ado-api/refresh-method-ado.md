@@ -59,7 +59,7 @@ collection.Refresh
 |[Properties Collection](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables Collection](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users Collection](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views Collection](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## See Also  
+## See also  
  [Refresh Method Example (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh Method Example (VC++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Count Property (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

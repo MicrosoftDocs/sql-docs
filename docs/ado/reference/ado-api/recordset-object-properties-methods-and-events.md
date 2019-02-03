@@ -129,5 +129,5 @@ ms.author: genemi
   
  [WillMove and MoveComplete Events](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

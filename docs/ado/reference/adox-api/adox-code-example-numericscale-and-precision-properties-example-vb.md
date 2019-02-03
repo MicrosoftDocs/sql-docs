@@ -69,7 +69,7 @@ End Sub
 ' EndNumericScalePrecVB  
 ```  
   
-## See Also  
+## See also  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [NumericScale Property (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision Property (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)

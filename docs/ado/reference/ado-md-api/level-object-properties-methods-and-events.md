@@ -35,5 +35,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

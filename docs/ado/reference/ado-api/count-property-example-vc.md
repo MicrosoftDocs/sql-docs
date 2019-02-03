@@ -124,5 +124,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Count Property (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

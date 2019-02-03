@@ -45,7 +45,7 @@ Procedures.Append Name, Command
 ## Applies To  
  [Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
-## See Also  
+## See also  
  [Procedures Append Method Example (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append Method (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

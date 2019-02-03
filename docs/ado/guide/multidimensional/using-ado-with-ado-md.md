@@ -38,7 +38,7 @@ ADO and ADO MD are related but separate object models. ADO provides objects for 
   
  For more information about the ADO objects and methods, see the [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md).  
   
-## See Also  
+## See also  
  [ADO MD Object Model](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Overview of Multidimensional Schemas and Data](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

@@ -31,5 +31,5 @@ Indicates the size of the stream in number of bytes.
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [Size Property (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

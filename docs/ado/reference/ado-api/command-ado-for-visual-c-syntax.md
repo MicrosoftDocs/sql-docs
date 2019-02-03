@@ -45,5 +45,5 @@ get_State(LONG *plObjState)
 get_Parameters(ADOParameters **ppvObject)  
 ```  
   
-## See Also  
+## See also  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

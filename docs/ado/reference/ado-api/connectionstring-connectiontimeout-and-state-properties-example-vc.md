@@ -160,7 +160,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [ConnectionTimeout Property (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   

@@ -34,7 +34,7 @@ Indicates the stream used as the input for a [Command](../../../ado/reference/ad
 ## Applies To  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## See Also  
+## See also  
  [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Dialect Property](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

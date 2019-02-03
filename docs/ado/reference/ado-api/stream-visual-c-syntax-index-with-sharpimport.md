@@ -85,5 +85,5 @@ void PutType( enum StreamTypeEnum ptype );
 __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;  
 ```  
   
-## See Also  
+## See also  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

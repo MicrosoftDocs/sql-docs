@@ -43,7 +43,7 @@ boolean = recordset.Supports(CursorOptions )
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Supports Method Example (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [Supports Method Example (VC++)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType Property (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

@@ -49,6 +49,6 @@ End Sub
 ' EndViewsRefreshVB  
 ```  
   
-## See Also  
+## See also  
  [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

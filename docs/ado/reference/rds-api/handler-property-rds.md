@@ -48,7 +48,7 @@ DataControl.Handler = String
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [Handler Property Example (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

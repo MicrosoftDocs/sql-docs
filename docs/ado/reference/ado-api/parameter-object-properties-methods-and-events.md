@@ -39,5 +39,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)

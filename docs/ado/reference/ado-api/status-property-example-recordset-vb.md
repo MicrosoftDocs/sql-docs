@@ -91,5 +91,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## See Also  
+## See also  
  [Status Property (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

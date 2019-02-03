@@ -32,5 +32,5 @@ Indicates the action performed when a primary [Key](../../../ado/reference/adox-
 ## Applies To  
  [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## See Also  
+## See also  
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

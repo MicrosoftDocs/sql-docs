@@ -61,7 +61,7 @@ Sub datashape()
 End Sub
 ```
 
-## See Also
+## See also
  [Data Shaping Overview](../../../ado/guide/data/data-shaping-overview.md)
  [Field Object](../../../ado/reference/ado-api/field-object.md)
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)

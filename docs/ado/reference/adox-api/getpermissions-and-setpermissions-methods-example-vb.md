@@ -88,7 +88,7 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## See Also  
+## See also  
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   

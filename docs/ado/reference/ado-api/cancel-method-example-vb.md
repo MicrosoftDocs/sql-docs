@@ -96,6 +96,6 @@ End Sub
 'EndCancelVB  
 ```  
   
-## See Also  
+## See also  
  [Cancel Method (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -37,7 +37,7 @@ Tables.Append Table
 ## Applies To  
  [Tables Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
-## See Also  
+## See also  
  [Columns and Tables Append Methods, Name Property Example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [ParentCatalog Property Example (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   

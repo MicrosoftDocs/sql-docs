@@ -27,7 +27,7 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 
 

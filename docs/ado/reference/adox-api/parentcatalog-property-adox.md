@@ -59,5 +59,5 @@ Specifies the parent catalog of a Table, User, or Column object to provide acces
 |[Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
 |[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
-## See Also  
+## See also  
  [ParentCatalog Property Example (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

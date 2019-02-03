@@ -61,6 +61,6 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ## Applies To  
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

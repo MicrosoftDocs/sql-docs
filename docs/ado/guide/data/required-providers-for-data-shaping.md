@@ -31,7 +31,7 @@ cnn.Provider = "MSDataShape"
 cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"  
 ```  
   
-## See Also  
+## See also  
  [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
  [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)

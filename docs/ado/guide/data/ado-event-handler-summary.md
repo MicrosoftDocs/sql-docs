@@ -38,7 +38,7 @@ Two ADO objects can raise events: the [Connection](../../../ado/reference/ado-ap
 |[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Row Change Management** - Notification that something in the current row of the **Recordset** will change, or has changed.|
 |[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Recordset Change Management** - Notification that something in the current **Recordset** will change, or has changed.|
 
-## See Also
+## See also
  [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md)
  [ADO Events](../../../ado/reference/ado-api/ado-events.md)
  [Event Parameters](../../../ado/guide/data/event-parameters.md)

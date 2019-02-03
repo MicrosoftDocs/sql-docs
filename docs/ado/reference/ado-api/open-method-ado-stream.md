@@ -55,7 +55,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

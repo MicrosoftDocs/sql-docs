@@ -35,7 +35,7 @@ Indicates the editing status of the current record.
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [CursorType, LockType, and EditMode Properties Example (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType, LockType, and EditMode Properties Example (VC++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [AddNew Method (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

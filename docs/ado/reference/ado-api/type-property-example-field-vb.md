@@ -99,6 +99,6 @@ End Sub
 Attribute VB_Name = "TypeField"  
 ```  
   
-## See Also  
+## See also  
  [Field Object](../../../ado/reference/ado-api/field-object.md)   
  [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

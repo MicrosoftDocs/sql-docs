@@ -95,6 +95,6 @@ End Sub
 'EndGetStringVB  
 ```  
   
-## See Also  
+## See also  
  [GetString Method (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

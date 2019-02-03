@@ -28,7 +28,7 @@ For information about using ADO with Visual C++, see the following sections:
   
 -   [Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
   
-## See Also  
+## See also  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [ADO for Visual C++ Syntax Index for COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
  [ADO for Visual C++ Syntax Index with #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   

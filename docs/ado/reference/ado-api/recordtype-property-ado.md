@@ -30,6 +30,6 @@ Indicates the type of [Record](../../../ado/reference/ado-api/record-object-ado.
 ## Applies To  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## See Also  
+## See also  
  [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
  [Type Property (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

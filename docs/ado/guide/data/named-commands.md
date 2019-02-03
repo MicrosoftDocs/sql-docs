@@ -83,5 +83,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

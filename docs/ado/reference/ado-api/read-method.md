@@ -45,5 +45,5 @@ Variant = Stream.Read ( NumBytes)
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [ReadText Method](../../../ado/reference/ado-api/readtext-method.md)

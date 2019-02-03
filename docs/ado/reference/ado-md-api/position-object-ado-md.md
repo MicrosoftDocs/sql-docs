@@ -30,7 +30,7 @@ Represents a set of one or more members of different dimensions that defines a p
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Axis Example (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

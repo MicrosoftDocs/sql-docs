@@ -36,5 +36,5 @@ void PutValue( const _variant_t & pval );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## See Also  
+## See also  
  [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

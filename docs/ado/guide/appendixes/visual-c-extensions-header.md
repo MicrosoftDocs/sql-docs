@@ -201,6 +201,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## See Also  
+## See also  
  [Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)

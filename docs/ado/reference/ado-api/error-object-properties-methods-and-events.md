@@ -33,5 +33,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Error Object](../../../ado/reference/ado-api/error-object.md)

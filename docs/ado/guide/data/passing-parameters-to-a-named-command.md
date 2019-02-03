@@ -86,5 +86,5 @@ objConn.GetOrdersOf "12345", objRs
   
  -is valid, but will yield an empty result set because no such records exist in the database.  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

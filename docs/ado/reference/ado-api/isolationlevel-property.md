@@ -33,6 +33,6 @@ Indicates the level of isolation for a [Connection](../../../ado/reference/ado-a
 ## Applies To  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## See Also  
+## See also  
  [IsolationLevel and Mode Properties Example (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [IsolationLevel and Mode Properties Example (VC++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

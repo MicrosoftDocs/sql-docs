@@ -34,7 +34,7 @@ Indicates the name of the object or application that originally generated an err
 ## Applies To  
  [Error Object](../../../ado/reference/ado-api/error-object.md)  
   
-## See Also  
+## See also  
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Description Property](../../../ado/reference/ado-api/description-property.md)   

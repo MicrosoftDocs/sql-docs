@@ -26,7 +26,7 @@ ms.author: genemi
 > [!NOTE]
 >  When business objects on the middle tier are implemented as Component Services components by using **GetObjectContext**, **SetComplete**, and **SetAbort**, the business objects can use Component Services (or MTS, if you are using Windows NT) context objects to maintain their state across multiple client calls. This scenario is possible with DCOM, which is typically implemented between trusted clients and servers in an intranet. In this case, the [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) object and [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) method on the client side are replaced by the transaction context object and **CreateInstance** method, which are provided by the **ITransactionContext** interface and implemented by Component Services.  
   
-## See Also  
+## See also  
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

@@ -39,5 +39,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

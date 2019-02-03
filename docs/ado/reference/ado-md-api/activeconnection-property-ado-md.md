@@ -56,7 +56,7 @@ Indicates to which ADO [Connection](../../../ado/reference/ado-api/connection-ob
 |-|-|  
 |[Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
-## See Also  
+## See also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open Method (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

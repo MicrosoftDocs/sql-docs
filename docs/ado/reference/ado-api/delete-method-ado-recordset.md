@@ -50,7 +50,7 @@ recordset.Delete AffectRecords
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Delete Method Example (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [Delete Method Example (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [Delete Method Example (VC++)](../../../ado/reference/ado-api/delete-method-example-vc.md)   

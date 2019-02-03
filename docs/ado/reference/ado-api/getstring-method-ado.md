@@ -54,5 +54,5 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [GetString Method Example (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)

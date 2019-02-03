@@ -42,7 +42,7 @@ Represents a dynamic characteristic of an ADO object that is defined by the prov
   
 -   [Property Object Properties, Methods, and Events](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field Object](../../../ado/reference/ado-api/field-object.md)   

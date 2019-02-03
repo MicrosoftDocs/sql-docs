@@ -35,5 +35,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

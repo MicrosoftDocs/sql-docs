@@ -43,7 +43,7 @@ fld.Properties("Optimize") = False   'Delete an index
 ## Applies To  
  [Field Object](../../../ado/reference/ado-api/field-object.md)  
   
-## See Also  
+## See also  
  [Optimize Property Example (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
  [Optimize Property Example (VC++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [Filter Property](../../../ado/reference/ado-api/filter-property.md)   

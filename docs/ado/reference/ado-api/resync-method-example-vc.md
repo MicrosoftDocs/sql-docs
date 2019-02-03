@@ -136,5 +136,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Resync Method](../../../ado/reference/ado-api/resync-method.md)

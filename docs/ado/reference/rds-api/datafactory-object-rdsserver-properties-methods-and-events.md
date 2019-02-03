@@ -36,7 +36,7 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
 
 

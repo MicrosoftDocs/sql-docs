@@ -62,7 +62,7 @@ End Sub
 <!-- EndCancelVBS -->  
 ```  
   
-## See Also  
+## See also  
  [Cancel Method (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
 
 

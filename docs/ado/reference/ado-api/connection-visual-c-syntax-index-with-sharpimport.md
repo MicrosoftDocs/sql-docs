@@ -81,5 +81,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## See Also  
+## See also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

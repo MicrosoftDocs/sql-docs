@@ -29,6 +29,6 @@ Indicates the status of the current record with respect to batch updates or othe
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Status Property Example (Recordset) (VB)](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)   
  [Status Property Example (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

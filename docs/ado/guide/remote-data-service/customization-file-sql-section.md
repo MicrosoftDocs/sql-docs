@@ -44,7 +44,7 @@ SQL = " "
 |**SQL**|A literal string that indicates this is an SQL section entry.|  
 |***sqlString***|An SQL string that replaces the client string.|  
   
-## See Also  
+## See also  
  [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Customization File UserList Section](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

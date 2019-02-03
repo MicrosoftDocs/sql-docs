@@ -121,6 +121,6 @@ End Sub
 'EndCloneVB  
 ```  
   
-## See Also  
+## See also  
  [Clone Method (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -56,6 +56,6 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [NextRecordset Method Example (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
  [NextRecordset Method Example (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

@@ -25,5 +25,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Axes Collection (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)

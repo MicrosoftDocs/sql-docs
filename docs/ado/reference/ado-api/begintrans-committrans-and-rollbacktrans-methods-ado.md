@@ -69,7 +69,7 @@ object.RollbackTrans
 ## Applies To  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## See Also  
+## See also  
  [BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [BeginTrans, CommitTrans, and RollbackTrans Methods Example (VC++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

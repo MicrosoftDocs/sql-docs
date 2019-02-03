@@ -60,7 +60,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Find Method Example (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Index Property](../../../ado/reference/ado-api/index-property.md)   
  [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

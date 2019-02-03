@@ -237,7 +237,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## See Also  
+## See also  
  [BOF, EOF Properties (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

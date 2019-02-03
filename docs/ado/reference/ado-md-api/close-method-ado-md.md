@@ -35,7 +35,7 @@ Cellset.Close
 ## Applies To  
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   

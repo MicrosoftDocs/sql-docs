@@ -48,7 +48,7 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
   
  As soon as the **Recordset** has been fabricated, it can be populated, manipulated, or persisted to a file.  
   
-## See Also  
+## See also  
  [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
  [Required Providers for Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   

@@ -66,7 +66,7 @@ End Sub
 ' EndCreateKeyVB  
 ```  
   
-## See Also  
+## See also  
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append Method (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

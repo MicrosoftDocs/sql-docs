@@ -177,6 +177,6 @@ Name            Address            City
 Sylvia   Panteley   1956 Arlington Pl.   Rockville  
 ```  
   
-## See Also  
+## See also  
  [GetString Method (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -57,7 +57,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 |-|-|  
 |[DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## See Also  
+## See also  
  [SubmitChanges Method Example (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [Address Book Command Buttons](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [CancelUpdate Method (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

@@ -28,6 +28,6 @@ This code example demonstrates how to use ADO with the Microsoft OLE DB Provider
   
 -   [Step 4: Populate the Details Text Box](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
-## See Also  
+## See also  
  [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [The OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

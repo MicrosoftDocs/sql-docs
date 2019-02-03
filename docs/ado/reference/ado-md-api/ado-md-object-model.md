@@ -24,7 +24,7 @@ This topic describes how objects are represented and related in ADO MD.
   
  The [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md), [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md), and [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) objects each have a standard ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
   
-## See Also  
+## See also  
  [ADO MD API Reference](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD Code Examples](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md)   

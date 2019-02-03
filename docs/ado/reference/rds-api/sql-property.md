@@ -45,7 +45,7 @@ Run time: DataControl.SQL = "QueryString"
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [SQL Property Example (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
  [Connect Property (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Query Method (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   

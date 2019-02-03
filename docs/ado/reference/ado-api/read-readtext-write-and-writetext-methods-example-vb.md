@@ -104,7 +104,7 @@ End Sub
 'EndReadVB  
 ```  
   
-## See Also  
+## See also  
  [Charset Property (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
  [Position Property (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Read Method](../../../ado/reference/ado-api/read-method.md)   

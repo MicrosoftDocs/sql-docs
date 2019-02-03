@@ -37,5 +37,5 @@ Indicates the current position within a [Stream](../../../ado/reference/ado-api/
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [Charset Property (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)

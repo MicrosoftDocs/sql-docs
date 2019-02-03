@@ -52,7 +52,7 @@ Represents one way in which the members of a [dimension](../../../ado/reference/
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [CubeDef Example (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Hierarchies Collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   

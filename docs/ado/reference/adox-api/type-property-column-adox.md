@@ -32,7 +32,7 @@ Indicates the data type of a column.
 ## Applies To  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## See Also  
+## See also  
  [ParentCatalog Property Example (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Type Property (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Type Property (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

@@ -251,7 +251,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## See Also  
+## See also  
  [AbsolutePosition Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [CursorLocation Property (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

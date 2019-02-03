@@ -35,7 +35,7 @@ SHAPE {SELECT * FROM Customers}
   
  For information about navigating a hierarchical **Recordset**, see [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
-## See Also  
+## See also  
  [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
  [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)

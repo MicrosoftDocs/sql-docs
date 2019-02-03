@@ -43,7 +43,7 @@ DataControl.Refresh
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [Refresh Method Example (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh Method Example (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [Address Book Command Buttons](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

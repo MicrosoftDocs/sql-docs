@@ -43,6 +43,6 @@ End Sub
 ' EndCreateDatabaseVB  
 ```  
   
-## See Also  
+## See also  
  [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create Method (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

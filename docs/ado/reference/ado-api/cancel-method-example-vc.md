@@ -134,6 +134,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [Cancel Method (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

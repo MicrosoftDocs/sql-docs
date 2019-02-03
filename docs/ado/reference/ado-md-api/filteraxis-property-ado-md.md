@@ -31,7 +31,7 @@ Indicates filter information about the current [cellset](../../../ado/reference/
 ## Applies To  
  [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [DimensionCount Property (ADO MD)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)

@@ -36,6 +36,6 @@ Represents a group account that has access permissions within a secured database
   
 -   [Group Object Properties, Methods, and Events](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Groups Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

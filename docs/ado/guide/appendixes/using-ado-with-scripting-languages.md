@@ -59,7 +59,7 @@ Within a scripting environment, ADO allows you to expose data by way of server-s
   
 -   [JScript ADO Programming](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## See Also  
+## See also  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Using ADO with Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

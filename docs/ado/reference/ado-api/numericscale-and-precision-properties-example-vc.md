@@ -127,6 +127,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [NumericScale Property (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Precision Property (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

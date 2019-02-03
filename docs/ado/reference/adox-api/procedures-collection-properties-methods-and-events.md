@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

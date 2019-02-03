@@ -53,7 +53,7 @@ cst.Axes(0).Positions(0).Members(0).Caption
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axes Collection (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

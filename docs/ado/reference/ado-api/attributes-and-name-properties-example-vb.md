@@ -120,7 +120,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## See Also  
+## See also  
  [Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field Object](../../../ado/reference/ado-api/field-object.md)   

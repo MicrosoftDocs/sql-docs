@@ -26,7 +26,7 @@ ms.author: genemi
 |[Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contains the **Member** objects from a level or a position along an axis.|  
 |[Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Contains the **Position** objects that define a point on an axis.|  
   
-## See Also  
+## See also  
  [ADO MD API Reference](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD Code Examples](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD Enumerated Constants](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

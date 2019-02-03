@@ -24,7 +24,7 @@ ms.author: genemi
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|This object represents the default server program. It executes the default RDS data retrieval and update behavior.<br /><br /> The **DataFactory** object is not safe for scripting.|  
 |[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|This object can automatically invoke the **RDS.DataSpace** and **RDSServer.DataFactory** objects.<br /><br /> Use this object to invoke the default RDS data retrieval or update behavior.<br /><br /> This object also provides the means for visual controls to access the returned **Recordset** object.<br /><br /> The **DataControl** object is safe for scripting.|  
   
-## See Also  
+## See also  
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   

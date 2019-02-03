@@ -118,7 +118,7 @@ End Sub
 'EndCopyRecordVB  
 ```  
   
-## See Also  
+## See also  
  [CopyRecord Method (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [CopyTo Method (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [LoadFromFile Method (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   

@@ -48,7 +48,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 |-|-|  
 |[Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## See Also  
+## See also  
  [GetPermissions and SetPermissions Methods Example (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

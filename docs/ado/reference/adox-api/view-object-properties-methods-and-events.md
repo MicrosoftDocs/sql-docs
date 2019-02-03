@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)

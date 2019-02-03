@@ -34,7 +34,7 @@ Represents a stored procedure. When used in conjunction with the ADO [Command](.
   
 -   [Procedure Object Properties, Methods, and Events](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Command and CommandText Properties Example (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameters Collection, Command Property Example (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Procedures Append Method Example (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   

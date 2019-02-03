@@ -25,5 +25,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Members Collection (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

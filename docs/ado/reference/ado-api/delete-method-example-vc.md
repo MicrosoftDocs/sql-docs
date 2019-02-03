@@ -287,6 +287,6 @@ MC2222
 BU7832  
 ```  
   
-## See Also  
+## See also  
  [Delete Method (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

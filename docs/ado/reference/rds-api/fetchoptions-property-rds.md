@@ -38,7 +38,7 @@ Indicates the type of asynchronous fetching.
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [ExecuteOptions and FetchOptions Properties Example (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel Method (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

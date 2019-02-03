@@ -44,7 +44,7 @@ Contains all [Column](../../../ado/reference/adox-api/column-object-adox.md) obj
   
 -   [Columns Collection Properties, Methods, and Events](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Columns and Tables Append Methods, Name Property Example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Connection Close Method, Table Type Property Example (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

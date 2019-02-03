@@ -106,7 +106,7 @@ End Sub
 'EndSkipLineVB  
 ```  
   
-## See Also  
+## See also  
  [EOS Property](../../../ado/reference/ado-api/eos-property.md)   
  [LineSeparator Property (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine Method](../../../ado/reference/ado-api/skipline-method.md)

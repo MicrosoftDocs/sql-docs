@@ -296,7 +296,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## See Also  
+## See also  
  [Filter Property](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

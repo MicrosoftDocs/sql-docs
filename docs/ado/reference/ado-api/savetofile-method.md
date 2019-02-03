@@ -47,6 +47,6 @@ Stream.SaveToFile FileName, SaveOptions
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## See Also  
+## See also  
  [Open Method (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save Method](../../../ado/reference/ado-api/save-method.md)

@@ -196,6 +196,6 @@ int main() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Attributes Property (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

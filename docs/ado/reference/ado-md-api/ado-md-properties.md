@@ -44,7 +44,7 @@ ms.author: genemi
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indicates an unambiguous name for the current object.|  
 |[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indicates the value of the current cell.|  
   
-## See Also  
+## See also  
  [ADO MD API Reference](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD Code Examples](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md)   

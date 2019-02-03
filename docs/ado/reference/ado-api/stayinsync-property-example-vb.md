@@ -83,7 +83,7 @@ End Sub
 'EndStayInSyncVB  
 ```  
   
-## See Also  
+## See also  
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync Property](../../../ado/reference/ado-api/stayinsync-property.md)

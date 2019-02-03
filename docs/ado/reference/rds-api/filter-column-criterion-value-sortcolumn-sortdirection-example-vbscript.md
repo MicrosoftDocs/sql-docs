@@ -197,7 +197,7 @@ End Sub
 <!-- EndFilterColumnVBS -->  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [FilterColumn Property (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
  [FilterCriterion Property (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   

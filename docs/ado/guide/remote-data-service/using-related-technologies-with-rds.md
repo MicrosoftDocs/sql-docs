@@ -37,7 +37,7 @@ This section contains the following topics.
   
  **Microsoft Windows NT Server/Windows 2000 Server** For more information about security in Microsoft Windows NT Server or Windows 2000 Server, see the Microsoft Windows Web site.  
   
-## See Also  
+## See also  
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

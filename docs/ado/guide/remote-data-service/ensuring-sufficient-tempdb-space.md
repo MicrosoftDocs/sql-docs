@@ -49,7 +49,7 @@ If errors occur while handling [Recordset](../../../ado/reference/ado-api/record
   
  For more information about this topic, search the Microsoft SQL Server Enterprise Manager Help file for "Expand Database dialog box."  
   
-## See Also  
+## See also  
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

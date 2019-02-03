@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [CompareBookmarks Method Example (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
  [CompareBookmarks Method Example (VC++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark Property (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

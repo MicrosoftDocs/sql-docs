@@ -62,7 +62,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
  If the dialect of the new source string differs from the original setting of the [Dialect Property](../../../ado/reference/ado-api/dialect-property.md) property (which corresponded to the **CommandStream**), the correct dialect must be specified by setting the **Dialect** property of the command object referenced by *pCommand*.  
   
-## See Also  
+## See also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

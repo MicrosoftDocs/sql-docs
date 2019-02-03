@@ -31,7 +31,7 @@ There are two basic types of events. "Will Events," which are called before an o
 ## Other Events  
  The other event handlers - that is, events whose names are not of the form <strong>Will*Event*</strong> or <strong>*Event*Complete</strong> - are called only after an operation completes. These events are **Disconnect**, **EndOfRecordset**, and **InfoMessage**.  
   
-## See Also  
+## See also  
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Event Parameters](../../../ado/guide/data/event-parameters.md)   

@@ -29,5 +29,5 @@ Returns a [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.
 ## Applies To  
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## See Also  
+## See also  
  [ChildCount Property (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)

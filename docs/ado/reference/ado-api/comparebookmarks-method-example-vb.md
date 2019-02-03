@@ -126,7 +126,7 @@ End Sub
 'EndCompareBookmarksVB  
 ```  
   
-## See Also  
+## See also  
  [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

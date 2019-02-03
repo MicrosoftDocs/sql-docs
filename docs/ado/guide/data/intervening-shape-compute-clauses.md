@@ -29,7 +29,7 @@ SHAPE {select au_lname, state from authors} APPEND
 RELATE state TO PARAMETER 0)  
 ```  
   
-## See Also  
+## See also  
  [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
  [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)

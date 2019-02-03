@@ -38,7 +38,7 @@ As a general rule, your application should use the simplest cursor that provides
   
 -   [Dynamic Cursors](../../../ado/guide/data/dynamic-cursors.md)  
   
-## See Also  
+## See also  
  [Forward-Only Cursors](../../../ado/guide/data/forward-only-cursors.md)   
  [Static Cursors](../../../ado/guide/data/static-cursors.md)   
  [Keyset Cursors](../../../ado/guide/data/keyset-cursors.md)   

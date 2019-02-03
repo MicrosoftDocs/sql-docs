@@ -196,6 +196,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## See Also  
+## See also  
  [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)

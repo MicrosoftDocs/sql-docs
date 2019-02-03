@@ -79,7 +79,7 @@ rs.Update
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [AddNew Method Example (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [AddNew Method Example (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [AddNew Method Example (VC++)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   

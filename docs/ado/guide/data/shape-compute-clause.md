@@ -126,7 +126,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |OR|Portland|400,000|  
 |OR|Corvallis|300,000|  
   
-## See Also  
+## See also  
  [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Data Shaping Overview](../../../ado/guide/data/data-shaping-overview.md)   
  [Field Object](../../../ado/reference/ado-api/field-object.md)   

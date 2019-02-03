@@ -37,7 +37,7 @@ ms.author: genemi
   
  Finally, if your needs are somewhere in between, ADO now supports customizing the behavior of the default server program.  
   
-## See Also  
+## See also  
  [RDS Programming Model in Detail](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   

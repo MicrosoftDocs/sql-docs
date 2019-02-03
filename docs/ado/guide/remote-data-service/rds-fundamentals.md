@@ -30,7 +30,7 @@ ms.author: genemi
   
 -   [The RDS Object Model Summary](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
   
-## See Also  
+## See also  
  [Solutions for Remote Data Access](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
  [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   

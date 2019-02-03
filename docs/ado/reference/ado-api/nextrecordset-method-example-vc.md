@@ -132,5 +132,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [NextRecordset Method (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)

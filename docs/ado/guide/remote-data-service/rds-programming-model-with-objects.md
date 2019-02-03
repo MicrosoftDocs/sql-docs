@@ -34,7 +34,7 @@ The goal of RDS is to gain access to and update data sources through an intermed
   
 -   Changes to the **Recordset** object are sent back to the server and used to update the data source (**RDS.DataControl** or **RDSServer.DataFactory**).  
   
-## See Also  
+## See also  
  [RDS Object Model Summary](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

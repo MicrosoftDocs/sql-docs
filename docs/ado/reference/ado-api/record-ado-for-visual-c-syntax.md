@@ -46,5 +46,5 @@ putref_Source(IDispatch *Source)
 get_State(ObjectStateEnum *pState)  
 ```  
   
-## See Also  
+## See also  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

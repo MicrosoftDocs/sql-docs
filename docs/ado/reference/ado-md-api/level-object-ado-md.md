@@ -56,7 +56,7 @@ Contains a set of members, each of which has the same rank within a hierarchy.
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [CubeDef Example (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Levels Collection (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   

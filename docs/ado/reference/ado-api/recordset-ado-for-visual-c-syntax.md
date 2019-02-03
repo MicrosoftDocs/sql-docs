@@ -112,5 +112,5 @@ WillChangeRecordset(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORec
 WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  
 ```  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

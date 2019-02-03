@@ -32,5 +32,5 @@ ADO consists of the following nine objects and four collections.
 |**Parameters** collection|Contains all the **Parameter** objects of a **Command** object.|  
 |**Errors** collection|Contains all the **Error** objects created in response to a single provider-related failure.|  
   
-## See Also  
+## See also  
  [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md)

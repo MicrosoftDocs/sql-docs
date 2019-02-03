@@ -39,7 +39,7 @@ Contains all [Key](../../../ado/reference/adox-api/key-object-adox.md) objects o
   
 -   [Indexes Collection Properties, Methods, and Events](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Keys Collection Properties, Methods, and Events](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

@@ -68,7 +68,7 @@ ms.author: genemi
   
  [onReadyStateChange Event (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

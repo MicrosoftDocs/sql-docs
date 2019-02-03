@@ -37,7 +37,7 @@ ms.author: genemi
   
 -   [Configuring DataFactory for Safe or Unrestricted Modes](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## See Also  
+## See also  
  [Using Related Technologies with RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Troubleshooting RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)

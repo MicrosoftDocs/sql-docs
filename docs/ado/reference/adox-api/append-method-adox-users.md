@@ -45,7 +45,7 @@ Users.Append User[,Password]
 ## Applies To  
  [Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
-## See Also  
+## See also  
  [Groups and Users Append, ChangePassword Methods Example (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append Method (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

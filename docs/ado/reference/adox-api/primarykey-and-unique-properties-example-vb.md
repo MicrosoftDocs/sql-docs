@@ -106,7 +106,7 @@ End Sub
 ' EndPrimaryKeyVB  
 ```  
   
-## See Also  
+## See also  
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [PrimaryKey Property (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Unique Property (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

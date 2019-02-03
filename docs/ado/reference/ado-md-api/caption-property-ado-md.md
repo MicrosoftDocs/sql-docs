@@ -30,6 +30,6 @@ Indicates the text caption to use when displaying a [Level](../../../ado/referen
 |-|-|  
 |[Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
-## See Also  
+## See also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Description Property (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)

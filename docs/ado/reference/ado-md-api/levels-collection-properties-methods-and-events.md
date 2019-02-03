@@ -25,5 +25,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Levels Collection (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)

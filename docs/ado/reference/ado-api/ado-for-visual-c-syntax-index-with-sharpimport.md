@@ -51,5 +51,5 @@ This index is a cross-reference to the ADO Language Reference based on Microsoft
   
 -   [Recordset Events](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## See Also  
+## See also  
  [ADO for Visual C++ Syntax Index for COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

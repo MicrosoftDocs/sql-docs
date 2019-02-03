@@ -30,7 +30,7 @@ Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) provides easy acc
   
 -   [Programming with ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)  
   
-## See Also  
+## See also  
  [ADO MD Object Model](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO Programmer's Guide](../../../ado/guide/ado-programmer-s-guide.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   

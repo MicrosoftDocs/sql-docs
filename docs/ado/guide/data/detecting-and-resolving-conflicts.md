@@ -109,5 +109,5 @@ If you are dealing with your Recordset in immediate mode, there is much less cha
   
  For detailed information about error handling, see [Error Handling](../../../ado/guide/data/error-handling.md).  
   
-## See Also  
+## See also  
  [Batch Mode](../../../ado/guide/data/batch-mode.md)

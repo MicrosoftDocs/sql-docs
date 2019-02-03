@@ -49,7 +49,7 @@ Use the following code examples to learn how to use the ADO methods, properties,
   
 -   [Filter and RecordCount Properties Example](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
   
-## See Also  
+## See also  
  [ADO Code Examples in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO Code Examples VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   

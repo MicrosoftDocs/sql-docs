@@ -351,7 +351,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
  For specific implementation details and functional information about the Microsoft SQL Server OLE DB Provider, see the [SQL Server Provider](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
 
-## See Also
+## See also
  [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)
  [Provider Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

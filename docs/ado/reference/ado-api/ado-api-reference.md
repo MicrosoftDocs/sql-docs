@@ -38,7 +38,7 @@ This section of the ADO documentation contains topics for each ADO object, colle
   
 -   [ADO Code Examples](../../../ado/reference/ado-api/ado-code-examples.md)  
   
-## See Also  
+## See also  
  [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Appendix C: Programming with ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   

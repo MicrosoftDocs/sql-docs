@@ -29,5 +29,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

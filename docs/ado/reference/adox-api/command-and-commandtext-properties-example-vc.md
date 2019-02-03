@@ -84,5 +84,5 @@ int main() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Command Property (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)

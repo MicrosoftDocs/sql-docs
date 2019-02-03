@@ -111,6 +111,6 @@ This example uses the [Clone](../../../ado/reference/ado-api/clone-method-ado.md
 <!-- EndCloneVBS -->  
 ```  
   
-## See Also  
+## See also  
  [Clone Method (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

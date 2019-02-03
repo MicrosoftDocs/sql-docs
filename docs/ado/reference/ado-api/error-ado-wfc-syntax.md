@@ -27,5 +27,5 @@ public String getSource()
 public String getSQLState()  
 ```  
   
-## See Also  
+## See also  
  [Error Object](../../../ado/reference/ado-api/error-object.md)

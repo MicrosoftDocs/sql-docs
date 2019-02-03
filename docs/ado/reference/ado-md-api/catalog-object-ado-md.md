@@ -32,7 +32,7 @@ Contains multidimensional schema information (that is, cubes and underlying dime
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
-## See Also  
+## See also  
  [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs Collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

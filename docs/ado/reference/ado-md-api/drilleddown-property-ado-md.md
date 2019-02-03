@@ -31,5 +31,5 @@ Indicates whether children immediately follow the [member](../../../ado/referenc
 ## Applies To  
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## See Also  
+## See also  
  [ParentSameAsPrev Property (ADO MD)](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)

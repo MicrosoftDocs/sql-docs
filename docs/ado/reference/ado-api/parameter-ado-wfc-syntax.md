@@ -88,5 +88,5 @@ public boolean isNull()
 public void setNull()  
 ```  
   
-## See Also  
+## See also  
  [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)

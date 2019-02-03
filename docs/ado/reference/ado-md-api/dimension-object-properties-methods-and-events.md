@@ -31,5 +31,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

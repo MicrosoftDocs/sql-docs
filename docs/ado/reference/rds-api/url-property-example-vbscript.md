@@ -132,7 +132,7 @@ End Sub
 <!-- EndURLServerVBS -->  
 ```  
   
-## See Also  
+## See also  
  [URL Property (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
 
 

@@ -33,7 +33,7 @@ RDS.DataControl.Cancel
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## See Also  
+## See also  
  [Cancel Method Example (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Cancel Method (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [CancelBatch Method (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

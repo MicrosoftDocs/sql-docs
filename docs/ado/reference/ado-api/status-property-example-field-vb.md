@@ -85,7 +85,7 @@ Attribute VB_Name = "StatusField"
 Attribute VB_Name = "StatusField"  
 ```  
   
-## See Also  
+## See also  
  [Field Object](../../../ado/reference/ado-api/field-object.md)   
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status Property (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)

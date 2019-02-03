@@ -63,7 +63,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## Applies To  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## See Also  
+## See also  
  [OpenSchema Method Example (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
  [OpenSchema Method Example (VC++)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
  [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

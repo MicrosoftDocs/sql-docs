@@ -37,6 +37,6 @@ Sub RDSTutorial5()
 ...  
 ```  
   
-## See Also  
+## See also  
  [Step 6: Changes are Sent to the Server (RDS Tutorial)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

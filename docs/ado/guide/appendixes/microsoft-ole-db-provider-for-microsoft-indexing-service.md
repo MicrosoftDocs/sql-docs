@@ -109,7 +109,7 @@ MSIDXS
 
  For specific implementation details and functional information about the Microsoft OLE DB Provider for Microsoft Indexing Service, consult the [OLE DB Programmer's Guide](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), or visit the Web Services page of the Windows NT Server Web site.
 
-## See Also
+## See also
  [CommandType Property (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)
  [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

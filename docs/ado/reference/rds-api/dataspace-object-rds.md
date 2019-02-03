@@ -41,7 +41,7 @@ ms.author: genemi
   
 -   [DataSpace Object (RDS) Properties, Methods, and Events](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [DataSpace Object and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
 
 

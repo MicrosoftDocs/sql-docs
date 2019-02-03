@@ -133,7 +133,7 @@ objectClass='user' AND objectCategory='Person'"
   
  For more information about ADSI and the specifics of the provider, refer to the Active Directory Service Interfaces documentation or visit the ADSI Web page.  
   
-## See Also  
+## See also  
  [CommandType Property (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

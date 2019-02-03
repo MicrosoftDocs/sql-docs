@@ -56,7 +56,7 @@ connectionString
   
  If you want to allow any connection (in effect, disabling the default handler behavior), set the access entry in the **connect default** section to `Access=ReadWrite`, and delete or comment out any other **connect** _identifier_ section.  
   
-## See Also  
+## See also  
  [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Customization File UserList Section](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

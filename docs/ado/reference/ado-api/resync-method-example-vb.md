@@ -97,6 +97,6 @@ End Sub
 'EndResyncVB  
 ```  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Resync Method](../../../ado/reference/ado-api/resync-method.md)

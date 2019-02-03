@@ -25,5 +25,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Positions Collection (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)

@@ -30,7 +30,7 @@ Indicates how many records constitute one page in the [Recordset](../../../ado/r
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [AbsolutePage, PageCount, and PageSize Properties Example (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [AbsolutePage, PageCount, and PageSize Properties Example (VC++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   

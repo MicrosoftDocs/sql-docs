@@ -58,7 +58,7 @@ Indicates the information used to establish a connection to a data source.
 ## Applies To  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## See Also  
+## See also  
  [ConnectionString, ConnectionTimeout, and State Properties Example (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout, and State Properties Example (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

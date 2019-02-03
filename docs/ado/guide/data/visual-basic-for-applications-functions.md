@@ -41,7 +41,7 @@ The following Visual Basic for Applications functions can be used in data shapin
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|Year||  
   
-## See Also  
+## See also  
  [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Data Shaping Overview](../../../ado/guide/data/data-shaping-overview.md)   
  [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   

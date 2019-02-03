@@ -149,7 +149,7 @@ void PrintComError(_com_error &e)
 // EndInternetTimeoutCpp  
 ```  
   
-## See Also  
+## See also  
  [InternetTimeout Property (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

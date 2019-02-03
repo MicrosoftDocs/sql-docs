@@ -43,7 +43,7 @@ Columns.Append Column [,Type] [,DefinedSize]
 ## Applies To  
  [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
-## See Also  
+## See also  
  [Columns and Tables Append Methods, Name Property Example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog Property Example (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   

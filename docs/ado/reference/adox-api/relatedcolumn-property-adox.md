@@ -34,6 +34,6 @@ Indicates the name of the related [Column Object (ADOX)](../../../ado/reference/
 ## Applies To  
  [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## See Also  
+## See also  
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

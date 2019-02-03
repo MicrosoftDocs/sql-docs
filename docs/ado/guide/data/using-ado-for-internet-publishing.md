@@ -46,7 +46,7 @@ ms.author: genemi
   
 -   [Records and Provider-Supplied Fields](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## See Also  
+## See also  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO History](../../../ado/guide/ado-history.md)

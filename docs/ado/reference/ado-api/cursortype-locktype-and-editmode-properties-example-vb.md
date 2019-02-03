@@ -116,7 +116,7 @@ End Function
 'EndEditModeVB  
 ```  
   
-## See Also  
+## See also  
  [CursorType Property (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode Property](../../../ado/reference/ado-api/editmode-property.md)   

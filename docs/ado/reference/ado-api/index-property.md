@@ -46,7 +46,7 @@ Indicates the name of the index currently in effect for a [Recordset](../../../a
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [Seek Method and Index Property Example (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek Method](../../../ado/reference/ado-api/seek-method.md)

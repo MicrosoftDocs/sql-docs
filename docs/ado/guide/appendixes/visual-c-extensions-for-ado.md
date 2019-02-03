@@ -33,7 +33,7 @@ The preferred method of programming ADO with Visual C++ is using the **#import**
 
 -   [ADO with Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
-## See Also
+## See also
  [ADO for Visual C++ Syntax Index for COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)
  [Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md)
  [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)

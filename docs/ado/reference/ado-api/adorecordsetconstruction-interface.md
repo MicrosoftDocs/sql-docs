@@ -72,6 +72,6 @@ The **ADORecordsetConstruction** interface is used to construct an ADO **Records
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## See Also  
+## See also  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset Property (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

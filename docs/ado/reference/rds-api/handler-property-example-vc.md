@@ -122,7 +122,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Handler Property (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 

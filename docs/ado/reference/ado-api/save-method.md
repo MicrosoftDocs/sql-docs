@@ -87,7 +87,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |-|-|  
 |[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## See Also  
+## See also  
  [Save and Open Methods Example (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Save and Open Methods Example (VC++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

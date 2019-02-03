@@ -36,7 +36,7 @@ The relationships between these objects are represented in the [ADO Object Model
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Represents the set of records from a base table or the results of an executed command. At any time, the **Recordset** object refers to only a single record within the set as the current record.<br /><br /> The **Recordset** object is safe for scripting.|  
 |[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Represents a binary stream of data.<br /><br /> The **Stream** object is safe for scripting.|  
   
-## See Also  
+## See also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

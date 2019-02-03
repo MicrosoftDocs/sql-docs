@@ -62,7 +62,7 @@ ms.author: genemi
   
 7.  After it executes, close the **Query**, **Query Analyzer**, and **Enterprise Manager** windows.  
   
-## See Also  
+## See also  
  [Running the Address Book Sample Application](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

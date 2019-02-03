@@ -26,7 +26,7 @@ The relationships between these collections and the ADO objects are represented 
 |[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contains all the **Parameter** objects of a **Command** object.|  
 |[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)|Contains all the **Property** objects for a specific instance of an object.|  
   
-## See Also  
+## See also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO Enumerated Constants](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

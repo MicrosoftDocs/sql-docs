@@ -69,5 +69,5 @@ void CreateDatabaseX() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Create Method (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

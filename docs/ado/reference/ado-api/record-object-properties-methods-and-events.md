@@ -49,5 +49,5 @@ ms.author: genemi
 ## Events  
  None.  
   
-## See Also  
+## See also  
  [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

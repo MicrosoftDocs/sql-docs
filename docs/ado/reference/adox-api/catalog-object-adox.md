@@ -34,7 +34,7 @@ Contains collections ([Tables](../../../ado/reference/adox-api/tables-collection
   
 -   [Catalog Object Properties, Methods, and Events](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Catalog ActiveConnection Property Example (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Command and CommandText Properties Example (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Connection Close Method, Table Type Property Example (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

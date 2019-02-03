@@ -47,7 +47,7 @@ Unless you are programming in Visual Basic, all event handlers for **Connection*
 > [!NOTE]
 >  This technique cannot be used in Visual Basic because that language can correlate only one object to an event handler.  
   
-## See Also  
+## See also  
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Event Parameters](../../../ado/guide/data/event-parameters.md)   

@@ -93,7 +93,7 @@ HRESULT _stdcall GetRecordset(
 };  
 ```  
   
-## See Also  
+## See also  
  [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

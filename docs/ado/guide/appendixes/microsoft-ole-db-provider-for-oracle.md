@@ -64,7 +64,7 @@ MSDAORA
 |**Prompt**|Indicates whether to prompt the user while a connection is being established.|
 |**Extended Properties**|A string containing provider-specific, extended connection information. Use this property only for provider-specific connection information that cannot be described through the property mechanism.|
 
-## See Also
+## See also
  [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)
  [Provider Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

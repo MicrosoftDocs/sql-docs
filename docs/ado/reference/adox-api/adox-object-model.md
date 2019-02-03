@@ -20,7 +20,7 @@ The following diagram illustrates how objects are represented and related in ADO
   
  Each of the [Table](../../../ado/reference/adox-api/table-object-adox.md), [Index](../../../ado/reference/adox-api/index-object-adox.md), and [Column](../../../ado/reference/adox-api/column-object-adox.md) objects also has a standard ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
   
-## See Also  
+## See also  
  [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX Code Examples](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md)   

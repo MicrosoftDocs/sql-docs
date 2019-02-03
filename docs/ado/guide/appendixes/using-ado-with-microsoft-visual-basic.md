@@ -108,7 +108,7 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ## Visual Basic Examples
  Many Visual Basic examples are included with the ADO documentation. For more information, see [ADO Code Examples in Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
 
-## See Also
+## See also
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
  [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
  [Using ADO with Scripting Languages](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

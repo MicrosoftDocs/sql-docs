@@ -49,7 +49,7 @@ Represents a cube from a multidimensional schema, containing a set of related di
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [CubeDef Example (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [CubeDefs Collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   

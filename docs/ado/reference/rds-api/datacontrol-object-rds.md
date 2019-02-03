@@ -102,7 +102,7 @@ Binds a data query [Recordset](../../../ado/reference/ado-api/recordset-object-a
   
 -   [DataControl Object (RDS) Properties, Methods, and Events](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [DataControl Object Example (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

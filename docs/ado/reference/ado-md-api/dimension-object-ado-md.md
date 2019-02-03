@@ -51,7 +51,7 @@ Represents one of the dimensions of a multidimensional cube, containing one or m
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [CubeDef Example (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Dimensions Collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   

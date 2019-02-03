@@ -36,7 +36,7 @@ Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and S
   
 -   [ADOX Examples](../../../ado/reference/adox-api/adox-code-examples.md)  
   
-## See Also  
+## See also  
  [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX Code Examples](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md)   

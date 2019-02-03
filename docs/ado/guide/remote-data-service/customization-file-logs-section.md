@@ -39,7 +39,7 @@ FileName
   
  The log file will contain the user name, HRESULT, date, and time of each error.  
   
-## See Also  
+## See also  
  [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Customization File UserList Section](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

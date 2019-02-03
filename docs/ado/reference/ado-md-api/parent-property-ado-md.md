@@ -29,5 +29,5 @@ Indicates the member that is the parent of the current [member](../../../ado/ref
 ## Applies To  
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Children Property (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)

@@ -29,6 +29,6 @@ Indicates the number of levels between the root of the hierarchy and a [member](
 ## Applies To  
  [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## See Also  
+## See also  
  [Depth Property (ADO MD)](../../../ado/reference/ado-md-api/depth-property-ado-md.md)   
  [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

@@ -90,7 +90,7 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## See Also  
+## See also  
  [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

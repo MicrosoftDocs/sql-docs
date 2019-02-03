@@ -39,5 +39,5 @@ public static int getInternetTimeout()
 public static void setInternetTimeout(int plInetTimeout)  
 ```  
   
-## See Also  
+## See also  
  [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)

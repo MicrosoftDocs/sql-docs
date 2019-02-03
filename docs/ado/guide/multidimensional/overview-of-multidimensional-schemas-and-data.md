@@ -77,7 +77,7 @@ Hamburg, Munich, Stuttgart}
   
  This example also illustrates another characteristic: Some members of the Week level of the Year-Week hierarchy do not appear in any level of the Year-Quarter hierarchy. Thus, a hierarchy need not include all members of a dimension.  
   
-## See Also  
+## See also  
  [ADO MD Object Model](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Programming with ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

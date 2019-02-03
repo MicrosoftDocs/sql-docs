@@ -41,7 +41,7 @@ Indicates the number of records from a [Recordset](../../../ado/reference/ado-ap
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [CacheSize Property Example (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [CacheSize Property Example (VC++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [CacheSize Property Example (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

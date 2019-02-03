@@ -32,6 +32,6 @@ Indicates whether the index keys must be unique.
 ## Applies To  
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## See Also  
+## See also  
  [PrimaryKey and Unique Properties Example (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

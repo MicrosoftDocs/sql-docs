@@ -34,6 +34,6 @@ Indicates whether the index represents the primary key on the table.
 ## Applies To  
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## See Also  
+## See also  
  [PrimaryKey and Unique Properties Example (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

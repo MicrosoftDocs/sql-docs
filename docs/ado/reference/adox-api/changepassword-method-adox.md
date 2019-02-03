@@ -42,5 +42,5 @@ User.ChangePassword OldPassword, NewPassword
 ## Applies To  
  [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
-## See Also  
+## See also  
  [Groups and Users Append, ChangePassword Methods Example (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

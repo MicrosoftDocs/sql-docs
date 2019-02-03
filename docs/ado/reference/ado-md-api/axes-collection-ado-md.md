@@ -38,6 +38,6 @@ Contains the [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) obj
   
 -   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

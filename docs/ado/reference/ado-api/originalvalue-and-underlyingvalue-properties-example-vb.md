@@ -113,7 +113,7 @@ End Sub
 'EndOriginalValueVB  
 ```  
   
-## See Also  
+## See also  
  [OriginalValue Property (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue Property](../../../ado/reference/ado-api/underlyingvalue-property.md)

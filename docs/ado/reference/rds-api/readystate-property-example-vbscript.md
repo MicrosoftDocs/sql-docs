@@ -103,7 +103,7 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## See Also  
+## See also  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ReadyState Property (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
 

@@ -127,7 +127,7 @@ End Sub
 'EndActiveConnectionVB  
 ```  
   
-## See Also  
+## See also  
  [ActiveCommand Property (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   

@@ -50,7 +50,7 @@ Contains details about data access errors that pertain to a single operation inv
   
 -   [Error Object Properties, Methods, and Events](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
-## See Also  
+## See also  
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

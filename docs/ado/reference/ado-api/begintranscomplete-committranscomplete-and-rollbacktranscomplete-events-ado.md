@@ -61,7 +61,7 @@ RollbackTransComplete pError, adStatus, pConnection
   
  If the [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) property is set to **adXactCommitRetaining** or **adXactAbortRetaining**, a new transaction starts after committing or rolling back a transaction. Use the **BeginTransComplete** event to ignore all but the first transaction start event.  
   
-## See Also  
+## See also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   

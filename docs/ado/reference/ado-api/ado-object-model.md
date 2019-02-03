@@ -18,7 +18,7 @@ The following figures show the ADO objects and their collections.
   
  ![ADO Object Model](../../../ado/reference/ado-api/media/ado_object_model.gif "ADO_object_model")  
   
-## See Also  
+## See also  
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO Enumerated Constants](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

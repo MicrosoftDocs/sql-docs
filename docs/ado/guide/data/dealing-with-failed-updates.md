@@ -30,5 +30,5 @@ Do While Not objRst.EOF
 Loop  
 ```  
   
-## See Also  
+## See also  
  [Batch Mode](../../../ado/guide/data/batch-mode.md)

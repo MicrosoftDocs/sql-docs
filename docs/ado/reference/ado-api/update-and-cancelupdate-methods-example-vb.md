@@ -114,7 +114,7 @@ End Sub
 Attribute VB_Name = "Update"  
 ```  
   
-## See Also  
+## See also  
  [CancelUpdate Method (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update Method](../../../ado/reference/ado-api/update-method.md)

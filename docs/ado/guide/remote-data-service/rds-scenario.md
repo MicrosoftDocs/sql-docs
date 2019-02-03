@@ -55,7 +55,7 @@ ms.author: genemi
   
 -   [Address Book Navigation Buttons](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
-## See Also  
+## See also  
  [System Requirements for the Address Book Application](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

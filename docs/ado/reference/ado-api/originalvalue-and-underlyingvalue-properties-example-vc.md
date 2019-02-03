@@ -213,7 +213,7 @@ void PrintComError(_com_error &e) {
 **Current Value: self_help**   
 **Original Value: psychology**   
 **Underlying Value: sociology**    
-## See Also  
+## See also  
  [OriginalValue Property (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue Property](../../../ado/reference/ado-api/underlyingvalue-property.md)

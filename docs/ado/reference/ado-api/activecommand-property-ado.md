@@ -32,7 +32,7 @@ Indicates the [Command](../../../ado/reference/ado-api/command-object-ado.md) ob
 ## Applies To  
  [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## See Also  
+## See also  
  [ActiveCommand Property Example (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
  [ActiveCommand Property Example (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
  [ActiveCommand Property Example (VC++)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   

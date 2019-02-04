@@ -123,11 +123,11 @@ There are two registry settings (DWORD values) to control the timeout behavior o
 These settings are SQL Server instance specific and should be created under the following registry key:  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> For 32-bit SQL Server running in 64-bit machines, the registry settings should be created under the following key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> For 32-bit SQL Server running in 64-bit machines, the registry settings should be created under the following key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 A timeout value is set for each transaction when it's started and the transaction is rolled back by the SQL Server if the timeout expires. The timeout is determined depending on these registry settings and depending on what the user has specified through XAResource.setTransactionTimeout(). A few examples on how these timeout values are interpreted as follows:  
   

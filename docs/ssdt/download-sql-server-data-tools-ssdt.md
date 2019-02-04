@@ -43,20 +43,19 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 
 ## SSDT for VS 2017 (standalone installer)
 
-[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.8.2) ](https://go.microsoft.com/fwlink/?linkid=2038031) 
+[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.0) ](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
-> - Before installing SSDT for Visual Studio 2017 (15.8.2), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
-> - Fixed an issue that deploying SSIS project which contains packages containing Script Task/Flat file destination to Azure-SSIS will result in the packages failing to execute in Azure-SSIS.
-> - SSDT for Visual Studio 2017 (15.8.2) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
+> - Before installing SSDT for Visual Studio 2017 (15.9.0), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
+> - SSDT for Visual Studio 2017 since 15.8.2 doesn't support designing packages that contain Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
 
 
 **Version Information**  
   
-Release number: 15.8.2  
-Build Number: 14.0.16182.0  
-Release date: November 5, 2018  
+Release number: 15.9.0  
+Build Number: 14.0.16186.0  
+Release date: January 28, 2019  
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -66,17 +65,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](https://docs.micr
 
 This release of **SSDT for VS 2017** can be installed in the following languages:
 
-- [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x804)
-- [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x404)
-- [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x409)
-- [French]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40c)
-- [German]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x407)
-- [Italian]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x410)
-- [Japanese]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x411)
-- [Korean]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x412)
-- [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x416)
-- [Russian]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x419)
-- [Spanish]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40a)
+- [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
+- [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
+- [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
+- [French]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40c)
+- [German]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x407)
+- [Italian]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x410)
+- [Japanese]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x411)
+- [Korean]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x412)
+- [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x416)
+- [Russian]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x419)
+- [Spanish]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40a)
 
 ## Offline install
 
@@ -112,7 +111,7 @@ For available options, run `SSDT-Setup-ENU.exe /help`
 |-------------------|--------------------|  
 |Relational databases|  SQL Server 2005\* - SQL Server 2017<br> (use SSDT 17.x or SSDT for Visual Studio 2017 to connect to [SQL Server on Linux](../linux/sql-server-linux-overview.md))<br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse (supports queries only; database projects are not yet supported)<br /><br /> \* SQL Server 2005 support is deprecated,<br /><br /> please move to an officially supported SQL version|
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 - SQL Server 2017|
-|Integration Services packages| SQL Server 2014 - SQL Server 2017 |
+|Integration Services packages| SQL Server 2012 - SQL Server 2019 |
   
 ## DacFx
 

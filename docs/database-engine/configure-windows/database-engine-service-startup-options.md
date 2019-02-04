@@ -43,6 +43,7 @@ manager: craigg
   
 ## List of Startup Options  
 ### Default startup options  
+
 |Options|Description|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Is the fully qualified path for the master database file (typically, C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). If you do not provide this option, the existing registry parameters are used.|  
@@ -50,6 +51,7 @@ manager: craigg
 |**-l**  *master_log_path*|Is the fully qualified path for the master database log file (typically C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). If you do not specify this option, the existing registry parameters are used.|  
   
 ### Other startup options   
+
 |Options |Description|   
 |---------------------------|-----------------|  
 |**-c**|Shortens startup time when starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command prompt. Typically, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts as a service by calling the Service Control Manager. Because the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] does not start as a service when starting from the command prompt, use **-c** to skip this step.|  

@@ -33,11 +33,14 @@ More details and a sample application to use this authentication mode can be fou
 
 ### OSGi support
 
-Microsoft JDBC Driver 7.2 for SQL Server introduces OSGi support by adding APIs for DataSourceFactory and OSGi Framework.
+Microsoft JDBC Driver 7.2 for SQL Server introduces OSGi support to the driver by adding below implementations for `org.osgi.service.jdbc.DataSourceFactory` and `org.osgi.framework.BundleActivator` :
+
+- `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory`
+- `com.microsoft.sqlserver.jdbc.osgi.Activator`
 
 ### SQLServerError APIs
 
-Microsoft JDBC Driver 7.2 for SQL Server introduces SQLServerError APIs to retrieve additional details about the error generated from the server. For more information, see [Handling Errors](../../connect/jdbc/handling-errors.md).
+Microsoft JDBC Driver 7.2 for SQL Server introduces `SQLServerException.getSQLServerError()` and `SQLServerError` getter APIs to retrieve additional details about the error generated from the server. For more information, see [Handling Errors](../../connect/jdbc/handling-errors.md).
 
 ### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.6.3
 
@@ -46,6 +49,11 @@ Microsoft JDBC Driver 7.2 for SQL Server has updated its Maven dependency on "Mi
 ### Updated "Microsoft Azure Key Vault SDK for Java" version: 1.2.0
 
 Microsoft JDBC Driver 7.2 for SQL Server has updated its Maven dependency on "Microsoft Azure Key Vault SDK for Java" to version 1.2.0, which also introduces "Microsoft Azure SDK for Key Vault WebKey" as a Maven dependency (Version: 1.2.0). For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+
+### Known Issues
+
+With Microsoft JDBC Driver 7.2 for SQL Server, a known issue exists with certain parameterized queries. An update of the 7.2 version (v7.2.1), will be released soon to address this issue.
+
 
 ## Updates in Microsoft JDBC Driver 7.0 for SQL Server
 

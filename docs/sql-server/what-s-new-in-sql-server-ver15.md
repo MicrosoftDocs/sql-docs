@@ -103,7 +103,7 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
-- [Submit Jar or Py](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) files with references to SQL Server big data clusters. (CTP 2.3)
+- [Submit Jar or Py](../big-data-cluster/big-data-cluster-overview.md) files with references to SQL Server big data clusters. (CTP 2.3)
 - Execute Jar or Py files located in the HDFS file system. (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-overview.md)<!--../big-data-cluster//big-data-cluster-create-apps.md-->. (CTP 2.1) 

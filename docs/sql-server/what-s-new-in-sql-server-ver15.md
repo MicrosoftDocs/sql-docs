@@ -106,7 +106,7 @@ Continue reading for more details about these features.
 - [Submit Jar or Py](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) files with references to SQL Server big data clusters. (CTP 2.3)
 - Execute Jar or Py files located in the HDFS file system. (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
-- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.1)
+- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-overview.md)<!--../big-data-cluster//big-data-cluster-create-apps.md-->. (CTP 2.1) 
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)
 - Run Advanced analytics and machine learning with Spark (CTP 2.0)

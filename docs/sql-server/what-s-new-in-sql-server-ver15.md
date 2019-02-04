@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 01/09/2019
+ms.date: 02/04/2019
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -28,8 +28,15 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3.
 
+- [Big data clusters](#bigdatacluster) 
+  - Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ
+
 - [Database engine](#databaseengine)
-  - Improved Indirect Checkpoint Scalability
+  - Accelerated database recovery
+  - Reduced recompilations for workloads using temporary tables across multiple scopes
+  - Improved indirect checkpoint scalability
+  - Query Store plan forcing support for fast forward and static cursors
+  - SQL Graph enables cascaded delete of edges upon deletion of nodes
 
 ## Previous CTPs
 
@@ -96,8 +103,10 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
+- [Submit Jar or Py](../big-data-cluster/big-data-cluster-overview.md) files with references to SQL Server big data clusters. (CTP 2.3)
+- Execute Jar or Py files located in the HDFS file system. (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
-- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.1)
+- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-overview.md)<!--../big-data-cluster//big-data-cluster-create-apps.md-->. (CTP 2.1) 
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)
 - Run Advanced analytics and machine learning with Spark (CTP 2.0)
@@ -109,6 +118,24 @@ Continue reading for more details about these features.
 ## <a id="databaseengine"></a> Database Engine
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
+
+### Accelerated database recovery (CTP 2.3)
+
+[Accelerated database recovery](http://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery
+) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process.
+
+### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
+
+Query Store now supports the ability to force query execution plans for fast forward and static T-SQL and API cursors.  Forcing is now supported via `sp_query_store_force_plan` or through SQL Server Management Studio Query Store reports.
+
+### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
+
+Prior to this feature, when referencing a temporary table with a DML statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed.  With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+
+- Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions.  
+- Keep track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions.  
+
+The end result is a reduction in extraneous recompilations and CPU-overhead.
 
 ### Improved Indirect Checkpoint Scalability (CTP 2.3)
 
@@ -249,7 +276,9 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 - **Match support in `MERGE` DML (CTP 2.0)** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
-- **Edge Constraints (CTP 2.0)** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
+- **Edge Constraints (CTP 2.0)** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema. 
+
+  **(CTP 2.3)** Extending this feature further, you can define cascaded delete actions on an Edge Constraint. You can define the actions that the database engine takes when a user deletes the node(s), that a given edge connects.
 
 ### Database scoped default setting for online and resumable DDL operations  (CTP 2.0)
 

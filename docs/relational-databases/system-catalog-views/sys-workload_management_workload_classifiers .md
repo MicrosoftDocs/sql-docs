@@ -30,7 +30,7 @@ is_enabled|**bit**|Displays whether the classifier is enabled or not. Is not nul
  
   
 ## Permissions
-Requires VIEW SERVER STATE permission.
+Requires CONTROL DATABASE permission.
 ```
 
 ## Next steps  

@@ -26,7 +26,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
  
   
 ## Permissions
-Requires VIEW SERVER STATE permission.
+Requires Control Database permission.
 ```
 
 ## Next steps  

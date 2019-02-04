@@ -24,6 +24,7 @@ The following connection string keywords have either been introduced or modified
 
 ### Access Token
 The `Access Token` keyword can be used to specify an access token to authenticate to Azure Active Directory.
+
 |Values|Default|Description|
 |---   |---    |---        |
 Any valid access token string|(not set) |if not empty, specifies the Azure AD Access Token to use. It's an error to specify an access token and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their equivalent attributes/keywords.<br/><br/>**NOTE:** Using `AccessToken` connection string keyword through `DBPROP_INIT_PROVIDERSTRING` property is not supported. Instead you can use the `Access Token` keyword in connection strings passed through `IDataInitialize::GetDataSource`. For more information, please view [Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).|
@@ -69,6 +70,7 @@ The following connection attributes have either been introduced or modified to s
 
 ### DBPROP_AUTH_INTEGRATED
 The `DBPROP_AUTH_INTEGRATED` property forces use of Windows Authentication for access validation on server login.
+
 |Type|Values|Default|Description|
 |-|-|-|-|-|
 |`VT_BSTR`|(not set), `"SSPI"`|`VT_EMPTY` (not set)|_Deprecated_; Set `SSPROP_AUTH_MODE` to `ActiveDirectoryIntegrated` instead.|
@@ -96,12 +98,14 @@ The `SSPROP_AUTH_OLD_PASSWORD` property allows the client to change an old (and 
 
 ### SSPROP_INIT_ENCRYPT
 The `SSPROP_INIT_ENCRYPT` property controls encryption for a connection.
+
 |Type|Values|Default|Description|
 |-|-|-|-|-|
 |`VT_BOOL`|`VARIANT_FALSE`, `VARIANT_TRUE`|(see description)|`VARIANT_FALSE` and `VARIANT_TRUE` disable and enable encryption, respectively. <br/><br/>In applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the default is `VARIANT_FALSE`.<br/><br/> In applications that **do not** obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, **and** at least one of `SSPROP_AUTH_MODE` or `SSPROP_AUTH_ACCESS_TOKEN` properties  are set to an acceptable and non-empty value, the default is `VARIANT_TRUE`. <br/><br/>In all other cases, the default is `VARIANT_FALSE`.<br/><br/> **IMPORTANT NOTE:** If `IDBInitialize` interface is obtained through `IDataInitialize::GetDataSource`, it's **recommended** that client applications explicitly set `SSPROP_INIT_ENCRYPT` to `VARIANT_TRUE` in order to override the default and improve security.|
 
 ### SSPROP_INIT_TRUST_SERVER_CERTIFICATE
 The `SSPROP_INIT_TRUST_SERVER_CERTIFICATE` property controls server certificate validation for a connection.
+
 |Type|Values|Default|Description|
 |-|-|-|-|-|
 |`VT_BOOL`|`VARIANT_FALSE`, `VARIANT_TRUE`|(See description)|The default is `VARIANT_FALSE`. If one of the `Windows` or `SQL Server` authentication methods are used, server certificates will be validated **only** if encryption is enabled. However, in the new authentication methods, that is, if the value of  at least one of the `SSPROP_AUTH_MODE` (or its equivalent connection string keyword) or `SSPROP_AUTH_ACCESS_TOKEN` properties is set to an acceptable and non-empty value, the value of this option is considered **regardless of encryption setting**. This feature was added since OLE DB Driver 18.2 for improvement in security.<br/><br/>**IMPORTANT NOTE:** It is **recommended** that applications using `Windows` or `SQL Server` authentication methods switch to the new `ActiveDirectoryIntegrated` and `SqlPassword` authentication methods to improve security.|
@@ -295,7 +299,7 @@ Cleanup:
 ```
 
 ## See Also
-[Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-protocols-oauth-code)
+[Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code)
 
 [Token-based authentication support for Azure SQL DB using Azure AD auth](https://go.microsoft.com/fwlink/?linkid=2068937)
 

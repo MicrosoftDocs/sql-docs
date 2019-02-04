@@ -111,13 +111,13 @@ For some hybrid transactional-analytical workloads, the overhead on a workload's
 ### Workloads that might benefit from batch mode on rowstore
 
 The following workloads might benefit from batch mode on rowstore:
-1. A significant part of the workload consists of analytical queries. Usually, these queries have operators like joins or aggregates that process hundreds of thousands of rows or more, **and**
-2. The workload is CPU bound. If the bottleneck is I/O, we still recommend that you consider a columnstore index, if possible, **and**
-3. Creating a columnstore index adds too much overhead to the transactional part of your workload, **or**
-4. Creating a columnstore index isn't feasible because your application depends on a feature that's not yet supported with columnstore indexes.
+* A significant part of the workload consists of analytical queries. Usually, these queries have operators like joins or aggregates that process hundreds of thousands of rows or more, **and**
+* The workload is CPU bound. If the bottleneck is I/O, we still recommend that you consider a columnstore index, if possible, **and**
+* Creating a columnstore index adds too much overhead to the transactional part of your workload, **or**
+* Creating a columnstore index isn't feasible because your application depends on a feature that's not yet supported with columnstore indexes.
 
 > [!NOTE]
-> Batch mode on rowstore helps only by reducing CPU consumption. If your bottleneck is I/O-related, and data isn't already cached, **cold cache**, batch mode on rowstore won't improve elapsed time. Similarly, if there isn't enough memory on the machine to cache all the data, a performance improvement is unlikely.
+> Batch mode on rowstore helps only by reducing CPU consumption. If your bottleneck is I/O related, and data isn't already cached, **cold cache**, batch mode on rowstore won't improve elapsed time. Similarly, if there isn't enough memory on the machine to cache all the data, a performance improvement is unlikely.
 
 ### What changes with batch mode on rowstore?
 
@@ -127,17 +127,17 @@ Even if a query doesn't involve any table with a columnstore index, the query pr
 1. An initial check of table sizes, operators used, and estimated cardinalities in the input query.
 2. Additional checkpoints, as the optimizer discovers new, cheaper plans for the query. If these alternative plans don't make significant use of batch mode, the optimizer stops exploring batch mode alternatives.
 
-If batch mode on rowstore is used, in the query run plan, you see the actual run mode as **batch mode**. It's used by the scan operator for on-disk heaps and B-tree indexes. This batch mode scan can evaluate batch mode bitmap filters. You might also see other batch mode operators in the plan. Examples are hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
+If batch mode on rowstore is used, you see the actual run mode as **batch mode** in the query run plan. The scan operator uses batch mode for on-disk heaps and B-tree indexes. This batch mode scan can evaluate batch mode bitmap filters. You might also see other batch mode operators in the plan. Examples are hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
 
 ### Remarks
 
-1. Query plans don't always use batch mode. The query optimizer might decide that batch mode isn't beneficial for the query. 
-2. The query optimizer's search space is changing. So if you get a row mode plan, it might not be the same as the plan you get in a lower compatibility level. And if you get a batch mode plan, it might not be the same as the plan you get with a columnstore index. 
-3. Plans might also change for queries that mix columnstore and rowstore indexes because of the new batch mode rowstore scan.
-4. There are current limitations for the new batch mode on rowstore scan: 
+* Query plans don't always use batch mode. The query optimizer might decide that batch mode isn't beneficial for the query. 
+* The query optimizer's search space is changing. So if you get a row mode plan, it might not be the same as the plan you get in a lower compatibility level. And if you get a batch mode plan, it might not be the same as the plan you get with a columnstore index. 
+* Plans might also change for queries that mix columnstore and rowstore indexes because of the new batch mode rowstore scan.
+* There are current limitations for the new batch mode on rowstore scan: 
     * It won't kick in for in-memory OLTP tables or for any index other than on-disk heaps and B-trees. 
     * It also won't kick in if a large object (LOB) column is fetched or filtered. This limitation includes sparse column sets and XML columns.
-5. There are queries that batch mode isn't used for even with columnstore indexes. Examples are queries that involve cursors. These same exclusions also extend to batch mode on rowstore.
+* There are queries that batch mode isn't used for even with columnstore indexes. Examples are queries that involve cursors. These same exclusions also extend to batch mode on rowstore.
 
 ### Configure batch mode on rowstore
 

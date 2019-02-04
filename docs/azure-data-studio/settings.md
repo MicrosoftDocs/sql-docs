@@ -39,9 +39,9 @@ Changes to settings are reloaded by [!INCLUDE[name-sos](../includes/name-sos-sho
 
 Depending on your platform, the user settings file is located here:
 
-* **Windows** `%APPDATA%\sqlops\User\settings.json`
-* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux** `$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
+* **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
 The workspace setting file is located under the `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` folder in your project.
 

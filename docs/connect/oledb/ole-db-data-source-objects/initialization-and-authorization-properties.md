@@ -73,7 +73,7 @@ manager: craigg
 |SSPROP_INIT_WSID|Type: VT_BSTR<br /><br /> R/W: Read/write<br /><br /> Description: A string identifying the workstation.|  
   
 
-**[1]**: When using these authentication modes, encryption is enabled by default and server certificate is validated **regardless of encryption settings**. This new behavior was introduced for improvement in security.
+**[1]**: When using these authentication modes, encryption is enabled by default and server certificate is validated **regardless of encryption setting**. This new behavior was introduced for improvement in security.
 
  In the provider-specific property set DBPROPSET_SQLSERVERDATASOURCEINFO, the OLE DB Driver for SQL Server defines the additional properties; see [Data Source Information Properties](../../oledb/ole-db-data-source-objects/data-source-information-properties.md) for more information.  
   

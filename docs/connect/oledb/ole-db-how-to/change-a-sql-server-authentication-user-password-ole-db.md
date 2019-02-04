@@ -2,7 +2,7 @@
 title: "Change a SQL Server Authentication User Password (OLE DB) | Microsoft Docs"
 description: "Change a SQL Server authentication user password (OLE DB)"
 ms.custom: ""
-ms.date: "01/28/2019"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

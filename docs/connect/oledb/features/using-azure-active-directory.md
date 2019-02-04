@@ -27,7 +27,7 @@ The `Access Token` keyword can be used to specify an access token to authenticat
 
 |Values|Default|Description|
 |---   |---    |---        |
-Any valid access token string|(not set) |if not empty, specifies the Azure AD Access Token to use. It's an error to specify an access token and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their equivalent attributes/keywords.<br/><br/>**NOTE:** Using `AccessToken` connection string keyword through `DBPROP_INIT_PROVIDERSTRING` property is not supported. Instead you can use the `Access Token` keyword in connection strings passed through `IDataInitialize::GetDataSource`. For more information, please view [Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).|
+Any valid access token string|(not set) |Specifies the Azure AD Access Token to use. It's an error to specify an access token and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their equivalent attributes/keywords.<br/><br/>**NOTE:** Using `AccessToken` connection string keyword through `DBPROP_INIT_PROVIDERSTRING` property is not supported. Instead you can use the `Access Token` keyword in connection strings passed through `IDataInitialize::GetDataSource`. For more information, please view [Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).|
 
 ### Authentication
 The `Authentication` keyword can be used to control the authentication mode used.
@@ -41,14 +41,14 @@ The `Encrypt` (or `Use Encryption for Data`) keyword controls encryption for a c
 
 |Values|Default|Description|
 |---   |---    |---        |
-|(not set), `"Yes"`, `"No"`|(see description)| In ADO applications or in applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the default is `"No"`.<br/><br/> In non-ADO applications or in applications that **do not** obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, and `Authentication` keyword (or its equivalent property) is set to an acceptable and non-empty value, the default is `"Yes"`. In all other cases, the default is `"No"`.<br/><br/> **IMPORTANT NOTE:** In ADO application and in applications that obtain  `IDBInitialize` interface through `IDataInitialize::GetDataSource`, it's **recommended** to explicitly set `encrypt=Yes` to override the default and improve security.|
+|(not set), `"Yes"`, `"No"`|(see description)| In ADO applications or in applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the default is `"No"`.<br/><br/> In non-ADO applications or in applications that **do not** obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, and `Authentication` keyword (or its equivalent property) is set to an acceptable and non-empty value, the default is `"Yes"`.<br/><br/>In all other cases, the default is `"No"`.<br/><br/> **IMPORTANT NOTE:** In ADO application and in applications that obtain  `IDBInitialize` interface through `IDataInitialize::GetDataSource`, it's **recommended** to explicitly set `encrypt=Yes` to override the default and improve security.|
 
 ### Integrated Security (or Trusted_Connection)
 The `Integrated Security` (or `Trusted_Connection`) keyword forces use of Windows Authentication for access validation on server login.
 
 |Values|Default|Description|
 |---   |---    |---        |
-|(not set), `"SSPI"` (or `"Yes"`)|(not set)|_Deprecated_; This option is deprecated in favor of `Authentication=ActiveDirectoryIntegrated` which enables encryption by default and validates server certificate regardless of encryption setting (unless `TrustServerCertificate` is set to `true`).|
+|(not set), `"SSPI"` (or `"Yes"`)|(not set)|**_Deprecated_**; This option is deprecated in favor of `Authentication=ActiveDirectoryIntegrated` which enables encryption by default and validates server certificate regardless of encryption setting (unless `TrustServerCertificate` is set to `true`).|
 
 ### Old Password
 The `Old Password` keyword allows the client to change an old (and possibly expired) password.
@@ -58,7 +58,7 @@ The `Old Password` keyword allows the client to change an old (and possibly expi
 |(not set), valid (and possibly expired) password|(not set)|Not supported with Azure Active Directory, since password changes to AAD principals cannot be accomplished through an OLE DB connection.|
 
 ### TrustServerCertificate (Or Trust Server Certificate)
-The `TrustServerCertificate` (Or `Trust Server Certificate`) keyword controls server certificate validation for a connection.
+The `TrustServerCertificate` (Or `Trust Server Certificate`) keyword controls whether server certificate should be trusted.
 
 |Values|Default|Description|
 |---   |---    |---        |
@@ -73,14 +73,14 @@ The `DBPROP_AUTH_INTEGRATED` property forces use of Windows Authentication for a
 
 |Type|Values|Default|Description|
 |-|-|-|-|-|
-|`VT_BSTR`|(not set), `"SSPI"`|`VT_EMPTY` (not set)|_Deprecated_; Set `SSPROP_AUTH_MODE` to `ActiveDirectoryIntegrated` instead.|
+|`VT_BSTR`|(not set), `"SSPI"`|`VT_EMPTY` (not set)|**_Deprecated_**; Set `SSPROP_AUTH_MODE` to `ActiveDirectoryIntegrated` instead.|
 
 ### SSPROP_AUTH_ACCESS_TOKEN
 The `SSPROP_AUTH_ACCESS_TOKEN` property can be used to specify an access token to authenticate to Azure Active Directory.
 
 |Type|Values|Default|Description|
 |-|-|-|-|-|
-|`VT_BSTR`|(not set), Any valid access token|`VT_EMPTY` (not set)|If not an empty string, specifies the AzureAD Access Token to use. It is an error to specify an access token and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their equivalent attributes/keywords.|
+|`VT_BSTR`|(not set), Any valid access token|`VT_EMPTY` (not set)|Specifies the AzureAD Access Token to use. It is an error to specify an access token and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their equivalent attributes/keywords.|
 
 ### SSPROP_AUTH_MODE
 The `SSPROP_AUTH_MODE` property can be used to control the authentication mode used.
@@ -104,7 +104,7 @@ The `SSPROP_INIT_ENCRYPT` property controls encryption for a connection.
 |`VT_BOOL`|`VARIANT_FALSE`, `VARIANT_TRUE`|(see description)|`VARIANT_FALSE` and `VARIANT_TRUE` disable and enable encryption, respectively. <br/><br/>In applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the default is `VARIANT_FALSE`.<br/><br/> In applications that **do not** obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, **and** at least one of `SSPROP_AUTH_MODE` or `SSPROP_AUTH_ACCESS_TOKEN` properties  are set to an acceptable and non-empty value, the default is `VARIANT_TRUE`. <br/><br/>In all other cases, the default is `VARIANT_FALSE`.<br/><br/> **IMPORTANT NOTE:** If `IDBInitialize` interface is obtained through `IDataInitialize::GetDataSource`, it's **recommended** that client applications explicitly set `SSPROP_INIT_ENCRYPT` to `VARIANT_TRUE` in order to override the default and improve security.|
 
 ### SSPROP_INIT_TRUST_SERVER_CERTIFICATE
-The `SSPROP_INIT_TRUST_SERVER_CERTIFICATE` property controls server certificate validation for a connection.
+The `SSPROP_INIT_TRUST_SERVER_CERTIFICATE` property controls whether server certificate should be trusted.
 
 |Type|Values|Default|Description|
 |-|-|-|-|-|
@@ -122,60 +122,75 @@ This section shows examples of new and existing connection string keywords to be
 > [!NOTE]   
 > When using `IDataInitialize::GetDataSource` or when using the Microsoft OLE DB Driver for SQL Server through ADO, the Microsoft Data Access Components (MDAC) explicitly sets the value of `Use Encryption for Data` to `false`, which overrides the default even in the new authentication modes. In addition, server certificate is **not** validated even if encryption is forced by the server. In such cases it's **recommended** that user applications explicitly specify `Use Encryption for Data=true` in the connection string to improve security.
 
-1. `SQL Server Authentication` - **deprecated** syntax. Server certificate is **only** validated when encryption is enabled by the client application. Additionally, when using this method encryption is disabled by default. The login ID and password are passed in the connection string:<br/>
+### SQL authentication
 
-    - Using `IDataInitialize::GetDataSource`:<br/>
-        > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];User ID=[username];Password=[password];Use Encryption for Data=true`<br/>
+#### New syntax
+The client requests encryption by default and the server certificate gets validated regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The login ID and password are passed in the connection string:<br/>
 
-    - Using `IDBInitialize::Initialize`:<br/>
-        > `Server=[server];Database=[database];UID=[username];PWD=[password];encrypt=yes`
+- Using `IDataInitialize::GetDataSource`:<br/>
+    > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=SqlPassword;User ID=[username];Password=[password];Use Encryption for Data=true`<br/>
 
-2. `SQL Authentication` - **new** syntax. The client requests encryption by default and the server certificate gets validated regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The login ID and password are passed in the connection string:<br/>
+- Using `IDBInitialize::Initialize`:<br/>
+    > `Server=[server];Database=[database];Authentication=SqlPassword;UID=[username];PWD=[password];encrypt=yes`
 
-    - Using `IDataInitialize::GetDataSource`:<br/>
-        > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=SqlPassword;User ID=[username];Password=[password];Use Encryption for Data=true`<br/>
+#### Deprecated syntax
 
-    - Using `IDBInitialize::Initialize`:<br/>
-        > `Server=[server];Database=[database];Authentication=SqlPassword;UID=[username];PWD=[password];encrypt=yes`
+Server certificate is **only** validated when encryption is enabled by the client application. Additionally, when using this method encryption is disabled by default. The login ID and password are passed in the connection string:<br/>
 
-3. `Integrated Windows Authentication` using Security Support Provider Interface (SSPI) - **deprecated** syntax.  Server certificate is **only** validated when encryption is enabled by the client application. Additionally, encryption is disabled by default. The credentials of the logged-in user are used for authentication:<br/>
+- Using `IDataInitialize::GetDataSource`:<br/>
+    > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];User ID=[username];Password=[password];Use Encryption for Data=true`<br/>
 
-    - Using `IDataInitialize::GetDataSource`:<br/>
-        > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Integrated Security=SSPI;Use Encryption for Data=true`<br/>
+- Using `IDBInitialize::Initialize`:<br/>
+    > `Server=[server];Database=[database];UID=[username];PWD=[password];encrypt=yes`
 
-    - Using `IDBInitialize::Initialize`:<br/>
-        > `Server=[server];Database=[database];Trusted_Connection=yes;encrypt=yes`
+### Integrated windows authentication using Security Support Provider Interface  (SSPI)
 
-4. `Integrated Windows Authentication` using Security Support Provider Interface  (SSPI) - **new** syntax. The client requests encryption by default and the server certificate gets validated regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The credentials of the logged-in user are used for authentication:<br/>
+#### New syntax
+The client requests encryption by default and the server certificate gets validated regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The credentials of the logged-in user are used for authentication:<br/>
 
-    - Using `IDataInitialize::GetDataSource`:<br/>
-        > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true`<br/>
+- Using `IDataInitialize::GetDataSource`:<br/>
+    > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true`<br/>
 
-    - Using `IDBInitialize::Initialize`:<br/>
-        > `Server=[server];Database=[database];Authentication=ActiveDirectoryIntegrated;encrypt=yes`
+- Using `IDBInitialize::Initialize`:<br/>
+    > `Server=[server];Database=[database];Authentication=ActiveDirectoryIntegrated;encrypt=yes`
 
-5. `AAD Username and Password Authentication` using ADAL. Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The login ID and password are passed in the connection string:<br/>
+#### Deprecated syntax
 
-    - Using `IDataInitialize::GetDataSource`:<br/>
-        > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryPassword;User ID=[username];Password=[password];Use Encryption for Data=true`<br/>
+Server certificate is **only** validated when encryption is enabled by the client application. Additionally, encryption is disabled by default. The credentials of the logged-in user are used for authentication:<br/>
 
-    - Using `IDBInitialize::Initialize`:<br/>
-        > `Server=[server];Database=[database];Authentication=ActiveDirectoryPassword;UID=[username];PWD=[password];encrypt=yes`
+- Using `IDataInitialize::GetDataSource`:<br/>
+    > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Integrated Security=SSPI;Use Encryption for Data=true`<br/>
+
+- Using `IDBInitialize::Initialize`:<br/>
+    > `Server=[server];Database=[database];Trusted_Connection=yes;encrypt=yes`
+
+### AAD username and password authentication using ADAL
+Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The login ID and password are passed in the connection string:<br/>
+
+- Using `IDataInitialize::GetDataSource`:<br/>
+    > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryPassword;User ID=[username];Password=[password];Use Encryption for Data=true`<br/>
+
+- Using `IDBInitialize::Initialize`:<br/>
+    > `Server=[server];Database=[database];Authentication=ActiveDirectoryPassword;UID=[username];PWD=[password];encrypt=yes`
 
 
-6. `Integrated Azure Active Directory Authentication` using ADAL, which involves redeeming Windows account credentials for an AAD-issued access token, assuming the target database is in Azure SQL Database. Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`):<br/>
-    - Using `IDataInitialize::GetDataSource`:<br/>
-        > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true`<br/>
+### Integrated Azure Active Directory authentication using ADAL
+Involves redeeming Windows account credentials for an AAD-issued access token, assuming the target database is in Azure SQL Database. Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`):<br/>
 
-    - Using `IDBInitialize::Initialize`:<br/>
-        > `Server=[server];Database=[database];Authentication=ActiveDirectoryIntegrated;encrypt=yes`
+- Using `IDataInitialize::GetDataSource`:<br/>
+    > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true`<br/>
 
-7. `Active Directory Authentication using an Access Token`. Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`):<br/>
-    - Using `IDataInitialize::GetDataSource`:<br/>
-        > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Access Token=[access token];Use Encryption for Data=true`<br/>
+- Using `IDBInitialize::Initialize`:<br/>
+    > `Server=[server];Database=[database];Authentication=ActiveDirectoryIntegrated;encrypt=yes`
 
-    - Using `IDBInitialize::Initialize`:<br/>
-        > Providing access token through `DBPROP_INIT_PROVIDERSTRING` is not supported
+### Azure Active Directory authentication using an Access Token 
+Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`):<br/>
+
+- Using `IDataInitialize::GetDataSource`:<br/>
+    > `Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Access Token=[access token];Use Encryption for Data=true`<br/>
+
+- Using `IDBInitialize::Initialize`:<br/>
+    > Providing access token through `DBPROP_INIT_PROVIDERSTRING` is not supported
 
 > [!NOTE] 
 >- When using the new Active Directory options with the Windows OLE DB driver, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. For driver version 18.2 and later, this is not an explicit dependency since it's not required for the other authentication methods or OLE DB operations.

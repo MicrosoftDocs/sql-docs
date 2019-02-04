@@ -1,7 +1,7 @@
 ---
-title: "Azure Key Vault Sample Version 7.0.0 | Microsoft Docs"
+title: "Azure Key Vault Sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,7 +11,7 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
-# Azure Key Vault Sample Version 7.0.0
+# Azure Key Vault Sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -42,7 +42,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerConnection;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import com.microsoft.sqlserver.jdbc.SQLServerKeyVaultAuthenticationCallback;
 
-public class AKV_7_0_0 {
+public class AKV {
 
     static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
     static String applicationClientID = "Your Client ID";

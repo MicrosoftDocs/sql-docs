@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 12/07/2018
+ms.date: 02/04/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -47,7 +47,7 @@ Limited support may be found at one of the following locations:
 
 - Or tweet [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
-### Documentation (CTP 2.2)
+### Documentation (CTP 2.3)
 
 - **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
 
@@ -55,7 +55,7 @@ Limited support may be found at one of the following locations:
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
-### Hardware and software requirements
+### Hardware and software requirements (CTP 2.3)
 
 - **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
 
@@ -74,16 +74,6 @@ Limited support may be found at one of the following locations:
 - **Workaround**: N/A
 
 - **Applies to**: SQL Server 2019 CTP 2.2, CTP 2.1
-
-### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
-
-- **Issue and customer impact**: After SSISDB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
-
-  `Cannot continue the execution because the session is in the kill state.`
-
-- **Workaround**: Stop and restart the SQL Server instance and switch SSISDB back to multi-user mode.
-
-- **Applies to**: SQL Server 2019 preview CTP 2.2, CTP 2.1
 
 ### UTF-8 collations
 
@@ -106,7 +96,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
 ### Always Encrypted with secure enclaves
 
@@ -114,7 +104,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.2, CTP 2.1, 2.0.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

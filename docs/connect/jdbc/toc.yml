@@ -171,6 +171,8 @@
         href: using-basic-data-types.md
       - name: Using Spatial Datatypes
         href: use-spatial-datatypes.md
+      - name: Using Sql_variant Data Type
+        href: using-sql-variant-datatype.md
       - name: Understanding Transactions
         href: understanding-transactions.md
       - name: Working with a Connection
@@ -268,4 +270,4 @@
       - name: Azure Key Vault sample version 6.2.2
         href: azure-key-vault-sample-version-6.2.2.md
       - name: Azure Key Vault sample version 7.0.0
-        href: azure-key-vault-sample-version-7-0-0.md
+        href: azure-key-vault-sample.md

@@ -19,55 +19,57 @@
   - name: Breaking changes in SQL Server 2016
     href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
 - name: Install
-  href: ../database-engine/install-windows/installation-for-sql-server-2016.md
+  href: ../database-engine/install-windows/toc.yml
 - name: Configure
-  href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
-- name: High availability
+  href: ../database-engine/configure-windows/toc.yml
+- name: Business continuity
   href: sql-server-business-continuity-dr.md
   items:
   - name: Availability groups
-    href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    href: availability-groups/windows/toc.yml
+  - name: Failover Cluster Instance
+    href: ../sql-server/failover-clusters/toc.yml
   - name: Database mirroring
-    href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
+    href: database-mirroring/toc.yml
   - name: Log shipping
-    href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+    href: log-shipping/toc.yml
 - name: Concepts
   items:
-  - name: Blob
+  - name: Blob + 
     href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
-  - name: Collations
+  - name: Collations + 
     href: ../relational-databases/collations/collation-and-unicode-support.md
-  - name: Cursors
+  - name: Cursors + 
     href: ../relational-databases/cursors.md
-  - name: Data collection
+  - name: Data collection + 
     href: ../relational-databases/data-collection/data-collection.md
-  - name: Data compression
+  - name: Data compression + 
     href: ../relational-databases/data-compression/data-compression.md
-  - name: Database mail
+  - name: Database mail + 
     href: ../relational-databases/database-mail/database-mail.md
-  - name: Databases
+  - name: Databases + 
     href: ../relational-databases/databases/databases.md
-  - name: Errors and events
+  - name: Errors and events + 
     href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
-  - name: Event classes
+  - name: Event classes + 
     href: ../relational-databases/event-classes/sql-server-event-class-reference.md
-  - name: Extended events
+  - name: Extended events + 
     href: ../relational-databases/extended-events/extended-events.md
-  - name: Graphs
+  - name: Graphs + 
     href: ../relational-databases/graphs/sql-graph-overview.md
-  - name: Hierarchical Data
+  - name: Hierarchical Data + 
     href: ../relational-databases/hierarchical-data-sql-server.md
-  - name: Import and export
+  - name: Import and export + 
     href: ../relational-databases/import-export/overview-import-export.md
-  - name: In-memory OLTP
+  - name: In-memory OLTP + 
     href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
-  - name: Indexes
+  - name: Indexes + 
     href: ../relational-databases/indexes/indexes.md
-  - name: JSON
+  - name: JSON + 
     href: ../relational-databases/json/json-data-sql-server.md
-  - name: Linked servers
+  - name: Linked servers + 
     href: ../relational-databases/linked-servers/linked-servers-database-engine.md
-  - name: Maintenance plans
+  - name: Maintenance plans + 
     href: ../relational-databases/maintenance-plans/maintenance-plans.md
   - name: Joins
     href: ../relational-databases/performance/joins.md

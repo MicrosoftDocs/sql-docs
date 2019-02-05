@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], permissions"
   - "REVOKE statement, asymmetric keys"
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Asymmetric Key Permissions (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "COOKIE clause"
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVERT (Transact-SQL)

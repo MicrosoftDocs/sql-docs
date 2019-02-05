@@ -13,7 +13,7 @@ featureFlags:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">

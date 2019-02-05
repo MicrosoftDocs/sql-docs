@@ -93,7 +93,7 @@
     items:
     - name: Create partition-based models
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: In-database analytics for SQL developers
+    - name: R for SQL developers
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
       - name: 1 - Data exploration
@@ -104,7 +104,7 @@
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
       - name: 4 - Predictions
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: In-database analytics for data scientists
+    - name: SQL for R data scientists
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
       - name: 1 - Data exploration
@@ -153,7 +153,7 @@
     items:
     - name: Create a Python model using revoscalepy
       href: tutorials/use-python-revoscalepy-to-create-model.md  
-    - name: Learn in-database analytics
+    - name: Python for SQL developers
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
       - name: 1 - Data exploration
@@ -257,8 +257,8 @@
       href: security/sql-server-launchpad-service-account.md
     - name: Configure firewall
       href: security/firewall-configuration.md
-    - name: Add SQLRUserGroup as a database user
-      href: security/add-sqlrusergroup-to-database.md
+    - name: Create a login for SQLRUserGroup
+      href: security/create-a-login-for-sqlrusergroup.md
   - name: Administration
     items:
     - name: Manage integration

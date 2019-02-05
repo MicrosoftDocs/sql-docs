@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "granting permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Availability Group Permissions (Transact-SQL)

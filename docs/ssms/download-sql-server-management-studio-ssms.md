@@ -27,7 +27,7 @@ ms.reviewer: sstein
 manager: craigg
 ---
 # Download SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
 > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)

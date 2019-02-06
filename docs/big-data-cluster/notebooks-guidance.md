@@ -55,16 +55,16 @@ If there are issues installing notebook dependencies, click on Ctrl+Shift+P or f
 There are multiple ways to launch a new notebook.
 
 1. From the **Manage Dashboard**. After making a new connection, you will see a dashboard. Click **New Notebook** task from the dashboard.
-
-  ![image4](media/notebooks-guidance/image4.png)
+  
+    ![image4](media/notebooks-guidance/image4.png)
 
 1. Right-click the HDFS/Spark connection and click **New Notebook** in the context menu.
 
-  ![image5](media/notebooks-guidance/image5.png)
+    ![image5](media/notebooks-guidance/image5.png)
 
-  A new file named `Notebook-0.ipynb` opens.
+    A new file named `Notebook-0.ipynb` opens.
 
-  ![image6](media/notebooks-guidance/image6.png)
+    ![image6](media/notebooks-guidance/image6.png)
 
 When you open the notebook from the command pallet, the notebook opens as `Untitled-0.ipynb`.
 

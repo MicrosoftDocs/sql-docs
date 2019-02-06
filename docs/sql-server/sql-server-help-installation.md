@@ -24,24 +24,24 @@ Internet access is required to download the Help Viewer content. You can then mi
 
 ## Install the Help Viewer
 
-There are two versions of Help Viewer.  Each version supports different versions of SQL Server content.  The format of the offline books has changed over time and the older versions of Help Viewer do not support the newer versions of the books.:
+There are two versions of Help Viewer.  Each version supports different versions of SQL Server content.  The format of the offline books has changed over time and the older versions of Help Viewer do not support the newer versions of the books:
 - v2.x supports SQL Server 2016 and SQL Server 2017 help. 
 - v1.x supports [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help. The Help Viewer does not support proxy settings or the ISO format.
 
-The following tools install the Help Viewer:
-|**Tool**|**Help Viewer version installed**|
+
+|**Tool**|**Installs Help Viewer version**|
 |---------|---------|
-|Visual Studio 2017* | v2.3|
+|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
 |[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | |
-|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | |
-|Visual Studio 2015 | |
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
+|Visual Studio 2015 | v2.2|
 |SQL Server 2016 | v1.x|
-|SQL Server 2014 Management Studio | |
-|Earlier versions of Visual Studio | |
+|SQL Server 2014 Management Studio | v1.x|
+|Earlier versions of Visual Studio | v1.x|
 | | |
 
-\* To install the Help Viewer with Visual Studio 2017, on the Individual Components tab in the Visual Studio Installer, select **Help Viewer** under Code Tools, and then click **Install**. 
+\* To install the Help Viewer with Visual Studio 2017, on the Individual Components tab in the Visual Studio Installer, select **Help Viewer** under Code Tools, and then click **Install**.
 
 >[!NOTE]
 > - SQL Server 2016 installs Help Viewer 1.1, which does not support SQL Server 2016 help. 
@@ -81,7 +81,7 @@ SSMS 17.x and VS 2015 and 2017 use Help Viewer 2.x, which supports SQL Server 20
 > [!NOTE]
 > Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:
 
-* indicates content that is from the first general availability version of SQL Server 2017 content along with older 2016 content. These books will be removed as the separate and complete books for SQL Server 2016 and 2017 contain content edits as of January 2019.  
+(*) indicates content that is from the first general availability version of SQL Server 2017 content along with older 2016 content. These books will be removed as the separate and complete books for SQL Server 2016 and 2017 contain content edits as of January 2019.  
 
 | | Contents pane | SQL Server book |
 |-----|-----|-----|

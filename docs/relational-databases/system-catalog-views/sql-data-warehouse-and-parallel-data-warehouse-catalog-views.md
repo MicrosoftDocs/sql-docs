@@ -59,7 +59,11 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-[sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details_transact_sql.md) 
+[sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
+
+[sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) 
+
+[sys.workload_management_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)  
   
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views  
  The following catalog views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:  

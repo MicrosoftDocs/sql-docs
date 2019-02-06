@@ -58,8 +58,10 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## Remarks  
 Consider using `CHECKSUM` or `BINARY_CHECKSUM` as alternatives to compute a hash value.
 
+The MD2, MD4, MD5, SHA, and SHA1 algorithms are not available under compatibility level 130 and above. Use SHA2_256 or SHA2_512 instead.
+
 ## Examples  
-### A: Return the hash of a variable  
+### Return the hash of a variable  
  The following example returns the `SHA1` hash of the **nvarchar** data stored in variable `@HashThis`.  
   
 ```sql  
@@ -68,7 +70,7 @@ SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');
 SELECT HASHBYTES('SHA1', @HashThis);  
 ```  
   
-### B: Return the hash of a table column  
+### Return the hash of a table column  
  The following example returns the SHA1 hash of the values in column `c1` in the table `Test1`.  
   
 ```sql  

@@ -77,7 +77,7 @@ manager: craigg
 |**APP**|SSPROP_INIT_APPNAME|The string identifying the application.|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about OLE DB Driver for SQL Server's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|The name of the primary file (include the full path name) of an attachable database. To use **AttachDBFileName**, you must also specify the database name with the provider string Database keyword. If the database was previously attached, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not reattach it (it uses the attached database as the default for the connection).|  
-|**Authentication**|SSPROP_AUTH_MODE|Used to specify the SQL or Active Directory authentication method used. Possible values are: <br/><ul><li>`ActiveDirectoryPassword`: Active Directory authentication using login ID and password</li><li>`ActiveDirectoryIntegrated`: Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><li>`SqlPassword`: Authentication using login ID and password</li><ul>|
+|**Authentication**|SSPROP_AUTH_MODE|Used to specify the SQL or Active Directory authentication method used. Possible values are: <br/><ul><li>`ActiveDirectoryPassword`: Active Directory authentication using login ID and password.</li><li>`ActiveDirectoryIntegrated`: Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><li>`SqlPassword`: Authentication using login ID and password.</li><ul>|
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are "yes" and "no".|  
 |**Database**|DBPROP_INIT_CATALOG|The database name.|  
@@ -130,10 +130,10 @@ manager: craigg
   
 |Keyword|Initialization property|Description|  
 |-------------|-----------------------------|-----------------|  
-|**Access Token**|SSPROP_AUTH_ACCESS_TOKEN|The Access Token used to authenticate to Azure Active Directory|
+|**Access Token**|SSPROP_AUTH_ACCESS_TOKEN|The Access Token used to authenticate to Azure Active Directory.|
 |**Application Name**|SSPROP_INIT_APPNAME|The string identifying the application.|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about OLE DB Driver for SQL Server's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
-|**Authentication**|SSPROP_AUTH_MODE|Used to specify the SQL or Active Directory authentication method used. Possible values are: <br/><ul><li>`ActiveDirectoryPassword`: Active Directory authentication using login ID and password</li><li>`ActiveDirectoryIntegrated`: Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><li>`SqlPassword`: Authentication using login ID and password</li><ul>|
+|**Authentication**|SSPROP_AUTH_MODE|Used to specify the SQL or Active Directory authentication method used. Possible values are: <br/><ul><li>`ActiveDirectoryPassword`: Active Directory authentication using login ID and password.</li><li>`ActiveDirectoryIntegrated`: Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><li>`SqlPassword`: Authentication using login ID and password.</li><ul>|
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are "true" and "false".|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  
@@ -185,10 +185,10 @@ manager: craigg
   
 |Keyword|Initialization property|Description|  
 |-------------|-----------------------------|-----------------|  
-|**Access Token**|SSPROP_AUTH_ACCESS_TOKEN|The Access Token used to authenticate to Azure Active Directory|
+|**Access Token**|SSPROP_AUTH_ACCESS_TOKEN|The Access Token used to authenticate to Azure Active Directory.|
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about OLE DB Driver for SQL Server's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Application Name**|SSPROP_INIT_APPNAME|The string identifying the application.|  
-|**Authentication**|SSPROP_AUTH_MODE|Used to specify the SQL or Active Directory authentication method used. Possible values are: <br/><ul><li>`ActiveDirectoryPassword`: Active Directory authentication using login ID and password</li><li>`ActiveDirectoryIntegrated`: Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><li>`SqlPassword`: Authentication using login ID and password</li><ul>|
+|**Authentication**|SSPROP_AUTH_MODE|Used to specify the SQL or Active Directory authentication method used. Possible values are: <br/><ul><li>`ActiveDirectoryPassword`: Active Directory authentication using login ID and password.</li><li>`ActiveDirectoryIntegrated`: Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><li>`SqlPassword`: Authentication using login ID and password.</li><ul>|
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are "true" and "false".|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  

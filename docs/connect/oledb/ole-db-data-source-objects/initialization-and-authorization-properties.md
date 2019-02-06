@@ -2,7 +2,7 @@
 title: "Initialization and Authorization Properties | Microsoft Docs"
 description: "Initialization and authorization properties"
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "2/6/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

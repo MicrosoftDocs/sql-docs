@@ -26,8 +26,8 @@
   href: oledb-driver-for-sql-server-support-for-localdb.md
 - name: Table-Valued Parameters (OLE DB Driver for SQL Server)
   href: table-valued-parameters-oledb-driver-for-sql-server.md
-- name: Using Azure Active Directory with the OLE DB Driver
-  href: ./using-azure-active-directory.md
+- name: Using Azure Active Directory
+  href: using-azure-active-directory.md
 - name: Using Database Mirroring
   href: using-database-mirroring.md
 - name: Using Encryption Without Validation

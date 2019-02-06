@@ -50,7 +50,7 @@ Microsoft JDBC Driver 7.2 for SQL Server introduces `SQLServerException.getSQLSe
 
 ### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.6.3
 
-Microsoft JDBC Driver 7.2 for SQL Server has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.6.3, which also introduces "Java Client Runtime for Auto-Rest" as a Maven dependency (Version: 1.6.5). For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+Microsoft JDBC Driver 7.2 for SQL Server has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.6.3, which also introduces "Java Client Runtime for AutoRest" as a Maven dependency (Version: 1.6.5). For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ### Updated "Microsoft Azure Key Vault SDK for Java" version: 1.2.0
 

@@ -33,6 +33,8 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
   - New PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE flag for pdo_sqlsrv to return datetime as objects
   - Add ReturnDatesAsStrings option to statement level for sqlsrv
   - New options at connection and statement levels for both drivers for formatting decimal values in the fetched results
+- Support for static compilation of drivers if users choose to build from source
+- Improved performance by caching metadata on fetches and speeding up Unicode string conversions
 
 ## What's New in Version 5.3
 

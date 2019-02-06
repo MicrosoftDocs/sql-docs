@@ -32,8 +32,13 @@ The following tools install the Help Viewer:
 |**Tool**|**Help Viewer version installed**|
 |---------|---------|
 |Visual Studio 2017* | v2.3|
-|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br> [SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br> [SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br> Visual Studio 2015 | v2.2|
-|SQL Server 2016<br> SQL Server 2014 Management Studio<br> Earlier versions of Visual Studio| v1.x|
+|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | |
+|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | |
+|Visual Studio 2015 | |
+|SQL Server 2016 | v1.x|
+|SQL Server 2014 Management Studio | |
+|Earlier versions of Visual Studio | |
 | | |
 
 \* To install the Help Viewer with Visual Studio 2017, on the Individual Components tab in the Visual Studio Installer, select **Help Viewer** under Code Tools, and then click **Install**. 

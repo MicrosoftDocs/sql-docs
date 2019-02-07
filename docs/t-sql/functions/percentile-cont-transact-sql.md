@@ -41,10 +41,10 @@ PERCENTILE_CONT ( numeric_literal )
  The percentile to compute. The value must range between 0.0 and 1.0.  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
- Specifies a list of numeric values to sort and compute the percentile over. Only one *order_by_expression* is allowed. The expression must evaluate to an exact numeric type (**int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, **money**) or an approximate numeric type (**float**, **real**). Other data types are not allowed. The default sort order is ascending.  
+ Specifies a list of numeric values to sort and compute the percentile over. Only one *order_by_expression* is allowed. The expression must evaluate to an exact or approximate numeric type, with no other data types allowed. Exact numeric types are **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, and **money**. Approximate numeric types are **float** and **real**. The default sort order is ascending.  
   
  OVER **(** \<partition_by_clause> **)**  
- Divides the result set produced by the FROM clause into partitions to which the percentile function is applied. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). The \<ORDER BY clause> and \<rows or range clause> of the OVER syntax cannot be specified in a PERCENTILE_CONT function.  
+ Divides the result set produced by the FROM clause into partitions to which the percentile function is applied. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). The \<ORDER BY clause> and \<rows or range clause> of the OVER syntax can't be specified in a PERCENTILE_CONT function.  
   
 ## Return Types  
  **float(53)**  
@@ -60,7 +60,7 @@ PERCENTILE_CONT ( numeric_literal )
 ## Examples  
   
 ### A. Basic syntax example  
- The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. Note that these functions may not return the same value. This is because PERCENTILE_CONT interpolates the appropriate value, whether or not it exists in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
+ The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
   
 ```  
 USE AdventureWorks2012;  
@@ -92,7 +92,7 @@ Human Resources        17.427850    16.5865
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### B. Basic syntax example  
- The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. Note that these functions may not return the same value. This is because PERCENTILE_CONT interpolates the appropriate value, whether or not it exists in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
+ The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
   
 ```  
 -- Uses AdventureWorks  
@@ -120,6 +120,4 @@ Shipping and Receiving 9.250000      9.0000
 ## See Also  
  [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
-  
-
-
+ 

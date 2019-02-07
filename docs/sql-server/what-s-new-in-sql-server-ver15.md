@@ -1,5 +1,5 @@
 ---
-title: "What's new in SQL Server 2019 | Microsoft Docs"
+title: "What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] | Microsoft Docs"
 ms.date: 02/04/2019
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
@@ -10,19 +10,19 @@ ms.author: mikeray
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# What's new in SQL Server 2019
+# What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   > [!div class="nextstepaction"]
   > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
-**Try SQL Server 2019!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download SQL Server 2019 to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
+**Try [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
+- [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
 
 ## CTP 2.3
 
@@ -30,11 +30,13 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
 
 - [Big data clusters](#bigdatacluster) 
   - Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ
+  - Common CLI for application deployment and cluster management
 
 - [Database engine](#databaseengine)
   - Accelerated database recovery
   - Reduced recompilations for workloads using temporary tables across multiple scopes
   - Improved indirect checkpoint scalability
+  - Improved tempdb scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
 
@@ -104,14 +106,15 @@ Continue reading for more details about these features.
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
 - [Submit Jar or Py](../big-data-cluster/big-data-cluster-overview.md) files with references to SQL Server big data clusters. (CTP 2.3)
-- Execute Jar or Py files located in the HDFS file system. (CTP 2.3)
-- Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
+- Execute Jar or Py files located in the HDFS file system (CTP 2.3)
+- Common CLI for app deployment and cluster management simplifies app deployment (CTP 2.3)
+- Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-overview.md)<!--../big-data-cluster//big-data-cluster-create-apps.md-->. (CTP 2.1) 
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)
 - Run Advanced analytics and machine learning with Spark (CTP 2.0)
 - Use Spark streaming to data to SQL data pools (CTP 2.0)
-- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md). (CTP 2.0)
+- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md) (CTP 2.0)
  
 [!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
@@ -126,20 +129,54 @@ Continue reading for more details about these features.
 
 ### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
 
-Query Store now supports the ability to force query execution plans for fast forward and static T-SQL and API cursors.  Forcing is now supported via `sp_query_store_force_plan` or through SQL Server Management Studio Query Store reports.
+Query Store now supports the ability to force query execution plans for fast forward and static T-SQL and API cursors. Forcing is now supported via `sp_query_store_force_plan` or through SQL Server Management Studio Query Store reports.
 
 ### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
 
-Prior to this feature, when referencing a temporary table with a DML statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed.  With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+Prior to this feature, when referencing a temporary table with a DML statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
 
-- Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions.  
-- Keep track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions.  
+- Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions. 
+- Keep track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions. 
 
 The end result is a reduction in extraneous recompilations and CPU-overhead.
 
 ### Improved Indirect Checkpoint Scalability (CTP 2.3)
 
 In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
+
+### Improved tempdb Scalability (CTP 2.3)
+
+tempdb metadata contention has historically been a bottleneck to scalability for many workloads running on SQL Server. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables. In order to opt-in to this new feature, use the following script:
+
+```sql
+ALTER SERVER CONFIGURATION SET TEMPDB METADATA MEMORY_OPTIMIZED ON 
+```
+
+This configuration change requires a restart of the service to take effect.
+
+There are some limitations with this implementation that are important to note:
+
+1. Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of tempdb, a restart is required to either enable or disable the feature.
+2. Lock-related query hints are not supported when executing queries that reference tempdb catalog views. Any query hints that are not supported by memory-optimized tables such as `TABLOCK`, `PAGLOCK`, `ROWLOCK`, and `READPAST` cannot be used when querying system catalog views, since these views are now referencing memory-optimized tables.
+3. Queries against system catalog views in tempdb will always use snapshot isolation. Again, because the system tables under these views are stored in memory-optimized tables, only snapshot isolation is supported. Therefore, explicit isolation level hints on queries that reference tempdb catalog views that are lower than snapshot isolation (such as `READCOMMITTED`, `READUNCOMMITTED`, or `NOLOCK`) trigger the following error:
+
+    ```
+    Msg 10794, Level 16, State 90, Line 15
+    The table option 'readcommitted' is not supported with memory optimized tables.
+    
+    USE tempdb
+    SELECT * FROM sys.objects WITH (readuncommitted)
+    
+    Msg 10794, Level 16, State 90, Line 72
+    The table option 'readuncommitted' is not supported with memory optimized tables
+    ```
+
+4. Cross-database queries that reference tempdb catalog views are not supported. Because memory-optimized tables do not support cross-database queries, any queries that reference tempdb catalog views from another database using three-part naming will fail with the following error:
+
+    ```
+    Msg 41317, Level 16, State 6, Line 20
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+
 
 ### Scalar UDF inlining (CTP 2.1)
 
@@ -157,7 +194,7 @@ The new error message 2628 provides more context for the data truncation problem
 
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution.  Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
 
 ### Static data masking (CTP 2.1)
 
@@ -245,7 +282,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 
 ### Intelligent query processing (CTP 2.0)
 
-- **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant. Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
+- **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] by adjusting memory grant sizes for both batch and row mode operators. For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant. Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
 
 - **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios. This function is optimized for queries where all the following conditions are true:
    - Accesses data sets of at least millions of rows.
@@ -262,7 +299,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
       - Would add too much overhead to the query.
       - Or, is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
 
-- **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
+- **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts. This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 
 To use intelligent query processing features, set database `COMPATIBILITY_LEVEL = 150`.
 
@@ -272,7 +309,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 ### <a id="sqlgraph"></a> SQL Graph features
 
-- **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on SQL Server 2019 preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
+- **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
 
 - **Match support in `MERGE` DML (CTP 2.0)** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
@@ -290,7 +327,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
   - `WHEN_SUPPPORTED` option allows supported operations online or resumable and run index unsupported operations offline or non-resumable.
   - `OFF` option allows the current behavior of executing all index operations offline and non-resumable unless explicitly specified in the DDL statement.
 
-To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands.  
+To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands. 
 
 Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
@@ -343,11 +380,11 @@ For more information, see [Hybrid buffer pool](../database-engine/configure-wind
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
 
-`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data. In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
 
 ### New options added to sp_estimate_data_compression_savings (CTP 2.0)
 
-`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state. Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
 ### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling (CTP 2.0)
 
@@ -369,7 +406,7 @@ For more information on lightweight profiling, see [Query Profiling Infrastructu
 
 ### New sys.dm_db_page_info system function returns page information (CTP 2.0)
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`. This function replaces the need to use `DBCC PAGE` in most cases.  
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`. This function replaces the need to use `DBCC PAGE` in most cases. 
 
 In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`. This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`. See the following script as an example:
 
@@ -392,13 +429,13 @@ FROM sys.dm_exec_requests AS d
 
   Configure replication [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
+- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
 
 - **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, and a health monitor.
 
 - **OpenLDAP support for third-party AD providers (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
-- **Machine Learning on Linux (CTP 2.0)**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 - **New container registry (CTP 2.1)**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
 
@@ -425,7 +462,7 @@ FROM sys.dm_exec_requests AS d
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
-  - Update to the [SQL Server 2019 (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
+  - Update to the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
   - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. (CTP 2.0) 
   - Quickly visualize data with built-in charting of your result sets. (CTP 2.0)
   - Create custom dashboards for your servers and databases using customizable widgets. (CTP 2.0)  
@@ -453,8 +490,8 @@ As of CTP 2.2, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not 
 
 ## Next steps
 
-- [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)
+- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md)
 
-- [Microsoft SQL Server 2019: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft SQL Server 2019 CTP 2.0 for Windows, Linux, and Docker containers.
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

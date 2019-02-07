@@ -57,7 +57,7 @@ Fixed Server Roles and Fixed Database Roles have preconfigured permissions that 
 >    ON SRM.member_principal_id = SP2.principal_id
 >  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
 >  ORDER BY SP1.name;
-```
+> ```
 > [!NOTE]
 >  * All logins are members of the public role and cannot be removed. 
 >  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
@@ -111,7 +111,7 @@ The following query returns a list of the permissions that have been granted or 
 >    ON pr.principal_id = pe.grantee_principal_id
 >  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
 >  ORDER BY pr.name, type_desc;
-```
+> ```
 
 ### Database Permissions
 

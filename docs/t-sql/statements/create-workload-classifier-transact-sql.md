@@ -1,0 +1,103 @@
+---
+title: "CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/06/2019"
+ms.prod: sql
+ms.prod_service: "sql-data-warehouse"
+ms.reviewer: ""
+ms.technology: t-sql
+ms.topic: "language-reference"
+f1_keywords: 
+  - "WORKLOAD GROUP"
+  - "WORKLOAD_GROUP_TSQL"
+  - "CREATE WORKLOAD GROUP"
+  - "CREATE_WORKLOAD_GROUP_TSQL"
+dev_langs: 
+  - "TSQL"
+helpviewer_keywords: 
+  - "CREATE WORKLOAD GROUP statement"
+ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+---
+# CREATE WORKLOAD CLASSIFIER (Transact-SQL)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+Creates a Workload Management Classifier.  The classifier assigns incoming requests to a workload group based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.  
+  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+  
+## Syntax  
+  
+```  
+CREATE WORKLOAD CLASSIFIER classifier_name  
+WITH  
+    ( WORKLOAD_GROUP = ‘name’  
+     ,MEMBERNAME = ‘security_account’ 
+ [ [ , ] IMPORTANCE = { LOW | BELOW NORMAL | NORMAL | ABOVE NORMAL | HIGH }])
+[;]
+  
+```  
+  
+## Arguments  
+ *classifier_name*  
+ Specifies the name by which the workload classifier is identified.  classifier_name is a sysname.  It can be up to 128 characters long and must be unique within the instance.
+
+WORKLOAD_GROUP = *'name'*
+When the conditions are met by the classifier rules, name maps the request to a workload group.  name is a sysname.  It can be up to 128 characters long and must be a valid workload group name at the time of classifier creation.
+
+For the purposes of the WLM Importance preview, WORKLOAD_GROUP should map to an existing resource class:
+
+|Static Resource Classes|Dynamic Resource Classes|
+|------------------------|-----------------------|
+|staticrc10|smallrc|
+|staticrc20|mediumrc|
+|staticrc30|largerc|
+|staticrc40|xlargerc|
+|staticrc50||
+|staticrc60||
+|staticrc70||
+|staticrc80||
+
+MEMBERNAME = *'security_account'*
+This is the security account being added to the role.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.
+
+IMPORTANCE = { LOW | BELOW NORMAL | NORMAL | ABOVE NORMAL | HIGH }
+Specifies the relative importance of a request.  Importance is one of the following:
+
+
+
+-   LOW 
+-   BELOW_NORMAL
+-   NORMAL (default)
+-   ABOVE_NORMAL
+-   HIGH  
+
+Importance influences the order which requests are scheduled, thus giving first access to resources and locks.
+
+> [!NOTE]  
+> Internally each importance setting is stored as a number that is used for calculations. 
+  
+## Permissions  
+ Requires CONTROL DATABASE permission.  
+  
+## Examples  
+ The following example shows how to create a workload classifier named `wgcELTRole`. It uses the staticrc20 workload group, the user `ELTRole`, and sets the importance to `above_normal`.
+  
+```  
+CREATE WORKLOAD CLASSIFIER wgcELTRole 
+  WITH (WORKLOAD_GROUP = 'staticrc20'
+       ,MEMBERNAME = 'ELTRole'
+      ,IMPORTANCE = above_normal);
+ 
+GO  
+```  
+  
+## See Also  
+ 
+ [DROP WORKLOAD CLASSIFIERS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
+ 
+  
+  
+

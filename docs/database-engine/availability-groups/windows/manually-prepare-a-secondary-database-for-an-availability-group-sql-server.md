@@ -188,7 +188,7 @@ This topic describes how to prepare a database for an Always On availability gro
         GO  
         ```  
   
-5.  After you restore the full backup, you must create a log backup on the primary database. For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement backs up the log to the a backup file named *E:\MyDB1_log.bak*:  
+5.  After you restore the full backup, you must create a log backup on the primary database. For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement backs up the log to the a backup file named *E:\MyDB1_log.trn*:  
   
     ```  
     BACKUP LOG MyDB1   
@@ -198,7 +198,7 @@ This topic describes how to prepare a database for an Always On availability gro
   
 6.  Before you can join the database to the secondary replica, you must apply the required log backup (and any subsequent log backups).  
   
-     For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores the first log from *C:\MyDB1.bak*:  
+     For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores the first log from *C:\MyDB1.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
@@ -209,15 +209,15 @@ This topic describes how to prepare a database for an Always On availability gro
   
 7.  If any additional log backups occur before the database joins the secondary replica, you must also restore all of those log backups, in sequence, to the server instance that hosts the secondary replica using RESTORE WITH NORECOVERY.  
   
-     For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores two additional logs from *E:\MyDB1_log.bak*:  
+     For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores two additional logs from *E:\MyDB1_log.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  

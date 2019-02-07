@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADOX Collections
+
 |||  
 |-|-|  
 |[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)|Contains all **Column** objects of a table, index, or key.|  

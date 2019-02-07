@@ -18,9 +18,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-The **Intelligent query processing** feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort.
+The **Intelligent query processing** feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort.  You can automatically benefit from this feature family by moving to the applicable database compatibility level.
 
-![Intelligent Query Processing Features](./media/3_IQPFeatureFamily2.png)
+![Intelligent Query Processing Features](./media/3_IQPFeatureFamily.png)
 
 ## Adaptive Query Processing
 

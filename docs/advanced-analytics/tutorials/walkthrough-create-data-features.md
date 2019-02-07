@@ -125,7 +125,7 @@ Switch to [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/dow
 
 1. Use a SQL function, named *fnCalculateDistance*. The function should already exist in the NYCTaxi_Sample database. In Object Explorer, verify the function exists by navigating this path: Databases > NYCTaxi_Sample > Programmability > Functions > Scalar-valued Functions >  dbo.fnCalculateDistance.
 
-  If the function does not exist, use SQL Server Management Studio to generate the function in the NYCTaxi_Sample database.
+    If the function does not exist, use SQL Server Management Studio to generate the function in the NYCTaxi_Sample database.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)

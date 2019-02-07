@@ -18,6 +18,7 @@ manager: craigg
 
 
 ## [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] and Data Quality Services
+
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database|Yes||||||Yes|  

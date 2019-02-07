@@ -42,6 +42,9 @@ manager: craigg
   
  
 ##  <a name="Provision"></a> To provision (install) a certificate on the server  
+
+>[!NOTE]
+>Refer to [Certificate Management (SQL Server Configuration Manager)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md) to add a certificate on a single server.
   
 1.  On the **Start** menu, click **Run**, and in the **Open** box, type **MMC** and click **OK**.  
   
@@ -63,6 +66,10 @@ manager: craigg
   
 10. Complete the **Certificate Import Wizard**, to add a certificate to the computer, and close the MMC console. For more information about adding a certificate to a computer, see your Windows documentation.  
   
+## To provision (install) a certificate across multiple servers
+
+Refer to [Certificate Management (SQL Server Configuration Manager)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md) to add a certificate across multiple servers.
+
 ##  <a name="Export"></a> To export the server certificate  
   
 1.  From the **Certificates** snap-in, locate the certificate in the **Certificates** / **Personal** folder, right-click the **Certificate**, point to **All Tasks**, and then click **Export**.  
@@ -83,15 +90,15 @@ manager: craigg
 > [!NOTE]
 > To ensure secure connectivity between client and server, configure the client to request encrypted connections. More details are explained [later in this article](#client-request-encrypt-connect-23h).
 
-
-
 ### Wildcard Certificates  
 Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client support wildcard certificates. Other clients might not support wildcard certificates. For more information, see the client documentation. Wildcard certificate cannot be selected by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> To configure the client to request encrypted connections  
+<a name="client-request-encrypt-connect-23h"/></a>
+
+## <a name="ConfigureClientConnections"></a> To configure the client to request encrypted connections  
   
 1.  Copy either the original certificate or the exported certificate file to the client computer.  
   
@@ -101,7 +108,7 @@ Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [
   
 4.  On the **Flags** page, in the **Force protocol encryption** box, click **Yes**.  
   
-##  <a name="EncryptConnection"></a> To encrypt a connection from SQL Server Management Studio  
+## <a name="EncryptConnection"></a> To encrypt a connection from SQL Server Management Studio  
   
 1.  On the Object Explorer toolbar, click **Connect**, and then click **Database Engine**.  
   

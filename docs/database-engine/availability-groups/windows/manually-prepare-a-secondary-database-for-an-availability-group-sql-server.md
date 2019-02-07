@@ -192,7 +192,7 @@ This topic describes how to prepare a database for an Always On availability gro
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
@@ -202,7 +202,7 @@ This topic describes how to prepare a database for an Always On availability gro
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  

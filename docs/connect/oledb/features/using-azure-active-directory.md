@@ -137,7 +137,7 @@ Server certificate gets validated independent of the encryption setting (unless 
 - Using `DBPROP_INIT_PROVIDERSTRING`:<br/>
     > Providing access token through `DBPROP_INIT_PROVIDERSTRING` isn't supported
 
-## Azure Active Directory Authentication Code Samples
+## Azure Active Directory authentication code samples
 
 The following samples show the code required to connect to Azure Active Directory with connection keywords. 
 

@@ -40,6 +40,9 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
 
+- [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
+  - Create calculation groups to define calculated members
+
 ## Previous CTPs
 
 Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
@@ -480,11 +483,14 @@ FROM sys.dm_exec_requests AS d
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 
+## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
+
+  - Create calculation groups to define calculated members. Calculated members enable complex calculations by reusing calculation logic. (CTP 2.3)
+
 ## Other services
 
-As of CTP 2.2, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
+As of CTP 2.3, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
 
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
 

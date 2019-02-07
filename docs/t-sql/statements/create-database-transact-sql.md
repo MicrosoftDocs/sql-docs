@@ -1043,7 +1043,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 **General Purpose service tier - Generation 5 compute platform (part 2)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
-|:----- | -------: |--------: |----=---: |--=-----: |--------: |---------:|--------: |
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
 **Business Critical service tier - Generation 4 compute platform (part 1)**

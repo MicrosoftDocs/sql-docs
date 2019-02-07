@@ -1,7 +1,7 @@
 ---
 title: "DSN and connection string keywords for the ODBC driver - SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: 12/11/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -99,7 +99,7 @@ The following table lists the available keywords and the attributes for each pla
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
-| | [SQL_COPT_SS_ENLIST_IN_XA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistinxa) | W |
+| | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sqlcoptssfallbackconnect) | LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
@@ -208,4 +208,21 @@ Loads a keystore provider library for Always Encrypted, or retrieves the names o
 |-|-|
 | char * | Path to a keystore provider library |
 
+### SQL_COPT_SS_ENLIST_IN_XA
 
+To enable XA transactions with an XA-compliant Transaction Processor (TP), the application needs to call **SQLSetConnectAttr** with SQL_COPT_SS_ENLIST_IN_XA and a pointer to an `XACALLPARAM` object. This option is supported on Windows, (17.3 and above) Linux and Mac.
+```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
+``` 
+ To associate an XA transaction with an ODBC connection only, provide TRUE or FALSE with SQL_COPT_SS_ENLIST_IN_XA instead of the pointer when calling **SQLSetConnectAttr**. This is only valid on Windows and cannot be used to specify XA operations through a client application. 
+ ```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
+``` 
+
+|Value|Description|Platforms|  
+|-----------|-----------------|-----------------|  
+|XACALLPARAM object*|The pointer to `XACALLPARAM` object.|Windows, Linux and Mac|
+|TRUE|Associates the XA transaction with the ODBC connection. All related database activities will be performed under the protection of the XA transaction.|Windows|  
+|FALSE|Disassociates the transaction with the ODBC connection.|Windows|
+
+ See [Using XA Transactions](../../connect/odbc/use-xa-with-dtc.md) for more information about XA transactions.

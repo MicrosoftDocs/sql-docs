@@ -26,19 +26,19 @@ Starting with version 18.2.1, Microsoft OLE DB Driver for SQL Server allows OLE 
 > [!NOTE]  
 > When using the Azure Active Directory options with the OLE DB driver, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. ADAL isn't  required for the other authentication methods or OLE DB operations.
 
-## New and modified connection string keywords and properties
-The following connection string keywords have either been introduced or modified to support Azure Active Directory authentication:
+## New connection string keywords and properties
+The following connection string keywords have been introduced to support Azure Active Directory authentication:
 
 |Connection keyword|Connection property|Description|
 |---               |---                |---        |
 |Access Token|SSPROP_AUTH_ACCESS_TOKEN|Specifies an access token to authenticate to Azure Active Directory. |
 |Authentication|SSPROP_AUTH_MODE|Specifies authentication method to use.|
 
-For more information about the new keywords/properties, see the [New Encryption and Certificate Validation Behavior](#New-Encryption-and-Certificate-Validation-Behavior) section or the following pages:
+For more information about the new keywords/properties, see the following pages:
 - [Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
-## New Encryption and Certificate Validation Behavior
+## New encryption and certificate validation behavior
 This section discusses the changes in encryption and certificate validation behavior. These changes are **only** effective when using the new Authentication and Access Token connection string keywords (or their corresponding properties).
 
 ### Encryption:
@@ -48,14 +48,16 @@ To improve security, the new connection attributes/keywords change encryption se
 > in ADO applications and in applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the Core Component implementing the interface explicitly sets encryption to its default value (that is, `no`). As a result, the new authentication attributes/keywords respect this setting and encryption **isn't** enabled. Therefore, it is **recommended** that these applications explicitly set `Use Encryption for Data=true` to override the default value.
 
 
-### Certificate Validation:
+### Certificate validation:
 In legacy connection attributes/keywords, server certificate was validated only when encryption was set to `yes` by the **client** application. As a result, server certificate **wasn't** validated even if `Force Protocol Encryption` setting was enabled on the server and encryption was used for data.
 
 To improve security, the new connection attributes/keywords respect the `TrustServerCertificate` setting (or its corresponding connection string keywords/properties) **independent of encryption setting** on the client **and** server. As a result, server certificate is validated by default.
 
+> [!NOTE]   
+> Certificate validation can also be controlled through the `Value` field of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` registry entry. Valid values are `0` or `1`. The OLE DB driver picks the most secure option between the registry setting and the connection setting set by client applications. That is, if one of the registry or the connection setting specify that server certificate should not be trusted, driver will **not** trust server certificate and the certificate is validated.
 
-## UI additions for Azure Active Directory
-The driver user interfaces have been enhanced to allow authentication with Azure AD. For more information please visit:
+## GUI additions for Azure Active Directory
+The driver graphical user interface has been enhanced to allow Azure Active Directory authentication. For more information, see:
 - [SQL Server Login Dialog](../help-topics/sql-server-login-dialog.md)
 - [Universal Data Link (UDL) Configuration](../help-topics/data-link-pages.md)
 

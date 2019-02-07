@@ -16,21 +16,30 @@ ms.author: v-kaywon
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Beginning in [!INCLUDE[sssqlv15](../../../includes/sssqlv15-md.md)], support for the UTF-8 character encoding as database-level or column-level collation for text data is added. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, `NCHAR` and `NVARCHAR` remain unchanged and only allow UTF-16 encoding.
+Microsoft OLE DB Driver for SQL Server (version 18.2.1) adds support for the UTF-8 server encoding. For information about the SQL Server UTF-8 support, see:
+- Collation and Unicode Support (https://docs.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-2017)
+- UTF-8 support (CTP 2.2) (https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-ver15?view=sqlallproducts-allversions#utf-8-support-ctp-22)
 
-## Data insertion into a UTF-8 collated CHAR or VARCHAR column
-If the input parameter type is DBTYPE_STR, no conversion is performed in the driver. Conversion from the client code page to the UTF-8 encoding is performed on the server side. The user should ensure the client code page and the database collation can represent all the characters in the input parameter. For example for inserting a Polish character, the client code page should be set to Polish, and the database collation either has Polish locale or is UTF-8 enabled.
+## Data insertion into a UTF-8 encoded CHAR or VARCHAR column
+When creating an input parameter buffer for insertion, the buffer is described by using an array of [**DBBINDING** structures](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms716845%28v%3dvs.85%29). Each DBBINDING structure associates a single parameter in the buffer and contains information such as the length and type of the data value. For an input parameter buffer of narrow characters, the *wType* of the DBBINDING structure should be set to DBTYPE_STR. For an input parameter buffer of wide characters, the *wType* of the DBBINDING structure should be set to DBTYPE_WSTR.
 
-If the input parameter type is DBTYPE_WSTR, the driver converts the supplied data from UTF-16 to the database collation. If the database collation is not UTF-8 enabled, the driver converts the supplied data to DBTYPE_STR using the database collation, then the server converts the data from the database collation to the UTF-8 encoding. If the database collation is also UTF-8 enabled, the driver converts the UTF-16 encoded data to the UTF-8 encoding.
+The conversion of the input parameter buffer from the client code page or input buffer encoding to the server column collation may occur at the driver side or the server side depending on the input buffer data type. During the conversion, data loss may occur if the client code page or the database collation code page is unable to represent all the characters in the input buffer.
 
-For avoiding data loss, the user should either (1) specify an input parameter of DBTYPE_STR and ensure both the client code page and the database collation can represent all the characters from the source data, or (2) specify an input parameter of DBTYPE_WSTR.
+### Input parameter buffer of narrow characters with type indicator DBTYPE_STR
+No conversion is performed in the driver. The conversion from the client code page to the UTF-8 encoding is performed on the server side. The user should ensure the client code page and the code page used by the database collation can represent all the characters in the input data. For example, to insert a Polish character, the client code page should be set to 1250 (ANSI Central European), and the database collation should use Polish as the collation designator (e.g. Polish_100_CI_AS_SC) or be UTF-8 enabled (e.g. Latin1_General_100_CI_AS_SC_UTF8).
 
-## Data retrieval from a UTF-8 collated CHAR or VARCHAR column
-If the binding type of the retrieved data is DBTYPE_STR, the driver converts the UTF-8 encoded data to the client encoding. Thus, make sure the client encoding can represent the data from the UTF-8 column, otherwise, data may be loss.
+### Input parameter buffer of wide characters with type indicator DBTYPE_WSTR
+If the insert statement is not prepared, no conversion is performed in the driver. The server converts the supplied data from the UTF-16 encoding to the UTF-8 encoding.
 
-If the binding type is DBTYPE_WSTR, the driver converts the UTF-8 encoded data to UTF-16.
+If the statement is prepared, then the driver converts the input data from the UTF-16 encoding to the encoding used by the database collation. If the database collation is not UTF-8 enabled, then the server converts the input data from the database collation encoding to the UTF-8 encoding. The user should ensure the code page used by the database collation can represent all the characters in the input data.
+
+## Data retrieval from a UTF-8 encoded CHAR or VARCHAR column
+If the buffer for returned data has the type indicator DBTYPE_STR, then the driver converts the UTF-8 encoded data to the client encoding. Thus, make sure the client encoding can represent the data from the UTF-8 column, otherwise, data loss may occur.
+
+If the buffer for returned data has the type indicator DBTYPE_WSTR, then the driver converts the UTF-8 encoded data to the UTF-16 encoding.
   
 ## See Also  
- [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
+ [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md) 
+ [UTF-16 Support in OLE DB Driver for SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)    
   
   

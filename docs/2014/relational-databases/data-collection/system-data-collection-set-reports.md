@@ -50,7 +50,7 @@ manager: craigg
  The table below the graph lists data collection times and corresponding usage data.  
   
 #### Disk Usage for Database: <database_name> Subreport  
- The **Disk usage for database:***<database_name>* subreport is displayed when you click a database name in the summary table of the Disk Usage Collection Set report. This report provides a numerical and graphical breakdown of space usage by the data and transaction log files of the database. Space usage for data files is categorized as a percentage allocated to index pages, unallocated space, data pages, and unused space. These categories are defined as follows:  
+ The **Disk usage for database:**_<database_name>_ subreport is displayed when you click a database name in the summary table of the Disk Usage Collection Set report. This report provides a numerical and graphical breakdown of space usage by the data and transaction log files of the database. Space usage for data files is categorized as a percentage allocated to index pages, unallocated space, data pages, and unused space. These categories are defined as follows:  
   
 |Category|Definition|  
 |--------------|----------------|  

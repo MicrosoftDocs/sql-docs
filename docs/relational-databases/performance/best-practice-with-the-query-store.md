@@ -323,25 +323,25 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> Avoid renaming databases if you have queries with Forced Plans  
 
- Execution plans reference objects using three-part names `database.schema.object`.   
+Execution plans reference objects using three-part names `database.schema.object`.   
 
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
 
-##  <a name="Recovery"></a> Use trace flags on mission critical servers to improve recovery from disaster
+##  <a name="Recovery"></a> Use trace flags on mission critical servers
  
-The global trace flags 7745 and 7752 can be used to improve performance of Query Store during High Availability and Disaster Recovery scenarios. For more information, refer to [Trace Flags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+The global trace flags 7745 and 7752 can be used to improve availability of databases using Query Store. For more information, refer to [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-Trace flag 7745 will prevent the default behavior where Query Store writes data to disk before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be shut down.
+-  Trace flag 7745 will prevent the default behavior where Query Store writes data to disk before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be shut down. This means that Query Store data that has been collected but not been yet persisted to disk will be lost. 
   
-Trace flag 7752 enables asynchronous load of Query Store, and also allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run queries before Query Store has been fully loaded. Default Query Store behavior prevents queries from running before the Query Store has been recovered.
+-  Trace flag 7752 enables asynchronous load of Query Store. This allows a database to become online and queries to be executed before the Query Store has been fully recovered. The default behavior is to do synchoronous load of Query Store. The default behavior prevents queries from executing before the Query Store has been recovered but also prevents any queries from being missed in the data collection.
 
 > [!IMPORTANT]
 > If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible. 
 
 ## See Also  
- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)  
+[Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
+[Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
+[Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     
+[Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)      
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)     
   

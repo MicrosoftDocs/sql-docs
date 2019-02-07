@@ -34,7 +34,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'**_publisher_**'**  
  Is the Publisher to drop. *publisher* is **sysname**, with no default.  
   
  [ **@no_checks=** ] *no_checks*  

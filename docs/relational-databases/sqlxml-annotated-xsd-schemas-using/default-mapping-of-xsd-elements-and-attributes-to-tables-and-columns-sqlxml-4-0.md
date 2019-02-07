@@ -40,7 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In this example, no annotations are specified in the XSD schema. The **\<Person.Contact>** element is of complex type and, therefore, maps by default to the Person.Contact table in the AdventureWorks database. All the attributes (ContactID, FirstName, LastName) of the **\<Person.Contact>** element are of simple type and map by default to columns with the same names in the Person.Contact table.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -91,7 +91,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In this example, default mapping also takes place because no annotations are used. The **\<Person.Contact>** element is of complex type and maps to the table with the same name in the database. The elements **\<FirstName>** and **\<LastName>** and the **EmployeeID** attribute are of simple type and, therefore, map to the columns with the same names. The only difference between this and the previous example are that elements are used for mapping the FirstName and LastName fields.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  
@@ -145,7 +145,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In this example, default mapping also takes place because no annotations are used. The **\<Production.ProductModel>** element is of complex type and maps to the table with the same name in the database. The **ProductModelID** attribute is of simple type and, therefore, map to the columns with the same names. The only difference between this and the previous examples is that the **\<Instructions>** element is mapping to a column that uses the **xml** data type by using the **xsd:anyType** type.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  

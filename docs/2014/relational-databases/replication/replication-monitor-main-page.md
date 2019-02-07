@@ -24,15 +24,7 @@ manager: craigg
   
     -   [Refresh Data in Replication Monitor](monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
     -   [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

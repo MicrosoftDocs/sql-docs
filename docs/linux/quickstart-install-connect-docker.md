@@ -5,7 +5,7 @@ description: This quickstart shows how to use Docker to run the SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -322,7 +322,7 @@ Now, run a query to return data from the `Inventory` table.
 
 You can also connect to the SQL Server instance on your Docker machine from any external Linux, Windows, or macOS tool that supports SQL connections.
 
-The following steps use **sqlcmd** outside of your container to connect to SQL Server running in the container. These steps assume that you already have the SQL Server command-line tools installed outside of your container. The same principals apply when using other tools, but the process of connecting is unique to each tool.
+The following steps use **sqlcmd** outside of your container to connect to SQL Server running in the container. These steps assume that you already have the SQL Server command-line tools installed outside of your container. The same principles apply when using other tools, but the process of connecting is unique to each tool.
 
 1. Find the IP address for the machine that hosts your container. On Linux, use **ifconfig** or **ip addr**. On Windows, use **ipconfig**.
 
@@ -342,7 +342,7 @@ Other common tools to connect to SQL Server include:
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
-- [Azure Data Studio (Preview)](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## Remove your container

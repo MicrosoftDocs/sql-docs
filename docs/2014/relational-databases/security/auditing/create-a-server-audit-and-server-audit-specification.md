@@ -89,7 +89,7 @@ manager: craigg
      Specifies the location of the folder where audit data is written when the **Audit destination** is a file.  
   
      **Ellipsis (...)**  
-     Opens the **Locate Folder -***server_name* dialog box to specify a file path or create a folder where the audit file is written.  
+     Opens the **Locate Folder -**_server_name_ dialog box to specify a file path or create a folder where the audit file is written.  
   
      **Audit File Maximum Limit:**  
      **Maximum rollover files**  

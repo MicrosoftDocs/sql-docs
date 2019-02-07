@@ -38,10 +38,10 @@ manager: craigg
 ```  
   
 ## Arguments  
- [ **@ db_name =** ] **'***db_name***'**  
+ [ **@ db_name =** ] **'**_db_name_**'**  
  The name of the database to enable or disable Selective XML Index on. If *db_name* is NULL, the current database is assumed.  
   
- [ **@action =** ] **'***action***'**  
+ [ **@action =** ] **'**_action_**'**  
  Determines whether to enable or disable the index. If another value except 'on', 'true', 'off', or 'false' is passed, an error will be raised.  
   
 ```  

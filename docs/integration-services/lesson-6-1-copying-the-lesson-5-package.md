@@ -1,7 +1,7 @@
 ---
-title: "Step 1: Copying the Lesson 5 Package | Microsoft Docs"
+title: "Step 1: Copy the Lesson 5 package | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -12,51 +12,47 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 6-1 - Copying the Lesson 5 Package
-In this task, you will create a copy of the Lesson 5.dtsx package that you created in Lesson 5. Alternatively, you can add the completed lesson 5 package that is included with the tutorial to the project, and then copy it instead. You will use this new copy throughout the rest of Lesson 6.  
+# Lesson 6-1: Copy the Lesson 5 package
+
+In this task, you create a copy of the **Lesson 5.dtsx** package from Lesson 5. If you did not complete Lesson 5, you can add the completed Lesson 5 package included with the tutorial to the project, and then make a copy of it to work with. You use this new copy throughout the rest of Lesson 6. 
+
+> [!IMPORTANT]
+> After copying the Lesson 5 package, if you currently have the packages from the previous lessons in your solution, right-click each package from lessons 1-5 and select **Exclude From Project**. When done you should have only **Lesson 6.dtsx** in your solution.   
   
-### To copy the Lesson 5 package  
+## Create the Lesson 6 package  
   
-1.  If SQL Server Data Tools is not already open, click Start, point to All Programs, point to Microsoft SQL Server 2012, and then click SQL Server Data Tools.  
-  
-2.  On the File menu, click Open, click Project/Solution, select SSIS Tutorial and click Open, and then double-click SSIS Tutorial.sln.  
-  
-3.  In Solution Explorer, right-click Lesson 5.dtsx, and then click Copy.  
-  
-4.  In Solution Explorer, right-click SSIS Packages, and then click Paste.  
-  
-    By default, the copied package is named Lesson 6.dtsx.  
-  
-5.  In the Solution Explorer, double-click Lesson 6.dtsx to open the package.  
-  
-6.  Right-click anywhere in the background of the Control Flow tab then click Properties.  
-  
-7.  In the Properties window, update the Name property to Lesson 6.  
-  
-8.  Click the box for the ID property, then click the dropdown arrow, and then click <Generate New ID>.  
-  
-### To add the completed Lesson 5 package  
-  
-1.  Open SQL Server Data Tools and open the SSIS Tutorial project.  
-  
-2.  In Solution Explorer, right-click SSIS Packages, and click Add Existing Package.  
-  
-3.  In the Add Copy of Existing Package dialog box, in Package location, select File system.  
-  
-4.  Click the browse (...) button, Lesson 5.dtsx on your machine, and then click **Open**.  
-  
-    To download all of the lesson packages for this tutorial, do the following.  
-  
-    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=275027)  
-  
-    2.  Click the **DOWNLOADS** tab.  
-  
-    3.  Click the SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.  
-  
-5.  Copy and paste the Lesson 5 package as described in steps 3-8 in the previous procedure.  
-  
-    After copying the Lesson 5 package, if you currently have the packages from the previous lessons in your solution, right-click each package from lessons 1-5 and click Exclude From Project. When done you should have only Lesson 6.dtsx in your solution.  
-  
-## Next Task in Lesson  
-[Step 2: Converting the Project to the Project Deployment Model](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+Use this procedure if you're copying the completed Lesson 5.  To copy the sample Lesson 5, see the next section.
+
+1.  If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools isn't already open, select **Start** > **All Programs** > **Microsoft SQL Server 2017**, and then select **SQL Server Data Tools**.
+
+2.  On the **File** menu, select **Open** > **Project/Solution**, select the **SSIS Tutorial** folder and select **Open**, and then double-click **SSIS Tutorial.sln**.
+
+3.  In **Solution Explorer**, right-click **Lesson 5.dtsx**, and then select **Copy**.
+
+4.  In **Solution Explorer**, right-click **SSIS Packages**, and then select **Paste**.
+
+    By default, the name of the copied package is **Lesson 5.dtsx**.
+
+5.  In **Solution Explorer**, double-click **Lesson 5.dtsx** to open the package
+
+6.  Right-click anywhere in the background of the **Control Flow** design surface and select **Properties**.
+
+7.  In the **Properties** window, change the **Name** property to **Lesson 6**.
+
+8.  Select the box for the **ID** property, select the drop-down arrow, and then select **\<Generate New ID>**.
+
+## Add the completed Lesson 5 package
+
+1.  Open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools and open the SSIS Tutorial project.
+
+2.  In **Solution Explorer**, right-click **SSIS Packages** and select **Add Existing Package**.
+
+3.  In the **Add Copy of Existing Package** dialog box, in **Package location**, select **File system**.
+
+4.  Select the browse **(...)** button, navigate to **Lesson 5.dtsx** on your machine, and then select **Open**.
+
+5.  Copy and paste the Lesson 5 package as described in steps 3-8 in the previous section.
+
+## Go to next task
+[Step 2: Convert the project to the Project Deployment Model](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   

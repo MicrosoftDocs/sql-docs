@@ -23,7 +23,7 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:int xs:QName"/>  
     </xs:simpleType>  
@@ -31,7 +31,7 @@ CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'
 GO  
   
 CREATE XML SCHEMA COLLECTION QNameLimitation2 AS N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:integer">  
    <xs:simpleType>  

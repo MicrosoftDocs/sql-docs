@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
- STATS_STREAM **=***stats_stream*  
+ STATS_STREAM **=**_stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  
@@ -243,7 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### Examples use the AdventureWorks database.  
 
 ### A. Using CREATE STATISTICS with SAMPLE number PERCENT  
- The following example creates the `ContactMail1` statistics, using a random sample of 5 percent of the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database.  
+ The following example creates the `ContactMail1` statistics, using a random sample of 5 percent of the `BusinessEntityID` and `EmailPromotion` columns of the `Person` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -252,7 +252,7 @@ CREATE STATISTICS ContactMail1
 ```  
   
 ### B. Using CREATE STATISTICS with FULLSCAN and NORECOMPUTE  
- The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and disables automatic recomputing of statistics.  
+ The following example creates the `NamePurchase` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Person` table and disables automatic recomputing of statistics.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -285,7 +285,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### E. Using CREATE STATISTICS with FULLSCAN and PERSIST_SAMPLE_PERCENT  
- The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and sets a 100 percent sampling percentage for all subsequent updates that do not explicitly specify a sampling percentage.  
+ The following example creates the `NamePurchase` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Person` table and sets a 100 percent sampling percentage for all subsequent updates that do not explicitly specify a sampling percentage.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  

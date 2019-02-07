@@ -78,14 +78,16 @@ DEFAULT <xml_namespace_uri>
   
 -   The XML namespace prefix `xmlns` cannot be declared.  
   
--   The XML namespace prefix `xml` cannot be overridden with a namespace, other than the namespaces URI `'https://www.w3.org/XML/1998/namespace'`, and this URI that cannot be assigned a different prefix.  
+-   The XML namespace prefix `xml` cannot be overridden with a namespace, other than the namespaces URI `'http://www.w3.org/XML/1998/namespace'`, and this URI that cannot be assigned a different prefix.  
   
 -   The XML namespace prefix `xsi` cannot be redeclared when the ELEMENTS XSINIL directive is being used on the query.  
-  
+
+-   It is not necesary to declare the 'http://www.w3.org/2001/XMLSchema-instance' to use xsi standard namespace. It is implicitly added by the XML/XPATH processor if not specified and xpath expressions can use the xsi prefix as long as the 'http://www.w3.org/2001/XMLSchema-instance' schema is properly declared in the xml document.
+
 -   URI string values are encoded according to the current database collation code page and are internally translated to Unicode.  
   
 -   The XML namespace URI will be white-space collapsed following the XSD white-space collapse rules that are used for **xs:anyURI**. Also, note that no entitization or deentitization are performed on XML namespace URI values.  
-  
+
 -   The XML namespace URI will be checked for XML 1.0 characters that are not valid, and an error will be raised if one is found (such as, U+0007).  
   
 -   The XML namespace URI (after all white space is collapsed) cannot be a zero-length string or an "invalid empty namespace URI" error occurs.  

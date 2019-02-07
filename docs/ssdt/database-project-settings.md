@@ -164,8 +164,7 @@ The **SQLCLR Build** property page contains advanced build settings for building
   
 2.  If the object is written in VB, you can first choose VB in the **Language** dropdown list, then click the **Advanced** button. Descriptions for VB options can be found at [Advanced Compiler Settings Dialog Box (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
-For more information, see [Build Configuration Properties](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
-  
+
 ## <a name="bkmk_build"></a>Build  
 You can choose a build configuration for each database project in your solution. By default there is a single configuration, but you can add custom configurations. You might choose to do this, for example, if you wanted a custom configuration in which you always deleted and re-created the database. In solutions that contain different project types, you can create a custom solution configuration that contains a particular build configuration for each project.  
   

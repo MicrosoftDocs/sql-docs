@@ -1,5 +1,5 @@
 ---
-title: "Subscription Properties - Subscriber | Microsoft Docs"
+title: "SQL Server Replication Subscription Properties - Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -8,6 +8,7 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newsubwizard.subproperties.subscriber.f1"
+  - "sql12.rep.newsubwizard.subproperties.publisher.f1"
 helpviewer_keywords: 
   - "Subscription Properties dialog box"
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
@@ -15,15 +16,54 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Subscription Properties - Subscriber
+# SQL Server Replication Subscription Properties 
+This section provides information on the **Subscription Properties** dialog box. 
+
+## Publisher properties 
+  The **Subscription Properties** dialog box at the Publisher allows you to view and set properties for push subscriptions. You can also view some properties for pull subscriptions, but the **Subscriptions Properties** dialog box at the Subscriber displays additional properties and allows properties to be modified.  
+  
+ Each property in the **Subscription Properties** dialog box includes a description. Click a property to see its description displayed at the bottom of the dialog box. This topic provides additional information on a number of properties, most of which are displayed at the Publisher only for push subscriptions. The properties are grouped into the following categories:  
+  
+-   Properties that apply to all subscriptions.    
+-   Properties that apply to transactional subscriptions.    
+-   Properties that apply to merge subscriptions.  
+  
+ If an option is displayed as read-only, it can only be set when the subscription is created. If you want to set options that are not available in the New Subscription Wizard, create the subscription with stored procedures. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md) and [Create a Push Subscription](create-a-push-subscription.md).  
+
+  
+### Options for all subscriptions  
+ **Security**  
+ Click the **Agent process account** row, and then click the properties button (**...**) to change the account under which the Distribution Agent or Merge Agent runs at the Distributor. To change the account under which the Distribution Agent or Merge Agent makes connections to the Subscriber, click **Subscriber connection**, and then click the properties button (**...**).  
+  
+ For more information about the permissions required for each agent, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
+  
+### Publisher Options for transactional subscriptions  
+ **Prevent transaction looping**  
+ Determines whether the Distribution Agent sends transactions that originated at the Subscriber back to the Subscriber. This option is used for bidirectional transactional replication. For more information, see [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
+  
+ **Updatable subscription**  
+ Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
+  
+### Options for merge subscriptions  
+ **Partition definition (HOST_NAME)**  
+ For a publication that uses parameterized filters, merge replication evaluates one of two system functions (or both if the filter references both functions) during synchronization to determine the data that a Subscriber should receive: **SUSER_SNAME()** or **HOST_NAME()**. By default, **HOST_NAME()** returns the name of the computer on which the Merge Agent is running, but you can override this value in the New Subscription Wizard. For more information on parameterized filters and overriding **HOST_NAME()**, see [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+  
+ **Subscription type** and **Priority**  
+ Displays whether the subscription is a client or server subscription (this cannot be changed after the subscription has been created). Server subscriptions can republish data to other Subscribers and can be assigned a priority for conflict resolution.  
+  
+ If you selected a subscription type of server in the New Subscription Wizard, the Subscriber is given a priority that is used during conflict resolution.  
+  
+ **Resolve conflicts interactively**  
+ Determines whether to use the Interactive Resolver user interface to resolve conflicts during merge synchronization. This requires a value of **Enable** for **Use Windows Synchronization Manager**. For more information, see [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+
+
+## Subscriber Properties
   The **Subscription Properties** dialog box at the Subscriber allows you to view and set properties for pull subscriptions.  
   
  Each property in the **Subscription Properties** dialog box includes a description. Click a property to see its description displayed at the bottom of the dialog box. This topic provides additional information on a number of properties. The properties are grouped into the following categories:  
   
--   Properties that apply to all subscriptions.  
-  
--   Properties that apply to transactional subscriptions.  
-  
+-   Properties that apply to all subscriptions.    
+-   Properties that apply to transactional subscriptions.   
 -   Properties that apply to merge subscriptions.  
   
  If an option is displayed as read-only, it can only be set when the subscription is created. If you want to set options that are not available in the New Subscription Wizard, create the subscription with stored procedures. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md) and [Create a Push Subscription](create-a-push-subscription.md).  
@@ -31,19 +71,16 @@ manager: craigg
 > [!NOTE]  
 >  If a Distribution Agent or Merge Agent job has not yet been created for the subscription, many subscription properties are not displayed. To create an agent job for a pull subscription, Execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) (for a subscription to a snapshot or transactional publication) or [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (for a subscription to a merge publication).  
   
-## Options for all subscriptions  
+### Options for all subscriptions  
  **Initialize published data from a snapshot**  
  Determines whether subscriptions are initialized with a snapshot (the default) or through another method. For more information on initializing subscriptions, see [Initialize a Subscription](initialize-a-subscription.md).  
   
  **Snapshot location**  
  Determines the location from which snapshot files are accessed during initialization or reinitialization. The location can be one of the following values:  
   
--   **Default location**: the default location, which is defined when configuring a Distributor. For more information, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md).  
-  
--   **Alternate folder**: an alternate location, which can be specified in the **Publication Properties** dialog box. For more information, see [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).  
-  
+-   **Default location**: the default location, which is defined when configuring a Distributor. For more information, see [Specify the Default Snapshot Location](snapshot-options.md#snapshot-folder-locations).    
+-   **Alternate folder**: an alternate location, which can be specified in the **Publication Properties** dialog box. For more information, see [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
 -   **Dynamic snapshot folder**: a snapshot location for merge publications that use parameterized row filters. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
-  
 -   **FTP folder**: a folder accessible to a File Transfer Protocol (FTP) server. For more information, see [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md).  
   
  **Snapshot folder**  
@@ -55,19 +92,17 @@ manager: craigg
  **Security**  
  Click the **Agent process account** row, and then click the properties button (**...**) to change the account under which the Distribution Agent or Merge Agent runs at the Subscriber. The security options related to connections depend on the type of subscription:  
   
--   For subscriptions to a transactional publication: to change the account under which the Distribution Agent makes connections to the Distributor, click **Distributor Connection**, and then click the properties button (**...**).  
-  
+-   For subscriptions to a transactional publication: to change the account under which the Distribution Agent makes connections to the Distributor, click **Distributor Connection**, and then click the properties button (**...**).    
 -   For immediate updating subscriptions to a transactional publication: in addition to the Distributor connection described above, you can change the method used to propagate changes from the Subscriber to the Publisher: click **Publisher Connection**, and then click the properties button (**...**).  
-  
 -   For subscriptions to merge publications click **Publisher Connection**, and then click the properties button (**...**).  
   
  For more information about the permissions required for each agent, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
-## Options for transactional subscriptions  
+### Options for transactional subscriptions  
  **Updatable subscription**  
  Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
-## Options for merge subscriptions  
+### Options for merge subscriptions  
  **Partition definition (HOST_NAME)**  
  For a publication that uses parameterized filters, merge replication evaluates one of two system functions (or both if the filter references both functions) during synchronization to determine the data that a Subscriber should receive: **SUSER_SNAME()** or **HOST_NAME()**. By default, **HOST_NAME()** returns the name of the computer on which the Merge Agent is running, but you can override this value in the New Subscription Wizard. For more information on parameterized filters and overriding **HOST_NAME()**, see [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
@@ -84,10 +119,8 @@ manager: craigg
   
  If you select **True** for **Use Web Synchronization**:  
   
--   Enter the full address to the IIS server in **Web server address**.  
-  
--   Click the **Web Server Connection** row, and then click the properties button (**...**) to set or change the account under which the Subscriber connects to the IIS server.  
-  
+-   Enter the full address to the IIS server in **Web server address**.   
+-   Click the **Web Server Connection** row, and then click the properties button (**...**) to set or change the account under which the Subscriber connects to the IIS server.   
 -   Change **Web server timeout** if necessary. The timeout is the length of time, in seconds, before a Web synchronization request expires.  
   
  For more information about configuration, see [Configure Web Synchronization](configure-web-synchronization.md).  

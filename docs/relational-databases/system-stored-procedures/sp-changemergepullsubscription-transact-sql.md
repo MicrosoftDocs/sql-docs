@@ -36,19 +36,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with a default of %.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'**_publisher_**'**  
  Is the name of the Publisher. *publisher*is **sysname**, with a default of %.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'**_publisher_db_**'**  
  Is the name of the Publisher database. *publisher_db*is **sysname**, with a default of %.  
   
- [ **@property=**]  **'***property***'**  
+ [ **@property=**]  **'**_property_**'**  
  Is the name of the property to change. *property* is **sysname**, and can be one of the values in the table.  
   
- [ **@value=**]  **'***value***'**  
+ [ **@value=**]  **'**_value_**'**  
  Is the new value for the specified property. *value*is **nvarchar(255)**, and can be one of the values in the table.  
   
 |Property|Value|Description|  

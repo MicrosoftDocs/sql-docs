@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "database audit specification"
   - "CREATE DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)

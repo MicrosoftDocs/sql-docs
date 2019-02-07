@@ -1,7 +1,7 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2018"
+ms.date: "01/16/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: replication
@@ -28,7 +28,9 @@ This article explains how to set up a SQL Server replication distribution databa
 SQL Server 2017 CU6 and SQL Server 2016 SP2-CU3 introduces support for replication distribution database in an AG through the following mechanisms:
 
 - The distribution database AG needs to have a listener. When the publisher adds the distributor, it uses the listener name as the distributor name.
-- The replication jobs are created with the listener name as the distributor name.
+- The replication jobs are created with the listener name as the distributor name. Replication snapshot, log reader and distribution agent (push subscription) jobs created on the distribution server gets created on all secondary replicas of the AG for Distribution DB.
+ >[!NOTE]
+ >Distribution agent jobs for pull susbcriptions are created on the subscriber server and not on the distribution server. 
 - A new job monitors the state (primary or secondary in AG) of the distribution databases and disables or enables the replication jobs based on the distribution databases state.
 
 After a distribution database in the AG is configured based on the steps described below, replication configuration and run time jobs can run properly before and after distribution database AG failover.
@@ -42,7 +44,7 @@ After a distribution database in the AG is configured based on the steps describ
 - Adding or removing nodes to existing distribution database AG.
 - A distributor may have multiple distribution databases. Each distribution database can be in its own AG and can be not in any AG. Multiple distribution databases can share an AG.
 - Publisher and distributor need to be on separate SQL Server instances.
-- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port. This alias would need to created on all the publisher, distributor and subsciber replicas (for subscribers running in pull mode). 
+- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port.
 
 ## Limitations or exclusions
 
@@ -230,7 +232,7 @@ This example removes a distributor from a current distribution database AG while
 
 ## Remove a publisher from distribution database AG
 
-This example removes a publisher from a distributor's current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
+This example removes a publisher from a distributor’s current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
 
 ### Publisher workflow
 

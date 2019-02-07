@@ -95,7 +95,7 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
   
     -   To configure read-only routing for the secondary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the SECONDARY_ROLE option, as follows:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://**_system-address_**:**_port_**')**  
   
          The parameters of the read-only routing URL are as follows:  
   
@@ -113,7 +113,7 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
   
     -   To configure read-only routing for the primary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the PRIMARY_ROLE option, as follows:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('***server***'** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('**_server_**'** [ **,**...*n* ] **))**  
   
          where, *server* identifies a server instance that hosts a read-only secondary replica in the availability group.  
   
@@ -183,13 +183,13 @@ GO
   
 2.  When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. The relevant parameters are as follows:  
   
-    -   To configure read-only routing for the secondary role, specify the **ReadonlyRoutingConnectionUrl"***url***"** parameter.  
+    -   To configure read-only routing for the secondary role, specify the **ReadonlyRoutingConnectionUrl"**_url_**"** parameter.  
   
          where, *url* is the connectivity fully-qualified domain name (FQDN) and port to use when routing to the replica for read-only connections. For example:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          For more information, see [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
-    -   To configure connection access for the primary role, specify **ReadonlyRoutingList"***server***"** [ **,**...*n* ], where *server* identifies a server instance that hosts a read-only secondary replica in the availability group. For example:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   To configure connection access for the primary role, specify **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ], where *server* identifies a server instance that hosts a read-only secondary replica in the availability group. For example:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  You must set the read-only routing URL of a replica before configuring its read-only routing list.  

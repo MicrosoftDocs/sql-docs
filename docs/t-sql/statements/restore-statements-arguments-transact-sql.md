@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "RESTORE statement, arguments"
   - "RESTORE statement"
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # RESTORE Statements - Arguments (Transact-SQL)
@@ -399,7 +399,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 ##### Monitoring Options  
  These options enable you to monitor the transfer of data transfer from the backup device.  
   
- STATS [ **=** *percentage* ]  
+ STATS [ **=** _percentage_ ]  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Displays a message each time another percentage completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed (approximately).  

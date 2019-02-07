@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/06/2018"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "names [SQL Server], logins"
   - "modifying login accounts"
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -41,7 +41,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />logical server](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -203,22 +203,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### C. Changing the password of a login when logged in as the login 
+ If you are attempting to change the password of the login that you're currently logged in with and you do not have the `ALTER ANY LOGIN` permission you must specify the `OLD_PASSWORD` option.    
   
-### C. Changing the name of a login  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### D. Changing the name of a login  
  The following example changes the name of login `Mary5` to `John2`.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### D. Mapping a login to a credential  
+### E. Mapping a login to a credential  
  The following example maps the login `John2` to the credential `Custodian04`.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### E. Mapping a login to an Extensible Key Management credential  
+### F. Mapping a login to an Extensible Key Management credential  
  The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.  
   
   
@@ -272,11 +279,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />logical server \*_**|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />single database/elastic pool \*_**|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## Azure SQL Database logical server
+## Azure SQL Database single database/elastic pool
 
 ## SQL Server
  
@@ -433,16 +440,16 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## Azure SQL Database Managed Instance
+## Azure SQL Database managed instance
 
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database Managed Instance
+-- Syntax for SQL Server and Azure SQL Database managed instance
   
 ALTER LOGIN login_name   
     {   
@@ -478,10 +485,10 @@ ALTER LOGIN login_name
 ```  
 
 > [!IMPORTANT]
-> Azure AD logins for SQL Database Managed Instance is in **public preview**.
+> Azure AD logins for SQL Database managed instance is in **public preview**.
   
 ```  
--- Syntax for Azure SQL Database Managed Instance using Azure AD logins
+-- Syntax for Azure SQL Database managed instance using Azure AD logins
   
 ALTER LOGIN login_name   
   {   
@@ -640,7 +647,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.  
   
  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database managed instance.
   
 ```sql  
 ALTER LOGIN Mary5  
@@ -669,7 +676,7 @@ GO
 ### G. Changing the password of a login using HASHED  
  The following example changes the password of the `TestUser` login to an already hashed value.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database managed instance.
   
 ```sql  
 ALTER LOGIN TestUser WITH   
@@ -698,7 +705,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -859,7 +866,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

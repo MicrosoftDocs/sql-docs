@@ -13,7 +13,7 @@ featureFlags:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -432,7 +432,7 @@ featureFlags:
                                 </a>
                             </li> 
                             <li>
-                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017/">
+                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

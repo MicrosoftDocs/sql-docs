@@ -8,6 +8,7 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
@@ -72,7 +73,7 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
-## Define environment variables
+## <a id="env"></a> Define environment variables
 
 The cluster configuration can be customized using a set of environment variables that are passed to the `mssqlctl create cluster` command. Most of the environment variables are optional with default values as per below. Note that there are environment variables like credentials that require user input.
 
@@ -242,7 +243,7 @@ kubectl get svc -n <your-cluster-name>
 
 Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of **mssqlctl** that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
 
-1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-databse.md). For HDFS, you [can copy the data out with **curl**](data-ingestion-curl.md).
+1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy the data out with **curl**](data-ingestion-curl.md).
 
 1. Delete the old cluster with the `mssqlctl delete cluster` command.
 
@@ -250,10 +251,27 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
     mssqlctl delete cluster <old-cluster-name>
    ```
 
-1. Install the latest version of **mssqlctl**.
+1. Uninstall any old versions of **mssqlctl**.
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > You should not install the new version of **mssqlctl** without uninstalling any older versions first.
+
+1. Install the latest version of **mssqlctl**. 
+   
+   **Windows:**
+
+   ```powershell
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   ```
+
+   **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
 
    > [!IMPORTANT]

@@ -57,11 +57,11 @@ ms.author: maghan
   
 |Database|Example name||  
 |--------------|------------------|-|  
-|Catalog database|ReportingService_[service application GUID] **(\*)**|User migrates.|  
-|Temp database|ReportingService_[service application GUID]TempDB **(\*)**|User migrates.|  
+|Catalog database|ReportingService_[service application GUID] **(&#42;)**|User migrates.|  
+|Temp database|ReportingService_[service application GUID]TempDB **(&#42;)**|User migrates.|  
 |Alerting database|ReportingService_[service application GUID]_Alerting|Created when a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application is created.|  
   
- **(\*)** The example names shown in the table follow the naming convention SSRS uses when you create a new SSRS service application. If you are migrating from a different server, your catalog and tempDBs will have the names from the original installation.  
+ **(&#42;)** The example names shown in the table follow the naming convention SSRS uses when you create a new SSRS service application. If you are migrating from a different server, your catalog and tempDBs will have the names from the original installation.  
   
 ####  <a name="bkmk_backup_operations"></a> Backup operations  
  This section describes the types of information you need to migrate and the tools or process you use to complete the backup.  

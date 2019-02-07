@@ -329,7 +329,7 @@ GO
  
 ## <a name="ClusterDTC"></a>8.	Prepare cluster resources
 
-This script will prepare the DTC dependent resources: Disk and IP.  The shared storage will be added to the Windows Cluster.  Network resources will be created and then the DTC will be created and made as a resource to the Availability Group.  Run the following PowerShell Script on `SQLNODE1`.
+This script will prepare the DTC dependent resources: Disk and IP.  The shared storage will be added to the Windows Cluster.  Network resources will be created and then the DTC will be created and made as a resource to the Availability Group.  Run the following PowerShell Script on `SQLNODE1`. Thanks [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) for the script!
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server

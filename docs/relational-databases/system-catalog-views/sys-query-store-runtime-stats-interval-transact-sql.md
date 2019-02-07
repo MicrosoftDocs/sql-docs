@@ -1,7 +1,7 @@
 ---
 title: "sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/29/2018"
+ms.date: "01/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -30,10 +30,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_interval_id**|**bigint**|Primary key.|  
-|**start_time**|**datetimeoffset**|Start time of the interval.|  
-|**end_time**|**datetimeoffset**|End time of the interval.|  
-|**comment**|**nvarchar(32)**|Always NULL.|  
+|**runtime_stats_interval_id**|**bigint**|Primary key.|
+|**start_time**|**datetimeoffset**|Start time of the interval.|
+|**end_time**|**datetimeoffset**|End time of the interval.|
+|**comment**|**nvarchar(32)**|Always NULL.|
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

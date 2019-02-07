@@ -43,7 +43,7 @@ manager: craigg
   
  ![Web synchronization components and data flow](../../relational-databases/replication/media/web-sync01.gif "Web synchronization components and data flow")  
   
- Web synchronization is an option only for pull subscriptions; therefore, a Merge Agent will always run on the Subscriber. This Merge Agent can be the standard Merge Agent, the Merge Agent ActiveX control, or an application that provides synchronization through Replication Management Objects (RMO). To specify the location of the computer that is running IIS, use the **-InternetUrl** parameter for the Merge Agent.  
+ Web synchronization is an option only for pull subscriptions; therefore, a Merge Agent will always run on the Subscriber. This Merge Agent can be the standard Merge Agent, the Merge Agent ActiveX control, or an application that provides synchronization through Replication Management Objects (RMO). To specify the location of the computer that is running IIS, use the **–InternetUrl** parameter for the Merge Agent.  
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) is configured on the computer that is running IIS and is responsible for handling messages that are sent to the server from the Publisher and Subscribers. Each node in the topology handles the XML data stream by using the Merge Replication Reconciler (Replrec.dll).  
   

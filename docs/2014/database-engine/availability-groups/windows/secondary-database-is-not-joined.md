@@ -1,7 +1,7 @@
 ---
 title: "Secondary database is not joined | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 01/09/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: high-availability
@@ -36,7 +36,7 @@ manager: craigg
  This secondary database is not joined to the availability group. The configuration of this secondary database is incomplete.  
   
 ## Possible Solution  
- Use Transact-SQL, PowerShell, or SQL Server Management Studio to join the secondary replica to the availability group. For more information about joining secondary replicas to availability groups, see [Joining a Secondary Replica to an Availability Group (SQL Server)](https://msdn.microsoft.com/en-sg/library/ff878473\(en-us,SQL.110\).aspx).  
+ Use Transact-SQL, PowerShell, or SQL Server Management Studio to join the secondary replica to the availability group. For more information about joining secondary replicas to availability groups, see [Joining a Secondary Replica to an Availability Group (SQL Server)](https://msdn.microsoft.com/library/ff878473\(en-us,SQL.110\).aspx).  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

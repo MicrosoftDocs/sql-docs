@@ -13,6 +13,7 @@ ms.custom: "sql-linux, seodec18"
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+zone_pivot_groups: cs1-command-shell
 ---
 # Quickstart: Run SQL Server container images with Docker
 
@@ -52,13 +53,17 @@ any changes to one section should be duplicated in the other-->
 
 1. Pull the SQL Server 2017 Linux container image from Microsoft Container Registry.
 
+::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+::: zone-end
 
+::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+::: zone-end
 
    > [!TIP]
    > If you want to try the SQL Server 2019 preview image, see the [SQL Server 2019 preview version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
@@ -69,17 +74,22 @@ any changes to one section should be duplicated in the other-->
 
 2. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS) or elevated PowerShell command prompt.
 
+
+::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+::: zone-end
 
+::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+::: zone-end
 
    > [!NOTE]
    > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols. You can examine the error log by executing the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
@@ -99,13 +109,18 @@ any changes to one section should be duplicated in the other-->
 
 3. To view your Docker containers, use the `docker ps` command.
 
+
+::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+::: zone-end
 
+::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+::: zone-end
 
    You should see output similar to the following screenshot:
 
@@ -134,13 +149,17 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 1. Pull the SQL Server 2019 preview Linux container image from Docker Hub.
 
+::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+::: zone-end
 
+::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+::: zone-end
 
    > [!TIP]
    > This quickstart uses the SQL Server 2019 preview Docker image. If you want to run the SQL Server 2017 image, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
@@ -151,17 +170,21 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 2. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS) or elevated PowerShell command prompt.
 
+::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+::: zone-end
 
+::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+::: zone-end
 
    > [!NOTE]
    > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols. You can examine the error log by executing the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
@@ -181,13 +204,17 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 3. To view your Docker containers, use the `docker ps` command.
 
+::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+::: zone-end
 
+::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+::: zone-end
 
    You should see output similar to the following screenshot:
 
@@ -219,19 +246,25 @@ The following steps use the SQL Server command-line tool, **sqlcmd**, inside the
 
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `sql1` is name specified by the `--name` parameter when you created the container.
 
+::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 "bash"
    ```
+::: zone-end
 
+::: zone pivot="cs1-powershell"
    ```PowerShell
    docker exec -it sql1 "bash"
    ```
+::: zone-end
 
 1. Once inside the container, connect locally with sqlcmd. Sqlcmd is not in the path by default, so you have to specify the full path.
 
+::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+::: zone-end
 
    > [!TIP]
    > You can omit the password on the command-line to be prompted to enter it.
@@ -328,13 +361,17 @@ The following steps use **sqlcmd** outside of your container to connect to SQL S
 
 1. Run sqlcmd specifying the IP address and the port mapped to port 1433 in your container. In this example, that is the same port, 1433, on the host machine. If you specified a different mapped port on the host machine, you would use it here.
 
+::: zone pivot="cs1-bash"
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+::: zone-end
 
+::: zone pivot="cs1-powershell"
    ```PowerShell
    sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
+::: zone-end
 
 1. Run Transact-SQL commands. When finished, type `QUIT`.
 
@@ -349,15 +386,19 @@ Other common tools to connect to SQL Server include:
 
 If you want to remove the SQL Server container used in this tutorial, run the following commands:
 
-```bash
+::: zone pivot="cs1-bash"
+   ```bash
 sudo docker stop sql1
 sudo docker rm sql1
-```
+   ```
+::: zone-end
 
-```PowerShell
+::: zone pivot="cs1-powershell"
+   ```PowerShell
 docker stop sql1
 docker rm sql1
-```
+   ```
+::: zone-end
 
 > [!WARNING]
 > Stopping and removing a container permanently deletes any SQL Server data in the container. If you need to preserve your data, [create and copy a backup file out of the container](tutorial-restore-backup-in-sql-server-container.md) or use a [container data persistence technique](sql-server-linux-configure-docker.md#persist).

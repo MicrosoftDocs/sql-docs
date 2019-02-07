@@ -4,21 +4,21 @@ ms.custom: ""
 ms.date: "02/06/2019"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
-ms.reviewer: ""
+ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
-  - "WORKLOAD GROUP"
-  - "WORKLOAD_GROUP_TSQL"
-  - "CREATE WORKLOAD GROUP"
-  - "CREATE_WORKLOAD_GROUP_TSQL"
+  - "WORKLOAD CLASSIFIER"
+  - "WORKLOAD_CLASSIFIER_TSQL"
+  - "CREATE WORKLOAD CLASSIFIER"
+  - "CREATE_WORKLOAD_CLASSIFIER_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "CREATE WORKLOAD GROUP statement"
-ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-author: CarlRabeler
-ms.author: carlrab
+  - "CREATE WORKLOAD CLASSIFIER statement"
+ms.assetid: 
+author: RonOrtloff
+ms.author: rortloff
 manager: craigg
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL)
@@ -96,7 +96,7 @@ GO
   
 ## See Also  
  
- [DROP WORKLOAD CLASSIFIERS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
+ [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)   
  
   
   

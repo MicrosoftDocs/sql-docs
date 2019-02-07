@@ -597,7 +597,7 @@ void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
 
 ### xadefs.h
 
-```xadefs.h
+```
 // xadefs.h : XA specific definitions.
 //
 

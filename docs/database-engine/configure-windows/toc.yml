@@ -253,6 +253,8 @@
     href: determine-whether-the-database-engine-is-installed-and-started.md
   - name: Connect to the Database Engine Using Extended Protection
     href: connect-to-the-database-engine-using-extended-protection.md
+  - name: Certificate Management (SQL Server Configuration Manager)
+    href: manage-certificates.md
   - name: Register a Service Principal Name for Kerberos Connections
     href: register-a-service-principal-name-for-kerberos-connections.md
 - name: Client Network Configuration

@@ -357,7 +357,7 @@ The following illustration shows the structure of a nonclustered index in a sing
   
 -   Cover the query.  
   
-     Performance gains are achieved when the index contains all columns in the query (either . The query optimizer can locate all the column values within the index; table or clustered index data is not accessed resulting in fewer disk I/O operations. Use index with [included columns](#Included_Columns) to add covering columns instead of creating a wide index key.  
+     Performance gains are achieved when the index contains all columns in the query. The query optimizer can locate all the column values within the index; table or clustered index data is not accessed resulting in fewer disk I/O operations. Use index with [included columns](#Included_Columns) to add covering columns instead of creating a wide index key.  
   
      If the table has a clustered index, the column or columns defined in the clustered index are automatically appended to the end of each nonclustered index on the table. This can produce a covered query without specifying the clustered index columns in the definition of the nonclustered index. For example, if a table has a clustered index on column `C`, a nonclustered index on columns `B` and `A` will have as its key values columns `B`, `A`, and `C`.  
       

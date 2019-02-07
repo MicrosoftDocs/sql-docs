@@ -43,7 +43,7 @@
       href: ../sql-server/failover-clusters/toc.yml
     - name: Database Mirroring
       href: database-mirroring/toc.yml
-    - name: Log Shipping +
+    - name: Log Shipping 
       href: log-shipping/toc.yml
 - name: Database Engine Features and Tasks
   href: database-engine-features-and-tasks.md

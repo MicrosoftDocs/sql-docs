@@ -98,7 +98,7 @@ WITH (
  *file_format_name*  
  Specifies a name for the external file format.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET]
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT]
  Specifies the format of the external data.
   
    -   PARQUET

@@ -123,7 +123,7 @@ When created with the **CACHE** option, an unexpected shutdown (such as a power 
   
 3.  The calculated value is returned to the calling statement.  
   
- **CACHE option when the cache is exhausted**  
+**CACHE option when the cache is exhausted**  
   
  The following process occurs every time a sequence object is requested to generate the next value for the **CACHE** option if the cache has been exhausted:  
   
@@ -133,7 +133,7 @@ When created with the **CACHE** option, an unexpected shutdown (such as a power 
   
 3.  The system table row for the sequence object is locked, and the value calculated in step 2 (the last value) is written to the system table. A cache-exhausted xevent is fired to notify the user of the new persisted value.  
   
- **NO CACHE option**  
+**NO CACHE option**  
   
  The following process occurs every time that a sequence object is requested to generate the next value for the **NO CACHE** option:  
   

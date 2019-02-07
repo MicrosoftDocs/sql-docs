@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/02/2018"
+ms.date: "02/06/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -45,7 +45,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />logical server](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -282,15 +282,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />logical server \*_** &nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## Azure SQL Database logical server
+## Azure SQL Database single database/elastic pool
 
 ## Overview
 
-In Azure SQL Database, use this statement to modify a database on a logical server. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
+In Azure SQL Database, use this statement to modify a database on a single database/elastic pool. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.  
 
@@ -303,68 +303,73 @@ Provides the syntax and related information for changing the attributes of a dat
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbls)  
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
-## Syntax 
+## Syntax
 
-```  
+```
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {  
     MODIFY NAME = new_database_name  
-  | MODIFY ( <edition_options> [, ... n] ) 
-  | SET { <option_spec> [ ,... n ] WITH <termination>} 
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
+  | MODIFY ( <edition_options> [, ... n] )
+  | SET { <option_spec> [ ,... n ] WITH <termination>}
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ADD SECONDARY ON SERVER <partner_server_name>  
     [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-[;] 
+[;]
 
-<edition_options> ::= 
+<edition_options> ::=
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
-  | SERVICE_OBJECTIVE = 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'}
+  | SERVICE_OBJECTIVE =
        {  <service-objective>
-       | { ELASTIC_POOL (name = <elastic_pool_name>) } 
+       | { ELASTIC_POOL (name = <elastic_pool_name>) }
        } 
 }  
 
 <add-secondary-option> ::=  
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
-     | SERVICE_OBJECTIVE = 
-       {  <service-objective> 
-       | { ELASTIC_POOL ( name = <elastic_pool_name>) } 
-       } 
+     | SERVICE_OBJECTIVE =
+       {  <service-objective>
+       | { ELASTIC_POOL ( name = <elastic_pool_name>) }
+       }
    }  
 
-<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+<service-objective> ::=  { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
-      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
-      | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
+       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
+       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
+       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
+       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
+       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
+       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
+       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
+       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
+       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | { ELASTIC_POOL(name = <elastic_pool_name>) } 
       }
 
-<option_spec> ::= 
+<option_spec> ::=
 {  
-    <auto_option> 
-  | <change_tracking_option> 
-  | <cursor_option> 
+    <auto_option>
+  | <change_tracking_option>
+  | <cursor_option>
   | <db_encryption_option>  
-  | <db_update_option> 
-  | <db_user_access_option> 
+  | <db_update_option>
+  | <db_user_access_option>
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
   | <snapshot_option>  
   | <sql_option> 
-  | <target_recovery_time_option> 
+  | <target_recovery_time_option>
   | <termination>  
   | <temporal_history_retention>  
 }  
@@ -372,7 +377,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## Arguments
 
-*database_name*  
+*database_name*
 
 Is the name of the database to be modified.  
   
@@ -382,21 +387,21 @@ Designates that the current database in use should be altered.
   
 MODIFY NAME **=**_new_database_name_  
 
-Renames the database with the name specified as *new_database_name*. The following example changes the name of a database `db1` to `db2`:   
+Renames the database with the name specified as *new_database_name*. The following example changes the name of a database `db1` to `db2`:
 
-```sql  
+```sql
 ALTER DATABASE db1  
     MODIFY Name = db2 ;  
-```    
+```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
 
 Changes the service tier of the database. 
 
 The following example changes edition to `premium`:
 
 ```sql
-ALTER DATABASE current 
+ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ```
 
@@ -407,7 +412,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. 
 
 > [!NOTE]
-> The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Hyperscale tier databases grow as needed, up to 100 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
+> The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Hyperscale service tier databases grow as needed, up to 100 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
 
 **DTU-based model**
 
@@ -438,32 +443,56 @@ Specifies the maximum size of the database. The maximum size must comply with th
 \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU-based model, see [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  
 
 The MAXSIZE value for the DTU-based model, if specified, has to be a valid value shown in the table above for the service tier specified.
- 
+
 **vCore-based model**
 
-**General Purpose service tier - Generation 4 compute platform**
+**General Purpose service tier - Generation 4 compute platform (part 1)**
 
-|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
-|:--- | --: |--: |--: |--: |--: |--:|
-|Max data size (GB)|1024|1024|1536|3072|4096|4096|
+|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|Max data size (GB)|1024|1024|1024|1536|1536|1536|
 
-**General Purpose service tier - Generation 5 compute platform**
+**General Purpose service tier - Generation 4 compute platform (part 2)**
 
-|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|Max data size (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
+|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|Max data size (GB)|1536|3072|3072|3072|4096|4096|
 
-**Business Critical service tier - Generation 4 compute platform**
+**General Purpose service tier - Generation 5 compute platform (part 1)**
 
-|Performance level|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |--: |
+|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|Max data size (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**General Purpose service tier - Generation 5 compute platform (part 2)**
+
+|MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
+
+**Business Critical service tier - Generation 4 compute platform (part 1)**
+
+|Performance level|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Max data size (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical service tier - Generation 5 compute platform**
+**Business Critical service tier - Generation 4 compute platform (part 2)**
 
-|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|Max data size (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
+|Performance level|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
+|Max data size (GB)|1024|1024|1024|1024|1024|1024|
+
+**Business Critical service tier - Generation 5 compute platform (part 1)**
+
+|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
+|Max data size (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**Business Critical service tier - Generation 5 compute platform (part 2)**
+
+|MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
+|:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
+|Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
 If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for  vCore-based model, see [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
@@ -482,9 +511,15 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-Specifies the performance level. Available values for service objective are:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`,`GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,`HS_Gen5_4`,`HS_Gen5_8`,`HS_Gen5_16`,`HS_Gen5_24`,`HS_Gen5_32`,`HS_Gen5_48`,`HS_Gen5_80`.  
+- **For single and pooled databases**
 
-For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com. 
+  - Specifies the performance level. Available values for service objective are:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`.
+
+  - **For single databases in the Hyperscale service tier**
+
+  Specifies the performance level. Available values for service objective are:  `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
+
+For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
   
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
 
@@ -504,7 +539,7 @@ WITH ALLOW_CONNECTIONS { **ALL** | NO }
 
 When ALLOW_CONNECTIONS is not specified, it is set to ALL by default. If it is set ALL, it is a read-only database that allows all logins with the appropriate permissions to connect.  
   
-WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,`GP_Gen5_4`,`GP_Gen5_8`,`GP_Gen5_16`,`GP_Gen5_24`,`GP_Gen5_32`,`GP_Gen5_48`,`GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80` }  
+WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }  
 
 When SERVICE_OBJECTIVE is not specified, the secondary database is created at the same service level as the primary database. When SERVICE_OBJECTIVE is  specified, the secondary database is created at the specified level. This option supports creating geo-replicated secondaries with less expensive service levels. The SERVICE_OBJECTIVE specified must be within the same edition as the source. For example, you cannot specify S0 if the edition is premium.  
   
@@ -513,29 +548,29 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
 When ELASTIC_POOL is not specified, the secondary database is not created in an elastic pool. When ELASTIC_POOL is specified, the secondary database is created in the specified pool.  
   
 > [!IMPORTANT]  
->  The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server.  
+> The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server.  
   
 REMOVE SECONDARY ON SERVER  \<partner_server_name>  
 
 Removes the specified geo-replicated secondary database on the specified server. The command is executed on the master database on the server hosting the primary database.  
   
 > [!IMPORTANT]  
->  The user executing the REMOVE SECONDARY command must be DBManager on the primary server.  
+> The user executing the REMOVE SECONDARY command must be DBManager on the primary server.  
   
 FAILOVER  
 
 Promotes the secondary database in geo-replication partnership on which the command is executed to become the primary and demotes the current primary to become the new secondary. As part of this process, the geo-replication mode is temporarily switched from asynchronous mode to synchronous mode. During the failover process:  
   
-1.  The primary stops taking new transactions.  
+1. The primary stops taking new transactions.  
   
-2.  All outstanding transactions are flushed to the secondary.  
+2. All outstanding transactions are flushed to the secondary.  
   
-3.  The secondary becomes the primary and begins asynchronous geo-replication with the old primary / the new secondary.  
+3. The secondary becomes the primary and begins asynchronous geo-replication with the old primary / the new secondary.  
   
 This sequence ensures that no data loss occurs. The period during which both databases are unavailable is on the order of 0-25 seconds while the roles are switched. The total operation should take no longer than about one minute. If the primary database is unavailable when this command is issued, the command fails with an error message indicating that the primary database is not available. If the failover process does not complete and appears stuck, you can use the force failover command and accept data loss - and then, if you need to recover the lost data, call devops (CSS) to recover the lost data.  
   
 > [!IMPORTANT]  
->  The user executing the FAILOVER command must be DBManager on both the primary server and the secondary server.  
+> The user executing the FAILOVER command must be DBManager on both the primary server and the secondary server.  
   
 FORCE_FAILOVER_ALLOW_DATA_LOSS  
 
@@ -552,9 +587,9 @@ During a forced failover:
 4. If there are additional secondaries, they are automatically reconfigured to become secondaries of the new primary. This process is asynchronous and there may be a delay until this process completes. Until the reconfiguration has completed, the secondaries continue to be secondaries of the old primary.  
   
 > [!IMPORTANT]  
->  The user executing the FORCE_FAILOVER_ALLOW_DATA_LOSS command must be DBManager on both the primary server and the secondary server.  
+> The user executing the FORCE_FAILOVER_ALLOW_DATA_LOSS command must be DBManager on both the primary server and the secondary server.
   
-## Remarks  
+## Remarks
 
 To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
 To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -563,20 +598,20 @@ The ALTER DATABASE statement must run in autocommit mode (the default transactio
   
 Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
-The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.    
+The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.
   
-## Viewing Database Information  
+## Viewing Database Information
 
 You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.  
   
-## Permissions  
+## Permissions
 
 Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.  
   
 > [!IMPORTANT]  
->  The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.  
+> The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.
   
-## Examples  
+## Examples
   
 ### A. Check the edition options and change them:
 
@@ -591,39 +626,47 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ### B. Moving a database to a different elastic pool  
 
 Moves an existing database into a pool named pool1:  
-  
-```sql  
-ALTER DATABASE db1   
+
+```sql
+ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
-```  
-  
+```
+
 ### C. Add a Geo-Replication Secondary  
 
 Creates a readable secondary database db1 on server `secondaryserver` of the db1 on the local server.  
   
-```sql  
-ALTER DATABASE db1   
-ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = ALL )  
-```  
-  
+```sql
+ALTER DATABASE db1
+ADD SECONDARY ON SERVER secondaryserver
+WITH ( ALLOW_CONNECTIONS = ALL )
+```
+
 ### D. Remove a Geo-Replication Secondary  
- 
+
 Removes the secondary database db1 on server `secondaryserver`.  
-  
-```sql  
-ALTER DATABASE db1   
-REMOVE SECONDARY ON SERVER testsecondaryserver   
-```  
-  
+
+```sql
+ALTER DATABASE db1
+REMOVE SECONDARY ON SERVER testsecondaryserver
+```
+
 ### E. Failover to a Geo-Replication Secondary  
 
 Promotes a secondary database db1 on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`.  
   
-```sql  
+```sql
 ALTER DATABASE db1 FAILOVER  
-```  
-  
+```
+
+### F. Update a single database to service tier S0 (standard edition, performance level 0)
+
+Updates a single database to the standard edition (service tier) with a performance level of S0 and a maximum size of 250 GB.
+
+```sql
+ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
+```
+
 ## See also
   
 [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbls)   
@@ -647,15 +690,15 @@ ALTER DATABASE db1 FAILOVER
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## Azure SQL Database Managed Instance
+## Azure SQL Database managed instance
 
 ## Overview
 
-In Azure SQL Database Managed Instance, use this statement to set database options.
+In Azure SQL Database managed instance, use this statement to set database options.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.  
 
@@ -773,7 +816,7 @@ ALTER DATABASE WideWorldImporters
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -895,7 +938,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 

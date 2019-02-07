@@ -34,9 +34,11 @@ If the insert statement is not prepared, no conversion is performed in the drive
 If the statement is prepared, then the driver converts the input data from the UTF-16 encoding to the encoding used by the database collation. If the database collation is not UTF-8 enabled, then the server converts the input data from the database collation encoding to the UTF-8 encoding. The user should ensure the code page used by the database collation can represent all the characters in the input data.
 
 ## Data retrieval from a UTF-8 encoded CHAR or VARCHAR column
-If the buffer for returned data has the type indicator DBTYPE_STR, then the driver converts the UTF-8 encoded data to the client encoding. Thus, make sure the client encoding can represent the data from the UTF-8 column, otherwise, data loss may occur.
+When creating a buffer for retrieved data, the buffer is described by using an array of [**DBBINDING** structures](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms716845%28v%3dvs.85%29). Each DBBINDING structure associates a single column in the retrieved row. For retrieving the column data as narrow characters, the *wType* of the DBBINDING structure should be set to DBTYPE_STR. For retrieving the column data as wide characters, the *wType* of the DBBINDING structure should be set to DBTYPE_WSTR.
 
-If the buffer for returned data has the type indicator DBTYPE_WSTR, then the driver converts the UTF-8 encoded data to the UTF-16 encoding.
+If the buffer has the type indicator DBTYPE_STR, then the driver converts the UTF-8 encoded data to the client encoding. Thus, make sure the client encoding can represent the data from the UTF-8 column, otherwise, data loss may occur.
+
+If the buffer has the type indicator DBTYPE_WSTR, then the driver converts the UTF-8 encoded data to the UTF-16 encoding.
   
 ## See Also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md) 

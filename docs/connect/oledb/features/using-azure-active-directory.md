@@ -49,7 +49,7 @@ To improve security, the new connection attributes/keywords change encryption se
 
 
 ### Certificate validation:
-In legacy connection attributes/keywords, server certificate was validated only when encryption was set to `yes` by the **client** application. As a result, server certificate **wasn't** validated even if `Force Protocol Encryption` setting was enabled on the server and encryption was used for data.
+In legacy connection attributes/keywords, server certificate is validated only when encryption is set to `yes` by the **client** application. Since encryption is false by default, server certificate **isn't** validated even if `Force Protocol Encryption` setting is enabled on the server and encryption is used for data.
 
 To improve security, the new connection attributes/keywords respect the `TrustServerCertificate` setting (or its corresponding connection string keywords/properties) **independent of encryption setting** on the client **and** server. As a result, server certificate is validated by default.
 

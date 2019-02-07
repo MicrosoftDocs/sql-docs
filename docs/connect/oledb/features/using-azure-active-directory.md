@@ -17,103 +17,41 @@ ms.author: v-beaziz
 
 ## Purpose
 
-The Microsoft OLE DB Driver for SQL Server with version 18.2.1 or above allows OLE DB applications to connect to an instance of Azure SQL database using a federated identity. The new authentication methods include:
+Starting with version 18.2.1, Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to an instance of Azure SQL Database using a federated identity. The new authentication methods include:
 - Azure Active Directory login ID and password
 - Azure Active Directory access token
 - Azure Active Directory integrated authentication
 - SQL login ID and password
 
-## New and modified connection string keywords
-The following connection string keywords have either been introduced or modified to support Azure Active Directory authentication. Additionally, setting the new authentication keywords to non-empty accepted values will enable encryption and certificate validation by default. Also, `Turst Server Certificate` setting will be considered independent of the encryption setting.
+> [!NOTE]  
+> When using the Azure Active Directory options with the OLE DB driver, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. ADAL isn't  required for the other authentication methods or OLE DB operations.
 
-### Access Token
-The `Access Token` keyword can be used to specify an access token to authenticate to Azure Active Directory.
+## New and modified connection string keywords and properties
+The following connection string keywords have either been introduced or modified to support Azure Active Directory authentication:
 
-|Default|Description|
-|---    |---        |
-(not set) |Specifies the Azure AD Access Token to use. It's an error to specify an access token and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their alternative attributes/keywords.<br/><br/>Any valid access token string can be used.<br/><br/>**NOTE:** Using `AccessToken` connection string keyword through `DBPROP_INIT_PROVIDERSTRING` property isn't supported. Instead you can use the `Access Token` keyword in connection strings passed through `IDataInitialize::GetDataSource`. For more information, please view [Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).|
+|Connection keyword|Connection property|Description|
+|---               |---                |---        |
+|Access Token|SSPROP_AUTH_ACCESS_TOKEN|Specifies an access token to authenticate to Azure Active Directory. |
+|Authentication|SSPROP_AUTH_MODE|Specifies authentication method to use.|
 
-### Authentication
-The `Authentication` keyword can be used to control the authentication mode used.
+For more information about the new keywords/properties, see the [New Encryption and Certificate Validation Behavior](#New-Encryption-and-Certificate-Validation-Behavior) section or the following pages:
+- [Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
+- [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
-|Default|Description|
-|---    |---        |
-|(not set)|Controls the authentication mode. The following options are accepted:<ul><li>`(not set)`: Authentication mode determined by other keywords (existing legacy connection options).</li><li>`(empty string)`: Override and unset an `Authentication` value.</li><li>`"SqlPassword"`: Directly authenticate to a SQL Server instance using login ID and password. <br/><br/>**IMPORTANT NOTE:** It's **recommended** that applications using `SQL Server` authentication set the value of `Authentication` keyword (or its alternative property) to `SqlPassword` to enable encryption and certificate validation by default.</li><br/><li>`"ActiveDirectoryPassword"`: Authenticate with an Azure Active Directory identity using login ID and password.</li><li>`"ActiveDirectoryIntegrated"`: Authenticate using integrated authentication.</li></ul>|
+## New Encryption and Certificate Validation Behavior
+This section discusses the changes in encryption and certificate validation behavior. These changes are **only** effective when using the new Authentication and Access Token connection string keywords (or their corresponding properties).
 
-### Use Encryption for Data (or Encrypt)
-The `Use Encryption for Data` (or `Encrypt`) keyword controls encryption for a connection.
+### Encryption:
+To improve security, the new connection attributes/keywords change encryption setting to `yes`,  **unless** the value is already explicitly set, in which case the value previously set is respected and not overridden.
 
-|Default|Description|
-|---    |---        |
-|(see description)| In ADO applications or in applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the default is `"No"`.<br/><br/> In non-ADO applications that **don't** obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, and `Authentication` keyword (or its alternative property) is set to an acceptable and non-empty value, the default is `"Yes"`.<br/><br/>In all other cases, the default is `"No"`.<br/><br/> **IMPORTANT NOTE:** In ADO application and in applications that obtain  `IDBInitialize` interface through `IDataInitialize::GetDataSource`, it's **recommended** to explicitly set `Use Encryption for Data=true` to override the default and improve security.|
-
-### Integrated Security (or Trusted_Connection)
-The `Integrated Security` (or `Trusted_Connection`) keyword forces use of Windows Authentication for access validation on server login.
-
-|Default|Description|
-|---    |---        |
-|(not set)|**_Deprecated_**; This option is deprecated. It's recommended that `Authentication=ActiveDirectoryIntegrated` is used instead, which enables encryption by default and validates server certificate independent of the encryption setting (unless `TrustServerCertificate` is set to `true`).|
-
-### Old Password
-The `Old Password` keyword allows the client to change an old (and possibly expired) password.
-
-|Default|Description|
-|---    |---        |
-|(not set)|Not supported with Azure Active Directory, since password changes to AAD principals can't be accomplished through an OLE DB connection.|
-
-### Trust Server Certificate (Or TrustServerCertificate)
-The `Trust Server Certificate` (Or `TrustServerCertificate`) keyword controls whether server certificate should be trusted.
-
-|Default|Description|
-|---    |---        |
-|(see description)|The default is `"No"` (That is, Server certificate is validated). If one of the `Windows` or `SQL Server` authentication methods are used, server certificates will be validated **only** if encryption is enabled. However, in the new authentication methods, that is, if the value of at least one of the `Authentication` or `Access Token` keywords (or their alternative connection properties) is set to an acceptable and non-empty value, the value of this option is considered **independent of the encryption setting**. This feature was added since OLE DB Driver 18.2.1 for improvement in security.<br/><br/>**IMPORTANT NOTE:** To improve security, it's **recommended** that applications using `Windows` or `SQL Server` authentication methods switch to the new `ActiveDirectoryIntegrated` and `SqlPassword` authentication methods, respectively.|
-
-## New and modified connection attributes
-
-The following connection attributes have either been introduced or modified to support Azure Active Directory authentication. Additionally, setting the new authentication attributes to non-empty accepted values will enable encryption and certificate validation by default. Also, `Turst Server Certificate` setting will be considered independent of the encryption setting.
+> [!NOTE]   
+> in ADO applications and in applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the Core Component implementing the interface explicitly sets encryption to its default value (that is, `no`). As a result, the new authentication attributes/keywords respect this setting and encryption **isn't** enabled. Therefore, it is **recommended** that these applications explicitly set `Use Encryption for Data=true` to override the default value.
 
 
-### DBPROP_AUTH_INTEGRATED
-The `DBPROP_AUTH_INTEGRATED` property forces use of Windows Authentication for access validation on server login.
+### Certificate Validation:
+In legacy connection attributes/keywords, server certificate was validated only when encryption was set to `yes` by the **client** application. As a result, server certificate **wasn't** validated even if `Force Protocol Encryption` setting was enabled on the server and encryption was used for data.
 
-|Type|Default|Description|
-|-|-|--|-|
-|`VT_BSTR`|`VT_EMPTY` (not set)|**_Deprecated_**; Set `SSPROP_AUTH_MODE` to `ActiveDirectoryIntegrated` instead.|
-
-### SSPROP_AUTH_ACCESS_TOKEN
-The `SSPROP_AUTH_ACCESS_TOKEN` property can be used to specify an access token to authenticate to Azure Active Directory.
-
-|Type|Default|Description|
-|-|-|--|-|
-|`VT_BSTR`|`VT_EMPTY` (not set)|See description of `Access Token` keyword above.|
-
-### SSPROP_AUTH_MODE
-The `SSPROP_AUTH_MODE` property can be used to control the authentication mode used.
-
-|Type|Default|Description|
-|-|-|--|-|
-|`VT_BSTR`|`VT_EMPTY`|See description of `Authentication` keyword above.|
-
-### SSPROP_AUTH_OLD_PASSWORD
-The `SSPROP_AUTH_OLD_PASSWORD` property allows the client to change an old (and possibly expired) password.
-
-|Type|Default|Description|
-|-|-|--|-|
-|`VT_BSTR`|`VT_EMPTY` (not set)|See description of `Old Password` keyword above.|
-
-### SSPROP_INIT_ENCRYPT
-The `SSPROP_INIT_ENCRYPT` property controls encryption for a connection.
-
-|Type|Default|Description|
-|-|-|--|-|
-|`VT_BOOL`|(see description)|`VARIANT_FALSE` and `VARIANT_TRUE` disable and enable encryption, respectively. <br/><br/>In ADO applications and applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the default is `VARIANT_FALSE`.<br/><br/> In non-ADO applications that **don't** obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, **and** at least one of `SSPROP_AUTH_MODE` or `SSPROP_AUTH_ACCESS_TOKEN` properties (or their alternative connection string keywords)  are set to an acceptable and non-empty value, the default is `VARIANT_TRUE`. <br/><br/>In all other cases, the default is `VARIANT_FALSE`.<br/><br/> **IMPORTANT NOTE:** If `IDBInitialize` interface is obtained through `IDataInitialize::GetDataSource`, it's **recommended** that client applications explicitly set `SSPROP_INIT_ENCRYPT` to `VARIANT_TRUE` to override the default and improve security.|
-
-### SSPROP_INIT_TRUST_SERVER_CERTIFICATE
-The `SSPROP_INIT_TRUST_SERVER_CERTIFICATE` property controls whether server certificate should be trusted.
-
-|Type|Default|Description|
-|-|-|--|-|
-|`VT_BOOL`|(See description)|The default is `VARIANT_FALSE`. If one of the `Windows` or `SQL Server` authentication methods are used, server certificates will be validated **only** if encryption is enabled. However, in the new authentication methods, that is, if the value of  at least one of the `SSPROP_AUTH_MODE` (or its alternative connection string keyword) or `SSPROP_AUTH_ACCESS_TOKEN` properties is set to an acceptable and non-empty value, the value of this option is considered **independent of the encryption setting**. This feature was added since OLE DB Driver 18.2.1 for improvement in security.<br/><br/>**IMPORTANT NOTE:** It's **recommended** that applications using `Windows` or `SQL Server` authentication methods switch to the new `ActiveDirectoryIntegrated` and `SqlPassword` authentication methods to improve security.|
+To improve security, the new connection attributes/keywords respect the `TrustServerCertificate` setting (or its corresponding connection string keywords/properties) **independent of encryption setting** on the client **and** server. As a result, server certificate is validated by default.
 
 
 ## UI additions for Azure Active Directory
@@ -196,12 +134,6 @@ Server certificate gets validated independent of the encryption setting (unless 
 
 - Using `DBPROP_INIT_PROVIDERSTRING`:<br/>
     > Providing access token through `DBPROP_INIT_PROVIDERSTRING` isn't supported
-
-> [!NOTE] 
->- When using the new Active Directory options with the Windows OLE DB driver, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. For driver version 18.2.1 and later, this isn't an explicit dependency since it's not required for the other authentication methods or OLE DB operations.
->- To connect using a SQL Server account login ID and password, you may now use the new `SqlPassword` option, which is recommended since this option enables more secure connection defaults.
->- To connect using an Azure Active Directory account login ID and password, specify `Authentication=ActiveDirectoryPassword` in the connection string and the `UID` and `PWD` keywords with the login ID and password, respectively.
->- To connect using `Windows Integrated` or `Active Directory Integrated` authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. `UID` and `PWD` must **not** be specified.
 
 ## Azure Active Directory Authentication Code Samples
 

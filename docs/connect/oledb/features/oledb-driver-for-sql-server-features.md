@@ -2,7 +2,7 @@
 title: "OLE DB Driver for SQL Server Features | Microsoft Docs"
 description: "OLE DB Driver for SQL Server features"
 ms.custom: ""
-ms.date: "06/12/2018"
+ms.date: "02/06/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -31,7 +31,7 @@ manager: craigg
  Discusses how OLE DB Driver for SQL Server supports asynchronous operations, which is the ability to return immediately without blocking on the calling thread.  
 
 [Using Azure Active Directory](using-azure-active-directory.md)  
-Discusses new authentication methods introduced in OLE DB driver 18.2.1 that have more secure default settings and allow connecting to an instance of Azure SQL database using a federated identity.
+Discusses new authentication methods introduced in OLE DB driver 18.2.1 that have more secure default settings and allow connecting to an instance of Azure SQL Database using a federated identity.
 
  [Using Multiple Active Result Sets &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  Discusses how OLE DB Driver for SQL Server supports multiple active result sets (MARS). MARS enables you to execute and receive multiple result sets using a single database connection  

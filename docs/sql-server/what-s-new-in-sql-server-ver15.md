@@ -41,7 +41,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
 
 - [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
-  - Create calculation groups to define calculated members. 
+  - Create calculation groups to define calculated members
 
 ## Previous CTPs
 

@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE WORKLOAD CLASSIFIER statement"
 ms.assetid: 
-author: RonOrtloff
+author: ronortloff
 ms.author: rortloff
 manager: craigg
 ---
@@ -95,9 +95,8 @@ GO
 ```  
   
 ## See Also  
- 
- [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)   
- 
+[DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)  
+Catalog view [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)   
+Catalog view [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)   
+Catalog view [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
   
-  
-

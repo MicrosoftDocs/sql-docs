@@ -1,7 +1,7 @@
 ---
 title: "sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/24/2019"
+ms.date: "02/08/2019"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: ""
@@ -16,7 +16,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 # sys.workload_management_workload_classifiers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  Returns ...  
+ Returns details for workload classifiers.  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|
@@ -31,9 +31,9 @@ is_enabled|**bit**|Displays whether the classifier is enabled or not. Is not nul
   
 ## Permissions
 Requires CONTROL DATABASE permission.
-```
+
 
 ## Next steps  
- For a list of all the catalog views for SQL Data Warehouse and Parallel Data Warehouse, see [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload classifier see (provide link)  
+ For a list of all the catalog views for SQL Data Warehouse and Parallel Data Warehouse, see [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload classifier see [CREATE WORKLOAD CLASSIFIER](../../t-sql/statements/create-workload-classifier-transact-sql.md)
   
 

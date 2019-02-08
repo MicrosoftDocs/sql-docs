@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP WORKLOAD CLASSIFIER statement"
 ms.assetid: 
-author: RonOrtloff
+author: ronortloff
 ms.author: rortloff
 manager: craigg
 ---
@@ -61,8 +61,9 @@ DROP WORKLOAD CLASSIFIER classifier_name;
  The following example drops the workload classifier named `wgcELTROLE`.  
   
 ```  
-DROP WORKLOAD CLASSIFIER wgcELTRole;  
->[!NOTE]
+DROP WORKLOAD CLASSIFIER wgcELTRole;
+  
+> [!NOTE]
 > A request submitted without a matching classifier, is classified to the default workload group.  The default workload group is currently the smallrc resource class.
   
 ## See Also 

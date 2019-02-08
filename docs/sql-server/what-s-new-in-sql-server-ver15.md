@@ -449,13 +449,13 @@ FROM sys.dm_exec_requests AS d
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (CTP 2.0) 
+## <a id="mds"></a> Master Data Services 
 
-- **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
+- **Silverlight controls replaced with HTML (CTP 2.0)**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
-## <a id="security"></a>Security (CTP 2.0)
+## <a id="security"></a>Security
 
-- **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
+- **Certificate management in SQL Server Configuration Manager (CTP 2.0)**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
   - Viewing and validating certificates installed in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. 
   - Viewing certificates close to expiration.

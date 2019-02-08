@@ -24,14 +24,21 @@ This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial teaches
 + Automate the generation of reports in a wide variety of formats, for example .xlsx and .pdf.  
   
 ## What You Will Learn  
- This tutorial is divided into three lessons:  
- Lesson | Comments
- ------- | --------------
- [Lesson 1: Create a Sample Subscriber Database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | In this lesson you will create a table local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains subscriber information. the information Order Numbers to use for filtering and output file formats.
-[Lesson 2: Configure Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |In this lesson, you will configure a report data source so that the report can run unattended on a schedule. Unattended processing requires stored credentials. You will also modify the report dataset to include a parameter that is supplied by the subscriber data. This parameter is used to filter the report data based on order number.
- [Lesson 3: Define a Data-Driven Subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | In this lesson you will create a data-driven subscription. This lesson guides you through each page in the Data-Driven Subscription Wizard.
+This tutorial is divided into three lessons:  
+Lesson | Comments
+[Lesson 1: Create a Sample Subscriber Database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md)
 
- The Following diagram illustrates the basic workflow of the tutorial
+In this lesson you will create a table local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains subscriber information. the information Order Numbers to use for filtering and output file formats.
+
+[Lesson 2: Configure Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)
+
+In this lesson, you will configure a report data source so that the report can run unattended on a schedule. Unattended processing requires stored credentials. You will also modify the report dataset to include a parameter that is supplied by the subscriber data. This parameter is used to filter the report data based on order number.
+
+[Lesson 3: Define a Data-Driven Subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)
+
+In this lesson you will create a data-driven subscription. This lesson guides you through each page in the Data-Driven Subscription Wizard.
+
+The Following diagram illustrates the basic workflow of the tutorial
 
 Step  |Description 
 ---------|---------

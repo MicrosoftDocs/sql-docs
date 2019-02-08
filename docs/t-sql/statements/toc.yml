@@ -304,6 +304,8 @@
     href: create-user-transact-sql.md
   - name: VIEW
     href: create-view-transact-sql.md
+  - name: WORKLOAD CLASSIFIER
+    href: create-workload-classifier-transact-sql.md
   - name: WORKLOAD GROUP
     href: create-workload-group-transact-sql.md
   - name: XML INDEX
@@ -450,6 +452,8 @@
     href: drop-user-transact-sql.md
   - name: VIEW
     href: drop-view-transact-sql.md
+  - name: WORKLOAD CLASSIFIER
+    href: drop-workload-classifier-transact-sql.md
   - name: WORKLOAD GROUP
     href: drop-workload-group-transact-sql.md
   - name: XML SCHEMA COLLECTION

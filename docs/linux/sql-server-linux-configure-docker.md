@@ -4,7 +4,7 @@ description: Explore different ways of using and interacting with SQL Server 201
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -344,6 +344,62 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
+## <a id="tz"></a> Configure the timezone
+
+To run SQL Server in a Linux container with a specific timezone, configure the **TZ** environment variable. To find the right timezone value, run the **tzselect** command from a Linux bash prompt:
+
+```bash
+tzselect
+```
+
+After selecting the timezone, **tzselect** displays output similar to the following:
+
+```bash
+The following information has been given:
+
+        United States
+        Pacific
+
+Therefore TZ='America/Los_Angeles' will be used.
+```
+
+You can use this information to set the same environment variable in your Linux container. The following example shows how to run SQL Server in a container in the `Americas/Los_Angeles` timezone:
+
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+::: moniker-end
 
 ## <a id="tags"></a> Run a specific SQL Server container image
 

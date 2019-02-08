@@ -46,7 +46,8 @@ GO
 SELECT d.definition   
 FROM sys.default_constraints AS d  
 INNER JOIN sys.columns AS c  
-ON d.parent_column_id = c.column_id  
+ON d.parent_object_id = c.object_id
+and d.parent_column_id = c.column_id  
 WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')  
 AND c.name = 'VacationHours';  
 ```  

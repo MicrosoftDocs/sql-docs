@@ -21,7 +21,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Unique ID of the classifier. Is not nullable||
-group_name|**sysname**|Name of the workload group the classifier is assigned to. Is not nullable. <br /><br />Joinable to [sys.workload_management_workload_groups.md](sys.workload-management-workload-groups)||
+group_name|**sysname**|Name of the workload group the classifier is assigned to. Is not nullable. <br /><br />Joinable to [sys.workload_management_workload_groups](sys-workload-management-workload-groups-transact-sql.md)||
 name|**sysname**|Name of the classifier. Must be unique to the instance. Is not nullable.||
 |importance|**sysname**|Is the relative importance of a request in this workload group and across workload groups for shared resources.  Importance specified in the classifier overrides the workload group importance setting. Is not nullable. |low, below_normal, normal, above_normal, high |
 |create_time|**datetime**|Time the classifier was created.||

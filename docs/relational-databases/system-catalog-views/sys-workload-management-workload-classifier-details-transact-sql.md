@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "01/24/2019"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
-ms.reviewer: ""
+ms.reviewer: "jrasnick"
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -21,7 +21,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Id of the classifier. Is not nullable.|
-|classifier_type|**sysname**|Joinable to [sys.workload_management_workload_classifiers](sys-workload_management_workload_classifiers.md)||
+|classifier_type|**sysname**|Joinable to [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md)||
 |classifier_value|**sysname**|The value of the classifier.|| 
  
   

@@ -41,7 +41,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
 
 - [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
-  - Create calculation groups to define calculated members
+  - Create calculation groups to reuse calculations in tabular models
 
 ## Previous CTPs
 
@@ -489,7 +489,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 
-  - Create calculation groups to define calculated members. Calculated members enable complex calculations by reusing calculation logic. (CTP 2.3)
+  - Create calculation groups to reuse calculations in tabular models. Calculation groups enable complex calculations by reusing calculation logic. They address the issue of proliferation of measures in complex BI models caused by common calculations like time-intelligence. (CTP 2.3)
 
 ## Other services
 

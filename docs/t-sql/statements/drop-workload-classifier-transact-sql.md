@@ -62,7 +62,8 @@ DROP WORKLOAD CLASSIFIER classifier_name;
   
 ```  
 DROP WORKLOAD CLASSIFIER wgcELTRole;
-  
+```
+
 > [!NOTE]
 > A request submitted without a matching classifier, is classified to the default workload group.  The default workload group is currently the smallrc resource class.
   

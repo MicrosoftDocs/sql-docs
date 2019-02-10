@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # IsWindowsServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)
   Indicates whether the Report Server Windows service is enabled. Read-only.  

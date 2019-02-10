@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "query designers"
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Query Designers (Report Builder)
   Report Builder provides graphical and text-based query designers to help you build queries for your report. Each type of data source has an associated query designer. Some data sources support graphical designers that help you build a query interactively. Other data sources use a text-based query designer. A SQL Server data source supports both the graphical and text-based query designers.  

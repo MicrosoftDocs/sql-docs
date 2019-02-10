@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Interactive Functionality for Different Report Rendering Extensions (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides interactive reporting features that allow you to work with a report at run time. Not all of the report rendering formats support the full range of interactive features. You can use the following table to understand how each interactive feature works in specific formats.  

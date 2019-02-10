@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Reporting Services in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environment with enhancements that are specific to business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] is included with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

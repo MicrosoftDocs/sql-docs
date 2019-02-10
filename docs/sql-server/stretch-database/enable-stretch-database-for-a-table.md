@@ -3,14 +3,15 @@ title: "Enable Stretch Database for a table | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
+ms.technology
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, enabling table"
   - "enabling table for Stretch Database"
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Enable Stretch Database for a table

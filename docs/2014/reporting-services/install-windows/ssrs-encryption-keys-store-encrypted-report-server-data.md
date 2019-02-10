@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Store Encrypted Report Server Data (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores encrypted values in the report server database and in configuration files. Most encrypted values are credentials that are used for accessing external data sources that provide data to reports. This topic describes which values are encrypted, the encryption functionality used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and other kinds of stored confidential data that you should know about.  

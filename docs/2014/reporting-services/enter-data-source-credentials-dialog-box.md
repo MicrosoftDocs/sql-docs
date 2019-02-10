@@ -12,8 +12,8 @@ f1_keywords:
   - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Enter Data Source Credentials Dialog Box
   Use the **Enter Data Source Credentials** dialog box to provide your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] credentials so that you can retrieve data from the data source.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Select Color dialog box"
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Select Color Dialog Box (Report Builder and SSRS)
   Use the **Select Color** dialog box to specify color options for the background of a single cell or multiple cells within a data region or a text box, or for a chart.  

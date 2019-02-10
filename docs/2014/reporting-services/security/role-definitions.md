@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Role Definitions
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a *role**definition* is a named collection of tasks that define the operations available on a report server. Role definitions provide the rules used by the report server to enforce security. When a user attempts to perform a task, such as publishing a report, the report server checks the user's role assignment to determine whether the task is included in their role definition. If the task is included in the role definition, the request is submitted.  

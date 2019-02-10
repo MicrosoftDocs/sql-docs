@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "queries [SQLXML], XPath"
   - "XML views [SQLXML]"
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

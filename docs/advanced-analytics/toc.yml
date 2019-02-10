@@ -280,7 +280,6 @@
     - name: R code profiling functions
       href: r/using-r-code-profiling-functions.md
 - name: Reference
-  href: 
   items:
   - name: R packages
     items:

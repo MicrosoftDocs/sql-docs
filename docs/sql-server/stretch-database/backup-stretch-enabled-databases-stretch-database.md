@@ -6,7 +6,9 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: backup-restore
+helpviewer_keywords: 
+  - "Stretch Database, disabling"
+  - "disabling Stretch Database"
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth

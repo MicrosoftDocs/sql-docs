@@ -206,7 +206,19 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
 After you have configured the correct repository, you can proceed to [install](sql-server-linux-setup.md#platforms) or [update](sql-server-linux-setup.md#upgrade) SQL Server and any related packages from the new repository.
 
+::: zone pivot="ld2-rhel"
 > [!IMPORTANT]
-> At this point, if you choose to use one of the installation articles, such as the [quickstarts](sql-server-linux-setup.md#platforms), remember that you have already configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstarts use the CU repository.
+> At this point, if you choose to use the [RHEL quickstart](quickstart-install-connect-red-hat.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart uses the CU repository.
+::: zone-end
+
+::: zone pivot="ld2-sles"
+> [!IMPORTANT]
+> At this point, if you choose to use the [SLES quickstart](quickstart-install-connect-suse.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart uses the CU repository.
+::: zone-end
+
+::: zone pivot="ld2-ubuntu"
+> [!IMPORTANT]
+> At this point, if you choose to use the [Ubuntu quickstart](quickstart-install-connect-ubuntu.md), remember that you have already configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart uses the CU repository.
+::: zone-end
 
 For more information on how to install SQL Server 2017 on Linux, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).

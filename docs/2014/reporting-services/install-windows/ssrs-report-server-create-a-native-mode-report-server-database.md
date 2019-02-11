@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create a Native Mode Report Server Database  (SSRS Configuration Manager)
   Native Mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for internal storage. The database is required and it is used to store published reports, models, shared data sources, session data, resources, and server metadata.  

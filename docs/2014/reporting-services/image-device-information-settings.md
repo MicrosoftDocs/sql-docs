@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Image Device Information Settings
   The following table lists the device information settings for rendering in IMAGE format.  

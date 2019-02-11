@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dqs.kb.selectkb.f1"
   - "sql12.dqs.kb.newkb.f1"
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Knowledge Base

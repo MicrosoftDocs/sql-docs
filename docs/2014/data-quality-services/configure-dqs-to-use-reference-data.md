@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.dqs.administration.rdsconfiguration.f1"
   - "sql12.dqs.administration.configuration.createDirectRDS.f1"
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Configure DQS to Use Reference Data

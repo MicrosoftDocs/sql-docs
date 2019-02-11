@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "operators [XQuery]"
   - "xml data type [SQL Server], XQuery"
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # XQuery Operators Against the xml Data Type

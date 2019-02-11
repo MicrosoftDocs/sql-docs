@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLXMLOLEDB Provider, samples"
   - "ClientSideXML property"
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

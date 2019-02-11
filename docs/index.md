@@ -6,6 +6,7 @@ description: Learn about SQL
 author: "barbkess"
 ms.author: "barbkess"
 ms.topic: "hub-page"
+ms.prod: sql
 ms.technology:
   - "database-engine"
 ---

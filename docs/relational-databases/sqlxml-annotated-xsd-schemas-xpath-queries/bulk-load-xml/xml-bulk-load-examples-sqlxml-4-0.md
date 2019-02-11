@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], SQLXML"
   - "bulk load [SQLXML], examples"
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # First Function (Report Builder and SSRS)
   Returns the first value in the given scope of the specified expression.  

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # UnattendedExecutionAccount Property (WMI MSReportServer_ConfigurationSetting)
   Returns the user account that the report server impersonates when running reports unattended. Read-only.  

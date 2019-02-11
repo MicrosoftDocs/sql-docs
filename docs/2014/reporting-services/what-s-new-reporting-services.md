@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # What&#39;s New (Reporting Services)
   

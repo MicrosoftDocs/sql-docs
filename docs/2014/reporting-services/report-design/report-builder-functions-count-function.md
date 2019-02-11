@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Count Function (Report Builder and SSRS)
   Returns a count of non-null values specified by the expression, evaluated in the context of the given scope.  

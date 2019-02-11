@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Verifying a Report Run
   To view information about the status of report processing, you can use log files or refer to status information that is displayed with the report in Report Manager.  

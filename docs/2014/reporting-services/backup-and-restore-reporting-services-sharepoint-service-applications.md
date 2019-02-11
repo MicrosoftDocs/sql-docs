@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Backup and Restore Reporting Services SharePoint Service Applications
   This topic describes how to backup and restore a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] services application using SharePoint Central Administration or PowerShell. The topic contains:  

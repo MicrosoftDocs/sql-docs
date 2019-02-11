@@ -12,8 +12,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.reportproperties.pagesetup.f1"
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Report Properties Dialog Box, Page Setup
   Select **Page Setup** on the **Report Properties**, dialog box to set page options for the entire report.  

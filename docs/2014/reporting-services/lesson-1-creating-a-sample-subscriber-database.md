@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Lesson 1: Creating a Sample Subscriber Database
   Before you can define a data-driven subscription, you must have a data source that provides subscription data. In this step, you will create a small database to store the subscription data used in this tutorial. Later, when the subscription is processed, the report server retrieves this data and uses it to customize report output, delivery options, and report presentation format.  

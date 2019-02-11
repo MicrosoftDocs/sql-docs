@@ -1,5 +1,5 @@
 ---
-title: "What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] | Microsoft Docs"
+title: "What's new in SQL Server 2019 | Microsoft Docs"
 ms.date: 02/04/2019
 ms.prod: "sql-server-2018"
 ms.reviewer: ""

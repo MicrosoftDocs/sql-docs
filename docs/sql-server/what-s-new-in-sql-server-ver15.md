@@ -127,7 +127,7 @@ Continue reading for more details about these features.
 ### Accelerated database recovery (CTP 2.3)
 
 [Accelerated database recovery](http://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery
-) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. Databases with accelerated database recovery significantly reduce startup time after failover or when a database was not shut down cleanly.  As of CTP 2.3, Accelerated database recovery can be enabled per-database using the following syntax:
+) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. As of CTP 2.3, accelerated database recovery can be enabled per-database using the following syntax:
 
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Controlling Page Breaks, Headings, Columns, and Rows (Report Builder and SSRS)
   A page break divides a report into separate pages for viewing and printing. Page breaks determine how the content is fitted to a report page for optimal viewing when you preview a report or export it to a different file format.  

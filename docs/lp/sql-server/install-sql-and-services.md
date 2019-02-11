@@ -6,6 +6,7 @@ experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server - Installation and Upgrade
 description: Find the content that will help you install or upgrade your SQL Server and related services. 
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
 ---

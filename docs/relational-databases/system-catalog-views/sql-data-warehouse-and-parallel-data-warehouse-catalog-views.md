@@ -2,10 +2,8 @@
 title: "SQL Data Warehouse and Parallel Data Warehouse Catalog Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

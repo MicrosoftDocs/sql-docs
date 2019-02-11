@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # CountDistinct Function (Report Builder and SSRS)
   Returns a count of all distinct non-null values specified by the expression, evaluated in the context of the given scope.  

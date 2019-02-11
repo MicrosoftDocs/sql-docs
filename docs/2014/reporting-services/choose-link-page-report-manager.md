@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Choose Link Page (Report Manager)
   Use the Choose Link page to choose a different report upon which to base the currently selected linked report. Linked reports are based on other reports already published to a report server. A linked report uses the layout and data of the base report, but has separate property pages so that you can customize parameter properties, security settings, name, description, and location.  

@@ -6,6 +6,7 @@ experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server Database Design
 description: Discover the features of SQL Server that help you design the database that best suits your business needs. 
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
 ---

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "tutorials [Policy-Based Management]"
   - "Policy-Based Management, tutorials"
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Tutorial: Evaluating Best Practices by Using Policy-Based Management

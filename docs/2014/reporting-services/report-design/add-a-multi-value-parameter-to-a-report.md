@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Add a multi-value parameter to a Report
   You can add a parameter to a report that allows the user to select more than one value for the parameter.  

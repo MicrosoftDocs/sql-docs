@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SqlXmlParameter object"
   - "Name property"
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

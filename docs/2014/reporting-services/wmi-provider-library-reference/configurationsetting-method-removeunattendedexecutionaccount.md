@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # RemoveUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)
   Deletes the unattended execution account entry from the report server configuration file.  

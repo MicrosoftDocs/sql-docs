@@ -12,8 +12,8 @@ f1_keywords:
   - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Map Meridian Properties Dialog Box, Labels
   Use the **MapMeridian Properties** dialog box to change label options for the vertical grid in the map viewport. A meridian represents the following value depending on the specified coordinate system for the viewport:  

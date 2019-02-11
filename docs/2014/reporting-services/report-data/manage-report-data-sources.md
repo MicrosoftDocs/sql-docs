@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Manage Report Data Sources
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], reports, report models, and data-driven subscriptions retrieve data from external data sources. To connect to an external data source, a report server uses data source connection information that is defined in or referenced from the report, model, or subscription. Data source connection properties are always defined with the report or model when you create it, but can be independently managed after the report or model is published to a report server.  

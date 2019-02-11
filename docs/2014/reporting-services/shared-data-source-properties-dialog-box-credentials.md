@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.shareddatasource.credentials.f1"
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Shared Data Source Properties Dialog Box, Credentials
   Select **Credentials** on the **Shared Data Source Properties** dialog box to display and modify credentials to connect to a shared data source in the report. The credentials that you provide are used to access the data source and to cache a copy of the data for previewing reports. For more information about how preview data is cached, see [Previewing Reports](reports/previewing-reports.md). For more information about credentials, see [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

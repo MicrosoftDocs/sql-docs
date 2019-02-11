@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], changing name"
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Change a Model Name (Master Data Services)

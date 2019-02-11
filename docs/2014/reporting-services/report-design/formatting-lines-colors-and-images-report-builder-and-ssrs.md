@@ -23,7 +23,7 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Formatting Lines, Colors, and Images (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gives you the ability to format lines, colors, data regions, images, and other report items.  

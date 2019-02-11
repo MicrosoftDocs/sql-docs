@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Enterprise Information Management Tutorials

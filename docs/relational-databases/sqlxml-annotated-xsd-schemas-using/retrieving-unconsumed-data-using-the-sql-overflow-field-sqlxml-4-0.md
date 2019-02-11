@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "overflow data [SQLXML]"
   - "sql:overflow-field"
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: douglasl
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

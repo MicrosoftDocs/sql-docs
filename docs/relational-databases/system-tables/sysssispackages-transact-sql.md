@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackages system table"
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-author: "douglasl"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # sysssispackages (Transact-SQL)

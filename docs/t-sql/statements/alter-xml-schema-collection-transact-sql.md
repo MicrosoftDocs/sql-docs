@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "schema collections [SQL Server], modifying"
   - "multiple schema namespaces"
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Change an Item Within a Cell (Report Builder and SSRS)
   Only a non-container item, such as a text box, line, or image, can be replaced by a new report item. For example, you can drag a table into a text box to replace the text box with a table.  

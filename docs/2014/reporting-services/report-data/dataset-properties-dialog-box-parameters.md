@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Dataset Properties Dialog Box, Parameters
   Select **Parameters** on the **Dataset Properties** dialog box to add, change, and delete query parameters, including query parameters that link to report parameters.  

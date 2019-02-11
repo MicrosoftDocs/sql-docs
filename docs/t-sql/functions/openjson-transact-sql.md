@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: douglasl
+ms.reviewer: genemi
 manager: craigg
 ---
 # OPENJSON (Transact-SQL)

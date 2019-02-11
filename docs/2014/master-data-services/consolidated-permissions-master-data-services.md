@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], consolidated members"
   - "members [Master Data Services], consolidated member permissions"
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Consolidated Permissions (Master Data Services)

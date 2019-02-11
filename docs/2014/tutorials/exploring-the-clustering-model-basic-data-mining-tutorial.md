@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Exploring the Clustering Model (Basic Data Mining Tutorial)
   The [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm groups cases into clusters that contain similar characteristics. These groupings are useful for exploring data, identifying anomalies in the data, and creating predictions.  

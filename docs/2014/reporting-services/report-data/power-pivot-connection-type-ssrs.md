@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # PowerPivot Connection Type (SSRS)
   You can use SQL Server Analysis Services data processing extension to retrieve data from a PowerPivot workbook that is published in a SharePoint PowerPivot Gallery.  

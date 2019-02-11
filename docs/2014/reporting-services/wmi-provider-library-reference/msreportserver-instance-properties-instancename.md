@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # InstanceName Property (WMI MSReportServer_Instance)
   Returns the name of a report server instance on a specific computer. Read-only.  

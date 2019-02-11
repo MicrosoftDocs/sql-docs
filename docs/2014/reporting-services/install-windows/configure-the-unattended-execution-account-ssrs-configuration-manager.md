@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Configure the Unattended Execution Account (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  

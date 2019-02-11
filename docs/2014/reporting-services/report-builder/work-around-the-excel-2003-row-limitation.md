@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Work Around the Excel Row Limitation
   This topic explains how to work around the Excel 2003 row limitation when you export reports to Excel. The workaround is for a report that contains only a table.  

@@ -10,9 +10,9 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # CREATE XML INDEX (Selective XML Indexes)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

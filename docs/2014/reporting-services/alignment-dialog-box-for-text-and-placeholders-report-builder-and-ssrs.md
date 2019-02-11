@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.placeholderproperties.alignment.f1"
   - "sql12.rtp.rptdesigner.textproperties.alignment.f1"
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Alignment Dialog Box for Text and Placeholders (Report Builder and SSRS)
   Select the **Alignment** tab to position the values within a selected cell or data region. You can only format the horizontal alignment of individual text within a text box. If you would like to set padding values on the text box or how text is aligned vertically, use the corresponding text box properties. For more information, see [Text Box Properties Dialog Box, Alignment &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

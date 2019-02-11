@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # URL Examples for Published Report Items on a Report Server in SharePoint Mode (SSRS)
   To publish reports and related items to a SharePoint library, you can either publish the content using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] authoring tools such as Report Designer or you can upload the content by using SharePoint site actions.  

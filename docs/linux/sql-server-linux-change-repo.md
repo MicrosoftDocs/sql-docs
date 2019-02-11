@@ -4,11 +4,12 @@ description: Check and configure source repositories for SQL Server 2019 and SQL
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
 ms.technology: linux
+zone_pivot_groups: ld2-linux-distribution
 ---
 # Configure repositories for installing and upgrading SQL Server on Linux
 
@@ -41,20 +42,26 @@ It is important to note that there are two main types of repositories for each d
 Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](sql-server-linux-setup.md#rollback) to any release within your major version (ex: 2017).
 
 > [!NOTE]
-> You can update from a GDR release to CU release at any time by changing repositories. Updating from a CU release to a GDR release is not supported. 
+> You can update from a GDR release to CU release at any time by changing repositories. Updating from a CU release to a GDR release is not supported.
 
-## <a id="configure"></a> Configure a repository
+## Configure repositories
 
-The following sections describe how to verify and configure a repository for the following supported platforms:
+::: zone pivot="ld2-rhel"
+Use the steps in the following sections to configure repositories on Red Hat Enterprise Server (RHEL).
+::: zone-end
 
-- [Red Hat Enterprise Server](#rhel)
-- [Ubuntu](#ubuntu)
-- [SUSE Linux Enterprise Server](#sles)
+::: zone pivot="ld2-sles"
+Use the steps in the following sections to configure repositories on SUSE Linux Enterprise Server (SLES).
+::: zone-end
 
-## <a id="rhel"></a> Configure RHEL repositories
-Use the following steps to configure repositories on Red Hat Enterprise Server (RHEL).
+::: zone pivot="ld2-ubuntu"
+Use the steps in the following sections to configure repositories on Ubuntu.
+::: zone-end
 
-### Check for previously configured repositories (RHEL)
+## Check for previously configured repositories
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
 First verify whether you have already registered a SQL Server repository.
 
 1. View the files in the **/etc/yum.repos.d** directory with the following command:
@@ -73,28 +80,10 @@ First verify whether you have already registered a SQL Server repository.
 
 4. The **name** property is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
 
-### Remove old repository (RHEL)
-If necessary, remove the old repository with the following command.
+::: zone-end
 
-```bash
-sudo rm -rf /etc/yum.repos.d/mssql-server.repo
-```
-
-This command assumes that the file identified in the previous section was named **mssql-server.repo**.
-
-### Configure new repository (RHEL)
-Configure the new repository to use for SQL Server installations and upgrades. Use one of the following commands to configure the repository of your choice.
-
-| Repository | Version | Command |
-|---|---|---|
-| **Preview (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-
-## <a id="sles"></a> Configure SLES repositories
-Use the following steps to configure repositories on SLES.
-
-### Check for previously configured repositories (SLES)
+<!--SLES-->
+::: zone pivot="ld2-sles"
 First verify whether you have already registered a SQL Server repository.
 
 1. Use **zypper info** to get information about any previously configured repository.
@@ -105,29 +94,10 @@ First verify whether you have already registered a SQL Server repository.
 
 2. The **Repository** property is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
 
-### Remove old repository (SLES)
-If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
+::: zone-end
 
-| Repository | Command to remove |
-|---|---|
-| **Preview (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-| **Preview (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
-
-### Configure new repository (SLES)
-Configure the new repository to use for SQL Server installations and upgrades. Use one of the following commands to configure the repository of your choice.
-
-| Repository | Version | Command |
-|---|---|---|
-| **Preview (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-
-## <a id="ubuntu"></a> Configure Ubuntu repositories
-Use the following steps to configure repositories on Ubuntu.
-
-### Check for previously configured repositories (Ubuntu)
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 First verify whether you have already registered a SQL Server repository.
 
 1. View the contents of the **/etc/apt/sources.list** file.
@@ -138,7 +108,37 @@ First verify whether you have already registered a SQL Server repository.
 
 2. Examine the package URL for mssql-server. You can identify it with the table in the [Repositories](#repositories) section of this article.
 
-### Remove old repository (Ubuntu)
+::: zone-end
+
+## Remove old repository
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+If necessary, remove the old repository with the following command.
+
+```bash
+sudo rm -rf /etc/yum.repos.d/mssql-server.repo
+```
+
+This command assumes that the file identified in the previous section was named **mssql-server.repo**.
+
+::: zone-end
+
+<!--SLES-->
+::: zone pivot="ld2-sles"
+If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
+
+| Repository | Command to remove |
+|---|---|
+| **Preview (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **Preview (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
+| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+
+::: zone-end
+
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
 
 | Repository | Command to remove |
@@ -148,7 +148,36 @@ If necessary, remove the old repository. Use one of the following commands based
 | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
-### Configure new repository (Ubuntu)
+::: zone-end
+
+## Configure new repository
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+Configure the new repository to use for SQL Server installations and upgrades. Use one of the following commands to configure the repository of your choice.
+
+| Repository | Version | Command |
+|---|---|---|
+| **Preview (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+
+::: zone-end
+
+<!--SLES-->
+::: zone pivot="ld2-sles"
+Configure the new repository to use for SQL Server installations and upgrades. Use one of the following commands to configure the repository of your choice.
+
+| Repository | Version | Command |
+|---|---|---|
+| **Preview (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+
+::: zone-end
+
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 Configure the new repository to use for SQL Server installations and upgrades.
 
 1. Import the public repository GPG keys.
@@ -170,6 +199,8 @@ Configure the new repository to use for SQL Server installations and upgrades.
    ```bash
    sudo apt-get update
    ```
+
+::: zone-end
 
 ## Next steps
 

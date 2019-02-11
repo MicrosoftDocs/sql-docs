@@ -925,18 +925,18 @@ All options apply to a table with a clustered index. If the table doesn't have a
 -   To disable Stretch for a table and copy the remote data for the table from Azure back to SQL Server, run the following command. This command can't be canceled.  
   
     ```sql  
-ALTER TABLE \<table name>
+    ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
   
-     This operation incurs data transfer costs, and it can't be canceled. For more information, see [Data Transfers Pricing Details](https://azure.microsoft.com/pricing/details/data-transfers/).  
+This operation incurs data transfer costs, and it can't be canceled. For more information, see [Data Transfers Pricing Details](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
-     After all the remote data has been copied from Azure back to SQL Server, Stretch is disabled for the table.  
+After all the remote data has been copied from Azure back to SQL Server, Stretch is disabled for the table.  
   
 -   To disable Stretch for a table and abandon the remote data, run the following command.  
   
     ```sql  
-ALTER TABLE \<table_name>
+    ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
   

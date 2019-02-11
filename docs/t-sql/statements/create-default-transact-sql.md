@@ -96,7 +96,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
 ### B. Binding a default  
  The following example binds the default created in example A. The default takes effect only if no entry is specified for the `Phone` column of the `Contact` table. 
  
- > [! Note] 
+ > [!Note] 
  >  Omitting any entry is different from explicitly stating NULL in an INSERT statement.  
   
  Because a default named `phonedflt` doesn't exist, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement fails. This example is for illustration only.  

@@ -53,4 +53,3 @@ DBCC FLUSHAUTHCACHE;
 ## See Also  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
-  

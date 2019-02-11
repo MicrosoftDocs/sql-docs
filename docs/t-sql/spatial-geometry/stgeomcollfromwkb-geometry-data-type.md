@@ -60,5 +60,3 @@ SELECT @g.STAsText();
 ## See Also  
  [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
-  
-

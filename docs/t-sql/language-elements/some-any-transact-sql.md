@@ -143,4 +143,3 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
-  

@@ -6,6 +6,7 @@ experiment_id: "81ba5f65-59fb-4d"
 title: Manage, Monitor, Tune SQL Server
 description: Discover the features that help you manage, monitor, and tune your SQL Server. 
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
 ---

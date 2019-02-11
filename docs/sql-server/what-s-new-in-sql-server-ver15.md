@@ -40,7 +40,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
 
 - [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
-  - Create calculation groups to reuse calculations in tabular models
+  - Calculation groups in tabular models reduce the number of measures by reusing calculation logic.
 
 ## Previous CTPs
 
@@ -454,7 +454,29 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 
-  - Create calculation groups to reuse calculations in tabular models. Calculation groups enable complex calculations by reusing calculation logic. They address the issue of proliferation of measures in complex BI models caused by common calculations like time-intelligence. (CTP 2.3)
+### Calculation groups in tabular models (CTP 2.3)
+
+Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures. 
+
+A calculation group can have any number of calculation items. Each calculation item is defined by a DAX expression. Three new DAX functions are introduced to work with calculation groups:
+
+- `SELECTEDMEASURE()` - Returns a reference to the measure currently in context. 
+- `SELECTEDMEASURENAME()` - Returns a string containing the name of the measure currently in context. 
+- `ISSELECTEDMEASURE(M1, M2, …)` - Returns a Boolean indicating whether the measure currently in context is one of those specified as an argument.
+
+In addition to new DAX functions, two new Dynamic Management Views are introduced:
+
+- `TMSCHEMA_CALCULATION_GROUPS` 
+- `TMSCHEMA_CALCULATION_ITEMS` 
+
+For this release, calculation groups do have some limitations:
+
+- The `ALLSELECTED DAX` function is not yet supported.
+- Row Level Security defined on the calculation-group table is not yet supported.
+- Object Level Security defined on the calculation-group table is not yet supported.
+- DetailsRows expressions referring to calculation items are net yet supported.
+
+Calculation groups require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
 
 ## Other services
 

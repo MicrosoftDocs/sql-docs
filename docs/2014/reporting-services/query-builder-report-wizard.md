@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Query Builder [Reporting Services]"
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Query Builder (Report Wizard)
   Use the Query Builder to specify a query that retrieves a result set to use in a report. You can choose between two query builders:  

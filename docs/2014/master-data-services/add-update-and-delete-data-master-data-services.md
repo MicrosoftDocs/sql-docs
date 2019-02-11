@@ -9,7 +9,7 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: leolimsft
-ms.author: douglasl
+ms.author: lle
 manager: craigg
 ---
 # Add, Update and Delete Data (Master Data Services)

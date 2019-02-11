@@ -12,8 +12,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.pictureproperties.size.f1"
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Image Properties Dialog Box, Size (Report Builder and SSRS)
   Select **Size** on the **Image Properties** dialog box to format the size of the images displayed in a field or in the design area, or to change the amount of extra space between the edge of a cell or text box and the picture or value contained within the cell or text box.  

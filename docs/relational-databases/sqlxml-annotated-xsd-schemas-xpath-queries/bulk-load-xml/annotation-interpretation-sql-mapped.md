@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "sql:mapped"
   - "column mapping [SQLXML]"
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

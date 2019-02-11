@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # RSWindowsExtendedProtectionScenario Property (WMI MSReportServer_ConfigurationSetting)
   Returns a string value that indicates the extended protection scenario the report server is configured to allow.  

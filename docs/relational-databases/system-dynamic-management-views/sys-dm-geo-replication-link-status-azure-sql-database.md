@@ -2,10 +2,8 @@
 title: "sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords: 
   - "dm_geo_replication_link_status"

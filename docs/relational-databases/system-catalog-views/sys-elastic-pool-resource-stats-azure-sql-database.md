@@ -2,10 +2,9 @@
 title: "sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
-ms.prod: ""
+ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.elastic_pool_resource_stats catalog view"

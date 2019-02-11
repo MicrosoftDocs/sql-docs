@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # SMTPServer Property (WMI MSReportServer_ConfigurationSetting)
   Gets the SMTP server property from the report server configuration file. Read-only.  

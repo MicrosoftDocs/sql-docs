@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)
   Use the **Enter Data Source Credentials** dialog box to provide your credentials so that you can retrieve data from the data source.  

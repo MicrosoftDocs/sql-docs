@@ -3,6 +3,7 @@ title: "Limitations for Stretch Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2016"
 ms.prod: sql
+ms.technology:
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "limitations (Stretch Database)"
   - "blocking issues (Stretch Database)"
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Limitations for Stretch Database

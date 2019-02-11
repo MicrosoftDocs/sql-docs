@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Min Function (Report Builder and SSRS)
   Returns the minimum value of all non-null numeric values specified by the expression, in the context of the given scope.  

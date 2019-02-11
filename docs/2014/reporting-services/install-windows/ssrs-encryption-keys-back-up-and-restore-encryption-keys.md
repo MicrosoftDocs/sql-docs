@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Back Up and Restore Reporting Services Encryption Keys
   An important part of report server configuration is creating a backup copy of the symmetric key used for encrypting sensitive information. A backup copy of the key is required for many routine operations, and enables you to reuse an existing report server database in a new installation.  

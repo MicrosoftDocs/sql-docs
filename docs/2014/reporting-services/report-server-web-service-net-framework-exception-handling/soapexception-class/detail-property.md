@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Detail Property
   The **Detail** property of the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** class has the following XML structure:  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "XML templates [SQLXML]"
   - "SQL queries [SQLXML]"
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -158,7 +158,7 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Gauges (Report Builder and SSRS)
   The Gauge data region is a one-dimensional data region that displays a single value in your dataset. An individual gauge is always positioned inside a gauge panel, where you can add child or adjacent gauges. You can use the gauge panel to create multiple gauges inside a single gauge panel that share common functions such as filtering, grouping, or sorting.  

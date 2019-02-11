@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # MachineAccountIdentity Property (WMI)
   Gets the machine account identity of the computer that the report server is installed on.  

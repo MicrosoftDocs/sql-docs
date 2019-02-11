@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Lesson 6: Add a ReportViewer Control to the Application
   After you design the child report by using the Report Wizard, your next step is to add a ReportViewer control to the website application.  

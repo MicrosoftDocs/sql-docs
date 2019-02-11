@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Preload the Cache (Report Manager)
   You can preload the cache for a shared dataset by creating a cache refresh plan for the shared dataset.  

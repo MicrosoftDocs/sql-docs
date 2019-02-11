@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 8: Adding Conditional Split Transform to Split Cleansing Output

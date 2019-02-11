@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Associate a Query Parameter with a Report Parameter (Report Builder and SSRS)
   When you define a dataset query that contains a query variable, the query command is parsed. For each query variable, a corresponding dataset parameter and report parameter are created. The dataset parameter points to the report parameter. This enables a user to enter a value that passes directly to the query. Each time you edit the query command, the same process takes place.  

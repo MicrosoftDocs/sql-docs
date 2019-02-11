@@ -2,10 +2,9 @@
 title: "sys.dm_xe_database_session_targets (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: ""
+ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 author: MightyPen

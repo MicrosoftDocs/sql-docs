@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Var Function (Report Builder and SSRS)
   Returns the variance of all non-null numeric values specified by the expression, evaluated in the given scope.  

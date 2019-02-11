@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Creating a Solution and Data Source (Intermediate Data Mining Tutorial)
   To work with data mining, you must first create a project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] using the template, **Analysis Services Multidimensional and Data Mining Project**. When you open the template, it loads into the designer all the schemas that you might need for data mining: data sources, mining structures and mining models, and even cubes if your mining structure uses multidimensional data.  

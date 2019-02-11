@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Extended Protection for Authentication with Reporting Services
   Extended Protection is a set of enhancements to recent versions of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system. Extended protection enhances how credentials and authentication can be protected by applications. The feature itself does not directly provide protection against specific attacks such as credential forwarding, but it provides an infrastructure for applications such as [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to enforce Extended Protection for Authentication.  

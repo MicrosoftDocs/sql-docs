@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: douglasl
+ms.reviewer: genemi
 manager: craigg
 ---
 # ISJSON (Transact-SQL)

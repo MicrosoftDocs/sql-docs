@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "JSON, path expressions"
   - "path expressions (JSON)"
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

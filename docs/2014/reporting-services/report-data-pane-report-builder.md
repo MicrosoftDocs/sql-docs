@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Report Data pane"
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Report Data Pane (Report Builder)
   Use the **Report Data** pane to view the currently defined parameters, data sources, datasets, field collections, and images in your report. The Report Dane displays a hierarchical view of the items that represent data in your report. The top level nodes represent built-in fields, parameters, images, and data source references. Expand each node to view the data items. For example, when you expand a data source node, the datasets defined for that data source appear. When you expand a dataset, its field collection appears. Drag items to the report design surface or to the Grouping pane to link data with selected report items on the report page. For more information, see [Report Design View &#40;Report Builder&#41;](report-builder/report-design-view-report-builder.md).  

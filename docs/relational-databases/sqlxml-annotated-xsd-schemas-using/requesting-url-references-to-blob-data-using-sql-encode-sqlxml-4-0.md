@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "BLOBs, URL references"
   - "Base 64-encoded format"
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: douglasl
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

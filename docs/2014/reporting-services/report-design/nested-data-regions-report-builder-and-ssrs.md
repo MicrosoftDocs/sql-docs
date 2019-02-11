@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Nested Data Regions (Report Builder and SSRS)
   You can nest one data region, such as a chart, inside another data region, such as a matrix, typically to display data summaries in a concise manner or to provide a visual display as well as a table or matrix display.  

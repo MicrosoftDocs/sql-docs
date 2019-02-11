@@ -1,7 +1,7 @@
 ---
 title: "Server Properties (Advanced Page) - Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-18"
+ms.date: 10/18/2016
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 

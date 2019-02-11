@@ -1,7 +1,7 @@
 ---
 title: "Replication Distribution Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "29/10/2018"
+ms.date: 10/29/2018
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: replication

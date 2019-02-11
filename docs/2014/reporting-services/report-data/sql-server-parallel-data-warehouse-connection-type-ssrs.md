@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # SQL Server Parallel Data Warehouse Connection Type (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] is a scalable data warehouse appliance that delivers performance and scalability through massively parallel processing. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] uses [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] databases for distributed processing and data storage.  

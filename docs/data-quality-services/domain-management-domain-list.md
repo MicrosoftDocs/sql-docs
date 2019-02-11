@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.domainlist.f1"
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Domain Management: Domain List

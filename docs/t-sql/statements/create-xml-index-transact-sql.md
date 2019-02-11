@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "index creation [SQL Server], XML indexes"
   - "XML indexes [SQL Server], creating"
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

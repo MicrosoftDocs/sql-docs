@@ -12,8 +12,8 @@ f1_keywords:
   - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Legend Properties Dialog Box, General (Report Builder and SSRS)
   Use the **Legend** dialog box to define the appearance and layout of the legend in the chart. For more information, see [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  

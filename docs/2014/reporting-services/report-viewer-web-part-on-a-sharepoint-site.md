@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Report Viewer Web Part on a SharePoint Site
   The Report Viewer Web Part is a custom Web Part that is installed by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products. You can use the Web Part to view, navigate, print, and export reports on a report server that is configured to run in SharePoint integrated mode. The Report Viewer Web Part is associated with report definition (.rdl) files that are processed by a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. You cannot use it with other report documents that you create in other software products.  

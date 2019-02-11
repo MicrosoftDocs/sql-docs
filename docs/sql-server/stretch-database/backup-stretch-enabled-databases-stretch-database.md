@@ -7,11 +7,11 @@ ms.technology: backup-restore
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Stretch Database, backing up"
-  - "backups (Stretch Database)"
+  - "Stretch Database, disabling"
+  - "disabling Stretch Database"
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Backup Stretch-enabled databases (Stretch Database)

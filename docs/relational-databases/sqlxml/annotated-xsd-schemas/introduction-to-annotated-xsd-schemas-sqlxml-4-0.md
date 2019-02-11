@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "annotated XSD schemas, examples"
   - "XML views [SQLXML]"
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

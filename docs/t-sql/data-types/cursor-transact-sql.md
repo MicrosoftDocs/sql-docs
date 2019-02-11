@@ -1,7 +1,7 @@
 ---
 title: "cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/23/2017"
+ms.date: "07/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

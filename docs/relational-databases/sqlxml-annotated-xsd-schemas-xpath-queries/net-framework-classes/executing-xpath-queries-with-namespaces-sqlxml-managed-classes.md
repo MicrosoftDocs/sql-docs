@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, executing XPath queries"
   - "namespaces [SQLXML], XPath queries"
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

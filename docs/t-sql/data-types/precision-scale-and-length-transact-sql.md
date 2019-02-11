@@ -1,7 +1,7 @@
 ---
 title: "Precision, scale, and length (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Report Designer [Reporting Services], wizards"
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Report Wizard Help
   This section provides F1 Help for the Report Wizard. The Report Wizard automates the process of creating tabular and matrix reports. The following table describes the topics in this section.  

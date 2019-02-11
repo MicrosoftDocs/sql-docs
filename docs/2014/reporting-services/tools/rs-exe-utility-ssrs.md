@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  

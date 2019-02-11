@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Tutorial: Add a Pie Chart to Your Report (Report Builder)
   Pie charts and doughnut charts display data as a proportion of the whole. Pie charts are most commonly used to make comparisons between groups. Pie and doughnut charts, along with pyramid and funnel charts, constitute a group of charts known as shape charts. Shape charts have no axes. When a numeric field is dropped on a shape chart, the chart calculates the percentage of each value to the total.  

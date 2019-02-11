@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Add Custom Locations to a Map (Report Builder and SSRS)
   After you add a map to a report, you can add your own point locations.  

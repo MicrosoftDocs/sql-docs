@@ -6,6 +6,7 @@ experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server - Load and move data
 description: Explore the features that help you load, move, and migrate databases and data with SQL Server. 
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
 ---

@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Access Report Server Items Using URL Access
   This topic describes how to access catalog items of different types in a report server data base or in a SharePoint site using *rs:Command*=*Value*.  

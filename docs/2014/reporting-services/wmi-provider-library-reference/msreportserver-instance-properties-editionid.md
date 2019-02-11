@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # EditionID Property (WMI MSReportServer_Instance)
   Returns the edition of the report server. Read-only.  

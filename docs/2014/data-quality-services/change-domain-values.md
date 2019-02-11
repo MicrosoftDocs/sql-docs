@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.dm.values.f1"
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Change Domain Values

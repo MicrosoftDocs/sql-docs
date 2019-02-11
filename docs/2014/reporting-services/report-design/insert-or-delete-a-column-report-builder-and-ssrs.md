@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Insert or Delete a Column (Report Builder and SSRS)
   You can add or delete columns in a tablix data region. The tablix data region can be a table, a matrix, or a list. The following procedures do not apply to the chart and gauge data regions.  

@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL) | Microsoft Docs"
 ms.date: "03/03/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.custom: ""
 ms.topic: "language-reference"

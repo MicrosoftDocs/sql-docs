@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Chart Types (Report Builder and SSRS)
   It is important to choose an appropriate chart type for the type of data that you are presenting. This will determine how well the data can be interpreted when put in chart form. For example, if your dataset contains a lot of data points relative to the size of the chart, it may be better presented using an area, line, or scatter chart. For discussion on how to prepare your data depending on the chart type selected, see [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  

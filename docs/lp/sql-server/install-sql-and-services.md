@@ -7,6 +7,9 @@ title: SQL Server - Installation and Upgrade
 description: Find the content that will help you install or upgrade your SQL Server and related services. 
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 featureFlags:
 - clicktale
 ---

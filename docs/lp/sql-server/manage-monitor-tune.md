@@ -7,6 +7,9 @@ title: Manage, Monitor, Tune SQL Server
 description: Discover the features that help you manage, monitor, and tune your SQL Server. 
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 featureFlags:
 - clicktale
 ---

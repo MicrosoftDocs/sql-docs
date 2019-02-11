@@ -7,6 +7,9 @@ title: SQL Server Database Design
 description: Discover the features of SQL Server that help you design the database that best suits your business needs. 
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 featureFlags:
 - clicktale
 ---

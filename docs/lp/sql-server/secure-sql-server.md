@@ -7,6 +7,9 @@ title: SQL Server Security
 description: Explore the features that make your SQL Server secure. 
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 featureFlags:
 - clicktale
 ---

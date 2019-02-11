@@ -7,6 +7,9 @@ title: SQL Server - Load and move data
 description: Explore the features that help you load, move, and migrate databases and data with SQL Server. 
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 featureFlags:
 - clicktale
 ---

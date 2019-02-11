@@ -146,16 +146,9 @@ Prior to this feature, when referencing a temporary table with a DML statement (
 
 The end result is a reduction in extraneous recompilations and CPU-overhead.
 
-### Improved Indirect Checkpoint Scalability (CTP 2.3)
+### Improved indirect checkpoint scalability (CTP 2.3)
 
 In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
-
-4. Cross-database queries that reference tempdb catalog views are not supported. Because memory-optimized tables do not support cross-database queries, any queries that reference tempdb catalog views from another database using three-part naming will fail with the following error:
-
-    ```
-    Msg 41317, Level 16, State 6, Line 20
-    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
-
 
 ### Scalar UDF inlining (CTP 2.1)
 

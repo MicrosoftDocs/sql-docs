@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Union Function (Report Builder and SSRS)
   Returns the union of all the non-null numeric values specified by the expression, evaluated in the given scope.  

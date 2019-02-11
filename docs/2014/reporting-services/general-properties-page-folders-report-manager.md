@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # General Properties Page, Folders (Report Manager)
   Use the General properties page for folders to view and set properties for the folders that you create. Information about who created or modified the folder and when the folder was modified appear at the top of the General properties page.  

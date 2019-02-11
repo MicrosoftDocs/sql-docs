@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Link a Report to a Model as a Clickthrough Report
   Instead of using the default clickthrough report templates, you can create a Report Builder report and then link it to a specific entity in the report model. When the person viewing the report clicks the interactive data in the main report, this report is displayed as a clickthrough report. To link a report to an entity, use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Manager.  

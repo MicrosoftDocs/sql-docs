@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Configure a Report Server on a Network Load Balancing Cluster
   If you are configuring a report server scale-out to run on a Network Load Balancing (NLB) cluster, you must do the following:  

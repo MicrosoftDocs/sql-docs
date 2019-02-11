@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Specifying a Testing Data Set for the Structure (Basic Data Mining Tutorial)
   In the final few screens of the Data Mining Wizard you will split your data into a testing set and a training set. You will then name your structure and enable drillthrough on the model.  

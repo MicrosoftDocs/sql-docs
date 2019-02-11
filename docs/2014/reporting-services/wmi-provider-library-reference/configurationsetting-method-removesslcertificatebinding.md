@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)
   Removes an SSL Certificate binding.  

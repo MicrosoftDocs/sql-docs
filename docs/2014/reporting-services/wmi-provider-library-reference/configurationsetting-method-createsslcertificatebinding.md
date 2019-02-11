@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)
   Creates an SSL Certificate binding.  

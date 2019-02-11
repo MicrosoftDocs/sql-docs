@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Security Properties Page, Items (Report Manager)
   Use the Security properties page to view or modify the security settings that determine access to folders, reports, models, resources, and shared data sources. This page is available for items that you have permission to secure.  

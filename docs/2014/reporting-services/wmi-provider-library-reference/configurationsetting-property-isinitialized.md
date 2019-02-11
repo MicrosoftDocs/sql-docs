@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # IsInitialized Property (WMI MSReportServer_ConfigurationSetting)
   Indicates whether the report server instance is initialized. Read-only.  

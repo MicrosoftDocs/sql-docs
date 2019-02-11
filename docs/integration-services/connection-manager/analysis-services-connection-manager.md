@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services Connection Manager | Microsoft Docs"
 ms.custom: ""
-ms.date: "1/25/2019"
+ms.date: 01/25/2019
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""

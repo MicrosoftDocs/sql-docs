@@ -3,6 +3,7 @@ title: "Date and Time Improvements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a

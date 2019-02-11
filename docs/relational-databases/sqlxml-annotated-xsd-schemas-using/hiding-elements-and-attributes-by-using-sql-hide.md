@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], hiding attributes and elements"
   - "attribute hiding [SQLXML]"
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: douglasl
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

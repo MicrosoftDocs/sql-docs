@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Lookup Function (Report Builder and SSRS)
   Returns the first matching value for the specified name from a dataset that contains name/value pairs.  

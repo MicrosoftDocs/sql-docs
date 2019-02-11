@@ -6,6 +6,7 @@ experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server Security
 description: Explore the features that make your SQL Server secure. 
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
 ---

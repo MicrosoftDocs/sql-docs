@@ -12,8 +12,8 @@ f1_keywords:
   - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Row Visibility Dialog Box
   Use the **Row Visibility** dialog box to show or hide the selected row when the report is first run or to use another report item to toggle the visibility of the row.  

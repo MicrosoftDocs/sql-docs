@@ -9,8 +9,8 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: c481a170-dc94-424f-a37c-d16003171d29
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Map F1 Help
   Topics in this section provide information about the options that you can set on a Map report item.  

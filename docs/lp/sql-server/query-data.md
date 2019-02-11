@@ -14,7 +14,7 @@ featureFlags:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -24,7 +24,7 @@ featureFlags:
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Download SQL Server</span>
+                                    <span class="likeAnH3">Try SQL Server 2019 (preview)</span>
                                 </div>
                             </div>
                         </div>

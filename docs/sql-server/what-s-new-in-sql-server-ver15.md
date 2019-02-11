@@ -36,7 +36,6 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Accelerated database recovery
   - Reduced recompilations for workloads using temporary tables across multiple scopes
   - Improved indirect checkpoint scalability
-  - Improved tempdb scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
 
@@ -150,33 +149,6 @@ The end result is a reduction in extraneous recompilations and CPU-overhead.
 ### Improved Indirect Checkpoint Scalability (CTP 2.3)
 
 In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
-
-### Improved tempdb Scalability (CTP 2.3)
-
-tempdb metadata contention has historically been a bottleneck to scalability for many workloads running on SQL Server. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables. In order to opt-in to this new feature, use the following script:
-
-```sql
-ALTER SERVER CONFIGURATION SET TEMPDB METADATA MEMORY_OPTIMIZED ON 
-```
-
-This configuration change requires a restart of the service to take effect.
-
-There are some limitations with this implementation that are important to note:
-
-1. Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of tempdb, a restart is required to either enable or disable the feature.
-2. Lock-related query hints are not supported when executing queries that reference tempdb catalog views. Any query hints that are not supported by memory-optimized tables such as `TABLOCK`, `PAGLOCK`, `ROWLOCK`, and `READPAST` cannot be used when querying system catalog views, since these views are now referencing memory-optimized tables.
-3. Queries against system catalog views in tempdb will always use snapshot isolation. Again, because the system tables under these views are stored in memory-optimized tables, only snapshot isolation is supported. Therefore, explicit isolation level hints on queries that reference tempdb catalog views that are lower than snapshot isolation (such as `READCOMMITTED`, `READUNCOMMITTED`, or `NOLOCK`) trigger the following error:
-
-    ```
-    Msg 10794, Level 16, State 90, Line 15
-    The table option 'readcommitted' is not supported with memory optimized tables.
-    
-    USE tempdb
-    SELECT * FROM sys.objects WITH (readuncommitted)
-    
-    Msg 10794, Level 16, State 90, Line 72
-    The table option 'readuncommitted' is not supported with memory optimized tables
-    ```
 
 4. Cross-database queries that reference tempdb catalog views are not supported. Because memory-optimized tables do not support cross-database queries, any queries that reference tempdb catalog views from another database using three-part naming will fail with the following error:
 

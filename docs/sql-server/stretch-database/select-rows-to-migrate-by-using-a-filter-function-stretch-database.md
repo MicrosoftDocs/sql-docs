@@ -3,6 +3,7 @@ title: "Select rows to migrate by using a filter function (Stretch Database) | M
 ms.custom: ""
 ms.date: "06/27/2016"
 ms.prod: sql
+ms.technology:
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Stretch Database, inline table-valued functions"
   - "inline table-valued functions for Stretch Database"
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Select rows to migrate by using a filter function (Stretch Database)

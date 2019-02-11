@@ -6,6 +6,7 @@ experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server - Query Data
 description: Explore the features that make it easy to query the data in your SQL Server database. 
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
 ---

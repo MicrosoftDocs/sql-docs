@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # rsInternalError - Reporting Services Error
     

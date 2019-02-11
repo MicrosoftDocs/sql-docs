@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "FOR JSON, using in client apps"
   - "FOR JSON, using in SQL Server"
 ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

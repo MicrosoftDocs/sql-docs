@@ -102,7 +102,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         REFERENCES Sales.SalesReason (SalesReasonID)     
         ON DELETE CASCADE    
         ON UPDATE CASCADE    
-    );GO    
+    );
+    GO    
     
     ```    
     

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions
   This topic compares role and task based authorization features in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] native mode to the security features in SharePoint products. This topic compares terminology and characteristics of roles, tasks, SharePoint groups, permission levels, and permissions.  

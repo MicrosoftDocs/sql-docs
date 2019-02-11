@@ -12,9 +12,9 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # DROP INDEX (Selective XML Indexes)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

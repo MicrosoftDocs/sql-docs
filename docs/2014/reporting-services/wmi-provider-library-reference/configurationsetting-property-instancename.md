@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # InstanceName Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the name of a report server instance on a specific computer. Read-only.  

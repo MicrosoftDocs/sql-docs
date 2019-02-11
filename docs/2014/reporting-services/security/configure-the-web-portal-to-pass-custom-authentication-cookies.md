@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Configure Report Manager to Pass Custom Authentication Cookies
   If you are using a custom authentication extension, you should configure Report Manager to transmit custom authentication cookies. Otherwise, Report Manager will only transmit cookies through HTTP requests specific to the report server. If you want to transmit additional cookies, you must modify the RSReportServer.Config file.  

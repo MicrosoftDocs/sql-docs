@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XML [SQL Server], construction"
   - "XQuery, XML construction"
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # XML Construction (XQuery)

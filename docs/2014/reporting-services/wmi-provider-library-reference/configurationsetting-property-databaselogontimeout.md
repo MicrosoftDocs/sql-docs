@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # DatabaseLogonTimeout Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the number of seconds to wait before an attempt to log on to the report server database fails. A value of **0** indicates an infinite wait time. Read only.  

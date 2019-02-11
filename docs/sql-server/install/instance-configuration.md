@@ -1,7 +1,7 @@
 ---
 title: "Installation Wizard Help | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-04-21"
+ms.date: 04/21/2017
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

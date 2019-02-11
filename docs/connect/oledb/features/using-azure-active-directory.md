@@ -41,14 +41,14 @@ For more information about the new keywords/properties, see the following pages:
 ## New encryption and certificate validation behavior
 This section discusses the changes in encryption and certificate validation behavior. These changes are **only** effective when using the new Authentication or Access Token connection string keywords (or their corresponding properties).
 
-### Encryption:
+### Encryption
 To improve security, the new connection attributes/keywords change encryption setting to `yes`,  **unless** the value is already explicitly set, in which case the value previously set is respected and not overridden.
 
 > [!NOTE]   
 > In ADO applications and in applications that obtain `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the Core Component implementing the interface explicitly sets encryption to its default value (that is, `no`). As a result, the new authentication attributes/keywords respect this setting and encryption **isn't** enabled. Therefore, it is **recommended** that these applications explicitly set `Use Encryption for Data=true` to override the default value.
 
 
-### Certificate validation:
+### Certificate validation
 In legacy connection attributes/keywords, server certificate is validated only when encryption is set to `yes` by the **client** application. Since encryption is false by default, server certificate **isn't** validated even if `Force Protocol Encryption` setting is enabled on the server and encryption is used for data.
 
 To improve security, the new connection attributes/keywords respect the `TrustServerCertificate` setting (or its corresponding connection string keywords/properties) **independent of encryption setting** on the client **and** server. As a result, server certificate is validated by default.

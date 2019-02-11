@@ -2,7 +2,7 @@
 title: "UTF-8 Support in OLE DB Driver for SQL Server| Microsoft Docs"
 description: "UTF-8 Support in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "02/08/2018"
+ms.date: "11/02/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -29,10 +29,10 @@ The input parameter buffer may be converted to the server column collation by th
 
 |Buffer data type|Parameter data type|Conversion|User precaution|
 |---             |---                |---       |---            |
-|DBTYPE_STR|DBTYPE_STR|Server conversion from client code page to database collation code page; server conversion from database collation code page to column collation code page.|Ensure the client code page and the database collation code page can represent all characters in the input data. For example, to insert a Polish character, the client code page could be set to 1250 (ANSI Central European), and the database collation could use Polish as the collation designator (for example, Polish_100_CI_AS_SC) or be UTF-8 enabled.|
-|DBTYPE_STR|DBTYPE_WSTR|Driver conversion from client code page to UTF-16 encoding; server conversion from UTF-16 encoding to column collation code page.|Ensure the client code page can represent all characters in the input data. For example, to insert a Polish character, the client code page could be set to 1250 (ANSI Central European).|
-|DBTYPE_WSTR|DBTYPE_STR|Driver conversion from UTF-16 encoding to database collation code page; server conversion from database collation code page to column collation code page.|Ensure the database collation code page can represent all characters in the input data. For example, to insert a Polish character, the database collation code page could use Polish as the collation designator (for example, Polish_100_CI_AS_SC) or be UTF-8 enabled.|
-|DBTYPE_WSTR|DBTYPE_WSTR|Server conversion from UTF-16 to column collation code page.|None.|
+|DBTYPE_STR|DBTYPE_STR|<ul><li>Server conversion from client code page to database collation code page.</li><li>Server conversion from database collation code page to column collation code page.</li></ul>|Ensure the client code page and the database collation code page can represent all characters in the input data. For example, to insert a Polish character, the client code page could be set to 1250 (ANSI Central European), and the database collation could use Polish as the collation designator (for example, Polish_100_CI_AS_SC) or be UTF-8 enabled.|
+|DBTYPE_STR|DBTYPE_WSTR|<ul><li>Driver conversion from client code page to UTF-16 encoding.</li><li>Server conversion from UTF-16 encoding to column collation code page.</li></ul>|Ensure the client code page can represent all characters in the input data. For example, to insert a Polish character, the client code page could be set to 1250 (ANSI Central European).|
+|DBTYPE_WSTR|DBTYPE_STR|<ul><li>Driver conversion from UTF-16 encoding to database collation code page.</li><li>Server conversion from database collation code page to column collation code page.</li></ul>|Ensure the database collation code page can represent all characters in the input data. For example, to insert a Polish character, the database collation code page could use Polish as the collation designator (for example, Polish_100_CI_AS_SC) or be UTF-8 enabled.|
+|DBTYPE_WSTR|DBTYPE_WSTR|<ul><li>Server conversion from UTF-16 to column collation code page.</li></ul>|None.|
 
 ## Data retrieval from a UTF-8 encoded CHAR or VARCHAR column
 When creating a buffer for retrieved data, the buffer is described by using an array of [DBBINDING structures](https://go.microsoft.com/fwlink/?linkid=2071182). Each DBBINDING structure associates a single column in the retrieved row. To retrieve the column data as CHAR, set the *wType* of the DBBINDING structure to DBTYPE_STR. To retrieve the column data as WCHAR, set the *wType* of the DBBINDING structure to DBTYPE_WSTR.

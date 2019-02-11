@@ -18,7 +18,7 @@ This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnover
 
 ## SQL Server 2017 Reporting Services 
 
-### Version 14.0.600.1103, Released: February 12, 2019
+### Version 14.0.600.1109, Released: February 12, 2019
 
 The following issues have been fixed:
 

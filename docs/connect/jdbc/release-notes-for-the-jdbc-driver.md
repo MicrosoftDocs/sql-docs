@@ -22,7 +22,7 @@ manager: craigg
 Microsoft JDBC Driver 7.2 for SQL Server is fully compliant with JDBC API Specification 4.2. The jars in the 7.2 package are named according to Java version compatibility. For example, the mssql-jdbc-7.2.1.jre11.jar file from the 7.2 package should be used with Java 11.
 
 > [!NOTE]  
-> An issue with SQL statement parsing was found in the JDBC 7.2 RTW driver released on January 31, 2019. The change was rolled back, and new jars (version 7.2.1) were released on <TBD>. 
+> An issue with SQL statement parsing was found in the JDBC 7.2 RTW driver released on January 31, 2019. The change was rolled back, and new jars (version 7.2.1) were released on February 11, 2019. 
 >
 > Download the latest updates for JDBC Driver 7.2 from [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2063159), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1), and [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Please update your projects to use the 7.2.1 release jars. For more information, view release notes for [7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1).
 

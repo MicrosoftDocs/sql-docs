@@ -127,11 +127,16 @@ Continue reading for more details about these features.
 ### Accelerated database recovery (CTP 2.3)
 
 [Accelerated database recovery](http://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery
-) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process.  As of CTP 2.3, Accelerated Database Recovery can be enabled per-database using the syntax 
+) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. Databases with accelerated database recovery significantly reduce startup time after failover or when a database was not shut down cleanly.  As of CTP 2.3, Accelerated database recovery can be enabled per-database using the following syntax:
+
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
-Note that this syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+
+>[!NOTE]
+>This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+
+Customers with critical databases, that are prone to large transactions, are invited to experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](http://aka.ms/sqlfeedback).
 
 ### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
 

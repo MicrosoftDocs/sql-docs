@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Report Manager F1 Help
   The following topics provide page-level help for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Manager. There is one topic for each page in the application. Not all pages may be available. Security settings determine the pages that you can access. To access these topics from within Report Manager, click **Help** on the main toolbar.  

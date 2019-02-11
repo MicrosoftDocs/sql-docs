@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "full-text stoplist [SQL Server], permissions"
   - "GRANT statement, full-text permissions"
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # GRANT Full-Text Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

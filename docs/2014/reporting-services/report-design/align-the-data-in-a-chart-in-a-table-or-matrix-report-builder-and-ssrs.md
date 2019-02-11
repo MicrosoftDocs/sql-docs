@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Align the Data in a Chart in a Table or Matrix (Report Builder and SSRS)
   Sparklines and data bars are small, simple charts that convey a lot of information with little extraneous detail. When you check this option, the values in your sparklines and data bars will align across the different cells in the table or matrix, even if there are missing values in the data they are based on.  

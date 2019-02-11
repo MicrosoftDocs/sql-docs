@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # DeleteEncryptedInformation Method (WMI MSReportServer_ConfigurationSetting)
   Deletes the encrypted information from the report server database.  

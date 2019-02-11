@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # New Data Source Page (Report Manager)
   Use the New Data Source page to create a shared data source item. A shared data source defines a connection to an external data source. With a shared data source, you can create and maintain the settings for the data source connection separately from the reports, models, and data-driven subscriptions that use the data source.  

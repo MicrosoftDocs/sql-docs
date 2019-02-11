@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackagefolders system table"
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-author: "douglasl"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # sysssispackagefolders (Transact-SQL)

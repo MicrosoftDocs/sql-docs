@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # rsProcessingError - Reporting Services Error
     

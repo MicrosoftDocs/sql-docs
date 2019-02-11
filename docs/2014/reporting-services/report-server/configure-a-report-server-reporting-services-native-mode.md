@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Configure a Report Server (Reporting Services Native Mode)
   Depending on options you selected during installation, the Report Server might require additional configuration before you can use it. At a minimum, a report server configuration consists of the following:  

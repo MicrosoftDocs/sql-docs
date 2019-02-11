@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], XQuery"
   - "functions [SQL Server], XQuery"
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # XQuery Functions against the xml Data Type

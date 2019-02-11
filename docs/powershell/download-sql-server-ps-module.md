@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server PowerShell Module | Microsoft Docs"
 ms.custom: ""
-ms.date: "1/31/2019"
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: scripting

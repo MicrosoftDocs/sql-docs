@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], arithmetic operators"
   - "operators [SQLXML]"
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

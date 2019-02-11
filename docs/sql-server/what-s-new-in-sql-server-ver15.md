@@ -36,12 +36,11 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Accelerated database recovery
   - Reduced recompilations for workloads using temporary tables across multiple scopes
   - Improved indirect checkpoint scalability
-  - Improved tempdb scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
 
 - [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
-  - Create calculation groups to define calculated members
+  - Create calculation groups to reuse calculations in tabular models
 
 ## Previous CTPs
 
@@ -147,43 +146,9 @@ Prior to this feature, when referencing a temporary table with a DML statement (
 
 The end result is a reduction in extraneous recompilations and CPU-overhead.
 
-### Improved Indirect Checkpoint Scalability (CTP 2.3)
+### Improved indirect checkpoint scalability (CTP 2.3)
 
 In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
-
-### Improved tempdb Scalability (CTP 2.3)
-
-tempdb metadata contention has historically been a bottleneck to scalability for many workloads running on SQL Server. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables. In order to opt-in to this new feature, use the following script:
-
-```sql
-ALTER SERVER CONFIGURATION SET TEMPDB METADATA MEMORY_OPTIMIZED ON 
-```
-
-This configuration change requires a restart of the service to take effect.
-
-There are some limitations with this implementation that are important to note:
-
-1. Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of tempdb, a restart is required to either enable or disable the feature.
-2. Lock-related query hints are not supported when executing queries that reference tempdb catalog views. Any query hints that are not supported by memory-optimized tables such as `TABLOCK`, `PAGLOCK`, `ROWLOCK`, and `READPAST` cannot be used when querying system catalog views, since these views are now referencing memory-optimized tables.
-3. Queries against system catalog views in tempdb will always use snapshot isolation. Again, because the system tables under these views are stored in memory-optimized tables, only snapshot isolation is supported. Therefore, explicit isolation level hints on queries that reference tempdb catalog views that are lower than snapshot isolation (such as `READCOMMITTED`, `READUNCOMMITTED`, or `NOLOCK`) trigger the following error:
-
-    ```
-    Msg 10794, Level 16, State 90, Line 15
-    The table option 'readcommitted' is not supported with memory optimized tables.
-    
-    USE tempdb
-    SELECT * FROM sys.objects WITH (readuncommitted)
-    
-    Msg 10794, Level 16, State 90, Line 72
-    The table option 'readuncommitted' is not supported with memory optimized tables
-    ```
-
-4. Cross-database queries that reference tempdb catalog views are not supported. Because memory-optimized tables do not support cross-database queries, any queries that reference tempdb catalog views from another database using three-part naming will fail with the following error:
-
-    ```
-    Msg 41317, Level 16, State 6, Line 20
-    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
-
 
 ### Scalar UDF inlining (CTP 2.1)
 
@@ -449,13 +414,13 @@ FROM sys.dm_exec_requests AS d
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (CTP 2.0) 
+## <a id="mds"></a> Master Data Services 
 
-- **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
+- **Silverlight controls replaced with HTML (CTP 2.0)**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
-## <a id="security"></a>Security (CTP 2.0)
+## <a id="security"></a>Security
 
-- **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
+- **Certificate management in SQL Server Configuration Manager (CTP 2.0)**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
   - Viewing and validating certificates installed in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. 
   - Viewing certificates close to expiration.
@@ -489,7 +454,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 
-  - Create calculation groups to define calculated members. Calculated members enable complex calculations by reusing calculation logic. (CTP 2.3)
+  - Create calculation groups to reuse calculations in tabular models. Calculation groups enable complex calculations by reusing calculation logic. They address the issue of proliferation of measures in complex BI models caused by common calculations like time-intelligence. (CTP 2.3)
 
 ## Other services
 

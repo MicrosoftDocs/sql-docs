@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Rectangles and Lines (Report Builder and SSRS)
   Rectangles and lines can create visual effects within a report. You can set display properties on these report items from the Border section of the Home tab, and set other properties by using the Properties pane. You can add features like a background color or image, a tooltip, or a bookmark to a rectangle.  

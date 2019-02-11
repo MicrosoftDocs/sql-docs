@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # RowNumber Function (Report Builder and SSRS)
   Returns a running count of the number of rows for the specified scope.  

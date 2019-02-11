@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Data Alert Messages
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts deliver two types of data alert messages by email: Messages with data alert results and messages with error descriptions. Messages with results keep all recipients informed about changes in report data that is of common interest and important to business decisions. If for some reason an error occurs and the results are not available, the error message is sent instead.  

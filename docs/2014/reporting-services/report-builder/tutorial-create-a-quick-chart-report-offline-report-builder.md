@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
   In this tutorial, you'll create a pie chart by using a wizard, and then you'll modify it a little, just to get an idea of what's possible. You can do this tutorial two different ways. Both methods have the same outcome-a pie chart like the one in the following illustration:  

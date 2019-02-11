@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Create a Stepped Report (Report Builder and SSRS)
   A stepped report shows detail rows or child groups indented under a parent group in the same column, as shown in the example below:  

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Tutorial: Adding a KPI to Your Report (Report Builder)
   A key performance indicator (KPI) is a measurable value that has business significance. This tutorial teaches you how to include a (KPI) in a report. In this scenario, the sales summary by product subcategories is the KPI. The current state of the KPI is shown by using colors, gauges, and indicators.  

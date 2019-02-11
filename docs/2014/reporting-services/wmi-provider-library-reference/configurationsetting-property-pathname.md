@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # PathName Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the installation path of a report server instance. Read-only.  

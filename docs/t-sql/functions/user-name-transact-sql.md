@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], databases"
   - "database usernames [SQL Server]"
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -6,6 +6,7 @@ experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server Business Continuity
 description: Explore the different SQL Server features for high availability, disaster recovery, and keeping your business running, no matter the circumstance. 
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
 ---

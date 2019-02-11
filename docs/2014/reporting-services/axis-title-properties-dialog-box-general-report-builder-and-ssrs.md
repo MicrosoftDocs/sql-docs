@@ -12,8 +12,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.axistitleproperties.general.f1"
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Axis Title Properties Dialog Box, General (Report Builder and SSRS)
   Select **General** on the **Axis Title Properties** dialog box to define the axis title. The axis title is displayed under the x-axis or next to the y-axis.  

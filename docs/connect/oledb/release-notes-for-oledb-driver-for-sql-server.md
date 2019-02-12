@@ -14,6 +14,13 @@ ms.author: v-daveng
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 
+## What's new in version 18.2.1
+
+**Features added:**
+
+* Support for UTF-8 server encoding. For more information, see: [UTF-8 Support in OLE DB Driver for SQL Server](features/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md).
+* Azure Active Directory authentication support. For more information, see: [Using Azure Active Directory](features/using-azure-active-directory.md).
+
 ## What's new in version 18.1.0
 
 **Features added:**

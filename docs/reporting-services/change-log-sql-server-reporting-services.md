@@ -7,7 +7,7 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 author: "casualoak"
-ms.author: "rhys"
+ms.author: "RhysSchmidtke"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Change log for SQL Server Reporting Services (SSRS) 2017 and later
@@ -28,11 +28,11 @@ The following issues have been fixed:
  - Deadlock during notification of completed data-driven subscriptions
  - Embedded images not displayed in certain circumstances when rc:Toolbar=False parameter used.
  - Unable to create data driven subscriptions for reports that use cascading parameters
- - Unable to edit subscriptions with an invalid MinuesIntervals.
+ - Unable to edit subscriptions with an invalid MinutesIntervals.
  - Security updates
  - Linked reports UI not showing.
  - Certain paginated reports with nested tablix controls have incorrect fonts.
- - Whitespace incorrectly being added to certain paginated reports containing tablixs.
+ - Whitespace incorrectly being added to certain paginated reports containing tablix data regions.
  - Header rows disappear when expanding mobile report simple data grids.
 
 ### Version 14.0.600.906, Released: September 12, 2018

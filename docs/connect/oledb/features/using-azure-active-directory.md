@@ -54,7 +54,7 @@ To improve security, when the new connection properties/keywords are used, the d
 > In ADO applications and in applications that obtain the `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the Core Component implementing the interface explicitly sets encryption to its default value of `no`. As a result, the new authentication properties/keywords respect this setting and the encryption value **isn't** overridden. Therefore, it is **recommended** that these applications explicitly set `Use Encryption for Data=true` to override the default value.
 
 ### Certificate validation
-To improve security, the new connection properties/keywords respect the `TrustServerCertificate` setting (and its corresponding connection string keywords/properties) **independent of the client encryption setting**. As a result, server certificates are validated by default.
+To improve security, the new connection properties/keywords respect the `TrustServerCertificate` setting (and its corresponding connection string keywords/properties) **independently of the client encryption setting**. As a result, server certificate is validated by default.
 
 > [!NOTE]   
 > Certificate validation can also be controlled through the `Value` field of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` registry entry. Valid values are `0` or `1`. The OLE DB driver chooses the most secure option between the registry and the connection property/keyword settings. That is, the driver will validate the server certificate as long as at least one of the registry/connection settings enables server certificate validation.
@@ -68,32 +68,50 @@ The driver graphical user interface has been enhanced to allow Azure Active Dire
 This section shows examples of new and existing connection string keywords to be used with `IDataInitialize::GetDataSource` and `DBPROP_INIT_PROVIDERSTRING` property.
 
 ### SQL authentication
-||Using `IDataInitialize::GetDataSource`|Using `DBPROP_INIT_PROVIDERSTRING`|
-|--- |--- |--- |
-|New|`Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=SqlPassword;User ID=[username];Password=[password];Use Encryption for Data=true`|`Server=[server];Database=[database];Authentication=SqlPassword;UID=[username];PWD=[password];encrypt=yes`|
-|Deprecated|`Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];User ID=[username];Password=[password];Use Encryption for Data=true`|`Server=[server];Database=[database];UID=[username];PWD=[password];encrypt=yes`|
+- Using `IDataInitialize::GetDataSource`:
+    - New:
+        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=SqlPassword**;User ID=[username];Password=[password];Use Encryption for Data=true
+    - Deprecated:
+        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];User ID=[username];Password=[password];Use Encryption for Data=true
+- Using `DBPROP_INIT_PROVIDERSTRING`:
+    - New:
+        > Server=[server];Database=[database];**Authentication=SqlPassword**;UID=[username];PWD=[password];encrypt=yes
+    - Deprecated:
+        > Server=[server];Database=[database];UID=[username];PWD=[password];encrypt=yes
 
 ### Integrated windows authentication using Security Support Provider Interface  (SSPI)
-||Using `IDataInitialize::GetDataSource`|Using `DBPROP_INIT_PROVIDERSTRING`|
-|--- |--- |--- |
-|New|`Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true`|`Server=[server];Database=[database];Authentication=ActiveDirectoryIntegrated;encrypt=yes`|
-|Deprecated|`Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Integrated Security=SSPI;Use Encryption for Data=true`|`Server=[server];Database=[database];Trusted_Connection=yes;encrypt=yes`|
+
+- Using `IDataInitialize::GetDataSource`:
+    - New:
+        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true
+    - Deprecated:
+        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Integrated Security=SSPI**;Use Encryption for Data=true
+- Using `DBPROP_INIT_PROVIDERSTRING`:
+    - New:
+        > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;encrypt=yes
+    - Deprecated:
+        > Server=[server];Database=[database];**Trusted_Connection=yes**;encrypt=yes
 
 ### AAD username and password authentication using ADAL
-|Using `IDataInitialize::GetDataSource`|Using `DBPROP_INIT_PROVIDERSTRING`|
-|--- |--- |
-|`Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryPassword;User ID=[username];Password=[password];Use Encryption for Data=true`|`Server=[server];Database=[database];Authentication=ActiveDirectoryPassword;UID=[username];PWD=[password];encrypt=yes`|
 
+- Using `IDataInitialize::GetDataSource`:
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryPassword**;User ID=[username];Password=[password];Use Encryption for Data=true
+- Using `DBPROP_INIT_PROVIDERSTRING`:
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];encrypt=yes
 
 ### Integrated Azure Active Directory authentication using ADAL
-|Using `IDataInitialize::GetDataSource`|Using `DBPROP_INIT_PROVIDERSTRING`|
-|--- |--- |
-|`Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true`|`Server=[server];Database=[database];Authentication=ActiveDirectoryIntegrated;encrypt=yes`|
 
-### Azure Active Directory authentication using an Access Token 
-|Using `IDataInitialize::GetDataSource`|Using `DBPROP_INIT_PROVIDERSTRING`|
-|--- |--- |
-|`Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];Access Token=[access token];Use Encryption for Data=true`|Providing access token through `DBPROP_INIT_PROVIDERSTRING` isn't supported|
+- Using `IDataInitialize::GetDataSource`:
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true
+- Using `DBPROP_INIT_PROVIDERSTRING`:
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;encrypt=yes
+
+### Azure Active Directory authentication using an Access Token
+
+- Using `IDataInitialize::GetDataSource`:
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=true
+- Using `DBPROP_INIT_PROVIDERSTRING`:
+    > Providing access token through `DBPROP_INIT_PROVIDERSTRING` isn't supported
 
 ## Azure Active Directory authentication code samples
 

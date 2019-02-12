@@ -5,7 +5,7 @@ description: Learn how to connect to the SQL Server master instance and the HDFS
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/10/2018
+ms.date: 02/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -54,6 +54,17 @@ The SQL Server master instance is a traditional SQL Server instance containing r
 
 1. Press **Connect**, and the **Server Dashboard** should appear.
 
+With the February 2019 release of Azure Data Studio, connecting to the SQL Server master instance also enables you to interact with the HDFS/Spark gateway. This means that you do not need to use a separate connection for HDFS and Spark that the next section describes.
+
+- The Object Explorer now contains a new **Data Services** node with right-click support for big data cluster tasks, such as creating new notebooks or submitting spark jobs. 
+- The **Data Services** node also contains an **HDFS** folder for HDFS exploration and performing actions such as Create External Table or Analyze in Notebook.
+- The **Server Dashboard** for the connection also contains tabs for **SQL Server Big Data Cluster** and **SQL Server 2019 (Preview)** when the extension is installed.
+
+   ![Azure Data Studio Data Services Node](./media/connect-to-big-data-cluster/connect-data-services-node.png)
+
+> [!IMPORTANT]
+> This new Azure Data Studio functionality assumes that the same password is used for the SQL Server master instance and the HDFS/Spark gateway. If this is not the case or if the HDFS/Spark gateway fails to connect, the text "Unknown error" appears in the object explorer. In this situation, connect to the HDFS/Spark gateway with a dedicated connection described in the following section.
+  
 ## <a id="hdfs"></a> HDFS/Spark gateway
 
 The **HDFS/Spark gateway** enables you to connect in order to work with the HDFS storage pool and to run Spark jobs. The following steps describe how to connect with Azure Data Studio.

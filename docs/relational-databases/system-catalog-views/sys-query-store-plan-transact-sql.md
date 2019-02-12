@@ -60,7 +60,6 @@ However, there are some limitations that can prevent a plan to be enforced.
 
 First, if the plan contains following constructions:
 * Insert bulk statement.
-* Insert bulk statement.
 * Reference to an external table
 * Distributed query or full-text operations
 * Use of Global queries 

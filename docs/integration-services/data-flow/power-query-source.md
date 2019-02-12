@@ -1,7 +1,7 @@
 ---
 title: Power Query Source | Microsoft Docs
 description: Learn how to configure the Power Query Source in the SQL Server Integration Services data flow
-ms.date: 02/02/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.technology: integration-services
@@ -62,9 +62,6 @@ In **Power Query Connection Manager Editor**, you need to specify **Data Source 
 
 Some of these sources (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) require additional installations of ADO.NET drivers that can be obtained from [Power Query Prerequisites](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) article. You can use the custom setup interface to install them on your Azure-SSIS IR, see [Customizing Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) article.
 
-> [!NOTE]
-> For **Oracle** data source, Oracle ADO.NET driver can not currently be installed on Azure-SSIS IR, so please install Oracle ODBC driver instead and use **ODBC** data source to connect to Oracle for now, see **ORACLE STANDARD ODBC** example in [Customizing Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) article.
-
 For **Data Source Path**, you can enter data source-specific properties forming a connection string without the authentication info. For example, the path for **SQL** data source is formed as `<Server>;<Database>`. You can select the **Edit** button to assign values to data source-specific properties forming the path.
 
 ![PQ Source Connection Manager Editor Path](media/power-query-source/pq-source-connection-manager-editor-path.png)
@@ -72,6 +69,12 @@ For **Data Source Path**, you can enter data source-specific properties forming 
 Finally, For **Authentication Kind**, you can select **Anonymous**/**Windows Authentication**/**Username Password**/**Key** from the dropdown menu, enter the appropriate access credentials, and select the **Test Connection** button to ensure that Power Query Source has been properly configured.
 
 ![PQ Source Connection Manager Editor Authentication](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
+
+### Current limitations
+
+-   **Oracle** data source can not currently be used, because Oracle ADO.NET driver can not be installed on Azure-SSIS IR, so please install Oracle ODBC driver instead and use **ODBC** data source to connect to Oracle for now, see **ORACLE STANDARD ODBC** example in [Customizing Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) article.
+
+-   **Web** data source can not currently be used on Azure-SSIS IR with custom setup, so please use it on Azure-SSIS IR without custom setup for now.
 
 ## Next steps
 Learn how to run SSIS packages in the Azure-SSIS IR as first-class activities in ADF pipelines. See [Execute SSIS Package activity Runtime](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) article.

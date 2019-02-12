@@ -40,6 +40,8 @@
   href: using-xml-data-types.md
 - name: UTF-16 Support in OLE DB Driver for SQL Server
   href: utf-16-support-in-oledb-driver-for-sql-server.md
+- name: UTF-8 Support in OLE DB Driver for SQL Server
+  href: utf-8-support-in-oledb-driver-for-sql-server.md
 - name: Working with Query Notifications
   href: working-with-query-notifications.md
 - name: Working with Snapshot Isolation

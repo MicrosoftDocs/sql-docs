@@ -24,7 +24,11 @@ Starting with version 18.2.1, Microsoft OLE DB Driver for SQL Server allows OLE 
 - SQL login ID and password
 
 > [!NOTE]  
-> When using the Azure Active Directory options with the OLE DB driver, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. ADAL isn't  required for the other authentication methods or OLE DB operations.
+> When using the following Azure Active Directory options with the OLE DB driver, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed:
+> - Azure Active Directory login ID and password
+> - Azure Active Directory integrated authentication
+>
+> ADAL isn't  required for the other authentication methods or OLE DB operations.
 
 > [!NOTE]
 > Using the following authentication modes with `DataTypeCompatibility` (or its corresponding property) set to `80` is **not** supported:
@@ -75,11 +79,11 @@ This section shows examples of new and existing connection string keywords to be
         > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];User ID=[username];Password=[password];Use Encryption for Data=true
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     - New:
-        > Server=[server];Database=[database];**Authentication=SqlPassword**;UID=[username];PWD=[password];encrypt=yes
+        > Server=[server];Database=[database];**Authentication=SqlPassword**;UID=[username];PWD=[password];Encrypt=yes
     - Deprecated:
-        > Server=[server];Database=[database];UID=[username];PWD=[password];encrypt=yes
+        > Server=[server];Database=[database];UID=[username];PWD=[password];Encrypt=yes
 
-### Integrated windows authentication using Security Support Provider Interface  (SSPI)
+### Integrated Windows authentication using Security Support Provider Interface  (SSPI)
 
 - Using `IDataInitialize::GetDataSource`:
     - New:
@@ -88,25 +92,25 @@ This section shows examples of new and existing connection string keywords to be
         > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Integrated Security=SSPI**;Use Encryption for Data=true
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     - New:
-        > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;encrypt=yes
+        > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes
     - Deprecated:
-        > Server=[server];Database=[database];**Trusted_Connection=yes**;encrypt=yes
+        > Server=[server];Database=[database];**Trusted_Connection=yes**;Encrypt=yes
 
 ### AAD username and password authentication using ADAL
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryPassword**;User ID=[username];Password=[password];Use Encryption for Data=true
 - Using `DBPROP_INIT_PROVIDERSTRING`:
-    > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];encrypt=yes
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];Encrypt=yes
 
 ### Integrated Azure Active Directory authentication using ADAL
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true
 - Using `DBPROP_INIT_PROVIDERSTRING`:
-    > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;encrypt=yes
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes
 
-### Azure Active Directory authentication using an Access Token
+### Azure Active Directory authentication using an access token
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=true

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # SetUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)
   Specifies the account used to execute reports unattended.  

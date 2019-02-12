@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Upload Documents to a SharePoint Library (Reporting Services in SharePoint Mode)
   You can upload report definitions and report models to a SharePoint library. When uploading a report server item, you must select a library or a folder within a library. You cannot upload a report server item to a list or page.  

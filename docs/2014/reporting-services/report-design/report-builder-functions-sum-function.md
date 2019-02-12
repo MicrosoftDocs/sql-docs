@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Sum Function (Report Builder and SSRS)
   Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope.  

@@ -3,11 +3,12 @@ title: "Configure compatible SQL Server features with Stretch Database | Microso
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
+ms.technology:
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Configure compatible SQL Server features with Stretch Database

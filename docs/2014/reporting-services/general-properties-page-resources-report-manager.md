@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # General Properties Page, Resources (Report Manager)
   Use the General properties page for resources to rename, delete, move, or replace a resource. Information about who added the resource or modified the properties appears at the top of the page.  

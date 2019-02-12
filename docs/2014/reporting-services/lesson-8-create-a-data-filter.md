@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Lesson 8: Create a Data Filter
   After you add a drillthrough action on the parent report, your next step is to create a data filter for the data table that you defined for the child report.  

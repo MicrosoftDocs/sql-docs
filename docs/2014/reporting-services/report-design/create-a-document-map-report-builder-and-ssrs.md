@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Create a Document Map (Report Builder and SSRS)
   A document map provides a set of navigational links to report items in a rendered report. When you view a report that includes a document map, a separate side pane appears next to the report. A user can click links in the document map to jump to the report page that displays that item. Report sections and groups are arranged in a hierarchy of links. Clicking items in the document map refreshes the report and displays the area of the report that corresponds to the item in the document map.  

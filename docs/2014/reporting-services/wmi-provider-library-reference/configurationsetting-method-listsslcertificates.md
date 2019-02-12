@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # ListSSLCertificates Method (WMI MSReportServer_ConfigurationSetting)
   Returns a list of certificates on the report server computer.  

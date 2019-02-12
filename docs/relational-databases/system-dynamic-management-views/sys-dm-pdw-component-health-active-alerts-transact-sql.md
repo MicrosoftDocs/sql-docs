@@ -3,9 +3,8 @@ title: "sys.dm_pdw_component_health_active_alerts (Transact-SQL) | Microsoft Doc
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
 author: stevestein

@@ -3,14 +3,15 @@ title: "Monitor and troubleshoot data migration (Stretch Database) | Microsoft D
 ms.custom: ""
 ms.date: "06/14/2016"
 ms.prod: sql
+ms.tecnology:
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, monitoring"
   - "monitoring Stretch Database"
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Monitor and troubleshoot data migration (Stretch Database)

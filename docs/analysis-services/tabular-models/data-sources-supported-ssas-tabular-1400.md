@@ -35,7 +35,7 @@ For Azure Analysis Services, see [Data sources supported in Azure Analysis Servi
 |Azure HDInsight Spark <sup>[2](#databricks)</sup>     |   Yes       |   No       |
 ||||
 
-<a name="gen2">1</a> - ADLS Gen2 is currently not supported.
+<a name="gen2">1</a> - ADLS Gen2 is currently not supported.   
 <a name="databricks">2</a> - Azure Databricks using the Spark connector is currently not supported.   
 
 

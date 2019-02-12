@@ -15,7 +15,17 @@ zone_pivot_groups: ld2-linux-distribution
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux.
+::: zone pivot="ld2-rhel"
+This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on **Red Hat Enterprise Linux (RHEL)**.
+::: zone-end
+
+::: zone pivot="ld2-sles"
+This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on **SUSE Linux Enterprise Server (SLES)**.
+::: zone-end
+
+::: zone pivot="ld2-ubuntu"
+This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on **Ubuntu**.
+::: zone-end
 
 > [!TIP]
 > SQL Server 2019 preview is now available! To try it, use this article to configure the new **mssql-server-preview** repository. Then install using the instructions in the [installation guide](sql-server-linux-setup.md).

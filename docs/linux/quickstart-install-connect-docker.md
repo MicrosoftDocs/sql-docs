@@ -238,6 +238,8 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 ## <a id="sapassword"></a> Change the SA password
 
+<!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
+
 The **SA** account is a system administrator on the SQL Server instance that gets created during setup. After creating your SQL Server container, the `MSSQL_SA_PASSWORD` environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your SA password.
 
 1. Choose a strong password to use for the SA user.

@@ -46,7 +46,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 ## Remarks  
  The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MultiPoint**, depending on the corresponding WKB input.  
   
- This method will throw a FormatException  exception if the input is not well-formatted.  
+ This method will throw a FormatException exception if the input isn't well-formatted.  
   
 ## Examples  
  The following example uses `STGeomCollFromWKB()` to create a **geometry** instance.  

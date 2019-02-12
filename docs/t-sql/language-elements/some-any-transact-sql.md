@@ -58,7 +58,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME or ANY returns **TRUE** when the comparison specified is TRUE for any pair (_scalar_expression_**,**_x_) where *x* is a value in the single-column set; otherwise, returns **FALSE**.  
   
 ## Remarks  
- SOME requires the *scalar_expression* to compare positively to at least one value returned by the subquery. For statements that require the *scalar_expression* to compare positively to every value that is returned by the subquery, see [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). For instance, if the subquery returns values of 2 and 3, *scalar_expression* = SOME (subquery) would evaluate as TRUE for a *scalar_express* of 2. If the subquery returns values of 2 and 3, *scalar_expression* = ALL (subquery) would evaluate as FALSE, because some of the values of the subquery (the value of 3) would not meet the criteria of the expression.  
+ SOME requires the *scalar_expression* to compare positively to at least one value returned by the subquery. For statements that require the *scalar_expression* to compare positively to every value that is returned by the subquery, see [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). For instance, if the subquery returns values of 2 and 3, *scalar_expression* = SOME (subquery) would evaluate as TRUE for a *scalar_express* of 2. If the subquery returns values of 2 and 3, *scalar_expression* = ALL (subquery) would evaluate as FALSE, because some of the values of the subquery (the value of 3) wouldn't meet the criteria of the expression.  
   
 ## Examples  
   
@@ -84,7 +84,7 @@ ELSE
 PRINT 'FALSE' ;  
 ```  
   
- The following query returns `FALSE` because `3` is not less than all of the values in the table.  
+ The following query returns `FALSE` because `3` isn't less than all of the values in the table.  
   
 ```  
 IF 3 < ALL (SELECT ID FROM T1)  
@@ -110,13 +110,13 @@ IF
     ON Sales.SalesOrderDetail.ProductID = Production.Product.ProductID   
     WHERE SalesOrderID = @OrderID  
    )  
-PRINT 'At least one item for this order cannot be manufactured in specified number of days.'  
+PRINT 'At least one item for this order can't be manufactured in specified number of days.'  
 ELSE   
 PRINT 'All items for this order can be manufactured in the specified number of days or less.' ;  
   
 ```  
   
- To test the procedure, execute the procedure by using the `SalesOrderID``49080`, which has one component that requires `2` days and two components that require 0 days. The first statement meets the criteria. The second query does not.  
+ To test the procedure, execute the procedure by using the `SalesOrderID``49080`, which has one component that requires `2` days and two components that require 0 days. The first statement meets the criteria. The second query doesn't.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -132,7 +132,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `At least one item for this order cannot be manufactured in specified number of days.`  
+ `At least one item for this order can't be manufactured in specified number of days.`  
   
 ## See Also  
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   

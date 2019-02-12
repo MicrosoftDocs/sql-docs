@@ -44,7 +44,7 @@ The maximum total number of decimal digits that will be stored, both to the left
 >  Informatica only supports 16 significant digits, regardless of the precision and scale specified.  
   
 *s* (scale)  
-The number of decimal digits that will be stored to the right of the decimal point. This number is subtracted from *p* to determine the maximum number of digits to the left of the decimal point. Scale must be a value from 0 through *p*. Scale can be specified only if precision is specified. The default scale is 0; therefore, 0 <= *s* \<= *p*. Maximum storage sizes vary, based on the precision.
+The number of decimal digits that will be stored to the right of the decimal point. This number is subtracted from *p* to determine the maximum number of digits to the left of the decimal point. Scale must be a value from 0 through *p*. Scale can be specified only if precision is specified. The default scale is 0 and so 0 <= *s* \<= *p*. Maximum storage sizes vary, based on the precision.
   
 |Precision|Storage bytes|  
 |---|---|
@@ -57,13 +57,13 @@ The number of decimal digits that will be stored to the right of the decimal poi
 >  Informatica (connected through the SQL Server PDW Informatica Connector) only supports 16 significant digits, regardless of the precision and scale specified.  
   
 ## Converting decimal and numeric data
-For the **decimal** and **numeric** data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers each specific combination of precision and scale as a different data type. For example, **decimal(5,5)** and **decimal(5,0)** are considered different data types.
+For **decimal** and **numeric** data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers each specific combination of precision and scale as a different data type. For example, **decimal(5,5)** and **decimal(5,0)** are considered different data types.
   
 In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, a constant with a decimal point is automatically converted into a **numeric** data value, using the minimum precision and scale necessary. For example, the constant 12.345 is converted into a **numeric** value with a precision of 5 and a scale of 3.
   
 Converting from **decimal** or **numeric** to **float** or **real** can cause some loss of precision. Converting from **int**, **smallint**, **tinyint**, **float**, **real**, **money**, or **smallmoney** to either **decimal** or **numeric** can cause overflow.
   
-By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses rounding when converting a number to a **decimal** or **numeric** value with a lower precision and scale. However, if the SET ARITHABORT option is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error when overflow occurs. Loss of only precision and scale is not sufficient to raise an error.
+By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses rounding when converting a number to a **decimal** or **numeric** value with a lower precision and scale. Conversely, if the SET ARITHABORT option is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error when overflow occurs. Loss of only precision and scale isn't sufficient to raise an error.
   
 When converting float or real values to decimal or numeric, the decimal value will never have more than 17 decimals. Any float value < 5E-18 will always convert as 0.
   

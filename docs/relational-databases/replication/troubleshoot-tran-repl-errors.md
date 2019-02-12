@@ -39,7 +39,7 @@ Errors can occur in any step of this process. Finding those errors can be the mo
 1. Use Replication Monitor to identify at which point replication is encountering the error (which agent?):
    - If errors are occurring in the **Publisher to Distributor** section, the issue is with the Log Reader Agent. 
    - If errors are occurring in the **Distributor to Subscriber** section, the issue is with the Distribution Agent.  
-2. Look through that agent's job history in Job Activity Monitor to identify details of the error. If the job history is not showing enough details, you can [enable verbose logging](#enable-verbose-logging) on that specific agent.
+2. Look through that agent's job history in Job Activity Monitor to identify details of the error. If the job history is not showing enough details, you can [enable verbose logging](#enable-verbose-logging-on-any-agent) on that specific agent.
 3. Try to determine a solution for the error.
 
 

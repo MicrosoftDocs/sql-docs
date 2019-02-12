@@ -24,6 +24,9 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
+| CTP 2.3 |  |
+| CTP 2.2 | No changes. |
+| CTP 2.1 | No changes. |
 | CTP 2.0 | Linux platform support for R and Python machine learning. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
 |   | [Java language extension](java/extension-java.md) on both Windows and Linux is new in SQL Server 2019 preview. You can make compiled Java code available to SQL Server by assigning permissions and setting the path. Client apps with access SQL Server can use data and run your code by calling [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), the same procedure used for R and Python integration on SQL Server. | 
 |  | The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduces two new parameters that enable you to easily generate multiple models from partitioned data. Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |

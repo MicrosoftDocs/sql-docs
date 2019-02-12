@@ -2,7 +2,7 @@
 title: "Installing OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Installing and uninstalling OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "06/12/2018"
+ms.date: "02/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -36,7 +36,7 @@ The OLE DB Driver for SQL Server files (msoledbsql.dll, msoledbsqlr.rll) are ins
 > [!NOTE]  
 > All appropriate registry settings for the OLE DB Driver for SQL Server are made as part of the installation process.  
 
-The OLE DB Driver for SQL Server header and library files (msoledbsql.h and msoledbsql.lib) are installed in `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`. Additionally, the x64 msoledbsql.msi installs the same files in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`.  
+The OLE DB Driver for SQL Server header and library files (msoledbsql.h and msoledbsql.lib) are installed in `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`. Additionally, the x64 msoledbsql.msi installs the same files in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`.  
 
 You can distribute OLE DB Driver for SQL Server through msoledbsql.msi. You might have to install OLE DB Driver for SQL Server when you deploy an application. One way to install multiple packages in what seems to the user to be a single installation is to use chainer and bootstrapper technology. For more information, see [Authoring a Custom Bootstrapper Package for Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) and [Adding Custom Prerequisites](https://go.microsoft.com/fwlink/?LinkId=115668).  
   

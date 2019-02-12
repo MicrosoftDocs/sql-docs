@@ -28,7 +28,7 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 |Option|Description|
 |---   |---        |
 |Server|The name of an instance of SQL Server on your network. Select a server\instance name from the list, or type the server\instance name in the **Server** box. Optionally, you can create a server alias on the client computer using **SQL Server Configuration Manager**, and type that name in the **Server** box. <br/><br/>You can enter "(local)" when you are using the same computer as SQL Server. You can then connect to a local instance of SQL Server, even when running a non-networked version of SQL Server.<br/><br/>For more information about server names for different types of networks, see [SQL Server Installation](https://go.microsoft.com/fwlink/?linkid=2067541).|
-|Authentication Mode|You can select the following authentication options from the drop-down list:<br/><ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials</li><li>`SQL Server Authentication:` Authentication to SQL Server using login ID and password</li><li>`Active Directory - Integrated:` Integrated authentication using the currently logged-in user's Windows account credentials</li><li>`Active Directory - Password:` Active Directory authentication using login ID and password</li></ul>|
+|Authentication Mode|You can select the following authentication options from the drop-down list:<br/><ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials.</li><li>`SQL Server Authentication:` Authentication to SQL Server using login ID and password.</li><li>`Active Directory - Integrated:` Integrated authentication using the currently logged-in user's Windows account credentials.</li><li>`Active Directory - Password:` Active Directory authentication using login ID and password.</li></ul>|
 |Server SPN|If you use a trusted connection, you can specify a service principal name (SPN) for the server.|
 |Login ID|Specifies the login ID to use for the connection. The Login ID text box is only enabled if `Authentication Mode` is set to `SQL Server Authentication` or `Active Directory - Password`.|
 |Password|Specifies the password used for the connection. The password text box is only enabled if `Authentication Mode` is set to `SQL Server Authentication` or `Active Directory - Password`.|
@@ -47,3 +47,6 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 
 > [!NOTE]  
 > When using `Windows Authentication` or `SQL Server Authentication` modes, **Trust server certificate** is considered only when the **Use strong encryption for data** option is enabled.
+
+## See Also
+[Using Azure Active Directory](../features/using-azure-active-directory.md)

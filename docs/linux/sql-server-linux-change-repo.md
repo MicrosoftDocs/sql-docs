@@ -16,15 +16,15 @@ zone_pivot_groups: ld2-linux-distribution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on **Red Hat Enterprise Linux (RHEL)**.
+This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux. At the top, your current selection is **Red Had (RHEL)**.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on **SUSE Linux Enterprise Server (SLES)**.
+This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux. At the top, your current selection is **SUSE (SLES)**.
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
-This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on **Ubuntu**.
+This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux. At the top, your current selection is **Ubuntu**.
 ::: zone-end
 
 > [!TIP]

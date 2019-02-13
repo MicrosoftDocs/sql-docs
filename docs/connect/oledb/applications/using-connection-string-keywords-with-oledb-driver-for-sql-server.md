@@ -104,7 +104,7 @@ manager: craigg
 |**UseProcForPrepare**|SSPROP_INIT_USEPROCFORPREP|This keyword is deprecated, and its setting is ignored by the OLE DB Driver for SQL Server.|  
 |**WSID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
-<b id="table1_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [New encryption and certificate validation behavior](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
+<b id="table1_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [Encryption and certificate validation](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
 
  Connection strings used by OLE DB applications using **IDataInitialize::GetDataSource** have the following syntax:  
   
@@ -162,7 +162,7 @@ manager: craigg
 |**User ID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
 |**Workstation ID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
-<b id="table2_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [New encryption and certificate validation behavior](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
+<b id="table2_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [Encryption and certificate validation](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
 
  **Note** In the connection string, the "Old Password" property sets SSPROP_AUTH_OLD_PASSWORD, which is the current (possibly expired) password that is not available via a provider string property.  
   
@@ -219,7 +219,7 @@ manager: craigg
 |**User ID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
 |**Workstation ID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
-<b id="table3_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [New encryption and certificate validation behavior](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
+<b id="table3_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [Encryption and certificate validation](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
 
  **Note** In the connection string, the "Old Password" property sets SSPROP_AUTH_OLD_PASSWORD, which is the current (possibly expired) password that is not available via a provider string property.  
   

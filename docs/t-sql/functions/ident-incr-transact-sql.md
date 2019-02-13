@@ -24,9 +24,9 @@ manager: craigg
 # IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the increment value (returned as **numeric** (**@@**MAXPRECISION,0)) specified during the creation of an identity column in a table or view that has an identity column.  
+  Returns the increment value (as **numeric** (**@@**MAXPRECISION, 0)) specified when creating a table or view's identity column.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,9 +43,9 @@ IDENT_INCR ( 'table_or_view' )
  **numeric**  
   
 ## Exceptions  
- Returns NULL on error or if a caller does not have permission to view the object.  
+ Returns NULL on error or if a caller doesn't have object view permission.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as IDENT_INCR may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables they own or have permissions for. Without user object permission, a metadata-emitting, built-in function, such as IDENT_INCR, may return NULL. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Examples  
   
@@ -60,7 +60,7 @@ GO
 ```  
   
 ### B. Returning the increment value from multiple tables  
- The following example returns the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that include an identity column with an increment value.  
+ The following example returns the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that includes an identity column with an increment value.  
   
 ```  
 USE AdventureWorks2012;  

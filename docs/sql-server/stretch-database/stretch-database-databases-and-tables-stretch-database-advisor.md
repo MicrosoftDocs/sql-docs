@@ -1,9 +1,7 @@
 ---
 title: "Identify databases and tables for Stretch Database | Microsoft Docs"
-ms.custom: ""
 ms.date: "10/30/2017"
-ms.prod: sql
-ms.technology:
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

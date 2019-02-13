@@ -1,5 +1,5 @@
 ---
-title: "Using the OLE DB Driver for SQL Server Header and Library Files | Microsoft Docs"
+title: "Using the OLE DB driver for SQL Server header and library Files | Microsoft Docs"
 description: "Using the OLE DB Driver for SQL Server header and library files"
 ms.custom: ""
 ms.date: "02/12/2019"
@@ -9,20 +9,20 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
-  - "header files [OLE DB Driver for SQL Server]"
+  - "header files [OLE DB driver for SQL Server]"
   - "MSOLEDBSQL, header files"
   - "OLE DB, header files"
-  - "library files [OLE DB Driver for SQL Server]"
+  - "library files [OLE DB driver for SQL Server]"
   - "OLE DB Driver for SQL Server, header files"
-  - "data access [OLE DB Driver for SQL Server], header files"
-  - "data access [OLE DB Driver for SQL Server], library files"
+  - "data access [OLE DB driver for SQL Server], header files"
+  - "data access [OLE DB driver for SQL Server], library files"
   - "OLE DB Driver for SQL Server, library files"
   - "MSOLEDBSQL, library files"
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ---
-# Using the OLE DB Driver for SQL Server Header and Library Files
+# Using the OLE DB driver for SQL Server header and library files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -41,7 +41,7 @@ manager: craigg
   
  OLE DB applications that use the OLE DB Driver for SQL Server only need to reference msoledbsql.h. If an application uses both MDAC (SQLOLEDB) and the OLE DB Driver for SQL Server, it can reference both sqloledb.h and msoledbsql.h, but the reference to sqloledb.h must come first.  
   
-## Using the OLE DB Driver for SQL Server Header File  
+## Using the OLE DB Driver for SQL Server header file  
  To use the OLE DB Driver for SQL Server header file, you must use an **include** statement within your C/C++ programming code. The following sections describe how to do it in OLE DB applications.  
   
 > [!NOTE]  
@@ -60,9 +60,9 @@ include "msoledbsql.h";
  When creating a connection to a data source through OLE DB Driver for SQL Server, use "MSOLEDBSQL" as the provider name string.  
 
   
-## Component Names and Properties by Version  
+## Component names and properties by version  
 
-|Property|OLE DB Driver for SQL Server|MDAC|  
+|Property|OLE DB driver for SQL Server|MDAC|  
 |--------|----------------------------|----|   
 |OLE DB PROGID|MSOLEDBSQL|SQLOLEDB|  
 |OLE DB header file name|msoledbsql.h|Sqloledb.h|  

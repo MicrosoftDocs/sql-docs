@@ -46,10 +46,10 @@ When you invoke msoledbsql.msi, only the client components are installed by defa
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
-## Silent Install  
+## Silent install  
  If you use the /passive, /qn, /qb, or /qr option with msiexec, you must also specify IACCEPTMSOLEDBSQLLICENSETERMS=YES, to explicitly indicate that you accept the terms of the end user license. This option must be specified in all capital letters.  
 
-## Installing OLE DB Driver for SQL Server as a Dependency  
+## Installing OLE DB Driver for SQL Server as a dependency  
 It is important not to uninstall OLE DB Driver for SQL Server until all dependent applications are uninstalled. To provide users with a warning that your application depends on OLE DB Driver for SQL Server, use the APPGUID install option in your MSI, as follows:  
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  

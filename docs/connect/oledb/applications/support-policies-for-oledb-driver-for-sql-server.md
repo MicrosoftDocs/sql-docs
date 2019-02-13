@@ -40,4 +40,4 @@ However, that is in maintenance mode and no longer updated.
 Use the OLE DB Driver for SQL Server (MSOLEDBSQL) instead.
 
 ## See also  
- [Building Applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [Building applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

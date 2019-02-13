@@ -1,7 +1,7 @@
 ---
 title: "Download Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Where to download Microsoft OLE DB Driver for SQL Server"
-ms.date: "07/03/2018"
+ms.date: "02/12/2019"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual

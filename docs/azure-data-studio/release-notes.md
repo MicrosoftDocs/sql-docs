@@ -3,7 +3,7 @@ title: Release notes and changelog
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
 ms.custom: "seodec18"
-ms.date: "01/17/2019"
+ms.date: "02/13/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -16,6 +16,23 @@ manager: craigg
 
 **[Download and install the latest release!](download.md)**
 
+## February 2019 (February Release)
+
+release date: February 13, 2019  
+version: 1.4.5
+
+- Added **Admin pack for SQL Server** extension pack to make it easier to install SQL Server admin-related extensions. This includes:
+    - [SQL Server Agent](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [SQL Server Import](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+- Added filtering extended event support in Profiler extension
+- Added Save as XML feature that can save T-SQL results as XML
+- Added Data-Tier Application Wizard improvements
+    - Added Generate script button
+    - Added view to give warnings of possible data loss during deployment
+- Updates to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Results streaming enabled by default for long running queries
+- Resolved [bugs and issues](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1).
 
 ## January Hotfix 2019 (January Hotfix Release)
 

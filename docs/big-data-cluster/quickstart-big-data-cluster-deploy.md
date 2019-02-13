@@ -165,56 +165,7 @@ When the deployment script finishes, the output notifies you of success:
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-The SQL Server big data cluster is now deployed on AKS. You can now use Azure Data Studio to connect to the SQL Server master instance and the HDFS/Spark endpoints using Azure Data Studio.
-
-### <a id="master"></a> Master instance
-
-The SQL Server master instance is a traditional SQL Server instance containing relational SQL Server databases. The following steps describe how to connect to the master instance using Azure Data Studio.
-
-1. From the command-line, find the IP of your master instance with the following command:
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. In Azure Data Studio, press **F1** > **New Connection**.
-
-1. In **Connection type**, select **Microsoft SQL Server**.
-
-1. Type the IP address of the SQL Server master instance in **Server name** (for example: **\<IP Address\>,31433**).
-
-1. Enter a SQL login **User name** (`SA`) and **Password** (the password you entered in the deployment script).
-
-1. Change the target **Database name** to one of your relational databases.
-
-   ![Connect to the master instance](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. Press **Connect**, and the **Server Dashboard** should appear.
-
-### <a id="hdfs"></a> HDFS/Spark gateway
-
-The **HDFS/Spark gateway** enables you to connect in order to work with the HDFS storage pool and to run Spark jobs. The following steps describe how to connect with Azure Data Studio.
-
-1. From the command-line, find the IP address of your HDFS/Spark gateway with the following command:
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. In Azure Data Studio, press **F1** > **New Connection**.
-
-1. In **Connection type**, select **SQL Server big data cluster**.
-   
-   > [!TIP]
-   > If you do not see the **SQL Server big data cluster** connection type, make sure you have installed the [SQL Server 2019 extension](../azure-data-studio/sql-server-2019-extension.md) and that you restarted Azure Data Studio after the extension completed installing.
-
-1. Type the IP address of the big data cluster in **Server name** (do not specify a port).
-
-1. Enter `root` for the **User** and specify the **Password** to your big data cluster that you entered in the deployment script.
-
-   ![Connect to HDFS/Spark gateway](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. Press **Connect**, and the **Server Dashboard** should appear.
+The SQL Server big data cluster is now deployed on AKS. You can now use Azure Data Studio to connect to the cluster. For more information, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## Clean up
 

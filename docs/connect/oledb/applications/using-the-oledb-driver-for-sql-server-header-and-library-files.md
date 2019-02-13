@@ -1,5 +1,5 @@
 ---
-title: "Using the OLE DB driver for SQL Server header and library Files | Microsoft Docs"
+title: "Using the OLE DB Driver for SQL Server header and library files | Microsoft Docs"
 description: "Using the OLE DB Driver for SQL Server header and library files"
 ms.custom: ""
 ms.date: "02/12/2019"
@@ -9,20 +9,20 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
-  - "header files [OLE DB driver for SQL Server]"
+  - "header files [OLE DB Driver for SQL Server]"
   - "MSOLEDBSQL, header files"
   - "OLE DB, header files"
-  - "library files [OLE DB driver for SQL Server]"
+  - "library files [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, header files"
-  - "data access [OLE DB driver for SQL Server], header files"
-  - "data access [OLE DB driver for SQL Server], library files"
+  - "data access [OLE DB Driver for SQL Server], header files"
+  - "data access [OLE DB Driver for SQL Server], library files"
   - "OLE DB Driver for SQL Server, library files"
   - "MSOLEDBSQL, library files"
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ---
-# Using the OLE DB driver for SQL Server header and library files
+# Using the OLE DB Driver for SQL Server header and library files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -62,7 +62,7 @@ include "msoledbsql.h";
   
 ## Component names and properties by version  
 
-|Property|OLE DB driver for SQL Server|MDAC|  
+|Property|OLE DB Driver for SQL Server|MDAC|  
 |--------|----------------------------|----|   
 |OLE DB PROGID|MSOLEDBSQL|SQLOLEDB|  
 |OLE DB header file name|msoledbsql.h|Sqloledb.h|  

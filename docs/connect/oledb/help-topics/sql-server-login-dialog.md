@@ -25,6 +25,7 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 
 ![Screenshot of SQL Server Login Dialog Box](../media/sql-server-login-dialog.png)
 
+## Options
 |Option|Description|
 |---   |---        |
 |Server|The name of an instance of SQL Server on your network. Select a server\instance name from the list, or type the server\instance name in the **Server** box. Optionally, you can create a server alias on the client computer using **SQL Server Configuration Manager**, and type that name in the **Server** box. <br/><br/>You can enter "(local)" when you are using the same computer as SQL Server. You can then connect to a local instance of SQL Server, even when running a non-networked version of SQL Server.<br/><br/>For more information about server names for different types of networks, see [SQL Server Installation](https://go.microsoft.com/fwlink/?linkid=2067541).|
@@ -48,5 +49,6 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 > [!NOTE]  
 > When using `Windows Authentication` or `SQL Server Authentication` modes, **Trust server certificate** is considered only when the **Use strong encryption for data** option is enabled.
 
-## See Also
-[Using Azure Active Directory](../features/using-azure-active-directory.md)
+## Next steps
+- [Authenticate to Azure Active Directory](../features/using-azure-active-directory.md) using the OLE DB driver.
+- Set connection information using [Universal Data Link (UDL)](data-link-pages.md).

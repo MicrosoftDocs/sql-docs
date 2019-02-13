@@ -1,7 +1,7 @@
 ---
 title: "Download Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Where to download Microsoft OLE DB Driver for SQL Server"
-ms.date: "07/03/2018"
+ms.date: "02/12/2019"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -18,6 +18,6 @@ The following version of the Microsoft OLE DB Driver for SQL Server is available
 
 ## See also
 [Release notes for the Microsoft OLE DB Driver for SQL Server](release-notes-for-oledb-driver-for-sql-server.md)  
-[System Requirements for OLE DB Driver for SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
+[System requirements for OLE DB Driver for SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
 [When to use OLE DB Driver for SQL Server](when-to-use-oledb-driver-for-sql-server.md)  
 [Installing OLE DB Driver for SQL Server](applications/installing-oledb-driver-for-sql-server.md)

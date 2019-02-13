@@ -4,7 +4,7 @@
   href: components-of-oledb-driver-for-sql-server.md
 - name: Installing OLE DB Driver for SQL Server
   href: installing-oledb-driver-for-sql-server.md
-- name: Support Policies for OLE DB Driver for SQL Server
+- name: Support policies for OLE DB Driver for SQL Server
   href: support-policies-for-oledb-driver-for-sql-server.md
 - name: Updating an Application from SQL Server 2005 Native Client
   href: updating-an-application-from-sql-server-2005-native-client.md

@@ -46,7 +46,7 @@ manager: craigg
  [Using ADO with OLE DB Driver for SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
  Discusses how ADO can use OLE DB Driver for SQL Server to access and use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functionality.  
 
- [Support Policies for OLE DB Driver for SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
+ [Support policies for OLE DB Driver for SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Discusses how various data-access components can be used with different versions of OLE DB Driver for SQL Server.  
 
 ## See Also  

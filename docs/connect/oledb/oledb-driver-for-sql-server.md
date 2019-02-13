@@ -70,7 +70,7 @@ The new OLE DB provider is called the Microsoft OLE DB Driver for SQL Server (MS
   
  This section also discusses OLE DB Driver for SQL Server installation and deployment, including how to redistribute the OLE DB Driver for SQL Server library.  
   
- [System Requirements for OLE DB Driver for SQL Server](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
+ [System requirements for OLE DB Driver for SQL Server](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
  Discusses the system resources needed to use OLE DB Driver for SQL Server.  
   
  [OLE DB Driver for SQL Server Programming](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

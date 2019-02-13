@@ -32,7 +32,7 @@ manager: craigg
 >  Make sure you log on with administrator privileges before installing this software.  
 
 ## Operating system requirements  
- For a list of operating systems that support OLE DB Driver for SQL Server, see [Support Policies for OLE DB Driver for SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
+ For a list of operating systems that support OLE DB Driver for SQL Server, see [Support policies for OLE DB Driver for SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
 
  ## Azure Active Directory authentication requirements  
  When using Azure Active Directory authentication methods with the OLE DB driver, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. ADAL isn't required for the other authentication methods or OLE DB operations.
@@ -41,7 +41,7 @@ manager: craigg
 ## SQL Server requirements  
  To use OLE DB Driver for SQL Server to access data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, you must have an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed.  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] supports connections from all versions of MDAC, Windows Data Access Components, and all versions of OLE DB Driver for SQL Server. When an older client version connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], server data types not known to the client are mapped to types that are compatible with the client version. For more information, see Data Type Compatibility for Client Versions, later in this article.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] supports connections from all versions of MDAC, Windows Data Access Components, and all versions of OLE DB Driver for SQL Server. When an older client version connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], server data types not known to the client are mapped to types that are compatible with the client version. For more information, see [Data type compatibility for client versions](system-requirements-for-oledb-driver-for-sql-server.md#data-type-compatibility-for-client-versions).  
 
 ## Cross-language requirements  
  The English-language version of OLE DB Driver for SQL Server is supported on all localized versions of supported operating systems. Localized versions of OLE DB Driver for SQL Server are supported on localized operating systems that are the same language as the localized OLE DB Driver for SQL Server version. Localized versions of OLE DB Driver for SQL Server are also supported on English-language versions of supported operating systems as long as the matching language settings are installed.  

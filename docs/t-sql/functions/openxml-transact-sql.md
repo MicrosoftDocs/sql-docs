@@ -242,4 +242,3 @@ EXEC sp_xml_removedocument @idoc;
 ## See Also  
  [Examples: Using OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
-  

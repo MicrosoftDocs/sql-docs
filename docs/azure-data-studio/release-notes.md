@@ -22,9 +22,9 @@ release date: February 13, 2019
 version: 1.4.5
 
 - Added **Admin pack for SQL Server** extension pack to make it easier to install SQL Server admin-related extensions. This includes:
-    - [SQL Server Agent](https://docs.microsoft.com/en-us/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
-    - [SQL Server Profiler](https://docs.microsoft.com/en-us/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
-    - [SQL Server Import](https://docs.microsoft.com/en-us/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+    - [SQL Server Agent](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [SQL Server Import](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
 - Added filtering extended event support in Profiler extension
 - Added Save as XML feature that can save T-SQL results as XML
 - Added Data-Tier Application Wizard improvements

@@ -33,7 +33,7 @@ For more information, see:
 
 * Support for `MultiSubnetFailover` connection string keyword and `SSPROP_INIT_MULTISUBNETFAILOVER` initialization property.  
 For more information, see:  
-  * [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+  * [Support for High Availability, Disaster Recovery](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
   * [Using Connection String Keywords with OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 
 ## See also

@@ -20,9 +20,9 @@
   href: service-principal-name-spn-support-in-client-connections.md
 - name: Sparse Columns Support in OLE DB Driver for SQL Server
   href: sparse-columns-support-in-oledb-driver-for-sql-server.md
-- name: OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
+- name: Support for High Availability, Disaster Recovery
   href: oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
-- name: OLE DB Driver for SQL Server Support for LocalDB
+- name: Support for LocalDB
   href: oledb-driver-for-sql-server-support-for-localdb.md
 - name: Table-Valued Parameters (OLE DB Driver for SQL Server)
   href: table-valued-parameters-oledb-driver-for-sql-server.md

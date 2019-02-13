@@ -1,6 +1,6 @@
 ---
-title: "OLE DB Driver for SQL Server Support for LocalDB | Microsoft Docs"
-description: "OLE DB Driver for SQL Server support for LocalDB"
+title: "Support for LocalDB | Microsoft Docs"
+description: "Support for LocalDB"
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ---
-# OLE DB Driver for SQL Server Support for LocalDB
+# Support for LocalDB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

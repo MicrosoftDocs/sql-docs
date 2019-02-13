@@ -232,9 +232,9 @@ Cleanup:
 }
 ```
 
-## See Also
-[Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://go.microsoft.com/fwlink/?linkid=2072672)
+## Next steps
+- Learn how to [authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://go.microsoft.com/fwlink/?linkid=2072672).
 
-[Token-based authentication support for Azure SQL DB using Azure AD auth](https://go.microsoft.com/fwlink/?linkid=2068937)
+- See how [Azure Active Directory Authentication](https://go.microsoft.com/fwlink/?linkid=2073783) to SQL Server works.
 
-[Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
+- See the [connection string keywords](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) the OLE DB driver supports.

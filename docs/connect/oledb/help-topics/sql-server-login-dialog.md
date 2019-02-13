@@ -48,5 +48,6 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 > [!NOTE]  
 > When using `Windows Authentication` or `SQL Server Authentication` modes, **Trust server certificate** is considered only when the **Use strong encryption for data** option is enabled.
 
-## See Also
-[Using Azure Active Directory](../features/using-azure-active-directory.md)
+## Next steps
+- Learn how to [authenticate to Azure Active Directory](../features/using-azure-active-directory.md)  using the OLE DB driver.
+- See how you can save connection information to file using [Universal Data Link (UDL)](data-link-pages.md) files.

@@ -87,13 +87,13 @@ Discusses new authentication methods introduced in OLE DB driver 18.2.1 that hav
  [UTF-8 Support in OLE DB Driver for SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
  Discusses support for UTF-8 server encoding and configuration precautions users should take when working with UTF-8 encoded data.
   
- [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+ [Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Discusses how your application can be configured to take advantage of the high-availability, disaster recovery features added in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Accessing Diagnostic Information in the Extended Events Log](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Discusses enhancements to OLE DB Driver for SQL Server and data tracing that gives you access to diagnostic information in the ring buffer and XEvents log.  
   
- [OLE DB Driver for SQL Server Support for LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
+ [Support for LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Discusses OLE DB Driver for SQL Server support for the LocalDB feature.  
   
 ## See Also  

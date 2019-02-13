@@ -1,6 +1,6 @@
 ---
 title: "Release notes (OLE DB Driver for SQL Server) | Microsoft Docs"
-ms.date: "07/03/2018"
+ms.date: "02/12/2019"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual

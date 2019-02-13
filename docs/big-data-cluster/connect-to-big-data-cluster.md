@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Connect to a SQL Server big data cluster with Azure Data Studio
 
-This article describes how to connect to a SQL Server 2019 big data cluster (preview) from Azure Data Studio. This article describes how to connect to two endpoints:
+This article describes how to connect to a SQL Server 2019 big data cluster (preview) from Azure Data Studio. There are two main endpoints that are used to interact with a big data cluster:
 
 | Endpoint | Description |
 |---|---|

@@ -53,6 +53,6 @@ Use the Advanced tab to view and set additional initialization properties.
 >  For more general Data Link connection information, see the [Data Link API Overview](https://go.microsoft.com/fwlink/?linkid=2067432).
 
 ## Next steps
-- Learn how to [authenticate to Azure Active Directory](../features/using-azure-active-directory.md)  using the OLE DB driver.
+- [Authenticate to Azure Active Directory](../features/using-azure-active-directory.md) using the OLE DB driver.
 
-- See how you can make the OLE DB driver [prompt user for authentication credentials](../help-topics/sql-server-login-dialog.md).
+- [Prompt user for authentication credentials](../help-topics/sql-server-login-dialog.md) using the OLE DB driver.

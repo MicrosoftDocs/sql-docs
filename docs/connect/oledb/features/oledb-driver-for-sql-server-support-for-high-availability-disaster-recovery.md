@@ -1,6 +1,6 @@
 ---
-title: "Support for High Availability, Disaster Recovery | Microsoft Docs"
-description: "Support for High Availability, Disaster Recovery"
+title: "OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery | Microsoft Docs"
+description: "OLE DB Driver for SQL Server support for high availability, disaster recovery"
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ---
-# Support for High Availability, Disaster Recovery
+# OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

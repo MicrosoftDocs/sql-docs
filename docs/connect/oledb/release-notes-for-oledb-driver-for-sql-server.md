@@ -1,6 +1,6 @@
 ---
-title: "Release Notes (OLE DB Driver for SQL Server) | Microsoft Docs"
-ms.date: "07/03/2018"
+title: "Release notes (OLE DB Driver for SQL Server) | Microsoft Docs"
+ms.date: "02/12/2019"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -13,6 +13,13 @@ ms.author: v-daveng
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
+
+## What's new in version 18.2.1
+
+**Features added:**
+
+* Support for UTF-8 server encoding. For more information, see: [UTF-8 Support in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md).
+* Azure Active Directory authentication support. For more information, see: [Using Azure Active Directory](features/using-azure-active-directory.md).
 
 ## What's new in version 18.1.0
 
@@ -33,7 +40,7 @@ For more information, see:
 
 * Support for `MultiSubnetFailover` connection string keyword and `SSPROP_INIT_MULTISUBNETFAILOVER` initialization property.  
 For more information, see:  
-  * [Support for High Availability, Disaster Recovery](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+  * [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
   * [Using Connection String Keywords with OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 
 ## See also

@@ -36,7 +36,7 @@ Starting with version 18.2.1, Microsoft OLE DB Driver for SQL Server allows OLE 
 > - Azure Active Directory authentication using access token
 > - Azure Active Directory integrated authentication
 
-## New connection string keywords and properties
+## Connection keywords and properties
 The following connection string keywords have been introduced to support Azure Active Directory authentication:
 
 |Connection keyword|Connection property|Description|
@@ -48,7 +48,7 @@ For more information about the new keywords/properties, see the following pages:
 - [Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
-## New encryption and certificate validation behavior
+## Encryption and certificate validation
 This section discusses the changes in encryption and certificate validation behavior. These changes are **only** effective when using the new Authentication or Access Token connection string keywords (or their corresponding properties).
 
 ### Encryption
@@ -63,7 +63,7 @@ To improve security, the new connection properties/keywords respect the `TrustSe
 > [!NOTE]   
 > Certificate validation can also be controlled through the `Value` field of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` registry entry. Valid values are `0` or `1`. The OLE DB driver chooses the most secure option between the registry and the connection property/keyword settings. That is, the driver will validate the server certificate as long as at least one of the registry/connection settings enables server certificate validation.
 
-## GUI additions for Azure Active Directory
+## GUI additions
 The driver graphical user interface has been enhanced to allow Azure Active Directory authentication. For more information, see:
 - [SQL Server Login Dialog](../help-topics/sql-server-login-dialog.md)
 - [Universal Data Link (UDL) Configuration](../help-topics/data-link-pages.md)
@@ -117,7 +117,7 @@ This section shows examples of new and existing connection string keywords to be
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Providing access token through `DBPROP_INIT_PROVIDERSTRING` isn't supported
 
-## Azure Active Directory authentication code samples
+## Code samples
 
 The following samples show the code required to connect to Azure Active Directory with connection keywords. 
 
@@ -233,8 +233,8 @@ Cleanup:
 ```
 
 ## Next steps
-- Learn how to [authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://go.microsoft.com/fwlink/?linkid=2072672).
+- [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://go.microsoft.com/fwlink/?linkid=2072672).
 
-- See how [Azure Active Directory Authentication](https://go.microsoft.com/fwlink/?linkid=2073783) to SQL Server works.
+- Learn about [Azure Active Directory Authentication](https://go.microsoft.com/fwlink/?linkid=2073783) to SQL Server.
 
-- See the [connection string keywords](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) the OLE DB driver supports.
+- Configure driver connections using [connection string keywords](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) the OLE DB driver supports.

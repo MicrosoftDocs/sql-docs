@@ -36,10 +36,10 @@ Starting with version 18.2.1, Microsoft OLE DB Driver for SQL Server allows OLE 
 > - Azure Active Directory authentication using access token
 > - Azure Active Directory integrated authentication
 
-## Connection keywords and properties
+## Connection string keywords and properties
 The following connection string keywords have been introduced to support Azure Active Directory authentication:
 
-|Connection keyword|Connection property|Description|
+|Connection string keyword|Connection property|Description|
 |---               |---                |---        |
 |Access Token|SSPROP_AUTH_ACCESS_TOKEN|Specifies an access token to authenticate to Azure Active Directory. |
 |Authentication|SSPROP_AUTH_MODE|Specifies authentication method to use.|

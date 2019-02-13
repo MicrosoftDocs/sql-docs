@@ -9,8 +9,8 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver"
-author: "v-jizho2"
-ms.author: 
+author: "karinazhou"
+ms.author: "v-jizho2"
 manager: "kenvh"
 ---
 # Using XA Transactions

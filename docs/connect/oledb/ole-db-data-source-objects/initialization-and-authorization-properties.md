@@ -73,7 +73,7 @@ manager: craigg
 |SSPROP_INIT_WSID|Type: VT_BSTR<br /><br /> R/W: Read/write<br /><br /> Description: A string identifying the workstation.|  
   
 
-<b id="table1_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [New encryption and certificate validation behavior](../features/using-azure-active-directory.md#new-encryption-and-certificate-validation-behavior).
+<b id="table1_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [New encryption and certificate validation behavior](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
 
  In the provider-specific property set DBPROPSET_SQLSERVERDATASOURCEINFO, the OLE DB Driver for SQL Server defines the additional properties; see [Data Source Information Properties](../../oledb/ole-db-data-source-objects/data-source-information-properties.md) for more information.  
   

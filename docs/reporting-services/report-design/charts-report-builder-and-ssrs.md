@@ -18,8 +18,8 @@ f1_keywords:
   - "10172"
   - "sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Charts (Report Builder and SSRS)
 Read about using chart data regions to help readers of your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports understand large volumes of aggregated data at a glance.  

@@ -7,8 +7,8 @@ ms.technology: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Add gauges to mobile reports | Reporting Services
 Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset - just the value, or the value compared to a goal.

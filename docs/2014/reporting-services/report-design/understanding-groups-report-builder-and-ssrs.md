@@ -11,8 +11,8 @@ f1_keywords:
   - "10056"
   - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Understanding Groups (Report Builder and SSRS)

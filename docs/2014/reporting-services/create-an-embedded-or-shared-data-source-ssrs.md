@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], creating"
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Formatting Report Items (Report Builder and SSRS)

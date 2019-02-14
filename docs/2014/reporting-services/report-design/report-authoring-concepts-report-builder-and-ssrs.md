@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "concepts"
   - "terminology"
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Report Authoring Concepts (Report Builder and SSRS)

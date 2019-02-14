@@ -25,30 +25,24 @@ This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial teaches
   
 ## What You Will Learn  
 This tutorial is divided into three lessons:  
-Lesson | Comments
-[Lesson 1: Create a Sample Subscriber Database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md)
 
-In this lesson you will create a table local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains subscriber information. the information Order Numbers to use for filtering and output file formats.
+| Lesson | Comments |
+| ------ | -------- |
+| [Lesson 1: Create a Sample Subscriber Database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | In this lesson you will create a table local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains subscriber information. the information Order Numbers to use for filtering and output file formats. |
+| [Lesson 2: Configure Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | In this lesson, you will configure a report data source so that the report can run unattended on a schedule. Unattended processing requires stored credentials. You will also modify the report dataset to include a parameter that is supplied by the subscriber data. This parameter is used to filter the report data based on order number. |
+| [Lesson 3: Define a Data-Driven Subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | In this lesson you will create a data-driven subscription. This lesson guides you through each page in the Data-Driven Subscription Wizard. |
 
-[Lesson 2: Configure Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)
+The following diagram illustrates the basic workflow of the tutorial:
 
-In this lesson, you will configure a report data source so that the report can run unattended on a schedule. Unattended processing requires stored credentials. You will also modify the report dataset to include a parameter that is supplied by the subscriber data. This parameter is used to filter the report data based on order number.
+| Step    | Description |
+| --------|------------ |
+| (1)     | The subscription configuration notes the source report, schedule, and the field mapping to the subscribers Database. |
+| (2)     | The OrderInfo table contains 4 order numbers to use for filtering, 1 per file. The table also contains the file formats for the generated reports. |
+| (3)     | Information from the Adventureworks database is filtered and return in the report. |
+| (4)     | The reports are created in the file formats specified in the Orderinfo table. |
 
-[Lesson 3: Define a Data-Driven Subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)
 
-In this lesson you will create a data-driven subscription. This lesson guides you through each page in the Data-Driven Subscription Wizard.
 
-The Following diagram illustrates the basic workflow of the tutorial
-
-Step  |Description 
----------|---------
-(1)     |  The subscription configuration notes the source report, schedule, and the field mapping to the subscribers Database.        
-(2)     | The OrderInfo table contains 4 order numbers to use for filtering, 1 per file. The table also contains the file formats for the generated reports.
-(3)     | Information from the Adventureworks database is filtered and return in the report. 
-(4)     | The reports are created in the file formats specified in the Orderinfo table.
-
- 
- 
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
 ## Requirements  

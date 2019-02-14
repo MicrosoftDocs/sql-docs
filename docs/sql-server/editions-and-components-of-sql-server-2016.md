@@ -180,7 +180,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
 
-<sup>4</sup> Standard Edition and CAL based licensing can restrict how many processors SQL Server Standard can use, but SQL Server Standard is NUMA aware. 
+<sup>4</sup> Standard Edition and SQL Server + CAL based licensing can restrict how many processors SQL Server Standard can use, but SQL Server Standard is NUMA aware. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|  

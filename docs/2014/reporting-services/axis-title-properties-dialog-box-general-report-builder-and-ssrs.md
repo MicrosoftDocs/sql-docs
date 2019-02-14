@@ -11,7 +11,7 @@ f1_keywords:
   - "10146"
   - "sql12.rtp.rptdesigner.axistitleproperties.general.f1"
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

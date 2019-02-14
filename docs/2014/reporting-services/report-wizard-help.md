@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Report Wizard"
   - "Report Designer [Reporting Services], wizards"
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.legendproperties.general.f1"
   - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

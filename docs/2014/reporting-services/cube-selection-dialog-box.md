@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.rpt.rptdesigner.cubeselection.f1"
   - "10130"
 ms.assetid: 03584db6-9bc0-4866-9f6d-18895322ea87
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

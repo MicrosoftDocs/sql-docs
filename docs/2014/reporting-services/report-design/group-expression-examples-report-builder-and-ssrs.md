@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "expressions [Reporting Services], adding"
   - "groups [Reporting Services], expressions"
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Group Expression Examples (Report Builder and SSRS)

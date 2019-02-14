@@ -3,7 +3,7 @@ title: Troubleshoot data collection for machine learning - SQL Server Machine Le
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 02/14/2019  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist

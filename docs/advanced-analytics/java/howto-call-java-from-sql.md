@@ -25,11 +25,11 @@ There are two methods for calling Java classes in SQL Server:
 2. Upload compiled classes in a .jar file and other dependencies into the database using the [external library](#external-library) DDL. This option is available for Windows only in CTP 2.3. Linux support will be added in a later CTP.
 
 > [!NOTE]
-> As a general recommendation, use .jar files and not individual .class files. This is common practice in Java and will make the overall experience easier.
+> As a general recommendation, use .jar files and not individual .class files. This is common practice in Java and will make the overall experience easier. See also: [How to create a jar file from class files](extension-java.md#create-jar).
 
 <a name="classpath"></a>
 
-## Use classpath
+## Classpath
 
 ### Basic principles
 
@@ -85,83 +85,6 @@ One approach for specifying a path to compiled code is by setting CLASSPATH as a
 
 Just as you created a system variable for the JDK executables, you can create a system variable for code paths. To do this, created a system environment variable called "CLASSPATH"
 
-### Class requirements
-
-In order for SQL Server to communicate with the Java runtime, you need to implement specific static variables in your class. SQL Server can then execute a method in the Java class and exchange data using the Java language extension.
-
-> [!Note]
-> Expect the implementation details to change in upcoming CTPs as we work to improve the experience for developers.
-
-### Method requirements
-To pass arguments, use the **@param** parameter in sp_execute_external_script. The method itself cannot have any arguments. The return type must be void.  
-
-```java
-public static void test()  {}
-```
-
-### Data inputs 
-
-This section explains how to push data to Java from a SQL Server query using **InputDataSet** in sp_execute_external_script.
-
-For every input column your SQL query pushes to Java, you need to declare an array.
-
-### inputDataCol
-
-In the current version of the Java extension, the **inputDataColN** variable is required, where *N* is the column number. 
-
-```java
-public static <type>[] inputDataColN = new <type>[1]
-```
-
-These arrays have to be initialized (the size of the array needs to be greater than 0, and does not have to reflect the actual length of the column).
-
-Example: `public static int[] inputDataCol1 = new int[1];`
-
-These array variables will be populated with input data from a SQL server query before execution of the Java program you are calling.
-
-#### inputNullMap
-
-Null map is used by the extension to know which values are null. This variable will be populated with information about null values by SQL Server before execution of the user function.
-
-The user only needs to initialize this variable (and the size of the array needs to be greater than 0).
-
-```java
-public static boolean[][] inputNullMap = new boolean[1][1];
-```
-
-### Data outputs 
-
-This section describes **OutputDataSet**, the output data sets returned from Java, which you can send to and persist in SQL Server.
-
-> [!Note]
-> Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
-
-#### outputDataColN
-
-Similar to **inputDataSet**, for every output column your Java program sends back to SQL Server, you must declare an array variable. All **outputDataCol** arrays should have the same length. You need to make sure this is initialized by the time the class execution finishes.
-
-```java
-public static <type>[] outputDataColN = new <type>[]
-```
-
-#### numberofOutputCols
-
-Set this variable to the number of output data columns you expect to have when the user function finishes execution.
-
-```java
-public static short numberofOutputCols = <expected number of output columns>;
-```
-
-#### outputNullMap
-
-Null map is used by the extension to indicate which values are null. We require this since primitive types don't support null. Currently, we also require the null map for String types, even though Strings can be null. Null values are indicated by "true".
-
-This NullMap must be populated with the expected number of columns and rows you are returning to SQL Server.
-
-```java
-public static boolean[][] outputNullMap
-```
-
 <a name="external-library"></a>
 
 ## External library
@@ -190,6 +113,83 @@ with result sets ((column1 int))
 ```
 
 For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## Class requirements
+
+In order for SQL Server to communicate with the Java runtime, you need to implement specific static variables in your class. SQL Server can then execute a method in the Java class and exchange data using the Java language extension.
+
+> [!Note]
+> Expect the implementation details to change in upcoming CTPs as we work to improve the experience for developers.
+
+## Method requirements
+To pass arguments, use the @param parameter in sp_execute_external_script. The method itself cannot have any arguments. The return type must be void.  
+
+```java
+public static void test()  {}
+```
+
+## Data inputs 
+
+This section explains how to push data to Java from a SQL Server query using **InputDataSet** in sp_execute_external_script.
+
+For every input column your SQL query pushes to Java, you need to declare an array.
+
+### inputDataCol
+
+In the current version of the Java extension, the **inputDataColN** variable is required, where *N* is the column number. 
+
+```java
+public static <type>[] inputDataColN = new <type>[1]
+```
+
+These arrays have to be initialized (the size of the array needs to be greater than 0, and does not have to reflect the actual length of the column).
+
+Example: `public static int[] inputDataCol1 = new int[1];`
+
+These array variables will be populated with input data from a SQL server query before execution of the Java program you are calling.
+
+### inputNullMap
+
+Null map is used by the extension to know which values are null. This variable will be populated with information about null values by SQL Server before execution of the user function.
+
+The user only needs to initialize this variable (and the size of the array needs to be greater than 0).
+
+```java
+public static boolean[][] inputNullMap = new boolean[1][1];
+```
+
+## Data outputs
+
+This section describes **OutputDataSet**, the output data sets returned from Java, which you can send to and persist in SQL Server.
+
+> [!Note]
+> Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
+
+### outputDataColN
+
+Similar to **inputDataSet**, for every output column your Java program sends back to SQL Server, you must declare an array variable. All **outputDataCol** arrays should have the same length. You need to make sure this is initialized by the time the class execution finishes.
+
+```java
+public static <type>[] outputDataColN = new <type>[]
+```
+
+### numberofOutputCols
+
+Set this variable to the number of output data columns you expect to have when the user function finishes execution.
+
+```java
+public static short numberofOutputCols = <expected number of output columns>;
+```
+
+### outputNullMap
+
+Null map is used by the extension to indicate which values are null. We require this since primitive types don't support null. Currently, we also require the null map for String types, even though Strings can be null. Null values are indicated by "true".
+
+This NullMap must be populated with the expected number of columns and rows you are returning to SQL Server.
+
+```java
+public static boolean[][] outputNullMap
+```
 
 ## Next steps
 

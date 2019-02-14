@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Edit a Data Alert in Alert Designer
   You open the data alert definition that you want to edit from Data Alert Manager. Only the user that created the alert definition can edit it. For more information about opening Data Alert Manager, see [Manage My Data Alerts in Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md).  

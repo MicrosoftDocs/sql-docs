@@ -6,6 +6,7 @@ description: Learn about SQL
 author: "barbkess"
 ms.author: "barbkess"
 ms.topic: "hub-page"
+ms.prod: sql
 ms.technology:
   - "database-engine"
 ---
@@ -13,7 +14,7 @@ ms.technology:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -23,7 +24,7 @@ ms.technology:
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Download SQL Server</span>
+                                    <span class="likeAnH3">Try SQL Server 2019 (preview)</span>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +309,7 @@ ms.technology:
                                                           <li><a class="barLink" href="/sql/relational-databases/database-features/">Relational database concepts</a></li>
                                                             <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">Connect with client applications on premises</a></li>
                                                             <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB connectivity libraries</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB applications</a></li>
+                                                            <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview">Azure SQL DB applications</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

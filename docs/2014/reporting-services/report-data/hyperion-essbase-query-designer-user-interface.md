@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Hyperion Essbase Query Designer User Interface
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from a cube defined on the data source to build an MDX query that retrieves data when the report is processed.  

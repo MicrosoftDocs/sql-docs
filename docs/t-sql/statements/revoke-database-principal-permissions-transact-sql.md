@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "REVOKE statement, users"
   - "application roles [SQL Server], permissions"
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)

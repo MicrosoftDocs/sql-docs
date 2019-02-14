@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "revoking permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Availability Group Permissions (Transact-SQL)

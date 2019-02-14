@@ -32,6 +32,7 @@ manager: craigg
 
 
 DMV's unique to SQL Database or SQL Data Warehouse.   
+
 | | | 
 |-|-|  
 |[sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  

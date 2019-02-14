@@ -34,7 +34,7 @@ Click Next to proceed to the next step in the wizard, which sets the Database Ma
 
 ## Select Destination Database
 
-In this step, you will choose the destination databse you wish to virtualize the data into. The drop-down field will contain all acceptable databases in the SQL Master instance specified in the previous screen. Here you can also name the new external table and see the schema it will use.
+In this step, you will choose the destination database you wish to virtualize the data into. The drop-down field will contain all acceptable databases in the SQL Master instance specified in the previous screen. Here you can also name the new external table and see the schema it will use.
 
 ![Create a database master key](media/data-virtualization/csv-select-destination.png)
 

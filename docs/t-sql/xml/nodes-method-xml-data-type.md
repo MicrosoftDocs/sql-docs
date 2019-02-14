@@ -3,7 +3,6 @@ title: "nodes() Method (xml Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "nodes() method"
   - "nodes method"
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # nodes() Method (xml Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

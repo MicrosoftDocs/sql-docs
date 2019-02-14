@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "RESTORE SERVICE MASTER KEY statement"
   - "transferring Service Master Keys"
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # RESTORE SERVICE MASTER KEY (Transact-SQL)

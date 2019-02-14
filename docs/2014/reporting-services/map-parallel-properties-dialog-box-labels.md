@@ -12,8 +12,8 @@ f1_keywords:
   - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+ms.author: maghan
+manager: kfile
 ---
 # Map Parallel Properties Dialog Box, Labels
   Use the **MapParallel Properties** dialog box to change label options for the horizontal grid in the map viewport. A parallel represents the following value depending on the specified coordinate system for the viewport:  

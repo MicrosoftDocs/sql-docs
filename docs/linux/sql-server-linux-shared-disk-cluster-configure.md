@@ -266,10 +266,12 @@ This example will create an FCI in the group NewLinFCIGrp. The name of the resou
 9.	Finally, fail the FCI back to the original node and remove the colocation constraint.
 
 <!---
+
 |Distribution |Topic 
 |----- |-----
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
+
 -->
 ## Summary
 

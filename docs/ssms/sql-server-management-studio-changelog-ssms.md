@@ -13,8 +13,11 @@ ms.author: "sstein"
 manager: craigg
 ---
 # SQL Server Management Studio - Changelog (SSMS)
-
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions](#previous-ssms-releases).
 
 
@@ -299,13 +302,13 @@ If there is no *preview 5* or *preview 6* label it indicates the change appeared
   - Fixed an issue where the user was unable to attach a database when physical filename of .mdf file does not match the original filename
   - Fixed an issue where SSMS might not find a valid restore plan or might find one which is sub-optimal. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.
   - Fixed a crash in SSMS when trying to restore a URL backup (this was a regression introduced in previous previews.)
-  - [New in Preview 5] Fixed issue where the "Attach Database" wizard was not displaying secondary files that were renamed. Now, the file is displayed and a comment about it is is added (e.g. "Not Found"). For details, see https://feedback.azure.com/forums/908035/suggestions/32897434
+  - [New in Preview 5] Fixed issue where the "Attach Database" wizard was not displaying secondary files that were renamed. Now, the file is displayed and a comment about it is added (e.g. "Not Found"). For details, see https://feedback.azure.com/forums/908035/suggestions/32897434
 
 - **Job Activity Monitor**
   - Fixed crash while using Job Activity Monitor (with filters)
 
 - **Managed Instance support**
-  - Improved/polished the support for Managed Instances: disabled unsupported options in UI and and a fix to the View Audit Logs option to handle URL audit target.
+  - Improved/polished the support for Managed Instances: disabled unsupported options in UI and a fix to the View Audit Logs option to handle URL audit target.
   - "Generate and Publish scripts" wizard scripts unsupported CREATE DATABASE clauses
   - Live Query Statistics was disabled for CL instances
   - Database properties->Files was incorrectly scripting ALTER DB ADD FILE

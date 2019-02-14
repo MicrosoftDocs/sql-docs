@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "updg:before attribute"
   - "record updates [SQLXML]"
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "int, bigint, smallint, and tinyint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "9/8/2017"
+ms.date: "09/8/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Exact-number data types that use integer data. To save space in the database, use the smallest data type that can reliably contain all possible values. For example, tinyint would be sufficient for a person's age because no one lives to be more than 255 years old. But tinyint would not be sufficient for a building's age because a building can be more than 255 years old.
   

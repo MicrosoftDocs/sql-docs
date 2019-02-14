@@ -9,9 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON AUTO"
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

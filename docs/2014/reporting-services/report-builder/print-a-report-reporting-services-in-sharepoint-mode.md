@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Print a Report (Reporting Services in SharePoint Mode)
   For a report server that runs in SharePoint mode, there are three ways to print a report from a SharePoint Web application:  

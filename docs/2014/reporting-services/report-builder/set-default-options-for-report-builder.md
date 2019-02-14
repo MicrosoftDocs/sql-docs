@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Report Builder Options Dialog Box, Settings (Report Builder)
   Click the **Report Builder** button and then click **Options** to set options for showing recent files and connections. You can also change the default report server, or add one if you don't have a default.  

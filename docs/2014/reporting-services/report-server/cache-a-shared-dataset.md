@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Cache a Shared Dataset
   One way to improve performance is to configure caching properties for a shared dataset. When a shared dataset is cached, a copy of the query results is saved for a specified period of time. The first user who requests a report that uses the shared dataset must wait for the query results and all processing to complete before viewing the report. Subsequent users who request the report within the caching period will experience improved performance because the query and processing has already occurred. You can also specify a cache refresh plan to run the query and cache the results until the specified cache expiration.  

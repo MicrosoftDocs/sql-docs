@@ -82,6 +82,7 @@ Sample Insight Details flyout configuration
     },
     "value": "second_column_and_condition_check_value_column_for_summary_list_view",
 ```
+
 |property|type|value|default value|description|comment|
 |:---|:---|:---|:---|:---|:---|
 |details|json object|||mandatory property to define insight detail definitions within its structure||

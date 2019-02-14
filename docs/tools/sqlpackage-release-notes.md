@@ -15,6 +15,29 @@ manager: kenvh
 
 **[Download the latest version](sqlpackage-download.md)**
 
+## sqlpackage 18.1
+
+Release date: February 1, 2019  
+Build: 15.0.4316.1 
+
+The release includes the following features and fixes:
+
+- Added support for UTF8 collations.
+- Performance fix to use the legacy cardinality estimator for reverse engineering queries.
+- Enabled non-clustered columnstore indexes on an indexed views.
+- Fixed a significant schema compare performance issue when generating a script.
+- Fixed the schema drift detection logic to ignore certain xevent sessions.
+- Fixed import ordering for graph tables.
+- Fixed exporting external tables with object permissions.
+- Moved to .NET Core 2.2 
+- Use memory backed storage for schema compare on .NET Core.
+
+This release includes cross-platform preview builds of sqlpackage that target .NET Core 2.2, and can run on macOS and Linux. This preview release has the following known issues:
+
+- Build and deployment contributors aren't supported.
+- Older .dacpac and .bacpac files that use json data serialization aren't supported.
+- Referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems.
+  - A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC).
 ## sqlpackage 18.0
 
 Release date: October 24, 2018  
@@ -70,22 +93,3 @@ The release includes the following fixes:
 - Added /DiagnosticsFile:"C:\Temp\sqlpackage.log" command-line parameter to specify a file path to save diagnostic information.
 - Added /Diagnostics command-line parameter to log diagnostic information to the console.
 
-## sqlpackage on macOS and Linux .NET Core (preview)
-
-Release date: November 15, 2018  
-Build: 15.0.4240.1
-
-This release contains the cross-platform preview build of sqlpackage that targets .NET Core 2.1, and can run on macOS and Linux. 
-
-The release includes the following fixes:
-
-- Moved to .NET Core 2.1 
-- Support for CLR UDT types, including the SQL CLR UDT types: SqlGeography, SqlGeometry, & SqlHierarchyId.
-
-This release is an early preview with following known issues:
-
-- The /p:CommandTimeout parameter is hard coded to 120.
-- Build and deployment contributors aren't supported.
-- Older .dacpac and .bacpac files that use json data serialization aren't supported.
-- Referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems.
-  - A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC).

@@ -25,6 +25,7 @@ manager: craigg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a row per XML schema component that is an attribute, **symbol_space** of **A**.  
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**|--|Inherits from [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  

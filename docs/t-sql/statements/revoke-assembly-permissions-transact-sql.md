@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "REVOKE statement, assemblies"
   - "assemblies [CLR integration], permissions"
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Assembly Permissions (Transact-SQL)

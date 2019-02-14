@@ -218,8 +218,8 @@ This can be also done using Azure portal. For details, see [Manage your key vaul
 
 
 ```powershell
-Import-Module AzureRM
-Connect-AzureRmAccount
+Import-Module Az
+Connect-AzAccount
 
 # User values
 $SubscriptionId = "<Azure SubscriptionId>"
@@ -229,16 +229,16 @@ $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
 
 # Set the context to the specified subscription.
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
 
 # Grant yourself permissions needed to create and use the column master key.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 
 # Create a column master key in Azure Key Vault.
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"

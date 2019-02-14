@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/23/2017"
+ms.date: "01/31/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -43,8 +43,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|Member name, which can be a computer name, a drive letter, or a file share path.|  
-|**member_type**|**tinyint**|The type of member, one of:<br /><br /> 0 = WSFC node<br /><br /> 1 = Disk witness<br /><br /> 2 = File share witness|  
-|**member_type_desc**|**nvarchar(50)**|Description of **member_type**, one of:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS|  
+|**member_type**|**tinyint**|The type of member, one of:<br /><br /> 0 = WSFC node<br /><br /> 1 = Disk witness<br /><br /> 2 = File share witness<br /><br /> 3 = Cloud Witness|  
+|**member_type_desc**|**nvarchar(50)**|Description of **member_type**, one of:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|The member state, one of:<br /><br /> 0 = Offline<br /><br /> 1 = Online|  
 |**member_state_desc**|**nvarchar(60)**|Description of **member_state**, one of:<br /><br /> UP<br /><br /> DOWN|  
 |**number_of_quorum_votes**|**tinyint**|Number of quorum votes possessed by this quorum member. For No Majority: Disk Only quorums, this value defaults to 0. For other quorum types, this value defaults to 1.|  

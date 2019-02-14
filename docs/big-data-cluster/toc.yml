@@ -4,10 +4,28 @@
     href: big-data-cluster-overview.md
   - name: Release notes
     href: big-data-cluster-release-notes.md
-- name: Quickstarts
+- name: Install
   items:
-  - name: Deploy SQL Server big data cluster
-    href: quickstart-big-data-cluster-deploy.md
+  - name: Install Tools
+    items:
+    - name: Install big data tools
+      href: deploy-big-data-tools.md
+    - name: Install mssqlctl
+      href: deploy-install-mssqlctl.md
+  - name: Deployment scripts
+    items:
+    - name: Azure Kubernetes Service
+      href: quickstart-big-data-cluster-deploy.md
+  - name: Deployment guidance
+    items:
+    - name: Deployment guidance
+      href: deployment-guidance.md
+    - name: Azure Kubernetes Service
+      href: deploy-on-aks.md
+    - name: Kubeadm
+      href: deploy-with-kubeadm.md
+    - name: Minikube
+      href: deploy-on-minikube.md
 - name: Tutorials
   items:
   - name: 1_Load sample data
@@ -40,24 +58,6 @@
     href: concept-security.md
 - name: How-to guides
   items:
-  - name: Install
-    items:
-    - name: Deploy big data clusters
-      items:  
-      - name: Deployment guidance
-        href: deployment-guidance.md
-      - name: Deploy on Minikube
-        href: deploy-on-minikube.md
-      - name: Deploy on AKS
-        href: deploy-on-aks.md
-      - name: Deploy with Kubeadm
-        href: deploy-with-kubeadm.md
-    - name: Install tools
-      items:
-      - name: Install big data tools
-        href: deploy-big-data-tools.md
-      - name: Install mssqlctl
-        href: deploy-install-mssqlctl.md
   - name: Data virtualization
     items:
     - name: Virtualize relational data
@@ -69,7 +69,7 @@
     - name: Load data with curl
       href: data-ingestion-curl.md
     - name: Restore a database
-      href: data-ingestion-restore-databse.md
+      href: data-ingestion-restore-database.md
   - name: Big Data/Machine Learning
     items:
     - name: Data wrangling using PROSE Code Accelerator

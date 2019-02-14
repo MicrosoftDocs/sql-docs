@@ -37,6 +37,9 @@ manager: craigg
 # Editions and supported features of SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 This topic provides details of features supported by the SQL Server editions.  At this time there are no changes to features supported by editions for SQL Server 2017.  
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -136,7 +139,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database mirroring|Yes|Yes<br /><br /> Full safety only|Witness only|Witness only|Witness only| 
 |Backup compression|Yes|Yes|No|No|No| 
 |Database snapshot|Yes|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|
-|Always On failover cluster instances|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
+|Always On failover cluster instances|Yes<br /><br /> 16|Yes<br /><br /> Support for 2 nodes|No|No|No|  
 |Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
 |Basic availability groups <sup>2</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
@@ -169,7 +172,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Resource Governor|Yes|No|No|No|No|  
 |Partitioned Table Parallelism|Yes|No|No|No|No|
 |Multiple Filestream containers|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
-|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
+|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
 |IO Resource Governance|Yes|No|No|No|No|  
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
@@ -179,6 +182,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 <sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
+
+<sup>4</sup> Standard Edition and SQL Server + CAL based licensing can restrict how many processors SQL Server Standard can use, but SQL Server Standard is NUMA aware. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|  

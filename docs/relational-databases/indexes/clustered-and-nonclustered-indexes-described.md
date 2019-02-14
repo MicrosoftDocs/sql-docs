@@ -1,7 +1,7 @@
 ---
 title: "Clustered and Nonclustered Indexes Described | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/28/2017"
+ms.date: "02/11/2019"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
@@ -18,6 +18,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Clustered and Nonclustered Indexes Described
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   An index is an on-disk structure associated with a table or view that speeds retrieval of rows from the table or view. An index contains keys built from one or more columns in the table or view. These keys are stored in a structure (B-tree) that enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to find the row or rows associated with the key values quickly and efficiently.  
   
@@ -44,7 +47,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  See [Indexes](../../relational-databases/indexes/indexes.md) for additional types of special purpose indexes.  
   
 ## Indexes and Constraints  
- Indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table and identify a particular column to be the primary key, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a PRIMARY KEY constraint and index on that column. For more information, see [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) and [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
+
+Indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table with a UNIQUE constraint, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a non-clustered index. If you configure a PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a clustered index, unless a clustered index already exists. When you try to enforce a PRIMARY KEY constraint on an existing table and a clustered index already exists on that table, SQL Server enforces the primary key using a nonclustered index.
+
+For more information, see [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) and [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
   
 ## How Indexes are used by the Query Optimizer  
  Well-designed indexes can reduce disk I/O operations and consume fewer system resources therefore improving query performance. Indexes can be helpful for a variety of queries that contain SELECT, UPDATE, DELETE, or MERGE statements. Consider the query `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. When this query is executed, the query optimizer evaluates each available method for retrieving the data and selects the most efficient method. The method may be a table scan, or may be scanning one or more indexes if they exist.  

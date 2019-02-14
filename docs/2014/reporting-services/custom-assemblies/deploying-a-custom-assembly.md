@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Deploying a Custom Assembly
   To deploy a custom assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], place the assembly in the application folders of both Report Designer and the report server. By default, custom assemblies are granted `Execution` permission in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To grant custom assemblies privileges beyond Execute permission, you will need to edit the rssrvpolicy.config configuration file for the report server and the rspreviewpolicy.config configuration file for the Report Designer preview window. Alternatively, you can install your custom assembly in the global assembly cache (GAC).  

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # ReportingServicesService Configuration File
   The ReportingServicesService.exe.config file includes settings that configure tracing.  

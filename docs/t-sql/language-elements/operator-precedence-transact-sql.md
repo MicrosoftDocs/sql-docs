@@ -22,9 +22,9 @@ manager: craigg
 # Operator Precedence (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  When a complex expression has multiple operators, operator precedence determines the sequence in which the operations are performed. The order of execution can significantly affect the resulting value.  
+  When a complex expression has multiple operators, operator precedence determines the sequence of operations. The order of execution can significantly affect the resulting value.  
   
- Operators have the precedence levels shown in the following table. An operator on higher levels is evaluated before an operator on a lower level (in the following table, 1 is the highest level and 8 is the lowest level).
+ Operators have the precedence levels shown in the following table. An operator on higher levels is evaluated before an operator on a lower level. In the following table, 1 is the highest level and 8 is the lowest level.
   
 |Level|Operators|  
 |-----------|---------------|  
@@ -37,7 +37,7 @@ manager: craigg
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
 |8|= (Assignment)|  
   
- When two operators in an expression have the same operator precedence level, they are evaluated left to right based on their position in the expression. For example, in the expression that is used in the following `SET` statement, the subtraction operator is evaluated before the addition operator.  
+ When two operators in an expression have the same precedence level, they're evaluated left to right based on their position in the expression. For example, in the expression that is used in the following `SET` statement, the subtraction operator is evaluated before the addition operator.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -46,9 +46,9 @@ SET @MyNumber = 4 - 2 + 27;
 SELECT @MyNumber;  
 ```  
   
- Use parentheses to override the defined precedence of the operators in an expression. Everything within the parentheses is evaluated first to yield a single value before that value can be used by any operator outside the parentheses.  
+ Use parentheses to override the defined precedence of the operators in an expression. Everything within parentheses is evaluated to yield a single value. That value can be used by any operator outside those parentheses.  
   
- For example, in the expression used in the following `SET` statement, the multiplication operator has a higher precedence than the addition operator. Therefore, it is evaluated first; the expression result is `13`.  
+ For example, in the expression used in the following `SET` statement, the multiplication operator has a higher precedence than the addition operator. The multiplication operation is evaluated first; the expression result is `13`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -57,7 +57,7 @@ SET @MyNumber = 2 * 4 + 5;
 SELECT @MyNumber;  
 ```  
   
- In the expression used in the following `SET` statement, the parentheses cause the addition to be performed first. The expression result is `18`.  
+ In the expression used in the following `SET` statement, the parentheses cause the addition to be evaluated first. The expression result is `18`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -66,7 +66,7 @@ SET @MyNumber = 2 * (4 + 5);
 SELECT @MyNumber;  
 ```  
   
- If an expression has nested parentheses, the most deeply nested expression is evaluated first. The following example contains nested parentheses, with the expression `5 - 3` in the most deeply nested set of parentheses. This expression yields a value of `2`. Then, the addition operator (`+`) adds this result to `4`. This yields a value of `6`. Finally, the `6` is multiplied by `2` to yield an expression result of `12`.  
+ If an expression has nested parentheses, the most deeply nested expression is evaluated first. The following example contains nested parentheses, with the expression `5 - 3` in the most deeply nested set of parentheses. This expression yields a value of `2`. Then, the addition operator (`+`) adds this result to `4` which yields a value of `6`. Finally, the `6` is multiplied by `2` to yield an expression result of `12`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -80,5 +80,4 @@ SELECT @MyNumber;
  [Logical Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  
   

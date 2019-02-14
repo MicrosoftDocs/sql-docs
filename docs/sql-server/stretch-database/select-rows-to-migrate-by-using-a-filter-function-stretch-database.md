@@ -1,9 +1,7 @@
 ---
 title: "Select rows to migrate by using a filter function (Stretch Database) | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: sql
-ms.technology:
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -17,7 +17,7 @@ manager: kenvh
 
 ## sqlpackage 18.1
 
-Release date: February 1, 2018  
+Release date: February 1, 2019  
 Build: 15.0.4316.1 
 
 The release includes the following features and fixes:

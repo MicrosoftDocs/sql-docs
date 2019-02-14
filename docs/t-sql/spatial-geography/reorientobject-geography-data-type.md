@@ -22,9 +22,9 @@ manager: craigg
 # ReorientObject (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Returns a **geography** instance with interchanged interior regions and exterior regions.  
+Returns a **geography** instance with interchanged interior regions and exterior regions.  
   
- This **geography** data type method supports **FullGlobe** instances or spatial instances that are larger than a hemisphere.  
+This **geography** data type method supports **FullGlobe** instances or spatial instances that are larger than a hemisphere.  
   
 ## Syntax  
   
@@ -34,18 +34,18 @@ manager: craigg
 ```  
   
 ## Arguments  
- *geography*  
- Is another **geography** instance on which `ReorientObject()` is invoked.  
+_geography_  
+Is another **geography** instance on which `ReorientObject()` is invoked.  
   
 ## Return Value  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  
   
- CLR return type: **SqlGeography**  
+CLR return type: **SqlGeography**  
   
 ## Remarks  
- This method changes the ring orientation of all **Polygons** in a **GeometryCollection** but does not remove or change any **Points** or **Linestrings** in the given collection.  
+This method changes the ring orientation of all **Polygons** in a **GeometryCollection** but doesn't remove or change any **Points** or **LineStrings** in the given collection.  
   
- If a **GeometryCollection** is passed to this method, each instance in the collection is reoriented, but the collection as a whole is not reoriented.  
+If you pass a **GeometryCollection** to this method, each instance in the collection reorients as a result, but the whole collection doesn't reorient.  
   
 ## Examples  
   
@@ -56,6 +56,5 @@ SELECT @R.ReorientObject().STAsText();
 ```  
   
 ## See Also  
- [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+[Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

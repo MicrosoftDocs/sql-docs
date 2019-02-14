@@ -4,14 +4,14 @@ description: New feature announcements for each release of SQL Server 2016 R Ser
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 01/18/2019
+ms.date: 02/14/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# What's new in SQL Server Machine Learning Services 
+# What's new in SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -24,7 +24,7 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
-| CTP 2.3 |  |
+| CTP 2.3 | New supported [Java data types](java-sql-datatypes.md). |
 | CTP 2.2 | No changes. |
 | CTP 2.1 | No changes. |
 | CTP 2.0 | Linux platform support for R and Python machine learning. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |

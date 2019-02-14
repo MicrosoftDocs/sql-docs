@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "query designers, SAP"
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

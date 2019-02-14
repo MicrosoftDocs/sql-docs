@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "keyboard shortcuts"
   - "shortcuts"
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Keyboard Shortcuts (Report Builder)

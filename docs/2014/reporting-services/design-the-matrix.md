@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.designmatrix.f1"
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

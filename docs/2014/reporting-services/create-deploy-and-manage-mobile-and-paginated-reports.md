@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Reporting Services"
   - "SQL Server Reporting Services"
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Reporting Services (SSRS)

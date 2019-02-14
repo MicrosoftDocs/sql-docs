@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.rowvisibility.f1"
   - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

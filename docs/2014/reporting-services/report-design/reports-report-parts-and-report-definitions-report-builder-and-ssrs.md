@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "report definitions"
   - "reports"
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Reports, Report Parts, and Report Definitions (Report Builder and SSRS)

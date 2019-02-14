@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "importing reports"
   - "modules [Reporting Services]"
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

@@ -172,7 +172,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Resource Governor|Yes|No|No|No|No|  
 |Partitioned Table Parallelism|Yes|No|No|No|No|
 |Multiple Filestream containers|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
-|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
+|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
 |IO Resource Governance|Yes|No|No|No|No|  
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
@@ -182,6 +182,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 <sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
+
+<sup>4</sup> Standard Edition and SQL Server + CAL based licensing can restrict how many processors SQL Server Standard can use, but SQL Server Standard is NUMA aware. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|  

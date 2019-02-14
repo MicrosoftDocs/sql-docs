@@ -155,7 +155,7 @@ GO
 Now set ANSI_NULLS to OFF and test.  
 
 ```sql
-PRINT 'Testing SET ANSI_NULLS OFF';  
+PRINT 'Testing ANSI_NULLS OFF';  
 SET ANSI_NULLS OFF;  
 GO  
 DECLARE @varname int;  

@@ -148,7 +148,7 @@ Typically it's the log file that appears not to shrink. This non-shrinking is us
   
 ### The shrink operation is blocked  
 
-A transaction running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) can block shrink operations. For example, if a large delete operation running under a row versioning-based isolation level is in progress when a DBCC SHRINK DATABASE operation executes, the shrink operation waits for the delete to complete before continuing. When this blocking happens, DBCC SHRINKFILE and DBCC SHRINKDATABASE operations print out an informational message (5202 for SHRINKDATABASE and 5203 for SHRINKFILE) to the SQL Server error log. They  do this every five minutes in the first hour and then every hour. For example, if the error log contains the following error message then the following error will occur:
+A transaction running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) can block shrink operations. For example, if a large delete operation running under a row versioning-based isolation level is in progress when a DBCC SHRINK DATABASE operation executes, the shrink operation waits for the delete to complete before continuing. When this blocking happens, DBCC SHRINKFILE and DBCC SHRINKDATABASE operations print out an informational message (5202 for SHRINKDATABASE and 5203 for SHRINKFILE) to the SQL Server error log. This message is logged every five minutes in the first hour and then every hour. For example, if the error log contains the following error message then the following error will occur:
   
 ```sql
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
@@ -156,7 +156,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-This message means that snapshot transactions with timestamps older than 109 (the last transaction that the shrink operation completed) are blocking the shrink operation. It also indicates that the **transaction_sequence_num**, or **first_snapshot_sequence_num** columns in the [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) dynamic management view contains a value of 15. If either the **transaction_sequence_num** or **first_snapshot_sequence_num** view column contains a number less than a shrink operation's last completed transaction  (109), the shrink operation waits for those transactions to finish.
+This message means snapshot transactions with timestamps older than 109 (the last transaction that the shrink operation completed) are blocking the shrink operation. It also indicates the **transaction_sequence_num**, or **first_snapshot_sequence_num** columns in the [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) dynamic management view contains a value of 15. If either the **transaction_sequence_num** or **first_snapshot_sequence_num** view column contains a number less than a shrink operation's last completed transaction  (109), the shrink operation waits for those transactions to finish.
   
 To resolve the issue, you can do one of the following tasks:
 -   End the transaction that is blocking the shrink operation.

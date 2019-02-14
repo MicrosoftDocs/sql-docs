@@ -37,9 +37,9 @@ IDENT_INCR ( 'table_or_view' )
   
 ## Arguments  
  **'** *table_or_view* **'**  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) specifying the table or view to check for a valid identity increment value. *table_or_view* can be a character string constant enclosed in quotation marks, a variable, a function, or a column name. *table_or_view* is **char**, **nchar**, **varchar**, or **nvarchar**.  
+ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) specifying the table or view to check for a valid identity increment value. *table_or_view* can be a character string constant enclosed in quotation marks. It can also be a variable, a function, or a column name. *table_or_view* is **char**, **nchar**, **varchar**, or **nvarchar**.  
   
-## Return Types  
+## Return types  
  **numeric**  
   
 ## Exceptions  

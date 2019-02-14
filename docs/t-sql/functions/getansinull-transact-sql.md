@@ -44,7 +44,7 @@ GETANSINULL ( [ 'database' ] )
  **int**  
   
 ## Remarks  
-GETANSINULL returns 1, the ANSI NULL default, if the database's nullability allows for null values and the column or data type nullability isn't explicitly defined.  
+GETANSINULL returns 1 if the database's nullability allows for null values. This return value also requires that the column or data type nullability isn't explicitly defined. The ANSI NULL default is 1. 
   
  To enable the ANSI NULL default behavior, one of these conditions must be set:  
   

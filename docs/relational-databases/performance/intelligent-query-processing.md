@@ -2,7 +2,7 @@
 title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: ""
-ms.date: 01/11/2019
+ms.date: 02/14/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,7 +20,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 The intelligent query processing (QP) feature family includes features with broad impact. They improve the performance of existing workloads with minimal implementation effort. To automatically benefit from this feature family, move to the applicable database compatibility level.
 
-![Intelligent query processing features](./media/3_IQPFeatureFamily.png)
+| **IQP Feature** | **Supported in Azure SQL Database** | **Supported in SQL Server** |
+| --- | --- | --- |
+| [Adaptive Joins (Batch Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
+| [Interleaved Execution](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#interleaved-execution-for-multi-statement-table-valued-functions) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
+| [Memory Grant Feedback (Batch Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
+| [Memory Grant Feedback (Row Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
+| [Approximate Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Yes, public preview| Yes, starting in SQL Server 2019 CTP 2.0, public preview|
+| [Table Variable Deferred Compilation](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
+| [Batch Mode on Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
+| [Scalar UDF Inlining](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | No, but planned for a future update | Yes, starting in SQL Server 2019 CTP 2.1 under compatibility level 150, public preview|
+
 
 ## Adaptive query processing
 

@@ -114,7 +114,16 @@ manager: craigg
   
 7.  In the **Run as** list, select **SQL Server Agent Service Account** or select a proxy account that has the credentials that the job step will use. For information about creating a proxy account, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
-     Using a proxy account instead of the **SQL Server Agent Service Account** may resolve common issues that can occur when executing a package using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about these issues, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760).  
+     Using a proxy account instead of the **SQL Server Agent Service Account** may resolve common issues that can occur when executing a package using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about these issues, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760). 
+     
+  7.1 When running job with a Proxy, one has to have the following security items in place for the job to successfuly run.
+
+      Credential Login used by the Proxy, the account running the SQL Server Agent and the account running the SQL Server Service     require the following permissions:
+Local Security Policy Attribue: Replace a Process Level Token
+Full control over %SYSTEMROOT%\Temp 
+
+Failure to put in the security items will result in the job failing and an error message similar to the following: The job failed.  A required privilege is not held by the client.
+     
   
     > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
   

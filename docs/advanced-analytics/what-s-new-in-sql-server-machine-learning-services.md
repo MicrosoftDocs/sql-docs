@@ -24,7 +24,7 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
-| CTP 2.3 | New supported [Java data types](java-sql-datatypes.md). |
+| CTP 2.3 | New supported [Java data types](java/java-sql-datatypes.md). |
 | CTP 2.2 | No changes. |
 | CTP 2.1 | No changes. |
 | CTP 2.0 | Linux platform support for R and Python machine learning. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |

@@ -86,7 +86,7 @@ To get the R version and RevoScaleR versions, open an R command prompt, or open 
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-The R console displays the version information on startup. For example, the following version represents the default configuration for SQL Server 2017 CTP 2.0:
+The R console displays the version information on startup. For example, the following version represents the default configuration for SQL Server 2017:
 
     *Microsoft R Open 3.3.3*
 

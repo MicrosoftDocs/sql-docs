@@ -28,8 +28,8 @@ Java version requirements vary across Windows and Linux. The Java Runtime Enviro
 
 | Operating System | Java version | JRE download | JDK download |
 |------------------|--------------|--------------|--------------|
-| Windows          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
-| Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
+| Windows          | 8         | [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
+| Linux            | 8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
 On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 1.8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 
@@ -103,7 +103,7 @@ JAVA_HOME is an environment variable that specifies the location of the Java int
 
 1. Find and copy the JDK/JRE installation path (for example, C:\Program Files\Java\jdk-10.0.2).
 
-  In CTP 2.0, setting JAVA_HOME to the base jdk folder only works for Java 1.10. 
+  In CTP 2.3, setting JAVA_HOME to the base jdk folder only works for Java 8. 
 
   For Java 1.8, extend the path to reach the jvm.dll on Windows in your JDK (for example, "C:\Program Files\Java\jdk1.8.0_181\bin\server". Alternatively, you can point to a JRE base folder: "C:\Program Files\Java\jre1.8.0_181".
 
@@ -166,17 +166,15 @@ At this point, you are almost ready to run Java code on Linux or Windows. As a l
 
 To confirm the installation is operational, create and run a [sample application](java-first-sample.md) using the JDK you just installed, placing the files in the classpath you configured earlier.
 
-## Differences in CTP 2.0
+## Differences in CTP 2.3
 
 If you are already familiar with Machine Learning Services, the authorization and isolation model for extensions has changed in this release. For more information, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
 
-## Limitations in CTP 2.0
+## Limitations in CTP 2.3
 
 * The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 
 * Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
-
-* No LOB datatype support for input and output data sets in this version. See [Java and SQL Server data types](java-sql-datatypes.md) for details about which data types are supported in this CTP.
 
 * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
 

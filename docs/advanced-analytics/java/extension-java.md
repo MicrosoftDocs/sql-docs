@@ -4,10 +4,10 @@ description: Install, configure, and validate the Java language extension on SQL
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/07/2018
+ms.date: 02/14/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
@@ -114,6 +114,12 @@ JAVA_HOME is an environment variable that specifies the location of the Java int
 4. Create a new system variable for JAVA_HOME.
 
    ![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
+
+5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
+
+    1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+
+    2. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
 
 <a name="perms-nonwindows"></a>
 

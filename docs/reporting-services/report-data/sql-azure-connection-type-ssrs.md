@@ -150,7 +150,7 @@ For more information about platform and version support, see [Data Sources Suppo
 
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
-## Azure SQL database and AAD
+## Azure SQL Database and AAD
 
 You can use the Azure SQL database with Azure Active Directory (AAD) pass-through authentication.
 
@@ -159,7 +159,7 @@ This scenario is supported when you set up the following items properly:
 - [Active Directory Authentication Library for SQL Server (ADALSQL)](https://www.microsoft.com/en-us/download/details.aspx?id=48742) is installed on the report server.
 - [Active Directory Federation Services (ADFS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) is configured to federate across on-premises Active Directory (AD) and AAD.
 - [Kerberos Constrained Delegation (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) is configured from the report server to the ADFS server.
-- Configure the report/data source to authenticate to [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) *as the user viewing the report* and the other components should do the rest.
+- Configure the report/data source to authenticate to [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) as the user viewing the report.
 
 ::: moniker-end
 

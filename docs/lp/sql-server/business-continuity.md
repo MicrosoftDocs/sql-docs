@@ -10,6 +10,7 @@ ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ---

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data regions"
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Data Regions and Maps (Report Builder and SSRS)

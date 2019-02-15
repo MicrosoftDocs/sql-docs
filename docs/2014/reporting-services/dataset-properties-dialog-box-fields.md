@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.datasetproperties.fields.f1"
   - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

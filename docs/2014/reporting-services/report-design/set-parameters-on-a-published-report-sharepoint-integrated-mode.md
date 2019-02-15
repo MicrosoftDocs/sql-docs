@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], content management"
   - "report parameters [Reporting Services]"
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Set Parameters on a Published Report (Reporting Services in SharePoint Integrated Mode)

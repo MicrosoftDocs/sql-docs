@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Formulas in Report Model Queries (Report Builder and SSRS)

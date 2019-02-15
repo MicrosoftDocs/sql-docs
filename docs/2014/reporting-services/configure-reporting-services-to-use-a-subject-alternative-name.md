@@ -8,7 +8,7 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

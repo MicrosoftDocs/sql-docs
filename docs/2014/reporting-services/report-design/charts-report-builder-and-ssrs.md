@@ -18,8 +18,8 @@ f1_keywords:
   - "10251"
   - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Charts (Report Builder and SSRS)

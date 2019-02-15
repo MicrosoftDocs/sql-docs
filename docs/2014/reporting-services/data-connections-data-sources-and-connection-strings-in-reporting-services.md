@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "logins [Reporting Services]"
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

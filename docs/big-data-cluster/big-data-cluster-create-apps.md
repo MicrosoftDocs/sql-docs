@@ -123,7 +123,7 @@ output: #output parameter the app expects and the type
 
 
 
-To try this, copy the above lines of code into two files directory `addpy` as `add.py`  and `spec.yaml` and run the command below
+To try this, copy the above lines of code into two files to the directory `addpy` as `add.py`  and `spec.yaml` and run the command below
 
 ```bash
 mssqlctl app create --spec ./addpy

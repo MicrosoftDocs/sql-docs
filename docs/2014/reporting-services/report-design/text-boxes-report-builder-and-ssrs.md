@@ -13,8 +13,8 @@ f1_keywords:
   - "10120"
   - "sql12.rtp.rptdesigner.textboxproperties.general.f1"
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Text Boxes (Report Builder and SSRS)

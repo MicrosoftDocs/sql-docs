@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Grouping Pane dialog box"
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Grouping Pane (Report Builder)

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], shared data sources"
   - "shared data sources [Reporting Services]"
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

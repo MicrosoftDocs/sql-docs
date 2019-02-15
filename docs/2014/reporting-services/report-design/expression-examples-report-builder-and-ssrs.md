@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "dates [Reporting Services], expressions"
   - "expressions [Reporting Services], examples"
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Expression Examples (Report Builder and SSRS)

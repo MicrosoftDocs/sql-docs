@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Add Custom Locations to a Map (Report Builder and SSRS)

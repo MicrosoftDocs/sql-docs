@@ -22,19 +22,23 @@ manager: craigg
 # String Operators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following string operators. String concatenation operators can combine two or more character or binary strings, columns, or a combination of strings and column names into one expression. Wildcard string operators can matches one or more characters in a string comparison operation such as LIKE or PATINDEX.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following string operators. String concatenation operators can combine two or more of the following data types into one expression: 
+* character or binary strings
+* columns 
+* combination of strings and column names 
+
+Wildcard string operators can match one or more characters in a string comparison operation. LIKE and PATINDEX are examples of two of these operations.  
   
 ## Section Heading  
- [+ (String Concatenation)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+[+ (String Concatenation)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+= (String Concatenation Assignment)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+[+= (String Concatenation Assignment)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
- [% (Wildcard - Character(s) to Match)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+[% (Wildcard - Character(s) to Match)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; &#93; (Wildcard - Character(s) to Match)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+[&#91; &#93; (Wildcard - Character(s) to Match)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91;^&#93; (Wildcard - Character(s) Not to Match)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+[&#91;^&#93; (Wildcard - Character(s) Not to Match)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
- [_ (Wildcard - Match One Character)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
-  
+[_ (Wildcard - Match One Character)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

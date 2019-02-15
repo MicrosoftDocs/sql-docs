@@ -11,7 +11,7 @@ f1_keywords:
   - "10541"
   - "sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1"
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

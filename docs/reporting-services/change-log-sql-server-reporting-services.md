@@ -28,7 +28,7 @@ The following issues have been fixed:
  - Deadlock during notification of completed data-driven subscriptions
  - Embedded images not displayed in certain circumstances when rc:Toolbar=False parameter used.
  - Unable to create data driven subscriptions for reports that use cascading parameters
- - Unable to edit subscriptions with an invalid MinutesIntervals.
+ - Unable to edit subscriptions configured with an invalid interval.
  - Security updates
  - Linked reports UI not showing.
  - Certain paginated reports with nested tablix controls have incorrect fonts.

@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.runtimecredentials.f1"
   - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

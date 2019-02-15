@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "getting started"
   - "report design"
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Planning a Report (Report Builder)

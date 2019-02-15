@@ -17,7 +17,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.textboxproperties.fill.f1"
   - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

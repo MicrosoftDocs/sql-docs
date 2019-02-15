@@ -7,6 +7,9 @@ ms.prod_service: "integration-services"
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
+  - sql13.ssis.designer.powerqueryconnmgr.f1
+  - sql13.ssis.designer.powerquerysource.queries.f1
+  - sql13.ssis.designer.powerquerysource.connmgrs.f1
   - sql14.ssis.designer.powerqueryconnmgr.f1
   - sql14.ssis.designer.powerquerysource.queries.f1
   - sql14.ssis.designer.powerquerysource.connmgrs.f1

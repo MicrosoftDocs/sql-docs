@@ -22,9 +22,9 @@ This article describes how to deploy and manage R and Python script as an applic
 - A single command-line utility to manage cluster and app.
 - Simplified app deployment while providing granular control through spec files.
 - Support hosting additional application types - SSIS and MLeap (new in CTP 2.3)
-- [VS Code Extension](app-deployment-extension) to manage application deployment
+- [VS Code Extension](app-deployment-extension.md) to manage application deployment
 
-Applications are deployed and managed using **mssqlctl** command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in VS Code refer to [VS Code Extension](app-deployment-extension)
+Applications are deployed and managed using **mssqlctl** command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in VS Code refer to [VS Code Extension](app-deployment-extension.md)
 
 Types of apps supported 
 R and Python apps

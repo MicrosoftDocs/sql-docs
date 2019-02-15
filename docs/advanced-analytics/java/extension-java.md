@@ -24,14 +24,12 @@ As with any programming language extension, the system stored procedure [sp_exec
 
 A SQL Server 2019 preview instance is required. Earlier versions do not have Java integration. 
 
-Java version requirements vary across Windows and Linux. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
+Java 8 is supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
 | Operating System | Java version | JRE download | JDK download |
 |------------------|--------------|--------------|--------------|
 | Windows          | 8         | [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |
 | Linux            | 8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
-
-Java 11 will be supported in a future CTP.
 
 On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 

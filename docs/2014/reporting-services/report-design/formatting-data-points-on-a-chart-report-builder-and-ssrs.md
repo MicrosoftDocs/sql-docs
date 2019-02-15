@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.serieslabelproperties.general.f1"
   - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Formatting Data Points on a Chart (Report Builder and SSRS)

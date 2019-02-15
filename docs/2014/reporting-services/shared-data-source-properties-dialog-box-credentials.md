@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.shareddatasource.credentials.f1"
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

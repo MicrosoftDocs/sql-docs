@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Keep Headers Visible When Scrolling Through a Report (Report Builder and SSRS)
   To prevent row and column labels from scrolling out of view after rendering a report, you can freeze the row or column headings.  

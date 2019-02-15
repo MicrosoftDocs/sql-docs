@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Exporting Reports (Report Builder and SSRS)

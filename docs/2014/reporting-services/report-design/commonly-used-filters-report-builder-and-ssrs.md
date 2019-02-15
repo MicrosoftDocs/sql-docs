@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "parameters [Reporting Services], multivalued"
   - "valid values [Reporting Services]"
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Commonly Used Filters (Report Builder and SSRS)

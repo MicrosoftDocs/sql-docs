@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Chart Effects - 3D, Bevel, and Other (Report Builder)
   Three-dimensional (3D) effects can be used to provide depth and add visual impact to charts in your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports. For example, if you want to emphasize a particular slice of an exploded pie chart, you can rotate and change the perspective of the chart so that people notice that slice first. When 3D effects are applied to your chart, all gradient colors and hatching styles are disabled.  

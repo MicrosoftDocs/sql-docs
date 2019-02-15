@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.designtable.f1"
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

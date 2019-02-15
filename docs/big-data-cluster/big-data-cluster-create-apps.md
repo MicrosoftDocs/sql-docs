@@ -17,7 +17,7 @@ ms.custom: seodec18
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster (preview).
  
 
-## What's new and improved (to be removed -work with Mike )
+## What's new and improved 
 
 - A single command-line utility to manage cluster and app.
 - Simplified app deployment while providing granular control through spec files.

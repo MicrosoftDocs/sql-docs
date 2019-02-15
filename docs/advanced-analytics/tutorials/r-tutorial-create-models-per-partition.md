@@ -42,7 +42,7 @@ To complete this tutorial, you must have the following:
 
 + SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration.
 
-Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
+Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.3) - 15.0.x".
 
 Check availability of R packages by returning a well-formatted list of all R packages currently installed with your database engine instance:
 

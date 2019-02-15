@@ -4,10 +4,10 @@ description: Install, configure, and validate the Java language extension on SQL
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/07/2018
+ms.date: 02/14/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
@@ -28,10 +28,12 @@ Java version requirements vary across Windows and Linux. The Java Runtime Enviro
 
 | Operating System | Java version | JRE download | JDK download |
 |------------------|--------------|--------------|--------------|
-| Windows          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
-| Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
+| Windows          | 8         | [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |
+| Linux            | 8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
-On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 1.8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
+Java 11 will be supported in a future CTP.
+
+On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 
 On Windows, we recommend installing the JDK under the default /Program Files/ folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
@@ -55,7 +57,7 @@ sudo apt-get install mssql-server-extensibility-java
 sudo zypper install mssql-server-extensibility-java
 ```
 
-When you install **mssql-server-extensibility-java**, the package automatically installs JRE 1.8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
+When you install **mssql-server-extensibility-java**, the package automatically installs JRE 8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
 
 After completing installation, your next step is [Configure external script execution](#configure-script-execution).
 
@@ -103,9 +105,9 @@ JAVA_HOME is an environment variable that specifies the location of the Java int
 
 1. Find and copy the JDK/JRE installation path (for example, C:\Program Files\Java\jdk-10.0.2).
 
-  In CTP 2.0, setting JAVA_HOME to the base jdk folder only works for Java 1.10. 
+  In CTP 2.3, setting JAVA_HOME to the base jdk folder only works for Java 8. 
 
-  For Java 1.8, extend the path to reach the jvm.dll on Windows in your JDK (for example, "C:\Program Files\Java\jdk1.8.0_181\bin\server". Alternatively, you can point to a JRE base folder: "C:\Program Files\Java\jre1.8.0_181".
+  For Java 8, extend the path to reach the jvm.dll on Windows in your JDK (for example, "C:\Program Files\Java\jdk1.8.0_181\bin\server". Alternatively, you can point to a JRE base folder: "C:\Program Files\Java\jre1.8.0_181".
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 
@@ -114,6 +116,12 @@ JAVA_HOME is an environment variable that specifies the location of the Java int
 4. Create a new system variable for JAVA_HOME.
 
    ![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
+
+5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
+
+    1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+
+    2. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
 
 <a name="perms-nonwindows"></a>
 
@@ -160,17 +168,15 @@ At this point, you are almost ready to run Java code on Linux or Windows. As a l
 
 To confirm the installation is operational, create and run a [sample application](java-first-sample.md) using the JDK you just installed, placing the files in the classpath you configured earlier.
 
-## Differences in CTP 2.0
+## Differences in CTP 2.3
 
 If you are already familiar with Machine Learning Services, the authorization and isolation model for extensions has changed in this release. For more information, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
 
-## Limitations in CTP 2.0
+## Limitations in CTP 2.3
 
 * The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 
 * Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
-
-* No LOB datatype support for input and output data sets in this version. See [Java and SQL Server data types](java-sql-datatypes.md) for details about which data types are supported in this CTP.
 
 * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
 

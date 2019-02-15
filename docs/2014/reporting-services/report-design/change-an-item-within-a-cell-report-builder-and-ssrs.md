@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Change an Item Within a Cell (Report Builder and SSRS)

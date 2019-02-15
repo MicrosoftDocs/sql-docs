@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Add Bevel, Emboss, and Texture Styles to a Chart (Report Builder and SSRS)

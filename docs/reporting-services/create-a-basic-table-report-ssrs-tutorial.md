@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "tutorials [Reporting Services]"
   - "reports [Reporting Services], creating"
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Create a Basic Table Report (SSRS Tutorial)
 

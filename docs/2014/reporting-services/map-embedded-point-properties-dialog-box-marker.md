@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1"
   - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

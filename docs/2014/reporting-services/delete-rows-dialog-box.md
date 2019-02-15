@@ -13,7 +13,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete Rows dialog box"
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

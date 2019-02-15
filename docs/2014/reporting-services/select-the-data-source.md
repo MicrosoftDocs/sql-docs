@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.selectdatasource.f1"
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Add, Move, or Delete a Text Box (Report Builder and SSRS)

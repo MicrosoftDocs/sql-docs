@@ -11,7 +11,7 @@ f1_keywords:
   - "10153"
   - "sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1"
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

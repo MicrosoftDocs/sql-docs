@@ -21,8 +21,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapgroupproperties.general.f1"
   - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS)

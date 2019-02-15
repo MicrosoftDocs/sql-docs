@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "text-based query designer [Reporting Services]"
   - "query designers [Reporting Services], text-based"
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

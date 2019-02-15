@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "expressions"
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

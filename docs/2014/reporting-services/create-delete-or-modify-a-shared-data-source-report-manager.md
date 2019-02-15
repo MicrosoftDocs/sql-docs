@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "deleting shared data sources"
   - "modifying shared data sources"
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

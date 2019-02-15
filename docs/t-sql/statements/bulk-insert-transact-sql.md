@@ -119,7 +119,7 @@ Is a named external data source pointing to the Azure Blob storage location of t
  Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values greater than **127** or less than **32**.  
 
 > [!IMPORTANT]
-> CODEPAGE is not a supported option on Linux.
+> CODEPAGE is not a supported option on Linux for [ssSQLv14_md](../../includes/sssqlv14-md.md). For [ssSQLv15_md](../../includes/sssqlv15-md.md), only **'**RAW**'** option is allowed for CODEPAGE.
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you specify a collation name for each column in a [format file](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  

@@ -16,7 +16,6 @@ ms.custom: seodec18
 
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster (preview).
  
-
 ## What's new and improved 
 
 - A single command-line utility to manage cluster and app.
@@ -24,34 +23,32 @@ This article describes how to deploy and manage R and Python script as an applic
 - Support hosting additional application types - SSIS and MLeap (new in CTP 2.3)
 - [VS Code Extension](app-deployment-extension.md) to manage application deployment
 
-Applications are deployed and managed using **mssqlctl** command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in VS Code refer to [VS Code Extension](app-deployment-extension.md)
+Applications are deployed and managed using `mssqlctl` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in VS Code refer to [VS Code Extension](app-deployment-extension.md)
 
-Types of apps supported 
-R and Python apps
-MLeap Serving
-SSIS as a fully containerzied app as a scheduled service
+Types of apps supported:
+- R and Python apps
+- MLeap Serving
+= SSIS as a fully containerzied app as a scheduled service
 
 ## Prerequisites
 
-- [SQL Server 2019 big data cluster](deployment-guidance.md). 
-
+- [SQL Server 2019 big data cluster](deployment-guidance.md).
 - [mssqlctl command-line utility](deploy-install-mssqlctl.md).
-
 
 ## Capabilities
 
-In CTP 2.3 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
-| Command | Description |
-|---|---|
-| `mssqlctl login` | Log into a SQL Server big data cluster |
-|  `mssqlctl create` | Create application. |
-|  `mssqlctl delete` | Delete application. |
-|  `mssqlctl describe` | Describe application. |
-|  `mssqlctl init` | Kickstart new application skeleton. |
-|  `mssqlctl list` | List application(s). |
-|  `mssqlctl run` | Run application. |
-|  `mssqlctl update`| Update application. |
+In SQL Server 2019 (preview) CTP 2.3 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
 
+|Command |Description |
+|:---|:---|
+|`mssqlctl login` | Log into a SQL Server big data cluster |
+|`mssqlctl create` | Create application. |
+|`mssqlctl delete` | Delete application. |
+|`mssqlctl describe` | Describe application. |
+|`mssqlctl init` | Kickstart new application skeleton. |
+|`mssqlctl list` | List application(s). |
+|`mssqlctl run` | Run application. |
+|`mssqlctl update`| Update application. |
 
 You can get help with the `--help` parameter as in the following example:
 
@@ -63,11 +60,11 @@ The following sections describe these commands in more detail.
 
 ## Log in
 
-Before you deploy or intereact with applications, first log into your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `service-proxy-lb` or `service-proxy-nodeport` services (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before you deploy or interact with applications, first log into your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `service-proxy-lb` or `service-proxy-nodeport` services (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
-You can get the IP address of the **service-proxy-lb** or **service-proxy-nodeport** service by running this command in a bash or cmd window:
+You can get the IP address of the `service-proxy-lb` or `service-proxy-nodeport` service by running this command in a bash or cmd window:
 
-```bash 
+```bash
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
@@ -77,9 +74,9 @@ mssqlctl login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> 
 
 ## Create an app
 
-To create an application, you use the **mssqlctl** with the `app create` command. These files reside locally on the machine that you are creating the app from.
+To create an application, you use `mssqlctl` with the `app create` command. These files reside locally on the machine that you are creating the app from.
 
-Use the following syntax to create a new app in your big data cluster:
+Use the following syntax to create a new app in big data cluster:
 
 ```bash
 mssqlctl app create -n <app_name> -v <version_number> --spec <path to spec file>
@@ -87,23 +84,24 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <path to spec file>
 
 The following command shows an example of what this command might look like:
 
-This assumes that you have file called spec.yaml within the addpy folder. 
-The addpy folder contains the **add.py** and  **spec.yaml**. 
-The **spec.yaml** is a specification file for the **add.py** app. 
+This assumes that you have file called `spec.yaml` within the `addpy` folder. 
+The `addpy` folder contains the `add.py` and  `spec.yaml` 
+The `spec.yaml` is a specification file for the `add.py` app.
+
+
+`add.py` creates the following python app: 
 
 ```py
-
-This python app is defined as
-
 #add.py
 def add(x,y):
         result = x+y
         return result;
 result=add(x,y)
+```
 
+The following script is a sample of the contents for `spec.yaml`:
 
-the spec.yaml file will be something like
-
+```yaml
 #spec.yaml
 name: add-app #name of your python script
 version: v1  #version of the app 
@@ -117,13 +115,9 @@ inputs:  #input parameters that the app expects and the type
   y: int
 output: #output parameter the app expects and the type
   result: int
-
-
 ```
 
-
-
-To try this, copy the above lines of code into two files to the directory `addpy` as `add.py`  and `spec.yaml` and run the command below
+To try this, copy the above lines of code into two files in the directory `addpy` as `add.py`  and `spec.yaml` and run the command below:
 
 ```bash
 mssqlctl app create --spec ./addpy
@@ -135,25 +129,25 @@ You can check if the app is deployed using the list command:
 mssqlctl app list
 ```
 
-If the deployment is not complete you should see the "state" show "WaitingforCreate": 
+If the deployment is not complete you should see the `state` show `WaitingforCreate` as the following example: 
 
 ```
 [
   {
     "name": "add-app",
-    "state": "WaitingforCreate",
+    `state`: "WaitingforCreate",
     "version": "v1"
   }
 ]
 ```
 
-After the deployment is successful you should see the "state" change to "Ready" status:
+After the deployment is successful you should see the `state` change to `Ready` status:
 
 ```
 [
   {
     "name": "add-app",
-    "state": "Ready",
+    `state`: `Ready`,
     "version": "v1"
   }
 ]
@@ -169,7 +163,7 @@ The following command lists all available applications in your big data cluster:
 mssqlctl app list
 ```
 
-If you specify a name and version, it will list that specific app and its state (Creating or Ready):
+If you specify a name and version, it lists that specific app and its state (Creating or Ready):
 
 ```bash
 mssqlctl app list --name <app_name> --version <app_version>
@@ -187,7 +181,7 @@ You should see output similar to the following example:
 [
   {
     "name": "add-app",
-    "state": "Ready",
+    `state`: `Ready`,
     "version": "v1"
   }
 ]
@@ -195,7 +189,7 @@ You should see output similar to the following example:
 
 ## Run an app
 
-If the app is in a "Ready" state, you can use it by running it with your specified input parameters. Use the following syntax to run an app:
+If the app is in a `Ready` state, you can use it by running it with your specified input parameters. Use the following syntax to run an app:
 
 ```bash
 mssqlctl app run --name <app_name> --version <app_version> --inputs <inputs_params>
@@ -224,7 +218,7 @@ If the run was successful, you should see your output as specified when you crea
 
 ## Describe an app
 
-The describe command provides detailed information about the app including the end point in your cluster. This will be typically be used by an app developer to build an app using the swagger client and using the weservice to interact with the app in a restFul manner.
+The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the weservice to interact with the app in a RESTful manner.
 
 ```
 {
@@ -249,12 +243,11 @@ The describe command provides detailed information about the app including the e
       "type": "int"
     }
   ],
-  "state": "Ready",
+  `state`: `Ready`,
   "version": "v1"
 }
 
 ```
-
 
 ## Delete an app
 

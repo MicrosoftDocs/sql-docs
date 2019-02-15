@@ -1,10 +1,10 @@
 ---
 title: Install SQL Server Machine Learning Services (R, Python, Java) on Linux | Microsoft Docs
-description: This article describes how to install SQL Server Machine Learning Services (R, Python, Java) on Red Hat and Ubuntu.
+description: Learn how to install SQL Server Machine Learning Services (R, Python, Java) on Red Hat and Ubuntu.
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 01/18/2019
+ms.date: 02/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -21,7 +21,7 @@ Package location for the R, Python, and Java extensions are in the SQL Server Li
 
 ## Uninstall previous CTP
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.0 or 2.1 to remove all previous packages before installing CTP 2.2 or later. Side-by-side installation of multiple versions is not supported.
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 2.3. Side-by-side installation of multiple versions is not supported.
 
 ### 1. Confirm package installation
 
@@ -55,7 +55,7 @@ Commands for removing packages appear in the following table.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### 3. Proceed with CTP 2.2 install
+### 3. Proceed with CTP 2.3 install
 
 Install at the highest package level using the instructions in this article for your operating system.
 
@@ -306,13 +306,21 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
   An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+3. Enable outbound network access. Outbound entwork access is disabled by default. To enable outbound requests, set the **outboundnetworkaccess**" Boolean property using the **mssql-conf** tool.
+
+  | Commands | Description |
+  |----------|-------------|
+  |`/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1` | Enables access. This setting is required if you want to access data or operations off the server.| 
+  |`/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0` | Disable network access. This is the default. |
+  |`/opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess` | Removes or hides the setting. You can restore the setting by replacing `unset` with `set`.|
+
+4. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
   + Edit or create a file named **.bash_profile** in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
   + Execute this file by typing `source .bash_profile` at a bash command prompt.
 
-4. Restart the SQL Server Launchpad service and the database engine instance. 
+5. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A restart message reminds you whenever an extensibility-related setting is modified.  
 
   ```bash
   systemctl restart mssql-launchpadd
@@ -320,14 +328,14 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
   systemctl restart mssql-server.service
   ```
 
-5. Enable external script execution using Azure Data Studio or another tool like SQL Server Management Studio (Windows only) that runs Transact-SQL. 
+6. Enable external script execution using Azure Data Studio or another tool like SQL Server Management Studio (Windows only) that runs Transact-SQL. 
 
   ```bash
   EXEC sp_configure 'external scripts enabled', 1 
   RECONFIGURE WITH OVERRIDE 
   ```
 
-6. Restart the Launchpad service again.
+7. Restart the Launchpad service again.
 
 ## Verify installation
 

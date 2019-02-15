@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to  configure
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -68,6 +68,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages. Applies to SQL Server 2019 only.|
+| [outboundnetworkaccess](#mlservices-outbound-acess) |Enable outbound network access for mlservices R and Python packages. Applies to SQL Server 2019 and Machine Learning Services only.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
@@ -552,6 +553,22 @@ You can also add EULA acceptance directly to the [mssql.conf file](#mssql-conf-f
 accepteula = Y
 accepteulaml = Y
 ```
+
+:::moniker-end
+
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="mlservices-outbound-acess"></a> Enable outbound network access
+
+Outbound network access is disabled by default. To enable outbound requests, set the **outboundnetworkaccess** Boolean property using the **mssql-conf** tool.
+
+| Settings | Description |
+|----------|-------------|
+|`/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1` | Enables access. This setting is required if you want to access data or operations off the server.| 
+|`/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0` | Disable network access. This is the default. |
+|`/opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess` | Removes or hides the setting. You can restore the setting by replacing `unset` with `set`.|
+
+Restart SQL Server Launchpad service to read the updated values from the INI file. A restart message reminds you whenever an extensibility-related setting is modified.
 
 :::moniker-end
 

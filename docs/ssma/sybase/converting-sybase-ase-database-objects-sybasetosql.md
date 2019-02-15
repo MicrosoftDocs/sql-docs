@@ -48,7 +48,7 @@ To convert ASE database objects, first select the objects you want to convert, a
     You can also convert individual objects or categories of objects by right-clicking the object or its containing folder, and then selecting **Convert Schema**.  
   
 > [!NOTE]  
-> Some of the SAP ASE system functions do not exactly match the equivalent SQL Server system functions in behavior. To emulate the SAP ASE behavior, SSMA generates User Defined functions in the converted SQL Server database under a schema called ‘s2ss’. Depending on the project settings, some of the SQL Server system functions are replaced with these emulated functions. SSMA creates the following user-defined functions:  
+> Some of the SAP ASE system functions do not exactly match the equivalent SQL Server system functions in behavior. To emulate the SAP ASE behavior, SSMA generates User Defined functions in the converted SQL Server database under a schema called 's2ss'. Depending on the project settings, some of the SQL Server system functions are replaced with these emulated functions. SSMA creates the following user-defined functions:  
   
 ||||  
 |-|-|-|  
@@ -118,7 +118,7 @@ For each item that could not be converted, you have to determine what you want t
 -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL and migrating data from SAP ASE.  
   
 ## Next steps  
-The next step in the migration process is [Loading Converted Database Objects into SQL Server/ SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
+The next step in the migration process is [Loading Converted Database Objects into SQL Server/ SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
 ## See also  
 [Migrating SAP ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

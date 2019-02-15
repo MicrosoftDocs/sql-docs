@@ -23,8 +23,7 @@ manager: craigg
 ---
 # FOR XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
- > For content related to previous versions of SQL Server, see [FOR XML (SQL Server)](for-xml-sql-server.md).
-
+ 
   A SELECT query returns results as a rowset. You can optionally retrieve formal results of a SQL query as XML by specifying the FOR XML clause in the query. The FOR XML clause can be used in top-level queries and in sub queries. The top-level FOR XML clause can be used only in the SELECT statement. In sub queries, FOR XML can be used in the INSERT, UPDATE, and DELETE statements. It can also be used in assignment statements.  
   
  In a FOR XML clause, you specify one of these modes:  

@@ -66,8 +66,7 @@ sp_addextendedproperty
  Is the name of the level 0 object type specified. *level0_object_name* is **sysname** with a default of NULL.  
   
  [ @level1type= ] { '*level1_object_type*' }  
- Is the type of level 1 object. *level1_object_type* is **varchar(128)**, with a default of NULL. Valid inputs are AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION, and NULL.  
-  
+ Is the type of level 1 object. *level1_object_type* is **varchar(128)**, with a default of NULL. Valid inputs are AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SEQUENCE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION, and NULL.    
  [ @level1name= ] { '*level1_object_name*' }  
  Is the name of the level 1 object type specified. *level1_object_name* is **sysname**, with a default of NULL.  
   

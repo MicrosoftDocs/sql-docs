@@ -57,5 +57,5 @@ The following example uses a database called Test and a table called Table1. It 
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

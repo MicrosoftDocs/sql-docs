@@ -55,7 +55,7 @@ manager: craigg
  A string property that specifies in a delimited list the folders that can be browsed when saving, opening, and finding files in Analysis Services dialog boxes. The Analysis Services service account must have read and write permissions to any folders that you add to the list.  
   
  `BackupDir`  
- A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the the Backup command.  
+ A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the Backup command.  
   
  `CollationName`  
  A string property that identifies the server collation. For more information, see [Languages and Collations &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -63,10 +63,10 @@ manager: craigg
  `CommitTimeout`  
  An integer property that specifies how long (in milliseconds) the server will wait to acquire a write lock for the purpose of committing a transaction. A waiting period is often required because the server must wait for other locks to be released before it can take a write lock that commits the transaction.  
   
- The default value for this property is zero (0), which indicates that the server will wait indefinitely. For more information about lock-related properties, see [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ The default value for this property is zero (0), which indicates that the server will wait indefinitely. For more information about lock-related properties, see [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  `CoordinatorBuildMaxThreads`  
- A signed 32-bit integer property that defines the maximum number of threads allocated to building partition indexes. Increase this value in order to speed-up partition indexing, at the cost of memory usage. For more information about this property, see [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ A signed 32-bit integer property that defines the maximum number of threads allocated to building partition indexes. Increase this value in order to speed-up partition indexing, at the cost of memory usage. For more information about this property, see [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  `CoordinatorCancelCount`  
  A signed 32-bit integer property that defines how frequently the server should check whether a Cancel event occurred (based on internal iteration count). Decrease this number in order to check for Cancel more frequently, at the expense of general performance.  
@@ -78,7 +78,7 @@ manager: craigg
   
  `CoordinatorExecutionMode` is ignored in tabular server mode.  
   
- The default value for this property is -4, which indicates the server is limited to 4 parallel operations per processor. For more information about this property, see [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ The default value for this property is -4, which indicates the server is limited to 4 parallel operations per processor. For more information about this property, see [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  `CoordinatorQueryMaxThreads`  
  A signed 32-bit integer property that defines the maximum number of threads per partition segment during query resolution. The fewer the number of concurrent users, the higher this value can be, at the cost of memory. Conversely, it may need to be lowered if there are a large number of concurrent users.  
@@ -90,7 +90,7 @@ manager: craigg
  A string property that identifies the name of the directory where data is stored.  
   
  `DeploymentMode`  
- Determines the operational context of an Analysis Services server instance. This property is referred to as ‘server mode’ in dialog boxes, messages, and documentation. This property is configured by SQL Server Setup based on the server mode you selected when installing Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
+ Determines the operational context of an Analysis Services server instance. This property is referred to as 'server mode' in dialog boxes, messages, and documentation. This property is configured by SQL Server Setup based on the server mode you selected when installing Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
   
  Valid values for this property include the following:  
   
@@ -123,7 +123,7 @@ manager: craigg
 > [!NOTE]  
 >  Queries and processes cancelled by this event will report the following error message: "`Server: The operation has been cancelled`"  
   
- For more information about this property, see [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ For more information about this property, see [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
 >  `ForceCommitTimeout` applies to cube processing commands and to writeback operations.  

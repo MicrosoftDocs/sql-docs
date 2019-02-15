@@ -1,6 +1,7 @@
 ---
-title: "Domain Independent Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Create a domain-independent availability group"
+description: "Steps to create an availability group that uses a Workgroup Cluster. This allows SQL Server 2016 (and greater) to deploy an Always On availability group on top of a WSFC that does not require Active Directory Domain Services and therefore does not require each server to be part of the same domain."
+ms.custom: "seodec18"
 ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,7 +14,7 @@ author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg
 ---
-# Domain Independent Availability Groups
+# Create a domain-independent availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On Availability Groups (AGs) require an underlying Windows Server failover cluster (WSFC). Deploying a WSFC through Windows Server 2012 R2 has always required that the servers participating in a WSFC, also known as nodes, are joined to the same domain. For more information on Active Directory Domain Services (AD DS), see [here](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
@@ -50,7 +51,7 @@ Deploying a Domain Independent Availability Group has some known caveats:
 
 ## Set and verify the DNS suffix on all replica servers
 
-A common DNS suffix is necessary for a Domain Independent Availability Group’s Workgroup Cluster. To set and verify the DNS suffix on each Windows Server that will host a replica for the availability group, follow these instructions:
+A common DNS suffix is necessary for a Domain Independent Availability Group's Workgroup Cluster. To set and verify the DNS suffix on each Windows Server that will host a replica for the availability group, follow these instructions:
 
 1. Using the Windows Key + X shortcut, select System.
 2. If the computer name and the full computer name are the same, the DNS suffix has not been set. For example, if the computer name is ALLAN, the value for the full computer name should not be just ALLAN. It should be something like ALLAN.SQLHA.LAB. SQLHA.LAB is the DNS suffix. The value for Workgroup should say WORKGROUP. If you need to set the DNS suffix, select Change Settings.

@@ -34,7 +34,7 @@ You can use Import to populate a project with new objects from a live database o
 ## <a name="bkmk_import_source_db"></a>Import Source: Database or Data-tier Application (*.dacpac)  
 The ability to import schema from a database or a .dacpac file is only available if there are no schema objects already defined in the project. This does not include RefactorLogs or Pre/Post-Deployment scripts.  
   
-On import, object definitions will be scripted into project files using SSDT’s organizational defaults for new objects: new files for top level objects, hierarchical children defined in the same file as the parent, table/column constraints defined inline where possible. For more targeted visibility and control for each object, use Schema Compare instead of Import.  
+On import, object definitions will be scripted into project files using SSDT's organizational defaults for new objects: new files for top level objects, hierarchical children defined in the same file as the parent, table/column constraints defined inline where possible. For more targeted visibility and control for each object, use Schema Compare instead of Import.  
   
 If the import source contains Pre- and Post-Deployment Scripts, RefactorLogs, or SQLCMD variable definitions, they will be imported into the project. If the project already contains any one of these artifacts, the imported files will be added to an **Ignored on Import** folder in the project.  
   
@@ -48,13 +48,12 @@ All objects from the import source that *do not* already exist in the project wi
 > [!NOTE]  
 > There are two known bugs in this path that will be fixed in a future release:  
 >   
-> -   If table/column constraints are defined outside of the CREATE TABLE statement in the project’s table definition, import will overwrite the table definition such that the constraint is inline. However, it will leave the out of line constraint, resulting in duplicate constraints in the project.  
+> -   If table/column constraints are defined outside of the CREATE TABLE statement in the project's table definition, import will overwrite the table definition such that the constraint is inline. However, it will leave the out of line constraint, resulting in duplicate constraints in the project.  
 > -   Any master keys or database encryption keys from your source script that already exist in the project will be duplicated on import. Remove duplicates in order to build the project.  
   
 The Import from Script process will not comprehend Pre/Post-Deployment scripts, SQLCMD variables, or RefactorLog files. These and any other unsupported constructs that are detected on import will be placed in a **ScriptsIgnoredOnImport.sql** file in a **Scripts** folder in your project.  
   
-For more information, see the SSDT team forum at [http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>Import Encrypted Objects  
 When importing encrypted objects into a database project, the full body of the object definition cannot always be retrieved from the server. As such, import behavior can be different when dealing with this class of objects.  
   

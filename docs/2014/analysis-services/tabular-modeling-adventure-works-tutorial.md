@@ -53,7 +53,7 @@ manager: craigg
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW sample database. This sample database includes the data necessary to complete this tutorial. To download the sample database, see [http://go.microsoft.com/fwlink/?LinkID=335807](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   AdventureWorksDW sample database. This sample database includes the data necessary to complete this tutorial. To download the sample database, see [https://go.microsoft.com/fwlink/?LinkID=335807](https://go.microsoft.com/fwlink/?LinkID=335807).  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 or later (for use with the Analyze in Excel feature in lesson 11)  
   

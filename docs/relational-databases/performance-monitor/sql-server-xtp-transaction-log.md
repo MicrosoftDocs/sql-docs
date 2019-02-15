@@ -5,12 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server XTP Transaction Log

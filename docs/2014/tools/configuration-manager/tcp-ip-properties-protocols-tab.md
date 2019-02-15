@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "configmgr-client"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TCP/IP [SQL Server], configuration options"

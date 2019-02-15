@@ -39,13 +39,13 @@ manager: craigg
  Windows firewall rules apply to all connections and have the same effects on logins (traditional model connections) and contained database users. For more information about the Windows firewall, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] allows separate firewall rules for sever level connections (logins) and for database level connections (contained database users). When connecting to a user database, first database firewall rules are checked. If there is no rule that allows access to the database, the server level firewall rules are checked, which requires access to the logical server master database. Database level firewall rules combined with contained database users can eliminate necessity to access master database of the server during connection providing improved connection scalability.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] allows separate firewall rules for server level connections (logins) and for database level connections (contained database users). When connecting to a user database, first database firewall rules are checked. If there is no rule that allows access to the database, the server level firewall rules are checked, which requires access to the logical server master database. Database level firewall rules combined with contained database users can eliminate necessity to access master database of the server during connection providing improved connection scalability.  
   
  For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] firewall rules, see the following topics:  
   
--   [Azure SQL Database Firewall](http://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Azure SQL Database Firewall](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [How to: Configure Firewall Settings (Azure SQL Database)](http://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [How to: Configure Firewall Settings (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Azure SQL Database&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   

@@ -1,6 +1,7 @@
 ---
-title: "Failover Clustering and Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Combine failover clustering with availability groups"
+description: "Enhance your high availability and disaster recoverability by combining the features of a SQL Server failover cluster instance and an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "07/02/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -68,7 +69,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  **Failover policy settings for the availability group apply to all replicas, whether it is hosted in a standalone instance or an FCI instance.  
   
 > [!NOTE]  
->  For more information about **Number of nodes** within Failover Clustering and **Always On Availability Groups** for different editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  For more information about **Number of nodes** within Failover Clustering and **Always On Availability Groups** for different editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### Considerations for hosting an Availability Replica on an FCI  
   
@@ -111,17 +112,17 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepapers:**  
   
-     [Always On Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft White Papers for SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server Customer Advisory Team Whitepapers](http://sqlcat.com/)  
+     [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -4,7 +4,7 @@ description: This article highlights what's new for SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -20,7 +20,7 @@ This article describes the major features and services available for SQL Server 
 SQL Server 2019 preview has been released. This article does not cover SQL Server 2019 preview releases. To learn about SQL Server 2019 preview, see [What's new in SQL Server 2019 preview for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 > [!NOTE]
-> In addition to these capabilities in this article, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes.md).
+> In addition to these capabilities in this article, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes.md).
 
 ## SQL Server Database Engine
 
@@ -28,7 +28,7 @@ SQL Server 2019 preview has been released. This article does not cover SQL Serve
 - Support for native Linux paths.
 - IPV6 support.
 - Support for database files on NFS.
-- Enabled [Transparent Layer Security](sql-server-linux-encrypted-connections.md) (TLS) encryption.
+- Enabled [Transport Layer Security](sql-server-linux-encrypted-connections.md) (TLS) encryption.
 - Enabled [Active Directory Authentication](sql-server-linux-active-directory-authentication.md).
 - [Availability Groups functionality](sql-server-linux-availability-group-overview.md) for high availability.
 - [Full-text Search](sql-server-linux-setup-full-text-search.md) support.

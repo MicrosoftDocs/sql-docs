@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Browse for Report Parts and Set a Default Folder (Report Builder and SSRS)
 The easiest way to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report is to add existing report parts, such as tables and charts, to your report from the Report Part Gallery. When you add a report part to your report, you are also adding everything it must have to work. For example, any report part that displays data depends on a dataset, that is, a query and a connection to a data source. After you add the report part to your report, you can modify it as much as you need.  
@@ -57,10 +57,10 @@ The easiest way to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversio
  You do not need to restart Report Builder for this setting to take effect.  
   
 ## See Also  
- [Check for Updates or Turn Updates Off (Report Builder and SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+ [Check for Updates or Turn Updates Off (Report Builder and SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Troubleshoot Report Parts (Report Builder and SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Troubleshoot Report Parts (Report Builder and SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Publish and Republish Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

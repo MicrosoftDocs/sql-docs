@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL job step"
@@ -74,7 +74,7 @@ manager: craigg
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- creates a job step that that uses Transact-SQL  
+    -- creates a job step that uses Transact-SQL  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  

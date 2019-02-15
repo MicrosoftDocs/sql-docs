@@ -40,7 +40,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
 -   **SharePoint mode**: where a report server is installed as part of a SharePoint server farm.  Deploy and configure SharePoint mode by using PowerShell commands or SharePoint content management pages.  
   
- In SQL Server Reporting Services you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items or report server database from the older versioned report server to the new report server. This process is typically referred to as a ‘migration’. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+ In SQL Server Reporting Services you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items or report server database from the older versioned report server to the new report server. This process is typically referred to as a 'migration'. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 ## Feature comparison of SharePoint and native mode
   
@@ -133,9 +133,9 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
 |Task|Link|  
 |----------|----------|  
-|Review Hardware and software requirements.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](http://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|If you are a Web developer or have expertise in creating cascading style sheets, you can modify the default styles at your own risk to change the colors, fonts, and layout of the toolbar or Report Manager. Neither the default style sheets nor instructions for modifying the style sheets are documented in this release.|[Customize Style Sheets for HTML Viewer and Report Manager](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
+|Review Hardware and software requirements.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
+|Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|If you are a Web developer or have expertise in creating cascading style sheets, you can modify the default styles at your own risk to change the colors, fonts, and layout of the toolbar or Report Manager. Neither the default style sheets nor instructions for modifying the style sheets are documented in this release.|[Customize Style Sheets for HTML Viewer and Report Manager](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |Web developers who are familiar with HTML styles and Cascade Style Sheets (CSS) can use the information in this topic to determine which files can be modified to customize the appearance of Report Manager.|[Configure the Web Portal to Pass Custom Authentication Cookies](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |Explains how to tune the memory settings for the Report Server Web service and Windows service.|[Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explains recommended steps to configure are report server for remote administration.|[Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
@@ -152,4 +152,4 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
 [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

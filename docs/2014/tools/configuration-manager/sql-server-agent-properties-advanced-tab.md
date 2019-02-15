@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "configmgr-client"
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: stevestein

@@ -24,7 +24,7 @@ Marks records for deletion.
 ```  
   
 DELETE FROM [DatabaseName!]TableName  
-   [WHERE FilterCondition1 [AND | OR FilterCondition2 ...]]  
+   [WHERE FilterCondition1 [AND | OR FilterCondition2 ...]]  
 ```  
   
 ## Arguments  

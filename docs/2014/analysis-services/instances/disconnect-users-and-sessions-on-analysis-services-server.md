@@ -43,7 +43,7 @@ manager: craigg
 1.  Paste the following syntax into an MDX query window, replacing the ConnectionID, SessionID, or SPID placeholder with a valid value copied from the previous step.  
   
     ```  
-    <Cancel xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Cancel xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   
        <ConnectionID>111</ConnectionID>  
        <SessionID>222</SessionID>  
@@ -64,12 +64,12 @@ manager: craigg
   
  In rare cases, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will not close a connection if it cannot track all the sessions and SPIDs associated with the connection (for example, when multiple sessions are open in an HTTP scenario).  
   
- For more information about the XMLA referenced in this topic, see [Execute Method &#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md) and [Cancel Element &#40;XMLA&#41;](../xmla/xml-elements-commands/cancel-element-xmla.md).  
+ For more information about the XMLA referenced in this topic, see [Execute Method &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) and [Cancel Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
   
 ## See Also  
  [Managing Connections and Sessions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [BeginSession Element &#40;XMLA&#41;](../xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [EndSession Element &#40;XMLA&#41;](../xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Session Element &#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)  
+ [BeginSession Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
+ [EndSession Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   
+ [Session Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/session-element-xmla)  
   
   

@@ -3,9 +3,14 @@ layout: HubPage
 hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
-title: Microsoft Azure Documentation
-description: Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more.
+title: Manage, Monitor, Tune SQL Server
+description: Discover the features that help you manage, monitor, and tune your SQL Server. 
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ---
@@ -13,7 +18,7 @@ featureFlags:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -23,7 +28,7 @@ featureFlags:
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Download SQL Server</span>
+                                    <span class="likeAnH3">Try SQL Server 2019 (preview)</span>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +437,7 @@ featureFlags:
                                 </a>
                             </li> 
                             <li>
-                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017/">
+                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -461,13 +466,23 @@ featureFlags:
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">
-                    Contribute to SQL docs
+                <a href="https://aka.ms/editsqldocs" data-linktype="external">
+                    Contribute
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
-                    SQL Docs Feedback
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">
+                    Get help
+                </a>
+            </li>
+           <li>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external">
+                    Feedback
+                </a>
+            </li>
+           <li>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external">
+                    Survey
                 </a>
             </li>
            <li>
@@ -492,4 +507,3 @@ featureFlags:
             </li>
         </ul>
     </div>
-

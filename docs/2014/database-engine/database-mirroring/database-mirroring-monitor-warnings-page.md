@@ -31,7 +31,7 @@ manager: craigg
 |**Warn if the age of the oldest unsent transaction exceeds the threshold**|Specifies the number of minutes worth of transactions that can accumulate in the send queue before a warning is generated on the principal server instance. This warning helps measure the potential for data loss in terms of time, and is particularly relevant for high-performance mode. However, the warning is also relevant for high-safety mode when mirroring is paused or suspended because the partners become disconnected.|  
 |**Warn if the mirror commit overhead exceeds the threshold**|Specifies the number of milliseconds of average delay per transaction tolerated before a warning is generated on the principal server. This delay is the amount of overhead incurred while the principal server instance waits for the mirror server instance to write the transaction's log record into the redo queue. This value is relevant only in high-safety mode.|  
   
- **Threshold at '** *<server_instance>* **'**  
+ **Threshold at '** _<server_instance>_ **'**  
  For each of the warnings, displays the current user-specified threshold, if any, for one of the server instances. The full instance name of the server instance is indicated in the corresponding column heading.  
   
  For more information, see "Remarks," later in this topic.  
@@ -42,7 +42,7 @@ manager: craigg
  For more information, see "Remarks," later in this topic.  
   
 ## Remarks  
- If information is currently unavailable for a server instance, the cells of the corresponding **Threshold at** column display a gray background and watermark text. If the monitor is not connected to the server instance, in every cell the grid displays either **Not connected to** *<SYSTEM_NAME>* or **Not connected to** *<SYSTEM_NAME>***\\***<instance_name>*, depending on whether the instance is the default instance or a named instance. If the monitor is waiting for a query to return, the grid displays **Waiting for data…** in every cell.  
+ If information is currently unavailable for a server instance, the cells of the corresponding **Threshold at** column display a gray background and watermark text. If the monitor is not connected to the server instance, in every cell the grid displays either **Not connected to** _<SYSTEM_NAME>_ or **Not connected to** _<SYSTEM_NAME>_**\\**_<instance_name>_, depending on whether the instance is the default instance or a named instance. If the monitor is waiting for a query to return, the grid displays **Waiting for data...** in every cell.  
   
  When information is available, the cell for each warning displays either a specified threshold value (and unit of measurement), or **Not enabled**.  
   
@@ -51,7 +51,7 @@ manager: craigg
  On a given partner, the events logged depend on its current role, principal or mirror. However, we recommend that you set a warning threshold for a given event on both partners to ensure that the warning persists if the database fails over. The appropriate threshold for each partner depends on the performance capabilities of that partner's system.  
   
 > [!NOTE]  
->  You can also use the **sp_dbmmonitorchangealert** system stored procedure to configure thresholds for the equivalent events—unsent log, unrecovered log, oldest unsent transaction, and mirror commit overhead. For more information, see [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql).  
+>  You can also use the **sp_dbmmonitorchangealert** system stored procedure to configure thresholds for the equivalent events-unsent log, unrecovered log, oldest unsent transaction, and mirror commit overhead. For more information, see [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql).  
   
  The following table shows the event ID associated with each warning.  
   

@@ -36,10 +36,10 @@ Stream.CopyTo DestStream, NumChars
 >  The *DestStream* parameter may not be a proxy of **Stream** object because this requires access to a private interface on the **Stream** object that cannot be remoted to the client.  
   
  *NumChars*  
- Optional. An **Integer** value that specifies the number of bytes or characters to be copied from the current position in the source **Stream** to the destination **Stream**. The default value is –1, which specifies that all characters or bytes are copied from the current position to [EOS](../../../ado/reference/ado-api/eos-property.md).  
+ Optional. An **Integer** value that specifies the number of bytes or characters to be copied from the current position in the source **Stream** to the destination **Stream**. The default value is -1, which specifies that all characters or bytes are copied from the current position to [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## Remarks  
- This method copies the specified number of characters or bytes, starting from the current position specified by the [Position](../../../ado/reference/ado-api/position-property-ado.md) property. If the specified number is more than the available number of bytes until **EOS**, then only characters or bytes from the current position to **EOS** are copied. If the value of *NumChars* is –1, or omitted, all characters or bytes starting from the current position are copied.  
+ This method copies the specified number of characters or bytes, starting from the current position specified by the [Position](../../../ado/reference/ado-api/position-property-ado.md) property. If the specified number is more than the available number of bytes until **EOS**, then only characters or bytes from the current position to **EOS** are copied. If the value of *NumChars* is -1, or omitted, all characters or bytes starting from the current position are copied.  
   
  If there are existing characters or bytes in the destination stream, all contents beyond the point where the copy ends remain, and are not truncated. **Position** becomes the byte immediately following the last byte copied. If you want to truncate these bytes, call [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   

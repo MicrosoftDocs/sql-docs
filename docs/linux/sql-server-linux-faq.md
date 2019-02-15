@@ -4,7 +4,7 @@ description: This article provides answers to frequently asked questions about S
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 07/24/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -27,10 +27,6 @@ The following sections provide common questions and answers for SQL Server runni
 
    SQL Server is tested and supported on Linux for the previously listed distributions. Other Linux distributions are closely related and might be able to run SQL Server (for example, CentOS is closely related to Red Hat Enterprise Server). But if you choose to install SQL Server on an unsupported operating system, please review the **Support policy** section of the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to understand the support implications. Also note that some community-maintained Linux distributions do not have a formal way to receive support if the underlying operating system is the problem.
 
-1. **How does licensing work on Linux?**
-
-   SQL Server is licensed the same way for both Windows and Linux. In fact, you license SQL Server and then you can choose to use that license on the platform of your choice. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
-
 1. **Is SQL Server on Linux the same as on Windows?**
 
    The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-release-notes.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
@@ -42,6 +38,39 @@ The following sections provide common questions and answers for SQL Server runni
 1. **I am coming from a Windows SQL Server background. Are there resources to help learn how to use SQL Server on Linux?**
 
    The [quickstarts](sql-server-linux-setup.md#platforms) provide step-by-step instructions on how to install SQL Server on Linux and run Transact-SQL queries. Other tutorials provide additional instructions on using SQL Server on Linux. For a third-party list of tips, see the [MSSQLTIPS list of SQL Server on Linux Tips](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
+
+## Licensing
+
+1. **How does licensing work on Linux?**
+
+   SQL Server is licensed the same way for both Windows and Linux. In fact, you license SQL Server and then you can choose to use that license on the platform of your choice. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
+1. **What edition of SQL Server should I choose when I already purchased it?**
+
+   When you run mssql-conf setup you are presented with the following options:
+   
+   ```
+   Choose an edition of SQL Server:
+      1. Evaluation (free, no production use rights, 180-day limit)
+      2. Developer (free, no production use rights)
+      3. Express (free)
+      4. Web (PAID)
+      5. Standard (PAID)
+      6. Enterprise (PAID)
+      7. Enterprise Core (PAID)
+      8. I bought a license through a retail sales channel and have a product key to enter.
+   ```
+     
+   If you have obtained your license through volume licensing as part of an Enterprise Agreement or through your MSDN subscription, you need to select options 4 through 7. This step does not ask you to enter the license, but you must have previously purchased the appropriate license for your configuration. If you have purchased Standard edition through a retail channel, select option 8. This option does prompt you to enter a key. 
+
+1. **How do I verify the installed version and edition of SQL Server on Linux?**
+
+   Connect to the SQL Server instance with a client tool such as **sqlcmd**, **mssql-cli**, or Visual Studio Code. Then run the following Transact-SQL query to verify the version and edition of SQL Server that you are running: 
+
+   ```sql
+   SELECT @@VERSION
+   SELECT SERVERPROPERTY('Edition')
+   ```
 
 ## Installation
 
@@ -98,7 +127,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Does SQL Server on Linux support multiple instances on the same host?**
 
-   We recommend running multiple containers on a host to have multiple distinct instances. Each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   We recommend running multiple containers on a host to have multiple distinct instances. This is easily achieved using docker, but each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
 
 1. **Is Active Directory Authentication supported on Linux?**
 

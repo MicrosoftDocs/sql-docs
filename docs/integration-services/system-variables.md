@@ -21,7 +21,7 @@ manager: craigg
 # System Variables
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a set of system variables that store information about the running package and its objects. These variables can be used in expressions and property expressions to customize packages, containers, tasks, and event handlers.  
   
- All variables—system and user-defined— can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters.  
+ All variables-system and user-defined- can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters.  
   
 ## System Variables for Packages  
  The following table describes the system variables that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for packages.  
@@ -99,6 +99,6 @@ manager: craigg
  This rule applies to user-defined variables as well. But, whereas the data types of system variables cannot be changed and you have to tailor your use of these variables to fit the data types, user-defined are more flexible. The user-defined variables that are used in parameter bindings are usually defined with data types that are compatible with the data types of parameters to which they are mapped.  
   
 ## Related Tasks  
- [Map Query Parameters to Variables in an Execute SQL Task](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [Map Query Parameters to Variables in an Execute SQL Task](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

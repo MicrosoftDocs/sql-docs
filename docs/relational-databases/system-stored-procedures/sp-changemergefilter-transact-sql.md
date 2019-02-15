@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_changemergefilter_TSQL"
@@ -39,19 +38,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@article=** ] **'***article***'**  
+ [ **@article=** ] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@filtername=** ] **'***filtername***'**  
+ [ **@filtername=** ] **'**_filtername_**'**  
  Is the current name of the filter. *filtername* is **sysname**, with no default.  
   
- [ **@property=** ] **'***property***'**  
+ [ **@property=** ] **'**_property_**'**  
  Is the name of the property to change. *property* is **sysname**, with no default.  
   
- [ **@value=**] **'***value***'**  
+ [ **@value=**] **'**_value_**'**  
  Is the new value for the specified property. *value*is **nvarchar(1000)**, with no default.  
   
  This table describes the properties of articles and the values for those properties.  

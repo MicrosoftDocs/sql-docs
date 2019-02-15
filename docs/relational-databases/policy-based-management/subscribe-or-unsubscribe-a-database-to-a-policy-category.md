@@ -5,14 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.groupsubscription.f1"
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Subscribe or Unsubscribe a Database  to a Policy Category

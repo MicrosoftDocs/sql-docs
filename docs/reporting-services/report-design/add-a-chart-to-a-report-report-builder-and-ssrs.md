@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Add a Chart to a Report (Report Builder and SSRS)
   When you want to summarize data in a visual format in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, use a Chart data region. It is important to choose an appropriate chart type for the type of data that you are presenting. This affects how well the data can be interpreted when put in chart form. For more information, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -64,9 +64,9 @@ ms.author: maggies
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Adding a Bar Chart to Your Report (Report Builder)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adding a Bar Chart to a Report (Report Designer)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Adding a Pie Chart to Your Report (Report Builder)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: Adding a Pie Chart to a Report (Report Designer)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Tutorial: Adding a Bar Chart to Your Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Adding a Bar Chart to a Report (Report Designer)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutorial: Adding a Pie Chart to Your Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Adding a Pie Chart to a Report (Report Designer)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

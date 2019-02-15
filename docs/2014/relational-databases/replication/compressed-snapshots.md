@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], compressed"
@@ -28,7 +27,7 @@ manager: craigg
   
  **To compress and deliver snapshot files**  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Compress Snapshot Files &#40;SQL Server Management Studio&#41;](publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Compress Snapshot Files &#40;SQL Server Management Studio&#41;](snapshot-options.md#compress-snapshot-files)  
   
 -   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

@@ -41,7 +41,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 The ID of the certificate used to protect the symmetric key. *cert_ID* has an **int** data type.  
   
 *cert_password*  
-The password used to encrypt the private key of the certificate. Can have a `NULL` value if the the database master key protects the private key. *cert_password* has an **nvarchar** data type.  
+The password used to encrypt the private key of the certificate. Can have a `NULL` value if the database master key protects the private key. *cert_password* has an **nvarchar** data type.  
 
 '*ciphertext*'  
 The string of data encrypted with the key. *ciphertext* has a **varbinary** data type.  

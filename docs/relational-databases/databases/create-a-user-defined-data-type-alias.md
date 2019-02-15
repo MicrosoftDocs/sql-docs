@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.userdefineddatatype.general.f1"
@@ -85,10 +84,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     |||  
     |-|-|  
-    |1 – 9|5|  
-    |10 – 19|9|  
-    |20 – 28|13|  
-    |29 – 38|17|  
+    |1 - 9|5|  
+    |10 - 19|9|  
+    |20 - 28|13|  
+    |29 - 38|17|  
   
      For **nchar** and **nvarchar** data types, the storage value is always two times the value in **Length**.  
   

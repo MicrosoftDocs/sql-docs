@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services, SSIS Designer"
@@ -50,11 +49,11 @@ manager: craigg
   
  `- <SamplesSites>`  
   
- `<GettingStartedSamples>http://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
+ `<GettingStartedSamples>https://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
   
  `- <ToolboxSamples>`  
   
- `<Site>http://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
+ `<Site>https://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
   
  `</ToolboxSamples>`  
   

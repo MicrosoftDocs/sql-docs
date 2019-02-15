@@ -1,7 +1,7 @@
 ---
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "11/13/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -186,7 +186,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 #### ON options 
    With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index uses the settings partition or filegroup settings of the existing table.  
   
-   *partition_scheme_name* **(** *column_name* **)**  
+   *partition_scheme_name* **(** _column_name_ **)**  
    Specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
    *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.  
@@ -205,7 +205,7 @@ Create an in-memory nonclustered columnstore index on a rowstore table stored as
 *index_name*  
    Specifies the name of the index. *index_name*  must be unique within the table, but does not have to be unique within the database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- **(** *column*  [ **,**...*n* ] **)**  
+ **(** _column_  [ **,**...*n* ] **)**  
     Specifies the columns to store. A nonclustered columnstore index is limited to 1024 columns.  
    Each column must be of a supported data type for columnstore indexes. See [Limitations and Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) for a list of the supported data types.  
 
@@ -228,7 +228,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
    For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ###### ONLINE = [ON | OFF]   
@@ -240,7 +240,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ```
 
 ##### COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   Specifies a lower bound on how long a row should stay in delta rowgroup before it is eligible for migration to compressed rowgroup. For example, a customer can say that if a row is unchanged for  120 minutes, make it  eligible for compressing into columnar storage format. For columnstore index on disk-based tables, we don’t track the time when a row was inserted or updated,  we use the delta rowgroup closed time as a proxy for the row instead. The default duration is 0 minutes. A row is migrated to columnar storage once 1 million rows have been accumulated in delta rowgroup and it has been marked closed.  
+   Specifies a lower bound on how long a row should stay in delta rowgroup before it is eligible for migration to compressed rowgroup. For example, a customer can say that if a row is unchanged for  120 minutes, make it  eligible for compressing into columnar storage format. For columnstore index on disk-based tables, we don't track the time when a row was inserted or updated,  we use the delta rowgroup closed time as a proxy for the row instead. The default duration is 0 minutes. A row is migrated to columnar storage once 1 million rows have been accumulated in delta rowgroup and it has been marked closed.  
   
 ###### DATA_COMPRESSION  
    Specifies the data compression option for the specified table, partition number, or range of partitions. Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. The options are as follows:
@@ -266,7 +266,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 #### ON options  
    These options specify the filegroups on which the index is created.  
   
-*partition_scheme_name* **(** *column_name* **)**  
+*partition_scheme_name* **(** _column_name_ **)**  
    Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index is mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
    *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. When partitioning a columnstore index, [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a column of the index, if it is not already specified.  
    If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.  
@@ -363,12 +363,15 @@ If the underlying table has a column of a data type that is not supported for co
 **Nonclustered columnstore indexes:**
 -   Cannot have more than 1024 columns.
 -   Cannot be created as a constraint-based index. It is possible to have unique constraints, primary key constraints, and foreign key constraints on a table with a columnstore index. Constraints are always enforced with a row-store index. Constraints cannot be enforced with a columnstore (clustered or nonclustered) index.
--   Cannot be created on a view or indexed view.  
 -   Cannot include a sparse column.  
 -   Cannot be changed by using the **ALTER INDEX** statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use **ALTER INDEX** to disable and rebuild a columnstore index.  
 -   Cannot be created by using the **INCLUDE** keyword.  
 -   Cannot include the **ASC** or **DESC** keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits.  
 -   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version and Azure SQL Database configured at  Premium tier, Standard tier (S3 and above), and all VCore offerings tiers tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
+
+
+> [!NOTE]  
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create a nonclustered columnstore index on an indexed view.  
 
 
  **Columnstore indexes cannot be combined with the following features:**  
@@ -384,8 +387,9 @@ These limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)
 
 -   Change tracking. You cannot use change tracking with nonclustered columnstore indexes (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
 -   Change data capture. You cannot use change data capture for nonclustered columnstore index (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
--   Readable secondary. You cannot access  a clustered clustered columnstore index (CCI) from a readable secondary of an Always OnReadable availability group.  You can access a nonclustered columnstore index (NCCI) from a readable secondary.  
+-   Readable secondary. You cannot access  a clustered columnstore index (CCI) from a readable secondary of an Always OnReadable availability group.  You can access a nonclustered columnstore index (NCCI) from a readable secondary.  
 -   Multiple Active Result Sets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] uses MARS for  read-only connections to tables with a columnstore index. However, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terminates the connections and aborts the transactions.  
+-  Nonclustered columnstore indexes cannot be created on a view or indexed view.
   
  For information about the performance benefits and limitations of columnstore indexes, see [Columnstore Indexes Overview](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -504,7 +508,7 @@ GO
     ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
-    --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
+    --Clustered rowstore indexes always use the DEFAULT name 'ClusteredIndex_<GUID>'.  
     SELECT i.name   
     FROM sys.indexes i   
     JOIN sys.tables t  
@@ -726,7 +730,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### E. Convert a columnstore table back to a rowstore heap  
- Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
+ Use [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

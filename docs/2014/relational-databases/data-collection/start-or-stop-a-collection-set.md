@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collection sets [SQL Server], stopping"

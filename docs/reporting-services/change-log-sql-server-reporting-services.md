@@ -7,7 +7,7 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 author: "casualoak"
-ms.author: "edugonz"
+ms.author: "RhysSchmidtke"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Change log for SQL Server Reporting Services (SSRS) 2017 and later
@@ -18,15 +18,32 @@ This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnover
 
 ## SQL Server 2017 Reporting Services 
 
+### Version 14.0.600.1109, Released: February 12, 2019
+
+The following issues have been fixed:
+
+ - Cache report snapshot schedules changes to "Report-specific schedule" after modifying subscription.
+ - rc:Toolbar=false not working in Express edition.
+ - Certain Thai characters rendered incorrectly when exporting paginated reports to PDF.
+ - Deadlock during notification of completed data-driven subscriptions
+ - Embedded images not displayed in certain circumstances when rc:Toolbar=False parameter used.
+ - Unable to create data driven subscriptions for reports that use cascading parameters
+ - Unable to edit subscriptions configured with an invalid interval.
+ - Security updates
+ - Linked reports UI not showing.
+ - Certain paginated reports with nested tablix controls have incorrect fonts.
+ - Whitespace incorrectly being added to certain paginated reports containing tablix data regions.
+ - Header rows disappear when expanding mobile report simple data grids.
+
 ### Version 14.0.600.906, Released: September 12, 2018
 
-This bug has been fixed:
+The following issue has been fixed:
 
 - Custom Authentication not returning correct cookie information
 
 ### Version 14.0.600.892, Released: August 31, 2018
 
-These bugs have been fixed:
+The following issues have been fixed:
 
 - Textbox inside Rectangle causes rectangle not to grow vertically when rc:Toolbar=False and it has long text 
 - Text size is not scaling if pageHeight is less than 0.5 in 
@@ -41,7 +58,7 @@ These bugs have been fixed:
 
 ### Version 14.0.600.744, Released: April 25, 2018 
 
-These bugs have been fixed:
+The following issues have been fixed:
 
 - Data Driven Subscription page does not show the Delivery Option once it is created
 - Upgrading SSRS 2012 to SSRS 2017 results in RSManagement throwing an exception every few seconds
@@ -50,7 +67,7 @@ These bugs have been fixed:
 
 ### Version 14.0.600.689, Released: February 28, 2018
 
-These bugs have been fixed:
+The following issues have been fixed:
 
 - Report Parameter visibility in a linked report is reverted after editing its properties
 - URL Parameter rc:Toolbar=false doesn't work in Express edition
@@ -65,7 +82,7 @@ Security updates
 
 ### Version 14.0.600.490, Released: November 1, 2017
 
-This bug has been fixed:
+The following issues have been fixed:
 
 - Resolved issues with SKU upgrade
 
@@ -77,4 +94,4 @@ Initial release
 
 [What's New in Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

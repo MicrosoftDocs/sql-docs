@@ -35,6 +35,6 @@ manager: craigg
 -   Enable and disable the IP address.  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

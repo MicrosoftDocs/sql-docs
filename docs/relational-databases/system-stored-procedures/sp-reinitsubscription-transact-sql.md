@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_reinitsubscription"
@@ -56,7 +55,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Indicates whether reinitialization occurs as a result of a schema change at the publication database. *for_schema_change* is **bit**, with a default of 0. If **0**, active subscriptions for publications that allow immediate updating are reactivated as long as the whole publication, and not just some of its articles, are reinitialized. This means that the reinitialization is being initiated as a result of schema changes. If **1**, active subscriptions are not reactivated until the Snapshot Agent runs.  
   
  [ **@publisher=** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  

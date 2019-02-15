@@ -54,5 +54,5 @@ To modify information about a connection, use the properties window in [!INCLUDE
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Solution Explorer Source Control](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Solution Explorer Source Control](https://msdn.microsoft.com/library/ms173879.aspx)  
   

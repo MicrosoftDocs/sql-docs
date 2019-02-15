@@ -24,11 +24,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  Optionally, call [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) with SQL_ROW_ARRAY_SIZE to change the number of rows (R) in the rowset.  
   
-2.  Call [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) to get a rowset.  
+2.  Call [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) to get a rowset.  
   
 3.  If bound columns are used, use the data values and data lengths now available in the bound column buffers for the rowset.  
   
-     If unbound columns are used, for each row call [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) with SQL_POSITION to set the cursor position; then, for each unbound column:  
+     If unbound columns are used, for each row call [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) with SQL_POSITION to set the cursor position; then, for each unbound column:  
   
     -   Call [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) one or more times to get the data for unbound columns after the last bound column of the rowset. Calls to [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) should be in order of increasing column number.  
   
@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  Set up any data-at-execution text or image columns.  
   
-5.  Call [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) or [SQLBulkOperations](http://go.microsoft.com/fwlink/?LinkId=58398) to set the cursor position, refresh, update, delete, or add row(s) within the rowset.  
+5.  Call [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) or [SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398) to set the cursor position, refresh, update, delete, or add row(s) within the rowset.  
   
      If data-at-execution text or image columns are used for an update or add operation, handle them.  
   

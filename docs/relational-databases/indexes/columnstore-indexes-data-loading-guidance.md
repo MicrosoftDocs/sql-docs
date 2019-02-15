@@ -59,7 +59,7 @@ These scenarios describe when loaded rows go directly to the columnstore or when
   
 ```sql  
 SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id, 
-  state state_desc, total_rows, deleted_rows, size_in_bytes   
+  state, state_desc, total_rows, deleted_rows, size_in_bytes   
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
@@ -115,4 +115,4 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
  For partitioned data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first assigns each row to a partition, and then performs columnstore operations on the data within the partition. Each partition has its own rowgroups and at least one delta rowgroup.  
   
  ## Next steps
- For further discussion on loading, see this [blog post](http://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  
+ For further discussion on loading, see this [blog post](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  

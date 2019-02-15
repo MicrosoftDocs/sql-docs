@@ -6,14 +6,13 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "SQL graph"
   - "SQL graph, overview"
 ms.assetid: 
-author: "shkale-msft"
-ms.author: "shkale"
+author: shkale-msft
+ms.author: shkale
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

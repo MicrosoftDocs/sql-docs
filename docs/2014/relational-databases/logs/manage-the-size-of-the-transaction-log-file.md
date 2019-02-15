@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], size management"
@@ -49,7 +49,7 @@ manager: craigg
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (See the **size**, **max_size**, and **growth** columns for the log file or files.)  
   
 > [!NOTE]  
->  Shrinking database and log files can be set to occur automatically. However, we recommend against automatic shrinking, and the `autoshrink` database property is set to FALSE by default. If `autoshrink` is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused. The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. For information about changing the setting of the `autoshrink` property, see [View or Change the Properties of a Database](../databases/view-or-change-the-properties-of-a-database.md)—use the **Auto Shrink** property on the **Options** page—or [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)—use the AUTO_SHRINK option.  
+>  Shrinking database and log files can be set to occur automatically. However, we recommend against automatic shrinking, and the `autoshrink` database property is set to FALSE by default. If `autoshrink` is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused. The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. For information about changing the setting of the `autoshrink` property, see [View or Change the Properties of a Database](../databases/view-or-change-the-properties-of-a-database.md)-use the **Auto Shrink** property on the **Options** page-or [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-use the AUTO_SHRINK option.  
   
   
 ##  <a name="AddOrEnlarge"></a> Add or Enlarge a Log File  

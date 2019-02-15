@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "service master key [SQL Server], modifying"
   - "DROP ENCRYPTION BY SERVICE MASTER KEY phrase"
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

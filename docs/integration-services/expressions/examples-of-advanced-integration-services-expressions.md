@@ -95,9 +95,9 @@ manager: craigg
     ```  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Use an Expression in a Data Flow Component](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
   
   

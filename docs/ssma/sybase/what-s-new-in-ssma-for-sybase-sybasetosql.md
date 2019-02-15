@@ -86,7 +86,7 @@ The v7.3 release of SSMA for Sybase contains the following changes:
 ## SSMA v7.2
 The v7.2 release of SSMA for Sybase contains the following changes:
 - Improved quality and conversion metric with targeted fixes based on customer feedback.
-- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA's conversion rates.
 
 ## SSMA v7.1
 The v7.1 release of SSMA for Access contains the following changes:
@@ -129,7 +129,7 @@ The July 2014 release of SSMA for Sybase contains the following changes:
 -  Moved extension pack functionality to schema to support Azure SQL DB.  
 -  Added performance improvements tested for databases with over 10k objects.  
 -  Added UI improvements for dealing with large number of objects.  
--  Added the ability to highlight “well known” LOB schemas (so they can be ignored in conversion).  
+-  Added the ability to highlight "well known" LOB schemas (so they can be ignored in conversion).  
 -  Added conversion speed improvements.  
 -  Added the ability to show object counts in UI. 
 -  Reduced report size by more than 25%.  
@@ -156,8 +156,8 @@ The July 2011 release of SSMA for Sybase contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Sybase contains the following changes:  
   
--   Consolidated “SSMA for Sybase” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
--   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
+-   Consolidated "SSMA for Sybase" product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" and Azure SQL.  
+-   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali."  
 -   Added a new feature to convert and migrate Sybase databases to Azure SQL.  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  
@@ -175,7 +175,7 @@ The July 2010 release of SSMA for Sybase contains the following changes:
 -   Added support for migrating to SQL Server 2008 R2.  
 -   Added a new SSMA Console application for command-line execution.  
 -   Added support for Data Migration using both Server-Side and Client-Side Data Migration Engines.  
--   Added support for “Custom SELECT” statement in data migration.  
+-   Added support for "Custom SELECT" statement in data migration.  
 -   Added support for migrating from Sybase ASE 15.0.3 and 15.5.  
   
 ## June 2008  

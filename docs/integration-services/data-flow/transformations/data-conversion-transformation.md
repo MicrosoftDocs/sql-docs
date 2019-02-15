@@ -41,10 +41,10 @@ manager: craigg
  This transformation has one input, one output, and one error output.  
   
 ## Related Tasks  
- You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). For information about setting properties of this transformation programmatically, see [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) and [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). For information about setting properties of this transformation programmatically, see [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) and [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## Related Content  
- Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
+ Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
   
 ## Data Conversion Transformation Editor
   Use the **Data Conversion Transformation Editor** dialog box to select the columns to convert, select the data type to which the column is converted, and set conversion attributes.  
@@ -78,10 +78,10 @@ manager: craigg
  Select the appropriate code page for columns of type DT_STR.  
   
  **Configure error output**  
- Specify how to handle row-level errors by using the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box.  
+ Specify how to handle row-level errors by using the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box.  
   
 ## See Also  
- [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "status information [SQL Server], jobs"
@@ -86,12 +86,12 @@ manager: craigg
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert).  
-    -- This example assumes that Test Alert already exists and that François Ajenstat is a valid operator name.  
+    -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
     GO  
     EXEC dbo.sp_add_notification   
     @alert_name = N'Test Alert',   
-    @operator_name = N'François Ajenstat',   
+    @operator_name = N'Fran??ois Ajenstat',   
     @notification_method = 1 ;  
     GO  
     ```  
@@ -101,6 +101,6 @@ manager: craigg
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To notify an operator of job status**  
   
- Use the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

@@ -107,7 +107,7 @@ The v7.3 release of SSMA for Oracle contains the following changes:
 ## SSMA v7.2
 The v7.2 release of SSMA for Oracle contains the following changes:
 - Improved quality and conversion metric with targeted fixes based on customer feedback.
-- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA's conversion rates.
 
 ## SSMA v7.1
 The v7.1 release of SSMA for Oracle contains the following changes:
@@ -127,7 +127,7 @@ The May 2016 release of SSMA for Oracle contains the following changes:
 - Added support for SQL Server 2016.
 - Added conversion of Oracle flashback archive tables to SQL Server temporal tables.
 
-    **Note** - SSMA doesn't copy history data from Oracle Flashback Data Archive tables. As a result, the history data must be copied manually during the migration process. In addition, while SSMA doesn't display the history table in the SQL Server metadata explorer because it’s treated as a system table, you can view the history table in SQL Server Management Studio.
+    **Note** - SSMA doesn't copy history data from Oracle Flashback Data Archive tables. As a result, the history data must be copied manually during the migration process. In addition, while SSMA doesn't display the history table in the SQL Server metadata explorer because it's treated as a system table, you can view the history table in SQL Server Management Studio.
     SQL Server 2016 doesn't support several Oracle Flashback features, including:
     - Oracle Flashback Transaction Query
     - DBMS_FLASHBACK Package
@@ -172,7 +172,7 @@ The July 2014 release of SSMA for Oracle contains the following changes:
 -   Added support for SQL Server 2014 Memory optimized tables.  
 -   Included performance improvements tested for databases with over 10k objects.  
 -   Added UI improvements for dealing with large number of objects.  
--   Added highlighting of “well known” LOB schemas.  
+-   Added highlighting of "well known" LOB schemas.  
 -   Included conversion speed improvements.  
 -   Added support for showing object counts in UI.  
 -   Reduced report size by more than 25%.
@@ -194,7 +194,7 @@ The January 2012 release of SSMA for Oracle contains the following changes:
 ## July 2011  
 The July 2011 release of SSMA for Oracle contains the following changes:  
   
--   Added support for conversion of Oracle sequence to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” sequence generator.  
+-   Added support for conversion of Oracle sequence to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" sequence generator.  
 -   Improved error reporting during data migration.  
 -   Improved conversion of statement using reserved words.  
 -   Improved implicit conversion of date value in a function.  
@@ -202,8 +202,8 @@ The July 2011 release of SSMA for Oracle contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Oracle contains the following changes:  
   
--   Consolidated “SSMA for Oracle” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
--   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
+-   Consolidated "SSMA for Oracle" product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali."  
+-   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali."  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  
 -   Added support for backward compatibility of projects created by earlier versions of SSMA (v4.0 and v4.2).  
@@ -216,7 +216,7 @@ The July 2010 release of SSMA for Oracle contains the following changes:
 -   Added support for migrating to SQL Server 2008 R2.  
 -   Added a new SSMA Console application for command-line execution.  
 -   Added support for Data Migration using both Server-Side and Client-Side Data Migration Engines.  
--   Added support for “Custom SELECT” statement in data migration.  
+-   Added support for "Custom SELECT" statement in data migration.  
 -   Added support for migrating from Oracle 11g R2.  
   
 ## June 2008  

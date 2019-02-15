@@ -1,12 +1,11 @@
 ---
 title: "sp_addmergepullsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addmergepullsubscription_agent"
@@ -19,6 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_addmergepullsubscription_agent (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a new agent job used to schedule synchronization of a pull subscription to a merge publication. This stored procedure is executed at the Subscriber on the subscription database.  

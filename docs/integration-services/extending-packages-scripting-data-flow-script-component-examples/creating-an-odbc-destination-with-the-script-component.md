@@ -1,7 +1,7 @@
 ---
 title: "Creating an ODBC Destination with the Script Component | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "10/10/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -32,7 +32,7 @@ manager: craigg
   
 -   The **OdbcCommand** expects positional parameters. The positions of the parameters are indicated by the question marks (?) in the text of the command. (In contrast, a **SqlCommand** expects named parameters.)  
   
- This example uses the **Person.Address** table in the **AdventureWorks** sample database. The example passes the first and fourth columns, the **int*AddressID*** and **nvarchar(30)City** columns, of this table through the data flow. This same data is used in the source, transformation, and destination samples in the topic, [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ This example uses the **Person.Address** table in the **AdventureWorks** sample database. The example passes the first and fourth columns, the **int _AddressID_** and **nvarchar(30) _City_** columns, of this table through the data flow. This same data is used in the source, transformation, and destination samples in the topic, [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### To configure this Script Component example  
   
@@ -161,6 +161,6 @@ manager: craigg
     ```  
   
 ## See Also  
- [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

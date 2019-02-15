@@ -20,7 +20,7 @@ manager: craigg
 # Data Mining Shapes for Visio
   The Data Mining Shapes for Visio provide templates customized for displaying data mining models. By using these templates, you can connect to a model that you have created, and create interactive presentations to illustrate the results of data mining.  
   
- The templates offer many advantages over static graphs and screen captures – they interact with the underlying data mining models, which are stored on an instance of Analysis Services, and let you customize the way that the patterns in the mining model are displayed. You can collapse and expand a tree model, filter on data nodes or by attributes, and display model statistics such as probabilities and coefficients.  
+ The templates offer many advantages over static graphs and screen captures - they interact with the underlying data mining models, which are stored on an instance of Analysis Services, and let you customize the way that the patterns in the mining model are displayed. You can collapse and expand a tree model, filter on data nodes or by attributes, and display model statistics such as probabilities and coefficients.  
   
  ![DM](media/dm-stencil.gif "DM")  
   

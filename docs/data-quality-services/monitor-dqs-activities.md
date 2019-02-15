@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.administration.activitymonitoring.f1"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "monitoring activity"
   - "activity monitoring"
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Monitor DQS Activities
@@ -121,7 +120,7 @@ manager: craigg
   
     -   **Activity Steps**: Displays a grid of the computational processes (activity steps) that are associated with the selected activity. There can be several activity steps displayed for an activity under this tab. This can happen in case the same activity step within the activity was run several times by the user. For example, the activity step was stopped and started again. The grid under this tab displays the following information for each activity step associated with the activity: **Type**, **Current Status**, **Start Time**, **Elapsed Time**, and **End Time**.  
   
-    -   **Profiler**: Displays the profiling information for current and historic activities. For current activities, it contains partial but consistent information. The profiling information of an activity is exported to an excel file when you export the corresponding activity details to an Excel file. The information is available in the **Profiler – Source** and **Profiler – Fields** sheets in the exported Excel file.  
+    -   **Profiler**: Displays the profiling information for current and historic activities. For current activities, it contains partial but consistent information. The profiling information of an activity is exported to an excel file when you export the corresponding activity details to an Excel file. The information is available in the **Profiler - Source** and **Profiler - Fields** sheets in the exported Excel file.  
   
 ##  <a name="Export"></a> Export DQS Activity Details  
  You can export the activity properties, activity processes, and profiling information of an activity in the monitoring screen to an Excel file. To do so:  

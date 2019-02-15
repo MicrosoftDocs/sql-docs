@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: supportability
+ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
 author: stevestein

@@ -26,7 +26,7 @@ manager: craigg
 
   Flushes to disk the  transaction log of the current database, thereby hardening all previously committed delayed durable transactions.  
   
- If you choose to use delayed transaction durability because of the performance benefits, but you also want to have a guaranteed limit on the amount of data that is lost on server crash or failover, then execute `sys.sp_flush_log` on a regular schedule. For example, if you want to make sure you don’t lose more than x seconds worth of data, you would execute `sp_flush_log` every x seconds.  
+ If you choose to use delayed transaction durability because of the performance benefits, but you also want to have a guaranteed limit on the amount of data that is lost on server crash or failover, then execute `sys.sp_flush_log` on a regular schedule. For example, if you want to make sure you don't lose more than x seconds worth of data, you would execute `sp_flush_log` every x seconds.  
   
  Executing `sys.sp_flush_log` guarantees that all previously committed delayed durable transactions are made durable. See the conceptual topic [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md) for more information.  
   

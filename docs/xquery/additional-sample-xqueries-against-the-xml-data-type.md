@@ -5,8 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "XQuery, samples"
   - "sample applications [XQuery]"
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Additional Sample XQueries Against the xml Data Type

@@ -90,10 +90,10 @@ XMLLocalName :: =
   
 |Order|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https\://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https\://www.adventure-works.com|  
   
  **Example #2**: `Customers {}/Customer`  
   
@@ -130,11 +130,11 @@ XMLLocalName :: =
 |15|Wyatt|Diaz|33|  
   
 #### XML document: Customers.xml  
- To try out the element path examples in the previous section, you can copy this XML and save it to a URL that is accessible by Report Designer, and then use the XML document as an XML data source: for example, `http://localhost/Customers.xml`.  
+ To try out the element path examples in the previous section, you can copy this XML and save it to a URL that is accessible by Report Designer, and then use the XML document as an XML data source: for example, `https://localhost/Customers.xml`.  
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="http://www.adventure-works.com">  
+<Customers xmlns="https://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  

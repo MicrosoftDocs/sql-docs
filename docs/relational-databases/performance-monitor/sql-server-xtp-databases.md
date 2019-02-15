@@ -5,14 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server 2016 XTP Databases"
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-author: "dagiro"
-ms.author: "v-dagir"
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server XTP Databases
@@ -35,11 +34,11 @@ This table describes the **SQL Server XTP Databases** counters.
 |**Flush Thread Frozen IOs/sec (256K)**|The number of 256K IO requests encountered during flush page processing that are above the freeze threshold and thus cannot be issued.|
 |**Flush Thread Frozen IOs/sec (4K)**|The number of 4K IO requests encountered during flush page processing that are above the freeze threshold and thus cannot be issued.|
 |**Flush Thread Frozen IOs/sec (64K)**|The number of 64K IO requests encountered during flush page processing that are above the freeze threshold and thus cannot be issued.|
-|**IoPagePool256K Free List Count**|Number of pages in the the 256K IO page pool free list. If this value goes to zero, more pages are allocated from the backend allocator. This is a very low-level counter, not intended for customer use.|
+|**IoPagePool256K Free List Count**|Number of pages in the 256K IO page pool free list. If this value goes to zero, more pages are allocated from the backend allocator. This is a very low-level counter, not intended for customer use.|
 |**IoPagePool256K Total Allocated**|Total number of pages allocated and held by the 256K IO page pool from the backend allocator. This is a very low-level counter, not intended for customer use.|
-|**IoPagePool4K Free List Count**|Number of pages in the the 4K IO page pool free list. If this value goes to zero, more pages are allocated from the backend allocator. This is a very low-level counter, not intended for customer use.|
+|**IoPagePool4K Free List Count**|Number of pages in the 4K IO page pool free list. If this value goes to zero, more pages are allocated from the backend allocator. This is a very low-level counter, not intended for customer use.|
 |**IoPagePool4K Total Allocated**|Total number of pages allocated and held by the 4K IO page pool from the backend allocator. This is a very low-level counter, not intended for customer use.|
-|**IoPagePool64K Free List Count**|Number of pages in the the 64K IO page pool free list. If this value goes to zero, more pages are allocated from the backend allocator. This is a very low-level counter, not intended for customer use.|
+|**IoPagePool64K Free List Count**|Number of pages in the 64K IO page pool free list. If this value goes to zero, more pages are allocated from the backend allocator. This is a very low-level counter, not intended for customer use.|
 |**IoPagePool64K Total Allocated**|Total number of pages allocated and held by the 64K IO page pool from the backend allocator. This is a very low-level counter, not intended for customer use.|
 |**MtLog 256K Expand Count**|Number of times a 256K MtLog was expanded. This is a very low-level counter, not intended for customer use.|
 |**MtLog 256K IOs Outstanding**|The number of outstanding 256K IO requests issued by MtLog.|

@@ -31,19 +31,19 @@ manager: craigg
   
 3.  Save changes to the file.  
   
-4.  Test metadata publishing by browsing to the service URL, for example: `http://yourserver/MDS/service/service.svc`. If metadata publishing is enabled, a page is displayed that begins with   
-    “You have created a service.”  
+4.  Test metadata publishing by browsing to the service URL, for example: `https://yourserver/MDS/service/service.svc`. If metadata publishing is enabled, a page is displayed that begins with   
+    "You have created a service."  
   
 ## Creating Proxy Classes by Using Visual Studio  
- If you have Visual Studio 2010 installed, the simplest way to generate proxy classes is to add a **Service Reference** to your project. The address of the service reference is the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, appended with /service/service.svc. For example: `http://yourserver/MDS/service/service.svc`. For more information, see [How to: Add, Update, or Remove a Service Reference](http://go.microsoft.com/fwlink/?LinkId=221167).  
+ If you have Visual Studio 2010 installed, the simplest way to generate proxy classes is to add a **Service Reference** to your project. The address of the service reference is the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, appended with /service/service.svc. For example: `https://yourserver/MDS/service/service.svc`. For more information, see [How to: Add, Update, or Remove a Service Reference](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## Creating Proxy Classes by Using Svcutil.exe  
- You must have either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK installed in order to have Svcutil.exe on your computer. If you use [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], you must use the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] command prompt to run the command. For more information, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027) and [Generating a WCF Client from Service Metadata](http://go.microsoft.com/fwlink/?LinkId=164821).  
+ You must have either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK installed in order to have Svcutil.exe on your computer. If you use [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], you must use the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] command prompt to run the command. For more information, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) and [Generating a WCF Client from Service Metadata](https://go.microsoft.com/fwlink/?LinkId=164821).  
   
  To create a set of C# proxy classes by using Svcutil.exe, use a command such as the following:  
   
 ```  
-svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc   
+svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc   
 /out:<proxy_name>.cs /messageContract /tcv:Version35   
 /noconfig /ct:System.Collections.ObjectModel.Collection`1   
 /namespace:*,Microsoft.MasterDataServices  

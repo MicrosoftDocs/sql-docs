@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpmergepublication"
@@ -38,7 +37,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ @publication**=** ] **'***publication***'**  
+ [ @publication**=** ] **'**_publication_**'**  
  The name of the publication. *publication*is **sysname**, with a default of **%**, which returns information about all merge publications in the current database.  
   
  [ @found**=** ] **'***found***'** OUTPUT  

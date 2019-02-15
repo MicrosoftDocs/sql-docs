@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_change_subscription_properties_TSQL"
@@ -38,19 +37,19 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'**_publisher_**'**  
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'**_publisher_db_**'**  
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@property=**]  **'***property***'**  
+ [ **@property=**]  **'**_property_**'**  
  Is the property to be changed. *property* is **sysname**.  
   
- [ **@value=**]  **'***value***'**  
+ [ **@value=**]  **'**_value_**'**  
  Is the new value of the property. *value* is **nvarchar(1000)**, with no default.  
   
  [ **@publication_type =** ] *publication_type*  

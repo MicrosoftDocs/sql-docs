@@ -1,5 +1,6 @@
 ---
-title: Get started with SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
+title: Get started with SQL Server on SUSE Linux Enterprise Server
+titleSuffix: SQL Server
 description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: rothja 
 ms.author: jroth 
@@ -7,7 +8,7 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ---
@@ -18,13 +19,13 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019 CTP 2.0 on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 preview on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 CTP 2.0 on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 preview on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -149,7 +150,7 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-At this point, SQL Server 2019 CTP 2.0 is running on your SLES machine and is ready to use!
+At this point, SQL Server 2019 preview is running on your SLES machine and is ready to use!
 
 ::: moniker-end
 

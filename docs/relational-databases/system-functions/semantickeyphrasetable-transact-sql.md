@@ -102,7 +102,7 @@ ORDER BY KEYP_TBL.score DESC;
 ```  
   
 ###  <a name="HowToTopDocuments"></a> Example 2: Find the Top Documents that Contain a Specific Key Phrase  
- The following example retrieves the top 25 documents that contain the key phrase “Bracket” from the Document column of the Production.Document table of the AdventureWorks sample database. This example assumes that the column is configured for full-text and semantic indexing.  
+ The following example retrieves the top 25 documents that contain the key phrase "Bracket" from the Document column of the Production.Document table of the AdventureWorks sample database. This example assumes that the column is configured for full-text and semantic indexing.  
   
 ```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

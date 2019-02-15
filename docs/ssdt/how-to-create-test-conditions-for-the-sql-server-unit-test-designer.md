@@ -43,7 +43,7 @@ This procedure explains how to create a test condition to appear in the SQL Serv
   
 10. Derive your class from the [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) class.  
   
-11. Sign the assembly with a strong name. For more information, see [How to: Sign an Assembly with a Strong Name](http://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Sign the assembly with a strong name. For more information, see [How to: Sign an Assembly with a Strong Name](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Build the class library.  
   
@@ -172,7 +172,7 @@ The class for the custom test condition inherits from the base [TestCondition](h
   
 |Attribute Parameter|Position|Description|  
 |-----------------------|------------|---------------|  
-|DisplayName|1|Identifies the string in the “Test Conditions” combo box. This name must be unique. If two conditions have the same display name, the first condition found will be shown to the user, and a warning will be shown in the Visual Studio Error Manager.|  
+|DisplayName|1|Identifies the string in the "Test Conditions" combo box. This name must be unique. If two conditions have the same display name, the first condition found will be shown to the user, and a warning will be shown in the Visual Studio Error Manager.|  
 |ImplementingType|2|This is used to uniquely identify the extension. You need to change this to match the type you are placing the attribute on. This example uses the type **ResultSetColumnCountCondition** so use **typeof(ResultSetColumnCountCondition)**. If your type is **NewTestCondition**, use **typeof(NewTestCondition)**.|  
   
 In this example, you add two properties. Users of the custom test condition can use the ResultSet property to specify for which result set the column count should be verified. Then, users can use the Count property to specify the expected column count.  

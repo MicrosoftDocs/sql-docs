@@ -5,8 +5,7 @@ ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: data-movement
 ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -15,6 +14,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 There are several ways to import data from Excel files to SQL Server or to Azure SQL Database. Some methods let you import data in a single step directly from Excel files; other methods require you to export your Excel data as text before you can import it. This article summarizes the frequently used methods and provides links for more detailed information.
 
 ## List of methods

@@ -25,23 +25,23 @@ manager: craigg
   
 |New Method|Description|JDBC Driver Implementation|  
 |----------------|-----------------|--------------------------------|  
-|void abort(Executor executor)|Terminates an open connection to SQL Server.|Implemented as described in the java.sql.Connection interface. For more details see [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
-|void setSchema(String schema)|Sets schema for the current connection.|SQL Server does not support setting schema for the current session. The driver silently logs a warning message if this method is called. For more details see [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
-|String getSchema()|Returns the schema name for the current connection.|Since SQL Server does not support setting schema for the current connection, the driver instead returns the default schema of the user. For more details see [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|void abort(Executor executor)|Terminates an open connection to SQL Server.|Implemented as described in the java.sql.Connection interface. For more details see [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|void setSchema(String schema)|Sets schema for the current connection.|SQL Server does not support setting schema for the current session. The driver silently logs a warning message if this method is called. For more details see [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|String getSchema()|Returns the schema name for the current connection.|Since SQL Server does not support setting schema for the current connection, the driver instead returns the default schema of the user. For more details see [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
   
  **SQLServerDatabaseMetaData class**  
   
 |New Method|Description|JDBC Driver Implementation|  
 |----------------|-----------------|--------------------------------|  
-|boolean generatedKeyAlwaysReturned()|Returns true as the driver supports retrieving generated keys|Implemented as described in the java.sql. DatabaseMetaData interface. For more details, see [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
-|ResultSet getPseudoColumns(String catalog, String schemaPattern,String tableNamePattern,String columnNamePattern)|Retrieves a description of the pseudo/hidden columns|Return an empty result set as SQL Server does not have a formal notion of pseudo-columns. For more details, see [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
+|boolean generatedKeyAlwaysReturned()|Returns true as the driver supports retrieving generated keys|Implemented as described in the java.sql. DatabaseMetaData interface. For more details, see [java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
+|ResultSet getPseudoColumns(String catalog, String schemaPattern,String tableNamePattern,String columnNamePattern)|Retrieves a description of the pseudo/hidden columns|Return an empty result set as SQL Server does not have a formal notion of pseudo-columns. For more details, see [java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
   
  **SQLServerStatement class**  
   
 |New Method|Description|JDBC Driver Implementation|  
 |----------------|-----------------|--------------------------------|  
-|void closeOnCompletion()|Specifies that this Statement will be closed when all its dependent result sets are closed.|Implemented as described in the java.sql.Statement interface. For more details, see [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
-|boolean isCloseOnCompletion()|Returns a value indicating whether this Statement will be closed when all its dependent result sets are closed.|Implemented as described in the java.sql.Statement interface. For more details, see [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
+|void closeOnCompletion()|Specifies that this Statement will be closed when all its dependent result sets are closed.|Implemented as described in the java.sql.Statement interface. For more details, see [java.sql.Statement](https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
+|boolean isCloseOnCompletion()|Returns a value indicating whether this Statement will be closed when all its dependent result sets are closed.|Implemented as described in the java.sql.Statement interface. For more details, see [java.sql.Statement](https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
   
  The Java Database Connectivity API 4.1 specification is supported by the Microsoft JDBC Driver 4.2 for SQL Server, with the following features.  
   

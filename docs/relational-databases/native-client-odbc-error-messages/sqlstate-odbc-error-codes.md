@@ -27,9 +27,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  For more information about the state error codes, see the following topics:  
   
--   [Appendix A: ODBC Error Codes](http://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Appendix A: ODBC Error Codes](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
--   [SQLSTATE Mappings](http://go.microsoft.com/fwlink/?LinkId=89355)  
+-   [SQLSTATE Mappings](https://go.microsoft.com/fwlink/?LinkId=89355)  
   
 ## See Also  
  [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

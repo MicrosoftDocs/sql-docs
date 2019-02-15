@@ -1,12 +1,10 @@
 ---
 title: "Create, Modify, and Drop Spatial Indexes | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [SQL Server], creating"
@@ -88,7 +86,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  In the **Spatial Indexes** dialog box, click **Add**.  
   
-5.  Select the new index in the **Selected Spatial Index** list, and in the grid to the right, set the properties for the spatial index. For information about the properties, see [Spatial Indexes Dialog Box &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
+5.  Select the new index in the **Selected Spatial Index** list, and in the grid to the right, set the properties for the spatial index. For information about the properties, see [Spatial Indexes Dialog Box &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
   
 ###  <a name="alter"></a> To alter a spatial index  

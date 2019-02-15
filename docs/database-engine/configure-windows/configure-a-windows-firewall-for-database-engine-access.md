@@ -18,8 +18,9 @@ manager: craigg
 ---
 # Configure a Windows Firewall for Database Engine Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > For content related to previous versions of SQL Server, see [Configure a Windows Firewall for Database Engine Access](configure-a-windows-firewall-for-database-engine-access.md).
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   This topic describes how to configure a Windows firewall for Database Engine access in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using SQL Server Configuration Manager. Firewall systems help prevent unauthorized access to computer resources. To access an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] through a firewall, you must configure the firewall on the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to allow access.  
   
@@ -45,7 +46,7 @@ manager: craigg
   
      [Security](#Security)  
   
--   **To configure a Widows Firewall for Database Engine access, using:**  
+-   **To configure a Windows Firewall for Database Engine access, using:**  
   
      [SQL Server Configuration Manager](#SSMSProcedure)  
   

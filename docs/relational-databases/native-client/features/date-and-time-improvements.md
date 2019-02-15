@@ -3,6 +3,7 @@ title: "Date and Time Improvements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -19,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  For more information about date/time improvements, see [Date and Time Improvements &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) and [Date and Time Improvements &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](http://msftdpprodsamples.codeplex.com/).  
+ For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
   
 ## Usage  
  The following sections describe various ways of using the new date and time types.  

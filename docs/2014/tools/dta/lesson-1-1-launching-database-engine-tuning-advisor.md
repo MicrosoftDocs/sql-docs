@@ -29,7 +29,7 @@ manager: craigg
  ![Database Engine Tuning Advisor default window](media/defaultdtagui.gif "Database Engine Tuning Advisor default window")  
   
 > [!NOTE]  
->  The the tab and **Session Name** box display the name of your computer and the instance you are connected to. The tab and box also display the current date and time.  
+>  The tab and **Session Name** box display the name of your computer and the instance you are connected to. The tab and box also display the current date and time.  
   
  Two main panes are displayed in the Database Engine Tuning Advisor GUI when it is first opened.  
   

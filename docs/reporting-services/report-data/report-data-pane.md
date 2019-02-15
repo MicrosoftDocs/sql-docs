@@ -1,26 +1,23 @@
 ---
-title: "Report Data Pane | Microsoft Docs"
-ms.date: 03/01/2017
+title: Report Data pane
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.reviewer: ""
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-data
-
-
 ms.topic: conceptual
-f1_keywords: 
-  - "10039"
-  - "sql13.rtp.rptdesigner.reportdata.f1"
-  - "10435"
-helpviewer_keywords: 
-  - "Report Data pane"
-ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
-author: markingmyname
-ms.author: maghan
+ms.custom: seodec18
+ms.date: 12/14/2018
 ---
-# Report Data Pane
+
+# Report Data pane in SQL Server Reporting Services (SSRS)
+
   Use the **Report Data** pane to view the currently defined parameters, data sources, datasets, field collections, and images in your report. The Report Data pane displays a hierarchical view of the items that represent data in your report. The top level nodes represent built-in fields, parameters, images, and data source references. Expand each node to view the data items. For example, when you expand a data source node, the datasets defined for that data source appear. When you expand a dataset, its field collection appears. Drag items to the report design surface to link data with report items on the report page.  
   
-## Options  
+## Options
+
  **Built-in Fields**  
  Represents fields provided by Reporting Services that are commonly used in a report, such as the report name or page number. For more information, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -36,8 +33,7 @@ ms.author: maghan
  **Dataset**  
  Represents a single dataset. A dataset is the parent node for the collection of fields specified by the query and including any calculated fields. Reporting Services supports query designers to help you specify a query. For more information, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) and [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
-## See Also  
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Grouping Pane](../../reporting-services/tools/grouping-pane.md)  
-  
-  
+## Next steps
+
+ - [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+ - [Grouping Pane](../../reporting-services/tools/grouping-pane.md)

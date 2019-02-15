@@ -11,9 +11,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.datasetproperties.fields.f1"
   - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Dataset Properties Dialog Box, Fields
   Select **Fields** on the **Dataset Properties** dialog box to change the field collection for the report dataset. The fields list is automatically populated, but you can use **Fields** to add, edit, and delete query and calculated fields.  

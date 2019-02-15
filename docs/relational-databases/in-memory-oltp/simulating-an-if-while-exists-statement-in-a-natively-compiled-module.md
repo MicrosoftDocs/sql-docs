@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ```sql  
 DECLARE @exists BIT = 0  
-SELECT TOP 1 @exists = 1 FROM MyTable WHERE …  
+SELECT TOP 1 @exists = 1 FROM MyTable WHERE ...  
 IF @exists = 1  
 ```  
   

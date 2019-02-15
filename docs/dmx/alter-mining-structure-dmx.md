@@ -50,7 +50,7 @@ USING <algorithm> [(<parameter list>)]
  The name of a data mining algorithm, as defined by the provider.  
   
 > [!NOTE]  
->  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *parameter list*  
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  
@@ -137,7 +137,7 @@ USING <algorithm> [(<parameter list>)]
  The syntax of the parameter list is as follows:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
 ## Example 1: Add a Model to a Structure  

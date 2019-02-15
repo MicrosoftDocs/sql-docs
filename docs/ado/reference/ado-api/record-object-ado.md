@@ -54,7 +54,7 @@ Represents a row from a [Recordset](../../../ado/reference/ado-api/recordset-obj
   
 -   Indicate the current status of the **Record** with the [State](../../../ado/reference/ado-api/state-property-ado.md) property.  
   
--   Indicate the type of **Record** — *simple*, *collection*, or *structured document* — with the [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)property.  
+-   Indicate the type of **Record** - *simple*, *collection*, or *structured document* - with the [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)property.  
   
 -   Stop execution of an asynchronous operation with the [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) method.  
   

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "RESTORE SERVICE MASTER KEY statement"
   - "transferring Service Master Keys"
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # RESTORE SERVICE MASTER KEY (Transact-SQL)
@@ -41,10 +41,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## Arguments  
- FILE **='***path_to_file***'**  
+ FILE **='**_path\_to\_file_**'**  
  Specifies the complete path, including file name, to the stored service master key. *path_to_file* can be a local path or a UNC path to a network location.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Specifies the password required to decrypt the service master key that is being imported from a file.  
   
  FORCE  

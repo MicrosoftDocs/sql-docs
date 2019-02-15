@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, service accounts"
@@ -59,17 +59,17 @@ manager: craigg
   
 2.  Click the plus sign to expand the **Local Server Groups** folder.  
   
-3.  Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager…**.  
+3.  Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager...**.  
   
 4.  In the **User Account Control** dialog box, click **Yes**.  
   
 5.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, in the console pane, select **SQL Server Services**.  
   
-6.  In the details pane, right-click **SQL Server Agent***(server_name)*, where *server_name* is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent instance for which you want to change the service startup account, and select **Properties**.  
+6.  In the details pane, right-click **SQL Server Agent**_(server_name)_, where *server_name* is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent instance for which you want to change the service startup account, and select **Properties**.  
   
-7.  In the **SQL Server Agent***(server_name)* **Properties** dialog box, in the **Log On** tab, select one of the following options under **Log on as**:  
+7.  In the **SQL Server Agent**_(server_name)_ **Properties** dialog box, in the **Log On** tab, select one of the following options under **Log on as**:  
   
-    -   **Built-in account**: select this option if your jobs require resources from the local server only. For information about how to choose a Windows built-in account type, see [Selecting an Account for SQL Server Agent Service.](http://msdn.microsoft.com/library/ms191543.aspx)  
+    -   **Built-in account**: select this option if your jobs require resources from the local server only. For information about how to choose a Windows built-in account type, see [Selecting an Account for SQL Server Agent Service.](https://msdn.microsoft.com/library/ms191543.aspx)  
   
         > [!IMPORTANT]  
         >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service does not support the **Local Service** account in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

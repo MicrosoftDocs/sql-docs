@@ -1,7 +1,7 @@
 ---
 title: "Server Properties (Advanced Page) - Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-18"
+ms.date: 10/18/2016
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Server Properties (Advanced Page) - Reporting Services
   Use this page to set system properties on the report server. There are a number of ways to set system properties. This tool provides a graphical user interface so that you can set properties without having to write code.  
@@ -48,7 +48,7 @@ manager: craigg
  Specifies the maximum number of days that a stored parameter can be stored. Valid values are `-1`, `+1` through `2,147,483,647`. The default value is `180` days.  
   
  **StoredParametersThreshold**  
- Specifies the maximum number of parameter values that that can be stored by the report server. Valid values are `-1`, `+1` through `2,147,483,647`. The default value is `1500`.  
+ Specifies the maximum number of parameter values that can be stored by the report server. Valid values are `-1`, `+1` through `2,147,483,647`. The default value is `1500`.  
   
  **UseSessionCookies**  
  Indicates whether the report server should use session cookies when communicating with client browsers. The default value is `true`.  

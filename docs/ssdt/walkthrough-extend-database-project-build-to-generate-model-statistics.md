@@ -40,7 +40,7 @@ Build contributors are run during project build, after the model representing th
   
 -   Generating model statistics and reporting to the user. This is the example shown here.  
   
-The main entry point for build contributors is the OnExecute method. All classes inheriting from BuildContributor must implement this method. A BuildContributorContext object is passed to this method – this contains all the relevant data for the build, such as a model of the database, build properties, and arguments/files to be used by build contributors.  
+The main entry point for build contributors is the OnExecute method. All classes inheriting from BuildContributor must implement this method. A BuildContributorContext object is passed to this method - this contains all the relevant data for the build, such as a model of the database, build properties, and arguments/files to be used by build contributors.  
   
 **TSqlModel and the database model API**  
   
@@ -50,26 +50,26 @@ Here are some of the commands used by the example contributor in this walkthroug
   
 |**Class**|**Method/Property**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried – types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
-|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table’s columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the “Table.Columns” filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried - types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table's columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the "Table.Columns" filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
   
 **Uniquely Identifying your Contributor**  
   
-During the build process, custom contributors are loaded from a standard extension directory. Build Contributors are identified by an [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
+During the build process, custom contributors are loaded from a standard extension directory. Build Contributors are identified by an [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
   
 ```  
   
-In this case the first parameter to the attribute should be a unique identifier – this will be used to identify your contributor in project files. Best practice is to combine your library’s namespace (in this walkthrough, “ExampleContributors”) with the class name (in this walkthrough, “ModelStatistics”) to produce the identifier. You will see how this namespace is used to specify that your contributor should be run later in the walkthrough.  
+In this case the first parameter to the attribute should be a unique identifier - this will be used to identify your contributor in project files. Best practice is to combine your library's namespace (in this walkthrough, "ExampleContributors") with the class name (in this walkthrough, "ModelStatistics") to produce the identifier. You will see how this namespace is used to specify that your contributor should be run later in the walkthrough.  
   
 ## <a name="CreateBuildContributor"></a>Create a Build Contributor  
 To create a build contributor, you must perform the following tasks:  
   
 -   Create a class library project and add required references.  
   
--   Define a class named ModelStatistics that inherits from [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Define a class named ModelStatistics that inherits from [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
   
 -   Override the OnExecute method.  
   
@@ -81,7 +81,7 @@ To create a build contributor, you must perform the following tasks:
   
 1.  Create a Visual Basic or Visual C# class library project named MyBuildContributor.  
   
-2.  Rename the file “Class1.cs” to “ModelStatistics.cs.”  
+2.  Rename the file "Class1.cs" to "ModelStatistics.cs."  
   
 3.  In Solution Explorer, right-click the project node and then click **Add Reference**.  
   
@@ -474,7 +474,7 @@ You can do this in one of two ways:
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -487,14 +487,14 @@ You can do this in one of two ways:
   
     1.  Navigate to %Program Files%\MSBuild\\.  
   
-    2.  Create a new folder “MyContributors” where your targets files will be stored.  
+    2.  Create a new folder "MyContributors" where your targets files will be stored.  
   
-    3.  Create a new file “MyContributors.targets” inside this directory, add the following text to it, and then save the file:  
+    3.  Create a new file "MyContributors.targets" inside this directory, add the following text to it, and then save the file:  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
   
-        <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+        <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
           <PropertyGroup>  
             <BuildContributors>$(BuildContributors);ExampleContributors.ModelStatistics</BuildContributors>  
             <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;</ContributorArguments>  
@@ -511,13 +511,13 @@ You can do this in one of two ways:
 After you have followed one of these approaches, you can use MSBuild to pass in the parameters for command-line builds.  
   
 > [!NOTE]  
-> You must always update the "BuildContributors" property to specify your contributor ID. This is the same ID used in the “ExportBuildContributor” attribute in your contributor source file. Without this, your contributor will not be run when building the project. The “ContributorArguments” property must be updated only if you have arguments required for your contributor to run.  
+> You must always update the "BuildContributors" property to specify your contributor ID. This is the same ID used in the "ExportBuildContributor" attribute in your contributor source file. Without this, your contributor will not be run when building the project. The "ContributorArguments" property must be updated only if you have arguments required for your contributor to run.  
   
 ### Build the SQL Project  
   
 ##### To rebuild your database project by using MSBuild and generate statistics  
   
-1.  In Visual Studio, right-click on your project and select “Rebuild”. This will rebuild the project, and you should see the model statistics generated, with the output included in the build output and saved to ModelStatistics.xml. Note that you may need to choose “Show all Files” in Solution Explorer to see the xml file.  
+1.  In Visual Studio, right-click on your project and select "Rebuild". This will rebuild the project, and you should see the model statistics generated, with the output included in the build output and saved to ModelStatistics.xml. Note that you may need to choose "Show all Files" in Solution Explorer to see the xml file.  
   
 2.  Open a Visual Studio command prompt: On the **Start** menu, click **All Programs**, click **Microsoft Visual Studio <Visual Studio Version>**, click **Visual Studio Tools**, and then click **Visual Studio Command Prompt (<Visual Studio Version>)**.  
   

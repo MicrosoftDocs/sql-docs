@@ -97,14 +97,14 @@ ms.author: maghan
 5.  Type the following command line, replacing *servername* with the actual name of your server:  
   
     ```  
-    rs -i EnableRemoteErrors.rss -s http://servername/ReportServer  
+    rs -i EnableRemoteErrors.rss -s https://servername/ReportServer  
     ```  
   
 6.  For more information, see [RS.exe Utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
 ##  <a name="bkmk_ConfigurationInfo"></a> Modifying the ConfigurationInfo table (Native Mode)  
   
-1.  > [!NOTE]  
-    >  You can edit the **ConfigurationInfo** table in the report server database to set **EnableRemoteErrors** to **True**, but if the report server is actively used, you should use SQL Server Management Studio or script to modify the settings. If you modify the setting in the database, you need to restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service before the changes take effect.  
+> [!NOTE]  
+>  You can edit the **ConfigurationInfo** table in the report server database to set **EnableRemoteErrors** to **True**, but if the report server is actively used, you should use SQL Server Management Studio or script to modify the settings. If you modify the setting in the database, you need to restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service before the changes take effect.  
   
   

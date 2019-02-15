@@ -52,7 +52,7 @@ This step runs all tests in the current test run. As soon as you start a test ru
   
 ## See Also  
 [Running SQL Server Unit Tests](../ssdt/running-sql-server-unit-tests.md)  
-[How to: Run Automated Tests from Microsoft Visual Studio 2010](http://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[Running Automated Tests from the Command Line (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[Testing the Application (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182409.aspx)  
+[How to: Run Automated Tests from Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Running Automated Tests from the Command Line (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
+[Testing the Application (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "08/08/2018"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -37,7 +37,7 @@ Sets database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntFor more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Click a product!
 
@@ -45,23 +45,14 @@ In the following row, click whichever product name you are interested in. The cl
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
-# SQL Server
+## SQL Server
   
 Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate articles because of their length. For more information, see [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -309,7 +300,7 @@ The status of this option can be determined by examining the is_auto_close_on co
 > [!NOTE]  
 >  Database mirroring requires AUTO_CLOSE OFF.  
   
-When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and higher, for each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and higher, for each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
  
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }  
 ON  
@@ -671,7 +662,7 @@ See [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } controls whether the database can create initial pages using a mixed extent for the first eight pages of a table or index.  
  
@@ -685,7 +676,7 @@ This setting is ON for all system databases. **tempdb** is the only system datab
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Controls the parameterization option.  
+Controls the parameterization option. For more information on parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,19 +689,22 @@ The current setting of this option can be determined by examining the is_paramet
   
 **\<query_store_options> ::=**  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Controls if the query store is enabled in this database, and also controls removing the contents of the query store.  
+Controls if the query store is enabled in this database, and also controls removing the contents of the query store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Enables the query store.  
   
 OFF  
-Disables the query store.  This is the default value.   
+Disables the query store. This is the default value.
   
 CLEAR  
-Remove the contents of the query store.  
+Remove the contents of the query store.
+
+> [!NOTE]  
+> For Azure SQL Data Warehouse, you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance is not supported.
   
 OPERATION_MODE  
 Describes the operation mode of the query store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the query store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the query store, but new information is not added. If the maximum allocated space of the query store has been exhausted, the query store will change is operation mode to READ_ONLY.  
@@ -731,7 +725,7 @@ SIZE_BASED_CLEANUP_MODE
 Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
 OFF  
-Size based cleanup won’t be automatically activated. 
+Size based cleanup won't be automatically activated. 
   
 AUTO  
 Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
@@ -815,7 +809,7 @@ When a torn page or checksum failure is detected, you can recover by restoring t
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824.  
   
-For more information about error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](http://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](http://support.microsoft.com/help/2015757).
+For more information about error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](https://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](https://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](https://support.microsoft.com/help/2015757).
   
 The current setting of this option can be determined by examining the *page_verify_option* column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
@@ -1086,7 +1080,7 @@ The status of this option can be determined by examining the is_recursive_trigge
   
 Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Specifies the maximum bound on the time to recover the specified database in the event of a crash.  
   
@@ -1161,7 +1155,7 @@ The procedure cache is also flushed in the following scenarios.
 - You restore a database backup.  
 -   You detach a database.  
   
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
 ## Examples  
   
@@ -1249,7 +1243,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### E. Enabling the query store  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 The following example enables the query store and configures query store parameters.  
   
@@ -1283,24 +1277,15 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-# Azure SQL Database logical server
+## Azure SQL Database single database/elastic pool
+
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
@@ -1642,7 +1627,7 @@ To change this state, you must have exclusive access to the database. For more i
 Controls user access to the database.  
   
 RESTRICTED_USER  
-RESTRICTED_USER allows for only members of the db_owner fixed database role and dbcreator and sysadmin fixed server roles to connect to the database, but does not limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  **RESTRICTED_USER** cannot be modified with SQL Database Managed instance.
+RESTRICTED_USER allows for only members of the db_owner fixed database role and dbcreator and sysadmin fixed server roles to connect to the database, but does not limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  **RESTRICTED_USER** cannot be modified with SQL Database managed instance.
   
 MULTI_USER  
 All users that have the appropriate permissions to connect to the database are allowed.  
@@ -1708,7 +1693,7 @@ SIZE_BASED_CLEANUP_MODE
 Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
 OFF  
-Size based cleanup won’t be automatically activated. 
+Size based cleanup won't be automatically activated. 
   
 AUTO  
 Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
@@ -1929,7 +1914,7 @@ The status of this option can be determined by examining the is_recursive_trigge
   
 Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Specifies the maximum bound on the time to recover the specified database in the event of a crash.  
   
@@ -2082,34 +2067,27 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />managed instance \*_** &nbsp;|
+
+
 
 &nbsp;
 
-# Azure SQL Database Managed Instance
+## Azure SQL Database managed instance
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 > Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
   
-## Syntax  
+## Syntax
   
-```  
+```
 ALTER DATABASE { database_name | Current }  
-SET   
+SET
 {  
     <optionspec> [ ,...n ] 
 }  
@@ -2380,7 +2358,7 @@ To change this state, you must have exclusive access to the database.
 Controls user access to the database.  
   
 RESTRICTED_USER  
-RESTRICTED_USER allows for only members of the db_owner fixed database role and dbcreator and sysadmin fixed server roles to connect to the database, but does not limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  **RESTRICTED_USER** cannot be modified with SQL Database Managed instance.
+RESTRICTED_USER allows for only members of the db_owner fixed database role and dbcreator and sysadmin fixed server roles to connect to the database, but does not limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  **RESTRICTED_USER** cannot be modified with SQL Database managed instance.
   
 MULTI_USER  
 All users that have the appropriate permissions to connect to the database are allowed.  
@@ -2446,7 +2424,7 @@ SIZE_BASED_CLEANUP_MODE
 Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
 OFF  
-Size based cleanup won’t be automatically activated. 
+Size based cleanup won't be automatically activated. 
   
 AUTO  
 Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
@@ -2667,7 +2645,7 @@ The status of this option can be determined by examining the is_recursive_trigge
   
 Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Specifies the maximum bound on the time to recover the specified database in the event of a crash.  
   

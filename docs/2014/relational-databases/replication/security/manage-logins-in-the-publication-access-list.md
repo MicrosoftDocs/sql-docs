@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server replication], publication access list"
@@ -67,7 +66,7 @@ manager: craigg
   
 ## See Also  
  [Replication Agent Security Model](replication-agent-security-model.md)   
- [Secure a Replication Topology](secure-a-replication-topology.md)   
+ [Secure a Replication Topology](view-and-modify-replication-security-settings.md)   
  [Secure the Publisher](secure-the-publisher.md)  
   
   

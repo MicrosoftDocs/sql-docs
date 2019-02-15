@@ -24,7 +24,7 @@ manager: craigg
   
  No actual data is sent or received for the table-valued parameter itself, but data is sent and received for each of its constituent columns. Because the table-valued parameter is a pseudo column, the parameters for SQLBindParameter are used to refer to different attributes than other data types, as follows:  
   
-|Parameter|Related attribute for non–table-valued parameter types, including columns|Related attribute for table-valued parameters|  
+|Parameter|Related attribute for non-table-valued parameter types, including columns|Related attribute for table-valued parameters|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|SQL_DESC_PARAMETER_TYPE in IPD.<br /><br /> For table-valued parameter columns, this must be the same as the setting for the table-valued parameter itself.|SQL_DESC_PARAMETER_TYPE in IPD.<br /><br /> This must be SQL_PARAM_INPUT.|  
 |*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD.<br /><br /> This must be SQL_C_DEFAULT or SQL_C_BINARY.|  

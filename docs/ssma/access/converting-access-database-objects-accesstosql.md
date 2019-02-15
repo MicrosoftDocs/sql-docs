@@ -43,7 +43,7 @@ Converting database objects takes the object definitions from the Access metadat
 During the conversion, SSMA prints status to the Output pane, and error, warning, and informational messages to the Error List pane. Use this information to determine whether you need to modify your Access databases or your conversion process to obtain the desired conversion results. You can also use the information in the [Preparing Access Databases for Migration](preparing-access-databases-for-migration-accesstosql.md) topic to determine what will and will not be converted.  
   
 ## Setting Conversion Options  
-Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts indexed memo columns, primary keys, foreign key constraints, timestamps, and tables without indexes. For more information, see [Project Settings (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts indexed memo columns, primary keys, foreign key constraints, timestamps, and tables without indexes. For more information, see [Project Settings (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## Conversion Results  
 The following table shows which Access objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects:  

@@ -8,8 +8,8 @@ ms.technology: report-builder
 
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Exporting to Microsoft Excel (Report Builder and SSRS)
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel rendering extension renders a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report to the [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] format (.xlsx). With the Excel rendering extension, the width of columns in Excel more accurately reflects the width of columns in reports.  
@@ -63,7 +63,7 @@ ms.author: maggies
   
 -   The text effect "Overline" is not supported in Excel.  
   
--   Excel adds a default padding of approximately 3.75 points to the left and right sides of cells. If a text box’s padding settings are less than 3.75 points and is just barely wide enough to accommodate the text, the text may wrap in Excel.  
+-   Excel adds a default padding of approximately 3.75 points to the left and right sides of cells. If a text box's padding settings are less than 3.75 points and is just barely wide enough to accommodate the text, the text may wrap in Excel.  
   
     > [!NOTE]  
     >  To work around this issue, increase the width of the text box in the report.  
@@ -157,7 +157,7 @@ ms.author: maggies
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- The EXCELOPENXML extension defines the Excel renderer for current (.xlsx) Excel files. The EXCEL extension defines the Excel 2003 version. `Visible = “false”` indicates the Excel 2003 renderer is hidden. For more information, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ The EXCELOPENXML extension defines the Excel renderer for current (.xlsx) Excel files. The EXCEL extension defines the Excel 2003 version. `Visible = "false"` indicates the Excel 2003 renderer is hidden. For more information, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### Differences Between the current (.xlsx) Excel and Excel 2003 Renderers  
  Reports, rendered by using the current (.xlsx) Excel or the Excel 2003 renderers are typically identical and only under rare circumstances will you notice differences between the two formats. The following table compares the Excel and the Excel 2003 renderers.  
@@ -247,10 +247,10 @@ ms.author: maggies
  The root node of the map is the report name, the \<*reportname*>.rdl, and it is not interactive. The document map links font is Arial, 10pt.  
   
 ### Drillthrough Links  
- Drillthrough links that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Drillthrough links for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the drillthrough link opens the client’s default browser and navigates to the HTML view of the target.  
+ Drillthrough links that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Drillthrough links for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the drillthrough link opens the client's default browser and navigates to the HTML view of the target.  
   
 ### Hyperlinks  
- Hyperlinks that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Hyperlinks for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the hyperlink opens the client’s default browser and navigates to the target URL.  
+ Hyperlinks that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Hyperlinks for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the hyperlink opens the client's default browser and navigates to the target URL.  
   
 ### Interactive Sorting  
  Excel does not support interactive sort.  

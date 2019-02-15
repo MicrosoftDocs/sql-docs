@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
@@ -55,7 +54,7 @@ manager: craigg
  Before you run the installation wizard, be sure that the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] is closed. Then follow the directions in the installation wizard.  
   
 ### Restart SSIS  
- After you install the CDC components, you must restart the SSIS service to be sure that that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
+ After you install the CDC components, you must restart the SSIS service to be sure that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
   
  A message is displayed after you install the components. Click **Yes** when prompted.  
   
@@ -199,17 +198,17 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [CDC in SSIS for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242543), on mattmasson.com.  
+-   Blog entry, [CDC in SSIS for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543), on mattmasson.com.  
   
--   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827), on blogs.msdn.com.  
+-   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), on blogs.msdn.com.  
   
--   Technical article, [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958), on social.technet.microsoft.com.  
+-   Technical article, [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), on social.technet.microsoft.com.  
   
--   Technical article, [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252960), on social.technet.microsoft.com.  
+-   Technical article, [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), on social.technet.microsoft.com.  
   
--   Technical article, [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252961), on social.technet.microsoft.com.  
+-   Technical article, [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), on social.technet.microsoft.com.  
   
--   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](http://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
+-   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
   
 ## See Also  
  [CDC Control Task](../control-flow/cdc-control-task.md)  

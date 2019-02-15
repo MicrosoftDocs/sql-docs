@@ -80,7 +80,7 @@ manager: craigg
 2.  Add **MasterDataSourceID** to the XMLA, and then specify the cube database, db-master, ID as the value. The XMLA should look similar to the following.  
   
     ```  
-    <Alter ObjectExpansion="ExpandFull" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Alter ObjectExpansion="ExpandFull" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
        <DatabaseID>DB-Storage</DatabaseID>  
     </Object>  

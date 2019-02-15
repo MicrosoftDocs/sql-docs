@@ -39,7 +39,7 @@ manager: craigg
  For more information, see [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLSetDescField](http://go.microsoft.com/fwlink/?LinkId=80705)   
+ [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

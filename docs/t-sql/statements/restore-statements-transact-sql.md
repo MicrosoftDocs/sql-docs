@@ -1,7 +1,7 @@
 ---
 title: "RESTORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2018"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -37,8 +37,8 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], RESTORE statement"
   - "RESTORE LOG, see RESTORE statement"
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
@@ -56,22 +56,13 @@ In the following row, click whichever product name you are interested in. The cl
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |**_\* SQL Server \*_**|[SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# SQL Server
+## SQL Server
 
 This command enables you to perform the following restore scenarios:  
   
@@ -103,7 +94,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    | , <change_data_capture_WITH_option>  
    | , <FILESTREAM_WITH_option>  
    | , <service_broker_WITH options>   
-   | , \<point_in_time_WITH_options—RESTORE_DATABASE>   
+   | , \<point_in_time_WITH_options-RESTORE_DATABASE>   
    } [ ,...n ]  
  ]  
 [;]  
@@ -115,7 +106,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    WITH   
       PARTIAL, NORECOVERY   
       [  , <general_WITH_options> [ ,...n ]   
-       | , \<point_in_time_WITH_options—RESTORE_DATABASE>   
+       | , \<point_in_time_WITH_options-RESTORE_DATABASE>   
       ] [ ,...n ]   
 [;]  
   
@@ -151,7 +142,7 @@ RESTORE LOG { database_name | @database_name_var }
        ]  
     | ,  <general_WITH_options> [ ,...n ]  
     | , <replication_WITH_option>  
-    | , \<point_in_time_WITH_options—RESTORE_LOG>   
+    | , \<point_in_time_WITH_options-RESTORE_LOG>   
    } [ ,...n ]  
  ]   
 [;]  
@@ -170,7 +161,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   
@@ -224,7 +215,7 @@ Note: URL is the format used to specify the location and the file name for the M
  | ERROR_BROKER_CONVERSATIONS   
  | NEW_BROKER  
   
-\<point_in_time_WITH_options—RESTORE_DATABASE>::=   
+\<point_in_time_WITH_options-RESTORE_DATABASE>::=   
  | {  
    STOPAT = { 'datetime'| @datetime_var }   
  | STOPATMARK = 'lsn:lsn_number'  
@@ -233,7 +224,7 @@ Note: URL is the format used to specify the location and the file name for the M
                  [ AFTER 'datetime']   
    }   
   
-\<point_in_time_WITH_options—RESTORE_LOG>::=   
+\<point_in_time_WITH_options-RESTORE_LOG>::=   
  | {  
    STOPAT = { 'datetime'| @datetime_var }   
  | STOPATMARK = { 'mark_name' | 'lsn:lsn_number' }  
@@ -297,7 +288,8 @@ For descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;
   
 ### Discontinued RESTORE Keywords  
 The following keywords were discontinued in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
-|Discontinued keyword|Replaced by…|Example of replacement keyword|  
+
+|Discontinued keyword|Replaced by...|Example of replacement keyword|  
 |--------------------------|------------------|------------------------------------|  
 |LOAD|RESTORE|`RESTORE DATABASE`|  
 |TRANSACTION|LOG|`RESTORE LOG`|  
@@ -345,7 +337,7 @@ RESTORE is not allowed in an explicit or implicit transaction.
   
 Restoring a damaged **master** database is performed using a special procedure. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
-Restoring a database clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+Restoring a database clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
 To restore an availability database, first restore the database to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then add the database to the availability group.  
 
@@ -368,7 +360,7 @@ Full-text data is restored together with other database data during a complete r
 The RESTORE statement also can be used to perform restores to alternate locations, differential restores, file and filegroup restores, and differential file and filegroup restores of full-text data. In addition, RESTORE can restore full-text files only, as well as with database data.  
   
 > [!NOTE] 
-> Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkId=107381).  
+> Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](https://go.microsoft.com/fwlink/?LinkId=107381).  
   
 ## Metadata  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes backup and restore history tables that track the backup and restore activity for each server instance. When a restore is performed, the backup history tables are also modified. For information on these tables, see [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
@@ -708,22 +700,13 @@ RESTORE DATABASE Sales
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />managed instance \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# Azure SQL Database Managed Instance
+## Azure SQL Database managed instance
 
 This command enables you to restore an entire database from a full database backup (a complete restore) from Azure Blob Storage account.
 
@@ -734,7 +717,7 @@ For other supported RESTORE commands, see:
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
 
 > [!IMPORTANT]
-> To restore from Azure SQL Database Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore).
+> To restore from Azure SQL Database managed instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
   
 ## Syntax  
   
@@ -757,7 +740,7 @@ FROM URL
 Specifies one or more backup devices placed on URLs that will be used for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service. 
 
 > [!IMPORTANT]  
-> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 *n*  
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
@@ -777,7 +760,7 @@ The following database options are set/overridden and cannot be changed later:
 - Memory optimized filegroup is added and called XTP if it was not in the source .bak file. Any existing memory optimized filegroup is renamed to XTP
 - SINGLE_USER and RESTRICTED_USER options are converted to MULTI_USER
 
-## Limitations - SQL Database Managed Instance
+## Limitations - SQL Database managed instance
 These limitations apply:
 
 - .BAK files containing multiple backup sets cannot be restored.
@@ -786,7 +769,7 @@ These limitations apply:
 - Backups containing databases that have active In-memory objects cannot be restored to a General Purpose managed instance.
 - Backups containing databases in read-only mode cannot currently be restored. This limitation will be removed soon.
 
-For more information, see [Managed Instance](/azure/sql-database/sql-database-managed-instance)
+For more information, see [managed instance](/azure/sql-database/sql-database-managed-instance)
 
 ## Restoring an Encrypted Database  
 To restore a database that is encrypted, you must have access to the certificate or asymmetric key that was used to encrypt the database. Without the certificate or asymmetric key, the database cannot be restored. As a result, the certificate that is used to encrypt the database encryption key must be retained as long as the backup is needed. For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
@@ -849,22 +832,13 @@ WHERE r.command = 'RESTORE DATABASE'
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 
-# Parallel Data Warehouse
+## Parallel Data Warehouse
 
 
 Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  

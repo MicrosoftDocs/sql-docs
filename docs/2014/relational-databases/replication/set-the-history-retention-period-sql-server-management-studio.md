@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "history retention periods [SQL Server replication]"
@@ -20,7 +19,7 @@ manager: craigg
   
 ### To specify the history retention period  
   
-1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**…**) for the distribution database.  
+1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**...**) for the distribution database.  
   
 2.  Enter a value in the **Store replication performance history at least** box.  
   

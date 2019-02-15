@@ -1,5 +1,5 @@
 ---
-title: "Measures| Microsoft Docs"
+title: "Measures in Analysis Services tabular models | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -44,7 +44,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Grand Total**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
- Measures are created at design time by using the measure grid in the model designer. Each table has a measure grid. By default, the measure grid is displayed below each table in the model designer. You can also choose not to view the measure grid for a particular table. To toggle the display of a table’s measure grid, click the **Table** menu, and then click **Show Measure Grid**.  
+ Measures are created at design time by using the measure grid in the model designer. Each table has a measure grid. By default, the measure grid is displayed below each table in the model designer. You can also choose not to view the measure grid for a particular table. To toggle the display of a table's measure grid, click the **Table** menu, and then click **Show Measure Grid**.  
   
  In the measure grid, you can create measures in the following ways:  
   

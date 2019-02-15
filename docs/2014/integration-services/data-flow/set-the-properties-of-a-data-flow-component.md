@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "components [Integration Services], properties"
@@ -21,7 +20,7 @@ manager: craigg
   
 -   The **Properties** window lists the component-level custom properties of each element, as well as the properties common to all data flow elements.  
   
--   The **Advanced Editor** dialog box provides access to custom properties for each component. The **Advanced Editor** dialog box also provides access to the properties common to all data flow components—the properties of inputs, outputs, error outputs, columns, and external columns.  
+-   The **Advanced Editor** dialog box provides access to custom properties for each component. The **Advanced Editor** dialog box also provides access to the properties common to all data flow components-the properties of inputs, outputs, error outputs, columns, and external columns.  
   
 ### To set the properties of a data flow component by using a component editor  
   

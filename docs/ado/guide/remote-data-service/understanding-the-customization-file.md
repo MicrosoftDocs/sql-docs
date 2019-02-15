@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/09/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,11 +18,11 @@ manager: craigg
 Each section header in the customization file consists of square brackets (**[]**) containing a type and parameter. The four section types are indicated by the literal strings **connect**, **sql**, **userlist**, or **logs**. The parameter is the literal string, the default, a user-specified identifier, or nothing.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Therefore, each section is marked with one of the following section headers:  
   
-```  
+```console
   
 [ connect default ] [ connect    
 identifier   
@@ -49,7 +49,7 @@ identifier
   
  A particular section is used under the following circumstances:  
   
--   A **connect** section is used if the value part of the client connect string keyword, "**Data Source=***value*", matches a **connect** section identifier*.*  
+-   A **connect** section is used if the value part of the client connect string keyword, "**Data Source=**_value_", matches a **connect** section identifier*.*  
   
 -   An **sql** section is used if the client command string contains a string that matches an **sql** section identifier.  
   
@@ -69,23 +69,4 @@ identifier
  [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Required Client Settings](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Writing Your Own Customized Handler](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

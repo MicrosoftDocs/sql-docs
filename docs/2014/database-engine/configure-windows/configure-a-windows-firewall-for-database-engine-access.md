@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], firewall systems"
@@ -41,7 +40,7 @@ manager: craigg
   
      [Security](#Security)  
   
--   **To configure a Widows Firewall for Database Engine access, using:**  
+-   **To configure a Windows Firewall for Database Engine access, using:**  
   
      [SQL Server Configuration Manager](#SSMSProcedure)  
   

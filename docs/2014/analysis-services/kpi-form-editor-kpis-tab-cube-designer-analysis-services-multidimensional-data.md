@@ -55,10 +55,10 @@ manager: craigg
   
  Drag selected elements from the **Calculation Tools** pane to this option to include the MDX syntax for the selected element.  
   
- It is recommended that this expression returns a decimal number between –1 and 1. A lower number represents a negative situation, while a higher number represents a positive situation.  
+ It is recommended that this expression returns a decimal number between -1 and 1. A lower number represents a negative situation, while a higher number represents a positive situation.  
   
 > [!NOTE]  
->  Values below –1 and above 1 are possible but may not be interpreted correctly by third-party client applications.  
+>  Values below -1 and above 1 are possible but may not be interpreted correctly by third-party client applications.  
   
  **Trend**  
  Expand to view the **Trend graphic** and **Trend expression** options.  
@@ -74,10 +74,10 @@ manager: craigg
   
  Drag selected elements from the **Calculation Tools** pane to this option to include the MDX syntax for the selected element.  
   
- The trend expression can be based on any time-based criteria that makes sense in a given business context. It is recommended that this expression returns a decimal number between –1 and 1. A lower number represents a negative trend over time; a higher number represents a positive trend over time.  
+ The trend expression can be based on any time-based criteria that makes sense in a given business context. It is recommended that this expression returns a decimal number between -1 and 1. A lower number represents a negative trend over time; a higher number represents a positive trend over time.  
   
 > [!NOTE]  
->  Values below –1 and above 1 are possible but may not be interpreted correctly by third-party client applications.  
+>  Values below -1 and above 1 are possible but may not be interpreted correctly by third-party client applications.  
   
  **Additional Properties**  
  Expand to view the **Display folder**, **Parent KPI**, **Current time member**, **Weight**, and **Description** options.  

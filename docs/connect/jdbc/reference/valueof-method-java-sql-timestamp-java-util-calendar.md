@@ -34,7 +34,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
  The offset value.  The date and time components of *calendar* will be set according to the *timestamp* value.  
   
 ## Return Value  
- Returns a DateTimeOffset object representing the point in time given by the java.sql.Timestamp object at the given java.util.Calendar object’s time zone.  
+ Returns a DateTimeOffset object representing the point in time given by the java.sql.Timestamp object at the given java.util.Calendar object's time zone.  
   
 ## Remarks  
  This method also sets the java.util.Calendar object to the point in time given by the java.sql.Timestamp object.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "starting SQL Server, single-user mode"
@@ -41,7 +40,7 @@ manager: craigg
   
  To get around the problem use the following procedure:  
   
-1.  Remove the –m startup parameter from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] advanced Properties.  
+1.  Remove the -m startup parameter from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] advanced Properties.  
   
 2.  Take the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource offline.  
   

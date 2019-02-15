@@ -93,7 +93,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   **ISupportErrorInfo**  
   
- The provider-specific properties SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS, and SSPROP_FASTLOADKEEPIDENTITY control behaviors of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider bulk-copy rowset. The properties are specified in the *rgProperties* member of an *rgPropertySets***IOpenRowset**parameter member.  
+ The provider-specific properties SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS, and SSPROP_FASTLOADKEEPIDENTITY control behaviors of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider bulk-copy rowset. The properties are specified in the *rgProperties* member of an _rgPropertySets_**IOpenRowset**parameter member.  
   
 |Property ID|Description|  
 |-----------------|-----------------|  
@@ -113,6 +113,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
- [Optimizing Bulk Import Performance](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
+ [Optimizing Bulk Import Performance](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
   
   

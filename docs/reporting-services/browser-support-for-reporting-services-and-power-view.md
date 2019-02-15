@@ -78,7 +78,7 @@ The following is the current list of browsers supported for the web portal.
 
  **(+)** Latest publicly released version
 
- If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
 ### Authentication requirements
 
@@ -138,15 +138,15 @@ The following is the current list of browsers supported for the web portal.
 
  **(+)** Latest publicly released version
 
- For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
 ## Next steps
 
 [Finding and Viewing Reports in the web portal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
-[Web portal (SSRS Native Mode)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Web portal (SSRS Native Mode)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
 

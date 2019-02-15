@@ -1,12 +1,11 @@
 ---
 title: "SQL Server Index Architecture and Design Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2018"
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index design guide" 
@@ -214,7 +213,7 @@ Use these metadata views to see attributes of indexes. More architectural inform
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -358,7 +357,7 @@ The following illustration shows the structure of a nonclustered index in a sing
   
 -   Cover the query.  
   
-     Performance gains are achieved when the index contains all columns in the query (either . The query optimizer can locate all the column values within the index; table or clustered index data is not accessed resulting in fewer disk I/O operations. Use index with [included columns](#Included_Columns) to add covering columns instead of creating a wide index key.  
+     Performance gains are achieved when the index contains all columns in the query. The query optimizer can locate all the column values within the index; table or clustered index data is not accessed resulting in fewer disk I/O operations. Use index with [included columns](#Included_Columns) to add covering columns instead of creating a wide index key.  
   
      If the table has a clustered index, the column or columns defined in the clustered index are automatically appended to the end of each nonclustered index on the table. This can produce a covered query without specifying the clustered index columns in the definition of the nonclustered index. For example, if a table has a clustered index on column `C`, a nonclustered index on columns `B` and `A` will have as its key values columns `B`, `A`, and `C`.  
       
@@ -634,7 +633,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. For more information, refer to [Columnstore Indexes overview](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
-For version information, see [Columnstore indexes - What's new](/sql/relational-databases/indexes/columnstore-indexes-what-s-new).
+For version information, see [Columnstore indexes - What's new](../relational-databases/indexes/columnstore-indexes-what-s-new.md).
 
 ### Columnstore Index Architecture
 
@@ -821,7 +820,7 @@ Nonclustered indexes are one of the possible index types in a memory-optimized t
 
 ### In-memory Nonclustered Index Architecture
 
-In-memory nonclustered indexes are implemented using a data structure called a Bw-Tree, originally envisioned and described by Microsoft Research in 2011. A Bw-Tree is a lock and latch-free variation of a B-Tree. For more details please see [The Bw-Tree: A B-tree for New Hardware Platforms](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+In-memory nonclustered indexes are implemented using a data structure called a Bw-Tree, originally envisioned and described by Microsoft Research in 2011. A Bw-Tree is a lock and latch-free variation of a B-Tree. For more details please see [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
 
 At a very high level the Bw-Tree can be understood as a map of pages organized by page ID (PidMap), a facility to allocate and reuse page IDs (PidAlloc) and a set of pages linked in the page map and to each other. These three high level sub-components make up the basic internal structure of a Bw-Tree.
 
@@ -889,7 +888,7 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Improving Performance with SQL Server 2008 Indexed Views](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Create a Primary Key](../relational-databases/tables/create-primary-keys.md)    
 [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -899,4 +898,4 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 [Index Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [Indexes and ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

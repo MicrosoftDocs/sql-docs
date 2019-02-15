@@ -27,8 +27,8 @@ manager: craigg
 ```  
   
 sys.sp_delete_backup_file_snapshot  
-    [ @db_name = ] N’<database_name>  
-    , [ @snapshot_url = ] N’<snapshot_url>  
+    [ @db_name = ] N'<database_name>  
+    , [ @snapshot_url = ] N'<snapshot_url>  
 ```  
   
 ## Arguments  

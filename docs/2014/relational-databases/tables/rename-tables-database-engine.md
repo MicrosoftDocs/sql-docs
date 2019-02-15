@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table renaming [SQL Server]"
@@ -59,7 +58,7 @@ manager: craigg
   
 4.  To cancel this action, press the ESC key before leaving this field.  
   
-5.  From the **File** menu choose **Save***table name*.  
+5.  From the **File** menu choose **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

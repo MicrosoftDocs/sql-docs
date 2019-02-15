@@ -32,7 +32,7 @@ manager: craigg
   
 -   You must be connected to the server instance that hosts the current primary replica.  
   
--   You must have a hybrid-IT environment where your on-premise subnet has a site-to-site VPN with Windows Azure. For more information, see [Configure a Site-to-Site VPN in the Management Portal](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create).  
+-   You must have a hybrid-IT environment where your on-premise subnet has a site-to-site VPN with Windows Azure. For more information, see [Configure a Site-to-Site VPN in the Management Portal](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
   
 -   Your availability group must contain on-premise availability replicas.  
   
@@ -58,7 +58,7 @@ manager: craigg
   
 1.  First, download a management certificate for your Windows Azure subscription. Click **Download** to open the sign-in page.  
   
-2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) and [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852).  
+2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) and [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852).  
   
 3.  Next, connect to your subscription by clicking **Connect**. Once you are connected, the drop-down lists are populated with your Windows Azure parameters, such as **Virtual Network** and **Virtual Network Subnet**.  
   

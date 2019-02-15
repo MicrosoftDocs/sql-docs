@@ -79,7 +79,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 ```
 sudo su
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
 subscription-manager repos --enable=rhel-7-server-optional-rpms
 yum-config-manager --enable remi-php72
@@ -186,12 +186,12 @@ To test your installation, see [Testing your installation](#testing-your-install
 > [!NOTE]
 > To install PHP 7.0, skip the command below adding the repository - 7.0 is the default PHP on suse 12.
 > To install PHP 7.1, replace the repository URL below with the following URL:
-      `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+      `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### Step 1. Install PHP
 ```
 sudo su
-zypper -n ar -f http://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
+zypper -n ar -f https://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
 zypper --gpg-auto-import-keys refresh
 zypper -n install php7 php7-pear php7-devel
 ```
@@ -328,7 +328,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-Point your browser to http://localhost/testsql.php (http://localhost:8080/testsql.php on macOS). You should now be able to connect to your SQL Server/Azure SQL database.
+Point your browser to https://localhost/testsql.php (https://localhost:8080/testsql.php on macOS). You should now be able to connect to your SQL Server/Azure SQL database.
 
 ## See Also  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

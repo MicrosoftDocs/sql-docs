@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Adding a KPI to Your Report (Report Builder)
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.  
@@ -214,7 +214,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
   
     A gauge is added to the design surface.  
   
-7.  From the the dataset in the Report Data pane, drag the `Sales` field to the gauge. The **Gauge Data** pane opens.  
+7.  From the dataset in the Report Data pane, drag the `Sales` field to the gauge. The **Gauge Data** pane opens.  
   
     When you drop the `Sales` field onto the gauge, it goes to the **Values** list and is aggregated by using the built-in Sum function.  
    
@@ -337,6 +337,6 @@ You have successfully completed the Adding a KPI to Your Report tutorial. For mo
   
 ## See Also  
 * [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
-* [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

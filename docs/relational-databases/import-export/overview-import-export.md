@@ -5,8 +5,7 @@ ms.date: "10/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: data-movement
 ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -30,7 +29,7 @@ You can import and export data with the BCP command-line utility. For more info,
 ### Use the Import Flat File Wizard
 If you don't need all the configuration options available in the Import and Export Wizard and other tools, you can import a text file into SQL Server by using the **Import Flat File Wizard** in SQL Server Management Studio (SSMS). For more info, see the following articles:
 - [Import Flat File to SQL Wizard](import-flat-file-wizard.md)
-- [What’s new in SQL Server Management Studio 17.3
+- [What's new in SQL Server Management Studio 17.3
 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 

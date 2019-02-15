@@ -23,7 +23,7 @@ manager: craigg
 ##  <a name="BeforeYouBegin"></a> Before You Begin 
 
 ###  <a name="Security"></a> Security 
-For more information, see [Secure Deployment &#40;Replication&#41;](../../relational-databases/replication/security/secure-deployment-replication.md).
+For more information, see [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio 
 Configure distribution using the New Publication Wizard or the Configure Distribution Wizard. After the Distributor is configured, view and modify properties in the **Distributor Properties - \<Distributor>** dialog box. Use the Configure Distribution Wizard if you want to configure a Distributor so that members of the `db_owner` fixed database roles can create publications, or because you want to configure a remote Distributor that is not a Publisher.
@@ -126,7 +126,7 @@ The following example demonstrates how to configure publishing and distribution 
 
 5. Install the Distributor by calling the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Specify a secure password (used by the Publisher when connecting to the remote Distributor) and the <xref:Microsoft.SqlServer.Replication.DistributionDatabase> object from step 3. For more information, see [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md).
 
-   > `IMPORTANT!!` When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
+   > `IMPORTANT!!` When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
 6. Create an instance of the <xref:Microsoft.SqlServer.Replication.DistributionPublisher> class.
 
@@ -150,8 +150,8 @@ The following example demonstrates how to configure publishing and distribution 
 
 11. Call the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Pass the name of the remote Distributor and the password for the remote Distributor specified in step 5.
 
->[!IMPORTANT]
-When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.
+> [!IMPORTANT]
+> When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.
 
 ###  <a name="PShellExample"></a> Example (RMO) 
 You can programmatically configure replication publishing and distribution by using Replication Management Objects (RMO).

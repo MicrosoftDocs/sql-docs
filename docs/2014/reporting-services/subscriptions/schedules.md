@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Schedules
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides shared schedules and report-specific schedules to help you control processing and distribution of reports. The difference between the two types of schedules is how they are defined, stored, and managed. The internal construction of the two types of schedules is the same. All schedules specify a type of recurrence: monthly, weekly, or daily. Within the recurrence type, you set the intervals and range for how often an event is to occur. The type of recurrence pattern and how those patterns are specified is the same whether you create a shared schedule or a report-specific schedule.  
@@ -61,7 +61,7 @@ manager: craigg
  For details on how to create and manage schedules, see [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Schedule operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Schedule operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_compare"></a> Comparing Shared and Report-Specific Schedules  
  Both types of schedules yield the same output:.  

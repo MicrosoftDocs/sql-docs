@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ---
 # Create Drillthrough (RDLC) Report with Parameters - ReportViewer
-A [drillthrough](http://technet.microsoft.com/library/ff519554.aspx) report is a report that a user opens by clicking a link within another report. Drillthrough reports commonly contain details about an item that is contained in an original summary report. This tutorial will walk you through the following lessons of creating a drillthrough report with parameters and a query, in [local mode reporting](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+A [drillthrough](https://technet.microsoft.com/library/ff519554.aspx) report is a report that a user opens by clicking a link within another report. Drillthrough reports commonly contain details about an item that is contained in an original summary report. This tutorial will walk you through the following lessons of creating a drillthrough report with parameters and a query, in [local mode reporting](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
 ## Requirements  
 To use this walkthrough, you must have access to the **AdventureWorks2014** sample database. For more information about how to get the **AdventureWorks2014** sample database, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
   
-This walkthrough assumes that you are familiar with Transaction-SQL queries and ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) and [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) objects.  
+This walkthrough assumes that you are familiar with Transaction-SQL queries and ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) and [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) objects.  
   
 Use Visual Studio 2015, and the ASP.NET Web Application, to create an ASP.NET webpage with a ReportViewer control. The control is configured to view a report that you create. For this walkthrough, you create the application in Microsoft Visual C#.  
   

@@ -49,7 +49,7 @@ manager: craigg
   
 ```  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
 ```  
   

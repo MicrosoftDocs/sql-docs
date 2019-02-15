@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], deleting"

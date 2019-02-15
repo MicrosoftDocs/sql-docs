@@ -7,8 +7,8 @@ ms.technology: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Add drillthrough from a mobile report to other mobile reports or URLs
 You can add drillthrough from any gauge, chart, or data grid in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report to another mobile report or custom URL. 
@@ -47,7 +47,7 @@ Report items with drillthrough, either to a URL or another mobile report, have t
 1. In Layout view in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], select a visualization that supports drillthrough targets.    
 2. In the **Visual Properties** pane, select **Drillthrough target** > **Custom URL**.  this will open the drillthrough configuration dialog.  
   
-3. In **Set drillthrough URL**, enter the destination URL to go to when the visualization is clicked, and and select from **Available parameters** listed on the right. A preview of the custom URL combined with sample resolved parameters (if included) is displayed in the panel below.  
+3. In **Set drillthrough URL**, enter the destination URL to go to when the visualization is clicked, and select from **Available parameters** listed on the right. A preview of the custom URL combined with sample resolved parameters (if included) is displayed in the panel below.  
   
    ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   

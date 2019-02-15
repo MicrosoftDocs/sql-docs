@@ -1,6 +1,7 @@
 ---
-title: "Configure distributed availability group (Always On Availability Group) | Microsoft Docs"
-ms.custom: ""
+title: "Configure a distributed availability group"
+description: "Describes how to create and configure a distributed Always On availability group. " 
+ms.custom: "seodec18"
 ms.date: "08/17/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure distributed availability group  
+# Configure a distributed Always On availability group  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To create a distributed availability group, you must create an availability group and listener on each Windows Server Failover Cluster (WSFC). You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements. 
@@ -171,7 +172,7 @@ GO
 ```  
   
 > [!NOTE]  
->  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener). If you are using a load balancer, for instance in Azure, [add a load balancing rule for the distributed availability group port](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Add the rule for the listener port, in addition to the SQL Server instance port. 
+>  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener). If you are using a load balancer, for instance in Azure, [add a load balancing rule for the distributed availability group port](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Add the rule for the listener port, in addition to the SQL Server instance port. 
   
 ## Join distributed availability group on second cluster  
  Then join the distributed availability group on the second WSFC.  

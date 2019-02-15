@@ -1,8 +1,8 @@
 ---
-title: "Migrate on-premises SQL Server to Azure SQL Database using the Data Migration Assistant | Microsoft Docs"
+title: "Migrate on-premises SQL Server or SQL Server on Azure VMs to Azure SQL Database using the Data Migration Assistant | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to migrate an on-premises SQL Server to Azure SQL Database
 ms.custom: ""
-ms.date: "08/29/2018"
+ms.date: "10/20/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,12 +12,12 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, on-premises SQL Server"
 ms.assetid: ""
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
 ---
 
-# Migrate on-premises SQL Server to SQL Server or SQL Server on Azure VMs using the Data Migration Assistant
+# Migrate on-premises SQL Server or SQL Server on Azure VMs to Azure SQL Database using the Data Migration Assistant
 
 The Data Migration Assistant provides seamless assessments of SQL Server on-premises and upgrades to later versions of SQL Server or migrations to SQL Server on Azure VMs or Azure SQL Database.
 

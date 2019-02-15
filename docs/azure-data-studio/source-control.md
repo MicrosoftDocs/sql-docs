@@ -1,11 +1,12 @@
 ---
-title: Source control in Azure Data Studio | Microsoft Docs
-description: Learn how to configure source control in Azure Data Studio.
-ms.custom: "tools|sos"
+title: Source control
+titleSuffix: Azure Data Studio
+description: Learn how to configure source control in Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"

@@ -24,19 +24,19 @@ Creates a table having the specified fields.
 ```  
   
 CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]  
-   (FieldName1FieldType [(nFieldWidth [, nPrecision])]  
-      [NULL | NOT NULL]   
-      [CHECK lExpression1 [ERROR cMessageText1]]  
-      [DEFAULT eExpression1]  
-      [PRIMARY KEY | UNIQUE]  
-      [REFERENCES TableName2 [TAG TagName1]]  
-      [NOCPTRANS]  
-   [, FieldName2 ...]  
-      [, PRIMARY KEY eExpression2 TAG TagName2  
-      |, UNIQUE eExpression3 TAG TagName3]  
-      [, FOREIGN KEY eExpression4 TAG TagName4 [NODUP]  
-            REFERENCES TableName3 [TAG TagName5]]  
-      [, CHECK lExpression2 [ERROR cMessageText2]])  
+   (FieldName1FieldType [(nFieldWidth [, nPrecision])]  
+      [NULL | NOT NULL]   
+      [CHECK lExpression1 [ERROR cMessageText1]]  
+      [DEFAULT eExpression1]  
+      [PRIMARY KEY | UNIQUE]  
+      [REFERENCES TableName2 [TAG TagName1]]  
+      [NOCPTRANS]  
+   [, FieldName2 ...]  
+      [, PRIMARY KEY eExpression2 TAG TagName2  
+      |, UNIQUE eExpression3 TAG TagName3]  
+      [, FOREIGN KEY eExpression4 TAG TagName4 [NODUP]  
+            REFERENCES TableName3 [TAG TagName5]]  
+      [, CHECK lExpression2 [ERROR cMessageText2]])  
 | FROM ARRAY ArrayName  
 ```  
   
@@ -105,12 +105,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  PRIMARY KEY *eExpression2* TAG *TagName2*  
- Specifies a primary index to create. *eExpression2* specifies any field or combination of fields in the table. TAG *TagName2 s*pecifies the name for the primary index tag that is created. Index tag names can contain up to 10 characters.  
+ Specifies a primary index to create. *eExpression2* specifies any field or combination of fields in the table. TAG *TagName2* specifies the name for the primary index tag that is created. Index tag names can contain up to 10 characters.  
   
  Because a table can have only one primary index, you cannot include this clause if you have already created a primary index for a field. Visual FoxPro generates an error if you include more than one PRIMARY KEY clause in CREATE TABLE.  
   
  UNIQUE *eExpression3*TAG *TagName3*  
- Creates a candidate index. *eExpression3* specifies any field or combination of fields in the table. However, if you have created a primary index with one of the PRIMARY KEY options, you cannot include the field that was specified for the primary index. TAG *TagName3 s*pecifies a tag name for the candidate index tag that is created. Index tag names can contain up to 10 characters.  
+ Creates a candidate index. *eExpression3* specifies any field or combination of fields in the table. However, if you have created a primary index with one of the PRIMARY KEY options, you cannot include the field that was specified for the primary index. TAG *TagName3* specifies a tag name for the candidate index tag that is created. Index tag names can contain up to 10 characters.  
   
  A table can have multiple candidate indexes.  
   

@@ -56,7 +56,7 @@ PARSENAME ( 'object_name' , object_piece )
  4 = Server name  
   
 ## Return Types  
- **nchar**  
+ **sysname**  
   
 ## Remarks  
  PARSENAME returns NULL if one of the following conditions is true:  

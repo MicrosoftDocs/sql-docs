@@ -55,14 +55,14 @@ manager: craigg
  We recommend that you specify a meaningful string. For example, for an availability group named `AG1`, a meaningful DNS host name would be `ag1-listener`.  
   
 > [!IMPORTANT]  
->  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
+>  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
 ###  <a name="WinPermissions"></a> Windows Permissions  
   
 |Permissions|Link|  
 |-----------------|----------|  
-|The cluster object name (CNO) of WSFC cluster that is hosting the availability group must have **Create Computer objects** permission.<br /><br /> In Active Directory, a CNO by default does not have **Create Computer objects** permission explicitly and can create 10 virtual computer objects (VCOs). After 10 VCOs are created, the creation of additional VCOs will fail. You can avoid this by granting the permission explicitly to the WSFC cluster’s CNO. Note that VCOs for availability groups that you have deleted are not automatically deleted in Active Directory and count against your 10 VCO default limit unless they are manually deleted.<br /><br /> Note: In some organizations, the security policy prohibits granting **Create Computer objects** permission to individual user accounts.|*Steps for configuring the account for the person who installs the cluster* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|If your organization requires that you prestage the computer account for a listener virtual network name, you will need membership in the **Account Operator** group or your domain administrator's assistance.<br /><br /> Tip: Generally, it is simplest not to prestage the computer account for a listener virtual network name. If you can, let the account to be created and configured automatically when you run the WSFC High Availability wizard.|*Steps for prestaging an account for a clustered service or application* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|The cluster object name (CNO) of WSFC cluster that is hosting the availability group must have **Create Computer objects** permission.<br /><br /> In Active Directory, a CNO by default does not have **Create Computer objects** permission explicitly and can create 10 virtual computer objects (VCOs). After 10 VCOs are created, the creation of additional VCOs will fail. You can avoid this by granting the permission explicitly to the WSFC cluster's CNO. Note that VCOs for availability groups that you have deleted are not automatically deleted in Active Directory and count against your 10 VCO default limit unless they are manually deleted.<br /><br /> Note: In some organizations, the security policy prohibits granting **Create Computer objects** permission to individual user accounts.|*Steps for configuring the account for the person who installs the cluster* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|If your organization requires that you prestage the computer account for a listener virtual network name, you will need membership in the **Account Operator** group or your domain administrator's assistance.<br /><br /> Tip: Generally, it is simplest not to prestage the computer account for a listener virtual network name. If you can, let the account to be created and configured automatically when you run the WSFC High Availability wizard.|*Steps for prestaging an account for a clustered service or application* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
   
 ###  <a name="SqlPermissions"></a> SQL Server Permissions  
   
@@ -139,7 +139,7 @@ manager: craigg
   
     ```  
     ALTER AVAILABILITY GROUP MyAg2   
-          ADD LISTENER ‘MyAg2ListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
+          ADD LISTENER 'MyAg2ListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
     GO  
   
     ```  
@@ -197,9 +197,9 @@ manager: craigg
 ###  <a name="ADQuotas"></a> Failure to Create An Availability Group Listener Because of Active Directory Quotas  
  The creation of a new availability group listener may fail upon creation because you have reached an Active Directory quota for the participating cluster node machine account.  For more information, see the following articles:  
   
--   [HYPERLINK "http://support.microsoft.com/kb/307532" How to Troubleshoot the Cluster Service Account When It Modifies Computer Objects](http://support.microsoft.com/kb/307532)  
+-   [HYPERLINK "https://support.microsoft.com/kb/307532" How to Troubleshoot the Cluster Service Account When It Modifies Computer Objects](https://support.microsoft.com/kb/307532)  
   
--   [HYPERLINK "http://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory Quotas](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [HYPERLINK "https://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory Quotas](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> Follow-up: After Creating an Availability Group Listener  
   
@@ -228,7 +228,7 @@ manager: craigg
   
      **Cons**: Half of the client connections will take more than 20 seconds  
   
--   If you have the permission to manipulate cluster resources, the more recommended approach is to set the network name of your availability group listener to `RegisterAllProvidersIP=0`. For more information, see "RegisterAllProvidersIP Setting” later in this section.  
+-   If you have the permission to manipulate cluster resources, the more recommended approach is to set the network name of your availability group listener to `RegisterAllProvidersIP=0`. For more information, see "RegisterAllProvidersIP Setting" later in this section.  
   
      **Pros:** You do not need to increase your client-connection timeout value.  
   
@@ -252,7 +252,7 @@ manager: craigg
   
 -   Connection strings that do not set `MultiSubnetFailover` to true  
   
-     When `RegisterAllProvidersIP = 1`, any clients whose connection strings do not use `MultiSubnetFailover = True`, will experience high latency connections. This occurs because these clients attempt connections to all IPs sequentially. In contrast, if `RegisterAllProvidersIP` is changed to 0, the active IP address is registered in the Client Access Point in the WSFC cluster, reducing latency for legacy clients. Therefore, if you have legacy clients that that need to connect to an availability group listener and cannot use the `MultiSubnetFailover` property, we recommend that you change `RegisterAllProvidersIP` to 0.  
+     When `RegisterAllProvidersIP = 1`, any clients whose connection strings do not use `MultiSubnetFailover = True`, will experience high latency connections. This occurs because these clients attempt connections to all IPs sequentially. In contrast, if `RegisterAllProvidersIP` is changed to 0, the active IP address is registered in the Client Access Point in the WSFC cluster, reducing latency for legacy clients. Therefore, if you have legacy clients that need to connect to an availability group listener and cannot use the `MultiSubnetFailover` property, we recommend that you change `RegisterAllProvidersIP` to 0.  
   
     > [!IMPORTANT]  
     >  When you create an availability group listener through the WSFC cluster (Failover Cluster Manager GUI), `RegisterAllProvidersIP` will be 0 (false) by default.  
@@ -295,21 +295,21 @@ Start-ClusterResource yourAGResource
   
         3.  Add a dependency to the WSFC availability group resource.  
   
-         For information about the dialog boxes and tabs of the Failover Cluster Manager, see [User Interface: The Failover Cluster Manager Snap-In](http://technet.microsoft.com/library/cc772502.aspx).  
+         For information about the dialog boxes and tabs of the Failover Cluster Manager, see [User Interface: The Failover Cluster Manager Snap-In](https://technet.microsoft.com/library/cc772502.aspx).  
   
     -   **Using Windows PowerShell for failover clusters:**  
   
-        1.  Use [Add-ClusterResource](http://technet.microsoft.com/library/ee460983.aspx) to create a network name and the IP address resources.  
+        1.  Use [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) to create a network name and the IP address resources.  
   
-        2.  Use [Start-ClusterResource](http://technet.microsoft.com/library/ee461056.aspx) to start the network name resource.  
+        2.  Use [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) to start the network name resource.  
   
-        3.  Use [Add-ClusterResourceDependency](http://technet.microsoft.com/library/ee461014.aspx) to set the dependency between the network name and the existing SQL Server Availability Group resource.  
+        3.  Use [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) to set the dependency between the network name and the existing SQL Server Availability Group resource.  
   
-         For information about using Windows PowerShell for failover clusters, see [Overview of Server Manager Commands](http://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
+         For information about using Windows PowerShell for failover clusters, see [Overview of Server Manager Commands](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
   
 2.  Start [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] listening on the new listener. After creating the additional listener, connect to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts the primary replica of the availability group and use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell to modify the listener port.  
   
- For more information, see [How to create multiple listeners for same availability group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx) (a SQL Server AlwaysOn team blog).  
+ For more information, see [How to create multiple listeners for same availability group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx) (a SQL Server AlwaysOn team blog).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -319,9 +319,9 @@ Start-ClusterResource yourAGResource
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [How to create multiple listeners for same availability group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
+-   [How to create multiple listeners for same availability group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn team blog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn team blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

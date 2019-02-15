@@ -64,7 +64,7 @@ There are two options to set up the on-premises environment so you can use Kerbe
 
 #### Requirements:
 
--   The gateway computer needs to join the Kerberos realm, and can’t join any Windows domain.
+-   The gateway computer needs to join the Kerberos realm, and can't join any Windows domain.
 
 #### How to configure:
 

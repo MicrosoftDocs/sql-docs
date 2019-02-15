@@ -1,10 +1,10 @@
 ---
 title: Release notes for SQL Server 2019 preview on Linux | Microsoft Docs
-description: This article contains the release notes and supported features for SQL Server 2019 CTP running on Linux. Release notes are included for the most recent release and several previous releases.
+description: This article contains the release notes and supported features for SQL Server 2019 preview running on Linux. Release notes are included for the most recent release and several previous releases.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -15,7 +15,7 @@ monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallprod
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
 
-The following release notes apply to SQL Server 2019 CTP running on Linux. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
+The following release notes apply to SQL Server 2019 preview running on Linux. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
 > [!TIP]
 > To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
@@ -38,11 +38,13 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 ## Release history
 
-The following table lists the release history for SQL Server 2019 CTPs.
+The following table lists the release history for SQL Server 2019 preview CTP releases.
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
-| [CTP 2.0](#CTP20) | 15.0.1000.34   | 2018-09-24   |
+| [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
+| [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
+| [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
 
 ## <a id="cuinstall"></a> How to install updates
 
@@ -56,6 +58,46 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server 2019 preview Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CTP22"></a> CTP 2.2 (December 2018)
+
+The following sections provide package locations and known issues for the CTP 2.2 release. To learn more about new features for Linux on SQL Server 2019, see the [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 15.0.1200.24-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| SLES RPM package | 15.0.1200.24-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| Ubuntu 16.04 Debian package | 15.0.1200.24-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1200.24-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1200.24-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1200.24-2_amd64.deb)</br>[Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1200.24-2_amd64.deb)</br>[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1200.24-2_amd64.deb)|
+
+### Known issues
+
+#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+
+Currently, MSDTC requires transactions to be unauthenticated. For example, if you are using a linked server from SQL Server on Windows to SQL Server on Linux or use a Windows client application to start a distributed transaction against SQL Server on Linux, then MSDTC on Windows server/client is required to use option "No Authentication Required".
+
+## <a id="CTP21"></a> CTP 2.1 (November 2018)
+
+The following sections provide package locations and known issues for the CTP 2.1 release. To learn more about new features for Linux on SQL Server 2019, see the [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 15.0.1100.94-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
+| SLES RPM package | 15.0.1100.94-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
+| Ubuntu 16.04 Debian package | 15.0.1100.94-1 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1100.94-1_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1100.94-1_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1100.94-1_amd64.deb)</br>[Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1100.94-1_amd64.deb)</br>[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1100.94-1_amd64.deb)|
+
+### Known issues
+
+#### Microsoft Distributed Transaction Coordinator
+
+Currently, MSDTC requires transactions to be unauthenticated. For example, if you are using a linked server from SQL Server on Windows to SQL Server on Linux or use a Windows client application to start a distributed transaction against SQL Server on Linux, then MSDTC on Windows server/client is required to use option "No Authentication Required".
+
 ## <a id="CTP20"></a> CTP 2.0 (September 2018)
 
 The following sections provide package locations and known issues for the CTP 2.0 release. To learn more about new features for Linux on SQL Server 2019, see the [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
@@ -68,11 +110,11 @@ For manual or offline package installations, you can download the RPM and Debian
 |-----|-----|-----|
 | Red Hat RPM package | 15.0.1000.34-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
 | SLES RPM package | 15.0.1000.34-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
-| Ubuntu 16.04 Debian package | 15.0.1000.34-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
+| Ubuntu 16.04 Debian package | 15.0.1000.34-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
 
 ### Known issues
 
-#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+#### Microsoft Distributed Transaction Coordinator
 
 Currently, MSDTC requires transactions to be unauthenticated. For example, if you are using a linked server from SQL Server on Windows to SQL Server on Linux or use a Windows client application to start a distributed transaction against SQL Server on Linux, then MSDTC on Windows server/client is required to use option "No Authentication Required".
 

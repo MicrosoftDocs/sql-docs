@@ -61,7 +61,7 @@ Returns a geometric object that represents the union of all points whose distanc
   
  A negative buffer removes all points enclosed in given distance of the boundary of the geometry.  
   
- The error between the theorectical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geometry Data Type Method Reference](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ The error between the theoretical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geometry Data Type Method Reference](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## Examples  
   

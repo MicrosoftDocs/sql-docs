@@ -46,7 +46,7 @@ ms.author: maghan
   
 5.  In the **Connection Type** area, verify that **Shared data source** is selected.  
   
-6.  In the **Data Source Link** area, click the ellipsis (…) button.  
+6.  In the **Data Source Link** area, click the ellipsis (...) button.  
   
 7.  Locate the data source you want to use.  
   
@@ -58,7 +58,7 @@ ms.author: maghan
   
 ## See Also  
  [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
+ [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   

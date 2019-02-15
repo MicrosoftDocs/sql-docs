@@ -19,7 +19,7 @@ ms.author: genemi
 manager: craigg
 ---
 # Batches of Statements
-  A batch of [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements contains two or more statements, separated by a semicolon (;), built into a single string passed to **SQLExecDirect** or [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360). For example:  
+  A batch of [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements contains two or more statements, separated by a semicolon (;), built into a single string passed to **SQLExecDirect** or [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360). For example:  
   
 ```  
 SQLExecDirect(hstmt,   

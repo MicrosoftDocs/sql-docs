@@ -13,7 +13,7 @@ manager: kfile
 # MDX Data Manipulation - UPDATE CUBE
 
 
-  The UPDATE CUBE statement is used to write back data to any cell in a cube that aggregates to its parent using the SUM aggregation. For more explanation and an example, see "Understanding Allocations" in this blog post: [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+  The UPDATE CUBE statement is used to write back data to any cell in a cube that aggregates to its parent using the SUM aggregation. For more explanation and an example, see "Understanding Allocations" in this blog post: [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 ## Syntax  
   

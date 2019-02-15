@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, copy facet state to XML file"
@@ -39,7 +39,7 @@ manager: craigg
   
 1.  In Object Explorer, right-click an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instance object, database, or database object, and then click **Facets**.  
   
-2.  In the **View Facets –***object_name* dialog box, click **Export Current State as Policy**.  
+2.  In the **View Facets -**_object_name_ dialog box, click **Export Current State as Policy**.  
   
 3.  In the **Export as Policy** dialog box, type the path and name of the file; or use the Browse (**...**) button to locate the file, and then type the name of the XML file. For more information on the available options in this dialog box, see [Export As Policy Dialog Box](export-as-policy-dialog-box.md)  
   

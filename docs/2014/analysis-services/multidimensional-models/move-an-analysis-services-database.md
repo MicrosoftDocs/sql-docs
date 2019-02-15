@@ -38,7 +38,7 @@ manager: craigg
   
 1.  Locate the database to be moved in the left or right pane of SSMS.  
   
-2.  Right-click on the database and select **Detach…**  
+2.  Right-click on the database and select **Detach...**  
   
 3.  Assign a password to the database to be detached, then click **OK** to execute the detach command.  
   
@@ -46,9 +46,9 @@ manager: craigg
   
 5.  Locate the **Databases** folder in the left or right pane of SSMS.  
   
-6.  Right-click on the **Databases** folder and select **Attach…**  
+6.  Right-click on the **Databases** folder and select **Attach...**  
   
-7.  In the **folder** text box, type the new location of the database folder. Alternatively, you can use the browse button (**…**) to locate the database folder.  
+7.  In the **folder** text box, type the new location of the database folder. Alternatively, you can use the browse button (**...**) to locate the database folder.  
   
 8.  Select the `ReadWrite` mode for the database.  
   
@@ -102,7 +102,7 @@ manager: craigg
   
 2.  Copy the following script template for XMLA  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -122,11 +122,11 @@ manager: craigg
   
 4.  Copy the following script template for XMLA in a new XMLA tab  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   
@@ -140,9 +140,9 @@ manager: craigg
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](database-storage-location.md)   
  [Database ReadWriteModes](database-readwritemodes.md)   
- [Attach Element](../xmla/xml-elements-commands/attach-element.md)   
- [Detach Element](../xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode Element](../xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation Element](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

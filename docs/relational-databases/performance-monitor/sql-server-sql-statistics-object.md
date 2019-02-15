@@ -5,15 +5,14 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:SQL Statistics"
   - "SQL Statistics object"
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, SQL Statistics Object

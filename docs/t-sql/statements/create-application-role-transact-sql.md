@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CREATE APPLICATION ROLE statement"
   - "application roles [SQL Server], creating"
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)
@@ -44,10 +44,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Specifies the name of the application role. This name must not already be used to refer to any principal in the database.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Specifies the password that database users will use to activate the application role. You should always use strong passwords. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA **=***schema_name*  
+ DEFAULT_SCHEMA **=**_schema\_name_  
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this role. If DEFAULT_SCHEMA is left undefined, the application role will use DBO as its default schema. *schema_name* can be a schema that does not exist in the database.  
   
 ## Remarks  

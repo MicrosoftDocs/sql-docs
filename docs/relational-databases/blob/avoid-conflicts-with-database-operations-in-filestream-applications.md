@@ -42,13 +42,13 @@ dstHandle =  OpenSqlFilestream(dstFilePath, Write, 0,
     transactionToken, cbTransactionToken, 0);  
   
 //Write some date to the FILESTREAM BLOB.  
-WriteFile(dstHandle, updateData, …);  
+WriteFile(dstHandle, updateData, ...);  
   
 //DDL statements will be denied.  
 //DML statements will be denied.  
 //SELECT statements will be allowed. The FILESTREAM BLOB is  
 //returned without the modifications that are made by  
-//WriteFile(dstHandle, updateData, …).  
+//WriteFile(dstHandle, updateData, ...).  
 CloseHandle(dstHandle);  
   
 //DDL statements will be allowed.  

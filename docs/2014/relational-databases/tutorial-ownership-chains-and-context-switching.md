@@ -5,7 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "context switching [SQL Server], tutorials"
@@ -90,7 +89,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## 2. Create a Stored Procedure to Access Data  
  To switch context within a database, use the EXECUTE AS statement. EXECUTE AS requires IMPERSONATE permissions.  

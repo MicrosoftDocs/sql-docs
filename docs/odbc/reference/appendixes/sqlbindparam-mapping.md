@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # SQLBindParam Mapping
-**SQLBindParam** cannot truly be called deprecated because it was never there in ODBC; however, it still represents duplicated functionality — the Driver Manager needs to export it because ISO and Open Group–compliant applications will be using it. Because **SQLBindParameter** contains all the functionality of **SQLBindParam**, **SQLBindParam** will be mapped on top of **SQLBindParameter** (when the underlying driver is an ODBC 3*.x* driver). An ODBC 3*.x* driver does not need to implement **SQLBindParam**.  
+**SQLBindParam** cannot truly be called deprecated because it was never there in ODBC; however, it still represents duplicated functionality - the Driver Manager needs to export it because ISO and Open Group-compliant applications will be using it. Because **SQLBindParameter** contains all the functionality of **SQLBindParam**, **SQLBindParam** will be mapped on top of **SQLBindParameter** (when the underlying driver is an ODBC 3*.x* driver). An ODBC 3*.x* driver does not need to implement **SQLBindParam**.  
   
 ## Remarks  
  When the following call to **SQLBindParam** is made:  

@@ -18,8 +18,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Create Foreign Key Relationships
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > For content related to previous versions of SQL Server, see [Create Foreign Key Relationships](create-foreign-key-relationships.md).
-
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   This topic describes how to create foreign key relationships in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You create a relationship between two tables when you want to associate rows of one table with rows of another.    
      
@@ -74,7 +74,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     
 4.  Click the relationship in the **Selected Relationship** list.    
     
-5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**…**) to the right of the property.    
+5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**...**) to the right of the property.    
     
 6.  In the **Tables and Columns** dialog box, in the **Primary Key** drop-down list, choose the table that will be on the primary-key side of the relationship.    
     
@@ -102,7 +102,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         REFERENCES Sales.SalesReason (SalesReasonID)     
         ON DELETE CASCADE    
         ON UPDATE CASCADE    
-    );GO    
+    );
+    GO    
     
     ```    
     

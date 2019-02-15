@@ -393,8 +393,10 @@
     href: sysmail-delete-account-sp-transact-sql.md
   - name: sysmail_delete_log_sp
     href: sysmail-delete-log-sp-transact-sql.md
-  - name: sysmail_delete_mailitems_sp](sysmail-delete-mailitems-sp-transact-sql.md)## [sysmail_delete_principalprofile_sp
-    href: sysmail-delete-principalprofile-sp-transact-sql.md
+  - name: sysmail_delete_mailitems_sp
+    href: sysmail-delete-mailitems-sp-transact-sql.md
+  ##- name: sysmail_delete_principalprofile_sp
+  ##  href: sysmail-delete-principalprofile-sp-transact-sql.md
   - name: sysmail_delete_profile_sp
     href: sysmail-delete-profile-sp-transact-sql.md
   - name: sysmail_delete_profileaccount_sp
@@ -1381,8 +1383,10 @@
     href: sp-detach-schedule-transact-sql.md
   - name: sp_enum_login_for_proxy
     href: sp-enum-login-for-proxy-transact-sql.md
-  - name: sp_enum_proxy_for_subsystem](sp-enum-proxy-for-subsystem-transact-sql.md)## [sp_enum_sqlagent_subsystems
-    href: sp-enum-sqlagent-subsystems-transact-sql.md
+  - name: sp_enum_proxy_for_subsystem
+    href: sp-enum-proxy-for-subsystem-transact-sql.md
+  ##- name: sp_enum_sqlagent_subsystems
+  ##  href: sp-enum-sqlagent-subsystems-transact-sql.md
   - name: sp_grant_proxy_to_subsystem
     href: sp-grant-proxy-to-subsystem-transact-sql.md
   - name: sp_grant_login_to_proxy

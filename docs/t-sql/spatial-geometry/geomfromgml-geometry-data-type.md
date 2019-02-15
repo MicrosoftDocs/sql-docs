@@ -26,7 +26,7 @@ Construct a **geometry** instance given a representation in the [!INCLUDE[ssNoVe
   
 For more information on the Geography Markup Language, see the following Open Geospatial Consortium Specifications:
   
-[OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ GeomFromGml ( GML_input, SRID )
 ```  
 DECLARE @g geometry;  
 DECLARE @x xml;  
-SET @x = '<LineString xmlns="http://www.opengis.net/gml"> <posList>100 100 20 180 180 180</posList> </LineString>';  
+SET @x = '<LineString xmlns="https://www.opengis.net/gml"> <posList>100 100 20 180 180 180</posList> </LineString>';  
 SET @g = geometry::GeomFromGml(@x, 0);  
 SELECT @g.ToString();  
 ```  

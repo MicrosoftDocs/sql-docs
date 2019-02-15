@@ -1,5 +1,5 @@
 ---
-title: "General Properties | Microsoft Docs"
+title: "Analysis Services General Properties | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -27,7 +27,7 @@ manager: kfile
  A string property that specifies in a delimited list the folders that can be browsed when saving, opening, and finding files in Analysis Services dialog boxes. The Analysis Services service account must have read and write permissions to any folders that you add to the list.  
   
  **BackupDir**  
- A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the the Backup command.  
+ A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the Backup command.  
   
  **CollationName**  
  A string property that identifies the server collation. For more information, see [Languages and Collations &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
@@ -58,7 +58,7 @@ manager: kfile
  A string property that identifies the name of the directory where data is stored.  
   
  **DeploymentMode**  
- Determines the operational context of an Analysis Services server instance. This property is referred to as ‘server mode’ in dialog boxes, messages, and documentation. This property is configured by SQL Server Setup based on the server mode you selected when installing Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
+ Determines the operational context of an Analysis Services server instance. This property is referred to as 'server mode' in dialog boxes, messages, and documentation. This property is configured by SQL Server Setup based on the server mode you selected when installing Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
   
  Valid values for this property include the following:  
   

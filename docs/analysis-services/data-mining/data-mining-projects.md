@@ -84,7 +84,7 @@ manager: kfile
   
  A single data mining project can reference multiple data sources. Even though a mining model can use only one data source at a time, the project could have multiple models drawing on different data sources.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports data from many external providers, and SQL Server Data Mining can use both relational and cube data as a data source. However, if you develop both types of projects—models based on relational sources and models based on OLAP cubes—you might wish to develop and manage these in separate projects.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports data from many external providers, and SQL Server Data Mining can use both relational and cube data as a data source. However, if you develop both types of projects-models based on relational sources and models based on OLAP cubes-you might wish to develop and manage these in separate projects.  
   
 -   Typically models that are based on an OLAP cube should be developed within the OLAP design solution. One reason is that models based on a cube must process the cube to update data. Generally, you should use cube data only when that is the principal means of data storage and access, or when you require the aggregations, dimensions, and attributes created by the multidimensional project.  
   

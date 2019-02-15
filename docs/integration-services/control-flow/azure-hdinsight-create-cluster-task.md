@@ -22,7 +22,7 @@ The **Azure HDInsight Create Cluster Task** is a component of the [SQL Server In
   
 > [!NOTE]  
 > - Creating a new HDInsight cluster may take 10~20 minutes.  
-> - There is a cost associated with creating and running an Azure HDInsight cluster. See [HDInsight Pricing](http://azure.microsoft.com/pricing/details/hdinsight/) for details.  
+> - There is a cost associated with creating and running an Azure HDInsight cluster. See [HDInsight Pricing](https://azure.microsoft.com/pricing/details/hdinsight/) for details.  
   
 To add an **Azure HDInsight Create Cluster Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure HDInsight Create Cluster Task Editor** dialog box.  
   

@@ -117,7 +117,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## Requirements  
   
 ## External Resources  
- Blog entry, [SSIS 2012: A Peek to Data Taps](http://go.microsoft.com/fwlink/?LinkId=239983), on rafael-salas.com.  
+ Blog entry, [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983), on rafael-salas.com.  
   
 ## See Also  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

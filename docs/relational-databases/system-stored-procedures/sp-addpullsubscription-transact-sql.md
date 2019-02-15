@@ -5,8 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addpullsubscription"
@@ -91,7 +90,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 ## See Also  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md)
+ [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

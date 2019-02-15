@@ -24,7 +24,7 @@ Portable computing (for example, using laptops) has generated the need for appli
   
 -   **Traveling:** When taking the application on the road, it is vital to supply the ability to make changes and add new records that can then be reconnected to the database later and committed.  
   
--   **Infrequently updated lookups:** Often in an application, tables are used as lookups—for example, state tax tables. They are infrequently updated and are read-only. Instead of rereading this data from the server each time the application is started, the application can simply load the data from a locally persisted **Recordset**.  
+-   **Infrequently updated lookups:** Often in an application, tables are used as lookups-for example, state tax tables. They are infrequently updated and are read-only. Instead of rereading this data from the server each time the application is started, the application can simply load the data from a locally persisted **Recordset**.  
   
  In ADO, to save and load **Recordsets**, use the **Recordset.Save** and **Recordset.Open(,,,,adCmdFile)** methods on the ADO **Recordset** object.  
   

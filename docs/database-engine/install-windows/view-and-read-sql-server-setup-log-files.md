@@ -1,7 +1,7 @@
 ---
 title: "View and Read SQL Server Setup Log Files | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/08/2016"
+ms.date: "09/09/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

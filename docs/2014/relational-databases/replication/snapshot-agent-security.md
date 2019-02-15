@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.security.SSA.f1"
@@ -50,7 +49,7 @@ manager: craigg
  The Windows account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account used for the connection must at minimum be a member of the **db_owner** fixed database role in the publication database.  
   
 ## See Also  
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  

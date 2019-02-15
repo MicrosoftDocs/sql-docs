@@ -51,7 +51,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  Specifies that the full-text index file associated with the database that is being detached will not be dropped during the database detach operation. *KeepFulltextIndexFile* is a **nvarchar(10)** value with a default of **true**. If *KeepFulltextIndexFile* is **false**, all the full-text index files associated with the database and the metadata of the full-text index are dropped, unless the database is read-only. If NULL or **true**, full-text related metadata are kept.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  The**@keepfulltextindexfile** parameter will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use this parameter in new development work, and modify applications that currently use this parameter as soon as possible.  
   
 ## Return Code Values  

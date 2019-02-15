@@ -23,7 +23,7 @@ Explicit data type conversion is specified in terms of SQL data type definitions
   
  The format of the **CONVERT** function is:  
   
- **CONVERT(** *value_exp*, *data_type***)**  
+ **CONVERT(** _value_exp_, _data_type_**)**  
   
  The function returns the value specified by *value_exp* converted to the specified *data_type*, where *data_type* is one of the following keywords:  
   
@@ -59,7 +59,7 @@ Explicit data type conversion is specified in terms of SQL data type definitions
   
  converts the output of the CURDATE scalar function to a character string.  
   
- Because ODBC does not mandate a data type for return values from scalar functions (because the functions are often data source–specific), applications should use the CONVERT scalar function whenever possible to force data type conversion.  
+ Because ODBC does not mandate a data type for return values from scalar functions (because the functions are often data source-specific), applications should use the CONVERT scalar function whenever possible to force data type conversion.  
   
  The following two examples illustrate the use of the **CONVERT** function. These examples assume the existence of a table called EMPLOYEES, with an EMPNO column of type SQL_SMALLINT and an EMPNAME column of type SQL_CHAR.  
   

@@ -24,7 +24,7 @@ This dialog box appears:
   
 -   If you enter an invalid collation name in the **Collation** field on the **Column Properties** tab.  
   
--   If you click in the **Collation** field on the **Column Properties** tab, and then click the ellipsis button (**…**) to the right of the field.  
+-   If you click in the **Collation** field on the **Column Properties** tab, and then click the ellipsis button (**...**) to the right of the field.  
   
 ## Options  
 **SQL Collation**  

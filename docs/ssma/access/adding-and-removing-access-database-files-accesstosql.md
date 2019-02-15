@@ -123,7 +123,7 @@ You can remove an Access database from a project by following these steps.
 2.  Right-click the database, and then select **Remove Database**.  
   
 ## Next Step  
-The next step in the migration process is to [connect to SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+The next step in the migration process is to [connect to SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## See Also  
 [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

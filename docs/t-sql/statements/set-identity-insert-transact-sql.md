@@ -27,7 +27,10 @@ manager: craigg
 # SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Allows explicit values to be inserted into the identity column of a table.  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+Allows explicit values to be inserted into the identity column of a table.  
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -35,7 +38,7 @@ manager: craigg
   
 ```  
   
-SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }  
+SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
   
 ## Arguments  
@@ -45,7 +48,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }
  *schema_name*  
  Is the name of the schema to which the table belongs.  
   
- *table*  
+ *table_name*  
  Is the name of a table with an identity column.  
   
 ## Remarks  

@@ -68,7 +68,7 @@ CREATE FULLTEXT INDEX ON table_name
  *column_name*  
  Is the name of the column included in the full-text index. Only columns of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, and **varbinary(max)** can be indexed for full-text search. To specify multiple columns, repeat the *column_name* clause as follows:  
   
- CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
+ CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
  TYPE COLUMN *type_column_name*  
  Specifies the name of a table column, *type_column_name*, that is used to hold the document type for a **varbinary(max)** or **image** document. This column, known as the type column, contains a user-supplied file extension (.doc, .pdf, .xls, and so forth). The type column must be of type **char**, **nchar**, **varchar**, or **nvarchar**.  
@@ -85,7 +85,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  If *language_term* is specified, the language it represents will be used to index data stored in **char**, **nchar**, **varchar**, **nvarchar**, **text**, and **ntext** columns. This language is the default language used at query time if *language_term* is not specified as part of a full-text predicate against the column.  
   
- When specified as a string, *language_term* corresponds to the alias column value in the syslanguages system table. The string must be enclosed in single quotation marks, as in **'***language_term***'**. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hex value of the LCID. The hex value must not exceed eight digits, including leading zeros.  
+ When specified as a string, *language_term* corresponds to the alias column value in the syslanguages system table. The string must be enclosed in single quotation marks, as in **'**_language\_term_**'**. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hex value of the LCID. The hex value must not exceed eight digits, including leading zeros.  
   
  If the value is in double-byte character set (DBCS) format, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will convert it to Unicode.  
   
@@ -115,7 +115,7 @@ CREATE FULLTEXT INDEX ON table_name
  Specifies whether changes (updates, deletes or inserts) made to table columns that are covered by the full-text index will be propagated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the full-text index. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
   
  MANUAL  
- Specifies that the tracked changes must be propagated manually by calling the ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
+ Specifies that the tracked changes must be propagated manually by calling the ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
   
  **AUTO**  
  Specifies that the tracked changes will be propagated automatically as data is modified in the base table (*automatic population*). Although changes are propagated automatically, these changes might not be reflected immediately in the full-text index. AUTO is the default.  

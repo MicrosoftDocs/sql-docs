@@ -51,5 +51,5 @@ The following table shows how the [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 ## See Also  
 [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-[How to: Start System Monitor (Windows)](http://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[How to: Start System Monitor (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

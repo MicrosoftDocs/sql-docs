@@ -56,10 +56,14 @@
   href: ../master-data-services/master-data-services-overview-mds.md
 - name: Reporting Services
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: Machine Learning Services
+  href: ../advanced-analytics/index.md
 - name: SQL Server Migration Assistant
   href: ../ssma/sql-server-migration-assistant.md
 - name: Data Migration Assistant
   href: ../dma/dma-overview.md
+- name: Database Experimentation Assistant
+  href: ../dea/database-experimentation-assistant-overview.md
 - name: Stretch Database
   href: ../sql-server/stretch-database/stretch-database.md
 - name: Tutorials for SQL Server
@@ -85,6 +89,7 @@
     - name: SQL on Channel 9
       href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
   - name: Feedback and help
+    href: sql-server-get-help.md
     items:
     - name: Contribute to SQL Documentation!
       href: sql-server-docs-contribute.md
@@ -93,7 +98,7 @@
     - name: DBA Stack Exchange
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow
-      href: http://stackoverflow.com/questions/tagged/sql-server
+      href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN Forums
       href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
     - name: Reddit

@@ -56,11 +56,11 @@ Server information can be specified either in the servers section of the script 
 ```  
   
 ## Server connection file validation  
-The user can easily validate his/her server connection file against the schema definition file **‘A2SSConsoleScriptServersSchema.xsd’** available in the ‘Schemas’ folder.  
+The user can easily validate his/her server connection file against the schema definition file **'A2SSConsoleScriptServersSchema.xsd'** available in the 'Schemas' folder.  
   
 ## Next step  
 The next step in operating the console is [Executing the SSMA Console &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## See also  
-[Executing the SSMA Console (Access)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Executing the SSMA Console (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

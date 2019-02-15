@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "proxies [SQL Server Agent], modifying"
@@ -60,7 +60,7 @@ manager: craigg
   
 5.  Right-click the proxy account you want to modify and select **Properties**.  
   
-6.  In the *proxy_name***Proxy Account Properties** dialog box, make changes to the proxy account as necessary. For more information on the options in this dialog box, see [Create a SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md).  
+6.  In the _proxy_name_**Proxy Account Properties** dialog box, make changes to the proxy account as necessary. For more information on the options in this dialog box, see [Create a SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md).  
   
 7.  When finished, click **OK**.  
   

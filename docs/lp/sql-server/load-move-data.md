@@ -3,9 +3,14 @@ layout: HubPage
 hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
-title: Microsoft Azure Documentation
-description: Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more.
+title: SQL Server - Load and move data
+description: Explore the features that help you load, move, and migrate databases and data with SQL Server. 
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ---
@@ -13,7 +18,7 @@ featureFlags:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -23,7 +28,7 @@ featureFlags:
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Download SQL Server</span>
+                                    <span class="likeAnH3">Try SQL Server 2019 (preview)</span>
                                 </div>
                             </div>
                         </div>
@@ -138,6 +143,25 @@ featureFlags:
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Database Experimentation Assistant (DEA)</h3>
+                                                    <p>Assists in evaluating a target version of SQL Server for an existing workload.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Load and Move Data</h2>
@@ -200,25 +224,6 @@ featureFlags:
                                 </a>
                             </li>
                             <li>
-                                <a href="/sql/relational-databases/replication/sql-server-replication/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/load-move-data/replication.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Replication</h3>
-                                                    <p> A set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sql/integration-services/sql-server-integration-services">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -237,6 +242,25 @@ featureFlags:
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/relational-databases/replication/sql-server-replication/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/replication.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Replication</h3>
+                                                    <p> A set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -248,13 +272,23 @@ featureFlags:
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">
-                    Contribute to SQL docs
+                <a href="https://aka.ms/editsqldocs" data-linktype="external">
+                    Contribute
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
-                    SQL Docs Feedback
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">
+                    Get help
+                </a>
+            </li>
+           <li>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external">
+                    Feedback
+                </a>
+            </li>
+           <li>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external">
+                    Survey
                 </a>
             </li>
            <li>

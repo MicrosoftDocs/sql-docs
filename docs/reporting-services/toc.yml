@@ -15,21 +15,21 @@
     items:
     - name: Deprecated features
       href: deprecated-features-in-sql-server-reporting-services-ssrs.md
-    - name: Discontinued functionality to SQL Server Reporting Services in SQL Server 2016
+    - name: Discontinued functionality in SSRS in SQL Server 2016
       href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-    - name: Breaking changes in SQL Server Reporting Services in SQL Server 2016
+    - name: Breaking changes in SSRS in SQL Server 2016
       href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
     - name: Behavior changes to SQL Server Reporting Services in SQL Server 2016
       href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Planning
   items:
-  - name: Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting
+  - name: Choosing BI tools for analysis and reporting
     href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
-  - name: Browser Support for Reporting Services and Power View
+  - name: Browser support for Reporting Services and Power View
     href: browser-support-for-reporting-services-and-power-view.md
-  - name: Plan for report design and report deployment | Reporting Services
+  - name: Plan for report design and report deployment
     href: plan-for-report-design-and-report-deployment-reporting-services.md
-  - name: Reporting Services Features Supported by the Editions of SQL Server 2016
+  - name: Reporting Services features in editions of SQL Server
     href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
 - name: Install
   href: ../reporting-services/install-windows/install-reporting-services.md
@@ -38,17 +38,17 @@
   items:
   - name: Branding the web portal
     href: branding-the-web-portal.md
-  - name: Working with shared datasets (web portal)
+  - name: Working with shared datasets
     href: work-with-shared-datasets-web-portal.md
-  - name: Working with paginated reports (web portal)
+  - name: Working with paginated reports
     href: working-with-paginated-reports-web-portal.md
-  - name: Working with snapshots (web portal)
+  - name: Working with snapshots
     href: working-with-snapshots-web-portal.md
-  - name: Working with subscriptions (web portal)
+  - name: Working with subscriptions
     href: working-with-subscriptions-web-portal.md
-  - name: Working with KPIs in Reporting Services
+  - name: Working with KPIs
     href: working-with-kpis-in-reporting-services.md
-  - name: My Settings for Power BI Integration (web portal)
+  - name: My Settings for Power BI Integration
     href: my-settings-for-power-bi-integration-web-portal.md
 - name: Report Server
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md

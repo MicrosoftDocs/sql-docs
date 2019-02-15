@@ -32,7 +32,7 @@ This tutorial uses SQL Server Migration Assistant (SSMA) for Oracle on Windows t
 
 ## Download and install SSMA for Oracle
 
-There are several editions of SQL Server Migration Assistant available, depending on your source database.  Download the current version of [SQL Server Migration Assistant for Oracle](http://aka.ms/ssmafororacle) and install it using the instructions found on the download page.
+There are several editions of SQL Server Migration Assistant available, depending on your source database.  Download the current version of [SQL Server Migration Assistant for Oracle](https://aka.ms/ssmafororacle) and install it using the instructions found on the download page.
 
 > [!NOTE]
 > At this time, the **SSMA for Oracle Extension Pack** is not supported on Linux, but it is not necessary for this tutorial.

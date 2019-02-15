@@ -41,10 +41,10 @@ The data section defines the data of the rowset along with any pending updates, 
   
 ```  
 <s:ElementType name="row" content="eltOnly" updatable="true">  
-  <s:attribute type="ShipperID"/>  
-  <s:attribute type="CompanyName"/>  
-  <s:attribute type="Phone"/>  
-  <s:extends type="rs:rowbase"/>  
+  <s:attribute type="ShipperID"/>  
+  <s:attribute type="CompanyName"/>  
+  <s:attribute type="Phone"/>  
+  <s:extends type="rs:rowbase"/>  
 </s:ElementType>  
 ```  
   
@@ -54,25 +54,25 @@ The data section defines the data of the rowset along with any pending updates, 
   
 ```  
 <rs:data>  
-  <z:row ShipperID="2" CompanyName="United Package"   
-    Phone="(503) 555-3199"/>  
+  <z:row ShipperID="2" CompanyName="United Package"   
+    Phone="(503) 555-3199"/>  
 <rs:update>  
-  <rs:original>  
-    <z:row ShipperID="3" CompanyName="Federal Shipping"   
-      Phone="(503) 555-9931"/>  
-  </rs:original>  
-  <z:row Phone="(503) 552-7134"/>  
+  <rs:original>  
+    <z:row ShipperID="3" CompanyName="Federal Shipping"   
+      Phone="(503) 555-9931"/>  
+  </rs:original>  
+  <z:row Phone="(503) 552-7134"/>  
 </rs:update>  
 <rs:insert>  
-  <z:row ShipperID="12" CompanyName="Lightning Shipping"   
-    Phone="(505) 111-2222"/>  
-  <z:row ShipperID="13" CompanyName="Thunder Overnight"   
-    Phone="(505) 111-2222"/>  
-  <z:row ShipperID="14" CompanyName="Blue Angel Air Delivery"   
-    Phone="(505) 111-2222"/>  
+  <z:row ShipperID="12" CompanyName="Lightning Shipping"   
+    Phone="(505) 111-2222"/>  
+  <z:row ShipperID="13" CompanyName="Thunder Overnight"   
+    Phone="(505) 111-2222"/>  
+  <z:row ShipperID="14" CompanyName="Blue Angel Air Delivery"   
+    Phone="(505) 111-2222"/>  
 </rs:insert>  
 <rs:delete>  
-  <z:row ShipperID="1" CompanyName="Speedy Express" Phone="(503) 555-9831"/>  
+  <z:row ShipperID="1" CompanyName="Speedy Express" Phone="(503) 555-9831"/>  
 </rs:delete>  
 </rs:data>  
 ```  

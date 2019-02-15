@@ -166,7 +166,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- This example returns only the rows for `DimEmployee` that have an `EndDate` that is not NULL and a `MaritalStatus` of ‘M’ (married).  
+ This example returns only the rows for `DimEmployee` that have an `EndDate` that is not NULL and a `MaritalStatus` of 'M' (married).  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

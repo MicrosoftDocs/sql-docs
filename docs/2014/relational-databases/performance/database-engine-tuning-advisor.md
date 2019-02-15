@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dta.general.f1"
@@ -104,7 +103,7 @@ manager: craigg
 ## Dependency on xp_msver Extended Stored Procedure  
  Database Engine Tuning Advisor depends on the **xp_msver** extended stored procedure to provide full functionality. This extended stored procedure is turned on by default. Database Engine Tuning Advisor uses this extended stored procedure to fetch the number of processors and available memory on the computer where the database that you are tuning resides. If **xp_msver** is unavailable, Database Engine Tuning Advisor assumes the hardware characteristics of the computer where Database Engine Tuning Advisor is running. If the hardware characteristics of the computer where Database Engine Tuning Advisor is running are not available, one processor and 1024 megabytes (MBs) of memory are assumed.  
   
- This dependency affects partitioning recommendations because the number of partitions recommended depends on these two values (number of processors and available memory). The dependency also affects your tuning results when you use a test server to tune your production server. In this scenario, Database Engine Tuning Advisor uses **xp_msver** to fetch hardware properties from the production server. After tuning the workload on the test server, Database Engine Tuning Advisor uses these hardware properties to generate a recommendation. For more information, see [xp_msver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ This dependency affects partitioning recommendations because the number of partitions recommended depends on these two values (number of processors and available memory). The dependency also affects your tuning results when you use a test server to tune your production server. In this scenario, Database Engine Tuning Advisor uses **xp_msver** to fetch hardware properties from the production server. After tuning the workload on the test server, Database Engine Tuning Advisor uses these hardware properties to generate a recommendation. For more information, see [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## Database Engine Tuning Advisor Tasks  
  The following table lists common Database Engine Tuning Advisor tasks and the topics that describe how to perform them.  

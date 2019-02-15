@@ -5,7 +5,6 @@ ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], public profiles"
@@ -47,7 +46,7 @@ manager: craigg
   
 -   On the **Manage Profiles and Accounts** page, select **Create a new profile** option, and click **Next**.  
   
--   On the **New Profile** page, specifiy the Profile name, Description and add accounts to be included in the profile, and click **Next**.  
+-   On the **New Profile** page, specify the Profile name, Description and add accounts to be included in the profile, and click **Next**.  
   
 -   On the **Complete the Wizard** page, review the actions to be performed and click **Finish** to complete creating the new profile.  
   
@@ -185,7 +184,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Default Profile status* '  
   
-     where *@profile_name* is the name of the profile, and *@principal_name* to indicate this this is a public profile, *@is_default* determines the whether this profile is the default for the database user or role.  
+     where *@profile_name* is the name of the profile, and *@principal_name* to indicate this is a public profile, *@is_default* determines the whether this profile is the default for the database user or role.  
   
  The following example creates a Database Mail account, creates a Database Mail private profile, then adds the account to the profile and grants public access to the profile.  
   

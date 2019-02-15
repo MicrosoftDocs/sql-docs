@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Add Scale Breaks to a Chart (Report Builder and SSRS)
@@ -21,7 +21,7 @@ ms.author: maggies
 > [!NOTE]  
 >  You cannot specify where to place a scale break on your chart. The chart uses its own calculations based on the values in your dataset to determine whether there is sufficient separation between data ranges to draw a scale break on the value axis (y-axis) at run time.  
   
- An example of a chart with scale breaks is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ An example of a chart with scale breaks is available as a sample report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,6 +46,6 @@ ms.author: maggies
 
 [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Axis Properties Dialog Box, Axis Options](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Axis Properties Dialog Box, Axis Options](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

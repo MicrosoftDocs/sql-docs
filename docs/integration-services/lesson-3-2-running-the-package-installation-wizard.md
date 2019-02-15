@@ -23,7 +23,7 @@ In an earlier lesson, you modified the packages in the tutorial to use configura
   
 1.  On the destination computer, locate the deployment bundle.  
   
-    If you used the default value—bin\Deployment—as the location of the deployment utility, the deployment bundle is the Deployment folder in the Deployment Tutorial project.  
+    If you used the default value-bin\Deployment-as the location of the deployment utility, the deployment bundle is the Deployment folder in the Deployment Tutorial project.  
   
 2.  In the Deployment folder, double-click the manifest file, Deployment Tutorial.SSISDeploymentManifest.  
   

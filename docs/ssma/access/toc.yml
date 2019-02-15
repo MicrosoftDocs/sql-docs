@@ -13,7 +13,7 @@
 - name: Access Inventory Schemas
   href: access-inventory-schemas-accesstosql.md
 - name: Save Metadata
-  href: save-metadata-acesstosql.md
+  href: save-metadata-accesstosql.md
 - name: Connecting to SQL Server 
   href: connecting-to-sql-server-accesstosql.md
 - name: Migrating Access Data into Azure SQL DB 

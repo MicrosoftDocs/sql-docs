@@ -18,6 +18,6 @@ manager: craigg
   
 ## Options  
  **Select the server to connect to**  
- Designate the server you want to connect to by clicking on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance displayed in the tree. You can show or hide portions of the tree view by clicking on the nodes marked with a **+** or **–** symbol.  
+ Designate the server you want to connect to by clicking on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance displayed in the tree. You can show or hide portions of the tree view by clicking on the nodes marked with a **+** or **-** symbol.  
   
   

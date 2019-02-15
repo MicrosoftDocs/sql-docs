@@ -1,5 +1,5 @@
 ---
-title: R Services in SQL Server 2016 | Microsoft Docs
+title: R Services in SQL Server 2016 - SQL Server Machine Learning Services
 description: R in SQL Server for integrated R tasks on relational data, including data science and statistical modeling, predictive analytics, data visualization and more.
 ms.prod: sql
 ms.technology: machine-learning
@@ -17,7 +17,7 @@ R Services is an add-on to a SQL Server 2016 database engine instance, used for 
 
 R Services includes a base distribution of R, overlaid with enterprise R packages from Microsoft so that you can load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. Microsoft's R functions and algorithms are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft. 
 
-R libraries include RevoScaleR, MicrosoftML, and others. Because R Services is integrated with the database engine, you can keep analytics close to the data and eliminate the costs and security risks associated with data movement.
+R libraries include [**RevoScaleR**](ref-r-revoscaler.md), [**MicrosoftML (R)**](ref-r-microsoftml.md), and others. Because R Services is integrated with the database engine, you can keep analytics close to the data and eliminate the costs and security risks associated with data movement.
 
 > [!Note]
 > R Services was renamed in SQL Server 2017 to [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), reflecting the addition of Python.
@@ -29,7 +29,7 @@ SQL Server 2016 is R only. The following table describes the features in SQL Ser
 | Component | Description |
 |-----------|-------------|
 | SQL Server Launchpad service | A service that manages communications between the external R runtimes and the SQL Server instance. |
-| R packages | [**RevoScaleR**](revoscaler-overview.md) is the primary library for scaleable R. Functions in this library are among the most widely used. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling and analyses are found in these libraries. Additionally, functions in these libraries automatically distribute workloads across available cores for parallel processing, with the ability to work on chunks of data that are coordinated and managed by the calculation engine.  <br/>[**MicrosoftML (R)**](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.<br/>[**olapR**](how-to-create-mdx-queries-using-olapr.md) is for specifying MDX queries in R.|
+| R packages | [**RevoScaleR**](ref-r-revoscaler.md) is the primary library for scalable R. Functions in this library are among the most widely used. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling and analyses are found in these libraries. Additionally, functions in these libraries automatically distribute workloads across available cores for parallel processing, with the ability to work on chunks of data that are coordinated and managed by the calculation engine.  <br/>[**MicrosoftML (R)**](ref-r-microsoftml.md) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](ref-r-sqlrutils.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.<br/>[**olapR**](ref-r-olapr.md) is for specifying MDX queries in R.|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) is Microsoft's open-source distribution of R. The package and interpreter are included. Always use the version of MRO installed by Setup. |
 | R tools | R console windows and command prompts are standard tools in an R distribution.  |
 | R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data |

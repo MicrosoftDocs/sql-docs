@@ -48,10 +48,10 @@ manager: craigg
  If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse **(…)** button and locate the folder in which to store the package.  
+ Type the package path, or click the browse **(...)** button and locate the folder in which to store the package.  
   
  **Protection level**  
- Click the browse **(…)** button and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Click the browse **(...)** button and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## See Also  
  [Import Package Dialog Box UI Reference](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   

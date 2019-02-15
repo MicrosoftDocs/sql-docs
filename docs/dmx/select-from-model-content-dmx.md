@@ -41,7 +41,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Optional. An expression that returns a scalar value.  
   
 ## Remarks  
- The **SELECT FROM** *\<model>***.CONTENT** statement returns content that is specific to each algorithm. For example, you might want to use the descriptions of all the rules of an association rules model in a custom application. You can use a **SELECT FROM \<model>.CONTENT** statement to return values in the NODE_RULE column of the model.  
+ The **SELECT FROM** _\<model>_**.CONTENT** statement returns content that is specific to each algorithm. For example, you might want to use the descriptions of all the rules of an association rules model in a custom application. You can use a **SELECT FROM \<model>.CONTENT** statement to return values in the NODE_RULE column of the model.  
   
  The following table lists the columns that are included in the mining model content.  
   

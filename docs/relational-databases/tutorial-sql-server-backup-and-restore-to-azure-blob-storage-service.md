@@ -71,7 +71,7 @@ Using the access key you saved, create the SQL Server credential following the s
 
   ```sql
   CREATE CREDENTIAL mycredential   
-  WITH IDENTITY= 'mystorageaccount', -- this is the name of the storage account you specified when creating a storage account   
+  WITH IDENTITY= 'msftutorialstorage', -- this is the name of the storage account you specified when creating a storage account   
   SECRET = '<storage account access key>' -- this should be either the Primary or Secondary Access Key for the storage account 
   ```
 1. Execute the statement to create the credential. 
@@ -84,8 +84,8 @@ In this section, you will use a T-SQL statement to perform a full database backu
 1. Copy and paste the following example into the query window, modifying as needed: 
 
  ```sql
- BACKUP DATABASE[AdventureWorks2016] 
- TO URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2016.bak' 
+ BACKUP DATABASE [AdventureWorks2016] 
+ TO URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/AdventureWorks2016.bak' 
  /* URL includes the endpoint for the BLOB service, followed by the container name, and the name of the backup file*/ 
  WITH CREDENTIAL = 'mycredential';
  /* name of the credential you created in the previous step */ 
@@ -103,7 +103,7 @@ In this section, you will use a T-SQL statement to restore the full database bac
 
  ```sql
  RESTORE DATABASE AdventureWorks2016 
- FROM URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2012.bak' 
+ FROM URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/AdventureWorks2016.bak' 
  WITH CREDENTIAL = 'mycredential',
  STATS = 5 -- use this to see monitor the progress
  GO

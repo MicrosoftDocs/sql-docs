@@ -36,7 +36,7 @@ IsTrainingCase()
  To return cases that are part of the test data set, use the function [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## Examples  
- The following example uses the clustering data mining model from the targeted mailing scenario in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns only those cases that were used for training the mining model. Moreover, the training cases are restricted to customers younger than 40.  
+ The following example uses the clustering data mining model from the targeted mailing scenario in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns only those cases that were used for training the mining model. Moreover, the training cases are restricted to customers younger than 40.  
   
 ```  
 SELECT *  

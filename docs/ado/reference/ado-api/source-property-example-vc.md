@@ -72,7 +72,7 @@ void SourceX() {
       pCmdSQL->CommandText = strCmdSQL;  
       pRstTitles = pCmdSQL->Execute(NULL, NULL, adCmdText);  
   
-      // Open a recordset based on a a table  
+      // Open a recordset based on a table  
       TESTHR(pRstPublishers.CreateInstance(__uuidof(Recordset)));  
       pRstPublishers->Open ("publishers", _variant_t((IDispatch *) pConnection, true),  
          adOpenForwardOnly, adLockReadOnly, adCmdTable);  

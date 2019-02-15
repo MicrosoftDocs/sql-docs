@@ -44,6 +44,6 @@ You can create relationships between columns in different tables in the Diagram 
   
 ## See Also  
 [Tables and Columns Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[Working with Constraints (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
+[Working with Constraints (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Work with Tables in Database Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

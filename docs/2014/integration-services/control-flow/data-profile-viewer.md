@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profile Viewer [Integration Services]"
@@ -55,7 +54,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  The drilldown capability that is available in the Data Profile Viewer sends live queries to the original data source. These queries may have a negative impact on the performance of the server.  
 >   
->  If you drill down from an output file that was not created recently, the the drilldown queries might return a different set of rows than those on which the original output was calculated.  
+>  If you drill down from an output file that was not created recently, the drilldown queries might return a different set of rows than those on which the original output was calculated.  
   
  For more information about the user interface of the Data Profile Viewer, see [Data Profile Viewer F1 Help](../data-profile-viewer-f1-help.md).  
   

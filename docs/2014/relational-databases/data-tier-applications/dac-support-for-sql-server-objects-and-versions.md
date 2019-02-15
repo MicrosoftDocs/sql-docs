@@ -65,7 +65,7 @@ manager: craigg
   
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 and Visual Studio 2010 SP1 included DAC Framework 1.1, which supports all DAC operations except export and import.  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and Visual Studio 2010 included DAC Framework 1.0, which supports all DAC operations except export, import, and in—place upgrade.  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and Visual Studio 2010 included DAC Framework 1.0, which supports all DAC operations except export, import, and in-place upgrade.  
   
 -   The client tools from earlier versions of SQL Server or Visual Studio do not support DAC operations.  
   
@@ -80,7 +80,7 @@ manager: craigg
   
     -   MONEY, SMALLMONEY, NUMERIC, DECIMAL base types:  Precision is not preserved.  
   
-        -   DECIMAL/NUMERIC base types with precision 38:  the “TotalBytes” sql_variant metadata is always set to 21.  
+        -   DECIMAL/NUMERIC base types with precision 38:  the "TotalBytes" sql_variant metadata is always set to 21.  
   
     -   All text base types:  The database default collation is applied for all text.  
   
@@ -94,20 +94,20 @@ manager: craigg
   
 3.  Deployment operation fails for the following conditions within sql_variant columns. In the affected cases, you will see a dialog with the following message:  **Operation failed due to data limitations in the DAC Framework.**  
   
-    -   DATETIME2, SMALLDATETIME and DATE base types:  If the value is outside of DATETIME range – for example, the year is less than 1753.  
+    -   DATETIME2, SMALLDATETIME and DATE base types:  If the value is outside of DATETIME range - for example, the year is less than 1753.  
   
     -   DECIMAL, NUMERIC base type:  when precision of the value is greater than 28.  
   
 ##  <a name="Considerations"></a> Additional Considerations for Deployment Actions  
  Note the following considerations for DAC Framework data deployment actions:  
   
--   **Extract/Export** - On actions that use the DAC Framework to create a package from a database – for example, extract a .dacpac file, export a .bacpac file - these limitations do not apply. The data in the package is a full-fidelity representation of the data in the source database. If any of these conditions are present in the package, the extract/export log will contain a summary of the issues via the messages noted above. This is to warn the user of potential data deployment issues with the package they created. The user will also see the following summary message in the log:  **These limitations do not affect the fidelity of the data types and values stored in the DAC package created by the DAC Framework; they only apply to the data types and values resulting from deploying a DAC package to a database. For more information about the data that is affected and how to work around this limitation, see** [this topic](http://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extract/Export** - On actions that use the DAC Framework to create a package from a database - for example, extract a .dacpac file, export a .bacpac file - these limitations do not apply. The data in the package is a full-fidelity representation of the data in the source database. If any of these conditions are present in the package, the extract/export log will contain a summary of the issues via the messages noted above. This is to warn the user of potential data deployment issues with the package they created. The user will also see the following summary message in the log:  **These limitations do not affect the fidelity of the data types and values stored in the DAC package created by the DAC Framework; they only apply to the data types and values resulting from deploying a DAC package to a database. For more information about the data that is affected and how to work around this limitation, see** [this topic](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
--   **Deploy/Publish/Import** - On actions that use the DAC Framework to deploy a package to a database, like to deploy or publish a .dacpac file, and import a .bacpac file, these limitations do apply. The data that results in the target database may not contain a full-fidelity representation of the data in the package. The Deploy/Import log will contain a message, noted above, for every instance the issue is encountered. The operation will be blocked by errors – see category 3 above - but will proceed with the other warnings.  
+-   **Deploy/Publish/Import** - On actions that use the DAC Framework to deploy a package to a database, like to deploy or publish a .dacpac file, and import a .bacpac file, these limitations do apply. The data that results in the target database may not contain a full-fidelity representation of the data in the package. The Deploy/Import log will contain a message, noted above, for every instance the issue is encountered. The operation will be blocked by errors - see category 3 above - but will proceed with the other warnings.  
   
-     For more information about the data that is affected in this scenario and how to work around this limitation for deploy/publish/import actions, see [this topic](http://go.microsoft.com/fwlink/?LinkId=267087).  
+     For more information about the data that is affected in this scenario and how to work around this limitation for deploy/publish/import actions, see [this topic](https://go.microsoft.com/fwlink/?LinkId=267087).  
   
--   **Workarounds** – Extract and export operations will write full-fidelity BCP data files into the .dacpac or .bacpac files. To avoid limitations, use the SQL Server BCP.exe command line utility to deploy full-fidelity data to a target database from a DAC package.  
+-   **Workarounds** - Extract and export operations will write full-fidelity BCP data files into the .dacpac or .bacpac files. To avoid limitations, use the SQL Server BCP.exe command line utility to deploy full-fidelity data to a target database from a DAC package.  
   
 ## See Also  
  [Data-tier Applications](data-tier-applications.md)  

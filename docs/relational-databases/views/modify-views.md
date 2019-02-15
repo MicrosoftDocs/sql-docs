@@ -63,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     1.  Select or clear the check boxes of any elements you wish to add or remove.  
   
-    2.  Right-click within the diagram pane, select **Add Table…**, and then select the additional columns you want to add to the view from the **Add Table** dialog box.  
+    2.  Right-click within the diagram pane, select **Add Table...**, and then select the additional columns you want to add to the view from the **Add Table** dialog box.  
   
     3.  Right-click the title bar of the table you wish to remove and select **Remove**.  
   

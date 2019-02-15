@@ -51,7 +51,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## Arguments  
- *number* | **@***number_var*  
+ *number* | **@**_number_var_  
  Is an integer that indicates the first day of the week. It can be one of the following values.  
   
 |Value|First day of the week is|  

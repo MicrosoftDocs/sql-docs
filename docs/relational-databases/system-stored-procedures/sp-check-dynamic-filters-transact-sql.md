@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "dynamic_filters_TSQL"
@@ -44,7 +43,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+ [ **@publication**= ] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 ## Result Sets  

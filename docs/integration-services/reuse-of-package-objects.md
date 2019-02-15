@@ -36,8 +36,8 @@ manager: craigg
   
 -   [Copy Package Objects](../integration-services/copy-package-objects.md)  
   
--   [Copy Project Items](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+-   [Copy Project Items](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
--   [Save a Package as a Package Template](http://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
+-   [Save a Package as a Package Template](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server, logging in"
@@ -77,9 +76,9 @@ WHERE session_id = @@SPID;
   
  The following resources can help you troubleshoot a connection problem.  
   
--   [How to Troubleshoot Connecting to the SQL Server Database Engine](http://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [How to Troubleshoot Connecting to the SQL Server Database Engine](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [Steps to troubleshoot SQL connectivity issues](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Steps to troubleshoot SQL connectivity issues](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## Related Content  
  [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)  

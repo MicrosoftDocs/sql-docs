@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Before You Begin  
  The export process builds a DAC export file in two stages.  
   
-1.  The export builds a DAC definition in the export file – BACPAC file - in the same way a DAC extract builds a DAC definition in a DAC package file. The exported DAC definition includes all of the objects in the current database. If the export process is run against a database that was originally deployed from a DAC, and changes were made directly to the database after deployment, the exported definition matches the object set in the database, not what was defined in the original DAC.  
+1.  The export builds a DAC definition in the export file - BACPAC file - in the same way a DAC extract builds a DAC definition in a DAC package file. The exported DAC definition includes all of the objects in the current database. If the export process is run against a database that was originally deployed from a DAC, and changes were made directly to the database after deployment, the exported definition matches the object set in the database, not what was defined in the original DAC.  
   
 2.  The export bulk copies out the data from all of the tables in the database and incorporates the data into the export file.  
   
@@ -59,7 +59,7 @@ On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELE
   
 3.  Right-click the database name.  
   
-4.  Click **Tasks** and then select **Export Data-tier Application…**  
+4.  Click **Tasks** and then select **Export Data-tier Application...**  
   
 5.  Complete the wizard dialogs:  
   
@@ -84,12 +84,12 @@ On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELE
   
  **Next** - Proceeds to the **Select DAC Package** page.  
   
- **Cancel** – Cancels the operation and closes the Wizard.  
+ **Cancel** - Cancels the operation and closes the Wizard.  
   
 ##  <a name="Export_settings"></a> Export Settings Page  
  Use this page to specify the location where you want the BACPAC file to be created.  
   
--   **Save to local disk** - Creates a BACPAC file in a directory on the local computer. Click **Browse…** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
+-   **Save to local disk** - Creates a BACPAC file in a directory on the local computer. Click **Browse...** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
   
 -   **Save to Windows Azure** - Creates a BACPAC file in a Windows Azure container. You must connect to a Windows Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. Note that the temporary file will be created at the specified location and will remain there after the operation completes.  
   
@@ -114,7 +114,7 @@ On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELE
 ##  <a name="NetApp"></a> Using a .Net Framework Application  
  **To export a DAC using the Export() method in a .Net Framework application.**  
   
- To view a code example, download the DAC sample application on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ To view a code example, download the DAC sample application on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Create a SMO Server object and set it to the instance that contains the DAC to be exported.  
   

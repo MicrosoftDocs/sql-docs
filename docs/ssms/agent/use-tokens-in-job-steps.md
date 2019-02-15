@@ -27,9 +27,9 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent allows you to use tokens in [!INCLUDE[tsql](../../includes/tsql-md.md)] job step scripts. Using tokens when you write your job steps gives you the same flexibility that variables provide when you write software programs. After you insert a token in a job step script, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent replaces the token at run time, before the job step is executed by the [!INCLUDE[tsql](../../includes/tsql-md.md)] subsystem.  
   
-> [!IMPORTANT]  
-> Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step token syntax changed. As a result, an escape macro must now accompany all tokens used in job steps, or else those job steps will fail. Using escape macros and updating your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps that use tokens are described in the following sections, "Understanding Using Tokens," "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Tokens and Macros," and "Updating Job Steps to Use Macros." In addition, the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] syntax, which used square brackets to call out [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step tokens (for example, "`[DATE]`") has also changed. You must now enclose token names in parentheses and place a dollar sign (`$`) at the beginning of the token syntax. For example:  
->   
+> [!IMPORTANT]
+> Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step token syntax changed. As a result, an escape macro must now accompany all tokens used in job steps, or else those job steps will fail. Using escape macros and updating your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps that use tokens are described in the following sections, "Understanding Using Tokens," " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Tokens and Macros," and "Updating Job Steps to Use Macros." In addition, the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] syntax, which used square brackets to call out [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step tokens (for example, "`[DATE]`") has also changed. You must now enclose token names in parentheses and place a dollar sign (`$`) at the beginning of the token syntax. For example:  
+> 
 > `$(ESCAPE_`*macro name*`(DATE))`  
   
 ## Understanding Using Tokens  
@@ -67,8 +67,8 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**(A-ERR)**|Error number. If the job is run by an alert, the error number value automatically replaces this token in the job step.|  
 |**(A-SEV)**|Error severity. If the job is run by an alert, the error severity value automatically replaces this token in the job step.|  
 |**(A-MSG)**|Message text. If the job is run by an alert, the message text value automatically replaces this token in the job step.|  
-|**(JOBNAME)**|The name of the job.|  
-|**(STEPNAME)**|The name of the step.|  
+|**(JOBNAME)**|The name of the job. This token is only available on SQL Server 2016 and above.|  
+|**(STEPNAME)**|The name of the step. This token is only available on SQL Server 2016 and above.|  
 |**(DATE)**|Current date (in YYYYMMDD format).|  
 |**(INST)**|Instance name. For a default instance, this token will have the default instance name: MSSQLSERVER.|  
 |**(JOBID)**|Job ID.|  
@@ -76,7 +76,7 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**(MSSA)**|Master SQLServerAgent service name.|  
 |**(OSCMD)**|Prefix for the program used to run **CmdExec** job steps.|  
 |**(SQLDIR)**|The directory in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. By default, this value is C:\Program Files\Microsoft SQL Server\MSSQL.|  
-|**(SQLLOGDIR)**|Replacement token for the SQL Server error log folder path – for example, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Replacement token for the SQL Server error log folder path - for example, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|A count of the number of times this step has executed (excluding retries). Can be used by the step command to force termination of a multistep loop.|  
 |**(STEPID)**|Step ID.|  
 |**(SRVR)**|Name of the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is a named instance, this includes the instance name.|  
@@ -97,7 +97,7 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 ## Updating Job Steps to Use Macros  
 Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, job steps that contain tokens without escape macros will fail and return an error message indicating the job step contains one or more tokens that must be updated with a macro before the job can run.  
   
-A script is provided with [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base article 915845: [SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1](http://support.microsoft.com/kb/915845).You can use this script to update all of your job steps that use tokens with the **ESCAPE_NONE** macro. After using this script, we recommend that you review your job steps that use tokens as soon as possible, and replace the **ESCAPE_NONE** macro with an escape macro that is appropriate for the job step context.  
+A script is provided with [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base article 915845: [SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845).You can use this script to update all of your job steps that use tokens with the **ESCAPE_NONE** macro. After using this script, we recommend that you review your job steps that use tokens as soon as possible, and replace the **ESCAPE_NONE** macro with an escape macro that is appropriate for the job step context.  
   
 The following table describes how token replacement is handled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. To turn alert token replacement on or off, right-click **SQL Server Agent** in Object Explorer, select **Properties**, and on the **Alert System** page, select or clear the **Replace tokens for all job responses to alerts** check box.  
   

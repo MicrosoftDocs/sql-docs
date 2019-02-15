@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], about restoring databases"
   - "database restores [SQL Server], scenarios"
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Restore and Recovery Overview (SQL Server)
@@ -146,9 +146,9 @@ manager: craigg
   
  For more information, see about the Database Recovery Advisor, see the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability blogs:  
   
--   [Recovery Advisor: An Introduction](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor: Using SSMS to create/restore split backups](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> Related Content  
  None.  

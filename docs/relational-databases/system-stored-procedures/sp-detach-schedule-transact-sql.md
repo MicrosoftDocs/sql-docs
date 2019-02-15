@@ -40,7 +40,7 @@ sp_detach_schedule
  [ **@job_id=** ] *job_id*  
  The job identification number of the job to remove the schedule from. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'**_job_name_**'**  
  The name of the job to remove the schedule from. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ sp_detach_schedule
  [ **@schedule_id=** ] *schedule_id*  
  The schedule identification number of the schedule to remove from the job. *schedule_id* is **int**, with a default of NULL.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'**_schedule_name_**'**  
  The name of the schedule to remove from the job. *schedule_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

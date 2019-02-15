@@ -5,7 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "archiving mail messages and attachments [SQL Server]"
@@ -42,11 +41,11 @@ manager: craigg
   
 -   The first procedure creates a job named Archive Database Mail with the following steps.  
   
-    1.  Copy all messages from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_***<year_month>*.  
+    1.  Copy all messages from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_**_<year_month>_.  
   
-    2.  Copy the attachments related to the messages copied in the first step, from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_Attachments_***<year_month>*.  
+    2.  Copy the attachments related to the messages copied in the first step, from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_Attachments_**_<year_month>_.  
   
-    3.  Copy the events from the Database Mail event log that are related to the messages copied in the first step, from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_Log_***<year_month>*.  
+    3.  Copy the events from the Database Mail event log that are related to the messages copied in the first step, from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_Log_**_<year_month>_.  
   
     4.  Delete the records of the transferred mail items from the Database Mail tables.  
   

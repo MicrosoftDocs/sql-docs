@@ -8,16 +8,16 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Creating Drillthrough and Main Reports (Report Builder)
   This tutorial teaches you how to create two kinds of reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. The following illustration shows the reports you will create.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- The following illustration shows how the field value, Games and Toys, in the main report displays in the drillthrough report’s title. The data in the drillthrough pertains to the Games and Toys product category.  
+ The following illustration shows how the field value, Games and Toys, in the main report displays in the drillthrough report's title. The data in the drillthrough pertains to the Games and Toys product category.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -143,7 +143,7 @@ manager: craigg
   
 #### To create query filters  
   
-1.  On the **Design a query** page, in the Metadata pane, click the button **(…)**.  
+1.  On the **Design a query** page, in the Metadata pane, click the button **(...)**.  
   
 2.  In the **Cube Selection** dialog box, click Sales, and then click **OK**.  
   
@@ -437,7 +437,7 @@ manager: craigg
   
 #### To create query filters  
   
-1.  On the **Design a query** page, in the Metadata pane, in the cube section, click the ellipsis **(…)**.  
+1.  On the **Design a query** page, in the Metadata pane, in the cube section, click the ellipsis **(...)**.  
   
 2.  In the **Cube Selection** dialog box, click Sales, and then click **OK**.  
   

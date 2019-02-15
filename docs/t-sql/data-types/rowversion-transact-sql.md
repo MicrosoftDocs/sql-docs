@@ -1,7 +1,7 @@
 ---
 title: "rowversion (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -84,7 +84,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myValue;  
+    AND RV = myRv;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -94,7 +94,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myValue` is the **rowversion** column value for the row that indicates the last time that you read the row. This value must be replaced by the actual **rowversion** value. An example of the actual **rowversion** value is 0x00000000000007D3.
+`myRv` is the **rowversion** column value for the row that indicates the last time that you read the row. This value must be replaced by the actual **rowversion** value. An example of the actual **rowversion** value is 0x00000000000007D3.
   
 You can also put the sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements into a transaction. By querying the `@t` variable in the scope of the transaction, you can retrieve the updated `myKey` column of the table without requerying the `MyTes`t table.
   
@@ -113,7 +113,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myValue;  
+    AND TS = myTS;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

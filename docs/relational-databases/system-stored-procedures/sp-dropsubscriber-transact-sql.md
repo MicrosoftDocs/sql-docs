@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropsubscriber_TSQL"
@@ -38,10 +37,10 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## Arguments  
- [ **@subscriber=** ] **'***subscriber***'**  
+ [ **@subscriber=** ] **'**_subscriber_**'**  
  Is the name of the Subscriber to be dropped. *subscriber* is **sysname**, with no default.  
   
- [ **@reserved=** ] **'***reserved***'**  
+ [ **@reserved=** ] **'**_reserved_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@ignore_distributor =** ] *ignore_distributor*  

@@ -15,12 +15,12 @@ manager: craigg
 After you have successfully synchronized the converted objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can migrate data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
-> If the engine being used is Server Side Data Migration Engine, then, before you can migrate data, you must install the SSMA for DB2 Extension Pack and the DB2 providers on the computer that is running SSMA. The SQL Server Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server](http://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+> If the engine being used is Server Side Data Migration Engine, then, before you can migrate data, you must install the SSMA for DB2 Extension Pack and the DB2 providers on the computer that is running SSMA. The SQL Server Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 ## Setting Migration Options  
 Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review the project migration options in the **Project Settings** dialog box.  
   
--   By using this dialog box you can set options such as migration batch size, table locking, constraint checking, null value handling, and identity value handling. For more information about the Project Migration Settings, see [Project Settings (Migration)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae).  
+-   By using this dialog box you can set options such as migration batch size, table locking, constraint checking, null value handling, and identity value handling. For more information about the Project Migration Settings, see [Project Settings (Migration)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae).  
   
 -   The **Migration Engine** in the **Project Settings** dialog box, allows the user to perform the migration process using two types of data migration engines:  
   
@@ -39,7 +39,7 @@ Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 **Server Side Data Migration:**  
   
--   During the Server side data migration, the engine resides on the target database. It is installed through the extension pack. For more information on how to install the extension pack, see [Installing SSMA Components on SQL Server](http://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+-   During the Server side data migration, the engine resides on the target database. It is installed through the extension pack. For more information on how to install the extension pack, see [Installing SSMA Components on SQL Server](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 -   To initiate migration on the server side, select the **Server Side Data Migration Engine** option in the **Project Settings** dialog box.  
   
@@ -81,13 +81,13 @@ To view migration messages, make sure that the Output pane is visible. Otherwise
 4.  Right-click **Schemas** in DB2 Metadata Explorer, and then click **Migrate Data**. You can also migrate data for individual objects or categories of objects: Right-click the object or its parent folder; select the **Migrate Data** option.  
   
     > [!NOTE]  
-    > If the SSMA for DB2 Extension Pack is not installed on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and if **Server Side Data Migration Engine** is selected, then while migrating the data to the target database, the following error is encountered: ‘SSMA Data Migration components were not found on SQL Server, server-side data migration will not be possible. Please check if Extension Pack is installed correctly’. Click **Cancel** to terminate the data migration.  
+    > If the SSMA for DB2 Extension Pack is not installed on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and if **Server Side Data Migration Engine** is selected, then while migrating the data to the target database, the following error is encountered: 'SSMA Data Migration components were not found on SQL Server, server-side data migration will not be possible. Please check if Extension Pack is installed correctly'. Click **Cancel** to terminate the data migration.  
   
 5.  In the **Connect to DB2** dialog box, enter the connection credentials, and then click **Connect**. For more information on connecting to DB2, see [Connecting to DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    For connecting to the target database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enter the connection credentials in the **Connect to SQL Server** dialog box, and click **Connect**. For more information on connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Connecting to SQL Server](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
+    For connecting to the target database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enter the connection credentials in the **Connect to SQL Server** dialog box, and click **Connect**. For more information on connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Connecting to SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
-    Messages will appear in the **Output** pane. When the migration is complete, the **Data Migration Report** appears. If any data did not migrate, click the row that contains the errors, and then click **Details**. When you are finished with the report, click **Close**. For more information on Data Migration Report, see [Data Migration Report (SSMA Common)](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    Messages will appear in the **Output** pane. When the migration is complete, the **Data Migration Report** appears. If any data did not migrate, click the row that contains the errors, and then click **Details**. When you are finished with the report, click **Close**. For more information on Data Migration Report, see [Data Migration Report (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > When SQL Express edition is used as the target database, only client side data migration is allowed and server side data migration is not supported.  

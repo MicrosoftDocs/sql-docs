@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Implementing a Data Processing Extension
   Data processing extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces.  
@@ -52,7 +52,7 @@ manager: craigg
  [Removing a Data Processing Extension](removing-a-data-processing-extension.md)  
  Describes how to remove a data processing extension from a report server or Report Designer.  
   
- For a sample of a fully implemented data processing extension, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For a sample of a fully implemented data processing extension, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Reporting Services Extensions](../reporting-services-extensions.md)   

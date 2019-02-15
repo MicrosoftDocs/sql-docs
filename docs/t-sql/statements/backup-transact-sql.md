@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2018"
+ms.date: "10/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -43,8 +43,8 @@ helpviewer_keywords:
   - "stripe sets [SQL Server]"
   - "cross-platform backups"
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
@@ -62,23 +62,14 @@ In the following row, click whichever product name you are interested in. The cl
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# SQL Server
+## SQL Server
 
 Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to create a database backup, or one or more files or filegroups of the database to create a file backup (BACKUP DATABASE). Also, under the full recovery model or bulk-logged recovery model, backs up the transaction log of the database to create a log backup (BACKUP LOG). 
   
@@ -263,9 +254,9 @@ Specifies a disk file or tape device, or a Microsoft Azure Blob storage service.
 > The NUL disk device will discard all information sent to it and should only be used for testing. This is not for production use.
   
 > [!IMPORTANT]  
-> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
-**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 A disk device does not have to exist before it is specified in a BACKUP statement. If the physical device exists and the INIT option is not specified in the BACKUP statement, the backup is appended to the device.  
  
@@ -286,7 +277,7 @@ Specifies a set of up to three secondary backup devices, each of which mirrors t
 This option is available only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> For MIRROR TO = DISK, BACKUP automatically determines the appropriate block size for disk devices. For more information about block size, see "BLOCKSIZE" later in this table.  
+> For MIRROR TO = DISK, BACKUP automatically determines the appropriate block size for disk devices based on the sector size of the disk. If the MIRROR TO disk is formatted with a different sector size than the disk specified as the primary backup device, the backup command will fail.  In order to mirror backups to devices that have different sector sizes, the BLOCKSIZE parameter must be specified, and should be set to the highest sector size amongst all the target devices.  For more information about block size, see "BLOCKSIZE" later in this topic.  
   
 \<backup_device>
 See "\<backup_device>," earlier in this section.
@@ -303,11 +294,11 @@ Is a placeholder that indicates that a single BACKUP statement can contain up to
 Specifies options to be used with a backup operation.  
   
 CREDENTIAL  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
 Used only when creating a backup to the Microsoft Azure Blob storage service.  
   
 FILE_SNAPSHOT
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Used to create an Azure snapshot of the database files when all of the SQL Server database files are stored using the Azure Blob storage service. For more information, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup takes Azure snapshots of the database files (data and log files) at a consistent state. A consistent set of Azure snapshots make up a backup and are recorded in the backup file. The only difference between `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` and `BACKUP LOG TO URL WITH FILE_SNAPSHOT` is that the latter also truncates the transaction log while the former does not. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup, after the initial full backup that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to establish the backup chain, only a single transaction log backup is required to restore a database to the point in time of the transaction log backup. Furthermore, only two transaction log backups are required to restore a database to a point in time between the time of the two transaction log backups.  
     
@@ -377,7 +368,7 @@ Specifies the free-form text describing the backup set. The string can have a ma
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.  
   
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
 Specifies when the backup set for this backup can be overwritten. If these options are both used, RETAINDAYS takes precedence over EXPIREDATE.  
   
 If neither option is specified, the expiration date is determined by the **mediaretention** configuration setting. For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -480,7 +471,7 @@ Specifies the total number of I/O buffers to be used for the backup operation. Y
 The total space used by the buffers is determined by: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
+> For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
@@ -529,7 +520,7 @@ Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], has no effec
   
 **Monitoring Options**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Displays a message each time another *percentage* completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed.  
   
 The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, if the amount completed is 40 percent, the option might display 43 percent. For large backup sets, this is not a problem, because the percentage complete moves very slowly between completed I/O calls.  
@@ -575,14 +566,14 @@ These options are only used with `BACKUP LOG`.
 > [!NOTE]  
 > If you do not want to take log backups, use the simple recovery model. For more information, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 Backs up the tail of the log and leaves the database in the RESTORING state. NORECOVERY is useful when failing over to a secondary database or when saving the tail of the log before a RESTORE operation.  
   
 To perform a best-effort log backup that skips log truncation and then take the database into the RESTORING state atomically, use the `NO_TRUNCATE` and `NORECOVERY` options together.  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 Backs up the tail of the log and leaves the database in a read-only and STANDBY state. The STANDBY clause writes standby data (performing rollback, but with the option of further restores). Using the STANDBY option is equivalent to BACKUP LOG WITH NORECOVERY followed by a RESTORE WITH STANDBY.  
   
@@ -737,7 +728,7 @@ The BACKUP statement is not allowed in an explicit or implicit transaction.
 Cross-platform backup operations, even between different processor types, can be performed as long as the collation of the database is supported by the operating system.  
  
 When using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, it is recommended to use a `MAXTRANSFERSIZE` setting **larger than 65536 (64 KB)**.   
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this enables an optimized compression algorithm for TDE encrypted databases that first decrypts a page, compresses it and then encrypts it again. If using `MAXTRANSFERSIZE = 65536` (64 KB), backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this enables an optimized compression algorithm for TDE encrypted databases that first decrypts a page, compresses it and then encrypts it again. If using `MAXTRANSFERSIZE = 65536` (64 KB), backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
 > There are some cases where the default `MAXTRANSFERSIZE` is greater than 64K:
@@ -948,25 +939,16 @@ WITH STATS = 5;
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# Azure SQL Database Managed Instance
+## Azure SQL Database managed instance
 
-Backs up a SQL database placed/hosted in an Azure SQL Databae managed instance. SQL Database [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) has automatic backups, and enables users to create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.  
+Backs up a SQL database placed/hosted in an Azure SQL Databae managed instance. SQL Database [managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) has automatic backups, and enables users to create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.  
 
 ## Syntax  
   
@@ -1008,9 +990,9 @@ DATABASE
 Specifies a complete database backup. During a database backup, the managed instance backs up enough of the transaction log to produce a consistent database when the backup is restored.  
 
 > [!IMPORTANT]
-> A database backup created on a managed instance can only be restored on another Managed Instance. It cannot be restored to a SQL Server on-premises instance (similar to the way that a backup of a SQL Server 2016 database cannot be restored to a SQL Server 2012 instance).
+> A database backup created on a managed instance can only be restored on another managed instance. It cannot be restored to a SQL Server on-premises instance (similar to the way that a backup of a SQL Server 2016 database cannot be restored to a SQL Server 2012 instance).
   
-When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
+When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database managed instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
 { *database_name* | **@**_database\_name\_var_ }   
 Is the database from which the complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.  
@@ -1023,7 +1005,7 @@ TO URL
 Specifies the URL to use for the backup operation. The URL format is used for creating backups to the Microsoft Azure storage service. 
 
 > [!IMPORTANT]  
-> In order to backup to multiple devices when backing up to URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> In order to backup to multiple devices when backing up to URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 *n*  
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
@@ -1089,7 +1071,7 @@ Specifies the total number of I/O buffers to be used for the backup operation. Y
 The total space used by the buffers is determined by: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
+> For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
@@ -1135,12 +1117,12 @@ Has no effect. This option is accepted by the version for compatibility with pre
   
 **Monitoring Options**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Displays a message each time another *percentage* completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed.  
   
 The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, if the amount completed is 40 percent, the option might display 43 percent. For large backup sets, this is not a problem, because the percentage complete moves very slowly between completed I/O calls.  
   
-## Limitations for SQL Database Managed Instance
+## Limitations for SQL Database managed instance
 Max backup stripe size is 195 GB (maximum blob size). Increase the number of stripes in the backup command to reduce individual stripe size and stay within this limit.
 
 ## Security  
@@ -1154,9 +1136,9 @@ Ownership and permission problems on the URL can interfere with a backup operati
 The example performs a COPY_ONLY backup of `Sales` to the Microsoft Azure Blob storage service.  The storage Account name is `mystorageaccount`.  The container is called `myfirstcontainer`.  A stored access policy has been created with read, write, delete, and list rights.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy.  For information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Microsoft Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   
@@ -1167,23 +1149,14 @@ WITH STATS = 5;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />managed instance](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 
-# Parallel Data Warehouse
+## Parallel Data Warehouse
 
 Creates a backup of a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and stores the backup off the appliance in a user-specified network location. Use this statement with [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-statements-transact-sql.md) for disaster recovery, or to copy a database from one appliance to another.  
   
@@ -1297,7 +1270,7 @@ The target appliance for restoring the backup must have at least as many Compute
   
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does track the success or failure of database backups.  
   
-A differential backup is only allowed if the last full backup completed successfully. For example, suppose that on Monday you create a full backup of the Sales database and the backup finishes successfully. Then on Tuesday you create a full backup of the Sales database and it fails. After this failure, you cannot then create a differential backup based on Monday’s full backup. You must first create a successful full backup before creating a differential backup.  
+A differential backup is only allowed if the last full backup completed successfully. For example, suppose that on Monday you create a full backup of the Sales database and the backup finishes successfully. Then on Tuesday you create a full backup of the Sales database and it fails. After this failure, you cannot then create a differential backup based on Monday's full backup. You must first create a successful full backup before creating a differential backup.  
   
 ## Metadata  
 These dynamic management views contain information about all backup, restore, and load operations. The information persists across system restarts.  

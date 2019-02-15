@@ -5,8 +5,7 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -41,7 +40,7 @@ fn:last() as xs:integer
   
 ```  
 SELECT ProductModelID, Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   <LastTwoManuSteps>  
    <Last-1Step>   
      { (/AWMI:root/AWMI:Location)[1]/AWMI:step[(last()-1)]/text() }  

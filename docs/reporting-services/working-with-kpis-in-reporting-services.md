@@ -17,7 +17,7 @@ ms.author: maghan
 
 A Key Performance Indicator (KPI) is a visual cue that communicates the amount of progress made toward a goal.  Key Performance Indicators are valuable for teams, managers, and businesses to evaluate quickly the progress made against measurable goals.   
   
-By using KPIs in SQL Server 2016 Reporting Services, you can easily visualize answers to the following questions:  
+By using KPIs in SQL Server Reporting Services, you can easily visualize answers to the following questions:  
   
 -   What am I ahead or behind on?  
   
@@ -55,8 +55,8 @@ You can either assign static values, or use data from a shared dataset. When you
 |Trend set|Comma-separated numeric values used for chart visualization. This can also be set to a column of a dataset with values that represent the trend.|  
   
 > **Warning**: While you can use the word value for the **Status** field at design time, you should use the number value if refreshing a dataset. If you refresh a dataset with the word value, instead of the number, it could corrupt the KPIs on your server.  
-  
-> **Note**: The **Value**, **Goal** and **Status** fields can only choose a value from the first row of a dataset’s result. The **Trend set** field, however, can choose which column reflects the trend.  
+> 
+> **Note**: The **Value**, **Goal** and **Status** fields can only choose a value from the first row of a dataset's result. The **Trend set** field, however, can choose which column reflects the trend.  
   
 To use data from a shared dataset, you can do the following.  
   
@@ -64,7 +64,7 @@ To use data from a shared dataset, you can do the following.
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Select the **ellipsis (…)** in the data box. This will bring up the **Pick a Dataset** screen.  
+2.  Select the **ellipsis (...)** in the data box. This will bring up the **Pick a Dataset** screen.  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -86,7 +86,7 @@ To use data from a shared dataset, you can do the following.
   
 To remove a KPI, you can do the following.  
   
-1.  Select the **ellipsis (…)** of the KPI you want to remove. Select **Manage**.  
+1.  Select the **ellipsis (...)** of the KPI you want to remove. Select **Manage**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -103,4 +103,4 @@ To refresh the KPI, you will need to configure a caching for the shared dataset.
 [Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

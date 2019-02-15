@@ -15,7 +15,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSTDC) on Linux. MSDTC support on Linux was introduced in SQL Server 2019 CTP 2.0.
+This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSTDC) on Linux. MSDTC support on Linux was introduced in SQL Server 2019 preview.
 
 ## Overview
 
@@ -38,7 +38,7 @@ The following MSDTC configurations are supported:
 - XA Distributed transactions against SQL Server on Linux using JDBC providers.
 - Distributed transactions on Linked server.
 
-For limitations and known issues for MSDTC in CTP 2.0, see [Release notes for SQL Server 2019 CTP on Linux](sql-server-linux-release-notes-2019.md#msdtc).
+For limitations and known issues for MSDTC in preview, see [Release notes for SQL Server 2019 preview on Linux](sql-server-linux-release-notes-2019.md#msdtc).
 
 ## MSDTC configuration steps
 
@@ -95,7 +95,7 @@ It is important to configure the firewall before configuring port routing in the
 
 ## Configure port routing
 
-Configure the Linux server routing table so that RPC communication on port 135 is redirected to SQL Server's **network.rpcport**. The iptable rules may not persist during reboots, so the following commands also provide instructions for restoring the rules after a reboot.
+Configure the Linux server routing table so that RPC communication on port 135 is redirected to SQL Server's **network.rpcport**. Configuration mechanism for port forwarding on different distribution may differ. On distributions which do not use firewalld service, iptable rules are an efficient mechanism to achieve this. Example of such distrubution are Ubuntu 16.04 and SUSE Enterprise Linux v12. The iptable rules may not persist during reboots, so the following commands also provide instructions for restoring the rules after a reboot.
 
 1. Create routing rules for port 135. In the following example, port 135 is directed to the RPC port, 13500, defined in the previous section. Replace `<ipaddress>` with the IP address of your server.
 
@@ -126,10 +126,16 @@ Configure the Linux server routing table so that RPC communication on port 135 i
    iptables-restore < /etc/iptables.conf
    ```
 
-The **iptables-save** and **iptables-restore** commands provide a basic mechanism to save and restore iptables entries. Depending on your Linux distribution, there might be more advanced or automated options available. For example, an Ubuntu alternative is the **iptables-persistent** package to make entries persistent. Or for Red Hat Enterprise Linux, you may be able to use firewalld service (via firewall-cmd configuration utility with –add-forward-port or similar options) to create persistent port forwarding rules instead of using iptables.
+The **iptables-save** and **iptables-restore** commands provide a basic mechanism to save and restore iptables entries. Depending on your Linux distribution, there might be more advanced or automated options available. For example, an Ubuntu alternative is the **iptables-persistent** package to make entries persistent. 
+
+On distributions which use firewalld service, the same service can be used for both opening the port on the server and internal port forwarding. For example, on Red Hat Enterprise Linux, you should use firewalld service (via firewall-cmd configuration utility with -add-forward-port or similar options) to create and manage persistent port forwarding rules instead of using iptables.
+
+```bash
+firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
+```
 
 > [!IMPORTANT]
-> The previous steps assume a fixed IP address. If the IP address for your SQL Server instance changes (due to manual intervention or DHCP), you must remove and recreate the routing rules. If you need to recreate or delete existing routing rules, you can use the following command to remove old `RpcEndPointMapper` rules:
+> The previous steps assume a fixed IP address. If the IP address for your SQL Server instance changes (due to manual intervention or DHCP), you must remove and recreate the routing rules if they were created with iptables. If you need to recreate or delete existing routing rules, you can use the following command to remove old `RpcEndPointMapper` rules:
 > 
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done

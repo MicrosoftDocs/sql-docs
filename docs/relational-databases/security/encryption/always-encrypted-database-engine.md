@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). As a result, Always Encrypted provides a separation between those who own the data (and can view it) and those who manage the data (but should have no access). By ensuring on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, cannot access the encrypted data, Always Encrypted enables customers to confidently store sensitive data outside of their direct control. This allows organizations to encrypt data at rest and in use for storage in Azure, to enable delegation of on-premises database administration to third parties, or to reduce security clearance requirements for their own DBA staff.  
+ Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ( [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). As a result, Always Encrypted provides a separation between those who own the data (and can view it) and those who manage the data (but should have no access). By ensuring on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, cannot access the encrypted data, Always Encrypted enables customers to confidently store sensitive data outside of their direct control. This allows organizations to encrypt data at rest and in use for storage in Azure, to enable delegation of on-premises database administration to third parties, or to reduce security clearance requirements for their own DBA staff.  
   
  Always Encrypted makes encryption transparent to applications. An Always Encrypted-enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the client application. The driver encrypts the data in sensitive columns before passing the data to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data, stored in encrypted database columns, contained in query results.  
   
@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  A customer has a client application and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] both running on-premises, at their business location. The customer wants to hire an external vendor to administer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In order to protect sensitive data stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the customer uses Always Encrypted to ensure the separation of duties between database administrators and application administrators. The customer stores plaintext values of Always Encrypted keys in a trusted key store which the client application can access. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administrators have no access to the keys and, therefore, are unable to decrypt sensitive data stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ### Client On-Premises with Data in Azure  
- A customer has an on-premises client application at their business location. The application operates on sensitive data stored in a database hosted in Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] running in a virtual machine on Microsoft Azure). The customer uses Always Encrypted and stores Always Encrypted keys in a trusted key store hosted on-premises, to ensure [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cloud administrators have no access to sensitive data.  
+ A customer has an on-premises client application at their business location. The application operates on sensitive data stored in a database hosted in Azure ( [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] running in a virtual machine on Microsoft Azure). The customer uses Always Encrypted and stores Always Encrypted keys in a trusted key store hosted on-premises, to ensure [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cloud administrators have no access to sensitive data.  
   
 ### Client and Data in Azure  
  A customer has a client application, hosted in Microsoft Azure (for example, in a worker role or a web role), which operates on sensitive data stored in a database hosted in Azure (SQL Database or SQL Server running in a virtual machine on Microsoft Azure). Although Always Encrypted does not provide complete isolation of data from cloud administrators, as both the data and keys are exposed to cloud administrators of the platform hosting the client tier, the customer still benefits from reducing the security attack surface area (the data is always encrypted in the database).  
@@ -66,7 +66,7 @@ Here's an example of an update that attempts to move data from an encrypted colu
 update dbo.Patients set testssn = SSN
 ```
 
-If SSN is a column encrypted using Always Encryption, the above update statement will fail with an error similar to:
+If SSN is a column encrypted using Always Encrypted, the above update statement will fail with an error similar to:
 
 ```
 Msg 206, Level 16, State 2, Line 89
@@ -118,7 +118,7 @@ Use the [Always Encrypted Wizard](../../../relational-databases/security/encrypt
 >  For a video that includes using the wizard, see [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
 1.	Connect to an existing database that contains tables with columns you wish to encrypt using the **Object Explorer** of Management Studio, or create a new database, create one or more tables with columns to encrypt, and connect to it.
-2.	Right-click your database, point to **Tasks**, and then click** Encrypt Columns** to open the **Always Encrypted Wizard**.
+2.	Right-click your database, point to **Tasks**, and then click **Encrypt Columns** to open the **Always Encrypted Wizard**.
 3.	Review the **Introduction** page, and then click **Next**.
 4.	On the **Column Selection** page, expand the tables, and select the columns that you want to encrypt.
 5.	For each column selected for encryption, set the **Encryption Type** to either *Deterministic* or *Randomized*.
@@ -181,7 +181,7 @@ Tool Requirements
 
 - SQL Server Management Studio can decrypt the results retrieved from encrypted columns if you connect with the *column encryption setting=enabled* in the **Additional Properties** tab of the **Connect to Server** dialog. Requires at least SQL Server Management Studio version 17 to insert, update, or filter encrypted columns.
 
-- Encrypted connections from `sqlcmd` require at least version 13.1, which is available from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643).
+- Encrypted connections from `sqlcmd` require at least version 13.1, which is available from the [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## Database Permissions  

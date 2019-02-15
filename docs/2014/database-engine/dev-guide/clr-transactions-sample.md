@@ -19,9 +19,9 @@ manager: craigg
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 or later or Microsoft Visual Studio 2005 or later. You can obtain .NET Framework SDK free of charge.  
   
@@ -78,7 +78,7 @@ manager: craigg
   
 8.  Install the audit database by executing  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i installDB.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i installDB.sql`  
   
      with appropriate values of the instance and server.  
   
@@ -92,7 +92,7 @@ manager: craigg
   
 12. Execute the script with the following command  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i cleanup.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i cleanup.sql`  
   
          with appropriate values of the instance and server.  
   

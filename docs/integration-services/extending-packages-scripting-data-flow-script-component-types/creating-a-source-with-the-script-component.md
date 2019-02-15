@@ -66,7 +66,7 @@ manager: craigg
 ### Adding Variables  
  If there are any existing variables whose values you want to use in your script, you can add them in the **ReadOnlyVariables** and **ReadWriteVariables** property fields on the **Script** page of the **Script Transformation Editor**.  
   
- When you enter multiple variables in the property fields, separate the variable names by commas. You can also enter multiple variables by clicking the ellipsis (**…**) button next to the **ReadOnlyVariables** and **ReadWriteVariables** property fields and selecting variables in the **Select variables** dialog box.  
+ When you enter multiple variables in the property fields, separate the variable names by commas. You can also enter multiple variables by clicking the ellipsis (**...**) button next to the **ReadOnlyVariables** and **ReadWriteVariables** property fields and selecting variables in the **Select variables** dialog box.  
   
  For general information about how to use variables with the Script component, see [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   

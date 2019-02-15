@@ -24,7 +24,7 @@ manager: craigg
  > [!NOTE]
 > If you can't see the toolbox, go to VIEW -> Other Windows -> SSIS Toolbox.
  
-Get more information about a component in the toolbox by clicking the component to view its description at the bottom of the toolbox. For some components you can also access samples that demonstrate how to configure and use the components. The samples are available on [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189). To access the samples from the **SSIS Toolbox**, click the **Find Samples** link that appears below the description.  
+Get more information about a component in the toolbox by clicking the component to view its description at the bottom of the toolbox. For some components you can also access samples that demonstrate how to configure and use the components. The samples are available on [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189). To access the samples from the **SSIS Toolbox**, click the **Find Samples** link that appears below the description.  
   
 > [!NOTE]
 > You can't *remove* installed components from the toolbox.  

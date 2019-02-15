@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, view facet properties"
@@ -45,7 +45,7 @@ manager: craigg
   
 4.  Click the plus sign to expand the **Facets** folder.  
   
-5.  Right-click the facet whose properties you want to view and select **Properties**. For more information on the available options in the **Facet Properties –***facet_name* dialog box, see [Facet Properties Dialog Box, General Page](../../integration-services/general-page-of-integration-services-designers-options.md), [Facet Properties Dialog Box, Dependent Policies Page](facet-properties-dialog-box-dependent-policies-page.md), and [Facet Properties Dialog Box, Dependent Conditions Page](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Right-click the facet whose properties you want to view and select **Properties**. For more information on the available options in the **Facet Properties -**_facet_name_ dialog box, see [Facet Properties Dialog Box, General Page](../../integration-services/general-page-of-integration-services-designers-options.md), [Facet Properties Dialog Box, Dependent Policies Page](facet-properties-dialog-box-dependent-policies-page.md), and [Facet Properties Dialog Box, Dependent Conditions Page](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  When finished, click **Close**.  
   

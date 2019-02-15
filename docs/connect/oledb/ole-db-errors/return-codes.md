@@ -31,7 +31,7 @@ manager: craigg
 
   At the most basic level, a member function either succeeds or fails. At a somewhat more precise level, a function can succeed, but its success may not be what the application developer intended.  
   
- For more information about OLE DB return codes, see [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
+ For more information about OLE DB return codes, see [Return Codes (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
  When an OLE DB Driver for SQL Server member function returns S_OK, the function succeeded.  
   

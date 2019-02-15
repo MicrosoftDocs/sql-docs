@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Comparing Predictions for Forecasting Models (Intermediate Data Mining Tutorial)
   In the previous steps of this tutorial, you created multiple time series models:  
@@ -30,7 +29,7 @@ manager: craigg
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
 ##  <a name="bkmk_EXTEND"></a> Comparing the Original Results with Results after Adding Data  
- Let’s look at the data for just the M200 product line in the Pacific region, to see how updating the model with new data affects the results. Remember that the original data series ended in June 2004, and we obtained new data for July, August, and September.  
+ Let's look at the data for just the M200 product line in the Pacific region, to see how updating the model with new data affects the results. Remember that the original data series ended in June 2004, and we obtained new data for July, August, and September.  
   
 -   The first column shows the new data that was added.  
   
@@ -52,7 +51,7 @@ manager: craigg
  In general, the algorithm weights the changes in the new data more strongly than data from the beginning of the model data. However, in this case, the new sales figures represent an increase of only 20-30 percent over the previous period, so there only was a slight uptick in projected sales, after which the sales projections drop again, more in line with the trend in the months before the new data.  
   
 ##  <a name="bkmk_REPLACE"></a> Comparing the Original and Cross-Prediction Results  
- Remember that the original mining model revealed big differences between regions and between product lines. For example, sales for the M200 model were very strong, while sales for the T1000 model were fairly low across all regions. Moreover, some series didn’t have much data. Series were ragged, meaning they didn’t have the same starting point.  
+ Remember that the original mining model revealed big differences between regions and between product lines. For example, sales for the M200 model were very strong, while sales for the T1000 model were fairly low across all regions. Moreover, some series didn't have much data. Series were ragged, meaning they didn't have the same starting point.  
   
  ![Series predicting M200 and T1000 quantity](../../2014/tutorials/media/6series-defaultforecasting.gif "Series predicting M200 and T1000 quantity")  
   

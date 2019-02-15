@@ -30,7 +30,7 @@ manager: craigg
 |**Last Schema Update**|Displays the date and time the metadata for the database was last updated.|  
 |**Connection String**|Displays the connection string used to connect to the data source that provides data to the model.|  
 |**Maximum Number of Connections**|Specifies the maximum number of client connections to this database.|  
-|**Isolation**|Valid values are ReadCommitted or Snapshot. For more information, see [Isolation Element &#40;ASSL&#41;](scripting/properties/isolation-element-assl.md).|  
+|**Isolation**|Valid values are ReadCommitted or Snapshot. For more information, see [Isolation Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl).|  
 |**Query Timeout**|Specifies the time, in seconds, after which an attempt to retrieve data is timed out.|  
 |**Managed Provider**|Specifies the name of the managed provider. If the data source connection uses a native OLE DB provider, this value is empty.|  
 |**Impersonation Info**|Specifies the impersonation account used for database connections when processing or refreshing data, queries that run against a relational data store (via DirectQuery), out-of-line bindings, remote partitions, and database synchronization from target to source.<br /><br /> Valid values include the Analysis Services service account or a specific set of Windows credentials. Do not specify **Use the credentials of the current user** or **Inherit**. Those credential options are not supported for a tabular model database.|  

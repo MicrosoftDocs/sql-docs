@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, connections"
@@ -60,7 +60,7 @@ manager: craigg
   
 2.  Right-click **SQL Server Agent** and select **Properties**.  
   
-3.  In the **SQL Server Agent Properties***sever_name* dialog box, under **Select a page**, click **Connection**.  
+3.  In the **SQL Server Agent Properties** dialog box, under **Select a page**, click **Connection**.  
   
 4.  Under **SQL Server connection**, select **Use Windows Authentication** to enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to connect to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] with [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication. Connections to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later databases require Windows Authentication.  
   

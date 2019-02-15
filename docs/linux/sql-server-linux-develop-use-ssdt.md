@@ -7,7 +7,6 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: "sql-linux"
@@ -94,7 +93,7 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
 5. Check the publish status in the **Data Tools Operations** window.
 
-6. Click **View Reulst** or **View Script** to see details of the database publish result on your SQL Server on Linux.
+6. Click **View Results** or **View Script** to see details of the database publish result on your SQL Server on Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -107,7 +106,7 @@ If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements] and the 
 For more information about developing a database with SQL Data Tools, see [SSDT MSDN documents]
 
 [Download and Install Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN documents]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

@@ -16,7 +16,7 @@ manager: craigg
 ## Data Migration Settings  
 **Data Migration Settings** allows the user to write custom queries for data migration.  
   
--   This tab is available when **Extended data migration options** is set to **Show** and is hidden when the setting is set to **Hide** in Project Settings. For more information about Project Migration Settings, see [Project Settings (Migration)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
+-   This tab is available when **Extended data migration options** is set to **Show** and is hidden when the setting is set to **Hide** in Project Settings. For more information about Project Migration Settings, see [Project Settings (Migration)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
   
 -   Parsing of Custom SQL statements will be implemented in **Data migration settings** tab of Table Node.  
   
@@ -47,5 +47,5 @@ There are two buttons present viz.:
 -   **Cancel:** Click **Cancel** to restore the settings present before the changes were being made.  
   
 ## See Also  
-[Migrating DB2 Data to SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
+[Migrating DB2 Data to SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

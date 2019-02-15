@@ -16,7 +16,7 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with default settings at both the database and instance level. It also describes how to enable email notifications and how to monitor backup activity.  
   
- This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
 >  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. For more information, see [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
@@ -25,7 +25,7 @@ manager: craigg
   
 #### Create the Azure Blob Container  
   
-1.  **Sign up for Azure:** If you already have an Azure subscription, go to the next step. Otherwise, you can get started with a [free trial](http://azure.microsoft.com/pricing/free-trial/) or explore [purchase options](http://azure.microsoft.com/pricing/purchase-options/).  
+1.  **Sign up for Azure:** If you already have an Azure subscription, go to the next step. Otherwise, you can get started with a [free trial](https://azure.microsoft.com/pricing/free-trial/) or explore [purchase options](https://azure.microsoft.com/pricing/purchase-options/).  
   
 2.  **Create an Azure storage account:** If you already have a storage account, go to the next step. Otherwise, you can use the [Azure Management Portal](https://manage.windowsazure.com/) or Azure PowerShell to create the storage account. The following `New-AzureStorageAccount` command creates a storage account named `managedbackupstorage` in the East US region.  
   
@@ -33,7 +33,7 @@ manager: craigg
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     For more information about storage accounts, see [About Azure Storage Accounts](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+     For more information about storage accounts, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
 3.  **Create a blob container for the backup files:** You can create a blob container in the Azure Management Portal or with Azure PowerShell. The following `New-AzureStorageContainer` command creates a blob container named `backupcontainer` in the `managedbackupstorage` storage account.  
   
@@ -48,6 +48,14 @@ manager: craigg
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
+    For Azure, use the following command:
+       ```powershell
+    Connect-AzAccount
+    Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+   ```  
   
      The output for this command will contain both the URL to the container and the SAS token. The following is an example:  
   
@@ -62,7 +70,7 @@ manager: craigg
     |**Container URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS token:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+     Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 #### Enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   

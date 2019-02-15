@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: stored-procedures
 ms.topic: "reference"
 api_name: 
   - "srv_rpcoptions"
@@ -42,7 +40,7 @@ srvproc
   
 ## Arguments  
  *srvproc*  
- Is a pointer to the SRV_PROC structure that is the handle for a particular client connection (in this case, the handle that received the remote stored procedure). The structure contains information the the Extended Stored Procedure API library uses to manage communication and data between the application and the client.  
+ Is a pointer to the SRV_PROC structure that is the handle for a particular client connection (in this case, the handle that received the remote stored procedure). The structure contains information the Extended Stored Procedure API library uses to manage communication and data between the application and the client.  
   
 ## Returns  
  A bitmap that contains the run-time flags joined in a logical OR for the current remote stored procedure. If there is not a current remote stored procedure, 0 is returned and a message is generated.  
@@ -56,6 +54,6 @@ srvproc
 |SRV_RECOMPILE|The client has requested to recompile the remote stored procedure before executing it. This flag may not apply to an Extended Stored Procedure API application.|  
   
 > [!IMPORTANT]  
->  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

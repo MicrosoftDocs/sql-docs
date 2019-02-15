@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -177,6 +176,6 @@ select @x.query('declare namespace CustOrders="Customers";
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires the argument type of **id()** to be a subtype of xs:IDREF*.  
   
 ## See Also  
- [Functions on Sequences](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
+ [Functions on Sequences](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

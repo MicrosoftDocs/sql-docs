@@ -53,7 +53,7 @@ manager: craigg
 >  The **ReferenceType** option is ready-only and set to **External Reference** if the project that contains the package has not been converted to the project deployment model. For more information about conversion, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
  **Password**  
- If the child package is password protected, provide the password for the child package, or click the ellipsis button (…) and create a new password for the child package.  
+ If the child package is password protected, provide the password for the child package, or click the ellipsis button (...) and create a new password for the child package.  
   
  `ExecuteOutOfProcess`  
  Specify whether the child package runs in the process of the parent package or in a separate process. By default, the ExecuteOutOfProcess property of the Execute Package task is set to `False`, and the child package runs in the same process as the parent package. If you set this property to `true`, the child package runs in a separate process. This may slow down the launching of the child package. In addition, if set the property to `true`, you cannot debug the package in a tools-only install; you must install the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] product. For more information, see [Install Integration Services](install-windows/install-integration-services.md).  
@@ -88,7 +88,7 @@ manager: craigg
  **Related Topics:** [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md), [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
- Type the name of the child package, or click the ellipsis (…) and then locate the package.  
+ Type the name of the child package, or click the ellipsis (...) and then locate the package.  
   
 #### Location = File system  
  **Connection**  

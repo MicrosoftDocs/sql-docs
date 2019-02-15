@@ -5,14 +5,13 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Trustworthy Bit

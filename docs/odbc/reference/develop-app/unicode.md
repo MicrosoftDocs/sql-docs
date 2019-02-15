@@ -18,7 +18,7 @@ manager: craigg
 # Unicode
 Unicode defines encoding for characters in many languages.  
   
- For more information about the Unicode standard, see [The Unicode Consortium](http://www.unicode.org).  
+ For more information about the Unicode standard, see [The Unicode Consortium](https://www.unicode.org).  
   
  Unicode defines a universal character set. A Windows ANSI code page defines a character set, typically containing characters for one language. It may be more difficult to write an application that is required to use different code pages.  
   

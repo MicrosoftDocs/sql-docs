@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server]"
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)

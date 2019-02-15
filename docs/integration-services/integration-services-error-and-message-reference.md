@@ -224,8 +224,8 @@ manager: craigg
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|The file, "%1", could not be opened for writing. The file could be read-only, or you do not have the correct permissions.|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|No result rowset is associated with the execution of this query. The result is not correctly specified.|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|Debug dump files were not generated correctly. The hresult is 0x%1!8.8X!.|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|The URL specified is not valid. This can happen when the server or proxy URL is null, or in an incorrect format. A valid URL format is in the form of http://ServerName:Port/ResourcePath or https://ServerName:Port/ResourcePath.|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|The URL %1 is not valid. This can happen when a scheme other than http or https is specified, or the URL is in an incorrect format. A valid URL format is in the form of http://ServerName:Port/ResourcePath or https://ServerName:Port/ResourcePath.|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|The URL specified is not valid. This can happen when the server or proxy URL is null, or in an incorrect format. A valid URL format is in the form of https://ServerName:Port/ResourcePath or https://ServerName:Port/ResourcePath.|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|The URL %1 is not valid. This can happen when a scheme other than http or https is specified, or the URL is in an incorrect format. A valid URL format is in the form of https://ServerName:Port/ResourcePath or https://ServerName:Port/ResourcePath.|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|Connection to server %1 cannot be established. This error can occur when the server does not exist, or the proxy settings are incorrect.|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|The connection with the server has been reset or terminated. Try again later.|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|The login attempt failed for "%1". This error occurs when the login credentials provided are incorrect. Verify the login credentials.|  
@@ -2007,7 +2007,7 @@ manager: craigg
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|The XML schema data type information for "%1" on  element "%2" has changed.  Please re-initialize the metadata for this component and review column mappings.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 not used in join or copy. Please remove the unused column from the input column list.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|The sort failed due to a stack overflow while sorting an incoming buffer.  Please reduce the DefaultBufferMaxRows property on the Data Flow Task.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Consider changing the PROVIDER in the connection string to %1 or visit http://www.microsoft.com/downloads to find and install support for %2.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Consider changing the PROVIDER in the connection string to %1 or visit https://www.microsoft.com/downloads to find and install support for %2.|  
 |||DTS_E_INITTASKOBJECTFAILED|Failed to initialize the task object for task "%1!s!", type "%2!s!" due to error 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Failed to create COM Component Categories Manager due to error 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Component %1!s! failed to initialize due to error 0x%2!8.8X! "%3!s!".|  

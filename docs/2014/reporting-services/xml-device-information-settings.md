@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # XML Device Information Settings
   The following table lists the device information settings for rendering in XML format.  
@@ -24,7 +24,7 @@ manager: craigg
 |**MIMEType**|The Multipurpose Internet Mail Extensions (MIME) type of the XML file.|  
 |**UseFormattedValues**|Indicates whether to render the formatted value of a text box when generating the XML data. A value of false indicates that the underlying value of the text box is used.|  
 |**Indented**|Indicates whether to generate indented XML. The default value of `false` generates non-indented, compressed XML.|  
-|`OmitNamespace`|Indicates whether to omit the default namespace from the XML.<br /><br /> If true, the XML does not specify a default namespace.<br /><br /> If false, the XML specifies a default namespace with the value of the report’s DataSchema property. The DataSchema property defaults to the report name.<br /><br /> The default value is `false`.|  
+|`OmitNamespace`|Indicates whether to omit the default namespace from the XML.<br /><br /> If true, the XML does not specify a default namespace.<br /><br /> If false, the XML specifies a default namespace with the value of the report's DataSchema property. The DataSchema property defaults to the report name.<br /><br /> The default value is `false`.|  
 |`OmitSchema`|Indicates whether to omit the schema location from the XML. The location is the SchemaLocation attribute. The default value of OmitSchema depends on the value of OmitNamespace:<br /><br /> If OmitNamespace = False, then OmitSchema = `False` by default. The user can override the default by setting OmitSchema = True.<br /><br /> If OmitNamespace = True, then OmitSchema will function as `True` regardless of the value explicitly configured for OmitShema.|  
 |**Encoding**|The Internet Assigned Numbers Authority (IANA) name of a character encoding that is supported by the .NET Framework. The default value is `UTF-8`. Examples of other values include ASCII, UTF-7, and UTF-16.|  
 |**FileExtension**|The file extension to use for the generated file.|  

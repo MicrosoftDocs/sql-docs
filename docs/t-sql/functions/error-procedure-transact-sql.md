@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-This function returns the name of the stored procedure or trigger where an error occurs, if that error caused the CATCH block of a TRY…CATCH construct to execute.  
+This function returns the name of the stored procedure or trigger where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +52,8 @@ When called in a stored procedure CATCH block where an error occurs, `ERROR_PROC
 ## Remarks  
 `ERROR_PROCEDURE` supports calls anywhere within the scope of a CATCH block.  
   
-`ERROR_PROCEDURE` returns the name of the stored procedure or trigger where an error occurs, regardless of how many times it runs or where it runs within the scope of the `CATCH` block. This contrasts with a function like @@ERROR, which only returns an error number in the statement immediately following the one that causes an error.  
-  
-In a nested `CATCH` block, `ERROR_PROCEDURE` returns the error number specific to the scope of the `CATCH` block that referenced that `CATCH` block. For example, the `CATCH` block of an outer TRY...CATCH construct could have an inner `TRY...CATCH` construct. Inside that inner `CATCH` block, `ERROR_PROCEDURE` returns the number of the error that invoked the inner `CATCH` block. If `ERROR_PROCEDURE` runs in the outer `CATCH` block, it returns the number of the error that invoked that outer `CATCH` block.  
-  
+`ERROR_PROCEDURE` returns the name of the stored procedure or trigger where an error occurs, regardless of how many times it runs, or where it runs, within the scope of the `CATCH` block. This contrasts with a function like @@ERROR, which only returns an error number in the statement immediately following the one that causes an error.  
+   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### A. Using ERROR_PROCEDURE in a CATCH block  

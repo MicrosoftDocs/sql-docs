@@ -32,7 +32,7 @@ manager: craigg
   
  [SqlLocalDB Utility](../tools/sqllocaldb-utility.md)  
   
- [More…](../tools/command-prompt-utility-reference-database-engine.md)  
+ [More...](../tools/command-prompt-utility-reference-database-engine.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Database Engine PowerShell Cmdlets**  
  [Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  

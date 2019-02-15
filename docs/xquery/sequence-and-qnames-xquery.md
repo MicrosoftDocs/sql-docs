@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -111,7 +110,7 @@ SELECT @x.query('/Root/a');
   
 ```  
 SELECT Instructions.query('  
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in /AWMI:root/AWMI:Location[1]/AWMI:step  
       return  
            string($Step)   
@@ -135,9 +134,9 @@ WHERE ProductModelID=7;
 |xdt|http://www.w3.org/2004/07/xpath-datatypes|  
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(no prefix)|`urn:schemas-microsoft-com:xml-sql`|  
-|sqltypes|http://schemas.microsoft.com/sqlserver/2004/sqltypes|  
+|sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
 |xml|`http://www.w3.org/XML/1998/namespace`|  
-|(no prefix)|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
+|(no prefix)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  Every database you create has the **sys** XML schema collection. It reserves these schemas so they can be accessed from any user-created XML schema collection.  
   

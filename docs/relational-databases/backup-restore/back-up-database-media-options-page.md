@@ -93,7 +93,7 @@ manager: craigg
  **Back up the tail of the log, and leave the database in the restoring state**  
  Back up the tail of the log and leave the database in a restoring state. This option creates a *tail-log backup*, which backs up logs that have not yet been backed up (the active log), typically, in preparation for restoring a database. The database will be unavailable to users until it is completely restored.  
   
- Selecting this option is equivalent to specifying WITH NO_TRUNCATE, NORECOVERY in a [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]). For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+ Selecting this option is equivalent to specifying WITH NO_TRUNCATE, NORECOVERY in a [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement ( [!INCLUDE[tsql](../../includes/tsql-md.md)]). For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 ### Tape drive  
  The options of the **Tape drive** panel control tape management during the backup operation. These options are activated only if **Tape** has been selected in the **Destination** panel on the [General](../../relational-databases/backup-restore/back-up-database-general-page.md) page of the **Back Up Database** dialog box.  

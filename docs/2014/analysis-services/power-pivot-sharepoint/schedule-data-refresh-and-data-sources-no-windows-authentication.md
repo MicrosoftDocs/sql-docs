@@ -27,7 +27,7 @@ manager: craigg
   
 -   **(2) OracleAuthentication:** A Secure Store Target Application ID that is set with Oracle credentials.  
   
--   **(3)** The PowerPivot Service application is configure to use the target application “PowerPivotDataRefresh” for the **Unattended Data Refresh Account**.  
+-   **(3)** The PowerPivot Service application is configure to use the target application "PowerPivotDataRefresh" for the **Unattended Data Refresh Account**.  
   
 -   **(4)** PowerePivot Workbook uses Oracle data. The workbook refresh settings specify the data source connection to use the target application **(2)** for credentials.  
   
@@ -109,13 +109,13 @@ manager: craigg
   
 11. Type the Oracle User ID and Oracle Password and then click **OK**.  
   
- For more information, see section “To Create a target application for SQL Server Authentication” in [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ For more information, see section "To Create a target application for SQL Server Authentication" in [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
   
 ## To Configure the PowerPivot Service Application  
   
 1.  In SharePoint central administration, click Manage Service Applications.  
   
-2.  Click the name of your PowerPivot Service Application, for example “Default PowerPivot Service Application”.  
+2.  Click the name of your PowerPivot Service Application, for example "Default PowerPivot Service Application".  
   
 3.  Click **Configure service application settings** in the Actions section.  
   
@@ -160,8 +160,8 @@ manager: craigg
   
 ## More Information  
   
--   [Configure the Secure Store Service in SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
+-   [Configure the Secure Store Service in SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
--   See the "Scheduled Data Refresh” section of [PowerPivot Data Refresh with SharePoint 2013 and SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   See the "Scheduled Data Refresh" section of [PowerPivot Data Refresh with SharePoint 2013 and SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

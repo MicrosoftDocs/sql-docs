@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 dev_langs: 
@@ -29,14 +29,14 @@ manager: craigg
   
  You can either copy and paste constant definitions from these files into your ASP pages, or, if you are doing server-side scripting, copy Adojavas.inc file to a folder on your Web site and references it from your ASP page like this:  
   
-```  
+```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
 ## Creating ADO Objects in JScript  
  You must instead use the **CreateObject** function call:  
   
-```  
+```javascript
 var Rs1;  
 Rs1 = Server.CreateObject("ADODB.Recordset");  
 ```  
@@ -44,7 +44,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ## JScript Example  
  The following code is a generic example of JScript server-side programming in an Active Server Page (ASP) file that opens a **Recordset** object:  
   
-```  
+```javascript
 <%  @LANGUAGE="JScript" %>  
 <!--#include File="adojavas.inc"-->  
 <HTML>  
@@ -52,7 +52,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 <%  
 var Source = "SELECT * FROM Authors";  
 var Connect =  "Provider=sqloledb;Data Source=srv;" +  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
 var Rs1 = Server.CreateObject( "ADODB.Recordset.2.5" );  
 Rs1.Open(Source,Connect,adOpenForwardOnly);  
 Response.Write("Success!");  

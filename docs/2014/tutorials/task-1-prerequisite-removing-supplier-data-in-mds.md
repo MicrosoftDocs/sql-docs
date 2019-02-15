@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 1 (Prerequisite): Removing Supplier Data in MDS
@@ -33,11 +30,11 @@ manager: craigg
   
 8.  Repeat the previous step to delete **State** entity.  
   
-9. Don’t close **Master Data Manager**.  
+9. Don't close **Master Data Manager**.  
   
 10. Switch to the Excel window that has **Cleansed and Matched Suppliers.xls** file open. Switch to the **Sheet1** tab at the bottom.  
   
-11. Select only the **first row with headers**. Don’t select any other row. You want to create the entities based on the Excel columns but don’t want to upload any data. Therefore you select only the first row with the headers.  
+11. Select only the **first row with headers**. Don't select any other row. You want to create the entities based on the Excel columns but don't want to upload any data. Therefore you select only the first row with the headers.  
   
 12. Click **Master Data** on the menu bar.  
   

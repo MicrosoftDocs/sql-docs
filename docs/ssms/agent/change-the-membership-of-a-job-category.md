@@ -57,13 +57,13 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 3.  Right-click the **Jobs** folder and select **Manage Job Categories**.  
   
-4.  In the **Manage Job Categories***server_name* dialog box, select the job category that you want to edit, and then click **View Jobs**.  
+4.  In the **Manage Job Categories**_server_name_ dialog box, select the job category that you want to edit, and then click **View Jobs**.  
   
 5.  Select the **Show all jobs** check box.  
   
 6.  To add a job to the category, in the main grid, select the check box in the **Select** column corresponding to the job. To remove a job from the category, clear the box. When finished, click **OK**.  
   
-7.  Close the **Manage Job Categories***server_name* dialog box.  
+7.  Close the **Manage Job Categories**_server_name_ dialog box.  
   
 ## <a name="TSQL"></a>Using Transact-SQL  
   
@@ -85,7 +85,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623).  
+For more information, see [sp_update_job (Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To change the membership of a job category**  

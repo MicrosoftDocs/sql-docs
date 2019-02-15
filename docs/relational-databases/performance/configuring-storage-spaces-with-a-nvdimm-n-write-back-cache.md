@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Configuring Storage Spaces with a NVDIMM-N write-back cache
@@ -47,7 +47,7 @@ $pd | Select FriendlyName, MediaType, BusType
  Using the $pd variable containing the PhysicalDisks, it is easy to build the storage pool using the New-StoragePool PowerShell cmdlet.  
   
 ```  
-New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –FriendlyName NVDIMM_Pool –PhysicalDisks $pd  
+New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
@@ -56,7 +56,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
  Now that a pool has been created, the next step is to carve out a virtual disk and format it. In this case only 1 virtual disk will be created and the New-Volume PowerShell cmdlet can be used to streamline this process:  
   
 ```  
-New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –FriendlyName Log_Space –Size 300GB –FileSystem NTFS –AccessPath S: -ResiliencySettingName Mirror  
+New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
  ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
@@ -70,8 +70,8 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
  ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## See Also  
- [Windows Storage Spaces in Windows 10](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
- [Windows Storage Spaces in Windows 2012 R2](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
+ [Windows Storage Spaces in Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
+ [Windows Storage Spaces in Windows 2012 R2](https://technet.microsoft.com/library/hh831739.aspx)   
  [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [View or Change the Default Locations for Data and Log Files &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   

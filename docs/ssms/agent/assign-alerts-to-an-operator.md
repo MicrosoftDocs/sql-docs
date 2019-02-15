@@ -99,5 +99,5 @@ Only members of the **sysadmin** fixed server role can assign alerts to operator
     GO  
     ```  
   
-For more information, see [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
+For more information, see [sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
   

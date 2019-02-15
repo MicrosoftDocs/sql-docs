@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logging"
   - "log files"
   - "dqs log files"
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Manage DQS Log Files

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "partitioned indexes [SQL Server], about partitioned indexes"
   - "index partitions"
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -87,7 +87,7 @@ Creating and rebuilding non-aligned indexes on a table with more than 1,000 part
   
 Creating and rebuilding aligned indexes could take longer to execute as the number of partitions increases. We recommend that you do not run multiple create and rebuild index commands at the same time as you may run into performance and memory issues.  
   
- When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs sorting to build partitioned indexes, it first builds one sort table for each partition. It then builds the sort tables either in the respective filegroup of each partition or in **tempdb**, if the SORT_IN_TEMPDB index option is specified. Each sort table requires a minimum amount of memory to build. When you are building a partitioned index that is aligned with its base table, sort tables are built one at a time, using less memory. However, when you are building a nonaligned partitioned index, the sort tables are built at the same time. As a result, there must be sufficient memory to handle these concurrent sorts. The larger the number of partitions, the more memory required. The minimum size for each sort table, for each partition, is 40 pages, with 8 kilobytes per page. For example, a nonaligned partitioned index with 100 partitions requires sufficient memory to serially sort 4,000 (40 * 100) pages at the same time. If this memory is available, the build operation will succeed, but performance may suffer. If this memory is not available, the build operation will fail. Alternatively, an aligned partitioned index with 100 partitions requires only sufficient memory to sort 40 pages, because the sorts are not performed at the same time.  
+ When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs sorting to build partitioned indexes, it first builds one sort table for each partition. It then builds the sort tables either in the respective filegroup of each partition or in **tempdb** if the SORT_IN_TEMPDB index option is specified. Each sort table requires a minimum amount of memory to build. When you are building a partitioned index that is aligned with its base table, sort tables are built one at a time, using less memory. However, when you are building a nonaligned partitioned index, the sort tables are built at the same time. As a result, there must be sufficient memory to handle these concurrent sorts. The larger the number of partitions, the more memory required. The minimum size for each sort table, for each partition, is 40 pages, with 8 kilobytes per page. For example, a nonaligned partitioned index with 100 partitions requires sufficient memory to serially sort 4,000 (40 * 100) pages at the same time. If this memory is available, the build operation will succeed, but performance may suffer. If this memory is not available, the build operation will fail. Alternatively, an aligned partitioned index with 100 partitions requires only sufficient memory to sort 40 pages, because the sorts are not performed at the same time.  
   
  For both aligned and non-aligned indexes, the memory requirement can be greater if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is applying degrees of parallelism to the build operation on a multiprocessor computer. This is because the greater the degrees of parallelism, the greater the memory requirement. For example, if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sets degrees of parallelism to 4, a nonaligned partitioned index with 100 partitions requires sufficient memory for four processors to sort 4,000 pages at the same time, or 16,000 pages. If the partitioned index is aligned, the memory requirement is reduced to four processors sorting 40 pages, or 160 (4 * 40) pages. You can use the MAXDOP index option to manually reduce the degrees of parallelism.  
 
@@ -123,11 +123,11 @@ In this way, the query optimizer can process the join faster, because the partit
   
 ## Related Content  
  You may find the following white papers on partitioned table and index strategies and implementations useful.  
--   [Partitioned Table and Index Strategies Using SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
--   [How to Implement an Automatic Sliding Window](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [Bulk Loading into a Partitioned Table](http://msdn.microsoft.com/library/cc966380.aspx)    
+-   [Partitioned Table and Index Strategies Using SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+-   [How to Implement an Automatic Sliding Window](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
+-   [Bulk Loading into a Partitioned Table](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Project REAL: Data Lifecycle -- Partitioning](https://technet.microsoft.com/library/cc966424.aspx)    
--   [Query Processing Enhancements on Partitioned Tables and Indexes](http://msdn.microsoft.com/library/ms345599.aspx)    
--   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [Query Processing Enhancements on Partitioned Tables and Indexes](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   
   

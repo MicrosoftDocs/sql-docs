@@ -1,11 +1,12 @@
 ---
-title: Extensibility APIs for Azure Data Studio | Microsoft Docs
-description: Extensibility APIs for Azure Data Studio
-ms.custom: "tools|sos"
+title: Extensibility APIs
+titleSuffix: Azure Data Studio
+description: Learn about the extensibility APIs for Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
@@ -38,19 +39,19 @@ Gets a dictionary containing the credentials associated with a connection. These
 ```
 > let connection = sqlops.connection.getCurrentConnection();
 connection: {
-	providerName: ‘MSSQL’,
-	connectionId: ‘d97bb63a-466e-4ef0-ab6f-00cd44721dcc’,
+	providerName: 'MSSQL',
+	connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
 	options: {
-		server: ‘mairvine-sql-server’,
-		user: ‘sa’,
-		authenticationType: ‘sqlLogin’,
-		…
+		server: 'mairvine-sql-server',
+		user: 'sa',
+		authenticationType: 'sqlLogin',
+		...
 	},
-	…
+	...
 }
 > let credentials = sqlops.connection.getCredentials(connection.connectionId);
 credentials: {
-	password: ‘abc123’
+	password: 'abc123'
 }
 
 ```

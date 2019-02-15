@@ -2,8 +2,7 @@
 title: "RENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/21/2018"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: sql-data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878

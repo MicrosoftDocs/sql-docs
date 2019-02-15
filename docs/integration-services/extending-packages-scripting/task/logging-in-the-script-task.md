@@ -89,7 +89,7 @@ public class ScriptMain
   
 ## External Resources  
   
--   Blog entry, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644), on dougbert.com  
+-   Blog entry, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644), on dougbert.com  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Logging](../../../integration-services/performance/integration-services-ssis-logging.md)  

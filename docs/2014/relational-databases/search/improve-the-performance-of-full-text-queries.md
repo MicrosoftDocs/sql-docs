@@ -42,7 +42,7 @@ manager: craigg
 -   For applications that contain selective-relation predications, queries that use selective relational predicates and unselective full-text predicates might perform best when they are written to use the query optimizer. This allows the query optimizer to decide whether it can exploit predicate or range pushdown to produce an effective query plan. This approach is simpler and often more efficient than indexing relational data as full-text data.  
   
 ## Related Resources  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search: Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## See Also  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: leolimsft

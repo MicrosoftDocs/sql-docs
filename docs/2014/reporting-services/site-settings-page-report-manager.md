@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Site Settings Page (Report Manager)
   Use the Site Settings page to change the application title, set server-wide defaults for report history limits and report processing timeout values, manage system-level role assignments, and manage shared schedules. You must have Content Manager and System Administrator permissions to view this page.  
@@ -27,7 +27,7 @@ manager: craigg
   
 2.  At the top of the page, click **Site Settings**. This opens the General Properties page of the site.  
   
-     **Note:** If you do not see the **Site Settings** option in the menu, you do not have the required permissions, For more information see the “site settings” section of [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Note:** If you do not see the **Site Settings** option in the menu, you do not have the required permissions, For more information see the "site settings" section of [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## Options  
  **Name**  
@@ -50,7 +50,7 @@ manager: craigg
   
  **Native mode report server:** In a native mode installation, the default URL will take the form of http://\<*computername*>/reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
- SharePoint integrated mode: The default URL will take the form of http://\<*SharePoint_site*>/_vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application.”  
+ SharePoint integrated mode: The default URL will take the form of http://\<*SharePoint_site*>/_vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application."  
   
  **Apply**  
  Click to save your changes to the report server.  

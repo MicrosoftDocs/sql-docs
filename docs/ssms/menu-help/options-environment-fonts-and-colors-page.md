@@ -7,9 +7,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Environment.Fonts_And_Colors"
-  - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.FONTS_AND_COLORS"
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: "stevestein"
 ms.author: "sstein"
@@ -41,7 +38,7 @@ Lists all the user interface elements for which you can change font and color sc
 The **Use Defaults** button resets the value for the default font and color values of the list item that you selected from the **Show settings for** list.  
   
 **Font (bold type indicates fixed-width fonts)**  
-Lists all the fonts installed on your system. When this drop-down list is first opened, the current font for the element you chose from the **Show settings for** list is selected. Fixed fonts — which are easier to align in an editor — appear in bold.  
+Lists all the fonts installed on your system. When this drop-down list is first opened, the current font for the element you chose from the **Show settings for** list is selected. Fixed fonts - which are easier to align in an editor - appear in bold.  
   
 **Size**  
 Lists available point sizes for the selected font. Changing the size of the font affects all **Display items** entries for a **Show settings for** selection.  
@@ -81,5 +78,5 @@ Displays a sample of the font style, size, and color scheme for the selected val
   
 ## See Also  
 [Color Coding in Code Editors](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[Options (Text Editor/Editor Tab and Status Bar Page)](http://msdn.microsoft.com/en-us/e4815678-7885-4631-878f-c6a2b857ee05)  
+[Options (Text Editor/Editor Tab and Status Bar Page)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "error numbers [Integration Services]"
@@ -2007,7 +2006,7 @@ manager: craigg
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|The XML schema data type information for "%1" on  element "%2" has changed.  Please re-initialize the metadata for this component and review column mappings.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 not used in join or copy. Please remove the unused column from the input column list.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|The sort failed due to a stack overflow while sorting an incoming buffer.  Please reduce the DefaultBufferMaxRows property on the Data Flow Task.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Consider changing the PROVIDER in the connection string to %1 or visit http://www.microsoft.com/downloads to find and install support for %2.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Consider changing the PROVIDER in the connection string to %1 or visit https://www.microsoft.com/downloads to find and install support for %2.|  
 |||DTS_E_INITTASKOBJECTFAILED|Failed to initialize the task object for task "%1!s!", type "%2!s!" due to error 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Failed to create COM Component Categories Manager due to error 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Component %1!s! failed to initialize due to error 0x%2!8.8X! "%3!s!".|  

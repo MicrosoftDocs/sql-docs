@@ -32,7 +32,7 @@ manager: craigg
 |database_specification_id|**int**|ID of the database specification.|  
 |create_date|**datetime**|Date the audit specification was created.|  
 |modified_date|**datetime**|Date the audit specification was last modified.|  
-|is_state_enabled|**bit**|Audit specification state:<br /><br /> 0 – DISABLED<br /><br /> 1 –ENABLED|  
+|is_state_enabled|**bit**|Audit specification state:<br /><br /> 0 - DISABLED<br /><br /> 1 -ENABLED|  
 |audit_GUID|**uniqueidentifer**|GUID for the audit that contains this specification. Used during enumeration of member database audit specifications during database attach/startup.|  
   
 ## Remarks  

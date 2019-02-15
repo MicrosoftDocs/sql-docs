@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, export policy"
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Export a Policy-Based Management Policy

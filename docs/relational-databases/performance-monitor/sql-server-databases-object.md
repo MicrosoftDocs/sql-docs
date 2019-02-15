@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "SQLServer:Databases"
   - "Availability Groups [SQL Server], performance counters"
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Databases Object
@@ -33,7 +32,7 @@ manager: craigg
 |**Backup/Restore Throughput/sec**|Read/write throughput for backup and restore operations of a database per second. For example, you can measure how the performance of the database backup operation changes when more backup devices are used in parallel or when faster devices are used. Throughput of a database backup or restore operation allows you to determine the progress and performance of your backup and restore operations.|  
 |**Bulk Copy Rows/sec**|Number of rows bulk copied per second.|  
 |**Bulk Copy Throughput/sec**|Amount of data bulk copied (in kilobytes) per second.|  
-|**Commit table entries**|The size of the in-memory portion of the commit table for the database. For more information, see [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
+|**Commit table entries**|The size (row count) of the in-memory portion of the commit table for the database. For more information, see [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Data File(s) Size (KB)**|Cumulative size (in kilobytes) of all the data files in the database including any automatic growth. Monitoring this counter is useful, for example, for determining the correct size of **tempdb**.|  
 |**DBCC Logical Scan Bytes/sec**|Number of logical read scan bytes per second for database console commands (DBCC).|  
 |**Group Commit Time/sec**|Group stall time (microseconds) per second.|

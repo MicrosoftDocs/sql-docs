@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "copying tables"
@@ -58,7 +57,7 @@ manager: craigg
   
 6.  From the **Edit** menu, click **Paste**.  
   
-7.  From the **File** menu, click **Save***table name*.  
+7.  From the **File** menu, click **Save**_table name_.  
   
 8.  In the **Choose Name** dialog box, type a name for the new table and click **OK**.  
   

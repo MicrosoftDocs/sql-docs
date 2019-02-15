@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "transformations [Integration Services], components"
@@ -33,7 +31,7 @@ manager: craigg
   
 #### To configure this Script Component example  
   
-1.  Before creating the new Script component, configure an upstream component in the data flow to redirect rows to its error output when an error or truncation occurs. For testing purposes, you may want to configure a component in a manner that ensures that errors will occur—for example, by configuring a Lookup transformation between two tables where the lookup will fail.  
+1.  Before creating the new Script component, configure an upstream component in the data flow to redirect rows to its error output when an error or truncation occurs. For testing purposes, you may want to configure a component in a manner that ensures that errors will occur-for example, by configuring a Lookup transformation between two tables where the lookup will fail.  
   
 2.  Add a new Script component to the Data Flow designer surface and configure it as a transformation.  
   
@@ -81,7 +79,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
+![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
   
 ## See Also  
  [Error Handling in Data](../data-flow/error-handling-in-data.md)   

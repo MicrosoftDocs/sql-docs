@@ -45,26 +45,26 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
 ```  
   
 ## Arguments  
- **N'** *plan_guide_name* **'**  
+ **N'** _plan_guide_name_ **'**  
  Specifies the plan guide that is being dropped, enabled, or disabled. *plan_guide_name* is resolved to the current database. If not specified, *plan_guide_name* defaults to NULL.  
   
  DROP  
  Drops the plan guide specified by *plan_guide_name*. After a plan guide is dropped, future executions of a query formerly matched by the plan guide are not influenced by the plan guide.  
   
  DROP ALL  
- Drops all plan guides in the current database. **N'***plan_guide_name* cannot be specified when DROP ALL is specified.  
+ Drops all plan guides in the current database. **N'**_plan_guide_name_ cannot be specified when DROP ALL is specified.  
   
  DISABLE  
  Disables the plan guide specified by *plan_guide_name*. After a plan guide is disabled, future executions of a query formerly matched by the plan guide are not influenced by the plan guide.  
   
  DISABLE ALL  
- Disables all plan guides in the current database. **N'***plan_guide_name* cannot be specified when DISABLE ALL is specified.  
+ Disables all plan guides in the current database. **N'**_plan_guide_name_ cannot be specified when DISABLE ALL is specified.  
   
  ENABLE  
  Enables the plan guide specified by *plan_guide_name*. A plan guide can be matched with an eligible query after it is enabled. By default, plan guides are enabled at the time they are created.  
   
  ENABLE ALL  
- Enables all plan guides in the current database. **N'***plan_guide_name***'**cannot be specified when ENABLE ALL is specified.  
+ Enables all plan guides in the current database. **N'**_plan_guide_name_**'**cannot be specified when ENABLE ALL is specified.  
   
 ## Remarks  
  Trying to drop or modify a function, stored procedure, or DML trigger that is referenced by a plan guide, either enabled or disabled, causes an error.  

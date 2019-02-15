@@ -5,8 +5,7 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -54,7 +53,7 @@ select @x.query('/ROOT[number()=111]')
   
 ```  
 SELECT ProductModelID, Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      for $i in (//AWMI:root//AWMI:Location)[1]  
      return   
        <Location LocationID="{ ($i/@LocationID) }"   

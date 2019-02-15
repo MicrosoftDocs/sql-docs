@@ -6,14 +6,13 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "SQL graph"
   - "SQL graph, architecture"
 ms.assetid: 
-author: "shkale-msft"
-ms.author: "shkale"
+author: shkale-msft
+ms.author: shkale
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -92,13 +91,15 @@ The following table lists the valid values for `graph_type` column
 
 `sys.columns` also stores information about implicit columns created in node or edge tables. Following information can be retrieved from sys.columns, however, users cannot select these columns from a node or edge table. 
 
-Implicit columns in a node table  
+Implicit columns in a node table
+
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
 |graph_id_\<hex_string>	|BIGINT	|1	|internal `graph_id` column  |
 |$node_id_\<hex_string>	|NVARCHAR	|0	|External node `node_id` column  |
 
-Implicit columns in an edge table  
+Implicit columns in an edge table
+
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
 |graph_id_\<hex_string>	|BIGINT	|1	|internal `graph_id` column  |
@@ -128,6 +129,7 @@ The following built-in functions are added. These will help users extract inform
 Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced in SQL Server and Azure SQL Database, that enable creating and querying graph objects. The query language extensions help query and traverse the graph using ASCII art syntax.
  
 ### Data Definition Language (DDL) statements
+
 |Task	|Related Article  |Notes
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` is now extended to support creating a table AS NODE or AS EDGE. Note that an edge table may or may not have any user-defined attributes.  |
@@ -138,6 +140,7 @@ Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced i
 
 
 ### Data Manipulation Language (DML) statements
+
 |Task	|Related Article  |Notes
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Inserting into a node table is no different than inserting into a relational table. The values for `$node_id` column is automatically generated. Trying to insert a value in `$node_id` or `$edge_id` column will result in an error. Users must provide values for `$from_id` and `$to_id` columns while inserting into an edge table. `$from_id` and `$to_id` are the `$node_id` values of the nodes that a given edge connects.  |
@@ -147,6 +150,7 @@ Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced i
 
 
 ### Query Statements
+
 |Task	|Related Article  |Notes
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nodes and edges are stored as tables internally, hence most of the operations supported on a table in SQL Server or Azure SQL Database are supported on the node and edge tables  |

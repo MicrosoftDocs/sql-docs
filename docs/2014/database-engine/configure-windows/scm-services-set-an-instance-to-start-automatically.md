@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "01/07/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic SQL Server startup"

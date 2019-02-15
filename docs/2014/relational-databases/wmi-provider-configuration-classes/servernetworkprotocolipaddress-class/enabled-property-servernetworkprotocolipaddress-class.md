@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "Enabled Property (ServerNetworkProtocolIpAddress Class)"
@@ -40,6 +38,6 @@ object
  A Boolean value that specifies whether the IP address is enabled: `true` if the IP address is enabled, or `false` if the IP address is disabled.  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

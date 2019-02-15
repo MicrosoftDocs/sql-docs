@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL11.SSIS.AZURE.F1"

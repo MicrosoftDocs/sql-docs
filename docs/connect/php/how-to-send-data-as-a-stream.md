@@ -23,7 +23,7 @@ The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] takes advantage of
 The third example shows how to send stream data to the server using the PDO_SQLSRV driver.  
   
 ## Example: Sending Stream Data at Execution
-The following example inserts a row into the *Production.ProductReview* table of the AdventureWorks database. The customer comments (*$comments*) are opened as a stream with the PHP [fopen](http://php.net/manual/en/function.fopen.php) function and then streamed to the server upon execution of the query.  
+The following example inserts a row into the *Production.ProductReview* table of the AdventureWorks database. The customer comments (*$comments*) are opened as a stream with the PHP [fopen](https://php.net/manual/en/function.fopen.php) function and then streamed to the server upon execution of the query.  
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console.  
   

@@ -56,7 +56,7 @@ CREATE COLUMN MASTER KEY key_name
  Is the name by which the column master key will be known in the database.  
   
  *key_store_provider_name*  
- Specifies the name of a key store provider, which is a client-side software component that encapsulates a key store containing the column master key. An Always Encrypted-enabled client driver uses a key store provider name to look up a key store provider in driver’s registry of key store providers. The driver uses the provider to decrypt column encryption keys, protected by a column master key, stored in the underlying key store. A plaintext value of the column encryption key is then used to encrypt query parameters, corresponding to encrypted database columns, or to decrypt query results from encrypted columns.  
+ Specifies the name of a key store provider, which is a client-side software component that encapsulates a key store containing the column master key. An Always Encrypted-enabled client driver uses a key store provider name to look up a key store provider in driver's registry of key store providers. The driver uses the provider to decrypt column encryption keys, protected by a column master key, stored in the underlying key store. A plaintext value of the column encryption key is then used to encrypt query parameters, corresponding to encrypted database columns, or to decrypt query results from encrypted columns.  
   
  Always Encrypted-enabled client driver libraries include key store providers for popular key stores.   
   

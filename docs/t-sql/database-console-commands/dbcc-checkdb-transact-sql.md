@@ -91,11 +91,11 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  Tries to repair all reported errors. These repairs can cause some data loss.  
-    
+    
 > [!WARNING]
 > The REPAIR_ALLOW_DATA_LOSS option is a supported feature but it may not always be the best option for bringing a database to a physically consistent state. If successful, the REPAIR_ALLOW_DATA_LOSS option may result in some data loss. In fact, it may result in more data lost than if a user were to restore the database from the last known good backup. 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. The REPAIR_ALLOW_DATA_LOSS option is not an alternative for restoring from a known good backup. It is an emergency “last resort” option recommended for use only if restoring from a backup is not possible.    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. The REPAIR_ALLOW_DATA_LOSS option is not an alternative for restoring from a known good backup. It is an emergency "last resort" option recommended for use only if restoring from a backup is not possible.    
 >     
 > Certain errors, that can only be repaired using the REPAIR_ALLOW_DATA_LOSS option, may involve deallocating a row, page, or series of pages to clear the errors. Any deallocated data is no longer accessible or recoverable for the user, and the exact contents of the deallocated data cannot be determined. Therefore, referential integrity may not be accurate after any rows or pages are deallocated because foreign key constraints are not checked or maintained as part of this repair operation. The user must inspect the referential integrity of their database (using DBCC CHECKCONSTRAINTS) after using the REPAIR_ALLOW_DATA_LOSS option.    
 >     
@@ -119,7 +119,7 @@ ALL_ERRORMSGS
  Displays all reported errors per object. All error messages are displayed by default. Specifying or omitting this option has no effect. Error messages are sorted by object ID, except for those messages generated from [tempdb database](../../relational-databases/databases/tempdb-database.md).     
 
 EXTENDED_LOGICAL_CHECKS  
- If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
+ If the compatibility level is 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
  For more information, see *Performing Logical Consistency Checks on Indexes*, in the [Remarks](#remarks) section later in this topic.  
     
 NO_INFOMSGS  
@@ -127,7 +127,7 @@ NO_INFOMSGS
     
 TABLOCK  
  Causes DBCC CHECKDB to obtain locks instead of using an internal database snapshot. This includes a short-term exclusive (X) lock on the database. TABLOCK will cause DBCC CHECKDB to run faster on a database under heavy load, but decreases the concurrency available on the database while DBCC CHECKDB is running.  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK limits the checks that are performed; DBCC CHECKCATALOG is not run on the database, and [!INCLUDE[ssSB](../../includes/sssb-md.md)] data is not validated.
     
@@ -149,14 +149,14 @@ This argment always implies NO_INFOMSGS and is not allowed with any one of the r
 DATA_PURITY  
  Causes DBCC CHECKDB to check the database for column values that are not valid or out-of-range. For example, DBCC CHECKDB detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that are not valid.  
  Column-value integrity checks are enabled by default and do not require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], column-value checks are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB checks column-value integrity by default. For more information about how CHECKDB might be affected by upgrading database from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the Remarks section later in this topic.  
-    
+    
 > [!WARNING]
 > If PHYSICAL_ONLY is specified, column-integrity checks are not performed.
     
- Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](http://support.microsoft.com/kb/923247).  
+ Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
@@ -242,7 +242,7 @@ When the database is in emergency mode and DBCC CHECKDB with the REPAIR_ALLOW_DA
 > [!WARNING]
 > The REPAIR_ALLOW_DATA_LOSS option is a supported feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, it may not always be the best option for bringing a database to a physically consistent state. If successful, the REPAIR_ALLOW_DATA_LOSS option may result in some data loss. 
 > In fact, it may result in more data lost than if a user were to restore the database from the last known good backup. [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. 
-> The REPAIR_ALLOW_DATA_LOSS option is **not** an alternative for restoring from a known good backup. It is an emergency “last resort” option recommended for use only if restoring from a backup is not possible.    
+> The REPAIR_ALLOW_DATA_LOSS option is **not** an alternative for restoring from a known good backup. It is an emergency "last resort" option recommended for use only if restoring from a backup is not possible.    
 >     
 >  After rebuilding the log, there is no full ACID guarantee.    
 >     

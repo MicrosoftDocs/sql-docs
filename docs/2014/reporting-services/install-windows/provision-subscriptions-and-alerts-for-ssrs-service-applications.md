@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Provision Subscriptions and Alerts for SSRS Service Applications
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions and data alerts require SQL Server Agent and require the configuration of permissions for SQL Server Agent. If you see error messages that indicate SQL Server Agent is required and you have verified SQL Server Agent is running, then update or verify permissions. The scope of this topic is [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode and the topic describes three ways you can update the permissions of SQL Server Agent with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions. The credentials you use for the steps in this topic need to have sufficient permissions to grant execute permissions to the RSExecRole for objects in the service application, msdb, and master databases.  
@@ -76,9 +76,9 @@ manager: craigg
   
 4.  Update the following PowerShell cmdlet by replacing the name of the report server database, application pool account, and the path of the statement.  
   
-     **Syntax of cmdlet:** `Get-SPRSDatabaseRightsScript –DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Syntax of cmdlet:** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Sample cmdlet:** `Get-SPRSDatabaseRightsScript –DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c –UserName “NT AUTHORITY\NETWORK SERVICE” –IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Sample cmdlet:** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## Using the Transact-SQL Script  
  The following procedures can be used with scripts download from the provisions page or scripts created using PowerShell.  

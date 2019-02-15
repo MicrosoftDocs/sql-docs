@@ -22,7 +22,7 @@ manager: craigg
   
  You can browse or delete writeback data. You can also convert writeback data to a partition. On a write-enabled partition, you can use cube roles to grant read/write access to users and groups of users, and to limit access to specific cells or groups of cells in the partition.  
   
- For a short video introduction to writeback, see [Excel 2010 Writeback to Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). A more detailed exploration of this feature is available through this blog post series, [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+ For a short video introduction to writeback, see [Excel 2010 Writeback to Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394951). A more detailed exploration of this feature is available through this blog post series, [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 > [!NOTE]  
 >  Writeback is supported for SQL Server relational databases and data marts only, and only for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional models.  
@@ -56,7 +56,7 @@ manager: craigg
   
 ## See Also  
  [Write-Enabled Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Enabling Write-back to an OLAP Cube at Cell Level in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Enabling and Securing Data Entry with Analysis Services Writeback](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Enabling Write-back to an OLAP Cube at Cell Level in Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Enabling and Securing Data Entry with Analysis Services Writeback](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

@@ -57,7 +57,7 @@ HRESULT BCPSetBulkMode (
 |`E_OUTOFMEMORY`|Out of memory error.|  
   
 ## Remarks  
- IBCPSession2::BCPSetBulkMode can be used to bulk copy out of either a query or a table. When IBCPSession2::BCPSetBulkMode is used to bulk copy out of a query statement, it must be called before calling `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` to specify the query statement.  
+ IBCPSession2::BCPSetBulkMode can be used to bulk copy out of either a query or a table. When IBCPSession2::BCPSetBulkMode is used to bulk copy out of a query statement, it must be called before calling `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` to specify the query statement.  
   
  You should avoid combining RPC call syntax with batch query syntax (`{rpc func};SELECT * from Tbl`, for example) in a single command text.  This will cause ICommandPrepare::Prepare to return an error and prevent you from retrieving metadata. Use ODBC CALL syntax (`{call func}; SELECT * from Tbl`, for example) if you need to combine stored procedure execution and batch query in a single command text.  
   
@@ -65,10 +65,10 @@ HRESULT BCPSetBulkMode (
   
 |Property|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Specifies character output mode.<br /><br /> Corresponds to the –c option in BCP.EXE, and to IBCPSession::BCPColFmt with *eUserDataType* property set to `BCP_TYPE_SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Specifies Unicode output mode.<br /><br /> Corresponds to the –w option in BCP.EXE and IBCPSession::BCPColFmt with *eUserDataType* property set to `BCP_TYPE_SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Specifies native types for non-character types and Unicode for character types.<br /><br /> Corresponds to the –N option in BCP.EXE and IBCPSession::BCPColFmt with *eUserDataType* property set to `BCP_TYPE_SQLNCHAR` if the column type is a string or `BCP_TYPE_DEFAULT` if not a string.|  
-|BCP_OUT_NATIVE_MODE|Specifies native database types.<br /><br /> Corresponds to the –n option in BCP.EXE and IBCPSession::BCPColFmt with *eUserDataType* property set to `BCP_TYPE_DEFAULT`.|  
+|BCP_OUT_CHARACTER_MODE|Specifies character output mode.<br /><br /> Corresponds to the -c option in BCP.EXE, and to IBCPSession::BCPColFmt with *eUserDataType* property set to `BCP_TYPE_SQLCHARACTER`.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Specifies Unicode output mode.<br /><br /> Corresponds to the -w option in BCP.EXE and IBCPSession::BCPColFmt with *eUserDataType* property set to `BCP_TYPE_SQLNCHAR`.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Specifies native types for non-character types and Unicode for character types.<br /><br /> Corresponds to the -N option in BCP.EXE and IBCPSession::BCPColFmt with *eUserDataType* property set to `BCP_TYPE_SQLNCHAR` if the column type is a string or `BCP_TYPE_DEFAULT` if not a string.|  
+|BCP_OUT_NATIVE_MODE|Specifies native database types.<br /><br /> Corresponds to the -n option in BCP.EXE and IBCPSession::BCPColFmt with *eUserDataType* property set to `BCP_TYPE_DEFAULT`.|  
   
  You can call IBCPSession::BCPControl and IBCPSession2::BCPSetBulkMode for IBCPSession::BCPControl options that do not conflict with IBCPSession2::BCPSetBulkMode. For example, you can call IBCPSession::BCPControl with `BCP_OPTION_FIRST` and IBCPSession2::BCPSetBulkMode.  
   
@@ -93,7 +93,7 @@ BCPReadFmt();
   
 ```  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPSetBulkMode();  
 ```  
   
@@ -114,7 +114,7 @@ BCPColFmt();
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPReadFmt();  
 ```  
   

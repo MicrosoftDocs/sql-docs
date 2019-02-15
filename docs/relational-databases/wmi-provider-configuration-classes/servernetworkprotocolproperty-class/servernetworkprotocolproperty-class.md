@@ -37,6 +37,6 @@ manager: craigg
 -   Set flags for the current property.  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

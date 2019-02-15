@@ -1,7 +1,7 @@
 ---
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/22/2018"
+ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -60,7 +60,8 @@ To make sure that the views can be maintained correctly and return consistent re
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> Setting `ANSI_WARNINGS` to ON implicitly sets `ARITHABORT` to ON.  
   
@@ -101,6 +102,7 @@ In addition to the SET options and deterministic function requirements, the foll
     |PRECISE = TRUE|Must be declared explicitly as an attribute of the .NET Framework method.|  
     |DATA ACCESS = NO SQL|Determined by setting DataAccess attribute to DataAccessKind.None and SystemDataAccess attribute to SystemDataAccessKind.None.|  
     |EXTERNAL ACCESS = NO|This property defaults to NO for CLR routines.|  
+    |&nbsp;|&nbsp;|
   
 -   The view must be created by using the `WITH SCHEMABINDING` option.  
   
@@ -120,6 +122,7 @@ In addition to the SET options and deterministic function requirements, the foll
     |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.  
   
@@ -146,8 +149,9 @@ When you execute DML (such as `UPDATE`, `DELETE` or `INSERT`) on a table referen
   
  Indexes on tables and views can be disabled. When a clustered index on a table is disabled, indexes on views associated with the table are also disabled.  
  
-<a name="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. This is because the results depend on the LANGUAGE and DATEFORMAT settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`listopad`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting. Implicit conversion of non-Unicode character data between collations is also considered nondeterministic.  
-  
+<a name="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. For more information, see [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
+
+
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  

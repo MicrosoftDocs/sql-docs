@@ -76,7 +76,7 @@ manager: craigg
  For more information about SPNs, see [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## See Also  
- [SQLGetConnectAttr Function](http://go.microsoft.com/fwlink/?LinkId=59347)   
+ [SQLGetConnectAttr Function](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   

@@ -209,7 +209,7 @@ DELETE Sales.ShoppingCartItem
 ## Parallelism
  An OUTPUT clause that returns results to the client will always use a serial plan.
 
-In the context of a database set to compatibility level 130 or higher, if an INSERT...SELECT operation uses a WITH (TABLOCK) hint for the SELECT statement and also uses OUTPUT…INTO to insert into a temporary or user table, then the target table for the INSERT…SELECT will be eligible for parallelism depending on the subtree cost.  The target table referenced in the OUTPUT INTO clause will not be eligible for parallelism. 
+In the context of a database set to compatibility level 130 or higher, if an INSERT...SELECT operation uses a WITH (TABLOCK) hint for the SELECT statement and also uses OUTPUT...INTO to insert into a temporary or user table, then the target table for the INSERT...SELECT will be eligible for parallelism depending on the subtree cost.  The target table referenced in the OUTPUT INTO clause will not be eligible for parallelism. 
  
 ## Triggers  
  Columns returned from OUTPUT reflect the data as it is after the INSERT, UPDATE, or DELETE statement has completed but before triggers are executed.  
@@ -348,7 +348,7 @@ GO
 ```  
   
 ### C. Using OUTPUT INTO with an UPDATE statement  
- The following example updates the `VacationHours` column in the `Employee` table by 25 percent for the first 10 rows. The `OUTPUT` clause returns the `VacationHours` value that exists before applying the `UPDATE` statement in the column `deleted.VacationHours`, and the updated value in the column `inserted.VacationHours` to the `@MyTableVar``table` variable.  
+ The following example updates the `VacationHours` column in the `Employee` table by 25 percent for the first 10 rows. The `OUTPUT` clause returns the `VacationHours` value that exists before applying the `UPDATE` statement in the column `deleted.VacationHours`, and the updated value in the column `inserted.VacationHours` to the `@MyTableVar` table variable.  
   
  Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Creating, Altering, and Removing Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2017"
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,6 +17,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Indexes
+
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) hierarchy, indexes are represented by the <xref:Microsoft.SqlServer.Management.Smo.Index> object. The indexed columns are represented by a collection of <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> objects represented by the <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> property.  

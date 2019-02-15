@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2014 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2018"
+ms.date: "03/15/2018"
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ""
@@ -41,7 +41,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 |Database cloning|Use the new DBCC command to troubleshoot existing production databases by cloning the schema, metadata, and statistics but without the data. Cloned databases are not meant to be used in production environments.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF additions|New DMF sys.dm_db_incremental_stats_properties expose information per-partition for incremental statistics.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
 |DMF for retrieving input buffer in SQL Server|A new DMF for retrieving the input buffer for a session/request (sys.dm_exec_input_buffer) is now available. This is functionally equivalent to DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
-|DROP DDL Support for Replication|Allows a table that’s included as an article in transactional replication publication to be dropped from the database and the publication.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
+|DROP DDL Support for Replication|Allows a table that's included as an article in transactional replication publication to be dropped from the database and the publication.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |IFI privilege to SQL service account|Determine whether Instant File initialization (IFI) is in effect at the SQL Server service startup.|[Database File Initialization](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |Memory Grants - Handling issues|You can leverage diagnostic hints while running queries by capping their memory grants to prevent memory contention.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
 |Query execution lightweight per-operator profiling |Optimizes collecting per-operator query execution statistics such as actual number of rows.|[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
@@ -52,8 +52,8 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 
 In addition, note the following fixes:
 - The Xevent call stack now include modules names and offset instead of absolute addresses.
-- Better correlation between diagnostics XE and DMVs – Query_hash and query_plan_hash are used for identifying a query uniquely. DMV defines them as varbinary(8), while XEvent defines them as UINT64. Since SQL server does not have "unsigned bigint", casting does not always work. This improvement introduces new XEvent action/filter columns equivalent to query_hash and query_plan_hash except when they are defined as INT64. This fix helps correlating queries between XE and DMVs.
-- Support for UTF-8 in BULK INSERT and BCP – Support for export and import of data encoded in UTF-8 character set is now enabled in BULK INSERT and BCP.
+- Better correlation between diagnostics XE and DMVs - Query_hash and query_plan_hash are used for identifying a query uniquely. DMV defines them as varbinary(8), while XEvent defines them as UINT64. Since SQL server does not have "unsigned bigint", casting does not always work. This improvement introduces new XEvent action/filter columns equivalent to query_hash and query_plan_hash except when they are defined as INT64. This fix helps correlating queries between XE and DMVs.
+- Support for UTF-8 in BULK INSERT and BCP - Support for export and import of data encoded in UTF-8 character set is now enabled in BULK INSERT and BCP.
 
 ### Download pages and more information for SP2
 
@@ -76,7 +76,7 @@ SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and in
 ### Download pages and more information for SP1
 
 - [Download Service Pack 1 for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 Service Pack 1 has released – Updated](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [SQL Server 2014 Service Pack 1 has released - Updated](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -97,7 +97,7 @@ Upgrade is fully supported. Specifically, you can:
 1.  Attach a SQL Server 2014 CTP 2 database to an instance of SQL Server 2014 RTM.    
 2.  Restore a database backup taken on SQL Server 2014 CTP 2 to an instance of SQL Server 2014 RTM.    
 3.  In-place upgrade to SQL Server 2014 RTM.
-4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](http://msdn.microsoft.com/library/dn178483.aspx) for details.    
+4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](https://msdn.microsoft.com/library/dn178483.aspx) for details.    
 5.  Data collected by Transaction Performance Collection Sets installed in SQL Server 2014 CTP 2 cannot be viewed through SQL Server Management Studio in SQL Server 2014 RTM, and vice versa.
   
 #### Downgrading from SQL Server 2014 RTM to SQL Server 2014 CTP 2  
@@ -108,7 +108,7 @@ This action is not supported.
 #### Incorrect version of StreamInsight Client on SQL Server 2014 media/ISO/CAB  
 The wrong version of StreamInsight.msi and StreamInsightClient.msi is located in the following path on the SQL Server media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
-**Workaround:** Download and install the correct version from the [SQL Server 2014 Feature Pack download page](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Workaround:** Download and install the correct version from the [SQL Server 2014 Feature Pack download page](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 ### <a name="ProdDoc"></a>Product Documentation RTM
   
@@ -152,7 +152,7 @@ SQL Server 2014 Standard has the following changes:
 -   The maximum memory has been raised from 64 GB to 128 GB.  
  
 #### Memory Optimization Advisor flags default constraints as incompatible  
-**Issue:** The Memory Optimized Advisor in SQL Server Management Studio flags all default constraints as incompatible. Not all default constraints are supported in a memory-optimized table; the Advisor does not distinguish between supported and unsupported types of default constraints. Supported default constraints include all constants, expressions, and built-in functions supported within natively compiled stored procedures. To see the list of functions supported in natively compiled stored procedures, refer to [Supported Constructs in Natively Compiled Stored Procedures](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Issue:** The Memory Optimized Advisor in SQL Server Management Studio flags all default constraints as incompatible. Not all default constraints are supported in a memory-optimized table; the Advisor does not distinguish between supported and unsupported types of default constraints. Supported default constraints include all constants, expressions, and built-in functions supported within natively compiled stored procedures. To see the list of functions supported in natively compiled stored procedures, refer to [Supported Constructs in Natively Compiled Stored Procedures](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Workaround:** If you want to use the advisor to identify blockers, ignore the compatible default constraints. To use the Memory Optimization Advisor to migrate tables that have compatible default constraints, but no other blockers, follow these steps:  
   
@@ -161,7 +161,7 @@ SQL Server 2014 Standard has the following changes:
 3.  Add back the default constraints in the migration script.    
 4.  Execute the migration script.  
   
-#### Informational message “file access denied” incorrectly reported as an error in the SQL Server 2014 error log  
+#### Informational message "file access denied" incorrectly reported as an error in the SQL Server 2014 error log  
 **Issue:** When restarting a server that has databases that contain memory-optimized tables, you may see the following type of error messages in the SQL Server 2014 error log:  
   
 ```  
@@ -286,7 +286,7 @@ If you already have the issue with mismatched instance_id values, the only way t
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### The SQL Server 2012 Reporting Services Native Mode report server cannot run side-by-side with SQL Server 2014 Reporting Services SharePoint Components  
-**Issue:** The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode Windows service ‘SQL Server Reporting Services’ (ReportingServicesService.exe) fails to start when there are [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components installed on the same server.  
+**Issue:** The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode Windows service 'SQL Server Reporting Services' (ReportingServicesService.exe) fails to start when there are [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components installed on the same server.  
   
 **Workaround:** Uninstall [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components and restart Microsoft SQL Server 2012 Reporting Services Windows service.  
   
@@ -317,7 +317,7 @@ Keywords:      Classic
 Description:   Report Server (DENALI) cannot connect to the report server database.  
 ```  
   
-For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkID=391254).  
+For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 #### Required Upgrade Order for Multi-node SharePoint Farm to SQL Server 2014 Reporting Services  
 **Issue:** Report rendering in a multi-node farm fails if instances of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Shared Service are upgraded before all instances of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products.  
@@ -327,7 +327,7 @@ For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and 
 1.  First upgrade all instances of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products.    
 2.  Then upgrade all instances of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Shared Service.  
   
-For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkID=391254)  
+For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkID=391254)  
   
 ### <a name="AzureVM"></a>SQL Server 2014 RTM on Windows Azure Virtual Machines  
   
@@ -342,7 +342,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
     This workaround will allow the Wizard to complete adding the replica in Windows Azure.  
   
-2.  After the Wizard completes, you will need to finish the configuration of the Listener in Windows Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Windows Azure](http://msdn.microsoft.com/library/dn376546.aspx)  
+2.  After the Wizard completes, you will need to finish the configuration of the Listener in Windows Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -353,9 +353,9 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:**  
   
-1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section “Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1” [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **More Information:**  
   
@@ -368,9 +368,9 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:**  
   
-1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section “Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1” [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **More Information:**  
   
@@ -383,7 +383,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:**  
   
-1.  In Microsoft Excel, clear the custom advanced properties. See the “Workaround” section of the following knowledge base article [KB 2927748](http://support.microsoft.com/kb/2927748).  
+1.  In Microsoft Excel, clear the custom advanced properties. See the "Workaround" section of the following knowledge base article [KB 2927748](https://support.microsoft.com/kb/2927748).  
   
 **More Information:**  
   
@@ -405,7 +405,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
 #### SQL Server 2014 Upgrade Advisor reports irrelevant upgrade issues for SQL Server Reporting Services  
 **Issue:** SQL Server Upgrade Advisor (SSUA) shipped with the SQL Server 2014 media incorrectly reports multiple errors when analyzing SQL Server Reporting Services server.  
   
-**Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 #### SQL Server 2014 Upgrade Advisor reports an error when analyzing SQL Server Integration Services server  
 **Issue:** SQL Server Upgrade Advisor (SSUA) shipped with the SQL Server 2014 media reports an error when analyzing SQL Server Integration Services server.  The error that is displayed to the user is:  
@@ -416,6 +416,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

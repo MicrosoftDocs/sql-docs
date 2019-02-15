@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Add a Parameter to Your Report (Report Builder)
 In this tutorial, you add a parameter to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report so report readers can filter report data for one or more values. 
@@ -496,5 +496,5 @@ This concludes the walkthrough for how to add a parameter to your report. To lea
   
 ## See Also  
 * [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
-* [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup Function](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

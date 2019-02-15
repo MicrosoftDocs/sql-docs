@@ -98,7 +98,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   The `PERMISSION` establishes what action is allowed or prohibited. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] can specify 230 permissions. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] has fewer permissions because some actions are not relevant in Azure. The permissions are listed in the topic [Permissions &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) and in the chart referenced below.  
   
--   `ON SECURABLE::NAME` is the type of securable (server, server object, database, or database object) and its name. Some permissions do not require `ON SECURABLE::NAME` because it is unambiguous or inappropriate in the context. For example the `CREATE TABLE` permission doesn’t require the `ON SECURABLE::NAME` clause. (For example `GRANT CREATE TABLE TO Mary;` allows Mary to create tables.)  
+-   `ON SECURABLE::NAME` is the type of securable (server, server object, database, or database object) and its name. Some permissions do not require `ON SECURABLE::NAME` because it is unambiguous or inappropriate in the context. For example the `CREATE TABLE` permission doesn't require the `ON SECURABLE::NAME` clause. (For example `GRANT CREATE TABLE TO Mary;` allows Mary to create tables.)  
   
 -   `PRINCIPAL` is the security principal (login, user, or role) which receives or loses the permission. Grant permissions to roles whenever possible.  
   
@@ -182,7 +182,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ### Useful Transact-SQL Statements  
  The following statements return useful information about permissions.  
   
- To return the explicit permissions granted or denied in a database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
+ To return the explicit permissions granted or denied in a database ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
 ```sql  
 SELECT   
@@ -197,7 +197,7 @@ JOIN sys.objects AS obj
     ON perms.major_id = obj.object_id;  
 ```  
   
- To return the members of the server roles ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] only), execute the following statement.  
+ To return the members of the server roles ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] only), execute the following statement.  
   
 ```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
@@ -209,7 +209,7 @@ JOIN sys.server_principals AS sRole
 ```  
   
  
- To return the members of the database roles ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
+ To return the members of the database roles ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
 ```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  

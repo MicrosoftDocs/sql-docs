@@ -1,13 +1,14 @@
 ---
-title: Configure SLES Cluster for SQL Server Availability Group | Microsoft Docs
-description: 
+title: Configure SLES Cluster for SQL Server Availability Group
+titleSuffix: SQL Server
+description: Learn how to create availability group clusters for SQL Server on SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ---
@@ -15,7 +16,7 @@ ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This guide provides instructions to create a three-node cluster for SQL Server on SUSE Linux Enterprise Server (SLES) 12 SP2. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
+This guide provides instructions to create a three-node cluster for SQL Server on SUSE Linux Enterprise Server (SLES) 12 SP2. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](https://clusterlabs.org/). 
 
 For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
@@ -56,7 +57,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Designate one node as primary and other nodes as secondaries. Use these terms throughout this guide.
 
-1. Make sure nodes that are going to be part of the cluster can communicate to each other.
+1. Make sure nodes that are going to be part of the cluster can communicate with each other.
 
    The following example shows `/etc/hosts` with additions for three nodes named SLES1, SLES2, and SLES3.
 
@@ -73,7 +74,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   For more information, see the [SLES Administration Guide - Miscellaneous section](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   For more information, see the [SLES Administration Guide - Miscellaneous section](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
 
 ## Create a SQL Server login for Pacemaker
@@ -98,7 +99,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
 ## Set up the first node
 
-   Refer to [SLES installation instructions](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   Refer to [SLES installation instructions](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. Log in as `root` to the physical or virtual machine you want to use as cluster node.
 2. Start the bootstrap script by executing:
@@ -215,7 +216,7 @@ Resource level fencing ensures mainly that there is no data corruption during an
 
 Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, such as an uninterruptible power supply or management interface cards for servers.
 
-For more information, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) and [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) and [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 At cluster initialization time, STONITH is disabled if no configuration is detected. It can be enabled later by running following command:
 

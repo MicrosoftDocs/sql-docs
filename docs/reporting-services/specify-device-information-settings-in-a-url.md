@@ -21,7 +21,7 @@ ms.author: maghan
  The following example sets the format of the specified report to JPEG by using the *OutputFormat* device information setting of the image rendering extension (the line breaks have been added for legibility):  
   
 ```  
-http://servername/reportserver?/SampleReports  
+https://servername/reportserver?/SampleReports  
 /Employee Sales Summary&EmployeeID=38&rs:  
 Command=Render&rs:Format=IMAGE&rc:OutputFormat=JPEG  
 ```  

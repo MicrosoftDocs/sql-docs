@@ -1,11 +1,11 @@
 ---
-title: Get R and Python package information on SQL Server Machine Learning| Microsoft Docs
+title: Get R and Python package information - SQL Server Machine Learning Services
 description: Determine R and Python package version, verify installation, and get a list of installed packages on SQL Server R Services or Machine Learning Services.
 ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/29/2018  
+ms.date: 11/08/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -30,7 +30,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Optionally, you can use [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) in newer versions of RevoScaleR in SQL Server 2017 Machine Learning Services or [R Services ugpraded R to at least RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). This stored procedure returns the path of the instance library and the version of RevoScaleR used by SQL Server:
+Optionally, you can use [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) in newer versions of RevoScaleR in SQL Server 2017 Machine Learning Services or [R Services upgraded R to at least RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). This stored procedure returns the path of the instance library and the version of RevoScaleR used by SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -78,7 +78,7 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-For more information about the variable `sys.path` and how it is used to set the interpreter’s search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+For more information about the variable `sys.path` and how it is used to set the interpreter's search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
 ## List all packages
 
@@ -86,9 +86,9 @@ There are multiple ways that you can get a complete list of the packages current
 
 ### R
 
-The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](..\..\includes\tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. This script returns package name and version fields in the DESCRIPTION file, only the name is returned.
+The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. This script returns package name and version fields in the DESCRIPTION file, only the name is returned.
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);
@@ -158,63 +158,39 @@ EXECUTE sp_execute_external_script
   print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
 ```
 
-## Get package information in R and Python tools
+<a name="get-package-vers"></a>
 
-All of the previous instructions assume you are using a SQL Server tool such as Management Studio (SSMS). If you prefer using R and Python tools, the following instructions explain how to get library and package information from an R or Python command line.
+## Get package version
 
-### R commands
+You can get R and Python package version information using Management Studio.
 
-The instance library for R is \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library.
+### R package version
 
-Launch the standard R tools from these locations to ensure packages from the instance library are used:
+This statement returns the RevoScaleR package version and the base R version.
 
-+ \MSSQL14.MSSQLSERVER\R_SERVICES\bin\R.exe for an R command prompt
-+ \MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe for an R console app
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'R',
+  @script = N'
+print(packageDescription("RevoScaleR"))
+print(packageDescription("base"))
+'
+```
 
-You can use standard R commands or RevoScaleR commands to get package information. The RevoScaleR package is loaded automatically. 
+### Python package version
 
-Return RevoScaleR package information:
+This statement returns the revoscalepy package version and the version of Python.
 
-    > print(Revo.version)
-
-Return a list of all installed packages:
-
-    > installed.packages()
-
-Return the version of R:
-
-    > packageDescription("base")
-
-### Python commands
-
-Python support is SQL Server 2017 only. The instance library for Python is \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\.
-
-Open the Python command window from this location to ensure packages from the instance library are used:
-
-+ \MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Python.exe
-
-Open interactive help:
-
-    > help()
-
-Type a module name at the help prompt to get the package contents, version, and file location:
-
-    help> revoscalepy
-
-<a name="pip-conda"></a>
-
-### Python package managers (Pip and Conda)
-
-Anaconda includes Python tools for managing packages. On a default instance, Pip, Conda, and other tools can be found at \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts.
-
-SQL Server Setup does not add Pip or Conda to the system path and on a production SQL Server instance, keeping non-essential executables out of the path is a best practice. However, for development and test environments, you could add the Scripts folder to the system PATH environment variable to run both Pip and Conda on command from any location.
-
-1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
-
-1. Right-click **conda.exe** > **Run as administrator**, and enter `conda list` to return a list of packages installed in the current environment.
-
-1. Similarly, right-click **pip.exe** > **Run as administrator**, and enter `pip list` to return the same information. 
-
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+import revoscalepy
+import sys
+print(revoscalepy.__version__)
+print(sys.version)
+'
+```
 
 ## Next steps
 

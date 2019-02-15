@@ -26,7 +26,7 @@ To toggle the gathering of client statistics, when the Transact\-SQL Editor is o
   
 If you turned on client statistics, the **Statistics** tab appears next to the **Message** tab upon query execution. If you turned off client statistics, the **Statistics** tab does not appear. Statistics from successive query executions are listed along with the average values.  
   
-For more information on the statistics collected, see [Query Window Statistics Pane](http://msdn.microsoft.com/library/aa216969(SQL.80).aspx) and [“Client Statistics Tab” section of this topic](http://msdn.microsoft.com/library/aa833205.aspx).  
+For more information on the statistics collected, see [Query Window Statistics Pane](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) and ["Client Statistics Tab" section of this topic](https://msdn.microsoft.com/library/aa833205.aspx).  
   
 ## Using Execution Plans  
 Execution plans display how the database engine navigates tables and uses indexes to access or process the data for a query or other DML statement, such as an update. This graphical approach is very useful for understanding the performance characteristics of a query.  
@@ -35,7 +35,7 @@ Open a Transact\-SQL script that contains the queries you want to analyze into t
   
 After the script is parsed or executed, click the **Execution plan** tab to see a graphical representation of execution plan output.  
   
-The graphical execution plan output is read from right to left and from top to bottom. Each query in the batch that is analyzed is displayed, including the cost of each query as a percentage of the total cost of the batch. To view additional information such as cost and operation for each step, hover your mouse over the [logical and physical operator icons](http://msdn.microsoft.com/library/ms175913.aspx) in the graphical plan.  
+The graphical execution plan output is read from right to left and from top to bottom. Each query in the batch that is analyzed is displayed, including the cost of each query as a percentage of the total cost of the batch. To view additional information such as cost and operation for each step, hover your mouse over the [logical and physical operator icons](https://msdn.microsoft.com/library/ms175913.aspx) in the graphical plan.  
   
 To alter the display of the execution plan, right-click the **Execution plan** and select **Zoom In**, **Zoom Out**, **Custom Zoom**, or **Zoom to Fit**. **Zoom In** and **Zoom Out** allow you to magnify or reduce the execution plan by fixed amounts. **Custom Zoom** allows you to define your own display magnification, such as zooming at 80 percent.  **Zoom to Fit** adjusts the execution plan to fit the result pane.  
   
@@ -46,5 +46,5 @@ You can use Code Analysis to discover potential issues in your scripts, such as 
   
 To use Code Analysis manually, right-click your project in **Solution Explorer** and select **Run Code Analysis**. Code analysis warnings are listed in the **Error List** window. You can double-click a warning to navigate to the source code that contains the issue, and you can view additional information and possible corrections for a warning by using the **Show Error Help** contextual menu.  
   
-For more information on Code Analysis, see [Analyzing Database Code to Improve Code Quality](http://msdn.microsoft.com/library/dd172133.aspx).  
+For more information on Code Analysis, see [Analyzing Database Code to Improve Code Quality](https://msdn.microsoft.com/library/dd172133.aspx).  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xe"
@@ -114,7 +113,7 @@ manager: craigg
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   
- [Extended Events Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql   
+ [Extended Events Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql)  
  [Extended Events Dynamic Management Views](../views/views.md)   
  [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
   

@@ -107,7 +107,7 @@ Partial type support means that you cannot programmatically query for the type o
 
 [Converting Data Types](../../connect/php/converting-data-types.md)
 
-[PHP Types](http://php.net/manual/en/language.types.php)
+[PHP Types](https://php.net/manual/en/language.types.php)
 
 [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 

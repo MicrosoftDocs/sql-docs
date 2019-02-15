@@ -5,12 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create New Policy or Open Policy Dialog Box, Description Page

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xe"
@@ -49,7 +48,7 @@ manager: craigg
   
  Referring to the preceding illustration, note that:  
   
--   The mapping between package objects and sessions is many to many, which means that that an object can appear in several sessions, and a session can contain several objects.  
+-   The mapping between package objects and sessions is many to many, which means that an object can appear in several sessions, and a session can contain several objects.  
   
 -   The same event (Event 1) or target (Target 1) can be enabled in more than one session.  
   
@@ -65,7 +64,7 @@ manager: craigg
   
  **Causality tracking**  
   
- Causality tracking provides the ability to track work across multiple tasks. When causality tracking is enabled, each event fired has a unique activity ID across the system. The activity ID is a combination of a GUID value that remains constant across all events for a task, and a sequence number that is incremented each time an event is fired. When one task causes work to be done on another, the activity ID of the parent is sent to the child task. The child task outputs the parent’s activity ID the first time it fires an event.  
+ Causality tracking provides the ability to track work across multiple tasks. When causality tracking is enabled, each event fired has a unique activity ID across the system. The activity ID is a combination of a GUID value that remains constant across all events for a task, and a sequence number that is incremented each time an event is fired. When one task causes work to be done on another, the activity ID of the parent is sent to the child task. The child task outputs the parent's activity ID the first time it fires an event.  
   
  The Extended Events architecture provides a flexible system that allows a variety of objects to be used together to solve specific problems.  
   

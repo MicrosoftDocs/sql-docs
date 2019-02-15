@@ -90,7 +90,7 @@ manager: craigg
   
 ### SQLSourceType = Direct input  
  **SQLStatement**  
- Type the SQL statement to execute in the option box, or click the browse button (…) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
+ Type the SQL statement to execute in the option box, or click the browse button (...) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
   
  **Related Topics:** [Query Builder](../../2014/integration-services/query-builder.md)  
   

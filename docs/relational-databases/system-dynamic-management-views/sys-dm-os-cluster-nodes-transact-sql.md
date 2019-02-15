@@ -30,7 +30,7 @@ manager: craigg
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|Name of a node in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance (virtual server) configuration.|  
-|status|**int**|Status of the node in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance: 0, 1, 2, 3, -1. For more information, see [GetClusterNodeState Function](http://go.microsoft.com/fwlink/?LinkId=204794).|  
+|status|**int**|Status of the node in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance: 0, 1, 2, 3, -1. For more information, see [GetClusterNodeState Function](https://go.microsoft.com/fwlink/?LinkId=204794).|  
 |status_description|**nvarchar(20)**|Description of the status of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster node.<br /><br /> 0 = up<br /><br /> 1 = down<br /><br /> 2 = paused<br /><br /> 3 = joining<br /><br /> -1 = unknown|  
 |is_current_owner|bit|1 means this node is the current owner of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster resource.|  
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], permissions"
   - "GRANT statement, assemblies"
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Assembly Permissions (Transact-SQL)
@@ -38,7 +38,7 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  Specifies a permission that can be granted on an assembly. Listed below.  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  Specifies the assembly on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

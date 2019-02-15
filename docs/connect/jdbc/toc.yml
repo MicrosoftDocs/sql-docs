@@ -1,269 +1,273 @@
-- name: Microsoft JDBC Driver for SQL Server
-  href: microsoft-jdbc-driver-for-sql-server.md
-- name: JDBC Code Samples +
-  href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
-- name: JDBC API Reference +
-  href: reference/jdbc-driver-api-reference.md
-- name: Getting Started with the JDBC Driver
-  href: getting-started-with-the-jdbc-driver.md
+- name: 4.2 Microsoft JDBC Driver for SQL Server
   items:
-  - name: "Step 1: Configure development environment for Java development"
-    href: step-1-configure-development-environment-for-java-development.md
-  - name: "Step 2: Create a SQL database for Java development"
-    href: step-2-create-a-sql-database-for-java-development.md
-  - name: "Step 3: Proof of concept connecting to SQL using Java"
-    href: step-3-proof-of-concept-connecting-to-sql-using-java.md
-- name: Overview of the JDBC Driver
-  href: overview-of-the-jdbc-driver.md
-  items:
-  - name: Download Microsoft JDBC Driver for SQL Server
-    href: download-microsoft-jdbc-driver-for-sql-server.md
-  - name: Release Notes for the JDBC Driver
-    href: release-notes-for-the-jdbc-driver.md
-  - name: System Requirements for the JDBC Driver
-    href: system-requirements-for-the-jdbc-driver.md
-  - name: Using the JDBC Driver
-    href: using-the-jdbc-driver.md
-  - name: Understanding Java EE Support
-    href: understanding-java-ee-support.md
-  - name: Deploying the JDBC Driver
-    href: deploying-the-jdbc-driver.md
-  - name: Redistributing the Microsoft JDBC Driver
-    href: redistributing-the-microsoft-jdbc-driver.md
-  - name: Finding Additional JDBC Driver Information
-    href: finding-additional-jdbc-driver-information.md
-  - name: Microsoft JDBC Driver for SQL Server Support Matrix
-    href: microsoft-jdbc-driver-for-sql-server-support-matrix.md
-  - name: Frequently Asked Questions (FAQ) for JDBC Driver
-    href: frequently-asked-questions-faq-for-jdbc-driver.md
-  - name: Feature dependencies of Microsoft JDBC Driver for SQL Server
-    href: ../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-- name: Securing JDBC Driver Applications
-  href: securing-jdbc-driver-applications.md
-  items:
-  - name: Securing Connection Strings
-    href: securing-connection-strings.md
-  - name: Validating User Input
-    href: validating-user-input.md
-  - name: Application Security
-    href: application-security.md
-  - name: Using SSL Encryption
-    href: using-ssl-encryption.md
-  - name: FIPS Mode
-    href: ../../connect/jdbc/fips-mode.md
+  - name: Microsoft JDBC Driver 4.2 for SQL Server
+    href: microsoft-jdbc-driver-for-sql-server.md
+  - name: JDBC Code Samples +
+    href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
+  - name: JDBC API Reference +
+    href: reference/jdbc-driver-api-reference.md
+  - name: Getting Started with the JDBC Driver
+    href: getting-started-with-the-jdbc-driver.md
     items:
-    - name: Understanding SSL Support
-      href: understanding-ssl-support.md
-    - name: Connecting with SSL Encryption
-      href: connecting-with-ssl-encryption.md
-    - name: Configuring the Client for SSL Encryption
-      href: configuring-the-client-for-ssl-encryption.md
-- name: Improving Performance and Reliability with the JDBC Driver
-  href: improving-performance-and-reliability-with-the-jdbc-driver.md
-  items:
-  - name: Closing Objects when Not In Use
-    href: closing-objects-when-not-in-use.md
-  - name: Managing Transaction Size
-    href: managing-transaction-size.md
-  - name: Working with Statements and Result Sets
-    href: working-with-statements-and-result-sets.md
-  - name: Using Adaptive Buffering
-    href: using-adaptive-buffering.md
-  - name: Sparse Columns
-    href: sparse-columns.md
-  - name: Prepared Statement Metadata Caching for the JDBC Driver
-    href: prepared-statement-metadata-caching-for-the-jdbc-driver.md
-- name: Diagnosing Problems with the JDBC Driver
-  href: diagnosing-problems-with-the-jdbc-driver.md
-  items:
-  - name: Handling Errors
-    href: handling-errors.md
-  - name: Getting the Driver Version
-    href: getting-the-driver-version.md
-  - name: Tracing Driver Operation
-    href: tracing-driver-operation.md
-  - name: Troubleshooting Connectivity
-    href: troubleshooting-connectivity.md
-  - name: Accessing Diagnostic Information in the Extended Events Log
-    href: accessing-diagnostic-information-in-the-extended-events-log.md
-- name: Sample JDBC Driver Applications
-  href: sample-jdbc-driver-applications.md
-  items:
-  - name: Connecting and Retrieving Data
-    href: connecting-and-retrieving-data.md
+    - name: "Step 1: Configure development environment for Java development"
+      href: step-1-configure-development-environment-for-java-development.md
+    - name: "Step 2: Create a SQL database for Java development"
+      href: step-2-create-a-sql-database-for-java-development.md
+    - name: "Step 3: Proof of concept connecting to SQL using Java"
+      href: step-3-proof-of-concept-connecting-to-sql-using-java.md
+  - name: Overview of the JDBC Driver
+    href: overview-of-the-jdbc-driver.md
     items:
-    - name: Connection URL Sample
-      href: connection-url-sample.md
-    - name: Data Source Sample
-      href: data-source-sample.md
-  - name: Working with Data Types (JDBC)
-    href: working-with-data-types-jdbc.md
+    - name: Download Microsoft JDBC Driver for SQL Server
+      href: download-microsoft-jdbc-driver-for-sql-server.md
+    - name: Release Notes for the JDBC Driver
+      href: release-notes-for-the-jdbc-driver.md
+    - name: System Requirements for the JDBC Driver
+      href: system-requirements-for-the-jdbc-driver.md
+    - name: Using the JDBC Driver
+      href: using-the-jdbc-driver.md
+    - name: Understanding Java EE Support
+      href: understanding-java-ee-support.md
+    - name: Deploying the JDBC Driver
+      href: deploying-the-jdbc-driver.md
+    - name: Redistributing the Microsoft JDBC Driver
+      href: redistributing-the-microsoft-jdbc-driver.md
+    - name: Finding Additional JDBC Driver Information
+      href: finding-additional-jdbc-driver-information.md
+    - name: Microsoft JDBC Driver for SQL Server Support Matrix
+      href: microsoft-jdbc-driver-for-sql-server-support-matrix.md
+    - name: Frequently Asked Questions (FAQ) for JDBC Driver
+      href: frequently-asked-questions-faq-for-jdbc-driver.md
+    - name: Feature dependencies of Microsoft JDBC Driver for SQL Server
+      href: ../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+  - name: Securing JDBC Driver Applications
+    href: securing-jdbc-driver-applications.md
     items:
-    - name: Basic Data Types Sample
-      href: basic-data-types-sample.md
-    - name: SQLXML Data Type Sample
-      href: sqlxml-data-type-sample.md
-    - name: Spatial Data Types Sample
-      href: spatial-data-types-sample.md
-  - name: Working with Result Sets
-    href: working-with-result-sets.md
+    - name: Securing Connection Strings
+      href: securing-connection-strings.md
+    - name: Validating User Input
+      href: validating-user-input.md
+    - name: Application Security
+      href: application-security.md
+    - name: Using SSL Encryption
+      href: using-ssl-encryption.md
+    - name: FIPS Mode
+      href: ../../connect/jdbc/fips-mode.md
+      items:
+      - name: Understanding SSL Support
+        href: understanding-ssl-support.md
+      - name: Connecting with SSL Encryption
+        href: connecting-with-ssl-encryption.md
+      - name: Configuring the Client for SSL Encryption
+        href: configuring-the-client-for-ssl-encryption.md
+  - name: Improving Performance and Reliability with the JDBC Driver
+    href: improving-performance-and-reliability-with-the-jdbc-driver.md
     items:
-    - name: Retrieving Result Set Data Sample
-      href: retrieving-result-set-data-sample.md
-    - name: Modifying Result Set Data Sample
-      href: modifying-result-set-data-sample.md
-    - name: Caching Result Set Data Sample
-      href: caching-result-set-data-sample.md
-  - name: Working with Large Data
-    href: working-with-large-data.md
+    - name: Closing Objects when Not In Use
+      href: closing-objects-when-not-in-use.md
+    - name: Managing Transaction Size
+      href: managing-transaction-size.md
+    - name: Working with Statements and Result Sets
+      href: working-with-statements-and-result-sets.md
+    - name: Using Adaptive Buffering
+      href: using-adaptive-buffering.md
+    - name: Sparse Columns
+      href: sparse-columns.md
+    - name: Prepared Statement Metadata Caching for the JDBC Driver
+      href: prepared-statement-metadata-caching-for-the-jdbc-driver.md
+  - name: Diagnosing Problems with the JDBC Driver
+    href: diagnosing-problems-with-the-jdbc-driver.md
     items:
-    - name: Reading Large Data Sample
-      href: reading-large-data-sample.md
-    - name: Reading Large Data with Stored Procedures Sample
-      href: reading-large-data-with-stored-procedures-sample.md
-    - name: Updating Large Data Sample
-      href: updating-large-data-sample.md
-  - name: Data Discovery and Classification Sample
-    href: data-discovery-classification-sample.md
-- name: Compliance and Legal for the JDBC SQL Driver
-  href: compliance-and-legal-for-the-jdbc-sql-driver.md
-  items:
-  - name: JDBC 4.1 Compliance for the JDBC Driver
-    href: jdbc-4-1-compliance-for-the-jdbc-driver.md
-  - name: JDBC 4.2 Compliance for the JDBC Driver
-    href: jdbc-4-2-compliance-for-the-jdbc-driver.md
-  - name: JDBC 4.3 Compliance for the JDBC Driver
-    href: jdbc-4-3-compliance-for-the-jdbc-driver.md
-- name: Programming Guide for JDBC SQL Driver
-  href: programming-guide-for-jdbc-sql-driver.md
-  items:
-  - name: Connecting to SQL Server with the JDBC Driver
-    href: connecting-to-sql-server-with-the-jdbc-driver.md
-  - name: Understanding the JDBC Driver Data Types
-    href: understanding-the-jdbc-driver-data-types.md
-  - name: Using Statements with the JDBC Driver
-    href: using-statements-with-the-jdbc-driver.md
-  - name: Managing Result Sets with the JDBC Driver
-    href: managing-result-sets-with-the-jdbc-driver.md
-  - name: Performing Transactions with the JDBC Driver
-    href: performing-transactions-with-the-jdbc-driver.md
-  - name: Handling Metadata with the JDBC Driver
-    href: handling-metadata-with-the-jdbc-driver.md
-  - name: Using Always Encrypted with the JDBC Driver
-    href: using-always-encrypted-with-the-jdbc-driver.md
-  - name: Guide articles
+    - name: Handling Errors
+      href: handling-errors.md
+    - name: Getting the Driver Version
+      href: getting-the-driver-version.md
+    - name: Tracing Driver Operation
+      href: tracing-driver-operation.md
+    - name: Troubleshooting Connectivity
+      href: troubleshooting-connectivity.md
+    - name: Accessing Diagnostic Information in the Extended Events Log
+      href: accessing-diagnostic-information-in-the-extended-events-log.md
+  - name: Sample JDBC Driver Applications
+    href: sample-jdbc-driver-applications.md
     items:
-    - name: Using Statements with SQL
-      href: using-statements-with-sql.md
-    - name: Using an SQL Statement to Modify Database Objects
-      href: using-an-sql-statement-to-modify-database-objects.md
-    - name: Setting the Data Source Properties
-      href: setting-the-data-source-properties.md
-    - name: Setting the Connection Properties
-      href: setting-the-connection-properties.md
-    - name: Using a Stored Procedure with No Parameters
-      href: using-a-stored-procedure-with-no-parameters.md
-    - name: Using Parameter Metadata
-      href: using-parameter-metadata.md
-    - name: Using Basic Data Types
-      href: using-basic-data-types.md
-    - name: Using Spatial Datatypes
-      href: use-spatial-datatypes.md
-    - name: Understanding Transactions
-      href: understanding-transactions.md
-    - name: Working with a Connection
-      href: working-with-a-connection.md
-    - name: International Features of the JDBC Driver
-      href: international-features-of-the-jdbc-driver.md
-    - name: Using Advanced Data Types
-      href: using-advanced-data-types.md
-    - name: Understanding Data Type Differences
-      href: understanding-data-type-differences.md
-    - name: Using Multiple Result Sets
-      href: using-multiple-result-sets.md
-    - name: Using Holdability
-      href: using-holdability.md
-    - name: Connecting using Azure Active Directory Authentication
-      href: connecting-using-azure-active-directory-authentication.md
-    - name: Understanding Data Type Conversions
-      href: understanding-data-type-conversions.md
-    - name: Understanding Concurrency Control
-      href: understanding-concurrency-control.md
-    - name: Using a Stored Procedure with Input Parameters
-      href: using-a-stored-procedure-with-input-parameters.md
-    - name: Using Database Metadata
-      href: using-database-metadata.md
-    - name: SQLXML Interface
-      href: sqlxml-interface.md
-    - name: Handling Complex Statements
-      href: handling-complex-statements.md
-    - name: Using Connection Pooling
-      href: using-connection-pooling.md
-    - name: Always Encrypted API Reference for the JDBC Driver
-      href: always-encrypted-api-reference-for-the-jdbc-driver.md
-    - name: Using Kerberos Integrated Authentication to Connect to SQL Server
-      href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
-    - name: Using a Stored Procedure with an Update Count
-      href: using-a-stored-procedure-with-an-update-count.md
-    - name: Understanding Row Locking
-      href: understanding-row-locking.md
-    - name: JDBC Driver Support for High Availability, Disaster Recovery
-      href: jdbc-driver-support-for-high-availability-disaster-recovery.md
-    - name: Using Result Set Metadata
-      href: using-result-set-metadata.md
-    - name: Understanding XA Transactions
-      href: understanding-xa-transactions.md
-    - name: Using Auto Generated Keys
-      href: using-auto-generated-keys.md
-    - name: Using Database Mirroring (JDBC)
-      href: using-database-mirroring-jdbc.md
-    - name: National Character Set Support
-      href: national-character-set-support.md
-    - name: Understanding Cursor Types
-      href: understanding-cursor-types.md
-    - name: Programming with SQLXML
-      href: programming-with-sqlxml.md
-    - name: Using a Stored Procedure with a Return Status
-      href: using-a-stored-procedure-with-a-return-status.md
-    - name: Using an SQL Statement with No Parameters
-      href: using-an-sql-statement-with-no-parameters.md
-    - name: Connecting to an Azure SQL database
-      href: connecting-to-an-azure-sql-database.md
-    - name: Using an SQL Statement to Modify Data
-      href: using-an-sql-statement-to-modify-data.md
-    - name: Building the Connection URL
-      href: building-the-connection-url.md
-    - name: Using Savepoints
-      href: using-savepoints.md
-    - name: Using Table-Valued Parameters
-      href: using-table-valued-parameters.md
-    - name: Supporting XML Data
-      href: supporting-xml-data.md
-    - name: Using an SQL Statement with Parameters
-      href: using-an-sql-statement-with-parameters.md
-    - name: Understanding Isolation Levels
-      href: understanding-isolation-levels.md
-    - name: Wrappers and Interfaces
-      href: wrappers-and-interfaces.md
-    - name: Using Bulk Copy with the JDBC Driver
-      href: using-bulk-copy-with-the-jdbc-driver.md
-    - name: Using Bulk Copy API for batch insert operation
-      href: use-bulk-copy-api-batch-insert-operation.md
-    - name: Using a Stored Procedure with Output Parameters
-      href: using-a-stored-procedure-with-output-parameters.md
-    - name: Performing Batch Operations
-      href: performing-batch-operations.md
-    - name: User Defined Types
-      href: user-defined-types.md
-    - name: Configuring How java.sql.Time Values are Sent to the Server
-      href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
-    - name: Using SQL Escape Sequences
-      href: using-sql-escape-sequences.md
-    - name: Using Statements with Stored Procedures
-      href: using-statements-with-stored-procedures.md
-    - name: Azure Key Vault sample version 6.0.0
-      href: azure-key-vault-sample-version-6.0.0.md
-    - name: Azure Key Vault sample version 6.2.2
-      href: azure-key-vault-sample-version-6.2.2.md
-    - name: Azure Key Vault sample version 7.0.0
-      href: azure-key-vault-sample-version-7-0-0.md
+    - name: Connecting and Retrieving Data
+      href: connecting-and-retrieving-data.md
+      items:
+      - name: Connection URL Sample
+        href: connection-url-sample.md
+      - name: Data Source Sample
+        href: data-source-sample.md
+    - name: Working with Data Types (JDBC)
+      href: working-with-data-types-jdbc.md
+      items:
+      - name: Basic Data Types Sample
+        href: basic-data-types-sample.md
+      - name: SQLXML Data Type Sample
+        href: sqlxml-data-type-sample.md
+      - name: Spatial Data Types Sample
+        href: spatial-data-types-sample.md
+    - name: Working with Result Sets
+      href: working-with-result-sets.md
+      items:
+      - name: Retrieving Result Set Data Sample
+        href: retrieving-result-set-data-sample.md
+      - name: Modifying Result Set Data Sample
+        href: modifying-result-set-data-sample.md
+      - name: Caching Result Set Data Sample
+        href: caching-result-set-data-sample.md
+    - name: Working with Large Data
+      href: working-with-large-data.md
+      items:
+      - name: Reading Large Data Sample
+        href: reading-large-data-sample.md
+      - name: Reading Large Data with Stored Procedures Sample
+        href: reading-large-data-with-stored-procedures-sample.md
+      - name: Updating Large Data Sample
+        href: updating-large-data-sample.md
+    - name: Data Discovery and Classification Sample
+      href: data-discovery-classification-sample.md
+  - name: Compliance and Legal for the JDBC SQL Driver
+    href: compliance-and-legal-for-the-jdbc-sql-driver.md
+    items:
+    - name: JDBC 4.1 Compliance for the JDBC Driver
+      href: jdbc-4-1-compliance-for-the-jdbc-driver.md
+    - name: JDBC 4.2 Compliance for the JDBC Driver
+      href: jdbc-4-2-compliance-for-the-jdbc-driver.md
+    - name: JDBC 4.3 Compliance for the JDBC Driver
+      href: jdbc-4-3-compliance-for-the-jdbc-driver.md
+  - name: Programming Guide for JDBC SQL Driver
+    href: programming-guide-for-jdbc-sql-driver.md
+    items:
+    - name: Connecting to SQL Server with the JDBC Driver
+      href: connecting-to-sql-server-with-the-jdbc-driver.md
+    - name: Understanding the JDBC Driver Data Types
+      href: understanding-the-jdbc-driver-data-types.md
+    - name: Using Statements with the JDBC Driver
+      href: using-statements-with-the-jdbc-driver.md
+    - name: Managing Result Sets with the JDBC Driver
+      href: managing-result-sets-with-the-jdbc-driver.md
+    - name: Performing Transactions with the JDBC Driver
+      href: performing-transactions-with-the-jdbc-driver.md
+    - name: Handling Metadata with the JDBC Driver
+      href: handling-metadata-with-the-jdbc-driver.md
+    - name: Using Always Encrypted with the JDBC Driver
+      href: using-always-encrypted-with-the-jdbc-driver.md
+    - name: Guide articles
+      items:
+      - name: Using Statements with SQL
+        href: using-statements-with-sql.md
+      - name: Using an SQL Statement to Modify Database Objects
+        href: using-an-sql-statement-to-modify-database-objects.md
+      - name: Setting the Data Source Properties
+        href: setting-the-data-source-properties.md
+      - name: Setting the Connection Properties
+        href: setting-the-connection-properties.md
+      - name: Using a Stored Procedure with No Parameters
+        href: using-a-stored-procedure-with-no-parameters.md
+      - name: Using Parameter Metadata
+        href: using-parameter-metadata.md
+      - name: Using Basic Data Types
+        href: using-basic-data-types.md
+      - name: Using Spatial Datatypes
+        href: use-spatial-datatypes.md
+      - name: Using Sql_variant Data Type
+        href: using-sql-variant-datatype.md
+      - name: Understanding Transactions
+        href: understanding-transactions.md
+      - name: Working with a Connection
+        href: working-with-a-connection.md
+      - name: International Features of the JDBC Driver
+        href: international-features-of-the-jdbc-driver.md
+      - name: Using Advanced Data Types
+        href: using-advanced-data-types.md
+      - name: Understanding Data Type Differences
+        href: understanding-data-type-differences.md
+      - name: Using Multiple Result Sets
+        href: using-multiple-result-sets.md
+      - name: Using Holdability
+        href: using-holdability.md
+      - name: Connecting using Azure Active Directory Authentication
+        href: connecting-using-azure-active-directory-authentication.md
+      - name: Understanding Data Type Conversions
+        href: understanding-data-type-conversions.md
+      - name: Understanding Concurrency Control
+        href: understanding-concurrency-control.md
+      - name: Using a Stored Procedure with Input Parameters
+        href: using-a-stored-procedure-with-input-parameters.md
+      - name: Using Database Metadata
+        href: using-database-metadata.md
+      - name: SQLXML Interface
+        href: sqlxml-interface.md
+      - name: Handling Complex Statements
+        href: handling-complex-statements.md
+      - name: Using Connection Pooling
+        href: using-connection-pooling.md
+      - name: Always Encrypted API Reference for the JDBC Driver
+        href: always-encrypted-api-reference-for-the-jdbc-driver.md
+      - name: Using Kerberos Integrated Authentication to Connect to SQL Server
+        href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
+      - name: Using a Stored Procedure with an Update Count
+        href: using-a-stored-procedure-with-an-update-count.md
+      - name: Understanding Row Locking
+        href: understanding-row-locking.md
+      - name: JDBC Driver Support for High Availability, Disaster Recovery
+        href: jdbc-driver-support-for-high-availability-disaster-recovery.md
+      - name: Using Result Set Metadata
+        href: using-result-set-metadata.md
+      - name: Understanding XA Transactions
+        href: understanding-xa-transactions.md
+      - name: Using Auto Generated Keys
+        href: using-auto-generated-keys.md
+      - name: Using Database Mirroring (JDBC)
+        href: using-database-mirroring-jdbc.md
+      - name: National Character Set Support
+        href: national-character-set-support.md
+      - name: Understanding Cursor Types
+        href: understanding-cursor-types.md
+      - name: Programming with SQLXML
+        href: programming-with-sqlxml.md
+      - name: Using a Stored Procedure with a Return Status
+        href: using-a-stored-procedure-with-a-return-status.md
+      - name: Using an SQL Statement with No Parameters
+        href: using-an-sql-statement-with-no-parameters.md
+      - name: Connecting to an Azure SQL database
+        href: connecting-to-an-azure-sql-database.md
+      - name: Using an SQL Statement to Modify Data
+        href: using-an-sql-statement-to-modify-data.md
+      - name: Building the Connection URL
+        href: building-the-connection-url.md
+      - name: Using Savepoints
+        href: using-savepoints.md
+      - name: Using Table-Valued Parameters
+        href: using-table-valued-parameters.md
+      - name: Supporting XML Data
+        href: supporting-xml-data.md
+      - name: Using an SQL Statement with Parameters
+        href: using-an-sql-statement-with-parameters.md
+      - name: Understanding Isolation Levels
+        href: understanding-isolation-levels.md
+      - name: Wrappers and Interfaces
+        href: wrappers-and-interfaces.md
+      - name: Using Bulk Copy with the JDBC Driver
+        href: using-bulk-copy-with-the-jdbc-driver.md
+      - name: Using Bulk Copy API for batch insert operation
+        href: use-bulk-copy-api-batch-insert-operation.md
+      - name: Using a Stored Procedure with Output Parameters
+        href: using-a-stored-procedure-with-output-parameters.md
+      - name: Performing Batch Operations
+        href: performing-batch-operations.md
+      - name: User Defined Types
+        href: user-defined-types.md
+      - name: Configuring How java.sql.Time Values are Sent to the Server
+        href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
+      - name: Using SQL Escape Sequences
+        href: using-sql-escape-sequences.md
+      - name: Using Statements with Stored Procedures
+        href: using-statements-with-stored-procedures.md
+      - name: Azure Key Vault sample version 6.0.0
+        href: azure-key-vault-sample-version-6.0.0.md
+      - name: Azure Key Vault sample version 6.2.2
+        href: azure-key-vault-sample-version-6.2.2.md
+      - name: Azure Key Vault sample version 7.0.0
+        href: azure-key-vault-sample.md

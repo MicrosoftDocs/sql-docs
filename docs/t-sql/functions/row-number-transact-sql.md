@@ -26,7 +26,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Numbers the output of a result set. More specifically, returns the sequential number of a row within a partition of a result set, starting at 1 for the first row in each partition. 
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+Numbers the output of a result set. More specifically, returns the sequential number of a row within a partition of a result set, starting at 1 for the first row in each partition. 
   
 `ROW_NUMBER` and `RANK` are similar. `ROW_NUMBER` numbers all rows sequentially (for example 1, 2, 3, 4, 5). `RANK` provides the same numeric value for ties (for example 1, 2, 2, 4, 5).   
   

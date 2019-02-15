@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Deprecated Features"
@@ -111,9 +111,9 @@ manager: craigg
 |PERMISSIONS|References to the PERMISSIONS intrinsic function were encountered. Query sys.fn_my_permissions instead. Occurs once per query.|  
 |ProcNums|The deprecated ProcNums syntax was encountered. Rewrite statements to remove the references. Occurs once per compilation.|  
 |READTEXT|The READTEXT syntax was encountered. Rewrite applications to use the `varchar(max)` data type and removed `text` data type syntax. Occurs once per query.|  
-|RESTORE DATABASE or LOG WITH DBO_ONLY|The RESTORE … WITH DBO_ONLY syntax was encountered. Use RESTORE … RESTRICTED_USER instead.|  
-|RESTORE DATABASE or LOG WITH MEDIAPASSWORD|The RESTORE … WITH MEDIAPASSWORD syntax was encountered. WITH MEDIAPASSWORD provides weak security and should be removed.|  
-|RESTORE DATABASE or LOG WITH PASSWORD|The RESTORE … WITH PASSWORD syntax was encountered. WITH PASSWORD provides weak security and should be removed.|  
+|RESTORE DATABASE or LOG WITH DBO_ONLY|The RESTORE ... WITH DBO_ONLY syntax was encountered. Use RESTORE ... RESTRICTED_USER instead.|  
+|RESTORE DATABASE or LOG WITH MEDIAPASSWORD|The RESTORE ... WITH MEDIAPASSWORD syntax was encountered. WITH MEDIAPASSWORD provides weak security and should be removed.|  
+|RESTORE DATABASE or LOG WITH PASSWORD|The RESTORE ... WITH PASSWORD syntax was encountered. WITH PASSWORD provides weak security and should be removed.|  
 |Returning results from trigger|This event occurs once per trigger invocation. Rewrite the trigger so that it does not return result sets.|  
 |ROWGUIDCOL|The ROWGUIDCOL syntax was encountered. Rewrite statements to use the $rowguid syntax. Occurs once per compilation.|  
 |SET ANSI_NULLS OFF|The SET ANSI_NULLS OFF syntax was encountered. Remove this deprecated syntax. Occurs once per compilation.|  
@@ -150,13 +150,13 @@ manager: craigg
 |sp_configure 'ft notify bandwidth (min)'|The ft notify bandwidth (min) option of sp_configure was encountered. Do not use. Occurs once per query.|  
 |sp_configure 'locks'|The locks option of sp_configure was encountered. Locks are no longer configurable. Do not use. Occurs once per query.|  
 |sp_configure 'open objects'|The open objects option of sp_configure was encountered. The number of open objects is no longer configurable. Do not use. Occurs once per query.|  
-|sp_configure 'priority boost'|The priority boost option of sp_configure was encountered. Do not use. Occurs once per query. Use the Windows start /high … program.exe option instead.|  
+|sp_configure 'priority boost'|The priority boost option of sp_configure was encountered. Do not use. Occurs once per query. Use the Windows start /high ... program.exe option instead.|  
 |sp_configure 'remote proc trans'|The remote proc trans option of sp_configure was encountered. Do not use. Occurs once per query.|  
 |sp_configure 'set working set size'|The set working set size option of sp_configure was encountered. The working set size is no longer configurable. Do not use. Occurs once per query.|  
 |sp_control_dbmasterkey_password|The sp_control_dbmasterkey_password stored procedure does not check whether a master key exists. This is permitted for backward compatibility, but displays a warning. This behavior is deprecated. In a future release the master key must exist and the password used in the stored procedure sp_control_dbmasterkey_password must be the same password as one of the passwords used to encrypt the database master key.|  
 |sp_create_removable|The sp_create_removable procedure was encountered. Use CREATE DATABASE instead. Occurs once per query.|  
 |sp_db_vardecimal_storage_format|Use of `vardecimal` storage format was encountered. Use data compression instead.|  
-|sp_dbcmptlevel|The sp_dbcmptlevel procedure was encountered. Use ALTER DATABASE … SET COMPATIBILITY_LEVEL instead. Occurs once per query.|  
+|sp_dbcmptlevel|The sp_dbcmptlevel procedure was encountered. Use ALTER DATABASE ... SET COMPATIBILITY_LEVEL instead. Occurs once per query.|  
 |sp_dbfixedrolepermission|The sp_dbfixedrolepermission procedure was encountered. Do not use. Occurs once per query.|  
 |sp_dboption|The sp_dboption procedure was encountered. Use ALTER DATABASE and DATABASEPROPERTYEX instead. Occurs once per compilation.|  
 |sp_dbremove|The sp_dbremove procedure was encountered. Use DROP DATABASE instead. Occurs once per query.|  

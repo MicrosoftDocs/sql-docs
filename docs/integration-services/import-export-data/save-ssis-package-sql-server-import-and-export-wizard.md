@@ -34,7 +34,7 @@ The following screen shot shows the first part of the **Save SSIS Package** page
  Provide a description for the package. As a best practice, describe the purpose of the package, to make packages self-documenting and easier to maintain.  
   
  **Target**  
- The destination ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or File system) that you previously specified for the package. If you want to save the package to a different destination, go back to the **Save and Run Package** page.
+ The destination ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or File system) that you previously specified for the package. If you want to save the package to a different destination, go back to the **Save and Run Package** page.
 
 ## Screen shot - Save the package in SQL Server
 

@@ -110,7 +110,7 @@ GO
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

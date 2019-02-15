@@ -48,7 +48,7 @@ Shows the name of the data source for the selected column. (Applies only to OLE 
 Expands to show the remaining properties.  
   
 **Data Type**  
-Shows the data type of the selected column. For more information, see [Data Types (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Shows the data type of the selected column. For more information, see [Data Types (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Identity Increment**  
 Shows the increment that will be added to the **Identity Seed** for each subsequent row of the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
@@ -90,7 +90,7 @@ Displays the name of the column. To edit the name, type in the text box.
 Shows whether or not the column's data type allows null values.  
   
 **Data Type**  
-Shows the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value. For more information, see [Data Types (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Shows the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value. For more information, see [Data Types (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Default Value or Binding**  
 Shows the default for this column when no value is specified for this column. The drop-down list contains all global defaults defined in the data source. To bind the column to a global default, select from the drop-down list. Alternatively, to create a default constraint for the column, type the default value directly as text.  
@@ -108,7 +108,7 @@ Shows the maximum number of digits that can appear to the right of the decimal p
 Expands to show the remaining properties.  
   
 **Collation**  
-Shows the collation setting for the selected column. To change this setting, click **Collation** and then click the ellipses **(…)** to the right of the value.  
+Shows the collation setting for the selected column. To change this setting, click **Collation** and then click the ellipses **(...)** to the right of the value.  
   
 **Computed Column Specification Category**  
 Expands to show properties for **Formula** and **Is Persisted**. If the column is computed, the formula will also be displayed. To edit the formula, expand this category and edit it in the **Formula** property.  
@@ -123,7 +123,7 @@ Allows you to save the computed column with the data source. A persisted compute
 Displays information about the field's data type, in the same format as the SQL CREATE TABLE statement. For example, a field containing a variable-length string with a maximum length of 20 characters would be represented as "varchar(20)." To change this property, type the value directly.  
   
 **Description**  
-Shows the description of the column. To see the full description or to edit it, click Description, and then click the ellipses **(…)** to the right of the property.  
+Shows the description of the column. To see the full description or to edit it, click Description, and then click the ellipses **(...)** to the right of the property.  
   
 **Full-text Specification Category**  
 Expands to show properties specific to full-text columns.  
@@ -138,7 +138,7 @@ Shows which column is used to define the document type of a column of type image
 Indicates the language used to index the column.  
   
 **Statistical Semantics**  
-Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search placeholder](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search placeholder](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** option is set to **No** and cannot be modified. If you select **Yes** for the **Statistical Semantics** option prior to selecting a **Language**, then the languages available in the **Language** column will be restricted to those for which there is Semantic Language Model support.  
   

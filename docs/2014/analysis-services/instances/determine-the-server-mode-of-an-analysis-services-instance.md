@@ -31,7 +31,7 @@ manager: craigg
 >  Do not change the value of the `DeploymentMode` property. Changing the property manually after the server is installed is not supported.  
   
 ## About the DeploymentMode Property  
- `DeploymentMode` property determines the operational context of an Analysis Services server instance. This property is referred to as ‘server mode’ in dialog boxes, messages, and documentation. This property is initialized by Setup based on how you install Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
+ `DeploymentMode` property determines the operational context of an Analysis Services server instance. This property is referred to as 'server mode' in dialog boxes, messages, and documentation. This property is initialized by Setup based on how you install Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
   
  Valid values for this property include the following:  
   

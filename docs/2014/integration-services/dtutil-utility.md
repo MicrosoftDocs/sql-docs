@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "verifying packages"
@@ -28,7 +27,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # dtutil Utility
-  The **dtutil** command p1ompt utility is used to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. The utility can copy, move, delete, or verify the existence of a package. These actions can be performed on any [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is stored in one of three locations: a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system. If the utility accesses a package that is stored in **msdb**, the command prompt may require a user name and a password. If the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, the command prompt requires both a user name and a password. If the user name is missing, **dtutil** tries to log on to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Windows Authentication. The storage type of the package is identified by the `/SQL`, `/FILE`, and `/DTS` options.  
+  The **dtutil** command prompt utility is used to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. The utility can copy, move, delete, or verify the existence of a package. These actions can be performed on any [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is stored in one of three locations: a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system. If the utility accesses a package that is stored in **msdb**, the command prompt may require a user name and a password. If the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, the command prompt requires both a user name and a password. If the user name is missing, **dtutil** tries to log on to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Windows Authentication. The storage type of the package is identified by the `/SQL`, `/FILE`, and `/DTS` options.  
   
  The **dtutil** command prompt utility does not support the use of command files or redirection.  
   
@@ -259,7 +258,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  The hash used in this example is not a real hash.  
   
- For more information, see the CertMgr section in [Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100).  
+ For more information, see the CertMgr section in [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100).  
   
 ### Encrypt Examples  
  The following sample encrypts the file-based PackageToEncrypt.dtsx to the file-based EncryptedPackage.dts using full package encryption, with a password. The password that is used for the encryption is *EncPswd*.  

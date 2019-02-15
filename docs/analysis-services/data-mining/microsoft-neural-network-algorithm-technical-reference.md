@@ -78,7 +78,7 @@ manager: kfile
   
  **Discrete values**  
   
- `μ = p` – the prior probability of a state  
+ `μ = p` - the prior probability of a state  
   
  `StdDev  = sqrt(p(1-p))`  
   

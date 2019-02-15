@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Properties Dialog Box, Code (Report Builder)
   Select **Code** on the **Report Properties** dialog box to define custom code to be used by expressions within the report.  

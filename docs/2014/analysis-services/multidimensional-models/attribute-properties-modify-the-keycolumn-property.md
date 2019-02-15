@@ -27,7 +27,7 @@ manager: craigg
   
     -   In **Solution Explorer**, right-click the dimension in the **Dimensions** folder, and then either click **Open** or **View Designer**.  
   
-         —or—  
+         -or-  
   
     -   In Cube Designer, on the **Cube Structure** tab, expand the cube dimension in the **Dimensions** pane and click **Edit \<dimension>**.  
   

@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Managing a Composite Domain
@@ -17,7 +16,7 @@ manager: craigg
   
  The single domains in a composite domain must have a common area of knowledge. An example is an address field that has street, city, state, country, and postal code data. The different terms in this field could have different data types. To handle that, you map those terms to different single domains. Another example is a full name field that has first name, middle name, and last name data. To use a composite domain, you have to be able to parse the data in the field into different single domains, creating a composite domain for the field and a single domain for part of the field.  
   
- Composite domains have different capabilities than single domains. You cannot change the values in the composite domain—you must do so in a single domain. With composite domains, you can use cross-domain rules to test the values in the single domains of the composite domain. You can also view the value combinations that are found in the composite domains.  
+ Composite domains have different capabilities than single domains. You cannot change the values in the composite domain-you must do so in a single domain. With composite domains, you can use cross-domain rules to test the values in the single domains of the composite domain. You can also view the value combinations that are found in the composite domains.  
   
 ## In This Section  
  Using a composite domain enables you to do the following:  

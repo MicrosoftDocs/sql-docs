@@ -1,7 +1,7 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2018"
+ms.date: "02/06/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -26,6 +26,7 @@ manager: craigg
   
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
+|Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.1.jre11.jar<br> mssql-jdbc-7.2.1.jre8.jar|Feb 11, 2024|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|July 31, 2023|  
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|February 27, 2023|    
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|June 30, 2022|    
@@ -49,6 +50,7 @@ manager: craigg
   
 |Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance (Extended Private Preview)|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.2|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
@@ -68,7 +70,7 @@ manager: craigg
   
  <sup>2</sup>Support for Azure SQL Database was introduced in the 3.0 driver as a hotfix. We recommend that Azure SQL Database customers use the latest driver version available.  
   
- <sup>3</sup>Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=145198) and  [Working with SQL Server 2008 FileStream using JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=145199). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](http://go.microsoft.com/fwlink/?LinkId=145211)and  [FILESTREAM Support](http://go.microsoft.com/fwlink/?LinkId=145212) topics in SQL Server Books Online.  
+ <sup>3</sup>Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145198) and  [Working with SQL Server 2008 FileStream using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145199). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](https://go.microsoft.com/fwlink/?LinkId=145211)and  [FILESTREAM Support](https://go.microsoft.com/fwlink/?LinkId=145212) topics in SQL Server Books Online.  
   
  <sup>4</sup>Support for connections between the Microsoft JDBC Driver and Parallel Data Warehouse was first introduced in the Microsoft JDBC Driver 4.0 for SQL Server and Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3.  
   
@@ -78,7 +80,8 @@ manager: craigg
   
 |JDBC Driver Version|JRE Versions|JDBC API Version| 
 |-|-|-|  
-|7.0|1.8, 10|4.2, 4.3 (partially)|  
+|7.2|1.8, 11|4.2, 4.3 (partially)|
+|7.0|1.8, 10|4.2, 4.3 (partially)|
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (partially)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  

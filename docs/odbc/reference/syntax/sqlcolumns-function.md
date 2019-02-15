@@ -33,15 +33,15 @@ manager: craigg
 ```  
   
 SQLRETURN SQLColumns(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      CatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      SchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      TableName,  
-     SQLSMALLINT    NameLength3,  
-     SQLCHAR *      ColumnName,  
-     SQLSMALLINT    NameLength4);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      CatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      SchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      TableName,  
+     SQLSMALLINT    NameLength3,  
+     SQLCHAR *      ColumnName,  
+     SQLSMALLINT    NameLength4);  
 ```  
   
 ## Arguments  
@@ -159,7 +159,7 @@ SQLRETURN SQLColumns(
 |TABLE_NAME (ODBC 1.0)|3|Varchar not NULL|Table name.|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar not NULL|Column name. The driver returns an empty string for a column that does not have a name.|  
 |DATA_TYPE (ODBC 1.0)|5|Smallint not NULL|SQL data type. This can be an ODBC SQL data type or a driver-specific SQL data type. For datetime and interval data types, this column returns the concise data type (such as SQL_TYPE_DATE or SQL_INTERVAL_YEAR_TO_MONTH, instead of the nonconcise data type such as SQL_DATETIME or SQL_INTERVAL). For a list of valid ODBC SQL data types, see [SQL Data Types](../../../odbc/reference/appendixes/sql-data-types.md) in Appendix D: Data Types. For information about driver-specific SQL data types, see the driver's documentation.<br /><br /> The data types returned for ODBC 3.*x* and ODBC 2.*x* applications may be different. For more information, see [Backward Compatibility and Standards Compliance](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  
-|TYPE_NAME (ODBC 1.0)|6|Varchar not NULL|Data source–dependent data type name; for example, "CHAR", "VARCHAR", "MONEY", "LONG VARBINAR", or "CHAR ( ) FOR BIT DATA".|  
+|TYPE_NAME (ODBC 1.0)|6|Varchar not NULL|Data source-dependent data type name; for example, "CHAR", "VARCHAR", "MONEY", "LONG VARBINAR", or "CHAR ( ) FOR BIT DATA".|  
 |COLUMN_SIZE (ODBC 1.0)|7|Integer|If DATA_TYPE is SQL_CHAR or SQL_VARCHAR, this column contains the maximum length in characters of the column. For datetime data types, this is the total number of characters required to display the value when it is converted to characters. For numeric data types, this is either the total number of digits or the total number of bits allowed in the column, according to the NUM_PREC_RADIX column. For interval data types, this is the number of characters in the character representation of the interval literal (as defined by the interval leading precision, see [Interval Data Type Length](../../../odbc/reference/appendixes/interval-data-type-length.md) in Appendix D: Data Types). For more information, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types.|  
 |BUFFER_LENGTH (ODBC 1.0)|8|Integer|The length in bytes of data transferred on an SQLGetData, SQLFetch, or SQLFetchScroll operation if SQL_C_DEFAULT is specified. For numeric data, this size may differ from the size of the data stored on the data source. This value might differ from COLUMN_SIZE column for character data. For more information about length, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types.|  
 |DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|The total number of significant digits to the right of the decimal point. For SQL_TYPE_TIME and SQL_TYPE_TIMESTAMP, this column contains the number of digits in the fractional seconds component. For the other data types, this is the decimal digits of the column on the data source. For interval data types that contain a time component, this column contains the number of digits to the right of the decimal point (fractional seconds). For interval data types that do not contain a time component, this column is 0. For more information about decimal digits, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types. NULL is returned for data types where DECIMAL_DIGITS is not applicable.|  
@@ -171,7 +171,7 @@ SQLRETURN SQLColumns(
 |SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|The subtype code for datetime and interval data types. For other data types, this column returns a NULL. For more information about datetime and interval subcodes, see "SQL_DESC_DATETIME_INTERVAL_CODE" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|16|Integer|The maximum length in bytes of a character or binary data type column. For all other data types, this column returns a NULL.|  
 |ORDINAL_POSITION (ODBC 3.0)|17|Integer not NULL|The ordinal position of the column in the table. The first column in the table is number 1.|  
-|IS_NULLABLE (ODBC 3.0)|18|Varchar|"NO" if the column does not include NULLs.<br /><br /> "YES" if the column could include NULLs.<br /><br /> This column returns a zero-length string if nullability is unknown.<br /><br /> ISO rules are followed to determine nullability. An ISO SQL–compliant DBMS cannot return an empty string.<br /><br /> The value returned for this column differs from the value returned for the NULLABLE column. (See the description of the NULLABLE column.)|  
+|IS_NULLABLE (ODBC 3.0)|18|Varchar|"NO" if the column does not include NULLs.<br /><br /> "YES" if the column could include NULLs.<br /><br /> This column returns a zero-length string if nullability is unknown.<br /><br /> ISO rules are followed to determine nullability. An ISO SQL-compliant DBMS cannot return an empty string.<br /><br /> The value returned for this column differs from the value returned for the NULLABLE column. (See the description of the NULLABLE column.)|  
   
 ## Code Example  
  In the following example, an application declares buffers for the result set returned by **SQLColumns**. It calls **SQLColumns** to return a result set that describes each column in the EMPLOYEE table. It then calls **SQLBindCol** to bind the columns in the result set to the buffers. Finally, the application fetches each row of data with **SQLFetch** and processes it.  

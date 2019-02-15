@@ -71,7 +71,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 4.  Right-click the error log you want to view and select **View Agent Log**.  
   
-    The following options are available in the **Log File Viewer –***server_name* dialog box:  
+    The following options are available in the **Log File Viewer -**_server_name_ dialog box:  
   
     **Load Log**  
     Open a dialog box where you can specify a log file to load.  

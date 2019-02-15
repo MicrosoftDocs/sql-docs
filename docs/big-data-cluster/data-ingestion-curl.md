@@ -1,17 +1,19 @@
 ---
-title: Use curl to load data into HDFS on SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: Use curl to load data into HDFS on SQL Server 2019 big data clusters | Microsoft Docs
 description:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
-# Use curl to load data into HDFS on SQL Server 2019 CTP 2.0
+# Use curl to load data into HDFS on SQL Server 2019 big data clusters
 
-This article explains how to use **curl** to load data into HDFS on SQL Server 2019 CTP 2.0.
+This article explains how to use **curl** to load data into HDFS on SQL Server 2019 big data clusters (preview).
 
 ## Obtain the service external IP
 

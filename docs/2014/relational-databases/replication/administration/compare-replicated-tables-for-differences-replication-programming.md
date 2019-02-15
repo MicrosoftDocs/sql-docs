@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -18,7 +17,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Compare Replicated Tables for Differences (Replication Programming)
-  Article validation is used to determine if published data for table articles at the Publisher and Subscriber are not identical, which can indicate non-convergence. For more information, see [Validate Replicated Data](../validate-replicated-data.md). However, validation only returns pass or fail information and does not provide any information about what is different between the source and destination tables. The **tablediff** command prompt utility returns detailed difference information between two tables and can even generate a [!INCLUDE[tsql](../../../includes/tsql-md.md)] script to bring a subscription into convergence with data at the Publisher.  
+  Article validation is used to determine if published data for table articles at the Publisher and Subscriber are not identical, which can indicate non-convergence. For more information, see [Validate Replicated Data](../validate-data-at-the-subscriber.md). However, validation only returns pass or fail information and does not provide any information about what is different between the source and destination tables. The **tablediff** command prompt utility returns detailed difference information between two tables and can even generate a [!INCLUDE[tsql](../../../includes/tsql-md.md)] script to bring a subscription into convergence with data at the Publisher.  
   
 > [!NOTE]  
 >  The **tablediff** utility is only supported for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servers.  

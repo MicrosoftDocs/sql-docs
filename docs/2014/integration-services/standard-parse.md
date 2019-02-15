@@ -18,7 +18,7 @@ manager: craigg
 # Standard Parse
   Standard parse is a locale-sensitive set of parsing routines that support all the data type conversions provided by the Automation data type conversion APIs that are available in Oleaut32.dll and Ole2dsip.dll. Standard parse is equivalent to the OLE DB parsing APIs.  
   
- Standard parse provides support for data type conversion of international data, and it should be used if the data format is not supported by Fast parse. For more information about the Automation data type conversion API, see "Data Type Conversion APIs" in the [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427).  
+ Standard parse provides support for data type conversion of international data, and it should be used if the data format is not supported by Fast parse. For more information about the Automation data type conversion API, see "Data Type Conversion APIs" in the [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=79427).  
   
 ## See Also  
  [Fast Parse](../../2014/integration-services/fast-parse.md)  

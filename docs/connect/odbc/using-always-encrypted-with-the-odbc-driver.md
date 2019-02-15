@@ -359,9 +359,9 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 
 The driver supports authenticating to Azure Key Vault using the following credential types:
 
-- Username/Password – with this method, the credentials are the name of an Azure Active Directory user and its password.
+- Username/Password - with this method, the credentials are the name of an Azure Active Directory user and its password.
 
-- Client ID/Secret – with this method, the credentials are an application client ID and an application secret.
+- Client ID/Secret - with this method, the credentials are an application client ID and an application secret.
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
@@ -411,6 +411,7 @@ Setting the `SQL_COPT_SS_CEKEYSTOREPROVIDER` connection attribute enables a clie
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -445,6 +446,7 @@ Getting this connection attribute enables a client application to determine the 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -460,7 +462,7 @@ To allow retrieving the entire list, every Get operation returns the current pro
 The `SQL_COPT_SS_CEKEYSTOREDATA` connection attribute enables a client application to communicate with loaded keystore providers for configuring additional parameters, keying material, etc. The communication between a client application and a provider follows a simple request-response protocol, based on Get and Set requests using this connection attribute. Communication is initiated only by the client application.
 
 > [!NOTE]
-> Due to the nature of the ODBC calls CEKeyStoreProvider’s respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
+> Due to the nature of the ODBC calls CEKeyStoreProvider's respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
 
 The application communicates with keystore providers through the driver via the CEKeystoreData structure:
 
@@ -471,6 +473,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | Argument | Description |
 |:---|:---|
 |`name`|[Input] Upon Set, the name of the provider to which the data is sent. Ignored upon Get. Null-terminated, wide-character string.|
@@ -483,6 +486,7 @@ A `SQLSetConnectAttr` call using the `SQL_COPT_SS_CEKEYSTOREDATA` attribute writ
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`| [Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -502,6 +506,7 @@ A call to `SQLGetConnectAttr` using the `SQL_COPT_SS_CEKEYSTOREDATA` attribute r
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -532,7 +537,7 @@ Encrypted **money** or **smallmoney** columns cannot be targeted by parameters, 
 
 ## Bulk Copy of Encrypted Columns
 
-Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the **bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_*) APIs and the **bcp** utility.
+Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the **bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_&#42;) APIs and the **bcp** utility.
 
 - To retrieve ciphertext in varbinary(max) form (e.g. for bulk loading into a different database), connect without the `ColumnEncryption` option (or set it to `Disabled`) and perform a BCP OUT operation.
 
@@ -599,5 +604,5 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 ## See Also
 
 - [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

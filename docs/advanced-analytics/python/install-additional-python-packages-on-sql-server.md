@@ -1,6 +1,6 @@
 ---
-title: Install new Python packages on SQL Server Machine Learning | Microsoft Docs
-description: Add new Python packages to SQL Server 2017 Machine Learning Services (In-Database), and Machine Learning Server (Standalone)
+title: Install new Python language packages -  SQL Server Machine Learning
+description: Add new Python packages to SQL Server 2017 Machine Learning Services (In-Database), and Machine Learning Server (Standalone).
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -15,36 +15,31 @@ manager: cgronlun
 
 This article describes how to install new Python packages on an instance of SQL Server 2017 Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
-For help figuring out where packages are installed, or which packages are installed, see [Get R or Python package information](../r/determine-which-packages-are-installed-on-sql-server.md).
+For more information about package location and installation paths, see [Get R or Python package information](../r/determine-which-packages-are-installed-on-sql-server.md).
 
 ## Prerequisites
 
-+ You must have installed SQL Server 2017 Machine Learning Services (In-Database) with the Python language option. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
++ [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) with the Python language option. 
 
-+ For each server instance, you must install a separate copy of the package. Packages cannot be shared across instances.
-
-+ Packages must be Python 3.5 compliant and run on Windows. 
-
-+ Assess whether the package is a good fit for use in the SQL Server environment. Typically a database server supports multiple services and applications, and resources on the file system might be limited, as well as connections to the server. In many cases Internet access is blocked entirely.
-
-    Other common problems include the use of networking functionality that is blocked on the server or by the firewall, or packages with dependencies that cannot be installed on a Windows computer. 
-
-    Some popular Python packages (like Flask) perform tasks such as web development that run better in a standalone environment. We recommend that you use Python in-database for tasks such as machine learning, that require intensive data processing that benefit from tight integration with the database engine, rather than simply querying the database.
++ Packages must be Python 3.5-compliant and run on Windows. 
 
 + Administrative access to the server is required to install packages.
+
+## Considerations
+
+Before adding packages, consider whether the package is a good fit for the SQL Server environment. Typically a database server is a shared asset accommodating multiple workloads. If you add packages that put too much computational pressure on the server, performance will suffer. 
+
+Additionally, Some popular Python packages (like Flask) perform tasks, such as web development, that are better suited for a standalone environment. We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning,  rather than tasks that simply query the database.
+
+Database servers are frequently locked down. In many cases, Internet access is blocked entirely. For packages with a long list of dependencies, you will need to identify these dependencies in advance and be willing to install each one manually.
 
 ## Add a new Python package
 
 For this example, we assume that you want to install a new package directly on the SQL Server computer.
 
-The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
+Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
-> [!TIP]
-> Need help configuring your Python tools? See these blogs:
-> 
-> [Getting Started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [David Crook: Microsoft Cognitive Toolkit + VS Code](http://dacrook.com/cntk-vs-code-awesome/)
+The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
 
 ### Step 1. Download the Windows version of the Python package
 
@@ -126,10 +121,13 @@ There are different ways that you can get a list of installed packages. For exam
 
 If you are using the Python command line, you can use either **Pip** or the **conda** package manager, included with the Anaconda Python environment added by SQL Server setup.
 
-Assuming you added the Scripts folder to the PATH environment variable, run this command from an administrator's command prompt to list the packages in your Python environment. Otherwise, see [Get R and Python package information](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda) for pointers on how to run the Python tools in SQL Server.
+1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
-```python
-conda list
-```
+1. Right-click **conda.exe** > **Run as administrator**, and enter `conda list` to return a list of packages installed in the current environment.
+
+1. Similarly, right-click **pip.exe** > **Run as administrator**, and enter `pip list` to return the same information. 
 
 For more information about **conda** and how you can use it to create and manage multiple Python environments, see [Managing environments with conda](https://conda.io/docs/user-guide/tasks/manage-environments.html).
+
+> [!Note]
+> SQL Server Setup does not add Pip or Conda to the system path and on a production SQL Server instance, keeping non-essential executables out of the path is a best practice. However, for development and test environments, you could add the Scripts folder to the system PATH environment variable to run both Pip and Conda on command from any location.

@@ -5,8 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "FileName Property (ClientNetLibInfo Class)"
@@ -41,6 +40,6 @@ object.FileName [= value]
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

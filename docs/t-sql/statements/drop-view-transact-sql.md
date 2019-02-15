@@ -1,7 +1,7 @@
 ---
 title: "DROP VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/12/2017"
+ms.date: "10/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -34,22 +34,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
+```sql  
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```sql
+-- Syntax for Parallel Data Warehouse  
   
-DROP VIEW [ schema_name . ] view_name   
-[;]  
+DROP VIEW [ schema_name . ] view_name [ ; ]  
 ```  
   
 ## Arguments  
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).|  
   
  Conditionally drops the view only if it already exists.  
   
@@ -80,8 +79,8 @@ DROP VIEW [ schema_name . ] view_name
 ### A. Drop a view  
  The following example removes the view `Reorder`.  
   
-```  
-DROP VIEW dbo.Reorder ;  
+```sql
+DROP VIEW IF EXISTS dbo.Reorder ;  
 GO  
 ```  
   

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # SetWindowsServiceIdentity Method (WMI MSReportServer_ConfigurationSetting)
   Makes the Report Server Windows service run as a specified Windows user, and grants this account sufficient file system permissions to allow the report server to operate.  
@@ -54,7 +54,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## Remarks  
  When the *UseBuiltInAccount* parameter is set to `true` and the report server is running on Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] or Windows XP, the value of the *Name*, *Domain*, and *Password* parameters are ignored and the Local system account is used.  
   
- When the *UseBuiltInAccount* parameter is set to `true` and the report server is running on Windows Server 2003, the *Domain* and *Password* properties are ignored, and the name field must contain either “Builtin\NetworkService” or “Builtin\System” or “Builtin\LocalService”.  
+ When the *UseBuiltInAccount* parameter is set to `true` and the report server is running on Windows Server 2003, the *Domain* and *Password* properties are ignored, and the name field must contain either "Builtin\NetworkService" or "Builtin\System" or "Builtin\LocalService".  
   
  The SetWindowsServiceIdentity method sets file permissions on files and folders in the report server installation directory.  
   

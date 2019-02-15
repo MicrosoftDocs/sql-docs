@@ -4,9 +4,6 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: application-integration
-
-
-
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
@@ -61,7 +58,7 @@ The final page should look like the following.
     <form id="form1" runat="server">
     <asp:ScriptManager runat="server"></asp:ScriptManager>        
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
-            <ServerReport ReportServerUrl="http://AContosoDepartment/ReportServer" ReportPath="/LatestSales" />
+            <ServerReport ReportServerUrl="https://AContosoDepartment/ReportServer" ReportPath="/LatestSales" />
         </rsweb:ReportViewer>
     </form>
 </body>
@@ -79,7 +76,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
-  http://go.microsoft.com/fwlink/?LinkId=169433
+  https://go.microsoft.com/fwlink/?LinkId=169433
   -->
 <configuration>
   <system.web>
@@ -187,7 +184,7 @@ If setting the height of the viewer control to 100% the parent element is requir
     <div id="div1" >
             <asp:ScriptManager runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote" Height="100%" Width="100%">
-            <ServerReport ReportServerUrl="http://test/ReportServer" ReportPath="/testreport" />
+            <ServerReport ReportServerUrl="https://test/ReportServer" ReportPath="/testreport" />
         </rsweb:ReportViewer>
     </div>
     </form>
@@ -198,7 +195,7 @@ If setting the height of the viewer control to 100% the parent element is requir
 
 ### Setting the parent's height attribute
 
-For more information about viewport percentage lengths, see [Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
+For more information about viewport percentage lengths, see [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
 ```
 <!DOCTYPE html>
@@ -210,7 +207,7 @@ For more information about viewport percentage lengths, see [Viewport-percentage
     <div style="height:100vh;">
             <asp:ScriptManager runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote" Height="100%" Width="100%">
-            <ServerReport ReportServerUrl="http://test/ReportServer" ReportPath="/testreport" />
+            <ServerReport ReportServerUrl="https://test/ReportServer" ReportPath="/testreport" />
         </rsweb:ReportViewer>
     </div>
     </form>
@@ -261,5 +258,5 @@ Let the team know about issues on the [Reporting Services forums](https://social
 ## See also
 
 [Data collection in the Report Viewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
 

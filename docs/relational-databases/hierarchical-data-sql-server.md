@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchies [SQL Server], tables to support"
@@ -37,7 +36,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   A graph of links between Web pages  
   
- Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) in [!INCLUDE[tsql](../includes/tsql-md.md)] to query and manage hierarchical data.  
+ Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) in [!INCLUDE[tsql](../includes/tsql-md.md)] to query and manage hierarchical data.  
   
 ##  <a name="keyprops"></a> Key Properties of hierarchyid  
  A value of the **hierarchyid** data type represents a position in a tree hierarchy. Values for **hierarchyid** have the following properties:  
@@ -522,7 +521,7 @@ GO
   
   
 ## See Also  
- [hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
  [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   

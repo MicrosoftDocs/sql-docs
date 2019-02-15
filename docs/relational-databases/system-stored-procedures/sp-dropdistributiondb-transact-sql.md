@@ -5,8 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropdistributiondb_TSQL"
@@ -33,7 +32,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## Arguments  
- [ **@database=**] **'***database***'**  
+ [ **@database=**] **'**_database_**'**  
  Is the database to drop. *database* is **sysname**, with no default.  
   
 ## Return Code Values  

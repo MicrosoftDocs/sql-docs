@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query plans [SQL Server], migrating"
@@ -74,10 +73,10 @@ EXECUTE sp_create_plan_guide
 @type = N'SQL',  
 @module_or_batch = NULL,  
 @params = NULL,  
-@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''http://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
+@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''https://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
     Version=''''0.5'''' Build=''''9.00.1116''''>  
     <BatchSequence><Batch><Statements><StmtSimple>  
-    …  
+    ...  
     </StmtSimple></Statements></Batch>  
     </BatchSequence></ShowPlanXML>'')';  
 GO  

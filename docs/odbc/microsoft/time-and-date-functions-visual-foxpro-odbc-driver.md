@@ -51,8 +51,8 @@ The following table lists ODBC time and date functions supported by the Visual F
  The driver also supports the ODBC escape sequence for date and timestamp data. The escape clause syntax is as follows:  
   
 ```  
---(*vendor(Microsoft),product(ODBC) d 'value' *)—  
---(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
+--(*vendor(Microsoft),product(ODBC) d 'value' *)-  
+--(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
  In this syntax, **d** indicates that *value* is a date in the *yyyy-mm-dd* format and **ts** indicates that *value* is a timestamp in the *yyyy-mm-dd hh:mm:ss*[.*f...*] format. The shorthand syntax for date and timestamp data is as follows:  

@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Backing Up and Restoring DQS Databases
@@ -19,7 +18,7 @@ manager: craigg
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
--   You must know or remember the password for the database master key that that you provided during the DQS server installation.  
+-   You must know or remember the password for the database master key that you provided during the DQS server installation.  
   
 -   Ensure that there are no running activities or processes in DQS. This can be verified using the **Activity Monitoring** screen. For detailed information about working in this screen, see [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   

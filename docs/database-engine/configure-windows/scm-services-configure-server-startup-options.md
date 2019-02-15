@@ -23,7 +23,7 @@ manager: craigg
 ---
 # SCM Services - Configure Server Startup Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to to configure startup options that will be used every time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] starts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. For a list of startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+  This topic describes how to configure startup options that will be used every time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] starts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. For a list of startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -57,7 +57,7 @@ manager: craigg
   
 2.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, click **SQL Server Services**.  
   
-3.  In the right pane, right-click **SQL Server (***<instance_name>***)**, and then click **Properties**.  
+3.  In the right pane, right-click **SQL Server (**_<instance_name>_**)**, and then click **Properties**.  
   
 4.  On the **Startup Parameters** tab, in the **Specify a startup parameter** box, type the parameter, and then click **Add**.  
   

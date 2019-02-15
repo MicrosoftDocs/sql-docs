@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Creating a Free Form Report (Report Builder)
 In this tutorial, you create a paginated report that acts as a newsletter. Each page displays static text, summary visuals, and detailed sample sales data.
@@ -169,7 +169,7 @@ One advantage of list data regions is that you can add report items such as rect
   
 1.  On the **Insert** tab, select **Rectangle**. 
 
-2. Click in the the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
+2. Click in the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
   
 2.  Right-click the rectangle > **Rectangle Properties**.  
   
@@ -453,7 +453,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Select the chart axis, and on the *Home** tab > **Number** > **Currency**.
+12. Select the chart axis, and on the **Home** tab > **Number** > **Currency**.
 
 13. Select **Decrease Decimal** two times, so the number shows just dollars and no cents.      
 ### To verify the charts are inside the rectangle  
@@ -500,7 +500,7 @@ For more information about lists, see:
 * [Create Invoices and Forms with Lists](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-For more information about query designers, see [Query Designers &#40;Report Builder&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+For more information about query designers, see [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 

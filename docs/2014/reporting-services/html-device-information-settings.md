@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # HTML Device Information Settings
   The following table lists the device information settings for rendering in HTML format.  
@@ -38,7 +38,7 @@ manager: craigg
 |`OutlookCompat`|Indicates whether to render with extra metadata that makes the report look better in Outlook. For others, the default value is `false`.|  
 |**Parameters**|Indicates whether to show or hide the parameters area of the toolbar. If you set this parameter to a value of `true`, the parameters area of the toolbar is displayed. The default value of this parameter is `true`.|  
 |`PrefixId`|When used with `HTMLFragment`, adds the specified prefix to all `ID` attributes in the HTML fragment that is created.|  
-|**ReplacementRoot(\*)**|The string to prepend to all drillthrough, toggle, and bookmark links in the report when rendered outside of the ReportViewer control. For example, this is used for redirecting a user’s click to a custom page.|  
+|**ReplacementRoot(\*)**|The string to prepend to all drillthrough, toggle, and bookmark links in the report when rendered outside of the ReportViewer control. For example, this is used for redirecting a user's click to a custom page.|  
 |**ResourceStreamRoot(\*)**|The string to prepend to the URL for all image resources, such as images for toggle or sort.|  
 |**Section**|The page number of the report to render. A value of `0` indicates that all sections of the report are rendered. The default value is `1`.|  
 |**StreamRoot (\*)**|The path used for prefixing the value of the **src** attribute of the IMG element in the HTML report returned by the report server. By default, the report server provides the path. You can use this setting to specify a root path for the images in a report (for example, **http://\<servername>/resources/companyimages**).|  

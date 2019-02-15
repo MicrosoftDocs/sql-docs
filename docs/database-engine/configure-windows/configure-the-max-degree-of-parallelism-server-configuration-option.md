@@ -108,6 +108,6 @@ GO
  [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)   
  [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
  [Set Index Options](../../relational-databases/indexes/set-index-options.md)  
- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](http://support.microsoft.com/help/2806535)
+ [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/help/2806535)
   
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: adbce647-18f3-470c-8114-42f8bcc95dc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Using the IDeliveryReportServerInformation Interface for a Delivery Extension
   The <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> interface exposes several properties that you can use to retrieve information about a report server. You can use this information to deliver notifications and reports. When implementing your delivery extension class, you implement the <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> property as required by the <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> interface. The <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> property returns an object that implements the <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> interface. From this object you can get a list of rendering extensions currently supported by the report server.  

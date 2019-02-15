@@ -23,7 +23,7 @@ manager: craigg
 catalog.set_object_parameter_value [@object_type =] object_type   
     , [@folder_name =] folder_name   
     , [@project_name =] project_name   
-    , [@parameter_name =] parameter _name   
+    , [@parameter_name =] parameter_name   
     , [@parameter_value =] parameter_value   
  [  , [@object_name =] object_name ]  
  [  , [@value_type =] value_type ]  

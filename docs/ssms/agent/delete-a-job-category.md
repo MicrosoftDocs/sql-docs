@@ -91,7 +91,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_delete_category (Transact-SQL)](http://msdn.microsoft.com/63ea7d0d-a567-456e-a778-bee99e21d16c).  
+For more information, see [sp_delete_category (Transact-SQL)](https://msdn.microsoft.com/63ea7d0d-a567-456e-a778-bee99e21d16c).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To delete a job category**  

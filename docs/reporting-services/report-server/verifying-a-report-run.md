@@ -34,13 +34,13 @@ ms.author: maghan
   
 |For this type of report|Date and time information is located here|To view the information, do the following|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|A report that runs as a report snapshot.|On the Contents page. For more information, see [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Locate the folder that contains the report.<br /><br /> 2) Set the folder in Details view.<br /><br /> 3) Note the date and time in the **When Run** column.|  
-|A snapshot in report history.|On the History Properties page. For more information, see [Snapshot Options Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Open the report.<br /><br /> 2) Click the **Properties** page.<br /><br /> 3) Click the **History** tab.<br /><br /> 4) Note the date and time in the **When Run** column.|  
+|A report that runs as a report snapshot.|On the Contents page. For more information, see [Contents Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Locate the folder that contains the report.<br /><br /> 2) Set the folder in Details view.<br /><br /> 3) Note the date and time in the **When Run** column.|  
+|A snapshot in report history.|On the History Properties page. For more information, see [Snapshot Options Properties Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Open the report.<br /><br /> 2) Click the **Properties** page.<br /><br /> 3) Click the **History** tab.<br /><br /> 4) Note the date and time in the **When Run** column.|  
 |A cached report.|In the schedule used to create and refresh the cached report.|1) Open the report.<br /><br /> 2) Click the **Properties** page.<br /><br /> 3) Click the **Execution** tab.<br /><br /> 4) Open the schedule.|  
   
 ## See Also  
  [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

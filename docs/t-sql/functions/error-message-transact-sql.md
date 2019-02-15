@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-This function returns the message text of the error that caused the CATCH block of a TRY…CATCH construct to execute.  
+This function returns the message text of the error that caused the CATCH block of a TRY...CATCH construct to execute.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,8 +57,7 @@ In nested `CATCH` blocks, `ERROR_MESSAGE` returns the error message specific to 
 ### A. Using ERROR_MESSAGE in a CATCH block  
 This example shows a `SELECT` statement that generates a divide-by-zero error. The `CATCH` block returns the error message.  
   
-```  
-  
+```sql   
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -67,7 +66,9 @@ BEGIN CATCH
     SELECT ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+```
 -----------
 
 (0 row(s) affected)
@@ -83,7 +84,7 @@ Divide by zero error encountered.
 ### B. Using ERROR_MESSAGE in a CATCH block with other error-handling tools  
 This example shows a `SELECT` statement that generates a divide-by-zero error. Along with the error message, the `CATCH` block returns information about that error.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -98,7 +99,9 @@ BEGIN CATCH
         ,ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+```
 -----------
 
 (0 row(s) affected)
@@ -111,4 +114,17 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine  ErrorMessage
 
 ```
   
+## See Also  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
+ [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
+ [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
+ [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
+ [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
+ [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)     
+ [Errors and Events Reference &#40;Database Engine&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
+  
+    
 

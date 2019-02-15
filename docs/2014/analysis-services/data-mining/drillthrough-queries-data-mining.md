@@ -23,7 +23,7 @@ manager: craigg
   
 -   Drilling through to the **model cases**  
   
-     Drillthrough to model cases is used when you want to go from a specific pattern in the model—such as a cluster or branch of a decision tree—and view details about the individual cases.  
+     Drillthrough to model cases is used when you want to go from a specific pattern in the model-such as a cluster or branch of a decision tree-and view details about the individual cases.  
   
 -   Drilling through to the **structure cases**  
   
@@ -64,7 +64,7 @@ manager: craigg
 -   If the mining structure does not allow drillthrough but the mining model does, you can view information only from the model cases, and not from the mining structure.  
   
 ###  <a name="bkmk_Security"></a> Security Issues for Drillthrough  
- If you want to drill through to structure cases from the model, you must verify that both the mining structure and the mining model have the [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) property set to `True`. Moreover, you must be a member of a role that has drillthrough permissions on both the structure and the model. For information about how to create roles, see [Role Designer &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). see.  
+ If you want to drill through to structure cases from the model, you must verify that both the mining structure and the mining model have the [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) property set to `True`. Moreover, you must be a member of a role that has drillthrough permissions on both the structure and the model. For information about how to create roles, see [Role Designer &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). see.  
   
  Drillthrough permissions are set separately on the structure and model. The model permission lets you drill through from the model, even if you do not have permissions on the structure. Drillthrough permissions on the structure provide the additional ability to include structure columns in drillthrough queries from the model, by using the [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) function.  
   

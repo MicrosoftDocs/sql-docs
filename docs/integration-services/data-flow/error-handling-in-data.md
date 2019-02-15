@@ -142,7 +142,7 @@ Use the **Configure Error Output** dialog box to configure error handling option
 ## See Also  
  [Data Flow](../../integration-services/data-flow/data-flow.md)   
  [Transform Data with Transformations](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [Connect Components with Paths](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Connect Components with Paths](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Data Flow Task](../../integration-services/control-flow/data-flow-task.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   

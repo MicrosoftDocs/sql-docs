@@ -5,8 +5,7 @@ ms.date: "08/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Activity Monitor [SQL Server], setting the refresh interval"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "Activity Monitor [SQL Server], opening"
   - "opening Activity Monitor"
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Open Activity Monitor (SQL Server Management Studio)

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
@@ -123,7 +122,7 @@ manager: craigg
   
  The Oracle database administrator can get Oracle SQL scripts that need to run so they can be evaluated before running them. The Oracle database administrator can also directly run Oracle SQL scripts from the Oracle CDC Designer console.  
   
- If the Oracle database administrator chooses to use the Oracle CDC Designer console, administrator’s credentials are not kept except for the context (dialog) in which they were used.  
+ If the Oracle database administrator chooses to use the Oracle CDC Designer console, administrator's credentials are not kept except for the context (dialog) in which they were used.  
   
  The Oracle database administrator works in coordination with the Oracle CDC Service administrator on the configuration of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle CDC Instances.  
   

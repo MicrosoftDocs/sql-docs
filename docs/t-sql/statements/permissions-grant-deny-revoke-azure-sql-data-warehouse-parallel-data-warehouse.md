@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -123,7 +123,7 @@ REVOKE
  An implicit permission can also be inherited from a covering or parent permission. For example, **UPDATE** permission on a table can be inherited by having **UPDATE** permission on the schema that contains the table, or **CONTROL** permission on the table.  
   
 ### Ownership Chaining  
- When multiple database objects access each other sequentially, the sequence is known as a *chain*. Although such chains do not independently exist, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traverses the links in a chain, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evaluates permissions on the constituent objects differently than it would if it were accessing the objects separately. Ownership chaining has important implications for managing security. For more information about ownership chains, see [Ownership Chains](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) and [Tutorial: Ownership Chains and Context Switching](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ When multiple database objects access each other sequentially, the sequence is known as a *chain*. Although such chains do not independently exist, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traverses the links in a chain, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evaluates permissions on the constituent objects differently than it would if it were accessing the objects separately. Ownership chaining has important implications for managing security. For more information about ownership chains, see [Ownership Chains](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) and [Tutorial: Ownership Chains and Context Switching](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## Permission List  
   
@@ -231,16 +231,16 @@ REVOKE
   
 -   UPDATE  
   
--   REFRENCES  
+-   REFERENCES  
   
- For a definition of each type of permission, see [Permissions (Database Engine)](http://msdn.microsoft.com/library/ms191291.aspx).  
+ For a definition of each type of permission, see [Permissions (Database Engine)](https://msdn.microsoft.com/library/ms191291.aspx).  
   
 ### Chart of Permissions  
  All permissions are graphically represented on this poster. This is the easiest way to see nested hierarchy of permissions. For example the **ALTER ON LOGIN** permission can be granted by itself, but it is also included if a login is granted the **CONTROL** permission on that login, or if a login is granted the **ALTER ANY LOGIN** permission.  
   
  ![APS security permissions poster](../../t-sql/statements/media/aps-security-perms-poster.png "APS security permissions poster")  
   
- To download a full size version of this poster, see [SQL Server PDW Permissions](http://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc@microsoft.com**.  
+ To download a full size version of this poster, see [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc@microsoft.com**.  
   
 ## Default Permissions  
  The following list describes the default permissions:  

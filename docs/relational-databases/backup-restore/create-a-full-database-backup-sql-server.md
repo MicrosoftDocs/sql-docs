@@ -21,6 +21,9 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > For SQL Server 2014, go to [Create a Full Database Backup (SQL Server)](create-a-full-database-backup-sql-server.md).
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
   This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   
 >  For information on SQL Server backup to the Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
@@ -356,7 +359,7 @@ $FileName = 'Sales.bak';
 $database = 'Sales';
 $BackupFile = $container + '/' + $FileName ;
   
-Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile $BackupFile;
+Backup-SqlDatabase -ServerInstance "MyServer" -Database $database -BackupFile $BackupFile;
 ```
  
  **To set up and use the SQL Server PowerShell provider**  
@@ -380,7 +383,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
 -   [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## See also  
-**[Troubleshooting SQL Server backup and restore operations](https://support.microsoft.com/en-us/kb/224071)**          
+**[Troubleshooting SQL Server backup and restore operations](https://support.microsoft.com/kb/224071)**          
 [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "remote Distributors [SQL Server replication]"
@@ -28,7 +27,7 @@ manager: craigg
   
 4.  On the **Distributor Password** page, in the **Password** and **Confirm password** text boxes, specify a strong password for the **distributor_admin** account, which replication uses to connect from the Publisher to the Distributor to perform administrative tasks.  
   
-5.  To view and modify settings for a Publisher, click the properties button (**…**).  
+5.  To view and modify settings for a Publisher, click the properties button (**...**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -42,7 +41,7 @@ manager: craigg
   
 4.  On the **Publishers** page, in the **Password** and **Confirm password** text boxes, specify a strong password for the **distributor_admin** account, which replication uses to connect from the Publisher to the Distributor to perform administrative tasks.  
   
-5.  To view and modify settings for a Publisher, click the properties button (**…**).  
+5.  To view and modify settings for a Publisher, click the properties button (**...**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

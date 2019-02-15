@@ -25,7 +25,7 @@ You can use the following keyboard shortcuts to navigate within the SQL Server U
   
 ## See Also  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Keyboard Shortcuts for the Transact-SQL Editor (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkId=160735)  
-[Accessibility Features of Visual Studio (Visual Studio 2010)](http://msdn.microsoft.com/library/y4b5z3y3(VS.90).aspx)  
-[Accessibility Features of Visual Studio (Visual Studio 2012)](http://msdn.microsoft.com/library/y4b5z3y3.aspx)  
+[Keyboard Shortcuts for the Transact-SQL Editor (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=160735)  
+[Accessibility Features of Visual Studio (Visual Studio 2010)](https://msdn.microsoft.com/library/y4b5z3y3(VS.90).aspx)  
+[Accessibility Features of Visual Studio (Visual Studio 2012)](https://msdn.microsoft.com/library/y4b5z3y3.aspx)  
   

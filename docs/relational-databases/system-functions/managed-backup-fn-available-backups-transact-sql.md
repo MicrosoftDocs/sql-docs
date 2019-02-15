@@ -47,7 +47,7 @@ If there are gaps in LSN meaning that there is a break in the log chain, the tab
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|The URL of the backup file.|  
-|backup_type|NVARCHAR(6)|‘DB’ for database backup ‘LOG’ for log backup|  
+|backup_type|NVARCHAR(6)|'DB' for database backup 'LOG' for log backup|  
 |expiration_date|DATETIME|The date on which this file is expected to be deleted. This is set based on the ability to recover the database to a point in time within the specified retention period.|  
 |database_guid|UNIQUEIDENTIFIER|The GUID value for the specified database.  The GUID uniquely identifies a database.|  
 |first_lsn|NUMERIC(25, 0)|Log sequence number of the first or oldest log record in the backup set. Can be NULL.|  
@@ -69,7 +69,7 @@ If there are gaps in LSN meaning that there is a break in the log chain, the tab
  Requires **SELECT** permissions on this function.  
   
 ## Examples  
- The following example lists all the available backups backed up through [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database ‘MyDB’  
+ The following example lists all the available backups backed up through [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database 'MyDB'  
   
 ```  
 SELECT *   

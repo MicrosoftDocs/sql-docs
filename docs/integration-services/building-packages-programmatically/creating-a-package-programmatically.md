@@ -145,9 +145,9 @@ End Module
   
 ## External Resources  
   
--   Blog entry, [API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824), on blogs.msdn.com.  
+-   Blog entry, [API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824), on blogs.msdn.com.  
   
--   Blog entry, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
+-   Blog entry, [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
   
 ## See Also  
  [Adding Tasks Programmatically](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

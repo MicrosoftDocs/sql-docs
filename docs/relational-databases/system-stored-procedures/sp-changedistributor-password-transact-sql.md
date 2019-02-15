@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_changedistributor_password"
@@ -33,7 +32,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## Arguments  
- [ **@password=**] **'***password***'**  
+ [ **@password=**] **'**_password_**'**  
  Is the new password. *password* is **sysname**, with no default. If the Distributor is local, the password of the **distributor_admin** system login is changed.  
   
 ## Return Code Values  

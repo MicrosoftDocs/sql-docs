@@ -28,7 +28,7 @@ manager: craigg
   
 ```  
   
-FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )  
+FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )  
 ```  
   
 ## Arguments  
@@ -72,7 +72,7 @@ SELECT @root = FileTableRootPath();
   
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath()  
 FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## Security  
@@ -89,13 +89,13 @@ WHERE Name = N’document.docx’;
   
 ```  
 USE MyDocumentDatabase;  
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase"  
 SELECT FileTableRootPath();  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable"  
 SELECT FileTableRootPath(N'dbo.MyFileTable');  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable"  
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   

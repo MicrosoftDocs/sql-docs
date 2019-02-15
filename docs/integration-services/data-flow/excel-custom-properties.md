@@ -41,7 +41,7 @@ manager: craigg
   
 |Property name|Data Type|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer (enumeration)|A value that specifies how the destination accesses its destination database.<br /><br /> This property can have one of the following values:<br /><br /> **OpenRowset** (0)—You provide the name of a table or view.<br /><br /> **OpenRowset from Variable** (1)—You provide the name of a variable that contains the name of a table or view.<br /><br /> **OpenRowset Using Fastload** (3)—You provide the name of a table or view.<br /><br /> **OpenRowset Using Fastload from Variable** (4)—You provide the name of a variable that contains the name of a table or view.<br /><br /> **SQL Command** (2)—You provide a SQL statement.|  
+|AccessMode|Integer (enumeration)|A value that specifies how the destination accesses its destination database.<br /><br /> This property can have one of the following values:<br /><br /> **OpenRowset** (0)-You provide the name of a table or view.<br /><br /> **OpenRowset from Variable** (1)-You provide the name of a variable that contains the name of a table or view.<br /><br /> **OpenRowset Using Fastload** (3)-You provide the name of a table or view.<br /><br /> **OpenRowset Using Fastload from Variable** (4)-You provide the name of a variable that contains the name of a table or view.<br /><br /> **SQL Command** (2)-You provide a SQL statement.|  
 |CommandTimeout|Integer|The maximum number of seconds that the SQL command can run before timing out. A value of **0** indicates an infinite time. The default value of this property is **0**.<br /><br /> Note: This property is not available in the **Excel Destination Editor**, but can be set by using the **Advanced Editor**.|  
 |FastLoadKeepIdentity|Boolean|A value that specifies whether to copy identity values when data is loaded. This property is available only when using one of the fast load options. The default value of this property is **False**.|  
 |FastLoadKeepNulls|Boolean|A value that specifies whether to copy Null values when data is loaded. This property is available only with one of the fast load options. The default value of this property is **False**.|  
@@ -56,7 +56,7 @@ manager: craigg
  For more information, see [Excel Destination](../../integration-services/data-flow/excel-destination.md).  
   
 ## See Also  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
  [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
   
   

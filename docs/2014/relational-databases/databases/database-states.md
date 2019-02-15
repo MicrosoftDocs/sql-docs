@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/15/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.DATABASESTATES.F1"

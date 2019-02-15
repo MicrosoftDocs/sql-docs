@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SELECT - INTO Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SELECT…INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+SELECT...INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +80,7 @@ If any one of these conditions is true, the column is created NOT NULL instead o
 ## Limitations and Restrictions  
  You cannot specify a table variable or table-valued parameter as the new table.  
   
- You cannot use `SELECT…INTO` to create a partitioned table, even when the source table is partitioned. `SELECT...INTO` does not use the partition scheme of the source table; instead, the new table is created in the default filegroup. To insert rows into a partitioned table, you must first create the partitioned table and then use the `INSERT INTO...SELECT...FROM` statement.  
+ You cannot use `SELECT...INTO` to create a partitioned table, even when the source table is partitioned. `SELECT...INTO` does not use the partition scheme of the source table; instead, the new table is created in the default filegroup. To insert rows into a partitioned table, you must first create the partitioned table and then use the `INSERT INTO...SELECT...FROM` statement.  
   
  Indexes, constraints, and triggers defined in the source table are not transferred to the new table, nor can they be specified in the `SELECT...INTO` statement. If these objects are required, you can create them after executing the `SELECT...INTO` statement.  
   

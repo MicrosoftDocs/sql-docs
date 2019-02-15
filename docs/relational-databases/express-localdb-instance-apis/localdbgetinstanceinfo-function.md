@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: "reference"
 apiname: 
   - "LocalDBGetInstanceInfo"
@@ -131,7 +130,7 @@ HRESULT LocalDBGetInstanceInfo(
   
 ```  
 LocalDBInstanceInfo ii;  
-LocalDBInstanceInfo(L”Test”, &ii, sizeof(LocalDBInstanceInfo));  
+LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));  
   
 ```  
   

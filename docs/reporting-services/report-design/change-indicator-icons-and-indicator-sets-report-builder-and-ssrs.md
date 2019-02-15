@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Change Indicator Icons and Indicator Sets (Report Builder and SSRS)
   The preconfigured indicators sets that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides for paginated reports might not always depict your data effectively and work well in the delivered report. This topic provides procedures to change the appearance of indicator icons and change the indicator sets to include different, more, or fewer indicator icons.  
@@ -26,7 +26,7 @@ ms.author: maggies
   
      Optionally, click the **Expression** (*fx*) button to edit an expression that sets the value of the **Color** option.  
   
-     If you clicked **More Colors**, the **Select Color** dialog box opens, where you can choose from a wide array of colors. For more information about its options, see [Select Color Dialog Box &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Click **OK** to close the **Select Color** dialog box.  
+     If you clicked **More Colors**, the **Select Color** dialog box opens, where you can choose from a wide array of colors. For more information about its options, see [Select Color Dialog Box &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Click **OK** to close the **Select Color** dialog box.  
   
 4.  Click **OK**.  
   

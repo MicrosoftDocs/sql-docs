@@ -2,8 +2,8 @@
 title: "sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -28,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |start_time|**datetime**|Time at which the request execution was started.|NULL for queued requests; otherwise, valid **datetime** smaller or equal to current time.|  
 |end_compile_time|**datetime**|Time at which the engine completed compiling the request.|NULL for requests that have not been compiled yet; otherwise a valid **datetime** less than start_time and less than or equal to the current time.|
 |end_time|**datetime**|Time at which the request execution completed, failed, or was cancelled.|Null for queued or active requests; otherwise, a valid **datetime** smaller or equal to current time.|  
-|total_elapsed_time|**int**|Time elapsed in execution since the request was started, in milliseconds.|Between 0 and the difference between start_time and end_time.<br /><br /> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning “The maximum value has been exceeded.”<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
+|total_elapsed_time|**int**|Time elapsed in execution since the request was started, in milliseconds.|Between 0 and the difference between start_time and end_time.<br /><br /> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded."<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
 |label|**nvarchar(255)**|Optional label string associated with some SELECT query statements.|Any string containing 'a-z','A-Z','0-9','_'.|  
 |error_id|**nvarchar(36)**|Unique id of the error associated with the request, if any.|See [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); set to NULL if no error occurred.|  
 |database_id|**int**|Identifier of database used by explicit context (e.g., USE DB_X).|See id in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  

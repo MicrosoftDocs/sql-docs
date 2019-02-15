@@ -5,7 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT

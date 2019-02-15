@@ -128,4 +128,4 @@ End Function
 ```  
   
 ## See Also  
- [Knowledge Base article 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
+ [Knowledge Base article 117500](https://go.microsoft.com/fwlink/?LinkId=117500)

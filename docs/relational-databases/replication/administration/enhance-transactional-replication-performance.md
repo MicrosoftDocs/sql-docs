@@ -152,7 +152,7 @@ Distribution Agent uses one session to retry the batch that could not be applied
 Committing a set of transactions has a fixed overhead; by committing a larger number of transactions less frequently, the overhead is spread across a larger volume of data.  Increasing CommitBatchSize (up to 200) can improve performance as more transactions are committed to the subscriber. However, the benefit of increasing this parameter drops off as the cost of applying changes is gated by other factors, such as the maximum I/O of the disk that contains the log. Additionally, there is a trade-off to be considered: any failure that causes the Distribution Agent to start over must roll back and reapply a larger number of transactions. For unreliable networks, a lower value can result in fewer failures and a smaller number of transactions to roll back and reapply if a failure occurs.  
   
 
-##See more
+## See more
   
 [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

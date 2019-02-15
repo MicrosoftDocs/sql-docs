@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, evaluate policy"
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Evaluate a Policy-Based Management Policy on a Schedule
@@ -50,7 +49,7 @@ manager: craigg
   
 5.  Right-click the policy whose schedule you what to evaluate and select **Properties**.  
   
-6.  On the **Open Policy –***policy_name* dialog box, in the **Evaluation Mode** list, select **On schedule**.  
+6.  On the **Open Policy -**_policy_name_ dialog box, in the **Evaluation Mode** list, select **On schedule**.  
   
 7.  Under **Schedule**, click either **Pick** to specify an existing schedule or **New** to create a new schedule.  
   

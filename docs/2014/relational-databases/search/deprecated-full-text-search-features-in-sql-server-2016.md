@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: search
+ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [full-text search]"
@@ -42,7 +42,7 @@ manager: craigg
   
 |Deprecated feature|Replacement|Feature name|Feature ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS and CONTAINSTABLE generic NEAR operator:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|The custom NEAR operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS and CONTAINSTABLE generic NEAR operator:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|The custom NEAR operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG option:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|None.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> None.*|237<br /><br /> None.<sup>*</sup>|  
 |DATABASEPROPERTYEX property: IsFullTextEnabled|None.|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |sp_detach_db option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|None.|sp_detach_db @keepfulltextindexfile|226|  

@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 You can do that by setting **SYSTEM_VERSIONING** clause to **OFF**.  
   
 ## Setting SYSTEM_VERSIONING = OFF  
- Stop system-versioning if you want to perform specific maintenance operations on temporal table or if you don’t need a versioned table anymore. As a result of this operation you will get two independent tables:  
+ Stop system-versioning if you want to perform specific maintenance operations on temporal table or if you don't need a versioned table anymore. As a result of this operation you will get two independent tables:  
   
 -   Current table with period definition  
   

@@ -69,7 +69,7 @@
     href: sql-server-filetable-object.md
   - name: SQL Server, General Statistics Object
     href: sql-server-general-statistics-object.md
-  - name: SQL Server, HTTP_STORAGE_OBJECT
+  - name: SQL Server, HTTP Storage
     href: sql-server-http-storage-object.md
   - name: SQL Server, Latches Object
     href: sql-server-latches-object.md

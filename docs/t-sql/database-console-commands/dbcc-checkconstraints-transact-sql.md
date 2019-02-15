@@ -85,7 +85,7 @@ DBCC CHECKCONSTRAINTS checks the integrity of FOREIGN KEY and CHECK constraints 
   
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-If *table_name* or *table_id* is specified and it is enabled for system versioning, DBCC CHECKCONSTRAINTS also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* is not specified, this command will return each consistency violation in the output on a separate line. The format of the output will be ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<what is wrong with temporal table record>.
+If *table_name* or *table_id* is specified and it is enabled for system versioning, DBCC CHECKCONSTRAINTS also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* is not specified, this command will return each consistency violation in the output on a separate line. The format of the output will be ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
   
 |Check|Additional info in output if check failed|  
 |-----------|-----------------------------------------------|  

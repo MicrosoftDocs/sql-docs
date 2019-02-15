@@ -34,20 +34,12 @@ This function returns the number of items found in a group. `COUNT_BIG` operates
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server and Azure SQL Database  
-  
-COUNT_BIG ( { [ ALL | DISTINCT ] expression } | * )  
-   [ OVER ( [ partition_by_clause ] [ order_by_clause ] ) ]  
-```  
-  
-```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  
   
 -- Analytic Function Syntax  
-COUNT_BIG ( { expression | * } ) OVER ( [ <partition_by_clause> ] )  
+COUNT_BIG ( [ ALL ] { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
 ## Arguments  
@@ -58,10 +50,10 @@ DISTINCT
 Specifies that `COUNT_BIG` returns the number of unique nonnull values.
   
 *expression*  
-An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type. Note that `COUNT_BIG` does not support aggregate functions or subqueries in an expression.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type. `COUNT_BIG` does not support aggregate functions or subqueries in an expression.
   
 *\**  
-Specifies that `COUNT_BIG` should count all rows to determine the total table row count to return. `COUNT_BIG(*)` takes no parameters and does not support the use of DISTINCT. `COUNT_BIG(*)` does not require an *expression* parameter because by definition, it does not use information about any particular column. `COUNT_BIG(*)` returns the number of rows in a specified table, and it preserves duplicate rows. It counts each row separately. This includes rows that contain null values.
+Specifies that `COUNT_BIG` should count all rows to determine the total table row count to return. `COUNT_BIG(*)` takes no parameters and does not support the use of DISTINCT. `COUNT_BIG(*)` does not require an *expression* parameter because by definition, it does not use information about any particular column. `COUNT_BIG(*)` returns the number of rows in a specified table, and it preserves duplicate rows. It counts each row separately, including rows that contain null values.
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
 The *partition_by_clause* divides the result set produced by the `FROM` clause into partitions to which the `COUNT_BIG` function is applied. If not specified, the function treats all rows of the query result set as a single group. The *order_by_clause* determines the logical order of the operation. See [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) for more information.
@@ -76,7 +68,7 @@ COUNT_BIG (ALL *expression*) evaluates *expression* for each row in a group, and
   
 COUNT_BIG (DISTINCT *expression*) evaluates *expression* for each row in a group, and returns the number of unique, nonnull values.
   
-COUNT_BIG is a deterministic function when used ***without*** the OVER and ORDER BY clauses. It is nondeterministic when used ***with*** the OVER and ORDER BY clauses. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.
+COUNT_BIG is a deterministic function when used **_without_** the OVER and ORDER BY clauses. COUNT_BIG is nondeterministic when used **_with_** the OVER and ORDER BY clauses. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.
   
 ## Examples  
 See [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) for examples.

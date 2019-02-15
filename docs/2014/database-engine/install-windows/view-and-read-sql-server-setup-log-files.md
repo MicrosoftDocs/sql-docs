@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing logs"
@@ -136,11 +135,11 @@ manager: craigg
   
  Types of MSI log files:  
   
--   \<Feature>_\<Architecture>\_\<Interation>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log  
   
--   \<Feature>_\<Architecture>\_\<Language>\_\<Interation>.log  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
   
--   \<Feature>_\<Architecture>\_\<Interation>\_\<workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### Location  
  The MSI log files are located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  

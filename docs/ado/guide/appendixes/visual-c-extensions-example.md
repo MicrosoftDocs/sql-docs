@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 dev_langs: 
@@ -24,30 +24,30 @@ This program shows how values are retrieved from fields and converted to C/C++ v
   
  Without smart pointers, you would code:  
   
-```  
+```cpp
 IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
-          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
+          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
 ...  
 if (picRs) picRs->Release();  
 ```  
   
  With smart pointers, you derive the `IADORecordBindingPtr` type from the `IADORecordBinding` interface with this statement:  
   
-```  
+```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
  And instantiate the pointer like this:  
   
-```  
+```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
  Because the Visual C++ Extensions are implemented by the **Recordset** object, the constructor for the smart pointer, `picRs`, takes the _`RecordsetPtr` pointer, `pRs`. The constructor calls `QueryInterface` using `pRs` to find the `IADORecordBinding` interface.  
   
-```  
+```cpp
 // Visual_Cpp_Extensions_Example.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  

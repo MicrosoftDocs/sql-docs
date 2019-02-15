@@ -274,7 +274,7 @@ GO
   
 SELECT AddressLine1, KEY_TBL.RANK   
 FROM Person.Address AS Address INNER JOIN  
-CONTAINSTABLE(Person.Address, AddressLine1, 'ISABOUT ("Bay*,"   
+CONTAINSTABLE(Person.Address, AddressLine1, 'ISABOUT ("Bay*",   
          Street WEIGHT(0.9),   
          View WEIGHT(0.1)  
          ) ' ) AS KEY_TBL  
@@ -336,6 +336,6 @@ After you apply a given word breaker, thesaurus, and stoplist combination in a q
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [Improve the Performance of Full-Text Queries](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)
  

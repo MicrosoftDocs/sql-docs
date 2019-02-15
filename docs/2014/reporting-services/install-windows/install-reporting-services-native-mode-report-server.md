@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Install Reporting Services Native Mode Report Server
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode report server can be installed from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard or from the command line. In the setup wizard, you can select to either 1) install files and configure the server with default settings or to 1) only install the files and the server is not configured by the installation wizard. This topic reviews the *Default configuration for native mode* where Setup both installs and configures a report server instance. After Setup is finished, the report server is running and ready to use. A native mode report server runs as a stand-alone application server. Native mode is the default server mode.  
@@ -115,7 +115,7 @@ manager: craigg
   
     -   **Reporting Services-Native**.  
   
-    -   **Management Tools – Basic**. The management tools are not required but it is recommended unless you have some other installation of management tools. The default configuration option will result a functioning report sever but you may want to change configuration options at a later date. Some options such as ‘My Reports’ are managed through [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **Management Tools - Basic**. The management tools are not required but it is recommended unless you have some other installation of management tools. The default configuration option will result a functioning report server but you may want to change configuration options at a later date. Some options such as 'My Reports' are managed through [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![SSRS Native Mode Select in Feature Selection](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "SSRS Native Mode Select in Feature Selection")  
   

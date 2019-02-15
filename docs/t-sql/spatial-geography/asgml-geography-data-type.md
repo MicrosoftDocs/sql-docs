@@ -26,7 +26,7 @@ manager: craigg
 
   Returns the Geography Markup Language (GML) representation of a **geography** instance.  
   
- For more information on Geography Markup Language, see the Open Geospatial Consortium Specification: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ For more information on Geography Markup Language, see the Open Geospatial Consortium Specification: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## Syntax  
   
@@ -54,7 +54,7 @@ SELECT @g.AsGml();
  This method returns the description as a `LineString` instance.  
   
 ```  
-<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
+<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
 ```  
   
 ## See Also  

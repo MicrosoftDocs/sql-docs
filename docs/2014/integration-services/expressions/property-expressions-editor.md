@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.propertyexpressionseditor.f1"
@@ -29,7 +28,7 @@ manager: craigg
 > [!NOTE]  
 >  The names of user-defined and system variables are case-sensitive.  
   
- **Expression (…)**  
+ **Expression (...)**  
  Click the ellipsis to open the **Expression Builder** dialog box. For more information, see [Expression Builder](expression-builder.md).  
   
  **Delete**  

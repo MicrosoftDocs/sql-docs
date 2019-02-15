@@ -40,7 +40,7 @@ Data shaping defines the columns of a shaped **Recordset**, the relationships be
   
  You can access the **Recordset** components of the shaped **Recordset** programmatically or through an appropriate visual control.  
   
- Microsoft provides a visual tool that generates shape commands (see the [Data Environment Designer](http://go.microsoft.com/fwlink/?LinkId=5689) in the Visual Basic 6 documentation) and another that displays hierarchical cursors (see "Using the Microsoft Hierarchical Flexgrid Control" in the Visual Basic 6 documentation).  
+ Microsoft provides a visual tool that generates shape commands (see the [Data Environment Designer](https://go.microsoft.com/fwlink/?LinkId=5689) in the Visual Basic 6 documentation) and another that displays hierarchical cursors (see "Using the Microsoft Hierarchical Flexgrid Control" in the Visual Basic 6 documentation).  
   
  For information about navigating a hierarchical **Recordset**, see [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

@@ -21,10 +21,10 @@ manager: craigg
 ## Options  
  The **Next** button is available only if you have selected the **Continue with upgrade** check box. If you do not select the check box, you cannot continue with the upgrade.  
   
- For more information, see [Upgrade and Migrate Reporting Services](http://go.microsoft.com/fwlink/?LinkID=245628) (http://go.microsoft.com/fwlink/?LinkID=245628).  
+ For more information, see [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
   
 ## See Also  
- [View and Read SQL Server Setup Log Files](http://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
- [Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode](http://go.microsoft.com/fwlink/?LinkId=217620)  
+ [View and Read SQL Server Setup Log Files](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
+ [Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode](https://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

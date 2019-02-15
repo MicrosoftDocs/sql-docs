@@ -29,7 +29,7 @@ manager: craigg
 ## High Availability  
  Like other user databases, the **SSISDB** database supports database mirroring and replication. For more information about mirroring and replication, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- You can also provide high-availability of SSISDB and its contents by making use of SSIS and Always On Availability Groups. For more information, see [Always On for SSIS Catalog (SSISDB](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Also see this blog post by Matt Masson, [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
+ You can also provide high-availability of SSISDB and its contents by making use of SSIS and Always On Availability Groups. For more information, see [Always On for SSIS Catalog (SSISDB](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Also see this blog post by Matt Masson, [SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Integration Services Server in SQL Server Management Studio  
  When you connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the **SSISDB** database, you see the following objects in Object Explorer:  
@@ -51,6 +51,6 @@ manager: craigg
 -   [Run Integration Services (SSIS) Packages](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## Related Content  
- Blog entry, [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
+ Blog entry, [SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
   
   

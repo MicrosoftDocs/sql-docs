@@ -21,8 +21,6 @@ manager: craigg
 ---
 # SSIS How to Create an ETL Package
 
- > For content related to previous versions of SQL Server, see [SSIS Tutorial: Creating a Simple ETL Package](ssis-how-to-create-an-etl-package.md).
-
 In this tutorial, you learn how to use [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create a simple [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package. The package that you create takes data from a flat file, reformats the data, and then inserts the reformatted data into a fact table. In following lessons, the package is expanded to demonstrate looping, package configurations, logging, and error flow.  
   
 When you install the sample data that the tutorial uses, you also install the completed versions of the packages that you create in each lesson of the tutorial. By using the completed packages, you can skip ahead and begin the tutorial at a later lesson if you like. If this tutorial is your first time working with packages or the new development environment, we recommend that you begin with Lesson1.  

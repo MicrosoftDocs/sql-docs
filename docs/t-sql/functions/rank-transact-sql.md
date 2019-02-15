@@ -26,12 +26,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the rank of each row within the partition of a result set. The rank of a row is one plus the number of ranks that come before the row in question.  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
-  ROW_NUMBER and RANK are similar. ROW_NUMBER numbers all rows sequentially (for example 1, 2, 3, 4, 5). RANK provides the same numeric value for ties (for example 1, 2, 2, 4, 5).   
+Returns the rank of each row within the partition of a result set. The rank of a row is one plus the number of ranks that come before the row in question.  
+
+ROW_NUMBER and RANK are similar. ROW_NUMBER numbers all rows sequentially (for example 1, 2, 3, 4, 5). RANK provides the same numeric value for ties (for example 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> RANK is a temporary value calulated when the query is run. To persist numbers in a table, see [IDENTITY Property](../../t-sql/statements/create-table-transact-sql-identity-property.md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
+> RANK is a temporary value calculated when the query is run. To persist numbers in a table, see [IDENTITY Property](../../t-sql/statements/create-table-transact-sql-identity-property.md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding nodes"
@@ -60,7 +59,7 @@ manager: craigg
   
 8.  On the Cluster Node Configuration page, use the drop-down box to specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance that will be modified during this Setup operation.  
   
-9. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](../../install/server-configuration-service-accounts.md) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. On the Server Configuration - Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](../../install/server-configuration-service-accounts.md) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Security Note** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   

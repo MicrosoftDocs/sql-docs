@@ -70,7 +70,7 @@ manager: craigg
 -   RUS - Russian  
   
 ## SQL Server Licensing Options  
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) Web site.  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) Web site.  
   
 ## See Also  
  [Microsoft SQL Server Privacy Statement](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   

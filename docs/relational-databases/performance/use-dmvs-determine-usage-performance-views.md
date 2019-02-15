@@ -2,8 +2,8 @@
 title: Use DMVs to Determine Usage Statistics and Performance of Views
 description: Use DMVs to Determine Usage Statistics and Performance of Views
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ""
@@ -12,17 +12,14 @@ ms.topic: conceptual
 ---
 
 # Use DMVs to Determine Usage Statistics and Performance of Views
+This article covers methodology and scripts used to get information about the **performance of queries that use Views**. The intention of these scripts is to provide indicators of use and performance of various Views found in a database. 
 
-This article covers methodology and scripts used to get information about the **performance of queries that use views** in a database object. The intention of these scripts is to provide indicators of use and performance of various views found within a database. 
+## sys.dm_exec_query_optimizer_info
+The DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) exposes statistics about the optimizations performed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer. These values are cumulative and begin recording when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. For more information on the query optimizer, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md).   
 
-## Sys.dm_exec_query_optimizer_info
+The below common_table_expression (CTE) uses this DMV to provide information about the workload, such as the percentage of queries that reference a view. The results returned by this query do not indicate a performance problem by themselves, but can expose underlying issues when combined with users' complaints of slow-performing queries. 
 
-The DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) exposes statistics about the optimizations performed by the SQL Server query optimizer. These values are cumulative and begin recording when SQL Server starts.  
-
-The below common_table_expression (CTE) uses this  DMV to provide information about the workload, such as the percentage of queries that reference a view. The results returned by this query do not indicate a performance problem by themselves, but can expose underlying issues when combined with users' complaints of slow-performing queries. 
-
-
-```SQL
+```sql
 WITH CTE_QO AS
 (
   SELECT
@@ -99,17 +96,17 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-Combine the results of this query with the results of the system view [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql) to identify query statistics, query text, and the cached execution plan. 
 
-## Sys.views
+Combine the results of this query with the results of the system view [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md) to identify query statistics, query text, and the cached execution plan. 
 
+## sys.views
 The below CTE provides information about the number of executions, total run time, and pages read from memory. The results can be used to identify queries that may be candidates for optimization. 
   
-  >[!NOTE]
-  > The results of this query can vary depending on the version of SQL Server.  
+> [!NOTE]
+> The results of this query can vary depending on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 
-```SQL
+```sql
 WITH CTE_VW_STATS AS
 (
   SELECT
@@ -163,12 +160,10 @@ CROSS APPLY
 GO
 ```
 
-## Sys.dmv_exec_cached_plans
+## sys.dmv_exec_cached_plans
+The final query provides information about unused views by using the DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md). However, the execution plan cache is dynamic, and results can vary. As such, use this query over time to determine whether or not a view is actually being used or not. 
 
-The final query provides information about unused views by using the DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). However, the execution plan cache is dynamic, and results can vary. As such, use this query over time to determine whether or not a view is actually being used or not. 
-
-
-```SQL
+```sql
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
   ,vw.name AS name
@@ -193,11 +188,5 @@ WHERE
 GO
 ```
 
-## Related external resources
-
-- [DMVs for Performance Tuning (Video - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
-- [SQL Server Tuning in capsule form (movie-SQL Saturday Parma)](https://vimeo.com/200980883)
-- [SQL Server Tuning in a nutshell (slides and Demo-SQL Saturday Parma)](http://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
-- [Performance Tuning With SQL Server Dynamic Management Views](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
-- [The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)
+## See also
+[Dynamic management views and functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

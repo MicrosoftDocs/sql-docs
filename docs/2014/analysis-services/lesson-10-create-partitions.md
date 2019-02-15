@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ---
 # Lesson 11: Create Partitions
-  In this lesson, you will create partitions to divide the Internet Sales table into smaller logical parts that can be processed (Refreshed) independent of other partitions. By default, every table you include in your model has one partition which includes all of the table’s columns and rows. For the Internet Sales table, we want to divide the data by year; one partition for each of the table’s five years.  Each partition can then be processed independently. To learn more, see [Partitions &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
+  In this lesson, you will create partitions to divide the Internet Sales table into smaller logical parts that can be processed (Refreshed) independent of other partitions. By default, every table you include in your model has one partition which includes all of the table's columns and rows. For the Internet Sales table, we want to divide the data by year; one partition for each of the table's five years.  Each partition can then be processed independently. To learn more, see [Partitions &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
   
  Estimated time to complete this lesson: **15 minutes**  
   

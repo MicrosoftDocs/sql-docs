@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Save Reports to a Report Server (Report Builder)
   In Report Builder, you can save a report definition to a report server (also known as publishing a report). When the report is saved to a report server, other users can view the report. Each time you run the published report, you will retrieve the most current data. To save a static copy of a rendered report, export the report to a different file format and save it or use the report history feature to save versions of rendered reports.  
@@ -20,7 +20,7 @@ manager: craigg
   
 ### To save a report to a report server  
   
-1.  From the Report Builder button, click **Save**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save**. The **Save As**_\<Report Item\>_ dialog box opens.  
   
     > [!NOTE]  
     >  If you are resaving a report, it is automatically resaved to its previous location. Use the Save As option to change location.  
@@ -35,7 +35,7 @@ manager: craigg
   
 ### To save a report as a different name  
   
-1.  From the Report Builder button, click **Save As**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save As**. The **Save As**_\<Report Item\>_ dialog box opens.  
   
 2.  Browse to the report server location or to the file share where you want to save the report.  
   

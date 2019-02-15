@@ -39,6 +39,9 @@ manager: craigg
 # CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
   Searches for precise or fuzzy (less precise) matches to single words and phrases, words within a certain distance of one another, or weighted matches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS is a predicate used in the [WHERE clause](../../t-sql/queries/where-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types.  
   
  CONTAINS can search for:  
@@ -100,9 +103,9 @@ CONTAINS (
 <custom_proximity_term> ::=   
   NEAR (   
      {  
-        { <simple_term> | <prefix_term> } [ ,…n ]  
+        { <simple_term> | <prefix_term> } [ ,...n ]  
      |  
-        ( { <simple_term> | <prefix_term> } [ ,…n ] )   
+        ( { <simple_term> | <prefix_term> } [ ,...n ] )   
       [, <maximum_distance> [, <match_order> ] ]  
      }  
        )   
@@ -287,10 +290,10 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  \<match_order> takes one of the following values:  
   
  **TRUE**  
- Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A … B`.  
+ Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A ... B`.  
   
  **FALSE**  
- Ignores the specified order. For example,  `NEAR(A,B)` would match both `A … B` and `B … A`.  
+ Ignores the specified order. For example,  `NEAR(A,B)` would match both `A ... B` and `B ... A`.  
   
  This is the default.  
   
@@ -541,7 +544,7 @@ GO
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   

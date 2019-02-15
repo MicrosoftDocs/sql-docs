@@ -88,7 +88,7 @@ manager: craigg
   
      Any log backups taken on the principal database after mirroring was removed must all be applied to the mirror database before you can restart mirroring.  
   
--   **If you do not intent to restart mirroring**  
+-   **If you do not intend to restart mirroring**  
   
      Optionally, you can recover the former mirror database. On the server instance that was the mirror server, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
@@ -97,7 +97,7 @@ manager: craigg
     ```  
   
     > [!IMPORTANT]  
-    >  If you recover this database, two divergent databases with the same name are online. Therefore, you need to ensure that clients can access only one of them—typically the most recent principal database.  
+    >  If you recover this database, two divergent databases with the same name are online. Therefore, you need to ensure that clients can access only one of them-typically the most recent principal database.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

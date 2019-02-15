@@ -94,9 +94,9 @@ There are two types of change tracking:
   
      **To start tracking changes with automatic population**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING AUTO  
   
     **Example - Alter a full-text index to use automatic change tracking**  
     The following example changes the full-text index of the `HumanResources.JobCandidate` table of the `AdventureWorks` sample database to use change tracking with automatic population.  
@@ -110,13 +110,13 @@ There are two types of change tracking:
   
 -   **Manual population**  
   
-     If you specify CHANGE_TRACKING MANUAL, the Full-Text Engine uses manual population on the full-text index. After the initial full population completes, changes are tracked as data is modified in the base table. However, they are not propagated to the full-text index until you execute an ALTER FULLTEXT INDEX … START UPDATE POPULATION statement. You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
+     If you specify CHANGE_TRACKING MANUAL, the Full-Text Engine uses manual population on the full-text index. After the initial full population completes, changes are tracked as data is modified in the base table. However, they are not propagated to the full-text index until you execute an ALTER FULLTEXT INDEX ... START UPDATE POPULATION statement. You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
   
      **To start tracking changes with manual population**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING MANUAL  
   
     **Example - Create a full-text index with manual change tracking**  
     The following example creates a full-text index that will use change tracking with manual population on the `HumanResources.JobCandidate` table of the `AdventureWorks` sample database.  
@@ -144,9 +144,9 @@ There are two types of change tracking:
    
 ### Disable change tracking 
   
--   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING OFF  
    
   
 ## Incremental population based on a timestamp  

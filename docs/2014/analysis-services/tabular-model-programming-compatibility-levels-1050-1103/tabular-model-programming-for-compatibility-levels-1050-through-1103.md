@@ -21,11 +21,11 @@ manager: craigg
  This section provides more information about how you can programmatically work with tabular model entities and their properties.  
   
 ## In This Section  
- [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Understanding the Tabular Object Model](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Technical Reference for BI Annotations to CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Technical Reference for BI Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded Interface](imdembeddeddata-interface.md)  
   

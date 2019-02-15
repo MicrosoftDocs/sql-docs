@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Each file is divided into extents of 8 pages and each page is of size 8K bytes.  
   
--   An extent can be shared across multiple tables, but a there is 1-to-1 mapping between an allocated page and the table or index. In other words, a page can’t have rows from two or more tables or index.  
+-   An extent can be shared across multiple tables, but a there is 1-to-1 mapping between an allocated page and the table or index. In other words, a page can't have rows from two or more tables or index.  
   
 -   The data is moved into memory (the buffer pool) as needed and the modified or newly created pages are asynchronously written to the disk generating mostly random IO.  
   

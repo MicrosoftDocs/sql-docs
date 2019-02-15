@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
   - "ALTER SYMMETRIC KEY statement"
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)
@@ -63,7 +63,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  CERTIFICATE *Certificate_name*  
  Specifies the certificate that is used to encrypt the symmetric key. This certificate must already exist in the database.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Specifies the password that is used to encrypt the symmetric key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  

@@ -33,11 +33,11 @@ manager: craigg
 ```  
   
 RETCODE SQLInstallerError(  
-     WORD      iError,  
-     DWORD *   pfErrorCode,  
-     LPSTR     lpszErrorMsg,  
-     WORD      cbErrorMsgMax,  
-     WORD *    pcbErrorMsg);  
+     WORD      iError,  
+     DWORD *   pfErrorCode,  
+     LPSTR     lpszErrorMsg,  
+     WORD      cbErrorMsgMax,  
+     WORD *    pcbErrorMsg);  
 ```  
   
 ## Arguments  

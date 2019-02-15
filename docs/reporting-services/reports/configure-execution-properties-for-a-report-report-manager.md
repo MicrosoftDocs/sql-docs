@@ -24,7 +24,7 @@ ms.author: maghan
   
 ### To configure report processing options  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigate to and open the report for which you want to set processing options.  
   
@@ -43,8 +43,8 @@ ms.author: maghan
 ## See Also  
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Contents Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Processing Options Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
+ [Processing Options Properties Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
   
   

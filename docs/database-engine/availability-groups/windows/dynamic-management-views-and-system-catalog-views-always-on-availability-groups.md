@@ -1,6 +1,7 @@
 ---
-title: "Dynamic management views and system catalog views (Always On Availability Groups-SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Dynamic management views and system catalog views for availability groups"
+description: "A collection of dynamic management and catalog views that can  help  you monitor and diagnose the health of an Always On availability group."
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -96,7 +97,7 @@ select database_id, synchronization_state_desc, synchronization_health_desc, las
 go  
 ```  
   
- Here again, three Always On DMVs report on availability databases. [sys.availability_databases_cluster](~/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md) reports configuration information about availability databases from the WSFC cluster. [sys.dm_hadr_database_replica_cluster_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) reports state information about the database replicas, which are locally cached in SQL Server. It contains some important state information, such as the availability replica’s failover readiness. Finally, [sys.dm_hadr_database_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) is a very verbose result set which reports identity and state information on each availability database, such as LSN progress information for the logs of the primary and secondary database replicas.  
+ Here again, three Always On DMVs report on availability databases. [sys.availability_databases_cluster](~/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md) reports configuration information about availability databases from the WSFC cluster. [sys.dm_hadr_database_replica_cluster_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) reports state information about the database replicas, which are locally cached in SQL Server. It contains some important state information, such as the availability replica's failover readiness. Finally, [sys.dm_hadr_database_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) is a very verbose result set which reports identity and state information on each availability database, such as LSN progress information for the logs of the primary and secondary database replicas.  
   
 ## Explore availability database health  
  The following query retrieves information about the health of each availability databases on the replicas. You can observe the change in the query results before and after you suspend data movement on an availability database.  

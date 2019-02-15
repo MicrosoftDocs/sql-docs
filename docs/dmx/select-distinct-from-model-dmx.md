@@ -57,7 +57,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|The midpoint for the values in the column.|  
   
 ## Discrete Column Example  
- The following code sample is based on the `[TM Decision Tree]` model that you create in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns the unique values that exist in the discrete column, `Gender`.  
+ The following code sample is based on the `[TM Decision Tree]` model that you create in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns the unique values that exist in the discrete column, `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  

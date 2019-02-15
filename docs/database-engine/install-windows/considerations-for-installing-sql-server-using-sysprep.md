@@ -37,7 +37,7 @@ You can use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPre
   
 - In combination with the Windows System Preparation tool (also known as Windows SysPrep); you can create an image of the operating system including the unconfigured prepared instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the source computer. You can then deploy the operating system image to multiple computers. After you complete the configuration of the operating system, you can configure the prepared instances by using the Complete Image step of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
-    The Windows SysPrep tool is used to prepare Windows operating system images. It is used to capture a customized image of the operating system for deployment throughout an organization. For more information about SysPrep and its uses, see [SysPrep](http://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+    The Windows SysPrep tool is used to prepare Windows operating system images. It is used to capture a customized image of the operating system for deployment throughout an organization. For more information about SysPrep and its uses, see [SysPrep](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
   
 ## Installation Media Considerations  
  If you are using a full version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consider the following:  

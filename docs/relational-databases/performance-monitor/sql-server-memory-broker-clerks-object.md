@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Memory Broker Clerks"
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
-author: "dagiro"
-ms.author: "v-dagir"
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Memory Broker Clerks Object
@@ -24,7 +23,7 @@ This following table describes the SQL Server **Memory Broker Clerks** performan
 |**SQL Server Memory Broker Clerks counters**|Description|  
 |-------------|-----------------|  
 |**Internal benefit**|The internal value of memory for entry count pressure, in ms per page per ms, multiplied by 10 billion and truncated to an integer.|
-|**Memory broker clerk size**|The size of the the clerk, in pages.|
+|**Memory broker clerk size**|The size of the clerk, in pages.|
 |**Periodic evictions (pages)**|The number of pages evicted from the broker clerk by last periodic eviction.|
 |**Pressure evictions (pages/sec)**|TThe number of pages per second evicted from the broker clerk by memory pressure.|
 |**Simulation benefit**|The value of memory to the clerk, in ms per page per ms, multiplied by 10 billion and truncated to an integer.|

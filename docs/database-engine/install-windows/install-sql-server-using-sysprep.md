@@ -30,7 +30,7 @@ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], re
 For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions and the hardware and software requirements, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep Cluster Support  
- Beginning in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supports clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in command line installations. For more information, see [What is Sysprep?](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx). 
+ Beginning in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supports clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in command line installations. For more information, see [What is Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx). 
   
 ### To Prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster (Unattended)  
   
@@ -108,13 +108,13 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 11. On the Instance Configuration page, specify the Instance ID for the Instance. Click **Next** to continue. 
   
-     **Instance ID** — The Instance ID is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. If the prepared instance is completed as a default Instance during the Complete step, the instance name is overwritten as MSSQLSERVER. The Instance ID remains the same as specified. 
+     **Instance ID** - The Instance ID is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. If the prepared instance is completed as a default Instance during the Complete step, the instance name is overwritten as MSSQLSERVER. The Instance ID remains the same as specified. 
   
-     **Instance root directory** — By default, the instance root directory is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. To specify a non-default root directory, use the field provided, or click **Browse** to locate an installation folder. The directory specified in the prepare step will be used during configuration in the Complete step. 
+     **Instance root directory** - By default, the instance root directory is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. To specify a non-default root directory, use the field provided, or click **Browse** to locate an installation folder. The directory specified in the prepare step will be used during configuration in the Complete step. 
   
      All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades will apply to every component of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-     **Installed Instances** — The grid shows instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. 
+     **Installed Instances** - The grid shows instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. 
   
 12. The **Disk Space Requirements** page calculates the required disk space for the features that you specify. Then it compares the required space to the available disk space. 
   
@@ -157,19 +157,19 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 9. On the Instance Configuration page, specify the Instance name for the prepared Instance. This is the name of the instance once you have completed the configuration of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Click **Next** to continue. 
   
-     **Instance ID** — The Instance ID is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. If the prepared instance is completed as a default Instance during the Complete step, the instance name is overwritten as MSSQLSERVER. The Instance ID remains the same as specified during the Prepare step. 
+     **Instance ID** - The Instance ID is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. If the prepared instance is completed as a default Instance during the Complete step, the instance name is overwritten as MSSQLSERVER. The Instance ID remains the same as specified during the Prepare step. 
   
-     **Instance root directory** —The directory specified in the prepare step will be used and cannot be modified in this step. 
+     **Instance root directory** -The directory specified in the prepare step will be used and cannot be modified in this step. 
   
      All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades will apply to every component of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-     **Installed instances** — The grid shows instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. 
+     **Installed instances** - The grid shows instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. 
   
 10. Work flow for the rest of this article depends on the features that were selected during the prepare step. You might not see all the pages, depending on the selections. 
   
-11. On the **Server Configuration** — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install. 
+11. On the **Server Configuration** - Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install. 
   
-     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, are started manually, or are disabled. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have to complete their tasks. For more information, see [Server Configuration - Service Accounts](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
+     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, are started manually, or are disabled. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have to complete their tasks. For more information, see [Server Configuration - Service Accounts](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
      To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide credentials in the fields at the bottom of the page. 
   
@@ -177,15 +177,15 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
      When you are finished specifying login information for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, click **Next**. 
   
-12. Use the **Server Configuration — Collation** tab to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Server Configuration - Collation](http://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022). 
+12. Use the **Server Configuration - Collation** tab to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Server Configuration - Collation](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022). 
   
 13. Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Account Provisioning page to specify the following:  
   
-    - Security Mode — Select Windows Authentication or Mixed Mode Authentication for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select Mixed Mode Authentication, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account. 
+    - Security Mode - Select Windows Authentication or Mixed Mode Authentication for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select Mixed Mode Authentication, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account. 
   
-         After a device establishes a successful connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the security mechanism is the same for both Windows Authentication and Mixed Mode. For more information, see [Database Engine Configuration - Server Configuration](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
+         After a device establishes a successful connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the security mechanism is the same for both Windows Authentication and Mixed Mode. For more information, see [Database Engine Configuration - Server Configuration](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrators — You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Server Configuration](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrators - You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Server Configuration](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
   
      When you are finished editing the list, click **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, click **Next**. 
   
@@ -194,11 +194,11 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
     > [!IMPORTANT]  
     >  If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-     For more information, see [Database Engine Configuration - Data Directories](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487). 
+     For more information, see [Database Engine Configuration - Data Directories](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487). 
   
-15. Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - FILESTREAM page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02). 
+15. Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - FILESTREAM page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02). 
   
-16. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration page to specify the kind of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to create. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration modes, see [Reporting Services Configuration Options &#40;SSRS&#41;](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391). 
+16. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration page to specify the kind of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to create. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration modes, see [Reporting Services Configuration Options &#40;SSRS&#41;](https://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391). 
   
 17. On the **Error Reporting** page, specify the information that you want to send to [!INCLUDE[msCoName](../../includes/msconame-md.md)] that will help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, options for error reporting is enabled. 
   
@@ -300,7 +300,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 - [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## See Also  
- [What is Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [How does Windows SysPrepWork](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [What is Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [How does Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

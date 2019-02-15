@@ -73,7 +73,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  **SQLProcedureColumns** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLProcedureColumns Function](http://go.microsoft.com/fwlink/?LinkId=59363)   
+ [SQLProcedureColumns Function](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

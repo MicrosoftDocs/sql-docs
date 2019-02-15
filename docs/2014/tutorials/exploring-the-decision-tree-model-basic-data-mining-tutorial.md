@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Exploring the Decision Tree Model (Basic Data Mining Tutorial)
   The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm predicts which columns influence the decision to purchase a bike based upon the remaining columns in the training set.  
@@ -22,7 +21,7 @@ manager: craigg
   
  In this case, the model predicts only one column, Bike Buyer, so there is only one tree to view. If there were more trees, you could use the **Tree** box to choose another tree.  
   
- As you view the `TM_Decision_Tree` model in the Decision Tree viewer, you can see the most important attributes at the left side of the chart. “Most important” means that these attributes have the greatest influence on the outcome. Attributes further down the tree (to the right of the chart) have less of an effect.  
+ As you view the `TM_Decision_Tree` model in the Decision Tree viewer, you can see the most important attributes at the left side of the chart. "Most important" means that these attributes have the greatest influence on the outcome. Attributes further down the tree (to the right of the chart) have less of an effect.  
   
  In this example, age is the single most important factor in predicting bike buying. The model groups customers by age, and then shows the next more important attribute for each age group. For example, in the group of customers aged 34 to 40, the number of cars owned is the strongest predictor after age.  
   

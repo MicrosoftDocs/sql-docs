@@ -64,7 +64,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 2.  On the toolbar, click **New Query**.  
   
-3.  In the query window, use the [sp_post_msx_operation (Transact-SQL)](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) system stored procedure to set the polling interval for target servers.  
+3.  In the query window, use the [sp_post_msx_operation (Transact-SQL)](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) system stored procedure to set the polling interval for target servers.  
   
 ## See Also  
 [sysdownloadlist](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  

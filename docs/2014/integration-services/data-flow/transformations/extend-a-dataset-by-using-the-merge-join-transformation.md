@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Merge Join transformation"
@@ -59,6 +58,6 @@ manager: craigg
  [Merge Join Transformation](merge-join-transformation.md)   
  [Integration Services Transformations](integration-services-transformations.md)   
  [Integration Services Paths](../integration-services-paths.md)   
- [Data Flow Task]((../../control-flow/data-flow-task.md)  
+ [Data Flow Task](../../control-flow/data-flow-task.md)  
   
   

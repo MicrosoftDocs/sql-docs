@@ -1,7 +1,7 @@
 ---
 title: "COMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "10/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # COMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 This function compresses the input expression, using the GZIP algorithm. The function returns a byte array of type **varbinary(max)**.
   
@@ -75,10 +75,10 @@ VALUES (N'Michael', N'Raheem', compress(@info));
 This statement first deletes old player records from the `player` table. To save space, it then stores the records in the `inactivePlayer` table, in a compressed format.
   
 ```sql
-DELETE player  
-WHERE datemodified < @startOfYear  
-OUTPUT id, name, surname datemodifier, COMPRESS(info)   
-INTO dbo.inactivePlayers ;  
+DELETE FROM player  
+OUTPUT deleted.id, deleted.name, deleted.surname, deleted.datemodifier, COMPRESS(deleted.info)   
+INTO dbo.inactivePlayers
+WHERE datemodified < @startOfYear; 
 ```  
   
 ## See also

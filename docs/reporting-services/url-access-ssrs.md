@@ -55,14 +55,14 @@ reportpath
  The Web service URL of the report server. For native mode, it is the Web service URL of the report server instance configured in Reporting Services Configuration Manager (see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). For example:  
   
 ```  
-http://myrshost/reportserver  
+https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
  For SharePoint integrated mode, it is the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For example:  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver  
+https://myspsite/subsite/_vti_bin/reportserver  
 ```  
   
 > [!TIP]  
@@ -80,7 +80,7 @@ http://myspsite/subsite/_vti_bin/reportserver
  For SharePoint integrated mode, it is the fully qualified URL of the item in the SharePoint library, including the item extension. For example:  
   
 ```  
-http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
+https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
 ```  
   
  **&**  

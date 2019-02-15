@@ -61,12 +61,12 @@ manager: craigg
   
  [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
- [SQL Server Data Mining Add-ins](http://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server Data Mining Add-ins](https://go.microsoft.com/fwlink/?LinkId=197091)  
   
- By default, sample databases, sample code, and client application add-ins are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843).  
+ By default, sample databases, sample code, and client application add-ins are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## See Also  
- [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Languages and Collations &#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   

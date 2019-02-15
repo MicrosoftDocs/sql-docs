@@ -104,7 +104,7 @@ manager: craigg
 4.  Install the service pack or the hotfix on each server instance that is now the mirror server in all mirroring sessions in which it is a partner. You might have to update multiple servers at this point.  
   
     > [!IMPORTANT]  
-    >  In a complex mirroring configuration, some server instance might still be the original principal server in one or more mirroring sessions. Repeat steps 2–4 for those server instances until all instances involved are updated.  
+    >  In a complex mirroring configuration, some server instance might still be the original principal server in one or more mirroring sessions. Repeat steps 2-4 for those server instances until all instances involved are updated.  
   
 5.  Resume the mirroring session.  
   

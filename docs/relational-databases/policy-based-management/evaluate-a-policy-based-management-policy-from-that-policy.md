@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, evaluate policy"
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Evaluate a Policy-Based Management Policy from That Policy

@@ -70,7 +70,7 @@ manager: craigg
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|Whether the full-text component is installed with the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|Whether operating system word breakers and filters are registered and used with this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
-|`VerifySignature`|Specifies whether only signed binaries are loaded by the the Full-Text Engine.|FULLTEXTSERVICEPROPERTY|  
+|`VerifySignature`|Specifies whether only signed binaries are loaded by the Full-Text Engine.|FULLTEXTSERVICEPROPERTY|  
   
 ##  <a name="monitor"></a> Monitoring Full-Text Search Activity  
  Several dynamic management views and functions are useful monitoring full-text search activity on a server instance.  

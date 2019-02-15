@@ -1,7 +1,7 @@
 ---
 title: "Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "12/04/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -132,7 +132,8 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
-> Driver version 17.2 or higher is required for Ubuntu 18.04 support.
+> - Driver version 17.2 or higher is required for Ubuntu 18.04 support.
+> - The unixodbc-dev package 2.3.1 is not available on Ubuntu 14.04.   
 
 ### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), and macOS 10.13 (High Sierra)
 
@@ -363,12 +364,12 @@ If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)]
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
+Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
 #### Redhat Linux Enterprise Server 7
-  - Download the latest `msodbcsql` `.rpm` from here: http://packages.microsoft.com/rhel/7/prod/
+  - Download the latest `msodbcsql` `.rpm` from here: https://packages.microsoft.com/rhel/7/prod/
   - Install dependencies and the driver
   
 ```
@@ -377,7 +378,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### Ubuntu 16.04
-- Download the latest `msodbcsql` `.deb` from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Download the latest `msodbcsql` `.deb` from here: https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Install dependencies and the driver 
 
 ```
@@ -386,7 +387,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### SUSE Linux Enterprise Server 12
-- Download the latest `msodbcsql` `.rpm` from here: http://packages.microsoft.com/sles/12/prod/
+- Download the latest `msodbcsql` `.rpm` from here: https://packages.microsoft.com/sles/12/prod/
 - Install the dependencies and the driver
 
 ```
@@ -430,7 +431,7 @@ Installation puts the driver in `/opt/microsoft/msodbcsql/11.0.2270.0`. The driv
   
 To verify that the Microsoft ODBC driver on Linux was registered successfully, execute the following command: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
-[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) shows a code sample that connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the ODBC driver on Linux.  
+[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) shows a code sample that connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the ODBC driver on Linux.  
   
 **Uninstalling**  
   
@@ -482,15 +483,15 @@ There is more than one Driver Manager installed and your application is using th
   
 For more information about resolving connection failures, see:  
   
--   [Steps to troubleshoot SQL connectivity issues](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Steps to troubleshoot SQL connectivity issues](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
--   [SQL Server 2005 Connectivity Issue Troubleshoot - Part I](http://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
+-   [SQL Server 2005 Connectivity Issue Troubleshoot - Part I](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
   
--   [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](http://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
+-   [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
   
--   [SQL Server Authentication Troubleshooter](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
+-   [SQL Server Authentication Troubleshooter](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [Error details (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [Error details (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     The error number specified in the URL (11001) should be changed to match the error that you see.  
   

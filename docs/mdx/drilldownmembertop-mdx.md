@@ -55,7 +55,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  The **DrilldownMemberTop** function is similar to the [DrilldownMember](../mdx/drilldownmember-mdx.md) function, but instead of including all children for each member in the first set that is also present in the second set, the **DrilldownMemberTop** function returns the topmost number of child members for each member.  
   
- Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) for details.  
+ Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) for details.  
   
 ## Example  
  The following example drills down into the clothing category to return the three subcategories of clothing with the top quantity of orders shipped.  

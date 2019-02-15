@@ -34,18 +34,18 @@ manager: craigg
   
 -   How much data do you have? Is there sufficient data for modeling?  
   
-     It need not be a huge amount – smaller and balanced can be better.  
+     It need not be a huge amount - smaller and balanced can be better.  
   
 -   Is the data from multiple sources, or a single source?  
   
 -   Is the data already processed and clean? Is more input data available?  
   
--   Do you know how it was manipulated before you received it – how data might have been truncated, summarized, or converted?  
+-   Do you know how it was manipulated before you received it - how data might have been truncated, summarized, or converted?  
   
 -   Does the input data have some example results that can be used for training?  
   
  **I understand the level of data integrity we have and the level we need.**  
- Bad data can affect the quality of the model, or prevent the model from being built at all. You should have a good understanding of both the distribution and meaning of the data, and how it came to this state. You’ll need to understand if it is possible or appropriate to simplify the data by labeling, truncating numeric data types, or by summarizing.  
+ Bad data can affect the quality of the model, or prevent the model from being built at all. You should have a good understanding of both the distribution and meaning of the data, and how it came to this state. You'll need to understand if it is possible or appropriate to simplify the data by labeling, truncating numeric data types, or by summarizing.  
   
 -   Data labels: are they clear and correct?  
   
@@ -66,7 +66,7 @@ manager: craigg
 -   If you combined data sets, did you check for multiple columns representing the same data?  
   
  **I know where source data is stored, where it came from, and how it is processed. The process can be easily repeated if needed.**  
- One-off data sets are fine for experiments, but if you ever want to move the model into production, you’ll want to think in advance about how the cleaning process can be applied to operational data. Also, if you have operational data, you need to know how it might have been altered before you got it—you’ll need to know how it was rounded, or summarized, certainly.  
+ One-off data sets are fine for experiments, but if you ever want to move the model into production, you'll want to think in advance about how the cleaning process can be applied to operational data. Also, if you have operational data, you need to know how it might have been altered before you got it-you'll need to know how it was rounded, or summarized, certainly.  
   
 -   Do you want to be able to repeat the experiment?  
   
@@ -99,7 +99,7 @@ manager: craigg
 -   Have you decided to use a seed for the model?  
   
  **We have the domain knowledge to validate the results, or have access to subject matter experts who can advise.**  
- Take time to validate the variables, the model, and the results. Get the help of experts to assess interactions and results. However, don’t let assumptions overrule evidence. Be open to new and unexpected findings.  
+ Take time to validate the variables, the model, and the results. Get the help of experts to assess interactions and results. However, don't let assumptions overrule evidence. Be open to new and unexpected findings.  
   
 -   Is domain knowledge available to help in filtering data and reducing input noise?  
   

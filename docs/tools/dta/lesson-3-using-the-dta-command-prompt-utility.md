@@ -20,7 +20,7 @@ The **dta** command-prompt utility offers functionality in addition to that prov
   
 You can use your favorite XML tools to create input files for the utility by using the Database Engine Tuning Advisor XML schema. This schema is installed when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and can be found at: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
-The Database Engine Tuning Advisor XML schema is also available online at [this Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+The Database Engine Tuning Advisor XML schema is also available online at [this Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
 The Database Engine Tuning Advisor XML schema provides more flexibility to set tuning options. For example, it enables you to perform "what-if" analysis. "What-if" analysis involves specifying a set of existing and hypothetical physical design structures for the database you want to tune, and then analyzing it with the Database Engine Tuning Advisor to find out whether this hypothetical physical design will improve query processing performance. This type of analysis provides the advantage of evaluating the new configuration without incurring the overhead of actually implementing it. If your hypothetical physical design does not provide the performance improvements you want, it is easy to change it and analyze it again until you reach the configuration that produces the results you need.  
   

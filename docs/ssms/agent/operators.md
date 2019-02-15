@@ -47,7 +47,7 @@ Every operator must have a name. Operator names must be unique within the [!INCL
 ### Contact Information  
 An operator's contact information defines how the operator is notified. Operators can be notified by e-mail, pager, or through the **net send** command:  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
 -   **E-mail notification**  
@@ -120,7 +120,7 @@ You must set up one or more of the following in order to notify an operator:
 |-|-|  
 |**Tasks**|**Topic**|  
 |Tasks related to creating an operator|[Create an Operator](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## See Also  
 [Database Mail](../../relational-databases/database-mail/database-mail.md)  

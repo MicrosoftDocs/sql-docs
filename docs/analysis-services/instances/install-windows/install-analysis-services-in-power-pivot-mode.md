@@ -255,7 +255,7 @@ manager: kfile
 ##  <a name="bkmk_upgrade_workbook"></a> Upgrade Workbooks and Scheduled Data Refresh  
  The steps required to upgrade workbooks created in previous versions of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] depend on what version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] created the workbook. For more information, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
-##  <a name="bkmk_multiple_servers"></a> Beyond the Single-Server Installation – Power Pivot for Microsoft SharePoint  
+##  <a name="bkmk_multiple_servers"></a> Beyond the Single-Server Installation - Power Pivot for Microsoft SharePoint  
  **Web front-end (WFE)** or **Middle-tier:**: To use an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint mode in a larger SharePoint farm and to install additional [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] features into the farm, run the installer package **spPowerPivot16.msi (SharePoint 2016), or spPowerPivot.msi (SharePoint 2013),** on each of the SharePoint servers. The spPowerPivot16.msi, or spPowerPivot.msi, installs required data providers and the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016, or 2013, Configuration tool.  
   
  For more information on installing and configuring the middle-tier, see the following:  

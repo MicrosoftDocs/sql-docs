@@ -29,7 +29,7 @@ manager: craigg
  **Network File Share**  
  Network shared folder on the source server from where the database files will be transferred. Use **Network File Share** when you transfer a database in offline mode by specifying **DatabaseOffline** for **Method** in the **Databases** page of the **Transfer Database Task Editor** dialog box.  
   
- Enter the network file share location, or click the browse button **(…)** to locate the network file share location.  
+ Enter the network file share location, or click the browse button **(...)** to locate the network file share location.  
   
  When you transfer a database in offline mode, the database files are copied to the **Network file share** location on the source server before they are transferred to the destination server.  
   

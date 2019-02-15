@@ -17,7 +17,7 @@ ms.custom: "sql-linux"
 
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the in-depth documentation for that area.
 
->  [!NOTE]
+> [!NOTE]
 >  The following examples use the **AdventureWorks2014** sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md).
 
 
@@ -29,7 +29,7 @@ Grant others access to SQL Server by creating a login in the master database usi
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
->  [!NOTE]
+> [!NOTE]
 >  Always use a strong password in place of the asterisks in the previous command.
 
 Logins can connect to SQL Server and have access (with limited permissions) to the master database. To connect to a user-database, a login needs a corresponding identity at the database level, called a database user. Users are specific to each database and must be separately created in each database to grant them access. The following example moves you into the AdventureWorks2014 database, and then uses the [CREATE USER](../t-sql/statements/create-user-transact-sql.md) statement to create a user named Larry that is associated with the login named Larry. Though the login and the user are related (mapped to each other), they are different objects. The login is a server-level principle. The user is a database-level principal.
@@ -61,7 +61,7 @@ Now the login Larry can create more logins, and the user Jerry can create more u
 
 ## Granting access with least privileges
 
-The first people to connect to a user-database will be the administrator and database owner accounts. However these users have all the the permissions available on the database. This is more permission than most users should have. 
+The first people to connect to a user-database will be the administrator and database owner accounts. However these users have all the permissions available on the database. This is more permission than most users should have. 
 
 When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.   
    
@@ -96,36 +96,36 @@ For more information about the permission system, see [Getting Started with Data
 The following steps walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
 Create two user accounts to test the row level security:    
-   
+   
 ```   
 USE AdventureWorks2014;   
 GO   
-   
+   
 CREATE USER Manager WITHOUT LOGIN;     
-   
+   
 CREATE USER SalesPerson280 WITHOUT LOGIN;    
 ```   
 
 Grant read access on the `Sales.SalesOrderHeader` table to both users:    
-   
+   
 ```   
 GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
 GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
 ```   
-   
+   
 Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.   
-   
+   
 ```     
 CREATE SCHEMA Security;   
 GO   
-   
+   
 CREATE FUNCTION Security.fn_securitypredicate(@SalesPersonID AS int)     
     RETURNS TABLE   
 WITH SCHEMABINDING   
 AS     
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
-    OR (USER_NAME() = 'Manager');    
+    OR (USER_NAME() = 'Manager');    
 ```   
 
 Create a security policy adding the function as both a filter and a block predicate on the table:  
@@ -243,7 +243,7 @@ To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`
 
 The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
 
->  [!WARNING]
+> [!WARNING]
 >  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
 For more information about TDE, see [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
@@ -251,7 +251,7 @@ For more information about TDE, see [Transparent Data Encryption (TDE)](../relat
 
 ## Configure backup encryption
 SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
-  
+  
 > [!WARNING]  
 >  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
  
@@ -261,7 +261,7 @@ The following example creates a certificate, and then creates a backup protected
 USE master;  
 GO  
 CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
+   WITH SUBJECT = 'Database backups';  
 GO 
 BACKUP DATABASE [AdventureWorks2014]  
 TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  

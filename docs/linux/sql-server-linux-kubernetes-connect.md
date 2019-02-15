@@ -14,24 +14,23 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 # Connect to a SQL Server Always On Availability Group on Kubernetes
 
-To connect to SQL Server instances in containers on a Kubernetes cluster, create a [load balancer service](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). The load balancer forwards requests for the IP address to the pod running the SQL Server instance.
+To connect to SQL Server instances in containers on a Kubernetes cluster, create a [load balancer service](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). The load balancer is an endpoint. It holds an IP address and forwards requests for the IP address to the pod running the SQL Server instance.
 
-To connect to an availability group replica, create a service for different replica types. You can see examples of services for different types of replicas in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml).
+To connect to an availability group replica, create a service for different replica types. You can see examples of services for different types of replicas in [sql-server-samples/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
 * `ag1-primary` points to the primary replica.
-* `ag1-secondary-sync` points to the synchronous secondary replica.
-* `ag1-secondary-async` points to an asynchronous secondary replica.
+* `ag1-secondary` points to any secondary replica.
 
-If more than one secondary replica of the same type exists, Kubernetes routes your connection to the different replicas in a round-robin fashion.
+If more than one secondary replica, Kubernetes routes your connection to the different replicas in a round-robin fashion.
 
 ## Create a load balancer service
 
-To create a load balancer service for the primary replica, copy `ag1-primary.yaml` from [sql-server-samples]()and update it for your availability group.
+To create load balancer services for the primary and replicas, copy [`ag1-services.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file) and update it for your availability group.
 
-The following command applies the .yaml file to your cluster:
+The following command applies the configuration from the `.yaml` file to cluster:
 
 ```kubectl
-kubectl apply -f ag1-primary.yaml
+kubectl apply -f ag1-services.yaml --namespace ag1
 ```
 
 ## Get the IP address for your load balancer service

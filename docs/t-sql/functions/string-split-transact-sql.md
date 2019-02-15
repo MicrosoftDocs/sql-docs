@@ -1,7 +1,7 @@
 ---
 title: "STRING_SPLIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "11/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,15 +20,20 @@ ms.author: mathoma
 manager: craigg
 ---
 # STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Splits the character expression using specified separator.  
-  
-> [!NOTE]  
-> The **STRING_SPLIT** function is available only under compatibility level 130 and above. If your database compatibility level is lower than 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not be able to find and execute **STRING_SPLIT** function. To change the compatibility level of a database, refer to [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
-> Note that compatibility level 120 might be default even in new [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+A table-valued function that splits a string into rows of substrings, based on a specified separator character.
+
+#### Compatibility level 130
+
+STRING_SPLIT requires the compatibility level to be at least 130. When the level is less than 130, SQL Server is unable to find the STRING_SPLIT function.
+
+To change the compatibility level of a database, refer to [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
+
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -41,30 +46,41 @@ STRING_SPLIT ( string , separator )
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar**, **varchar**, **nchar**, or **char**).  
   
  *separator*  
- Is a single character [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar(1)**, **varchar(1)**, **nchar(1)**, or **char(1)**) that is used as separator for concatenated strings.  
+ Is a single character [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar(1)**, **varchar(1)**, **nchar(1)**, or **char(1)**) that is used as separator for concatenated substrings.  
   
 ## Return Types  
- Returns a single-column table with fragments. The name of the column is **value**. Returns **nvarchar** if any of the input arguments are either **nvarchar** or **nchar**. Otherwise returns **varchar**. The length of the return type is the same as the length of the string argument.  
+
+Returns a single-column table whose rows are the substrings. The name of the column is **value**. Returns **nvarchar** if any of the input arguments are either **nvarchar** or **nchar**. Otherwise returns **varchar**. The length of the return type is the same as the length of the string argument.  
   
 ## Remarks  
-**STRING_SPLIT** takes a string that should be divided and the separator that will be used to divide string. It returns a single-column table with substrings. For example, the following  statement `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` using the space character as the separator, returns following result table:  
+
+**STRING_SPLIT** inputs a string that has delimited substrings, and inputs one character to use as the delimiter or separator. STRING_SPLIT outputs a single-column table whose rows contain the substrings. The name of the output column is **value**.
+
+The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string. You can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value`).
+
+Empty zero-length substrings are present when the input string contains two or more consecutive occurrences of the delimiter character. Empty substrings are treated the same as are plain substrings. You can filter out any rows that contain the empty substring by using the WHERE clause (`WHERE value <> ''`). If the input string is NULL, the STRING_SPLIT table-valued function returns an empty table.  
+
+As an example, the following SELECT statement uses the space character as the separator:
+
+```sql
+SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
+```
+
+In a practice run, the preceding SELECT returned following result table:  
   
 |value|  
-|-----------|  
+| :-- |  
 |Lorem|  
 |ipsum|  
 |dolor|  
 |sit|  
 |amet.|  
-  
-If the input string is **NULL**, the **STRING_SPLIT** table-valued function returns an empty table.  
-  
-**STRING_SPLIT** requires at least compatibility mode 130.  
-  
+| &nbsp; |
+
 ## Examples  
   
 ### A. Split comma-separated value string  
-Parse a comma separated list of values and return all non-empty tokens:  
+Parse a comma-separated list of values and return all non-empty tokens:  
   
 ```sql  
 DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
@@ -104,6 +120,9 @@ FROM Product
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > The order of the output may vary as the order is _not_ guaranteed to match the order of the substrings in the input string.
   
 ### C. Aggregation by values  
 Users must create a report that shows the number of products per each tag, ordered by number of products, and to filter only the tags with more than two products.  
@@ -131,12 +150,11 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 Find products with two specified tags (clothing and road):  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
 ### E. Find rows by list of values  
@@ -148,9 +166,9 @@ FROM Product
 JOIN STRING_SPLIT('1,2,3',',')   
     ON value = ProductId;  
 ```  
-  
-This is replacement for common anti-pattern such as creating a dynamic SQL string in application layer or [!INCLUDE[tsql](../../includes/tsql-md.md)], or by using LIKE operator:  
-  
+
+The preceding STRING_SPLIT usage is a replacement for a common anti-pattern. Such an anti-pattern can involve the creation of a dynamic SQL string in the application layer or in Transact-SQL. Or an anti-pattern can be achieved by using the LIKE operator. See the following example SELECT statement:
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  

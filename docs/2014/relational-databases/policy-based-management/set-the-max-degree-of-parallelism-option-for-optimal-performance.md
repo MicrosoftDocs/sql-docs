@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
@@ -20,7 +20,7 @@ manager: craigg
  Set the max degree of parallelism option to 8 or less by using sp_configure.  
   
 ## For More Information  
- [Microsoft Knowledge Base article 329204](http://go.microsoft.com/fwlink/?linkid=117786)  
+ [Microsoft Knowledge Base article 329204](https://go.microsoft.com/fwlink/?linkid=117786)  
   
  [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   

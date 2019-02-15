@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CHECK constraints, modifying"
@@ -45,7 +44,7 @@ manager: craigg
   
 1.  In the **Object Explorer**, right-click the table containing the check constraint and select **Design**.  
   
-2.  On the **Table Designer** menu, click **Check Constraints…**.  
+2.  On the **Table Designer** menu, click **Check Constraints...**.  
   
 3.  In the **Check Constraints** dialog box, under **Selected Check Constraint**, select the constraint you wish to edit.  
   
@@ -64,7 +63,7 @@ manager: craigg
   
 5.  Click **Close**.  
   
-6.  On the **File** menu, click **Save***table name*.  
+6.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a check constraint**  

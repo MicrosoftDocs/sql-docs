@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "System Monitor [SQL Server], charts and reports"
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "System Monitor [SQL Server], logs"
   - "Windows System Monitor [SQL Server], logs"
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Create Charts, Alerts, Logs, and Reports

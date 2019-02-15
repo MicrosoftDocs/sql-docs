@@ -30,6 +30,6 @@ manager: craigg
   
 4.  [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) One of the steps to take after your databases have been upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is to enable new features by changing the database compatibility mode and then using the query store to monitor performance. This article discusses this process and provides a recommended workflow.  
   
-5.  [Take Advantage of New SQL Server Features](http://www.microsoft.com/sql-server/sql-server-2017) Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This article suggests a few of these enhancements and provides links for more information.  
+5.  [Take Advantage of New SQL Server Features](https://www.microsoft.com/sql-server/sql-server-2017) Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This article suggests a few of these enhancements and provides links for more information.  
   
   

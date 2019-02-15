@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "DENY statement, assemblies"
   - "denying permissions [SQL Server], assemblies"
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Assembly Permissions (Transact-SQL)
@@ -41,7 +41,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  Specifies a permission that can be denied on an assembly. Listed below.  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  Specifies the assembly on which the permission is being denied. The scope qualifier "::" is required.  
   
  *database_principal*  

@@ -83,7 +83,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT with CHECK_CONSTRAINTS clause.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) without IGNORE_CONSTRAINTS clause.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) without IGNORE_CONSTRAINTS clause.  
   
 -   Bulk loading operations that do not enforce constraints fail unless the FileTable system-defined constraints have been disabled. This category includes the following operations:  
   
@@ -91,7 +91,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT without CHECK_CONSTRAINTS clause.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) with IGNORE_CONSTRAINTS clause.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) with IGNORE_CONSTRAINTS clause.  
   
 ###  <a name="HowToBulkLoad"></a> How To: Bulk Load Files into a FileTable  
  You can use various methods to bulk load files into a FileTable:  
@@ -108,7 +108,7 @@ UPDATE PhotoMetadata
   
     -   Disable the FileTable namespace and call without the **CHECK_CONSTRAINTS** clause. Then re-enable the FileTable namespace.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   Call with the **IGNORE_CONSTRAINTS** clause.  
   

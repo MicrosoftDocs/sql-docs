@@ -9,7 +9,7 @@
   - name: Tools and applications
     href: tools-and-applications-used-in-analysis-services.md
   - name: Client libraries (data providers)
-    href: instances/data-providers-used-for-analysis-services-connections.md
+    href: ./instances/data-providers-used-for-analysis-services-connections.md
   - name: Comparing Tabular and Multidimensional solutions
     href: comparing-tabular-and-multidimensional-solutions-ssas.md
   - name: Analysis Services Features and Tasks
@@ -32,7 +32,6 @@
     - name: Tips and best practices
       href: globalization-tips-and-best-practices-analysis-services.md
 - name: Tutorials
-  href: analysis-services-tutorials-ssas.md
   items:
   - name: Tabular modeling (1400 compatibility level)
     href: tutorial-tabular-1400/as-adventure-works-tutorial.md
@@ -69,34 +68,34 @@
       href: tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
     - name: Supplemental lesson - Ragged hierarchies
       href: tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-  - name: Tabular modeling (1200 compatibility level)
+  - name: Tabular modeling (1200 compatibility level) 
     href: tabular-modeling-adventure-works-tutorial.md
     items:
-    - name: "Lesson 1: Create a New Tabular Model Project"
+    - name: 1 - Create a New Tabular Model Project
       href: lesson-1-create-a-new-tabular-model-project.md
-    - name: "Lesson 2: Add Data"
+    - name: 2 - Add Data
       href: lesson-2-add-data.md
-    - name: "Lesson 3: Mark as Date Table"
+    - name: 3 - Mark as Date Table
       href: lesson-3-mark-as-date-table.md
-    - name: "Lesson 4: Create relationships"
+    - name: 4 - Create relationships
       href: lesson-4-create-relationships.md
-    - name: "Lesson 5: Create calculated columns"
+    - name: 5 - Create calculated columns
       href: lesson-5-create-calculated-columns.md
-    - name: "Lesson 6: Create measures"
+    - name: 6 - Create measures
       href: lesson-6-create-measures.md
-    - name: "Lesson 7: Create Key Performance Indicators"
+    - name: 7 - Create Key Performance Indicators
       href: lesson-7-create-key-performance-indicators.md
-    - name: "Lesson 8: Create perspectives"
+    - name: 8 - Create perspectives
       href: lesson-8-create-perspectives.md
-    - name: "Lesson 9: Create hierarchies"
+    - name: 9 - Create hierarchies
       href: lesson-9-create-hierarchies.md
-    - name: "Lesson 10: Create partitions"
+    - name: 10 - Create partitions
       href: lesson-10-create-partitions.md
-    - name: "Lesson 11: Create roles"
+    - name: 11 - Create roles
       href: lesson-11-create-roles.md
-    - name: "Lesson 12: Analyze in Excel"
+    - name: 12 - Analyze in Excel
       href: lesson-12-analyze-in-excel.md
-    - name: "Lesson 13: Deploy"
+    - name: 13 - Deploy
       href: lesson-13-deploy.md
     - name: Supplemental Lesson - Implement dynamic security by using row filters
       href: supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
@@ -162,7 +161,7 @@
       - name: Lesson 4-5 - Sorting attribute members based on a secondary attribute
         href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
       - name: Lesson 4-6 - Specifying attribute relationships between attributes in a user-defined hierarchy
-        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+        href: lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
       - name: Lesson 4-7 - Defining the unknown member and null processing properties
         href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
     - name: "Lesson 5: Defining relationships between dimensions and measure groups"
@@ -209,55 +208,1283 @@
     href: data-mining-tutorials-analysis-services.md
 - name: How-to
   items:
-  - name: Tabular models
-    href: ../analysis-services/tabular-models/tabular-models-ssas.md
-  - name: Multidimensional models
-    href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
-  - name: Data mining
-    href: ../analysis-services/data-mining/data-mining-ssas.md
+  - name: Install and configure
+    items:
+    - name: Install in tabular or multidimensional mode
+      href: ./instances/install-windows/install-analysis-services.md
+    - name: Install in Power Pivot for Sharepoint mode
+      href: ./instances/install-windows/install-analysis-services-in-power-pivot-mode.md
+      items:
+      - name: Verify a Power Pivot for SharePoint Installation
+        href: ./instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
+      - name: Example of a Minimum-Privilege Configuration for Power Pivot for SharePoint 2016
+        href: ./instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2016.md
+      - name: Example of a Minimum-Privilege Configuration for Power Pivot for SharePoint 2013
+        href: ./instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
+      - name: Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)
+        href: ./instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md
+      - name: Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2013)
+        href: ./instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+      - name: Configure Power Pivot and Deploy Solutions (SharePoint 2016)
+        href: ./instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2016.md
+      - name: Configure Power Pivot and Deploy Solutions (SharePoint 2013)
+        href: ./instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+      - name: Migrate Power Pivot to SharePoint 2013
+        href: ./instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
+      - name: Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
+        href: ./instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+      - name: Configure Analysis Services and Kerberos Constrained Delegation (KCD)
+        href: ./instances/install-windows/configure-analysis-services-and-kerberos-constrained-delegation-kcd.md
+      - name: CheckList Use PowerShell to Verify Power Pivot for SharePoint
+        href: ./instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+      - name: Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016
+        href: ./instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md
+      - name: Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm
+        href: ./instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md
+    - name: Install client libraries (AMO, ADOMD.NET, MSOLAP)
+      href: ./instances/data-providers-used-for-analysis-services-connections.md
+    - name: Verify cumulative update build version
+      href: ./instances/analysis-services-component-version.md
+    - name: Post-install configuration
+      items:
+      - name: Post install and confiuration overview  
+        href: ./instances/post-install-configuration-analysis-services.md
+      - name: Configure the Windows Firewall
+        href: ./instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
+      - name: Configure the service account
+        href: ./instances/configure-service-accounts-analysis-services.md
+      - name: Add administrators
+        href: ./instances/grant-server-admin-rights-to-an-analysis-services-instance.md
+      - name: Features off by default
+        href: ./instances/features-off-by-default-analysis-services.md
+      - name: Server groups in SSMS
+        href: ./instances/register-an-analysis-services-instance-in-a-server-group.md
+      - name: Determine the Server Mode
+        href: ./instances/determine-the-server-mode-of-an-analysis-services-instance.md
+      - name: Rename an Analysis Services Instance
+        href: ./instances/rename-an-analysis-services-instance.md
+  - name: Tabular modeling
+    items: 
+    - name: Tabular modeling overview
+      href: ./tabular-models/tabular-models-ssas.md
+    - name: Compatibility level
+      href: ./tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md
+    - name: Data sources supported in tabular 1400 models
+      href: ./tabular-models/data-sources-supported-ssas-tabular-1400.md
+    - name: Data sources supported in tabular 1200 models
+      href: ./tabular-models/data-sources-supported-ssas-tabular.md
+    - name: Create Tabular Models
+      items:
+      - name: Tabular model designer
+        href: ./tabular-models/tabular-model-designer-ssas.md
+      - name: Workspace database
+        href: ./tabular-models/workspace-database-ssas-tabular.md
+      - name: Tabular Model Projects
+        href: ./tabular-models/tabular-model-projects-ssas-tabular.md
+        items:
+        - name: Create a New Tabular Model Project
+          href: ./tabular-models/create-a-new-tabular-model-project-analysis-services.md
+        - name: Import from Analysis Services
+          href: ./tabular-models/import-from-analysis-services-ssas-tabular.md
+        - name: Import from Power Pivot
+          href: ./tabular-models/import-from-power-pivot-ssas-tabular.md
+      - name: Properties
+        items:
+        - name: Power View - Reporting Properties
+          href: ./tabular-models/power-view-reporting-properties-ssas-tabular.md
+        - name: Power View - Configure Default Field Set
+          href: ./tabular-models/power-view-configure-default-field-set-for-reports.md
+        - name: Power View - Configure Table Behavior Properties
+          href: ./tabular-models/power-view-configure-table-behavior-properties-for-reports.md
+        - name: Project properties
+          href: ./tabular-models/project-properties-ssas-tabular.md
+        - name: Model properties
+          href: ./tabular-models/model-properties-ssas-tabular.md
+        - name: Table Properties
+          href: ./tabular-models/table-properties-ssas-tabular.md
+        - name: Column Properties
+          href: ./tabular-models/column-properties-ssas-tabular.md
+        - name: Configure default data modeling and deployment properties
+          href: ./tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
+      - name: Import Data
+        items:
+        - name: Data sources supported in tabular 1400 models
+          href: ./tabular-models/data-sources-supported-ssas-tabular-1400.md
+        - name: Data sources supported in tabular 1200 models
+          href: ./tabular-models/data-sources-supported-ssas-tabular.md
+        - name: Data types supported
+          href: ./tabular-models/data-types-supported-ssas-tabular.md
+        - name: Impersonation
+          href: ./tabular-models/impersonation-ssas-tabular.md
+        - name: Import data by using a native query
+          href: ./tabular-models/ssas-import-query.md
+      - name: DirectQuery Mode
+        href: ./tabular-models/directquery-mode-ssas-tabular.md
+        items:
+        - name: Enable DirectQuery mode in SSDT
+          href: ./tabular-models/enable-directquery-mode-in-ssdt.md
+        - name: Enable DirectQuery mode in SSMS
+          href: ./tabular-models/enable-directquery-mode-in-ssms.md
+        - name: Add sample data to DirectQuery models
+          href: ./tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md
+        - name: Define partitions in DirectQuery models
+          href: ./tabular-models/define-partitions-in-directquery-models-ssas-tabular.md
+        - name: Test a model in DirectQuery mode
+          href: ./tabular-models/test-a-model-in-directquery-mode.md
+        - name: DAX formula compatibility in DirectQuery mode (SSAS 2016)
+          href: ./tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md
+      - name: Tables and Columns
+        href: ./tabular-models/tables-and-columns-ssas-tabular.md
+        items:
+        - name: Add columns to a table
+          href: ./tabular-models/add-columns-to-a-table-ssas-tabular.md
+        - name: Delete a Column
+          href: ./tabular-models/delete-a-column-ssas-tabular.md
+        - name: Change table, column, or row filter mappings
+          href: ./tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md
+        - name: Specify Mark as Date Table for use with Time Intelligence
+          href: ./tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
+        - name: Add a table
+          href: ./tabular-models/add-a-table-ssas-tabular.md
+        - name: Delete a Table
+          href: ./tabular-models/delete-a-table-ssas-tabular.md
+        - name: Create a Calculated Table
+          href: ./tabular-models/create-a-calculated-table-ssas-tabular.md
+        - name: Rename a Table or Column
+          href: ./tabular-models/rename-a-table-or-column-ssas-tabular.md
+        - name: Set the Data Type of a Column
+          href: ./tabular-models/set-the-data-type-of-a-column-ssas-tabular.md
+        - name: Hide or freeze columns
+          href: ./tabular-models/hide-or-freeze-columns-ssas-tabular.md
+        - name: Calculated Columns
+          href: ./tabular-models/ssas-calculated-columns.md
+        - name: Create a Calculated Column
+          href: ./tabular-models/ssas-calculated-columns-create-a-calculated-column.md
+        - name: Sort Data in a Table
+          href: ./tabular-models/sort-data-in-a-table-ssas-tabular.md
+        - name: Filter Data in a Table
+          href: ./tabular-models/filter-data-in-a-table-ssas-tabular.md
+      - name: Relationships
+        href: ./tabular-models/relationships-ssas-tabular.md
+        items:
+        - name: Create a Relationship Between Two Tables
+          href: ./tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md
+        - name: Delete Relationships
+          href: ./tabular-models/delete-relationships-ssas-tabular.md
+        - name: Bi-directional cross filters
+          href: ./tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md
+      - name: Calculations
+        href: ./tabular-models/calculations-ssas-tabular.md
+        items:
+        - name: Understanding DAX in Tabular Models
+          href: ./tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md
+      - name: Measures
+        href: ./tabular-models/measures-ssas-tabular.md
+        items:
+        - name: Create and Manage Measures
+          href: ./tabular-models/create-and-manage-measures-ssas-tabular.md
+      - name: KPIs
+        href: ./tabular-models/kpis-ssas-tabular.md
+        items:
+        - name: Create and Manage KPIs
+          href: ./tabular-models/create-and-manage-kpis-ssas-tabular.md
+      - name: Hierarchies
+        href: ./tabular-models/hierarchies-ssas-tabular.md
+        items:
+        - name: Create and Manage Hierarchies
+          href: ./tabular-models/create-and-manage-hierarchies-ssas-tabular.md
+      - name: Partitions
+        href: ./tabular-models/partitions-ssas-tabular.md
+        items:
+        - name: Create and Manage Partitions in the Workspace Database
+          href: ./tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
+        - name: Process Partitions in the Workspace Database
+          href: ./tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md
+      - name: Perspectives
+        href: ./tabular-models/perspectives-ssas-tabular.md
+        items:
+        - name: Create and Manage Perspectives
+          href: ./tabular-models/create-and-manage-perspectives-ssas-tabular.md
+      - name: Translations 
+        href: ./tabular-models/translations-in-tabular-models-analysis-services.md
+      - name: Roles
+        href: ./tabular-models/roles-ssas-tabular.md
+        items:
+        - name: Create and Manage Roles
+          href: ./tabular-models/create-and-manage-roles-ssas-tabular.md
+        - name: Object-level security
+          href: ./tabular-models/object-level-security.md
+      - name: Analyze in Excel
+        href: ./tabular-models/analyze-in-excel-ssas-tabular.md
+        items:
+        - name: Analyze a tabular model in Excel
+          href: ./tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md
+      - name: String storage and collation in tabular models
+        href: ./tabular-models/string-storage-and-collation-in-tabular-models.md
+    - name: Deploy tabular model solutions
+      href: ./tabular-models/tabular-model-solution-deployment-ssas-tabular.md
+      items:
+      - name: Deploy from SQL Server Data Tools
+        href: ./tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md
+    - name: Manage Tabular Model Databases
+      href: ./tabular-models/tabular-model-databases-ssas-tabular.md
+      items:
+      - name: Process Database, Table, or Partition
+        href: ./tabular-models/process-database-table-or-partition-analysis-services.md
+      - name: Tabular Model Roles
+        href: ./tabular-models/tabular-model-roles-ssas-tabular.md
+        items:
+        - name: Manage Roles by using SSMS
+          href: ./tabular-models/manage-roles-by-using-ssms-ssas-tabular.md
+      - name: Tabular Model Partitions
+        href: ./tabular-models/tabular-model-partitions-ssas-tabular.md
+        items:
+        - name: Create and Manage Tabular Model Partitions
+          href: ./tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md
+        - name: Process Tabular Model Partitions
+          href: ./tabular-models/process-tabular-model-partitions-ssas-tabular.md
+    - name: Connect to a tabular model database
+      href: ./tabular-models/connect-to-a-tabular-model-database-ssas.md
+    - name: Restore from Power Pivot
+      href: ./tabular-models/restore-from-power-pivot.md
+  - name: Multidimensional modeling
+    items:
+    - name: Multidimensionl modeling overview
+      href: ./multidimensional-models/multidimensional-models-ssas.md
+    - name: Multidimensional Solutions
+      href: ./multidimensional-models/multidimensional-model-solutions-ssas.md
+      items:
+      - name: Creating Multidimensional Models Using SQL Server Data Tools (SSDT)
+        href: ./multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md
+        items:
+        - name: Create an Analysis Services Project (SSDT)
+          href: ./multidimensional-models/create-an-analysis-services-project-ssdt.md
+        - name: Configure Analysis Services Project Properties (SSDT)
+          href: ./multidimensional-models/configure-analysis-services-project-properties-ssdt.md
+        - name: Build Analysis Services Projects (SSDT)
+          href: ./multidimensional-models/build-analysis-services-projects-ssdt.md
+        - name: Deploy Analysis Services Projects (SSDT)
+          href: ./multidimensional-models/deploy-analysis-services-projects-ssdt.md
+        - name: Create and Run an MDX Script (SSDT)
+          href: ./multidimensional-models/create-and-run-an-mdx-script-in-sql-server-data-tools.md
+        - name: View the XML for an Analysis Services Project (SSDT)
+          href: ./multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md
+        - name: Connect in Online Mode to an Analysis Services Database
+          href: ./multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md
+        - name: Working with Analysis Services Projects and Databases During the Development Phase
+          href: ./multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md
+        - name: Working with Analysis Services Projects and Databases in a Production Environment
+          href: ./multidimensional-models/work-with-analysis-services-projects-and-databases-in-production.md
+      - name: Data Sources
+        href: ./multidimensional-models/data-sources-in-multidimensional-models.md
+        items:
+        - name: Supported Data Sources
+          href: ./multidimensional-models/supported-data-sources-ssas-multidimensional.md
+        - name: Create a Data Source
+          href: ./multidimensional-models/create-a-data-source-ssas-multidimensional.md
+        - name: Delete a Data Source
+          href: ./multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md
+        - name: Set Data Source Properties
+          href: ./multidimensional-models/set-data-source-properties-ssas-multidimensional.md
+        - name: Set Impersonation Options for a Data Source Connection
+          href: ./multidimensional-models/set-impersonation-options-ssas-multidimensional.md
+      - name: Data Source Views
+        href: ./multidimensional-models/data-source-views-in-multidimensional-models.md
+        items:
+        - name: Data Sources and Bindings
+          href: ./multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md
+        - name: Define a Data Source View
+          href: ./multidimensional-models/defining-a-data-source-view-analysis-services.md
+        - name: Add or Remove Tables or Views in a Data Source View
+          href: ./multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md
+        - name: Explore Data in a Data Source View
+          href: ./multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md
+        - name: Work with Diagrams in Data Source View Designer
+          href: ./multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md
+        - name: Refresh the Schema in a Data Source View
+          href: ./multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md
+        - name: Replace a Table or a Named Query in a Data Source View
+          href: ./multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md
+        - name: Define Logical Relationships in a Data Source View
+          href: ./multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md
+        - name: Define Logical Primary Keys in a Data Source View
+          href: ./multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md
+        - name: Define Named Calculations in a Data Source View
+          href: ./multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md
+        - name: Define Named Queries in a Data Source View
+          href: ./multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md
+        - name: Delete a Data Source View
+          href: ./multidimensional-models/delete-a-data-source-view-analysis-services.md
+        - name: Change Properties in a Data Source View
+          href: ./multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md
+        - name: Schema Generation Wizard
+          href: ./multidimensional-models/schema-generation-wizard-analysis-services.md
+          items:
+          - name: Use the Schema Generation Wizard
+            href: ./multidimensional-models/use-the-schema-generation-wizard-analysis-services.md
+          - name: Understanding the Database Schemas
+            href: ./multidimensional-models/understanding-the-database-schemas.md
+          - name: Understanding Incremental Generation
+            href: ./multidimensional-models/understanding-incremental-generation.md
+          - name: Manage Changes to Data Source Views and Data Sources
+            href: ./multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md
+      - name: Dimensions
+        href: ./multidimensional-models/dimensions-in-multidimensional-models.md
+        items:
+        - name: Create a Dimension Using the Dimension Wizard
+          href: ./multidimensional-models/create-a-dimension-using-the-dimension-wizard.md
+        - name: Create a Dimension by Using an Existing Table
+          href: ./multidimensional-models/create-a-dimension-by-using-an-existing-table.md
+        - name: Create a Time Dimension by Generating a Time Table
+          href: ./multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md
+        - name: Create a Dimension by Generating a Non-Time Table in the Data Source
+          href: ./multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md
+        - name: Database Dimensions
+          href: ./multidimensional-models/define-database-dimensions.md
+        - name: Database Dimensions - Configure the (All) Level for Attribute Hierarchies
+          href: ./multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md
+        - name: Database Dimensions - Modify or Delete in Solution Explorer
+          href: ./multidimensional-models/database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md
+        - name: Database Dimensions - Browse Data in Designer
+          href: ./multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md
+        - name: Database Dimensions - BI Wizard in Designer
+          href: ./multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md
+        - name: Database Dimensions - Create a Date type
+          href: ./multidimensional-models/database-dimensions-create-a-date-type-dimension.md
+        - name: Database Dimensions - Finance Account of parent-child
+          href: ./multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md
+        - name: Database Dimensions - Currency type
+          href: ./multidimensional-models/database-dimensions-create-a-currency-type-dimension.md
+        - name: Dimension Attribute Properties Reference
+          href: ./multidimensional-models/dimension-attribute-properties-reference.md
+          items:
+          - name: Attribute Properties - Rename an Attribute
+            href: ./multidimensional-models/attribute-properties-rename-an-attribute.md
+          - name: Attribute Properties - Add an  Attribute to a Dimension
+            href: ./multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md
+          - name: Attribute Properties - Remove an Attribute from a Dimension
+            href: ./multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md
+          - name: Attribute Properties - Configure Attribute Types
+            href: ./multidimensional-models/attribute-properties-configure-attribute-types.md
+          - name: Attribute Properties - Group Attribute Members
+            href: ./multidimensional-models/attribute-properties-group-attribute-members.md
+          - name: Attribute Properties - Define Custom Member Formulas
+            href: ./multidimensional-models/attribute-properties-define-custom-member-formulas.md
+          - name: Attribute Properties - Define a Default Member
+            href: ./multidimensional-models/attribute-properties-define-a-default-member.md
+          - name: Attribute Properties - View Attributes in Dimension Designer
+            href: ./multidimensional-models/attribute-properties-view-attributes-in-dimension-designer.md
+          - name: Attribute Properties - Define a New Attribute Automatically
+            href: ./multidimensional-models/attribute-properties-define-a-new-attribute-automatically.md
+          - name: Attribute Properties - View Attributes in Dimension Designer
+            href: ./multidimensional-models/view-attributes-in-dimension-designer.md
+          - name: Attribute Properties - Modify the KeyColumn Property
+            href: ./multidimensional-models/attribute-properties-modify-the-keycolumn-property.md
+          - name: Attribute Properties - Bind an Attribute to a Key Column
+            href: ./multidimensional-models/attribute-properties-bind-an-attribute-to-a-key-column.md
+          - name: Attribute Properties - Bind an Attribute to a Name Column
+            href: ./multidimensional-models/attribute-properties-bind-an-attribute-to-a-name-column.md
+          - name: Attribute Properties - Set Usage Property
+            href: ./multidimensional-models/attribute-properties-set-usage-property.md
+          - name: Attribute Properties - Define Member Groups
+            href: ./multidimensional-models/attribute-properties-define-member-groups.md
+        - name: Parent-Child Dimension
+          href: ./multidimensional-models/parent-child-dimension.md
+        - name: Parent-Child Dimension Attributes
+          href: ./multidimensional-models/parent-child-dimension-attributes.md
+        - name: Parent-Child Dimension Attributes - Custom Rollup Operators
+          href: ./multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md
+        - name: Parent-Child Dimension Attributes - Unary Operators
+          href: ./multidimensional-models/parent-child-dimension-attributes-unary-operators.md
+        - name: User-Defined Hierarchies - Create
+          href: ./multidimensional-models/user-defined-hierarchies-create.md
+        - name: User-Defined Hierarchies - Ragged Hierarchies
+          href: ./multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md
+        - name: User-Defined Hierarchies - Add or Delete a User-Defined Hierarchy
+          href: ./multidimensional-models/user-defined-hierarchies-add-or-delete-a-user-defined-hierarchy.md
+        - name: Attribute Relationships - Define
+          href: ./multidimensional-models/attribute-relationships-define.md
+        - name: Attribute Relationships - Configure Attribute Properties
+          href: ./multidimensional-models/attribute-relationships-configure-attribute-properties.md
+        - name: Attribute Relationships - Create, Modify, or Delete Relationship
+          href: ./multidimensional-models/attribute-relationships-create-modify-or-delete-relationship.md
+        - name: Attribute Relationships - Define the Relationship Type
+          href: ./multidimensional-models/attribute-relationships-define-the-relationship-type.md
+        - name: Attribute Relationships - Arrange Shapes in the Diagram
+          href: ./multidimensional-models/attribute-relationships-arrange-shapes-in-the-diagram.md
+        - name: BI Wizard - Add Account Intelligence to a Dimension
+          href: ./multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md
+        - name: BI Wizard - Add Dimension Intelligence to a Dimension
+          href: ./multidimensional-models/bi-wizard-add-dimension-intelligence-to-a-dimension.md
+        - name: BI Wizard - Add a Custom Aggregation to a Dimension
+          href: ./multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md
+        - name: BI Wizard - Custom Member Formulas for Attributes in a Dimension
+          href: ./multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md
+        - name: BI Wizard - Define the Ordering for a Dimension
+          href: ./multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md
+        - name: BI Wizard - Enable Dimension Writeback
+          href: ./multidimensional-models/bi-wizard-enable-dimension-writeback.md
+        - name: Configure String Storage for Dimensions and Partitions
+          href: ./multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md
+        - name: Define Linked Dimensions
+          href: ./multidimensional-models/define-linked-dimensions.md
+      - name: Cubes
+        href: ./multidimensional-models/cubes-in-multidimensional-models.md
+        items:
+        - name: Create a Cube Using the Cube Wizard
+          href: ./multidimensional-models/create-a-cube-using-the-cube-wizard.md
+        - name: Create a Cube from a template without using a Data Source View
+          href: ./multidimensional-models/create-a-cube-from-a-template-without-using-a-data-source-view.md
+        - name: Create a Cube using a Data Source View
+          href: ./multidimensional-models/create-a-cube-using-a-data-source-view.md
+        - name: Browse data and metadata in Cube
+          href: ./multidimensional-models/browse-data-and-metadata-in-cube.md
+        - name: View the Cube Schema
+          href: ./multidimensional-models/view-the-cube-schema.md
+        - name: Define Cube Dimension Properties
+          href: ./multidimensional-models/define-cube-dimension-properties.md
+        - name: Define Cube Hierarchy Properties
+          href: ./multidimensional-models/define-cube-hierarchy-properties.md
+        - name: Define Cube Attribute Properties
+          href: ./multidimensional-models/define-cube-attribute-properties.md
+        - name: Define a Regular Relationship and Regular Relationship Properties
+          href: ./multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md
+        - name: Define a Referenced Relationship and Referenced Relationship Properties
+          href: ./multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md
+        - name: Define a Fact Relationship and Fact Relationship Properties
+          href: ./multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md
+        - name: Define a Many-to-Many Relationship and Many-to-Many Relationship Properties
+          href: ./multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md
+      - name: Measures and Measure Groups
+        href: ./multidimensional-models/measures-and-measure-groups.md
+        items:
+        - name: Create Measures and Measure Groups
+          href: ./multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md
+        - name: Configure Measure Group Properties
+          href: ./multidimensional-models/configure-measure-group-properties.md
+        - name: Configure Measure Properties
+          href: ./multidimensional-models/configure-measure-properties.md
+        - name: Use Aggregate Functions
+          href: ./multidimensional-models/use-aggregate-functions.md
+        - name: Define Semiadditive Behavior
+          href: ./multidimensional-models/define-semiadditive-behavior.md
+        - name: Defined Linked Measure Groups
+          href: ./multidimensional-models/linked-measure-groups.md
+      - name: Partitions
+        href: ./multidimensional-models/partitions-in-multidimensional-models.md
+        items:
+        - name: Create Local Partitions
+          href: ./multidimensional-models/create-and-manage-a-local-partition-analysis-services.md
+        - name: Create Remote Partitions
+          href: ./multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md
+        - name: Change a Partition Source
+          href: ./multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md
+        - name: Designing Aggregations
+          href: ./multidimensional-models/designing-aggregations-analysis-services-multidimensional.md
+        - name: Edit or Delete Partitions
+          href: ./multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md
+        - name: Merge Partitions
+          href: ./multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md
+        - name: Set Partition Storage
+          href: ./multidimensional-models/set-partition-storage-analysis-services-multidimensional.md
+        - name: Set Partition Slice
+          href: ./multidimensional-models/set-the-partition-slice-property-analysis-services.md
+        - name: Set Partition Writeback
+          href: ./multidimensional-models/set-partition-writeback.md
+      - name: Calculations
+        href: ./multidimensional-models/calculations-in-multidimensional-models.md
+        items:
+        - name: Create Calculated Members
+          href: ./multidimensional-models/create-calculated-members.md
+        - name: Create Named Sets
+          href: ./multidimensional-models/create-named-sets.md
+        - name: Define Assignments and Other Script Commands
+          href: ./multidimensional-models/define-assignments-and-other-script-commands.md
+        - name: Define Time Intelligence Calculations using the Business Intelligence Wizard
+          href: ./multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
+      - name: KPIs
+        href: ./multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md
+      - name: Actions overview
+        href: ./multidimensional-models/actions-in-multidimensional-models.md
+        items:
+        - name: Actions
+          href: ./multidimensional-models/actions-analysis-services-multidimensional-data.md
+        - name: Add a Standard Action
+          href: ./multidimensional-models/add-a-standard-action.md
+        - name: Test an Action
+          href: ./multidimensional-models/test-an-action.md
+        - name: Use a Template to Create an Action
+          href: ./multidimensional-models/use-a-template-to-create-an-action.md
+      - name: Perspectives
+        href: ./multidimensional-models/perspectives-in-multidimensional-models.md
+      - name: Translations
+        href: ./multidimensional-models/translations-in-multidimensional-models-analysis-services.md
+      - name: Solution Deployment
+        href: ./multidimensional-models/multidimensional-model-solution-deployment.md
+        items:
+        - name: Requirements and Considerations for Analysis Services Deployment
+          href: ./multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md
+        - name: Deploy Model Solutions Using XMLA
+          href: ./multidimensional-models/deploy-model-solutions-using-xmla.md
+        - name: Deploy Model Solutions Using the Deployment Wizard
+          href: ./multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
+          items:
+          - name: Running the Analysis Services Deployment Wizard
+            href: ./multidimensional-models/running-the-analysis-services-deployment-wizard.md
+          - name: Deployment Script Files - Input to Create Script
+            href: ./multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md
+          - name: Deployment Script Files - Specify the Install Target
+            href: ./multidimensional-models/deployment-script-files-specifying-the-installation-target.md
+          - name: Deployment Script Files - Partition and Role Deployment Options
+            href: ./multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md
+          - name: Deployment Script Files - Solution Deployment Config Settings
+            href: ./multidimensional-models/deployment-script-files-solution-deployment-config-settings.md
+          - name: Deployment Script Files - Specify Processing Options
+            href: ./multidimensional-models/deployment-script-files-specifying-processing-options.md
+          - name: Understanding the Analysis Services Deployment Script
+            href: ./multidimensional-models/understanding-the-analysis-services-deployment-script.md
+        - name: Deploy Model Solutions with the Deployment Utility
+          href: ./multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
+    - name: Multidimensional Databases
+      href: ./multidimensional-models/multidimensional-model-databases-ssas.md
+      items:
+      - name: Attach and Detach Analysis Services Databases
+        href: ./multidimensional-models/attach-and-detach-analysis-services-databases.md
+      - name: Backup and Restore of Analysis Services Databases
+        href: ./multidimensional-models/backup-and-restore-of-analysis-services-databases.md
+        items:
+        - name: Backup Options
+          href: ./multidimensional-models/backup-options.md
+        - name: Restore Options
+          href: ./multidimensional-models/restore-options.md
+      - name: Document and Script an Analysis Services Database
+        href: ./multidimensional-models/document-and-script-an-analysis-services-database.md
+      - name: Modify or Delete an Analysis Services Database
+        href: ./multidimensional-models/modify-or-delete-an-analysis-services-database.md
+      - name: Move an Analysis Services Database
+        href: ./multidimensional-models/move-an-analysis-services-database.md
+      - name: Rename a Multidimensional Database
+        href: ./multidimensional-models/rename-a-multidimensional-database-analysis-services.md
+      - name: Compatibility Level
+        href: ./multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md
+      - name: Set Multidimensional Database Properties
+        href: ./multidimensional-models/set-multidimensional-database-properties-analysis-services.md
+        items:
+        - name: Database Storage Location
+          href: ./multidimensional-models/database-storage-location.md
+        - name: Database ReadWriteModes
+          href: ./multidimensional-models/database-readwritemodes.md
+      - name: Synchronize Analysis Services Databases
+        href: ./multidimensional-models/synchronize-analysis-services-databases.md
+      - name: Switch ReadOnly and ReadWrite modes
+        href: ./multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
+    - name: Processing a multidimensional model
+      href: ./multidimensional-models/processing-a-multidimensional-model-analysis-services.md
+      items:
+      - name: Processing Options and Settings
+        href: ./multidimensional-models/processing-options-and-settings-analysis-services.md
+      - name: Processing Databases, Dimensions and Partitions
+        href: ./multidimensional-models/processing-analysis-services-objects.md
+      - name: Tools and Approaches for Processing
+        href: ./multidimensional-models/tools-and-approaches-for-processing-analysis-services.md
+      - name: Batch Processing
+        href: ./multidimensional-models/batch-processing-analysis-services.md
+      - name: Remote Processing
+        href: ./multidimensional-models/remote-processing-analysis-services.md
+      - name: Error Configuration
+        href: ./multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md
+    - name: Roles and Permissions
+      href: ./multidimensional-models/roles-and-permissions-analysis-services.md
+      items:
+      - name: Authorizing access to objects and operations
+        href: ./multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md
+      - name: Database permissions
+        href: ./multidimensional-models/grant-database-permissions-analysis-services.md
+      - name: Cube or model permissions
+        href: ./multidimensional-models/grant-cube-or-model-permissions-analysis-services.md
+      - name: Process permissions
+        href: ./multidimensional-models/grant-process-permissions-analysis-services.md
+      - name: Read Definition permissions
+        href: ./multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md
+      - name: Dimension permissions
+        href: ./multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md
+      - name: Custom access to dimension data
+        href: ./multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md
+      - name: Custom access to cell data
+        href: ./multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md
+      - name: Data Source object permissions
+        href: ./multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md
+      - name: Data Mining permissions
+        href: ./multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md
+    - name: Power View for Multidimensional Models
+      href: ./multidimensional-models/power-view-for-multidimensional-models.md
+      items:
+      - name: Understanding Power View for Multidimensional Models
+        href: ./multidimensional-models/understanding-power-view-for-multidimensional-models.md
+      - name: Create a Report Data Source
+        href: ./multidimensional-models/create-a-report-data-source.md
+      - name: Create a Power View Report
+        href: ./multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md
+    - name: Assemblies Management
+      href: ./multidimensional-models/multidimensional-model-assemblies-management.md
+  - name: Data Mining
+    items:
+    - name: Data Mining overview
+      href: ./data-mining/data-mining-ssas.md
+    - name: Data Mining concepts
+      href: ./data-mining/data-mining-concepts.md
+    - name: Algorithms
+      href: ./data-mining/data-mining-algorithms-analysis-services-data-mining.md
+      items:
+      - name: Microsoft Association
+        href: ./data-mining/microsoft-association-algorithm.md
+        items:
+        - name: Microsoft Association Algorithm Technical Reference
+          href: ./data-mining/microsoft-association-algorithm-technical-reference.md
+        - name: Mining Model Content for Association Models
+          href: ./data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md
+        - name: Association Model Query Examples
+          href: ./data-mining/association-model-query-examples.md
+      - name: Microsoft Clustering
+        href: ./data-mining/microsoft-clustering-algorithm.md
+        items:
+        - name: Microsoft Clustering Algorithm Technical Reference
+          href: ./data-mining/microsoft-clustering-algorithm-technical-reference.md
+        - name: Mining Model Content for Clustering Models
+          href: ./data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md
+        - name: Clustering Model Query Examples
+          href: ./data-mining/clustering-model-query-examples.md
+      - name: Microsoft Decision Trees
+        href: ./data-mining/microsoft-decision-trees-algorithm.md
+        items:
+        - name: Microsoft Decision Trees Algorithm Technical Reference
+          href: ./data-mining/microsoft-decision-trees-algorithm-technical-reference.md
+        - name: Mining Model Content for Decision Tree Models
+          href: ./data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md
+        - name: Decision Trees Model Query Examples
+          href: ./data-mining/decision-trees-model-query-examples.md
+      - name: Microsoft Linear Regression
+        href: ./data-mining/microsoft-linear-regression-algorithm.md
+        items:
+        - name: Microsoft Linear Regression Algorithm Technical Reference
+          href: ./data-mining/microsoft-linear-regression-algorithm-technical-reference.md
+        - name: Mining Model Content for Linear Regression Models
+          href: ./data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md
+        - name: Linear Regression Model Query Examples
+          href: ./data-mining/linear-regression-model-query-examples.md
+      - name: Microsoft Logistic Regression
+        href: ./data-mining/microsoft-logistic-regression-algorithm.md
+        items:
+        - name: Microsoft Logistic Regression Algorithm Technical Reference
+          href: ./data-mining/microsoft-logistic-regression-algorithm-technical-reference.md
+        - name: Mining Model Content for Logistic Regression Models
+          href: ./data-mining/mining-model-content-for-logistic-regression-models.md
+        - name: Logistic Regression Model Query Examples
+          href: ./data-mining/logistic-regression-model-query-examples.md
+      - name: Microsoft Naive Bayes
+        href: ./data-mining/microsoft-naive-bayes-algorithm.md
+        items:
+        - name: Microsoft Naive Bayes Algorithm Technical Reference
+          href: ./data-mining/microsoft-naive-bayes-algorithm-technical-reference.md
+        - name: Mining Model Content for Naive Bayes Models
+          href: ./data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md
+        - name: Naive Bayes Model Query Examples
+          href: ./data-mining/naive-bayes-model-query-examples.md
+      - name: Microsoft Neural Network
+        href: ./data-mining/microsoft-neural-network-algorithm.md
+        items:
+        - name: Microsoft Neural Network Algorithm Technical Reference
+          href: ./data-mining/microsoft-neural-network-algorithm-technical-reference.md
+        - name: Mining Model Content for Neural Network Models
+          href: ./data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md
+        - name: Neural Network Model Query Examples
+          href: ./data-mining/neural-network-model-query-examples.md
+      - name: Microsoft Sequence Clustering
+        href: ./data-mining/microsoft-sequence-clustering-algorithm.md
+        items:
+        - name: Microsoft Sequence Clustering Algorithm Technical Reference
+          href: ./data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md
+        - name: Mining Model Content for Sequence Clustering Models
+          href: ./data-mining/mining-model-content-for-sequence-clustering-models.md
+        - name: Sequence Clustering Model Query Examples
+          href: ./data-mining/sequence-clustering-model-query-examples.md
+      - name: Microsoft Time Series
+        href: ./data-mining/microsoft-time-series-algorithm.md
+        items:
+        - name: Microsoft Time Series Algorithm Technical Reference
+          href: ./data-mining/microsoft-time-series-algorithm-technical-reference.md
+        - name: Mining Model Content for Time Series Models
+          href: ./data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md
+        - name: Time Series Model Query Examples
+          href: ./data-mining/time-series-model-query-examples.md
+      - name: Plugin Algorithms
+        href: ./data-mining/plugin-algorithms.md
+    - name: Structures
+      href: ./data-mining/mining-structures-analysis-services-data-mining.md
+      items:
+      - name: Mining Structure Columns
+        href: ./data-mining/mining-structure-columns.md
+        items:
+        - name: Data Types (Data Mining)
+          href: ./data-mining/data-types-data-mining.md
+        - name: Nested Tables
+          href: ./data-mining/nested-tables-analysis-services-data-mining.md
+        - name: Column Distributions
+          href: ./data-mining/column-distributions-data-mining.md
+        - name: Discretization Methods
+          href: ./data-mining/discretization-methods-data-mining.md
+        - name: Classified Columns
+          href: ./data-mining/classified-columns-data-mining.md
+      - name: Drillthrough on Mining Structures
+        href: ./data-mining/drillthrough-on-mining-structures.md
+      - name: Properties for Mining Structure and Structure Columns
+        href: ./data-mining/properties-for-mining-structure-and-structure-columns.md
+      - name: Mining Structure Tasks and How-tos
+        href: ./data-mining/mining-structure-tasks-and-how-tos.md
+        items:
+        - name: Create a New Relational Mining Structure
+          href: ./data-mining/create-a-new-relational-mining-structure.md
+        - name: Create a New OLAP Mining Structure
+          href: ./data-mining/create-a-new-olap-mining-structure.md
+        - name: Add Columns to a Mining Structure
+          href: ./data-mining/add-columns-to-a-mining-structure.md
+        - name: Remove Columns from a Mining Structure
+          href: ./data-mining/remove-columns-from-a-mining-structure.md
+        - name: Add a Nested Table to a Mining Structure
+          href: ./data-mining/add-a-nested-table-to-a-mining-structure.md
+        - name: Change the Properties of a Mining Structure
+          href: ./data-mining/change-the-properties-of-a-mining-structure.md
+        - name: Edit the Data Source View used for a Mining Structure
+          href: ./data-mining/edit-the-data-source-view-used-for-a-mining-structure.md
+        - name: Process a Mining Structure
+          href: ./data-mining/process-a-mining-structure.md
+    - name: Models
+      href: ./data-mining/mining-models-analysis-services-data-mining.md
+      items:
+      - name: Mining Model Columns
+        href: ./data-mining/mining-model-columns.md
+      - name: Content Types (Data Mining)
+        href: ./data-mining/content-types-data-mining.md
+      - name: Mining Model Properties
+        href: ./data-mining/mining-model-properties.md
+      - name: Missing Values
+        href: ./data-mining/missing-values-analysis-services-data-mining.md
+      - name: Feature Selection (Data Mining)
+        href: ./data-mining/feature-selection-data-mining.md
+      - name: Modeling Flags (Data Mining)
+        href: ./data-mining/modeling-flags-data-mining.md
+      - name: Mining Model Content
+        href: ./data-mining/mining-model-content-analysis-services-data-mining.md
+      - name: Drillthrough on Mining Models
+        href: ./data-mining/drillthrough-on-mining-models.md
+      - name: Filters for Mining Models
+        href: ./data-mining/filters-for-mining-models-analysis-services-data-mining.md
+        items:
+        - name: Model Filter Syntax and Examples
+          href: ./data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md
+      - name: Mining Model Tasks and How-tos
+        href: ./data-mining/mining-model-tasks-and-how-tos.md
+        items:
+        - name: Add a Mining Model to an Existing Mining Structure
+          href: ./data-mining/add-a-mining-model-to-an-existing-mining-structure.md
+        - name: Delete a Mining Model from a Mining Structure
+          href: ./data-mining/delete-a-mining-model-from-a-mining-structure.md
+        - name: Exclude a Column from a Mining Model
+          href: ./data-mining/exclude-a-column-from-a-mining-model.md
+        - name: Create an Alias for a Model Column
+          href: ./data-mining/create-an-alias-for-a-model-column.md
+        - name: Change the Discretization of a Column in a Mining Model
+          href: ./data-mining/change-the-discretization-of-a-column-in-a-mining-model.md
+        - name: View or Change Modeling Flags
+          href: ./data-mining/view-or-change-modeling-flags-data-mining.md
+        - name: Specify a Column to Use as Regressor in a Model
+          href: ./data-mining/specify-a-column-to-use-as-regressor-in-a-model.md
+        - name: Change the Properties of a Mining Model
+          href: ./data-mining/change-the-properties-of-a-mining-model.md
+        - name: Apply a Filter to a Mining Model
+          href: ./data-mining/apply-a-filter-to-a-mining-model.md
+        - name: Delete a Filter from a Mining Model
+          href: ./data-mining/delete-a-filter-from-a-mining-model.md
+        - name: Enable Drillthrough for a Mining Model
+          href: ./data-mining/enable-drillthrough-for-a-mining-model.md
+        - name: View or Change Algorithm Parameters
+          href: ./data-mining/view-or-change-algorithm-parameters.md
+        - name: Process a Mining Model
+          href: ./data-mining/process-a-mining-model.md
+        - name: Make a Copy of a Mining Model
+          href: ./data-mining/make-a-copy-of-a-mining-model.md
+        - name: Create a Data Mining Dimension
+          href: ./data-mining/create-a-data-mining-dimension.md
+    - name: Testing and Validation
+      href: ./data-mining/testing-and-validation-data-mining.md
+      items:
+      - name: Training and Testing Data Sets
+        href: ./data-mining/training-and-testing-data-sets.md
+      - name: Lift Chart
+        href: ./data-mining/lift-chart-analysis-services-data-mining.md
+      - name: Profit Chart
+        href: ./data-mining/profit-chart-analysis-services-data-mining.md
+      - name: Classification Matrix
+        href: ./data-mining/classification-matrix-analysis-services-data-mining.md
+      - name: Scatter Plot
+        href: ./data-mining/scatter-plot-analysis-services-data-mining.md
+      - name: Cross-Validation
+        href: ./data-mining/cross-validation-analysis-services-data-mining.md
+        items:
+        - name: Measures in the Cross-Validation Report
+          href: ./data-mining/measures-in-the-cross-validation-report.md
+        - name: Cross-Validation Formulas
+          href: ./data-mining/cross-validation-formulas.md
+      - name: Testing and Validation Tasks and How-tos
+        href: ./data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md
+        items:
+        - name: Create a Lift Chart, Profit Chart, or Classification Matrix
+          href: ./data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md
+        - name: Create a Cross-Validation Report
+          href: ./data-mining/create-a-cross-validation-report.md
+        - name: Choose and Map Model Testing Data
+          href: ./data-mining/choose-and-map-model-testing-data.md
+        - name: Apply Filters to Model Testing Data
+          href: ./data-mining/apply-filters-to-model-testing-data.md
+        - name: Choose the Column to Use for Testing a Mining Model
+          href: ./data-mining/choose-the-column-to-use-for-testing-a-mining-model.md
+        - name: Choose an Accuracy Chart Type and Set Chart Options
+          href: ./data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md
+        - name: Using Nested Table Data as an Input for an Accuracy Chart
+          href: ./data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md
+    - name: Queries
+      href: ./data-mining/data-mining-queries.md
+      items:
+      - name: Prediction Queries
+        href: ./data-mining/prediction-queries-data-mining.md
+      - name: Content Queries
+        href: ./data-mining/content-queries-data-mining.md
+      - name: Drillthrough Queries
+        href: ./data-mining/drillthrough-queries-data-mining.md
+        items:
+        - name: Drill Through to Case Data from a Mining Model
+          href: ./data-mining/drill-through-to-case-data-from-a-mining-model.md
+        - name: Create Drillthrough Queries using DMX
+          href: ./data-mining/create-drillthrough-queries-using-dmx.md
+      - name: Data Definition Queries
+        href: ./data-mining/data-definition-queries-data-mining.md
+      - name: Data Mining Schema Rowsets
+        href: ./data-mining/data-mining-schema-rowsets-ssas.md
+      - name: Data Mining Query Tools
+        href: ./data-mining/data-mining-query-tools.md
+      - name: Data Mining Query Tasks and How-tos
+        href: ./data-mining/data-mining-query-tasks-and-how-tos.md
+        items:
+        - name: Create a Prediction Query Using the Prediction Query Builder
+          href: ./data-mining/create-a-prediction-query-using-the-prediction-query-builder.md
+        - name: Create a DMX Query in SQL Server Management Studio
+          href: ./data-mining/create-a-dmx-query-in-sql-server-management-studio.md
+        - name: Create a Singleton Query in the Data Mining Designer
+          href: ./data-mining/create-a-singleton-query-in-the-data-mining-designer.md
+        - name: Apply Prediction Functions to a Model
+          href: ./data-mining/apply-prediction-functions-to-a-model.md
+        - name: Choose and Map Input Data for a Prediction Query
+          href: ./data-mining/choose-and-map-input-data-for-a-prediction-query.md
+        - name: Manually Edit a Prediction Query
+          href: ./data-mining/manually-edit-a-prediction-query.md
+        - name: View and Save the Results of a Prediction Query
+          href: ./data-mining/view-and-save-the-results-of-a-prediction-query.md
+        - name: Create a Content Query on a Mining Model
+          href: ./data-mining/create-a-content-query-on-a-mining-model.md
+        - name: Query the Parameters Used to Create a Mining Model
+          href: ./data-mining/query-the-parameters-used-to-create-a-mining-model.md
+        - name: Create a Singleton Prediction Query from a Template
+          href: ./data-mining/create-a-singleton-prediction-query-from-a-template.md
+        - name: Create a Data Mining Query by Using XMLA
+          href: ./data-mining/create-a-data-mining-query-by-using-xmla.md
+        - name: Change the Time-out Value for Data Mining Queries
+          href: ./data-mining/change-the-time-out-value-for-data-mining-queries.md
+    - name: Solutions
+      href: ./data-mining/data-mining-solutions.md
+      items:
+      - name: Data Mining Projects
+        href: ./data-mining/data-mining-projects.md
+        items:
+        - name: Import a Data Mining Project using the Analysis Services Import Wizard
+          href: ./data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md
+      - name: Processing Data Mining Objects
+        href: ./data-mining/processing-data-mining-objects.md
+      - name: Related Projects for Data Mining Solutions
+        href: ./data-mining/related-projects-for-data-mining-solutions.md
+      - name: Deployment of Data Mining Solutions
+        href: ./data-mining/deployment-of-data-mining-solutions.md
+        items:
+        - name: Deploy a Data Mining Solution to Previous Versions of SQL Server
+          href: ./data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md
+        - name: Export and Import Data Mining Objects
+          href: ./data-mining/export-and-import-data-mining-objects.md
+    - name: Architecture
+      href: ./data-mining/data-mining-architecture.md
+      items:
+      - name: Logical Architecture
+        href: ./data-mining/logical-architecture-analysis-services-data-mining.md
+      - name: Physical Architecture
+        href: ./data-mining/physical-architecture-analysis-services-data-mining.md
+      - name: Data Mining Services and Data Sources
+        href: ./data-mining/data-mining-services-and-data-sources.md
+      - name: Management of Data Mining Solutions and Objects
+        href: ./data-mining/management-of-data-mining-solutions-and-objects.md
+        items:
+        - name: Moving Data Mining Objects
+          href: ./data-mining/moving-data-mining-objects.md
+        - name: Processing Requirements and Considerations (Data Mining)
+          href: ./data-mining/processing-requirements-and-considerations-data-mining.md
+        - name: Using SQL Server Profiler to Monitor Data Mining
+          href: ./data-mining/using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md
+      - name: Security Overview (Data Mining)
+        href: ./data-mining/security-overview-data-mining.md
+    - name: Tools
+      href: ./data-mining/data-mining-tools.md
+      items:
+      - name: Data Mining Wizard
+        href: ./data-mining/data-mining-wizard-analysis-services-data-mining.md
+        items:
+        - name: Create a Relational Mining Structure
+          href: ./data-mining/create-a-relational-mining-structure.md
+        - name: Create an OLAP Mining Structure
+          href: ./data-mining/create-an-olap-mining-structure.md
+        - name: Add Mining Models to a Structure
+          href: ./data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md
+        - name: Customize Mining Models and Structure
+          href: ./data-mining/customize-mining-models-and-structure.md
+      - name: Data Mining Designer
+        href: ./data-mining/data-mining-designer.md
+      - name: Data Mining Model Viewers
+        href: ./data-mining/data-mining-model-viewers.md
+        items:
+        - name: Browse a Model Using the Microsoft Tree Viewer
+          href: ./data-mining/browse-a-model-using-the-microsoft-tree-viewer.md
+        - name: Browse a Model Using the Microsoft Cluster Viewer
+          href: ./data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md
+        - name: Browse a Model Using the Microsoft Time Series Viewer
+          href: ./data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md
+        - name: Browse a Model Using the Microsoft Naive Bayes Viewer
+          href: ./data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md
+        - name: Browse a Model Using the Microsoft Sequence Cluster Viewer
+          href: ./data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md
+        - name: Browse a Model Using the Microsoft Association Rules Viewer
+          href: ./data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md
+        - name: Browse a Model Using the Microsoft Neural Network Viewer
+          href: ./data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md
+        - name: Browse a Model Using the Microsoft Generic Content Tree Viewer
+          href: ./data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md
+        - name: Mining Model Viewer Tasks and How-tos
+          href: ./data-mining/mining-model-viewer-tasks-and-how-tos.md
+          items:
+          - name: Select a Mining Model and a Data Mining Viewer
+            href: ./data-mining/select-a-mining-model-and-a-data-mining-viewer.md
+          - name: Copy a View of a Mining Model
+            href: ./data-mining/copy-a-view-of-a-mining-model.md
+          - name: Find a Specific Node in a Dependency Network
+            href: ./data-mining/find-a-specific-node-in-a-dependency-network.md
+          - name: Filter a Rule in an Association Rules Model
+            href: ./data-mining/filter-a-rule-in-an-association-rules-model.md
+          - name: Filter an Itemset in an Association Rules Model
+            href: ./data-mining/filter-an-itemset-in-an-association-rules-model.md
+          - name: Use Drillthrough from the Model Viewers
+            href: ./data-mining/use-drillthrough-from-the-model-viewers.md
+          - name: View the Formula for a Time Series Model
+            href: ./data-mining/view-the-formula-for-a-time-series-model-data-mining.md
+          - name: Change the Colors Used in the Data Mining Viewer
+            href: ./data-mining/change-the-colors-used-in-the-data-mining-viewer.md
+      - name: Data Mining Add-Ins for Office
+        href: ./data-mining/sql-server-data-mining-add-ins-for-office.md
+    - name: Stored Procedures
+      href: ./data-mining/data-mining-stored-procedures-analysis-services-data-mining.md
+      items:
+      - name: SystemGetCrossValidationResults
+        href: ./data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md
+      - name: SystemGetClusterCrossValidationResults
+        href: ./data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md
+      - name: SystemGetAccuracyResults
+        href: ./data-mining/systemgetaccuracyresults-analysis-services-data-mining.md
+      - name: SystemGetClusterAccuracyResults
+        href: ./data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md
+    - name: Data Mining Extensions (DMX)
+      href: ../dmx/data-mining-extensions-dmx-reference.md
   - name: Power Pivot for Sharepoint
-    href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
-  - name: Monitor an Analysis Services Instance
-    href: instances/monitor-an-analysis-services-instance.md
+    items:
+    - name: Power Pivot for SharePoint overview
+      href: ./power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+    - name: Power Pivot Server Administration and Configuration in Central Administration
+      href: ./power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
+      items:
+      - name: Deploy Power Pivot Solutions to SharePoint
+        href: ./power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
+      - name: Create and Configure a Power Pivot Service Application
+        href: ./power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
+      - name: Connect a Power Pivot Service Application to a SharePoint Web Application
+        href: ./power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+      - name: Activate Power Pivot Feature Integration for Site Collections
+        href: ./power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
+      - name: Add MSOLAP.5 as a Trusted Data Provider in Excel Services
+        href: ./power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+      - name: Create a Trusted Location for Power Pivot Sites
+        href: ./power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+      - name: Configure Power Pivot Service Accounts
+        href: ./power-pivot-sharepoint/configure-power-pivot-service-accounts.md
+      - name: Configure and View SharePoint Log Files
+        href: ./power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
+      - name: Configure Disk Space Usage
+        href: ./power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
+      - name: Configure Maximum File Upload Size
+        href: ./power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+      - name: Configuration Setting Reference
+        href: ./power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
+      - name: Start or Stop a Power Pivot for SharePoint Server
+        href: ./power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
+    - name: Power Pivot Configuration using Windows PowerShell
+      href: ./power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
+    - name: Power Pivot Configuration Tools
+      href: ./power-pivot-sharepoint/power-pivot-configuration-tools.md
+      items:
+      - name: Configure or Repair Power Pivot for SharePoint 2013 (Power Pivot Configuration Tool)
+        href: ./power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
+    - name: Power Pivot Availability and Disaster Recovery
+      href: ./power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
+    - name: Power Pivot Authentication and Authorization
+      href: ./power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
+    - name: Configure Power Pivot Health Rules
+      href: ./power-pivot-sharepoint/configure-power-pivot-health-rules.md
+      items:
+      - name: Health Rules Reference
+        href: ./power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
+    - name: Power Pivot Management Dashboard and Usage Data
+      href: ./power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
+      items:
+      - name: Power Pivot Usage Data Collection
+        href: ./power-pivot-sharepoint/power-pivot-usage-data-collection.md
+      - name: Configure Usage Data Collection for (Power Pivot for SharePoint
+        href: ./power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+    - name: Create and Customize Power Pivot Gallery
+      href: ./power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
+      items:
+      - name: Use Power Pivot Gallery
+        href: ./power-pivot-sharepoint/use-power-pivot-gallery.md
+      - name: Delete Power Pivot Gallery
+        href: ./power-pivot-sharepoint/delete-power-pivot-gallery.md
+    - name: Power Pivot Data Access
+      href: ./power-pivot-sharepoint/power-pivot-data-access.md
+    - name: Power Pivot Data Refresh
+      href: ./power-pivot-sharepoint/power-pivot-data-refresh.md
+      items:
+      - name: View Power Pivot Data Refresh History
+        href: ./power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
+      - name: Power Pivot Data Refresh with SharePoint 2013
+        href: ./power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
+        items:
+        - name: Schedule Data Refresh and Data Sources That Do Not Support Windows Authentication (Power Pivot for SharePoint)
+          href: ./power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
+    - name: Power Pivot Data Feeds
+      href: ./power-pivot-sharepoint/power-pivot-data-feeds.md
+      items:
+      - name: Create or Customize a Data Feed Library
+        href: ./power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+      - name: Use Power Pivot Data Feeds
+        href: ./power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
+      - name: Delete a Power Pivot Data Feed Library
+        href: ./power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
+      - name: Share Power Pivot Data Feeds in a Data Feed Library
+        href: ./power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: Power Pivot BI Semantic Model Connection (.bism)
+      href: ./power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
+      items:
+      - name: Add a BI Semantic Model Connection Content Type to a Library
+        href: ./power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
+      - name: Create a BI Semantic Model Connection to a Power Pivot Workbook
+        href: ./power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+      - name: Create a BI Semantic Model Connection to a Tabular Model Database
+        href: ./power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+      - name: Use a BI Semantic Model Connection in Excel or Reporting Services
+        href: ./power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+    - name: Errors and Events Reference (Power Pivot for SharePoint)
+      href: ./power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
+      items:
+      - name: "An error occurred during an attempt to establish a connection to the external data source. The following connections failed to refresh: Power Pivot Data"
+        href: ./power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
+      - name: Could not load file or assembly Microsoft.Data.Services
+        href: ./power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
+      - name: Could not load file or assembly 'Microsoft.AnalysisServices.SharePoint.Integration'
+        href: ./power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
+      - name: The data connection path in the workbook points to a file on the local drive or is an invalid URI
+        href: ./power-pivot-sharepoint/the-data-connection-path-is-invalid.md
+      - name: "The data connection uses Windows Authentication and user credentials could not be delegated. The following connections failed to refresh: Power Pivot Data"
+        href: ./power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
+      - name: "The following features are not supported by Excel Services and may not display or may display only partially: Comments, Shapes, or other objects"
+        href: ./power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
+      - name: The trusted location where the workbook is stored does not allow external data connections
+        href: ./power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
+      - name: Workbook contains one or more queries that refresh external data
+        href: ./power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+      - name: Unable to refresh data for a data connection in the workbook
+        href: ./power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
   - name: Manage servers
-    href: ../analysis-services/instances/analysis-services-instance-management.md
-  - name: Trace-events
-    href: ../analysis-services/trace-events/analysis-services-trace-events.md
+    items:
+    - name: SQL Server Analysis Services server management overview
+      href: ./instances/analysis-services-instance-management.md
+    - name: Server properties
+      items:
+      - name: Server properties overview  
+        href: ./server-properties/server-properties-in-analysis-services.md
+      - name: Data Mining Properties
+        href: ./server-properties/data-mining-properties.md
+      - name: DAX Properties
+        href: ./server-properties/dax-properties.md
+      - name: Feature Properties
+        href: ./server-properties/feature-properties.md
+      - name: Filestore Properties
+        href: ./server-properties/filestore-properties.md
+      - name: General Properties
+        href: ./server-properties/general-properties.md
+      - name: Lock Manager Properties
+        href: ./server-properties/lock-manager-properties.md
+      - name: Log Properties
+        href: ./server-properties/log-properties.md
+      - name: Memory Properties
+        href: ./server-properties/memory-properties.md
+      - name: Network Properties
+        href: ./server-properties/network-properties.md
+      - name: OLAP Properties
+        href: ./server-properties/olap-properties.md
+      - name: Security Properties
+        href: ./server-properties/security-properties.md
+      - name: Thread Pool Properties 
+        href: ./server-properties/thread-pool-properties.md   
+    - name: Monitor Analysis Services
+      items:
+      - name: Monitoring tools
+        href: ./instances/monitor-an-analysis-services-instance.md
+      - name: SQL Server Profiler
+        href: ./instances/use-sql-server-profiler-to-monitor-analysis-services.md
+        items:
+        - name: Monitoring Analysis Services with SQL Server Profiler
+          href: ./instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+        - name: Create Profiler Traces for Replay
+          href: ./instances/create-profiler-traces-for-replay-analysis-services.md
+      - name: Extended Events
+        href: ./instances/monitor-analysis-services-with-sql-server-extended-events.md
+      - name: Dynamic Management Views (DMVs) 
+        href: ./instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+      - name: Performance counters
+        href: ./instances/performance-counters-ssas.md
+      - name: Trace-events
+        href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+      - name: Log operations
+        href: ./instances/log-operations-in-analysis-services.md
+    - name: Clear server caches
+      href: ./instances/clear-the-analysis-services-caches.md
+    - name: Database Consistency Checker (DBCC)
+      href: ./instances/database-consistency-checker-dbcc-for-analysis-services.md
+  - name: Connect
+    items:
+    - name: Connect to servers overview
+      href: ./instances/connect-to-analysis-services.md
+    - name: Connect from client applications
+      href: ./instances/connect-from-client-applications-analysis-services.md
+    - name: Connection String Properties
+      href: ./instances/connection-string-properties-analysis-services.md
+    - name: Authentication methodologies
+      href: ./instances/authentication-methodologies-supported-by-analysis-services.md
+    - name: Kerberos authentication
+      href: ./instances/configure-analysis-services-for-kerberos-constrained-delegation.md
+    - name: SPN registration
+      href: ./instances/spn-registration-for-an-analysis-services-instance.md
+    - name: HTTP Access
+      href: ./instances/configure-http-access-to-analysis-services-on-iis-8-0.md
+    - name: Client libraries (data providers)
+      href: ./instances/data-providers-used-for-analysis-services-connections.md
+    - name: Disconnect users and sessions
+      href: ./instances/disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Developer
   items:
   - name: Analysis Services Developer Documentation
     href: analysis-services-developer-documentation.md
-  - name: Tabular Model Programming for Compatibility Level 1200 and higher
-    href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+  - name: Tabular models
+    items: 
+    - name: Tabular 1200 and higher
+      items:
+      - name: Tabular model programming for compatibility level 1200 and higher
+        href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+      - name: Tabular Model Scripting Language (TMSL)
+        href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
+      - name: Tabular Object Model (TOM)
+        href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo 
+      - name: Analysis Management Objects (AMO)
+        href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction 
+    - name: Tabular 1103 and lower 
+      items:
+      - name: Tabular model programming for compatibility level 1103 and lower
+        href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+      - name: Conceptual Schema Definition Language (CSDL)
+        href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
+      - name: Analysis Services Scripting Language (ASSL)
+        href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+      - name: IMDEmbeddedData Interface
+        href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
+      - name: Representation
+        items:
+        - name: Connection Representation (Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
+        - name: Database Representation(Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/database-representation-tabular.md
+        - name: Perspective Representation (Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md
+        - name: Querying a Tabular Model
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/querying-a-tabular-model.md
+        - name: Relationship Representation (Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md
+        - name: Tables - Calculated Column Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-column-representation.md
+        - name: Tables - Calculated Measure Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-measure-representation.md
+        - name: Tables - Hierarchy Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md
+        - name: Tables - Key Performance Indicator Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md
+        - name: Tables - Partition Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md
+        - name: Tables Representation (Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md
+        - name: Understanding Tabular Object Model at Levels 1050 through 1103
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md 
+  - name: Multidimensional models
     items:
-    - name: Tabular Model Scripting Language (TMSL)
-      href: tabular-model-scripting-language-tmsl-reference.md
-    - name: Tabular Model Scripting Language (TMSL) commands
-      href: ../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md
-    - name: Tabular Model Scripting Language (TMSL) objects
-      href: ../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md
-  - name: Tabular Model Programming for Compatibility Levels 1050 and 1103
-    href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
-  - name: Analysis Services Scripting Language (ASSL) +
-    href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-  - name: Analysis management objects (AMO)+
-    href: ../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md
-  - name: ADOMD.NET +
-    href: ../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md
-  - name: OLAP logical +
-    href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-  - name: OLAP physical +
-    href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-  - name: Extending OLAP +
-    href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-  - name: Schema rowsets
-    href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
-  - name: Analysis Services Scripting Language (ASSL for XMLA)
-    href: scripting/analysis-services-scripting-language-assl-for-xmla.md
-  - name: Data Mining Programming
-    href: data-mining-programming.md
+    - name: Multidimensional model programming
+      href: ./multidimensional-models/multidimensional-model-programming.md
+    - name: Analysis Management Objects (AMO)
+      href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo   
+    - name: Analysis Services Scripting Language (ASSL)
+      href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+    - name: XML for Analysis (XMLA)
+      href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+    - name: ADOMD.NET
+      href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+    - name: Analysis Services Scripting Language (ASSL for XMLA)
+      href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+    - name: OLAP logical
+      href: ./multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+    - name: OLAP physical
+      href: ./multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+    - name: Extending OLAP
+      href: ./multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+  - name: Data Mining
     items:
-    - name: Data Mining Programming - OLE DB
+    - name: Data Mining programming
+      href: data-mining-programming.md
+    - name: Analysis Management Objects (AMO)
+      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction 
+    - name: ADOMD.NET
+      href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+    - name: Data Mining Extensions (DMX)
+      href: ../dmx/data-mining-extensions-dmx-reference.md
+    - name: XML for Analysis (XMLA)
+      href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference  
+    - name: OLE DB for Data Minining
       href: data-mining-programming-ole-db.md
 - name: Samples
   items:
@@ -265,19 +1492,34 @@
     href: analysis-services-samples.md
 - name: Reference
   items:
-  - name: PowerShell Reference for Analysis Services
-    href: ../analysis-services/powershell/analysis-services-powershell-reference.md
-  - name: PowerShell Reference for Power Pivot for SharePoint
-    href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-  - name: Data Analysis Expressions (DAX) on MSDN
+  - name: PowerShell for Analysis Services
+    href: ./powershell/analysis-services-powershell-reference.md
+  - name: PowerShell for Power Pivot for SharePoint
+    href: ./powershell/powershell-reference-for-power-pivot-for-sharepoint.md
+  - name: Data Analysis Expressions (DAX)
     href: https://msdn.microsoft.com/library/gg413422.aspx
-  - name: Data Mining Extensions (DMX)
-    href: ../dmx/data-mining-extensions-dmx-reference.md
-  - name: Multidimensional Expressions (MDX)
-    href: ../mdx/analysis-services-language-reference.md
   - name: Power Query M
     href: https://msdn.microsoft.com/library/mt211003.aspx
-  - name: Server properties
-    href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
+  - name: Data Mining Extensions (DMX)
+    href: ../dmx/data-mining-extensions-dmx-reference.md
+  - name: Multidimensional Data Expressions (MDX)
+    href: ../mdx/multidimensional-expressions-mdx-reference.md
+  - name: Tabular Model Scripting Language (TMSL)
+    href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
+  - name: Tabular Object Model (TOM)
+    href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo  
+  - name: Analysis Management Objects (AMO)
+    href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo 
+  - name: Conceptual Schema Definition Language (CSDL)
+    href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
   - name: XML for Analysis (XMLA)
-    href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md
+    href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+  - name: ADOMD.NET
+    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+  - name: Analysis Services Scripting Language (ASSL for XMLA)
+    href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+  - name: Schema rowsets
+    href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets 
+  - name: Trace events
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+    

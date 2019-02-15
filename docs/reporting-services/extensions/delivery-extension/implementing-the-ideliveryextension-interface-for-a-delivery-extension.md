@@ -27,7 +27,7 @@ The IDeliveryExtension interface allows validation of user data as well as for c
   
  You can also use your delivery extension class to retrieve and process custom configuration data stored in the RSReportServer.config file. For more information about processing custom configuration data, see the <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A> method.  
   
- For a sample **IDeliveryExtension** class implementation, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For a sample **IDeliveryExtension** class implementation, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

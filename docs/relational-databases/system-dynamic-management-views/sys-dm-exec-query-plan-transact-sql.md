@@ -25,7 +25,7 @@ manager: craigg
 
   Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
   
- The XML schema for the Showplan is published and available at [this Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). It is also available in the directory where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
+ The XML schema for the Showplan is published and available at [this Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). It is also available in the directory where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

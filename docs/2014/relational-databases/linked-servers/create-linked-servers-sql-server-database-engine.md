@@ -5,7 +5,6 @@ ms.date: "11/20/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.linkedserver.properties.general.f1"
@@ -76,9 +75,9 @@ manager: craigg
     > [!NOTE]  
     >  If the instance of **SQL Server** is the default instance, enter the name of the computer that hosts the instance of **SQL Server**. If the **SQL Server** is a named instance, enter the name of the computer and the name of the instance, such as **Accounting\SQLExpress**.  
   
-3.  In the **Server type** area, select **SQL Server** to indicate that that the linked server is another instance of **SQL Server**.  
+3.  In the **Server type** area, select **SQL Server** to indicate that the linked server is another instance of **SQL Server**.  
   
-4.  On the **Security** page, specify the security context that will be used when the original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to the linked server. In a domain environment where users are connecting by using their domain logins, selecting **Be made using the login’s current security context** is often the best choice. When users connect to the original **SQL Server** by using a **SQL Server** login, the best choice is often to select **By using this security context**, and then providing the necessary credentials to authenticate at the linked server.  
+4.  On the **Security** page, specify the security context that will be used when the original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to the linked server. In a domain environment where users are connecting by using their domain logins, selecting **Be made using the login's current security context** is often the best choice. When users connect to the original **SQL Server** by using a **SQL Server** login, the best choice is often to select **By using this security context**, and then providing the necessary credentials to authenticate at the linked server.  
   
      **Local login**  
      Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or a Windows Authentication login. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.  

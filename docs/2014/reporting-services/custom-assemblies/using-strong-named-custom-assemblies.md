@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Using Strong-Named Custom Assemblies
   A strong name identifies an assembly and includes the assembly's text name, four-part version number, culture information (if provided), a public key, and a digital signature stored in the assembly's manifest. A strong name uniquely identifies an assembly to the common language runtime (CLR) and ensures binary integrity.  

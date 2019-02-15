@@ -121,7 +121,7 @@ manager: craigg
   
 ## See Also  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [Publication Types for Transactional Replication](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
+ [Transactional Replication](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   

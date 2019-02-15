@@ -35,7 +35,7 @@ manager: craigg
 > [!WARNING]  
 >  The user should be well-informed on the concepts and interactions of Windows Server Failover Clustering, WSFC Quorum Models, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and the environment's specific deployment configuration.  
 >   
->  For more information, see:  [Windows Server Failover Clustering (WSFC) with SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC Quorum Modes and Voting Configuration (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  For more information, see:  [Windows Server Failover Clustering (WSFC) with SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC Quorum Modes and Voting Configuration (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Security  
  The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
@@ -60,7 +60,7 @@ manager: craigg
   
      On this node, manually force the cluster to come online using the forced quorum procedure.  To minimize potential data loss, select a node that was last hosting an availability group primary replica.  
   
-     For more information, see:  [Force a WSFC Cluster to Start Without a Quorum](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     For more information, see:  [Force a WSFC Cluster to Start Without a Quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  The forced quorum setting has a cluster-wide affect to block quorum checks until the logical WSFC cluster achieves a majority of votes and automatically transitions to a regular quorum mode of operation.  
@@ -112,9 +112,9 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## See Also  
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

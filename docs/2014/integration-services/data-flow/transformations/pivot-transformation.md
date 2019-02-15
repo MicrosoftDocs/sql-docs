@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.pivottrans.f1"
@@ -92,7 +91,7 @@ manager: craigg
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
-|2004|Water Bottle – 30 oz.|2805.00|  
+|2004|Water Bottle - 30 oz.|2805.00|  
 |2002|Touring Tire|62364.225|  
   
  The following table shows a data set after the data has been pivoted on the **Year** column.  
@@ -101,7 +100,7 @@ manager: craigg
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
-|Water Bottle – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Water Bottle - 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring Tire|62364.225|375051.60|1041810.00|  
   
  To pivot the data on the **Year** column, as shown above, the following options are set in the **Pivot** dialog box.  

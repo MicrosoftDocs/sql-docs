@@ -5,8 +5,7 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -37,7 +36,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## Remarks  
  All the types of the atomized values that are passed to **avg()** have to be a subtype of exactly one of the three built-in numeric base types or xdt:untypedAtomic. They cannot be a mixture. Values of type xdt:untypedAtomic are treated as xs:double. The result of **avg()** receives the base type of the passed in types, such as xs:double in the case of xdt:untypedAtomic.  
   
- If the input is statically empty empty is implied and a static error is raised.  
+ If the input is statically empty, empty is implied and a static error is raised.  
   
  The **avg()** function returns the average of the numbers computed. For example:  
   

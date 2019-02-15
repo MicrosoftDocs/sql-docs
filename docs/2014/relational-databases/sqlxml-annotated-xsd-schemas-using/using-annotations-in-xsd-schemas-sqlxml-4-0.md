@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "annotated XSD schemas, about annotated XSD schemas"
@@ -27,7 +25,7 @@ manager: craigg
   
  If you do not specify the annotations, default mapping takes place. By default, an XSD element with a complex type maps to a table (view) name in the specified database, and an element or attribute with a simple type maps to the column with the same name as the element or attribute.  
   
- These annotations can also be used to specify the hierarchical relationships in XML—thus representing the relationships in the database, because an XSD schema is simply an XML view of relational data.  
+ These annotations can also be used to specify the hierarchical relationships in XML-thus representing the relationships in the database, because an XSD schema is simply an XML view of relational data.  
   
  This section provides descriptions of the annotations you can use with XSD schemas and examples of their usage.  
   

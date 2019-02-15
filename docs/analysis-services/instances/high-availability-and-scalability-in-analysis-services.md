@@ -90,7 +90,7 @@ manager: kfile
 
 - Active/Active is not currently supported. Active/Passive (failover) is the only supported WSFC configuration for Analysis Services.
 - When clustering Analysis Services, make sure that any nodes participating in the cluster run on identical or highly similar hardware, and that the operational context of each node is the same in terms of operating system version and service packs, Analysis Services version and service packs (or cumulative updates), and server mode.
-- Avoid repurposing a Passive node as another workload’s Active node. Any short-term gains in computer utilization will be lost in the event of an actual failover situation if the node is unable to handle both workloads.
+- Avoid repurposing a Passive node as another workload's Active node. Any short-term gains in computer utilization will be lost in the event of an actual failover situation if the node is unable to handle both workloads.
  
  In-depth instructions and background information for deploying Analysis Services in a failover cluster are provided in this whitepaper: [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Although written for SQL Server 2012, this guidance still applies to newer versions of Analysis Services.  
   

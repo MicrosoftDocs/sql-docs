@@ -26,7 +26,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Evaluates a list of conditions and returns one of multiple possible result expressions.  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+Evaluates a list of conditions and returns one of multiple possible result expressions.  
   
  The CASE expression has two formats:  
   
@@ -310,7 +313,7 @@ ORDER BY MaximumRate DESC;
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### G. Using a SELECT statement with a CASE expression  
- Within a SELECT statement, the CASE expression allows for values to be replaced in the result set based on comparison values. The following example uses the CASE expression to change the display of product line categories to make them more understandable. When a value does not exist, the text “Not for sale’ is displayed.  
+ Within a SELECT statement, the CASE expression allows for values to be replaced in the result set based on comparison values. The following example uses the CASE expression to change the display of product line categories to make them more understandable. When a value does not exist, the text "Not for sale' is displayed.  
   
 ```  
 -- Uses AdventureWorks  

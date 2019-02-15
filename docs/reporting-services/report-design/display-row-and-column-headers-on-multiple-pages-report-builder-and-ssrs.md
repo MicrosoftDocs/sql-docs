@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)
   You can control whether to repeat row and column headers on every page of a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report for a tablix data region (a table, matrix, or list) that spans multiple pages.
@@ -18,7 +18,7 @@ ms.author: maggies
   
  ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
- Row and column group headers are created automatically when you add groups by using the New Table or Matrix wizard or the the New Chart wizard, by adding fields to the Grouping pane, or by using context menus. If the tablix data region has only a tablix body area and no group headers, the rows and columns are tablix members.  
+ Row and column group headers are created automatically when you add groups by using the New Table or Matrix wizard or the New Chart wizard, by adding fields to the Grouping pane, or by using context menus. If the tablix data region has only a tablix body area and no group headers, the rows and columns are tablix members.  
   
  For static members, you can display the top adjacent rows or the side adjacent columns on multiple pages.  
   
@@ -46,7 +46,7 @@ ms.author: maggies
   
 3.  Click the static member that corresponds to the static member (row or column) that you want to remain visible while scrolling. The Properties pane displays the **Tablix Member** properties.  
   
-     If you don’t see the Properties pane, click the **View** tab at the top of the Report Builder window and then click **Properties**.  
+     If you don't see the Properties pane, click the **View** tab at the top of the Report Builder window and then click **Properties**.  
   
 4.  In the Properties pane, set **RepeatOnNewPage** to True.  
   

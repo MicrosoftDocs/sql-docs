@@ -26,9 +26,9 @@ manager: craigg
 |-|-|  
 |[Arithmetic Operators](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)|[Logical Operators](../../t-sql/language-elements/logical-operators-transact-sql.md)|  
 |[Assignment Operator](../../t-sql/language-elements/assignment-operator-transact-sql.md)|[Scope Resolution Operator](../../t-sql/language-elements/scope-resolution-operator-transact-sql.md)|  
-|[Bitwise Operators](../../t-sql/language-elements/bitwise-operators-transact-sql.md)|[Set Operators](http://msdn.microsoft.com/library/1aa4c424-b92c-4409-a1c7-34a0264ee107)|  
+|[Bitwise Operators](../../t-sql/language-elements/bitwise-operators-transact-sql.md)|[Set Operators](https://msdn.microsoft.com/library/1aa4c424-b92c-4409-a1c7-34a0264ee107)|  
 |[Comparison Operators](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[String Concatenation Operator](../../t-sql/language-elements/string-operators-transact-sql.md)|  
-|[Compound Operators](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Unary Operators](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
+|[Compound Operators](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Unary Operators](https://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
 ## See Also  
  [Operator Precedence &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  

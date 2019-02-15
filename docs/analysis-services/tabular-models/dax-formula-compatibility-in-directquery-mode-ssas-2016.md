@@ -1,5 +1,5 @@
 ---
-title: "DAX formula compatibility in DirectQuery mode | Microsoft Docs"
+title: "DAX formula compatibility in Analysis Services DirectQuery mode | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -72,16 +72,16 @@ The following comparisons will always return an error when used in a calculation
 In general, DAX is more forgiving of data type mismatches in in-memory models and will attempt an implicit cast of values up to two times, as described in this section. However, formulas sent to a relational data store in DirectQuery mode are evaluated more strictly, following the rules of the relational engine, and are more likely to fail.  
   
 **Comparisons of strings and numbers**  
-EXAMPLE: `“2” < 3`  
+EXAMPLE: `"2" < 3`  
   
 The formula compares a text string to a number. The expression is **true** in both DirectQuery mode and in-memory models.  
   
 In an in-memory model, the result is **true** because numbers as strings are implicitly cast to a numerical data type for comparisons with other numbers. SQL also implicitly casts text numbers as numbers for comparison to numerical data types.  
   
-Note that this represents a change in behavior from the first version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], which would return **false**, because the text “2” would always be considered larger than any number.  
+Note that this represents a change in behavior from the first version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], which would return **false**, because the text "2" would always be considered larger than any number.  
   
 **Comparison of text with Boolean**  
-EXAMPLE: `“VERDADERO” = TRUE`  
+EXAMPLE: `"VERDADERO" = TRUE`  
   
 This expression compares a text string with a Boolean value. In general, for DirectQuery or In-Memory models, comparing a string value to a Boolean value results in an error. The only exceptions to the rule are when the string contains the word **true** or the word **false**; if the string contains any of true or false values, a conversion to Boolean is made and the comparison takes place giving the logical result.  
   
@@ -101,7 +101,7 @@ There is no cast function as such in DAX, but implicit casts are performed in ma
 -   Boolean values are always treated as logical values in comparisons and when used with EXACT, AND, OR, &amp;&amp;, or ||.  
   
 **Cast from string to Boolean**  
-In in-memory and DirectQuery models, casts are permitted to Boolean values from these strings only: **“”** (empty string), **“true”**, **“false”**; where an empty string casts to false value.  
+In in-memory and DirectQuery models, casts are permitted to Boolean values from these strings only: **""** (empty string), **"true"**, **"false"**; where an empty string casts to false value.  
   
 Casts to the Boolean data type of any other string results in an error.  
   
@@ -114,7 +114,7 @@ Models that use the in-memory data store support a more limited range of text fo
 When casting from strings to non-Boolean values, DirectQuery mode behaves the same as SQL Server. For more information, see [CAST and CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Cast from numbers to string not allowed**  
-EXAMPLE: `CONCATENATE(102,”,345”)`  
+EXAMPLE: `CONCATENATE(102,",345")`  
   
 Casting from numbers to strings is not allowed in SQL Server.  
   
@@ -123,7 +123,7 @@ This formula returns an error in tabular models and in DirectQuery mode; however
 **No support for two-try casts in DirectQuery**  
 In-memory models often attempt a second cast when the first one fails. This never happens in DirectQuery mode.  
   
-EXAMPLE: `TODAY() + “13:14:15”`  
+EXAMPLE: `TODAY() + "13:14:15"`  
   
 In this expression, the first parameter has type **datetime** and second parameter has type **string**. However, the casts when combining the operands are handled differently. DAX will perform an implicit cast from **string** to **double**. In in-memory models, the formula engine attempts to cast directly to **double**, and if that fails, it will try to cast the string to **datetime**.  
   
@@ -148,7 +148,7 @@ In Transact-SQL, operations that result in a numerical overflow return an overfl
 However, the same formula when used in an in-memory model returns an eight-byte integer. That is because the formula engine does not perform checks for numerical overflows.  
   
 **LOG functions with blanks return different results**  
-SQL Server handles nulls and blanks differently than the xVelocity engine. As a result, the following formula returns an error in DirectQuery mode, but return infinity (–inf) in in-memory mode.  
+SQL Server handles nulls and blanks differently than the xVelocity engine. As a result, the following formula returns an error in DirectQuery mode, but return infinity (-inf) in in-memory mode.  
   
 `EXAMPLE: LOG(blank())`  
   
@@ -278,7 +278,7 @@ In general, any string manipulation functions that use fixed-size columns as arg
 Additionally, in SQL Server, some text functions support additional arguments that are not provided in Excel. If the formula requires the missing argument you can get different results or errors in the in-memory model.  
   
 **Operations that return a character using LEFT, RIGHT, etc. may return the correct character but in a different case, or no results**  
-EXAMPLE: `LEFT([“text”], 2)`  
+EXAMPLE: `LEFT(["text"], 2)`  
   
 In DirectQuery mode, the case of the character that is returned is always exactly the same as the letter that is stored in the database. However, the xVelocity engine uses a different algorithm for compression and indexing of values, to improve performance.  
   
@@ -287,7 +287,7 @@ By default, the Latin1_General collation is used, which is case-insensitive but 
 This behavior also applies to other text functions, including RIGHT, MID, and so forth.  
   
 **String length affects results**  
-EXAMPLE: `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+EXAMPLE: `SEARCH("within string", "sample target  text", 1, 1)`  
   
 If you search for a string using the SEARCH function, and the target string is longer than the within string, DirectQuery mode raises an error.  
   
@@ -300,21 +300,21 @@ If the length of the replacement string is greater than the length of the origin
 In in-memory models, the formula follows the behavior of Excel, which concatenates the source string and the replacement string, which returns CACalifornia.  
   
 **Implicit TRIM in the middle of strings**  
-EXAMPLE: `TRIM(“ A sample sentence with leading white space”)`  
+EXAMPLE: `TRIM(" A sample sentence with leading white space")`  
   
 DirectQuery mode translates the DAX TRIM function to the SQL statement `LTRIM(RTRIM(<column>))`. As a result, only leading and trailing white space is removed.  
   
 In contrast, the same formula in an in-memory model removes spaces within the string, following the behavior of Excel.  
   
 **Implicit RTRIM with use of LEN function**  
-EXAMPLE: `LEN(‘string_column’)`  
+EXAMPLE: `LEN('string_column')`  
   
 Like SQL Server, DirectQuery mode automatically removes white space from the end of string columns: that is, it performs an implicit RTRIM. Therefore, formulas that use the LEN function can return different values if the string has trailing spaces.  
   
 **In-memory supports additional parameters for SUBSTITUTE**  
-EXAMPLE: `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+EXAMPLE: `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-EXAMPLE: `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+EXAMPLE: `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 In DirectQuery mode, you can use only the version of this function that has three (3) parameters: a reference to a column, the old text, and the new text. If you use the second formula, an error is raised.  
   

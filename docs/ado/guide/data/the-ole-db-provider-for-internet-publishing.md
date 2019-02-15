@@ -30,20 +30,20 @@ The ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) and [Strea
 -   Specify "URL=" in the connection string. For example:  
   
     ```  
-    objConn.Open "URL=http://servername"  
+    objConn.Open "URL=https://servername"  
     ```  
   
 -   Specify Msdaipp.dso for the *Provider* keyword of the connection string. For example:  
   
     ```  
-    objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
+    objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
 -   Specify Msdaipp.dso for the [Provider](../../../ado/reference/ado-api/provider-property-ado.md) property of the [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object. For example:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
-    objConn.Open "http://servername"  
+    objConn.Open "https://servername"  
     ```  
   
 > [!NOTE]

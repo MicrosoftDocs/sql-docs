@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,7 +24,7 @@ The Microsoft OLE DB Persistence Provider enables you to save a [Recordset](../.
 ## Provider Keyword
  To invoke this provider, specify the following keyword and value in the connection string.
 
-```
+```vb
 "Provider=MSPersist"
 ```
 

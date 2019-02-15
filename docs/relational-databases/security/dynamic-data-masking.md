@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 ![Dynamic data masking](../../relational-databases/security/media/dynamic-data-masking.png)
 
-Dynamic data masking limits (DDM) sensitive data exposure by masking it to non-privileged users. It can be used to greatly simplify the design and coding of security in your application.  
+Dynamic data masking (DDM) limits sensitive data exposure by masking it to non-privileged users. It can be used to greatly simplify the design and coding of security in your application.  
 
 Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. DDM can be configured on the database to hide sensitive data in the result sets of queries over designated database fields, while the data in the database is not changed. Dynamic data masking is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
 
@@ -28,9 +28,9 @@ Dynamic data masking helps prevent unauthorized access to sensitive data by enab
 
 As an example, a call center support person may identify callers by several digits of their social security number or credit card number, but those data items should not be fully exposed to the support person. A masking rule can be defined that masks all but the last four digits of any social security number or credit card number in the result set of any query. For another example, by using the appropriate data mask to protect personally identifiable information (PII) data, a developer can query production environments for troubleshooting purposes without violating compliance regulations.
 
-The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security…) and it is highly recommended to use this feature in conjunction with them in addition in order to better protect the sensitive data in the database.  
+The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security...) and it is highly recommended to use this feature in conjunction with them in addition in order to better protect the sensitive data in the database.  
   
-Dynamic data masking is available in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For additional information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+Dynamic data masking is available in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For additional information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
 ## Defining a Dynamic Data Mask  
  A masking rule may be defined on a column in a table, in order to obfuscate the data in that column. Four types of masks are available.  
@@ -191,4 +191,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [Get started with SQL Database Dynamic Data Masking (Azure Preview portal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [Get started with SQL Database Dynamic Data Masking (Azure Preview portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

@@ -1,11 +1,12 @@
 ---
-title: Use Active Directory Authentication (Kerberos) when connecting with Azure Data Studio | Microsoft Docs
+title: Use Active Directory Authentication (Kerberos)
+titleSuffix: Azure Data Studio
 description: Learn how to enable Kerberos to use Active Directory Authentication for Azure Data Studio
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: "meet-bhagdev"
 ms.author: "meetb"
@@ -20,7 +21,7 @@ In order to use Integrated Authentication (Windows Authentication) on macOS or L
 ## Prerequisites
 
 - Access to a Windows domain-joined machine in order to query your Kerberos Domain Controller.
-- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. More information on setting up Sql Server to authenticate using Kerberos can be found [here](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). There should be SPNs registered for each instance of Sql Server you are trying to connect to. Details about the format of SQL Server SPNs are listed [here](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. More information on setting up Sql Server to authenticate using Kerberos can be found [here](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). There should be SPNs registered for each instance of Sql Server you are trying to connect to. Details about the format of SQL Server SPNs are listed [here](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## Checking if Sql Server has Kerberos Setup
@@ -36,7 +37,7 @@ Find the Kerberos KDC (Key Distribution Center) configuration value. Run the fol
 Start `cmd.exe` and run `nltest`.
 
 ```
-nltest /dsgetdc:DOMAIN.COMPANY.COM (where “DOMAIN.COMPANY.COM” maps to your domain’s name)
+nltest /dsgetdc:DOMAIN.COMPANY.COM (where "DOMAIN.COMPANY.COM" maps to your domain's name)
 
 Sample Output
 DC: \\dc-33.domain.company.com
@@ -119,7 +120,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### macOS
 
-- Join your macOS to the Active Directory Domain Controller by [following these steps] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Join your macOS to the Active Directory Domain Controller by following these steps:
 
 
 

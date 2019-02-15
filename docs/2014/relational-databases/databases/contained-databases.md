@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database"
@@ -120,7 +119,7 @@ manager: craigg
 ### Benefit of Contained Database Users with AlwaysOn  
  By reducing the ties to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], partially contained databases can be useful during failover when you use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- Creating contained users enables the user to connect directly to the contained database. This is a very significant feature in high availability and disaster recovery scenarios such as in an AlwaysOn solution. If the users are contained users, in case of failover, people would be able to connect to the secondary without creating logins on the instance hosting the secondary. This provides an immediate benefit. For more information, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) and [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;]((../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ Creating contained users enables the user to connect directly to the contained database. This is a very significant feature in high availability and disaster recovery scenarios such as in an AlwaysOn solution. If the users are contained users, in case of failover, people would be able to connect to the secondary without creating logins on the instance hosting the secondary. This provides an immediate benefit. For more information, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) and [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### Initial Database Development  
  Because a developer may not know where a new database will be deployed, limiting the deployed environmental impacts on the database lessens the work and concern for the developer. In the non-contained model, the developer must consider possible environmental impacts on the new database and program accordingly. However, by using partially contained databases, developers can detect instance-level impacts on the database and instance-level concerns for the developer.  

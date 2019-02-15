@@ -23,7 +23,7 @@ manager: craigg
   
 -   Do not set the memory pre-allocation value too high. Otherwise, other processes may not get sufficient memory at the time when they require it, and this can result in memory paging.  
   
- If you follow the above practices for a database with memory-optimized tables, an attempt to restore and recover a database could result in the database being in a “Recovery Pending” state, even if you have sufficient memory to recover the database. The reason for this is that, when starting up, [!INCLUDE[hek_2](../includes/hek-2-md.md)] brings data into memory more aggressively than dynamic memory allocation allocates memory to the database.  
+ If you follow the above practices for a database with memory-optimized tables, an attempt to restore and recover a database could result in the database being in a "Recovery Pending" state, even if you have sufficient memory to recover the database. The reason for this is that, when starting up, [!INCLUDE[hek_2](../includes/hek-2-md.md)] brings data into memory more aggressively than dynamic memory allocation allocates memory to the database.  
   
  **Resolution**  
   

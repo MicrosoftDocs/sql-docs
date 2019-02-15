@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # rsModelGenerationError - Reporting Services Error
     

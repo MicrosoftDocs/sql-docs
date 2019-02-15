@@ -64,7 +64,7 @@ manager: craigg
   
  ![The user interface for property expressions](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
- In the **Properties** window and the **Expressions** page, click the browse button **(…)** at the **Expressions** collection level to open the **Property Expressions Editor** dialog box. The Property Expressions Editor allows you to map a property to an expression and to type a property expression. If you want to use the graphical expression tools to create and then validate the expression, click the browse button **(…)** at the expression level to open the **Expression Builder** dialog box, and then create or modify and optionally validate the expression.  
+ In the **Properties** window and the **Expressions** page, click the browse button **(...)** at the **Expressions** collection level to open the **Property Expressions Editor** dialog box. The Property Expressions Editor allows you to map a property to an expression and to type a property expression. If you want to use the graphical expression tools to create and then validate the expression, click the browse button **(...)** at the expression level to open the **Expression Builder** dialog box, and then create or modify and optionally validate the expression.  
   
  You can also open the **Expression Builder** dialog box from the **Property Expressions Editor** dialog box.  
   
@@ -82,7 +82,7 @@ manager: craigg
   
  You will therefore not see the updated values of the properties of the package objects that use property expressions in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer until you save the package, run the package, or reopen the package after adding the property expressions.  
   
- The property expressions associated with different types of objects—connection managers, log providers, and enumerators—are also loaded when methods specific to that object type are called. For example, the properties of connection managers are loaded before [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates an instance of the connection.  
+ The property expressions associated with different types of objects-connection managers, log providers, and enumerators-are also loaded when methods specific to that object type are called. For example, the properties of connection managers are loaded before [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates an instance of the connection.  
   
  Property expressions are loaded after package configurations have loaded. For example, variables are updated first by their configurations, and then the property expressions that use the variables are evaluated and loaded. This means that the property expressions always use the values of variables that are set by configurations.  
   
@@ -162,11 +162,11 @@ manager: craigg
   
 ## External Resources  
   
--   [Expression and Configuration Highlighter (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Expression and Configuration Highlighter (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+-   Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
- [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

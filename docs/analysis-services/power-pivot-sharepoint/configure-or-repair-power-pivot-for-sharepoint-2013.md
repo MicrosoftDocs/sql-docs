@@ -134,7 +134,7 @@ manager: kfile
 ||Site URL|Default, if needed|The tool creates the site URL, using the same URL naming conventions as SharePoint.|  
 ||Site Title|Default, if needed|The tool adds **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Site** as the default title.|  
 |**Activate [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Feature in a Site Collection**|Site URL||URL of the site collection for which you are activating [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] features.|  
-||Enable premium feature for this site||Enable the SharePoint site feature ”PremiumSite”.|  
+||Enable premium feature for this site||Enable the SharePoint site feature "PremiumSite".|  
 |**Create Secure Store Service Application**|Service Application Name|Default, if needed|Type the name for the Secure Store service application.|  
 ||Database Server|User input|Type the name of the database server to use for the Secure Store service application.|  
 |**Create Secure Store Service Application Proxy**|Service Application Name|Default, if needed|Type the name for the Secure Store service application you typed in the previous page.|  
@@ -145,7 +145,7 @@ manager: kfile
 ||Friendly Name for Target Application|Default, if needed||  
 ||Unattended Account User Name and Password|Default, if needed|Type credentials of a Windows user account that is used by the target application to run unattended data refresh. For more information, see [Configure Excel Services data refresh by using the unattended service account in SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/library/hh525344(office.15).aspx).|  
 ||Site URL|Default, if needed|Type the site URL of the site collection associated wit the target application. To associate with additional site collections, use SharePoint Central administration.|  
-|**Create Excel Services Service Application**|Service Application Name|Default, if needed|Type a service application name. A service application database with the same name is created on the SharePoint farm’s database server.|  
+|**Create Excel Services Service Application**|Service Application Name|Default, if needed|Type a service application name. A service application database with the same name is created on the SharePoint farm's database server.|  
 |**Configure [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servers**|Service Application Name|Default, if needed|Service application name you typed on the previous page.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server Name||List of Registered [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servers.<br /><br /> The server name typed on the main page is automatically be added to this page.|  
 |**Register [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Add-in as Excel Services Usage Tracker**|Service Application Name||Service application name you typed on the previous page.|  
@@ -156,7 +156,7 @@ manager: kfile
  If the tool creates a site collection, it creates a content database on the database server, using the same file naming conventions as SharePoint. You cannot change the content database name.  
   
 ## Verify the Configuration  
- See the “Verify [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration“ section of [Configure Power Pivot and Deploy Solutions &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
+ See the "Verify [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration" section of [Configure Power Pivot and Deploy Solutions &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
 ##  <a name="bkmk_nextsteps"></a> Next steps  
  After you complete server installation, there are several post-installation tasks you should perform:  
@@ -183,7 +183,7 @@ manager: kfile
 ### Install Data Providers Used in Data Refresh and Check User Permissions  
  Server-side data refresh allows users to re-import updated data to their workbooks in unattended mode. In order for data refresh to succeed, the server runnin Analysis Services in SharePoint mode must have the same data providers that were used to originally import the data. In addition, the user account under which data refresh runs often requires read permissions on the external data sources. Be sure to check the requirements for enabling and configuring data refresh to ensure a successful outcome. For more information, see [Power Pivot Data Refresh with SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9).  
   
-> [!NOTE]  
+> [!NOTE]
 >  For [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013, the data providers are installed when you run the **spPowerPivot.msi** installer and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool. For more information, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ### Change Application Pool and Service Identities in SharePoint  
@@ -200,7 +200,7 @@ manager: kfile
 -   [Start Power Pivot in Excel 2013 add-in](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
   
 ### Add additional Analysis Services servers in SharePoint mode  
- Over time, if you determine that additional data storage and processing capability is needed, you can add additional servers running Analysis Services in SharePoint mode to the farm. For [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013, you install new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servers in SharePoint mode and then configure Excel Services. For more information, see the “Beyond the single-server installation” section of [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+ Over time, if you determine that additional data storage and processing capability is needed, you can add additional servers running Analysis Services in SharePoint mode to the farm. For [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013, you install new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servers in SharePoint mode and then configure Excel Services. For more information, see the "Beyond the single-server installation" section of [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ## Additional Resources  
  ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through SQL Server Feedback](https://feedback.azure.com/forums/908035-sql-server).  

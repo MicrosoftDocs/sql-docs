@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing constraints"
@@ -60,7 +59,7 @@ manager: craigg
   
 4.  Click **Delete**.  
   
-5.  On the **File** menu, click **Save** *table name*.  
+5.  On the **File** menu, click **Save** _table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

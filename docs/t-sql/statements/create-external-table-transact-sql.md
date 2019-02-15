@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "6/12/2018"
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -138,16 +138,15 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  The one to three-part name of the table to create. For an external table, only the table metadata is stored in SQL along with basic statistics about the file and or folder referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  \<column_definition> [ ,...*n* ] 
- CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. An exception to this, you cannot use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [CREATE TABLE on Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. An exception to this, you cannot use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [CREATE TABLE on Azure SQL Database](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- The column definitions, including the data types and number of columns, must match the data in the external files. If there is a mismatch, the file rows will be rejected when querying the actual data. For more information on how to map data types for different external data sources, see [Type mapping with PolyBase](../../relational-databases/polybase/polybase-type-mapping.md).  
-  
+ The column definitions, including the data types and number of columns, must match the data in the external files. If there is a mismatch, the file rows will be rejected when querying the actual data.  
   
  LOCATION =  '*folder_or_filepath*'  
  Specifies the folder or the file path and file name for the actual data in Hadoop or Azure blob storage. The location starts from the root folder; the root folder is the data location specified in the external data source.  
 
 
-In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder if it does not already exist. You can then use INSERT INTO to export data from a local SQL Server table to the external data source. For more information, see [Polybase Queries](/sql/relational-databases/polybase/polybase-queries). 
+In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder if it does not already exist. You can then use INSERT INTO to export data from a local SQL Server table to the external data source. For more information, see [PolyBase Queries](/sql/relational-databases/polybase/polybase-queries). 
 
 In SQL Data Warehouse and Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it does not exist. In these two products, CREATE EXTERNAL TABLE does not create the path and folder.
 
@@ -158,7 +157,7 @@ In SQL Data Warehouse and Analytics Platform System, the [CREATE EXTERNAL TABLE 
   
  ![Recursive data for external tables](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")  
   
- To change the default and only read from the root folder, set the attribute \<polybase.recursive.traversal> to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
+ To change the default and only read from the root folder, set the attribute \<polybase.recursive.traversal> to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
  DATA_SOURCE = *external_data_source_name*  
  Specifies the name of the external data source that contains the location of the external data. This location is either a Hadoop or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
@@ -167,7 +166,7 @@ In SQL Data Warehouse and Analytics Platform System, the [CREATE EXTERNAL TABLE 
  Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  Reject Options  
- You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered ‘dirty’ if it actual data types or the number of columns do not match the column definitions of the external table.  
+ You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns do not match the column definitions of the external table.  
   
  When you do not specify or change reject values, PolyBase uses default values. This information about the reject parameters is stored as additional metadata when you create an external table with CREATE EXTERNAL TABLE statement.   When a future SELECT statement or SELECT INTO SELECT statement selects data from the external table , PolyBase will use the reject options to determine the number or percentage of rows that can be rejected before the actual query fails. . The query will return (partial) results until the reject threshold is exceeded; it then fails with the appropriate error message.  
   
@@ -217,7 +216,7 @@ Example:
 REJECTED_ROW_LOCATION = *Directory Location*
   
   Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
-If the specified path does not exist, PolyBase will create one on your behalf. A child directory is created with the name “_rejectedrows”. The “_” character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there is a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. 
+If the specified path does not exist, PolyBase will create one on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there is a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. 
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files corresponding files have a matching suffix. 
   
@@ -252,8 +251,8 @@ The reason files and the data files both have the queryID associated with the CT
  Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
 ## Error Handling  
@@ -262,7 +261,7 @@ The reason files and the data files both have the queryID associated with the CT
 ## General Remarks  
  In ad-hoc query scenarios, i.e. SELECT FROM EXTERNAL TABLE, PolyBase stores the rows retrieved from the external data source in a temporary table. After the query completes, PolyBase removes and deletes the temporary table. No permanent data is stored in SQL tables.  
   
- In contrast, in the import scenario, i.e. SELECT INTO FROM EXTERNAL TABLE, PolyBase stores the rows retrieved from the external data source as permanent data in the SQL table. The new table is created during query execution when Polybase retrieves the external data.  
+ In contrast, in the import scenario, i.e. SELECT INTO FROM EXTERNAL TABLE, PolyBase stores the rows retrieved from the external data source as permanent data in the SQL table. The new table is created during query execution when PolyBase retrieves the external data.  
   
  PolyBase can push some of the query computation to Hadoop to improve query performance. This is called predicate pushdown. To enable this, specify the Hadoop resource manager location option in [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
@@ -271,9 +270,9 @@ The reason files and the data files both have the queryID associated with the CT
 ## Limitations and Restrictions  
  In CTP2, the export functionality is not supported, i.e. permanently storing SQL data into the external data source. This functionality will be available in CTP3.  
   
- Since the data for an external table resides off the appliance, it is not under the control of PolyBase, and can be changed or removed at any time by an external process. Because of this, uery results against an external table are not guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query can fail if the external data is removed or relocated.  
+ Since the data for an external table resides off the appliance, it is not under the control of PolyBase, and can be changed or removed at any time by an external process. Because of this, query results against an external table are not guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query can fail if the external data is removed or relocated.  
   
- You can create multiple external tables that each reference different external data sources. However, if you simultaneously run queries against different Hadoop data sources, then each Hadoop source must use the same 'hadoop connectivity' server configuration setting. For example, you can’t simultaneously run a query against a Cloudera Hadoop cluster and a Hortonworks Hadoop cluster since these use different configuration settings. For the configuration settings and supported combinations, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+ You can create multiple external tables that each reference different external data sources. However, if you simultaneously run queries against different Hadoop data sources, then each Hadoop source must use the same 'hadoop connectivity' server configuration setting. For example, you can't simultaneously run a query against a Cloudera Hadoop cluster and a Hortonworks Hadoop cluster since these use different configuration settings. For the configuration settings and supported combinations, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
  Only these Data Definition Language (DDL) statements are allowed on external tables:  
   
@@ -404,7 +403,7 @@ WITH (
 ```  
   
 ### D. Querying Hadoop data  
- Clickstream is an external table that connects to the employee.tbl delimited text file on a Hadoop cluster. The following query looks just like a query against a standard table. However, this query retrieves data from Hadoop and then computes the restuls.  
+ Clickstream is an external table that connects to the employee.tbl delimited text file on a Hadoop cluster. The following query looks just like a query against a standard table. However, this query retrieves data from Hadoop and then computes the results.  
   
 ```  
 SELECT TOP 10 (url) FROM ClickStream WHERE user_ip = 'xxx.xxx.xxx.xxx'  
@@ -551,7 +550,7 @@ FROM ClickStream
 ```  
   
 ## See Also  
- [Common Metadata Query Examples (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [Common Metadata Query Examples (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

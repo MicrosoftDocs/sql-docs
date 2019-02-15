@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Table-Valued Parameter Specification  
  The consumer can specify the type of the table-valued parameter. This information includes the table-valued parameter type name. It also includes the schema name, if the user-defined table type for the table-valued parameter is not in the current default schema for the connection. Depending on server support, the consumer can also specify optional metadata information, such as ordering of columns, and can specify that all rows for particular columns have the default values.  
   
- To specify a table-valued parameter, the consumer calls ISSCommandWithParamter::SetParameterInfo, and optionally calls ISSCommandWithParameters::SetParameterProperties. For a table-valued parameter, the *pwszDataSourceType* field in the DBPARAMBINDINFO structure has a value of DBTYPE_TABLE. The *ulParamSize* field is set to ~0 to indicate that length is unknown. Particular properties for table-valued parameters, such as schema name, type name, column order, and default columns, can be set through ISSCommandWithParameters::SetParameterProperties.  
+ To specify a table-valued parameter, the consumer calls ISSCommandWithParameter::SetParameterInfo, and optionally calls ISSCommandWithParameters::SetParameterProperties. For a table-valued parameter, the *pwszDataSourceType* field in the DBPARAMBINDINFO structure has a value of DBTYPE_TABLE. The *ulParamSize* field is set to ~0 to indicate that length is unknown. Particular properties for table-valued parameters, such as schema name, type name, column order, and default columns, can be set through ISSCommandWithParameters::SetParameterProperties.  
   
 ## Table-Valued Parameter Binding  
  A table-valued parameter can be any rowset object. The provider reads from this object while sending table-valued parameters to the server during execution.  
@@ -41,7 +41,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   A table-valued parameter can be marked with the status DBSTATUS_S_DEFAULT. The only valid values are DBSTATUS_S_DEFAULT and DBSTATUS_S_OK. When the status is set to DBSTATUS_S_DEFAULT, the value of the table-valued parameter corresponds to an empty table.  
   
--   Read-only columns in table-valued parameters (identity or computed columns) must be marked as default by using the SSPROP_PARAM_TABLE_DEFAULT_COLUMNS property. Columns that have a default value must also be marked as default through SSPROP_PARAM_TABLE_DEFAULT_COLUMNS property to allow the default value to be used for the column’s data values for a particular table-valued parameter. The provider will ignore the data values bound for the columns marked as default.  
+-   Read-only columns in table-valued parameters (identity or computed columns) must be marked as default by using the SSPROP_PARAM_TABLE_DEFAULT_COLUMNS property. Columns that have a default value must also be marked as default through SSPROP_PARAM_TABLE_DEFAULT_COLUMNS property to allow the default value to be used for the column's data values for a particular table-valued parameter. The provider will ignore the data values bound for the columns marked as default.  
   
 -   Data will be sent to the server for columns with DBPROP_COL_AUTOINCREMENT or SSPROP_COL_COMPUTED, unless SSPROP_PARAM_TABLE_DEFAULT is also set.  
   

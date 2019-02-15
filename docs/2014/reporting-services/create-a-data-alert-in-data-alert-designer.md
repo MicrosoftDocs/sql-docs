@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create a Data Alert in Data Alert Designer
   You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md) and [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md).  
@@ -49,7 +49,7 @@ manager: craigg
   
      The default name of the alert definition is the name of the report. Alert definition names do not have to be unique, which can make it difficult to tell them apart when you later view the list of your alerts in Data Alert Manager. It is recommended that you use meaningful and unique names for your alert definitions.  
   
-6.  Optionally, change the default data option from **any data in in the data feed has** to **no data in the data feed has**.  
+6.  Optionally, change the default data option from **any data in the data feed has** to **no data in the data feed has**.  
   
 7.  Click **Add rule**.  
   
@@ -65,15 +65,15 @@ manager: craigg
   
 10. Type the comparison value.  
   
-11. Optionally, click the ellipsis **(…)** again.  
+11. Optionally, click the ellipsis **(...)** again.  
   
-     The ellipsis **(…)** appears on the line that contains the first clause.  
+     The ellipsis **(...)** appears on the line that contains the first clause.  
   
      An OR clause is added below and within the AND rule.  
   
 12. Optionally, click the down-arrow, select **Field Selection Mode**, and then select a column in the list.  
   
-     You will notice that the ellipsis **(…)** that you click to add OR clauses has disappeared.  
+     You will notice that the ellipsis **(...)** that you click to add OR clauses has disappeared.  
   
 13. Optionally, click **Add rule** again to add additional rules.  
   

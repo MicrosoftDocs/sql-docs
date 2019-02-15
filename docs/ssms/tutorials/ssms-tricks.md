@@ -128,7 +128,7 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 
 
 ## Filter objects in Object Explorer
-You can filter objects to make finding a specific object easier in databases that have many objects. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
+In databases that have many objects, you can use filtering to search for specific tables, views, etc. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
 
 1. Connect to your SQL server.
 2. Expand **Databases** > **AdventureWorks** > **Tables**. All the tables in the database appear.

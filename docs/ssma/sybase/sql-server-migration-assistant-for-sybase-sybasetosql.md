@@ -26,5 +26,5 @@ This documentation introduces you to SSMA for Sybase and provides step-by-step i
 |[Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)|Provides an overview of the conversion process and detailed information about each step in the process.|  
 |[User Interface Reference &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)|Contains documentation for SSMA for Sybase dialog boxes.|  
 |[Working with SSMA for Sybase Console](working-with-ssma-for-sybase-console-sybasetosql.md)|Contains documentation on the SSMA Console application.|  
-|[Getting SSMA for Sybase Assistance](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Provides information about getting additional assistance.|  
+|[Getting SSMA for Sybase Assistance](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Provides information about getting additional assistance.|  
   

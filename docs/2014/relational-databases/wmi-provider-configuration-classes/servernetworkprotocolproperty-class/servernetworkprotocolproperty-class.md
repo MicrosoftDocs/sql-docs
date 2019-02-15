@@ -5,8 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
 ms.topic: "reference"
 api_name: 
   - "ServerNetworkProtocolProperty Class"
@@ -37,6 +35,6 @@ manager: craigg
 -   Set flags for the current property.  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

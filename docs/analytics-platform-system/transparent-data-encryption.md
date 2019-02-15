@@ -202,14 +202,14 @@ The database encryption key (DEK) is protected by the certificates stored in the
   
 The system can access the keys without requiring human intervention (such as providing a password). If the certificate is not available, the system will output an error explaining that the DEK cannot be decrypted until the proper certificate is available.  
   
-When moving a database from one appliance to another, the certificate used to protect its’ DEK must be restored first on the destination server. Then the database can be restored as usual. For more information, see the standard SQL Server documentation, at [Move a TDE Protected Database to Another SQL Server](http://technet.microsoft.com/library/ff773063.aspx).  
+When moving a database from one appliance to another, the certificate used to protect its' DEK must be restored first on the destination server. Then the database can be restored as usual. For more information, see the standard SQL Server documentation, at [Move a TDE Protected Database to Another SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
   
 Certificates used to encrypt DEKs should be retained as long as there are database backups that use them. Certificate backups must include the certificate private key, because without the private key a certificate cannot be used for database restore. Those certificate private key backups are stored in a separate file, protected by a password that must be provided for certificate restore.  
   
 ## Restoring the master Database  
 The master database can be restored using **DWConfig**, as part of the disaster recovery.  
   
--   If the control node hasn’t changed, that is if the master database is restored on the same and unchanged appliance from which the backup of master database was taken, the DMK and all the certificates will be readable without additional action.  
+-   If the control node hasn't changed, that is if the master database is restored on the same and unchanged appliance from which the backup of master database was taken, the DMK and all the certificates will be readable without additional action.  
   
 -   If the master database is restored on a different appliance, or if the control node has been changed since the backup of the master database, additional steps will be required in order to regenerate the DMK.  
   
@@ -233,11 +233,11 @@ If a DMK exists on the appliance on which Upgrade or Replace VM was performed, D
   
 Example of the upgrade action. Replace `**********` with your DMK password.  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 Example of the action to replace a virtual machine.  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 During upgrade, if a user DB is encrypted and the DMK password is not provided, the upgrade action will fail. During replace, if the correct password is not provided when a DMK exists, the operation will skip the DMK recovery step. All the other steps will be completed at the end of the replace VM action, however the action will report failure at the end to indicate that additional steps are required. In the setup logs (located in **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\<time-stamp>\Detail-Setup**), the following warning will be shown near the end.  
   

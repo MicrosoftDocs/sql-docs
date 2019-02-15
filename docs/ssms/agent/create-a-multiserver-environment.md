@@ -57,7 +57,7 @@ The following topics document common tasks for creating a multiserver environmen
 |Describes how to enlist a target server into a master server.|[Enlist a Target Server to a Master Server](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |Describes how to defect a target server from a master server.|[Defect a Target Server from a Master Server](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |Describes how to defect multiple target servers from a master server.|[Defect Multiple Target Servers from a Master Server](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
-|Describes how to check the status of a target server.|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
+|Describes how to check the status of a target server.|[sp_help_targetserver (Transact-SQL)](https://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](https://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## See Also  
 [Troubleshoot Multiserver Jobs That Use Proxies](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  

@@ -32,6 +32,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 This function returns an integer representing the specified *datepart* of the specified *date*.
   
 See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
@@ -153,12 +156,12 @@ The numbering systems of different countries/regions might not comply with the I
   
 |First day of week|First week of year contains|Weeks assigned two times|Used by/in|  
 |---|---|---|---|
-|Sunday|1 January,<br /><br /> First Saturday,<br /><br /> 1–7 days of year|Yes|United States|  
-|Monday|1 January,<br /><br /> First Sunday,<br /><br /> 1–7 days of year|Yes|Most of Europe and the United Kingdom|  
-|Monday|4 January,<br /><br /> First Thursday,<br /><br /> 4–7 days of year|No|ISO 8601, Norway, and Sweden|  
+|Sunday|1 January,<br /><br /> First Saturday,<br /><br /> 1-7 days of year|Yes|United States|  
+|Monday|1 January,<br /><br /> First Sunday,<br /><br /> 1-7 days of year|Yes|Most of Europe and the United Kingdom|  
+|Monday|4 January,<br /><br /> First Thursday,<br /><br /> 4-7 days of year|No|ISO 8601, Norway, and Sweden|  
 |Monday|7 January,<br /><br /> First Monday,<br /><br /> 7 days of year|No||  
-|Wednesday|1 January,<br /><br /> First Tuesday,<br /><br /> 1–7 days of year|Yes||  
-|Saturday|1 January,<br /><br /> First Friday,<br /><br /> 1–7 days of year|Yes||  
+|Wednesday|1 January,<br /><br /> First Tuesday,<br /><br /> 1-7 days of year|Yes||  
+|Saturday|1 January,<br /><br /> First Friday,<br /><br /> 1-7 days of year|Yes||  
   
 ## TZoffset  
 `DATEPART` returns the **TZoffset** (**tz**) value as the number of minutes (signed). This statement returns a time zone offset of 310 minutes:

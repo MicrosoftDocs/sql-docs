@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG024070 error"
@@ -45,7 +44,7 @@ manager: craigg
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [SQL Server Configuration Manager](../sql-server-configuration-manager.md)  
   
   

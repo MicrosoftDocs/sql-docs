@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "recovery [SQL Server replication], merge replication"
@@ -20,12 +19,9 @@ manager: craigg
 # Strategies for Backing Up and Restoring Merge Replication
   For merge replication, back up the following databases regularly:  
   
--   The publication database at the Publisher  
-  
--   The distribution database at the Distributor  
-  
--   The subscription database at each Subscriber  
-  
+-   The publication database at the Publisher   
+-   The distribution database at the Distributor    
+-   The subscription database at each Subscriber    
 -   The **master** and **msdb** system databases at the Publisher, Distributor and all Subscribers. These databases should be backed up at the same time as each other and the relevant replication database. For example, back up the **master** and **msdb** databases at the Publisher at the same time you back up the publication database. If the publication database is restored, ensure that the **master** and **msdb** database are consistent with the publication database in terms of replication configuration and settings.  
   
  If you perform regular log backups, any replication-related changes should be captured in the log backups. If you don't perform log backups, a backup should be performed whenever a setting relevant to replication is changed. For more information, see [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md).  

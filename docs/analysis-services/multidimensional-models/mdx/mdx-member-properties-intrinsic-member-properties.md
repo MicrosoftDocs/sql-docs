@@ -20,9 +20,9 @@ manager: kfile
   
  For an introduction to using and viewing dimension member properties, see [Viewing SSAS Member Properties within an MDX Query Window in SSMS](http://go.microsoft.com/fwlink/?LinkId=317362).  
   
-> [!NOTE]  
+> [!NOTE]
 >  As a provider that is compliant with the OLAP section of the OLE DB specification dated March 1999 (2.6), [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the intrinsic member properties listed in this topic.  
->   
+> 
 >  Providers other than [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] may support additional intrinsic member properties. For more information about the intrinsic member properties supported by other providers, refer to the documentation that comes with those providers.  
   
 ## Types of Member Properties  
@@ -79,7 +79,7 @@ manager: kfile
  The following table lists the non-context sensitive intrinsic properties supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the **MEMBERS** schema rowset, see [MDSCHEMA_MEMBERS Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the **MEMBERS** schema rowset, see [MDSCHEMA_MEMBERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Property|Description|  
 |--------------|-----------------|  

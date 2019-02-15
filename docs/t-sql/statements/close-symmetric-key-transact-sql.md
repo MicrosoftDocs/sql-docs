@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "CLOSE SYMMETRIC KEY statement"
   - "cryptography [SQL Server], symmetric keys"
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CLOSE SYMMETRIC KEY (Transact-SQL)

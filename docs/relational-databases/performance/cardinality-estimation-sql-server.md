@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "CE (cardinality estimator)"
   - "estimating cardinality"
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -102,7 +102,7 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> We recommend that you install the latest release of [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) and update it often.  
+> We recommend that you install the latest release of [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) and update it often.  
   
 Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner.  
   
@@ -133,7 +133,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-For information about extended events as tailored for [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Extended events in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+For information about extended events as tailored for [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Extended events in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
 ## Steps to assess the CE version  
   
@@ -264,7 +264,7 @@ WHERE s.ticket = r.ticket AND
   
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    

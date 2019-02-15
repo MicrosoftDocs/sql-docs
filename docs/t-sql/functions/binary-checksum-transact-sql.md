@@ -52,13 +52,14 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of an
  **int**
   
 ## Remarks  
-BINARY_CHECKSUM(*), computed on any row of a table, returns the same value as long the row is not subsequently modified. BINARY_CHECKSUM satisfies the properties of a hash function: BINARY_CHECKSUM, applied over any two lists of expressions, returns the same value if the corresponding elements of the two lists have the same type and are equal when compared using the equals (=) operator. For this definition, we say that null values, of a specified type, compare as equal values. If at least one of the values in the expression list changes, the expression checksum can also change. However, this is not guaranteed. Therefore, to detect whether values have changed, we recommend use of BINARY_CHECKSUM only if your application can tolerate an occasional missed change. Otherwise, consider HashBytes instead. With a specified MD5 hash algorithm, the probability that HashBytes will return the same result, for two different inputs, is much lower compared to BINARY_CHECKSUM.
+`BINARY_CHECKSUM(*)`, computed on any row of a table, returns the same value as long the row is not subsequently modified. `BINARY_CHECKSUM` satisfies the properties of a hash function: when applied over any two lists of expressions, returns the same value if the corresponding elements of the two lists have the same type and are equal when compared using the equals (=) operator. For this definition, we say that null values, of a specified type, compare as equal values. If at least one of the values in the expression list changes, the expression checksum can also change. However, this is not guaranteed. 
+Therefore, to detect whether values have changed, we recommend use of `BINARY_CHECKSUM` only if your application can tolerate an occasional missed change. Otherwise, consider using `HASHBYTES` instead. With a specified MD5 hash algorithm, the probability that `HASHBYTES` will return the same result, for two different inputs, is much lower compared to `BINARY_CHECKSUM`.
   
-BINARY_CHECKSUM can operate over a list of expressions, and it returns the same value for a specified list. BINARY_CHECKSUM applied over any two lists of expressions returns the same value if the corresponding elements of the two lists have the same type and byte representation. For this definition, null values of a specified type are considered to have the same byte representation.
+`BINARY_CHECKSUM` can operate over a list of expressions, and it returns the same value for a specified list. `BINARY_CHECKSUM` applied over any two lists of expressions returns the same value if the corresponding elements of the two lists have the same type and byte representation. For this definition, null values of a specified type are considered to have the same byte representation.
   
-BINARY_CHECKSUM and CHECKSUM are similar functions: They can be used to compute a checksum value on a list of expressions, and the order of expressions affects the resultant value. The order of columns used for BINARY_CHECKSUM(*) is the order of columns specified in the table or view definition. This includes computed columns.
+`BINARY_CHECKSUM` and `CHECKSUM` are similar functions. They can be used to compute a checksum value on a list of expressions, and the order of expressions affects the resultant value. The order of columns used for `BINARY_CHECKSUM(*)` is the order of columns specified in the table or view definition. This includes computed columns.
   
-BINARY_CHECKSUM and CHECKSUM return different values for the string data types, where locale can cause strings with different representation to compare as equal. The string data types are  
+`BINARY_CHECKSUM` and `CHECKSUM` return different values for the string data types, where locale can cause strings with different representation to compare as equal. The string data types are  
 
 * **char**  
 * **nchar**  
@@ -69,9 +70,9 @@ or
 
 * **sql_variant** (if the base type of **sql_variant** is a string data type).  
   
-For example, the strings "McCavity" and "Mccavity" have different BINARY_CHECKSUM values. In contrast, for a case-insensitive server, CHECKSUM returns the same checksum values for those strings. You should avoid comparison of CHECKSUM values with BINARY_CHECKSUM values.
+For example, the strings "McCavity" and "Mccavity" have different `BINARY_CHECKSUM` values. In contrast, for a case-insensitive server, `CHECKSUM` returns the same checksum values for those strings. You should avoid comparison of `CHECKSUM` values with `BINARY_CHECKSUM` values.
  
-BINARY_CHECKSUM supports up to 8,000 characters of type **varbinary(max)** and up to 255 characters of type **nvarchar(max)**.
+`BINARY_CHECKSUM` supports any length of type **varbinary(max)** and up to 255 characters of type **nvarchar(max)**.
   
 ## Examples  
 This example uses `BINARY_CHECKSUM` to detect changes in a table row.
@@ -93,7 +94,8 @@ GO
   
 ## See also
 [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Write (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/23/2017"
+ms.date: "07/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -54,6 +54,6 @@ byte[] encoding = stream.ToArray();
 [Read &#40;Database Engine&#41;](../../t-sql/data-types/read-database-engine.md)  
 [ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
+[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
   

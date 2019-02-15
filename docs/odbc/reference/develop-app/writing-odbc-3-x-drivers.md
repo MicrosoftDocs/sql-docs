@@ -100,9 +100,9 @@ The following table shows function support in an ODBC 3.*x* driver and an ODBC a
 |**SQLTables**|Yes|Yes|No|  
 |**SQLTransact**|No|No[1]|Yes|  
   
- [1]   This function is deprecated in ODBC 3.*x*. ODBC 3.*x* applications should not use this function. However, an Open Group or ISO CLI–compliant application can call this function.  
+ [1]   This function is deprecated in ODBC 3.*x*. ODBC 3.*x* applications should not use this function. However, an Open Group or ISO CLI-compliant application can call this function.  
   
- [2]   ODBC 3.*x* applications should use **SQLBindParameter** instead of **SQLBindParam**. However, an Open Group or ISO CLI–compliant application can call this function.  
+ [2]   ODBC 3.*x* applications should use **SQLBindParameter** instead of **SQLBindParam**. However, an Open Group or ISO CLI-compliant application can call this function.  
   
  [3]   Driver writers should note that the ODBC 2.*x* column attributes SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE, and SQL_COLUMN_LENGTH must be supported with **SQLColAttribute**.  
   

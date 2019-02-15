@@ -90,5 +90,5 @@ By default, members of the **sysadmin** fixed server role can view information a
     GO  
     ```  
   
-For more information, see [sp_help_alert (Transact-SQL)](http://msdn.microsoft.com/850cef4e-6348-4439-8e79-fd1bca712091).  
+For more information, see [sp_help_alert (Transact-SQL)](https://msdn.microsoft.com/850cef4e-6348-4439-8e79-fd1bca712091).  
   

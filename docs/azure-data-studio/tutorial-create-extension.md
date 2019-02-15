@@ -1,11 +1,12 @@
 ---
-title: "Tutorial: Create an extension for Azure Data Studio | Microsoft Docs"
-description: This tutorial demonstrates how to create an extension for Azure Data Studio.
-ms.custom: "tools|sos"
+title: "Tutorial: Create an extension"
+titleSuffix: Azure Data Studio
+description: This tutorial demonstrates how to create an extension to add custom functionality to Azure Data Studio.
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: "tutorial"
 author: "kevcunnane"
 ms.author: "kcunnane"
@@ -14,7 +15,7 @@ manager: craigg
 
 # Tutorial: Create an Azure Data Studio extension
 
-This tutorial demonstrates how to create a new Azure Data Studio extension. The extension creates familiar SSMS keybindings in Azure Data Studio.
+This tutorial demonstrates how to create a new Azure Data Studio extension. The extension creates familiar SSMS key bindings in Azure Data Studio.
 
 During this tutorial you learn how to:
 > [!div class="checklist"]
@@ -32,7 +33,7 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 - [Node.js](https://nodejs.org) installed and available in your `$PATH`. Node.js includes [npm](https://www.npmjs.com/), the Node.js Package Manager, which is used to install the extension generator.
 - [Visual Studio Code](https://code.visualstudio.com) to debug the extension.
 - The Azure Data Studio [Debug extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Ensure sqlops is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'sqlops' command in PATH* option.
+- Ensure `sqlops` is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'sqlops' command in PATH* option.
 - SQL Operations Studio Debug extension (optional). This lets you test your extension without needing to package and install it into Azure Data Studio.
 
 
@@ -56,7 +57,7 @@ To create an extension:
 
 3. Follow the steps to fill in the extension name (for this tutorial, use **ssmskeymap**), and add a description.
 
-Completing the previous steps creates a new folder. Open the folder in Visual Studio Code and you're ready to create your own keybinding extension!
+Completing the previous steps creates a new folder. Open the folder in Visual Studio Code and you're ready to create your own key binding extension!
 
 
 ### Add a keyboard shortcut
@@ -68,12 +69,12 @@ Now that we have our extension ready to go, add some SSMS keyboard shortcuts (or
 The top things I saw missing were:
 
 - Run a query with the actual execution plan enabled. This is **Ctrl+M** in SSMS and doesn't have a binding in Azure Data Studio.
-- Having **CTRL+SHIFT+E** as a 2nd way of running a query. User feedback indicated that this was missing.
+- Having **CTRL+SHIFT+E** as a second way of running a query. User feedback indicated that this was missing.
 - Having **ALT+F1** run `sp_help`. We added this in Azure Data Studio but since that binding was already in use, we mapped it to **ALT+F2** instead.
 - Toggle full screen (**SHIFT+ALT+ENTER**).
 - **F8** to show **Object Explorer** / **Servers view**.
 
-It’s easy to find and replace these keybindings. Run *Open Keyboard Shortcuts* to show the **Keyboard Shortcuts** tab in Azure Data Studio, search for *query* and then choose **Change Keybinding**. Once you're done changing the keybinding you can see the updated mapping in the keybindings.json file (run *Open Keyboard Shortcuts* to see it).
+It's easy to find and replace these key bindings. Run *Open Keyboard Shortcuts* to show the **Keyboard Shortcuts** tab in Azure Data Studio, search for *query* and then choose **Change Key binding**. Once you're done changing the keybinding, you can see the updated mapping in the keybindings.json file (run *Open Keyboard Shortcuts* to see it).
 
 ![keyboard shortcuts](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
@@ -127,11 +128,11 @@ Select **F5** to launch Azure Data Studio in debug mode with the extension runni
 
 ![test extension](./media/tutorial-create-extension/test-extension.png)
 
-Keymaps are one of the quickest extensions to create, so your new extension should now be successfully working and ready to share.
+Key maps are one of the quickest extensions to create, so your new extension should now be successfully working and ready to share.
 
 ## Package your extension
 
-To share with others you need to package the extension into a single file. This can be published to the Azure Data Studio extension marketplace, or just shared among your team or community. To do this, you need to install another npm package from the command line:
+To share with others you need to package the extension into a single file. This can be published to the Azure Data Studio extension marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
 
 `npm install -g vsce`
 
@@ -169,7 +170,7 @@ In this tutorial, you learned how to:
 > * Publish your extension to the marketplace
 
 
-We hope after reading this you’ll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
+We hope after reading this you'll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
 
 If you have an idea but are not sure how to get started, please open an issue or tweet at the team: [azuredatastudio](https://twitter.com/azuredatastudio).
 

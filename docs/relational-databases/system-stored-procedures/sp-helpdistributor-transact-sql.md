@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpdistributor_TSQL"
@@ -45,43 +44,43 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## Arguments  
- [ **@distributor=**] **'***distributor***'** OUTPUT  
+ [ **@distributor=**] **'**_distributor_**'** OUTPUT  
  Is the name of the Distributor. Distributor is **sysname**, with a default of **%**, which is the only value that returns a result set.  
   
- [ **@distribdb=**] **'***distribdb***'** OUTPUT  
+ [ **@distribdb=**] **'**_distribdb_**'** OUTPUT  
  Is the name of the distribution database. *distribdb* is **sysname**, with a default of **%**, which is the only value that returns a result set.  
   
- [ **@directory=**] **'***directory***'** OUTPUT  
+ [ **@directory=**] **'**_directory_**'** OUTPUT  
  Is the working directory. *directory* is **nvarchar(255)**, with a default of **%**, which is the only value that returns a result set.  
   
- [ **@account=**] **'***account***' OUTPUT**  
+ [ **@account=**] **'**_account_**' OUTPUT**  
  Is the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user account. *account*is **nvarchar(255)**, with a default of **%**, which is the only value that returns a result set.  
   
- [ **@min_distretention=**] *min_distretention***OUTPUT**  
+ [ **@min_distretention=**] _min_distretention_**OUTPUT**  
  Is the minimum distribution retention period, in hours. *min_distretention* is **int**, with a default of **-1**.  
   
- [ **@max_distretention=**] *max_distretention***OUTPUT**  
+ [ **@max_distretention=**] _max_distretention_**OUTPUT**  
  Is the maximum distribution retention period, in hours. *max_distretention* is **int**, with a default of **-1**.  
   
- [ **@history_retention=**] *history_retention***OUTPUT**  
+ [ **@history_retention=**] _history_retention_**OUTPUT**  
  Is the history retention period, in hours. *history_retention* is **int**, with a default of **-1**.  
   
- [ **@history_cleanupagent=**] **'***history_cleanupagent***' OUTPUT**  
+ [ **@history_cleanupagent=**] **'**_history_cleanupagent_**' OUTPUT**  
  Is the name of the history cleanup agent. *history_cleanupagent* is **nvarchar(100)**, with a default of **%**, which is the only value that returns a result set.  
   
- [ **@distrib_cleanupagent =**] **'***distrib_cleanupagent***' OUTPUT**  
+ [ **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**' OUTPUT**  
  Is the name of the distribution cleanup agent. *distrib_cleanupagent* is **nvarchar(100)**, with a default of **%**, which is the only value that returns a result set.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'**_publisher_**'**  
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
- [ **@local=**] **'***local***'**  
+ [ **@local=**] **'**_local_**'**  
  Is whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should get local server values. *local* is **nvarchar(5)**, with a default of NULL.  
   
- [ **@rpcsrvname=**] **'***rpcsrvname***' OUTPUT**  
+ [ **@rpcsrvname=**] **'**_rpcsrvname_**' OUTPUT**  
  Is the name of the server that issues remote procedure calls. *rpcsrvname* is **sysname**, with a default of **%**, which is the only value that returns a result set.  
   
- [ **@publisher_type**= ] **'***publisher_type***' OUTPUT**  
+ [ **@publisher_type**= ] **'**_publisher_type_**' OUTPUT**  
  Is the publisher type of the Publisher. *publisher_type* is **sysname**, with a default of **%**, which is the only value that returns a result set.  
   
 ## Result Sets  

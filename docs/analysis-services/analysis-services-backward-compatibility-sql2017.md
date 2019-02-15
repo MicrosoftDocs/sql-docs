@@ -1,6 +1,6 @@
 ﻿---
-title: "SQL Server 2017 Analysis Services backward compatibility  | Microsoft Docs"
-ms.date: 05/08/2018
+title: "SQL Server 2017 Analysis Services backward compatibility | Microsoft Docs"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -16,7 +16,7 @@ manager: kfile
 This article describes changes in feature availability and behavior between the current release and the previous release.
 
 ## Deprecated features
-A *deprecated feature* will be discontinued from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. It's recommended you discontinue using deprecated features in new and existing projects to maintain compatibility with future releases.
+A *deprecated feature* will be discontinued from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. It's recommended you discontinue using deprecated features in new and existing projects to maintain compatibility with future releases. Documentation is not updated for deprecated features.
 
 The following features are deprecated in this release:
   
@@ -55,7 +55,7 @@ There are no breaking changes in this release.
 ## Behavior changes
 A *behavior change* affects how the same feature works in the current release as compared to the previous release. Only significant behavior changes are described. Changes in  user interface are not included.
 
-Changes to MDSCHEMA_MEASUREGROUP_DIMENSIONS and DISCOVER_CALC_DEPENDENCY, detailed in the [What’s new in SQL Server 2017 CTP 2.1 for Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) announcement.
+Changes to MDSCHEMA_MEASUREGROUP_DIMENSIONS and DISCOVER_CALC_DEPENDENCY, detailed in the [What's new in SQL Server 2017 CTP 2.1 for Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) announcement.
 
 
 ## See also

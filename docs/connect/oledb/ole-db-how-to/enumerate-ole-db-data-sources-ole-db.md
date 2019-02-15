@@ -21,16 +21,16 @@ manager: craigg
 
   This sample shows how to use the enumerator object to list the data sources available.  
   
- To list the data sources visible to the MSOLEDBSQL enumerator, the consumer calls the [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) method. This method returns a rowset of information about the currently visible data sources.  
+ To list the data sources visible to the MSOLEDBSQL enumerator, the consumer calls the [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) method. This method returns a rowset of information about the currently visible data sources.  
   
  Depending on the network library used, the appropriate domain is searched for the data sources. For named pipes, it is the domain to which the client is logged on. For AppleTalk, it is the default zone. For SPX/IPX, it is the list of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations found in the bindery. For Banyan VINES, it is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations found on the local network. Multiprotocol and TCP/IP sockets are not supported.  
   
  When the server is turned off or on, it can take few minutes to update the information in these domains.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### To enumerate OLE DB data sources  
   

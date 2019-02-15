@@ -54,6 +54,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Parity of [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).Used internally to determine the end of log within a VLF.|
 |vlf_first_lsn|**nvarchar(48)** |[Log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the first log record in the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar(48)** |[Log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the log record that created the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Applies to:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Shows the thumbprint of the encryptor of the VLF if the VLF is encrypted using [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), otherwise NULL. |
 
 ## Remarks
 The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement.    

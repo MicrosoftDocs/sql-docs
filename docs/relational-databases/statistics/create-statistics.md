@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "creating statistics"
   - "statistics [SQL Server], creating"
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -63,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Click the plus sign to expand the table in which you want to create a new statistic.  
   
-4.  Right-click the **Statistics** folder and select **New Statistics…**.  
+4.  Right-click the **Statistics** folder and select **New Statistics...**.  
   
      The following properties show on the **General** page in the **New Statistics on Table**_table\_name_ dialog box.  
   

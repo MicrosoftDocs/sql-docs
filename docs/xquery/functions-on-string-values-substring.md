@@ -5,8 +5,7 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -28,7 +27,7 @@ manager: craigg
 ```  
   
 fn:substring($sourceString as xs:string?,  
-                          $startingLoc  as as xs:decimal?) as xs:string?  
+                          $startingLoc as xs:decimal?) as xs:string?  
   
 fn:substring($sourceString as xs:string?,  
                           $startingLoc as xs:decimal?,  
@@ -71,7 +70,7 @@ fn:substring($sourceString as xs:string?,
  The query retrieves the first 50 characters of the text that describes the product model, the <`Summary`> element in the document.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Prod>{ substring(string((/pd:ProductDescription/pd:Summary)[1]), 1, 50) }</Prod>  
  ') as Result  

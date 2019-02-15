@@ -5,11 +5,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: "reference"
-f1_keywords: 
-  - "vs.toolbox"
 helpviewer_keywords: 
   - "Toolbox [SQL Server Management Studio]"
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
@@ -38,6 +35,4 @@ manager: craigg
   
 ## See Also  
  [Use the Toolbox](../../ssms/use-the-toolbox.md)   
- [Choose Toolbox Items &#40;Maintenance Tasks Page&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
-  
-  
+ [Choose Toolbox Items &#40;Maintenance Tasks Page&#41;](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  

@@ -16,6 +16,7 @@ manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create an Analysis Services Job Step
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -41,9 +42,9 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
   
--   If the job step uses an Analysis Services command, the command statement must be an XML for Analysis Services **Execute** method. The statement may not contain a complete Simple Object Access Protocol (SOAP) envelope or an XML for Analysis **Discover** method. While [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not. For more information about XML for Analysis Services, see [XML for Analysis Overview (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
+-   If the job step uses an Analysis Services command, the command statement must be an XML for Analysis Services **Execute** method. The statement may not contain a complete Simple Object Access Protocol (SOAP) envelope or an XML for Analysis **Discover** method. While [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not. For more information about XML for Analysis Services, see [XML for Analysis Overview (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
--   If the job step uses an Analysis Services query, the query statement must be a multidimensional expressions (MDX) query. For more information about MDX, see [MDX Statement Fundamentals (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
+-   If the job step uses an Analysis Services query, the query statement must be a multidimensional expressions (MDX) query. For more information about MDX, see [MDX Statement Fundamentals (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ### <a name="Security"></a>Security  
   
@@ -118,7 +119,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
             N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
         @command =
-            N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+            N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
@@ -140,7 +141,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
     GO  
     ```  
   
-For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+For more information, see [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 #### To create an Analysis Services query job step  
   
@@ -167,10 +168,10 @@ For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.
     GO  
     ```  
   
-For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+For more information, see [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To create a PowerShell Script job step**  
   
-Use the **JobStep** class by using a programming language that you choose, such as XMLA or MDX. For more information, see [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Use the **JobStep** class by using a programming language that you choose, such as XMLA or MDX. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

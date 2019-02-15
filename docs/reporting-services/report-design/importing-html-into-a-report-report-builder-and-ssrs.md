@@ -1,15 +1,15 @@
 ---
 title: "Importing HTML into a Report (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 03/01/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-
-
+description: Learn about using a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a report.
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Importing HTML into a Report (Report Builder and SSRS)
   You can use a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a report. The text can come from any simple or complex expression that evaluates to correctly formatted HTML. Formatted text can be rendered to all supported output formats, including PDF.  
@@ -22,9 +22,6 @@ ms.author: maggies
 >  When you import text that contains HTML markup, the data must always be parsed by the text box first. Because only a subset of HTML tags is supported, the HTML that is shown in the rendered report may differ from your original HTML.  
   
  To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## Supported HTML Tags  
  The following is a complete list of tags that will render as HTML when defined as placeholder text:  
@@ -59,8 +56,6 @@ ms.author: maggies
     -   Only valid RDL size values, in absolute CSS length units are supported. Supported units are: in, cm, mm, pt, pc.  
   
     -   Relative CSS length units are ignored and not supported. Unsupported units include em, ex, px,%,rem.  
-  
-     For more information on CSS units, see: [CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
   
 -   color  
   

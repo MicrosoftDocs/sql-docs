@@ -71,7 +71,7 @@ manager: craigg
   
 3.  On the **Select how to define the connection** page, choose **Create a data source based on an existing or new connection** and then click **New** to open **Connection Manager**.  
   
-     New connections are created in Connection Manager. In Connection Manager, you select a provider and then specify the connection string properties used by that provider to connect to the underlying data. The exact information required depends upon the provider selected, but generally such information includes a server or service instance, information for logging on to the server or service instance, a database or file name, and other provider-specific settings. For the remainder of this procedure, we’ll assume a SQL Server database connection.  
+     New connections are created in Connection Manager. In Connection Manager, you select a provider and then specify the connection string properties used by that provider to connect to the underlying data. The exact information required depends upon the provider selected, but generally such information includes a server or service instance, information for logging on to the server or service instance, a database or file name, and other provider-specific settings. For the remainder of this procedure, we'll assume a SQL Server database connection.  
   
 4.  Select the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework or native OLE DB provider to use for the connection.  
   

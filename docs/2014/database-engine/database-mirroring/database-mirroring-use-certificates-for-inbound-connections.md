@@ -107,7 +107,7 @@ manager: craigg
   
 5.  Grant CONNECT permission on the login for the remote mirroring endpoint.  
   
-     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login—that is, to connect to `HOST_B_login`—use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login-that is, to connect to `HOST_B_login`-use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  

@@ -5,7 +5,7 @@ ms.date: "03/14/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: sql-data-warehouse
-ms.component: system-objects
+ms.subservice: design
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

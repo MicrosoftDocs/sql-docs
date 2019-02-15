@@ -59,7 +59,7 @@ EXEC managed_backup.sp_backup_on_demand
  Requires membership in **db_backupoperator** database role, with **ALTER ANY CREDENTIAL** permissions, and **EXECUTE** permissions on **sp_delete_backuphistory**stored procedure.  
   
 ## Examples  
- The following example makes a database backup request for the database ‘TestDB’. This database has [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] enabled.  
+ The following example makes a database backup request for the database 'TestDB'. This database has [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] enabled.  
   
 ```  
 Use MSDB  

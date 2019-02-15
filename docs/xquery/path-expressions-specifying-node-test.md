@@ -5,8 +5,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -201,8 +200,8 @@ text3
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::wm:Warranty  
 ')  
 FROM Production.ProductModel  
@@ -222,7 +221,7 @@ WHERE ProductModelID=19
  This is the result:  
   
 ```  
-<wm:Warranty xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+<wm:Warranty xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
   <wm:WarrantyPeriod>3 years</wm:WarrantyPeriod>  
   <wm:Description>parts and labor</wm:Description>  
 </wm:Warranty>     
@@ -232,8 +231,8 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::*  
 ')  
 FROM Production.ProductModel  
@@ -246,8 +245,8 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::wm:*  
 ')  
 FROM Production.ProductModel  
@@ -258,8 +257,8 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::*:Maintenance  
 ')  
 FROM Production.ProductModel  
@@ -275,8 +274,8 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::PD:Features/child::text()  
 ')  
 FROM Production.ProductModel  
@@ -303,8 +302,8 @@ These are the product highlights.
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::PD:ProductDescription/child::comment()  
 ')  
 FROM Production.ProductModel  
@@ -328,8 +327,8 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::processing-instruction()  
 ')  
 FROM Production.ProductModel  
@@ -346,8 +345,8 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
  /child::processing-instruction("xml-stylesheet")  
 ')  
 FROM Production.ProductModel  

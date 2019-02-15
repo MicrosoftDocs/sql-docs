@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.detachdatabase.f1"
@@ -80,7 +79,7 @@ manager: craigg
   
     -   When a database is involved with replication, the **Status** is **Not ready** and the **Message** column displays **Database replicated**.  
   
-    -   When a database has one or more active connections, the **Status** is **Not ready** and the **Message** column displays *<number_of_active_connections>***Active connection(s)** — for example: **1 Active connection(s)**. Before you can detach the database, you need to disconnect any active connections by selecting **Drop Connections**.  
+    -   When a database has one or more active connections, the **Status** is **Not ready** and the **Message** column displays _<number_of_active_connections>_**Active connection(s)** - for example: **1 Active connection(s)**. Before you can detach the database, you need to disconnect any active connections by selecting **Drop Connections**.  
   
      To obtain more information about a message, click the hyperlinked text to open Activity Monitor.  
   

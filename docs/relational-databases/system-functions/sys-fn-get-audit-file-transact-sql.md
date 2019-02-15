@@ -101,8 +101,8 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|SID of target login. Is nullable. Returns NULL if not applicable.|  
 |target_database_principal_name|**sysname**|Target user of action. Is nullable. Returns NULL if not applicable.|  
 |server_instance_name|**sysname**|Name of the server instance where the audit occurred. The standard server\instance format is used.|  
-|database_name|**sysname**|The database context in which the action occurred. Is nullable. Returns NULL for audits occuring at the server level.|  
-|schema_name|**sysname**|The schema context in which the action occurred. Is nullable. Returns NULL for audits occuring outside a schema.|  
+|database_name|**sysname**|The database context in which the action occurred. Is nullable. Returns NULL for audits occurring at the server level.|  
+|schema_name|**sysname**|The schema context in which the action occurred. Is nullable. Returns NULL for audits occurring outside a schema.|  
 |object_name|**sysname**|The name of the entity on which the audit occurred. This includes the following:<br /> Server objects<br /> Databases<br /> Database objects<br /> Schema objects<br /> Is nullable. Returns NULL if the entity is the Server itself or if the audit is not performed at an object level. For example, Authentication.|  
 |statement|**nvarchar(4000)**|TSQL statement if it exists. Is nullable. Returns NULL if not applicable.|  
 |additional_information|**nvarchar(4000)**|Unique information that only applies to a single event is returned as XML. A small number of auditable actions contain this kind of information.<br /><br /> One level of TSQL stack will be displayed in XML format for actions that have TSQL stack associated with them. The XML format will be:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indicates the current nesting level of the frame. The Module name is represented in three part format (database_name, schema_name and object_name).  The module name will be parsed to escape invalid xml characters like `'\<'`, `'>'`, `'/'`, `'_x'`. They will be escaped as `_xHHHH\_`. The HHHH stands for the four-digit hexadecimal UCS-2 code for the character<br /><br /> Is nullable. Returns NULL when there is no additional information reported by the event.|  
@@ -135,10 +135,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  This example reads from a file that is named `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

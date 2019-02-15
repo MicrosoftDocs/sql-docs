@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
      [Security](#Security)  
   
--   **To coy columns, using:**  
+-   **To copy columns, using:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -72,7 +72,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 4.  In the **Add Table** dialog box, select the source and destination table, click **Add**, and then close the **Add Table** dialog box. 
 
-5.  Right-click an open area of the the Query Editor, point to **Change Type**, and then click **Insert Results**.  
+5.  Right-click an open area of the Query Editor, point to **Change Type**, and then click **Insert Results**.  
 
 6.  In the **Choose Target Table for Insert Results** dialog box, select the destination table. 
 

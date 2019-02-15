@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Creating Predictions for the Call Center Models (Intermediate Data Mining Tutorial)
   Now that you have learned something about the interactions between shifts, the number of operators, calls, and service grade, you are ready to create some prediction queries that can be used in business analysis and planning. You will first create some predictions on the exploratory model to test some assumptions. Next, you will create bulk predictions by using the logistic regression model.  
@@ -178,9 +177,9 @@ manager: craigg
 ## Remarks  
  The Data Mining Add-Ins for Excel 2007 provide logistic regression wizards that make it easy to answer complex questions, such as how many Level Two Operators would be required to improve service grade to a target level for a specific shift. The data mining add-ins are a free download, and include wizards that are based on the neural network or logistic regression algorithms. For more information, see the following links:  
   
--   [SQL Server 2005 Data Mining Add-Ins for Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): Goal Seek and What If Scenario Analysis  
+-   [SQL Server 2005 Data Mining Add-Ins for Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Goal Seek and What If Scenario Analysis  
   
--   [SQL Server 2008 Data Mining Add-Ins for Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): Goal Seek Scenario Analysis, What If Scenario Analysis, and Prediction Calculator  
+-   [SQL Server 2008 Data Mining Add-Ins for Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Goal Seek Scenario Analysis, What If Scenario Analysis, and Prediction Calculator  
   
 ## Conclusion  
  You have learned to create, customize, and interpret mining models that are based on the Microsoft Neural Network algorithm and the Microsoft Logistic Regression algorithm. These model types are sophisticated and permit almost infinite variety in analysis, and therefore can be complex and difficult to master.  

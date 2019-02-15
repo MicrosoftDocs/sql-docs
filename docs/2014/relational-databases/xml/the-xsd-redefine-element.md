@@ -20,7 +20,7 @@ manager: craigg
   
 1.  Create a new XML Schema collection with the modified schema components.  
   
-2.  Retype all `xml` data types (XML DT) that use the the XML Schema collection to be redefined to use the new XML Schema collection instead. To do this, use the ALTER COLUMN option of the ALTER TABLE command for retyping columns, or change the XML Schema collection constraints on variables or parameters.  
+2.  Retype all `xml` data types (XML DT) that use the XML Schema collection to be redefined to use the new XML Schema collection instead. To do this, use the ALTER COLUMN option of the ALTER TABLE command for retyping columns, or change the XML Schema collection constraints on variables or parameters.  
   
 3.  Drop the old version of the XML Schema collection.  
   

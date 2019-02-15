@@ -34,7 +34,7 @@ manager: craigg
 2.  Double click the **CustomerKey** column name, then type `Customer  Id`, and then press ENTER.  
   
     > [!TIP]  
-    >  You can also rename a column in the **Column Name** property in the column’s **Properties** window, or in Diagram View.  
+    >  You can also rename a column in the **Column Name** property in the column's **Properties** window, or in Diagram View.  
   
 3.  Rename the remaining columns in the **Customer** table, as well as the columns in the remaining tables, replacing the source name with the friendly name:  
   

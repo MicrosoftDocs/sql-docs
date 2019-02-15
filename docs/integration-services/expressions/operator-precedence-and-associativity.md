@@ -23,10 +23,10 @@ manager: craigg
 |Operator symbol|Type of Operation|Associativity|  
 |---------------------|-----------------------|-------------------|  
 |( )|Expression|Left to right|  
-|–, !, ~|Unary|Right to left|  
+|-, !, ~|Unary|Right to left|  
 |casts|Unary|Right to left|  
 |*, / ,%|Multiplicative|Left to right|  
-|+, –|Additive|Left to right|  
+|+, -|Additive|Left to right|  
 |\<, >, \<=, >=|Relational|Left to right|  
 |==, !=|Equality|Left to right|  
 |&|Bitwise AND|Left to right|  

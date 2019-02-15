@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "configmgr-client"
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: stevestein
@@ -17,7 +16,7 @@ manager: craigg
   
 ## Options  
  **Binary Path**  
- Displays the the location of the program files used by this service.  
+ Displays the location of the program files used by this service.  
   
  **Error Control**  
  1 indicates `SERVICE_ERROR_NORMAL`. If the service fails to start during computer start up, the startup program logs the error and displays a pop-up message box but continues the startup operation. This value cannot be changed.  
@@ -47,6 +46,6 @@ manager: craigg
 -   Disabled: This service cannot be started.  
   
  **State**  
- Indicates whether this service is running, stopped, or disabled. "**…**" indicates a state change is pending.  
+ Indicates whether this service is running, stopped, or disabled. "**...**" indicates a state change is pending.  
   
   

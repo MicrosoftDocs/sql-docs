@@ -85,7 +85,7 @@ The v7.3 release of SSMA for DB2 contains the following changes:
 ## SSMA v7.2
 The v7.2 release of SSMA for DB2 contains the following changes:
 - Improved quality and conversion metric with targeted fixes based on customer feedback.
-- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA's conversion rates.
 
 ## SSMA v7.1
 The v7.1 release of SSMA for Access contains the following changes:

@@ -20,11 +20,11 @@ This documentation introduces you to SSMA for Oracle and provides step-by-step i
   
 |Section|Description|  
 |-----------|---------------|  
-|[What's New in SSMA  for Oracle](http://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|What is new in this version of SSMA for Oracle|  
+|[What's New in SSMA  for Oracle](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|What is new in this version of SSMA for Oracle|  
 |[Installing SSMA  for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|Contains topics that provide prerequisites and instructions for installing the SSMA for Oracle client and required components on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Getting Started with SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|Introduces the user interface, projects, and configuration options.|  
 |[Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|Provides an overview of the conversion process and detailed information about each step in the process.|  
 |[User Interface Reference &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|Contains documentation for SSMA for Oracle dialog boxes.|  
 |[Working with SSMA for Oracle Console](working-with-ssma-for-oracle-console-oracletosql.md)|Contains documentation on the SSMA Console application|  
-|[Getting SSMA for Oracle Assistance](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Provides information about getting additional assistance.|  
+|[Getting SSMA for Oracle Assistance](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Provides information about getting additional assistance.|  
   

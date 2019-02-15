@@ -51,7 +51,10 @@ manager: craigg
 # CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 > [!NOTE]   
 >  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
@@ -78,7 +81,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -111,7 +114,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -258,7 +261,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -380,10 +384,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"**default**"**} can also be specified in a PRIMARY KEY or UNIQUE constraint. These constraints create indexes. If *filegroup* is specified, the index is stored in the named filegroup. If **"**default**"** is specified, or if ON is not specified at all, the index is stored in the same filegroup as the table. If the PRIMARY KEY or UNIQUE constraint creates a clustered index, the data pages for the table are stored in the same filegroup as the index. If CLUSTERED is specified or the constraint otherwise creates a clustered index, and a *partition_scheme* is specified that differs from the *partition_scheme* or *filegroup* of the table definition, or vice-versa, only the constraint definition will be honored, and the other will be ignored.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If **"**default**"** is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  After you create a partitioned table, consider setting the LOCK_ESCALATION option for the table to AUTO. This can improve concurrency by enabling locks to escalate to partition (HoBT) level instead of the table. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  TEXTIMAGE_ON { *filegroup*| **"**default**"** }  
@@ -391,12 +395,12 @@ column_name <data_type>
   
  TEXTIMAGE_ON is not allowed if there are no large value columns in the table. TEXTIMAGE_ON cannot be specified if *partition_scheme* is specified. If **"**default**"** is specified, or if TEXTIMAGE_ON is not specified at all, the large value columns are stored in the default filegroup. The storage of any large value column data specified in CREATE TABLE cannot be subsequently altered.  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max), nvarchar(max), varbinary(max), xml and large UDT values are stored directly in the data row, up to a limit of 8000 bytes and as long as the value can fit the record. If the value does not fit in the record, a pointer is sorted in-row and the rest is stored out of row in the LOB storage space. 0 is the default value.
- TEXTIMAGE_ON only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row. 
-
-
-> [!NOTE]  
+>  TEXTIMAGE_ON only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row. 
+> 
+> 
+> [!NOTE]
 >  In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in TEXTIMAGE_ON **"**default**"** or TEXTIMAGE_ON **[**default**]**. If **"**default**"** is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } 
@@ -469,8 +473,6 @@ column_name <data_type>
   
  IDENTITY  
  Indicates that the new column is an identity column. When a new row is added to the table, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides a unique, incremental value for the column. Identity columns are typically used with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. Both the seed and increment or neither must be specified. If neither is specified, the default is (1,1).  
-  
- In a memory-optimized table, the only allowed value for both *seed* and *increment* is 1; (1,1) is the default for *seed* and *increment*.  
   
  *seed*  
  Is the value used for the very first row loaded into the table.  
@@ -919,7 +921,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Azure SQL Database Managed Instance does not support memory optiimized tables. 
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Azure SQL Database managed instance does not support memory optimized tables. 
   
  The value  ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
@@ -972,7 +974,7 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
   
  Prefix local temporary table names with single number sign (#*table_name*), and prefix global temporary table names with a double number sign (##*table_name*).  
   
- SQL statements reference the temporary table by using the value specified for *table_name* in the CREATE TABLE statement, for example####:  
+ SQL statements reference the temporary table by using the value specified for *table_name* in the CREATE TABLE statement, for example:  
   
 ```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -981,6 +983,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  If more than one temporary table is created inside a single stored procedure or batch, they must have different names.  
+ 
+ If you include a *schema_name* when you create or access a temporary table, it is ignored.  All temporary tables are created in the dbo schema.
   
  If a local temporary table is created in a stored procedure or application that can be executed at the same time by several users, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different users. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the **sysobjects** table in **tempdb** is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.  
   
@@ -1038,9 +1042,9 @@ GO
 
 ## Database scoped global temporary tables (Azure SQL Database)
 
-Global temporary tables for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (initiated with ## table name) are stored in tempdb and shared among all users’ sessions across the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For information on SQL table types, see the above section on Create Tables.  
+Global temporary tables for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (initiated with ## table name) are stored in tempdb and shared among all users' sessions across the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For information on SQL table types, see the above section on Create Tables.  
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports global temporary tables that are also stored in tempdb and scoped to the database level. This means that global temporary tables are shared for all users’ sessions within the same [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. User sessions from other databases cannot access global temporary tables.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports global temporary tables that are also stored in tempdb and scoped to the database level. This means that global temporary tables are shared for all users' sessions within the same [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. User sessions from other databases cannot access global temporary tables.
 
 Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] follow the same syntax and semantics that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses for temporary tables. Similarly, global temporary stored procedures are also scoped to the database level in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Local temporary tables (initiated with # table name) are also supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and follow the same syntax and semantics that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  See the above section on [Temporary Tables](#temporary-tables).  
 
@@ -1049,7 +1053,7 @@ Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 
 ### Troubleshooting global temporary tables for Azure SQL Database 
 
-For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
 
 > [!NOTE]
 > Only a server admin can access the troubleshooting DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1220,7 +1224,7 @@ SELECT * FROM tempdb.sys.database_files
 |CLR user-defined type|Nullability is determined according to the column definition.|  
 |System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL is assigned.  <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL is assigned.<br /><br /> When any database settings are configured by using ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL is assigned.  <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL is assigned.<br /><br /> To view the database setting for ANSI_NULL_DEFAULT, use the **sys.databases** catalog view|  
   
- When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULTis OFF), the default of NOT NULL is assigned.  
+ When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULT is OFF), the default of NOT NULL is assigned.  
   
  If the column is a computed column, its nullability is always automatically determined by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To find out the nullability of this type of column, use the COLUMNPROPERTY function with the **AllowsNull** property.  
   
@@ -1429,7 +1433,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

@@ -1,11 +1,12 @@
 ---
-title: Quickly access insights and common tasks in Azure Data Studio | Microsoft Docs
-description: Learn about displaying insightful widgets in Azure Data Studio.
-ms.custom: "tools|sos"
+title: Quickly access insights and common tasks
+titleSuffix: Azure Data Studio
+description: Learn about displaying widgets on the database dashboard in Azure Data Studio.
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
@@ -40,7 +41,7 @@ After following this tutorial, read on to learn more about specific widgets that
 The Insight details flyout provides more detailed information for a related insight widget. 
 - An Insight widget renders an at-a-glance summary view with count, line, chart etc. 
 - The Insight details flyout provides "drill in" details, listing deeper data insights for each item listed in the high-level Insight widget. 
-  - The details flyout contents are defined with a separate SQL query to the main widget's query. 
+  - The details flyout contents are defined with a separate SQL query to the main widget's query.
 
 There is no set requirement for an Insight details query, but the layout is standard.
 - The top half of the view is always a 2-column "summary" view. Which columns to use are defined by the "label" and "value" properties of the JSON configuration
@@ -81,16 +82,17 @@ Sample Insight Details flyout configuration
     },
     "value": "second_column_and_condition_check_value_column_for_summary_list_view",
 ```
+
 |property|type|value|default value|description|comment|
 |:---|:---|:---|:---|:---|:---|
-|details|json object|||mandatory proerty to define insight detail definitions within its structure||
+|details|json object|||mandatory property to define insight detail definitions within its structure||
 |queryFile|string|||the insight detail sql query file path and filename relative to the location of package.json||
 |label|json object|||mandatory property to define each line item in the summary list view|in future the name of this property to change like 'summaryList'|
-|icon|string|||indicate the icon name to reder for each summary list view item.|(tbd) list of supported icons will be documented|
+|icon|string|||indicate the icon name to render for each summary list view item.|(tbd) list of supported icons will be documented|
 |column|string|||indicate the name of first column in the summary list view from the query result set|in future the name of this property will be changed to more intuitive name|
-|value|string|||indicate the name of second column in the summary list view from the query result set. The value of this column is used to check conditions and set color for each summary list view items's color dot|in future the name of this property will change to something more intuitive|
+|value|string|||indicate the name of second column in the summary list view from the query result set. The value of this column is used to check conditions and set color for each summary list view items color dot|in future the name of this property will change to something more intuitive|
 |condition|json object|||defines the condition check for column value and determine color for each summary list view item||
-|if|string|always, equals, notEquals, greaterThan, lessThan, greaterThanOrEqauls, lessThanOrEquals||condition check operator|in future the property name will change to operator|
+|if|string|always, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||condition check operator|in future the property name will change to operator|
 |equals|string|||condition check value|in future this property name will change to 'value'|
 
 ## Insight Actions
@@ -102,7 +104,7 @@ Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s Insight Actions conf
 
 ## Sample Insight Action definition
 
-```"actions"{}``` defines an insight action. Action can be defined over a specific scope such as ```"server"```, ```"database"``` and so on and [!INCLUDE[name-sos](../includes/name-sos-short.md)] passes the current connection context information to the action. 
+```"actions"{}``` defines an insight action. Action can be defined over a specific scope such as ```"server"```, ```"database"``` and so on and [!INCLUDE[name-sos](../includes/name-sos-short.md)] passes the current connection context information to the action.
 
 For example, when restore action is launched for WideWorldImporters database, ```"database": "${Database}"``` definition indicates to pass ```Database``` column value in your query result to the restore action. Then restore action starts for the database. ```"types"``` is a json array and multiple actions can be listed in the array. It basically becomes a context menu on Insight Details dialog that user can click and perform the action. 
 

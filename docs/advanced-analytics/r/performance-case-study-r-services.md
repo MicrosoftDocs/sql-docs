@@ -1,5 +1,5 @@
 ---
-title: Performance for SQL Server R Services - results and resources| Microsoft Docs
+title: Performance for SQL Server R Services - results and resources - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -57,7 +57,7 @@ For example, the following results are the times from a single test. The main ti
 
 **Sample timings**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -167,7 +167,7 @@ The execution time is more consistent and faster when using the Windows **High p
 
 This test assessed the impact of modifying the R code to avoid a common problem with string factors. Specifically, a model was trained using `rxLinMod` using two tables: in the first, factors are stored as strings; in the second table, factors are stored as integers.
 
-+ For the *airline* table, the [DayOfWeek] column contains strings. The _colInfo_ parameter was used to specify the factor levels (Monday, Tuesday, …)
++ For the *airline* table, the [DayOfWeek] column contains strings. The _colInfo_ parameter was used to specify the factor levels (Monday, Tuesday, ...)
 
 +  For the *airlineWithIndex* table, [DayOfWeek] is an integer. The _colInfo_ parameter was not specified.
 
@@ -337,7 +337,7 @@ For training large models, or scoring in large batches, the overhead might be mi
 
 + [Loan classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
 + [Early customer experiences with R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
-+ [Using R to detect fraud at 1 million transactions per second](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
++ [Using R to detect fraud at 1 million transactions per second](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## Resources
 
@@ -361,7 +361,7 @@ The following are links to information, tools, and scripts used in the developme
 
 ### Learn about SQL Server optimizations
 
-+ [Reorganize and Rebuild Indexes](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [Introduction to memory-optimized tables](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
@@ -396,7 +396,7 @@ The following are links to information, tools, and scripts used in the developme
 
 ## Other articles in this series
 
-[Performance tuning for R – introduction](sql-server-r-services-performance-tuning.md)
+[Performance tuning for R - introduction](sql-server-r-services-performance-tuning.md)
 
 [Performance tuning for R - SQL Server configuration](sql-server-configuration-r-services.md)
 

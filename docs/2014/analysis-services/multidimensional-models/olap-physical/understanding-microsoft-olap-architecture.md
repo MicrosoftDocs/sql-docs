@@ -25,21 +25,21 @@ manager: craigg
   
  [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
- [More…](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [More...](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Physical Architecture**  
  [OLAP Engine Server Components](olap-engine-server-components.md)  
   
  [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](local-cubes-analysis-services-multidimensional-data.md)  
   
- [More…](understanding-microsoft-olap-physical-architecture.md)  
+ [More...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Programming Architecture**  
- [Developing with Analysis Management Objects &#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Developing with ADOMD.NET](../adomd-net/developing-with-adomd-net.md)  
+ [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **International Considerations**  
  [Globalization scenarios for Analysis Services Multiidimensional](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  

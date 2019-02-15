@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Batching Methods
   The use of SOAP headers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enables you to include multiple Web service methods in a single operation. Methods run within the scope of a single database transaction, in the order in which they are called.  

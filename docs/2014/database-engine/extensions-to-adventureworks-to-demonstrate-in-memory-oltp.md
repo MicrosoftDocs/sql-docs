@@ -17,7 +17,7 @@ manager: craigg
  This sample showcases the new [!INCLUDE[hek_2](../includes/hek-2-md.md)] feature, which is part of [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. It shows the new memory-optimized tables and natively-compiled stored procedures, and can be used to demonstrate performance benefits of [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
->  To view this topic for SQL Server 2016, see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
+>  To view this topic for SQL Server 2016, see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://msdn.microsoft.com/library/mt465764.aspx)  
   
  The sample migrates 5 tables in the AdventureWorks database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using [!INCLUDE[hek_2](../includes/hek-2-md.md)] on your server.  
   
@@ -29,15 +29,15 @@ manager: craigg
   
 -   Instructions for [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Description of the sample tables and procedures](#Descriptionofthesampletablesandprocedures) – this includes descriptions of the tables and procedures added to AdventureWorks by the [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample, as well as considerations for migrating some of the original AdventureWorks tables to memory-optimized  
+-   [Description of the sample tables and procedures](#Descriptionofthesampletablesandprocedures) - this includes descriptions of the tables and procedures added to AdventureWorks by the [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample, as well as considerations for migrating some of the original AdventureWorks tables to memory-optimized  
   
--   Instructions for performing [Performance Measurements using the Demo Workload](#PerformanceMeasurementsusingtheDemoWorkload) – this includes instructions for installing and running ostress, a tool using for driving the workload, as well as running the demo workload itself  
+-   Instructions for performing [Performance Measurements using the Demo Workload](#PerformanceMeasurementsusingtheDemoWorkload) - this includes instructions for installing and running ostress, a tool using for driving the workload, as well as running the demo workload itself  
   
 -   [Memory and Disk Space Utilization in the Sample](#MemoryandDiskSpaceUtilizationintheSample)  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation, Developer, or Enterprise edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM - Evaluation, Developer, or Enterprise edition  
   
 -   For performance testing, a server with specifications similar to your production environment. For this particular sample you should have at least 16GB of memory available to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For general guidelines on hardware for [!INCLUDE[hek_2](../includes/hek-2-md.md)], see the following blog post:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -81,13 +81,13 @@ manager: craigg
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Download the sample script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ from [SQL Server 2014 RTM In-Memory OLTP Sample](http://go.microsoft.com/fwlink/?LinkID=396372) to a local folder.  
+5.  Download the sample script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' from [SQL Server 2014 RTM In-Memory OLTP Sample](https://go.microsoft.com/fwlink/?LinkID=396372) to a local folder.  
   
-6.  Update the value for the variable ‘checkpoint_files_location’ in the script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', to point to the target location for the [!INCLUDE[hek_2](../includes/hek-2-md.md)] checkpoint files. The checkpoint files should be placed on a drive with good sequential IO performance.  
+6.  Update the value for the variable 'checkpoint_files_location' in the script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', to point to the target location for the [!INCLUDE[hek_2](../includes/hek-2-md.md)] checkpoint files. The checkpoint files should be placed on a drive with good sequential IO performance.  
   
      Update the value for the variable 'database_name' to point to the AdventureWorks2014 database.  
   
-    1.  Be sure to include the backslash ‘\’ as part of the path name  
+    1.  Be sure to include the backslash '\' as part of the path name  
   
     2.  Example:  
   
@@ -102,23 +102,23 @@ manager: craigg
     1.  Using the sqlcmd command-line utility. For example, for example by running the following command from the command-line prompt in the folder containing the script:  
   
         ```  
-        sqlcmd –S . –E –i "ssSQL14 RTM hek_2 Sample.sql"  
+        sqlcmd -S . -E -i "ssSQL14 RTM hek_2 Sample.sql"  
         ```  
   
     2.  Using Management Studio:  
   
-        1.  Open the script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ in a query window  
+        1.  Open the script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' in a query window  
   
         2.  Connect to the target server that contains the database AdventureWorks2014  
   
-        3.  Enable SQLCMD Mode, by clicking on ‘Query -> SQLCMD Mode’  
+        3.  Enable SQLCMD Mode, by clicking on 'Query -> SQLCMD Mode'  
   
-        4.  Click the button ‘Execute’ to run the script  
+        4.  Click the button 'Execute' to run the script  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
  The sample creates new tables for products and sales orders, based on existing tables in AdventureWorks. The schema of the new tables is similar to the existing tables, with a few differences, as explained below.  
   
- The new memory-optimized tables carry the suffix ‘_inmem’. The sample also includes corresponding tables carrying the suffix ‘_ondisk’ – these tables can be used to make a one-to-one comparison between the performance of memory-optimized tables and disk-based tables on your system..  
+ The new memory-optimized tables carry the suffix '_inmem'. The sample also includes corresponding tables carrying the suffix '_ondisk' - these tables can be used to make a one-to-one comparison between the performance of memory-optimized tables and disk-based tables on your system..  
   
  Note that the memory-optimized tables used in the workload for performance comparison are fully durable and fully logged. They do not sacrifice durability or reliability to attain the performance gain.  
   
@@ -200,9 +200,9 @@ manager: craigg
   
  Sales.SalesOrderDetail  
   
--   *Default constraints* – similar to SalesOrderHeader, the default constraint requiring the system date/time is not migrated, instead the stored procedure inserting sales orders takes care of inserting the current system date/time on first insert.  
+-   *Default constraints* - similar to SalesOrderHeader, the default constraint requiring the system date/time is not migrated, instead the stored procedure inserting sales orders takes care of inserting the current system date/time on first insert.  
   
--   *Computed columns* – the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. To access this column use the view Sales.vSalesOrderDetail_extended_inmem.  
+-   *Computed columns* - the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. To access this column use the view Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* - The rowguid column is omitted. For details see the description for the table SalesOrderHeader.  
   
@@ -215,9 +215,9 @@ manager: craigg
   
  Production.Product  
   
--   *Alias UDTs* – the original table uses the user-defined data type dbo.Flag, which is equivalent to the system data type bit. The migrated table uses the bit data type instead.  
+-   *Alias UDTs* - the original table uses the user-defined data type dbo.Flag, which is equivalent to the system data type bit. The migrated table uses the bit data type instead.  
   
--   *BIN2 collation* – The columns Name and ProductNumber are included in index keys, and must thus have BIN2 collations in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Here, the assumption is that the app does not rely on collation specifics, like case insensitivity.  
+-   *BIN2 collation* - The columns Name and ProductNumber are included in index keys, and must thus have BIN2 collations in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Here, the assumption is that the app does not rely on collation specifics, like case insensitivity.  
   
 -   *Rowguid* - The rowguid column is omitted. For details see the description for the table SalesOrderHeader.  
   
@@ -257,7 +257,7 @@ manager: craigg
   
  HASH indexes are can be used to further optimize the workload. They are particularly optimized for point lookups and row inserts. However, one must consider that they do not support range scans, ordered scans, or search on leading index key columns. Therefore, care needs to be taken when using these indexes. In addition, it is necessary to specify the bucket_count at create time. It should usually be set at between one and two times the number of index key values, but overestimating is usually not a problem.  
   
- See Books Online for more details about [index guidelines](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) and guidelines for [choosing the right bucket_count](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
+ See Books Online for more details about [index guidelines](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) and guidelines for [choosing the right bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
   
  The indexes on the migrated tables have been tuned for the demo sales order processing workload. The workload relies on inserts and point lookups in the tables Sales.SalesOrderHeader_inmem and Sales.SalesOrderDetail_inmem, and it also relies on point lookups on the primary key columns in the tables Production.Product_inmem and Sales.SpecialOffer_inmem.  
   
@@ -265,7 +265,7 @@ manager: craigg
   
 -   HASH index on (SalesOrderID): bucket_count is sized at 10 million (rounded up to 16 million), because the expected number of sales orders is 10 million  
   
--   HASH index on (SalesPersonID): bucket_count is 1 million. The data set provided does not have a lot of sales persons, but this allows for future growth, plus you don’t pay a performance penalty for point lookups if the bucket_count is oversized.  
+-   HASH index on (SalesPersonID): bucket_count is 1 million. The data set provided does not have a lot of sales persons, but this allows for future growth, plus you don't pay a performance penalty for point lookups if the bucket_count is oversized.  
   
 -   HASH index on (CustomerID): bucket_count is 1 million. The data set provided does not have a lot of customers, but this allows for future growth.  
   
@@ -287,7 +287,7 @@ manager: craigg
   
  Sales.SpecialOffer_inmem has one HASH index on (SpecialOfferID): point lookups of special offers are in the critical part of the demo workload. The bucket_count is sized at 1 million to allow for future growth.  
   
- Sales.SpecialOfferProduct_inmem is not referenced in the demo workload, and thus there is no apparent need to use hash indexes on this table to optimize the workload – the indexes on (SpecialOfferID, ProductID) and (ProductID) are NONCLUSTERED.  
+ Sales.SpecialOfferProduct_inmem is not referenced in the demo workload, and thus there is no apparent need to use hash indexes on this table to optimize the workload - the indexes on (SpecialOfferID, ProductID) and (ProductID) are NONCLUSTERED.  
   
  Notice that in the above some of the bucket_counts are over-sized, but not the bucket_counts for the indexes on SalesOrderHeader_inmem and SalesOrderDetail_inmem: they are sized for just 10 million sales orders. This was done to allow installing the sample on systems with low memory availability, although in those cases the demo workload will fail with out-of-memory. If you do want to scale well beyond 10 million sales orders, feel free to increase the bucket counts accordingly.  
   
@@ -303,7 +303,7 @@ manager: craigg
   
     -   Output parameter:  
   
-        -   @SalesOrderID int – the SalesOrderID for the sales order that was just inserted  
+        -   @SalesOrderID int - the SalesOrderID for the sales order that was just inserted  
   
     -   Input parameters (required):  
   
@@ -317,7 +317,7 @@ manager: craigg
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – TVP that contains the line items of the order  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - TVP that contains the line items of the order  
   
     -   Input parameters (optional):  
   
@@ -345,7 +345,7 @@ manager: craigg
   
     -   Update the shipping information for a given sales order. This will also update the shipping information for all line items of the sales order.  
   
-    -   This is a wrapper procedure for the natively compiled stored procedures Sales.usp_UpdateSalesOrderShipInfo_native with retry logic to deal with (unexpected) potential conflicts with concurrent transactions updating the same order. For more information about retry logic see the Books Online topic [here](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   This is a wrapper procedure for the natively compiled stored procedures Sales.usp_UpdateSalesOrderShipInfo_native with retry logic to deal with (unexpected) potential conflicts with concurrent transactions updating the same order. For more information about retry logic see the Books Online topic [here](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -373,9 +373,9 @@ manager: craigg
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   Optional parameter: @object_id – ID of the object to validate integrity for  
+    -   Optional parameter: @object_id - ID of the object to validate integrity for  
   
-    -   This procedure relies on the tables dbo.DomainIntegrity, dbo.ReferentialIntegrity, and dbo.UniqueIntegrity for the integrity rules that need to be verified – the sample populates these tables based on the check, foreign key, and unique constraints that exist for the original tables in the AdventureWorks database.  
+    -   This procedure relies on the tables dbo.DomainIntegrity, dbo.ReferentialIntegrity, and dbo.UniqueIntegrity for the integrity rules that need to be verified - the sample populates these tables based on the check, foreign key, and unique constraints that exist for the original tables in the AdventureWorks database.  
   
     -   It relies on the helper procedures dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck, and dbo.GenerateUQCheck to generate the T-SQL needed for performing the integrity checks.  
   
@@ -387,16 +387,16 @@ manager: craigg
   
  Installation steps:  
   
-1.  Download and run the x64 installation package for the RML utilities from the following page: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  Download and run the x64 installation package for the RML utilities from the following page: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
-2.  If there is a dialog box saying certain files are in use, click ‘Continue’  
+2.  If there is a dialog box saying certain files are in use, click 'Continue'  
   
 ### Running ostress  
  Ostress is run from the command-line prompt. It is most convenient to run the tool from the "RML Cmd Prompt", which is installed as part of the RML Utilities.  
   
  To open the RML Cmd Prompt follow these instructions:  
   
- In Windows Server 2012 [R2] and in Windows 8 and 8.1, open the start menu by clicking the Windows key, and type ‘rml’. Click on “RML Cmd Prompt”, which will be in the list of search results.  
+ In Windows Server 2012 [R2] and in Windows 8 and 8.1, open the start menu by clicking the Windows key, and type 'rml'. Click on "RML Cmd Prompt", which will be in the list of search results.  
   
  Ensure that the command prompt is located in the RML Utilities installation folder. For example:  
   
@@ -406,7 +406,7 @@ manager: craigg
   
 -   -S name of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to connect to  
   
--   -E use Windows authentication to connect (default); if you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication, use the options –U and –P to specify the username and password, respectively  
+-   -E use Windows authentication to connect (default); if you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentication, use the options -U and -P to specify the username and password, respectively  
   
 -   -d name of the database, for this example AdventureWorks2014  
   
@@ -451,9 +451,9 @@ END
   
  With this script, each sample order that is constructed is inserted 20 times, through 20 stored procedures executed in a WHILE loop. The loop is used to account for the fact that the database is used to construct the sample order. In typical production environments, the mid-tier application will construct the sales order to be inserted.  
   
- The above script inserts sales orders into memory-optimized tables. The script to insert sales orders into disk-based tables is derived by replacing the two occurrences of ‘_inmem’ with ‘_ondisk’.  
+ The above script inserts sales orders into memory-optimized tables. The script to insert sales orders into disk-based tables is derived by replacing the two occurrences of '_inmem' with '_ondisk'.  
   
- We will use the ostress tool to execute the scripts using several concurrent connections. We will use the parameter ‘-n’ to control the number of connections, and the parameter ‘r’ to control how many times the script is executed on each connection.  
+ We will use the ostress tool to execute the scripts using several concurrent connections. We will use the parameter '-n' to control the number of connections, and the parameter 'r' to control how many times the script is executed on each connection.  
   
 #### Functional Validation of the Workload  
  To verify everything works, we will start with a sample test, using 10 concurrent connects and 5 iterations, inserting a total of 10 * 5 \* 20 = 1000 sales order.  
@@ -465,7 +465,7 @@ END
  Click the Copy button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  If everything works as expected, your command window will look similar to the following. Error messages are not expected.  
@@ -477,11 +477,11 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  Click the Copy button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
 #### Running the Workload  
- To test at scale we insert 10 million sales orders, using 100 connections. This test performs reasonably on a modest server (e.g., 8 physical, 16 logical cores), and basic SSD storage for the log. If the test does not perform well on your hardware, take look at the Section [Troubleshooting slow-running tests](#Troubleshootingslow-runningtests).If you want to reduce the level of stress for this test, lower the number of connections by changing the parameter ‘-n’. For example to lower the connection count to 40, change the parameter ‘-n100’ to ‘-n40’.  
+ To test at scale we insert 10 million sales orders, using 100 connections. This test performs reasonably on a modest server (e.g., 8 physical, 16 logical cores), and basic SSD storage for the log. If the test does not perform well on your hardware, take look at the Section [Troubleshooting slow-running tests](#Troubleshootingslow-runningtests).If you want to reduce the level of stress for this test, lower the number of connections by changing the parameter '-n'. For example to lower the connection count to 40, change the parameter '-n100' to '-n40'.  
   
  As a performance measure for the workload we use the elapsed time as reported by ostress.exe after running the workload.  
   
@@ -493,7 +493,7 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  Click the Copy button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 2 minutes and 5 seconds. On a second test server with 24 physical (48 logical) cores, this took 1 minute and 0 seconds.  
@@ -508,16 +508,16 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 
  Click the Copy button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 41 minutes and 25 seconds. On a second test server with 24 physical (48 logical) cores, this took 52 minutes and 16 seconds.  
   
- The main factor in the performance difference between memory-optimized tables and disk-based tables in this test is the fact that when using disk-based tables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot not fully utilize the CPU. The reason is latch contention: concurrent transactions are attempting to write to the same data page; latches are used to ensure only one transaction at a time can write to a page. The [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine is latch-free, and data rows are not organized in pages. Thus, concurrent transactions do not block each other’s inserts, thus enabling [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to fully utilize the CPU.  
+ The main factor in the performance difference between memory-optimized tables and disk-based tables in this test is the fact that when using disk-based tables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot not fully utilize the CPU. The reason is latch contention: concurrent transactions are attempting to write to the same data page; latches are used to ensure only one transaction at a time can write to a page. The [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine is latch-free, and data rows are not organized in pages. Thus, concurrent transactions do not block each other's inserts, thus enabling [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to fully utilize the CPU.  
   
  You can observe the CPU utilization while the workload is running, for example using task manager. You will see with disk-based tables the CPU utilization is far from 100%. On a test configuration with 16 logical processors, the utilization would hover around 24%.  
   
- Optionally, you can view the number of latch waits per second using Performance Monitor, with the performance counter ‘\SQL Server:Latches\Latch Waits/sec’.  
+ Optionally, you can view the number of latch waits per second using Performance Monitor, with the performance counter '\SQL Server:Latches\Latch Waits/sec'.  
   
 #### Resetting the demo  
  To reset the demo, open the RML Cmd Prompt, and execute the following command:  
@@ -641,7 +641,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- We can see a total of about 6.5GB of data. Notice that the size of the indexes on the table SalesOrderHeader_inmem and SalesOrderDetail_inmem is is the same as the size of the indexes before inserting the sales orders. The index size did not change because both tables are using hash indexes, and hash indexes are static.  
+ We can see a total of about 6.5GB of data. Notice that the size of the indexes on the table SalesOrderHeader_inmem and SalesOrderDetail_inmem is the same as the size of the indexes before inserting the sales orders. The index size did not change because both tables are using hash indexes, and hash indexes are static.  
   
 #### After demo reset  
  The stored procedure Demo.usp_DemoReset can be used to reset the demo. It deletes the data in the tables SalesOrderHeader_inmem and SalesOrderDetail_inmem, and re-seeds the data from the original tables SalesOrderHeader and SalesOrderDetail.  
@@ -694,7 +694,7 @@ WHERE f.type=N'FX'
 ```  
   
 #### Initial state  
- When the sample filegroup and sample memory-optimized tables are created initially, a number of checkpoint files are pre-created and the system starts filling the files – the number of checkpoint files pre-created depends on the number of logical processors in the system. As the sample is initially very small, the pre-created files will be mostly empty after initial create.  
+ When the sample filegroup and sample memory-optimized tables are created initially, a number of checkpoint files are pre-created and the system starts filling the files - the number of checkpoint files pre-created depends on the number of logical processors in the system. As the sample is initially very small, the pre-created files will be mostly empty after initial create.  
   
  The following shows the initial on-disk size for the sample on a machine with 16 logical processors:  
   
@@ -866,7 +866,7 @@ ORDER BY state, file_type
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
   
- In this case, there are two checkpoint file pairs in the ‘under construction’ state, which means multiple file pairs were moved to the ‘under construction’ state, likely due to the high level of concurrency in the workload. Multiple concurrent threads required a new file pair at the same time, and thus moved a pair from ‘precreated’ to ‘under construction’.  
+ In this case, there are two checkpoint file pairs in the 'under construction' state, which means multiple file pairs were moved to the 'under construction' state, likely due to the high level of concurrency in the workload. Multiple concurrent threads required a new file pair at the same time, and thus moved a pair from 'precreated' to 'under construction'.  
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

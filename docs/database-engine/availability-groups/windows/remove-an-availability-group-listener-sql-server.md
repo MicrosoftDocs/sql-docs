@@ -76,14 +76,14 @@ manager: craigg
   
 2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:  
   
-     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **‘***dns_name***’**  
+     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **'**_dns_name_**'**  
   
      where *group_name* is the name of the availability group and *dns_name* is the DNS name of the availability group listener.  
   
      The following example deletes the listener of the `AccountsAG` availability group. The DNS name is AccountsAG_Listener.  
   
     ```  
-    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER ‘AccountsAG_Listener’;  
+    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  

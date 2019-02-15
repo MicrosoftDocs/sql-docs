@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table dependencies [SQL Server]"
@@ -18,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ---
 # View the Dependencies of a Table
-  You can view a table’s dependencies in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can view a table's dependencies in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -26,7 +25,7 @@ manager: craigg
   
      [Security](#Security)  
   
--   **To view a table’s dependencies, using:**  
+-   **To view a table's dependencies, using:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,7 +46,7 @@ manager: craigg
   
 2.  Right-click a table, and then click **View Dependencies**.  
   
-3.  In the **Object Dependencies***\<object name>* dialog box, select either **Objects that depend on** *\<object name>*, or **Objects on which***\<object name>***depends**.  
+3.  In the **Object Dependencies**_\<object name>_ dialog box, select either **Objects that depend on** _\<object name>_, or **Objects on which**_\<object name>_**depends**.  
   
 4.  Select an object in the **Dependencies** grid. The type of object (such as "Trigger" or "Stored Procedure"), appears in the **Type** box.  
   

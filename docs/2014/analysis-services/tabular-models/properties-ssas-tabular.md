@@ -23,7 +23,7 @@ manager: craigg
 |[Project Properties &#40;SSAS Tabular&#41;](project-properties-ssas-tabular.md)|Provides descriptions for project properties. Project properties include project file and deployment options settings.|  
 |[Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)|Provides descriptions for model properties. Model properties affect the model project's build actions, backup, and workspace database during model authoring.|  
 |[Table Properties &#40;SSAS Tabular&#41;](table-properties-ssas-tabular.md)|Provides descriptions for basic table properties. Table properties described here are different from those in the Edit Table Properties dialog box, which display and allow selection and filtering of columns from the source,|  
-|[Column Properties &#40;SSAS Tabular&#41;](column-properties-ssas-tabular.md)|Provides descriptions for column properties. Column properties define a column’s data type, format, and hiding settings.|  
+|[Column Properties &#40;SSAS Tabular&#41;](column-properties-ssas-tabular.md)|Provides descriptions for column properties. Column properties define a column's data type, format, and hiding settings.|  
 |[Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Provides descriptions and configuration steps for default modeling and deployment properties. Default properties apply to new tabular model projects. After a project is created, these properties can be changed for a particular model project depending on your requirements.|  
   
   

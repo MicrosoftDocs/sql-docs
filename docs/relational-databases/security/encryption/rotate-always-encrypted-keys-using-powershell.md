@@ -18,11 +18,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 This article provides the steps to rotate keys for Always Encrypted using the SqlServer PowerShell module. For information about how to start using the SqlServer PowerShell module for Always Encrypted, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-Rotating Always Encrypted Keys is the process of replacing an existing key with a new one. You may need to rotate a key if it has been compromised, or in order to comply with your organization’s policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. 
+Rotating Always Encrypted Keys is the process of replacing an existing key with a new one. You may need to rotate a key if it has been compromised, or in order to comply with your organization's policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. 
 
 Always Encrypted uses two types of keys, so there are two high-level key rotation workflows; rotating column master keys, and rotating column encryption keys.
 
-* **Column encryption key rotation** - involves decrypting data that is encrypted with the current key, and re-encrypting the data using the new column encryption key. Because rotating a column encryption key requires access to both the keys and the database, column encryption key rotation con only be performed without role separation.
+* **Column encryption key rotation** - involves decrypting data that is encrypted with the current key, and re-encrypting the data using the new column encryption key. Because rotating a column encryption key requires access to both the keys and the database, column encryption key rotation can only be performed without role separation.
 * **Column master key rotation** - involves decrypting column encryption keys that are protected with the current column master key, re-encrypting them using the new column master key, and updating the metadata for both types of keys. Column master key rotation can be completed with or without role separation (when using the SqlServer PowerShell module).
 
 

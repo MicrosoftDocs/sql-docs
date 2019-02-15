@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
@@ -23,12 +22,12 @@ manager: craigg
   
 -   [Upgrade with Restoring a Database from Backup](#restore)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Upgrading from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 release to the CTP2 release is not supported.  
 > -   Back up your database before performing any upgrade.  
 > -   The upgrade process recreates stored procedures and upgrades tables used by [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Any customizations you have made to either of these components may be lost.  
 > -   Model deployment packages can be used only in the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] they were created in. You cannot deploy model deployment packages created in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-> -   You can continue using the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel after upgrading Master Data Services and Data Quality Services to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. However, any earlier version of the Master Data Services Add-In for Excel will not work after upgrading to SQL Server 2014 CTP2. You can download the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel from [here](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   You can continue using the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel after upgrading Master Data Services and Data Quality Services to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. However, any earlier version of the Master Data Services Add-In for Excel will not work after upgrading to SQL Server 2014 CTP2. You can download the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel from [here](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="noengine"></a> Upgrade without Database Engine Upgrade  
  This scenario can be considered a side-by-side installation, because both [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] are installed in parallel, on either the same computer or separate computers.  
@@ -85,7 +84,7 @@ manager: craigg
         > [!IMPORTANT]  
         >  Your existing MDS web application from an earlier version of SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) is available for selection in the SQL Server 2014 version of Master Data Services Configuration Manager. You must not select the existing web application, and instead must create a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] web application for MDS. Otherwise, you will receive an error when you try to associate the web application with the upgraded MDS database stating that the requested page cannot be accessed because the related configuration data for the page is invalid.  
         >   
-        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using SQL Server 2014 version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using SQL Server 2014 version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Now associate the new web application with the upgraded MDS database.  
   
@@ -156,7 +155,7 @@ manager: craigg
         > [!IMPORTANT]  
         >  Your existing MDS web application from an earlier version of SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) is available for selection in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. You must not select the existing web application, and instead must create a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] web application for MDS. Otherwise, you will receive an error when you try to associate the web application with the upgraded MDS database stating that the requested page cannot be accessed because the related configuration data for the page is invalid.  
         >   
-        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 6.  Now associate the new web application with the upgraded MDS database.  
   
@@ -219,7 +218,7 @@ manager: craigg
         > [!IMPORTANT]  
         >  Your existing MDS web application from an earlier version of SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) is available for selection in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. You must not select the existing web application, and instead must create a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] web application for MDS. Otherwise, you will receive an error when you try to associate the web application with the upgraded MDS database stating that the requested page cannot be accessed because the related configuration data for the page is invalid.  
         >   
-        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Now associate the web application with the upgraded MDS database.  
   
@@ -282,7 +281,7 @@ manager: craigg
         > [!IMPORTANT]  
         >  Your existing MDS web application from an earlier version of SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) is available for selection in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. You must not select the existing web application, and instead must create a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] web application for MDS. Otherwise, you will receive an error when you try to associate the web application with the upgraded MDS database stating that the requested page cannot be accessed because the related configuration data for the page is invalid.  
         >   
-        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 5.  Now associate the new web application with the upgraded MDS database.  
   
@@ -293,7 +292,7 @@ manager: craigg
     3.  Click **Apply**.  
   
 ## Troubleshooting  
- **Issue:** When you open the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, a “client version is not compatible with the database version” error message is displayed.  
+ **Issue:** When you open the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, a "client version is not compatible with the database version" error message is displayed.  
   
  **Solution:** This issue occurs when a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Master Data Manager web application tries to access a database that has been upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. You must use a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] web application instead.  
   

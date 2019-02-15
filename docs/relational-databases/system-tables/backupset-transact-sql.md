@@ -55,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**first_lsn**|**numeric(25,0)**|Log sequence number of the first or oldest log record in the backup set. Can be NULL.|  
 |**last_lsn**|**numeric(25,0)**|Log sequence number of the next log record after the backup set. Can be NULL.|  
 |**checkpoint_lsn**|**numeric(25,0)**|Log sequence number of the log record where redo must start. Can be NULL.|  
-|**database_backup_lsn**|**numeric(25,0)**|Log sequence number of the most recent full database backup. Can be NULL.<br /><br /> **database_backup_lsn** is the “begin of checkpoint” that is triggered when the backup starts. This LSN will coincide with **first_lsn** if the backup is taken when the database is idle and no replication is configured.|  
+|**database_backup_lsn**|**numeric(25,0)**|Log sequence number of the most recent full database backup. Can be NULL.<br /><br /> **database_backup_lsn** is the "begin of checkpoint" that is triggered when the backup starts. This LSN will coincide with **first_lsn** if the backup is taken when the database is idle and no replication is configured.|  
 |**database_creation_date**|**datetime**|Date and time the database was originally created. Can be NULL.|  
 |**backup_start_date**|**datetime**|Date and time the backup operation started. Can be NULL.|  
 |**backup_finish_date**|**datetime**|Date and time the backup operation finished. Can be NULL.|  

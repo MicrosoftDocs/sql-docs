@@ -181,8 +181,8 @@ SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt2);
   
 // The 2nd execute would have failed with connection busy error if  
 // MARS were not enabled.  
-SQLExecDirect(hstmt1, L”SELECT * FROM Authors”, SQL_NTS);  
-SQLExecDirect(hstmt2, L”SELECT * FROM Titles”, SQL_NTS);  
+SQLExecDirect(hstmt1, L"SELECT * FROM Authors", SQL_NTS);  
+SQLExecDirect(hstmt2, L"SELECT * FROM Titles", SQL_NTS);  
   
 // Result set processing can interleave.  
 SQLFetch(hstmt1);  

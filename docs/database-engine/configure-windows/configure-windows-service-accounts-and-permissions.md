@@ -54,12 +54,13 @@ manager: craigg
 ---
 # Configure Windows Service Accounts and Permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > For content related to previous versions of SQL Server, see [Configure Windows Service Accounts and Permissions](configure-windows-service-accounts-and-permissions.md).
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   Each service in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] represents a process or a set of processes to manage authentication of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operations with Windows. This topic describes the default configuration of services in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and configuration options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services that you can set during and after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. This topic helps advanced users understand the details of the service accounts.  
   
- Most services and their properties can be configured by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Here are the paths to the last four versions when Windows in installed on the C drive.  
+ Most services and their properties can be configured by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Here are the paths to the last four versions when Windows is installed on the C drive.  
   
 |||  
 |-|-|  
@@ -100,13 +101,13 @@ manager: craigg
   
  - **SQL Server PolyBase Engine** - Provides distributed query capabilities to external data sources.
  
- - **SQL Server Polybase Data Movement Service** - Enables data movement between SQL Server and External Data Sources and between SQL nodes in PolyBase Scaleout Groups.
+ - **SQL Server PolyBase Data Movement Service** - Enables data movement between SQL Server and External Data Sources and between SQL nodes in PolyBase Scaleout Groups.
   
 ##  <a name="Serv_Prop"></a> Service Properties and Configuration
 
 Startup accounts used to start and run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be [domain user accounts](#Domain_User), [local user accounts](#Local_User), [managed service accounts](#MSA), [virtual accounts](#VA_Desc), or [built-in system accounts](#Local_Service). To start and run, each service in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must have a startup account configured during installation.
   
- This section describes the accounts that can be configured to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, the default values used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, the concept of per-service SID’s, the startup options, and configuring the firewall.  
+ This section describes the accounts that can be configured to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, the default values used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, the concept of per-service SID's, the startup options, and configuring the firewall.  
   
 -   [Default Service Accounts](#Default_Accts)  
   
@@ -156,7 +157,7 @@ The following table lists the default service accounts used by setup when instal
 
 ####  <a name="Changing_Accounts"></a> Changing Account Properties
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Always use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to change the account used by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent services, or to change the password for the account. In addition to changing the account name, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager performs additional configuration such as updating the Windows local security store which protects the service master key for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Other tools such as the Windows Services Control Manager can change the account name but do not change all the required settings.  
 > -   For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that you deploy in a SharePoint farm, always use SharePoint Central Administration to change the server accounts for [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] applications and the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Associated settings and permissions are updated to use the new account information when you use Central Administration.  
 > -   To change [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] options, use the Reporting Services Configuration Tool.  
@@ -176,9 +177,9 @@ Managed service accounts, group managed service accounts, and virtual accounts a
   
      A Group Managed Service Account is an MSA for multiple servers. Windows manages a service account for services running on a group of servers. Active Directory automatically updates the group managed service account password without restarting services. You can configure SQL Server services to use a group managed service account principal. Beginning with SQL Server 2014, SQL Server supports group managed service accounts for standalone instances, and SQL Server 2016 and later for failover cluster instances, and availability groups.  
   
-    To use a group managed service account for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](http://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.  
+    To use a group managed service account for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](https://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.  
   
-    For more information, see [Group Managed Service Accounts](http://technet.microsoft.com/library/hh831782.aspx)  
+    For more information, see [Group Managed Service Accounts](https://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  The group managed service account must be created in the Active Directory by the domain administrator before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup can use it for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
@@ -199,7 +200,7 @@ Managed service accounts, group managed service accounts, and virtual accounts a
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- For more information on Managed Service Accounts and Virtual Accounts, see the **Managed service account and virtual account concepts** section of [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) and [Managed Service Accounts Frequently Asked Questions (FAQ)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
+ For more information on Managed Service Accounts and Virtual Accounts, see the **Managed service account and virtual account concepts** section of [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) and [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
   
  **Security Note:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use a [MSA](#MSA) or [virtual account](#VA_Desc) when possible. When MSA and virtual accounts are not possible, use a specific low-privilege user account or domain account instead of a shared account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Use separate accounts for different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Do not grant additional permissions to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account or the service groups. Permissions will be granted through group membership or granted directly to a service SID, where a service SID is supported.  
   
@@ -243,7 +244,7 @@ In most cases, when initially installed, the [!INCLUDE[ssDE](../../includes/ssde
   
 ##  <a name="Serv_Perm"></a> Service Permissions
 
-This section describes the permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures for the per-service SID’s of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
+This section describes the permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures for the per-service SID's of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
   
 -   [Service Configuration and Access Control](#Serv_SID)  
   
@@ -279,7 +280,7 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
  Depending on the service configuration, the service account for a service or service SID is added as a member of the service group during install or upgrade.
   
 ###  <a name="Windows"></a> Windows Privileges and Rights  
- The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this.  First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
+ The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this.  First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
   
  The following table shows permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup requests for the per-service SIDs or local Windows groups used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.
   
@@ -287,7 +288,7 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT SERVICE\MSSQLSERVER**. Named instance: **NT SERVICE\MSSQL$**InstanceName.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> Permission to start SQL Writer<br /><br /> Permission to read the Event Log service<br /><br /> Permission to read the Remote Procedure Call service|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:** \*<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT Service\SQLSERVERAGENT**. Named instance: **NT Service\SQLAGENT$**_InstanceName_.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (All rights are granted to a local Windows group. Default instance: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. Named instance: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> For tabular only:<br /><br /> **Increase a process working set** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Lock pages in memory** (SeLockMemoryPrivilege) – this is needed only when paging is turned off entirely.<br /><br /> For failover cluster installations only:<br /><br /> **Increase scheduling priority** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (All rights are granted to a local Windows group. Default instance: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. Named instance: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> For tabular only:<br /><br /> **Increase a process working set** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> **Lock pages in memory** (SeLockMemoryPrivilege) - this is needed only when paging is turned off entirely.<br /><br /> For failover cluster installations only:<br /><br /> **Increase scheduling priority** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT SERVICE\ReportServer**. Named instance: **NT SERVICE\\ReportServer$**_InstanceName_.)|**Log on as a service** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance and named instance: **NT SERVICE\MsDtsServer130**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not have a separate process for a named instance.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> Permission to write to application event log.<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Impersonate a client after authentication** (SeImpersonatePrivilege)|  
 |**Full-text search:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT Service\MSSQLFDLauncher**. Named instance: **NT Service\ MSSQLFDLauncher$**_InstanceName_.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)|  
@@ -558,13 +559,13 @@ In all installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S
   
     -   The per-service SID of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is provisioned in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a member of the **sysadmin** fixed server role.  
   
-    -   The per-service SID’s are added to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups, unless [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a Failover Cluster Instance.  
+    -   The per-service SID's are added to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups, unless [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a Failover Cluster Instance.  
   
     -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources remain provisioned to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups.  
   
-    -   The local Windows group for services is renamed from **SQLServer2005MSSQLUser$**_<computer_name>_**$**_<instance_name>_ to **SQLServerMSSQLUser$**_<computer_name>_**$**_<instance_name>_. File locations for migrated databases will have Access Control Entries (ACE) for the local Windows groups. The file locations for new databases will have ACE’s for the per-service SID.  
+    -   The local Windows group for services is renamed from **SQLServer2005MSSQLUser$**_<computer_name>_**$**_<instance_name>_ to **SQLServerMSSQLUser$**_<computer_name>_**$**_<instance_name>_. File locations for migrated databases will have Access Control Entries (ACE) for the local Windows groups. The file locations for new databases will have ACE's for the per-service SID.  
   
--   During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will be preserve the ACE’s for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.  
+-   During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will be preserve the ACE's for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.  
   
 -   For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance, the ACE for the domain account configured for the service will be retained.  
   
@@ -643,7 +644,7 @@ In all installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S
 |French|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
 |Italian|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |Spanish|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
-|Russian|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Администраторы|  
+|Russian|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\СИСТЕМА|BUILTIN\Администраторы|  
   
 ## Related Content  
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

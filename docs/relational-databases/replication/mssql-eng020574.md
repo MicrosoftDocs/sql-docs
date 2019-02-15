@@ -3,7 +3,6 @@ title: "MSSQL_ENG020574 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: conceptual
@@ -29,7 +28,7 @@ manager: craigg
 |Message Text|Subscriber '%s' subscription to article '%s' in publication '%s' failed data validation.|  
   
 ## Explanation  
- The data at the Subscriber was validated against the data at the Publisher, and the data did not match; therefore validation failed. For more information about validation, see [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md).  
+ The data at the Subscriber was validated against the data at the Publisher, and the data did not match; therefore validation failed. For more information about validation, see [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 ## User Action  
  We recommend that you do the following:  

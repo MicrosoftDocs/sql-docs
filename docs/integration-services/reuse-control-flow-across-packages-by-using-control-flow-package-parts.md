@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts
-  Save a commonly used control flow task or container to a standalone part file - a “.dtsxp” file - and reuse it multiple times in one or more packages by using control flow package parts. This reusability makes SSIS packages easier to design and maintain.  
+  Save a commonly used control flow task or container to a standalone part file - a ".dtsxp" file - and reuse it multiple times in one or more packages by using control flow package parts. This reusability makes SSIS packages easier to design and maintain.  
   
 ## Create a new control flow package part  
  To create a new control flow package part, in Solution Explorer, expand the **Package Parts** folder. Right-click on **Control Flow** and select **New Control Flow Package Part**.  
@@ -74,7 +74,7 @@ manager: craigg
  **Options**  
   
  **Package Part path**  
- Type the path to the part file, or click the browse button (…) and locate the part file to copy or to reference.  
+ Type the path to the part file, or click the browse button (...) and locate the part file to copy or to reference.  
   
  **Add as a reference**  
  -   If selected, the part is added to the Integration Services project as a reference. Select this option when you  when want to reference a single copy of a  part file in multiple Integration Services projects.  
@@ -135,13 +135,13 @@ manager: craigg
 ## Package parts are a design-time feature only  
  Package parts are purely a design-time feature. SSIS designer creates, opens, saves, and updates parts,  and adds, configures, or deletes part instances in a package. However, the SSIS runtime is not aware of the parts. Here is how the designer achieves this separation.  
   
--   The designer saves package part instances with their configured properties to a “.dtsx.designer” file.  
+-   The designer saves package part instances with their configured properties to a ".dtsx.designer" file.  
   
--   When the designer saves the “.dtsx.designer” file, it also extracts the content from the parts referenced by this file and replaces the part instances in the package with the content of the parts.  
+-   When the designer saves the ".dtsx.designer" file, it also extracts the content from the parts referenced by this file and replaces the part instances in the package with the content of the parts.  
   
--   Finally all the content, which no longer includes part information, is saved back to the “.dtsx” package file. This is the file that the SSIS runtime runs.  
+-   Finally all the content, which no longer includes part information, is saved back to the ".dtsx" package file. This is the file that the SSIS runtime runs.  
   
- The diagram below demonstrates the relationship among parts (“.dtsxp” files), SSIS designer, and the SSIS runtime.  
+ The diagram below demonstrates the relationship among parts (".dtsxp" files), SSIS designer, and the SSIS runtime.  
   
  ![Control flow templates files and flow](../integration-services/media/control-flow-templates-intro.png "Control flow templates files and flow")  
   

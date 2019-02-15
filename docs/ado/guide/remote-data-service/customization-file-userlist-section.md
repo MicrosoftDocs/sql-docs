@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/09/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,18 +21,18 @@ The **userlist** section pertains to the **connect** section with the same secti
  This section can contain a *user access entry*, which specifies access rights for the specified user and overrides the *default* *access entry* in the matching **connect** section.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## Syntax  
  A user access entry is of the form:  
   
- *userName* **=**   
- ***accessRights***  
+ _userName_ **=**   
+ **_accessRights_**  
   
 |Part|Description|  
 |----------|-----------------|  
 |*userName*|The *user name* of the person employing this connection. Valid user names are established with the IIS **Service Manager** dialog.|  
-|***accessRights***|One of the following access rights:<br /><br /> -   **NoAccess** — User cannot access the data source.<br />-   **ReadOnly** — User can read the data source.<br />-   **ReadWrite** — User can read or write to the data source.|  
+|**_accessRights_**|One of the following access rights:<br /><br /> -   **NoAccess** - User cannot access the data source.<br />-   **ReadOnly** - User can read the data source.<br />-   **ReadWrite** - User can read or write to the data source.|  
   
 ## See Also  
  [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

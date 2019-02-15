@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_validatemergepublication"
@@ -57,7 +56,7 @@ sp_validatemergepublication [@publication=] 'publication'
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)   
+ [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

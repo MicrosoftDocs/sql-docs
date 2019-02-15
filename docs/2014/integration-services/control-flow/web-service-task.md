@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.webservicetask.f1"
@@ -77,8 +76,8 @@ manager: craigg
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## Related Content  
- Video, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642), on technet.microsoft.com.  
+ Video, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642), on technet.microsoft.com.  
   
- Curated Answer, [Consume Web Services in SSIS using Scripts](http://go.microsoft.com/fwlink/?LinkId=321996), on curatedviews.cloudapp.net.  
+ Curated Answer, [Consume Web Services in SSIS using Scripts](https://go.microsoft.com/fwlink/?LinkId=321996), on curatedviews.cloudapp.net.  
   
   

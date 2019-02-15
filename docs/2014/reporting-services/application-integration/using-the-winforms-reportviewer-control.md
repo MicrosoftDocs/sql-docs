@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Using the WinForms ReportViewer Control
   To view reports that have been deployed to a report server or reports that exist on the local file system, you can use the WinForms ReportViewer control to render them in a Windows application.  
@@ -148,7 +148,7 @@ End Class
   
 3.  Browse to the location where you installed the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples project.  
   
-     The download the report samples, go to [AdventureWorks 2012 Report Samples](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     The download the report samples, go to [AdventureWorks 2012 Report Samples](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Select the Sales Order Detail.rdl file and click the **Add** button.  
   

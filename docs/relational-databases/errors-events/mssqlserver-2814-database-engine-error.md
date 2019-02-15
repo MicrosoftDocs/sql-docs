@@ -61,7 +61,7 @@ The following table lists the reasons for recompilation.
     AND qs.plan_handle = *plan_handle*;
     ```
   
-2.  Based on the reason code description, modify the statement, batch, or procedure to avoid recompilations. For example, a stored procedure may contain one or more SET statements. These statements should be removed from the procedure. For additional examples of recompilation causes and resolutions, see [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=69175).  
+2.  Based on the reason code description, modify the statement, batch, or procedure to avoid recompilations. For example, a stored procedure may contain one or more SET statements. These statements should be removed from the procedure. For additional examples of recompilation causes and resolutions, see [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=69175).  
   
 3.  If the problem persists, contact Microsoft Customer Support Services.  
   

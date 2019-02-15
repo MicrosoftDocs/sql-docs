@@ -1,7 +1,7 @@
 ---
 title: "table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/24/2018"
+ms.date: "10/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -23,7 +23,7 @@ manager: craigg
 Is a special data type that can be used to store a result set for processing at a later time. **table** is primarily used for temporary storage of a set of rows returned as the result set of a table-valued function. Functions and variables can be declared to be of type **table**. **table** variables can be used in functions, stored procedures, and batches. To declare variables of type **table**, use [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -110,7 +110,7 @@ Table variables cannot be altered after creation.
 **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial plan compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts. This accurate row count information will then be used for optimizing downstream plan operations.
 
 > [!NOTE]
-> Table variable deferred compilation is a public preview feature in Azure SQL Database.  
+> Table variable deferred compilation is a public preview feature in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 With table variable deferred compilation, compilation of a statement that references a table variable is deferred until the first actual execution of the statement. This deferred compilation behavior is identical to the behavior of temporary tables, and this change results in the use of actual cardinality instead of the original one-row guess. 
 
@@ -121,6 +121,44 @@ Table variable deferred compilation does **not** change any other characteristic
 Table variable deferred compilation **does not increase recompilation frequency**.  Rather, it shifts where the initial compilation occurs. The resulting cached plan is generated based on the initial deferred compilation table variable row count. The cached plan is re-used by consecutive queries until the plan is evicted or recompiled. 
 
 If the table variable row count used for initial plan compilation represents a typical value that is significantly different from a fixed row count guess,  downstream operations will benefit.  If the table variable row count varies significantly across executions, then performance may not be improved by this feature.
+
+### Disabling table variable deferred compilation without changing the compatibility level
+Table variable deferred compilation can be disabled at the database or statement scope while still maintaining database compatibility level 150 and higher. To disable table variable deferred compilation for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+To re-enable table variable deferred compilation for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+You can also disable table variable deferred compilation for a specific query by designating DISABLE_DEFERRED_COMPILATION_TV as a USE HINT query hint.  For example:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+	(L_OrderKey INT NOT NULL,
+	 L_Quantity INT NOT NULL
+	);
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT	O_OrderKey,
+	O_CustKey,
+	O_OrderStatus,
+	L_QUANTITY
+FROM	
+	ORDERS,
+	@LINEITEMS
+WHERE	O_ORDERKEY	=	L_ORDERKEY
+	AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## Examples  
@@ -187,7 +225,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## See also
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

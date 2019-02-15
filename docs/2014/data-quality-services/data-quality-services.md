@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Data Quality Services
@@ -41,7 +40,7 @@ manager: craigg
 ## See Also  
  [Introduction to Data Quality Services](../../2014/data-quality-services/introduction-to-data-quality-services.md)   
  [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)   
- [DQS Resources](http://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [DQS Resources](https://technet.microsoft.com/sqlserver/hh780961)   
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

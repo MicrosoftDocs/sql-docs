@@ -77,7 +77,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
   
  Because an S-lock or Sch-M lock is held in the final phase of the index operation, be careful when you run an online index operation inside an explicit user transaction, such as BEGIN TRANSACTION...COMMIT block. Doing this causes the lock to be held until the end of the transaction, therefore impeding user concurrency.  
   
- Online index rebuilding may increase fragmentation when it is allowed to run with `MAX DOP > 1` and `ALLOW_PAGE_LOCKS = OFF` options. For more information, see [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+ Online index rebuilding may increase fragmentation when it is allowed to run with `MAX DOP > 1` and `ALLOW_PAGE_LOCKS = OFF` options. For more information, see [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
   
 ## Transaction log considerations  
  Large-scale index operations, performed offline or online, can generate large data loads that can cause the transaction log to quickly fill. To make sure that the index operation can be rolled back, the transaction log cannot be truncated until the index operation has been completed; however, the log can be backed up during the index operation. Therefore, the transaction log must have sufficient space to store both the index operation transactions and any concurrent user transactions for the duration of the index operation. For more information, see [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
@@ -90,7 +90,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 When you perform resumable online index create or rebuild, the following guidelines apply:
 -	Managing, planning and extending of index maintenance windows. You can pause and restart an index create or rebuild operation multiple times to fit your maintenance windows.
 - Recovering from index create or rebuild failures (such as database failovers or running out of disk space).
-- When an index operation is paused, both the original index and the the newly created one require disk space and need to be updated during DML operations.
+- When an index operation is paused, both the original index and the newly created one require disk space and need to be updated during DML operations.
 
 - Enables truncation of transaction logs during an index create or rebuild operation.
 - SORT_IN_TEMPDB=ON option is not supported
@@ -114,7 +114,7 @@ Generally, there is no difference in defragmentation quality between resumable a
 You can set default options for online or resumable at a database level by setting the ELEVATE_ONLINE or ELEVATE_RESUMABLE database scoped configuration options. With these default options, you can avoid accidentally performing an operation that takes your database table offline. Both options will cause the engine to automatically elevate certain operations to online or resumable execution.  
 You can set either option as FAIL_UNSUPPORTED, WHEN_SUPPORTED, or OFF using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) command. You can set different values for online and resumable. 
 
-Both ELEVATE_ONLINE and ELEVATE_RESUMABLE only apply to DDL statements that support the online and resumable syntax respectively. For example, if you attempt to create an XML index with ELEVATE_ONLINE=FAIL_UNSUPORTED, the operation will run offline since XML indexes don’t support the ONLINE= syntax. The options only effect DDL statements that are submitted without specifying an ONLINE or RESUMABLE option. For example, by submitting a statement with ONLINE=OFF or RESUMABLE=OFF, the user can override a FAIL_UNSUPPORTED setting and run a statement offline and/or non-resumably. 
+Both ELEVATE_ONLINE and ELEVATE_RESUMABLE only apply to DDL statements that support the online and resumable syntax respectively. For example, if you attempt to create an XML index with ELEVATE_ONLINE=FAIL_UNSUPORTED, the operation will run offline since XML indexes don't support the ONLINE= syntax. The options only effect DDL statements that are submitted without specifying an ONLINE or RESUMABLE option. For example, by submitting a statement with ONLINE=OFF or RESUMABLE=OFF, the user can override a FAIL_UNSUPPORTED setting and run a statement offline and/or non-resumably. 
  
 > [!NOTE]
 > ELEVATE_ONLINE and ELEVATE_RESUMABLE does not apply to XML index operations. 

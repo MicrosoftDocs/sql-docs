@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: leolimsft
@@ -17,7 +16,7 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  You can edit and delete an index that you’ve created on attributes.  
+  You can edit and delete an index that you've created on attributes.  
   
 ## Prerequisites  
  To perform this procedure:  

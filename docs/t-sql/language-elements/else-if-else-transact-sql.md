@@ -25,6 +25,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
   Imposes conditions on the execution of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*sql_statement*) following the *Boolean_expression*is executed if the *Boolean_expression* evaluates to TRUE. The optional ELSE keyword is an alternate [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that is executed when *Boolean_expression* evaluates to FALSE or NULL.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -112,7 +115,7 @@ GO
 ```  
   
 ### D. Using nested IF...ELSE statements  
- The following example shows how an IF … ELSE statement can be nested inside another. Set the `@Number` variable to `5`, `50`, and `500` to test each statement.  
+ The following example shows how an IF ... ELSE statement can be nested inside another. Set the `@Number` variable to `5`, `50`, and `500` to test each statement.  
   
 ```  
 DECLARE @Number int;  
@@ -132,7 +135,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### E: Using a query as part of a Boolean expression  
- The following example uses `IF…ELSE` to determine which of two responses to show the user, based on the weight of an item in the `DimProduct` table.  
+ The following example uses `IF...ELSE` to determine which of two responses to show the user, based on the weight of an item in the `DimProduct` table.  
   
 ```  
 -- Uses AdventureWorks  

@@ -5,14 +5,13 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.logshipping.f1"
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Properties (Transaction Log Shipping Page)

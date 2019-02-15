@@ -5,15 +5,14 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Backup Device"
   - "Backup Device object"
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Backup Device Object

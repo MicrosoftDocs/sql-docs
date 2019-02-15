@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For a list of the keywords available in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## See Also  
- [SQLConfigDataSource Function](http://go.microsoft.com/fwlink/?LinkId=59337)   
+ [SQLConfigDataSource Function](https://go.microsoft.com/fwlink/?LinkId=59337)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

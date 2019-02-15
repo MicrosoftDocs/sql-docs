@@ -9,7 +9,7 @@
     href: supported-version-and-edition-upgrades.md
   - name: Prepare for upgrade by running Data Migration Assistant
     href: prepare-for-upgrade-by-running-data-migration-assistant.md
-  - name: Are you upgrading from SQL Server 2005?
+  - name: Upgrading from SQL 2005, 2008, or 2008 R2?
     href: are-you-upgrading-from-sql-server-2005.md
   - name: Upgrade Analysis Services
     href: upgrade-analysis-services.md
@@ -66,6 +66,8 @@
     href: install-sql-server-using-a-configuration-file.md
   - name: Install SQL Server Using SysPrep
     href: install-sql-server-using-sysprep.md
+  - name: Install SQL Server With PowerShell Desired State Configuration
+    href: install-sql-server-with-powershell-desired-state-configuration.md
   - name: Add Features to an Instance of SQL Server (Setup)
     href: add-features-to-an-instance-of-sql-server-setup.md
   - name: Repair a Failed SQL Server Installation

@@ -38,7 +38,7 @@ The following table lists all the project artifacts that can or cannot be conver
   
 4.  Notice that in **Solution Explorer**, project file, property files, and schema objects are all converted.  
   
-### To change a project’s target platform  
+### To change a project's target platform  
   
 1.  Right-click your newly converted project in **Solution Explorer** and select **Properties** to access the **Project Settings** dialog box.  
   

@@ -113,6 +113,6 @@ The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11
 
 The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-The ODBC driver on Linux supports connections to Microsoft Azure SQL Database. For more information, see [How to: Connect to Windows Azure SQL Database Using ODBC](http://msdn.microsoft.com/library/hh974312.aspx).  
+The ODBC driver on Linux supports connections to Microsoft Azure SQL Database. For more information, see [How to: Connect to Windows Azure SQL Database Using ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 The `-l` option (login timeout) has been added to `bcp`. For more information, see [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

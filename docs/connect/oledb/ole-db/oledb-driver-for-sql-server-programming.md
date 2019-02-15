@@ -29,7 +29,7 @@ manager: craigg
   
  OLE DB Driver for SQL Server provides OLE DB support to applications connecting to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- The OLE DB Driver for SQL Server is an OLE DB version 2.0–compliant provider.  
+ The OLE DB Driver for SQL Server is an OLE DB version 2.0-compliant provider.  
   
 ## In This Section  
   

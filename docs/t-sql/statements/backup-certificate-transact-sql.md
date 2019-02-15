@@ -1,7 +1,7 @@
 ---
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "10/04/2018"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
@@ -25,13 +25,13 @@ helpviewer_keywords:
   - "decryption [SQL Server]"
   - "cryptography [SQL Server], certificates"
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Exports a certificate to a file.  
   
@@ -53,7 +53,7 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
       WITH PRIVATE KEY   
@@ -70,10 +70,6 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *path_to_private_key_file*  
  Specifies the complete path, including file name, of the file in which the private key is to be saved. This path can be a local path or a UNC path to a network location. The default is the path of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA folder.  
 
-> [!IMPORTANT]
-> Azure SQL Database does not support backing up a certificate to a file.
-
-  
  *encryption_password*  
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  
   

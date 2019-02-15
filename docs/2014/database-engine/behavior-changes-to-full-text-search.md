@@ -62,8 +62,8 @@ manager: craigg
   
 |**Term**|**Results with previous word breaker and stemmer**|**Results with new word breaker and stemmer**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿｑℭžl<br /><br /> *(where the terms are not valid English characters)*|‘jěˊÿｑℭžl’|je yq zl|  
-|table's|table’s<br /><br /> table|table’s|  
+|jěˊÿｑℭžl<br /><br /> *(where the terms are not valid English characters)*|'jěˊÿｑℭžl'|je yq zl|  
+|table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z*(where v and z are noise words)*|*(no results)*|v-z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 usd<br /><br /> nn100000usd|  
@@ -73,7 +73,7 @@ manager: craigg
 ## Behavior Changes in Full-Text Search in SQL Server 2008  
  In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions, the Full-Text Engine is integrated as a database service into the relational database as part of the server query and storage engine infrastructure. The new full-text search architecture achieves the following goals:  
   
--   Integrated storage and management—Full-text search is now integrated directly with the inherent storage and management features of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and the MSFTESQL service no longer exists.  
+-   Integrated storage and management-Full-text search is now integrated directly with the inherent storage and management features of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and the MSFTESQL service no longer exists.  
   
     -   Full-text indexes are stored inside the database filegroups, rather than in the file system. Administrative operations on a database, such as creating a backup, automatically affect its full-text indexes.  
   
@@ -82,9 +82,9 @@ manager: craigg
         > [!NOTE]  
         >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] DDL statements that specify full-text catalogs work correctly.  
   
--   Integrated query processing—The new full-text search query processor is part of the Database Engine and is fully integrated with the SQL Server Query processor. This means that, the query optimizer recognizes full-text query predicates and automatically executes them as efficiently as possible.  
+-   Integrated query processing-The new full-text search query processor is part of the Database Engine and is fully integrated with the SQL Server Query processor. This means that, the query optimizer recognizes full-text query predicates and automatically executes them as efficiently as possible.  
   
--   Enhanced administration and troubleshooting—Integrated full-text search provides tools to help you analyze search structures such as the full-text index, the output of a given word breaker, stopword configuration, and so forth.  
+-   Enhanced administration and troubleshooting-Integrated full-text search provides tools to help you analyze search structures such as the full-text index, the output of a given word breaker, stopword configuration, and so forth.  
   
 -   Stopwords and stoplists have replaced noise words and noise-word files. A stoplist is a database object that facilitates manageability tasks for stopwords and improves the integrity between different server instances and environments. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
@@ -97,7 +97,7 @@ manager: craigg
      The full-text engine indexes the contents of the FILESTREAM BLOBs. Indexing files such as images might not be useful. When a FILESTREAM BLOB is updated it is reindexed.  
   
 ## See Also  
- [Full-Text Search]((../relational-databases/search/full-text-search.md)   
+ [Full-Text Search](../relational-databases/search/full-text-search.md)   
  [Full-Text Search Backward Compatibility](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Upgrade Full-Text Search](../relational-databases/search/upgrade-full-text-search.md)   
  [Get Started with Full-Text Search](../relational-databases/search/get-started-with-full-text-search.md)  

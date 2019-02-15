@@ -21,7 +21,7 @@ manager: craigg
 # ADO for Visual C++ Syntax Index for COM
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++.  
   
- If you use the **#import** directive in your application, a header file will be generated that will enable you to use syntax similar to Microsoft Visual Basic. Property names of the form **get_***PropertyName* and **put_***PropertyName* can be treated as if they were declared simply as *PropertyName*. A property can then be treated like a data member instead of a function.  
+ If you use the **#import** directive in your application, a header file will be generated that will enable you to use syntax similar to Microsoft Visual Basic. Property names of the form **get_**_PropertyName_ and **put_**_PropertyName_ can be treated as if they were declared simply as *PropertyName*. A property can then be treated like a data member instead of a function.  
   
  All of the methods, properties, and events are functions that return an **HRESULT**, which you can test to determine if the function executed successfully.  
   

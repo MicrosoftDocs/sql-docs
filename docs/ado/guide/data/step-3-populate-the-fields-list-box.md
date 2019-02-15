@@ -17,26 +17,26 @@ To populate the Fields list box, insert the following code into the Click event 
   
 ```  
 Private Sub lstMain_Click()  
-    Dim rec As Record  
-    Dim rs As Recordset  
-    Set rec = New Record  
-    Set rs = New Recordset  
-    grs.MoveFirst  
-    grs.Move lstMain.ListIndex  
-    lstDetails.Clear  
-    rec.Open grs  
-    Select Case rec.RecordType  
-        Case adCollectionRecord:  
-            Set rs = rec.GetChildren  
-            While Not rs.EOF  
-                lstDetails.AddItem rs(0)  
-                rs.MoveNext  
-            Wend  
-        Case adSimpleRecord:  
-            recFields rec, lstDetails, txtDetails  
+    Dim rec As Record  
+    Dim rs As Recordset  
+    Set rec = New Record  
+    Set rs = New Recordset  
+    grs.MoveFirst  
+    grs.Move lstMain.ListIndex  
+    lstDetails.Clear  
+    rec.Open grs  
+    Select Case rec.RecordType  
+        Case adCollectionRecord:  
+            Set rs = rec.GetChildren  
+            While Not rs.EOF  
+                lstDetails.AddItem rs(0)  
+                rs.MoveNext  
+            Wend  
+        Case adSimpleRecord:  
+            recFields rec, lstDetails, txtDetails  
   
-        Case adStructDoc:  
-    End Select  
+        Case adStructDoc:  
+    End Select  
   
 End Sub  
 ```  

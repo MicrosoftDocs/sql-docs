@@ -67,7 +67,7 @@ SQLRETURN  SQLPoolConnect(
   
  Whenever a driver returns SQL_SUCCESS_WITH_INFO, the Driver Manager will obtain the diagnostic information from *hDbcInfoToken*, and return SQL_SUCCESS_WITH_INFO to the application in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) and [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- When an application uses [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *wszOutConnectString* will be a NULL buffer (the last three parameters will all be set to NULL, 0, NULL). Otherwise, the driver must return the output connection string, which will be returned to application’s [SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md) call.  
+ When an application uses [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *wszOutConnectString* will be a NULL buffer (the last three parameters will all be set to NULL, 0, NULL). Otherwise, the driver must return the output connection string, which will be returned to application's [SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md) call.  
   
  Include sqlspi.h for ODBC driver development.  
   

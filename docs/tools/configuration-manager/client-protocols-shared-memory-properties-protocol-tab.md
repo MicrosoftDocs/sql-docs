@@ -25,6 +25,6 @@ manager: craigg
  Possible values are **Yes** and **No**.  
   
 ## See Also  
- [Choosing a Network Protocol](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [Choosing a Network Protocol](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

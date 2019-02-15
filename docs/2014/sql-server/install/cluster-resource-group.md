@@ -25,6 +25,6 @@ manager: craigg
 -   Type the name of a new group to create. Note that the name "Available storage" is not a valid group name.  
   
 ## See Also  
- [How to: Create a New SQL Server Failover Cluster](http://go.microsoft.com/fwlink/?LinkId=190960)  
+ [How to: Create a New SQL Server Failover Cluster](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

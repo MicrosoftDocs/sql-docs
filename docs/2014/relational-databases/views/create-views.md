@@ -54,7 +54,7 @@ manager: craigg
   
 1.  In **Object Explorer**, expand the database where you want to create your new view.  
   
-2.  Right-click the **Views** folder, then click **New View…**.  
+2.  Right-click the **Views** folder, then click **New View...**.  
   
 3.  In the **Add Table** dialog box, select the element or elements that you want to include in your new view from one of the following tabs: Tables, Views, Functions, and Synonyms.  
   
@@ -64,7 +64,7 @@ manager: craigg
   
 6.  In the **Criteria Pane**, select additional sort or filter criteria for the columns.  
   
-7.  On the **File** menu, click **Save***view name*.  
+7.  On the **File** menu, click **Save**_view name_.  
   
 8.  In the **Choose Name** dialog box, enter a name for the new view and click **OK**.  
   

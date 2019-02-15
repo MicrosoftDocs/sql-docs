@@ -46,11 +46,11 @@ manager: craigg
   
     -   Click **Use a table or a view**, and then either select a table or view, or click **New** to create a table or view.  
   
-         —or—  
+         -or-  
   
     -   Click **Use results of an SQL query**, and then build a query in the **SQL Command** window, or click **Build Query** to build a query by using the graphical tools that the **Query Builder** provides.  
   
-         —or—  
+         -or-  
   
     -   Alternatively, click **Browse** to import an SQL statement from a file.  
   

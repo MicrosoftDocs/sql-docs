@@ -68,5 +68,5 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 
 
 ## Community  
-- [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [SQL Server Data Access Forum](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Microsoft ODBC Driver For SQL Server Team blog](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

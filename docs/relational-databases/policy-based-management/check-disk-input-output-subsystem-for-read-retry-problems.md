@@ -5,14 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Check Disk Input-Output Subsystem for Read Retry Problems
@@ -33,6 +32,6 @@ manager: craigg
 ## For More Information  
  [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)  
   
- [SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?linkid=69370)  
+ [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?linkid=69370)  
   
   

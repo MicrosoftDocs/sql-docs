@@ -1,5 +1,6 @@
 ---
-title: Get started with SQL Server on Ubuntu | Microsoft Docs
+title: Get started with SQL Server on Ubuntu
+titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,24 +8,26 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Quickstart: Install SQL Server and create a database on Ubuntu
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019 CTP 2.0 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 preview on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 CTP 2.0 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 preview on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -35,7 +38,7 @@ In this quickstart, you install SQL Server 2019 CTP 2.0 on Ubuntu 16.04. You the
 
 You must have a Ubuntu 16.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu on your own machine, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu on your own machine, go to [https://www.ubuntu.com/download/server](https://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
@@ -141,7 +144,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 
 6. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
 
-At this point, SQL Server 2019 CTP 2.0 is running on your Ubuntu machine and is ready to use!
+At this point, SQL Server 2019 preview is running on your Ubuntu machine and is ready to use!
 
 ::: moniker-end
 

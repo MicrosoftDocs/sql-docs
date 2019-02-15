@@ -31,7 +31,7 @@ manager: craigg
 4.  Select the control flow or data flow items to copy. You can either select items one at a time by pressing the Shift key and clicking the item or select items as a group by dragging the pointer across the items you want to select.  
   
     > [!IMPORTANT]  
-    >  The precedence constraints and paths that connect items are not selected automatically when you select the two items that they connect. To copy an ordered workflow—a segment of control flow or data flow—make sure to also copy the precedence constrains and the paths.  
+    >  The precedence constraints and paths that connect items are not selected automatically when you select the two items that they connect. To copy an ordered workflow-a segment of control flow or data flow-make sure to also copy the precedence constrains and the paths.  
   
 5.  Right-click a selected item and click **Copy**.  
   
@@ -60,6 +60,6 @@ manager: craigg
  [Control Flow](../integration-services/control-flow/control-flow.md)   
  [Data Flow](../integration-services/data-flow/data-flow.md)   
  [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copy Project Items](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+ [Copy Project Items](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

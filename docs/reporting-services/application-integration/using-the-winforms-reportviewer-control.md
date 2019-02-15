@@ -69,7 +69,7 @@ public partial class Form1 : Form
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =   
-            new Uri("http:// <Server Name>/reportserver");  
+            new Uri("https:// <Server Name>/reportserver");  
         serverReport.ReportPath =   
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -116,7 +116,7 @@ Public Class Form1
   
         'Set the report server URL and report path  
         serverReport.ReportServerUrl = _  
-           New Uri("http://<Server Name>/reportserver")  
+           New Uri("https://<Server Name>/reportserver")  
         serverReport.ReportPath = _  
            "/AdventureWorks Sample Reports/Sales Order Detail"  
   
@@ -147,7 +147,7 @@ End Class
   
 3.  Browse to the location where you installed the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples project.  
   
-     The download the report samples, go to [AdventureWorks 2012 Report Samples](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     The download the report samples, go to [AdventureWorks 2012 Report Samples](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Select the Sales Order Detail.rdl file and click the **Add** button.  
   

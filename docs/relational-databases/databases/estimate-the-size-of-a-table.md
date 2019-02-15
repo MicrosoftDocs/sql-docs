@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pages [SQL Server], space"

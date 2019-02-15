@@ -51,6 +51,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## See Also  
- [ADOMD.NET Server Programming](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET Server Programming](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

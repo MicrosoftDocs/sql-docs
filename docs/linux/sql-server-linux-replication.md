@@ -4,14 +4,12 @@ description: This article describes SQL Server replication on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.custom: "sql-linux"
-ms.technology: database-engine
-ms.assetid: 
-ms.workload: "On Demand"
+ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server Replication on Linux
@@ -28,7 +26,7 @@ An instance of SQL Server can participate in any replication role:
 * Distributor
 * Subscriber
 
-A replication schema can mix and match operating system platforms. For example, a replication schema can use instances of SQL Server on Linux for publisher and distributor, and the subscribers can include instances of SQL Server on Windows.
+A replication schema can mix and match operating system platforms. For example, a replication schema may include an instance of SQL Server on Linux for publisher and distributor, and the subscribers include instances of SQL Server on Windows as well as Linux.
 
 SQL Server instances on Linux can participate in any type of replication.
 
@@ -56,6 +54,7 @@ For [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] the following replic
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] does not support the following features:
 
 * Immediate update subscribers
+* Oracle publishing
 
 ## Next steps
 

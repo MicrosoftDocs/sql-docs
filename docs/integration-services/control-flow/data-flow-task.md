@@ -50,7 +50,7 @@ manager: craigg
 |**OnPipelinePrePrimeOutput**|Indicates that the component is about to receive its call from the **PrimeOutput** method. Depending on the data flow, multiple log entries may be written.|  
 |**OnPipelineRowsSent**|Reports the number of rows provided to a component input by a call to the **ProcessInput** method. The log entry includes the component name.|  
 |**PipelineBufferLeak**|Provides information about any component that kept buffers alive after the buffer manager goes away. If a buffer is still alive, buffers resources were not released and may cause memory leaks. The log entry provides the name of the component and the ID of the buffer.|  
-|**PipelineComponentTime**|Reports the amount of time (in milliseconds) that the component spent in each of its five major processing steps—Validate, PreExecute, PostExecute, ProcessInput, and ProcessOutput.|  
+|**PipelineComponentTime**|Reports the amount of time (in milliseconds) that the component spent in each of its five major processing steps-Validate, PreExecute, PostExecute, ProcessInput, and ProcessOutput.|  
 |**PipelineExecutionPlan**|Reports the execution plan of the data flow. The execution plan provides information about how buffers will be sent to components. This information, in combination with the PipelineExecutionTrees log entry, describes what is happening within the Data Flow task.|  
 |**PipelineExecutionTrees**|Reports the execution trees of the layout in the data flow. The scheduler of the data flow engine uses the trees to build the execution plan of the data flow.|  
 |**PipelineInitialization**|Provides initialization information about the task. This information includes the directories to use for temporary storage of BLOB data, the default buffer size, and the number of rows in a buffer. Depending on the configuration of the Data Flow task, multiple log entries may be written.|  
@@ -98,7 +98,7 @@ manager: craigg
   
  For more information about how to set these properties in the **Properties** window, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Programmatic Configuration of the Data Flow Task  
  For more information about programmatically adding a data flow task to a package and setting data flow properties, click the following topic:  
@@ -106,9 +106,9 @@ manager: craigg
 -   [Adding the Data Flow Task Programmatically](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## Related Tasks  
- [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Related Content  
- Video, [Balanced Data Distributer](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  
+ Video, [Balanced Data Distributer](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  
   
   

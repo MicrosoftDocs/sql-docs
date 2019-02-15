@@ -29,6 +29,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

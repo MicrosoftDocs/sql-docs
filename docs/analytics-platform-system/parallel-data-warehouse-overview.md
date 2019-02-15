@@ -35,7 +35,7 @@ To learn more about Analytics Platform System, see:
   
 ![Parallel Data Warehouse software](media/parallel-data-warehouse-software.png "Parallel Data Warehouse software")  
   
-## <a name="sec1"></a>Appliance Software – Query Processing and User Data Storage  
+## <a name="sec1"></a>Appliance Software - Query Processing and User Data Storage  
   
 ### Control Node  
 MPP Engine  
@@ -50,7 +50,7 @@ The MPP Engine is the brains of the Massively Parallel Processing (MPP) system. 
 -   Tracks hardware and software status.  
   
 ### Data Movement Service (DMS)  
-Data Movement Service (DMS) is part of the “secret sauce” of PDW. It does the following:  
+Data Movement Service (DMS) is part of the "secret sauce" of PDW. It does the following:  
   
 -   Transfers data to and from the SQL Server PDW nodes.  
   
@@ -138,7 +138,7 @@ Queries are written with Transact\-SQL modified to fit the MPP nature of the que
 ### SQL Server Data Tools (SSDT)  
 SQL Server Data Tools runs inside of Visual Studio and is our recommended GUI tool for submitting queries to SQL Server PDW. It is similar to SQL Server Management Studio by allowing you to navigate through an object explorer.  
   
-If you don’t already have Visual Studio, you can download the tools that you need for free. 
+If you don't already have Visual Studio, you can download the tools that you need for free. 
 <!-- MISSING LINKS
 For more information, see [Install SQL Server database tooling  for Visual Studio &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-database-tooling-for-visual-studio-sql-server-pdw.md).  
 -->
@@ -148,7 +148,7 @@ sqlcmd is the SQL Server command-line tool for running Transact\-SQL statements 
   
 <!-- MISSING LINKS
 
-If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
+If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
 ### Integration Services  

@@ -29,5 +29,5 @@ Backward compatibility describes how applications, the Driver Manager, and drive
   
  [1]   The backward compatibility of drivers is primarily discussed in Appendix G: Driver Guidelines for Backward Compatibility.  
   
-> [!NOTE]  
->  A standards-compliant application — for example, an application that has been written in accordance with the Open Group or ISO CLI standards — is guaranteed to work with an ODBC 3*.x* driver through the ODBC 3*.x* Driver Manager. It is assumed that the functionality that the application is using is available in the driver. It is also assumed that the standards-compliant application has been compiled with the ODBC 3*.x* header files.
+> [!NOTE]
+>  A standards-compliant application - for example, an application that has been written in accordance with the Open Group or ISO CLI standards - is guaranteed to work with an ODBC 3*.x* driver through the ODBC 3*.x* Driver Manager. It is assumed that the functionality that the application is using is available in the driver. It is also assumed that the standards-compliant application has been compiled with the ODBC 3*.x* header files.

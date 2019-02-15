@@ -1,6 +1,6 @@
 ---
-title: Python extension in SQL Server Machine Learning Services| Microsoft Docs
-description: Learn about Python code execution and built-in Python libraries in SQL Server.
+title: Python programming language extension - SQL Server Machine Learning
+description: Learn about Python code execution and built-in Python libraries in SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,10 +10,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Python extension in SQL Server
+# Python language extension in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The Python extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds a Python execution environment, Anaconda distribution with the Python 3.5 runtime and interpreter, standard libraries and tools, and the Microsoft product libraries for Python: [revoscalepy](../python/what-is-revoscalepy.md) for analytics at scale and [microsoftml](../using-the-microsoftml-package.md) for machine learning algorithms. 
+The Python extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds a Python execution environment, Anaconda distribution with the Python 3.5 runtime and interpreter, standard libraries and tools, and the Microsoft product libraries for Python: [revoscalepy](../python/ref-py-revoscalepy.md) for analytics at scale and [microsoftml](../python/ref-py-microsoftml.md) for machine learning algorithms. 
 
 Python integration is installed as [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
@@ -23,7 +23,7 @@ Installation of the Python 3.5 runtime and interpreter ensures near-complete com
 
 SQL Server includes both open-source and proprietary packages. The Python runtime installed by Setup is Anaconda 4.2 with Python 3.5. The Python runtime is installed independently of SQL tools, and is executed outside of core engine processes, in the extensibility framework. As part of the installation of Machine Learning Services with Python, you must consent to the terms of the GNU Public License. 
 
-SQL Server does not modify the Python executables, but you must use the version of Python installed by Setup because that version is the one that the proprietary packages are built and tested on. For a list of packages supported by the Anaconda distribution, see the Continuum analytics site: [Anaconda package list](https://docs.continuum.io/anaconda/pkg-docs).
+SQL Server does not modify the Python executables, but you must use the version of Python installed by Setup because that version is the one that the proprietary packages are built and tested on. For a list of packages supported by the Anaconda distribution, see the Continuum analytics site: [Anaconda package list](https://docs.continuum.io/anaconda/packages/pkg-docs).
 
 The Anaconda distribution associated with a specific database engine instance can be found in the folder associated with the instance. For example, if you installed SQL Server 2017 database engine with Machine Learning Services and Python on the default instance, look under `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`.
 
@@ -31,8 +31,8 @@ Python packages added by Microsoft for parallel and distributed workloads includ
 
 | Library | Description |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. It is equivalent to that of the [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) package for Microsoft R. |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [Using the MicrosoftML package with SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package). |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. For more information, see [revoscalepy module with SQL Server](../python/ref-py-revoscalepy.md).  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [microsoftml module with SQL Server](../python/ref-py-microsoftml.md). |
 
 Microsoftml and revoscalepy are tightly coupled; data sources used in microsoftml are defined as revoscalepy objects. Compute context limitations in revoscalepy transfer to microsoftml. Namely, all functionality is available for local operations, but switching to a remote compute context requires RxInSqlServer.
 
@@ -71,7 +71,7 @@ After the script has been embedded in the stored procedure, any application that
 You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQl Server computer, if these conditions are met:
 
 + You design the scripts appropriately
-+ The remote computer has installed the extensibility libraries that are used by Machine Learning Services. The [revoscalepy](../python/what-is-revoscalepy.md) package is required to use remote compute contexts.
++ The remote computer has installed the extensibility libraries that are used by Machine Learning Services. The [revoscalepy](../python/ref-py-revoscalepy.md) package is required to use remote compute contexts.
 
 The following diagram summarizes the overall workflow when scripts are sent from a remote computer.
 
@@ -89,6 +89,7 @@ The following diagram summarizes the overall workflow when scripts are sent from
 
 ## See also
 
-+ [What is revoscalepy](../python/what-is-revoscalepy.md) 
++ [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md)
++ [revoscalepy function reference](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Extensibility framework in SQL Server](extensibility-framework.md)
 + [R and machine learning extensions in SQL Server](extension-r.md)

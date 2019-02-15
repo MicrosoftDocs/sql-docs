@@ -21,11 +21,11 @@ manager: craigg
   
  **SQLGetInfo** supports the SQL_FILE_USAGE information type. The returned value is a 16-bit integer that indicates how the driver directly treats files in a data source:  
   
--   SQL_FILE_NOT_SUPPORTED — The driver is not a single-tier driver.  
+-   SQL_FILE_NOT_SUPPORTED - The driver is not a single-tier driver.  
   
--   SQL_FILE_TABLE — A single-tier driver treats files in a data source as tables.  
+-   SQL_FILE_TABLE - A single-tier driver treats files in a data source as tables.  
   
--   SQL_FILE_QUALIFIER — A single-tier driver treats files in a data source as a qualifier.  
+-   SQL_FILE_QUALIFIER - A single-tier driver treats files in a data source as a qualifier.  
   
  The ODBC driver returns SQL_FILE_QUALIFIER because each file is a complete database.  
   

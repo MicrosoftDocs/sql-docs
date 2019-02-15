@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], consolidated members"
   - "members [Master Data Services], consolidated member permissions"
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Consolidated Permissions (Master Data Services)
@@ -35,7 +35,7 @@ manager: craigg
 |**Deny**|Consolidated members for the entity are not displayed.|  
   
 ## Attribute Permissions  
- Attribute permissions apply to the attribute’s values for the specific entity. Users with only attribute permissions cannot add or remove members.  
+ Attribute permissions apply to the attribute's values for the specific entity. Users with only attribute permissions cannot add or remove members.  
   
 |Permission|Description|  
 |----------------|-----------------|  

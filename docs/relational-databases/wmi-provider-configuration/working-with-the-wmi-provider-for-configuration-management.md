@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-
+ms.technology: wmi
 ms.topic: "reference"
 helpviewer_keywords: 
   - "permissions [WMI]"
@@ -29,7 +28,7 @@ manager: craigg
 ## Binding  
  The WMI Provider for Configuration Management is a COM object model and it supports early and late binding. With late binding you can use script languages, such as VBScript, to manipulate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, network settings, and aliases programmatically.  
   
- For further information about programming WMI Provider implementations using scripting languages, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web site](http://go.microsoft.com/fwlink/?linkid=15426).  
+ For further information about programming WMI Provider implementations using scripting languages, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web site](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## Specifying a Connection String  
  Applications direct the WMI Provider for Configuration Management to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by connecting to a WMI namespace defined by the provider. The Windows WMI service maps this namespace to the provider DLL and loads it into memory. All instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are represented with a single WMI namespace. The namespace defaults to  
@@ -40,7 +39,7 @@ manager: craigg
   
  where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Note:** If you are connecting through Windows Firewall you will need to make sure your computers are configured appropriately. See the "Connecting Through Windows Firewall" article in the Windows Management Instrumentation documentation on [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web site](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Note:** If you are connecting through Windows Firewall you will need to make sure your computers are configured appropriately. See the "Connecting Through Windows Firewall" article in the Windows Management Instrumentation documentation on [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web site](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## Permissions and Server Authentication  
  To access the WMI Provider for Configuration Management, the client WMI management script must be running in the context of an administrator on the target computer. You need to be a member of the local Windows administrators group on the computer you want to manage.  

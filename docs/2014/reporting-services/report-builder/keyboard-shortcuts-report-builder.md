@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "keyboard shortcuts"
   - "shortcuts"
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Keyboard Shortcuts (Report Builder)
   When you work in Report Builder, you have access to all the shortcut keys for navigation that are provided by the Windows environment. You can select from several standard keyboard mapping schemes.  

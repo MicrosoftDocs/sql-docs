@@ -21,7 +21,7 @@ manager: craigg
   
 -   The **Properties** window lists the component-level custom properties of each element, as well as the properties common to all data flow elements.  
   
--   The **Advanced Editor** dialog box provides access to custom properties for each component. The **Advanced Editor** dialog box also provides access to the properties common to all data flow components—the properties of inputs, outputs, error outputs, columns, and external columns.  
+-   The **Advanced Editor** dialog box provides access to custom properties for each component. The **Advanced Editor** dialog box also provides access to the properties common to all data flow components-the properties of inputs, outputs, error outputs, columns, and external columns.  
   
 ## Set the properties of a data flow component with a component editor  
   

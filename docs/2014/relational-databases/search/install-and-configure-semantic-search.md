@@ -55,7 +55,7 @@ GO
   
     -   Locate the Windows installer package named **SemanticLanguageDatabase.msi** on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media. Locate the 32-bit or 64-bit version of the installer package depending on the target system. The name of the containing folder identifies the 32-bit or 64-bit version of the file; the file name itself is the same for both versions.  
   
-    -   Download the installer package from the [Microsoft® SQL Server® 2014 Semantic Language Statistics](http://go.microsoft.com/fwlink/?LinkID=296743) page on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Download Center.  
+    -   Download the installer package from the [Microsoft?? SQL Server?? 2014 Semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) page on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Download Center.  
   
 2.  Run the **SemanticLanguageDatabase.msi** Windows installer package to extract the database and log file.  
   
@@ -129,6 +129,6 @@ GO
 ## Installing Optional Support for Newer Document Types  
   
 ###  <a name="office"></a> How to: Install the Latest Filters for Microsoft Office and other Microsoft Document Types  
- This release of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installs the latest [!INCLUDE[msCoName](../../../includes/msconame-md.md)] word breakers and stemmers, but does not install the latest filters for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office documents and other [!INCLUDE[msCoName](../../../includes/msconame-md.md)] document types. These filters are required for indexing documents created with recent versions of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office and other [!INCLUDE[msCoName](../../../includes/msconame-md.md)] applications. To download the latest filters, see [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293).  
+ This release of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installs the latest [!INCLUDE[msCoName](../../../includes/msconame-md.md)] word breakers and stemmers, but does not install the latest filters for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office documents and other [!INCLUDE[msCoName](../../../includes/msconame-md.md)] document types. These filters are required for indexing documents created with recent versions of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office and other [!INCLUDE[msCoName](../../../includes/msconame-md.md)] applications. To download the latest filters, see [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293).  
   
   

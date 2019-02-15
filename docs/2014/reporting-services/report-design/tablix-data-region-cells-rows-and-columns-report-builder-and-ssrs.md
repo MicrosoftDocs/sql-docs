@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.deleterows.f1"
   - "sql12.rtp.rptdesigner.deletecolumns.f1"
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS

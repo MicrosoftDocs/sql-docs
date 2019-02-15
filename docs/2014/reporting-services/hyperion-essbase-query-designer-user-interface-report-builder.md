@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Hyperion Essbase query designer"
   - "query designers, Hyperion"
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

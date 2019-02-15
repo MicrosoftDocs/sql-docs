@@ -11,7 +11,7 @@ f1_keywords:
   - "10054"
   - "sql12.rtp.rptdesigner.pictureproperties.size.f1"
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

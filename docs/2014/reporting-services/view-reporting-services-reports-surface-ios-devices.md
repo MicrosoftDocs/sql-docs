@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Report Viewer [Reporting Services]"
   - "iOS"
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

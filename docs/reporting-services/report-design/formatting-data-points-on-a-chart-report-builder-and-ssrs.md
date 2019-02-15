@@ -11,8 +11,8 @@ f1_keywords:
   - "10248"
   - "sql13.rtp.rptdesigner.serieslabelproperties.general.f1"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Formatting Data Points on a Chart (Report Builder and SSRS)
 In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, a data point is the smallest individual entity on the chart. On non-Shape charts, data points are represented depending on their chart type. For example, a Line series consists of one or more connected data points. On Shape charts, data points are represented by individual slices or segments that add up to the whole chart. For example, on a pie chart, each piece is a data point. For more information, see [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  

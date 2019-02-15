@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "dialog boxes"
   - "Help, dialog boxes"
   - "user interface, dialog boxes"
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

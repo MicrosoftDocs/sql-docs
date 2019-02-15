@@ -8,8 +8,8 @@ description: The Word rendering extension renders paginated reports to the  [!IN
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Exporting to Microsoft Word (Report Builder and SSRS)

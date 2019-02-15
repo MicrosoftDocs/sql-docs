@@ -13,7 +13,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select Color dialog box"
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

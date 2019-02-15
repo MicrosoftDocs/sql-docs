@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "Access reports [Reporting Services]"
   - "importing reports"
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

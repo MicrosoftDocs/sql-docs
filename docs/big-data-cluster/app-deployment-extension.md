@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: TheBharath 
 ms.author: bharaths  
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -20,7 +20,7 @@ This extension is in private preview. Please provide feedback to [[!INCLUDE[ssNo
 
 ### Install
 
-Download the[sqlservbdc-app-deploy.vsix](<https://github.com/Microsoft/sql-server-samples>) in order to install the extension as part of VS Code. 
+Download [sqlservbdc-app-deploy.vsix](<https://github.com/Microsoft/sql-server-samples>) in order to install the extension as part of VS Code.
 
 Launch VS Code and navigate to the Extensions sidebar.
 

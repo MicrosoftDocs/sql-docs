@@ -4,12 +4,11 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-
-
 ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+
 ---
 # Integrating Reporting Services into Applications
 

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "shared data sources"
   - "data sources"
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

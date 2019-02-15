@@ -11,7 +11,7 @@ f1_keywords:
   - "10530"
   - "sql12.rtp.rptdesigner.reportproperties.references.f1"
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

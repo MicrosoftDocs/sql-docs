@@ -13,7 +13,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Expression dialog box [Reporting Services]"
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

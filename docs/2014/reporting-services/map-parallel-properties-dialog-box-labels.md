@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapparallelproperties.labels.f1"
   - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

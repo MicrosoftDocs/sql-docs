@@ -15,8 +15,8 @@ f1_keywords:
   - "MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE"
   - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Maps (Report Builder and SSRS)

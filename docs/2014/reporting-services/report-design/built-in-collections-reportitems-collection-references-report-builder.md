@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # ReportItems Collection References (Report Builder and SSRS)
   The `ReportItems` built-in collection is the set of text boxes from report items such as rows of a data region or text boxes on the report design surface. The `ReportItems` collection includes text boxes that are in the current scope of a page header, page footer, or report body. This collection is determined at run time by the report processor and the report renderer. The current scope changes as the report processor successively combines report data and the report item layout elements as the user views pages of a report. You can use the `ReportItems` built-in collection to produce dictionary-style page headers that show the first and last items on each page.  

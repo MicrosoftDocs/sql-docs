@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Expressions (Report Builder and SSRS)
   Expressions are widely used throughout [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports to retrieve, calculate, display, group, sort, filter, parameterize, and format data. 

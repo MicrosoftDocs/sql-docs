@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Saving Reports (Report Builder)
   In Report Builder you can save a report to a report server, SharePoint library, file share on which you have write permission, or your computer. You can save a report to the same location from which you opened it, save it to a different location, or save it with a new name to the same or different location. By default, a report is resaved to the location from which you opened it. When you save the report, what you are really saving is the report definition, which describes the report layout. You are not saving the data. Every time you run the report, the report data is refreshed and is likely to be different than the previous time you ran the report.  

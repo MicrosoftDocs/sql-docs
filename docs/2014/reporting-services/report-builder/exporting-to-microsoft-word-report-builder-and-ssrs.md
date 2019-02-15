@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Exporting to Microsoft Word (Report Builder and SSRS)
   The Word rendering extension renders reports to the native format of [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. The format is Office Open XML.  

@@ -10,19 +10,19 @@ ms.author: mikeray
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# What's new in SQL Server 2019
+# What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   > [!div class="nextstepaction"]
   > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
-**Try SQL Server 2019!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download SQL Server 2019 to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
+**Try [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
+- [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
 
 ## CTP 2.3
 
@@ -30,6 +30,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
 
 - [Big data clusters](#bigdatacluster) 
   - Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ
+  - Common CLI for application deployment and cluster management
 
 - [Database engine](#databaseengine)
   - Accelerated database recovery
@@ -37,6 +38,9 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Improved indirect checkpoint scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
+
+- [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
+  - Calculation groups in tabular models reduce the number of measures by reusing calculation logic.
 
 ## Previous CTPs
 
@@ -104,14 +108,15 @@ Continue reading for more details about these features.
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
 - [Submit Jar or Py](../big-data-cluster/big-data-cluster-overview.md) files with references to SQL Server big data clusters. (CTP 2.3)
-- Execute Jar or Py files located in the HDFS file system. (CTP 2.3)
-- Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
+- Execute Jar or Py files located in the HDFS file system (CTP 2.3)
+- Common CLI for app deployment and cluster management simplifies app deployment (CTP 2.3)
+- Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-overview.md)<!--../big-data-cluster//big-data-cluster-create-apps.md-->. (CTP 2.1) 
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)
 - Run Advanced analytics and machine learning with Spark (CTP 2.0)
 - Use Spark streaming to data to SQL data pools (CTP 2.0)
-- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md). (CTP 2.0)
+- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md) (CTP 2.0)
  
 [!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
@@ -122,22 +127,31 @@ Continue reading for more details about these features.
 ### Accelerated database recovery (CTP 2.3)
 
 [Accelerated database recovery](http://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery
-) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process.
+) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. As of CTP 2.3, accelerated database recovery can be enabled per-database using the following syntax:
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+>[!NOTE]
+>This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+
+Customers with critical databases, that are prone to large transactions, are invited to experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](http://aka.ms/sqlfeedback).
 
 ### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
 
-Query Store now supports the ability to force query execution plans for fast forward and static T-SQL and API cursors.  Forcing is now supported via `sp_query_store_force_plan` or through SQL Server Management Studio Query Store reports.
+Query Store now supports the ability to force query execution plans for fast forward and static T-SQL and API cursors. Forcing is now supported via `sp_query_store_force_plan` or through SQL Server Management Studio Query Store reports.
 
 ### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
 
-Prior to this feature, when referencing a temporary table with a DML statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed.  With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+Prior to this feature, when referencing a temporary table with a DML statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
 
-- Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions.  
-- Keep track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions.  
+- Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions. 
+- Keep track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions. 
 
 The end result is a reduction in extraneous recompilations and CPU-overhead.
 
-### Improved Indirect Checkpoint Scalability (CTP 2.3)
+### Improved indirect checkpoint scalability (CTP 2.3)
 
 In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
 
@@ -157,7 +171,7 @@ The new error message 2628 provides more context for the data truncation problem
 
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution.  Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
 
 ### Static data masking (CTP 2.1)
 
@@ -245,7 +259,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 
 ### Intelligent query processing (CTP 2.0)
 
-- **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant. Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
+- **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] by adjusting memory grant sizes for both batch and row mode operators. For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant. Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
 
 - **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios. This function is optimized for queries where all the following conditions are true:
    - Accesses data sets of at least millions of rows.
@@ -262,7 +276,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
       - Would add too much overhead to the query.
       - Or, is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
 
-- **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
+- **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts. This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 
 To use intelligent query processing features, set database `COMPATIBILITY_LEVEL = 150`.
 
@@ -272,7 +286,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 ### <a id="sqlgraph"></a> SQL Graph features
 
-- **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on SQL Server 2019 preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
+- **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
 
 - **Match support in `MERGE` DML (CTP 2.0)** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
@@ -290,7 +304,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
   - `WHEN_SUPPPORTED` option allows supported operations online or resumable and run index unsupported operations offline or non-resumable.
   - `OFF` option allows the current behavior of executing all index operations offline and non-resumable unless explicitly specified in the DDL statement.
 
-To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands.  
+To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands. 
 
 Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
@@ -343,11 +357,11 @@ For more information, see [Hybrid buffer pool](../database-engine/configure-wind
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
 
-`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data. In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
 
 ### New options added to sp_estimate_data_compression_savings (CTP 2.0)
 
-`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state. Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
 ### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling (CTP 2.0)
 
@@ -369,7 +383,7 @@ For more information on lightweight profiling, see [Query Profiling Infrastructu
 
 ### New sys.dm_db_page_info system function returns page information (CTP 2.0)
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`. This function replaces the need to use `DBCC PAGE` in most cases.  
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`. This function replaces the need to use `DBCC PAGE` in most cases. 
 
 In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`. This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`. See the following script as an example:
 
@@ -392,26 +406,26 @@ FROM sys.dm_exec_requests AS d
 
   Configure replication [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
+- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
 
 - **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, and a health monitor.
 
 - **OpenLDAP support for third-party AD providers (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
-- **Machine Learning on Linux (CTP 2.0)**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 - **New container registry (CTP 2.1)**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
 
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (CTP 2.0) 
+## <a id="mds"></a> Master Data Services 
 
-- **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
+- **Silverlight controls replaced with HTML (CTP 2.0)**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
-## <a id="security"></a>Security (CTP 2.0)
+## <a id="security"></a>Security
 
-- **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
+- **Certificate management in SQL Server Configuration Manager (CTP 2.0)**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
   - Viewing and validating certificates installed in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. 
   - Viewing certificates close to expiration.
@@ -425,7 +439,7 @@ FROM sys.dm_exec_requests AS d
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
-  - Update to the [SQL Server 2019 (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
+  - Update to the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
   - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. (CTP 2.0) 
   - Quickly visualize data with built-in charting of your result sets. (CTP 2.0)
   - Create custom dashboards for your servers and databases using customizable widgets. (CTP 2.0)  
@@ -443,18 +457,43 @@ FROM sys.dm_exec_requests AS d
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 
+## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
+
+### Calculation groups in tabular models (CTP 2.3)
+
+Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures. 
+
+A calculation group can have any number of calculation items. Each calculation item is defined by a DAX expression. Three new DAX functions are introduced to work with calculation groups:
+
+- `SELECTEDMEASURE()` - Returns a reference to the measure currently in context. 
+- `SELECTEDMEASURENAME()` - Returns a string containing the name of the measure currently in context. 
+- `ISSELECTEDMEASURE(M1, M2, …)` - Returns a Boolean indicating whether the measure currently in context is one of those specified as an argument.
+
+In addition to new DAX functions, two new Dynamic Management Views are introduced:
+
+- `TMSCHEMA_CALCULATION_GROUPS` 
+- `TMSCHEMA_CALCULATION_ITEMS` 
+
+For this release, calculation groups do have some limitations:
+
+- The `ALLSELECTED DAX` function is not yet supported.
+- Row Level Security defined on the calculation-group table is not yet supported.
+- Object Level Security defined on the calculation-group table is not yet supported.
+- DetailsRows expressions referring to calculation items are net yet supported.
+
+Calculation groups require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
+
 ## Other services
 
-As of CTP 2.2, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
+As of CTP 2.3, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
 
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
 
 ## Next steps
 
-- [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)
+- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md)
 
-- [Microsoft SQL Server 2019: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft SQL Server 2019 CTP 2.0 for Windows, Linux, and Docker containers.
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

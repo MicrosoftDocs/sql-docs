@@ -8,8 +8,8 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Create mobile reports with SQL Server Mobile Report Publisher
 Learn about [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and connected to on-premises data, with an assortment of data visualizations. 

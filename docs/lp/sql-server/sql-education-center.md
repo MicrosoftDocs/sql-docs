@@ -6,6 +6,7 @@ experiment_id: "81ba5f65-59fb-4d"
 title: Microsoft Azure Documentation
 description: Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
 ---
@@ -13,7 +14,7 @@ featureFlags:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -23,7 +24,7 @@ featureFlags:
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Download SQL Server</span>
+                                    <span class="likeAnH3">Try SQL Server 2019 (preview)</span>
                                 </div>
                             </div>
                         </div>

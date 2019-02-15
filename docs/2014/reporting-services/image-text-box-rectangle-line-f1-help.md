@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 4d2afca6-ab7a-4695-b9c9-bc2bdaa4060e
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Image, Text Box, Rectangle, Line F1 Help
   Topics in this section provide information about the options that you can set on images, text boxes, rectangles, and lines from dialog boxes in Report Designer.  

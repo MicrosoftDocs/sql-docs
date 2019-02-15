@@ -2,6 +2,7 @@
 title: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
 ms.date: 06/17/2018
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""

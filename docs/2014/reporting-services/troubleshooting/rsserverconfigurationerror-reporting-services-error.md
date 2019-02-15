@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # rsServerConfigurationError - Reporting Services Error
     

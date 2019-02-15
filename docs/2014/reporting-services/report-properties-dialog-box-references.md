@@ -11,9 +11,9 @@ f1_keywords:
   - "10530"
   - "sql12.rtp.rptdesigner.reportproperties.references.f1"
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Properties Dialog Box, References
   Select **References** on the **Report Properties** dialog box to add or remove references to custom or other external assemblies and custom class instances that are used by expressions in the report definition.  

@@ -34,46 +34,46 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Transact-SQL Syntax Conventions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  The following table lists and describes conventions that are used in the syntax diagrams in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference.  
+The following table lists and describes conventions that are used in the syntax diagrams in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference.  
   
 |Convention|Used for|  
 |----------------|--------------|  
 |UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] keywords.|  
-|*italic*|User-supplied parameters of [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax.|  
-|**bold**|Database names, table names, column names, index names, stored procedures, utilities, data type names, and text that must be typed exactly as shown.|  
-|_underline_|Indicates the default value applied when the clause that contains the underlined value is omitted from the statement.|  
+|_italic_|User-supplied parameters of [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax.|  
+|**bold**|Type database names, table names, column names, index names, stored procedures, utilities, data type names, and text exactly as shown.|  
+|underline|Indicates the default value applied when the clause that contains the underlined value is omitted from the statement.|  
 |&#124; (vertical bar)|Separates syntax items enclosed in brackets or braces. You can use only one of the items.|  
-|`[ ]` (brackets)|Optional syntax items. Do not type the brackets.|  
-|{ } (braces)|Required syntax items. Do not type the braces.|  
-|[**,**...*n*]|Indicates the preceding item can be repeated *n* number of times. The occurrences are separated by commas.|  
-|[...*n*]|Indicates the preceding item can be repeated *n* number of times. The occurrences are separated by blanks.|  
-|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] statement terminator. Although the semicolon is not required for most statements in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it will be required in a future version.|  
-|\<label> ::=|The name for a block of syntax. This convention is used to group and label sections of lengthy syntax or a unit of syntax that can be used in more than one location within a statement. Each location in which the block of syntax can be used is indicated with the label enclosed in chevrons: \<label>.<br /><br /> A set is a collection of expressions, for example \<grouping set>; and a list is a collection of sets, for example \<composite element list>.|  
+|`[ ]` (brackets)|Optional syntax items. Don't type the brackets.|  
+|{ } (braces)|Required syntax items. Don't type the braces.|  
+|[**,**..._n_]|Indicates the preceding item can be repeated _n_ number of times. The occurrences are separated by commas.|  
+|[..._n_]|Indicates the preceding item can be repeated _n_ number of times. The occurrences are separated by blanks.|  
+|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] statement terminator. Although the semicolon isn't required for most statements in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it will be required in a future version.|  
+|\<label> ::=|The name for a block of syntax. Use this convention to group and label sections of lengthy syntax or a unit of syntax that you can use in more than one location within a statement. Each location in which the block of syntax could be used is indicated with the label enclosed in chevrons: \<label>.<br /><br /> A set is a collection of expressions, for example \<grouping set>; and a list is a collection of sets, for example \<composite element list>.|  
   
 ## Multipart Names  
- Unless specified otherwise, all [!INCLUDE[tsql](../../includes/tsql-md.md)] references to the name of a database object can be a four-part name in the following form:  
+Unless specified otherwise, all [!INCLUDE[tsql](../../includes/tsql-md.md)] references to the name of a database object can be a four-part name in the following form:  
   
-*server_name* **.**[*database_name*]**.**[*schema_name*]**.**_object\_name_  
+_server\_name_.[_database\_name_].[_schema\_name_]._object\_name_  
   
- | _database\_name_**.**[_schema\_name_]**.**_object\_name_  
+| _database\_name_.[_schema\_name_]._object\_name_  
+ 
+| _schema\_name_._object\_name_  
   
- | _schema\_name_**.**_object\_name_  
-  
- | _object\_name_  
+| _object\_name_  
   
 _server\_name_  
 Specifies a linked server name or remote server name.  
   
-*database_name*  
+_database\_name_  
 Specifies the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database when the object resides in a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When the object is in a linked server, *database_name* specifies an OLE DB catalog.  
   
-*schema_name*  
+_schema\_name_  
 Specifies the name of the schema that contains the object if the object is in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. When the object is in a linked server, *schema_name* specifies an OLE DB schema name.  
   
-*object_name*  
+_object\_name_  
 Refers to the name of the object.  
   
-When referencing a specific object, you do not always have to specify the server, database, and schema for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to identify the object. However, if the object cannot be found, an error is returned.  
+When referencing a specific object, you don't always have to specify the server, database, and schema for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to identify the object. However, if the object can't be found, an error is returned.  
   
 > [!NOTE]  
 > To avoid name resolution errors, we recommend specifying the schema name whenever you specify a schema-scoped object.  
@@ -82,14 +82,14 @@ To omit intermediate nodes, use periods to indicate these positions. The followi
   
 |Object reference format|Description|  
 |-----------------------------|-----------------|  
-|*server* **.** *database* **.** *schema* **.** *object*|Four-part name.|  
-|*server* **.** *database* **..** *object*|Schema name is omitted.|  
-|*server* **..** *schema* **.** *object*|Database name is omitted.|  
-|*server* **...** *object*|Database and schema name are omitted.|  
-|*database* **.** *schema* **.** *object*|Server name is omitted.|  
-|*database* **..** *object*|Server and schema name are omitted.|  
-|*schema* **.** *object*|Server and database name are omitted.|  
-|*object*|Server, database, and schema name are omitted.|  
+|_server_._database_._schema_._object_|Four-part name.|  
+|_server_._database_.._object_|Schema name is omitted.|  
+|_server_.._schema_._object_|Database name is omitted.|  
+|_server_..._object_|Database and schema name are omitted.|  
+|_database_._schema_._object_|Server name is omitted.|  
+|_database_.._object_|Server and schema name are omitted.|  
+|_schema_._object_|Server and database name are omitted.|  
+|_object_|Server, database, and schema name are omitted.|  
   
 ## Code Example Conventions  
 Unless stated otherwise, the examples provided in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference were tested by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and its default settings for the following options:  
@@ -106,11 +106,11 @@ Most code examples in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference 
 Many code examples prefix Unicode character string constants with the letter **N**. Without the **N** prefix, the string is converted to the default code page of the database. This default code page may not recognize certain characters.  
   
 ## "Applies to" References  
-The [!INCLUDE[tsql](../../includes/tsql-md.md)] reference includes articles related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+The [!INCLUDE[tsql](../../includes/tsql-md.md)] reference includes articles related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-Near the top of each article is a section indicating which products support the subject of the article. If a product is omitted, then the feature described by the article is not available in that product. For example, availability groups were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The **CREATE AVAILABILITY GROUP** article indicates it applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) because it does not apply to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+There's a section near the top of each article indicating which products support the article's subject. If a product is omitted, then the feature described by the article isn't available in that product. For example, availability groups were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The **CREATE AVAILABILITY GROUP** article indicates it applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) because it doesn't apply to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-In some cases, the general subject of the article can be used in a product, but all of the arguments are not supported. For example, contained database users were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The **CREATE USER** statement can be used in any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product, however the **WITH PASSWORD** syntax cannot be used with older versions. In this case, additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the article.  
+The general subject of the article might be used in a product, but all of the arguments aren't supported in some cases. For example, contained database users were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Use the **CREATE USER** statement in any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product, however the **WITH PASSWORD** syntax can't be used with older versions. Additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the article.  
   
 ## See Also  
 [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)    

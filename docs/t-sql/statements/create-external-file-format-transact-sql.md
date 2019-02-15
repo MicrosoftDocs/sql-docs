@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2/20/2018"
+ms.date: 02/20/2018
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""

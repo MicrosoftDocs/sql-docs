@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "JSON"
   - "JSON, built-in support"
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

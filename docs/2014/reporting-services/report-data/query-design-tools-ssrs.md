@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Query Design Tools in Report Designer SQL Server Data Tools (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a variety of query design tools that you can use to create dataset queries in Report Designer. The type of data source that you are working with determines the availability of a particular query designer. In addition, some query designers provide alternate modes so that you can choose whether to work in visual mode or directly in the query language. This topic introduces each tool and describes the type of data source each one supports. The following tools are described in this topic:  

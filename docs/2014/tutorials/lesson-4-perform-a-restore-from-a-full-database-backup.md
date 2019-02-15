@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Lesson 4: Perform a Restore From a Full Database Backup

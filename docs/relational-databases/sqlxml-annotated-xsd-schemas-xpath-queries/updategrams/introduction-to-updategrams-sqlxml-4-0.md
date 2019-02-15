@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "executing updategrams [SQLXML]"
   - "implicit schema mapping"
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -2,10 +2,8 @@
 title: "sys.dm_xe_database_sessions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: MightyPen

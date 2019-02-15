@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Access the Reporting Services WMI Provider
   The Reporting Services WMI provider exposes two WMI classes for administration of Native mode report server instances through scripting:  

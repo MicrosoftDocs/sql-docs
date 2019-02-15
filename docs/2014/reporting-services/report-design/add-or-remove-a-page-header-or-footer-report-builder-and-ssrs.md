@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Add or Remove a Page Header or Footer (Report Builder and SSRS)
   You can add static text, images, lines, rectangles, and borders to page headers or footers. You can place expressions and data-bound images in a textbox if you want variable or computed data in a header or footer.  

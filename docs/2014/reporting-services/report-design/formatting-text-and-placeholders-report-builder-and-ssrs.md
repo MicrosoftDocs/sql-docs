@@ -15,8 +15,8 @@ f1_keywords:
   - "10132"
   - "sql11.rtp.rptdesigner.textproperties.font.f1"
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Formatting Text and Placeholders (Report Builder and SSRS)

@@ -38,8 +38,8 @@ f1_keywords:
   - "10062"
   - "10053"
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Drilldown Action (Report Builder and SSRS)

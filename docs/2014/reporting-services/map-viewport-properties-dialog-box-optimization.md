@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapviewport.optimization.f1"
   - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

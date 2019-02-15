@@ -13,7 +13,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Query Builder [Reporting Services]"
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
 ---

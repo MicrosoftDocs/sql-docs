@@ -12,8 +12,8 @@ f1_keywords:
   - "10542"
   - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Map Wizard and Map Layer Wizard (Report Builder and SSRS)

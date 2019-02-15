@@ -15,8 +15,8 @@ f1_keywords:
   - "10546"
   - "sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ---
 # Indicators (Report Builder and SSRS)

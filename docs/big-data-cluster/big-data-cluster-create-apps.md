@@ -15,54 +15,55 @@ ms.custom: seodec18
 # How to deploy an app on SQL Server 2019 big data cluster (preview)
 
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster (preview).
+ 
 
-We have significantly improved the app deploy experince in CTP 2.3. If you are using CTP 2.2 you are refer to the documentation here (need to add a link)
+## What's new and improved (to be removed -work with Mike )
 
-What's new and improved
+- A single command-line utility to manage cluster and app.
+- Simplified app deployment while providing granular control through spec files.
+- Support hosting additional application types - SSIS and MLeap (new in CTP 2.3)
+- [VS Code Extension](app-deployment-extension) to manage application deployment
 
-A single command-line utility that does both cluster and app management.
-Simplified app deployment through the use of "spec" files reducing the arguments yet providing fine grain control 
-Support to 
+Applications are deployed and managed using **mssqlctl** command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in VS Code refer to [VS Code Extension](app-deployment-extension)
 
-R and Python applications are deployed and managed with the same **mssqlctl** command-line utility used to manage the cluster. This article provides examples of how to deploy these R and Python scripts as apps from the command line.
+Types of apps supported 
+R and Python apps
+MLeap Serving
+SSIS as a fully containerzied app as a scheduled service
 
 ## Prerequisites
 
-You must have a SQL Server 2019 big data cluster configured. For more information, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md). 
+- [SQL Server 2019 big data cluster](deployment-guidance.md). 
 
-## Installation
+- [mssqlctl command-line utility](deploy-install-mssqlctl.md).
 
-https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-mssqlctl?view=sqlallproducts-allversions
-
-The **mssqlctl-pre** command-line utility is provided to preview the Python and R application deployment feature. Use the following command to install the utility:
-
-```cmd
-pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
-```
 
 ## Capabilities
 
-In CTP 2.2 you can create, delete, list, and run an R or Python application. The following table describes the application deployment commands that you can use with **mssqlctl-pre**.
-
+In CTP 2.3 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
 | Command | Description |
 |---|---|
-| `mssqlctl-pre login` | Log into a SQL Server big data cluster |
-| `mssqlctl-pre app create` | Create an app |
-| `mssqlctl-pre app list` | List deployed apps |
-| `mssqlctl-pre app delete` | Delete an app |
-| `mssqlctl-pre app run` | List running apps |
+| `mssqlctl login` | Log into a SQL Server big data cluster |
+|  `mssqlctl create` | Create application. |
+|  `mssqlctl delete` | Delete application. |
+|  `mssqlctl describe` | Describe application. |
+|  `mssqlctl init` | Kickstart new application skeleton. |
+|  `mssqlctl list` | List application(s). |
+|  `mssqlctl run` | Run application. |
+|  `mssqlctl update`| Update application. |
+
 
 You can get help with the `--help` parameter as in the following example:
 
 ```bash
-mssqlctl-pre app create --help
+mssqlctl app create --help
 ```
 
 The following sections describe these commands in more detail.
 
 ## Log in
 
-Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the external IP address of the `service-proxy-lb` or `service-proxy-nodeport` services (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before you deploy or intereact with applications, first log into your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `service-proxy-lb` or `service-proxy-nodeport` services (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
 You can get the IP address of the **service-proxy-lb** or **service-proxy-nodeport** service by running this command in a bash or cmd window:
 
@@ -71,47 +72,76 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## Create an app
 
-To create an application, you pass Python or R code files to **mssqlctl-pre** with the `app create` command. These files reside locally on the machine that you are creating the app from.
+To create an application, you use the **mssqlctl** with the `app create` command. These files reside locally on the machine that you are creating the app from.
 
 Use the following syntax to create a new app in your big data cluster:
 
 ```bash
-mssqlctl-pre app create -n <app_name> -v <version_number> -r <runtime> -i <path_to_code_init> -c <path_to_code> --inputs <input_params> --outputs <output_params> 
+mssqlctl app create -n <app_name> -v <version_number> --spec <path to spec file>
 ```
 
 The following command shows an example of what this command might look like:
 
+This assumes that you have file called spec.yaml within the addpy folder. 
+The addpy folder contains the **add.py** and  **spec.yaml**. 
+The **spec.yaml** is a specification file for the **add.py** app. 
+
 ```py
+
+This python app is defined as
+
 #add.py
 def add(x,y):
         result = x+y
         return result;
 result=add(x,y)
+
+
+the spec.yaml file will be something like
+
+#spec.yaml
+name: add-app #name of your python script
+version: v1  #version of the app 
+runtime: Python #the languge this app uses (R or Python)
+src: ./add.py #full path to the loction of the app
+entrypoint: add #the function that will be called upon execution
+replicas: 1  #number of replicas needed
+poolsize: 1  #the pool size that you need your app to scale
+inputs:  #input parameters that the app expects and the type
+  x: int
+  y: int
+output: #output parameter the app expects and the type
+  result: int
+
+
 ```
-To try this, save the above lines of code to your local directory as `add.py` and run the command below
+
+
+
+To try this, copy the above lines of code into two files directory `addpy` as `add.py`  and `spec.yaml` and run the command below
 
 ```bash
-mssqlctl-pre app create --name add-app --version v1 --runtime Python --code ./add.py  --inputs x=int,y=int --outputs result=int 
+mssqlctl app create --spec ./addpy
 ```
 
 You can check if the app is deployed using the list command:
 
 ```bash
-mssqlctl-pre app list
+mssqlctl app list
 ```
 
-If the deployment is not complete you should see the "state" show "Creating": 
+If the deployment is not complete you should see the "state" show "WaitingforCreate": 
 
 ```
 [
   {
     "name": "add-app",
-    "state": "Creating",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -136,19 +166,19 @@ You can list any apps that were successfully created with the `app list` command
 The following command lists all available applications in your big data cluster:
 
 ```bash
-mssqlctl-pre app list
+mssqlctl app list
 ```
 
 If you specify a name and version, it will list that specific app and its state (Creating or Ready):
 
 ```bash
-mssqlctl-pre app list --name <app_name> --version <app_version>
+mssqlctl app list --name <app_name> --version <app_version>
 ```
 
 The following example demonstrates this command:
 
 ```bash
-mssqlctl-pre app list --name add-app --version v1
+mssqlctl app list --name add-app --version v1
 ```
 
 You should see output similar to the following example:
@@ -168,13 +198,13 @@ You should see output similar to the following example:
 If the app is in a "Ready" state, you can use it by running it with your specified input parameters. Use the following syntax to run an app:
 
 ```bash
-mssqlctl-pre app run --name <app_name> --version <app_version> --inputs <inputs_params>
+mssqlctl app run --name <app_name> --version <app_version> --inputs <inputs_params>
 ```
 
 The following example command demonstrates the run command:
 
 ```bash
-mssqlctl-pre app run --name add-app --version v1 --inputs x=1,y=2
+mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
 If the run was successful, you should see your output as specified when you created the app. The following is an example.
@@ -192,16 +222,50 @@ If the run was successful, you should see your output as specified when you crea
 }
 ```
 
+## Describe an app
+
+The describe command provides detailed information about the app including the end point in your cluster. This will be typically be used by an app developer to build an app using the swagger client and using the weservice to interact with the app in a restFul manner.
+
+```
+{
+  "input_param_defs": [
+    {
+      "name": "x",
+      "type": "int"
+    },
+    {
+      "name": "y",
+      "type": "int"
+    }
+  ],
+  "links": {
+    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+  },
+  "name": "add-app",
+  "output_param_defs": [
+    {
+      "name": "result",
+      "type": "int"
+    }
+  ],
+  "state": "Ready",
+  "version": "v1"
+}
+
+```
+
+
 ## Delete an app
 
 To delete an app from your big data cluster, use the following syntax:
 
 ```bash
-mssqlctl-pre app delete --name add-app --version v1
+mssqlctl app delete --name add-app --version v1
 ```
 
 ## Next steps
 
-You can also check out additional samples at [https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). 
+You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

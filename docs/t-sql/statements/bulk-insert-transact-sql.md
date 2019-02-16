@@ -154,9 +154,11 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |*code_page*|Specific code page number, for example, 850.<br /><br /> **&#42;&#42; Important &#42;&#42;** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|  
 | &nbsp; | &nbsp; |
 
- DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
- Specifies that BULK INSERT performs the import operation using the specified data-file type value.  
-  
+DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+Specifies that BULK INSERT performs the import operation using the specified data-file type value.  
+
+&nbsp;
+
 |DATAFILETYPE value|All data represented in:|  
 |------------------------|------------------------------|  
 |**char** (default)|Character format.<br /><br /> For more information, see [Use Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).|  
@@ -165,10 +167,10 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |**widenative**|Native (database) data types, except in **char**, **varchar**, and **text** columns, in which data is stored as Unicode. Create the **widenative** data file by bulk importing data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the **bcp** utility.<br /><br /> The **widenative** value offers a higher performance alternative to **widechar**. If the data file contains [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] extended characters, specify **widenative**.<br /><br /> For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|  
 | &nbsp; | &nbsp; |
 
-  ERRORFILE **='**_file_name_**'**  
- Specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."  
-  
- The error file is created when the command is executed. An error occurs if the file already exists. Additionally, a control file that has the extension .ERROR.txt is created. This references each row in the error file and provides error diagnostics. As soon as the errors have been corrected, the data can be loaded.   
+ERRORFILE **='**_file_name_**'**  
+Specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."
+
+The error file is created when the command is executed. An error occurs if the file already exists. Additionally, a control file that has the extension .ERROR.txt is created. This references each row in the error file and provides error diagnostics. As soon as the errors have been corrected, the data can be loaded.  
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the `error_file_path` can be in Azure blob storage.
 
@@ -176,7 +178,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the `erro
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
  
- FIRSTROW **=**_first_row_  
+ FIRSTROW **=** _first_row_  
  Specifies the number of the first row to load. The default is the first row in the specified data file. FIRSTROW is 1-based.  
   
 > [!NOTE]  
@@ -202,7 +204,7 @@ Is a named external data source pointing to the Azure Blob storage location of t
  KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_  
  Specifies the approximate number of kilobytes (KB) of data per batch as *kilobytes_per_batch*. By default, KILOBYTES_PER_BATCH is unknown. For information about performance considerations, see "Remarks," later in this topic.  
   
- LASTROW**=**_last_row_  
+LASTROW **=** _last_row_
  Specifies the number of the last row to load. The default is 0, which indicates the last row in the specified data file.  
   
  MAXERRORS **=** _max_errors_  
@@ -217,7 +219,7 @@ Is a named external data source pointing to the Azure Blob storage location of t
  *n*  
  Is a placeholder that indicates that multiple columns can be specified.  
   
- ROWS_PER_BATCH **=**_rows_per_batch_  
+ ROWS_PER_BATCH **=** _rows_per_batch_  
  Indicates the approximate number of rows of data in the data file.  
   
  By default, all the data in the data file is sent to the server as a single transaction, and the number of rows in the batch is unknown to the query optimizer. If you specify ROWS_PER_BATCH (with a value > 0) the server uses this value to optimize the bulk-import operation. The value specified for ROWS_PER_BATCH should approximately the same as the actual number of rows. For information about performance considerations, see "Remarks," later in this topic.  
@@ -244,7 +246,7 @@ FIELDQUOTE **=** 'field_quote'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Specifies a character that will be used as the quote character in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
   
- FORMATFILE **='**_format_file_path_**'**  
+ FORMATFILE **=** '_format_file_path_'  
  Specifies the full path of a format file. A format file describes the data file that contains stored responses created by using the **bcp** utility on the same table or view. The format file should be used if:  
   
 -   The data file contains greater or fewer columns than the table or view.  
@@ -288,7 +290,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, t
 
  This example uses the following table:  
   
-```  
+```sql
 CREATE TABLE t_float(c1 float, c2 decimal (5,4));  
 ```  
   
@@ -302,7 +304,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  The following format file uses the `SQLFLT8` data type to map the second data field to the second column:  
   
- ```
+ ```xml
  <?xml version="1.0"?> 
  <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
  <RECORD> 
@@ -314,7 +316,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  To use this format file (using the file name `C:\t_floatformat-c-xml.xml`) to import the test data into the test table, issue the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
-```  
+```sql
 BULK INSERT bulktest..t_float  
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
@@ -559,5 +561,4 @@ For complete `BULK INSERT` examples including configuring the credential and ext
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
-  
-  
+

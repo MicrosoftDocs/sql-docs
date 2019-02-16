@@ -7,6 +7,10 @@ title: SQL Server Business Continuity
 description: Explore the different SQL Server features for high availability, disaster recovery, and keeping your business running, no matter the circumstance. 
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ---

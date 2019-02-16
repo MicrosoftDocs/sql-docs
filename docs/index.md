@@ -3,12 +3,13 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
-author: "barbkess"
-ms.author: "barbkess"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ms.topic: "hub-page"
 ms.prod: sql
-ms.technology:
-  - "database-engine"
+ms.technology: release-landing
+ms.date: 12/15/2018
 ---
 <div id="main" class="v2">
     <div class="container">

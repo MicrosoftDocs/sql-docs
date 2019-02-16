@@ -9,6 +9,7 @@ manager: craigg
 ms.topic: "hub-page"
 ms.prod: sql
 ms.technology: release-landing
+ms.date: 12/15/2018
 ---
 <div id="main" class="v2">
     <div class="container">

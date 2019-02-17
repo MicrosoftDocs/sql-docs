@@ -10,17 +10,52 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
-# SQL Server big data cluster app deploy extension
+# How to use the VS Code SQL Server big data cluster App Deploy extension
 
-Deploy applications to a SQL Server big data cluster with Visual Studio Code. 
+This article describes how to deploy applications to a SQL Server big data cluster using Visual Studio Code. 
+
+## What's new 
+
+- An extenstion that provides developers app deploymnet experience through Visual Studio Code
+- Connect , run, update and manage app deployment in VS Code
+
+## Prerequisites
+
+- [Visual Studio Code](<https://code.visualstudio.com/>)
+- [SQL Server big data cluster](big-data-cluster-overview.md) CTP 2.3 or later.
 
 ## Example Usage
 
-This extension is in private preview. Please provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
+This extension is currently private preview. Please provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
+
+
+## Features
+
+Included features in this release:
+
+- Authentication with SQL Server Big Data Cluster.
+- Retrieving an application template from GitHub repository for deployment of supported runtimes.
+- Management of currently open application templates in the user's workspace.
+- Deployment of an application through a specification in YAML format.
+- Management of deployed apps within SQL Server Big Data Cluster
+
+View all apps you have deployed in the side bar with the following information:
+
+- state
+- version
+- input parameters
+- output parameters
+- links
+    - swagger
+    - details
+
+Generate a run spec to consume the app or delete the app from the cluster
+
+- Consumption of deployed apps through a run specification YAML
 
 ### Install
 
-Download [sqlservbdc-app-deploy.vsix](<https://github.com/Microsoft/sql-server-samples>) in order to install the extension as part of VS Code.
+Download [sqlservbdc-app-deploy.vsix](<https://aka.ms/sql-app-deploy>) to install the extension as part of VS Code.
 
 Launch VS Code and navigate to the Extensions sidebar.
 
@@ -34,13 +69,15 @@ Once the SQL Server big data cluster app deploy extension has been installed, it
 
 ### App Explorer
 
-When you click on the extension in the sidebar, a side panel loads showing you the App Explorer. App Explorer shows no apps or app specifications available:
+Clicking on the extension in the sidebar, loads a side panel showing the App Explorer. 
+
+Here is a sample screen shot of the App Explorer shows no apps or app specifications available
 
 ![App Explorer](media/vs-extension/app_explorer.png)
 
 #### New Connection
 
-To connect to your cluster endpoint, either:
+To connect to the cluster endpoint, either:
 
 - Click on the status bar at the bottom that says `SQL Server BDC Disconnected`
    or
@@ -144,35 +181,13 @@ Or give a string as a relative or absolute file path to a `.txt`, .`json`, or `.
 
 If the input parameter is not provided as needed, an appropriate error message will be shown with either the incorrect file path if a string file path was given or that parameter was invalid. The responsibility is given to the creator of the app to ensure they understand the parameters they are defining.
 
-If you would like to delete the app for any reason, just click the Trash can button next to the app in the `Deployed Apps` side pane.
+To delete an app, just click the Trash can button next to the app in the `Deployed Apps` side pane.
 
-## Features
 
-Features include:
+## Next steps
 
-- Authentication with cluster endpoint, username, and password
-- Retrieving an application template from GitHub for deployment of supported runtimes
-- Management of currently open application templates in the user's workspace
-- Deployment of an application through a specification YAML
-- Management of deployed apps within SQL Server big data cluster
+You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) with the App Deployment extension.
 
-You may view all apps you have deployed in the side bar with the following information:
+For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
 
-- state
-- version
-- input parameters
-- output parameters
-- links
-    - swagger
-    - details
 
-From here, generate a run spec to consume the app or delete the app from the cluster
-
-- Consumption of deployed apps through a run specification YAML
-
-## Requirements
-
-Requirements include:
-
-- [Visual Studio Code](<https://code.visualstudio.com/>)
-- [SQL Server big data cluster](big-data-cluster-overview.md)

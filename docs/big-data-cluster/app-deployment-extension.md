@@ -16,22 +16,16 @@ This article describes how to deploy applications to a SQL Server big data clust
 
 ## What's new 
 
-- An extenstion that provides developers app deploymnet experience through Visual Studio Code
-- Connect , run, update and manage app deployment in VS Code
+- Manage apps deployed into SQL Server Big Data Cluster using the App Deployment extension for Visual Studio Code .
 
 ## Prerequisites
 
 - [Visual Studio Code](<https://code.visualstudio.com/>)
 - [SQL Server big data cluster](big-data-cluster-overview.md) CTP 2.3 or later.
 
-## Example Usage
+## Capabilities
 
-This extension is currently private preview. Please provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
-
-
-## Features
-
-Included features in this release:
+What's included in this release:
 
 - Authentication with SQL Server Big Data Cluster.
 - Retrieving an application template from GitHub repository for deployment of supported runtimes.
@@ -52,6 +46,8 @@ View all apps you have deployed in the side bar with the following information:
 Generate a run spec to consume the app or delete the app from the cluster
 
 - Consumption of deployed apps through a run specification YAML
+
+The following sections walks though the installation and how an overview how the extension works. 
 
 ### Install
 
@@ -89,11 +85,11 @@ VS Code prompts for the appropriate endpoint, username, and password. If given t
 
 ### App Template
 
-To deploy a brand new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. It is advised that you place it in your current VS Code workspace so that you can use the full functionality of the extension, but place it anywhere in your local file system.
+To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. It is advised that you place it in your current VS Code workspace so that you can use the full functionality of the extension, but place it anywhere in your local file system.
 
 ![New App Template](media/vs-extension/new_app_template.png)
 
-Once completed, a new App Template will be scaffolded for you at the location you specified and the deployment `spec.yaml` will open in your workspace. If the directory you selected is in your workspace, you will also be able to see it listed under the `App Specifications` pane:
+Once completed, a new app template will be scaffolded for you at the location you specified and the deployment `spec.yaml` will open in your workspace. If the directory you selected is in your workspace, you will also be able to see it listed under the `App Specifications` pane:
 
 ![Loaded App Template](media/vs-extension/loading_app_template.png)
 
@@ -186,8 +182,9 @@ To delete an app, just click the Trash can button next to the app in the `Deploy
 
 ## Next steps
 
-You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) with the App Deployment extension.
+You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
 
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
 
 
+Our goal is to make this extension useful for you and we appreciate you feedback. Please send them to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).

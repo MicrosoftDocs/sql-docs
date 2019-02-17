@@ -560,7 +560,7 @@ accepteulaml = Y
 
 Outbound network access for R, Python, and Java extensions in the [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) feature is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using mssql-conf.
 
-Restart SQL Server Launchpad service to read the updated values from the INI file. A restart message reminds you whenever an extensibility-related setting is modified.
+After setting the property, restart SQL Server Launchpad service to read the updated values from the INI file. A restart message reminds you whenever an extensibility-related setting is modified.
 
 ```bash
 # Adds the extensibility section and property.

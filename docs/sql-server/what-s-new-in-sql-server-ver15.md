@@ -107,7 +107,7 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
-- [Submit Jar or Py](../big-data-cluster/big-data-cluster-overview.md) files with references to SQL Server big data clusters. (CTP 2.3)
+- [Submit Jar or Py](../big-data-cluster/big-data-cluster-create-apps.md) files with references to SQL Server big data clusters. (CTP 2.3)
 - Execute Jar or Py files located in the HDFS file system (CTP 2.3)
 - Common CLI for app deployment and cluster management simplifies app deployment (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
@@ -136,7 +136,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 >[!NOTE]
 >This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
 
-Customers with critical databases, that are prone to large transactions, are invited to experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](http://aka.ms/sqlfeedback).
+Customers with critical databases, that are prone to large transactions, are invited to experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 
 ### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
 

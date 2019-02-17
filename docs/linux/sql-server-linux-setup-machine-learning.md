@@ -301,18 +301,18 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
   ```bash
   # Run as SUDO or root
   # Use set + EULA 
-    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+  sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
   ```
 
   An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. Enable outbound network access. Outbound entwork access is disabled by default. To enable outbound requests, set the **outboundnetworkaccess**" Boolean property using the **mssql-conf** tool.
+3. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using the mssql-conf tool. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
-  | Commands | Description |
-  |----------|-------------|
-  |`/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1` | Enables access. This setting is required if you want to access data or operations off the server.| 
-  |`/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0` | Disable network access. This is the default. |
-  |`/opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess` | Removes or hides the setting. You can restore the setting by replacing `unset` with `set`.|
+  ```bash
+  # Run as SUDO or root
+  # Enable outbound requests over the network
+  sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+  ```
 
 4. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 

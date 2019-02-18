@@ -1,5 +1,5 @@
 ---
-title: How to deploy an app
+title: Deploying applications in SQL Sever Big Data Cluster using mssqlctl
 titleSuffix: SQL Server 2019 big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
 author: TheBharath 
@@ -23,12 +23,12 @@ This article describes how to deploy and manage R and Python script as an applic
 - Support hosting additional application types - SSIS and MLeap (new in CTP 2.3)
 - [VS Code Extension](app-deployment-extension.md) to manage application deployment
 
-Applications are deployed and managed using `mssqlctl` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in VS Code refer to [VS Code Extension](app-deployment-extension.md)
+Applications are deployed and managed using `mssqlctl` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [VS Code Extension](app-deployment-extension.md)
 
 Types of apps supported:
-- R and Python apps
+- R and Python apps (functions, models and apps)
 - MLeap Serving
-= SSIS as a fully containerzied app as a scheduled service
+- SQL Server Integration Services (SSIS)
 
 ## Prerequisites
 

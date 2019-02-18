@@ -72,9 +72,9 @@
       href: data-ingestion-restore-database.md
   - name: Deploy apps
     items:
-    - name: App deployment
+    - name: Deploying applications using mssqlctl
       href: big-data-cluster-create-apps.md
-    - name: App deployment extension
+    - name: Using App Deployment Extension to manage applications
       href: app-deployment-extension.md
   - name: Big Data/Machine Learning
     items:

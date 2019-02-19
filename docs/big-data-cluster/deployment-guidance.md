@@ -184,7 +184,7 @@ If you are deploying with kubeadm on your own physical or virtual machines, you 
 The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server big data cluster on your Kubernetes cluster, run the following command:
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
@@ -248,7 +248,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
 1. Delete the old cluster with the `mssqlctl delete cluster` command.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
 
 1. Uninstall any old versions of **mssqlctl**.

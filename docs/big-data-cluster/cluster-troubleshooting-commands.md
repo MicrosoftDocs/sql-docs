@@ -34,7 +34,7 @@ kubectl get pods --all-namespaces
 
 ### Show status of all pods in the SQL Server big data cluster
 
-Use the `-n` parameter to specify a specific namespace. Note that SQL Server big data cluster pods are created in a new namespace created at cluster bootstrap time based on the cluster name specified in the `mssqlctl create cluster <cluster_name>` command.
+Use the `-n` parameter to specify a specific namespace. Note that SQL Server big data cluster pods are created in a new namespace created at cluster bootstrap time based on the cluster name specified in the `mssqlctl cluster create --name <cluster_name>` command.
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -62,7 +62,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## Get status of services
 
-Run the following command to get details for the big data cluster services. These details include their type and the IPs associated with respective services and ports. Note that SQL Server big data cluster services are created in a new namespace created at cluster bootstrap time based on the cluster name specified in the `mssqlctl create cluster <cluster_name>` command.
+Run the following command to get details for the big data cluster services. These details include their type and the IPs associated with respective services and ports. Note that SQL Server big data cluster services are created in a new namespace created at cluster bootstrap time based on the cluster name specified in the `mssqlctl cluster create --name <cluster_name>` command.
 
 ```bash
 kubectl get svc -n <namespace_name>

@@ -1,6 +1,6 @@
 ---
 title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
-ms.date: "11/6/2017"
+ms.date: 11/06/2017
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""

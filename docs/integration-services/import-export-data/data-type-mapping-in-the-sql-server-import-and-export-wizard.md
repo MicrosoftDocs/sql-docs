@@ -17,8 +17,8 @@ manager: craigg
   
 ##  <a name="wizardMapping"></a> How does the wizard map data types between source and destination?
 The wizard uses mapping files that are installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to map data types from one database system or version to another. For example, it can map from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types to Oracle data types. By default, the mapping files in XML format are installed in the following folders.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\** (for 64-bit)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\** (for 32-bit).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\** (for 64-bit)
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (for 32-bit).  
   
  If you edit an existing mapping file, or add a new mapping file to the folder, you have to close and reopen the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to load the new or changed mapping file.  
  

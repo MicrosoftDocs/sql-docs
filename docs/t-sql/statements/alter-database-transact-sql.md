@@ -283,7 +283,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 > ||||||
 
 &nbsp;
@@ -692,7 +692,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 > ||||||
 
 &nbsp;
@@ -819,7 +819,7 @@ ALTER DATABASE WideWorldImporters
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 > ||||||
 
 &nbsp;
@@ -942,7 +942,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 > ||||||
 
 &nbsp;

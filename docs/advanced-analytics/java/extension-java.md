@@ -20,9 +20,11 @@ The extensibility framework is an architecture for executing external code: Java
 
 As with any programming language extension, the system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is the interface for executing pre-compiled Java code.
 
+<a name="prerequisites"></a>
+
 ## Prerequisites
 
-A SQL Server 2019 preview instance is required. Earlier versions do not have Java integration. 
+A SQL Server 2019 preview instance is required. Earlier versions do not have Java integration.
 
 Java 8 is supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
@@ -89,13 +91,15 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ## Install on Windows
 
-1. [Run Setup](../install/sql-machine-learning-services-windows-install.md) to install SQL Server 2019.
+1. Ensure Java is installed. For more information, see the [prerequisites](#prerequisites).
 
-2. When you get to Feature Selection, choose **Machine Learning Services (in-database)**. 
+2. [Run Setup](../install/sql-machine-learning-services-windows-install.md) to install SQL Server 2019.
+
+3. When you get to Feature Selection, choose **Machine Learning Services (in-database)**. 
 
    Although Java integration does not come with machine learning libraries, this is the option in setup that provides the extensibility framework. You can omit R and Python if you wish.
 
-3. Finish the installation wizard, and then continue with the next two tasks.
+4. Finish the installation wizard, and then continue with the next two tasks.
 
 ### Add the JAVA_HOME variable
 

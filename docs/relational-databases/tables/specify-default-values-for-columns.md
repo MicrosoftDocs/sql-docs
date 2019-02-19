@@ -96,3 +96,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
+
+#### To specify a default value for a column inline at table creation
+
+    CREATE TABLE dbo.doc_exz (
+      column_a INT,
+      column_b INT DEFAULT 50
+    );  
+    GO
+
+
+#### To specify a default value for a column inline at table creation via named constraint
+
+    CREATE TABLE dbo.doc_exz (
+      column_a INT,
+      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50
+    );  
+    GO
+

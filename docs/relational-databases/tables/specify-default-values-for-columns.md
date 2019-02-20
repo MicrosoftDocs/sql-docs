@@ -40,10 +40,9 @@ Before you begin, be aware of the following limitations and restrictions:
 
 - To enter an object/function, enter the name of the object/function without quotation marks around it.
 
-### <a name="Security"></a> Security
+### <a name="Security"></a> Security Permissions
 
-#### <a name="Permissions"></a> Permissions
-Requires ALTER permission on the table.
+The actions described in this article require ALTER permission on the table.
 
 ## <a name="SSMSProcedure"></a> Use SSMS to specify a default
 
@@ -94,8 +93,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT DEFAULT 50
-    );
+      column_b INT DEFAULT 50);
 ```
 
 ### Named CONSTRAINT (T-SQL)
@@ -103,8 +101,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50
-    );
+      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
 ```
 
 For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).

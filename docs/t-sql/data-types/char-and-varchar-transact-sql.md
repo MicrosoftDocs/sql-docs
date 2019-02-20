@@ -42,7 +42,7 @@ Fixed-length string data. *n* defines the string length in bytes and must be a v
 Variable-length string data. *n* defines the string length in bytes and can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). For single-byte encoding character sets such as *Latin*, the storage size is *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For multibyte encoding character sets, the storage size is still *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**. For more information on character sets, see [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## Remarks  
-When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified when using the CAST and CONVERT functions, the default length is 30.
+When *n* isn't specified in a data definition or variable declaration statement, the default length is 1. When *n* isn't specified when using the CAST and CONVERT functions, the default length is 30.
   
 Objects that use **char** or **varchar** are assigned the default collation of the database, unless a specific collation is assigned using the COLLATE clause. The collation controls the code page that is used to store the character data.
 
@@ -63,7 +63,7 @@ If SET ANSI_PADDING is OFF when either CREATE TABLE or ALTER TABLE is executed, 
   
 > [!WARNING]
 > Each non-null varchar(max) or nvarchar(max) column requires 24 bytes of additional fixed allocation which counts against the 8,060 byte row limit during a sort operation. This can create an implicit limit to the number of non-null varchar(max) or nvarchar(max) columns that can be created in a table.  
-No special error is provided when the table is created (beyond the usual warning that the maximum row size exceeds the allowed maximum of 8,060 bytes) or at the time of data insertion. This large row size can cause errors (such as error 512) during some normal operations, such as a clustered index key update, or sorts of the full column set, which users cannot anticipate until performing an operation.
+No special error is provided when the table is created (beyond the usual warning that the maximum row size exceeds the allowed maximum of 8,060 bytes) or at the time of data insertion. This large row size can cause errors (such as error 512) during some normal operations, such as a clustered index key update, or sorts of the full column set, which users can anticipate until performing an operation.
   
 ##  <a name="_character"></a> Converting Character Data  
 When character expressions are converted to a character data type of a different size, values that are too long for the new data type are truncated. The **uniqueidentifier** type is considered a character type for the purposes of conversion from a character expression, and therefore is subject to the truncation rules for converting to a character type. See the Examples section that follows.
@@ -71,11 +71,11 @@ When character expressions are converted to a character data type of a different
 When a character expression is converted to a character expression of a different data type or size, such as from **char(5)** to **varchar(5)**, or **char(20)** to **char(15)**, the collation of the input value is assigned to the converted value. If a noncharacter expression is converted to a character data type, the default collation of the current database is assigned to the converted value. In either case, you can assign a specific collation by using the [COLLATE](../../t-sql/statements/collations.md) clause.
   
 > [!NOTE]  
-> Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. As with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data loss during code page translations is not reported.  
+> Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. As with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data loss during code page translations isn't reported.  
   
 Character expressions that are being converted to an approximate **numeric** data type can include optional exponential notation (a lowercase e or uppercase E followed by an optional plus (+) or minus (-) sign and then a number).
   
-Character expressions that are being converted to an exact **numeric** data type must consist of digits, a decimal point, and an optional plus (+) or minus (-). Leading blanks are ignored. Comma separators, such as the thousands separator in 123,456.00, are not allowed in the string.
+Character expressions that are being converted to an exact **numeric** data type must consist of digits, a decimal point, and an optional plus (+) or minus (-). Leading blanks are ignored. Comma separators, such as the thousands separator in 123,456.00, aren't allowed in the string.
   
 Character expressions being converted to **money** or **smallmoney** data types can also include an optional decimal point and dollar sign ($). Comma separators, as in $123,456.00, are allowed.
   

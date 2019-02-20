@@ -51,7 +51,7 @@ The following sections walks though the installation and provides an overview ho
 
 ### Install
 
-Download [sqlservbdc-app-deploy.vsix](<https://aka.ms/sql-app-deploy>) to install the extension as part of VS Code.
+Download [sqlservbdc-app-deploy.vsix](https://aka.ms/sql-app-deploy) to install the extension as part of VS Code.
 
 Launch VS Code and navigate to the Extensions sidebar.
 

@@ -30,7 +30,7 @@ kubectl get service service-security-lb -n <cluster name> -o json | jq -r .statu
 
 Now, you can construct the URL to access the WebHDFS as follows:
 
-`https://<service-security-lb service external IP address>:30433/gateway/default/webhdfs/v1/`
+`https://<service-security-lb service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 For example:
 

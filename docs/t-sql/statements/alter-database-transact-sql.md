@@ -42,16 +42,14 @@ In the following row, click whichever product name you are interested in. The cl
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## SQL Server
-
-## Overview
+## Overview: SQL Server
 
 In SQL Server, this statement modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
 
@@ -279,16 +277,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
-
-## Overview
+## Overview: Azure SQL Database single database/elastic pool
 
 In Azure SQL Database, use this statement to modify a database on a single database/elastic pool. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
 
@@ -687,16 +683,14 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## Azure SQL Database managed instance
-
-## Overview
+## Overview: Azure SQL Database managed instance
 
 In Azure SQL Database managed instance, use this statement to set database options.
 
@@ -813,16 +807,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## Azure SQL Data Warehouse
-
-## Overview
+## Overview: Azure SQL Data Warehouse
 
 Modifies the name, maximum size, or service objective for a database.
 
@@ -935,16 +927,14 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+||||||
 
 &nbsp;
 
-## Parallel Data Warehouse
-
-## Overview
+## Overview: Parallel Data Warehouse
 
 Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in Parallel Data Warehouse. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The article also describes syntax related to setting database options in Parallel Data Warehouse.
 

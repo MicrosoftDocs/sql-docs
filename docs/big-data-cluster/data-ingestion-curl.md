@@ -24,7 +24,7 @@ kubectl get service service-security-lb -n <cluster name> -o json | jq -r .statu
 ```
 
 > [!NOTE]
-> The `<cluster name>` here is the name of the cluster that you provided when you ran mssqlctl create cluster `<cluster name>`.
+> The `<cluster name>` here is the name of the cluster that you provided when you ran `mssqlctl cluster create --name <cluster name>`.
 
 ## Construct the URL to access WebHDFS
 

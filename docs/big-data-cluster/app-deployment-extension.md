@@ -89,7 +89,7 @@ To deploy a new app from one of our templates, click on the `New App Template` b
 
 ![New App Template](media/vs-extension/new_app_template.png)
 
-Once completed, a new app template will be scaffolded for you at the location you specified and the deployment `spec.yaml` will open in your workspace. If the directory you selected is in your workspace, you will also be able to see it listed under the `App Specifications` pane:
+Once completed, a new app template is scaffolded for you at the location you specified, and the deployment `spec.yaml` opens in your workspace. If the directory you selected is in your workspace, you should also see it listed under the `App Specifications` pane:
 
 ![Loaded App Template](media/vs-extension/loading_app_template.png)
 

@@ -67,7 +67,7 @@ Once the SQL Server big data cluster app deploy extension has been installed, it
 
 Click on the extension in the sidebar to load a side panel showing the App Explorer: 
 
-Here is a sample screen shot of the App Explorer shows no apps or app specifications available
+The following sample screenshot of the App Explorer shows no apps or app specifications available:
 
 ![App Explorer](media/vs-extension/app_explorer.png)
 

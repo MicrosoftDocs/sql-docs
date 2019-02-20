@@ -47,7 +47,7 @@ Generate a run spec to consume the app or delete the app from the cluster
 
 - Consumption of deployed apps through a run specification YAML
 
-The following sections walks though the installation and how an overview how the extension works. 
+The following sections walks though the installation and provides an overview how the extension works. 
 
 ### Install
 

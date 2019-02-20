@@ -25,7 +25,7 @@ This article describes how to deploy applications to a SQL Server big data clust
 
 ## Capabilities
 
-What's included in this release:
+This extension supports the following tasks in Visual Studio Code:
 
 - Authentication with SQL Server Big Data Cluster.
 - Retrieving an application template from GitHub repository for deployment of supported runtimes.

@@ -83,7 +83,7 @@ In a practice run, the preceding SELECT returned following result table:
 Parse a comma-separated list of values and return all non-empty tokens:  
   
 ```sql  
-DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
+DECLARE @tags NVARCHAR(400) = 'clothing,road,touring,bike'  
   
 SELECT value  
 FROM STRING_SPLIT(@tags, ',')  

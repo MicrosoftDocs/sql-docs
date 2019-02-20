@@ -20,7 +20,7 @@ This article describes how to deploy applications to a SQL Server big data clust
 
 ## Prerequisites
 
-- [Visual Studio Code](<https://code.visualstudio.com/>)
+- [Visual Studio Code](https://code.visualstudio.com/).
 - [SQL Server big data cluster](big-data-cluster-overview.md) CTP 2.3 or later.
 
 ## Capabilities

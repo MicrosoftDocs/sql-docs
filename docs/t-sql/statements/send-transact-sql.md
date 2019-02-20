@@ -31,7 +31,7 @@ manager: craigg
 
   Sends a message, using one or more existing conversations.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -46,32 +46,32 @@ SEND
   
 ## Arguments  
  ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
- Specifies the conversations that the message belongs to. The *conversation_handle* must contain a valid conversation identifier. The same conversation handle cannot be used more than once.  
+ Specifies the conversations that the message belongs to. The *conversation_handle* must contain a valid conversation identifier. The same conversation handle can't be used more than once.  
   
  MESSAGE TYPE *message_type_name*  
  Specifies the message type of the sent message. This message type must be included in the service contracts used by these conversations. These contracts must allow the message type to be sent from this side of the conversation. For example, the target services of the conversations may only send messages specified in the contract as SENT BY TARGET or SENT BY ANY. If this clause is omitted, the message is of the message type DEFAULT.  
   
  *message_body_expression*  
- Provides an expression representing the message body. The *message_body_expression* is optional. However, if the *message_body_expression* is present the expression must be of a type that can be converted to **varbinary(max)**. The expression cannot be NULL. If this clause is omitted, the message body is empty.  
+ Provides an expression representing the message body. The *message_body_expression* is optional. However, if the *message_body_expression* is present the expression must be of a type that can be converted to **varbinary(max)**. The expression can't be NULL. If this clause is omitted, the message body is empty.  
   
 ## Remarks  
   
 > [!IMPORTANT]  
->  If the SEND statement is not the first statement in a batch or stored procedure, the preceding statement must be terminated with a semicolon (;).  
+>  If the SEND statement isn't the first statement in a batch or stored procedure, the preceding statement must be terminated with a semicolon (;).  
   
  The SEND statement transmits a message from the services on one end of one or more [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations to the services on the other end of these conversations. The RECEIVE statement is then used to retrieve the sent message from the queues associated with the target services.  
   
  The conversation handles supplied to the ON CONVERSATION clause comes from one of three sources:  
   
--   When sending a message that is not in response to a message received from another service, use the conversation handle returned from the BEGIN DIALOG statement that created the conversation.  
+-   When sending a message that isn't in response to a message received from another service, use the conversation handle that is returned from the BEGIN DIALOG statement that created the conversation.  
   
 -   When sending a message that is a response to a message previously received from another service, use the conversation handle returned by the RECEIVE statement that returned the original message.  
   
- In many cases the code that contains the SEND statement is separate from the code that contains either the BEGIN DIALOG or RECEIVE statements supplying conversation handle. In these cases, the conversation handle must be one of the data items in the state information passed to the code that contains the SEND statement.  
+ The code that contains the SEND statement is sometimes separate from the code that contains either the BEGIN DIALOG or RECEIVE statements supplying conversation handle. In these cases, the conversation handle must be one of the data items in the state information that is passed to the code containing the SEND statement.  
   
- Messages that are sent to services in other instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] are stored in a transmission queue in the current database until they can be transmitted to the service queues in the remote instances. Messages sent to services in the same instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are put directly into the queues associated with these services. If a condition prevents a local message from being put directly in the target service queue, it can be stored in the transmission queue until the condition is resolved. Examples of when this occurs include some types of errors or the target service queue being inactive. You can use the **sys.transmission_queue** system view to see the messages in the transmission queue.  
+ Messages that are sent to services in other instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] are stored in a transmission queue in the current database until they can be transmitted to the service queues in the remote instances. Messages sent to services in the same instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are put directly into the queues associated with these services. If a condition prevents a local message from being put directly in the target service queue, it can be stored in the transmission queue until the condition is resolved. Examples of these occurrences include some types of errors or the target service queue being inactive. You can use the **sys.transmission_queue** system view to see the messages in the transmission queue.  
   
- SEND is an atomic statement, that is, if a SEND statement sending a message on multiple conversations fails, e.g. because a conversation is in an errored state, no messages will be stored in the transmission queue or put in any target service queue.  
+ SEND is an atomic statement. If a SEND statement sending a message on multiple conversations fails (for example, because a conversation is in an errored state), no messages are stored in the transmission queue or put in any target service queue.  
   
  Service Broker optimizes the storage and transmission of messages that are sent on multiple conversations in the same SEND statement.  
   
@@ -81,11 +81,11 @@ SEND
   
 -   Within priority level, their send sequence in the conversation.  
   
- Priority levels specified in conversation priorities are only applied to messages in the transmission queue if the HONOR_BROKER_PRIORITY database option is set to ON. If HONOR_BROKER_PRIORITY is set to OFF, all messages put in the transmission queue for that database are assigned the default priority level of 5. Priority levels are not applied to a SEND where the messages are put directly into a service queue in the same instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Priority levels specified in conversation priorities are only applied to messages in the transmission queue if the HONOR_BROKER_PRIORITY database option is set to ON. If HONOR_BROKER_PRIORITY is set to OFF, all messages in the transmission queue for that database are assigned the default priority level of 5. Priority levels aren't applied to a SEND where the messages are put directly into a service queue in the same instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  The SEND statement separately locks each conversation on which a message is sent to ensure per-conversation ordered delivery.  
   
- SEND is not valid in a user-defined function.  
+ SEND isn't valid in a user-defined function.  
   
 ## Permissions  
  To send a message, the current user must have RECEIVE permission on the queue of every service that sends the message.  

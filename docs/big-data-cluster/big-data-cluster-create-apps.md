@@ -1,5 +1,5 @@
 ---
-title: Deploying applications in SQL Sever Big Data Cluster using mssqlctl
+title: Deploy applications using mssqlctl
 titleSuffix: SQL Server 2019 big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
 author: TheBharath 

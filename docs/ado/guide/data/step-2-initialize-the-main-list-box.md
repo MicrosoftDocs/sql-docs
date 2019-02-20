@@ -28,19 +28,19 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=https://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- This code instantiates the global Record and Recordset objects. The Record object, `grec`, is opened with a URL specified as the ActiveConnection. If the URL exists, it is opened; if it does not already exist, it is created. Note that you should replace "https://servername/foldername/" with a valid URL from your environment.  
+ This code instantiates the global Record and Recordset objects. The Record object, `grec`, is opened with a URL specified as the ActiveConnection. If the URL exists, it is opened; if it does not already exist, it is created. Note that you should replace "<https://servername/foldername/>" with a valid URL from your environment.  
   
  The Recordset object, `grs`, is opened on the children of the Record, `grec`. Then `lstMain` is populated with the file names of the resources published to the URL.  
   

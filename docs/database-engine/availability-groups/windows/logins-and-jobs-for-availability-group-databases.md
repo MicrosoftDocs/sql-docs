@@ -1,6 +1,7 @@
 ---
-title: "Logins and Jobs for Availability Group Databases | Microsoft Docs"
-ms.custom: ""
+title: "Manage logins for jobs using databases in an availability group"
+description: "A description for how to manage logins for jobs that use databases which participate in an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Logins and Jobs for Availability Group Databases
+# Manage logins for jobs using databases in an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You should routinely maintain the same set of user logins and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent jobs on every primary database of an Always On availability group and the corresponding secondary databases. The logins and jobs must be reproduced on every instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts an availability replica for the availability group.  
   

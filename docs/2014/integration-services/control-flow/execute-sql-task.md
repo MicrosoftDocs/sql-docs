@@ -56,7 +56,7 @@ manager: craigg
 >  Valid SQL statements written outside the Execute SQL task may not be parsed successfully by the Execute SQL task.  
   
 > [!NOTE]  
->  The Execute SQL Task uses the `RecognizeAll` ParseMode enumeration value. For more information, see [ManagedBatchParser Namespace](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  The Execute SQL Task uses the `RecognizeAll` ParseMode enumeration value. For more information, see [ManagedBatchParser Namespace](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## Sending Multiple Statements in a Batch  
  If you include multiple statements in an Execute SQL task, you can group them and run them as a batch. To signal the end of a batch, use the GO command. All the SQL statements between two GO commands are sent in a batch to the OLE DB provider to be run. The SQL command can include multiple batches separated by GO commands.  
@@ -152,6 +152,6 @@ manager: craigg
   
 -   [Transact-SQL Reference &#40;Database Engine&#41;](/sql/t-sql/language-reference)  
   
--   Blog entry, [New Date and Time Functions in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783), on mssqltips.com  
+-   Blog entry, [New Date and Time Functions in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783), on mssqltips.com  
   
   

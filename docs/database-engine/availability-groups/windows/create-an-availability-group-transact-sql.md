@@ -1,6 +1,7 @@
 ---
-title: "Create an Availability Group (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Create an availability group using Transact-SQL (T-SQL)"
+description: "Steps to creating an Always On availability group using Transact-SQL (T-SQL). "
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Create an Availability Group (Transact-SQL)
+# Create an Always On availability group using Transact-SQL (T-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to use [!INCLUDE[tsql](../../../includes/tsql-md.md)] to create and configure an availability group on instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] on which the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature is enabled. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
@@ -54,7 +55,7 @@ manager: craigg
 ###  <a name="SummaryTsqlStatements"></a> Summary of Tasks and Corresponding Transact-SQL Statements  
  The following table lists the basic tasks involved in creating and configuring an availability group and indicates which [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements to use for these tasks. The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tasks must be performed in the sequence in which they are presented in the table.  
   
-|Task|Transact-SQL Statement(s)|Where to Perform Task**\***|  
+|Task|Transact-SQL Statement(s)|Where to Perform Task**&#42;**|  
 |----------|----------------------------------|---------------------------------|  
 |Create database mirroring endpoint (once per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ... FOR DATABASE_MIRRORING|Execute on each server instance that lacks database mirroring endpoint.|  
 |Create availability group|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|Execute on the server instance that is to host the initial primary replica.|  

@@ -83,7 +83,7 @@ manager: craigg
  For more information about sparse columns in ODBC, see [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLColumns Function](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns Function](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

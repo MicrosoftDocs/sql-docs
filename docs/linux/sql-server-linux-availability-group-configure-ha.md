@@ -1,13 +1,14 @@
 ---
-title: Configure SQL Server Always On Availability Group for high availability on Linux | Microsoft Docs
-description: 
+title: Configure SQL Server Always On Availability Group for high availability on Linux
+titleSuffix: SQL Server
+description: Learn about creating a SQL Server Always On Availability Group (AG) for high availability on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 
 ---
@@ -164,20 +165,20 @@ Run **only one** of the following scripts:
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1]
-      WITH (CLUSTER_TYPE = EXTERNAL)
-      FOR REPLICA ON
-      N'node1' WITH (
+      WITH (CLUSTER_TYPE = EXTERNAL)
+      FOR REPLICA ON
+      N'node1' WITH (
          ENDPOINT_URL = N'tcp://node1:5022',
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-         FAILOVER_MODE = EXTERNAL,
-         SEEDING_MODE = AUTOMATIC
-      ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-         FAILOVER_MODE = EXTERNAL,
-         SEEDING_MODE = AUTOMATIC
-      );
+         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+         FAILOVER_MODE = EXTERNAL,
+         SEEDING_MODE = AUTOMATIC
+      ),
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
+         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+         FAILOVER_MODE = EXTERNAL,
+         SEEDING_MODE = AUTOMATIC
+      );
    		
    ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
    ```

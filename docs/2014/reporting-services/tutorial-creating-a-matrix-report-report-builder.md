@@ -8,16 +8,16 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Creating a Matrix Report (Report Builder)
   This tutorial teaches you how to create a basic matrix report based on sample sales data. The matrix has nested row and column groups and an adjacent column group. You will also learn how to format columns and rotate text. The following illustration shows a report similar to the one you will create.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- An enhanced version of the report you will create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ An enhanced version of the report you will create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> What You Will Learn  
  In this tutorial, you will learn how to:  

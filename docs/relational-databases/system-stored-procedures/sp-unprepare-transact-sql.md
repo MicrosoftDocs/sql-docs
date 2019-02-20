@@ -40,29 +40,27 @@ sp_unprepare handle
 ## Examples  
  The following example prepares, executes, and unprepares a simple statement.  
   
-```  
-Declare @P1 int;  
-Exec sp_prepare @P1 output,   
+```SQL  
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
     N'@P1 nvarchar(128), @P2 nvarchar(100)',  
-    N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
-Exec sp_execute @P1, N'tempdb', N'ONLINE';  
+    N'SELECT database_id, name FROM sys.databases WHERE name = @P1 AND state_desc = @P2';  
+EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example prepares, executes, and unprepares a simple statement.  
   
-```  
-Declare @P1 int;  
-Exec sp_prepare @P1 output,   
+```SQL  
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
     N'@P1 nvarchar(128), @P2 nvarchar(100)',  
-    N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
-Exec sp_execute @P1, N'tempdb', N'ONLINE';  
+    N'SELECT database_id, name FROM sys.databases WHERE name = @P1 AND state_desc = @P2';  
+EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
 ```  
   
 ## See Also  
- [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
-  
-  
+ [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 

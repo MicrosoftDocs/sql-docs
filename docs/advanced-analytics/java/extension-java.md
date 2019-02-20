@@ -1,10 +1,10 @@
 ---
-title: Java language extension in SQL Server 2019 | Microsoft Docs
-description: Run Java code on SQL Server 2019 using the Java language extension.
+title: Java language extension in SQL Server 2019 - SQL Server Machine Learning Services
+description: Install, configure, and validate the Java language extension on SQL Server 2019 for both Linux and Windows systems.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/29/2018  
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -42,7 +42,7 @@ On Windows, we recommend installing the JDK under the default /Program Files/ fo
 
 ## Install on Linux
 
-You can install the [database engine and the Java extension together](../../linux/sql-server-linux-setup-machine-learning.md#chained-installation), or add Java support to an existing instance. The following examples add the Java extension to an existing installation.  
+You can install the [database engine and the Java extension together](../../linux/sql-server-linux-setup-machine-learning.md#install-all), or add Java support to an existing instance. The following examples add the Java extension to an existing installation.  
 
 ```bash
 # RedHat install commands

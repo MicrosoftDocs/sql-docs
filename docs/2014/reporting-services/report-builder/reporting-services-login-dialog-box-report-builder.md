@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Reporting Services Login Dialog Box (Report Builder)
   Use the **Reporting Services Login** dialog box to provide credentials to publish reports to the report server. For help with these credentials, contact your report server administrator.  

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Publish a Report to a SharePoint Library
   To publish a report to a SharePoint site configured for SharePoint integration, you must set the project properties in Report Designer. In the project properties, all references to servers, reports, and shared data sources must be fully qualified URLs. In the report definition, all references to subreports, drillthrough reports, and resources such as Web-based images, must be fully qualified URLS.  
@@ -25,7 +25,7 @@ manager: craigg
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open an existing or new Report Server project.  
   
-2.  From the **Project** menu, click **Properties**. The *\<project>***Property Pages** dialog box opens.  
+2.  From the **Project** menu, click **Properties**. The _\<project>_**Property Pages** dialog box opens.  
   
 3.  In the **Configuration** list, select the name of a solution build configuration to use to build and publish your report. The current configuration is listed as **Active**(*\<configuration>*).  
   

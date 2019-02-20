@@ -45,7 +45,7 @@ manager: craigg
  If you install a second instance of a component that you already installed, such as the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and you name the instance Contoso, the **Instance ID** is MSSQL12.Contoso.  
   
  **Edition**  
- Displays edition information. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server](http://go.microsoft.com/fwlink/?linkid=232473).  
+ Displays edition information. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server](https://go.microsoft.com/fwlink/?linkid=232473).  
   
  **Product Version**  
  Displays the version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] that you installed.  

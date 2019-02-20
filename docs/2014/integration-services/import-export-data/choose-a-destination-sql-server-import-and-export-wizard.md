@@ -123,6 +123,6 @@ manager: craigg
  Provide the user's password for the database connection when a workgroup information file is associated with the database. However, if the database is protected with a single password for all users, you must provide this value in the **Data Link Properties** dialog box, which is accessed from the **Advanced** button.  
   
  **Advanced**  
- Specify advanced options, such as the database password or a non-default workgroup information file, by using the **Data Link Properties** dialog box. For more information about OLE DB provider properties, search in the Data Access section of the [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Specify advanced options, such as the database password or a non-default workgroup information file, by using the **Data Link Properties** dialog box. For more information about OLE DB provider properties, search in the Data Access section of the [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

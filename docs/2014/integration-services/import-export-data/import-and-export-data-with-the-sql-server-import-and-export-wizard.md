@@ -82,8 +82,8 @@ manager: craigg
   
 ## External Resources  
   
--   Video, [Exporting SQL Server Data to Excel (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=200975), on technet.microsoft.com  
+-   Video, [Exporting SQL Server Data to Excel (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=200975), on technet.microsoft.com  
   
--   CodePlex sample, [Exporting from ODBC to a Flat File Using a Wizard Tutorial: Lesson Packages](http://go.microsoft.com/fwlink/?LinkId=217657), on msftisprodsamples.codeplex.com  
+-   CodePlex sample, [Exporting from ODBC to a Flat File Using a Wizard Tutorial: Lesson Packages](https://go.microsoft.com/fwlink/?LinkId=217657), on msftisprodsamples.codeplex.com  
   
   

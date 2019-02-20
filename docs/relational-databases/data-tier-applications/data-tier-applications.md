@@ -17,7 +17,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # Data-tier Applications
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A data-tier application (DAC) is a logical database management entity that defines all of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects - like tables, views, and instance objects, including logins - associated with a user's database. A DAC is a self-contained unit of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database deployment that enables data-tier developers and database administrators to package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects into a portable artifact called a DAC package, also known as a DACPAC.  
   
  A BACPAC is a related artifact that encapsulates the database schema as well as the data stored in the database.  

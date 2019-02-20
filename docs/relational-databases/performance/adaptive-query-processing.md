@@ -2,7 +2,7 @@
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
 ms.custom: ""
-ms.date: "11/15/2018"
+ms.date: "02/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,6 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 This article introduces these adaptive query processing features that you can use to improve query performance in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
 - Batch mode memory grant feedback
+- Row mode memory grant feedback (public preview under database compatibility level 150)
 - Batch mode adaptive join
 - Interleaved execution
 
@@ -30,8 +31,6 @@ At a general level, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ex
 For more information on query processing and execution modes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md).
 
 Sometimes the plan chosen by the Query Optimizer is not optimal for a variety of reasons. For example, the estimated number of rows flowing through the query plan may be incorrect. The estimated costs help determine which plan gets selected for use in execution. If cardinality estimates are incorrect, the original plan is still used despite the poor original assumptions.
-
-![Adaptive Query Processing Features](./media/1_AQPFeatures.png)
 
 ### How to enable adaptive query processing
 You can make workloads automatically eligible for adaptive query processing by enabling compatibility level 140 for the database.  You can set this using Transact-SQL. For example:  
@@ -165,7 +164,7 @@ The following query is used to illustrate an Adaptive Join example:
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -184,7 +183,7 @@ In the plan, we see the following:
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 The query returns one row. Enabling Live Query Statistics we see the following plan:
@@ -362,6 +361,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## See Also
+[Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing.md)   
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

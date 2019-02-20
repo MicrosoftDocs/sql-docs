@@ -27,7 +27,7 @@ manager: craigg
 ## External Resources  
  [Full-Text Search Backward Compatibility](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
   
- [Full-Text Search Upgrade](http://go.microsoft.com/fwlink/?LinkId=112291)  
+ [Full-Text Search Upgrade](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
  [Breaking Changes to Full-Text Search](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   

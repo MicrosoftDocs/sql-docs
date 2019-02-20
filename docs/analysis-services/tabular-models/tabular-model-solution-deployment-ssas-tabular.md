@@ -1,5 +1,5 @@
 ---
-title: "Tabular model solution deployment | Microsoft Docs"
+title: "Analysis Services tabular model solution deployment | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -67,7 +67,7 @@ manager: kfile
 ##  <a name="bkmk_connecting"></a> Configuring the deployment server and connecting to a deployed model  
  After a model has been deployed, there are additional considerations for securing model data access, backups, and processing operations that can be configured on the Analysis Services server by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. While these properties and configuration settings are outside the scope of this topic, they are, nonetheless, very important in assuring your deployed model data is secure, kept up to date, and provide a valuable data analysis resource for users in your organization.  
   
- After a model has been deployed, and optional server settings configured, the model can be connected to by reporting client applications and used to browse and analyze the model metadata. Connecting to a deployed model database from client applications is outside the scope of this topic. To learn more about connecting to a model database from client applications, see [Tabular Model Data Access](../../analysis-services/tabular-models/tabular-model-data-access.md).  
+ After a model has been deployed, and optional server settings configured, the model can be connected to by reporting client applications and used to browse and analyze the model metadata. Connecting to a deployed model database from client applications is outside the scope of this topic. 
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   

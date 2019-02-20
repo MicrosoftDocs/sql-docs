@@ -34,8 +34,8 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides nine fixed server roles. The permissions that are granted to the fixed server roles (except **public**) cannot be changed. Beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can create user-defined server roles and add server-level permissions to the user-defined server roles.  
   
- You can add server-level principals ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, Windows accounts, and Windows groups) into server-level roles. Each member of a fixed server role can add other logins to that same role. Members of user-defined server roles cannot add other server principals to the role.  
->  [!NOTE]
+ You can add server-level principals ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, Windows accounts, and Windows groups) into server-level roles. Each member of a fixed server role can add other logins to that same role. Members of user-defined server roles cannot add other server principals to the role.  
+> [!NOTE]
 >  Server-level permissions are not available in SQL Database or SQL Data Warehouse. For more information about SQL Database, see [Controlling and granting database access.](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)
   
 ## Fixed Server-Level Roles  

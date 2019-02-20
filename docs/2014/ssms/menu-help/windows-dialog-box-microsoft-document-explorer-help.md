@@ -6,8 +6,6 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.windows"
 helpviewer_keywords: 
   - "Windows dialog box"
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
@@ -33,5 +31,3 @@ manager: craigg
   
  **Close Windows**  
  Closes the selected documents and windows in the list.  
-  
-  

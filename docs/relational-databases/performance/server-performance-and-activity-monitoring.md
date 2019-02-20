@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], monitoring system"
   - "Profiler [SQL Server Profiler], how-to topics"
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Server Performance and Activity Monitoring

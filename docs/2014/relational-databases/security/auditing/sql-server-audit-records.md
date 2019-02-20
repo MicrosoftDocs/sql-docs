@@ -22,7 +22,7 @@ manager: craigg
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Date/time when the auditable action is fired.|`datetime2`|Yes|  
 |**sequence_no**|Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits.|`int`|Yes|  
-|**action_id**|ID of the action<br /><br /> Tip: To use **action_id** as a predicate it must be converted from a character string to a numeric value. For more information, see [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|Yes|  
+|**action_id**|ID of the action<br /><br /> Tip: To use **action_id** as a predicate it must be converted from a character string to a numeric value. For more information, see [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|Yes|  
 |**succeeded**|Indicates if the action that triggered the event succeeded|`bit` - 1 = Success, 0 = Fail|Yes|  
 |**permission_bitmask**|When applicable, shows the permissions that were granted, denied, or revoked|`bigint`|No|  
 |**is_column_permission**|Flag indicating a column level permission|`bit` - 1 = True, 0 = False|No|  

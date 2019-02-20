@@ -1,7 +1,7 @@
 ---
 title: "Annotated XSD Schemas in SQLXML 4.0 | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 01/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], annotations"
   - "schemas [SQLXML]"
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotated XSD Schemas in SQLXML 4.0
@@ -43,14 +43,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Other Resources  
  You can find more information about XML Schema Definition language (XSD), XML Path language (XPath), and Extensible Stylesheet Language Transformations (XSLT) at the following Web sites:  
   
--   XML Schema Part 0: Primer, W3C Recommendation (https://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Structures, W3C Recommendation (https://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2:Datatypes, W3C Recommendation (https://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2:Datatypes, W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (https://www.w3.org/TR/xslt)  
+-   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
   
   

@@ -3,6 +3,7 @@ title: "Changing Passwords Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 

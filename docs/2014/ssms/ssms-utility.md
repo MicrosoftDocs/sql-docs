@@ -45,16 +45,16 @@ manager: craigg
  *solutionfile*  
  Specifies a solution to open. The parameter must contain the full path to the solution file.  
   
- [**-S** *servername*]  
+ [**-S** _servername_]  
  Server name  
   
- [**-d** *databasename*]  
+ [**-d** _databasename_]  
  Database name  
   
- [**-U** *username*]  
+ [**-U** _username_]  
  User name when connecting with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication  
   
- [**-P** *password*]  
+ [**-P** _password_]  
  Password when connecting with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication  
   
  [**-E**]  
@@ -63,7 +63,7 @@ manager: craigg
  [**-nosplash**]  
  Prevents [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] from displaying the splash screen graphic while opening. Use this option when connecting to the computer running [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by means of Terminal Services over a connection with a limited bandwidth. This argument is not case-sensitive and may appear before or after other arguments  
   
- [**-log***[filename]?*]  
+ [**-log**_[filename]?_]  
  Logs [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] activity to the specified file for troubleshooting  
   
  [**-?**]  

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Granting Permissions on Report Server Items on a SharePoint Site
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] provides built-in security features that you can use to grant access to report server items that you access from SharePoint sites and libraries. If you already assigned permissions to users, those same users will have access to report server items and operations immediately after you configure the integration settings between [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] and a report server. You can use existing permissions to upload report definitions and other documents, view reports, create subscriptions, and manage items.  

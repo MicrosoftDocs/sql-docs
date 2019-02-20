@@ -61,7 +61,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 3.  Right-click the **Jobs** folder and select **Manage Job Categories**.  
   
-4.  In the **Manage Job Categories***server_name* dialog box, click **Add**.  
+4.  In the **Manage Job Categories**_server_name_ dialog box, click **Add**.  
   
 5.  In the new dialog box, in the **Name** box, enter a name for the new job category.  
   
@@ -69,7 +69,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 7.  Click **OK**.  
   
-8.  In the **Manage Job Categories***server_name* dialog box, click **Refresh** to ensure that the new job category is active. If everything looks as expected, close this dialog box.  
+8.  In the **Manage Job Categories**_server_name_ dialog box, click **Refresh** to ensure that the new job category is active. If everything looks as expected, close this dialog box.  
   
 For more information on these dialog boxes, see [Job Categories - Manage Job Categories](../../ssms/agent/job-categories-manage-job-categories.md) and [Job Categories Properties - New Job Category](../../ssms/agent/job-categories-properties-new-job-category.md).  
   

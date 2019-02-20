@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "shared data sources"
   - "data sources"
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Embedded and Shared Data Connections or Data Sources (Report Builder and SSRS)
   Reports use data connections to retrieve data for a report when a query runs or when the report is processed. You choose from a list of built-in data connection types to connect to a relational database, a multidimensional database, a Web service, or some other source of data. The following terms are used when describing data connections.  

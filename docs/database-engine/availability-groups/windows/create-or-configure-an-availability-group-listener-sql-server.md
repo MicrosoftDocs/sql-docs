@@ -1,6 +1,7 @@
 ---
-title: "Create or Configure an Availability Group Listener (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure a listener for an availability group"
+description: "Describes the steps to take when configuring a listener for an Always On availability group using PowerShell or SQL Server Management Studio. "
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: "erikre"
 ---
-# Create or Configure an Availability Group Listener (SQL Server)
+# Configure a listener for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create or configure a single *availability group listener* for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

@@ -1,8 +1,8 @@
 ---
 title: "Accessing Diagnostic Information in the Extended Events Log | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab

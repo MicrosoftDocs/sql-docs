@@ -1,5 +1,6 @@
 ---
-title: Unattended install for SQL Server on Ubuntu | Microsoft Docs
+title: Unattended install for SQL Server on Ubuntu
+titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on Ubuntu
 author: rothja
 ms.author: jroth
@@ -7,7 +8,7 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for Ubuntu
@@ -81,6 +82,7 @@ sudo ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
 echo Adding SQL Server tools to your path...
 echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
 
 # Optional SQL Server Agent installation:
 if [ ! -z $SQL_INSTALL_AGENT ]

@@ -109,6 +109,6 @@ manager: craigg
  [Configure PowerPivot Service Accounts](configure-power-pivot-service-accounts.md)   
  [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot Securtiy Architecture](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot Securtiy Architecture](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

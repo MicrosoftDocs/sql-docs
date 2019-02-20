@@ -33,9 +33,9 @@ manager: craigg
 ```  
   
 BOOL SQLInstallDriverManager(  
-     LPSTR    lpszPath,  
-     WORD     cbPathMax,  
-     WORD *   pcbPathOut);  
+     LPSTR    lpszPath,  
+     WORD     cbPathMax,  
+     WORD *   pcbPathOut);  
 ```  
   
 ## Arguments  

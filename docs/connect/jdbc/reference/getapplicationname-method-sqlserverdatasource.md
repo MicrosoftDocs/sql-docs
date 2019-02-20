@@ -30,10 +30,10 @@ public java.lang.String getApplicationName()
 ```  
   
 ## Return Value  
- A **String** that contains the application name, or "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]" if no value is set.  
+ A **String** that contains the application name, or " [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]" if no value is set.  
   
 ## Remarks  
- The application name is used to identify the specific application in various [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] profiling and logging tools. If the application name is not set, the getApplicationName method returns the non-localized string "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
+ The application name is used to identify the specific application in various [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] profiling and logging tools. If the application name is not set, the getApplicationName method returns the non-localized string " [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
   
 ## See Also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

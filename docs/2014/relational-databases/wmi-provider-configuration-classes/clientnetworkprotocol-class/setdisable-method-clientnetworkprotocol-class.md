@@ -20,7 +20,7 @@ ms.author: carlrab
 manager: craigg
 ---
 # SetDisable Method (ClientNetworkProtocol Class)
-  Disables the client network protocol that is specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
+  Disables the client network protocol that is specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## Syntax  
   
@@ -41,6 +41,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

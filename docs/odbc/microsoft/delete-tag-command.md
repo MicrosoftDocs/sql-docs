@@ -22,7 +22,7 @@ Removes a tag or tags from a compound index (.cdx) file.
 ```  
   
 DELETE TAG TagName1 [OF CDXFileName1]  
-   [, TagName2 [OF CDXFileName2]] ...  
+   [, TagName2 [OF CDXFileName2]] ...  
   Or   
 DELETE TAG ALL [OF CDXFileName]  
 ```  

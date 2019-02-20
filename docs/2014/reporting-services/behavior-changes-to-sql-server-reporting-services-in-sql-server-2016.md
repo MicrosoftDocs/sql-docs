@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Behavior Changes to SQL Server Reporting Services  in SQL Server 2014
   This topic describes behavior changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as compared to previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -47,7 +47,7 @@ manager: craigg
   
  **Previous Behavior:** Users with the "View Items" SharePoint permission could download the contents of Reporting Services shared datasets.  
   
- For more information on SharePoint permission levels, see [User permissions and permission levels](http://technet.microsoft.com/library/cc721640.aspx)  
+ For more information on SharePoint permission levels, see [User permissions and permission levels](https://technet.microsoft.com/library/cc721640.aspx)  
   
 ### Report Server trace logs are in a new location for SharePoint mode (SharePoint Mode)  
  **New behavior:** For a report server installed in SharePoint mode, the report server trace logs will be under %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles.  

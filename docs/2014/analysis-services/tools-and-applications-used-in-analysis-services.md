@@ -21,9 +21,9 @@ manager: craigg
 ### Download SQL Server Data Tools for Business Intelligence (SSDT-BI)  
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI), previously known as Business Intelligence Development Studio (BIDS), is used to create Analysis Services models, Reporting Services reports, and Integration Services packages. You can download SSDT-BI from the following locations:  
   
--   [Download SSDT-BI for Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [Download SSDT-BI for Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [Download SSDT-BI for Visual Studio 2012](http://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [Download SSDT-BI for Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  If you have a prior version of SSDT-BI or BIDS installed on your computer, the newer version is installed side-by-side the previous version. It's common to run newer and older versions of the design tools on a single workstation so that you can modify projects and solutions tied to specific versions of the server.  
   

@@ -1,5 +1,6 @@
 ---
-title: Score new data (SQL Server and RevoScaleR tutorial)| Microsoft Docs
+title: Score new data using RevoScaleR and rxPredict - SQL Server Machine Learning
+description: Tutorial walkthrough on how to score data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -116,11 +117,11 @@ After the new table has been created, compute and display a histogram of the 10,
     ```R
     minMaxVals <- rxImport(sqlMinMax)
     minMaxVals <- as.vector(unlist(minMaxVals))
-  
     ```
-     **Results**
+
+    **Results**
      
-    ``` 
+    ```R
     > minMaxVals
      
     [1] -23.970256   9.786345

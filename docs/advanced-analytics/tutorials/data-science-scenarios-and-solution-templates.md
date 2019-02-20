@@ -1,5 +1,5 @@
 ---
-title: Data science scenarios and solution templates (SQL Server Machine Learning) | Microsoft Docs
+title: Data science scenarios and solution templates - SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 

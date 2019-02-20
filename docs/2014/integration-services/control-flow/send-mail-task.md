@@ -78,7 +78,7 @@ manager: craigg
   
 ## Related Content  
   
--   Technical article, [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
+-   Technical article, [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
   
 ## See Also  
  [Integration Services Tasks](integration-services-tasks.md)   

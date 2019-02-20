@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], about restoring databases"
   - "database restores [SQL Server], scenarios"
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Restore and Recovery Overview (SQL Server)

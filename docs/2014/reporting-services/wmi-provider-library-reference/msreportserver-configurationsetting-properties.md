@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # MSReportServer_ConfigurationSetting Properties
   The MSReportServer_ConfigurationSetting class represents the installation and runtime parameters of a report server instance. These settings are stored in the RSReportServer.config configuration file.  

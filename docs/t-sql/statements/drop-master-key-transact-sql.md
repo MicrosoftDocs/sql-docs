@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "dropping Database Master Keys"
   - "deleting Database Master Keys"
 ms.assetid: 5ccef797-408f-4964-80da-965d8e1ccba7
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

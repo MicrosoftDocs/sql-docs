@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.linkeddomain.f1"
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Linked Domain

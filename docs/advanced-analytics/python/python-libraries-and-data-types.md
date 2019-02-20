@@ -1,20 +1,19 @@
 ---
-title: Python libraries and data types in SQL Server Machine Learning | Microsoft Docs
+title: Python-to-SQL data type conversions - SQL Server Machine Learning
+description: Review the implicit and explicit data type converstions between Python and SQL Server in data science and machine learning solutions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 12/10/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Python libraries and data types
+# Data type mappings between Python and SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the Python libraries that are included with SQL Server Machine Learning Services (In-Database) and (Standalone) installations.
-
-This article also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
+For Python solutions that run on the Python integration feature in SQL Server Machine Learning Services, review the list of unsupported data types, and data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
 
 ## Python Version
 
@@ -49,5 +48,5 @@ This table lists the implicit conversions that are provided. Other data types ar
 |**varchar(n)**|`str`|
 |**varchar(max)**|`str`|
 
-
+## See also
 

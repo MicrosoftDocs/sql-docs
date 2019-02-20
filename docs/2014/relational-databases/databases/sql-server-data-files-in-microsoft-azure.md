@@ -51,7 +51,7 @@ manager: craigg
   
 -   You must store the information regarding Windows Azure Storage container, its associated policy name, and SAS key in the SQL Server credential store.  
   
- The following example assumes that a Windows Azure Storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'your SAS key'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Create and Use a Shared Access Signature](http://msdn.microsoft.com/library/azure/jj721951.aspx)  
+ The following example assumes that a Windows Azure Storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'your SAS key'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Create and Use a Shared Access Signature](https://msdn.microsoft.com/library/azure/jj721951.aspx)  
   
 ```  
   
@@ -85,9 +85,9 @@ ON
 ### Installation Prerequisites  
  The followings are installation prerequisites when storing SQL Server Data Files in Windows Azuree.  
   
--   **SQL Server on-premises:** SQL Server 2014 version includes this feature. To learn how to download SQL Server 2014, see [SQL Server 2014](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   **SQL Server on-premises:** SQL Server 2014 version includes this feature. To learn how to download SQL Server 2014, see [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
--   SQL Server running in a Windows Azure virtual machine: If you are installing SQL Server on a Windows Azure Virtual Machine, install SQL Server 2014, or update your existing instance. Similarly, you can also create a new virtual machine in Windows Azure using SQL Server 2014 platform image. To learn how to download SQL Server 2014, see [SQL Server 2014](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   SQL Server running in a Windows Azure virtual machine: If you are installing SQL Server on a Windows Azure Virtual Machine, install SQL Server 2014, or update your existing instance. Similarly, you can also create a new virtual machine in Windows Azure using SQL Server 2014 platform image. To learn how to download SQL Server 2014, see [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
   

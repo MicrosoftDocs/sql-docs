@@ -128,9 +128,9 @@ manager: craigg
 |-|-------------|-------------|  
 |Conventional memory|Up to process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:<br /><br /> 2 GB<br /><br /> 3 GB with **/3gb** boot parameter*<br /><br /> 4 GB on WOW64\*\*|Up to process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:<br /><br /> 8 TB on x64 architecture|  
   
- ***/3gb** is an operating-system boot parameter. For more information, visit the [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ***/3gb** is an operating-system boot parameter. For more information, visit the [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- **WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a 64-bit operating system. For more information, visit the [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ **WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a 64-bit operating system. For more information, visit the [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## Examples  
   

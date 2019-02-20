@@ -1,6 +1,7 @@
 ---
-title: "Perform a Forced Manual Failover of an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Perform a forced manual failover of an Availability Group"
+description: "This topic describes how to perform a forced failover of an Always On availability group (with possible data loss) by using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Perform a Forced Manual Failover of an Availability Group (SQL Server)
+# Perform a Forced Manual Failover of an Always On Availability Group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to perform a forced failover (with possible data loss) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A forced failover is a form of manual failover that is intended strictly for disaster recovery, when a [planned manual failover](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) is not possible. If you force failover to an unsynchronized secondary replica, some data loss is possible. Therefore, we strongly recommend that you force failover only if you must restore service to the availability group immediately and you are willing to risk losing data.  
   

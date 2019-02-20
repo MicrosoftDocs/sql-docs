@@ -108,7 +108,7 @@ OPENROWSET
  For information about how to use the BULK option, see "Remarks," later in this topic. For information about the permissions that are required by the BULK option, see "Permissions," later in this topic.  
   
 > [!NOTE]  
->  When used to import data with the full recovery model, OPENROWSET (BULK ...) does not optimize logging.  
+> When used to import data with the full recovery model, OPENROWSET (BULK ...) does not optimize logging.  
   
  For information on preparing data for bulk import, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
@@ -130,7 +130,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, t
 > CODEPAGE is not a supported option on Linux.
 
 > [!NOTE]  
->  We recommend that you specify a collation name for each column in a format file, except when you want the 65001 option to have priority over the collation/code page specification.  
+> We recommend that you specify a collation name for each column in a format file, except when you want the 65001 option to have priority over the collation/code page specification.  
   
 |CODEPAGE value|Description|  
 |--------------------|-----------------|  
@@ -162,7 +162,7 @@ Is a named external data source pointing to the Azure Blob storage location of t
  The default for *maximum_errors* is 10.  
   
 > [!NOTE]  
->  MAX_ERRORS does not apply to CHECK constraints, or to converting **money** and **bigint** data types.  
+> MAX_ERRORS does not apply to CHECK constraints, or to converting **money** and **bigint** data types.  
   
  ROWS_PER_BATCH =*rows_per_batch*  
  Specifies the approximate number of rows of data in the data file. This value should be of the same order as the actual number of rows.  
@@ -192,7 +192,7 @@ Is a named external data source pointing to the Azure Blob storage location of t
  Returns the contents of *data_file* as a single-row, single-column rowset of type **varbinary(max)**.  
   
 > [!IMPORTANT]  
->  We recommend that you import XML data only using the SINGLE_BLOB option, rather than SINGLE_CLOB and SINGLE_NCLOB, because only SINGLE_BLOB supports all Windows encoding conversions.  
+> We recommend that you import XML data only using the SINGLE_BLOB option, rather than SINGLE_CLOB and SINGLE_NCLOB, because only SINGLE_BLOB supports all Windows encoding conversions.  
   
  SINGLE_CLOB  
  By reading *data_file* as ASCII, returns the contents as a single-row, single-column rowset of type **varchar(max)**, using the collation of the current database.  
@@ -242,10 +242,10 @@ Specifies a character that will be used as the quote character in the CSV file. 
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
->    [!IMPORTANT]  
->    Failure to add the `AS <table_alias>` will result in the error:    
->    Msg 491, Level 16, State 1, Line 20    
->    A correlation name must be specified for the bulk rowset in the from clause.    
+> [!IMPORTANT]  
+> Failure to add the `AS <table_alias>` will result in the error:    
+> Msg 491, Level 16, State 1, Line 20    
+> A correlation name must be specified for the bulk rowset in the from clause.    
   
 -   A `SELECT...FROM OPENROWSET(BULK...)` statement queries the data in a file directly, without importing the data into a table. `SELECT...FROM OPENROWSET(BULK...)` statements can also list bulk-column aliases by using a format file to specify column names, and also data types.  
   
@@ -256,13 +256,13 @@ Specifies a character that will be used as the quote character in the CSV file. 
  For information about how to use `INSERT...SELECT * FROM OPENROWSET(BULK...)` statements, see [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 > [!NOTE]  
->  When you use `OPENROWSET`, it is important to understand how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handles impersonation. For information about security considerations, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+> When you use `OPENROWSET`, it is important to understand how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handles impersonation. For information about security considerations, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### Bulk Importing SQLCHAR, SQLNCHAR or SQLBINARY Data  
  OPENROWSET(BULK...) assumes that, if not specified, the maximum length of SQLCHAR, SQLNCHAR or SQLBINARY data does not exceed 8000 bytes. If the data being imported is in a LOB data field that contains any **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** objects that exceed 8000 bytes, you must use an XML format file that defines the maximum length for the data field. To specify the maximum length, edit the format file and declare the MAX_LENGTH attribute.  
   
 > [!NOTE]  
->  An automatically generated format file does not specify the length or maximum length for a LOB field. However, you can edit a format file and specify the length or maximum length manually.  
+> An automatically generated format file does not specify the length or maximum length for a LOB field. However, you can edit a format file and specify the length or maximum length manually.  
   
 ### Bulk Exporting or Importing SQLXML Documents  
  To bulk export or import SQLXML data, use one of the following data types in your format file.  
@@ -293,7 +293,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
  The following example accesses the `Customers` table in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Northwind` database through the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet.  
   
 > [!NOTE]  
->  This example assumes that Access is installed. To run this example, you must install the Northwind database.  
+> This example assumes that Access is installed. To run this example, you must install the Northwind database.  
   
 ```sql  
 SELECT CustomerID, CompanyName  
@@ -309,7 +309,7 @@ GO
  The following example selects all data from the `Customers` table from the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` database and from the `Orders` table from the Access `Northwind` database stored on the same computer.  
   
 > [!NOTE]  
->  This example assumes that Access is installed. To run this example, you must install the Northwind database.  
+> This example assumes that Access is installed. To run this example, you must install the Northwind database.  
   
 ```sql  
 USE Northwind  ;  

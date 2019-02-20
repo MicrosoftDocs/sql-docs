@@ -18,7 +18,7 @@ manager: craigg
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+  This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **In This Topic**  
   
@@ -29,7 +29,7 @@ manager: craigg
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- To create a subscription for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber:  
+ To create a subscription for a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber:  
   
 1.  Install and configure the appropriate client software and OLE DB provider(s) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. For more information, see [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
@@ -92,7 +92,7 @@ manager: craigg
   
     -   For IBM DB2, the database is specified in the **Initial Catalog** property of the DB2 connection string, which can be entered in the **Additional connection options** field described later in this process.  
   
-8.  On the **Distribution Agent Security** page, click the properties button (**...**) next to the Subscriber to access the **Distribution Agent Security** dialog box.  
+8.  On the **Distribution Agent Security** page, click the properties button (**…**) next to the Subscriber to access the **Distribution Agent Security** dialog box.  
   
 9. In the **Distribution Agent Security** dialog box:  
   
@@ -138,7 +138,7 @@ manager: craigg
  When the Snapshot Agent finishes generating the snapshot, a message is displayed, such as "[100%] A snapshot of 17 article(s) was generated."  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- You can create push subscriptions to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers programmatically using replication stored procedures.  
+ You can create push subscriptions to non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers programmatically using replication stored procedures.  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  

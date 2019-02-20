@@ -11,12 +11,12 @@ helpviewer_keywords:
   - "resource pool [SQL Server], overview"
   - "resource pool [SQL Server]"
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Resource Governor Resource Pool
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor, a resource pool represents a subset of the physical resources of an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use within the resource pool. Each resource pool can contain one or more workload groups. When a session is started, the Resource Governor classifier assigns the session to a specific workload group, and the session must run using the resources assigned to the workload group.  
   
@@ -55,6 +55,7 @@ The following table illustrates a few of the preceding concepts. The table shows
 |default|0|100|30|30|The effective MAX value is calculated as: min(100,100-(20+50)) = 30. The calculated shared % is effective MAX - MIN = 30.|  
 |Pool 1|20|100|50|30|The effective MAX value is calculated as: min(100,100-50) = 50. The calculated Shared % is Effective MAX - MIN = 30.|  
 |Pool 2|50|70|70|20|The effective MAX value is calculated as: min(70,100-20) = 70. The calculated Shared % is Effective MAX - MIN = 20.|  
+
 The following formulas are used for calculating the effective MAX% and the shared % in the table above:  
   
 -   Min(X,Y) means the smaller value of X and Y.  

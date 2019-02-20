@@ -16,7 +16,7 @@ manager: craigg
 # DAX Formula Compatibility in DirectQuery Mode (SSAS 2014)
 The Data Analysis Expression language (DAX) can be used to create measures and other custom formulas for use in Analysis Services Tabular models, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data models in Excel workbooks, and Power BI Desktop data models. In most respects, the models you create in these environments are identical, and you can use the same measures, relationships, and KPIs, etc. However, if you author an Analysis Services Tabular model and deploy it in DirectQuery mode, there are some restrictions on the formulas that you can use. This topic provides an overview of those differences, lists the functions that are not supported in SQL Server 2014 Analysis Services tabulars model at compatibility level 1100 or 1103 and in DirectQuery mode, and lists the functions that are supported but might return different results.  
   
-Within this topic, we use the term *in-memory model* to refer to  Tabular models, which are fully hosted in-memory cached data on an Analysis Services server running in Tabular mode. We use *DirectQuery models* to refer to Tabular models that have been authored and/or deployed in DirectQuery mode. For information about DirectQuery mode, see [DirectQuery Mode (SSAS Tabular)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+Within this topic, we use the term *in-memory model* to refer to  Tabular models, which are fully hosted in-memory cached data on an Analysis Services server running in Tabular mode. We use *DirectQuery models* to refer to Tabular models that have been authored and/or deployed in DirectQuery mode. For information about DirectQuery mode, see [DirectQuery Mode (SSAS Tabular)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Differences between in-memory and DirectQuery mode  
@@ -86,7 +86,7 @@ For information about the rules governing casts from string to **datetime** data
 Models that use the in-memory data store support a more limited range of text formats for dates than the string formats for dates that are supported by SQL Server. However, DAX supports custom date and time formats.  
   
 **Cast from string to other non Boolean values**  
-When casting from strings to non-Boolean values, DirectQuery mode behaves the same as SQL Server. For more information, see [CAST and CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+When casting from strings to non-Boolean values, DirectQuery mode behaves the same as SQL Server. For more information, see [CAST and CONVERT (Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Cast from numbers to string not allowed**  
 EXAMPLE: `CONCATENATE(102,",345")`  
@@ -259,7 +259,7 @@ In DirectQuery mode, the case of the character that is returned is always exactl
   
 By default, the Latin1_General collation is used, which is case-insensitive but accent-sensitive. Therefore, if there are multiple instances of a text string in lower case, upper case, or mixed case, all instances are considered the same string, and only the first instance of the string is stored in the index. All text functions that operate on stored strings will retrieve the specified portion of the indexed form. Therefore, the example formula would return the same value for the entire column, using the first instance as the input.  
   
-[String Storage and Collation in Tabular Models](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
+[String Storage and Collation in Tabular Models](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 This behavior also applies to other text functions, including RIGHT, MID, and so forth.  
   
@@ -500,6 +500,6 @@ LASTDATE
 DATEADD  
   
 ## See also  
-[DirectQuery Mode (SSAS Tabular)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery Mode (SSAS Tabular)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

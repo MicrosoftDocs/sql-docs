@@ -3282,7 +3282,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 				if (server.LoadProperties())
 				{
 					string[] slash = new string[1];
-					slash[1] = @"\";
+					slash[0] = @"\";
 
 					// If the login is in the form string\string, assume we are 
 					// changing the password for a Windows login.

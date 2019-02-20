@@ -2,8 +2,8 @@
 title: Use DMVs to Determine Usage Statistics and Performance of Views
 description: Use DMVs to Determine Usage Statistics and Performance of Views
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ""
@@ -189,10 +189,4 @@ GO
 ```
 
 ## See also
-[Dynamic management views and functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[DMVs for Performance Tuning (Video - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
-[DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
-[SQL Server Tuning in capsule form (movie-SQL Saturday Parma)](https://vimeo.com/200980883)    
-[SQL Server Tuning in a nutshell (slides and Demo-SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
-[Performance Tuning With SQL Server Dynamic Management Views](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
-[The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   
+[Dynamic management views and functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

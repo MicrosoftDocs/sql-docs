@@ -15,7 +15,7 @@ ms.technology: linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
+This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/ [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]
 > An AG with a cluster type of None does *not* require a Pacemaker cluster, nor can it be managed by Pacemaker. 
 

@@ -174,7 +174,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
   
 -   The Management Object Model (MOM) API  
   
- For more info, see [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ For more info, see [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
 ####  <a name="encrypted"></a> Support for Always Encrypted in the SSIS Catalog  
  SSIS already supports the Always Encrypted feature in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more info, see the following blog posts.  
@@ -320,7 +320,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
    
  ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > If you develop custom extensions for SSIS, see [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) and [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
 
 ### Better management experience in SQL Server Management Studio

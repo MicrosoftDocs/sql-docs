@@ -33,9 +33,9 @@ File initialization causes these operations to take longer. However, when data i
 ## Instant File Initialization (IFI)  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data files can be initialized instantaneously to avoid zeroing operations. Instant file initialization allows for fast execution of the previously mentioned file operations. Instant file initialization reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.  
   
-> [!NOTE]  
+> [!NOTE]
 > Instant file initialization is available only on [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] or [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] or later versions.  
-
+> 
 > [!IMPORTANT]
 > Instant file initialization is available only for data files. Log files will always be zeroed when being created, or growing in size.
   

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 2: Testing and Publishing the Matching Policy
@@ -35,7 +32,7 @@ manager: craigg
   
 4.  Click **Close** to close the **Matching Score Details** dialog box.  
   
-5.  Click **Matching Results** tab at the bottom of the page. This tab gives you detail such as number of matched records, number of unmatched records, number of clusters with matched records, the average cluster size, minimum cluster size, and maximum cluster size. See [Create a Matching Policy](http://msdn.microsoft.com/library/hh270290.aspx) for more details. You cannot export results from this activity. You are just defining a matching policy by using the sample data to test rules and the policy against the sample data.  
+5.  Click **Matching Results** tab at the bottom of the page. This tab gives you detail such as number of matched records, number of unmatched records, number of clusters with matched records, the average cluster size, minimum cluster size, and maximum cluster size. See [Create a Matching Policy](https://msdn.microsoft.com/library/hh270290.aspx) for more details. You cannot export results from this activity. You are just defining a matching policy by using the sample data to test rules and the policy against the sample data.  
   
      ![Matching Results Tab](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "Matching Results Tab")  
   

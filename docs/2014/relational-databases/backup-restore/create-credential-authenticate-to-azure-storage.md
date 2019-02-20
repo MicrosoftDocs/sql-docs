@@ -23,7 +23,7 @@ manager: craigg
   
 ## Windows Azure Credentials  
  **Management Certificate**  
- Use this option to specify a certificate from the local certificate store that matches the management certificate from Windows Azure. For more information on Windows Azure management certificate, see [Create and Upload a Management Certificate for Windows Azure](http://go.microsoft.com/fwlink/?LinkId=320781).  
+ Use this option to specify a certificate from the local certificate store that matches the management certificate from Windows Azure. For more information on Windows Azure management certificate, see [Create and Upload a Management Certificate for Windows Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
   
  **Subscription**  
  Select, type, or paste your Windows Azure subscription ID that matches the management certificate from the local certificate store.  
@@ -32,7 +32,7 @@ manager: craigg
  Use this option if you have a publishing profile downloaded to your computer. If you use this option, the subscription ID, and the certificate are auto populated.  
   
 > [!CAUTION]  
->  SQL Server currently supports publishing profile version 2.0. To download the supported version of the publishing profile, see [Download Publishing Profile 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+>  SQL Server currently supports publishing profile version 2.0. To download the supported version of the publishing profile, see [Download Publishing Profile 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
 ## Storage Account  
  Select the storage account you want to use to store the backup files on.  

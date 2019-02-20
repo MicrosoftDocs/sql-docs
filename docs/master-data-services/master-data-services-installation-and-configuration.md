@@ -29,12 +29,12 @@ For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes
 For links to videos and other training resources to help you learn [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Learn Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
->-   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
- 
+> -   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
+> 
 > **Can't create an MDS web site?**
->>Check out this Microsoft support article for instructions on how to resolve this problem.
-[Can't create an MDS website through a low-privilege account in SQL Server 2016](https://aka.ms/mdssupport) 
+> >Check out this Microsoft support article for instructions on how to resolve this problem.
+> [Can't create an MDS website through a low-privilege account in SQL Server 2016](https://aka.ms/mdssupport) 
 
 ## Internet Explorer and Silverlight
 - When you install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 machine, you may have to configure Internet Explorer Enhanced Security to allow scripting for the Web application site. Otherwise, browsing to the site on the server computer will fail.
@@ -112,11 +112,11 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
  **To set up the database and website using the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
-> [!WARNING]  
-    >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Internet Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
-    
+> [!WARNING]
+>  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Internet Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
+> 
 > **Browser Requirement**
->>The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
+> >The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
   
 1.  Launch the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and click **Database Configuration** in the left pane.  
   

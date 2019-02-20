@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Pass a Report Parameter Within a URL
   You can pass report parameters to a report by including them in a report URL. These URL parameters are not prefixed because they are passed directly to the report processing engine.  
@@ -25,12 +25,12 @@ manager: craigg
   
  All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a Query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Report parameters are case-sensitive.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Report parameters are case-sensitive and utilize the following special characters:  
->   
+> 
 >  -   Any space characters in the URL string are replaced with the characters "%20," according to URL encoding standards.  
 > -   A space character in the parameter portion of the URL is replaced with a plus character (+).  
 > -   A semicolon in any portion of the string is replaced with the characters "%3A."  

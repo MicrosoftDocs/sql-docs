@@ -119,10 +119,10 @@ To query the data in your Hadoop data source, you must define an external table 
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))
    ```
 
-4. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
+4. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  

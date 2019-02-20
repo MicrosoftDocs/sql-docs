@@ -1,6 +1,6 @@
 ---
-title: Lesson 3 Train and save a model using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
+title: Lesson 3 Train and save a model using R and T-SQL - SQL Server Machine Learning
+description: Tutorial showing how to train, serialize, and save an R model using SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -25,7 +25,7 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
 
 2. Run the following statement to create the stored procedure **RxTrainLogitModel**. This stored procedure defines the input data and uses **rxLogit** from RevoScaleR to create a logistic regression model.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
     
     AS
@@ -70,7 +70,7 @@ Because the stored procedure already includes a definition of the input data, yo
 
 1. To train and deploy the R model, call the stored procedure and insert it into the database table _nyc_taxi_models_, so that you can use it for future predictions:
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC RxTrainLogitModel @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
@@ -86,7 +86,7 @@ Because the stored procedure already includes a definition of the input data, yo
 
     You can see that one new row has been added, which contains the serialized model in the column _model_ and the model name **RxTrainLogit_model** in the column _name_.
 
-    ```
+    ```sql
     model                        name
     ---------------------------- ------------------
     0x580A00000002000302020....  RxTrainLogit_model

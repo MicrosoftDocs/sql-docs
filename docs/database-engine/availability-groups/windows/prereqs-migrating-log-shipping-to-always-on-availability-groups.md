@@ -1,6 +1,7 @@
 ---
-title: "Prereqs Migrating Log Shipping to Always On Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "Prerequisites to convert log shipping to availability groups"
+description: "A description of the prerequisites necessary to convert log shipping to an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Prereqs Migrating Log Shipping to Always On Availability Groups
+# Prerequisites to convert log shipping to Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes the prerequisites for converting a log shipping primary database along with one or more of its secondary databases to an Always On primary database and secondary database(s).  
@@ -62,7 +63,7 @@ manager: craigg
   
  **For more information:**  
   
- [Converting a logshipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (a SQL Server blog)  
+ [Converting a log shipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (a SQL Server blog)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Log shipping**  

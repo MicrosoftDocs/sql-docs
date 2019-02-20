@@ -59,7 +59,7 @@ Check the syntax of the command.
   
 ## Options for ActiveX Script Job Steps  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
 **VBScript**  

@@ -1,19 +1,22 @@
 ---
-title: How to deploy an app on SQL Server big data cluster | Microsoft Docs
+title: How to deploy an app
+titleSuffix: SQL Server 2019 big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
 author: TheBharath 
 ms.author: bharaths  
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # How to deploy an app on SQL Server 2019 big data cluster (preview)
 
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster (preview).
 
-R and Python applications are deployed and managed with the **mssqlctl-pre** command-line utility which is included in CTP 2.1. This article provides examples of how to deploy these R and Python scripts as apps from the command line.
+R and Python applications are deployed and managed with the **mssqlctl-pre** command-line utility which is included in CTP 2.2. This article provides examples of how to deploy these R and Python scripts as apps from the command line.
 
 ## Prerequisites
 
@@ -24,12 +27,12 @@ You must have a SQL Server 2019 big data cluster configured. For more informatio
 The **mssqlctl-pre** command-line utility is provided to preview the Python and R application deployment feature. Use the following command to install the utility:
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## Capabilities
 
-In CTP 2.1 you can create, delete, list, and run an R or Python application. The following table describes the application deployment commands that you can use with **mssqlctl-pre**.
+In CTP 2.2 you can create, delete, list, and run an R or Python application. The following table describes the application deployment commands that you can use with **mssqlctl-pre**.
 
 | Command | Description |
 |---|---|
@@ -49,15 +52,16 @@ The following sections describe these commands in more detail.
 
 ## Log in
 
-Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address (external) of the `service-proxy-lb` (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the external IP address of the `service-proxy-lb` or `service-proxy-nodeport` services (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
-You can get the IP address of the service-proxy-lb service by running this command in a bash or cmd window:
+You can get the IP address of the **service-proxy-lb** or **service-proxy-nodeport** service by running this command in a bash or cmd window:
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## Create an app

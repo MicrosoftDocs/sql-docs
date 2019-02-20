@@ -17,7 +17,7 @@ manager: craigg
   You use the OData Source component in an SSIS package to consume data from Open Data Protocol (OData) services. The component supports the OData v2 and v3 protocols, as well as the ATOM and JSON data formats.  
   
 > [!NOTE]  
->  The OData Source can be used to read from SharePoint lists. To see all lists on your SharePoint server, use the following URL: http://\<server>/_vti_bin/ListData.svc. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](http://msdn.microsoft.com/library/ff521587.aspx).  
+>  The OData Source can be used to read from SharePoint lists. To see all lists on your SharePoint server, use the following URL: http://\<server>/_vti_bin/ListData.svc. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).  
   
 ## OData Format  
  Most OData services return results in multiple formats. You can specify the format of the result set by using the $format query option. Formats such as JSON and JSON Light are more efficient than ATOM/XML, and may give you better performance when transferring large amounts of data. The following table provides results from sample tests. As you can see, there was a 30-53% performance gain when switching from ATOM to JSON and 67% performance gain when switching from ATOM to the new JSON light format (available in WCF Data Services 5.1).  

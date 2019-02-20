@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "logins [Reporting Services]"
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Data Connections, Data Sources, and Connection Strings in Reporting Services
   To include data in a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -71,7 +71,7 @@ manager: craigg
   
 -   ODBC  
   
--   Microsoft BI Semantic Model for Power View : On a SharePoint site that has been configured for a PowerPivot gallery and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Microsoft BI Semantic Model for Power View : On a SharePoint site that has been configured for a PowerPivot gallery and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   

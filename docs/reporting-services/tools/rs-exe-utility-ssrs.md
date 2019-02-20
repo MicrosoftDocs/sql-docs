@@ -52,7 +52,7 @@ rs {-?}
  (Required) Specifies the .rss file to execute. This value can be a relative or fully qualified path to the .rss file.  
   
  **-s** *serverURL*  
- (Required) Specifies the Web server name and report server virtual directory name to execute the file against. An example of a report server URL is `https://examplewebserver/reportserver`. The prefix https:// or https:// at the beginning of the server name is optional. If you omit the prefix, the report server script host tries to use https first, and then uses http if https does not work.  
+ (Required) Specifies the Web server name and report server virtual directory name to execute the file against. An example of a report server URL is `https://examplewebserver/reportserver`. The prefix http:// or https:// at the beginning of the server name is optional. If you omit the prefix, the report server script host tries to use https first, and then uses http if https does not work.  
   
  **-u** [*domain*\\]*username*  
  (Optional) Specifies a user account used to connect to the report server. If **-u** and **-p** are omitted, the current Windows user account is used.  

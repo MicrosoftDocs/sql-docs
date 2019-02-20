@@ -1,5 +1,5 @@
 ---
-title: Predict potential outcomes using Python models (SQL Server Machine Learning) | Microsoft Docs
+title: Predict potential outcomes using Python models - SQL Server Machine Learning
 description: Tutorial showing how to operationalize embedded PYthon script in SQL Server stored procedures with T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
@@ -43,7 +43,7 @@ Rrun the following T-SQL statements to create the stored procedures. This stored
 
 + The data frame containing inputs is passed to the `predict_proba` function of the logistic regression model, `mod`. The `predict_proba` function (`probArray = mod.predict_proba(X)`) returns a **float** that represents the probability that a tip (of any amount) will be given.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -87,7 +87,7 @@ GO
 
 This stored procedure uses the same inputs and creates the same type of scores as the previous stored procedure, but uses functions from the **revoscalepy** package provided with SQL Server machine learning.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -137,7 +137,7 @@ By passing those arguments to the stored procedure, you can select a particular 
 
 1. To use the **scikit-learn** model for scoring, call the stored procedure **PredictTipSciKitPy**, passing the model name and query string as inputs.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -152,7 +152,7 @@ By passing those arguments to the stored procedure, you can select a particular 
 
 2. To use the **revoscalepy** model for scoring, call the stored procedure **PredictTipRxPy**, passing the model name and query string as inputs.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -183,7 +183,7 @@ Both stored procedures create a score based on the Python model.
 
 Take a minute to review the code of the stored procedure that performs scoring using the **scikit-learn** model.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -250,7 +250,7 @@ GO
 
 The following stored procedure performs scoring using the **revoscalepy** model.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -331,13 +331,13 @@ v*trip_time_in_secs*
 
 1. To generate a prediction by using the **revoscalepy** model, run this statement:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. To generate a score by using the **scikit-learn** model, run this statement:
 
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 

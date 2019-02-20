@@ -66,7 +66,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     |DROP INDEX.|The action succeeds.|The action succeeds.|  
     |CREATE INDEX WITH DROP_EXISTING.|The action fails.|The action succeeds.|  
 
--   When rebuilding disabled compressed nonclustered indexes, data_compression will default to 'none', meaning that indexes will be uncompressed. This is due to compression settings metadata is lost when nonclustered indexes are disabled. To work around this you must specifiy explicit data compression in rebuild statement.
+-   When rebuilding disabled compressed nonclustered indexes, data_compression will default to 'none', meaning that indexes will be uncompressed. This is due to compression settings metadata is lost when nonclustered indexes are disabled. To work around this you must specify explicit data compression in rebuild statement.
 
 ###  <a name="Security"></a> Security  
   

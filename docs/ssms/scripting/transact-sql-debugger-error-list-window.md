@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ErrorList"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -85,5 +83,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  **Project**  
  Displays the name of the project that includes the script file.  
-  
-  

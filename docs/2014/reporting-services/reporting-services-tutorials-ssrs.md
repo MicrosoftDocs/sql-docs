@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorials [Reporting Services]"
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Reporting Services Tutorials (SSRS)
   This section contains tutorials for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -33,9 +33,9 @@ manager: craigg
  Follow the steps in this tutorial to learn how to create a drillthrough report with parameters and a filter using the ReportViewer control.  
   
 ## See Also  
- [Adventure Works for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
- [Reporting Services Samples on CodePlex (http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
- [TechNet WIKI: SQL Server 2012 Samples (http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [Picnic Dataset (Sample Data) (http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [Adventure Works for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=245471)   
+ [Reporting Services Samples on CodePlex (https://go.microsoft.com/fwlink/?LinkId=198283)](https://go.microsoft.com/fwlink/?LinkId=198283)   
+ [TechNet WIKI: SQL Server 2012 Samples (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [Picnic Dataset (Sample Data) (https://go.microsoft.com/fwlink/?linkID=219108)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

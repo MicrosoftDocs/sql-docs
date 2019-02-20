@@ -192,37 +192,19 @@
       - name: Java
         href: /sql/advanced-analytics/java/
         homepage: /sql/advanced-analytics/java/extension-java
-      - name: R
-        href: /sql/advanced-analytics/r/
-        homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
-      - name: Python
-        href: /sql/advanced-analytics/python/
-        homepage: /sql/advanced-analytics/python/sql-server-python-services
       - name: Install
         href: /sql/advanced-analytics/install/
-        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
-      - name: Learn
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install
+      - name: Tutorials
         href: /sql/advanced-analytics/tutorials/
         homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials  
-      - name: Python
-        href: /sql/advanced-analytics/python/
-        homepage: /sql/advanced-analytics/python/dmvs-for-python
-    - name: R
-      href: /sql/advanced-analytics/r/
-      homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
-    - name: Install and configure
-      href: /sql/advanced-analytics/install/
-      homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
-    - name: Tutorials
-      href: /sql/advanced-analytics/tutorials/
-      homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation
       items:
       - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
-        homepage: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
+        homepage: /sql/database-engine/sql-server-business-continuity-dr
         items:
         - name: Install
           href: /sql/sql-server/failover-clusters/install/
@@ -653,7 +635,7 @@
       - name: Extended events
         href: /sql/relational-databases/extended-events/
         homepage: /sql/relational-databases/extended-events/extended-events
-      - name: Graphs
+      - name: SQL Graph
         href: /sql/relational-databases/graphs/
         homepage: /sql/relational-databases/graphs/sql-graph-overview
       - name: Import and export
@@ -705,7 +687,7 @@
         items:
         - name: Administration
           href: /sql/relational-databases/replication/administration/
-          homepage: /sql/relational-databases/replication/administration/administration-replication
+          homepage: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
         - name: Agents
           href: /sql/relational-databases/replication/agents/
           homepage: /sql/relational-databases/replication/agents/replication-agents
@@ -755,7 +737,7 @@
       - name: Service Broker
         href: /sql/relational-databases/service-broker/
         homepage: /sql/relational-databases/service-broker/event-notifications
-      - name: Spatial
+      - name: Spatial data
         href: /sql/relational-databases/spatial/
         homepage: /sql/relational-databases/spatial/spatial-data-sql-server
       - name: SQL Trace

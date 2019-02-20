@@ -39,7 +39,7 @@ manager: craigg
 |Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Perceived file type based on its canonical type.|  
 |Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Title of the item. For example, the title of a document, the subject of a message, the caption of a photo, or the name of a music track.|  
   
- To encourage consistency among file formats, Microsoft has identified subsets of frequently used, high-priority document properties for several categories of documents. These include communications, contacts, documents, music files, pictures, and videos. For more information about the top-ranked properties for each category, see [system-defined properties for custom file formats](http://go.microsoft.com/fwlink/?LinkId=144336) in the Windows Search documentation.  
+ To encourage consistency among file formats, Microsoft has identified subsets of frequently used, high-priority document properties for several categories of documents. These include communications, contacts, documents, music files, pictures, and videos. For more information about the top-ranked properties for each category, see [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) in the Windows Search documentation.  
   
  A specific file format might implement properties of three types:  
   
@@ -54,7 +54,7 @@ manager: craigg
   
  You run **filtdump.exe** from the command prompt and provide a single argument. This argument is the name of an individual file that has a file type for which an IFilter is installed. The utility displays a list of all the properties discovered by the IFilter in the document, with their property set GUIDs, integer IDs, and additional information.  
   
- For information about installing this software, see [Microsoft Windows SDK for Windows 7 and .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=212980). After you download and install the SDK, look in the following folders for the filtdump.exe utility.  
+ For information about installing this software, see [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). After you download and install the SDK, look in the following folders for the filtdump.exe utility.  
   
 -   For the 64-bit version, look in `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   
@@ -75,9 +75,9 @@ propID = 4
 ...  
 ```  
   
- For the complete description of this property, see [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) in the Windows Search documentation.  
+ For the complete description of this property, see [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) in the Windows Search documentation.  
   
- For a complete list of Windows properties, see [Windows Properties](http://go.microsoft.com/fwlink/?LinkId=215013), also in the Windows Search documentation.  
+ For a complete list of Windows properties, see [Windows Properties](https://go.microsoft.com/fwlink/?LinkId=215013), also in the Windows Search documentation.  
   
 ##  <a name="examples"></a> Adding a Property to a Search Property List  
  The following example shows how to add a property to a search property list. The example uses an [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) statement to add the `System.Author` property to a search property list named `PropertyList1`, and provides a user friendly name for the property, `Author`.  

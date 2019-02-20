@@ -399,7 +399,7 @@
         - name: Create and Manage Partitions in the Workspace Database
           href: ./tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
         - name: Process Partitions in the Workspace Database
-          href: ./tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md
+          href: ./tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md
       - name: Perspectives
         href: ./tabular-models/perspectives-ssas-tabular.md
         items:
@@ -488,8 +488,6 @@
           href: ./multidimensional-models/set-data-source-properties-ssas-multidimensional.md
         - name: Set Impersonation Options for a Data Source Connection
           href: ./multidimensional-models/set-impersonation-options-ssas-multidimensional.md
-        - name: Multidimensional Model Programming
-          href: ./multidimensional-models/multidimensional-model-programming.md
       - name: Data Source Views
         href: ./multidimensional-models/data-source-views-in-multidimensional-models.md
         items:
@@ -706,7 +704,7 @@
           href: ./multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
       - name: KPIs
         href: ./multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md
-      - name: Actions
+      - name: Actions overview
         href: ./multidimensional-models/actions-in-multidimensional-models.md
         items:
         - name: Actions
@@ -1355,7 +1353,8 @@
         href: ./server-properties/olap-properties.md
       - name: Security Properties
         href: ./server-properties/security-properties.md
-      - name: Thread Pool Properties    
+      - name: Thread Pool Properties 
+        href: ./server-properties/thread-pool-properties.md   
     - name: Monitor Analysis Services
       items:
       - name: Monitoring tools
@@ -1403,30 +1402,6 @@
       href: ./instances/disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Developer
   items:
-  - name: Performance Counters
-    href: performance-counters-ssas.md
-  - name: Clear the Analysis Services Caches
-    href: clear-the-analysis-services-caches.md
-  - name: Script Administrative Tasks
-    items:
-    - name: Create Scripts in Management Studio
-      href: create-analysis-services-scripts-in-management-studio.md
-      items:
-      - name: Use Analysis Services Templates in SQL Server Management Studio
-        href: use-analysis-services-templates-in-sql-server-management-studio.md
-      - name: Use the Analysis Services Scripts Project in Management Studio
-        href: analysis-services-scripts-project-in-sql-server-management-studio.md
-      - name: Schedule Administrative Tasks with SQL Server Agent
-        href: schedule-ssas-administrative-tasks-with-sql-server-agent.md
-      - name: Automate Administrative Tasks with SSIS
-        href: automate-analysis-services-administrative-tasks-with-ssis.md
-    - name: High Availability and Scalability
-      href: high-availability-and-scalability-in-analysis-services.md
-    - name: Logging in Analysis Services
-      href: log-operations-in-analysis-services.md
-    - name: DBCC for Analysis Services
-      href: database-consistency-checker-dbcc-for-analysis-services.md  
-  items:
   - name: Analysis Services Developer Documentation
     href: analysis-services-developer-documentation.md
   - name: Tabular models
@@ -1438,11 +1413,9 @@
       - name: Tabular Model Scripting Language (TMSL)
         href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
       - name: Tabular Object Model (TOM)
-        href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo  
+        href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo 
       - name: Analysis Management Objects (AMO)
         href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction 
-      - name: Schema rowsets
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets 
     - name: Tabular 1103 and lower 
       items:
       - name: Tabular model programming for compatibility level 1103 and lower
@@ -1453,8 +1426,6 @@
         href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
       - name: IMDEmbeddedData Interface
         href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
-      - name: Schema rowsets
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
       - name: Representation
         items:
         - name: Connection Representation (Tabular)
@@ -1486,11 +1457,9 @@
     - name: Multidimensional model programming
       href: ./multidimensional-models/multidimensional-model-programming.md
     - name: Analysis Management Objects (AMO)
-      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction   
+      href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo   
     - name: Analysis Services Scripting Language (ASSL)
       href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: Schema rowsets
-      href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: XML for Analysis (XMLA)
       href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
     - name: ADOMD.NET

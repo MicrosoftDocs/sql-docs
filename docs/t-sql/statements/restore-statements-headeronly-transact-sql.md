@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "RESTORE HEADERONLY statement"
   - "backup header information [SQL Server]"
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
@@ -78,10 +78,10 @@ FROM <backup_device>
 ## Result Sets  
  For each backup on a given device, the server sends a row of header information with the following columns:  
   
-> [!NOTE]  
->  RESTORE HEADERONLY looks at all backup sets on the media. Therefore, producing this result set when using high-capacity tape drives can take some time. To get a quick look at the media without getting information about every backup set, use RESTORE LABELONLY or specify FILE **=** *backup_set_file_number*.  
-  
-> [!NOTE]  
+> [!NOTE]
+>  RESTORE HEADERONLY looks at all backup sets on the media. Therefore, producing this result set when using high-capacity tape drives can take some time. To get a quick look at the media without getting information about every backup set, use RESTORE LABELONLY or specify FILE **=** _backup_set_file_number_.  
+> 
+> [!NOTE]
 >  Due to the nature of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format, it is possible for backup sets from other software programs to occupy space on the same media as [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup sets. The result set returned by RESTORE HEADERONLY includes a row for each of these other backup sets.  
   
 |Column name|Data type|Description for SQL Server backup sets|  
@@ -116,7 +116,7 @@ FROM <backup_device>
 |**SoftwareVersionBuild**|**int**|Build number of the server that created the backup set.|  
 |**MachineName**|**nvarchar(128)**|Name of the computer that performed the backup operation.|  
 |**Flags**|**int**|Individual flags bit meanings if set to **1**:<br /><br /> **1** = Log backup contains bulk-logged operations.<br /><br /> **2** = Snapshot backup.<br /><br /> **4** = Database was read-only when backed up.<br /><br /> **8** = Database was in single-user mode when backed up.<br /><br /> **16** = Backup contains backup checksums.<br /><br /> **32** = Database was damaged when backed up, but the backup operation was requested to continue despite errors.<br /><br /> **64** = Tail log backup.<br /><br /> **128** = Tail log backup with incomplete metadata.<br /><br /> **256** = Tail log backup with NORECOVERY.<br /><br /> **Important:** We recommend that instead of **Flags** you use the individual Boolean columns (listed below starting with **HasBulkLoggedData** and ending with **IsCopyOnly**).|  
-|**BindingID**|**uniqueidentifier**|Binding ID for the database. This corresponds to **sys.database_recovery_status****database_guid**. When a database is restored, a new value is assigned. Also see **FamilyGUID** (below).|  
+|**BindingID**|**uniqueidentifier**|Binding ID for the database. This corresponds to **sys.database_recovery_status database_guid**. When a database is restored, a new value is assigned. Also see **FamilyGUID** (below).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID for the ending recovery fork. This column corresponds to **last_recovery_fork_guid** in the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) table.<br /><br /> For data backups, **RecoveryForkID** equals **FirstRecoveryForkID**.|  
 |**Collation**|**nvarchar(128)**|Collation used by the database.|  
 |**FamilyGUID**|**uniqueidentifier**|ID of the original database when created. This value stays the same when the database is restored.|  
@@ -144,7 +144,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The type of encryptor used: Certificate or Asymmetric Key. When the backup was not encrypted, this value is NULL.|  
   
 > [!NOTE]  
->  If passwords are defined for the backup sets, RESTORE HEADERONLY shows complete information for only the backup set whose password matches the specified PASSWORD option of the command. RESTORE HEADERONLY also shows complete information for unprotected backup sets. The **BackupName** column for the other password-protected backup sets on the media is set to '***Password Protected\*\*\*', and all other columns are NULL.  
+>  If passwords are defined for the backup sets, RESTORE HEADERONLY shows complete information for only the backup set whose password matches the specified PASSWORD option of the command. RESTORE HEADERONLY also shows complete information for unprotected backup sets. The **BackupName** column for the other password-protected backup sets on the media is set to '**_Password Protected_**', and all other columns are NULL.  
   
 ## General Remarks  
  A client can use RESTORE HEADERONLY to retrieve all the backup header information for all backups on a particular backup device. For each backup on the backup device, the server sends the header information as a row.  

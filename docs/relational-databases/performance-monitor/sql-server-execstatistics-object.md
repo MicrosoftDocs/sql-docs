@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLServer:ExecStatistics"
   - "ExecStatistics object"
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, ExecStatistics Object

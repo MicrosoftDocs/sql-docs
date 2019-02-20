@@ -20,7 +20,7 @@ manager: craigg
   This article discusses how various data-access components can be used with OLE DB Driver for SQL Server.  
 
 ## Server Support  
- OLE DB Driver for SQL Server supports connections to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)],  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)],[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)],  [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+ OLE DB Driver for SQL Server supports connections to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)],  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)],  [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ## Supported Operating System Versions  
  The following table lists which operating systems support OLE DB Driver for SQL Server.  

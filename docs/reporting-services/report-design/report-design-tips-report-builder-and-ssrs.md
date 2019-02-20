@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Report Design Tips (Report Builder and SSRS)
   Use the following tips to help design your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports.  

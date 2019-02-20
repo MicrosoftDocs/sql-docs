@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/07/2016"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
@@ -17,6 +17,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Tutorial: Use Azure Blob storage service with SQL Server 2016
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Welcome to the  Working with SQL Server 2016 in Microsoft Azure Blob Storage service tutorial. This tutorial helps you understand how to use the Microsoft Azure Blob storage service for SQL Server data files and SQL Server backups.  
   
@@ -24,7 +25,8 @@ SQL Server integration support for the Microsoft Azure Blob storage service bega
 
 This tutorial shows you how to work with  SQL Server Data Files in Microsoft Azure Blob storage service in multiple sections. Each section is focused on a specific task and the sections should be completed in sequence. First, you will learn how to create a new container in Blob storage with a stored access policy and a shared access signature. Then, you will learn how to create a SQL Server credential to integrate SQL Server with Azure Blob storage. Next, you will back up a database to Blob storage and restore it to an Azure virtual machine. You will then use SQL Server 2016 file-snapshot transaction log backup to restore to a point in time and to a new database. Finally, the tutorial will demonstrate the use of meta data system stored procedures and functions to help you understand and work with file-snapshot backups.
   
-## Prerequisites  
+## Prerequisites
+
 To complete this tutorial, you must be familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax. 
 To use this tutorial, you need an Azure storage account, SQL Server Management Studio (SSMS), access to an instance of SQL Server on-premises, access to an Azure virtual machine (VM) running SQL Server 2016, and an AdventureWorks2016 database. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions. 
 
@@ -37,6 +39,7 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 - Assign the user account to the role of [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) and grant [alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) permissions. 
  
 ## 1 - Create stored access policy and shared access storage
+
 In this section, you will use an [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) script to create a shared access signature on an Azure Blob container using a stored access policy.  
   
 > [!NOTE]  
@@ -79,19 +82,19 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     $resourceGroupName=$prefixName + 'rg'   
   
     # Add an authenticated Azure account for use in the session   
-    Login-AzureRmAccount    
+    Connect-AzAccount    
   
     # Set the tenant, subscription and environment for use in the rest of   
-    Set-AzureRmContext -SubscriptionId $subscriptionID   
+    Set-AzContext -SubscriptionId $subscriptionID   
   
     # Create a new resource group - comment out this line to use an existing resource group  
-    New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
+    New-AzResourceGroup -Name $resourceGroupName -Location $locationName   
   
     # Create a new Azure Resource Manager storage account - comment out this line to use an existing Azure Resource Manager storage account  
-    New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+    New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
   
     # Get the access keys for the Azure Resource Manager storage account  
-    $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+    $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
@@ -117,13 +120,14 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     Write-Host $tSql 
 
     # Once you're done with the tutorial, remove the resource group to clean up the resources. 
-    # Remove-AzureRmResourceGroup -Name $resourceGroupName  
+    # Remove-AzResourceGroup -Name $resourceGroupName  
     ```  
 
 3.  After the script completes, the CREATE CREDENTIAL statement will be in your clipboard for use in the next section.  
 
 
 ## 2 - Create a SQL Server credential using a shared access signature
+
 In this section, you will create a credential to store the security information that will be used by SQL Server to write to and read from the Azure container that you created in the previous step.  
   
 A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. The credential stores the URI path of the storage container and the shared access signature for this container.  
@@ -164,6 +168,7 @@ To create a SQL Server credential, follow these steps:
 7.  Repeat steps 5 and 6 for any additional SQL Server instances that you wish to have access to the Azure container.  
 
 ## 3 - Database backup to URL
+
 In this section, you will back up the AdventureWorks2016 database in your on-premises SQL Server 2016 instance to the Azure container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
@@ -195,6 +200,7 @@ To back up a database to Blob storage, follow these steps:
 
 
 ## 4 -  Restore database to virtual machine from URL
+
 In this section, you will restore the AdventureWorks2016 database to your SQL Server 2016 instance in your Azure virtual machine.
   
 > [!NOTE]  
@@ -230,7 +236,8 @@ To restore the AdventureWorks2016 database from Azure blob storage to your SQL S
   
    ![Data files within container on Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-# 5 - Backup database using file-snapshot backup
+## 5 - Backup database using file-snapshot backup
+
 In this section, you will back up the AdventureWorks2016 database in your Azure virtual machine using file-snapshot backup to perform a nearly instantaneous backup  using Azure snapshots. For more information on file-snapshot backups, see [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 To back up the AdventureWorks2016 database using file-snapshot backup, follow these steps:  
@@ -270,6 +277,7 @@ To back up the AdventureWorks2016 database using file-snapshot backup, follow th
     ![Snapshot back up on Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
 ## 6 -  Generate activity and backup log using file-snapshot backup
+
 In this section, you will generate activity in the AdventureWorks2016 database and periodically create transaction log backups using file-snapshot backups. For more information on using file snapshot backups, see [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 To generate activity in the AdventureWorks2016 database and periodically create transaction log backups using file-snapshot backups, follow these steps:  
@@ -335,6 +343,7 @@ To generate activity in the AdventureWorks2016 database and periodically create 
     ![Multiple snapshots in Azure Container](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## 7 - Restore a database to a point in time
+
 In this section, you will restore the AdventureWorks2016 database to a point in time between two of the transaction log backups.  
   
 With traditional backups, to accomplish point in time restore, you would need to use the full database backup, perhaps a differential backup, and all of the transaction log files up to and just past the point in time to which you wish to restore. With file-snapshot backups, you only need the two adjacent log backup files that provide the goal posts framing the time to which you wish to restore. You only need two log file snapshot backup sets because each log backup creates a file snapshot of each database file (each data file and the log file).  
@@ -373,6 +382,7 @@ To restore a database to a specified point in time from file snapshot backup set
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
 ## 8 -  Restore as new database from log backup
+
 In this section, you will restore the AdventureWorks2016 database as a new database from a file-snapshot transaction log backup.  
   
 In this scenario, you are performing a restore to a SQL Server instance on a different virtual machine for the purposes of business analysis and reporting. Restoring to a different instance on a different virtual machine offloads the workload to a virtual machine dedicated and sized for this purpose, removing its resource requirements from the transactional system.  
@@ -406,6 +416,7 @@ To restore a database to a new database from a transaction log backup using file
     ![Azure container showing the data and log files for the new database](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
 ## 9 - Manage backup sets and file-snapshot backups
+
 In this section, you will delete a backup set using the [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) system stored procedure. This system stored procedure deletes the backup file and the file snapshot on each database file associated with this backup set.  
   
 > [!NOTE]  
@@ -435,6 +446,7 @@ To delete a file-snapshot backup set, follow these steps:
     ![Results pane showing 2 file snapshots deleted](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## 10 - Remove resources
+
 Once you're done with this tutorial, and to conserve resources, be sure to delete the resource group created in this tutorial. 
 
 To delete the resource group, run the following powershell code:
@@ -447,18 +459,19 @@ To delete the resource group, run the following powershell code:
   $resourceGroupName=$prefixName + 'rg'   
   
   # Adds an authenticated Azure account for use in the session   
-  Login-AzureRmAccount    
+  Connect-AzAccount    
   
   # Set the tenant, subscription and environment for use in the rest of   
-  Set-AzureRmContext -SubscriptionId $subscriptionID    
+  Set-AzContext -SubscriptionId $subscriptionID    
     
   # Remove the resource group
-  Remove-AzureRmResourceGroup -Name $resourceGroupName   
+  Remove-AzResourceGroup -Name $resourceGroupName   
   ```
 
 
   
-## See Also  
+## See Also
+
 [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 

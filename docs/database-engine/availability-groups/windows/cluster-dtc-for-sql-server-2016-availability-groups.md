@@ -1,6 +1,7 @@
 ---
-title: "Cluster DTC for SQL Server 2016 Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "How to cluster the DTC service for an availability group"
+description: "Describes the requirements and steps for clustering the Microsoft Distributed Transaction Coordinator (DTC) service for an Always On availability group. "
+ms.custom: "seodec18"
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,19 +13,21 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Cluster DTC for SQL Server 2016 Availability Groups
+# How to cluster the DTC service for an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes the requirements and steps for clustering the Microsoft Distributed Transaction Coordinator (DTC) service for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For additional information regarding distributed transactions and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
  ## Checklist: Preliminary Requirements
+
 ||Task|Reference|  
 |------|-----------------|----------|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure all nodes, services and the Availability Group have been configured correctly.|[Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure Availability Group DTC requirements have been met.|[Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
 ## Checklist: Clustered DTC Resource Dependencies
+
 ||Task|Reference|  
 |------|-----------------|----------|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|A shared-storage drive.|[Configuring the Shared-Storage Drive](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Consider using drive letter **M**.|
@@ -36,6 +39,7 @@ Once you have created your Availability Group resource, create a clustered DTC r
 
 
 ## Checklist: Post Clustered DTC Resource Configurations
+
 ||Task|Reference|  
 |------|-----------------|----------|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Enable network access securely for the clustered DTC resource.|[Enable Network Access Securely for MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|

@@ -55,7 +55,7 @@ You can either assign static values, or use data from a shared dataset. When you
 |Trend set|Comma-separated numeric values used for chart visualization. This can also be set to a column of a dataset with values that represent the trend.|  
   
 > **Warning**: While you can use the word value for the **Status** field at design time, you should use the number value if refreshing a dataset. If you refresh a dataset with the word value, instead of the number, it could corrupt the KPIs on your server.  
-  
+> 
 > **Note**: The **Value**, **Goal** and **Status** fields can only choose a value from the first row of a dataset's result. The **Trend set** field, however, can choose which column reflects the trend.  
   
 To use data from a shared dataset, you can do the following.  

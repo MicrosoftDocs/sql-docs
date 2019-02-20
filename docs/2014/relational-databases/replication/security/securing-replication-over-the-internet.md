@@ -33,6 +33,6 @@ manager: craigg
   
 ## See Also  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md)  
   
   

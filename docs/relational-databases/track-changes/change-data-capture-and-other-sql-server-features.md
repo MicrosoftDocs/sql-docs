@@ -1,6 +1,6 @@
 ---
 title: "Change Data Capture and Other SQL Server Features | Microsoft Docs"
-ms.date: "05/03/2016"
+ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -14,7 +14,7 @@ ms.author: jroth
 manager: craigg
 ---
 # Change Data Capture and Other SQL Server Features
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   This topic describes how the following features interact with change data capture:  
   
 -   [Change tracking](#ChangeTracking)  

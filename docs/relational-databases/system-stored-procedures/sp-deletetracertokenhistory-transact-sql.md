@@ -48,12 +48,15 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
  [ **@publisher=** ] **'***publisher***'**  
  The name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
-> [!NOTE]  
->  This parameter should only be specified for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+> [!NOTE]
+>  This parameter should only be specified for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers or when executing the stored procedure from distributor.  
   
  [ **@publisher_db=** ] **'***publisher_db***'**  
  The name of the publication database. *publisher_db* is **sysname**, with a default value of NULL. This parameter is ignored if the stored procedure is executed at the Publisher.  
   
+> [!NOTE]
+>  This parameter should be specified when executing the stored procedure from distributor.  
+
 ## Return Code Values  
  **0** (success) or **1** (failure)  
   

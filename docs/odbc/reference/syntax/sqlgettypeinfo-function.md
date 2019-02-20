@@ -36,8 +36,8 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetTypeInfo(  
-     SQLHSTMT      StatementHandle,  
-     SQLSMALLINT   DataType);  
+     SQLHSTMT      StatementHandle,  
+     SQLSMALLINT   DataType);  
 ```  
   
 ## Arguments  

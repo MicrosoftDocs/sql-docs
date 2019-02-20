@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Understanding Security Policies
   Any code that is executed by a report server must be part of a specific code access security policy. These security policies consist of code groups that map evidence to a set of named permission sets. Often, code groups are associated with a named permission set that specifies the allowable permissions for code in that group. The runtime uses evidence provided by a trusted host or by the loader to determine which code groups the code belongs to and, therefore, which permissions to grant the code. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adheres to this security policy architecture as defined by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime (CLR). The following sections describe the various types of code in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and the policy rules associated with them.  

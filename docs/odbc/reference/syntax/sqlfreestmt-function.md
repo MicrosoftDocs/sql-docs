@@ -33,8 +33,8 @@ manager: craigg
 ```  
   
 SQLRETURN SQLFreeStmt(  
-     SQLHSTMT       StatementHandle,  
-     SQLUSMALLINT   Option);  
+     SQLHSTMT       StatementHandle,  
+     SQLUSMALLINT   Option);  
 ```  
   
 ## Arguments  

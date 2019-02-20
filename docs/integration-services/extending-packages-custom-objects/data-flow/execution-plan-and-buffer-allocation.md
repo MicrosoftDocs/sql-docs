@@ -26,11 +26,11 @@ manager: craigg
   Before execution, the data flow task examines its components and generates an execution plan for each sequence of components. This section provides details about the execution plan, how to view the plan, and how input and output buffers are allocated based on the execution plan.  
   
 ## Understanding the Execution Plan  
- An execution plan contains source threads and work threads, and each thread contains work lists that specify output work lists for source threads or input and output work lists for work threads. The source threads in an execution plan represent the source components in the data flow and are identified in the execution plan by *SourceThread**n*, where *n* is the zero-based number of the source thread.  
+ An execution plan contains source threads and work threads, and each thread contains work lists that specify output work lists for source threads or input and output work lists for work threads. The source threads in an execution plan represent the source components in the data flow and are identified in the execution plan by *SourceThreadn*, where *n* is the zero-based number of the source thread.  
   
  Each source thread creates a buffer, sets a listener, and calls the <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> method on the source component. This is where execution starts and data originates, as the source component starts adding rows to the output buffers that are provided to it by the data flow task. After the source threads are running, the balance of work is distributed among work threads.  
   
- A work thread may contain both input and output work lists and is identified in the execution plan as *WorkThread**n*, where *n* is the zero-based number of the work thread. These threads contain output work lists when the graph contains a component with asynchronous outputs.  
+ A work thread may contain both input and output work lists and is identified in the execution plan as *WorkThreadn*, where *n* is the zero-based number of the work thread. These threads contain output work lists when the graph contains a component with asynchronous outputs.  
   
  The following sample execution plan represents a data flow that contains a source component connected to a transformation with an asynchronous output connected to a destination component. In this example, WorkThread0 contains an output work list because the transformation component has an asynchronous output.  
   

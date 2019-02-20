@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 12: Discovering Knowledge (Knowledge Discovery)
   In this task, you perform the **Knowledge Discovery** activity on **Supplier ID** and **Supplier Name** domains. In this scenario, the knowledge discovery process mainly imports values for these two domains.  
   
- In this tutorial, you started building knowledge base from scratch. You can also start creating a knowledge base by performing a knowledge discovery activity. When you click **Create a Knowledge Base** in the main page, DQS client takes you to a page with **Domain Management** activity selected for the activity. You can change the **activity** to **Knowledge Discovery** and then in the next page you can create domains as part of the knowledge discovery process. See [Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx) for more details.  
+ In this tutorial, you started building knowledge base from scratch. You can also start creating a knowledge base by performing a knowledge discovery activity. When you click **Create a Knowledge Base** in the main page, DQS client takes you to a page with **Domain Management** activity selected for the activity. You can change the **activity** to **Knowledge Discovery** and then in the next page you can create domains as part of the knowledge discovery process. See [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) for more details.  
   
 1.  In the main page of DQS Client, in the **Recent Knowledge Base** section, click **right-arrow** next to the **Suppliers** knowledge base and click **Knowledge Discovery**. Alternatively, you can click **Open Knowledge Base**, select **Suppliers** from the **list of knowledge bases**, select **Knowledge Discovery** as **activity** and click **Next**.  
   

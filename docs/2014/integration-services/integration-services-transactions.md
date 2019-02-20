@@ -36,7 +36,7 @@ manager: craigg
   
 ## External Resources  
   
--   Blog entry, [How to Use Transactions in SQL Server Integration Services SSIS](http://go.microsoft.com/fwlink/?LinkId=157783), on www.mssqltips.com  
+-   Blog entry, [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783), on www.mssqltips.com  
   
 ## See Also  
  [Inherited Transactions](../../2014/integration-services/inherited-transactions.md)   

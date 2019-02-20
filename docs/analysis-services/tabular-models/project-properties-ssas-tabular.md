@@ -1,5 +1,5 @@
 ---
-title: "Project properties | Microsoft Docs"
+title: "Analysis Services tabular model project properties | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

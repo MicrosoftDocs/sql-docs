@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "multiple schema namespaces"
   - "XML schema collections [SQL Server], creating"
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ N'<?xml version="1.0" encoding="UTF-16"?>
    xmlns          ="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
    elementFormDefault="qualified"   
    attributeFormDefault="unqualified"  
-   xmlns:xsd="https://www.w3.org/2001/XMLSchema" >  
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
   
     <xsd:complexType name="StepType" mixed="true" >  
         <xsd:choice  minOccurs="0" maxOccurs="unbounded" >   
@@ -170,10 +170,10 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
 </xsd:schema>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->  
 </xsd:schema>';  
 ```  
@@ -185,7 +185,7 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
     elementFormDefault="qualified"   
-    xmlns:xsd="https://www.w3.org/2001/XMLSchema" >  
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
     <xsd:element name="Warranty"  >  
         <xsd:complexType>  
             <xsd:sequence>  
@@ -199,7 +199,7 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
     elementFormDefault="qualified"   
     xmlns:mstns="https://tempuri.org/XMLSchema.xsd"   
-    xmlns:xs="https://www.w3.org/2001/XMLSchema"  
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"  
     xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >  
     <xs:import   
 namespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />  
@@ -213,7 +213,7 @@ namespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/Produ
         </xs:complexType>  
         <xs:complexType name="Summary" mixed="true" >  
             <xs:sequence>  
-                <xs:any processContents="skip" namespace="https://www.w3.org/1999/xhtml" minOccurs="0" maxOccurs="unbounded" />  
+                <xs:any processContents="skip" namespace="http://www.w3.org/1999/xhtml" minOccurs="0" maxOccurs="unbounded" />  
             </xs:sequence>  
         </xs:complexType>  
 </xs:schema>'  
@@ -229,7 +229,7 @@ GO
 ```  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
 <element name="e" type="dateTime"/>  
 </schema>';  
 go  
@@ -248,7 +248,7 @@ WHERE  sys.xml_schema_namespaces.name='';
   
 ```  
 CREATE XML SCHEMA COLLECTION mySC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  
 </schema>  
 ';  

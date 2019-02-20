@@ -182,7 +182,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ### Useful Transact-SQL Statements  
  The following statements return useful information about permissions.  
   
- To return the explicit permissions granted or denied in a database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
+ To return the explicit permissions granted or denied in a database ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
 ```sql  
 SELECT   
@@ -197,7 +197,7 @@ JOIN sys.objects AS obj
     ON perms.major_id = obj.object_id;  
 ```  
   
- To return the members of the server roles ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] only), execute the following statement.  
+ To return the members of the server roles ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] only), execute the following statement.  
   
 ```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
@@ -209,7 +209,7 @@ JOIN sys.server_principals AS sRole
 ```  
   
  
- To return the members of the database roles ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
+ To return the members of the database roles ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
 ```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  

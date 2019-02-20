@@ -45,14 +45,14 @@ manager: craigg
 ```  
   
 SQLRETURN SQLDriverConnect(  
-     SQLHDBC         ConnectionHandle,  
-     SQLHWND         WindowHandle,  
-     SQLCHAR *       InConnectionString,  
-     SQLSMALLINT     StringLength1,  
-     SQLCHAR *       OutConnectionString,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLength2Ptr,  
-     SQLUSMALLINT    DriverCompletion);  
+     SQLHDBC         ConnectionHandle,  
+     SQLHWND         WindowHandle,  
+     SQLCHAR *       InConnectionString,  
+     SQLSMALLINT     StringLength1,  
+     SQLCHAR *       OutConnectionString,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLength2Ptr,  
+     SQLUSMALLINT    DriverCompletion);  
 ```  
   
 ## Arguments  

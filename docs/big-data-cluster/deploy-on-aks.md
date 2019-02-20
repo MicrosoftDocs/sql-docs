@@ -1,14 +1,18 @@
 ---
-title: Configure Azure Kubernetes Service for SQL Server 2019 big data cluster deployments | Microsoft Docs
+title: Configure Azure Kubernetes Service
+titleSuffix: SQL Server 2019 big data clusters
 description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/27/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
-# Configure Azure Kubernetes Service for SQL Server 2019 (preview) deployments
+
+# Configure Azure Kubernetes Service for SQL Server 2019 big data cluster (preview) deployments
 
 This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
 
@@ -17,22 +21,19 @@ AKS makes it simple to create, configure, and manage a cluster of virtual machin
 This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If you don't have an Azure subscription, create a free account before you begin.
 
 > [!TIP] 
-> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
 
 ## Prerequisites
 
-- For an AKS environment, for an optimal experience while validating basic scenarios, we recommend  at least three agent VMs (in addition to master), with at least 4 vCPUs and 32 GB of memory each. Azure infrastructure offers multiple size options for VMs, see [here](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
-  
-- This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
+- [Deploy the SQL Server 2019 big data tools](deploy-big-data-tools.md):
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+   - **Azure CLI**
 
-- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) with a minimum of version 1.10. If you want to install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+- Minimum 1.10 version for Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
 
-- Same 1.10 minimum version applies to Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
-
-> [!NOTE]
-Note that the client/server version skew that is supported is +/-1 minor version. The Kubernetes documentation states that  "a client should be skewed no more than one minor version from the master, but may lead the master by up to one minor version. For example, a v1.3 master should work with v1.1, v1.2, and v1.3 nodes, and should work with v1.2, v1.3, and v1.4 clients." For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
-
-Also, note that `az aks kubernetes install-cli` will install kubectl client with a version lower that the required 1.10. Follow above instructions to install the right version of kubectl client.
+- For an AKS environment, for an optimal experience while validating basic scenarios, we recommend  at least three agent VMs with at least 4 vCPUs and 32 GB of memory each. Azure infrastructure offers multiple size options for VMs, see [here](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
 
 ## Create a resource group
 
@@ -75,7 +76,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --generate-ssh-keys \
     --node-vm-size Standard_L4s \
     --node-count 3 \
-    --kubernetes-version 1.10.8
+    --kubernetes-version 1.10.9
     ```
 
    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. So in the example above, there are **3** VMs of size **Standard_L4s** used for the agent nodes of your AKS cluster.
@@ -100,6 +101,6 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
 ## Next steps
 
-The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy SQL Server 2019 big data to the cluster.
+The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy SQL Server 2019 big data to the cluster. For more information on how to deploy big data clusters, see the following article:
 
-[Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+[How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)

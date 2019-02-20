@@ -1,5 +1,5 @@
 ---
-title: "Create and Manage Roles | Microsoft Docs"
+title: "Create and manage roles in Analysis Services tabular models | Microsoft Docs"
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services

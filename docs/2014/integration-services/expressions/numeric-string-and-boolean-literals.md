@@ -111,6 +111,6 @@ manager: craigg
 >  In an expression, a Boolean literal must be delimited by spaces.  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
   
   

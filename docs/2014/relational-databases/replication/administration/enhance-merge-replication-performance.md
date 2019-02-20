@@ -138,6 +138,6 @@ manager: craigg
   
 -   Monitor synchronization performance using the **Synchronization History** tab in Replication Monitor.  
   
-     For merge replication, Replication Monitor displays detailed statistics in the **Synchronization History** tab for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For merge replication, Replication Monitor displays detailed statistics in the **Synchronization History** tab for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View Information and Perform Tasks using Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

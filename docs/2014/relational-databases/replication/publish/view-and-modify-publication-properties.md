@@ -186,8 +186,8 @@ manager: craigg
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)   
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Add Articles to and Drop Articles from a Publication](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [View Information and Perform Tasks using Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [View and Modify Article Properties](view-and-modify-article-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DAX formula compatibility in DirectQuery mode | Microsoft Docs"
+title: "DAX formula compatibility in Analysis Services DirectQuery mode | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

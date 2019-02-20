@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 SQLRETURN SQLCloseCursor(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## Arguments  

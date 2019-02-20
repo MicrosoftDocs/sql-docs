@@ -38,7 +38,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  If the **?** occurrence indicator is not specified, `sequence of` returns True only when the `Expression` type matches the `Type` specified and `Expression` returns a singleton.  
   
- **Note** The plus symbol (**+**) and the asterisk (**\***) occurrence indicators are not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Note** The plus symbol (**+**) and the asterisk (**&#42;**) occurrence indicators are not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The following examples illustrate the use of the**instance of** XQuery operator.  
   
@@ -149,7 +149,7 @@ where ProductModelID=19
   
 ```  
 CREATE XML SCHEMA COLLECTION MyTestSchema AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns">  
 <simpleType name="MyUnionType">  
 <union memberTypes="integer string"/>  
 </simpleType>  
@@ -164,9 +164,9 @@ Go
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
   
-SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
+SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
   
-SELECT @var.query('declare namespace ns="https://ns"   
+SELECT @var.query('declare namespace ns="http://ns"   
    data(/ns:TestElement[1]) instance of xs:integer')  
 go  
 ```  
@@ -176,8 +176,8 @@ go
 ```  
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
-SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
-SELECT @var.query('declare namespace ns="https://ns"     
+SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
+SELECT @var.query('declare namespace ns="http://ns"     
    data(/ns:TestElement[1]) instance of xs:decimal')  
 go  
 ```  
@@ -191,7 +191,7 @@ go
 drop xml schema collection SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
 xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
       <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
@@ -237,7 +237,7 @@ go
   
 ```  
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  

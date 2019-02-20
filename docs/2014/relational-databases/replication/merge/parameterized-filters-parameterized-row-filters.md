@@ -87,7 +87,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  For example, employee Pamela Ansman-Wolfe has been assigned an employee ID of 280. Specify the value of the employee ID (280 in our example) for the HOST_NAME() value when creating a subscription for this employee. When the Merge Agent connects to the Publisher, it compares the value returned by HOST_NAME() to the values in the table and downloads only the row that contains a value of 280 in the **EmployeeID** column.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  The HOST_NAME() function returns an `nchar` value, so you must use CONVERT if the column in the filter clause is of a numeric data type, as it is in the example above. For performance reasons, we recommended that you do not apply functions to column names in parameterized row filter clauses, such as `CONVERT(nchar,EmployeeID) = HOST_NAME()`. Instead, we recommend using the approach shown in the example: `EmployeeID = CONVERT(int,HOST_NAME())`. This clause can be used for the **@subset_filterclause** parameter of [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), but it typically cannot be used in the New Publication Wizard (the wizard executes the filter clause to validate it, which fails because the computer name cannot be converted to an `int`). If you use the New Publication Wizard, we recommend specifying `CONVERT(nchar,EmployeeID) = HOST_NAME()` in the wizard and then use [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) to change the clause to `EmployeeID = CONVERT(int,HOST_NAME())` before creating a snapshot for the publication.  
   
  **To override the HOST_NAME() value**  

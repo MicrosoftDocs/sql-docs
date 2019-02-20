@@ -58,7 +58,7 @@ manager: craigg
      For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 -   Reconfigure **max server memory**.  
-    For information on configuring **max server memory** see the topic [Optimizing Server Performance Using Memory Configuration Options](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
+    For information on configuring **max server memory** see the topic [Optimizing Server Performance Using Memory Configuration Options](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
   
 ##  <a name="bkmk_recoverFromOOM"></a> Resolve impact of low memory or OOM conditions on the workload  
  Obviously, it is best to not get into a low memory or OOM (Out of Memory) situation. Good planning and monitoring can help avoid OOM situations. Still, the best planning does not always foresee what actually happens and you might end up with low memory or OOM. There are two steps to recovering from OOM:  
@@ -70,7 +70,7 @@ manager: craigg
 ###  <a name="bkmk_openDAC"></a> Open a DAC (Dedicated Administrator Connection)  
  Microsoft SQL Server provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server-even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and SQL Server Management Studio (SSMS).  
   
- For guidance on using `sqlcmd` and DAC see [Using a Dedicated Administrator Connection](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). For guidance on using DAC through SSMS see [How to: Use the Dedicated Administrator Connection with SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
+ For guidance on using `sqlcmd` and DAC see [Using a Dedicated Administrator Connection](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). For guidance on using DAC through SSMS see [How to: Use the Dedicated Administrator Connection with SQL Server Management Studio](https://msdn.microsoft.com/library/ms178068.aspx).  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> Take corrective action  
  To resolve your OOM condition you need to either free up existing memory by reducing usage, or make more memory available to your in-memory tables.  
@@ -83,9 +83,9 @@ manager: craigg
 ##### Move one or more rows to a disk-based table  
  The following TechNet articles provide guidance on moving rows from a memory-optimized table to a disk-based table.  
   
--   [Application-Level Partitioning](http://technet.microsoft.com/library/dn296452\(v=sql.120\).aspx)  
+-   [Application-Level Partitioning](https://technet.microsoft.com/library/dn296452\(v=sql.120\).aspx)  
   
--   [Application Pattern for Partitioning Memory-Optimized Tables](http://technet.microsoft.com/library/dn133171\(v=sql.120\).aspx)  
+-   [Application Pattern for Partitioning Memory-Optimized Tables](https://technet.microsoft.com/library/dn133171\(v=sql.120\).aspx)  
   
 #### Increase available memory  
   
@@ -129,11 +129,11 @@ GO
 > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolve page allocation failures due to insufficient memory when sufficient memory is available  
- If you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information." in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
+ If you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See '<https://go.microsoft.com/fwlink/?LinkId=330673>' for more information." in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
   
  To resolve this you need to enable the Resource Governor.  
   
- See [Enable Resource Governor](http://technet.microsoft.com/library/bb895149.aspx) for information on Limits and Restrictions as well as guidance on enabling Resource Governor using Object Explorer, Resource Governor properties, or Transact-SQL.  
+ See [Enable Resource Governor](https://technet.microsoft.com/library/bb895149.aspx) for information on Limits and Restrictions as well as guidance on enabling Resource Governor using Object Explorer, Resource Governor properties, or Transact-SQL.  
   
 ## See Also  
  [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md)   

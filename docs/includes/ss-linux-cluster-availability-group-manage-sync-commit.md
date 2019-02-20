@@ -3,7 +3,7 @@
 >[!WARNING]
 >In some cases, a SQL Server availability group in synchronous commit mode on Linux may be vulnerable to data loss. See the following details on the root cause and the workaround to make sure data loss is avoided. This issue is going to be fixed in the upcoming releases.
 
-###Pacemaker notification for Availability Group resource promotion
+### Pacemaker notification for Availability Group resource promotion
 
 Before CTP 1.4 release, the Pacemaker resource agent for availability groups could not know if a replica marked as `SYNCHRONOUS_COMMIT` was really up-to-date or not. It was possible that the replica had stopped synchronizing with the primary but was not aware. Thus the agent could promote an out-of-date replica to primary - which if successful would cause data loss. 
 

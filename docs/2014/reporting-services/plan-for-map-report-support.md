@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Plan for Map Report Support
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supports map reports that use spatial data sources. Spatial data can come from SQL Server databases, from ESRI Shapefiles, or from the Map Gallery that is installed with either Reporting Services or Report Builder. A map can also display a background of Bing map tiles. A report author can create a report that specifies spatial data or Bing map tiles as dynamic and retrieved at run time or as static and embedded in the report definition.  
@@ -21,7 +21,7 @@ manager: craigg
  In each report, report authors can specify whether to use a Secure Sockets Layer (SSL) connection to retrieve tiles from the tile server. To do this, in the Properties pane for the tile layer, they must set the Boolean property UseSecureConnection to `true`.  
   
 > [!NOTE]  
->  For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371) and [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=151372).  
+>  For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371) and [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 ## Report Design Recommendations  
  Good report design for map reports requires that the report author assess the trade-offs between static and dynamic spatial data and find a balance that serves the report users. Embedded map elements can significantly increase the size of the report definition, but reduce the time that is required to view the map report. Dynamic map elements reduce the report definition size but increase the time that is required to process and view the map. The report author must find the right balance between these opposing issues.  

@@ -14,7 +14,7 @@
         href: ../relational-databases/collations/collation-and-unicode-support.md
       - name: Databases +
         href: ../relational-databases/databases/databases.md
-      - name: Graphs +
+      - name: SQL Graph +
         href: ../relational-databases/graphs/sql-graph-overview.md
       - name: Hierarchical Data
         href: hierarchical-data-sql-server.md
@@ -108,6 +108,8 @@
     items: 
     - name: Manage
       items: 
+        - name: SQL Server Utility + 
+          href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
         - name: Administer Multiple Servers Using Central Management Servers
           href: administer-multiple-servers-using-central-management-servers.md
         - name: Configuration Manager
@@ -122,6 +124,8 @@
           href: ../relational-databases/maintenance-plans/maintenance-plans.md 
         - name: Policy-based management +
           href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+        - name: Transaction log management +
+          href: ../relational-databases/logs/log-file-viewer.md
     - name: Monitor
       items: 
       - name: Data collection +

@@ -1,7 +1,7 @@
 ---
 title: "Database Health Detection Failover Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/28/2017"
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -29,8 +29,8 @@ The availability group database level health detection option is widely recommen
 
 For example, with database level health detection option on, if SQL Server was unable to write to the transaction log file for one of the databases, the status of that database would change to indicate failure, and the availability group would soon fail over, and your application could reconnect and continue working with minimal interruption once the databases are online again.
 
-Enabling database level health detection
-----
+### Enabling database level health detection
+
 Though it is generally recommended, the Database Health option is **off by default**, in effort to keep backward compatibility with the default settings in prior versions.
 
 There are several easy ways to enable database level health detection setting:
@@ -46,7 +46,7 @@ There are several easy ways to enable database level health detection setting:
 
 3. Transact-SQL Syntax to **CREATE AVAILABILITY GROUP**. The DB_FAILOVER parameter accepts values ON or OFF.
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -59,7 +59,7 @@ There are several easy ways to enable database level health detection setting:
 
 4. Transact-SQL Syntax to **ALTER AVAILABILITY GROUP**. The DB_FAILOVER parameter accepts values ON or OFF.
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -83,16 +83,16 @@ Database level health detection implements a flexible failover policy which conf
 
 The system DMV sys.availability_groups shows a column db_failover which indicates if the database level health detection option is off (0) or on (1).
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 Example dmv output:
 
-name  |  db_failover
----------|---------
-| Contoso-ag |	1  |
+|name  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### ErrorLog
 The SQL Server Errorlog (or text from sp_readerrorlog) will show the error message 41653 when an availability group has failed over, due to the database level health detection checks.
@@ -129,7 +129,8 @@ This XEvent is triggered on the primary replica only. This XEvent is triggered w
 Here is a example to create an XEvent session that captures this event. As no path is specified, the XEvent output file should be located in the default SQL Server error log path. Execute this on the primary replica of your availability group:
 
 Example Extended Event Session Script
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -145,32 +146,32 @@ Using SQL Server Management Studio, connect to the primary SQL Server, and expan
 
 Explanation of the fields:
 
-|Column Data	| Description
-|---------|---------
-|availability_group_id	|The ID of the availability group.
-|availability_group_name	|The name of the availability group.
-|availability_replica_id	|The ID of the availability replica.
-|availability_replica_name	|The name of the availability replica.
-|database_name	|The name of the database reporting the fault.
-|database_replica_id	|The ID of the availability replica database.
-|failover_ready_replicas	|The number of automatic failover secondary replicas that are synchronized.
-|fault_type 	| The fault id reported. Possible values:  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown
-|is_critical	| This  value should always return true for the XEvent as of SQL Server 2016.
+|Column Data | Description|
+|---------|---------|
+|availability_group_id |The ID of the availability group.|
+|availability_group_name |The name of the availability group.|
+|availability_replica_id |The ID of the availability replica.|
+|availability_replica_name |The name of the availability replica.|
+|database_name |The name of the database reporting the fault.|
+|database_replica_id |The ID of the availability replica database.|
+|failover_ready_replicas |The number of automatic failover secondary replicas that are synchronized.|
+|fault_type  | The fault id reported. Possible values:  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown|
+|is_critical | This  value should always return true for the XEvent as of SQL Server 2016.|
 
 
 In this example output, the fault_type shows that a critical event happened on the availability group Contoso-ag, on replica named SQLSERVER-1, due to database name AutoHa-Sample2, with fault type 2- Shutdown.
 
-|Field  | Value
-|---------|---------
-|availability_group_id |	24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |	Contoso-ag
-|availability_replica_id	| 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |	SQLSERVER-1
-|database_name |	AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |	1
-|fault_type |	2
-|is_critical	| True
+|Field  | Value|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | True|
 
 
 ### Related References

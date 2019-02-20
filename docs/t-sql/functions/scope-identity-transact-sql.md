@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "last-inserted identity values"
   - "identity values [SQL Server], last-inserted"
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SCOPE_IDENTITY (Transact-SQL)

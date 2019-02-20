@@ -1,6 +1,7 @@
 ---
-title: "Always On Availability Groups ring buffers (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Use ring buffers to obtain health information about availability groups"
+description: "Obtain certain diagnostics information about Always On availability groups using the SQL Server ring buffers."
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# Always On Availability Groups ring buffers
+# Use ring buffers to obtain health information about Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Some diagnostic Always On Availability Groups information can be obtained from the SQL Server ring buffers, or the sys.dm_os_ring_buffers dynamic management view (DMV). The ring buffers are created during SQL Server startup, and record alerts within the SQL Server system for internal diagnostics. They are not supported, but you can still extract valuable information from them when troubleshooting issues. These ring buffers provide another source of diagnostics when SQL Server hangs or has crashed.  
   

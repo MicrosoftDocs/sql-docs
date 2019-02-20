@@ -8,18 +8,18 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Add a Sparkline to Your Report (Report Builder)
   In this tutorial, you create a basic table report based on sample sales data, and then add a sparkline chart to a cell in the table.  
   
- An enhanced version of the report you create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851). The following illustration shows the sample report similar to the one that you will create.  
+ An enhanced version of the report you create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](https://go.microsoft.com/fwlink/?LinkId=184851). The following illustration shows the sample report similar to the one that you will create.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- The video [How to: Create a Sparkline in a Table (Report Builder Video)](http://technet.microsoft.com/bi/ff871942.aspx) illustrates how to create a similar report with sparklines.  
+ The video [How to: Create a Sparkline in a Table (Report Builder Video)](https://technet.microsoft.com/bi/ff871942.aspx) illustrates how to create a similar report with sparklines.  
   
 ##  <a name="BackToTop"></a> What You Will Learn  
  In this tutorial, you will learn how to do the following:  

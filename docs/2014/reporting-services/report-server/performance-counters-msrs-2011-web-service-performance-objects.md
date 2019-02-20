@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects (Native Mode)
   This topic describes performance counters for the `MSRS 2014 Web Service` and `MSRS 2014 Windows Service` performance objects  
@@ -27,7 +27,7 @@ manager: craigg
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode  
   
- The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation, [Runtime Profiling](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation, [Runtime Profiling](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  For information related to the SharePoint mode performance counters, see [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   

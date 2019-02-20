@@ -44,7 +44,7 @@ manager: craigg
  Map input columns to parameters by using the **Set Query Parameters** dialog box.  
   
 ## External Resources  
- Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
  [Lookup Transformation Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   

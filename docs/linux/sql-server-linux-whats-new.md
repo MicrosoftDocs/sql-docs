@@ -28,7 +28,7 @@ SQL Server 2019 preview has been released. This article does not cover SQL Serve
 - Support for native Linux paths.
 - IPV6 support.
 - Support for database files on NFS.
-- Enabled [Transparent Layer Security](sql-server-linux-encrypted-connections.md) (TLS) encryption.
+- Enabled [Transport Layer Security](sql-server-linux-encrypted-connections.md) (TLS) encryption.
 - Enabled [Active Directory Authentication](sql-server-linux-active-directory-authentication.md).
 - [Availability Groups functionality](sql-server-linux-availability-group-overview.md) for high availability.
 - [Full-text Search](sql-server-linux-setup-full-text-search.md) support.

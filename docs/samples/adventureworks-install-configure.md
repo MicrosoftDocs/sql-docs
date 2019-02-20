@@ -14,6 +14,9 @@ manager: craigg
 # AdventureWorks Installation and configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 AdventureWorks download links and installation instructions. 
 
 ## Prerequisites
@@ -96,5 +99,5 @@ If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](htt
 
 
 ## See also
-[Tutorials for SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+[Tutorials for SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [Tutorials for SQL Server database engine](../relational-databases/database-engine-tutorials.md)

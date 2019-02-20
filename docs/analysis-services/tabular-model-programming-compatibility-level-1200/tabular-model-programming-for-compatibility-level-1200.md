@@ -1,5 +1,5 @@
 ---
-title: "Tabular Model Programming for Compatibility Level 1200 | Microsoft Docs"
+title: "Analysis Services tabular model programming for compatibility level 1200 | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

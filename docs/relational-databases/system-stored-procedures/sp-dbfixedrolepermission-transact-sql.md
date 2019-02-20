@@ -37,7 +37,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+ [ **@rolename =** ] **'**_role_**'**  
  Is the name of a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fixed database role. *role* is **sysname**, with a default of NULL. If *role* is not specified, the permissions for all fixed database roles are displayed.  
   
 ## Return Code Values  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Latches object"
   - "SQLServer:Latches"
 ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Latches Object

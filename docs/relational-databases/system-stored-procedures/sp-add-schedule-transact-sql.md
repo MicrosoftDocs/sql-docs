@@ -49,7 +49,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## Arguments  
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [ **@schedule_name =** ] **'**_schedule_name_**'**  
  The name of the schedule. *schedule_name* is **sysname**, with no default.  
   
  [ **@enabled =** ] *enabled*  
@@ -124,13 +124,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@active_end_time =** ] *active_end_time*  
  The time on any day between *active_start_date* and *active_end_date* to end execution of a job. *active_end_time* is **int**, with a default of **235959**, which indicates 11:59:59 P.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+ [ **@owner_login_name**= ] **'**_owner_login_name_**'**  
  The name of the server principal that owns the schedule. *owner_login_name* is **sysname**, with a default of NULL, which indicates that the schedule is owned by the creator.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**= ] _schedule_uid_**OUTPUT**  
  A unique identifier for the schedule. *schedule_uid* is a variable of type **uniqueidentifier**.  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+ [ **@schedule_id**= ] _schedule_id_**OUTPUT**  
  An identifier for the schedule. *schedule_id* is a variable of type **int**.  
   
  [ **@originating_server**= ] *server_name*  

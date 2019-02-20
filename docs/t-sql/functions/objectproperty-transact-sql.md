@@ -101,7 +101,8 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Any schema-scoped object|Bound rule.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|Function|Scalar-valued function.<br /><br /> 1 = Scalar-valued function<br /><br /> 0 = Not scalar-valued function|  
 |IsSchemaBound|Function, view|A schema bound function or view created by using SCHEMABINDING.<br /><br /> 1 = Schema-bound<br /><br /> 0 = Not schema-bound.|  
-|IsSystemTable|Table|System table.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Table|System table.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|SQL Server can verify the determinism and precision properties of the object.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Table|Table.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Function|Table-valued function.<br /><br /> 1 = Table-valued function<br /><br /> 0 = Not table-valued function|  
 |IsTrigger|Any schema-scoped object|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  

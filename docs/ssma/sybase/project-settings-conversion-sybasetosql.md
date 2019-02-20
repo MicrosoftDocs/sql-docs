@@ -136,7 +136,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Full Mode:** Consider NULL values  
   
 **Format strings**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure no longer supports the *format_string* argument in PRINT and RAISERROR statements. The *format_string* variable supported putting replaceable parameters directly in the string, and then replacing the parameters at runtime. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires the full string by using either a string literal, or a string built by using a variable. For more information, see the "PRINT ([!INCLUDE[tsql](../../includes/tsql-md.md)])" topic in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure no longer supports the *format_string* argument in PRINT and RAISERROR statements. The *format_string* variable supported putting replaceable parameters directly in the string, and then replacing the parameters at runtime. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires the full string by using either a string literal, or a string built by using a variable. For more information, see the "PRINT ( [!INCLUDE[tsql](../../includes/tsql-md.md)])" topic in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 When SSMA encounters a *format_string* argument, it can either build a string literal using the variables or create a new variable and build a string by using that variable.  
   

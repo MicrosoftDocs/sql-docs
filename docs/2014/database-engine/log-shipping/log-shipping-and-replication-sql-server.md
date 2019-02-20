@@ -105,10 +105,10 @@ manager: craigg
   
     -   If the publication is filtered, you might not be able to bring the publication database up-to-date. Consider a table that is partitioned such that each subscription receives customer data only for a single region: North, East, South, and West. If there is at least one Subscriber for each partition of data, synchronizing with a Subscriber for each partition should bring the publication database up-to-date. However, if data in the West partition, for example, was not replicated to any Subscribers, this data at the Publisher cannot be brought up-to-date. In this case, we recommend reinitializing all subscriptions so that the data at the Publisher and Subscribers converges. For more information, see [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../relational-databases/replication/synchronize-data.md).  
+     If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../relational-databases/replication/synchronize-data.md).   
   
 ## See Also  
- [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   
  [About Log Shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Database Mirroring and Replication &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-replication-sql-server.md)  
   

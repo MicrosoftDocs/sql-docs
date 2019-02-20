@@ -24,7 +24,7 @@ Appends a record to the end of a table that contains the specified field values.
 ```  
   
 INSERT INTO dbf_name [(fname1 [, fname2, ...])]  
-   VALUES (eExpression1 [, eExpression2, ...])  
+   VALUES (eExpression1 [, eExpression2, ...])  
 ```  
   
 ## Arguments  

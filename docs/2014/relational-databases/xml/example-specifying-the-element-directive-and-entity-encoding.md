@@ -78,7 +78,7 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
        (SELECT CatalogDescription.query('  
-            declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
           /pd:ProductDescription/pd:Summary'))  
 FROM     Production.ProductModel  
 WHERE    CatalogDescription is not null  

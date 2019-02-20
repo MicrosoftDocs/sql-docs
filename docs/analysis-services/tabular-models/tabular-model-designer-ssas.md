@@ -1,5 +1,5 @@
 ---
-title: "Tabular model designer in SQL Server Data Tools| Microsoft Docs"
+title: "Analysis Services tabular model designer in SQL Server Data Tools| Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

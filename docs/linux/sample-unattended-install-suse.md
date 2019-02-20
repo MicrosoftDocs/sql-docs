@@ -1,5 +1,6 @@
 ---
-title: Unattended install for SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
+title: Unattended install for SQL Server on SUSE Linux Enterprise Server
+titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
 author: rothja
 ms.author: jroth
@@ -7,7 +8,7 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
@@ -82,6 +83,7 @@ sudo ACCEPT_EULA=Y zypper install -y mssql-tools unixODBC-devel
 echo Adding SQL Server tools to your path...
 echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
 
 # Optional SQL Server Agent installation:
 if [ ! -z $SQL_INSTALL_AGENT ]

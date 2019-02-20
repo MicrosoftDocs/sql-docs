@@ -1,17 +1,19 @@
 ---
-title: Use curl to load data into HDFS on SQL Server 2019 CTP 2.1 | Microsoft Docs
+title: Use curl to load data into HDFS on SQL Server 2019 big data clusters | Microsoft Docs
 description:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
-# Use curl to load data into HDFS on SQL Server 2019 CTP 2.1
+# Use curl to load data into HDFS on SQL Server 2019 big data clusters
 
-This article explains how to use **curl** to load data into HDFS on SQL Server 2019 CTP 2.1.
+This article explains how to use **curl** to load data into HDFS on SQL Server 2019 big data clusters (preview).
 
 ## Obtain the service external IP
 
@@ -28,7 +30,7 @@ kubectl get service service-security-lb -n <cluster name> -o json | jq -r .statu
 
 Now, you can construct the URL to access the WebHDFS as follows:
 
-`https://<service-security-lb service external IP address>:30433/gateway/default/webhdfs/v1/`
+`https://<service-security-lb service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 For example:
 

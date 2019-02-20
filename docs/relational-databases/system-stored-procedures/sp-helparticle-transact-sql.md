@@ -46,7 +46,7 @@ sp_helparticle [ @publication = ] 'publication'
  Specifies whether the filter clause should be returned. *returnfilter* is **bit**, with a default of **1**, which returns the filter clause.  
   
  [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified when requesting information on an article published by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

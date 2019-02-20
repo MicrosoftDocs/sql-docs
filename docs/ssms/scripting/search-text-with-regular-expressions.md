@@ -6,9 +6,7 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
+f1_keywords:
   - "vs.regularexpressionbuilder"
 helpviewer_keywords: 
   - "regular expressions [SQL Server Management Studio]"
@@ -22,16 +20,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Search Text with Regular Expressions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Regular expressions are a concise and flexible notation for finding and replacing patterns of text. A specific set of regular expressions can be used in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+
+Regular expressions are a concise and flexible notation for finding and replacing patterns of text. A specific set of regular expressions can be used in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
-#### To find using regular expressions  
+## Find using regular expressions  
   
-1.  To enable the use of regular expressions in the **Find what** field during **QuickFind**, **FindinFiles**, **Quick Replace**, or **Replace in Files** operations, select the **Use** option under **Find Options**and choose **Regular expressions**.  
+1.  To enable the use of regular expressions in the **Find what** field during **QuickFind**, **FindinFiles**, **Quick Replace**, or **Replace in Files** operations, select the **Use** option under **Find Options** and choose **Regular expressions**.  
   
 2.  The triangular **Reference List** button next to the **Find what** field then becomes available. Click this button to display a list of the most commonly used regular expressions. When you choose any item from the Expression Builder, it is inserted into the **Find what** string.  
   
 > [!NOTE]  
->  There are syntax differences between the regular expressions that can be used in **Find what** strings and those that are valid in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework programming. For example, in **Find and Replace**, the braces notation {} is used for tagged expressions. So the expression "zo{1}" matches all occurrences of "zo" followed by the tag 1, as in "Alonzo1" and "Gonzo1". But within the .NET Framework, the notation {} is used for quantifiers. So the expression "zo{1}" matches all occurrences of "z" followed by exactly one "o", as in "zone" but not "zoo".  
+> There are syntax differences between the regular expressions that can be used in **Find what** strings and those that are valid in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework programming. For example, in **Find and Replace**, the braces notation {} is used for tagged expressions. So the expression "zo{1}" matches all occurrences of "zo" followed by the tag 1, as in "Alonzo1" and "Gonzo1". But within the .NET Framework, the notation {} is used for quantifiers. So the expression "zo{1}" matches all occurrences of "z" followed by exactly one "o", as in "zone" but not "zoo".  
   
  The following table describes the regular expressions available in the **Reference List**.  
   
@@ -61,7 +60,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |----------------|------------|-----------------|  
 |Minimal - zero or more|@|Matches zero or more occurrences of the preceding expression, matching as few characters as possible.|  
 |Minimal - one or more|#|Matches one or more occurrences of the preceding expression, matching as few characters as possible.|  
-|Repeat n times|^n|Matches n occurrences of the preceding expression. For example, [0-9]^4 matches any 4-digit sequence.|  
+|Repeat n times|^n|Matches n occurrences of the preceding expression. For example, [0-9]^4 matches any four digit sequence.|  
 |Grouping|()|Groups a subexpression.|  
 |nth tagged text|\n|In a **Find or Replace** expression, indicates the text matched by the nth tagged expression, where n is a number from 1 to 9.<br /><br /> In a **Replace** expression, \0 inserts the entire matched text.|  
 |Right-justified field|\\(w,n)|In a **Replace** expression, right-justifies the nth tagged expression in a field at least *w* characters wide.|  
@@ -131,5 +130,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## See Also  
  [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
  [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)  
-  
-  

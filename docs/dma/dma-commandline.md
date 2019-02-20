@@ -2,7 +2,7 @@
 title: "Run Data Migration Assistant from the command line (SQL Server) | Microsoft Docs"
 description: Learn how to run Data Migration Assistant from the command line to assess SQL Server databases for migration
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ manager: craigg
 ---
 
 # Run Data Migration Assistant from the command line
-With version 2.1 and above, when you install Data Migration Assistant, it will also install dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Use dmacmd.exe to assess your databases in an unattended mode, and output the result to JSON or CSV file. This method is especially useful when assessing several databases or huge databases. 
+With version 2.1 and above, when you install Data Migration Assistant, it will also install dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Use dmacmd.exe to assess your databases in an unattended mode, and output the result to JSON or CSV file. This method is especially useful when assessing several databases or huge databases. 
 
 > [!NOTE]
 > Dmacmd.exe supports running assessments only. Migrations are not supported at this time.
@@ -39,15 +39,19 @@ DmaCmd.exe /AssessmentName="string"
 |---------|---------|---------------|
 | `/help or /?`     | How to use dmacmd.exe help text        | N
 |`/AssessmentName`     |   Name of the assessment project   | Y
-|`/AssessmentDatabases`     | Space-delimited list of connection strings. Database name (Initial Catalog) is case-sensitive. | Y
+|`/AssessmentDatabases`     | Space-delimited list of connection strings. Database name (Initial Catalog) is case-sensitive. | Y
 |`/AssessmentTargetPlatform`     | Target platform for the assessment, supported values: SqlServer2012, SqlServer2014, SqlServer2016, and AzureSqlDatabaseV12. Default is SqlServer2016   | N
-|`/AssessmentEvaluateFeatureParity`  | Run feature parity rules  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
-|`/AssessmentEvaluateRecommendations`     | Run feature recommendations        | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendationsis required)
+|`/AssessmentEvaluateFeatureParity`  | Run feature parity rules  | N
+|`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
+|`/AssessmentEvaluateRecommendations`     | Run feature recommendations        | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendationsis required)
 |`/AssessmentOverwriteResult`     | Overwrite the result file    | N
-|`/AssessmentResultJson`     | Full path to the JSON result file     | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
-|`/AssessmentResultCsv`    | Full path to the CSV result file   | Y <br>(Either AssessmentResultJson or AssessmentResultCsv is required)
-
+|`/AssessmentResultJson`     | Full path to the JSON result file     | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
+|`/AssessmentResultCsv`    | Full path to the CSV result file   | Y <br>(Either AssessmentResultJson or AssessmentResultCsv is required)
+|`/Action`    | Use SkuRecommendation to get SKU recommendations, use AssessTargetReadiness to perform target readiness assessment.   | N
+|`/SourceConnections`    | Space delimited list of connection strings. Database name (Initial Catalog) is optional. If no database name is provided, then all databases on the source are assessed.   | Y <br>(Required if Action is 'AssessTargetReadiness')
+|`/TargetReadinessConfiguration`    | Full path to the XML file describing values for the name, source connections and result file.   | Y <br>(Either TargetReadinessConfiguration or SourceConnections is required)
+|`/FeatureDiscoveryReportJson`    | Path to the feature discovery JSON report. If this file is generated, then it can be used to run target readiness assessment again without connecting to source.   | N
+|`/ImportFeatureDiscoveryReportJson`    | Path to the feature discovery JSON report created earlier. Instead of source connections, this file will be used.   | N
 
 ## Examples of assessments using the CLI
 
@@ -61,8 +65,8 @@ DmaCmd.exe /AssessmentName="string"
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
-Catalog=DatabaseName;***Integrated Security=true*"**
-***/AssessmentEvaluateCompatibilityIssues*** /AssessmentOverwriteResult
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
 
@@ -71,33 +75,33 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
-Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
-***/AssessmentEvaluateRecommendations*** /AssessmentOverwriteResult
+Catalog=DatabaseName;User Id=myUsername;Password=myPassword;"
+/AssessmentEvaluateRecommendations /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Single-database assessment for target platform SQL Server 2012, save results to .json and .csv file**
+**Single-database assessment for target platform SQL Server 2012, save results to .json and .csv file**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
-***/AssessmentTargetPlatform="SqlServer2012"***
+/AssessmentTargetPlatform="SqlServer2012"
 /AssessmentEvaluateRecommendations /AssessmentOverwriteResult
-***/AssessmentResultJson***="C:\\temp\\Results\\AssessmentReport.json"
-***/AssessmentResultCsv***="C:\\temp\\Results\\AssessmentReport.csv"
+/AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
+/AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Single-database assessment for target platform SQL Azure Database, save results to .json and .csv file**
+**Single-database assessment for target platform SQL Azure Database, save results to .json and .csv file**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -105,36 +109,106 @@ Catalog=DatabaseName;Integrated Security=true"
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
-***/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
+/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
 Catalog=DatabaseName1;Integrated Security=true"
 "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated
 Security=true" "Server=SQLServerInstanceName2;Initial
-Catalog=DatabaseName3;Integrated Security=true"***
+Catalog=DatabaseName3;Integrated Security=true"
 /AssessmentTargetPlatform="SqlServer2016"
 /AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 /AssessmentResultJson="C:\\Results\\test2016.json"
 ```
 
+**Single-database Target Readiness assessment using Windows authentication**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+```
+
+**Single-database Target Readiness assessment using SQL Server authentication**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateRecommendations 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json" 
+
+```
+
+**Multiple-database Target Readiness assessment**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
+/AssessmentOverwriteResult  
+/AssessmentResultJson="C:\Results\test2016.json"
+
+```
+
+**Target Readiness assessment for all databases on a server using Windows authentication**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**Target Readiness assessment by importing feature discovery report created earlier**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/ImportFeatureDiscoveryReportJson="c:\temp\feature_report.json" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**Target Readiness assessment by providing configuration file**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/TargetReadinessConfiguration=.\Config.xml
+
+```
+Configuration file contents when using source connections:
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <SourceConnections>
+    <SourceConnection>connection string 1</SourceConnection>
+    <SourceConnection>connection string 2</SourceConnection>
+    <!-- ... -->
+    <SourceConnection>connection string n</SourceConnection>
+  </SourceConnections>
+  <AssessmentResultJson>path\to\file.json</AssessmentResultJson>
+  <FeatureDiscoveryReportJson>path\to\featurediscoveryreport.json</FeatureDiscoveryReportJson>
+  <OverwriteResult>true</OverwriteResult> <!-- or false -->
+</TargetReadinessConfiguration>
+```
+
+Configuration file contents when importing feature discovery report:
+```
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <ImportFeatureDiscoveryReportJson>path\to\featurediscoveryfile.json</ImportFeatureDiscoveryReportJson>
+  <AssessmentResultJson>path\to\resultfile.json</AssessmentResultJson>
+  <OverwriteResult>true</OverwriteResult><!-- or false -->
+</TargetReadinessConfiguration>
+```
+
 ## Azure SQL Database SKU recommendations using the CLI
-
-> [!IMPORTANT]
-> SKU recommendations for Azure SQL Database are currently available for migrations from SQL Server 2016 or later.
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

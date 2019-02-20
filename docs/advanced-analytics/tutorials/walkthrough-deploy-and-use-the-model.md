@@ -1,5 +1,6 @@
 ---
-title: Deploy an R model for predictions on SQL Server (walkthrough) | Microsoft Docs
+title: Deploy an R model for predictions on SQL Server - SQL Server Machine Learning
+description: Tutorial showing how to deploy an R model on SQL Server for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -30,7 +31,7 @@ Create a stored procedure, *PredictTipBatchMode*, that generates multiple predic
 
 1. In Management Studio, open a new query window and run the following T-SQL script to create the PredictTipBatchMode stored procedure.
   
-    ```tsql
+    ```sql
     USE [NYCTaxi_Sample]
     GO
 
@@ -75,7 +76,7 @@ Create a stored procedure, *PredictTipBatchMode*, that generates multiple predic
   
 2.  To call the stored procedure in batch mode, you define the query required as input to the stored procedure. Below is the SQL query, which you can run in SSMS to verify that it works.
 
-    ```SQL
+    ```sql
     SELECT TOP 10
       a.passenger_count AS passenger_count,
       a.trip_time_in_secs AS trip_time_in_secs,
@@ -121,7 +122,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
 
 1. Run the following Transact-SQL statement to create the stored procedure.
 
-    ```tsql
+    ```sql
     USE [NYCTaxi_Sample]
     GO
 
@@ -187,7 +188,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
 
 2. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedure (or **EXECUTE**) to call the stored procedure, and pass it the required inputs. For example, try running this statement in Management Studio:
 
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 

@@ -39,19 +39,19 @@ manager: craigg
 ```  
   
 SQLRETURN SQLForeignKeys(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      PKCatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      PKSchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      PKTableName,  
-     SQLSMALLINT    NameLength3,  
-     SQLCHAR *      FKCatalogName,  
-     SQLSMALLINT    NameLength4,  
-     SQLCHAR *      FKSchemaName,  
-     SQLSMALLINT    NameLength5,  
-     SQLCHAR *      FKTableName,  
-     SQLSMALLINT    NameLength6);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      PKCatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      PKSchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      PKTableName,  
+     SQLSMALLINT    NameLength3,  
+     SQLCHAR *      FKCatalogName,  
+     SQLSMALLINT    NameLength4,  
+     SQLCHAR *      FKSchemaName,  
+     SQLSMALLINT    NameLength5,  
+     SQLCHAR *      FKTableName,  
+     SQLSMALLINT    NameLength6);  
 ```  
   
 ## Arguments  

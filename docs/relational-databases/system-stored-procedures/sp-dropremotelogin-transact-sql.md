@@ -39,13 +39,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## Arguments  
- [ **@remoteserver =** ] **'***remoteserver***'**  
+ [ **@remoteserver =** ] **'**_remoteserver_**'**  
  Is the name of the remote server mapped to the remote login that is to be removed. *remoteserver* is **sysname**, with no default. *remoteserver* must already exist.  
   
- [ **@loginame =** ] **'***login***'**  
+ [ **@loginame =** ] **'**_login_**'**  
  Is the optional login name on the local server that is associated with the remote server. *login* is **sysname**, with a default of NULL. *login* must already exist if specified.  
   
- [ **@remotename =** ] **'***remote_name***'**  
+ [ **@remotename =** ] **'**_remote_name_**'**  
  Is the optional name of the remote login that is mapped to *login* when logging in from the remote server. *remote_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

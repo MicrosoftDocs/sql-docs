@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Creating a Free Form Report (Report Builder)
 In this tutorial, you create a paginated report that acts as a newsletter. Each page displays static text, summary visuals, and detailed sample sales data.
@@ -453,7 +453,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Select the chart axis, and on the *Home** tab > **Number** > **Currency**.
+12. Select the chart axis, and on the **Home** tab > **Number** > **Currency**.
 
 13. Select **Decrease Decimal** two times, so the number shows just dollars and no cents.      
 ### To verify the charts are inside the rectangle  

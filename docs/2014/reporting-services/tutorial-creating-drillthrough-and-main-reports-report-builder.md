@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Creating Drillthrough and Main Reports (Report Builder)
   This tutorial teaches you how to create two kinds of reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. The following illustration shows the reports you will create.  

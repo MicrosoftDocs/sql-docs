@@ -38,7 +38,7 @@ For information about how to download and install the latest stable PHP binaries
 
 1. Versions 7.2.1 and later are supported on Windows, while versions 7.2.0 and later are supported on Linux and macOS.
 
--   A version of the driver file must be in your PHP extension directory. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+-   A version of the driver file must be in your PHP extension directory. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Download the Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 
 -   A Web server is required. Your Web server must be configured to run PHP. For information about hosting PHP applications with IIS, see the [tutorial on PHP's web site](https://php.net/manual/fa/install.windows.iis.php).  
 

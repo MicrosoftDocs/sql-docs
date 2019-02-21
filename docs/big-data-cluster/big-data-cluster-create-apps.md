@@ -42,13 +42,13 @@ In SQL Server 2019 (preview) CTP 2.3 you can create, delete, describe, initializ
 |Command |Description |
 |:---|:---|
 |`mssqlctl login` | Log into a SQL Server big data cluster |
-|`mssqlctl create` | Create application. |
-|`mssqlctl delete` | Delete application. |
-|`mssqlctl describe` | Describe application. |
-|`mssqlctl init` | Kickstart new application skeleton. |
-|`mssqlctl list` | List application(s). |
-|`mssqlctl run` | Run application. |
-|`mssqlctl update`| Update application. |
+|`mssqlctl app create` | Create application. |
+|`mssqlctl app delete` | Delete application. |
+|`mssqlctl app describe` | Describe application. |
+|`mssqlctl app init` | Kickstart new application skeleton. |
+|`mssqlctl app list` | List application(s). |
+|`mssqlctl app run` | Run application. |
+|`mssqlctl app update`| Update application. |
 
 You can get help with the `--help` parameter as in the following example:
 

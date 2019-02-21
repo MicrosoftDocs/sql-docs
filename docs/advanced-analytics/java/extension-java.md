@@ -30,15 +30,16 @@ Java 8 is supported. The Java Runtime Environment (JRE) is the minimum requireme
 
 You can use your preferred Java 8 distribution. Below are two suggestions:
 
-* [Oracle OpenJDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Oracle Java SE 8 JRE or JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
 * [Zulu OpenJDK 8](https://www.azul.com/downloads/zulu/)
 
 On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 
-On Windows, we recommend installing the JDK under the default /Program Files/ folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
+On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
 > [!Note]
-> Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table.
+> Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for this early CTP release is Java 8. 
 
 <a name="install-on-linux"></a>
 
@@ -105,15 +106,16 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 JAVA_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
-1. Find and copy the JRE installation path (for example, `C:\Program Files\Java\jre1.8.0_201`).
+1. Find and copy the JDK/JRE path (for example, `C:\Program Files\Java\jdk1.8.0_201`).
 
-    If you only have a JRE installed, you can provide the JRE folder path (for example, `C:\Program Files\Java\jre1.8.0_201`). However, if you have a JDK installed, you will need to provide the full path to the JVM, in the JRE folder under JDK, like this: `C:\Program Files\Java\jdk1.8.0_201\jre\bin\server`.
+    > [!Note]
+    > Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above.
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 
 3. Click **Environment Variables**.
 
-4. Create a new system variable for JAVA_HOME with the value of the JDK/JRE installation path.
+4. Create a new system variable for `JAVA_HOME` with the value of the JDK/JRE path (found in step 1).
 
 5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
 

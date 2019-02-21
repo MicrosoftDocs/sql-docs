@@ -10,13 +10,9 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
-# How to use the VS Code SQL Server big data cluster App Deploy extension
+# How to use VS Code to deploy applications to SQL Server big data clusters
 
-This article describes how to deploy applications to a SQL Server big data cluster using Visual Studio Code. 
-
-## What's new 
-
-- Manage apps deployed into SQL Server Big Data Cluster using the App Deployment extension for Visual Studio Code .
+This article describes how to deploy applications to a SQL Server big data cluster using Visual Studio Code with the App Deployment extension. This capability was introduced in CTP 2.3. 
 
 ## Prerequisites
 
@@ -33,7 +29,7 @@ This extension supports the following tasks in Visual Studio Code:
 - Deployment of an application through a specification in YAML format.
 - Management of deployed apps within SQL Server Big Data Cluster
 
-View all apps you have deployed in the side bar with the following information:
+You can also view all apps that you have deployed in the side bar with the following information:
 
 - state
 - version
@@ -43,43 +39,42 @@ View all apps you have deployed in the side bar with the following information:
     - swagger
     - details
 
-Generate a run spec to consume the app or delete the app from the cluster
+Generate a run spec to consume the app or delete the app from the cluster:
 
 - Consumption of deployed apps through a run specification YAML
 
-The following sections walks though the installation and provides an overview how the extension works. 
+The following sections walk though the installation process and provides an overview how the extension works. 
 
 ### Install
 
-Download [sqlservbdc-app-deploy.vsix](https://aka.ms/sql-app-deploy) to install the extension as part of VS Code.
+First install the App Deployment extension in VS Code:
 
-Launch VS Code and navigate to the Extensions sidebar.
+1. Download [sqlservbdc-app-deploy.vsix](https://aka.ms/sql-app-deploy) to install the extension as part of VS Code.
 
-Click the `…` context menu on the top of the side bar and select `Install from vsix`.
+1. Launch VS Code and navigate to the Extensions sidebar.
 
-![Install VSIX](media/vs-extension/install_vsix.png)
+1. Click the `…` context menu on the top of the side bar and select `Install from vsix`.
 
-Find the `sqlservbdc-app-deploy.vsix` file you downloaded and choose that to install.
+   ![Install VSIX](media/vs-extension/install_vsix.png)
 
-Once the SQL Server big data cluster app deploy extension has been installed, it prompts you to reload VS Code. You should now see the SQL Server BDC App Explorer in the VS Code sidebar.
+1. Find the `sqlservbdc-app-deploy.vsix` file you downloaded and choose that to install.
+
+After the SQL Server big data cluster app deploy extension has been installed, it prompts you to reload VS Code. You should now see the SQL Server BDC App Explorer in the VS Code sidebar.
 
 ### App Explorer
 
-Click on the extension in the sidebar to load a side panel showing the App Explorer: 
-
-The following sample screenshot of the App Explorer shows no apps or app specifications available:
+Click on the extension in the sidebar to load a side panel showing the App Explorer. The following sample screenshot of the App Explorer shows no apps or app specifications available:
 
 ![App Explorer](media/vs-extension/app_explorer.png)
 
 #### New Connection
 
-To connect to the cluster endpoint, either:
+To connect to the cluster endpoint, use one of the following methods:
 
-- Click on the status bar at the bottom that says `SQL Server BDC Disconnected`
-   or
-- Click on the `New Connection` button at the top with the arrow pointing into a doorway
+- Click on the status bar at the bottom that says `SQL Server BDC Disconnected`.
+- Or click on the `New Connection` button at the top with the arrow pointing into a doorway.
 
-![New Connection](media/vs-extension/connect_to_cluster.png)
+   ![New Connection](media/vs-extension/connect_to_cluster.png)
 
 VS Code prompts for the appropriate endpoint, username, and password. If given the correct credentials and app endpoint, VS Code notifies that you've been connected to the cluster and you will see any deployed apps populated in the sidebar. If you successfully connect, your endpoint and username will be saved to `./sqldbc` as part of your user profile. No password or tokens will ever be saved. When logging in again, the prompt will pre-fill with your saved host and username but always require you to input a password. If you wish to connect to a different cluster endpoint, just click the `New Connection` again. The connection will automatically close if you close VS Code or if you open a different workspace and you will need to reconnect.
 
@@ -94,13 +89,14 @@ Once completed, a new app template is scaffolded for you at the location you spe
 ![Loaded App Template](media/vs-extension/loading_app_template.png)
 
 The template is a simple `Hello World` app that is laid out as follows:
+
 - `spec.yaml`
-    - Tells the cluster how to deploy your app
+   - Tells the cluster how to deploy your app
 - ` `run-spec.yaml``
-    - Tells the cluster how you'd like to call your app
+   - Tells the cluster how you'd like to call your app
 - `handler.py`
-    - This is your source code file as specified by `src` in `spec.yaml`
-    - It has one function called `handler` that is considered the `entrypoint` of the app as shown in `spec.yaml`. It takes in a string input called `msg` and returns a string output called `out`. These are specified in `inputs` and `outputs` of the `spec.yaml`.
+   - This is your source code file as specified by `src` in `spec.yaml`
+   - It has one function called `handler` that is considered the `entrypoint` of the app as shown in `spec.yaml`. It takes in a string input called `msg` and returns a string output called `out`. These are specified in `inputs` and `outputs` of the `spec.yaml`.
 
 If you do not want a scaffolded template and would just prefer a `spec.yaml` for deployment of an app you have already built, click the `New Deploy Spec` button next to the `New App Template` button and go through the same process, but you will just receive the `spec.yaml`, which modify how you choose.
 
@@ -179,7 +175,6 @@ If the input parameter is not provided as needed, an appropriate error message w
 
 To delete an app, just click the Trash can button next to the app in the `Deployed Apps` side pane.
 
-
 ## Next steps
 
 You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
@@ -187,4 +182,4 @@ You can also refer to the additional samples at [App Deploy Samples](https://aka
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
 
 
-Our goal is to make this extension useful for you and we appreciate you feedback. Please send them to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
+Our goal is to make this extension useful for you and we appreciate you feedback. Please send them to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback).

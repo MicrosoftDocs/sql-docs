@@ -4,7 +4,7 @@ description: Install, configure, and validate the Java language extension on SQL
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -28,10 +28,10 @@ A SQL Server 2019 preview instance is required. Earlier versions do not have Jav
 
 Java 8 is supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
-| Operating System | Java version | JRE download | JDK download |
-|------------------|--------------|--------------|--------------|
-| Windows          | 8         | [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |
-| Linux            | 8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
+You can use your preferred Java 8 distribution. Below are two suggestions:
+
+* [Oracle OpenJDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Zulu OpenJDK 8](https://www.azul.com/downloads/zulu/)
 
 On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 
@@ -105,19 +105,15 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 JAVA_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
-1. Find and copy the JDK/JRE installation path (for example, C:\Program Files\Java\jdk-10.0.2).
+1. Find and copy the JRE installation path (for example, `C:\Program Files\Java\jre1.8.0_201`).
 
-  In CTP 2.3, setting JAVA_HOME to the base jdk folder only works for Java 8. 
-
-  For Java 8, extend the path to reach the jvm.dll on Windows in your JDK (for example, "C:\Program Files\Java\jdk1.8.0_181\bin\server". Alternatively, you can point to a JRE base folder: "C:\Program Files\Java\jre1.8.0_181".
+    If you only have a JRE installed, you can provide the JRE folder path (for example, `C:\Program Files\Java\jre1.8.0_201`). However, if you have a JDK installed, you will need to provide the full path to the JVM, in the JRE folder under JDK, like this: `C:\Program Files\Java\jdk1.8.0_201\jre\bin\server`.
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 
 3. Click **Environment Variables**.
 
-4. Create a new system variable for JAVA_HOME.
-
-   ![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
+4. Create a new system variable for JAVA_HOME with the value of the JDK/JRE installation path.
 
 5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
 
@@ -146,13 +142,6 @@ icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
 ```cmd
 icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 ```
-
-### Add the JRE path to JAVA_HOME
-You also need to add the path to the JRE in the JAVA_HOME system environment variable. If you only have a JRE installed, you can provide the JRE folder path. However, if you have a JDK installed, you will need to provide the full path to the JVM, in the JRE folder under JDK, like this: "C:\Program Files\Java\jdk1.8.0_191\jre\bin\server".
-
-To create a system variable, use Control Panel > System and Security > System to access **Advanced System Properties**. Click **Environment Variables** and then create a new system variable for JAVA_HOME.
-
-![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
 
 <a name="configure-script-execution"></a>
 
@@ -194,7 +183,7 @@ Navigate to the folder containing your class file and run this command:
 jar -cf <MyJar.jar> *.class
 ```
 
-Make sure the path to **jar.exe** is part of the system path variable. Alternatively, specify the full path to jar which can be found under /bin in the JDK folder: `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
+Make sure the path to **jar.exe** is part of the system path variable. Alternatively, specify the full path to jar which can be found under /bin in the JDK folder: `C:\Users\MyUser\Desktop\jdk1.8.0_201\bin\jar -cf <MyJar.jar> *.class`
 
 ## Next steps
 

@@ -18,14 +18,14 @@ This article provides the latest updates and known issues for the latest release
 
 | Release | Date |
 |---|---|
-| [CTP 2.3](#ctp23) | March 2019 |
+| [CTP 2.3](#ctp23) | February 2019 |
 | [CTP 2.2](#ctp22) | December 2018 |
 | [CTP 2.1](#ctp21) | November 2018 |
 | [CTP 2.0](#ctp20) | October 2018 |
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="ctp23"></a> CTP 2.3 (March 2019)
+## <a id="ctp23"></a> CTP 2.3 (February 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.3.
 

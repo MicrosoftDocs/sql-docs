@@ -111,7 +111,7 @@ manager: ""
 |macOS Mojave (64-bit)               |Y  |   |   |   |   |   |   |   |   |
 |macOS High Sierra (64-bit)          |Y  |Y  |   |   |   |   |   |   |   |
 |macOS Sierra (64-bit)               |Y  |Y  |Y  |Y  |   |   |   |   |   |
-|macOS El Capitan (64-bit)           |Y  |Y  |Y  |Y  |   |   |   |   |   |
+|macOS El Capitan (64-bit)           |   |Y  |Y  |Y  |   |   |   |   |   |
 
 ## See Also  
 [Release Notes](../../connect/php/release-notes-for-the-php-sql-driver.md)

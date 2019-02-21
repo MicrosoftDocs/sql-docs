@@ -26,7 +26,7 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 - Support for macOS Mojave (requires ODBC Driver 17.3 or above)
 - Support for Ubuntu 18.10 and Suse Linux 15 (both require ODBC Driver 17.3 or above)
 - Dropped support for PHP 7.0
-- Dropped support for Ubuntu 17.10
+- Dropped support for Linux Ubuntu 17.10 and macOS El Capitan
 - Support for Azure AD Access Token (in Linux and macOS, requires ODBC Driver 17.2+ and unixODBC 2.3.6+)
 - Support for Authentication with Azure AD using Managed Identity for Azure Resources (requires ODBC Driver 17.3+)
 - New fetch functionalities:

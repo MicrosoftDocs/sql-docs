@@ -107,7 +107,7 @@ Supported operating systems for each version of the driver are as follows:
 |macOS Mojave (64-bit)               |Y  |   |   |   |   |   |   |
 |macOS High Sierra (64-bit)          |Y  |Y  |   |   |   |   |   |
 |macOS Sierra (64-bit)               |Y  |Y  |Y  |Y  |   |   |   |
-|macOS El Capitan (64-bit)           |Y  |Y  |Y  |Y  |   |   |   |
+|macOS El Capitan (64-bit)           |   |Y  |Y  |Y  |   |   |   |
 
 ## Driver Versions  
 This section lists the driver files that are included with each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Each installation package contains SQLSRV and PDO_SQLSRV driver files in threaded and non-threaded variants. On Windows, they are also available in 32-bit and 64-bit variants. To configure the driver for use with the PHP runtime, follow the installation instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).

@@ -1,7 +1,7 @@
 ---
 title: "Loading the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "02/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

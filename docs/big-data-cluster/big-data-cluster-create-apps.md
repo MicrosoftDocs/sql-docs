@@ -60,16 +60,16 @@ The following sections describe these commands in more detail.
 
 ## Log in
 
-Before you deploy or interact with applications, first log into your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `service-proxy-lb` or `service-proxy-nodeport` services (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
-
-You can get the IP address of the `service-proxy-lb` or `service-proxy-nodeport` service by running this command in a bash or cmd window:
+Before you deploy or interact with applications, first log into your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `endpoint-service-proxy` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
 ```bash
-kubectl get svc service-proxy-lb -n <name of your cluster>
+mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
 ```
 
+You can get the IP address of the `endpoint-service-proxy` service by running this command in a bash or cmd window:
+
 ```bash
-mssqlctl login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
+kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
 ## Create an app

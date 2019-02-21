@@ -34,14 +34,23 @@ The following sections describe the new features and known issues for big data c
 - Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ.
 - Common CLI for application deployment and cluster management.
 - New syntax for **mssqlctl** tool usage.
+- New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
+- Endpoint names have changed in this release:
+
+   | Previous endpoints | New endpoint |
+   |---|---|
+   | service-security-lb, service-security-nodeport | endpoint-security |
+   | service-proxy-lb, service-proxy-nodeport | endpoint-service-proxy |
+   | service-mssql-controller-lb, service-mssql-controller-nodeport | endpoint-controller |
 
 ### Known issues
 
-The following sections provide known issues for SQL Server big data clusters in CTP 2.2.
+The following sections provide known issues for SQL Server big data clusters in CTP 2.3.
 
 #### Deployment
 
-- Upgrading a big data data cluster from a previous release is not supported. You must backup and delete any existing big data cluster before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+> [!IMPORTANT]
+> Upgrading a big data data cluster from a previous release is not supported. You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 

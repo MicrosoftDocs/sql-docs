@@ -24,8 +24,8 @@ The controller service provides the following core functionality:
 - Expose monitoring tools to observe the state of the cluster
 - Expose troubleshooting tools to detect and repair unexpected issues
 - Manage cluster security: ensure secure cluster endpoints, manage users and roles, configure credentials for intra-cluster communication
-- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.2)
-- Manage high availability and DR for statefull services in the cluster (not available in CTP 2.2)
+- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.3)
+- Manage high availability and DR for statefull services in the cluster (not available in CTP 2.3)
 
 ## Deploying the controller service
 

@@ -15,7 +15,7 @@ manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Contains a row for each physical database on a compute node. Aggregate physical database information to get detailed information about databases. To combine information, join the `sys.pdw_nodes_pdw_physical_databases` to the `sys.pdw_database_mappings` and `sys.databases` tables.  
   
@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |physical_name|**sysname**|The physical name for the database on the Shell/Compute nodes. This value is same as a value in the physical_name column in the [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) view.|  
 |pdw_node_id|**int**|Unique numeric id associated with the node.|  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### A. Returning  
  The following query returns the name and ID of each database in master, and the corresponding database name on each compute node.  

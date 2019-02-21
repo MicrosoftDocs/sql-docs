@@ -36,7 +36,7 @@ The following sections describe the new features and known issues for big data c
 - New syntax for **mssqlctl** tool usage.
 - New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
 - Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster but leaves the namespace. Previously, this command deleted the entire namespace.
-- Endpoint names have changed in this release:
+- Endpoint names have been changed and consolidated in this release:
 
    | Previous endpoints | New endpoint |
    |---|---|
@@ -55,7 +55,7 @@ The following sections provide known issues for SQL Server big data clusters in 
    > [!IMPORTANT]
    > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
 
-- The **ACCEPT_EULA** environment variable must be "yes" or "Yes" to accept the EULA. Previous releases permitted "y" and "Y" but these are Values “y” and “Y” are not recognized as valid and deployment will fail.
+- The **ACCEPT_EULA** environment variable must be "yes" or "Yes" to accept the EULA. Previous releases permitted "y" and "Y" but these are no longer accepted and will cause the deployment to fail.
 
 - The **CLUSTER_PLATFORM** environment variables does not have a default as it did in previous releases.
 

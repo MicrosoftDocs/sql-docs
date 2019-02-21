@@ -102,7 +102,7 @@
       - name: Formatting Decimal Strings and Money Values (SQLSRV Driver)
         href: formatting-decimals-sqlsrv-driver.md
       - name: Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)
-        href: formatting-decimals-sqlsrv-driver.md
+        href: formatting-decimals-pdo-sqlsrv-driver.md
   - name: Updating Data
     href: updating-data-microsoft-drivers-for-php-for-sql-server.md
     items:

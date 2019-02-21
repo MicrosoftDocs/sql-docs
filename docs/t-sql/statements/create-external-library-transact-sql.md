@@ -136,7 +136,7 @@ Currently, Windows is the only supported platform.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-Specifies the language of the package. The value can be **R**, **Python**, or **Java**.
+Specifies the language of the package. The value can be `R`, `Python`, or `Java`.
 ::: moniker-end
 
 ## Remarks
@@ -177,7 +177,7 @@ EXEC sp_execute_external_script
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-For the Python language in SQL Server 2019, the example also works by replacing **'R'** with **'Python'**.
+For the Python language in SQL Server 2019, the example also works by replacing `'R'` with `'Python'`.
 ::: moniker-end
 
 ### B. Installing packages with dependencies
@@ -230,7 +230,7 @@ Because it can be difficult to determine all dependencies just from looking at t
     ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-For the Python language in SQL Server 2019, the example also works by replacing **'R'** with **'Python'**.
+For the Python language in SQL Server 2019, the example also works by replacing `'R'` with `'Python'`.
 ::: moniker-end
 
 ### C. Create a library from a byte stream

@@ -172,7 +172,7 @@ EXEC sp_execute_external_script
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-For the Python language in SQL Server 2019, the example also works by replacing **'R'** with **'Python'**.
+For the Python language in SQL Server 2019, the example also works by replacing `'R'` with `'Python'`.
 ::: moniker-end
 ### B. Alter an existing library using a byte stream
 
@@ -184,7 +184,7 @@ SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-For the Python language in SQL Server 2019, the example also works by replacing **'R'** with **'Python'**.
+For the Python language in SQL Server 2019, the example also works by replacing `'R'` with `'Python'`.
 ::: moniker-end
 
 > [!NOTE]

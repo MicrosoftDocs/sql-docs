@@ -25,8 +25,8 @@ This release adds the top-requested features for R and Python machine learning o
 | Release | Feature update |
 |---------|----------------|
 | CTP 2.3 | New supported [Java data types](java/java-sql-datatypes.md). |
-| | On Windows only, Java code can be now accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. Equivalent functionality will be available on Linux in an upcoming CTP. Learn more: [How to call Java from SQL Server](java/howto-call-java-from-sql.md). |
-| | On Windows only, Python code can be now accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. Equivalent functionality will be available on Linux in an upcoming CTP. |
+| | On Windows only, Java code can be accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. Equivalent functionality will be available on Linux in an upcoming CTP. Learn more: [How to call Java from SQL Server](java/howto-call-java-from-sql.md). |
+| | On Windows only, Python code can be accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. Equivalent functionality will be available on Linux in an upcoming CTP. |
 | CTP 2.2 | No changes. |
 | CTP 2.1 | No changes. |
 | CTP 2.0 | Linux platform support for R and Python machine learning. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |

@@ -1,5 +1,5 @@
 ---
-title: How to deploy an app
+title: Deploy applications using mssqlctl
 titleSuffix: SQL Server 2019 big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
 author: TheBharath 
@@ -23,12 +23,12 @@ This article describes how to deploy and manage R and Python script as an applic
 - Support hosting additional application types - SSIS and MLeap (new in CTP 2.3)
 - [VS Code Extension](app-deployment-extension.md) to manage application deployment
 
-Applications are deployed and managed using `mssqlctl` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in VS Code refer to [VS Code Extension](app-deployment-extension.md)
+Applications are deployed and managed using `mssqlctl` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [VS Code Extension](app-deployment-extension.md)
 
 Types of apps supported:
-- R and Python apps
+- R and Python apps (functions, models and apps)
 - MLeap Serving
-= SSIS as a fully containerzied app as a scheduled service
+- SQL Server Integration Services (SSIS)
 
 ## Prerequisites
 
@@ -42,13 +42,13 @@ In SQL Server 2019 (preview) CTP 2.3 you can create, delete, describe, initializ
 |Command |Description |
 |:---|:---|
 |`mssqlctl login` | Log into a SQL Server big data cluster |
-|`mssqlctl create` | Create application. |
-|`mssqlctl delete` | Delete application. |
-|`mssqlctl describe` | Describe application. |
-|`mssqlctl init` | Kickstart new application skeleton. |
-|`mssqlctl list` | List application(s). |
-|`mssqlctl run` | Run application. |
-|`mssqlctl update`| Update application. |
+|`mssqlctl app create` | Create application. |
+|`mssqlctl app delete` | Delete application. |
+|`mssqlctl app describe` | Describe application. |
+|`mssqlctl app init` | Kickstart new application skeleton. |
+|`mssqlctl app list` | List application(s). |
+|`mssqlctl app run` | Run application. |
+|`mssqlctl app update`| Update application. |
 
 You can get help with the `--help` parameter as in the following example:
 

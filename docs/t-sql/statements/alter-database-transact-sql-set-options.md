@@ -273,7 +273,7 @@ SET
 ```  
   
 ## Arguments  
-*database_name*  
+_database\_name_  
 Is the name of the database to be modified.  
   
 CURRENT  
@@ -392,7 +392,7 @@ FORCE_LAST_GOOD_PLAN = { ON | OFF }
 ON  
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. 
 
-If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan if performance gains aren't detected. The statement will fail if Query Store isn't enabled or if it'sn't in *Read-Write* mode.  
+If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan if performance gains aren't detected. The statement will fail if Query Store isn't enabled or if it'sn't in _Read-Write_ mode.  
 
 OFF  
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. OFF is the default value.
@@ -413,10 +413,10 @@ Change tracking information is automatically removed after the specified retenti
 OFF  
 Change tracking data isn't removed from the database.  
   
-CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }  
+CHANGE_RETENTION =_retention\_period_ { DAYS | HOURS | MINUTES }  
 Specifies the minimum period for keeping change tracking information in the database. Data is removed only when the AUTO_CLEANUP value is ON.  
   
-*retention_period* is an integer that specifies the numerical component of the retention period.  
+_retention\_period_ is an integer that specifies the numerical component of the retention period.  
   
 The default retention period is two days. The minimum retention period is 1 minute. The default retention type is DAYS.  
   
@@ -665,7 +665,7 @@ FILESTREAM data in FileTables in this database can be read by non-transactional 
 FULL  
 Enables full, non-transactional access to FILESTREAM data in FileTables.  
   
-DIRECTORY_NAME = *\<directory_name>*  
+DIRECTORY_NAME = _\<directory\_name>_  
 A windows-compatible directory name. This name should be unique among all the database-level directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of collation settings. This option must be set before creating a FileTable in this database.  
   
 **\<HADR_options> ::=**  
@@ -831,7 +831,7 @@ For more information about error messages 823, 824 and 825, see:
 * [How to troubleshoot Msg 824 in SQL Server](https://support.microsoft.com/help/2015756)
 * [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](https://support.microsoft.com/help/2015757).
   
-The current setting of this option can be determined by examining the *page_verify_option* column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
+The current setting of this option can be determined by examining the _page\_verify\_option_ column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the _IsTornPageDetectionEnabled_ property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
 **\<remote_data_archive_option> ::=**  
  
@@ -1101,14 +1101,14 @@ You can determine this option's status by examining the is_recursive_triggers_on
 Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions, the default is 0. This value indicates that the database uses automatic checkpoints. The checkpoint's frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.  
   
 TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
-*target_recovery_time*  
+_target\_recovery\_time_  
 Specifies the maximum bound on the time to recover the specified database if a crash occurs.  
   
 SECONDS  
-Indicates that *target_recovery_time* is expressed as the number of seconds.  
+Indicates that _target\_recovery\_time_ is expressed as the number of seconds.  
   
 MINUTES  
-Indicates that *target_recovery_time* is expressed as the number of minutes.  
+Indicates that _target\_recovery\_time_ is expressed as the number of minutes.  
   
 For more information about indirect checkpoints, see [Database Checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
@@ -1119,7 +1119,7 @@ Specifies when to roll back incomplete transactions when the database is transit
 > [!NOTE]  
 >  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.  
   
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
+ROLLBACK AFTER _integer_ [SECONDS] | ROLLBACK IMMEDIATE  
 Specifies whether to roll back after the specified number of seconds or immediately.  
   
 NO_WAIT  
@@ -1444,7 +1444,7 @@ SET
 ```  
 
 ## Arguments  
-*database_name*  
+_database\_name_  
 Is the name of the database to be modified.  
   
 CURRENT  
@@ -1574,7 +1574,7 @@ Inherits default settings from the server. In this case, options of enabling or 
 ON  
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. 
 
-If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan if performance gains aren't detected. The statement will fail if Query Store isn't enabled or if it isn't in *Read-Write* mode.   
+If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan if performance gains aren't detected. The statement will fail if Query Store isn't enabled or if it isn't in _Read-Write_ mode.   
   
 OFF  
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. OFF is the default value.  
@@ -1593,10 +1593,10 @@ Change tracking information is automatically removed after the specified retenti
 OFF  
 Change tracking data isn't removed from the database.  
   
-CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }  
+CHANGE_RETENTION =_retention\_period_ { DAYS | HOURS | MINUTES }  
 Specifies the minimum period for keeping change tracking information in the database. Data is removed only when the AUTO_CLEANUP value is ON.  
   
-*retention_period* is an integer that specifies the numerical component of the retention period.  
+_retention\_period_ is an integer that specifies the numerical component of the retention period.  
   
 The default retention period is two days. The minimum retention period is 1 minute. The default retention type is DAYS.  
   
@@ -1940,14 +1940,14 @@ You can determine this option's status by examining the is_recursive_triggers_on
 Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions, the default is 0. This value indicates that the database will use automatic checkpoints. The checkpoint's frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.  
   
 TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
-*target_recovery_time*  
+_target\_recovery\_time_  
 Specifies the maximum bound on the time to recover the specified database if a crash occurs.  
   
 SECONDS  
-Indicates that *target_recovery_time* is expressed as the number of seconds.  
+Indicates that _target\_recovery\_time_ is expressed as the number of seconds.  
   
 MINUTES  
-Indicates that *target_recovery_time* is expressed as the number of minutes.  
+Indicates that _target\_recovery\_time_ is expressed as the number of minutes.  
   
 For more information about indirect checkpoints, see [Database Checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
@@ -1958,7 +1958,7 @@ Specifies when to roll back incomplete transactions when the database is transit
 > [!NOTE]  
 >  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.  
   
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
+ROLLBACK AFTER _integer_ [SECONDS] | ROLLBACK IMMEDIATE  
 Specifies whether to roll back after the specified number of seconds or immediately.  
   
 NO_WAIT  
@@ -2223,7 +2223,7 @@ SET
 ```  
 
 ## Arguments  
-*database_name*  
+_database\_name_  
 Is the name of the database to be modified.  
   
 CURRENT  
@@ -2314,7 +2314,7 @@ FORCE_LAST_GOOD_PLAN = { ON | OFF }
 ON  
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. 
 
-If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan if performance gains aren't detected. The statement will fail if Query Store isn't enabled or if it'sn't in *Read-Write* mode.
+If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan if performance gains aren't detected. The statement will fail if Query Store isn't enabled or if it'sn't in _Read-Write_ mode.
 
 OFF  
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations aren't automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. OFF is the default value.
@@ -2333,10 +2333,10 @@ Change tracking information is automatically removed after the specified retenti
 OFF  
 Change tracking data isn't removed from the database.  
   
-CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }  
+CHANGE_RETENTION =_retention\_period_ { DAYS | HOURS | MINUTES }  
 Specifies the minimum period for keeping change tracking information in the database. Data is removed only when the AUTO_CLEANUP value is ON.  
   
-*retention_period* is an integer that specifies the numerical component of the retention period.  
+_retention\_period_ is an integer that specifies the numerical component of the retention period.  
   
 The default retention period is two days. The minimum retention period is 1 minute. The default retention type is DAYS.  
   
@@ -2677,18 +2677,18 @@ You can determine this option's status by examining the is_recursive_triggers_on
 Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions, the default is 0. This value indicates that the database will use automatic checkpoints. The checkpoint's frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.  
   
 TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
-*target_recovery_time*  
+_target\_recovery\_time_  
 Specifies the maximum bound on the time to recover the specified database if a crash occurs.  
   
 SECONDS  
-Indicates that *target_recovery_time* is expressed as the number of seconds.  
+Indicates that _target\_recovery\_time_ is expressed as the number of seconds.  
   
 MINUTES  
-Indicates that *target_recovery_time* is expressed as the number of minutes.  
+Indicates that _target\_recovery\_time_ is expressed as the number of minutes.  
   
 For more information about indirect checkpoints, see [Database Checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
+ROLLBACK AFTER _integer_ [SECONDS] | ROLLBACK IMMEDIATE  
 Specifies whether to roll back after the specified number of seconds or immediately.  
   
 NO_WAIT  

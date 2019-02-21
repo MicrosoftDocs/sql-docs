@@ -79,7 +79,7 @@ The cluster configuration can be customized using a set of environment variables
 
 | Environment variable | Required | Default value | Description |
 |---|---|---|---|
-| **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Y').  |
+| **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Yes').  |
 | **CLUSTER_NAME** | Yes | N/A | The name of the Kubernetes namespace to deploy SQLServer big data cluster into. |
 | **CLUSTER_PLATFORM** | Yes | N/A | The platform the Kubernetes cluster is deployed. Can be `aks`, `minikube`, `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.3 only valued allowed is 1. |

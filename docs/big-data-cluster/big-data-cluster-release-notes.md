@@ -39,9 +39,9 @@ The following sections describe the new features and known issues for big data c
 
    | Previous endpoints | New endpoint |
    |---|---|
-   | service-security-lb, service-security-nodeport | endpoint-security |
-   | service-proxy-lb, service-proxy-nodeport | endpoint-service-proxy |
-   | service-mssql-controller-lb, service-mssql-controller-nodeport | endpoint-controller |
+   | **service-security-lb**<br/>**service-security-nodeport** | **endpoint-security** |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | **endpoint-service-proxy** |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | **endpoint-controller** |
 
 ### Known issues
 

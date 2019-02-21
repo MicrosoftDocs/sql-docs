@@ -55,7 +55,7 @@ sudo yum install mssql-server-extensibility-java
 # Ubuntu install commands
 sudo apt-get install mssql-server-extensibility-java
 
-# USE install commands
+# SUSE install commands
 sudo zypper install mssql-server-extensibility-java
 ```
 

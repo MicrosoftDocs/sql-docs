@@ -28,11 +28,12 @@ A SQL Server 2019 preview instance is required. Earlier versions do not have Jav
 
 Java 8 is supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
-You can use your preferred Java 8 distribution. Below are two suggestions:
+You can use your preferred Java 8 distribution. Below are two suggested distributions:
 
-* [Oracle Java SE 8 JRE or JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-
-* [Zulu OpenJDK 8](https://www.azul.com/downloads/zulu/)
+| Distribution | Java version | Operating systems | JDK | JRE |
+|-|-|-|-|-|
+| [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows and Linux | Yes | Yes |
+| [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows and Linux | Yes | No |
 
 On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 

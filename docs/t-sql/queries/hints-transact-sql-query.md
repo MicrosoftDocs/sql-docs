@@ -1,7 +1,7 @@
 ---
 title: "Query Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/04/2019"
+ms.date: "02/21/2019"
 ms.prod: sqll
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -283,6 +283,12 @@ The following hint names are supported:
    This hint name is parallel to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
    Instructs query optimizer to use average data distribution while compiling a query with one or more parameters. This instruction makes the query plan independent on the parameter value that was first used when the query was compiled. This hint name is parallel to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting PARAMETER_SNIFFING=OFF.
+* 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
+  Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback).
+* 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
+  Disables scalar UDF inlining. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
+* 'DISALLOW_BATCH_MODE'    
+  Disables batch mode execution. For more information, see [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Enables automatically generated quick statistics (histogram amendment) for any leading index column for which cardinality estimation is needed. The histogram used to estimate cardinality will be adjusted at query compile time to account for actual maximum or minimum value of this column. This hint name is parallel to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     

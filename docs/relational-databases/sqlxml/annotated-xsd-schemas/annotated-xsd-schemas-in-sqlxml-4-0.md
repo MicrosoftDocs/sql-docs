@@ -1,7 +1,7 @@
 ---
 title: "Annotated XSD Schemas in SQLXML 4.0 | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/11/2019"
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

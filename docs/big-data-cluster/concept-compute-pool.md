@@ -21,7 +21,7 @@ This article describes the role of *SQL Server compute pools* in a SQL Server 20
 A compute pool is made of one or more compute pods running in Kubernetes. The automated creation and management of these pods is coordinated by the [SQL Server master instance](concept-master-instance.md). Each pod contains a set of base services and an instance of the SQL Server database engine.
 
 > [!NOTE]
-> CTP 2.2 only supports a single compute pool per cluster.
+> CTP 2.3 only supports a single compute pool per cluster.
 
 ## Scale-out groups
 

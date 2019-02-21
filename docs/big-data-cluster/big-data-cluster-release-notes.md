@@ -18,14 +18,14 @@ This article provides the latest updates and known issues for the latest release
 
 | Release | Date |
 |---|---|
-| [CTP 2.3](#ctp23) | March 2019 |
+| [CTP 2.3](#ctp23) | February 2019 |
 | [CTP 2.2](#ctp22) | December 2018 |
 | [CTP 2.1](#ctp21) | November 2018 |
 | [CTP 2.0](#ctp20) | October 2018 |
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="ctp23"></a> CTP 2.3 (March 2019)
+## <a id="ctp23"></a> CTP 2.3 (February 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.3.
 
@@ -34,14 +34,30 @@ The following sections describe the new features and known issues for big data c
 - Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ.
 - Common CLI for application deployment and cluster management.
 - New syntax for **mssqlctl** tool usage.
+- New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
+- Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster but leaves the namespace. Previously, this command deleted the entire namespace.
+- Endpoint names have been changed and consolidated in this release:
+
+   | Previous endpoints | New endpoint |
+   |---|---|
+   | **service-security-lb**<br/>**service-security-nodeport** | **endpoint-security** |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | **endpoint-service-proxy** |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | **endpoint-controller** |
 
 ### Known issues
 
-The following sections provide known issues for SQL Server big data clusters in CTP 2.2.
+The following sections provide known issues for SQL Server big data clusters in CTP 2.3.
 
 #### Deployment
 
-- Upgrading a big data data cluster from a previous release is not supported. You must backup and delete any existing big data cluster before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+- Upgrading a big data data cluster from a previous release is not supported.
+
+   > [!IMPORTANT]
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+
+- The **ACCEPT_EULA** environment variable must be "yes" or "Yes" to accept the EULA. Previous releases permitted "y" and "Y" but these are no longer accepted and will cause the deployment to fail.
+
+- The **CLUSTER_PLATFORM** environment variables does not have a default as it did in previous releases.
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 

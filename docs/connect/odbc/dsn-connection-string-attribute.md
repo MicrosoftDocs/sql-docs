@@ -150,6 +150,7 @@ Sets the authentication mode to use when connecting to SQL Server. See [Using Az
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory Integrated authentication.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory Password authentication.|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory Interactive authentication.|
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory Managed Service Identity authentication. For user-assigned identity, UID is set to the object ID of the user identity. |
 | |SQL_AU_RESET|Unset. Overrides any DSN or connection string setting.|
 
 > [!NOTE]

@@ -22,30 +22,29 @@ manager: "craigg"
 # replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Updates the value of a node in the document.  
+Updates the value of a node in the document.  
   
 ## Syntax  
   
-```  
-  
+```sql
 replace value of Expression1   
 with Expression2  
 ```  
   
 ## Arguments  
- *Expression1*  
- Identifies a node whose value is to be updated. It must identify only a single node. That is, *Expression1* must be a static singleton. If the XML is typed, the type of the node must be a simple type. If multiple nodes are selected, an error is raised. If *Expression1* returns an empty sequence, no value replacement occurs and no errors are returned. *Expression1* must return a single element that has simply typed content (list or atomic types), a text node, or an attribute node. *Expression1* cannot be a union type, a complex type, a processing instruction, a document node, or a comment node. If it is, an error is returned.  
+*Expression1*  
+Identifies a node whose value is to be updated. It must identify only a single node. That is, *Expression1* must be a static singleton. If the XML is typed, the type of the node must be a simple type. When multiple nodes are selected, an error is raised. If *Expression1* returns an empty sequence, no value replacement occurs and no errors are returned. *Expression1* must return a single element that has simple type content (list or atomic types), a text node, or an attribute node. *Expression1* can't be a union type, a complex type, a processing instruction, a document node, or a comment node, or an error is returned.  
   
- *Expression2*  
- Identifies the new value of the node. This can be an expression that returns a simply typed node, because **data()** will be used implicitly. If the value is a list of values, the **update** statement replaces the old value with the list. In modifying a typed XML instance, *Expression2* must be the same type or a subtype of *Expression*1. Otherwise, an error is returned. In modifying an untyped XML instance, *Expression2* must be an expression that can be atomized. Otherwise, an error is returned.  
+*Expression2*  
+Identifies the new value of the node. It can be an expression that returns a simple type node, because **data()** will be used implicitly. If the value is a list of values, the **update** statement replaces the old value with the list. In modifying a typed XML instance, *Expression2* must be the same type or a subtype of *Expression*1. Otherwise, an error is returned. In modifying an untyped XML instance, *Expression2* must be an expression that can be atomized. Otherwise, an error is returned.  
   
 ## Examples  
- The following examples of the **replace value of** XML DML statement illustrates how to update nodes in an XML document.  
+The following examples of the **replace value of** XML DML statement illustrates how to update nodes in an XML document.  
   
 ### A. Replacing values in an XML instance  
- In the following example, a document instance is first assigned to a variable of **xml** type. Then, **replace value of** XML DML statements update values in the document.  
+In the following example, a document instance is first assigned to a variable of **xml** type. Then, **replace value of** XML DML statements update values in the document.  
   
-```  
+```sql
 DECLARE @myDoc xml;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -71,12 +70,12 @@ SET @myDoc.modify('
 SELECT @myDoc;  
 ```  
   
- Note that the target being updated must be, at most, one node that is explicitly specified in the path expression by adding a "[1]" at the end of the expression.  
+The target being updated must be, at most, one node that is explicitly specified in the path expression by adding a "[1]" at the end of the expression.  
   
 ### B. Using the if expression to determine replacement value  
- You can specify the **if** expression in Expression2 of the **replace value of XML DML** statement, as shown in the following example. Expression1 identifies that the LaborHours attribute from the first work center is to be updated. Expression2 uses an **if** expression to determine the new value of the LaborHours attribute.  
+You can specify the **if** expression in Expression2 of the **replace value of XML DML** statement, as shown in the following example. Expression1 identifies   the LaborHours attribute from the first work center is to be updated. Expression2 uses an **if** expression to determine the new value of the LaborHours attribute.  
   
-```  
+```sql
 DECLARE @myDoc xml  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -101,9 +100,9 @@ SELECT @myDoc
 ```  
   
 ### C. Updating XML stored in an untyped XML column  
- The following example updates XML stored in a column:  
+The following example updates XML stored in a column:  
   
-```  
+```sql
 drop table T  
 go  
 CREATE TABLE T (i int, x xml)  
@@ -131,11 +130,11 @@ FROM T
 ```  
   
 ### D. Updating XML stored in a typed XML column  
- This example replaces values in a manufacturing instructions document stored in a typed XML column.  
+This example replaces values in a manufacturing instructions document stored in a typed XML column.  
   
- In the example, you first create a table (T) with a typed XML column in the AdventureWorks database. You then copy a manufacturing instructions XML instance from the Instructions column in the ProductModel table into table T. Insertions are then applied to XML in table T.  
+In the example, you first create a table (T) with a typed XML column in the AdventureWorks database. You then copy a manufacturing instructions XML instance from the Instructions column in the ProductModel table into table T. Insertions are then applied to XML in table T.  
   
-```  
+```sql
 use AdventureWorks  
 go  
 drop table T  
@@ -184,12 +183,12 @@ select Instructions
 from T  
 ```  
   
- Note the use of **cast** when replacing LotSize value. This is required when the value must be of a specific type. In this example, if 500 were the value, explicit casting would not be necessary.  
+Note the use of **cast** when replacing LotSize value. It's required when the value must be of a specific type. In this example, if 500 were the value, explicit casting wouldn't be necessary.  
   
 ## See Also  
- [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+[Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+[Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)   
+[xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)   
+[XML Data Modification Language &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

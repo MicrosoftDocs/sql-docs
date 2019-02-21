@@ -23,25 +23,14 @@ This article describes how to deploy applications to a SQL Server big data clust
 
 This extension supports the following tasks in Visual Studio Code:
 
-- Authentication with SQL Server Big Data Cluster.
-- Retrieving an application template from GitHub repository for deployment of supported runtimes.
-- Management of currently open application templates in the user's workspace.
-- Deployment of an application through a specification in YAML format.
-- Management of deployed apps within SQL Server Big Data Cluster
-
-You can also view all apps that you have deployed in the side bar with the following information:
-
-- state
-- version
-- input parameters
-- output parameters
-- links
-    - swagger
-    - details
-
-Generate a run spec to consume the app or delete the app from the cluster:
-
-- Consumption of deployed apps through a run specification YAML
+- Authenticate with SQL Server Big Data Cluster.
+- Retrieve an application template from GitHub repository for deployment of supported runtimes.
+- Manage currently open application templates in the user's workspace.
+- Deploy an application through a specification in YAML format.
+- Manage deployed apps within SQL Server Big Data Cluster.
+- View all apps that you have deployed in the side bar with additional information.
+- Generate a run spec to consume the app or delete the app from the cluster.
+- Consume deployed apps through a run specification YAML.
 
 The following sections walk though the installation process and provides an overview how the extension works. 
 
@@ -65,7 +54,8 @@ After the SQL Server big data cluster app deploy extension has been installed, i
 
 Click on the extension in the sidebar to load a side panel showing the App Explorer. The following sample screenshot of the App Explorer shows no apps or app specifications available:
 
-![App Explorer](media/vs-extension/app_explorer.png)
+<img src="media/vs-extension/app_explorer.png" width=350px></img>
+<!--![App Explorer](media/vs-extension/app_explorer.png)-->
 
 #### New Connection
 
@@ -90,11 +80,11 @@ Once completed, a new app template is scaffolded for you at the location you spe
 
 The template is a simple `Hello World` app that is laid out as follows:
 
-- `spec.yaml`
+- **spec.yaml**
    - Tells the cluster how to deploy your app
-- ` `run-spec.yaml``
+- **run-spec.yaml**
    - Tells the cluster how you'd like to call your app
-- `handler.py`
+- **handler.py**
    - This is your source code file as specified by `src` in `spec.yaml`
    - It has one function called `handler` that is considered the `entrypoint` of the app as shown in `spec.yaml`. It takes in a string input called `msg` and returns a string output called `out`. These are specified in `inputs` and `outputs` of the `spec.yaml`.
 

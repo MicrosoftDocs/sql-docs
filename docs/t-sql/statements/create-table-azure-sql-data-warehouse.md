@@ -33,7 +33,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     ( 
       { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
     )  
-    [ WITH [ <table_option> [ ,...n ] ) ]  
+    [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
    
 <column_options> ::=

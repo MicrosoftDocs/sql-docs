@@ -26,8 +26,7 @@ Updates the value of a node in the document.
   
 ## Syntax  
   
-```  
-  
+```sql
 replace value of Expression1   
 with Expression2  
 ```  
@@ -45,7 +44,7 @@ The following examples of the **replace value of** XML DML statement illustrates
 ### A. Replacing values in an XML instance  
 In the following example, a document instance is first assigned to a variable of **xml** type. Then, **replace value of** XML DML statements update values in the document.  
   
-```  
+```sql
 DECLARE @myDoc xml;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -76,7 +75,7 @@ The target being updated must be, at most, one node that is explicitly specified
 ### B. Using the if expression to determine replacement value  
 You can specify the **if** expression in Expression2 of the **replace value of XML DML** statement, as shown in the following example. Expression1 identifies   the LaborHours attribute from the first work center is to be updated. Expression2 uses an **if** expression to determine the new value of the LaborHours attribute.  
   
-```  
+```sql
 DECLARE @myDoc xml  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -103,7 +102,7 @@ SELECT @myDoc
 ### C. Updating XML stored in an untyped XML column  
 The following example updates XML stored in a column:  
   
-```  
+```sql
 drop table T  
 go  
 CREATE TABLE T (i int, x xml)  
@@ -135,7 +134,7 @@ This example replaces values in a manufacturing instructions document stored in 
   
 In the example, you first create a table (T) with a typed XML column in the AdventureWorks database. You then copy a manufacturing instructions XML instance from the Instructions column in the ProductModel table into table T. Insertions are then applied to XML in table T.  
   
-```  
+```sql
 use AdventureWorks  
 go  
 drop table T  

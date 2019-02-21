@@ -29,7 +29,7 @@ You can retrieve multiple values from the rowset. For example, you can apply the
   
 ## Syntax  
   
-```  
+```sql
   
 nodes (XQuery) as Table(Column)  
 ```  
@@ -44,13 +44,13 @@ Is the table name and the column name for the resulting rowset.
 ## Remarks  
 As an example, assume that you have the following table:  
   
-```  
+```sql
 T (ProductModelID int, Instructions xml)  
 ```  
   
 The following manufacturing instructions document is stored in the table. Only a fragment is shown. Notice that there are three manufacturing locations in the document.  
   
-```  
+```sql
 <root>  
   <Location LocationID="10"...>  
      <step>...</step>  
@@ -68,7 +68,7 @@ The following manufacturing instructions document is stored in the table. Only a
   
 A `nodes()` method invocation with the query expression `/root/Location` would return a rowset with three rows, each containing a logical copy of the original XML document, and with the context item set to one of the `<Location>` nodes:  
   
-```  
+```sql
 Product  
 ModelID      Instructions  
 ----------------------------------  
@@ -85,7 +85,7 @@ ModelID      Instructions
   
 You can then query this rowset by using **xml** data type methods. The following query extracts the subtree of the context item for each generated row:  
   
-```  
+```sql
 SELECT T2.Loc.query('.')  
 FROM   T  
 CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)   
@@ -93,7 +93,7 @@ CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)
   
 Here is the result:  
   
-```  
+```sql
 ProductModelID  Instructions  
 ----------------------------------  
 1        <Location LocationID="10" ... />  
@@ -116,7 +116,7 @@ The **nodes()** function can't be applied directly to the results of a user-defi
   
 The following example shows one way to use `CROSS APPLY` to select from the result of a user-defined function.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
   
@@ -145,7 +145,7 @@ In the following example, there's an XML document that has a <`Root`> top-level 
   
 The query then returns the context node from each row:  
   
-```  
+```sql
 DECLARE @x xml   
 SET @x='<Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
@@ -159,7 +159,7 @@ GO
   
 In the following example result, the query method returns the context item and its content:  
   
-```  
+```sql
 <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
 <row id="2"><name>moe</name></row>  
 <row id="3"/>  
@@ -167,7 +167,7 @@ In the following example result, the query method returns the context item and i
   
 Applying the parent accessor on the context nodes returns the <`Root`> element for all three:  
   
-```  
+```sql
 SELECT T.c.query('..') AS result  
 FROM   @x.nodes('/Root/row') T(c)  
 go  
@@ -175,7 +175,7 @@ go
   
 Here is the result:  
   
-```  
+```sql
 <Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -216,7 +216,7 @@ Note the following:
   
 - CROSS APPLY applies `nodes()` to each row in the `Instructions` table and returns only the rows that produce a result set.  
   
-    ```  
+    ```sql  
     SELECT C.query('.') as result  
     FROM Production.ProductModel  
     CROSS APPLY Instructions.nodes('  
@@ -227,7 +227,7 @@ Note the following:
   
   Here is the partial result:  
   
-    ```  
+    ```sql
     <MI:Location LocationID="10"  ...>  
        <MI:step ... />  
           ...  
@@ -248,7 +248,7 @@ Note the following:
   
 - `nodes()` is applied to the `T1 (Locations)` rowset and returns the `T2 (steps)` rowset. This rowset contains logical copies of the original manufacturing instructions document, with `/root/Location/step` element as the item context.  
   
-```  
+```sql
 SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
 steps.query('.') as Step         
 FROM Production.ProductModel         
@@ -264,7 +264,7 @@ GO
   
 Here is the result:  
   
-```  
+```sql
 ProductModelID LocID Step         
 ----------------------------         
 7      10   <step ... />         
@@ -278,7 +278,7 @@ ProductModelID LocID Step
   
 The query declares the `MI` prefix two times. Instead, you can use `WITH XMLNAMESPACES` to declare the prefix one time and use it in the query:  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
   

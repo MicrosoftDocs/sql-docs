@@ -35,7 +35,7 @@ Sends a message, using one or more existing conversations.
   
 ## Syntax  
   
-```  
+```sql
   
 SEND  
    ON CONVERSATION [(]conversation_handle [,.. @conversation_handle_n][)]  
@@ -93,7 +93,7 @@ To send a message, the current user must have RECEIVE permission on the queue of
 ## Examples  
 The following example starts a dialog and sends an XML message on the dialog. To send the message, the example converts the xml object to **varbinary(max)**.  
   
-```  
+```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ExpenseReport XML ;  
   
@@ -111,7 +111,7 @@ SEND ON CONVERSATION @dialog_handle
   
 The following example starts three dialogs and sends an XML message on each of them.  
   
-```  
+```sql
 DECLARE @dialog_handle1 UNIQUEIDENTIFIER,  
         @dialog_handle2 UNIQUEIDENTIFIER,  
         @dialog_handle3 UNIQUEIDENTIFIER,  

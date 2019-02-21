@@ -93,7 +93,7 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ## Install on Windows
 
-1. Ensure Java is installed. For more information, see the [prerequisites](#prerequisites).
+1. Ensure a supported version of Java is installed. For more information, see the [prerequisites](#prerequisites).
 
 2. [Run Setup](../install/sql-machine-learning-services-windows-install.md) to install SQL Server 2019.
 
@@ -109,8 +109,7 @@ JAVA_HOME is an environment variable that specifies the location of the Java int
 
 1. Find and copy the JDK/JRE path (for example, `C:\Program Files\Java\jdk1.8.0_201`).
 
-    > [!Note]
-    > Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above.
+    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above.
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 

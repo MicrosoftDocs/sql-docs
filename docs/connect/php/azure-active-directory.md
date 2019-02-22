@@ -36,7 +36,7 @@ When using Azure AD with the PHP drivers for SQL Server on Windows, you may be a
 
 On Windows, the underlying ODBC driver supports one more value for the **Authentication** keyword, **ActiveDirectoryIntegrated**, but the PHP drivers do not support this value on any platform.
 
-## Example - connect using **SqlPassword** and **ActiveDirectoryPassword**
+## Example - connect using SqlPassword and ActiveDirectoryPassword
 
 ```php
 <?php
@@ -76,7 +76,7 @@ if ($conn === false) {
 ?>
 ```
 
-## Example - connect using the PDO_SQLSRV driver.
+## Example - connect using the PDO_SQLSRV driver
 
 ```php
 <?php

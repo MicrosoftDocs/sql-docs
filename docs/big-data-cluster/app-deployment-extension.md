@@ -38,7 +38,7 @@ The following sections walk though the installation process and provides an over
 
 First install the App Deployment extension in VS Code:
 
-1. Download [sqlservbdc-app-deploy.vsix](https://aka.ms/sql-app-deploy) to install the extension as part of VS Code.
+1. Download [App Deploy Extension](https://aka.ms/app-deploy-vscode) to install the extension as part of VS Code.
 
 1. Launch VS Code and navigate to the Extensions sidebar.
 

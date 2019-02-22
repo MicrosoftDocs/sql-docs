@@ -26,7 +26,7 @@ You can create relationships between columns in different tables in the Diagram 
   
 3.  Two dialog boxes appear: **Foreign Key Relationship** and **Tables and Columns**, with the latter appearing in the foreground.  
   
-4.  **Relationship name** has a system-provided name in the format FK_*localtable*_*foreigntable*. You may change this value.  
+4.  **Relationship name** has a system-provided name in the format FK_*localtable*\_*foreigntable*. You may change this value.  
   
 5.  Verify that **Primary key table** specifies the correct table.  
   

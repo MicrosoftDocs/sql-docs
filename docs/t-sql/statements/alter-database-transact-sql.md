@@ -689,19 +689,54 @@ In Azure SQL Database managed instance, use this statement to set database optio
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 
-ALTER DATABASE
-The current article provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatibility level.
-
-[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
-Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.
-
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
-Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.
-
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-mi-current)
-Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.
+ALTER DATABASE  
+The current article provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatibility level.  
+  
+[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) 
+Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
+  
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)
+Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
+  
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)
+Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
 ## Syntax
+
+```
+-- Azure SQL Database Syntax  
+ALTER DATABASE { database_name | CURRENT }  
+{
+    MODIFY NAME = new_database_name
+  | COLLATE collation_name
+  | <file_and_filegroup_options>  
+  | SET <option_spec> [ ,...n ]  
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
+}  
+[;]
+
+<file_and_filegroup_options>::=  
+  <add_or_modify_files>::=  
+  <filespec>::=
+  <add_or_modify_filegroups>::=  
+  <filegroup_updatability_option>::=  
+
+<option_spec> ::=
+{  
+    <auto_option>
+  | <change_tracking_option>
+  | <cursor_option>
+  | <db_encryption_option>  
+  | <db_update_option>
+  | <db_user_access_option>
+  | <delayed_durability_option>  
+  | <parameterization_option>  
+  | <query_store_options>  
+  | <snapshot_option>  
+  | <sql_option>
+  | <target_recovery_time_option>
+  | <temporal_history_retention>  
+}  
 
 ```
 -- Azure SQL Database Syntax

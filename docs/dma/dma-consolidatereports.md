@@ -2,7 +2,7 @@
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
-ms.date: "02/20/20198"
+ms.date: "02/21/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -181,7 +181,7 @@ You can use Bookmarks to switch the reporting context between:
 - Azure SQL MI cloud assessments
 - On-premises assessments
 
-  ![DMA Report Views bookmarks](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![DMA Report Views bookmarks](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 To hide the filters blade, CTRL-click the Back button:
 

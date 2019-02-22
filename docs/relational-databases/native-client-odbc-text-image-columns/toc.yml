@@ -1,8 +1,0 @@
-- name: Managing Text and Image Columns
-  href: managing-text-and-image-columns.md
-- name: Bound vs. Unbound Text and Image Columns
-  href: bound-vs-unbound-text-and-image-columns.md
-- name: Data-at-Execution and Text, ntext, or Image Columns
-  href: data-at-execution-and-text-ntext-or-image-columns.md
-- name: Logged vs. Unlogged Modifications
-  href: logged-vs-unlogged-modifications.md

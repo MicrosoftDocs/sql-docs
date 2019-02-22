@@ -70,7 +70,7 @@ VS Code prompts for the appropriate endpoint, username, and password. If given t
 
 ### App Template
 
-To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. It is advised that you place it in your current VS Code workspace so that you can use the full functionality of the extension, but place it anywhere in your local file system.
+To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. It is advised that you place it in your current VS Code workspace so that you can use the full functionality of the extension, but you can place it anywhere in your local file system.
 
 ![New App Template](media/vs-extension/new_app_template.png)
 
@@ -88,7 +88,7 @@ The template is a simple `Hello World` app that is laid out as follows:
    - This is your source code file as specified by `src` in `spec.yaml`
    - It has one function called `handler` that is considered the `entrypoint` of the app as shown in `spec.yaml`. It takes in a string input called `msg` and returns a string output called `out`. These are specified in `inputs` and `outputs` of the `spec.yaml`.
 
-If you do not want a scaffolded template and would just prefer a `spec.yaml` for deployment of an app you have already built, click the `New Deploy Spec` button next to the `New App Template` button and go through the same process, but you will just receive the `spec.yaml`, which modify how you choose.
+If you do not want a scaffolded template and would just prefer a `spec.yaml` for deployment of an app you have already built, click the `New Deploy Spec` button next to the `New App Template` button and go through the same process, but you will just receive the `spec.yaml`, which you can modify how you choose.
 
 ### Deploy App
 
@@ -131,7 +131,7 @@ Once the app is ready, call the app with the `run-spec.yaml` that was given as p
 
 ![Run Spec](media/vs-extension/run_spec.png)
 
-Specify any string you'd like in place of `hello` and then again run it through the codelens link or the lightning button in the side bar next to the `run-spec.yaml`. If you do not have a run-spec for whatever reason, generate one from the deployed app in the cluster:
+Specify any string you'd like in place of `hello` and then again run it through the code lens link or the lightning button in the side bar next to the `run-spec.yaml`. If you do not have a run-spec for whatever reason, generate one from the deployed app in the cluster:
 
 ![Get Run Spec](media/vs-extension/get_run_spec.png)
 
@@ -143,11 +143,11 @@ As you can see from above, the output is given in a temporary `.json` file in yo
 
 When running an app, there are a variety of ways to pass parameters:
 
-You may specify all inputs required through a `.json`, i.e.
+You may specify all inputs required through a `.json`, that is:
 
 - `inputs: ./example.json`
 
-When calling a deployed app, if any input parameters are innate to the app or user specified and that given input parameter is anything other than a primitive, such as an array, vector, dataframe, complex JSON, etc. specify the parameter type directly in line when calling the app, i.e.
+When calling a deployed app, if any input parameters are innate to the app or user specified and that given input parameter is anything other than a primitive, such as an array, vector, dataframe, complex JSON, etc. specify the parameter type directly in line when calling the app, that is:
 
 - Vector
     - `inputs:`
@@ -159,7 +159,7 @@ When calling a deployed app, if any input parameters are innate to the app or us
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 
-Or give a string as a relative or absolute file path to a `.txt`, .`json`, or `.csv` that gives the required input in the format that your app requires. The file parsing is based on `Node.js Path library`, where a file path is defined as a `string that contains a / or \ character`.
+Or give a string as a relative or absolute file path to a `.txt`, `.json`, or `.csv` that gives the required input in the format that your app requires. The file parsing is based on `Node.js Path library`, where a file path is defined as a `string that contains a / or \ character`.
 
 If the input parameter is not provided as needed, an appropriate error message will be shown with either the incorrect file path if a string file path was given or that parameter was invalid. The responsibility is given to the creator of the app to ensure they understand the parameters they are defining.
 

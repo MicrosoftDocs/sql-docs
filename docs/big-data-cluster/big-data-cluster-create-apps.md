@@ -23,17 +23,17 @@ This article describes how to deploy and manage R and Python script as an applic
 - Support hosting additional application types - SSIS and MLeap (new in CTP 2.3)
 - [VS Code Extension](app-deployment-extension.md) to manage application deployment
 
-Applications are deployed and managed using `mssqlctl` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [VS Code Extension](app-deployment-extension.md)
+Applications are deployed and managed using `mssqlctl` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [VS Code Extension](app-deployment-extension.md).
 
-Types of apps supported:
+The following types of apps are supported:
 - R and Python apps (functions, models and apps)
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
 ## Prerequisites
 
-- [SQL Server 2019 big data cluster](deployment-guidance.md).
-- [mssqlctl command-line utility](deploy-install-mssqlctl.md).
+- [SQL Server 2019 big data cluster](deployment-guidance.md)
+- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
 
 ## Capabilities
 
@@ -60,7 +60,7 @@ The following sections describe these commands in more detail.
 
 ## Log in
 
-Before you deploy or interact with applications, first log into your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `endpoint-service-proxy` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before you deploy or interact with applications, first log in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `endpoint-service-proxy` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
 ```bash
 mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
@@ -79,7 +79,7 @@ To create an application, you use `mssqlctl` with the `app create` command. Thes
 Use the following syntax to create a new app in big data cluster:
 
 ```bash
-mssqlctl app create -n <app_name> -v <version_number> --spec <path to spec file>
+mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
 ```
 
 The following command shows an example of what this command might look like:
@@ -141,7 +141,7 @@ If the deployment is not complete you should see the `state` show `WaitingforCre
 ]
 ```
 
-After the deployment is successful you should see the `state` change to `Ready` status:
+After the deployment is successful, you should see the `state` change to `Ready` status:
 
 ```
 [
@@ -218,7 +218,7 @@ If the run was successful, you should see your output as specified when you crea
 
 ## Describe an app
 
-The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the weservice to interact with the app in a RESTful manner.
+The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
 
 ```
 {

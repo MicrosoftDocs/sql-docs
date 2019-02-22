@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 
 Returns the binary checksum value computed over a row of a table or over a list of expressions.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -52,12 +52,11 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of an
  **int**
   
 ## Remarks  
-`BINARY_CHECKSUM(*)`, computed on any row of a table, returns the same value as long the row is not subsequently modified. `BINARY_CHECKSUM` satisfies the properties of a hash function: when applied over any two lists of expressions, returns the same value if the corresponding elements of the two lists have the same type and are equal when compared using the equals (=) operator. For this definition, we say that null values, of a specified type, compare as equal values. If at least one of the values in the expression list changes, the expression checksum can also change. However, this is not guaranteed. 
-Therefore, to detect whether values have changed, we recommend use of `BINARY_CHECKSUM` only if your application can tolerate an occasional missed change. Otherwise, consider using `HASHBYTES` instead. With a specified MD5 hash algorithm, the probability that `HASHBYTES` will return the same result, for two different inputs, is much lower compared to `BINARY_CHECKSUM`.
+`BINARY_CHECKSUM(*)`, computed on any row of a table, returns the same value as long the row isn't modified later. `BINARY_CHECKSUM` satisfies the properties of a hash function: when applied over any two lists of expressions, returns the same value if the corresponding elements of the two lists have the same type and are equal when compared using the equals (=) operator. For this definition, we say that null values, of a specified type, compare as equal values. If at least one of the values in the expression list changes, the expression checksum can also change. However, this change isn't guaranteed, and so to detect whether values have changed, we recommend use of `BINARY_CHECKSUM` only if your application can tolerate an occasional missed change. Otherwise, consider using `HASHBYTES` instead. With a specified MD5 hash algorithm, the probability that `HASHBYTES` will return the same result, for two different inputs, is much lower than `BINARY_CHECKSUM`.
   
 `BINARY_CHECKSUM` can operate over a list of expressions, and it returns the same value for a specified list. `BINARY_CHECKSUM` applied over any two lists of expressions returns the same value if the corresponding elements of the two lists have the same type and byte representation. For this definition, null values of a specified type are considered to have the same byte representation.
   
-`BINARY_CHECKSUM` and `CHECKSUM` are similar functions. They can be used to compute a checksum value on a list of expressions, and the order of expressions affects the resultant value. The order of columns used for `BINARY_CHECKSUM(*)` is the order of columns specified in the table or view definition. This includes computed columns.
+`BINARY_CHECKSUM` and `CHECKSUM` are similar functions. They can be used to compute a checksum value on a list of expressions, and the order of expressions affects the resultant value. The order of columns used for `BINARY_CHECKSUM(*)` is the order of columns specified in the table or view definition. This ordering includes computed columns.
   
 `BINARY_CHECKSUM` and `CHECKSUM` return different values for the string data types, where locale can cause strings with different representation to compare as equal. The string data types are  
 

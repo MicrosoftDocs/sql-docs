@@ -41,6 +41,7 @@ In the following row, click whichever product name you are interested in. The cl
 ||||||
 |-|-|-|-|-|
 |**_\* SQL Server \*_**|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+||||||
 
 &nbsp;
 
@@ -273,7 +274,6 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > ||||||

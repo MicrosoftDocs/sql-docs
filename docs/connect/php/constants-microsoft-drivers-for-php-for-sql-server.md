@@ -66,7 +66,7 @@ You can modify the default decimal formatting behaviour with the PDO::SQLSRV_ATT
 
 ### Handling Date and Time Fetches
 
-The PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE specifies whether to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects. If left false, the default behaviour is to return them as strings. This attribute may be set at either the connection or statement level with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) or [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), but the statement attribute will override the corresponding connection attribute. For more information, see [How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver](../../connect/php/how-to-retrieve-date-and-time-type-as-objects-using-the-pdo-sqlsrv-driver.md).
+The PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE specifies whether to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects. If left false, the default behaviour is to return them as strings. This attribute may be set at either the connection or statement level with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) or [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), but the statement attribute will override the corresponding connection attribute. For more information, see [How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## SQLSRV Driver Constants  
 The following sections list the constants used by the SQLSRV driver.  

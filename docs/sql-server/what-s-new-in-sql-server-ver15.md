@@ -24,6 +24,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
 
+**Also, use the [latest tools](#tools) for the best experience with SQL Server 2019!**
+
 ## CTP 2.3
 
 Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3.
@@ -38,9 +40,6 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Improved indirect checkpoint scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
-
-- [Tools](#tools)
-  - Azure Data Studio (Februrary release)
 
 - [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
   - Calculation groups in tabular models reduce the number of measures by reusing calculation logic.
@@ -439,8 +438,13 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>Tools
 
-- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
+- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [SQL Server 2019 Preview extentsion](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
+  - Notebook view UI has moved into Azure Data Studio core. (CTP 2.3)
+  - Added new wizard to create external data sources from HDFS to SQL Server Big Data Cluster. (CTP 2.3)
+  - Improved Notebook viewer UI. (CTP 2.3)
+  - Added new Notebook APIs. (CTP 2.3)
+  - Added "Reinstall Notebook dependencies" command to assist with Python package updates. (CTP 2.3)
   - Connect and manage SQL Server 2019 big data clusters. (CTP 2.1)
   - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. (CTP 2.0) 
   - Quickly visualize data with built-in charting of your result sets. (CTP 2.0)
@@ -461,6 +465,16 @@ FROM sys.dm_exec_requests AS d
   - Smaller download size. (CTP 2.0)
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
+
+- [**SQL Server Powershell Module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer Powershell Module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
+
+  - Upgrade from 21.0 to 21.1 to support SMO v150.
+  - Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.
+  - Fixed issue in New-SqlAvailabilityGroup cmdlet when targeting SQL Server 2014.
+  - Added –LoadBalancedReadOnlyRoutingList parameter to Set-SqlAvailabilityReplica and New-SqlAvailabilityReplica.
+  - Updated AnalysisService Cmdlet to use cached login token from Login-AzureAsAccount for Azure Analysis Services.
+
+Download the latest SqlServer PS module 
 
 ## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 

@@ -459,9 +459,9 @@ FROM sys.dm_exec_requests AS d
   > [!TIP]
   > For the latest improvements to Azure Data Studio, see the [Azure Data Studio release notes](../azure-data-studio/release-notes.md).
 
-- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
+- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md): Supports [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. (CTP 2.0)
+  - Launch Azure Data Studio from SSMS. (CTP 2.3)
   - Support for Always Encrypted with secure enclaves. (CTP 2.0)
   - Smaller download size. (CTP 2.0)
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
@@ -469,7 +469,6 @@ FROM sys.dm_exec_requests AS d
 
 - [**SQL Server Powershell Module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer Powershell Module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 
-  - Launch Azure Data Studio from SSMS.
   - Upgrade from 21.0 to 21.1 to support SMO v150.
   - Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.
   - Fixed issue in New-SqlAvailabilityGroup cmdlet when targeting SQL Server 2014.

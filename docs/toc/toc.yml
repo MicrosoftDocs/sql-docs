@@ -7121,12 +7121,16 @@
               href: ../big-data-cluster/data-ingestion-curl.md
             - name: Restore a database
               href: ../big-data-cluster/data-ingestion-restore-database.md
+          - name: Deploy apps
+            items:
+            - name: Deploy with mssqlctl
+              href: ../big-data-cluster/big-data-cluster-create-apps.md
+            - name: Deploy with VS Code
+              href: ../big-data-cluster/app-deployment-extension.md
           - name: Big Data/Machine Learning
             items:
             - name: Data wrangling using PROSE Code Accelerator
               href: ../big-data-cluster/use-prose-for-big-data-automation.md
-            - name: Deploy apps
-              href: ../big-data-cluster/big-data-cluster-create-apps.md
             - name: Training and Creating Machine Learning Models with Spark
               href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
             - name: Exporting ML models with Spark/Mleap

@@ -54,11 +54,12 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 In the following row, click whichever product name you are interested in. The click displays different content here, appropriate for whichever product you click:
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> ||||
-> |-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+||||
+|-|-|-|
+|**_\* SQL Server \*_**|[SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+||||
 
 &nbsp;
 

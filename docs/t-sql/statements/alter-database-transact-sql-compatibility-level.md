@@ -397,9 +397,9 @@ SELECT @v;
 
 ## See Also [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)
 
- [Reserved Keywords](../../t-sql/language-elements/reserved-keywords-transact-sql.md)
- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
- [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)
+- [Reserved Keywords](../../t-sql/language-elements/reserved-keywords-transact-sql.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
+- [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)

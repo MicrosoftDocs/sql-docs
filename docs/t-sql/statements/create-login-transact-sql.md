@@ -39,11 +39,12 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+||||||
+|-|-|-|-|-|
+|**_\* SQL Server \*_**|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+||||||
 
 &nbsp;
 

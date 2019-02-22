@@ -220,7 +220,7 @@ The following example assumes that the server is the current principal.
 
 1. Manually fail over to the database mirroring partner:
 
-  ```sql
+    ```sql
     ALTER DATABASE AdventureWorks2012 SET PARTNER FAILOVER;
     GO
     ```

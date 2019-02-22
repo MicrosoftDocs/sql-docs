@@ -25,7 +25,7 @@ When using the SQLSRV driver for the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 
 The default is **false**, which means that **smalldatetime**, **datetime**, **date**, **time**, **datetime2**, and **datetimeoffset** types will be returned as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects. If this option is set at the statement level, it overrides the connection level setting.
 
-The PDO_SQLSRV driver returns date and time types as strings by default. To retrieve them as PHP DateTime objects, see [How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-objects-using-the-pdo-sqlsrv-driver.md)
+The PDO_SQLSRV driver returns date and time types as strings by default. To retrieve them as PHP DateTime objects, see [How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
 ## Example
 The following example shows the syntax specifying to retrieve date and time types as strings.

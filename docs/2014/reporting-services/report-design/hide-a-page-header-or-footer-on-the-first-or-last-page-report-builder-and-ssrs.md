@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Hide a Page Header or Footer on the First or Last Page (Report Builder and SSRS)
   A report can contain a page header and page footer that run along the top and bottom of each page, respectively. After you a add a header or footer, you can selectively hide it on the first and last pages of a report.  

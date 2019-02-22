@@ -302,13 +302,13 @@ If there is no *preview 5* or *preview 6* label it indicates the change appeared
   - Fixed an issue where the user was unable to attach a database when physical filename of .mdf file does not match the original filename
   - Fixed an issue where SSMS might not find a valid restore plan or might find one which is sub-optimal. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.
   - Fixed a crash in SSMS when trying to restore a URL backup (this was a regression introduced in previous previews.)
-  - [New in Preview 5] Fixed issue where the "Attach Database" wizard was not displaying secondary files that were renamed. Now, the file is displayed and a comment about it is is added (e.g. "Not Found"). For details, see https://feedback.azure.com/forums/908035/suggestions/32897434
+  - [New in Preview 5] Fixed issue where the "Attach Database" wizard was not displaying secondary files that were renamed. Now, the file is displayed and a comment about it is added (e.g. "Not Found"). For details, see https://feedback.azure.com/forums/908035/suggestions/32897434
 
 - **Job Activity Monitor**
   - Fixed crash while using Job Activity Monitor (with filters)
 
 - **Managed Instance support**
-  - Improved/polished the support for Managed Instances: disabled unsupported options in UI and and a fix to the View Audit Logs option to handle URL audit target.
+  - Improved/polished the support for Managed Instances: disabled unsupported options in UI and a fix to the View Audit Logs option to handle URL audit target.
   - "Generate and Publish scripts" wizard scripts unsupported CREATE DATABASE clauses
   - Live Query Statistics was disabled for CL instances
   - Database properties->Files was incorrectly scripting ALTER DB ADD FILE
@@ -551,7 +551,7 @@ Scripting:
 	
 SMO:
 
-- Fixed an issue where Table.Alter() fails if adding a column with a default constraint and the table already has data. For details, For details, see [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
+- Fixed an issue where Table.Alter() fails if adding a column with a default constraint and the table already has data. For details, see [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
 	
 Always Encrypted:
 
@@ -601,7 +601,7 @@ Azure SQL Data Warehouse:
 **General SSMS** 
 
 Maintenance Plan:   
-- Fixed an issue where trying to change the schedule of an existing Maintenance Plan was throwing an exception. For details, For details, see [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
+- Fixed an issue where trying to change the schedule of an existing Maintenance Plan was throwing an exception. For details, see [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
 
 Always On: 
 - Fixed an issue where Always On Latency Dashboard was not working with SQL Server 2012.
@@ -617,7 +617,7 @@ Azure SQL Database:
 - Fixed an issue  where the user was not able to set or change compatibility level (the drop-down from empty). Note: in order to set the compatibility level to 150, the user still needs to use the *Script* button and manually edit the script. 
  
 SMO: 
-- Exposed Error Log Size setting in SMO. For details, For details, see [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
+- Exposed Error Log Size setting in SMO. For details, see [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
 - Fix linefeed scripting in SMO on Linux.
 - Miscellaneous perf improvement when retrieving rarely used properties.  
 
@@ -828,7 +828,7 @@ XE Profiler:
 - Added database\_name and client\_hostname actions to appropriate events in XEvent Profiler sessions. For the change to take effect, you may need to delete existing QuickSessionStandard or QuickSessionTSQL session instances on the servers - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 Command line:
-- Added a new command-line option ("-G") that can be used to automatically have SSMS connect to a server/database using Active Directory Authentication (either 'Integrated' or 'Password'). For details, For details, see [Ssms utility](ssms-utility.md).
+- Added a new command-line option ("-G") that can be used to automatically have SSMS connect to a server/database using Active Directory Authentication (either 'Integrated' or 'Password'). For details, see [Ssms utility](ssms-utility.md).
 
 Import Flat File Wizard:
 - Added a way to pick a schema name other than the default ("dbo") when creating the table.
@@ -897,8 +897,8 @@ Generally available | Build number: 14.0.17199.0
 
 ### Enhancements
 
-- New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention, or specialized domain knowledge. For details, For details, see [Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md).
-- Added "XEvent Profiler" node to Object Explorer. For details, For details, see [Use the SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+- New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention, or specialized domain knowledge. For details, see [Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md).
+- Added "XEvent Profiler" node to Object Explorer. For details, see [Use the SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 - Updated waits filtering and categorization in Performance Dashboard historical waits report.
 - Added the syntax check of the "Predict" function.
 - Added the syntax check of the External Library Management queries.

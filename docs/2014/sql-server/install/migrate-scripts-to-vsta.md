@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], converting scripts"
   - "SSIS Script component, converting scripts"
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Migrate Scripts to VSTA

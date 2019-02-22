@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "JSON, indexing JSON data"
   - "indexing JSON data"
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

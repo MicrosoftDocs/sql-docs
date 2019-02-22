@@ -572,6 +572,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 1000 to 1999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	1001	|	16	|	No	|	Line %d: Length or precision specification %d is invalid.	|
@@ -921,7 +922,7 @@ The table contains error message numbers and the description, which is the text 
 |	1846	|	16	|	No	|	Cannot find SQL Volume Shadow Copy (VSS) Writer component for database '%ls' while creating auto-recovered VSS snapshot for online DBCC check.	|
 |	1847	|	16	|	No	|	The current version of the operating system doesn't support auto-recovered Volume Shadow Copy (VSS) snapshots.	|
 |	1848	|	16	|	No	|	Volume Shadow Copy Service (VSS) failed to create an auto-recovered snapshot of database '%ls' for online DBCC check.	|
-|	1849	|	16	|	No	|	CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABSE to add FILESTREAM filegroups and files.	|
+|	1849	|	16	|	No	|	CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABASE to add FILESTREAM filegroups and files.	|
 |	1901	|	16	|	No	|	Cannot create index or statistics '%.*ls' on view '%.*ls' because key column '%.*ls' is imprecise, computed and not persisted. Consider removing reference to column in view index or statistics key or changing column to be precise. If column is computed in base table consider marking it PERSISTED there.	|
 |	1902	|	16	|	No	|	Cannot create more than one clustered index on %S_MSG '%.*ls'. Drop the existing clustered index '%.*ls' before creating another.	|
 |	[1904](mssqlserver-1904-database-engine-error.md)	|	16	|	No	|	The %S_MSG '%.*ls' on table '%.*ls' has %d column names in %S_MSG key list. The maximum limit for index or statistics key column list is %d.	|
@@ -1003,6 +1004,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 2000 to 2999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	2002	|	16	|	No	|	Cannot create a procedure for replication with group number greater than one.	|
@@ -1375,6 +1377,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 3000 - 3999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	3002	|	16	|	No	|	Cannot BACKUP or RESTORE a database snapshot.	|
@@ -1815,6 +1818,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 4000 to 4999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	4001	|	10	|	No	|	Client sends a sp_reset_connection while there is still pending requests, server is disconnecting.	|
@@ -3149,6 +3153,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 7000 to 7999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	7000	|	16	|	No	|	OPENXML document handle parameter must be of data type int.	|
@@ -3592,6 +3597,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 8000 to 8999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	8001	|	16	|	No	|	The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Meta-information is invalid for the Sql Variant parameter.	|

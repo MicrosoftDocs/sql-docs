@@ -11,9 +11,9 @@ f1_keywords:
   - "10520"
   - "sql12.rtp.rptdesigner.reportproperties.customcode.f1"
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Properties Dialog Box, Code
   Select **Code**on the **Report Properties** dialog box to define custom code to be used by expressions within the report.  

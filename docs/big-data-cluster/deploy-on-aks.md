@@ -21,7 +21,7 @@ AKS makes it simple to create, configure, and manage a cluster of virtual machin
 This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If you don't have an Azure subscription, create a free account before you begin.
 
 > [!TIP] 
-> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
 
 ## Prerequisites
 
@@ -76,7 +76,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --generate-ssh-keys \
     --node-vm-size Standard_L4s \
     --node-count 3 \
-    --kubernetes-version 1.10.8
+    --kubernetes-version 1.10.9
     ```
 
    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. So in the example above, there are **3** VMs of size **Standard_L4s** used for the agent nodes of your AKS cluster.
@@ -101,6 +101,6 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
 ## Next steps
 
-The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy SQL Server 2019 big data to the cluster.
+The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy SQL Server 2019 big data to the cluster. For more information on how to deploy big data clusters, see the following article:
 
-[Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+[How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Preview View
   Use **Preview** view to display the rendered report. When a report is previewed, Report Designer runs the report locally and displays it in the Preview view. In preview mode, the report is processed in full. If the report has a complex query or has a large amount of data, preview might take several minutes to complete the first time you view it. For subsequent changes that affect only the format of the report, preview uses cached data.  

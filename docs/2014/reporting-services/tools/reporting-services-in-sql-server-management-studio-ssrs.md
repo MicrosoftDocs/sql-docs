@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Reporting Services in SQL Server Management Studio (SSRS)
   Report server administrators can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to:  

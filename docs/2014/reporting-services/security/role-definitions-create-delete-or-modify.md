@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create, Delete, or Modify a Role (Management Studio)
   Reporting Services provides predefined roles that define a level of access to a report server. Each user or group who requires access to report server does so through a role that describes the tasks that can be performed. Roles are defined for the report server as a whole. You cannot vary a role definition for specific parts of the report server, or specify that a role be used differently depending on the circumstances.  

@@ -21,12 +21,13 @@ keywords:
   - "sql server ssms"
   - "ssms express"
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-author: "stevestein"
-ms.author: "sstein"
+author: dnethi
+ms.author: dinethi
+ms.reviewer: sstein
 manager: craigg
 ---
 # Download SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
 > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)

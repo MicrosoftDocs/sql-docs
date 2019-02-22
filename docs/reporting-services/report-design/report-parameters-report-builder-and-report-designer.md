@@ -15,8 +15,8 @@ f1_keywords:
   - "10073"
   - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Report Parameters (Report Builder and Report Designer)
 

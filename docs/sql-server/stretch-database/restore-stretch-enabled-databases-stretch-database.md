@@ -1,13 +1,12 @@
 ---
 title: "Restore Stretch-enabled databases (Stretch Database) | Microsoft Docs"
-ms.custom: ""
 ms.date: "07/06/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Restore Stretch-enabled databases (Stretch Database)
@@ -19,7 +18,7 @@ manager: craigg
   For more info about backup, see [Backup Stretch-enabled databases](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md).
 
 > [!TIP]
-> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../database-engine/sql-server-business-continuity-dr.md).
 
 ## Restore your SQL Server data
 To recover from hardware failure or corruption, restore the Stretch-enabled SQL Server database from a backup. You can continue to use the SQL Server restore methods that you currently use. For more info, see [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).

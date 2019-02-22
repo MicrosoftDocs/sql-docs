@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Page Layout and Rendering (Report Builder and SSRS)
   When you author reports it is important to understand the behavior of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] renderers to ensure the rendered report looks the way you want, including page layout and page breaks. You likely also want to make sure the rendered report fits on the paper size that you or your organization commonly uses.  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "elementFormDefault attribute"
   - "target namespaces [SQLXML]"
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: douglasl
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

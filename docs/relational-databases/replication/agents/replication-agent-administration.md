@@ -65,7 +65,7 @@ manager: craigg
   
     -   Queue Reader Agent  
   
-     Access information and tasks associated with these agents through the **Agents** tab. For more information, see View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Access information and tasks associated with these agents through the **Agents** tab. For more information, see View information and perform tasks using [Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   The following agents are associated with subscriptions in Replication Monitor:  
   

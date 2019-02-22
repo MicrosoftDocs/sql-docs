@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "data-accessor functions [XQuery]"
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Data Accessor Functions

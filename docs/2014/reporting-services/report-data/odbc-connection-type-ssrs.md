@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # ODBC Connection Type (SSRS)
   To include data from an ODBC data provider, you must have a dataset that is based on a report data source of type ODBC. This built-in data source type is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ODBC data processing extension.  

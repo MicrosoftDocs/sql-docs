@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Format a Reporting Services Script File
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] script is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET code file, written against a proxy that is built on Web Service Description Language (WSDL), which defines the Reporting Services SOAP API. A script file is stored as a Unicode or UTF-8 text file with the extension .rss.  

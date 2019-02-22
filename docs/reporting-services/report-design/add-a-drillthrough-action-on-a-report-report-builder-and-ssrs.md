@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Add a Drillthrough Action on a Report (Report Builder and SSRS)
   The report that opens when you click the link in the main report is known as a *drillthrough report*. This drillthrough link enables a drillthrough action.  

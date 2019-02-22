@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Migrate a Reporting Services Installation (SharePoint Mode)
   This topic is an overview of the steps needed to migrate a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment from one SharePoint environment to another. The specific steps can be different depending on the version you are migrating from. For more information on Upgrade and Migration scenarios for SharePoint mode, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). If you only want to copy the report items from one server to another, see [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

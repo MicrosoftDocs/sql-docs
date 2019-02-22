@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Display Page Numbers or Other Report Properties (Report Builder and SSRS)
   It's easy to add page numbers, a report title, file name, and other report properties to the page headers or footers of your report. These properties are stored as fields in the Built-in Fields folder in the Report Data pane:  

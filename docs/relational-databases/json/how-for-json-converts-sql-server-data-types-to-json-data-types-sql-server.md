@@ -9,9 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON, data type conversion"
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

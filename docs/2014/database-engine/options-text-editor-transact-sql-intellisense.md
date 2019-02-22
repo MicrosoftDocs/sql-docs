@@ -9,6 +9,7 @@ ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Text_Editor.SQL.Advanced"
+  - "VS.ToolsOptionsPages.Text_Editor.SQL_Server_Tools.Advanced"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950

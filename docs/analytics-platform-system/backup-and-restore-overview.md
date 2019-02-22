@@ -6,23 +6,22 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ---
-
 # Backup and restore
+
 Describes how data backup and restore works for Parallel Data Warehouse (PDW). Backup and restore operations are used for disaster recovery. Backup and restore can also be used to copy a database from one appliance to another appliance.  
     
-## <a name="BackupRestoreBasics"></a>Backup and restore basics  
+## <a name="BackupRestoreBasics"></a>Backup and restore basics
+
 A PDW *database backup* is a copy of an appliance database, stored in a format so that it can be used to restore the original database to an appliance.  
   
 A PDW database backup is created with the [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md) t-sql statement and formatted for use with the [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
   
 <!-- MISSING LINKS
-
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
-
 -->
   
 PDW uses SQL Server backup technology to backup and restore appliance databases. SQL Server backup options are preconfigured to use backup compression. You cannot set backup options such as compression, checksum, block size, and buffer count.  
@@ -31,7 +30,8 @@ Database backups are stored on one or more backup servers, which exist in your o
   
 Backups are stored on the backup server as a set of files in the Windows file system. A PDW database backup can only be restored to PDW. However, you can archive database backups from the backup server to another location by using standard Windows file backup processes. For more information about backup servers, see [Acquire and configure a backup server](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Database backup types  
+## <a name="BackupTypes"></a>Database backup types
+
 There are two types of data that require a backup: user databases and system databases (e.g., the master database). PDW does not backup the transaction log.  
   
 A full database backup is a backup of an entire  PDW database. This is the default backup type. A full backup of a user database includes database users, and database roles. A backup of master includes logins.  
@@ -44,7 +44,8 @@ A differential backup is only supported for user databases. A backup of master i
   
 To backup the entire appliance, you need to perform a backup of all user databases and a backup of the master database.  
   
-## <a name="BackupProc"></a>Database backup process  
+## <a name="BackupProc"></a>Database backup process
+
 The following diagram shows the flow of data during a database backup.  
   
 ![PDW backup process](media/backup-process.png "PDW backup process")  
@@ -77,14 +78,16 @@ The backup process works as follows:
   
     -   You cannot change the name of the backup before performing a restore. The name of the backup directory must match the name of the original name of the backup. The original name of the backup is located in the backup.xml file within the backup directory. To restore a database to a different name, you can specify the new name in the restore command. For example: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Database restore modes  
+## <a name="RestoreModes"></a>Database restore modes
+
 A full database restore re-creates the PDW database by using the data in the database backup. The database restore is performed by first restoring a full backup, and then optionally restoring one differential backup. The database restore includes the database users and database roles.  
   
 A header only restore returns the header information for a database. It does not restore data to the appliance.  
   
 An appliance restore is a restore of the entire appliance. This includes restoring all user databases and the master database.  
   
-## <a name="RestoreProc"></a>Restore Process  
+## <a name="RestoreProc"></a>Restore Process
+
 The following diagram shows the flow of data during a database restore.  
   
 ![Restore process](media/restore-process.png "Restore process")  
@@ -126,9 +129,12 @@ After the redistribution, each Compute node will contain less actual data and mo
 |Prepare a server as a backup server.|[Acquire and configure a backup server ](acquire-and-configure-backup-server.md)|  
 |Backup a database.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Restore a database.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+
 <!-- MISSING LINKS
+
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 
 |Copy a database from one appliance to another appliance.|[Copy a PDW database to another appliance](copy-pdw-database-to-another-appliance.md).|  
 |Monitor backups and restores.|[Monitor backups and restores](monitor-backup-and-restore.md)|  
+
 -->

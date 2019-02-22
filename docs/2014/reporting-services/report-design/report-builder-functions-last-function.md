@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Last Function (Report Builder and SSRS)
   Returns the last value in the given scope of the specified expression.  

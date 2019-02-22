@@ -22,5 +22,7 @@
     href: using-transparent-network-ip-resolution.md
   - name: Data Classification
     href: data-classification.md
+  - name: Using XA Transactions
+    href: use-xa-with-dtc.md
 - name: Bug Fixes
   href: bug-fixes.md

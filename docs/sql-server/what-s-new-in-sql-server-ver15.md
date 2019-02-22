@@ -137,7 +137,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 >[!NOTE]
 >This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
 
-Customers with critical databases, that are prone to large transactions, are invited to experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
+If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 
 ### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
 
@@ -154,7 +154,7 @@ The end result is a reduction in extraneous recompilations and CPU-overhead.
 
 ### Improved indirect checkpoint scalability (CTP 2.3)
 
-In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
+In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint, which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
 
 ### Scalar UDF inlining (CTP 2.1)
 
@@ -307,13 +307,13 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands. 
 
-Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
+Without this feature, you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
 For more information on index resumable operations, see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Always On Availability Groups - more synchronous replicas  (CTP 2.0)
 
-- **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] . You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
+- **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.
 
 - **Secondary-to-primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use secondary-to-primary replica connection redirection in the following cases:
 
@@ -438,8 +438,9 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>Tools
 
-- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [SQL Server 2019 Preview extentsion](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
+- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [SQL Server 2019 Preview extension](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
+  - AAD is now supported. (CTP 2.3)
   - Notebook view UI has moved into Azure Data Studio core. (CTP 2.3)
   - Added new wizard to create external data sources from HDFS to SQL Server Big Data Cluster. (CTP 2.3)
   - Improved Notebook viewer UI. (CTP 2.3)
@@ -468,6 +469,7 @@ FROM sys.dm_exec_requests AS d
 
 - [**SQL Server Powershell Module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer Powershell Module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 
+  - Launch Azure Data Studio from SSMS.
   - Upgrade from 21.0 to 21.1 to support SMO v150.
   - Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.
   - Fixed issue in New-SqlAvailabilityGroup cmdlet when targeting SQL Server 2014.

@@ -1,7 +1,7 @@
 ---
 title: "sqlsrv_prepare | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2018"
+ms.date: "02/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -64,9 +64,13 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 |Key|Supported values|Description|  
 |-------|--------------------|---------------|  
-|QueryTimeout|A positive integer value.|Sets the query timeout in seconds. By default, the driver waits indefinitely for results.|  
-|SendStreamParamsAtExec|**true** or **false**<br /><br />The default value is **true**.|Configures the driver to send all stream data at execution (**true**), or to send stream data in chunks (**false**). By default, the value is set to **true**. For more information, see [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
+|ClientBufferMaxKBSize|A positive integer|Configures the size of the buffer that holds the result set for a client-side cursor.<br /><br />The default is 10240 KB. For more information, read [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|DecimalPlaces|An integer between 0 and 4 (inclusive)|Specifies the decimal places when formatting fetched money values.<br /><br />Any negative integer or value more than 4 will be ignored.<br /><br />This option works only when FormatDecimals is **true**.|
+|FormatDecimals|**true** or **false**<br /><br />The default value is **false**.|Specifies whether to add leading zeroes to decimal strings when appropriate and enables the `DecimalPlaces` option for formatting money types.<br /><br />For more information, see [Formatting Decimal Strings and Money Values (SQLSRV Driver)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|QueryTimeout|A positive integer|Sets the query timeout in seconds. By default, the driver waits indefinitely for results.|  
+|ReturnDatesAsStrings|**true** or **false**<br /><br />The default value is **false**.|Configures the statement to retrieve date and time types as strings (**true**). For more information, read [How to: Retrieve Date and Time Types as Strings Using the SQLSRV Driver](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Scrollable|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|For more information about these values, see [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
+|SendStreamParamsAtExec|**true** or **false**<br /><br />The default value is **true**.|Configures the driver to send all stream data at execution (**true**), or to send stream data in chunks (**false**). By default, the value is set to **true**. For more information, see [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
 ## Return Value  
 A statement resource. If the statement resource cannot be created, **false** is returned.  

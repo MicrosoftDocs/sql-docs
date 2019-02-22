@@ -1,8 +1,0 @@
-- name: Introducing Exception Handling in Reporting Services
-  href: introducing-exception-handling-in-reporting-services.md
-- name: Handling Exceptions in Reporting Services
-  href: handling-exceptions-in-reporting-services.md
-- name: Best Practices for Reporting Services Exception Handling +
-  href: ./best-practices/best-practices-for-reporting-services-exception-handling.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2fbest-practices%2ftoc.json
-- name: Reporting Services SoapException Class +
-  href: ./soapexception-class/reporting-services-soapexception-class.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2fsoapexception-class%2ftoc.json

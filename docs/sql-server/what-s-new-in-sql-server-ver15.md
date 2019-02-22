@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 02/04/2019
+ms.date: 02/27/2019
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -38,6 +38,9 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Improved indirect checkpoint scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
+
+- [Tools](#tools)
+  - Azure Data Studio (Februrary release)
 
 - [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
   - Calculation groups in tabular models reduce the number of measures by reusing calculation logic.
@@ -97,9 +100,8 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - Certificate management in SQL Server Configuration Manager (CTP 2.0)
 
 - [Tools](#tools)
-  - SQL Server Management Studio (SSMS) 18.0 (preview) (CTP 2.0)
-  - Azure Data Studio (CTP 2.0)
-  - Azure Data Studio (CTP 2.1)
+  - Azure Data Studio
+  - SQL Server Management Studio (SSMS) 18.0 (preview)
 
 Continue reading for more details about these features.
 
@@ -439,7 +441,7 @@ FROM sys.dm_exec_requests AS d
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
-  - Update to the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
+  - Connect and manage SQL Server 2019 big data clusters. (CTP 2.1)
   - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. (CTP 2.0) 
   - Quickly visualize data with built-in charting of your result sets. (CTP 2.0)
   - Create custom dashboards for your servers and databases using customizable widgets. (CTP 2.0)  
@@ -448,6 +450,9 @@ FROM sys.dm_exec_requests AS d
   - Enhance your experience with custom theming and extensions.(CTP 2.0)
   - And explore your Azure resources with a built-in subscription and resource browser. (CTP 2.0)
   - Supports scenarios using SQL Server big data cluster. (CTP 2.0)
+  
+  > [!TIP]
+  > For the latest improvements to Azure Data Studio, see the [Azure Data Studio release notes](../azure-data-studio/release-notes.md).
 
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 

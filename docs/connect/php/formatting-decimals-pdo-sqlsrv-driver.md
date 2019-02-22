@@ -105,6 +105,6 @@ unset($conn);
 ```
 
 ## See Also
-[Formatting Decimal Strings and Money Values](../../connect/php/formatting-decimal-strings-and-money-values.md)
+[Formatting Decimal Strings and Money Values (SQLSRV Driver)](../../connect/php/formatting-decimals-sqlsrv-driver.md)
 
 [Retrieving Data](../../connect/php/retrieving-data.md)

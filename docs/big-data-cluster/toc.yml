@@ -74,7 +74,7 @@
     items:
     - name: Deploy with mssqlctl
       href: big-data-cluster-create-apps.md
-    - name: Use the App Deployment extension
+    - name: Deploy with VS Code
       href: app-deployment-extension.md
   - name: Big Data/Machine Learning
     items:

@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
 
-**Also, use the [latest tools](#tools) for the best experience with SQL Server 2019!**
+**Use the [latest tools](#tools) for the best experience with SQL Server 2019.**
 
 ## CTP 2.3
 
@@ -473,8 +473,6 @@ FROM sys.dm_exec_requests AS d
   - Fixed issue in New-SqlAvailabilityGroup cmdlet when targeting SQL Server 2014.
   - Added –LoadBalancedReadOnlyRoutingList parameter to Set-SqlAvailabilityReplica and New-SqlAvailabilityReplica.
   - Updated AnalysisService Cmdlet to use cached login token from Login-AzureAsAccount for Azure Analysis Services.
-
-Download the latest SqlServer PS module 
 
 ## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 

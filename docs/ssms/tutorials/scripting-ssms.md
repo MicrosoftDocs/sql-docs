@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools

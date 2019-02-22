@@ -51,7 +51,7 @@ The statement attributes always override the corresponding connection settings. 
     $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
     ```
 
-## Example
+## Example - format money data
 The following example shows how to fetch money data using [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md):
 
 ```php
@@ -76,7 +76,7 @@ unset($conn);
 ?>
 ```
 
-## Example
+## Example - override connection attributes
 The following example shows how to override the connection attributes:
 
 ```php

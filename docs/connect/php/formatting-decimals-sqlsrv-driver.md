@@ -32,7 +32,7 @@ Both options can be set to connection or statement level, and the statement sett
 > negative number or any value larger than 4 will be ignored. It is not recommended to use 
 > any formatted money data as inputs to any calculation.
 
-## Example
+## Example - a simple fetch
 The following example shows how to use the new options in a simple fetch.
 
 ```php
@@ -61,7 +61,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## Example
+## Example - format the output parameter
 If a decimal or numeric field is returned as the [output parameter](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), the returned value will be regarded as a regular varchar string. However, if either SQLSRV_SQLTYPE_DECIMAL or SQLSRV_SQLTYPE_NUMERIC is specified, you can set `FormatDecimals` to true to ensure there is no missing leading zero for the numerical string value. For more information, please read [How to: Retrieve Output Parameters Using the SQLSRV Driver](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
 The following example shows how to format the output parameter of a stored procedure that returns a decimal(8,4) value.

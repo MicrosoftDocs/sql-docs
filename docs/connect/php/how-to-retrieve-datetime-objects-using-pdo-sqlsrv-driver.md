@@ -26,7 +26,7 @@ any effect. In order to retrieve date and time types as [PHP DateTime](http://ph
 > This connection or statement attribute only applies to regular fetching of date and
 > time types because DateTime objects cannot be specified as output parameters.
 
-## Example
+## Example - use the connection attribute
 The following examples omit error checking for clarity. This one shows how to set the connection attribute:
 
 ```php
@@ -54,7 +54,7 @@ unset($conn);
 ?>
 ```
 
-## Example
+## Example - use the statement attribute
 This example shows how to set the statement attribute:
 
 ```php
@@ -76,7 +76,7 @@ unset($conn);
 ?>
 ```
 
-## Example
+## Example - use the statement option
 Alternatively, the statement attribute can be set as an option:
 
 ```php
@@ -99,7 +99,7 @@ unset($conn);
 ?>
 ```
 
-## Example
+## Example - retrieve datetime types as strings
 The following example shows how to achieve the opposite (which is not really necessary because it is false by default):
 
 ```php

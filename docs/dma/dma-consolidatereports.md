@@ -2,7 +2,7 @@
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "02/23/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -40,7 +40,7 @@ Saving the PowerShell modules into the PowerShell modules directory enables you 
 
 To load the modules, perform the following steps:
 1. Navigate to C:\Program Files\WindowsPowerShell\Modules, and then create a folder named **DataMigrationAssistant**.
-2. Open the [PowerShell-Modules](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip), and then save them into the folder you created.
+2. Open the [PowerShell-Modules](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip), and then save them into the folder you created.
 
       ![PowerShell Modules](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 

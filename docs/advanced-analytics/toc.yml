@@ -1,5 +1,5 @@
 - name: SQL Server root Table of Contents +
-  href: /sql/sql-server/sql-server-technical-documentation
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 
 - name: SQL Server ML and Programming Extensions Documentation
   href: ../advanced-analytics/index.md

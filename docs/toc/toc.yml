@@ -1,5 +1,6 @@
 - name: Welcome
-  href: ../sql-server/sql-server-technical-documentation.md
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+
 - name: Overview
   items:
   - name: What's new

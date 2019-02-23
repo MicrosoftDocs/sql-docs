@@ -301,7 +301,7 @@
 - name: Resources
   items:
   - name: Release notes +
-    href: /sql/sql-server/sql-server-2017-release-notes
+    href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
   - name: Troubleshooting
     href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
     items:

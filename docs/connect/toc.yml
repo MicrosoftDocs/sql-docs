@@ -4874,376 +4874,399 @@
 
 - name: Bug Fixes
   href: ../connect/odbc/bug-fixes.md
-- name: Microsoft OLE DB Driver for SQL Server
-  href: ../connect/oledb/oledb-driver-for-sql-server.md
-- name: OLE DB Driver for SQL Server Features
-  href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
-- name: Accessing Diagnostic Information in the Extended Events Log
-  href: ../connect/oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md
-- name: Changing Passwords Programmatically
-  href: ../connect/oledb/features/changing-passwords-programmatically.md
-- name: Date and Time Improvements
-  href: ../connect/oledb/features/date-and-time-improvements.md
-- name: FILESTREAM Support
-  href: ../connect/oledb/features/filestream-support.md
-- name: Large CLR User-Defined Types
-  href: ../connect/oledb/features/large-clr-user-defined-types.md
-- name: Metadata Discovery
-  href: ../connect/oledb/features/metadata-discovery.md
-- name: Performing Asynchronous Operations
-  href: ../connect/oledb/features/performing-asynchronous-operations.md
-- name: Performing Bulk Copy Operations
-  href: ../connect/oledb/features/performing-bulk-copy-operations.md
-- name: Service Principal Name (SPN) Support in Client Connections
-  href: ../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md
-- name: Sparse Columns Support in OLE DB Driver for SQL Server
-  href: ../connect/oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md
-- name: OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
-  href: ../connect/oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
-- name: OLE DB Driver for SQL Server Support for LocalDB
-  href: ../connect/oledb/features/oledb-driver-for-sql-server-support-for-localdb.md
-- name: Table-Valued Parameters (OLE DB Driver for SQL Server)
-  href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
-- name: Using Azure Active Directory
-  href: ../connect/oledb/features/using-azure-active-directory.md
-- name: Using Database Mirroring
-  href: ../connect/oledb/features/using-database-mirroring.md
-- name: Using Encryption Without Validation
-  href: ../connect/oledb/features/using-encryption-without-validation.md
-- name: Using Large Value Types
-  href: ../connect/oledb/features/using-large-value-types.md
-- name: Using Multiple Active Result Sets (MARS)
-  href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
-- name: Using User-Defined Types
-  href: ../connect/oledb/features/using-user-defined-types.md
-- name: Using XML Data Types
-  href: ../connect/oledb/features/using-xml-data-types.md
-- name: UTF-16 Support in OLE DB Driver for SQL Server
-  href: ../connect/oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md
-- name: UTF-8 Support in OLE DB Driver for SQL Server
-  href: ../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md
-- name: Working with Query Notifications
-  href: ../connect/oledb/features/working-with-query-notifications.md
-- name: Working with Snapshot Isolation
-  href: ../connect/oledb/features/working-with-snapshot-isolation.md
-- name: Building applications with OLE DB Driver for SQL Server
-  href: ../connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
-- name: Components of OLE DB Driver for SQL Server
-  href: ../connect/oledb/applications/components-of-oledb-driver-for-sql-server.md
-- name: Installing OLE DB Driver for SQL Server
-  href: ../connect/oledb/applications/installing-oledb-driver-for-sql-server.md
-- name: Support policies for OLE DB Driver for SQL Server
-  href: ../connect/oledb/applications/support-policies-for-oledb-driver-for-sql-server.md
-- name: Updating an application from SQL Server 2005 Native Client
-  href: ../connect/oledb/applications/updating-an-application-from-sql-server-2005-native-client.md
-- name: Updating an application to OLE DB Driver for SQL Server from MDAC
-  href: ../connect/oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md
-- name: Using ADO with OLE DB Driver for SQL Server
-  href: ../connect/oledb/applications/using-ado-with-oledb-driver-for-sql-server.md
-- name: Using connection string keywords with OLE DB Driver for SQL Server
-  href: ../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md
-- name: Using the OLE DB Driver for SQL Server header and library files
-  href: ../connect/oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md
-- name: OLE DB programming
-  href: ../connect/oledb/ole-db/oledb-driver-for-sql-server-programming.md
-- name: Specific Areas
+
+- name: OLE DB
   items:
-  - name: Creating an OLE DB Driver for SQL Server Application
-    href: ../connect/oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
-  - name: About OLE DB Properties
-    href: ../connect/oledb/ole-db-driver/about-ole-db-properties.md
-  - name: Establishing a Connection to a Data Source
-    href: ../connect/oledb/ole-db-driver/establishing-a-connection-to-a-data-source.md
-  - name: Executing a Command
-    href: ../connect/oledb/ole-db-driver/executing-a-command.md
-  - name: Processing Results
-    href: ../connect/oledb/ole-db-driver/processing-results.md
-  - name: Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server
-    href: ../connect/oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md
-  - name: Data Source Objects (OLE DB)
-    href: ../connect/oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
-  - name: Data Source Information Properties
-    href: ../connect/oledb/ole-db-data-source-objects/data-source-information-properties.md
-  - name: Data Source Properties (OLE DB)
-    href: ../connect/oledb/ole-db-data-source-objects/data-source-properties-ole-db.md
-  - name: Initialization and Authorization Properties
-    href: ../connect/oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md
-  - name: Persisted Data Source Objects
-    href: ../connect/oledb/ole-db-data-source-objects/persisted-data-source-objects.md
-  - name: Session Properties - OLE DB Driver for SQL Server
-    href: ../connect/oledb/ole-db-data-source-objects/session-properties-oledb-driver-for-sql-server.md
-  - name: Sessions
-    href: ../connect/oledb/ole-db-data-source-objects/sessions.md
-  - name: Commands
-    href: ../connect/oledb/ole-db-commands/commands.md
-  - name: Command Parameters
-    href: ../connect/oledb/ole-db-commands/command-parameters.md
-  - name: Command Syntax
-    href: ../connect/oledb/ole-db-commands/command-syntax.md
-  - name: Commands Generating Multiple-Rowset Results
-    href: ../connect/oledb/ole-db-commands/commands-generating-multiple-rowset-results.md
-  - name: Preparing Commands
-    href: ../connect/oledb/ole-db-commands/preparing-commands.md
-  - name: Using IMultipleResults to Process Multiple Result Sets
-    href: ../connect/oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md
-  - name: Rowsets
-    href: ../connect/oledb/ole-db-rowsets/rowsets.md
-  - name: Bookmarks
-    href: ../connect/oledb/ole-db-rowsets/bookmarks.md
-  - name: Creating a Rowset with IOpenRowset
-    href: ../connect/oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md
-  - name: "Creating Rowsets with ICommand::Execute"
-    href: ../connect/oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md
-  - name: Fetching a Single Row with IRow
-    href: ../connect/oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md
-  - name: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream"
-    href: ../connect/oledb/ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
-  - name: "Fetching BLOB Data Using IRow::Open and ISequentialStream"
-    href: ../connect/oledb/ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
-  - name: Fetching Rows - Next Fetch Position
-    href: ../connect/oledb/ole-db-rowsets/fetching-rows-next-fetch-position.md
-  - name: Fetching Rows
-    href: ../connect/oledb/ole-db-rowsets/fetching-rows.md
-  - name: Rowset Properties and Behaviors
-    href: ../connect/oledb/ole-db-rowsets/rowset-properties-and-behaviors.md
-  - name: Rowsets and SQL Server Cursors
-    href: ../connect/oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md
-  - name: Updating Data in Rowsets - Resynchronizing Rows
-    href: ../connect/oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
-  - name: Updating Data in Rowsets
-    href: ../connect/oledb/ole-db-rowsets/updating-data-in-rowsets.md
-  - name: Updating Data in SQL Server Cursors
-    href: ../connect/oledb/ole-db-rowsets/updating-data-in-sql-server-cursors.md
-  - name: "Using IRow::GetColumns"
-    href: ../connect/oledb/ole-db-rowsets/using-irow-getcolumns.md
-  - name: BLOBs and OLE Objects
-    href: ../connect/oledb/ole-db-blobs/blobs-and-ole-objects.md
-  - name: Getting Large Data
-    href: ../connect/oledb/ole-db-blobs/getting-large-data.md
-  - name: Setting Large Data
-    href: ../connect/oledb/ole-db-blobs/setting-large-data.md
-  - name: Streaming Support for BLOB Output Parameters
-    href: ../connect/oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md
-  - name: Tables and Indexes
-    href: ../connect/oledb/ole-db-tables-indexes/tables-and-indexes.md
-  - name: Adding a Column to a SQL Server Table
-    href: ../connect/oledb/ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md
-  - name: Creating SQL Server Indexes
-    href: ../connect/oledb/ole-db-tables-indexes/creating-sql-server-indexes.md
-  - name: Creating SQL Server Tables
-    href: ../connect/oledb/ole-db-tables-indexes/creating-sql-server-tables.md
-  - name: Dropping a SQL Server Index
-    href: ../connect/oledb/ole-db-tables-indexes/dropping-a-sql-server-index.md
-  - name: Dropping a SQL Server Table
-    href: ../connect/oledb/ole-db-tables-indexes/dropping-a-sql-server-table.md
-  - name: Removing a Column from a SQL Server Table
-    href: ../connect/oledb/ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md
-  - name: Data Types (OLE DB)
-    href: ../connect/oledb/ole-db-data-types/data-types-ole-db.md
-  - name: Data Type Mapping in ITableDefinition
-    href: ../connect/oledb/ole-db-data-types/data-type-mapping-in-itabledefinition.md
-  - name: Data Type Mapping in Rowsets and Parameters
-    href: ../connect/oledb/ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md
-  - name: SSVARIANT Structure
-    href: ../connect/oledb/ole-db-data-types/ssvariant-structure.md
-  - name: Table-Valued Parameters (OLE DB)
-    href: ../connect/oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
-  - name: Executing Commands Containing Table-Valued Parameters
-    href: ../connect/oledb/ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md
-  - name: Inserting Data into Table-Valued Parameters
-    href: ../connect/oledb/ole-db-table-valued-parameters/inserting-data-into-table-valued-parameters.md
-  - name: OLE DB Table-Valued Parameter Type Support (Methods)
-    href: ../connect/oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md
-  - name: OLE DB Table-Valued Parameter Type Support (Properties)
-    href: ../connect/oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md
-  - name: OLE DB Table-Valued Parameter Type Support
-    href: ../connect/oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md
-  - name: Schema Rowsets Changed for OLE DB Table-Valued Parameters
-    href: ../connect/oledb/ole-db-table-valued-parameters/schema-rowsets-changed-for-ole-db-table-valued-parameters.md
-  - name: Table-Valued Parameter Rowset Creation
-    href: ../connect/oledb/ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md
-  - name: Table-Valued Parameter Type Discovery
-    href: ../connect/oledb/ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md
-  - name: Date and Time Improvements (OLE DB)
-    href: ../connect/oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
-  - name: Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)
-    href: ../connect/oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md
-  - name: Comparability for IRowsetFind
-    href: ../connect/oledb/ole-db-date-time/comparability-for-irowsetfind.md
-  - name: Conversions (OLE DB)
-    href: ../connect/oledb/ole-db-date-time/conversions-ole-db.md
-  - name: Conversions Performed from Client to Server
-    href: ../connect/oledb/ole-db-date-time/conversions-performed-from-client-to-server.md
-  - name: Conversions Performed from Server to Client
-    href: ../connect/oledb/ole-db-date-time/conversions-performed-from-server-to-client.md
-  - name: Data Type Support for OLE DB Date and Time Improvements
-    href: ../connect/oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md
-  - name: Metadata - Date and Time and Schema Rowsets
-    href: ../connect/oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md
-  - name: Metadata - Parameter and Rowset
-    href: ../connect/oledb/ole-db-date-time/metadata-parameter-and-rowset.md
-  - name: OLE DB API Support for Date and Time Enhancements
-    href: ../connect/oledb/ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md
-  - name: Transactions
-    href: ../connect/oledb/ole-db-transactions/transactions.md
-  - name: Isolation Levels (OLE DB)
-    href: ../connect/oledb/ole-db-transactions/isolation-levels-ole-db.md
-  - name: Supporting Distributed Transactions
-    href: ../connect/oledb/ole-db-transactions/supporting-distributed-transactions.md
-  - name: Supporting Local Transactions
-    href: ../connect/oledb/ole-db-transactions/supporting-local-transactions.md
-  - name: Errors in OLE DB Driver for SQL Server
-    href: ../connect/oledb/ole-db-errors/errors.md
-  - name: Information in Error Interfaces
-    href: ../connect/oledb/ole-db-errors/information-in-error-interfaces.md
-  - name: Retrieving Error Information
-    href: ../connect/oledb/ole-db-errors/retrieving-error-information.md
-  - name: Return Codes
-    href: ../connect/oledb/ole-db-errors/return-codes.md
-  - name: SQL Server Error Detail
-    href: ../connect/oledb/ole-db-errors/sql-server-error-detail.md
-  - name: SQL Server Message Results
-    href: ../connect/oledb/ole-db-errors/sql-server-message-results.md
-  - name: OLE DB Driver for SQL Server (OLE DB) Interfaces
-    href: ../connect/oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
-  - name: IBCPSession (OLE DB)
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-ole-db.md
-  - name: "IBCPSession::BCPColFmt (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md
-  - name: "IBCPSession::BCPColumns (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md
-  - name: "IBCPSession::BCPControl (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md
-  - name: "IBCPSession::BCPDone (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md
-  - name: "IBCPSession::BCPExec (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md
-  - name: "IBCPSession::BCPInit (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md
-  - name: "IBCPSession::BCPReadFmt (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md
-  - name: "IBCPSession::BCPWriteFmt (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md
-  - name: IBCPSession2 (OLE DB)
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession2-ole-db.md
-  - name: "IBCPSession2::BCPSetBulkMode"
-    href: ../connect/oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md
-  - name: IColumnsRowset
-    href: ../connect/oledb/ole-db-interfaces/icolumnsrowset.md
-  - name: ICommand (OLE DB)
-    href: ../connect/oledb/ole-db-interfaces/icommand-ole-db.md
-  - name: ICommandWithParameters
-    href: ../connect/oledb/ole-db-interfaces/icommandwithparameters.md
-  - name: IDBProperties (OLE DB)
-    href: ../connect/oledb/ole-db-interfaces/idbproperties-ole-db.md
-  - name: IRowsetFastLoad (OLE DB)
-    href: ../connect/oledb/ole-db-interfaces/irowsetfastload-ole-db.md
-  - name: "IRowsetFastLoad::Commit (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md
-  - name: "IRowsetFastLoad::InsertRow (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md
-  - name: "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md
-  - name: "ISSAbort::Abort (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/issabort-abort-ole-db.md
-  - name: ISSAsynchStatus (OLE DB)
-    href: ../connect/oledb/ole-db-interfaces/issasynchstatus-ole-db.md
-  - name: "ISSAsynchStatus::Abort (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md
-  - name: "ISSAsynchStatus::GetStatus (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md
-  - name: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md
-  - name: ISSCommandWithParameters (OLE DB)
-    href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md
-  - name: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
-  - name: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
-    href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
-  - name: OLE DB How-to Topics
-    href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
-  - name: Processing Results How-to Topics (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
-  - name: Execute a User-Defined Function and Process Return Code (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md
-  - name: Execute Stored Procedure with ODBC CALL and Process Output
-    href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md
-  - name: Execute Stored Procedure with RPC and Process Output
-    href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
-  - name: Fetch Rows from a Result Set (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-  - name: Filestream and OLE DB
-    href: ../connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db.md
-  - name: Read a FILESTREAM Column to File Using IBCPSession (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
-  - name: Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md
-  - name: Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md
-  - name: Send Data to FILESTREAM - ISequentialStream Bound to ICommandText
-    href: ../connect/oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md
-  - name: Bulk Copy Data Using IRowsetFastLoad (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md
-  - name: Change a SQL Server Authentication User Password (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md
-  - name: Display Column and Catalog Metadata for Sparse Columns (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md
-  - name: Enumerate OLE DB Data Sources (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md
-  - name: "Fetch Columns Using IRow::GetColumns (OLE DB)"
-    href: ../connect/oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md
-  - name: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
-    href: ../connect/oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md
-  - name: Integrated Kerberos Authentication (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md
-  - name: Obtain a FAST_FORWARD Cursor
-    href: ../connect/oledb/ole-db-how-to/obtain-a-fast-forward-cursor.md
-  - name: Retrieve Rows Using Bookmarks (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md
-  - name: Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md
-  - name: Set Large Data (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/set-large-data-ole-db.md
-  - name: Use Enhanced Date and Time Features (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md
-  - name: Use Large CLR UDTs (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/use-large-clr-udts-ole-db.md
-  - name: Use Table-Valued Parameters (OLE DB)
-    href: ../connect/oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md
-- name: Large CLR User-Defined Types
-  href: ../connect/oledb/ole-db/large-clr-user-defined-types-ole-db.md
-- name: Schema Rowset Support
-  href: ../connect/oledb/ole-db/schema-rowset-support-ole-db.md
-- name: Schema Rowsets - Distributed Query Support
-  href: ../connect/oledb/ole-db/schema-rowsets-distributed-query-support.md
-- name: Schema Rowsets - LINKEDSERVERS Rowset
-  href: ../connect/oledb/ole-db/schema-rowsets-linkedservers-rowset.md
-- name: Service Principal Names (SPNs) in Client Connections
-  href: ../connect/oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md
-- name: Sparse Columns Support
-  href: ../connect/oledb/ole-db/sparse-columns-support-ole-db.md
-- name: Stored Procedures - Calling
-  href: ../connect/oledb/ole-db/stored-procedures-calling.md
-- name: Stored Procedures - Running
-  href: ../connect/oledb/ole-db/stored-procedures-running.md
-- name: Stored Procedures
-  href: ../connect/oledb/ole-db/stored-procedures.md
-- name: Release notes for the Microsoft OLE DB Driver for SQL Server
-  href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-- name: Download Microsoft OLE DB Driver for SQL Server
-  href: ../connect/oledb/download-oledb-driver-for-sql-server.md
-- name: Finding more OLE DB Driver for SQL Server information
-  href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
-- name: System requirements for OLE DB Driver for SQL Server
-  href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
-- name: When to use OLE DB Driver for SQL Server
-  href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
-- name: Help topics
-  items:
-  - name: SQL Server Login Dialog
-    href: ../connect/oledb/help-topics/sql-server-login-dialog.md
-  - name: Universal Data Link (UDL) configuration
-    href: ../connect/oledb/help-topics/data-link-pages.md
+  - name: Microsoft OLE DB Driver for SQL Server
+    href: ../connect/oledb/oledb-driver-for-sql-server.md
+  - name: Features
+    href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
+    items:
+      - name: Accessing Diagnostic Information in the Extended Events Log
+        href: ../connect/oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md
+      - name: Changing Passwords Programmatically
+        href: ../connect/oledb/features/changing-passwords-programmatically.md
+      - name: Date and Time Improvements
+        href: ../connect/oledb/features/date-and-time-improvements.md
+      - name: FILESTREAM Support
+        href: ../connect/oledb/features/filestream-support.md
+      - name: Large CLR User-Defined Types
+        href: ../connect/oledb/features/large-clr-user-defined-types.md
+      - name: Metadata Discovery
+        href: ../connect/oledb/features/metadata-discovery.md
+      - name: Performing Asynchronous Operations
+        href: ../connect/oledb/features/performing-asynchronous-operations.md
+      - name: Performing Bulk Copy Operations
+        href: ../connect/oledb/features/performing-bulk-copy-operations.md
+      - name: Service Principal Name (SPN) Support in Client Connections
+        href: ../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md
+      - name: Sparse Columns Support in OLE DB Driver for SQL Server
+        href: ../connect/oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md
+      - name: OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
+        href: ../connect/oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
+      - name: OLE DB Driver for SQL Server Support for LocalDB
+        href: ../connect/oledb/features/oledb-driver-for-sql-server-support-for-localdb.md
+      - name: Table-Valued Parameters (OLE DB Driver for SQL Server)
+        href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
+      - name: Using Azure Active Directory
+        href: ../connect/oledb/features/using-azure-active-directory.md
+      - name: Using Database Mirroring
+        href: ../connect/oledb/features/using-database-mirroring.md
+      - name: Using Encryption Without Validation
+        href: ../connect/oledb/features/using-encryption-without-validation.md
+      - name: Using Large Value Types
+        href: ../connect/oledb/features/using-large-value-types.md
+      - name: Using Multiple Active Result Sets (MARS)
+        href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+      - name: Using User-Defined Types
+        href: ../connect/oledb/features/using-user-defined-types.md
+      - name: Using XML Data Types
+        href: ../connect/oledb/features/using-xml-data-types.md
+      - name: UTF-16 Support in OLE DB Driver for SQL Server
+        href: ../connect/oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md
+      - name: UTF-8 Support in OLE DB Driver for SQL Server
+        href: ../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md
+      - name: Working with Query Notifications
+        href: ../connect/oledb/features/working-with-query-notifications.md
+      - name: Working with Snapshot Isolation
+        href: ../connect/oledb/features/working-with-snapshot-isolation.md
+  - name: Applications
+    href: ../connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
+    items:
+      - name: Components of OLE DB Driver for SQL Server
+        href: ../connect/oledb/applications/components-of-oledb-driver-for-sql-server.md
+      - name: Installing OLE DB Driver for SQL Server
+        href: ../connect/oledb/applications/installing-oledb-driver-for-sql-server.md
+      - name: Support policies for OLE DB Driver for SQL Server
+        href: ../connect/oledb/applications/support-policies-for-oledb-driver-for-sql-server.md
+      - name: Updating an application from SQL Server 2005 Native Client
+        href: ../connect/oledb/applications/updating-an-application-from-sql-server-2005-native-client.md
+      - name: Updating an application to OLE DB Driver for SQL Server from MDAC
+        href: ../connect/oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md
+      - name: Using ADO with OLE DB Driver for SQL Server
+        href: ../connect/oledb/applications/using-ado-with-oledb-driver-for-sql-server.md
+      - name: Using connection string keywords with OLE DB Driver for SQL Server
+        href: ../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md
+      - name: Using the OLE DB Driver for SQL Server header and library files
+        href: ../connect/oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md
+
+  - name: OLE DB programming
+    href: ../connect/oledb/ole-db/oledb-driver-for-sql-server-programming.md
+    items:
+      - name: Specific Areas
+        items:
+        - name: Creating OLE DB Driver for SQL Server applications
+          href: ../connect/oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
+          items:
+              - name: About OLE DB Properties
+                href: ../connect/oledb/ole-db-driver/about-ole-db-properties.md
+              - name: Establishing a Connection to a Data Source
+                href: ../connect/oledb/ole-db-driver/establishing-a-connection-to-a-data-source.md
+              - name: Executing a Command
+                href: ../connect/oledb/ole-db-driver/executing-a-command.md
+              - name: Processing Results
+                href: ../connect/oledb/ole-db-driver/processing-results.md
+              - name: Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server
+                href: ../connect/oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md
+        - name: OLE DB data source objects
+          href: ../connect/oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
+          items:
+                - name: Data Source Information Properties
+                  href: ../connect/oledb/ole-db-data-source-objects/data-source-information-properties.md
+                - name: Data Source Properties
+                  href: ../connect/oledb/ole-db-data-source-objects/data-source-properties-ole-db.md
+                - name: Initialization and Authorization Properties
+                  href: ../connect/oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md
+                - name: Persisted Data Source Objects
+                  href: ../connect/oledb/ole-db-data-source-objects/persisted-data-source-objects.md
+                - name: Session Properties - OLE DB Driver for SQL Server
+                  href: ../connect/oledb/ole-db-data-source-objects/session-properties-oledb-driver-for-sql-server.md
+                - name: Sessions
+                  href: ../connect/oledb/ole-db-data-source-objects/sessions.md
+        - name: Commands
+          href: ../connect/oledb/ole-db-commands/commands.md
+          items:
+                - name: Command Parameters
+                  href: ../connect/oledb/ole-db-commands/command-parameters.md
+                - name: Command Syntax
+                  href: ../connect/oledb/ole-db-commands/command-syntax.md
+                - name: Commands Generating Multiple-Rowset Results
+                  href: ../connect/oledb/ole-db-commands/commands-generating-multiple-rowset-results.md
+                - name: Preparing Commands
+                  href: ../connect/oledb/ole-db-commands/preparing-commands.md
+                - name: Using IMultipleResults to Process Multiple Result Sets
+                  href: ../connect/oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md
+        - name: Rowsets
+          href: ../connect/oledb/ole-db-rowsets/rowsets.md
+          items:
+                - name: Bookmarks
+                  href: ../connect/oledb/ole-db-rowsets/bookmarks.md
+                - name: Creating a Rowset with IOpenRowset
+                  href: ../connect/oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md
+                - name: "Creating Rowsets with ICommand::Execute"
+                  href: ../connect/oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md
+                - name: Fetching a Single Row with IRow
+                  href: ../connect/oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md
+                - name: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream"
+                  href: ../connect/oledb/ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
+                - name: "Fetching BLOB Data Using IRow::Open and ISequentialStream"
+                  href: ../connect/oledb/ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
+                - name: Fetching Rows - Next Fetch Position
+                  href: ../connect/oledb/ole-db-rowsets/fetching-rows-next-fetch-position.md
+                - name: Fetching Rows
+                  href: ../connect/oledb/ole-db-rowsets/fetching-rows.md
+                - name: Rowset Properties and Behaviors
+                  href: ../connect/oledb/ole-db-rowsets/rowset-properties-and-behaviors.md
+                - name: Rowsets and SQL Server Cursors
+                  href: ../connect/oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md
+                - name: Updating Data in Rowsets - Resynchronizing Rows
+                  href: ../connect/oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
+                - name: Updating Data in Rowsets
+                  href: ../connect/oledb/ole-db-rowsets/updating-data-in-rowsets.md
+                - name: Updating Data in SQL Server Cursors
+                  href: ../connect/oledb/ole-db-rowsets/updating-data-in-sql-server-cursors.md
+                - name: "Using IRow::GetColumns"
+                  href: ../connect/oledb/ole-db-rowsets/using-irow-getcolumns.md
+        - name: Blobs
+          href: ../connect/oledb/ole-db-blobs/blobs-and-ole-objects.md
+          items:
+                - name: Getting Large Data
+                  href: ../connect/oledb/ole-db-blobs/getting-large-data.md
+                - name: Setting Large Data
+                  href: ../connect/oledb/ole-db-blobs/setting-large-data.md
+                - name: Streaming Support for BLOB Output Parameters
+                  href: ../connect/oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md
+        - name: Tables and indexes
+          href: ../connect/oledb/ole-db-tables-indexes/tables-and-indexes.md
+          items:
+                - name: Adding a Column to a SQL Server Table
+                  href: ../connect/oledb/ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md
+                - name: Creating SQL Server Indexes
+                  href: ../connect/oledb/ole-db-tables-indexes/creating-sql-server-indexes.md
+                - name: Creating SQL Server Tables
+                  href: ../connect/oledb/ole-db-tables-indexes/creating-sql-server-tables.md
+                - name: Dropping a SQL Server Index
+                  href: ../connect/oledb/ole-db-tables-indexes/dropping-a-sql-server-index.md
+                - name: Dropping a SQL Server Table
+                  href: ../connect/oledb/ole-db-tables-indexes/dropping-a-sql-server-table.md
+                - name: Removing a Column from a SQL Server Table
+                  href: ../connect/oledb/ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md
+        - name: Data types
+          href: ../connect/oledb/ole-db-data-types/data-types-ole-db.md
+          items:
+                - name: Data Type Mapping in ITableDefinition
+                  href: ../connect/oledb/ole-db-data-types/data-type-mapping-in-itabledefinition.md
+                - name: Data Type Mapping in Rowsets and Parameters
+                  href: ../connect/oledb/ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md
+                - name: SSVARIANT Structure
+                  href: ../connect/oledb/ole-db-data-types/ssvariant-structure.md
+        - name: Table-valued parameters
+          href: ../connect/oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+          items:
+                - name: Executing Commands Containing Table-Valued Parameters
+                  href: ../connect/oledb/ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md
+                - name: Inserting Data into Table-Valued Parameters
+                  href: ../connect/oledb/ole-db-table-valued-parameters/inserting-data-into-table-valued-parameters.md
+                - name: OLE DB Table-Valued Parameter Type Support (Methods)
+                  href: ../connect/oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md
+                - name: OLE DB Table-Valued Parameter Type Support (Properties)
+                  href: ../connect/oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md
+                - name: OLE DB Table-Valued Parameter Type Support
+                  href: ../connect/oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md
+                - name: Schema Rowsets Changed for OLE DB Table-Valued Parameters
+                  href: ../connect/oledb/ole-db-table-valued-parameters/schema-rowsets-changed-for-ole-db-table-valued-parameters.md
+                - name: Table-Valued Parameter Rowset Creation
+                  href: ../connect/oledb/ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md
+                - name: Table-Valued Parameter Type Discovery
+                  href: ../connect/oledb/ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md
+        - name: Date and time improvements
+          href: ../connect/oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
+          items:
+                - name: Bulk Copy Changes for Enhanced Date and Time Types
+                  href: ../connect/oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md
+                - name: Comparability for IRowsetFind
+                  href: ../connect/oledb/ole-db-date-time/comparability-for-irowsetfind.md
+                - name: Conversions
+                  href: ../connect/oledb/ole-db-date-time/conversions-ole-db.md
+                - name: Conversions Performed from Client to Server
+                  href: ../connect/oledb/ole-db-date-time/conversions-performed-from-client-to-server.md
+                - name: Conversions Performed from Server to Client
+                  href: ../connect/oledb/ole-db-date-time/conversions-performed-from-server-to-client.md
+                - name: Data Type Support for OLE DB Date and Time Improvements
+                  href: ../connect/oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md
+                - name: Metadata - Date and Time and Schema Rowsets
+                  href: ../connect/oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md
+                - name: Metadata - Parameter and Rowset
+                  href: ../connect/oledb/ole-db-date-time/metadata-parameter-and-rowset.md
+                - name: OLE DB API Support for Date and Time Enhancements
+                  href: ../connect/oledb/ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md
+        - name: Transactions
+          href: ../connect/oledb/ole-db-transactions/transactions.md
+          items:
+                - name: Isolation Levels
+                  href: ../connect/oledb/ole-db-transactions/isolation-levels-ole-db.md
+                - name: Supporting Distributed Transactions
+                  href: ../connect/oledb/ole-db-transactions/supporting-distributed-transactions.md
+                - name: Supporting Local Transactions
+                  href: ../connect/oledb/ole-db-transactions/supporting-local-transactions.md
+        - name: Errors
+          href: ../connect/oledb/ole-db-errors/errors.md
+          items:
+                - name: Information in Error Interfaces
+                  href: ../connect/oledb/ole-db-errors/information-in-error-interfaces.md
+                - name: Retrieving Error Information
+                  href: ../connect/oledb/ole-db-errors/retrieving-error-information.md
+                - name: Return Codes
+                  href: ../connect/oledb/ole-db-errors/return-codes.md
+                - name: SQL Server Error Detail
+                  href: ../connect/oledb/ole-db-errors/sql-server-error-detail.md
+                - name: SQL Server Message Results
+                  href: ../connect/oledb/ole-db-errors/sql-server-message-results.md
+        - name: Interfaces
+          href: ../connect/oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
+          items:
+                - name: IBCPSession
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-ole-db.md
+                - name: "IBCPSession::BCPColFmt"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md
+                - name: "IBCPSession::BCPColumns"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md
+                - name: "IBCPSession::BCPControl"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md
+                - name: "IBCPSession::BCPDone"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md
+                - name: "IBCPSession::BCPExec"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md
+                - name: "IBCPSession::BCPInit"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md
+                - name: "IBCPSession::BCPReadFmt"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md
+                - name: "IBCPSession::BCPWriteFmt"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md
+                - name: IBCPSession2
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession2-ole-db.md
+                - name: "IBCPSession2::BCPSetBulkMode"
+                  href: ../connect/oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md
+                - name: IColumnsRowset
+                  href: ../connect/oledb/ole-db-interfaces/icolumnsrowset.md
+                - name: ICommand
+                  href: ../connect/oledb/ole-db-interfaces/icommand-ole-db.md
+                - name: ICommandWithParameters
+                  href: ../connect/oledb/ole-db-interfaces/icommandwithparameters.md
+                - name: IDBProperties
+                  href: ../connect/oledb/ole-db-interfaces/idbproperties-ole-db.md
+                - name: IRowsetFastLoad
+                  href: ../connect/oledb/ole-db-interfaces/irowsetfastload-ole-db.md
+                - name: "IRowsetFastLoad::Commit"
+                  href: ../connect/oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md
+                - name: "IRowsetFastLoad::InsertRow"
+                  href: ../connect/oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md
+                - name: "ISQLServerErrorInfo::GetErrorInfo"
+                  href: ../connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md
+                - name: "ISSAbort::Abort"
+                  href: ../connect/oledb/ole-db-interfaces/issabort-abort-ole-db.md
+                - name: ISSAsynchStatus
+                  href: ../connect/oledb/ole-db-interfaces/issasynchstatus-ole-db.md
+                - name: "ISSAsynchStatus::Abort"
+                  href: ../connect/oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md
+                - name: "ISSAsynchStatus::GetStatus"
+                  href: ../connect/oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md
+                - name: "ISSAsynchStatus::WaitForAsynchCompletion"
+                  href: ../connect/oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md
+                - name: ISSCommandWithParameters
+                  href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md
+                - name: "ISSCommandWithParameters::GetParameterProperties"
+                  href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
+                - name: "ISSCommandWithParameters::SetParameterProperties"
+                  href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+        - name: How to
+          href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
+          items:
+                - name: Results
+                  href: ../connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
+                  items:
+                      - name: Execute a User-Defined Function and Process Return Code
+                        href: ../connect/oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md
+                      - name: Execute Stored Procedure with ODBC CALL and Process Output
+                        href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md
+                      - name: Execute Stored Procedure with RPC and Process Output
+                        href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
+                      - name: Fetch Rows from a Result Set
+                        href: ../connect/oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
+                - name: Filestream
+                  href: ../connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db.md
+                  items:
+                      - name: Read a FILESTREAM Column to File Using IBCPSession
+                        href: ../connect/oledb/ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
+                      - name: Retrieve Data from a FILESTREAM Column Using ISequentialStream
+                        href: ../connect/oledb/ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md
+                      - name: Send Data to a FILESTREAM Column Using IRowsetFastUpload
+                        href: ../connect/oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md
+                      - name: Send Data to FILESTREAM - ISequentialStream Bound to ICommandText
+                        href: ../connect/oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md
+                - name: Bulk Copy Data Using IRowsetFastLoad
+                  href: ../connect/oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md
+                - name: Change a SQL Server Authentication User Password
+                  href: ../connect/oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md
+                - name: Display Column and Catalog Metadata for Sparse Columns
+                  href: ../connect/oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md
+                - name: Enumerate OLE DB Data Sources
+                  href: ../connect/oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md
+                - name: "Fetch Columns Using IRow::GetColumns"
+                  href: ../connect/oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md
+                - name: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
+                  href: ../connect/oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md
+                - name: Integrated Kerberos Authentication
+                  href: ../connect/oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md
+                - name: Obtain a FAST_FORWARD Cursor
+                  href: ../connect/oledb/ole-db-how-to/obtain-a-fast-forward-cursor.md
+                - name: Retrieve Rows Using Bookmarks
+                  href: ../connect/oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md
+                - name: Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM
+                  href: ../connect/oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md
+                - name: Set Large Data
+                  href: ../connect/oledb/ole-db-how-to/set-large-data-ole-db.md
+                - name: Use Enhanced Date and Time Features
+                  href: ../connect/oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md
+                - name: Use Large CLR UDTs
+                  href: ../connect/oledb/ole-db-how-to/use-large-clr-udts-ole-db.md
+                - name: Use Table-Valued Parameters
+                  href: ../connect/oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md
+      - name: Large CLR User-Defined Types
+        href: ../connect/oledb/ole-db/large-clr-user-defined-types-ole-db.md
+      - name: Schema Rowset Support
+        href: ../connect/oledb/ole-db/schema-rowset-support-ole-db.md
+      - name: Schema Rowsets - Distributed Query Support
+        href: ../connect/oledb/ole-db/schema-rowsets-distributed-query-support.md
+      - name: Schema Rowsets - LINKEDSERVERS Rowset
+        href: ../connect/oledb/ole-db/schema-rowsets-linkedservers-rowset.md
+      - name: Service Principal Names (SPNs) in Client Connections
+        href: ../connect/oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md
+      - name: Sparse Columns Support
+        href: ../connect/oledb/ole-db/sparse-columns-support-ole-db.md
+      - name: Stored Procedures - Calling
+        href: ../connect/oledb/ole-db/stored-procedures-calling.md
+      - name: Stored Procedures - Running
+        href: ../connect/oledb/ole-db/stored-procedures-running.md
+      - name: Stored Procedures
+        href: ../connect/oledb/ole-db/stored-procedures.md
+  - name: Release notes for the Microsoft OLE DB Driver for SQL Server
+    href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
+  - name: Download Microsoft OLE DB Driver for SQL Server
+    href: ../connect/oledb/download-oledb-driver-for-sql-server.md
+  - name: Finding more OLE DB Driver for SQL Server information
+    href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
+  - name: System requirements for OLE DB Driver for SQL Server
+    href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
+  - name: When to use OLE DB Driver for SQL Server
+    href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
+  - name: Help topics
+    items:
+        - name: SQL Server Login Dialog
+          href: ../connect/oledb/help-topics/sql-server-login-dialog.md
+        - name: Universal Data Link (UDL) configuration
+          href: ../connect/oledb/help-topics/data-link-pages.md
+
 - name: PHP
   items:
   - name: Microsoft Drivers for PHP for SQL Server

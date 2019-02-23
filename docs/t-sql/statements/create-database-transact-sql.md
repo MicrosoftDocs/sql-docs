@@ -51,11 +51,11 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 |||||
 |-|-|-|-|
-|**_\* SQL Server \*_** | [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|**_\* SQL Server \*_** &nbsp;| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -879,7 +879,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />single database/elastic pool \*_** | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\* SQL Database<br />single database/elastic pool \*_** | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1231,7 +1231,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />managed instance \*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />managed instance \*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1305,7 +1305,7 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1423,7 +1423,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 

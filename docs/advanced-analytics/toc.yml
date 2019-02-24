@@ -1,8 +1,8 @@
-- name: SQL Server root Table of Contents +
+- name: SQL Server root Table of Contents ++
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 
 - name: SQL Server ML and Programming Extensions Documentation
-  href: ../advanced-analytics/index.md
+  href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
 - name: Machine learning extensions (R, Python)
   items:
   - name: What's New

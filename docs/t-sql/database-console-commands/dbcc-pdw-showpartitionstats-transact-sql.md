@@ -18,7 +18,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 
 Displays the size and number of rows for each partition of a table in a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -36,16 +36,16 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 Requires **VIEW SERVER STATE** permission.
   
 ## Result Sets  
-This is the results for the DBCC PDW_SHOWPARTITIONSTATS command.
+This set is the results for the DBCC PDW_SHOWPARTITIONSTATS command.
   
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
 |partition_number|int|Partition number.|  
 |used_page_count|bigint|Number of pages used for the data.|  
-|reserved_page_count|bigint|Number of pages allocated to the partition.|  
+|reserved_page_count|bigint|Number of pages reserved for the partition.|  
 |row_count|bigint|Number of rows in the partition.|  
 |pdw_node_id|int|Compute node for the data.|  
-|distribution_id|int|Distribution id for the data.|  
+|distribution_id|int|Distribution identifier for the data.|  
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### A. DBCC PDW_SHOWPARTITIONSTATS Basic Syntax Examples  
@@ -59,4 +59,4 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 ## See also
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
-  
+ 

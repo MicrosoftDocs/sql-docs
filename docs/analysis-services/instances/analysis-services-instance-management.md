@@ -39,16 +39,6 @@ For Azure Analysis Services, see [Manage Azure Analysis Services](https://docs.m
 > [!NOTE]  
 >  The exception is [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Server administration of a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deployment is always within the context of a SharePoint farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] differs from other server modes in that it is always single-instance, and always managed through SharePoint Central Administration or the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool. Although it is possible to connect to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint in SQL Server Management Studio or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], it is not desirable. A SharePoint farm includes infrastructure that synchronizes server state and oversees server availability. Using other tools can interfere with these operations. For more information about [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server administration, see [Power Pivot for SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## Common server management topics  
-  
-|Link|Task Description|  
-|----------|----------------------|  
-|[Post-install Configuration](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Describes the required and optional tasks that complete or modify an installation of Analysis.|  
-|[Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Describes connection string properties, client libraries, authentication methodologies, and steps for establishing or clearing connections.|  
-|[Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Describes tools and techniques for monitoring a server instance, including how to use Performance Monitor and SQL Server Profiler.|  
-|[High availability and Scalability](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Describes the most commonly used techniques for making Analysis Services databases high available and scalable. |  
-|[Globalization scenarios for Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)|Explains language and collation support, steps for changing both properties, and tips for setting and testing language and collation behaviors.|  
-|[Log operations in Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Describes the logs and explains how to configure them.|  
   
   
 ## See also  

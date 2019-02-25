@@ -2983,11 +2983,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
-            "redirect_url": "/sql/analysis-services/analysis-services",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/analysis-services/rename-columns.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false

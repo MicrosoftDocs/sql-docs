@@ -1,5 +1,5 @@
-- name: SQL Server root Table of Contents +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: SQL Server root Table of Contents ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 
 
 - name: Programming to interact with SQL Server
@@ -4904,11 +4904,8 @@
   href: ../connect/oledb/features/oledb-driver-for-sql-server-support-for-localdb.md
 - name: Table-Valued Parameters (OLE DB Driver for SQL Server)
   href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
-
-# TODO: PR 9069, after the PR is merged into master.  GeneMi , 2019/02/21 22:08pm
-#- name: Using Azure Active Directory
-#  href: ../connect/oledb/deatures/using-azure-active-directory.md
-
+- name: Using Azure Active Directory
+  href: ../connect/oledb/features/using-azure-active-directory.md
 - name: Using Database Mirroring
   href: ../connect/oledb/features/using-database-mirroring.md
 - name: Using Encryption Without Validation
@@ -4923,11 +4920,8 @@
   href: ../connect/oledb/features/using-xml-data-types.md
 - name: UTF-16 Support in OLE DB Driver for SQL Server
   href: ../connect/oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md
-
-# TODO: PR 9069, after the PR is merged into master.  GeneMi , 2019/02/21 22:08pm
-#- name: UTF-8 Support in OLE DB Driver for SQL Server
-#  href: ../connect/oledb/deatures/utf-8-support-in-oledb-driver-for-sql-server.md
-
+- name: UTF-8 Support in OLE DB Driver for SQL Server
+  href: ../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md
 - name: Working with Query Notifications
   href: ../connect/oledb/features/working-with-query-notifications.md
 - name: Working with Snapshot Isolation
@@ -5244,15 +5238,12 @@
   href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
 - name: When to use OLE DB Driver for SQL Server
   href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
-
-# TODO: After PR 9069 merges.
-#- name: Help topics
-#  items:
-#  - name: SQL Server Login Dialog
-#    href: ../connect/oledb/help-topics/sql-server-login-dialog.md
-#  - name: Universal Data Link (UDL) configuration
-#    href: ../connect/oledb/help-topics/data-link-pages.md
-
+- name: Help topics
+  items:
+  - name: SQL Server Login Dialog
+    href: ../connect/oledb/help-topics/sql-server-login-dialog.md
+  - name: Universal Data Link (UDL) configuration
+    href: ../connect/oledb/help-topics/data-link-pages.md
 - name: PHP
   items:
   - name: Microsoft Drivers for PHP for SQL Server

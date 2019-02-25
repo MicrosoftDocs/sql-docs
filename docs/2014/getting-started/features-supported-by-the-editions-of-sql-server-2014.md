@@ -20,8 +20,6 @@ manager: craigg
 ---
 # Features Supported by the Editions of SQL Server 2014
 
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
 

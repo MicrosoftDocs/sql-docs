@@ -22,9 +22,6 @@ manager: craigg
 # STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 A table-valued function that splits a string into rows of substrings, based on a specified separator character.
 
 #### Compatibility level 130

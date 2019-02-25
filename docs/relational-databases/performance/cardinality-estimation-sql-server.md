@@ -1,7 +1,7 @@
 ---
 title: "Cardinality Estimation (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "02/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,6 +19,26 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Cardinality Estimation (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+The Query Optimizer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is a cost-based optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The query optimizer determines the cost of executing a query plan based on two main factors:
+
+- The total number of rows processed at each level of a query plan, referred to as the cardinality of the plan.
+- The cost model of the algorithm dictated by the operators used in the query.
+
+The first factor, cardinality, is used as an input parameter of the second factor, the cost model. Therefore, improved cardinality leads to better estimated costs and, in turn, faster execution plans.
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estimates cardinalities primarily from histograms that are created when indexes or statistics are created, either manually or automatically. Sometimes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] also uses constraint information and logical rewrites of queries to determine cardinality.
+
+In the following cases, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot accurately calculate cardinalities. This causes inaccurate cost calculations that may cause suboptimal query plans. Avoiding these constructs in queries may improve query performance. Sometimes, alternative query formulations or other measures are possible and these are pointed out:
+
+- Queries with predicates that use comparison operators between different columns of the same table.
+- Queries with predicates that use operators, and any one of the following are true:
+  - There are no statistics on the columns involved on either side of the operators.
+  - The distribution of values in the statistics is not uniform, but the query seeks a highly selective value set. This situation can be especially true if the operator is anything other than the equality (=) operator.
+  - The predicate uses the not equal to (!=) comparison operator or the NOT logical operator.
+- Queries that use any of the SQL Server built-in functions or a scalar-valued, user-defined function whose argument is not a constant value.
+- Queries that involve joining columns through arithmetic or string concatenation operators.
+- Queries that compare variables whose values are not known when the query is compiled and optimized.
 
 This article illustrates how you can assess and choose the best cardinality estimation (CE) configuration for your SQL system. Most systems benefit from the latest CE because it is the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the Query Optimizer to generate the optimal query plan. With more accurate estimations, the Query Optimizer can usually do a better job of producing a more optimal query plan.  
   

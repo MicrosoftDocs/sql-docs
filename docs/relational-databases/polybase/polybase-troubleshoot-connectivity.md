@@ -63,7 +63,7 @@ These files are located under:
 
 For example, the default for SQL Server 2016 is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Update **core-site.xml**, add the three properties below. Set the values according to the environment:
+Update **core-site.xml**, add the three properties below. Set the values according to the environment:
 
 ```xml
 <property>

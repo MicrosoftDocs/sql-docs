@@ -1,5 +1,5 @@
-- name: SQL Server root Table of Contents +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: SQL Server root Table of Contents ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 
 - name: SQL Server Integration Services
   href: ../integration-services/sql-server-integration-services.md

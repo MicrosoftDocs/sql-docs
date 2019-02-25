@@ -15,9 +15,6 @@ ms.technology: ssms
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to do the following:
 
 > [!div class="checklist"]	

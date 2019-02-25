@@ -4879,6 +4879,16 @@
   items:
   - name: Microsoft OLE DB Driver for SQL Server
     href: ../connect/oledb/oledb-driver-for-sql-server.md
+  - name: Release notes for the Microsoft OLE DB Driver for SQL Server
+    href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
+  - name: Download Microsoft OLE DB Driver for SQL Server
+    href: ../connect/oledb/download-oledb-driver-for-sql-server.md
+  - name: System requirements for OLE DB Driver for SQL Server
+    href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
+  - name: When to use OLE DB Driver for SQL Server
+    href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
+  - name: Finding more OLE DB Driver for SQL Server information
+    href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
   - name: Features
     href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
     items:
@@ -5250,16 +5260,6 @@
         href: ../connect/oledb/ole-db/stored-procedures-running.md
       - name: Stored Procedures
         href: ../connect/oledb/ole-db/stored-procedures.md
-  - name: Release notes for the Microsoft OLE DB Driver for SQL Server
-    href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-  - name: Download Microsoft OLE DB Driver for SQL Server
-    href: ../connect/oledb/download-oledb-driver-for-sql-server.md
-  - name: Finding more OLE DB Driver for SQL Server information
-    href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
-  - name: System requirements for OLE DB Driver for SQL Server
-    href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
-  - name: When to use OLE DB Driver for SQL Server
-    href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
   - name: Help topics
     items:
         - name: SQL Server Login Dialog

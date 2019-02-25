@@ -4879,11 +4879,11 @@
   items:
   - name: Microsoft OLE DB Driver for SQL Server
     href: ../connect/oledb/oledb-driver-for-sql-server.md
-  - name: Release notes for the Microsoft OLE DB Driver for SQL Server
+  - name: Release notes
     href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
   - name: Download Microsoft OLE DB Driver for SQL Server
     href: ../connect/oledb/download-oledb-driver-for-sql-server.md
-  - name: System requirements for OLE DB Driver for SQL Server
+  - name: System requirements
     href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
   - name: When to use OLE DB Driver for SQL Server
     href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md

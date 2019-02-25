@@ -4221,7 +4221,7 @@
         href: ../sql-server/install/uninstall-reporting-services.md
 - name: Load & migrate data
   items:
-    - name: SQL Server Integration Services ++
+    - name: SQL Server Integration Services (SSIS) ++
       href: ../integration-services/index.md
     - name: Replication
       items:

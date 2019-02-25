@@ -5013,13 +5013,13 @@
                   href: ../connect/oledb/ole-db-rowsets/bookmarks.md
                 - name: Creating a Rowset with IOpenRowset
                   href: ../connect/oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md
-                - name: "Creating Rowsets with ICommand::Execute"
+                - name: Creating Rowsets with ICommand::Execute
                   href: ../connect/oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md
                 - name: Fetching a Single Row with IRow
                   href: ../connect/oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md
-                - name: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream"
+                - name: Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
                   href: ../connect/oledb/ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
-                - name: "Fetching BLOB Data Using IRow::Open and ISequentialStream"
+                - name: Fetching BLOB Data Using IRow::Open and ISequentialStream
                   href: ../connect/oledb/ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
                 - name: Fetching Rows - Next Fetch Position
                   href: ../connect/oledb/ole-db-rowsets/fetching-rows-next-fetch-position.md
@@ -5035,7 +5035,7 @@
                   href: ../connect/oledb/ole-db-rowsets/updating-data-in-rowsets.md
                 - name: Updating Data in SQL Server Cursors
                   href: ../connect/oledb/ole-db-rowsets/updating-data-in-sql-server-cursors.md
-                - name: "Using IRow::GetColumns"
+                - name: Using IRow::GetColumns
                   href: ../connect/oledb/ole-db-rowsets/using-irow-getcolumns.md
         - name: Blobs
           href: ../connect/oledb/ole-db-blobs/blobs-and-ole-objects.md
@@ -5137,25 +5137,25 @@
           items:
                 - name: IBCPSession
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-ole-db.md
-                - name: "IBCPSession::BCPColFmt"
+                - name: IBCPSession::BCPColFmt
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md
-                - name: "IBCPSession::BCPColumns"
+                - name: IBCPSession::BCPColumns
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md
-                - name: "IBCPSession::BCPControl"
+                - name: IBCPSession::BCPControl
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md
-                - name: "IBCPSession::BCPDone"
+                - name: IBCPSession::BCPDone
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md
-                - name: "IBCPSession::BCPExec"
+                - name: IBCPSession::BCPExec
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md
-                - name: "IBCPSession::BCPInit"
+                - name: IBCPSession::BCPInit
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md
-                - name: "IBCPSession::BCPReadFmt"
+                - name: IBCPSession::BCPReadFmt
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md
-                - name: "IBCPSession::BCPWriteFmt"
+                - name: IBCPSession::BCPWriteFmt
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md
                 - name: IBCPSession2
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession2-ole-db.md
-                - name: "IBCPSession2::BCPSetBulkMode"
+                - name: IBCPSession2::BCPSetBulkMode
                   href: ../connect/oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md
                 - name: IColumnsRowset
                   href: ../connect/oledb/ole-db-interfaces/icolumnsrowset.md
@@ -5167,27 +5167,27 @@
                   href: ../connect/oledb/ole-db-interfaces/idbproperties-ole-db.md
                 - name: IRowsetFastLoad
                   href: ../connect/oledb/ole-db-interfaces/irowsetfastload-ole-db.md
-                - name: "IRowsetFastLoad::Commit"
+                - name: IRowsetFastLoad::Commit
                   href: ../connect/oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md
-                - name: "IRowsetFastLoad::InsertRow"
+                - name: IRowsetFastLoad::InsertRow
                   href: ../connect/oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md
-                - name: "ISQLServerErrorInfo::GetErrorInfo"
+                - name: ISQLServerErrorInfo::GetErrorInfo
                   href: ../connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md
-                - name: "ISSAbort::Abort"
+                - name: ISSAbort::Abort
                   href: ../connect/oledb/ole-db-interfaces/issabort-abort-ole-db.md
                 - name: ISSAsynchStatus
                   href: ../connect/oledb/ole-db-interfaces/issasynchstatus-ole-db.md
-                - name: "ISSAsynchStatus::Abort"
+                - name: ISSAsynchStatus::Abort
                   href: ../connect/oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md
-                - name: "ISSAsynchStatus::GetStatus"
+                - name: ISSAsynchStatus::GetStatus
                   href: ../connect/oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md
-                - name: "ISSAsynchStatus::WaitForAsynchCompletion"
+                - name: ISSAsynchStatus::WaitForAsynchCompletion
                   href: ../connect/oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md
                 - name: ISSCommandWithParameters
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md
-                - name: "ISSCommandWithParameters::GetParameterProperties"
+                - name: ISSCommandWithParameters::GetParameterProperties
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
-                - name: "ISSCommandWithParameters::SetParameterProperties"
+                - name: ISSCommandWithParameters::SetParameterProperties
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
         - name: How to
           href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
@@ -5222,9 +5222,9 @@
                   href: ../connect/oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md
                 - name: Enumerate OLE DB Data Sources
                   href: ../connect/oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md
-                - name: "Fetch Columns Using IRow::GetColumns"
+                - name: Fetch Columns Using IRow::GetColumns
                   href: ../connect/oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md
-                - name: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
+                - name: Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
                   href: ../connect/oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md
                 - name: Integrated Kerberos Authentication
                   href: ../connect/oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md

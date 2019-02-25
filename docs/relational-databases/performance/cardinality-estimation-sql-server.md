@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Cardinality Estimation (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-The Query Optimizer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a cost-based optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
 
 - The total number of rows processed at each level of a query plan, referred to as the cardinality of the plan.
 - The cost model of the algorithm dictated by the operators used in the query.

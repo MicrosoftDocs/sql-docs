@@ -1,5 +1,6 @@
 - name: Welcome
-  href: ../sql-server/sql-server-technical-documentation.md
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+
 - name: Overview
   items:
   - name: What's new
@@ -14,6 +15,8 @@
         href: ../sql-server/what-s-new-in-sql-server-2016.md
       - name: Database engine in SQL Server 2016
         href: ../database-engine/whats-new-in-sql-server-2016.md
+  - name: Database engine overview
+    href: ../database-engine/sql-server-database-engine-overview.md
   - name: SQL Server 2017 editions & features
     href: ../sql-server/editions-and-components-of-sql-server-2017.md
   - name: SQL Server 2016 editions & features
@@ -31,7 +34,7 @@
   - name: SQL Server 2019 
     href: ../sql-server/sql-server-ver15-release-notes.md
   - name: SQL Server 2017 
-    href: ../sql-server/sql-server-2017-release-notes.md
+    href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
   - name: SQL Server 2016 
     href: ../sql-server/sql-server-2016-release-notes.md
   - name: SQL Server 2014 
@@ -1051,7 +1054,6 @@
             - name: Compare Options for Storing Blobs
               href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
         - name: Filestream
-          href: 
           items:
           - name: Enable and Configure FILESTREAM
             href: ../relational-databases/blob/enable-and-configure-filestream.md
@@ -1080,7 +1082,6 @@
           - name: FILESTREAM DDL, Functions, Stored Procedures, and Views
             href: ../relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
         - name: FileTables
-          href: 
           items:
           - name: Enable the Prerequisites for FileTable
             href: ../relational-databases/blob/enable-the-prerequisites-for-filetable.md
@@ -1744,8 +1745,8 @@
             href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Development
   items:
-    - name: Programming to interact with SQL Server +
-      href: ../connect/homepage-sql-connection-programming.md
+    - name: Programming to interact with SQL Server ++
+      href: ../connect/index.md
     - name: Data tier applications
       items:
       - name: Overview
@@ -2091,6 +2092,8 @@
               href: ../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md
             - name: SQL Server Express LocalDB Header and Version Information
               href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md
+            - name: LocalDB API sample
+              href: ../relational-databases/sql-server-express-localdb-reference.md  
             - name: LocalDB Functions
               items:
                 - name: LocalDBCreateInstance 
@@ -3125,6 +3128,12 @@
               href: ../relational-databases/server-management-objects-smo/tasks/using-user-defined-tables.md
             - name: Using XML Schemas
               href: ../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md
+    - name: Visual Studio native helpers
+      items:
+        - name: SqlToolsVSNativeHelpers
+          href: ../relational-databases/sqltoolsvsnativehelpers.md
+        - name: FrameWindowVisible
+          href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
     - name: SQLXML
       items:
         - name: Requirements for Running SQLXML Examples
@@ -3414,7 +3423,6 @@
               - name: SqlErrorLogFile Class
                 href: ../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md
               - name: ClientNetLibInfo Class
-                href: 
                 items:
                   - name: Overview
                     href: ../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md
@@ -3879,7 +3887,6 @@
     - name: Install SQL Server BI Features
       href: ../sql-server/install/install-sql-server-business-intelligence-features.md
   - name: Upgrade SQL Server
-    href: 
     items:
     - name: Supported Version and Edition Upgrades SQL Server 2017
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
@@ -4224,8 +4231,8 @@
         href: ../sql-server/install/uninstall-reporting-services.md
 - name: Load & migrate data
   items:
-    - name: SQL Server Integration Services +
-      href: ../integration-services/sql-server-integration-services.md
+    - name: SQL Server Integration Services (SSIS) ++
+      href: ../integration-services/index.md
     - name: Replication
       items:
         - name:  Overview
@@ -5125,8 +5132,9 @@
     - name: Bulk Copy Utility (bcp)
       href: ../tools/bcp-utility.md
     - name: Azure Migration Services +
-      href: https://docs.microsoft.com/en-us/azure/dms/dms-overview
-    - name: Stretch database 
+      href: /azure/dms/dms-overview
+      displayName: DMS, Data Migration Service
+    - name: Stretch database
       items:
         - name: Overview
           href: ../sql-server/stretch-database/stretch-database.md
@@ -6353,7 +6361,6 @@
         - name: Live query stats
           href: ../relational-databases/performance/live-query-statistics.md
         - name: Activity Monitor
-          href: 
           items:
             - name: Overview
               href: ../relational-databases/performance-monitor/activity-monitor.md
@@ -7039,14 +7046,15 @@
         href: ../relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
-    - name: Advanced Analytics & Machine learning +
+    - name: Advanced Analytics & Machine learning ++
       href: ../advanced-analytics/index.md
-    - name: Analytics Platform System +
-      href: ../analytics-platform-system/whats-new-analytics-platform-system.md
-    - name: SQL Server Analysis Services (SSAS) +
-      href: ../analysis-services/analysis-services.md
-    - name: SQL Server Reporting Services (SSRS) +
-      href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+    - name: Analytics Platform System ++
+      href: ../analytics-platform-system/index.md
+      displayName: APS, PDW, Parallel Data Warehouse
+    - name: SQL Server Analysis Services (SSAS) ++
+      href: ../analysis-services/index.md
+    - name: SQL Server Reporting Services (SSRS) ++
+      href: ../reporting-services/index.md
     - name: Big data cluster
       items:
         - name: Overview
@@ -7112,9 +7120,9 @@
           - name: Data virtualization
             items:
             - name: Virtualize relational data
-              href: ../big-data-cluster/../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+              href: ../relational-databases/polybase/data-virtualization.md
             - name: Virtualize CSV data
-              href: ../big-data-cluster/../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+              href: ../relational-databases/polybase/data-virtualization-csv.md
           - name: Data ingestion
             items:
             - name: Load data with curl
@@ -7731,7 +7739,7 @@
             - name: Stack Overflow +
               href: https://stackoverflow.com/questions/tagged/sql-server
             - name: MSDN Forums +
-              href: https://social.msdn.microsoft.com/Forums/en-us/home?category=sqlserver
+              href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
             - name: Submit feedback +
               href: https://feedback.azure.com/forums/908035-sql-server
             - name: Reddit +
@@ -7821,11 +7829,11 @@
           - name: SQL Server connector with encryption
             href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
           - name: Bring your own key +
-            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
+            href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
           - name: Rotate TDE BYOK keys +
-            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-          - name: Remove TDE protector + 
-            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
+            href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
+          - name: Remove TDE protector +
+            href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
           - name: EKM using Azure Key Vault
             href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
       - name: Auditing
@@ -7901,10 +7909,10 @@
             - name: Transparent Data Encryption (TDE)
               href: ../relational-databases/security/encryption/transparent-data-encryption.md
             - name: TDE with Azure SQL Database +
-              href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql
+              href: /azure/sql-database/transparent-data-encryption-azure-sql
               items:
               - name: Bring your own key +
-                href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql
+                href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
             - name: Encryption keys
               href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
@@ -8132,7 +8140,6 @@
             - name: Workload Element (DTA)
               href: ../tools/dta/workload-element-dta.md
         - name: "Tutorial: Database Engine Tuning Advisor"
-          href: 
           items:
             - name: Overview
               href: ../tools/dta/tutorial-database-engine-tuning-advisor.md               
@@ -10052,24 +10059,24 @@
       - name: DBA Stack Exchange +
         href: https://dba.stackexchange.com/questions/tagged/sql-server
       - name: Stack Overflow +
-        href: https://stackoverflow.com/questions/tagged/sql-server
+        href: https://stackoverflow.com/questions/tagged/sql-server  # Note: this S.O. https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
       - name: MSDN Forums +
-        href: https://social.msdn.microsoft.com/Forums/en-US/home
+        href: https://social.msdn.microsoft.com/Forums/home
       - name: Submit feedback +
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit +
-        href: https://www.reddit.com/r/SQLServer
+        href: https://www.reddit.com/r/SQLServer  # Note: this Reddit https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
 - name: SQL on Azure
   items:
-    - name: Azure SQL Database + 
-      href: https://docs.microsoft.com/en-us/azure/sql-database/
+    - name: Azure SQL Database +
+      href: /azure/sql-database/
     - name: Azure SQL Data Warehouse +
-      href: https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - name: SQL Server on an Azure VM + 
-      href: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+      href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
+    - name: SQL Server on an Azure VM +
+      href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Resources
   items:
-  - name: Blogs
+  - name: Blogs  # TODO: Blog websites on MSDN and TechNet are being retired in 2019.
     items:
     - name: SQL Server +
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
@@ -10082,7 +10089,7 @@
   - name: Learn
     items:
     - name: Microsoft Virtual Academy +
-      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+      href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
     - name: SQL on Channel 9 +
       href: https://channel9.msdn.com/Search
   - name: Feedback and help
@@ -10100,7 +10107,7 @@
     - name: Stack Overflow +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN Forums +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit +
       href: https://www.reddit.com/r/SQLServer
   - name: Partners

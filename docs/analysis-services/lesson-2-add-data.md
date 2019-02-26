@@ -15,7 +15,7 @@ manager: kfile
 
 In this lesson, you'll use the Table Import Wizard in SSDT to connect to the AdventureWorksDW SQL sample database, select data, preview and filter the data, and then import the data into your model workspace.  
   
-By using the Table Import Wizard, you can import data from a variety of relational sources: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata, and more. The steps for importing data from each of these relational sources are very similar to what is described below. Data can also be selected using a stored procedure. To learn more about importing data and the different types of data sources you can import from, see [Data Sources](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+By using the Table Import Wizard, you can import data from a variety of relational sources: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata, and more. The steps for importing data from each of these relational sources are very similar to what is described below. Data can also be selected using a stored procedure. To learn more about importing data and the different types of data sources you can import from, see [Data Sources](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 Estimated time to complete this lesson: **20 minutes**  
   

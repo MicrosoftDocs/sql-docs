@@ -29,7 +29,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
 
 - [Big data clusters](#bigdatacluster)
   - Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ
-  - Aplication deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more
+  - Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more
   - Use Sparklyr in SQL Server 2019 big data clusters
 
 - [Database engine](#databaseengine)

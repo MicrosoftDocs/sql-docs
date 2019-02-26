@@ -13,7 +13,7 @@ manager: kfile
 # Monitoring overview
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Analysis Services has several different tools to help you monitor and and tune the performance of your servers. The choice of tool depends on the type of monitoring or tuning to be done and the particular events to be monitored.
+Analysis Services has several different tools to help you monitor and tune the performance of your servers. The choice of tool depends on the type of monitoring or tuning to be done and the particular events to be monitored.
 
 For more information about monitoring SQL Server Analysis Services, see the [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
   

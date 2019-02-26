@@ -37,7 +37,7 @@ manager: craigg
   
 9. In the **Property Expressions Editor**, click in the **Property** list, and select `Directory`.  
   
-10. In the **Expression** box, click the ellipsis button**(...)**.  
+10. In the **Expression** box, click the ellipsis button **(...)**.  
   
 11. In the **Expression Builder**, expand the Variables folder, and drag the variable **User::varFolderName** to the **Expression** box.  
   
@@ -81,7 +81,7 @@ manager: craigg
   
 16. Click **Close**.  
   
-17. The wizard creates a configuration file, named SSISTutorial.dtsConfig, that contains configuration settings for the v`alue` of the variable that in turn sets the `Directory` property of the enumerator.  
+17. The wizard creates a configuration file, named SSISTutorial.dtsConfig, that contains configuration settings for the `value` of the variable that in turn sets the `Directory` property of the enumerator.  
   
     > [!NOTE]  
     >  A configuration file typically contains complex information about the package properties, but for this tutorial the only configuration information should be  

@@ -8,8 +8,8 @@ ms.technology: report-builder
 
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Saving Reports (Report Builder)
   In Report Builder you can save a paginated report to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report server, SharePoint library, file share where you have write permission, or your computer. 

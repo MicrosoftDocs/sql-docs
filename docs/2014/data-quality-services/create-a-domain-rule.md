@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dqs.dm.rules.f1"
   - "sql12.dqs.dm.testdomainrule.f1"
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Domain Rule

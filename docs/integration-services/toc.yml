@@ -1,332 +1,1795 @@
+- name: SQL Server root Table of Contents ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+
 - name: SQL Server Integration Services
-  href: sql-server-integration-services.md
+  href: ../integration-services/sql-server-integration-services.md
 - name: Overview
   items:
   - name: What's New in Integration Services in SQL Server 2016
-    href: what-s-new-in-integration-services-in-sql-server-2016.md
+    href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md
   - name: What's New in Integration Services in SQL Server 2017
-    href: what-s-new-in-integration-services-in-sql-server-2017.md
+    href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md
   - name: Integration Services Features Supported by the Editions of SQL Server
-    href: integration-services-features-supported-by-the-editions-of-sql-server.md
+    href: ../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md
   - name: Integration Services Developer Documentation
-    href: integration-services-developer-documentation.md
+    href: ../integration-services/integration-services-developer-documentation.md
   - name: Integration Services Backward Compatibility
-    href: integration-services-backward-compatibility.md
+    href: ../integration-services/integration-services-backward-compatibility.md
 - name: Quickstarts
   items:
   - name: Deploy
     items:
     - name: Deploy with SSMS
-      href: ./ssis-quickstart-deploy-ssms.md
+      href: ../integration-services/ssis-quickstart-deploy-ssms.md
     - name: Deploy with Transact-SQL (SSMS)
-      href: ./ssis-quickstart-deploy-tsql-ssms.md
+      href: ../integration-services/ssis-quickstart-deploy-tsql-ssms.md
     - name: Deploy with Transact-SQL (VS Code)
-      href: ssis-quickstart-deploy-tsql-vscode.md
+      href: ../integration-services/ssis-quickstart-deploy-tsql-vscode.md
     - name: Deploy from the command prompt
-      href: ./ssis-quickstart-deploy-cmdline.md
+      href: ../integration-services/ssis-quickstart-deploy-cmdline.md
     - name: Deploy with PowerShell
-      href: ssis-quickstart-deploy-powershell.md
+      href: ../integration-services/ssis-quickstart-deploy-powershell.md
     - name: Deploy with C#
-      href: ./ssis-quickstart-deploy-dotnet.md
+      href: ../integration-services/ssis-quickstart-deploy-dotnet.md
   - name: Run
     items:
     - name: Run with SSMS
-      href: ./ssis-quickstart-run-ssms.md
+      href: ../integration-services/ssis-quickstart-run-ssms.md
     - name: Run with Transact-SQL (SSMS)
-      href: ./ssis-quickstart-run-tsql-ssms.md
+      href: ../integration-services/ssis-quickstart-run-tsql-ssms.md
     - name: Run with Transact-SQL (VS Code)
-      href: ssis-quickstart-run-tsql-vscode.md
+      href: ../integration-services/ssis-quickstart-run-tsql-vscode.md
     - name: Run from the command prompt
-      href: ./ssis-quickstart-run-cmdline.md
+      href: ../integration-services/ssis-quickstart-run-cmdline.md
     - name: Run with PowerShell
-      href: ssis-quickstart-run-powershell.md
+      href: ../integration-services/ssis-quickstart-run-powershell.md
     - name: Run with C#
-      href: ./ssis-quickstart-run-dotnet.md
+      href: ../integration-services/ssis-quickstart-run-dotnet.md
 - name: Deploy and run packages in Azure
-  href: lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
+  href: ../integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
   items:
   - name: Tutorial - Deploy and run a package in Azure
-    href: lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
+    href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
   - name: Connect to data with Windows Authentication
-    href: lift-shift/ssis-azure-connect-with-windows-auth.md
+    href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
   - name: Save files and connect to file shares
-    href: lift-shift/ssis-azure-files-file-shares.md
+    href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
   - name: Connect to the SSIS Catalog in Azure
-    href: lift-shift/ssis-azure-connect-to-catalog-database.md
+    href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
   - name: Validate packages deployed to Azure
-    href: lift-shift/ssis-azure-validate-packages.md
+    href: ../integration-services/lift-shift/ssis-azure-validate-packages.md
   - name: Run packages in Azure
-    href: lift-shift/ssis-azure-run-packages.md
+    href: ../integration-services/lift-shift/ssis-azure-run-packages.md
   - name: Schedule packages in Azure
-    href: lift-shift/ssis-azure-schedule-packages.md
+    href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
   - name: Schedule packages in Azure with SSMS
-    href: lift-shift/ssis-azure-schedule-packages-ssms.md
-- name: Install or upgrade
+    href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+- name: Install Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
+- name: Installing Integration Services Versions Side by Side
+  href: ../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
+- name: Upgrade Integration Services
+  href: ../integration-services/install-windows/upgrade-integration-services.md
+  items:
+  - name: Upgrade Integration Services Packages
+    href: ../integration-services/install-windows/upgrade-integration-services-packages.md
+  - name: Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard
+    href: ../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md
 - name: Development and management Tools
-  href: integration-services-ssis-development-and-management-tools.md
+  href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: Projects and solutions
-  href: integration-services-ssis-projects-and-solutions.md
+  href: ../integration-services/integration-services-ssis-projects-and-solutions.md
 - name: User interface
-  href: integration-services-user-interface.md
+  href: ../integration-services/integration-services-user-interface.md
   items:
   - name: SSIS Designer
-    href: ssis-designer.md
+    href: ../integration-services/ssis-designer.md
   - name: Advanced Editor
-    href: advanced-editor.md
+    href: ../integration-services/advanced-editor.md
   - name: Group or Ungroup Components
-    href: group-or-ungroup-components.md
+    href: ../integration-services/group-or-ungroup-components.md
   - name: Use Annotations in Packages
-    href: use-annotations-in-packages.md
+    href: ../integration-services/use-annotations-in-packages.md
   - name: SSIS Toolbox
-    href: ssis-toolbox.md
+    href: ../integration-services/ssis-toolbox.md
   - name: General Page of Integration Services Designers Options
-    href: general-page-of-integration-services-designers-options.md
+    href: ../integration-services/general-page-of-integration-services-designers-options.md
 - name: Packages
-  href: integration-services-ssis-packages.md
+  href: ../integration-services/integration-services-ssis-packages.md
   items:
   - name: Create Packages in SQL Server Data Tools
-    href: create-packages-in-sql-server-data-tools.md
+    href: ../integration-services/create-packages-in-sql-server-data-tools.md
   - name: Add Copy of Existing Package
-    href: add-copy-of-existing-package.md
+    href: ../integration-services/add-copy-of-existing-package.md
   - name: Set Package Properties
-    href: set-package-properties.md
+    href: ../integration-services/set-package-properties.md
   - name: View Package Objects
-    href: view-package-objects.md
+    href: ../integration-services/view-package-objects.md
   - name: Copy a Package in SQL Server Data Tools
-    href: copy-a-package-in-sql-server-data-tools.md
+    href: ../integration-services/copy-a-package-in-sql-server-data-tools.md
   - name: Copy Package Objects
-    href: copy-package-objects.md
+    href: ../integration-services/copy-package-objects.md
   - name: Save Packages
-    href: save-packages.md
+    href: ../integration-services/save-packages.md
   - name: Reuse Control Flow across Packages by Using Control Flow Package Parts
-    href: reuse-control-flow-across-packages-by-using-control-flow-package-parts.md
+    href: ../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md
   - name: Reuse of Package Objects
-    href: reuse-of-package-objects.md
+    href: ../integration-services/reuse-of-package-objects.md
   - name: Delete Packages
-    href: delete-packages.md
+    href: ../integration-services/delete-packages.md
   - name: dtutil Utility
-    href: dtutil-utility.md
+    href: ../integration-services/dtutil-utility.md
   - name: Package Upgrade Wizard F1 Help
-    href: ssis-package-upgrade-wizard-f1-help.md
+    href: ../integration-services/ssis-package-upgrade-wizard-f1-help.md
   - name: Package and Project Parameters
-    href: integration-services-ssis-package-and-project-parameters.md
-- name: Connections
+    href: ../integration-services/integration-services-ssis-package-and-project-parameters.md
+- name: Overview
   href: ../integration-services/connection-manager/integration-services-ssis-connections.md
-- name: Control flow
+- name: Data Sources
+  href: ../integration-services/connection-manager/data-sources.md
+- name: ADO Connection Manager
+  href: ../integration-services/connection-manager/ado-connection-manager.md
+- name: ADO.NET Connection Manager
+  href: ../integration-services/connection-manager/ado-net-connection-manager.md
+- name: Analysis Services Connection Manager
+  href: ../integration-services/connection-manager/analysis-services-connection-manager.md
+  items:
+  - name: Add Analysis Services Connection Manager Dialog Box UI Reference
+    href: ../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: Azure Data Lake Analytics Connection Manager
+  href: ../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md
+- name: Azure Data Lake Store Connection Manager
+  href: ../integration-services/connection-manager/azure-data-lake-store-connection-manager.md
+- name: Azure HDInsight Connection Manager
+  href: ../integration-services/connection-manager/azure-hdinsight-connection-manager.md
+- name: Azure Resource Manager Connection Manager
+  href: ../integration-services/connection-manager/azure-resource-manager-connection-manager.md
+- name: Azure Storage Connection Manager
+  href: ../integration-services/connection-manager/azure-storage-connection-manager.md
+- name: Azure Subscription Connection Manager
+  href: ../integration-services/connection-manager/azure-subscription-connection-manager.md
+- name: Excel Connection Manager
+  href: ../integration-services/connection-manager/excel-connection-manager.md
+- name: File Connection Manager
+  href: ../integration-services/connection-manager/file-connection-manager.md
+  items:
+  - name: Add File Connection Manager Dialog Box UI Reference
+    href: ../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
+  - name: Suggest Column Types Dialog Box UI Reference
+    href: ../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md
+- name: Flat File Connection Manager
+  href: ../integration-services/connection-manager/flat-file-connection-manager.md
+- name: FTP Connection Manager
+  href: ../integration-services/connection-manager/ftp-connection-manager.md
+- name: Hadoop Connection Manager
+  href: ../integration-services/connection-manager/hadoop-connection-manager.md
+- name: HTTP Connection Manager
+  href: ../integration-services/connection-manager/http-connection-manager.md
+- name: MSMQ Connection Manager
+  href: ../integration-services/connection-manager/msmq-connection-manager.md
+- name: Multiple Files Connection Manager
+  href: ../integration-services/connection-manager/multiple-files-connection-manager.md
+- name: Multiple Flat Files Connection Manager
+  href: ../integration-services/connection-manager/multiple-flat-files-connection-manager.md
+- name: OData Connection Manager
+  href: ../integration-services/connection-manager/odata-connection-manager.md
+- name: ODBC Connection Manager
+  href: ../integration-services/connection-manager/odbc-connection-manager.md
+- name: OLE DB Connection Manager
+  href: ../integration-services/connection-manager/ole-db-connection-manager.md
+- name: SAP BW Connection Manager
+  href: ../integration-services/connection-manager/sap-bw-connection-manager.md
+- name: SMTP Connection Manager
+  href: ../integration-services/connection-manager/smtp-connection-manager.md
+- name: SMO Connection Manager
+  href: ../integration-services/connection-manager/smo-connection-manager.md
+- name: SQL Server Compact Edition Connection Manager
+  href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
+- name: WMI Connection Manager
+  href: ../integration-services/connection-manager/wmi-connection-manager.md
+- name: Overview
   href: ../integration-services/control-flow/control-flow.md
-- name: Data flow
+- name: Add or Delete a Task or a Container in a Control Flow
+  href: ../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md
+- name: Integration Services Containers
+  href: ../integration-services/control-flow/integration-services-containers.md
+  items:
+  - name: Foreach Loop Container
+    href: ../integration-services/control-flow/foreach-loop-container.md
+  - name: Loop through Excel Files and Tables by Using a Foreach Loop Container
+    href: ../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+  - name: For Loop Container
+    href: ../integration-services/control-flow/for-loop-container.md
+  - name: Sequence Container
+    href: ../integration-services/control-flow/sequence-container.md
+  - name: Task Host Container
+    href: ../integration-services/control-flow/task-host-container.md
+- name: Integration Services Tasks
+  href: ../integration-services/control-flow/integration-services-tasks.md
+  items:
+  - name: Analysis Services Execute DDL Task
+    href: ../integration-services/control-flow/analysis-services-execute-ddl-task.md
+  - name: Analysis Services Processing Task
+    href: ../integration-services/control-flow/analysis-services-processing-task.md
+  - name: Azure Blob Download Task
+    href: ../integration-services/control-flow/azure-blob-download-task.md
+  - name: Azure Blob Upload Task
+    href: ../integration-services/control-flow/azure-blob-upload-task.md
+  - name: Azure Data Lake Analytics Task
+    href: ../integration-services/control-flow/azure-data-lake-analytics-task.md
+  - name: Azure Data Lake Store File System Task
+    href: ../integration-services/control-flow/azure-data-lake-store-file-system-task.md
+  - name: Azure HDInsight Create Cluster Task
+    href: ../integration-services/control-flow/azure-hdinsight-create-cluster-task.md
+  - name: Azure HDInsight Delete Cluster Task
+    href: ../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md
+  - name: Azure HDInsight Hive Task
+    href: ../integration-services/control-flow/azure-hdinsight-hive-task.md
+  - name: Azure HDInsight Pig Task
+    href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
+  - name: Azure SQL DW Upload Task
+    href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+  - name: Back Up Database Task
+    href: ../integration-services/control-flow/back-up-database-task.md
+  - name: Bulk Insert Task
+    href: ../integration-services/control-flow/bulk-insert-task.md
+  - name: CDC Control Task
+    href: ../integration-services/control-flow/cdc-control-task.md
+    items:
+    - name: CDC Control Task Custom Properties
+      href: ../integration-services/control-flow/cdc-control-task-custom-properties.md
+  - name: Check Database Integrity Task
+    href: ../integration-services/control-flow/check-database-integrity-task.md
+  - name: Data Flow Task
+    href: ../integration-services/control-flow/data-flow-task.md
+  - name: Data Mining Query Task
+    href: ../integration-services/control-flow/data-mining-query-task.md
+    items:
+    - name: Data Mining Query
+      href: ../integration-services/control-flow/data-mining-query.md
+  - name: Data Profiling Task and Viewer
+    href: ../integration-services/control-flow/data-profiling-task-and-viewer.md
+    items:
+    - name: Setup of the Data Profiling Task
+      href: ../integration-services/control-flow/setup-of-the-data-profiling-task.md
+    - name: Data Profile Viewer
+      href: ../integration-services/control-flow/data-profile-viewer.md
+    - name: Data Profiling Task
+      href: ../integration-services/control-flow/data-profiling-task.md
+      items:
+      - name: Single Table Quick Profile Form (Data Profiling Task)
+        href: ../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md
+      - name: Data Profiling Task Editor (Profile Requests Page)
+        href: ../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md
+        items:
+        - name: Candidate Key Profile Request Options (Data Profiling Task)
+          href: ../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md
+        - name: Column Length Distribution Profile Request Options (Data Profiling Task)
+          href: ../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md
+        - name: Column Null Ratio Profile Request Options (Data Profiling Task)
+          href: ../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md
+        - name: Column Pattern Profile Request Options (Data Profiling Task)
+          href: ../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md
+        - name: Column Statistics Profile Request Options (Data Profiling Task)
+          href: ../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md
+        - name: Column Value Distribution Profile Request Options (Data Profiling Task)
+          href: ../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md
+        - name: Functional Dependency Profile Request Options (Data Profiling Task)
+          href: ../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md
+        - name: Value Inclusion Profile Request Options (Data Profiling Task)
+          href: ../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md
+      - name: Data Profiling Task Editor (General Page)
+        href: ../integration-services/control-flow/data-profiling-task-editor-general-page.md
+      - name: Incorporate a Data Profiling Task in Package Workflow
+        href: ../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md
+  - name: Execute Package Task
+    href: ../integration-services/control-flow/execute-package-task.md
+  - name: Execute Process Task
+    href: ../integration-services/control-flow/execute-process-task.md
+  - name: Execute SQL Server Agent Job Task
+    href: ../integration-services/control-flow/execute-sql-server-agent-job-task.md
+  - name: Execute SQL Task
+    href: ../integration-services/control-flow/execute-sql-task.md
+    items:
+    - name: MERGE in Integration Services Packages
+      href: ../integration-services/control-flow/merge-in-integration-services-packages.md
+  - name: Execute T-SQL Statement Task
+    href: ../integration-services/control-flow/execute-t-sql-statement-task.md
+  - name: Expression Task
+    href: ../integration-services/control-flow/expression-task.md
+  - name: File System Task
+    href: ../integration-services/control-flow/file-system-task.md
+  - name: FTP Task
+    href: ../integration-services/control-flow/ftp-task.md
+  - name: Hadoop File System Task
+    href: ../integration-services/control-flow/hadoop-file-system-task.md
+  - name: Hadoop Hive Task
+    href: ../integration-services/control-flow/hadoop-hive-task.md
+  - name: Hadoop Pig Task
+    href: ../integration-services/control-flow/hadoop-pig-task.md
+  - name: History Cleanup Task
+    href: ../integration-services/control-flow/history-cleanup-task.md
+  - name: Maintenance Cleanup Task
+    href: ../integration-services/control-flow/maintenance-cleanup-task.md
+  - name: Message Queue Task
+    href: ../integration-services/control-flow/message-queue-task.md
+    items:
+    - name: Select Variables
+      href: ../integration-services/control-flow/select-variables.md
+    - name: Select a Package
+      href: ../integration-services/control-flow/select-a-package.md
+  - name: Notify Operator Task
+    href: ../integration-services/control-flow/notify-operator-task.md
+  - name: Rebuild Index Task
+    href: ../integration-services/control-flow/rebuild-index-task.md
+  - name: Reorganize Index Task
+    href: ../integration-services/control-flow/reorganize-index-task.md
+  - name: Script Task
+    href: ../integration-services/control-flow/script-task.md
+    items:
+    - name: Select Variables Page
+      href: ../integration-services/control-flow/select-variables-page.md
+  - name: Send Mail Task
+    href: ../integration-services/control-flow/send-mail-task.md
+  - name: Shrink Database Task
+    href: ../integration-services/control-flow/shrink-database-task.md
+  - name: Transfer Database Task
+    href: ../integration-services/control-flow/transfer-database-task.md
+  - name: Transfer Error Messages Task
+    href: ../integration-services/control-flow/transfer-error-messages-task.md
+  - name: Transfer Jobs Task
+    href: ../integration-services/control-flow/transfer-jobs-task.md
+  - name: Transfer Logins Task
+    href: ../integration-services/control-flow/transfer-logins-task.md
+  - name: Transfer Master Stored Procedures Task
+    href: ../integration-services/control-flow/transfer-master-stored-procedures-task.md
+  - name: Transfer SQL Server Objects Task
+    href: ../integration-services/control-flow/transfer-sql-server-objects-task.md
+  - name: Select Objects to Transfer
+    href: ../integration-services/control-flow/select-objects-to-transfer.md
+  - name: Update Statistics Task
+    href: ../integration-services/control-flow/update-statistics-task.md
+  - name: Web Service Task
+    href: ../integration-services/control-flow/web-service-task.md
+  - name: WMI Data Reader Task
+    href: ../integration-services/control-flow/wmi-data-reader-task.md
+  - name: WMI Event Watcher Task
+    href: ../integration-services/control-flow/wmi-event-watcher-task.md
+  - name: XML Task
+    href: ../integration-services/control-flow/xml-task.md
+    items:
+    - name: Validate XML with the XML Task
+      href: ../integration-services/control-flow/validate-xml-with-the-xml-task.md
+- name: Precedence Constraints
+  href: ../integration-services/control-flow/precedence-constraints.md
+- name: Overview
   href: ../integration-services/data-flow/data-flow.md
+- name: Data in Data Flows
+  href: ../integration-services/data-flow/data-in-data-flows.md
+  items:
+  - name: Integration Services Data Types
+    href: ../integration-services/data-flow/integration-services-data-types.md
+  - name: Parsing Data
+    href: ../integration-services/data-flow/parsing-data.md
+  - name: Comparing String Data
+    href: ../integration-services/data-flow/comparing-string-data.md
+- name: Add or Delete a Component in a Data Flow
+  href: ../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md
+- name: Set the Properties of a Data Flow Component
+  href: ../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md
+- name: Connect Components in a Data Flow
+  href: ../integration-services/data-flow/connect-components-in-a-data-flow.md
+- name: Integration Services Paths
+  href: ../integration-services/data-flow/integration-services-paths.md
+- name: Resolve Column Reference Editor
+  href: ../integration-services/data-flow/resolve-column-reference-editor.md
+- name: Data Viewer
+  href: ../integration-services/data-flow/data-viewer.md
+- name: Error Handling in Data
+  href: ../integration-services/data-flow/error-handling-in-data.md
+- name: Data Flow Performance Features
+  href: ../integration-services/data-flow/data-flow-performance-features.md
+- name: Source Assistant
+  href: ../integration-services/data-flow/source-assistant.md
+- name: Destination Assistant
+  href: ../integration-services/data-flow/destination-assistant.md
+- name: ADO NET Source
+  href: ../integration-services/data-flow/ado-net-source.md
+- name: ADO NET Destination
+  href: ../integration-services/data-flow/ado-net-destination.md
+- name: ADO NET Custom Properties
+  href: ../integration-services/data-flow/ado-net-custom-properties.md
+- name: Azure Blob Source
+  href: ../integration-services/data-flow/azure-blob-source.md
+- name: Azure Blob Destination
+  href: ../integration-services/data-flow/azure-blob-destination.md
+- name: Azure Data Lake Store Source
+  href: ../integration-services/data-flow/azure-data-lake-store-source.md
+- name: Azure Data Lake Store Destination
+  href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: CDC Flow Components
+  href: ../integration-services/data-flow/cdc-flow-components.md
+  items:
+  - name: CDC Source
+    href: ../integration-services/data-flow/cdc-source.md
+    items:
+    - name: CDC Source Custom Properties
+      href: ../integration-services/data-flow/cdc-source-custom-properties.md
+    - name: Extract Change Data Using the CDC Source
+      href: ../integration-services/data-flow/extract-change-data-using-the-cdc-source.md
+  - name: CDC Splitter
+    href: ../integration-services/data-flow/cdc-splitter.md
+  - name: Direct the CDC Stream According to the Type of Change
+    href: ../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md
+  - name: Define a State Variable
+    href: ../integration-services/data-flow/define-a-state-variable.md
+- name: Data Mining Model Training Destination
+  href: ../integration-services/data-flow/data-mining-model-training-destination.md
+  items:
+  - name: Data Mining Model Training Destination Custom Properties
+    href: ../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md
+- name: Data Streaming Destination
+  href: ../integration-services/data-flow/data-streaming-destination.md
+  items:
+  - name: "Walkthrough: Publish an SSIS Package as a SQL View"
+    href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
+- name: DataReader Destination
+  href: ../integration-services/data-flow/datareader-destination.md
+  items:
+  - name: DataReader Destination Custom Properties
+    href: ../integration-services/data-flow/datareader-destination-custom-properties.md
+- name: Dimension Processing Destination
+  href: ../integration-services/data-flow/dimension-processing-destination.md
+  items:
+  - name: Dimension Processing Destination Custom Properies
+    href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
+- name: Excel Source
+  href: ../integration-services/data-flow/excel-source.md
+- name: Excel Destination
+  href: ../integration-services/data-flow/excel-destination.md
+- name: Excel Custom Properties
+  href: ../integration-services/data-flow/excel-custom-properties.md
+- name: Flat File Source
+  href: ../integration-services/data-flow/flat-file-source.md
+- name: Flat File Destination
+  href: ../integration-services/data-flow/flat-file-destination.md
+- name: HDFS File Source
+  href: ../integration-services/data-flow/hdfs-file-source.md
+- name: HDFS File Destination
+  href: ../integration-services/data-flow/hdfs-file-destination.md
+- name: Flat File Custom Properties
+  href: ../integration-services/data-flow/flat-file-custom-properties.md
+- name: OData Source
+  href: ../integration-services/data-flow/odata-source.md
+  items:
+  - name: "Tutorial: Using the OData Source"
+    href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
+  - name: Provide an OData Source Query at Runtime
+    href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
+  - name: OData Source Properties
+    href: ../integration-services/data-flow/odata-source-properties.md
+- name: ODBC Flow Components
+  href: ../integration-services/data-flow/odbc-flow-components.md
+  items:
+  - name: ODBC Destination
+    href: ../integration-services/data-flow/odbc-destination.md
+    items:
+    - name: Load Data by Using the ODBC Destination
+      href: ../integration-services/data-flow/load-data-by-using-the-odbc-destination.md
+    - name: ODBC Destination Custom Properties
+      href: ../integration-services/data-flow/odbc-destination-custom-properties.md
+  - name: ODBC Source
+    href: ../integration-services/data-flow/odbc-source.md
+    items:
+    - name: Extract Data by Using the ODBC Source
+      href: ../integration-services/data-flow/extract-data-by-using-the-odbc-source.md
+    - name: ODBC Source Custom Properties
+      href: ../integration-services/data-flow/odbc-source-custom-properties.md
+- name: OLE DB Source
+  href: ../integration-services/data-flow/ole-db-source.md
+  items:
+  - name: Map Query Parameters to Variables in a Data Flow Component
+    href: ../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md
+  - name: Extract Data by Using the OLE DB Source
+    href: ../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md
+- name: OLE DB Destination
+  href: ../integration-services/data-flow/ole-db-destination.md
+  items:
+  - name: Load Data by Using the OLE DB Destination
+    href: ../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md
+- name: OLE DB Custom Properties
+  href: ../integration-services/data-flow/ole-db-custom-properties.md
+- name: Partition Processing Destination
+  href: ../integration-services/data-flow/partition-processing-destination.md
+  items:
+  - name: Partition Processing Destination Custom Properties
+    href: ../integration-services/data-flow/partition-processing-destination-custom-properties.md
+- name: Power Query Source
+  href: ../integration-services/data-flow/power-query-source.md
+- name: Raw File Source
+  href: ../integration-services/data-flow/raw-file-source.md
+- name: Raw File Destination
+  href: ../integration-services/data-flow/raw-file-destination.md
+- name: Raw File Custom Properties
+  href: ../integration-services/data-flow/raw-file-custom-properties.md
+- name: Recordset Destination
+  href: ../integration-services/data-flow/recordset-destination.md
+  items:
+  - name: Use a Recordset Destination
+    href: ../integration-services/data-flow/use-a-recordset-destination.md
+  - name: Recordset Destination Custom Properties
+    href: ../integration-services/data-flow/recordset-destination-custom-properties.md
+- name: SAP BW Source
+  href: ../integration-services/data-flow/sap-bw-source.md
+  items:
+  - name: SAP BW Source Editor (Connection Manager Page)
+    href: ../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md
+  - name: SAP BW Source Editor (Columns Page)
+    href: ../integration-services/data-flow/sap-bw-source-editor-columns-page.md
+  - name: SAP BW Source Editor (Error Output Page)
+    href: ../integration-services/data-flow/sap-bw-source-editor-error-output-page.md
+  - name: SAP BW Source Editor (Advanced Page)
+    href: ../integration-services/data-flow/sap-bw-source-editor-advanced-page.md
+  - name: Look Up RFC Destination
+    href: ../integration-services/data-flow/look-up-rfc-destination.md
+  - name: Look Up Process Chain
+    href: ../integration-services/data-flow/look-up-process-chain.md
+  - name: Request Log
+    href: ../integration-services/data-flow/request-log.md
+  - name: Preview
+    href: ../integration-services/data-flow/preview.md
+- name: SAP BW Destination
+  href: ../integration-services/data-flow/sap-bw-destination.md
+  items:
+  - name: SAP BW Destination Editor (Connection Manager Page)
+    href: ../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md
+  - name: SAP BW Destination Editor (Mappings Page)
+    href: ../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md
+  - name: SAP BW Destination Editor (Error Output Page)
+    href: ../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md
+  - name: SAP BW Destination Editor (Advanced Page)
+    href: ../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md
+  - name: Look Up InfoPackage
+    href: ../integration-services/data-flow/look-up-infopackage.md
+  - name: Create New InfoObject
+    href: ../integration-services/data-flow/create-new-infoobject.md
+  - name: Create InfoCube for Transaction Data
+    href: ../integration-services/data-flow/create-infocube-for-transaction-data.md
+  - name: Look Up InfoObject
+    href: ../integration-services/data-flow/look-up-infoobject.md
+  - name: Create InfoSource
+    href: ../integration-services/data-flow/create-infosource.md
+  - name: Create InfoSource for Transaction Data
+    href: ../integration-services/data-flow/create-infosource-for-transaction-data.md
+  - name: Create InfoSource for Master Data
+    href: ../integration-services/data-flow/create-infosource-for-master-data.md
+  - name: Create InfoPackage
+    href: ../integration-services/data-flow/create-infopackage.md
+- name: SQL Server Compact Edition Destination
+  href: ../integration-services/data-flow/sql-server-compact-edition-destination.md
+  items:
+  - name: SQL Server Compact Edition Destination Custom Properties
+    href: ../integration-services/data-flow/sql-server-compact-edition-destination-custom-properties.md
+- name: SQL Server Destination
+  href: ../integration-services/data-flow/sql-server-destination.md
+  items:
+  - name: Bulk Load Data by Using the SQL Server Destination
+    href: ../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md
+  - name: SQL Server Destination Custom Properties
+    href: ../integration-services/data-flow/sql-server-destination-custom-properties.md
+- name: Overview
+  href: ../integration-services/data-flow/transformations/integration-services-transformations.md
+- name: Aggregate Transformation
+  href: ../integration-services/data-flow/transformations/aggregate-transformation.md
+  items:
+  - name: Aggregate Values in a Dataset by Using the Aggregate Transformation
+    href: ../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: Audit Transformation
+  href: ../integration-services/data-flow/transformations/audit-transformation.md
+- name: Balanced Data Distributor Transformation
+  href: ../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md
+- name: Character Map Transformation
+  href: ../integration-services/data-flow/transformations/character-map-transformation.md
+- name: Conditional Split Transformation
+  href: ../integration-services/data-flow/transformations/conditional-split-transformation.md
+  items:
+  - name: Split a Dataset by Using the Conditional Split Transformation
+    href: ../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: Copy Column Transformation
+  href: ../integration-services/data-flow/transformations/copy-column-transformation.md
+- name: Data Conversion Transformation
+  href: ../integration-services/data-flow/transformations/data-conversion-transformation.md
+  items:
+  - name: Convert Data to a Different Data Type by Using the Data Conversion Transformation
+    href: ../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md
+- name: Data Mining Query Transformation
+  href: ../integration-services/data-flow/transformations/data-mining-query-transformation.md
+- name: DQS Cleansing Transformation
+  href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
+  items:
+  - name: DQS Cleansing Connection Manager
+    href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+  - name: Apply Data Quality Rules to Data Source
+    href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
+  - name: Map Columns to Composite Domains
+    href: ../integration-services/data-flow/transformations/map-columns-to-composite-domains.md
+- name: Derived Column Transformation
+  href: ../integration-services/data-flow/transformations/derived-column-transformation.md
+  items:
+  - name: Derive Column Values by Using the Derived Column Transformation
+    href: ../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md
+- name: Export Column Transformation
+  href: ../integration-services/data-flow/transformations/export-column-transformation.md
+- name: Fuzzy Grouping Transformation
+  href: ../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md
+  items:
+  - name: Identify Similar Data Rows by Using the Fuzzy Grouping Transformation
+    href: ../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: Fuzzy Lookup Transformation
+  href: ../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md
+- name: Import Column Transformation
+  href: ../integration-services/data-flow/transformations/import-column-transformation.md
+- name: Lookup Transformation
+  href: ../integration-services/data-flow/transformations/lookup-transformation.md
+  items:
+  - name: Implement a Lookup in No Cache or Partial Cache Mode
+    href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+  - name: Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager
+    href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+  - name: Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager
+    href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+  - name: Create and Deploy a Cache for the Lookup Transformation
+    href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
+  - name: Create Relationships
+    href: ../integration-services/data-flow/transformations/create-relationships.md
+  - name: Cache Transform
+    href: ../integration-services/data-flow/transformations/cache-transform.md
+    items:
+    - name: Cache Connection Manager
+      href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+- name: Merge Transformation
+  href: ../integration-services/data-flow/transformations/merge-transformation.md
+- name: Merge Join Transformation
+  href: ../integration-services/data-flow/transformations/merge-join-transformation.md
+  items:
+  - name: Extend a Dataset by Using the Merge Join Transformation
+    href: ../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md
+  - name: Sort Data for the Merge and Merge Join Transformations
+    href: ../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md
+- name: Multicast Transformation
+  href: ../integration-services/data-flow/transformations/multicast-transformation.md
+- name: OLE DB Command Transformation
+  href: ../integration-services/data-flow/transformations/ole-db-command-transformation.md
+- name: Percentage Sampling Transformation
+  href: ../integration-services/data-flow/transformations/percentage-sampling-transformation.md
+- name: Pivot Transformation
+  href: ../integration-services/data-flow/transformations/pivot-transformation.md
+- name: Row Count Transformation
+  href: ../integration-services/data-flow/transformations/row-count-transformation.md
+- name: Row Sampling Transformation
+  href: ../integration-services/data-flow/transformations/row-sampling-transformation.md
+- name: Script Component
+  href: ../integration-services/data-flow/transformations/script-component.md
+- name: Slowly Changing Dimension Transformation
+  href: ../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md
+  items:
+  - name: Configure Outputs Using the Slowly Changing Dimension Wizard
+    href: ../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md
+  - name: Slowly Changing Dimension Wizard F1 Help
+    href: ../integration-services/data-flow/transformations/slowly-changing-dimension-wizard-f1-help.md
+    items:
+    - name: Welcome to the Slowly Changing Dimension Wizard
+      href: ../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md
+    - name: Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)
+      href: ../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+    - name: Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)
+      href: ../integration-services/data-flow/transformations/slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+    - name: Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
+      href: ../integration-services/data-flow/transformations/fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+    - name: Historical Attribute Options (Slowly Changing Dimension Wizard)
+      href: ../integration-services/data-flow/transformations/historical-attribute-options-slowly-changing-dimension-wizard.md
+    - name: Inferred Dimension Members (Slowly Changing Dimension Wizard)
+      href: ../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md
+    - name: Finish the Slowly Changing Dimension Wizard
+      href: ../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md
+- name: Sort Transformation
+  href: ../integration-services/data-flow/transformations/sort-transformation.md
+- name: Term Extraction Transformation
+  href: ../integration-services/data-flow/transformations/term-extraction-transformation.md
+- name: Term Lookup Transformation
+  href: ../integration-services/data-flow/transformations/term-lookup-transformation.md
+- name: Union All Transformation
+  href: ../integration-services/data-flow/transformations/union-all-transformation.md
+  items:
+  - name: Merge Data by Using the Union All Transformation
+    href: ../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md
+- name: Unpivot Transformation
+  href: ../integration-services/data-flow/transformations/unpivot-transformation.md
+- name: Transform Data with Transformations
+  href: ../integration-services/data-flow/transformations/transform-data-with-transformations.md
+- name: Transformation Custom Properties
+  href: ../integration-services/data-flow/transformations/transformation-custom-properties.md
+- name: XML Source
+  href: ../integration-services/data-flow/xml-source.md
+  items:
+  - name: Extract Data by Using the XML Source
+    href: ../integration-services/data-flow/extract-data-by-using-the-xml-source.md
+  - name: XML Source Custom Properties
+    href: ../integration-services/data-flow/xml-source-custom-properties.md
 - name: Variables
-  href: integration-services-ssis-variables.md
+  href: ../integration-services/integration-services-ssis-variables.md
   items:
   - name: Variables Window
-    href: variables-window.md
+    href: ../integration-services/variables-window.md
   - name: System Variables
-    href: system-variables.md
-- name: Expressions
+    href: ../integration-services/system-variables.md
+- name: Overview
   href: ../integration-services/expressions/integration-services-ssis-expressions.md
+- name: Examples of Advanced Integration Services Expressions
+  href: ../integration-services/expressions/examples-of-advanced-integration-services-expressions.md
+- name: Use Property Expressions in Packages
+  href: ../integration-services/expressions/use-property-expressions-in-packages.md
+  items:
+  - name: Enumerated Constants in Property Expressions
+    href: ../integration-services/expressions/enumerated-constants-in-property-expressions.md
+  - name: Add or Change a Property Expression
+    href: ../integration-services/expressions/add-or-change-a-property-expression.md
+    items:
+    - name: Expressions Page
+      href: ../integration-services/expressions/expressions-page.md
+    - name: Property Expressions Editor
+      href: ../integration-services/expressions/property-expressions-editor.md
+    - name: Expression Builder
+      href: ../integration-services/expressions/expression-builder.md
+- name: Integration Services Data Types in Expressions
+  href: ../integration-services/expressions/integration-services-data-types-in-expressions.md
+- name: Data Truncation (SSIS)
+  href: ../integration-services/expressions/data-truncation-ssis.md
+- name: String Padding (SSIS)
+  href: ../integration-services/expressions/string-padding-ssis.md
+- name: Syntax (SSIS)
+  href: ../integration-services/expressions/syntax-ssis.md
+- name: Identifiers (SSIS)
+  href: ../integration-services/expressions/identifiers-ssis.md
+- name: Literals (SSIS)
+  href: ../integration-services/expressions/numeric-string-and-boolean-literals.md
+- name: Operators (SSIS Expression)
+  href: ../integration-services/expressions/operators-ssis-expression.md
+  items:
+  - name: Operator Precedence and Associativity
+    href: ../integration-services/expressions/operator-precedence-and-associativity.md
+  - name: Cast (SSIS Expression)
+    href: ../integration-services/expressions/cast-ssis-expression.md
+  - name: "() (Parentheses) (SSIS Expression)"
+    href: ../integration-services/expressions/parentheses-ssis-expression.md
+  - name: "+ (Add) (SSIS)"
+    href: ../integration-services/expressions/add-ssis.md
+  - name: "+ (Concatenate) (SSIS Expression)"
+    href: ../integration-services/expressions/concatenate-ssis-expression.md
+  - name: "- (Subtract) (SSIS Expression)"
+    href: ../integration-services/expressions/subtract-ssis-expression.md
+  - name: "- (Negate) (SSIS Expression)"
+    href: ../integration-services/expressions/negate-ssis-expression.md
+  - name: "* (Multiply) (SSIS Expression)"
+    href: ../integration-services/expressions/multiply-ssis-expression.md
+  - name: Divide (SSIS Expression)
+    href: ../integration-services/expressions/divide-ssis-expression.md
+  - name: (Modulo) (SSIS Expression)
+    href: ../integration-services/expressions/modulo-ssis-expression.md
+  - name: "|| (Logical OR) (SSIS Expression)"
+    href: ../integration-services/expressions/logical-or-ssis-expression.md
+  - name: "&& (Logical AND) (SSIS Expression)"
+    href: ../integration-services/expressions/logical-and-ssis-expression.md
+  - name: "! (Logical Not) (SSIS Expression)"
+    href: ../integration-services/expressions/logical-not-ssis-expression.md
+  - name: "| (Bitwise Inclusive OR) (SSIS Expression)"
+    href: ../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md
+  - name: "^ (Bitwise Exclusive OR) (SSIS Expression)"
+    href: ../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md
+  - name: "& (Bitwise AND) (SSIS Expression)"
+    href: ../integration-services/expressions/bitwise-and-ssis-expression.md
+  - name: "~ (Bitwise Not) (SSIS Expression)"
+    href: ../integration-services/expressions/bitwise-not-ssis-expression.md
+  - name: "== (Equal) (SSIS Expression)"
+    href: ../integration-services/expressions/equal-ssis-expression.md
+  - name: "!= (Unequal) (SSIS Expression)"
+    href: ../integration-services/expressions/unequal-ssis-expression.md
+  - name: "> (Greater Than) (SSIS Expression)"
+    href: ../integration-services/expressions/greater-than-ssis-expression.md
+  - name: "< (Less Than) (SSIS Expression)"
+    href: ../integration-services/expressions/less-than-ssis-expression.md
+  - name: ">= (Greater Than or Equal To) (SSIS Expression)"
+    href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
+  - name: "<= (Less Than or Equal To) (SSIS Expression)"
+    href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
+  - name: "? : (Conditional) (SSIS Expression)"
+    href: ../integration-services/expressions/conditional-ssis-expression.md
+- name: Functions (SSIS Expression)
+  href: ../integration-services/expressions/functions-ssis-expression.md
+  items:
+  - name: ABS (SSIS Expression)
+    href: ../integration-services/expressions/abs-ssis-expression.md
+  - name: CEILING (SSIS Expression)
+    href: ../integration-services/expressions/ceiling-ssis-expression.md
+  - name: CODEPOINT (SSIS Expression)
+    href: ../integration-services/expressions/codepoint-ssis-expression.md
+  - name: DATEADD (SSIS Expression)
+    href: ../integration-services/expressions/dateadd-ssis-expression.md
+  - name: DATEDIFF (SSIS Expression)
+    href: ../integration-services/expressions/datediff-ssis-expression.md
+  - name: DATEPART (SSIS Expression)
+    href: ../integration-services/expressions/datepart-ssis-expression.md
+  - name: DAY (SSIS Expression)
+    href: ../integration-services/expressions/day-ssis-expression.md
+  - name: EXP (SSIS Expression)
+    href: ../integration-services/expressions/exp-ssis-expression.md
+  - name: FINDSTRING (SSIS Expression)
+    href: ../integration-services/expressions/findstring-ssis-expression.md
+  - name: FLOOR (SSIS Expression)
+    href: ../integration-services/expressions/floor-ssis-expression.md
+  - name: GETDATE (SSIS Expression)
+    href: ../integration-services/expressions/getdate-ssis-expression.md
+  - name: GETUTCDATE (SSIS Expression)
+    href: ../integration-services/expressions/getutcdate-ssis-expression.md
+  - name: HEX (SSIS Expression)
+    href: ../integration-services/expressions/hex-ssis-expression.md
+  - name: ISNULL (SSIS Expression)
+    href: ../integration-services/expressions/isnull-ssis-expression.md
+  - name: LEFT (SSIS Expression)
+    href: ../integration-services/expressions/left-ssis-expression.md
+  - name: LEN (SSIS Expression)
+    href: ../integration-services/expressions/len-ssis-expression.md
+  - name: LN (SSIS Expression)
+    href: ../integration-services/expressions/ln-ssis-expression.md
+  - name: LOG (SSIS Expression)
+    href: ../integration-services/expressions/log-ssis-expression.md
+  - name: LOWER (SSIS Expression)
+    href: ../integration-services/expressions/lower-ssis-expression.md
+  - name: LTRIM (SSIS Expression)
+    href: ../integration-services/expressions/ltrim-ssis-expression.md
+  - name: MONTH (SSIS Expression)
+    href: ../integration-services/expressions/month-ssis-expression.md
+  - name: NULL (SSIS Expression)
+    href: ../integration-services/expressions/null-ssis-expression.md
+  - name: POWER (SSIS Expression)
+    href: ../integration-services/expressions/power-ssis-expression.md
+  - name: REPLACE (SSIS Expression)
+    href: ../integration-services/expressions/replace-ssis-expression.md
+  - name: REPLACENULL (SSIS Expression)
+    href: ../integration-services/expressions/replacenull-ssis-expression.md
+  - name: REPLICATE (SSIS Expression)
+    href: ../integration-services/expressions/replicate-ssis-expression.md
+  - name: REVERSE (SSIS Expression)
+    href: ../integration-services/expressions/reverse-ssis-expression.md
+  - name: RIGHT (SSIS Expression)
+    href: ../integration-services/expressions/right-ssis-expression.md
+  - name: ROUND (SSIS Expression)
+    href: ../integration-services/expressions/round-ssis-expression.md
+  - name: RTRIM (SSIS Expression)
+    href: ../integration-services/expressions/rtrim-ssis-expression.md
+  - name: SIGN (SSIS Expression)
+    href: ../integration-services/expressions/sign-ssis-expression.md
+  - name: SQRT (SSIS Expression)
+    href: ../integration-services/expressions/sqrt-ssis-expression.md
+  - name: SQUARE (SSIS Expression)
+    href: ../integration-services/expressions/square-ssis-expression.md
+  - name: SUBSTRING (SSIS Expression)
+    href: ../integration-services/expressions/substring-ssis-expression.md
+  - name: TOKEN  (SSIS Expression)
+    href: ../integration-services/expressions/token-ssis-expression.md
+  - name: TOKENCOUNT (SSIS Expression)
+    href: ../integration-services/expressions/tokencount-ssis-expression.md
+  - name: TRIM (SSIS Expression)
+    href: ../integration-services/expressions/trim-ssis-expression.md
+  - name: UPPER (SSIS Expression)
+    href: ../integration-services/expressions/upper-ssis-expression.md
+  - name: YEAR (SSIS Expression)
+    href: ../integration-services/expressions/year-ssis-expression.md
 - name: Event Handlers
-  href: integration-services-ssis-event-handlers.md
+  href: ../integration-services/integration-services-ssis-event-handlers.md
 - name: Queries
-  href: integration-services-ssis-queries.md
+  href: ../integration-services/integration-services-ssis-queries.md
 - name: Transactions
-  href: integration-services-transactions.md
-- name: Deploy packages
-  href: packages/deploy-integration-services-ssis-projects-and-packages.md
-- name: Run packages
-  href: packages/run-integration-services-ssis-packages.md
-- name: Scale Out
-  href: scale-out/integration-services-ssis-scale-out.md
-- name: Catalog and server
-  href: catalog/integration-services-ssis-server-and-catalog.md
-- name: Service (legacy)
+  href: ../integration-services/integration-services-transactions.md
+- name: Deploy Integration Services (SSIS) Projects and Packages
+  href: ../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md
+- name: Legacy Package Deployment (SSIS)
+  href: ../integration-services/packages/legacy-package-deployment-ssis.md
+- name: Run Integration Services (SSIS) Packages
+  href: ../integration-services/packages/run-integration-services-ssis-packages.md
+  items:
+  - name: Execute Package Utility (dtexecui)
+    href: ../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md
+  - name: dtexec Utility
+    href: ../integration-services/packages/dtexec-utility.md
+  - name: Restart Packages by Using Checkpoints
+    href: ../integration-services/packages/restart-packages-by-using-checkpoints.md
+  - name: SQL Server Agent Jobs for Packages
+    href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
+  - name: Load-Balancing Packages on Remote Servers by Using SQL Server Agent
+    href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+- name: Overview
+  href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
+- name: Get started with SSIS Scale Out on a single computer
+  href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
+- name: "Walkthrough: Set up Integration Services Scale Out"
+  href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
+- name: Run packages in Scale Out
+  href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
+- name: Add a Scale Out Worker with Scale Out Manager
+  href: ../integration-services/scale-out/add-scale-out-worker.md
+- name: Scale Out Master
+  href: ../integration-services/scale-out/integration-services-ssis-scale-out-master.md
+- name: Scale Out Worker
+  href: ../integration-services/scale-out/integration-services-ssis-scale-out-worker.md
+- name: Scale Out Manager
+  href: ../integration-services/scale-out/integration-services-ssis-scale-out-manager.md
+- name: Change the account for Scale Out logging
+  href: ../integration-services/scale-out/change-logdb-account.md
+- name: Manage certificates for Scale Out
+  href: ../integration-services/scale-out/deal-with-certificates-in-ssis-scale-out.md
+- name: High availability for Scale Out
+  href: ../integration-services/scale-out/scale-out-support-for-high-availability.md
+- name: High availability via SQL Server failover cluster instance
+  href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
+- name: Troubleshoot Scale Out
+  href: ../integration-services/scale-out/troubleshooting-scale-out.md
+- name: Catalog and Server
+  href: ../integration-services/catalog/integration-services-ssis-server-and-catalog.md
+- name: SSIS Catalog
+  href: ../integration-services/catalog/ssis-catalog.md
+- name: View the List of Packages on the SSIS Server
+  href: ../integration-services/catalog/view-the-list-of-packages-on-the-integration-services-server.md
+- name: SSIS Catalog Transact-SQL Reference
+  href: ../integration-services/catalog/integration-services-ssis-catalog-transact-sql-reference.md
+- name: SSIS Catalog dialog boxes
+  items:
+  - name: Browse All Principals Dialog Box
+    href: ../integration-services/catalog/browse-all-principals-dialog-box.md
+  - name: Configure Dialog Box
+    href: ../integration-services/catalog/configure-dialog-box.md
+  - name: Folder Properties Dialog Box
+    href: ../integration-services/catalog/folder-properties-dialog-box.md
+  - name: Package Properties Dialog Box
+    href: ../integration-services/catalog/package-properties-dialog-box.md
+  - name: Project Properties Dialog Box
+    href: ../integration-services/catalog/project-properties-dialog-box.md
+  - name: Project Versions Dialog Box
+    href: ../integration-services/catalog/project-versions-dialog-box.md
+  - name: Set Parameter Value Dialog Box
+    href: ../integration-services/catalog/set-parameter-value-dialog-box.md
+  - name: Validate Dialog Box
+    href: ../integration-services/catalog/validate-dialog-box.md
+- name: Integration Services (SSIS) Service
   href: ../integration-services/service/integration-services-service-ssis-service.md
-- name: Security
+- name: Package Management (SSIS Service)
+  href: ../integration-services/service/package-management-ssis-service.md
+- name: Events Logged by the Integration Services Service
+  href: ../integration-services/service/events-logged-by-the-integration-services-service.md
+- name: Integration Services (SSIS) in a Cluster
+  href: ../integration-services/service/integration-services-ssis-in-a-cluster.md
+- name: Overview
   href: ../integration-services/security/security-overview-integration-services.md
-- name: Performance
+- name: Access Control for Sensitive Data in Packages
+  href: ../integration-services/security/access-control-for-sensitive-data-in-packages.md
+- name: Identify the Source of Packages with Digital Signatures
+  href: ../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md
+- name: Integration Services Roles (SSIS Service)
+  href: ../integration-services/security/integration-services-roles-ssis-service.md
+- name: Monitor Running Packages and Other Operations
   href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
-- name: Troubleshooting
+- name: Events Logged by an Integration Services Package
+  href: ../integration-services/performance/events-logged-by-an-integration-services-package.md
+- name: Integration Services (SSIS) Logging
+  href: ../integration-services/performance/integration-services-ssis-logging.md
+- name: Performance Counters
+  href: ../integration-services/performance/performance-counters.md
+- name: Overview
   href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
-- name: System views
+- name: Troubleshoot and Debug for Package Development
+  items:
+  - name: Troubleshooting Tools for Package Development
+    href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md
+  - name: Debugging Control Flow
+    href: ../integration-services/troubleshooting/debugging-control-flow.md
+  - name: Debugging Script
+    href: ../integration-services/troubleshooting/debugging-script.md
+  - name: Debugging Data Flow
+    href: ../integration-services/troubleshooting/debugging-data-flow.md
+- name: Troubleshooting Tools for Package Connectivity
+  href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: Troubleshooting Tools for Package Execution
+  href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md
+- name: Troubleshooting Reports for Package Execution
+  href: ../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md
+- name: Generating Dump Files for Package Execution
+  href: ../integration-services/troubleshooting/generating-dump-files-for-package-execution.md
+- name: Overview
   href: ../integration-services/system-views/views-integration-services-catalog.md
-- name: System stored procedures
+- name: catalog.catalog_properties
+  href: ../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md
+- name: catalog.effective_object_permissions
+  href: ../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md
+- name: catalog.environment_variables
+  href: ../integration-services/system-views/catalog-environment-variables-ssisdb-database.md
+- name: catalog.environment_references
+  href: ../integration-services/system-views/catalog-environment-references-ssisdb-database.md
+- name: catalog.environments
+  href: ../integration-services/system-views/catalog-environments-ssisdb-database.md
+- name: catalog.event_message_context
+  href: ../integration-services/system-views/catalog-event-message-context.md
+- name: catalog.event_messages
+  href: ../integration-services/system-views/catalog-event-messages.md
+- name: catalog.executable_statistics
+  href: ../integration-services/system-views/catalog-executable-statistics.md
+- name: catalog.executables
+  href: ../integration-services/system-views/catalog-executables.md
+- name: catalog.execution_component_phases
+  href: ../integration-services/system-views/catalog-execution-component-phases.md
+- name: catalog.execution_data_statistics
+  href: ../integration-services/system-views/catalog-execution-data-statistics.md
+- name: catalog.execution_data_taps
+  href: ../integration-services/system-views/catalog-execution-data-taps.md
+- name: catalog.execution_parameter_values
+  href: ../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md
+- name: catalog.execution_property_override_values
+  href: ../integration-services/system-views/catalog-execution-property-override-values.md
+- name: catalog.executions
+  href: ../integration-services/system-views/catalog-executions-ssisdb-database.md
+- name: catalog.explicit_object_permissions
+  href: ../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md
+- name: catalog.extended_operation_info
+  href: ../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md
+- name: catalog.folders
+  href: ../integration-services/system-views/catalog-folders-ssisdb-database.md
+- name: catalog.object_parameters
+  href: ../integration-services/system-views/catalog-object-parameters-ssisdb-database.md
+- name: catalog.object_versions
+  href: ../integration-services/system-views/catalog-object-versions-ssisdb-database.md
+- name: catalog.operation_messages
+  href: ../integration-services/system-views/catalog-operation-messages-ssisdb-database.md
+- name: catalog.operations
+  href: ../integration-services/system-views/catalog-operations-ssisdb-database.md
+- name: catalog.packages
+  href: ../integration-services/system-views/catalog-packages-ssisdb-database.md
+- name: catalog.projects
+  href: ../integration-services/system-views/catalog-projects-ssisdb-database.md
+- name: catalog.validations
+  href: ../integration-services/system-views/catalog-validations-ssisdb-database.md
+- name: catalog.master_properties
+  href: ../integration-services/system-views/catalog-master-properties-ssisdb-database.md
+- name: catalog.worker_agents
+  href: ../integration-services/system-views/catalog-worker-agents-ssisdb-database.md
+- name: Overview
   href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
+- name: Add
+  items:
+  - name: catalog.add_data_tap
+    href: ../integration-services/system-stored-procedures/catalog-add-data-tap.md
+  - name: catalog.add_data_tap_by_guid
+    href: ../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md
+  - name: catalog.add_execution_worker
+    href: ../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md
+- name: catalog.check_schema_version
+  href: ../integration-services/system-stored-procedures/catalog-check-schema-version.md
+- name: catalog.clear_object_parameter_value
+  href: ../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md
+- name: catalog.configure_catalog
+  href: ../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md
+- name: Create
+  items:
+  - name: catalog.create_customized_logging_level
+    href: ../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md
+  - name: catalog.create_environment
+    href: ../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md
+  - name: catalog.create_environment_reference
+    href: ../integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database.md
+  - name: catalog.create_environment_variable
+    href: ../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md
+  - name: catalog.create_execution
+    href: ../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md
+  - name: catalog.create_execution_dump
+    href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
+  - name: catalog.create_folder
+    href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
+- name: Delete
+  items:
+  - name: catalog.delete_customized_logging_level
+    href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
+  - name: catalog.delete_environment
+    href: ../integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md
+  - name: catalog.delete_environment_reference
+    href: ../integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md
+  - name: catalog.delete_environment_variable
+    href: ../integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md
+  - name: catalog.delete_folder
+    href: ../integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md
+  - name: catalog.delete_project
+    href: ../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md
+- name: catalog.deny_permission
+  href: ../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md
+- name: Deploy
+  items:
+  - name: catalog.deploy_packages
+    href: ../integration-services/system-stored-procedures/catalog-deploy-packages.md
+  - name: catalog.deploy_project
+    href: ../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md
+- name: catalog.disable_worker_agent
+  href: ../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md
+- name: catalog.enable_worker_agent
+  href: ../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md
+- name: Get
+  items:
+  - name: catalog.get_parameter_values
+    href: ../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md
+  - name: catalog.get_project
+    href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
+- name: catalog.grant_permission
+  href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
+- name: Move
+  items:
+  - name: catalog.move_environment
+    href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
+  - name: catalog.move_project
+    href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
+- name: catalog.remove_data_tap
+  href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
+- name: Rename
+  items:
+  - name: catalog.rename_customized_logging_level
+    href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
+  - name: catalog.rename_environment
+    href: ../integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md
+  - name: catalog.rename_folder
+    href: ../integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md
+- name: catalog.restore_project
+  href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
+- name: catalog.revoke_permission
+  href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
+- name: Set
+  items:
+  - name: catalog.set_customized_logging_level_description
+    href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
+  - name: catalog.set_customized_logging_level_value
+    href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-value.md
+  - name: catalog.set_environment_property
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md
+  - name: catalog.set_environment_reference_type
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database.md
+  - name: catalog.set_environment_variable_property
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md
+  - name: catalog.set_environment_variable_protection
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md
+  - name: catalog.set_environment_variable_value
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md
+  - name: catalog.set_execution_parameter_value
+    href: ../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md
+  - name: catalog.set_execution_property_override_value
+    href: ../integration-services/system-stored-procedures/catalog-set-execution-property-override-value.md
+  - name: catalog.set_folder_description
+    href: ../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md
+  - name: catalog.set_object_parameter_value
+    href: ../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md
+  - name: catalog.set_worker_agent_property
+    href: ../integration-services/system-stored-procedures/catalog-set-worker-agent-property-ssisdb-database.md
+- name: catalog.startup
+  href: ../integration-services/system-stored-procedures/catalog-startup.md
+- name: catalog.start_execution
+  href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
+- name: catalog.stop_operation
+  href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
+- name: Update
+  items:
+  - name: catalog.update_logdb_info (SSISDB Database)
+    href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
+  - name: catalog.update_master_address (SSISDB Database)
+    href: ../integration-services/system-stored-procedures/catalog-update-master-address.md
+- name: Validate
+  items:
+  - name: catalog.validate_package
+    href: ../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md
+  - name: catalog.validate_project
+    href: ../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md
+- name: Cleanup
+  items:
+  - name: catalog.cleanup_server_execution_keys
+    href: ../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md
+  - name: catalog.cleanup_server_log
+    href: ../integration-services/system-stored-procedures/catalog-cleanup-server-log.md
 - name: System function - dm_execution_performance_counters
-  href: functions-dm-execution-performance-counters.md
+  href: ../integration-services/functions-dm-execution-performance-counters.md
 - name: Errors and Events Reference
-  href: errors-and-events-reference-integration-services.md
+  href: ../integration-services/errors-and-events-reference-integration-services.md
   items:
   - name: Integration Services Error and Message Reference
-    href: integration-services-error-and-message-reference.md
+    href: ../integration-services/integration-services-error-and-message-reference.md
 - name: Scripting and programming
   items:
   - name: Integration Services Programming Overview
-    href: integration-services-programming-overview.md
+    href: ../integration-services/integration-services-programming-overview.md
   - name: Understanding Synchronous and Asynchronous Transformations
-    href: understanding-synchronous-and-asynchronous-transformations.md
+    href: ../integration-services/understanding-synchronous-and-asynchronous-transformations.md
   - name: Working with Connection Managers Programmatically
-    href: working-with-connection-managers-programmatically.md
-  - name: Extend packages with scripting
+    href: ../integration-services/working-with-connection-managers-programmatically.md
+  - name: Extending Packages with Scripting
     href: ../integration-services/extending-packages-scripting/extending-packages-with-scripting.md
-  - name: Extend packages with custom objects
+  - name: Comparing the Script Task and the Script Component
+    href: ../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md
+  - name: Comparing Scripting Solutions and Custom Objects
+    href: ../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md
+  - name: Referencing Other Assemblies in Scripting Solutions
+    href: ../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md
+  - name: Debug a Script by Setting Breakpoints in a Script Task and Script Component
+    href: ../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md
+  - name: Extending the Package with the Script Task
+    href: ../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md
+  - name: Configuring the Script Task in the Script Task Editor
+    href: ../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md
+  - name: Coding and Debugging the Script Task
+    href: ../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md
+  - name: Using Variables in the Script Task
+    href: ../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md
+  - name: Connecting to Data Sources in the Script Task
+    href: ../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md
+  - name: Raising Events in the Script Task
+    href: ../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md
+  - name: Logging in the Script Task
+    href: ../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md
+  - name: Returning Results from the Script Task
+    href: ../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md
+  - name: Script Task Examples
+    href: ../integration-services/extending-packages-scripting-task-examples/script-task-examples.md
+  - name: Detecting an Empty Flat File with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md
+  - name: Finding Installed Printers with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md
+  - name: Gathering a List for the ForEach Loop with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md
+  - name: Monitoring Performance Counters with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md
+  - name: Querying the Active Directory with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md
+  - name: Sending an HTML Mail Message with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md
+  - name: Sending to a Remote Private Message Queue with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md
+  - name: Working with Excel Files with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md
+  - name: Working with Images with the Script Task
+    href: ../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md
+  - name: Extending the Data Flow with the Script Component
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md
+  - name: Configuring the Script Component in the Script Component Editor
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md
+  - name: Coding and Debugging the Script Component
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md
+  - name: Understanding the Script Component Object Model
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md
+  - name: Using Variables in the Script Component
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md
+  - name: Connecting to Data Sources in the Script Component
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md
+  - name: Raising Events in the Script Component
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md
+  - name: Logging in the Script Component
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md
+  - name: Develop Specific Types of Script Components
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md
+  - name: Creating a Source with the Script Component
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md
+  - name: Creating a Synchronous Transformation with the Script Component
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md
+  - name: Creating an Asynchronous Transformation with the Script Component
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md
+  - name: Creating a Destination with the Script Component
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md
+  - name: Additional Script Component Examples
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md
+  - name: Creating an ODBC Destination with the Script Component
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/creating-an-odbc-destination-with-the-script-component.md
+  - name: Enhancing an Error Output with the Script Component
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md
+  - name: Parsing Non-Standard Text File Formats with the Script Component
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/parsing-non-standard-text-file-formats-with-the-script-component.md
+  - name: Simulating an Error Output for the Script Component
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md
+  - name: Extending Packages with Custom Objects
     href: ../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md
-  - name: Build packages programmatically
+  - name: Developing Custom Objects for Integration Services
+    href: ../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md
+  - name: Persisting Custom Objects
+    href: ../integration-services/extending-packages-custom-objects/persisting-custom-objects.md
+  - name: Building, Deploying, and Debugging Custom Objects
+    href: ../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md
+  - name: Support multi-targeting in your custom components
+    href: ../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md
+  - name: Developing a Custom Task
+    href: ../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md
+  - name: Creating a Custom Task
+    href: ../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md
+  - name: Coding a Custom Task
+    href: ../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md
+  - name: Connecting to Data Sources in a Custom Task
+    href: ../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md
+  - name: Raising and Defining Events in a Custom Task
+    href: ../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md
+  - name: Adding Support for Debugging in a Custom Task
+    href: ../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md
+  - name: Developing a User Interface for a Custom Task
+    href: ../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md
+  - name: Developing a Custom Connection Manager
+    href: ../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md
+  - name: Creating a Custom Connection Manager
+    href: ../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md
+  - name: Coding a Custom Connection Manager
+    href: ../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md
+  - name: Developing a User Interface for a Custom Connection Manager
+    href: ../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md
+  - name: Developing a Custom Log Provider
+    href: ../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md
+  - name: Creating a Custom Log Provider
+    href: ../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md
+  - name: Coding a Custom Log Provider
+    href: ../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md
+  - name: Developing a User Interface for a Custom Log Provider
+    href: ../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md
+  - name: Developing a Custom ForEach Enumerator
+    href: ../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md
+  - name: Creating a Custom Foreach Enumerator
+    href: ../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md
+  - name: Coding a Custom Foreach Enumerator
+    href: ../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md
+  - name: Developing a User Interface for a Custom ForEach Enumerator
+    href: ../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md
+  - name: Developing a Custom Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md
+  - name: Creating a Custom Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md
+  - name: Design-time Methods of a Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md
+  - name: Run-time Methods of a Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md
+  - name: Execution Plan and Buffer Allocation
+    href: ../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md
+  - name: Working with Data Types in the Data Flow
+    href: ../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md
+  - name: Validating a Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md
+  - name: Implementing External Metadata
+    href: ../integration-services/extending-packages-custom-objects/data-flow/implementing-external-metadata.md
+  - name: Raising and Defining Events in a Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md
+  - name: Logging and Defining Log Entries in a Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md
+  - name: Using Error Outputs in a Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md
+  - name: Developing a User Interface for a Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md
+  - name: Upgrading the Version of a Data Flow Component
+    href: ../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md
+  - name: Subcategories of Articles
+    items:
+    - name: Developing a Custom Destination Component
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md
+    - name: Developing a Custom Source Component
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md
+    - name: Developing a Custom Transformation Component with Asynchronous Outputs
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md
+    - name: Developing a Custom Transformation Component with Synchronous Outputs
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md
+    - name: Developing Data Flow Components with Multiple Inputs
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-data-flow-components-with-multiple-inputs.md
+    - name: Developing Specific Types of Data Flow Components
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md
+  - name: Adding Connections Programmatically
     href: ../integration-services/building-packages-programmatically/adding-connections-programmatically.md
-  - name: Run and manage packages programmatically
+  - name: Building Packages Programmatically
+    href: ../integration-services/building-packages-programmatically/building-packages-programmatically.md
+  - name: Creating a Package Programmatically
+    href: ../integration-services/building-packages-programmatically/creating-a-package-programmatically.md
+  - name: Adding Tasks Programmatically
+    href: ../integration-services/building-packages-programmatically/adding-tasks-programmatically.md
+  - name: Connecting Tasks Programmatically
+    href: ../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md
+  - name: Working with Variables Programmatically
+    href: ../integration-services/building-packages-programmatically/working-with-variables-programmatically.md
+  - name: Handling Events Programmatically
+    href: ../integration-services/building-packages-programmatically/handling-events-programmatically.md
+  - name: Enabling Logging Programmatically
+    href: ../integration-services/building-packages-programmatically/enabling-logging-programmatically.md
+  - name: Adding the Data Flow Task Programmatically
+    href: ../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md
+  - name: Discovering Data Flow Components Programmatically
+    href: ../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md
+  - name: Adding Data Flow Components Programmatically
+    href: ../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md
+  - name: Connecting Data Flow Components Programmatically
+    href: ../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md
+  - name: Selecting Input Columns Programmatically
+    href: ../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md
+  - name: Saving a Package Programmatically
+    href: ../integration-services/building-packages-programmatically/saving-a-package-programmatically.md
+  - name: Running and Managing Packages Programmatically
     href: ../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md
+  - name: Understanding the Differences between Local and Remote Execution
+    href: ../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md
+  - name: Loading and Running a Local Package Programmatically
+    href: ../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md
+  - name: Loading and Running a Remote Package Programmatically
+    href: ../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md
+  - name: Loading the Output of a Local Package
+    href: ../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md
+  - name: Enumerating Available Packages Programmatically
+    href: ../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md
+  - name: Managing Packages and Folders Programmatically
+    href: ../integration-services/run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md
+  - name: Managing Running Packages Programmatically
+    href: ../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md
+  - name: Managing Package Roles Programmatically (SSIS Service)
+    href: ../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md
 - name: Integration Services Language Reference
-  href: integration-services-language-reference.md
+  href: ../integration-services/integration-services-language-reference.md
 - name: Azure Feature Pack for Integration Services (SSIS)
-  href: azure-feature-pack-for-integration-services-ssis.md
+  href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Hadoop and HDFS Support in Integration Services (SSIS)
-  href: hadoop-and-hdfs-support-in-integration-services-ssis.md
+  href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
 - name: Microsoft Connectors for Oracle and Teradata by Attunity
-  href: attunity-connectors.md
-- name: Import and export data
+  href: ../integration-services/attunity-connectors.md
+- name: SQL Server Import and Export Wizard
   href: ../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+- name: Get started with this simple example of the Import and Export Wizard
+  href: ../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md
+- name: Start the SQL Server Import and Export Wizard
+  href: ../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md
+- name: Connect to Data Sources with the SQL Server Import and Export Wizard
+  href: ../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md
+  items:
+  - name: Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md
+  - name: Connect to an Oracle Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md
+  - name: Connect to a Flat File Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md
+  - name: Connect to an Excel Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md
+  - name: Connect to an Access Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md
+  - name: Connect to Azure Blob Storage (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md
+  - name: Connect to an ODBC Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md
+  - name: Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md
+  - name: Connect to a MySQL Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md
+- name: Steps in the SQL Server Import and Export Wizard
+  href: ../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md
+  items:
+  - name: Welcome to SQL Server Import and Export Wizard
+    href: ../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md
+  - name: Choose a Data Source (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md
+  - name: Choose a Destination (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md
+  - name: Create Database (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md
+  - name: Specify Table Copy or Query (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md
+  - name: Provide a Source Query (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md
+  - name: Select Source Tables and Views (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md
+  - name: Configure Flat File Destination (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md
+  - name: Convert Types without Conversion Checking (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
+  - name: Column Mappings (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md
+  - name: Data Type Mapping (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md
+  - name: Review Data Type Mapping (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md
+  - name: Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md
+  - name: Create Table SQL Statement (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md
+  - name: Preview Data Dialog Box (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md
+  - name: Save and Run Package (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md
+  - name: Save SSIS Package (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md
+  - name: Complete the Wizard (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md
+  - name: Performing Operation (SQL Server Import and Export Wizard)
+    href: ../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md
 - name: Import from or export to Excel
-  href: load-data-to-from-excel-with-ssis.md
+  href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: Load data to SQL Server or SQL Database
-  href: load-data-to-sql-database-with-ssis.md
+  href: ../integration-services/load-data-to-sql-database-with-ssis.md
 - name: Load data to SQL Data Warehouse
-  href: load-data-to-sql-data-warehouse.md
-- name: Change data capture
+  href: ../integration-services/load-data-to-sql-data-warehouse.md
+- name: Overview
   href: ../integration-services/change-data-capture/change-data-capture-ssis.md
+- name: Specify an Interval of Change Data
+  href: ../integration-services/change-data-capture/specify-an-interval-of-change-data.md
+- name: Determine Whether the Change Data Is Ready
+  href: ../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md
+- name: Prepare to Query for the Change Data
+  href: ../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md
+- name: Create the Function to Retrieve the Change Data
+  href: ../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md
+- name: Retrieve and Understand the Change Data
+  href: ../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md
+- name: Process Inserts, Updates, and Deletes
+  href: ../integration-services/change-data-capture/process-inserts-updates-and-deletes.md
+- name: Apply the Changes to the Destination
+  href: ../integration-services/change-data-capture/apply-the-changes-to-the-destination.md
+- name: Perform an Incremental Load of Multiple Tables
+  href: ../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md
+- name: Change Data Capture for Oracle by Attunity
+  href: ../integration-services/change-data-capture/change-data-capture-for-oracle-by-attunity.md
+- name: Change Data Capture Designer for Oracle by Attunity
+  href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md
+  items:
+  - name: The CDC Designer Console Introduction
+    href: ../integration-services/change-data-capture/the-cdc-designer-console-introduction.md
+  - name: Oracle CDC Instance Data Types
+    href: ../integration-services/change-data-capture/oracle-cdc-instance-data-types.md
+  - name: Error Handling
+    href: ../integration-services/change-data-capture/error-handling.md
+  - name: The Oracle CDC Instance
+    href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
+  - name: The Oracle CDC Databases
+    href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+  - name: Change Data Capture Designer for Oracle by Attunity F1 Help Reference
+    href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
+    items:
+    - name: Access the CDC Designer Console
+      href: ../integration-services/change-data-capture/access-the-cdc-designer-console.md
+    - name: Manage a CDC Service
+      href: ../integration-services/change-data-capture/manage-a-cdc-service.md
+    - name: Manage a CDC Instance
+      href: ../integration-services/change-data-capture/manage-a-cdc-instance.md
+    - name: Use the New Instance Wizard
+      href: ../integration-services/change-data-capture/use-the-new-instance-wizard.md
+      items:
+      - name: Create the SQL Server Change Database
+        href: ../integration-services/change-data-capture/create-the-sql-server-change-database.md
+      - name: Connect to an Oracle Source Database
+        href: ../integration-services/change-data-capture/connect-to-an-oracle-source-database.md
+      - name: Connect to Oracle
+        href: ../integration-services/change-data-capture/connect-to-oracle.md
+      - name: Select Oracle Tables and Columns
+        href: ../integration-services/change-data-capture/select-oracle-tables-and-columns.md
+      - name: Select Oracle Tables for Capturing Changes
+        href: ../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md
+      - name: Make Changes to the Tables Selected for Capturing Changes
+        href: ../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md
+      - name: Generate and Run the Supplemental Logging Script
+        href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
+      - name: Generate Mirror Tables and CDC Capture Instances
+        href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
+      - name: Finish
+        href: ../integration-services/change-data-capture/finish.md
+    - name: Edit Instance Properties
+      href: ../integration-services/change-data-capture/edit-instance-properties.md
+      items:
+      - name: Edit the Oracle Database Properties
+        href: ../integration-services/change-data-capture/edit-the-oracle-database-properties.md
+      - name: Edit Tables
+        href: ../integration-services/change-data-capture/edit-tables.md
+      - name: Add Tables to a CDC Instance
+        href: ../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md
+      - name: Edit the Table Properties
+        href: ../integration-services/change-data-capture/edit-the-table-properties.md
+      - name: Review and Generate Supplemental Logging Scripts
+        href: ../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md
+      - name: Edit the Advanced Properties
+        href: ../integration-services/change-data-capture/edit-the-advanced-properties.md
+  - name: Change Data Capture Designer for Oracle by Attunity How to Guide
+    href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
+    items:
+    - name: How to Manage a CDC Service from the CDC Designer Console
+      href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
+    - name: How to Create the SQL Server Change Database Instance
+      href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
+    - name: How to Manage a CDC Instance
+      href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
+    - name: How to Edit the CDC Instance Properties
+      href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
+    - name: How to View the CDC Instance Properties
+      href: ../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md
+  - name: SQL Server Connection for Instance Creation
+    href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
+  - name: Advanced Connection Properties
+    href: ../integration-services/change-data-capture/advanced-connection-properties.md
+  - name: Oracle Credentials for Running Script
+    href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
+  - name: Oracle Supplemental Logging Script
+    href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
+  - name: CDC Instance Deployment Script
+    href: ../integration-services/change-data-capture/cdc-instance-deployment-script.md
+  - name: SQL Server Connection Required Permissions for the CDC Designer
+    href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md
+- name: Change Data Capture Service for Oracle by Attunity
+  href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md
+  items:
+  - name: Change Data Capture Service for Oracle by Attunity System Architecture
+    href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-system-architecture.md
+  - name: The Oracle CDC Service
+    href: ../integration-services/change-data-capture/the-oracle-cdc-service.md
+    items:
+    - name: High Availability Support
+      href: ../integration-services/change-data-capture/high-availability-support.md
+    - name: SQL Server Connection Required Permissions for the CDC Service
+      href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md
+    - name: User Roles
+      href: ../integration-services/change-data-capture/user-roles.md
+    - name: Working with the Oracle CDC Service
+      href: ../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md
+  - name: Change Data Capture Service for Oracle by Attunity F1 Help
+    href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md
+    items:
+    - name: Connection to SQL Server
+      href: ../integration-services/change-data-capture/connection-to-sql-server.md
+    - name: Connection to SQL Server for Delete
+      href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
+    - name: Create and Edit an Oracle CDC Service
+      href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
+    - name: Manage an Oracle CDC Service
+      href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
+    - name: Prepare SQL Server for CDC
+      href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
+    - name: Prepare SQL Server for Oracle CDC-View Script
+      href: ../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md
+    - name: Work with CDC Services
+      href: ../integration-services/change-data-capture/work-with-cdc-services.md
+  - name: Change Data Capture Service for Oracle by Attunity How to Guide
+    href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
+    items:
+    - name: How to Create and Edit a CDC Service
+      href: ../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md
+    - name: How to Manage a Local CDC Service
+      href: ../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md
+    - name: How to Prepare SQL Server for CDC
+      href: ../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md
+    - name: How to Use the CDC Service Command-Line Interface
+      href: ../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md
+    - name: How to Work with CDC Services
+      href: ../integration-services/change-data-capture/how-to-work-with-cdc-services.md
 - name: Microsoft Connector for SAP BW
-  href: microsoft-connector-for-sap-bw.md
+  href: ../integration-services/microsoft-connector-for-sap-bw.md
   items:
   - name: Installing the Microsoft Connector for SAP BW
-    href: installing-the-microsoft-connector-for-sap-bw.md
+    href: ../integration-services/installing-the-microsoft-connector-for-sap-bw.md
   - name: Microsoft Connector for SAP BW Components
-    href: microsoft-connector-for-sap-bw-components.md
+    href: ../integration-services/microsoft-connector-for-sap-bw-components.md
   - name: Microsoft Connector for SAP BW F1 Help
-    href: microsoft-connector-for-sap-bw-f1-help.md
+    href: ../integration-services/microsoft-connector-for-sap-bw-f1-help.md
   - name: Certification by SAP
-    href: certification-by-sap.md
+    href: ../integration-services/certification-by-sap.md
 - name: Tutorials
-  href: integration-services-tutorials.md
+  href: ../integration-services/integration-services-tutorials.md
   items:
   - name: Create a Package
-    href: ssis-how-to-create-an-etl-package.md
+    href: ../integration-services/ssis-how-to-create-an-etl-package.md
     items:
     - name: "Lesson 1: Create a Project and Basic Package"
-      href: lesson-1-create-a-project-and-basic-package-with-ssis.md
+      href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
       items:
       - name: Lesson 1-1 - Creating a New Integration Services Project
-        href: lesson-1-1-creating-a-new-integration-services-project.md
+        href: ../integration-services/lesson-1-1-creating-a-new-integration-services-project.md
       - name: Lesson 1-2 - Adding and Configuring a Flat File Connection Manager
-        href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
+        href: ../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
       - name: Lesson 1-3 - Adding and Configuring an OLE DB Connection Manager
-        href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
+        href: ../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
       - name: Lesson 1-4 - Adding a Data Flow Task to the Package
-        href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
+        href: ../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md
       - name: Lesson 1-5 - Adding and Configuring the Flat File Source
-        href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
+        href: ../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md
       - name: Lesson 1-6 - Adding and Configuring the Lookup Transformations
-        href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
+        href: ../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md
       - name: Lesson 1-7 - Adding and Configuring the OLE DB Destination
-        href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
+        href: ../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md
       - name: Lesson 1-8 - Making the Lesson 1 Package Easier to Understand
-        href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
+        href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
       - name: Lesson 1-9 - Testing the Lesson 1 Tutorial Package
-        href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
+        href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
     - name: "Lesson 2: Add Looping"
-      href: lesson-2-adding-looping-with-ssis.md
+      href: ../integration-services/lesson-2-adding-looping-with-ssis.md
       items:
       - name: Lesson 2-1 - Copying the Lesson 1 Package
-        href: lesson-2-1-copying-the-lesson-1-package.md
+        href: ../integration-services/lesson-2-1-copying-the-lesson-1-package.md
       - name: Lesson 2-2 - Adding and Configuring the Foreach Loop Container
-        href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
+        href: ../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
       - name: Lesson 2-3 - Modifying the Flat File Connection Manager
-        href: lesson-2-3-modifying-the-flat-file-connection-manager.md
+        href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
       - name: Lesson 2-4 - Testing the Lesson 2 Tutorial Package
-        href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
+        href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
     - name: "Lesson 3: Add Logging"
-      href: lesson-3-add-logging-with-ssis.md
+      href: ../integration-services/lesson-3-add-logging-with-ssis.md
       items:
       - name: Lesson 3-1 - Copying the Lesson 2 Package
-        href: lesson-3-1-copying-the-lesson-2-package.md
+        href: ../integration-services/lesson-3-1-copying-the-lesson-2-package.md
       - name: Lesson 3-2 - Adding and Configuring Logging
-        href: lesson-3-2-adding-and-configuring-logging.md
+        href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
       - name: Lesson 3-3 - Testing the Lesson 3 Tutorial Package
-        href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
+        href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
     - name: "Lesson 4: Add Error Flow Redirection"
-      href: lesson-4-add-error-flow-redirection-with-ssis.md
+      href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
       items:
       - name: Lesson 4-1 - Copying the Lesson 3 Package
-        href: lesson-4-1-copying-the-lesson-3-package.md
+        href: ../integration-services/lesson-4-1-copying-the-lesson-3-package.md
       - name: Lesson 4-2 - Creating a Corrupted File
-        href: lesson-4-2-creating-a-corrupted-file.md
+        href: ../integration-services/lesson-4-2-creating-a-corrupted-file.md
       - name: Lesson 4-3 - Adding Error Flow Redirection
-        href: lesson-4-3-adding-error-flow-redirection.md
+        href: ../integration-services/lesson-4-3-adding-error-flow-redirection.md
       - name: Lesson 4-4 - Adding a Flat File Destination
-        href: lesson-4-4-adding-a-flat-file-destination.md
+        href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
       - name: Lesson 4-5 - Testing the Lesson 4 Tutorial Package
-        href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
+        href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
     - name: "Lesson 5: Add Package Configurations for the Package Deployment Model"
-      href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
+      href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
       - name: Lesson 5-1 - Copying the Lesson 4 Package
-        href: lesson-5-1-copying-the-lesson-4-package.md
+        href: ../integration-services/lesson-5-1-copying-the-lesson-4-package.md
       - name: Lesson 5-2 - Enabling and Configuring Package Configurations
-        href: lesson-5-2-enabling-and-configuring-package-configurations.md
+        href: ../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md
       - name: Lesson 5-3 - Modifying the Directory Property Configuration Value
-        href: lesson-5-3-modifying-the-directory-property-configuration-value.md
+        href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
       - name: Lesson 5-4 - Testing the Lesson 5 Tutorial Package
-        href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
+        href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
     - name: "Lesson 6: Using Parameters with the Project Deployment Model"
-      href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
+      href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
       - name: Lesson 6-1 - Copying the Lesson 5 Package
-        href: lesson-6-1-copying-the-lesson-5-package.md
+        href: ../integration-services/lesson-6-1-copying-the-lesson-5-package.md
       - name: Lesson 6-2 - Converting the Project to the Project Deployment Model
-        href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
+        href: ../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md
       - name: Lesson 6-3 - Testing the Lesson 6 Package
-        href: lesson-6-3-testing-the-lesson-6-package.md
+        href: ../integration-services/lesson-6-3-testing-the-lesson-6-package.md
       - name: Lesson 6-4 - Deploying the Lesson 6 Package
-        href: lesson-6-4-deploying-the-lesson-6-package.md
+        href: ../integration-services/lesson-6-4-deploying-the-lesson-6-package.md
   - name: Deploy Packages
-    href: deploy-packages-with-ssis.md
+    href: ../integration-services/deploy-packages-with-ssis.md
     items:
     - name: "Lesson 1: Preparing to Create the Deployment Bundle"
-      href: lesson-1-preparing-to-create-the-deployment-bundle.md
+      href: ../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md
       items:
       - name: Lesson 1-1 - Creating Working Folders and Environment Variables
-        href: lesson-1-1-creating-working-folders-and-environment-variables.md
+        href: ../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md
       - name: Lesson 1-2 - Creating the Deployment Project
-        href: lesson-1-2-creating-the-deployment-project.md
+        href: ../integration-services/lesson-1-2-creating-the-deployment-project.md
       - name: Lesson 1-3 - Adding Packages and Other Files
-        href: lesson-1-3-adding-packages-and-other-files.md
+        href: ../integration-services/lesson-1-3-adding-packages-and-other-files.md
       - name: Lesson 1-4 - Adding Package Configurations
-        href: lesson-1-4-adding-package-configurations.md
+        href: ../integration-services/lesson-1-4-adding-package-configurations.md
       - name: Lesson 1-5 - Testing the Updated Packages
-        href: lesson-1-5-testing-the-updated-packages.md
+        href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
     - name: "Lesson 2: Create the Deployment Bundle"
-      href: lesson-2-create-the-deployment-bundle-in-ssis.md
+      href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
       - name: Lesson 2-1 - Building the Deployment Utility
-        href: lesson-2-1-building-the-deployment-utility.md
+        href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
       - name: Lesson 2-2 - Verifying the Deployment Bundle
-        href: lesson-2-2-verifying-the-deployment-bundle.md
+        href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
     - name: "Lesson 3: Install Packages"
-      href: lesson-3-install-ssis-packages.md
+      href: ../integration-services/lesson-3-install-ssis-packages.md
       items:
       - name: Lesson 3-1 - Copying the Deployment Bundle
-        href: lesson-3-1-copying-the-deployment-bundle.md
+        href: ../integration-services/lesson-3-1-copying-the-deployment-bundle.md
       - name: Lesson 3-2 - Running the Package Installation Wizard
-        href: lesson-3-2-running-the-package-installation-wizard.md
+        href: ../integration-services/lesson-3-2-running-the-package-installation-wizard.md
       - name: Lesson 3-3 - Testing the Deployed Packages
-        href: lesson-3-3-testing-the-deployed-packages.md
+        href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: Resources
   items:
-  - name: Get help in the SSIS forum
-    href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices
-  - name: Get help on Stack Overflow
+  - name: Get help in the SSIS forum +
+    href: https://social.msdn.microsoft.com/Forums/en-US/home
+  - name: Get help on Stack Overflow +
     href: https://stackoverflow.com/questions/tagged/ssis
-  - name: Follow the SSIS team blog
+  - name: Follow the SSIS team blog +
     href: https://blogs.msdn.microsoft.com/ssis/
-  - name: Report issues & request features
+  - name: Report issues & request features +
     href: https://feedback.azure.com/forums/908035-sql-server
-  - name: Get the docs on your PC
-    href: ../sql-server/sql-server-help-installation.md

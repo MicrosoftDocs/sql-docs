@@ -88,20 +88,30 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- adds an alert (Test Alert) that runs the Back up
-    -- the AdventureWorks2012 Database job when fired   
-    -- assumes that the message 55001 and the Back up
-    -- the AdventureWorks2012 Database job already exist.  
+    -- Adds an alert (Test Alert) that notifies the
+    -- Alert Operator via email when an error with a 
+    -- severity of 23 is detected.
+    
+    -- Assumes that the Alert Operator already exists 
+    -- and that database mail is configured.
+    
     USE msdb ;  
     GO  
   
-    EXEC dbo.sp_add_alert  
-        @name = N'Test Alert',  
-        @message_id = 55001,   
-       @severity = 0,   
-       @notification_message = N'Error 55001 has occurred. The DB will be backed up...',   
-       @job_name = N'Back up the AdventureWorks2012 Database' ;  
-    GO  
+    EXEC dbo.sp_add_alert @name=N'Test Alert', 
+      @message_id = 0, 
+      @severity = 23, 
+      @enabled = 1, 
+      @include_event_description_in = 1
+    ;
+    GO
+    
+    EXEC dbo.sp_add_notification @alert_name=N'Test Alert',
+      @operator_name=N'Alert Operator',
+      @notification_method=1
+    ;
+    GO
+
     ```  
   
 For more information, see [sp_add_alert (Transact-SQL)](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09).  

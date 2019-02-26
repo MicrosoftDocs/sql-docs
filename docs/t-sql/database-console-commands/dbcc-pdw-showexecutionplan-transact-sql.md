@@ -2,7 +2,8 @@
 title: "DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
-ms.prod: ""
+ms.prod: sql
+ms.technology: data-warehouse
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.topic: "language-reference"

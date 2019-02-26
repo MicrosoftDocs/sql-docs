@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Specify Credentials in Report Builder
   Credentials authenticate the user who is attempting to retrieve data from a source of data. The owner of the source of data determines the type of credentials that must be used. For example, a database administrator might specify that the user must provide a Windows username and password.  

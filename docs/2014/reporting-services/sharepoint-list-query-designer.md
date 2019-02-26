@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # SharePoint List Query Designer
   Report Designer provides both a graphical query designer and a text-based query designer to help you create a query that specifies the data to retrieve from a SharePoint site for a report dataset. Use the graphical query designer to explore the SharePoint list metadata, interactively build a query, and view the results of your query. Use the text-based query designer to view the query that was built by the graphical query designer, modify a query, or type the query commands. You can also import an existing query from a file or report.  

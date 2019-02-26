@@ -68,7 +68,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -121,7 +121,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+-- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -135,7 +135,7 @@ CREATE USER user_name
 ```
 
 > [!IMPORTANT]
-> Azure AD logins for SQL Database Managed Instance is in **public preview**.
+> Azure AD logins for SQL Database managed instance is in **public preview**.
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -263,11 +263,11 @@ GO
   
  Information about database users is visible in the [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) catalog view.
 
-A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Azure AD logins in SQL Database Managed Instance. Azure AD logins allow database-level Azure AD principals to be mapped to server-level Azure AD logins. To create an Azure AD user from an Azure AD login use the following syntax:
+A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Azure AD logins in SQL Database managed instance. Azure AD logins allow database-level Azure AD principals to be mapped to server-level Azure AD logins. To create an Azure AD user from an Azure AD login use the following syntax:
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-When creating the user in the SQL Database Managed Instance database, the login_name must correspond to an existing Azure AD login, or else using the **FROM EXTERNAL PROVIDER** clause will only create an Azure AD user without a login in the master database. For example, this command will create a contained user:
+When creating the user in the SQL Database managed instance database, the login_name must correspond to an existing Azure AD login, or else using the **FROM EXTERNAL PROVIDER** clause will only create an Azure AD user without a login in the master database. For example, this command will create a contained user:
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -458,11 +458,11 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### I. Create an Azure AD user from an Azure AD login in SQL Database Managed Instance
+### I. Create an Azure AD user from an Azure AD login in SQL Database managed instance
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
- Sign into your Managed Instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) example.
+ Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) example.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -488,7 +488,7 @@ GO
 
 ### J. Create an Azure AD user without an AAD login for the database
 
-The following syntax is used to create an Azure AD user bob@contoso.com, in the SQL Database Managed Instance database (contained user):
+The following syntax is used to create an Azure AD user bob@contoso.com, in the SQL Database managed instance database (contained user):
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLXMLOLEDB Provider, executing SQL queries"
   - "SQL queries [SQLXML]"
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

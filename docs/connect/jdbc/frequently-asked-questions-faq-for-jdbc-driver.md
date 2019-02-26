@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions (FAQ) for JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2018"
+ms.date: "02/06/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -30,7 +30,14 @@ See the [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc
 **What is the difference between the JDBC driver packages available on the Microsoft Download Center and the JDBC driver available on GitHub?**  
 The JDBC driver files available on the GitHub repository for the Microsoft JDBC driver are the core of the JDBC driver and are under the open-source license listed in the repository. The driver packages on the Microsoft Download Center include additional libraries for Windows-integrated authentication and enabling XA transactions with the JDBC driver. Those additional libraries are under the license included with the downloadable package.
 
-**What should I know when upgrading my driver?**  
+**What should I know when upgrading my driver?**
+ The Microsoft JDBC Driver 7.2 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
+
+| JAR                        | JDBC Specification            | JDK Version |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.2.1.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+
  The Microsoft JDBC Driver 7.0 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
 
 | JAR                        | JDBC Specification            | JDK Version |
@@ -100,7 +107,7 @@ The table below lists available authentication options. A pure Java Kerberos aut
 Yes. The driver supports the use of IPv6 addresses. Use the connection properties collection and the serverName connection string property. For more information, see [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
 
 **What is adaptive buffering?**  
-Adaptive buffering is introduced starting with Microsoft SQL Server 2005 JDBC Driver version 1.2. It is designed to retrieve any kind of large-value data without the overhead of server cursors. The adaptive buffering feature of the Microsoft SQL Server JDBC Driver provides a connection string property, responseBuffering, which can be set to "adaptive" or "full". In the version 1.2 release, the buffering mode is "full" by default and the application must set the adaptive buffering mode explicitly. Starting with the JDBC Driver version 2.0, the default behavior of the driver is "adaptive". Thus, your application does not have to request the adaptive behavior explicitly to get the adaptive buffering behavior. For more information, see [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md) and the blog [What is adaptiveresponse buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575).
+Adaptive buffering is introduced starting with Microsoft SQL Server 2005 JDBC Driver version 1.2. It is designed to retrieve any kind of large-value data without the overhead of server cursors. The adaptive buffering feature of the Microsoft SQL Server JDBC Driver provides a connection string property, responseBuffering, which can be set to "adaptive" or "full". In the version 1.2 release, the buffering mode is "full" by default and the application must set the adaptive buffering mode explicitly. Starting with the JDBC Driver version 2.0, the default behavior of the driver is "adaptive". Thus, your application does not have to request the adaptive behavior explicitly to get the adaptive buffering behavior. For more information, see [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md) and the blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575).
 
 **Does the driver support connection pooling?**  
 The driver provides support for Java Platform, Enterprise Edition 5 (Java EE 5) connection pooling. The driver implements the JDBC 3.0 required interfaces to enable the driver to participate in any connection-pooling implementation that is provided by middleware application server vendors. The driver participates in pooled connections in these environments. For more information, see [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). The driver does not provide its own pooling implementation, but rather it relies on third-party Java application servers.

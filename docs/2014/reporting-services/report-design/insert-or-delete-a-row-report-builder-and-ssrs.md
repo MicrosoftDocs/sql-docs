@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Insert or Delete a Row (Report Builder and SSRS)
   You can add or delete rows in a tablix data region. The tablix data region can be a table, a matrix, or a list. The following procedures do not apply to the chart and gauge data regions.  

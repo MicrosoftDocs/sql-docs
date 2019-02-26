@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # SharePoint Integration with 2008 and 2008 R2  Report Servers
   The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] introduced a architecture where SharePoint mode is now based on a SharePoint Shared service. Management of the new functionality is completed in SharePoint Central administration on the **Manage Services** and **Manager Service Applications** pages. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] previous architecture for SharePoint Integration is still supported with the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint 2010 products so you can integrate SharePoint 2010 with previous versions of a report server.  

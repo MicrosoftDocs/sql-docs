@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Exporting Reports (Report Builder and SSRS)
   After you run a report, you can export it to another format, such as Excel or PDF, or export the report by generating an Atom service document, listing the Atom-compliant data feeds available from the report.  

@@ -57,6 +57,7 @@ SELECT @myVariable AS ResultVariable;
 ```
   
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+
 |ResultVariable | 
 |--- |
 |8.75 |

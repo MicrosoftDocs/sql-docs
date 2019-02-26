@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)

@@ -77,8 +77,8 @@ The crawl log file follows the following naming scheme:
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 The variable parts of the crawl log file name are the following.
--   <**DatabaseID**> - The ID of a database. <**dbid**> is a five digit number with leading zeros.  
--   <**FullTextCatalogID**> - Full-text catalog ID. <**catid**> is a five digit number with leading zeros.  
+-   \<**DatabaseID**> - The ID of a database. <**dbid**> is a five digit number with leading zeros.  
+-   <**FullTextCatalogID**> - Full-text catalog ID. \<**catid**> is a five digit number with leading zeros.  
 -   <**n**> - Is an integer that indicates one or more crawl logs of the same full-text catalog exist.  
   
  For example, `SQLFT0000500008.2` is the crawl log file for a database with database ID = 5, and full-text catalog ID = 8. The 2 at the end of the file name indicates that there are two crawl log files for this database/catalog pair.  

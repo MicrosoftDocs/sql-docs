@@ -93,4 +93,4 @@ Inputs to this stored procedure include:
 Now that you have run a couple of simple Python scripts, take a closer look at structuring inputs and outputs.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Handle inputs and outputs](quickstart-python-run-using-t-sql.md)
+> [Quickstart: Handle inputs and outputs](quickstart-python-inputs-and-outputs.md)

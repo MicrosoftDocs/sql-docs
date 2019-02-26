@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Linked Reports Methods
   You can use these methods to create and manage linked items.  

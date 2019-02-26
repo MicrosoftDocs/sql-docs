@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create and Manage Role Assignments
   A *role assignment* is a security policy that determines whether a user or group can access a specific report server item or perform an operation. A role assignment consists of a single user or group account name and one or more role definitions.  

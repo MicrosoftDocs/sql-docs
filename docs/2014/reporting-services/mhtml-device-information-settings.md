@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # MHTML Device Information Settings
   The following table lists the device information settings for rendering reports in Web archive (MHTML) format.  

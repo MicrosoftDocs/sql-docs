@@ -43,7 +43,7 @@ The Linux and macOS drivers are available only for the 64-bit versions of the fo
 |Ubuntu Linux 15.10|13, 13.1|
 |Ubuntu Linux 16.04|13, 13.1, 17|
 |Ubuntu Linux 16.10|13, 13.1|
-|Ubuntu Linux 17.10|17| 
+|Ubuntu Linux 17.04|17| 
 |Ubuntu Linux 18.04|17| 
 |Ubuntu Linux 18.10|17| 
 

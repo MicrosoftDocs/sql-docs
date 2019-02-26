@@ -7177,21 +7177,21 @@
               items:
               - name: mssqlctl app 
                 href: ../big-data-cluster/reference-mssqlctl-app.md
-              - name: Templates
+              - name: mssqlctl app template
                 href: ../big-data-cluster/reference-mssqlctl-app-template.md
             - name: Cluster
               items:
               - name: mssqlctl cluster
                 href: ../big-data-cluster/reference-mssqlctl-cluster.md
-              - name: Config
+              - name: mssqlctl cluster config
                 href: ../big-data-cluster/reference-mssqlctl-cluster-confiig.md
-              - name: Debug
+              - name: mssqlctl cluster debug
                 href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md              
             - name: Storage
               items:
               - name: mssqlctl storage
                 href: ../big-data-cluster/reference-mssqlctl-storage.md
-              - name: Mount
+              - name: mssqlctl storage mount
                 href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
         - name: Resources
           items:

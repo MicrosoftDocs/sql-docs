@@ -19,7 +19,14 @@ The following article provides reference for the **cluster** commands in the **m
 
 |||
 |---|---|
-| TBD | TBD |
+| [config](reference-mssqlctl-cluster-config.md) | Cluster configuration commands. |
+| [debug](reference-mssqlctl-cluster-debug.md) | Debug commands. |
+| [create](#create) | Create cluster. |
+| [delete](#delete) | Delete cluster. |
+
+## <a id="create"></a> mssqlctl cluster create
+
+## <a id="delete"></a> mssqlctl cluster delete
 
 ## Next steps
 

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl cluster
+# mssqlctl cluster config
 
 The following article provides reference for the **cluster config** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
@@ -19,7 +19,9 @@ The following article provides reference for the **cluster config** commands in 
 
 |||
 |---|---|
-| TBD | TBD |
+| [get](#get) | Get cluster. |
+
+## <a id="get"></a> mssqlctl cluster config get
 
 ## Next steps
 

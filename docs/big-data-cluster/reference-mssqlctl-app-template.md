@@ -19,7 +19,12 @@ The following article provides reference for the **app template** commands in th
 
 |||
 |---|---|
-| TBD | TBD |
+| [list](#list) | Fetch supported templates. |
+| [pull](#pull) | Download supported templates. |
+
+## <a id="list"></a> mssqlctl app template list
+
+## <a id="pull"></a> mssqlctl app template pull
 
 ## Next steps
 

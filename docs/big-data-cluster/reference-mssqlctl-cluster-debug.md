@@ -19,7 +19,12 @@ The following article provides reference for the **cluster debug** commands in t
 
 |||
 |---|---|
-| TBD | TBD |
+| [copy-logs](#copy-logs) | Copy logs. |
+| [dump](#dump) | Trigger logging dump. |
+
+## <a id="copy-logs"></a> cluster debug copy-logs
+
+## <a id="dump"></a> cluster debug dump
 
 ## Next steps
 

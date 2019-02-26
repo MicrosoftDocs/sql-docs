@@ -19,7 +19,7 @@ The following article provides reference for the **storage** commands in the **m
 
 |||
 |---|---|
-| TBD | TBD |
+| [mount](reference-mssqlctl-storage-mount.md) | Manage mounting of remote stores in HDFS. |
 
 ## Next steps
 

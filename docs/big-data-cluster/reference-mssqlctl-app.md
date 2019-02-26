@@ -19,7 +19,28 @@ The following article provides reference for the **app** commands in the **mssql
 
 |||
 |---|---|
-| TBD | TBD |
+| [create](#create) | Create application. |
+| [delete](#delete) | Delete application. |
+| [describe](#describe) | Describe application. |
+| [init](#init) | Kickstart new application skeleton. |
+| [list](#list) | List application(s). |
+| [run](#run) | Run application. |
+| [update](#update) | Update application. |
+| [template](reference-mssqlctl-app-template.md) | Template commands. |
+
+## <a id="create"></a> mssqlctl app create
+
+## <a id="delete"></a> mssqlctl app delete
+
+## <a id="describe"></a> mssqlctl app describe
+
+## <a id="init"></a> mssqlctl app init
+
+## <a id="list"></a> mssqlctl app list
+
+## <a id="run"></a> mssqlctl app run
+
+## <a id="update"></a> mssqlctl app update
 
 ## Next steps
 

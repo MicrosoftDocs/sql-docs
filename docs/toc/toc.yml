@@ -7167,6 +7167,24 @@
               href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
             - name: Use extended Spark History Server
               href: ../big-data-cluster/spark-history-server.md
+        - name: Reference
+          items:
+          - name: mssqlctl reference
+            items:
+            - name: mssqlctl
+              href: mssqlctl-reference.md
+            - name: App Deploy
+              items:
+              - name: mssqlctl app 
+                href: mssqlctl-reference-app.md
+            - name: Cluster
+              items:
+              - name: mssqlctl cluster
+                href: mssqlctl-reference-cluster.md
+            - name: Storage
+              items:
+              - name: mssqlctl storage
+                href: mssqlctl-reference-storage.md
         - name: Resources
           items:
           - name: Request access to big data clusters

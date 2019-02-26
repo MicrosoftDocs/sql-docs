@@ -13,7 +13,7 @@ ms.author: "rortloff"
 manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sys.workload_management_workload_groups (Transact-SQL)
+# sys.workload_management_workload_groups (Transact-SQL) (Preview)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Returns information for each workload group.  

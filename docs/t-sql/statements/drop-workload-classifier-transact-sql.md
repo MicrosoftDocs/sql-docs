@@ -21,7 +21,7 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 ---
-# DROP WORKLOAD CLASSIFIER (Transact-SQL)
+# DROP WORKLOAD CLASSIFIER (Transact-SQL) (Preview)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   Drops an existing user-defined Workload Management Classifier.  

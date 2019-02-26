@@ -2,7 +2,7 @@
 title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: ""
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -95,6 +95,8 @@ For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/fun
 
 > [!NOTE]
 > Batch mode on rowstore is a public preview feature.  
+
+Batch mode on rowstore enables batch mode execution for analytic workloads without requiring columnstore indexes.  This feature supports batch mode execution and bitmap filters for on-disk heaps and B-tree indexes. Batch mode on rowstore enables support for all existing batch mode-enabled operators.
 
 ### Background
 

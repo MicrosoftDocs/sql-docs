@@ -1,7 +1,7 @@
 ---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/09/2019"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

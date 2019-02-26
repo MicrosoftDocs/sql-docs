@@ -2,7 +2,7 @@
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
-ms.date: "10/22/2018"
+ms.date: "02/23/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -32,15 +32,15 @@ The following step-by-step instructions help you use the Data Migration Assistan
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
     - [Azure PowerShell Modules](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Download and extract:
-    - The [DMA Reports Power BI template](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - The [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
+    - The [DMA Reports Power BI template](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip).
+    - The [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip).
 
 ## Loading the PowerShell modules
 Saving the PowerShell modules into the PowerShell modules directory enables you to call the modules without the need to explicitly load them before use.
 
 To load the modules, perform the following steps:
 1. Navigate to C:\Program Files\WindowsPowerShell\Modules, and then create a folder named **DataMigrationAssistant**.
-2. Open the [PowerShell-Modules](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip), and then save them into the folder you created.
+2. Open the [PowerShell-Modules](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip), and then save them into the folder you created.
 
       ![PowerShell Modules](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -92,13 +92,13 @@ After loading the PowerShell modules into the modules directory and creating an 
 
 The parameters associated with the dmaDataCollector function are described in the following table.
 
-|Parameter  |Description
+|Parameter  |Description |
 |---------|---------|
 |**getServerListFrom** | Your inventory. Possible values are **SqlServer** and **CSV**.<br/>For more info, see [Create an inventory of SQL Servers](#create-inventory). |
 |**serverName**	| The SQL Server instance name of the inventory when using **SqlServer** in the **getServerListFrom** parameter. |
 |**databaseName** | The database hosting the inventory table. |
 |**AssessmentName**	| The name of the DMA assessment. |
-|**TargetPlatform** | The assessment target type that you want to perform.  Possible values are **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, and **SQLServerWindows2017**. |
+|**TargetPlatform** | The assessment target type that you want to perform.  Possible values are **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, and **ManagedSqlServer**. |
 |**AuthenticationMethod** |	The authentication method for connecting to the SQL Server targets you want to assess. Possible values are **SQLAuth** and **WindowsAuth**. |
 |**OutputLocation** | The directory in which to storing the JSON assessment output file. Depending on the number of databases being assessed and the number of objects within the databases, the assessments can take an exceptionally long time. The file will be written after all assessments have completed. |
 
@@ -114,10 +114,10 @@ After your assessment has finished, you're now ready to import the data into SQL
 
 The parameters associated with the dmaProcessor function are described in the following table.
 
-|Parameter  |Description
+|Parameter  |Description |
 |---------|---------|
-|**processTo**	| The location to which the JSON file will be processed. Possible values are **SQLServer** and **AzureSQLDatabase**. |
-|**serverName**	| The SQL Server instance to which data will be processed.  If you specify **AzureSQLDatabase** for the **processTo** parameter, then include only the SQL Server name (don't include .database.windows.net). You'll be prompted for two logins when targeting Azure SQL Database; the first is your Azure tenant credentials, while the second is your admin login for the Azure SQL Server. |
+|**processTo** | The location to which the JSON file will be processed. Possible values are **SQLServer** and **AzureSQLDatabase**. |
+|**serverName** | The SQL Server instance to which data will be processed.  If you specify **AzureSQLDatabase** for the **processTo** parameter, then include only the SQL Server name (don't include .database.windows.net). You'll be prompted for two logins when targeting Azure SQL Database; the first is your Azure tenant credentials, while the second is your admin login for the Azure SQL Server. |
 |**CreateDMAReporting** | The staging database to create for processing the JSON file.  If the database you specify already exists and you set this parameter to one, then objects don't get created.  This parameter is useful for recreating a single object that has been dropped. |
 |**CreateDataWarehouse** | Creates the data warehouse that will be used by the Power BI report. |
 |**databaseName** | The name of the DMAReporting database. |
@@ -156,22 +156,43 @@ You can also use the LoadWarehouse script to provide the basic TSQL statements f
 
    After the report has refreshed the data from the **DMAWarehouse** database, you're presented with a report similar to the following.
 
-   ![DMAWarehouse report view](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+   ![DMAWarehouse report view](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > If you do not see the data you were expecting, try changing the active bookmark.  For more information, see the Functionality section.
+   > If you do not see the data you were expecting, try changing the active bookmark.  For more information, see the the detail in the following section.
 
 ## Working with DMA reports
-To work with a DMA report, use the slicers to filter by:
+To work with DMA reports, use bookmarks and slicers to filter by:
+- Assessment types (Azure SQL DB, Azure SQL MI, SQL on-premises) 
 - Instance Name
 - Database Name
 - Team Name
 
-You can also use Bookmarks to switch the reporting context between:
-- Cloud assessments
+To access the bookmarks and filters blade, select the filters bookmark on the main report page:
+
+![DMA report bookmarks and filters](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
+
+This enables the following blade:
+
+![DMA Report Views blade](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
+
+You can use Bookmarks to switch the reporting context between:
+- Azure SQL DB cloud assessments
+- Azure SQL MI cloud assessments
 - On-premises assessments
 
-  ![DMA report bookmarks](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
+![DMA Report Views bookmarks](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+
+To hide the filters blade, CTRL-click the Back button:
+
+![DMA Report Views back button](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
+
+There is a prompt at the bottom-left of the report page to show whether a filter is currently applied on any of the following:
+* FactAssessment – InstanceName
+* FactAssessment – DatabaseName
+* dimDBOwner - DBOwner
+
+![Filter applied prompt](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
 > [!NOTE]
 > If you only perform an Azure SQL Database assessment, then only Cloud reports are populated. Conversely, if you only perform an on-premises assessment, only On-Premise reports are populated. However, if you perform both an Azure and an On-Premise assessment and then load both assessments into your warehouse, you can switch between Cloud reports and On-Premise reports by CTRL-clicking the associated icon.

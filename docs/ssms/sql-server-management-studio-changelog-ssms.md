@@ -15,9 +15,6 @@ manager: craigg
 # SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions](#previous-ssms-releases).
 
 

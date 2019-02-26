@@ -1,7 +1,7 @@
 ---
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/27/2019
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql

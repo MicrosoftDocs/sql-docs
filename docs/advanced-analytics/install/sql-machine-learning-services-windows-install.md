@@ -4,7 +4,7 @@ description: R in SQL Server or Python on SQL Server installation steps for SQL 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/27/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist

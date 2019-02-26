@@ -7131,9 +7131,9 @@
               href: ../big-data-cluster/data-ingestion-restore-database.md
           - name: Deploy apps
             items:
-            - name: Deploy with mssqlctl
+            - name: Deploy and manage with mssqlctl
               href: ../big-data-cluster/big-data-cluster-create-apps.md
-            - name: Deploy with VS Code
+            - name: Deploy and maange with VS Code
               href: ../big-data-cluster/app-deployment-extension.md
           - name: Big Data/Machine Learning
             items:
@@ -7143,6 +7143,8 @@
               href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
             - name: Exporting ML models with Spark/Mleap
               href: ../big-data-cluster/export-model-with-spark-mleap.md
+            - name: Use Sparklyr from RStudio
+              href: ../big-data-cluster/sparklyr-from-RStudio.md  
           - name: Manage SQL Server big data cluster
             items:
             - name: Connect to a big data cluster
@@ -7159,8 +7161,10 @@
               href: ../big-data-cluster/notebooks-how-to-manage.md
           - name: Spark jobs
             items:
-            - name: Submit Spark jobs
+            - name: Submit Spark jobs in Azure Data Studio
               href: ../big-data-cluster/spark-submit-job.md
+            - name: Submit Spark jobs in IntelliJ
+              href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
             - name: Use extended Spark History Server
               href: ../big-data-cluster/spark-history-server.md
         - name: Resources

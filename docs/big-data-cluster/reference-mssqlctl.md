@@ -11,7 +11,7 @@ ms.prod | sql
 ms.technology | big-data-cluster
 ---
 
-# mssqlctl reference
+# mssqlctl
 
 The following article provides reference for the **mssqlctl** tool for SQL Server 2019 big data clusters (preview).
 
@@ -19,11 +19,11 @@ The following article provides reference for the **mssqlctl** tool for SQL Serve
 
 |||
 |---|---|
-| [app](mssqlctl-reference-app.md) | Create, delete, run, and manage applications. |
-| [cluster](mssqlctl-reference-cluster.md) | Select, manage, and operate clusters. |
+| [app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications. |
+| [cluster](reference-mssqlctl-cluster.md) | Select, manage, and operate clusters. |
 | [login](#login) | Log in to the cluster. |
 | [logout](#logout) | Log out of cluster. |
-| [storage](mssqlctl-reference-storage.md) | Manage cluster storage. |
+| [storage](reference-mssqlctl-storage.md) | Manage cluster storage. |
 
 ## <a id="login"></a> mssqlctl login
 

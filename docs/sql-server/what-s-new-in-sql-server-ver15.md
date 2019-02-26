@@ -496,6 +496,7 @@ For this release, calculation groups do have some limitations:
 - Row Level Security defined on the calculation-group table is not yet supported.
 - Object Level Security defined on the calculation-group table is not yet supported.
 - DetailsRows expressions referring to calculation items are net yet supported.
+- MDX is not yet supported.
 
 Calculation groups require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
 

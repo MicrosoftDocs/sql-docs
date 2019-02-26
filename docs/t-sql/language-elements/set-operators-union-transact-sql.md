@@ -38,11 +38,10 @@ The following are basic rules for combining the result sets of two queries by us
 ## Syntax  
   
 ```  
-    { <query_specification> | ( <query_expression> ) }   
-  UNION [ ALL ]   
-  <query_specification | ( <query_expression> )   
- [ UNION [ ALL ] <query_specification> | ( <query_expression> )   
-    [ ...n ] ]   
+{ <query_specification> | ( <query_expression> ) }   
+{ UNION [ ALL ]   
+  { <query_specification> | ( <query_expression> ) } 
+  [ ...n ] }
 ```  
   
 ## Arguments  

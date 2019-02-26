@@ -89,7 +89,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | The type of auditable entity that the audit occurs on. Is not nullable. |  
 | client_ip | **nvarchar(128)** | **Applies to**: Azure SQL DB + SQL Server (starting with 2017)<br /><br /> 	Source IP of the client application |  
 | connection_id | GUID | **Applies to**: Azure SQL DB and Managed instance<br /><br /> ID of the connection in the server |
-| data_sensitivity_information | nvarchar(4000) | **Applies to**: Azure SQL DB only<br /><br /> Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](https://review.docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification) |
+| data_sensitivity_information | nvarchar(4000) | **Applies to**: Azure SQL DB only<br /><br /> Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | The database context in which the action occurred. Is nullable. Returns NULL for audits occurring at the server level. |  
 | database_principal_id | **int** |ID of the database user context that the action is performed in. Is not nullable. Returns 0 if this does not apply. For example, a server operation.|
 | database_principal_name | **sysname** | Current user. Is nullable. Returns NULL if not available. |  

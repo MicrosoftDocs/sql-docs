@@ -17,6 +17,17 @@ manager: kenvh
 
   Release Notes for Microsoft ODBC Driver for SQL Server on Windows.  
 
+
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows
+
+**Features Added**:
+
+- Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode
+- AE input parameter streaming
+- XA DTC
+
+[Bug fixes](../bug-fixes.md)
+
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows
 
 **Features Added**:

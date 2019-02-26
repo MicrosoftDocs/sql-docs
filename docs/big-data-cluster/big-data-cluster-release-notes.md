@@ -32,8 +32,10 @@ The following sections describe the new features and known issues for big data c
 ### What's in the CTP 2.3 release?
 
 - Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ.
-- Common CLI for application deployment and cluster management.
+- [Common CLI for application deployment and cluster management](big-data-cluster-create-apps.md).
+- [VS Code extension to deploy applications to SQL Server big data clusters](app-deployment-extension.md).
 - New syntax for **mssqlctl** tool usage.
+- [Use Sparklyr in SQL Server 2019 Big data cluster](sparklyr-from-RStudio.md).
 - New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
 - Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster but leaves the namespace. Previously, this command deleted the entire namespace.
 - Endpoint names have been changed and consolidated in this release:

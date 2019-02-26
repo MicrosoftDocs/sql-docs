@@ -21,8 +21,8 @@ manager: kenvh
 **Features Added**:
 
 - Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode, for more information see [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md)
-- AE input parameter streaming, for more information see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#Limitations-of-the-ODBC-driver-when-using-Always-Encrypted)
-- XA DTC, for more information see [Using XA Transactions](../use-xa-with-dtc.md)
+- Ability to stream input parameters against Always Encrypted columns, for more information see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#Limitations-of-the-ODBC-driver-when-using-Always-Encrypted)
+- XA distributed transactions, for more information see [Using XA Transactions](../use-xa-with-dtc.md)
 
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS
 

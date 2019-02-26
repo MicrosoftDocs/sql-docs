@@ -1,14 +1,14 @@
 ---
-title | mssqlctl reference
-titleSuffix | SQL Server 2019 big data clusters
-description | Reference article for mssqlctl commands.
-author | rothja
-ms.author | jroth
-manager | craigg
-ms.date | 02/27/2019
-ms.topic | reference
-ms.prod | sql
-ms.technology | big-data-cluster
+title: mssqlctl reference
+titleSuffix: SQL Server 2019 big data clusters
+description: Reference article for mssqlctl commands.
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 02/27/2019
+ms.topic: reference
+ms.prod: sql
+ms.technology: big-data-cluster
 ---
 
 # mssqlctl
@@ -29,7 +29,7 @@ The following article provides reference for the **mssqlctl** tool for SQL Serve
 
 Log in to the cluster.
 
-```console
+```
 mssqlctl login
    --endpoint
    --password
@@ -48,19 +48,19 @@ mssqlctl login
 
 Log in interactively.
 
-```console
+```
 mssqlctl login
 ```
 
 Log in with user name and password.
 
-```console
+```
 mssqlctl login -u johndoe@contoso.com -p VerySecret
 ```
 
 Log in with user name, password, and cluster endpoint.
 
-```console
+```
 mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:12800
 ```
 
@@ -68,7 +68,7 @@ mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:
 
 Log out of cluster.
 
-```console
+```
 mssqlctl logout
    --username -u
 ```
@@ -83,7 +83,7 @@ mssqlctl logout
 
 Log out this user.
 
-```console
+```
 mssqlctl logout --username admin
 ```
 

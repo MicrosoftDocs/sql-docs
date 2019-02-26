@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Use Sparklyr in SQL Server 2019 Big data cluster
 
-Sparklyr provides an R interface for Apache Spark. Sparklyr is preffered way for R developers to use Spark. The guide describe how to use sparklyr in a SQL Server 2019 big data cluster (preview) using RStudio.
+Sparklyr provides an R interface for Apache Spark. Sparklyr is the preffered way for R developers to use Spark. This article describes how to use sparklyr in a SQL Server 2019 big data cluster (preview) using RStudio.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Sparklyr provides an R interface for Apache Spark. Sparklyr is preffered way for
 
 ## Connect to spark in SS19 Big Data cluster
 
-In RStudio create a RScript and connect to the Spark as follows. Spark Big data cluster connects through Livy, which can be reached with the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs). For authentication use the username and password you set during the deployment.
+In RStudio create a RScript and connect to the Spark as follows. Spark Big data cluster connects through Livy, which can be reached with the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs). For authentication, use the username and password you set during the deployment.
 
 ```r
 library(sparklyr)

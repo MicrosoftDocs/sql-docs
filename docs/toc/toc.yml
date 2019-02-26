@@ -7161,8 +7161,10 @@
               href: ../big-data-cluster/notebooks-how-to-manage.md
           - name: Spark jobs
             items:
-            - name: Submit Spark jobs
+            - name: Submit Spark jobs in Azure Data Studio
               href: ../big-data-cluster/spark-submit-job.md
+            - name: Submit Spark jobs in IntelliJ
+              href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
             - name: Use extended Spark History Server
               href: ../big-data-cluster/spark-history-server.md
         - name: Resources

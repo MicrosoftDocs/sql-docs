@@ -31,7 +31,9 @@ The following sections describe the new features and known issues for big data c
 
 ### What's in the CTP 2.3 release?
 
-- Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ.
+- [Submit Jar or Py](big-data-cluster-create-apps.md) files with references to SQL Server big data clusters.
+- Execute Jar or Py files located in the HDFS file system (CTP 2.3)
+- [Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [Common CLI for application deployment and cluster management](big-data-cluster-create-apps.md).
 - [VS Code extension to deploy applications to SQL Server big data clusters](app-deployment-extension.md).
 - New syntax for **mssqlctl** tool usage.

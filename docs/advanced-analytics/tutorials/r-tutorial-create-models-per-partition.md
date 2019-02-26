@@ -5,7 +5,7 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 10/02/2018
+ms.date: 02/27/2019
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen

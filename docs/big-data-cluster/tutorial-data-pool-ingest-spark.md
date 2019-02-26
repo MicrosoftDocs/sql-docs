@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to ingest data into the data pool of
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster

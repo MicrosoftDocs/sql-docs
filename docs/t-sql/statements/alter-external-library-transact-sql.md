@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/15/2019"
+ms.date: 02/27/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 

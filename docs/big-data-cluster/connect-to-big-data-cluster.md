@@ -5,7 +5,7 @@ description: Learn how to connect to the SQL Server master instance and the HDFS
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/12/2019
+ms.date: 02/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -37,8 +37,9 @@ httr::set_config(httr::config(ssl_verifypeer = 0L))
 sc <- spark_connect(master = "https://13.92.82.57:30443/gateway/default/livy/v1",
                     method = "livy",
                     config = config)
-
 ```
+
+## Run sparklyr queries
 
 After connecting to Spark, you can run sparklyr. The following example performs a query on iris dataset using sparklyr:
 

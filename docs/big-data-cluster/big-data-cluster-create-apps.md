@@ -66,10 +66,22 @@ Before you deploy or interact with applications, first log in to your SQL Server
 mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
 ```
 
-You can get the IP address of the `endpoint-service-proxy` service by running this command in a bash or cmd window:
+## AKS
+
+If you are using AKS, you need to run the following command to get the IP address of the `endpoint-service-proxy` service by running this command in a bash or cmd window:
+
 
 ```bash
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
+```
+
+
+## Kubeadm or Minikube
+
+If you are using Kubeadm or Minikube run the following command to get the IP address to login in to the cluster
+
+```bash
+kubectl get node --selector='node-role.kubernetes.io/master' 
 ```
 
 ## Create an app
@@ -214,6 +226,26 @@ If the run was successful, you should see your output as specified when you crea
   },
   "success": true
 }
+```
+
+## Create an app skeleton
+
+The init command provides a scaffold with the relevant artifcats that is required for deploying an app. The example below creates  hello you can do this by running the following command.
+
+```
+mssqlctl app init --name hello --version v1 --template python
+```
+
+This will create a folder called hello.  You can cd into the the directory and inspect the generated files in the folder. spec.yaml defines the app, such as name, version and source code. You can edit the spec to change name, version, input and outputs.
+
+Here is a sample output from the init command that you will see in the folder
+
+```
+hello.py
+README.md
+run-spec.yaml
+spec.yaml
+
 ```
 
 ## Describe an app

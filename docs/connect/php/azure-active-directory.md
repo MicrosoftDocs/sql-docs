@@ -1,6 +1,6 @@
 ---
 title: "Azure Active Directory | Microsoft Docs"
-ms.date: "02/11/2019"
+ms.date: "02/25/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -22,11 +22,11 @@ To use Azure AD, use the **Authentication** or **AccessToken** keywords (they ar
 |Keyword|Values|Description|
 |-|-|-|
 |**AccessToken**|Not set (default)|Authentication mode determined by other keywords. For more information, see [Connection Options](../../connect/php/connection-options.md). |
-||A byte string|The Azure AD Access Token extracted from an OAuth JSON response. The connection string must not contain user ID, password, or the Authentication keyword. |
+||A byte string|The Azure AD Access Token extracted from an OAuth JSON response. The connection string must not contain user ID, password, or the Authentication keyword (requires ODBC Driver version 17 or above in Linux or macOS). |
 |**Authentication**|Not set (default)|Authentication mode determined by other keywords. For more information, see [Connection Options](../../connect/php/connection-options.md). |
 ||`SqlPassword`|Directly authenticate to a SQL Server instance (which may be an Azure instance) using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 ||`ActiveDirectoryPassword`|Authenticate with an Azure Active Directory identity using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
-||`ActiveDirectoryMsi`|Authenticate using either a system-assigned managed identity or a user-assigned managed identity. For an overview and tutorials, refer to [What is managed identities for Azure resources?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
+||`ActiveDirectoryMsi`|Authenticate using either a system-assigned managed identity or a user-assigned managed identity (requires ODBC Driver version 17.3.1.1 or above). For an overview and tutorials, refer to [What is managed identities for Azure resources?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
 
 The **Authentication** keyword affects the connection security settings. If it is set in the connection string, then by default the **Encrypt** keyword is set to true, which means the client will request encryption. Moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true (**false** by default). This feature is distinguished from the old, less secure login method, in which the server certificate is validated only when encryption is specifically requested in the connection string.
 

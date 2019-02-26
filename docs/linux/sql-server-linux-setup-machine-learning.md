@@ -4,7 +4,7 @@ description: Learn how to install SQL Server Machine Learning Services (R, Pytho
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 02/14/2019
+ms.date: 02/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"

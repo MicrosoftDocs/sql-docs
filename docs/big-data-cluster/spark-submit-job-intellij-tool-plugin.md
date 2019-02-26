@@ -5,9 +5,9 @@ description: Submit Spark jobs on SQL Server Big Data Clusters in Azure Toolkit 
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.date: 01/04/2018
+ms.date: 02/27/2019
 ms.topic: conceptual
-ms.date: 01/04/2018
+ms.date: 02/27/2019
 ---
 
 # Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ

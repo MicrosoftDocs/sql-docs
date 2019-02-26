@@ -5,7 +5,7 @@ description: Learn about how data persistence works in a SQL Server 2019 big dat
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

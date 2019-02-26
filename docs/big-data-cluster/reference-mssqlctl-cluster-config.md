@@ -23,6 +23,8 @@ The following article provides reference for the **cluster config** commands in 
 
 ## <a id="get"></a> mssqlctl cluster config get
 
+Get cluster.
+
 ## Next steps
 
 For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).

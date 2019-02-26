@@ -26,7 +26,11 @@ The following article provides reference for the **cluster** commands in the **m
 
 ## <a id="create"></a> mssqlctl cluster create
 
+Create cluster.
+
 ## <a id="delete"></a> mssqlctl cluster delete
+
+Delete cluster.
 
 ## Next steps
 

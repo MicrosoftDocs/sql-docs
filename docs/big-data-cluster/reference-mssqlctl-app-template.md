@@ -24,7 +24,11 @@ The following article provides reference for the **app template** commands in th
 
 ## <a id="list"></a> mssqlctl app template list
 
+Fetch supported templates.
+
 ## <a id="pull"></a> mssqlctl app template pull
+
+Download supported templates.
 
 ## Next steps
 

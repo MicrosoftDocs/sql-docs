@@ -27,7 +27,14 @@ The following article provides reference for the **mssqlctl** tool for SQL Serve
 
 ## <a id="login"></a> mssqlctl login
 
+Log in to the cluster.
+
+### Parameters
+
+
 ## <a id="logout"></a> mssqlctl logout
+
+Log out of cluster.
 
 ## Next steps
 

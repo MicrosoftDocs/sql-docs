@@ -24,7 +24,11 @@ The following article provides reference for the **cluster debug** commands in t
 
 ## <a id="copy-logs"></a> cluster debug copy-logs
 
+Copy logs.
+
 ## <a id="dump"></a> cluster debug dump
+
+Trigger logging dump.
 
 ## Next steps
 

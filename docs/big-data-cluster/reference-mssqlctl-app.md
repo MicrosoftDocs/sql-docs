@@ -30,17 +30,31 @@ The following article provides reference for the **app** commands in the **mssql
 
 ## <a id="create"></a> mssqlctl app create
 
+Create application.
+
 ## <a id="delete"></a> mssqlctl app delete
+
+Delete application.
 
 ## <a id="describe"></a> mssqlctl app describe
 
+Describe application.
+
 ## <a id="init"></a> mssqlctl app init
+
+Kickstart new application skeleton.
 
 ## <a id="list"></a> mssqlctl app list
 
+List application(s).
+
 ## <a id="run"></a> mssqlctl app run
 
+Run application.
+
 ## <a id="update"></a> mssqlctl app update
+
+Update application.
 
 ## Next steps
 

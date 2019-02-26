@@ -25,9 +25,15 @@ The following article provides reference for the **storage mount** commands in t
 
 ## <a id="create"></a> mssqlctl storage mount create
 
+Create mounts of remote stores in HDFS.
+
 ## <a id="delete"></a> mssqlctl storage mount delete
 
+Delete mounts of remote stores in HDFS.
+
 ## <a id="status"></a> mssqlctl storage mount status
+
+Status of mount(s).
 
 ## Next steps
 

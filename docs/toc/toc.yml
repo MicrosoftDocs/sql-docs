@@ -15,6 +15,8 @@
         href: ../sql-server/what-s-new-in-sql-server-2016.md
       - name: Database engine in SQL Server 2016
         href: ../database-engine/whats-new-in-sql-server-2016.md
+  - name: Database engine overview
+    href: ../database-engine/sql-server-database-engine-overview.md
   - name: SQL Server 2017 editions & features
     href: ../sql-server/editions-and-components-of-sql-server-2017.md
   - name: SQL Server 2016 editions & features
@@ -2090,6 +2092,8 @@
               href: ../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md
             - name: SQL Server Express LocalDB Header and Version Information
               href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md
+            - name: LocalDB API sample
+              href: ../relational-databases/sql-server-express-localdb-reference.md  
             - name: LocalDB Functions
               items:
                 - name: LocalDBCreateInstance 
@@ -3124,6 +3128,12 @@
               href: ../relational-databases/server-management-objects-smo/tasks/using-user-defined-tables.md
             - name: Using XML Schemas
               href: ../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md
+    - name: Visual Studio native helpers
+      items:
+        - name: SqlToolsVSNativeHelpers
+          href: ../relational-databases/sqltoolsvsnativehelpers.md
+        - name: FrameWindowVisible
+          href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
     - name: SQLXML
       items:
         - name: Requirements for Running SQLXML Examples

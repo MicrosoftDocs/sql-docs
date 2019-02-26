@@ -34,7 +34,7 @@ config <- livy_config(user = "***root***", password = "****")
 
 httr::set_config(httr::config(ssl_verifypeer = 0L))
 
-sc <- spark_connect(master = "https://13.92.82.57:30443/gateway/default/livy/v1",
+sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
                     method = "livy",
                     config = config)
 ```

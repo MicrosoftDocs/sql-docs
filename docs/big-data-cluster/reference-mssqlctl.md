@@ -29,12 +29,63 @@ The following article provides reference for the **mssqlctl** tool for SQL Serve
 
 Log in to the cluster.
 
+```console
+mssqlctl login
+   --endpoint
+   --password
+   --username
+```
+
 ### Parameters
 
+| Parameter | Description |
+|---|---|
+|**--endpoint -e**| Cluster host and port (ex) `http://host:port"`. |
+|**--password -p**| Password credentials. |
+|**--username -u**| Account user. |
+
+### Examples
+
+Log in interactively.
+
+```console
+mssqlctl login
+```
+
+Log in with user name and password.
+
+```console
+mssqlctl login -u johndoe@contoso.com -p VerySecret
+```
+
+Log in with user name, password, and cluster endpoint.
+
+```console
+mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:12800
+```
 
 ## <a id="logout"></a> mssqlctl logout
 
 Log out of cluster.
+
+```console
+mssqlctl logout
+   --username -u
+```
+
+### Parameters
+
+| Parameters | Description |
+|---|---|
+| **--username -u** | Account user, if missing, logout the current active account. |
+
+### Examples
+
+Log out this user.
+
+```console
+mssqlctl logout --username admin
+```
 
 ## Next steps
 

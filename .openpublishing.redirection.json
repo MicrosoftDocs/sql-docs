@@ -271,6 +271,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md",
+            "redirect_url": "/sql/database-engine/availability-groups/windows/distributed-availability-groups",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/2014/relational-database/replication/what-s-new-replication.md",
             "redirect_url": "/sql/relational-database/replication/sql-server-replication?view=sql-server-2014",
             "redirect_document_id": false

@@ -29,8 +29,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
 
 - [Big data clusters](#bigdatacluster)
   - Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ
-  - Common CLI for application deployment and cluster management
-  - VS Code extension for application deployment and management
+  - Aplication deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more
   - Use Sparklyr in SQL Server 2019 big data clusters
 
 - [Database engine](#databaseengine)
@@ -108,13 +107,10 @@ Continue reading for more details about these features.
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
 - [Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
-- [Submit Jar or Py](../big-data-cluster/big-data-cluster-create-apps.md) files with references to SQL Server big data clusters (CTP 2.3)
-- Execute Jar or Py files located in the HDFS file system (CTP 2.3)
-- Common CLI for app deployment and cluster management simplifies app deployment (CTP 2.3)
-- [VS Code extension for application deployment and management](../big-data-cluster/app-deployment-extension.md) (CTP 2.3)
+- [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more (CTP 2.3)
 - [Use Sparklyr in SQL Server 2019 big data clusters](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
-- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-overview.md)<!--../big-data-cluster//big-data-cluster-create-apps.md-->. (CTP 2.1) 
+- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md) (CTP 2.2)
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)
 - Run Advanced analytics and machine learning with Spark (CTP 2.0)

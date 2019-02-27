@@ -298,7 +298,7 @@
         },
         {
             "source_path": "docs/2014/relational-database/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md",
-            "redirect_url": "/sql/relational-databases/replication/execute-scripts-before-and-after-a-snapshot-is-applied?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
@@ -323,7 +323,7 @@
         },
         {
             "source_path": "docs/2014/relational-database/replication/administration/administration-replication.md",
-            "redirect_url": "/sql/relational-databases/replication/adminstration/frequently-asked-questions-for-replication-administrators?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
@@ -378,7 +378,7 @@
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/create-updatable-subscription-to-transactional-publication.md",
-            "redirect_url": "/sql/relational-databases/replication/create-an-updatable-subscription-to-a-transactional-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
@@ -453,7 +453,7 @@
         },
         {
             "source_path": "docs/2014/relational-database/replication/advanced-merge-replication-resolve-merge-replication-conflicts.md",
-            "redirect_url": "/sql/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
@@ -463,17 +463,17 @@
         },
         {
             "source_path": "docs/2014/relational-database/replication/distribution-database-properties.md",
-            "redirect_url": "/sql/relational-databases/replication/distribution-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distributor-properties-general.md",
-            "redirect_url": "/sql/relational-databases/replication/distribution-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distributor-properties-publishers.md",
-            "redirect_url": "/sql/relational-databases/replication/distribution-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
@@ -548,7 +548,7 @@
         },
         {
             "source_path": "docs/2014/relational-database/replication/subscription-properties-publisher.md",
-            "redirect_url": "/sql/relational-databases/replication/subscription-properties-subscription?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/subscription-properties-subscriber?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
@@ -598,7 +598,7 @@
         },
         {
             "source_path": "docs/2014/relational-database/replication/merge/create-a-publication.md",
-            "redirect_url": "/sql/relational-databases/replication/merge/create-a-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/create-a-publication?view=sql-server-2014",
             "redirect_document_id": true
         },    
         {
@@ -1794,7 +1794,7 @@
         },
         {
             "source_path": "docs/relational-database/replication/administration/administration-replication.md",
-            "redirect_url": "/sql/relational-databases/replication/adminstration/frequently-asked-questions-for-replication-administrators",
+            "redirect_url": "/sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators",
             "redirect_document_id": false
         },
         {
@@ -1924,7 +1924,7 @@
         },
         {
            "source_path": "docs/relational-database/replication/advanced-merge-replication-resolve-merge-replication-conflicts.md",
-           "redirect_url": "/sql/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution",
+           "redirect_url": "/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution",
            "redirect_document_id": false
         },
         {
@@ -1934,7 +1934,7 @@
         },
         {
            "source_path": "docs/relational-database/replication/distribution-database-properties.md",
-           "redirect_url": "/sql/relational-databases/replication/distribution-properties",
+           "redirect_url": "/sql/relational-databases/replication/distributor-properties",
            "redirect_document_id": false
         },
         {
@@ -1944,12 +1944,12 @@
          },
         {
            "source_path": "docs/relational-database/replication/distributor-properties-general.md",
-           "redirect_url": "/sql/relational-databases/replication/distribution-properties",
+           "redirect_url": "/sql/relational-databases/replication/distributor-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/distributor-properties-publishers.md",
-           "redirect_url": "/sql/relational-databases/replication/distribution-properties",
+           "redirect_url": "/sql/relational-databases/replication/distributor-properties",
            "redirect_document_id": false
         },
         {

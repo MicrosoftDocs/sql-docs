@@ -4453,7 +4453,7 @@
                   href: ../relational-databases/replication/initialize-a-subscription.md
                   items:
                   - name: Initialize manually
-                    items: ../relational-databases/replication/initialize-a-subscription-manually.md
+                    href: ../relational-databases/replication/initialize-a-subscription-manually.md
                   - name: Create and apply the initial snapshot
                     href: ../relational-databases/replication/create-and-apply-the-initial-snapshot.md
                   - name: Modify Snapshot Options

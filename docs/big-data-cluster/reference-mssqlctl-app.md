@@ -54,14 +54,14 @@ mssqlctl app create
 | **--assets -a** | List of additional application file assets to be included. |
 | **--code -c** | Path to R or Python code file. |
 | **--description -d** | Description of the application. |
-| **--entrypoint** | Input parameter schema. |
-| **--inputs** | Application name. |
-| **--name -n** | Output parameter schema. |
-| **--outputs** | Application runtime.  Allowed values: Mleap, Python, R, SSIS. |
-| **--runtime -r** | Path to a directory with a YAML spec file describing the application. |
-| **--spec -s** | Application version. |
-| **--version -v** | Do not prompt for confirmation when creating an application from the CWD's |
-| **--yes -y** | spec.yaml file. |
+| **--entrypoint** |  |
+| **--inputs** | Input parameter schema. |
+| **--name -n** | Application name. |
+| **--outputs** | Output parameter schema. |
+| **--runtime -r** | Application runtime.  Allowed values: Mleap, Python, R, SSIS. |
+| **--spec -s** | Path to a directory with a YAML spec file describing the application. |
+| **--version -v** | Application version. |
+| **--yes -y** | Do not prompt for confirmation when creating an application from the CWD's spec.yaml file. |
 
 ### Examples
 

@@ -70,7 +70,7 @@ Log out of cluster.
 
 ```
 mssqlctl logout
-   --username -u
+   --username
 ```
 
 ### Parameters

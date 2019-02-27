@@ -10164,10 +10164,12 @@
     items:
     - name: Get help
       href: ../sql-server/sql-server-get-help.md
-    - name: Provide feedback for SQL Docs
+    - name: Feedback for SQL Docs +
       href: https://aka.ms/sqldocsfeedback
-    - name: Provide feedback for SQL Server (UserVoice)
+    - name: Feedback for SQL Server (UserVoice) +
       href: https://feedback.azure.com/forums/908035-sql-server
+    - name: SQL Docs Survey +
+      href: https://aka.ms/sqldocsurvey
     - name: Contribute to SQL Documentation!
       href: ../sql-server/sql-server-docs-contribute.md
     - name: DBA Stack Exchange +
@@ -10192,6 +10194,9 @@
     href: ../sql-server/sql-server-help-installation.md
 - name: Reference
   items:
+    - name: Archived Content (SQL 2005 - 2012)
+      displayName: 2005, 2008, 2008 r2, 2012
+      href: https://docs.microsoft.com/en-us/previous-versions/sql/
     - name: Database samples
       items:
         - name: Samples Overview

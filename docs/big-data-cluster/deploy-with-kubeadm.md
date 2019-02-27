@@ -21,9 +21,11 @@ This article provides an example of how to use **kubeadm** to configure Kubernet
 
 ## Prerequisites
 
-- Multiple Linux physical machines or virtual machines to use for the cluster
-- Recommended configuration: 8 CPUs, 32 GB of memory, and at least 100 GB of storage for each machine
-- Minimum of three machines in the cluster
+- Minimum of 3 Linux physical machines or virtual machines
+- Recommended configuration per machine:
+   - 8 CPUs
+   - 32 GB of memory
+   - 100 GB of storage
 
 ## Prepare the machines
 

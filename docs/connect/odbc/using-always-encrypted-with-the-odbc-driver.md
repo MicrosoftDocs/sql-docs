@@ -532,7 +532,7 @@ While the ODBC driver will allow the use of [asynchronous operations](../../rela
 Before ODBC Driver 17 for SQL Server, encrypted character and binary columns cannot be retrieved in parts with SQLGetData. Only one call to SQLGetData can be made, with a buffer of sufficient length to contain the entire column's data.
 
 ### Send data in parts with SQLPutData
-Data for insertion or comparison cannot be sent in parts with SQLPutData. Only one call to SQLPutData can be made, with a buffer containing the entire data. For inserting long data into encrypted columns, use the Bulk Copy API, described in the next section, with an input data file.
+Before ODBC Driver 17.3 for SQL Server, data for insertion or comparison cannot be sent in parts with SQLPutData. Only one call to SQLPutData can be made, with a buffer containing the entire data. For inserting long data into encrypted columns, use the Bulk Copy API, described in the next section, with an input data file.
 
 ### Encrypted money and smallmoney
 Encrypted **money** or **smallmoney** columns cannot be targeted by parameters, since there is no specific ODBC data type which maps to those types, resulting in Operand Type Clash errors.

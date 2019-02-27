@@ -2,7 +2,7 @@
 title: "What's New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "09/22/2018"
+ms.date: "02/27/2019"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -12,7 +12,26 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # What's New in SSMA for Access (AccessToSQL)
-This article lists SSMA for Access changes in each release.  
+This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.  
+
+## SSMA v8.0
+The v8.0 release of SSMA for Access has been enhanced to provide targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
+
+* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+
+  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+
+*	Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+
+* Preliminary database/schema selection.
+
+    When connecting to the source, the user can now select databases/schemas of interest. Selecting only the schemas that you plan to migrate will save time during initial connection and improve overall SSMA performance.
+
+    ![SSMA filter objects](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
 
 ## SSMA v7.10
 The v7.10 release of SSMA for Access has been enhanced with targeted fixes designed to provide additional security and privacy protections to meet changes in global requirements.

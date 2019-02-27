@@ -145,6 +145,7 @@ A scalar T-SQL UDF can be inline if all of the following conditions are true:
 - The UDF uses the `EXECUTE AS CALLER` clause (the default behavior if the `EXECUTE AS` clause is not specified).
 - The UDF does not reference table variables or table-valued parameters.
 - The query invoking a scalar UDF does not reference a scalar UDF call in its `GROUP BY` clause.
+- The query invoking a scalar UDF in its select list with `DISTINCT` clause does not reference a scalar UDF call in its `ORDER BY` clause.
 - The UDF is not natively compiled (interop is supported).
 - The UDF is not used in a computed column or a check constraint definition.
 - The UDF does not reference user-defined types.

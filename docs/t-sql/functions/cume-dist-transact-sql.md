@@ -2,7 +2,7 @@
 title: "CUME_DIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: sqll
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql

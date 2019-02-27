@@ -19,18 +19,44 @@ The following article provides reference for the **cluster** commands in the **m
 
 |||
 |---|---|
-| [config](reference-mssqlctl-cluster-config.md) | Cluster configuration commands. |
-| [debug](reference-mssqlctl-cluster-debug.md) | Debug commands. |
 | [create](#create) | Create cluster. |
 | [delete](#delete) | Delete cluster. |
+| [config](reference-mssqlctl-cluster-config.md) | Cluster configuration commands. |
+| [debug](reference-mssqlctl-cluster-debug.md) | Debug commands. |
 
 ## <a id="create"></a> mssqlctl cluster create
 
 Create cluster.
 
+```
+mssqlctl cluster create
+   --name
+   [--accept-eula]
+```
+
+### Parameters
+
+| Parameters | Description |
+|---|---|
+| **--name -n** | Cluster name, used for kubernetes namespace. |
+| **--accept-eula -e** | Do you accept the license terms? \[yes/no\].  Allowed values: no, yes. Required. |
+
 ## <a id="delete"></a> mssqlctl cluster delete
 
 Delete cluster.
+
+```
+mssqlctl cluster delete
+   --name
+   [--force]
+```
+
+### Parameters
+
+| Parameters | Description |
+|---|---|
+| **--name -n** | Cluster name, used for kubernetes namespace. Required. |
+| **--force -f** | Force delete cluster. |
 
 ## Next steps
 

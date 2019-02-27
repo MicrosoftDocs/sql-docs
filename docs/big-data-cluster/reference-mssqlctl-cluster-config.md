@@ -25,6 +25,19 @@ The following article provides reference for the **cluster config** commands in 
 
 Get cluster.
 
+```
+mssqlctl cluster config get
+   --name
+   --output-file
+```
+
+### Parameters
+
+| Parameters | Description |
+|---|---|
+| **--name -n** | Cluster name, used for kubernetes namespace. Required. |
+| **--output-file -f** | Output file to store the result in. Required. |
+
 ## Next steps
 
 For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).

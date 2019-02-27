@@ -26,9 +26,70 @@ The following article provides reference for the **app template** commands in th
 
 Fetch supported templates.
 
+```
+mssqlctl app template list
+   --url
+```
+
+### Parameters
+
+| Parameters | Description |
+|---|---|
+| **--url -u** | Specify a different template repository location. Default: https://github.com/Microsoft/sql-server-samples.git. |
+
+### Examples
+
+Fetch all templates under the default template repository location.
+
+```
+mssqlctl app template list
+```
+
+Fetch all templates under a different repository location.
+
+```
+mssqlctl app template list --url https://github.com/diffrent/templates.git
+```
+
 ## <a id="pull"></a> mssqlctl app template pull
 
 Download supported templates.
+
+```
+mssqlctl app template pull
+   --destination
+   --name
+   --url
+```
+
+### Parameters
+
+| Parameters | Description |
+|---|---|
+| **--destination -d** | Where to place the application skeleton template.  Default: ./templates. |
+| **--name -n** | Template name. For a full list off supported template names run `mssqlctl app template list`. |
+| **--url -u** | Specify a different template repository location. Default:
+https://github.com/Microsoft/sql-server-samples.git. |
+
+### Examples
+
+Download all templates under the default template repository location.
+
+```
+mssqlctl app template pull
+```
+
+Download all templates under a different repository location.
+
+```
+mssqlctl app template list --url https://github.com/diffrent/templates.git
+```
+
+Download individual template by name.
+
+```
+mssqlctl app template pull --name ssis
+```
 
 ## Next steps
 

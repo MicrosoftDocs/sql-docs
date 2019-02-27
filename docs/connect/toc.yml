@@ -2650,6 +2650,7 @@
   - name: Microsoft ODBC Driver for SQL Server
     href: ../connect/odbc/microsoft-odbc-driver-for-sql-server.md
   - name: Linux and Mac
+    items:
     - name: System Requirements
       href: ../connect/odbc/linux-mac/system-requirements.md
     - name: Installing the Driver Manager
@@ -2681,6 +2682,7 @@
     - name: Frequently Asked Questions (FAQ) for ODBC Linux and macOS
       href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
   - name: Windows
+    items:
     - name: Microsoft ODBC Driver for SQL Server on Windows
       href: ../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md
     - name: Features of the Microsoft ODBC Driver for SQL Server on Windows

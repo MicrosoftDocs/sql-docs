@@ -10194,9 +10194,11 @@
     href: ../sql-server/sql-server-help-installation.md
 - name: Reference
   items:
-    - name: Archived Content (SQL 2005 - 2012)
+    - name: Archived Content (SQL 2005 - 2012) +
       displayName: 2005, 2008, 2008 r2, 2012
       href: https://docs.microsoft.com/en-us/previous-versions/sql/
+    - name: SQL Docs include files
+      href: ../sql-server/applies-to-includes.md   
     - name: Database samples
       items:
         - name: Samples Overview

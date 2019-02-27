@@ -1,6 +1,5 @@
 - name: Welcome
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
-
 - name: Overview
   items:
   - name: What's new
@@ -15,7 +14,7 @@
         href: ../sql-server/what-s-new-in-sql-server-2016.md
       - name: Database engine in SQL Server 2016
         href: ../database-engine/whats-new-in-sql-server-2016.md
-  - name: Database engine overview
+  - name: Database engine
     href: ../database-engine/sql-server-database-engine-overview.md
   - name: SQL Server 2017 editions & features
     href: ../sql-server/editions-and-components-of-sql-server-2017.md
@@ -303,6 +302,8 @@
           href: ../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md
         - name: Prerequisites, restrictions, and recommendations
           href: ../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
+        - name: Interoperability
+          href: ../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md 
       - name: Quickstart
         items:
         - name: Getting started
@@ -345,6 +346,8 @@
             href: ../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md
           - name: Configure read-only routing
             href: ../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md
+          - name: Create listener
+            href: ../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md
           - name: Remove listener
             href: ../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md
           - name: Join a secondary database
@@ -447,6 +450,8 @@
                 href: ../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
               - name: Read-scale only
                 href: ../database-engine/availability-groups/windows/read-scale-availability-groups.md
+              - name: Read/write connection redirection
+                href: ../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
           - name: Administration
             items:
               - name: Backup on Secondary Replica
@@ -3824,6 +3829,8 @@
         href: ../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md
   - name: Planning
     items:
+    - name: Reference
+      href: ../sql-server/install/planning-a-sql-server-installation.md
     - name: What's New in SQL Server Installation
       href: ../sql-server/install/what-s-new-in-sql-server-installation.md
     - name: Hardware and Software Requirements for Installing SQL Server
@@ -3842,6 +3849,8 @@
     items:
     - name: Overview
       href: ../database-engine/install-windows/install-sql-server.md
+    - name: Reference
+      href: ../database-engine/install-windows/installation-for-sql-server.md 
     - name: Installation Wizard Help
       href: ../sql-server/install/instance-configuration.md
     - name: Install SQL Server Database Engine
@@ -3888,6 +3897,8 @@
       href: ../sql-server/install/install-sql-server-business-intelligence-features.md
   - name: Upgrade SQL Server
     items:
+    - name: Reference
+      href: ../database-engine/install-windows/upgrade-sql-server.md     
     - name: Supported Version and Edition Upgrades SQL Server 2017
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version and Edition Upgrades SQL Server 2016
@@ -4219,6 +4230,8 @@
         href: ../database-engine/configure-windows/buffer-pool-extension.md
   - name: Uninstall SQL Server
     items:
+      - name: Overview
+        href: ../sql-server/install/uninstall-sql-server.md
       - name: Uninstall an Existing Instance of SQL Server (Setup)
         href: ../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
       - name: Remove Data Quality Server Objects
@@ -4235,7 +4248,7 @@
       href: ../integration-services/index.md
     - name: Replication
       items:
-        - name:  Overview
+        - name: Overview
           href: ../relational-databases/replication/sql-server-replication.md
           items:
             - name: Replication Backward Compatibility
@@ -4254,6 +4267,8 @@
             items:
             - name: Dist & Pub information scripts
               href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
+            - name: Script replication
+              href: ../relational-databases/replication/scripting-replication.md
             - name: Compare replicated tables
               href: ../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md
             - name: Configure predefined alerts (SSMS)
@@ -4294,9 +4309,13 @@
           - name: Monitor
             href: ../relational-databases/replication/monitor/monitoring-replication.md
             items:
+              - name: Monitor replication agents
+                href: ../relational-databases/replication/monitor/monitor-replication-agents.md
               - name: Replication Monitor
                 href: ../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md
                 items:
+                - name: Start Replication Monitor
+                  href: ../relational-databases/replication/monitor/start-the-replication-monitor.md
                 - name: Manage permissions
                   href: ../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md
                 - name: Add or remove publishers
@@ -4322,45 +4341,51 @@
           - name: Publish objects
             href: ../relational-databases/replication/publish/publish-data-and-database-objects.md
             items:
-              - name: Filter published data
-                href: ../relational-databases/replication/publish/filter-published-data.md
-              - name: Replicate identity columns
-                href: ../relational-databases/replication/publish/replicate-identity-columns.md
-              - name: Schema changes on publication databases
-                href: ../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md
-              - name: Partitioned tables and indexes
-                href: ../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md
-              - name: Partitions for Merge publication with parameterized filters
-                href: ../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md
-              - name: Encrypted columns
-                href: ../relational-databases/replication/security/replicate-data-in-encrypted-columns-sql-server-management-studio.md
+            - name: Filter published data
+              href: ../relational-databases/replication/publish/filter-published-data.md
+            - name: Replicate identity columns
+              href: ../relational-databases/replication/publish/replicate-identity-columns.md
+            - name: Schema changes on publication databases
+              href: ../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md
+            - name: Partitioned tables and indexes
+              href: ../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md
+            - name: Partitions for Merge publication with parameterized filters
+              href: ../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md
+            - name: Encrypted columns
+              href: ../relational-databases/replication/security/replicate-data-in-encrypted-columns-sql-server-management-studio.md
           - name: Configure replication
             items:
             - name: Configure distribution
               href: ../relational-databases/replication/configure-distribution.md
               items:
-                - name: Configure Publishing and Distribution
-                  href: ../relational-databases/replication/configure-publishing-and-distribution.md
-                - name: Configure Distribution in AG
-                  href: ../relational-databases/replication/configure-distribution-availability-group.md
-                - name: View and Modify properties
-                  href: ../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md
-                - name: Disable Publishing and Distribution
-                  href: ../relational-databases/replication/disable-publishing-and-distribution.md
-                - name: Enable a Database for Replication
-                  href: ../relational-databases/replication/enable-a-database-for-replication-sql-server-management-studio.md
-                - name: Enable a Remote Publisher at a Distributor
-                  href: ../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md
-                - name: Set the Distribution Retention Period for Transactional Publications
-                  href: ../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md
-                - name: Set the History Retention Period
-                  href: ../relational-databases/replication/set-the-history-retention-period-sql-server-management-studio.md
+              - name: Configure Publishing and Distribution
+                href: ../relational-databases/replication/configure-publishing-and-distribution.md
+              - name: Configure Distribution in AG
+                href: ../relational-databases/replication/configure-distribution-availability-group.md
+              - name: View and Modify properties
+                href: ../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md
+              - name: Disable Publishing and Distribution
+                href: ../relational-databases/replication/disable-publishing-and-distribution.md
+              - name: Enable a Database for Replication
+                href: ../relational-databases/replication/enable-a-database-for-replication-sql-server-management-studio.md
+              - name: Enable a Remote Publisher at a Distributor
+                href: ../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md
+              - name: Set the Distribution Retention Period for Transactional Publications
+                href: ../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md
+              - name: Set the History Retention Period
+                href: ../relational-databases/replication/set-the-history-retention-period-sql-server-management-studio.md
             - name: Manage Publications
               items:
               - name: Create a publication
                 href: ../relational-databases/replication/publish/create-a-publication.md
               - name: View & modify properties
                 href: ../relational-databases/replication/publish/view-and-modify-publication-properties.md
+              - name: Configure snapshot properties
+                href: ../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md
+              - name: Maintain publications
+                href: ../relational-databases/replication/publish/maintain-publications.md
+              - name: Deliver a snapshot through FTP
+                href: ../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md
               - name: Delete a publication
                 href: ../relational-databases/replication/publish/delete-a-publication.md
               - name: Set Subscription expiration period
@@ -4377,20 +4402,22 @@
                 href: ../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md
               - name: Optimize parameterized row filters
                 href: ../relational-databases/replication/publish/optimize-parameterized-row-filters.md
-              - name: Add or drop articles
-                href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
               - name: Change publication and article properties
                 href: ../relational-databases/replication/publish/change-publication-and-article-properties.md
             - name: Manage Articles
               items:
-                - name: Define an article
-                  href: ../relational-databases/replication/publish/define-an-article.md
-                - name: Specify article types
-                  href: ../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md
-                - name: View & modify properties
-                  href: ../relational-databases/replication/publish/view-and-modify-article-properties.md
-                - name: Delete an article
-                  href: ../relational-databases/replication/publish/delete-an-article.md
+              - name: Define an article
+                href: ../relational-databases/replication/publish/define-an-article.md
+              - name: Specify article types
+                href: ../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md
+              - name: Add or drop articles
+                href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
+              - name: View & modify properties
+                href: ../relational-databases/replication/publish/view-and-modify-article-properties.md
+              - name: Add or drop articles to existing publication
+                href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md
+              - name: Delete an article
+                href: ../relational-databases/replication/publish/delete-an-article.md
             - name: Manage Subscriptions
               href: ../relational-databases/replication/subscribe-to-publications.md
               items:
@@ -4402,6 +4429,12 @@
                   href: ../relational-databases/replication/view-and-modify-pull-subscription-properties.md
                 - name: View and Modify Push Subscription Properties
                   href: ../relational-databases/replication/view-and-modify-push-subscription-properties.md
+                - name: Reinitialize a subscription
+                  href: ../relational-databases/replication/reinitialize-a-subscription.md
+                - name: Sync a Pull Subscription
+                  href: ../relational-databases/replication/synchronize-a-pull-subscription.md
+                - name: Sync a Push Subscription
+                  href: ../relational-databases/replication/synchronize-a-push-subscription.md
                 - name: Delete a Pull Subscription
                   href: ../relational-databases/replication/delete-a-pull-subscription.md
                 - name: Delete a Push Subscription
@@ -4419,6 +4452,8 @@
                 - name: Initialize a Subscription
                   href: ../relational-databases/replication/initialize-a-subscription.md
                   items:
+                  - name: Initialize manually
+                    href: ../relational-databases/replication/initialize-a-subscription-manually.md
                   - name: Create and apply the initial snapshot
                     href: ../relational-databases/replication/create-and-apply-the-initial-snapshot.md
                   - name: Modify Snapshot Options
@@ -4474,12 +4509,18 @@
             items:
             - name: Configure propagation method for data changes
               href: ../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md
+            - name: View replicated commands
+              href: ../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md
             - name: Enable updating subscriptions
               href: ../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md
             - name: Create updatable subscription
               href: ../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md
             - name: Publish the execution of an SP
               href: ../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md
+            - name: Enable initialization from backup
+              href: ../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md
+            - name: Initialize from backup
+              href: ../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md
             - name: View data conflicts
               href: ../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
             - name: Find errors with transactional replication
@@ -4506,6 +4547,8 @@
               href: ../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md
             - name: Automatically generate join filters between articles
               href: ../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
+            - name: Define a logical record relationship
+              href: ../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
             - name: Configure web synchronization
               href: ../relational-databases/replication/configure-web-synchronization.md
             - name: Configure IIS for Web Synchronization
@@ -4528,6 +4571,8 @@
               href: ../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md
             - name: Filter published data
               href: ../relational-databases/replication/merge/filter-published-data-for-merge-replication.md
+            - name: View conflict information
+              href: ../relational-databases/replication/view-conflict-information-for-merge-publications.md
             - name: Conflict resolution
               items:
               - name: Choose a resolver
@@ -4612,8 +4657,10 @@
               - name: Topologies for web synchronization
                 href: ../relational-databases/replication/topologies-for-web-synchronization.md
             - name: Replication Agents
-              href: ../relational-databases/replication/agents/replication-agents-overview.md
+              href: ../relational-databases/replication/agents/replication-agent-administration.md
               items:
+              - name: Overview
+                href: ../relational-databases/replication/agents/replication-agents-overview.md
               - name: Distribution Agent
                 href: ../relational-databases/replication/agents/replication-distribution-agent.md
               - name: Log Reader Agent
@@ -4624,6 +4671,8 @@
                 href: ../relational-databases/replication/agents/replication-queue-reader-agent.md
               - name: Snapshot Agent
                 href: ../relational-databases/replication/agents/replication-snapshot-agent.md
+              - name: Agent profiles
+                href: ../relational-databases/replication/agents/replication-agent-profiles.md
             - name: Developer concepts
               href: ../relational-databases/replication/concepts/replication-developer-documentation.md
               items:
@@ -4658,6 +4707,8 @@
                 - name: Oracle
                   href: ../relational-databases/replication/non-sql/oracle-publishing-overview.md
                   items:
+                  - name: Considerations and limitations
+                    href: ../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md
                   - name: Glossary of terms
                     href: ../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md
                   - name: Administrative Considerations
@@ -4692,6 +4743,8 @@
             href: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
         - name: Reference
           items:
+            - name: Replication language
+              href: ../relational-databases/replication/replication-language-reference.md
             - name: Properties of replication objects
               items:
               - name: Distributor properties
@@ -4711,11 +4764,21 @@
                 href: ../relational-databases/replication/article-properties-article.md
               - name: Subscription properties
                 href: ../relational-databases/replication/subscription-properties-subscriber.md
+              - name: Filter settings
+                href: ../relational-databases/replication/filter-settings.md
+              - name: Log reader agent
+                href: ../relational-databases/replication/log-reader-agent.md
+              - name: Snapshot agent
+                href: ../relational-databases/replication/snapshot-agent.md
+              - name: Queue reader agent
+                href: ../relational-databases/replication/queue-reader-agent.md
             - name: Tools Reference
               items:
               - name: Replication Monitor
                 href: ../relational-databases/replication/replication-monitor.md
                 items:
+                - name: Main page
+                  href: ../relational-databases/replication/replication-monitor-main-page.md
                 - name: Add Publisher
                   href: ../relational-databases/replication/add-publisher.md
                 - name: Distributor Settings
@@ -4726,37 +4789,42 @@
                   href: ../relational-databases/replication/publisher-settings.md
                 - name: Publisher Information
                   href: ../relational-databases/replication/publisher-information-publications.md
-                  items:
-                    - name: Transactional Replication
-                      items:
-                        - name: Subscription watch list
-                          href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
-                        - name: Subscriptions
-                          href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
-                        - name: Warnings
-                          href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
-                        - name: Agents
-                          href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
-                        - name: Tracer tokens
-                          href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
-                        - name: Undistributed commands
-                          href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
-                        - name: Publisher to distributor history
-                          href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
-                        - name: Distributor to subscriber history
-                          href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
+                - name: Publisher Agents
+                  href: ../relational-databases/replication/publisher-information-agents.md
+                - name: Sort columns
+                  href: ../relational-databases/replication/sort-columns.md
+              - name: Publication information
+                items:
+                  - name: Transactional Replication
+                    items:
+                    - name: Subscription watch list
+                      href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
+                    - name: Subscriptions
+                      href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
+                    - name: Warnings
+                      href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
+                    - name: Agents
+                      href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
+                    - name: Tracer tokens
+                      href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
+                    - name: Undistributed commands
+                      href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
+                    - name: Publisher to distributor history
+                      href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
+                    - name: Distributor to subscriber history
+                      href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
                     - name: Merge replication
                       items:
-                        - name: Subscription watch list
-                          href: ../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md
-                        - name: Subscriptions
-                          href: ../relational-databases/replication/publication-information-all-subscriptions-merge-publication.md
-                        - name: Warnings
-                          href: ../relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md
-                        - name: Agents
-                          href: ../relational-databases/replication/publication-information-agents-merge-publication.md
-                        - name: Synchronization history
-                          href: ../relational-databases/replication/subscription-synchronization-history.md
+                      - name: Subscription watch list
+                        href: ../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md
+                      - name: Subscriptions
+                        href: ../relational-databases/replication/publication-information-all-subscriptions-merge-publication.md
+                      - name: Warnings
+                        href: ../relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md
+                      - name: Agents
+                        href: ../relational-databases/replication/publication-information-agents-merge-publication.md
+                      - name: Synchronization history
+                        href: ../relational-databases/replication/subscription-synchronization-history.md
                     - name: Snapshot replication
                       items:
                         - name: Subscription Watch list
@@ -10096,10 +10164,12 @@
     items:
     - name: Get help
       href: ../sql-server/sql-server-get-help.md
-    - name: Provide feedback for SQL Docs
+    - name: Feedback for SQL Docs +
       href: https://aka.ms/sqldocsfeedback
-    - name: Provide feedback for SQL Server (UserVoice)
+    - name: Feedback for SQL Server (UserVoice) +
       href: https://feedback.azure.com/forums/908035-sql-server
+    - name: SQL Docs Survey +
+      href: https://aka.ms/sqldocsurvey
     - name: Contribute to SQL Documentation!
       href: ../sql-server/sql-server-docs-contribute.md
     - name: DBA Stack Exchange +
@@ -10124,6 +10194,11 @@
     href: ../sql-server/sql-server-help-installation.md
 - name: Reference
   items:
+    - name: Archived Content (SQL 2005 - 2012) +
+      displayName: 2005, 2008, 2008 r2, 2012
+      href: https://docs.microsoft.com/previous-versions/sql/
+    - name: SQL Docs include files
+      href: ../sql-server/applies-to-includes.md   
     - name: Database samples
       items:
         - name: Samples Overview

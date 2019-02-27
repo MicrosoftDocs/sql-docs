@@ -6,7 +6,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.date: 02/27/2019
+ms.date: 02/28/2019
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)

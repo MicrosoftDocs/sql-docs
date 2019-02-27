@@ -462,13 +462,13 @@ FROM sys.dm_exec_requests AS d
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 
-- [**SQL Server Powershell Module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer Powershell Module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
+- [**SQL Server PowerShell module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 
   - Upgrade from 21.0 to 21.1 to support SMO v150.
   - Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.
-  - Fixed issue in New-SqlAvailabilityGroup cmdlet when targeting SQL Server 2014.
-  - Added –LoadBalancedReadOnlyRoutingList parameter to Set-SqlAvailabilityReplica and New-SqlAvailabilityReplica.
-  - Updated AnalysisService Cmdlet to use cached login token from Login-AzureAsAccount for Azure Analysis Services.
+  - Fixed issue in `New-SqlAvailabilityGroup` cmdlet when targeting SQL Server 2014.
+  - Added `–LoadBalancedReadOnlyRoutingList` parameter to `Set-SqlAvailabilityReplica` and `New-SqlAvailabilityReplica`.
+  - Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.
 
 ## Other services
 

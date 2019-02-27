@@ -46,7 +46,7 @@ DBCC CHECKTABLE
     ]     
 )    
     [ WITH     
-        { ALL_ERRORMSGS ]    
+        { [ ALL_ERRORMSGS ]    
           [ , EXTENDED_LOGICAL_CHECKS ]     
           [ , NO_INFOMSGS ]    
           [ , TABLOCK ]     

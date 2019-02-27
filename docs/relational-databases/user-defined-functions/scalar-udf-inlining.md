@@ -2,7 +2,7 @@
 title: "Scalar UDF Inlining in Microsoft SQL databases | Microsoft Docs"
 description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (2018 and later), and Azure SQL Database."
 ms.custom: ""
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

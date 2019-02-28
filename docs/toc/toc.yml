@@ -1,19 +1,20 @@
 - name: Welcome
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Overview
+  href: ../toc/redirectfrom-overview-10.md ## /sql/database-engine/sql-server-database-engine-overview
   items:
   - name: What's new
     items:
-      - name: SQL Server 2019
-        href: ../sql-server/what-s-new-in-sql-server-ver15.md
-      - name: SQL Server 2017
-        href: ../sql-server/what-s-new-in-sql-server-2017.md
-      - name: Database engine in SQL Server 2017
-        href: ../database-engine/whats-new-in-sql-server-2017.md
-      - name: SQL Server 2016
-        href: ../sql-server/what-s-new-in-sql-server-2016.md
-      - name: Database engine in SQL Server 2016
-        href: ../database-engine/whats-new-in-sql-server-2016.md
+    - name: SQL Server 2019
+      href: ../sql-server/what-s-new-in-sql-server-ver15.md
+    - name: SQL Server 2017
+      href: ../sql-server/what-s-new-in-sql-server-2017.md
+    - name: Database engine in SQL Server 2017
+      href: ../database-engine/whats-new-in-sql-server-2017.md
+    - name: SQL Server 2016
+      href: ../sql-server/what-s-new-in-sql-server-2016.md
+    - name: Database engine in SQL Server 2016
+      href: ../database-engine/whats-new-in-sql-server-2016.md
   - name: Database engine
     href: ../database-engine/sql-server-database-engine-overview.md
   - name: SQL Server 2017 editions & features
@@ -45,10 +46,12 @@
   - name: SQL Server 2008 R2 SP2 
     href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Business continuity
+  href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:
   - name: Overview
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: Backup & restore
+    href: ../toc/redirectfrom-backup-restore-10.md ## /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
     items:
       - name: Overview
         href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
@@ -874,6 +877,7 @@
           - name: Upgrading Log Shipping to SQL Server 2016
             href: ../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
 - name: Database design
+  href: ../toc/redirectfrom-database-design.md ## /sql/relational-databases/hierarchical-data-sql-server
   items:
     - name: Hierarchical Data
       href: ../relational-databases/hierarchical-data-sql-server.md
@@ -1749,6 +1753,7 @@
           - name: Use the value() and nodes() Methods with OPENXML
             href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Development
+  href: redirectfrom-development-10.md ## /sql/relational-databases/data-tier-applications/data-tier-applications
   items:
     - name: Programming to interact with SQL Server ++
       href: ../connect/index.md
@@ -3812,8 +3817,10 @@
   - name: Transaction Locking and Row Versioning Guide
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
 - name: Installation
-  items: 
+  href: redirectfrom-installation-10.md ## /sql/database-engine/sql-server-database-engine-backward-compatibility
+  items:
   - name: Release notes
+    href: redirectfrom-release-notes-10.md ## /sql/database-engine/sql-server-database-engine-backward-compatibility
     items:
       - name: Backward compatibility
         href: ../database-engine/sql-server-database-engine-backward-compatibility.md
@@ -3905,7 +3912,7 @@
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades.md
     - name: Prepare for upgrade by running Data Migration Assistant
       href: ../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-    - name: Upgrading from SQL 2005, 2008, or 2008 R2?
+    - name: Upgrading from SQL 2005, 2008, or 2008 R2
       href: ../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
     - name: Upgrade Analysis Services
       href: ../database-engine/install-windows/upgrade-analysis-services.md
@@ -5200,8 +5207,8 @@
     - name: Bulk Copy Utility (bcp)
       href: ../tools/bcp-utility.md
     - name: Azure Migration Services +
-      href: /azure/dms/dms-overview
       displayName: DMS, Data Migration Service
+      href: /azure/dms/dms-overview
     - name: Stretch database
       items:
         - name: Overview
@@ -7117,8 +7124,8 @@
     - name: Advanced Analytics & Machine learning ++
       href: ../advanced-analytics/index.md
     - name: Analytics Platform System ++
-      href: ../analytics-platform-system/index.md
       displayName: APS, PDW, Parallel Data Warehouse
+      href: ../analytics-platform-system/index.md
     - name: SQL Server Analysis Services (SSAS) ++
       href: ../analysis-services/index.md
     - name: SQL Server Reporting Services (SSRS) ++
@@ -10227,13 +10234,15 @@
   - name: Local content with Help Viewer
     href: ../sql-server/sql-server-help-installation.md
 - name: Reference
+  href: ../toc/redirectfrom-reference-10.md ## /sql/sql-server/applies-to-includes
   items:
     - name: Archived Content (SQL 2005 - 2012) +
       displayName: 2005, 2008, 2008 r2, 2012
       href: https://docs.microsoft.com/previous-versions/sql/
     - name: SQL Docs include files
-      href: ../sql-server/applies-to-includes.md   
+      href: ../sql-server/applies-to-includes.md
     - name: Database samples
+      href: ../toc/redirectfrom-database-samples.md ## /sql/samples/sql-samples-where-are
       items:
         - name: Samples Overview
           href: ../samples/sql-samples-where-are.md
@@ -10244,10 +10253,12 @@
           - name: Install and configure
             href: ../samples/adventureworks-install-configure.md
         - name: Wide World Importers
+          href: ../toc/redirectfrom-wide-world-importers.md ## /sql/samples/wide-world-importers-what-is
           items:
           - name: Overview
             href: ../samples/wide-world-importers-what-is.md
           - name: OLTP
+            href: ../toc/redirectfrom-oltp-10.md ## /sql/samples/wide-world-importers-oltp-database-catalog
             items:
             - name: Database catalog
               href: ../samples/wide-world-importers-oltp-database-catalog.md
@@ -10256,6 +10267,7 @@
             - name: SQL Server features
               href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
           - name: Data Warehouse
+            href: ../toc/redirectfrom-data-warehouse-10.md ## /sql/samples/wide-world-importers-dw-database-catalog
             items:
             - name: Database catalog
               href: ../samples/wide-world-importers-dw-database-catalog.md
@@ -14779,6 +14791,7 @@
         href: ../relational-databases/system-views/systranschemas-transact-sql.md
     - name: Transact-SQL (T-SQL)
       displayName: tsql
+      href: ../toc/redirectfrom-transact-sql-t-sql.md ## /sql/t-sql/language-reference (redirect_url:)
       items:
         - name: Overview
           href: ../t-sql/language-reference.md
@@ -15274,86 +15287,91 @@
             href: ../t-sql/xml/binding-relational-data-inside-xml-data.md
           - name: Guidelines for Using xml Data Type Methods
             href: ../t-sql/xml/guidelines-for-using-xml-data-type-methods.md
-        - name: Overview
+        - name: Overview of DBCC
+          displayName: database console commands
           href: ../t-sql/database-console-commands/database-console-commands.md
-        - name: About DBCC
-          href: ../t-sql/database-console-commands/dbcc-transact-sql.md
-        - name: DBCC CHECKALLOC
-          href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
-        - name: DBCC CHECKCATALOG
-          href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
-        - name: DBCC CHECKCONSTRAINTS
-          href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
-        - name: DBCC CHECKDB
-          href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
-        - name: DBCC CHECKFILEGROUP
-          href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
-        - name: DBCC CHECKIDENT
-          href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
-        - name: DBCC CHECKTABLE
-          href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
-        - name: DBCC CLEANTABLE
-          href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
-        - name: DBCC CLONEDATABASE
-          href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
-        - name: DBCC DBREINDEX
-          href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
-        - name: DBCC dllname (FREE)
-          href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
-        - name: DBCC DROPCLEANBUFFERS
-          href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
-        - name: DBCC FLUSHAUTHCACHE
-          href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
-        - name: DBCC FREEPROCCACHE
-          href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
-        - name: DBCC FREESESSIONCACHE
-          href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
-        - name: DBCC FREESYSTEMCACHE
-          href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
-        - name: DBCC HELP
-          href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
-        - name: DBCC INDEXDEFRAG
-          href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
-        - name: DBCC INPUTBUFFER
-          href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
-        - name: DBCC OPENTRAN
-          href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
-        - name: DBCC OUTPUTBUFFER
-          href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
-        - name: DBCC PDW_SHOWEXECUTIONPLAN
-          href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
-        - name: DBCC PDW_SHOWPARTITIONSTATS
-          href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
-        - name: DBCC PDW_SHOWSPACEUSED
-          href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
-        - name: DBCC PROCCACHE
-          href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
-        - name: DBCC SHOW_STATISTICS
-          href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
-        - name: DBCC SHOWCONTIG
-          href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
-        - name: DBCC SHRINKDATABASE
-          href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
-        - name: DBCC SHRINKFILE
-          href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
-        - name: DBCC SHRINKLOG
-          href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
-        - name: DBCC SQLPERF
-          href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
-        - name: DBCC TRACEOFF
-          href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
-        - name: DBCC TRACEON - Trace Flags
-          href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
-        - name: DBCC TRACEON
-          href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
-        - name: DBCC TRACESTATUS
-          href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
-        - name: DBCC UPDATEUSAGE
-          href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
-        - name: DBCC USEROPTIONS
-          href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
-        - name: Overview
+          items:
+          - name: About DBCC
+            href: ../t-sql/database-console-commands/dbcc-transact-sql.md
+          - name: DBCC CHECKALLOC
+            href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
+          - name: DBCC CHECKCATALOG
+            href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
+          - name: DBCC CHECKCONSTRAINTS
+            href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
+          - name: DBCC CHECKDB
+            href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
+          - name: DBCC CHECKFILEGROUP
+            href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
+          - name: DBCC CHECKIDENT
+            href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
+          - name: DBCC CHECKTABLE
+            href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
+          - name: DBCC CLEANTABLE
+            href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
+          - name: DBCC CLONEDATABASE
+            href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
+          - name: DBCC DBREINDEX
+            href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
+          - name: DBCC dllname (FREE)
+            href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
+          - name: DBCC DROPCLEANBUFFERS
+            href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
+          - name: DBCC FLUSHAUTHCACHE
+            href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
+          - name: DBCC FREEPROCCACHE
+            href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
+          - name: DBCC FREESESSIONCACHE
+            href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
+          - name: DBCC FREESYSTEMCACHE
+            href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
+          - name: DBCC HELP
+            href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
+          - name: DBCC INDEXDEFRAG
+            href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
+          - name: DBCC INPUTBUFFER
+            href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
+          - name: DBCC OPENTRAN
+            href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
+          - name: DBCC OUTPUTBUFFER
+            href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
+          - name: DBCC PDW_SHOWEXECUTIONPLAN
+            href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
+          - name: DBCC PDW_SHOWPARTITIONSTATS
+            href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
+          - name: DBCC PDW_SHOWSPACEUSED
+            href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
+          - name: DBCC PROCCACHE
+            href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
+          - name: DBCC SHOW_STATISTICS
+            href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
+          - name: DBCC SHOWCONTIG
+            href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
+          - name: DBCC SHRINKDATABASE
+            href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
+          - name: DBCC SHRINKFILE
+            href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
+          - name: DBCC SHRINKLOG
+            href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
+          - name: DBCC SQLPERF
+            href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
+          - name: DBCC TRACEOFF
+            href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
+          - name: DBCC TRACEON - Trace Flags
+            href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
+          - name: DBCC TRACEON
+            href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
+          - name: DBCC TRACESTATUS
+            href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
+          - name: DBCC UPDATEUSAGE
+            href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
+          - name: DBCC USEROPTIONS
+            href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
+
+# TODO: We need a 'functions' expando.  See docs/t-sql/functions/ .
+        - name: Overview of T-SQL functions
           href: ../t-sql/functions/functions.md
+          items:
         - name: Aggregate
           href: ../t-sql/functions/aggregate-functions-transact-sql.md
           items:

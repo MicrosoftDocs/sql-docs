@@ -108,6 +108,16 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
 
+### SQL Server Analysis Services (SSAS)
+
+- **Issue and customer impact**: For tabular models with dynamic security, under some circumstances a user can see data from another user belonging to the same role.
+
+  **Scenario**: There are at least 2 roles in the model. One of the roles doesn't have any dynamic security expression that contains `USERNAME` or `USERPRINCIPALNAME`. The second role with dynamic row-level security is defined for user A and user B by using expressions that contain `USERNAME` or `USERPRINCIPLENAME`. User A and user B can connect and query data, however, user B may see data secured only for user A under certain circumstances.
+
+- **Workaround**: Add a dummy measure in the model. For example `[DummyMeasure] := UserName()`. This ensures that dynamic expressions are evaluated for the row level security expressions.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
+
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

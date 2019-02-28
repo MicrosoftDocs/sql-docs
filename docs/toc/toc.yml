@@ -48,7 +48,7 @@
       items:
       - name: Backup & restore
         href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-      - name: Azure blog storage
+      - name: Azure blob storage
         href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       - name: Interoperability and Coexistence
     - name: How-to
@@ -619,7 +619,7 @@
     items: 
       - name: Overview
         href: ../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
-      - name: Always On Failover Cluster Instances
+      - name: Always On failover cluster instances
         href: ../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
       - name: How-to
         items:
@@ -631,79 +631,78 @@
             href: ../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md
           - name: Create a cluster
             href: ../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md
-          - name: Install client tools on a failover cluster
+          - name: Install client tools 
             href: ../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md
           - name: Add or remove nodes
             href: ../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
-          - name: Remove a Failover Cluster
+          - name: Remove a cluster
             href: ../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md
-          - name: Upgrade a Failover Cluster Instance
-            href: ../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
-            items:
-            - name: Upgrade a SQL Server Failover Cluster Instance
-              href: ../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-            - name: Upgrade a SQL Server Failover Cluster Instance (Windows Server 2008/2008 R2/2012)
-              href: ../sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
-          - name: Configuration
-            items:
-            - name: Rename a failover cluster
-              href: ../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md
-            - name: Add Dependencies to a SQL Server Resource
-              href: ../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md
-            - name: Configure Cluster Quorum NodeWeight Settings
-              href: ../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md
-            - name: Change the IP Address of a Failover Cluster Instance
-              href: ../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md
-            - name: Configure HealthCheckTimeout Property Settings
-              href: ../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md
-            - name: Configure FailureConditionLevel Property Settings
-              href: ../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md
-          - name: Administration
-            items:
-            - name: View Cluster Quorum NodeWeight Settings
-              href: ../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md
-            - name: WSFC Disaster Recovery through Forced Quorum
-              href: ../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-            - name: Force a WSFC Cluster to Start Without a Quorum
-              href: ../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-            - name: Failover Cluster Troubleshooting
-              href: ../sql-server/failover-clusters/windows/failover-cluster-troubleshooting.md
-            - name: Troubleshoot Orphaned Users
-              href: ../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md
-            - name: View and Read Failover Cluster Instance Diagnostics Log
-              href: ../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-            - name: Failover Cluster Instance Administration and Maintenance
-              href: ../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md
-            - name: Recover from Failover Cluster Instance Failure
-              href: ../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md
+          - name: Upgrade a cluster 
+            href: ../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+          - name: Migrating to Windows Server 2012 & 2016
+            href: ../sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+        - name: Configuration
+          items:
+          - name: Rename a failover cluster
+            href: ../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md
+          - name: Add Dependencies resource
+            href: ../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md
+          - name: Configure Quorum NodeWeight Settings
+            href: ../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md
+          - name: Change the IP Address 
+            href: ../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md
+          - name: Configure HealthCheckTimeout 
+            href: ../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md
+          - name: Configure FailureConditionLevel
+            href: ../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md
+        - name: Administration
+          items:
+          - name: View Quorum NodeWeight Settings
+            href: ../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md
+          - name: Disaster Recovery through Forced Quorum
+            href: ../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+          - name: Force a cluster to start without a Quorum
+            href: ../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+          - name: Troubleshooting
+            href: ../sql-server/failover-clusters/windows/failover-cluster-troubleshooting.md
+          - name: Troubleshoot Orphaned Users
+            href: ../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md
+          - name: Diagnostics Log
+            href: ../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md
+          - name: Recover from a failure
+             href: ../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md
       - name: Concepts
         items:
         - name: Configuration
           items:
-          - name: WSFC Quorum Modes and Voting Configuration
+          - name: Upgrade
+            href: ../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
+          - name: Quorum Modes & Voting 
             href: ../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
-          - name: SQL Server Multi-Subnet Clustering
+          - name: Multi-Subnet Clustering
             href: ../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md
-          - name: Failover Policy for Failover Cluster Instances
+          - name: Failover Policy
             href: ../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md
         - name: Administration
           items:
+          - name: Administration & maintenance
+            href: ../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md
           - name: Automatic Page Repair
             href: ../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md
-          - name: Management of Logins and Jobs After Role Switching
+          - name: Logins & Jobs after role switching
             href: ../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md
   - name: Database mirroring
     items: 
       - name: Overview
         href: ../database-engine/database-mirroring/database-mirroring-sql-server.md
         items:
-        - name: Prerequisites, Restrictions, and Recommendations for Database Mirroring
+        - name: Prerequisites, Restrictions, & Recommendations 
           href: ../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md
         - name: Mirroring States
           href: ../database-engine/database-mirroring/mirroring-states-sql-server.md
-        - name: Database Mirroring Operating Modes
+        - name: Operating Modes
           href: ../database-engine/database-mirroring/database-mirroring-operating-modes.md
-        - name: Database Mirroring Witness
+        - name: Witness
           href: ../database-engine/database-mirroring/database-mirroring-witness.md
       - name: How-to
         items:
@@ -711,30 +710,30 @@
             items:
             - name: Deployment
               items:
-                - name: Setting up Database Mirroring
+                - name: Set up
                   href: ../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md
-                - name: Prepare a Mirror Database for Mirroring
+                - name: Prepare a a database 
                   href: ../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md
-                - name: Set up an encrypted Mirror Database
+                - name: Set up encryption
                   href: ../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md
-                - name: Set up a Mirror Database to use the Trustworthy Property
+                - name: Use the Trustworthy Property
                   href: ../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
                 - name: Specify a server network address
                   href: ../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md
-                - name: Establish a Database Mirroring Session
+                - name: Establish a session
                   href: ../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
                   items:
-                  - name: "Example: Setting Up Database Mirroring Using Windows Authentication (T-SQL)"
+                  - name: "Example: Configure with Windows Authentication (T-SQL)"
                     href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-                  - name: "Example: Setting Up Database Mirroring Using Certificates (T-SQL)"
+                  - name: "Example: Configure with Certificates (T-SQL)"
                     href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
-                - name: Upgrading Mirrored Instances
+                - name: Upgrade
                   href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
-                - name: Remove Database Mirroring
+                - name: Remove mirroring
                   href: ../database-engine/database-mirroring/remove-database-mirroring-sql-server.md
             - name: Witness
               items:
-              - name: Add a witness using Windows authentication
+              - name: Add using Windows authentication
                 href: ../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
               - name: Add or replace a witness
                 href: ../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
@@ -742,13 +741,13 @@
                 href: ../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md
           - name: Administration
             items:
-            - name: View the state of a Mirrored Database
+            - name: View states 
               href: ../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md
-            - name: Pause or resume Database Mirroring
+            - name: Pause or resume 
               href: ../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md
             - name: Connect clients
               href: ../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md
-            - name: Use Warning thresholds and alerts on Mirroring performance metrics
+            - name:  Warning thresholds on performance 
               href: ../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
             - name: Change transaction safety
               href: ../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
@@ -764,37 +763,37 @@
               href: ../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md
           - name: Security
             items:
-            - name: Set Up Login Accounts for Database Mirroring or Always On Availability Groups
+            - name: Configure accounts 
               href: ../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md
-            - name: Create an endpoint for Windows authentication
+            - name: Create an endpoint 
               href: ../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
-            - name: Allow Network Access an endpoint
+            - name: Allow access to an endpoint
               href: ../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md
             - name: Use certificates for an endpoint
               href: ../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
               items:
-              - name: Use certificates for outbound connections
+              - name: For outbound connections
                 href: ../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md
-              - name: Use certificates for inbound connections
+              - name: For inbound connections
                 href: ../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md
       - name: Concepts
         items:
           - name: Interoperability and Coexistence
             href: ../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md
             items:
-              - name: Database Mirroring and SQL Server Failover Cluster Instances
+              - name: Failover cluster instances
                 href: ../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md
-              - name: Database Mirroring and Log Shipping
+              - name: Log Shipping
                 href: ../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md
-              - name: Database Mirroring and Full-Text Catalogs
+              - name: Full-Text Catalogs
                 href: ../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md
-              - name: Database Mirroring and Database Snapshots
+              - name: Database Snapshots
                 href: ../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md
-              - name: Database Mirroring and Replication
+              - name: Replication
                 href: ../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md
           - name: Administration
             items:
-              - name: Monitoring Database Mirroring
+              - name: Monitoring
                 href: ../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md
               - name: Role Switching
                 href: ../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md
@@ -802,9 +801,9 @@
                 href: ../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md
               - name: Possible cause of failures
                 href: ../database-engine/database-mirroring/possible-failures-during-database-mirroring.md
-              - name: Pausing and resuming Database Mirroring
+              - name: Pausing & resuming 
                 href: ../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md
-              - name: Removing Database Mirroring
+              - name: Remove Mirroring
                 href: ../database-engine/database-mirroring/removing-database-mirroring-sql-server.md
           - name: Security
             items:
@@ -814,7 +813,7 @@
                 href: ../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md
       - name: Reference
         items:
-          - name: Database Mirroring Security Wizard
+          - name: Security Wizard
             href: ../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md
             items:
               - name: Include Witness Server
@@ -836,11 +835,11 @@
                 href: ../database-engine/database-mirroring/database-mirroring-monitor-overview.md
               - name: Register Mirrored Database
                 href: ../database-engine/database-mirroring/register-mirrored-database.md
-              - name: Database Mirroring Status Page
+              - name: Status Page
                 href: ../database-engine/database-mirroring/database-mirroring-monitor-status-page.md
-              - name: Database Mirroring History
+              - name: History Page
                 href: ../database-engine/database-mirroring/database-mirroring-history.md
-              - name: Database Mirroring Warnings Page
+              - name: Warnings Page
                 href: ../database-engine/database-mirroring/database-mirroring-monitor-warnings-page.md
               - name: Set Warning Thresholds
                 href: ../database-engine/database-mirroring/set-warning-thresholds.md
@@ -850,30 +849,38 @@
         href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
       - name: How-to
         items:
-          - name: Configure Log Shipping
-            href: ../database-engine/log-shipping/configure-log-shipping-sql-server.md
-          - name: Add a secondary database
-            href: ../database-engine/log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-          - name: Remove a secondary database
-            href: ../database-engine/log-shipping/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-          - name: Remove Log Shipping
-            href: ../database-engine/log-shipping/remove-log-shipping-sql-server.md
-          - name: View the Log Shipping Report
-            href: ../database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md
-          - name: Monitor Log Shipping
-            href: ../database-engine/log-shipping/monitor-log-shipping-transact-sql.md
-          - name: Fail Over to secondary
-            href: ../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md
-          - name: Change roles between Servers
-            href: ../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+        - name: Configure 
+          href: ../database-engine/log-shipping/configure-log-shipping-sql-server.md
+        - name: Add a secondary database
+          href: ../database-engine/log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+        - name: Remove a secondary database
+          href: ../database-engine/log-shipping/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+        - name: Remove 
+          href: ../database-engine/log-shipping/remove-log-shipping-sql-server.md
+        - name: View report
+          href: ../database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md
+        - name: Monitor 
+          href: ../database-engine/log-shipping/monitor-log-shipping-transact-sql.md
+        - name: Failover to secondary
+          href: ../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md
+        - name: Change roles between servers
+          href: ../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
       - name: Concepts
         items:
-          - name: Log Shipping and Replication
-            href: ../database-engine/log-shipping/log-shipping-and-replication-sql-server.md
-          - name: Log Shipping Tables and Stored Procedures
-            href: ../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md
-          - name: Upgrading Log Shipping to SQL Server 2016
-            href: ../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+        - name: Log Shipping & Replication
+          href: ../database-engine/log-shipping/log-shipping-and-replication-sql-server.md
+        - name: Tables and Stored Procedures
+          href: ../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md
+        - name: Upgrading Log Shipping to SQL Server 2016
+          href: ../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+      - name: Reference
+        items:
+        - name: Transaction Log Backup Settings
+          href: ../relational-databases/databases/log-shipping-transaction-log-backup-settings.md
+        - name: Secondary Database Settings
+          href: ../relational-databases/databases/secondary-database-settings.md
+        - name: Log Shipping Monitor Settings
+          href: ../relational-databases/databases/log-shipping-monitor-settings.md
 - name: Database design
   items:
     - name: Hierarchical Data
@@ -882,171 +889,340 @@
       items:
         - name: Overview
           href: ../relational-databases/collations/collation-and-unicode-support.md
-        - name: Set or Change the Server Collation
+        - name: Server Collation
           href: ../relational-databases/collations/set-or-change-the-server-collation.md
-        - name: Set or Change the Database Collation
+        - name: Database Collation
           href: ../relational-databases/collations/set-or-change-the-database-collation.md
-        - name: Set or Change the Column Collation
+        - name: Column Collation
           href: ../relational-databases/collations/set-or-change-the-column-collation.md
         - name: View Collation Information
           href: ../relational-databases/collations/view-collation-information.md
         - name: Write International T-SQL Statements
           href: ../relational-databases/collations/write-international-transact-sql-statements.md
-        - name: Set a Session Language
+        - name: Set a session language
           href: ../relational-databases/collations/set-a-session-language.md  
+        - name: Databases
+      items:
+        - name: Overview
+          href: ../relational-databases/databases/databases.md
+        - name: How-to 
+          - name: Manage
+            items:
+            - name: Create a Database
+              href: ../relational-databases/databases/create-a-database.md
+            - name: View databases
+              href: ../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md
+            - name: Add data files 
+              href: ../relational-databases/databases/add-data-or-log-files-to-a-database.md
+            - name: Manage properties 
+              href: ../relational-databases/databases/view-or-change-the-properties-of-a-database.md
+            - name: Change configuration settings
+              href: ../relational-databases/databases/change-the-configuration-settings-for-a-database.md
+            - name: Delete a Database
+              href: ../relational-databases/databases/delete-a-database.md
+            - name: Delete Data or Log Files from a Database
+              href: ../relational-databases/databases/delete-data-or-log-files-from-a-database.md
+            - name: Display Data and Log Space Information for a Database
+              href: ../relational-databases/databases/display-data-and-log-space-information-for-a-database.md
+            - name: Increase the Size of a Database
+              href: ../relational-databases/databases/increase-the-size-of-a-database.md
+            - name: Manage Metadata
+              href: ../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md
+            - name: Rename 
+              href: ../relational-databases/databases/rename-a-database.md
+            - name: Set Single-user Mode
+              href: ../relational-databases/databases/set-a-database-to-single-user-mode.md
+            - name: Shrink a Database
+              href: ../relational-databases/databases/shrink-a-database.md
+            - name: Shrink a File
+              href: ../relational-databases/databases/shrink-a-file.md
+            - name: Compatibility level
+              href: ../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md
+            - name: User defined data type alias
+              href: ../relational-databases/databases/create-a-user-defined-data-type-alias.md
+          - name: Move databases
+            items:            
+            - name: Migrate to a partially contained database
+              href: ../relational-databases/databases/migrate-to-a-partially-contained-database.md
+            - name: Copy Database Wizard
+              href: ../relational-databases/databases/use-the-copy-database-wizard.md
+            - name: Backup and Restore
+              href: ../relational-databases/databases/copy-databases-with-backup-and-restore.md
+            - name: Publish a Database 
+              href: ../relational-databases/databases/publish-a-database-sql-server-management-studio.md
+            - name: Detach & attach (T-SQL)
+              href: ../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
+            - name: Upgrade a Database (T-SQL)
+              href: ../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md
+            - name: Detach a Database
+              href: ../relational-databases/databases/detach-a-database.md
+            - name: Attach a Database
+              href: ../relational-databases/databases/attach-a-database.md
+            - name: User Databases
+              href: ../relational-databases/databases/move-user-databases.md
+            - name: System Databases
+              href: ../relational-databases/databases/move-system-databases.md
+          - name: Size estimation
+            items: 
+            - name: Of a Database
+              href: ../relational-databases/databases/estimate-the-size-of-a-database.md
+            - name: Of a Table
+              href: ../relational-databases/databases/estimate-the-size-of-a-table.md
+            - name: Of a clustered index
+              href: ../relational-databases/databases/estimate-the-size-of-a-clustered-index.md
+            - name: Of a nonclustered index
+              href: ../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md
+            - name: Of a heap
+              href: ../relational-databases/databases/estimate-the-size-of-a-heap.md
+          - name: Database snapshots
+            items:
+            - name: Create 
+              href: ../relational-databases/databases/create-a-database-snapshot-transact-sql.md
+            - name: View 
+              href: ../relational-databases/databases/view-a-database-snapshot-sql-server.md
+            - name: Revert to a Snapshot
+              href: ../relational-databases/databases/revert-a-database-to-a-database-snapshot.md
+            - name: Drop 
+              href: ../relational-databases/databases/drop-a-database-snapshot-transact-sql.md
+            - name: View size of sparse file
+              href: ../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
+        - name: Concepts
+          items: 
+          - name: Management
+            items:       
+            - name: Copy Databases to Other Servers
+              href: ../relational-databases/databases/copy-databases-to-other-servers.md   
+            - name: Move files
+              href: ../relational-databases/databases/move-database-files.md
+            - name: Database Detach and Attach
+              href: ../relational-databases/databases/database-detach-and-attach-sql-server.md          
+            - name: Storing data files in Azure
+              href: ../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md
+            - name: Files and filegroups
+              href: ../relational-databases/databases/database-files-and-filegroups.md
+            - name: States
+              href: ../relational-databases/databases/database-states.md
+            - name: File states
+              href: ../relational-databases/databases/file-states.md
+            - name: Identifiers
+              href: ../relational-databases/databases/database-identifiers.md
+            - name: Database snapshots
+              href: ../relational-databases/databases/database-snapshots-sql-server.md
+            - name: Instant file initialization
+              href: ../relational-databases/databases/database-instant-file-initialization.md
+          - name: System databases
+            items:
+            - name: Overview
+              href: ../relational-databases/databases/system-databases.md
+            - name: master 
+              href: ../relational-databases/databases/master-database.md
+            - name: model 
+              href: ../relational-databases/databases/model-database.md
+            - name: msdb 
+              href: ../relational-databases/databases/msdb-database.md
+            - name: Resource 
+              href: ../relational-databases/databases/resource-database.md
+            - name: tempdb 
+              href: ../relational-databases/databases/tempdb-database.md
+            - name: Rebuild System Databases
+              href: ../relational-databases/databases/rebuild-system-databases.md
+          - name: Contained databases
+            items:
+            - name: Overvivew
+              href: ../relational-databases/databases/contained-databases.md
+            - name: Modified Features 
+              href: ../relational-databases/databases/modified-features-contained-database.md
+            - name: Collations
+              href: ../relational-databases/databases/contained-database-collations.md
+            - name: Security best practices
+              href: ../relational-databases/databases/security-best-practices-with-contained-databases.md
+        - name: Reference
+          items:
+            - name: Dialog boxes
+              items:
+              - name: Value for Extended Property 
+                href: ../relational-databases/databases/value-for-extended-property-dialog-box.md
+              - name: Extended Properties Page
+                href: ../relational-databases/databases/database-object-extended-properties-page.md
+              - name: Database Properties
+                items:
+                - name: General page
+                  href: ../relational-databases/databases/database-properties-general-page.md
+                - name: Files page
+                  href: ../relational-databases/databases/database-properties-files-page.md
+                - name: Filegroups page
+                  href: ../relational-databases/databases/database-properties-filegroups-page.md
+                - name: Options page
+                  href: ../relational-databases/databases/database-properties-options-page.md
+                - name: Change Tracking page
+                  href: ../relational-databases/databases/database-properties-changetracking-page.md
+                - name: Transaction log shipping page
+                  href: ../relational-databases/databases/database-properties-transaction-log-shipping-page.md
+                - name: Mirroring page
+                  href: ../relational-databases/databases/database-properties-mirroring-page.md
+                - name: Query store page
+                  href: ../relational-databases/databases/database-properties-query-store-page.md
     - name: Databases
       items:
         - name: Overview
           href: ../relational-databases/databases/databases.md
-        - name: System Databases
-          href: ../relational-databases/databases/system-databases.md
-          items:
-          - name: master Database
-            href: ../relational-databases/databases/master-database.md
-          - name: model Database
-            href: ../relational-databases/databases/model-database.md
-          - name: msdb Database
-            href: ../relational-databases/databases/msdb-database.md
-          - name: Resource Database
-            href: ../relational-databases/databases/resource-database.md
-          - name: tempdb Database
-            href: ../relational-databases/databases/tempdb-database.md
-          - name: Rebuild System Databases
-            href: ../relational-databases/databases/rebuild-system-databases.md
-        - name: Contained Databases
-          href: ../relational-databases/databases/contained-databases.md
-          items:
-          - name: Modified Features (Contained Database)
-            href: ../relational-databases/databases/modified-features-contained-database.md
-          - name: Contained Database Collations
-            href: ../relational-databases/databases/contained-database-collations.md
-          - name: Security Best Practices with Contained Databases
-            href: ../relational-databases/databases/security-best-practices-with-contained-databases.md
-          - name: Migrate to a Partially Contained Database
-            href: ../relational-databases/databases/migrate-to-a-partially-contained-database.md
-        - name: SQL Server Data Files in Microsoft Azure
-          href: ../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md
-        - name: Database Files and Filegroups
-          href: ../relational-databases/databases/database-files-and-filegroups.md
-        - name: Database States
-          href: ../relational-databases/databases/database-states.md
-        - name: File States
-          href: ../relational-databases/databases/file-states.md
-        - name: Database Identifiers
-          href: ../relational-databases/databases/database-identifiers.md
-        - name: Estimate the Size of a Database
-          href: ../relational-databases/databases/estimate-the-size-of-a-database.md
-          items:
-          - name: Estimate the Size of a Table
-            href: ../relational-databases/databases/estimate-the-size-of-a-table.md
-          - name: Estimate the Size of a Clustered Index
-            href: ../relational-databases/databases/estimate-the-size-of-a-clustered-index.md
-          - name: Estimate the Size of a Nonclustered Index
-            href: ../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md
-          - name: Estimate the Size of a Heap
-            href: ../relational-databases/databases/estimate-the-size-of-a-heap.md
-        - name: Copy Databases to Other Servers
-          href: ../relational-databases/databases/copy-databases-to-other-servers.md
-          items:
-          - name: Use the Copy Database Wizard
-            href: ../relational-databases/databases/use-the-copy-database-wizard.md
-          - name: Copy Databases with Backup and Restore
-            href: ../relational-databases/databases/copy-databases-with-backup-and-restore.md
-          - name: Publish a Database (SQL Server Management Studio)
-            href: ../relational-databases/databases/publish-a-database-sql-server-management-studio.md
-        - name: Database Detach and Attach
-          href: ../relational-databases/databases/database-detach-and-attach-sql-server.md
-          items:
-          - name: Move a Database Using Detach and Attach (T-SQL)
-            href: ../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
-          - name: Upgrade a Database Using Detach and Attach (T-SQL)
-            href: ../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md
-          - name: Detach a Database
-            href: ../relational-databases/databases/detach-a-database.md
-          - name: Attach a Database
-            href: ../relational-databases/databases/attach-a-database.md
-        - name: Add Data or Log Files to a Database
-          href: ../relational-databases/databases/add-data-or-log-files-to-a-database.md
-        - name: Change the Configuration Settings for a Database
-          href: ../relational-databases/databases/change-the-configuration-settings-for-a-database.md
-        - name: Create a Database
-          href: ../relational-databases/databases/create-a-database.md
-        - name: Delete a Database
-          href: ../relational-databases/databases/delete-a-database.md
-        - name: Delete Data or Log Files from a Database
-          href: ../relational-databases/databases/delete-data-or-log-files-from-a-database.md
-        - name: Display Data and Log Space Information for a Database
-          href: ../relational-databases/databases/display-data-and-log-space-information-for-a-database.md
-        - name: Increase the Size of a Database
-          href: ../relational-databases/databases/increase-the-size-of-a-database.md
-        - name: Manage Metadata When Making a Database Available on Another Server Instance
-          href: ../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md
-        - name: Move Database Files
-          href: ../relational-databases/databases/move-database-files.md
-          items:
-          - name: Move User Databases
-            href: ../relational-databases/databases/move-user-databases.md
-          - name: Move System Databases
-            href: ../relational-databases/databases/move-system-databases.md
-        - name: Rename a Database
-          href: ../relational-databases/databases/rename-a-database.md
-        - name: Set a Database to Single-user Mode
-          href: ../relational-databases/databases/set-a-database-to-single-user-mode.md
-        - name: Shrink a Database
-          href: ../relational-databases/databases/shrink-a-database.md
-        - name: Shrink a File
-          href: ../relational-databases/databases/shrink-a-file.md
-        - name: View or Change the Properties of a Database
-          href: ../relational-databases/databases/view-or-change-the-properties-of-a-database.md
-          items:
-          - name: Value for Extended Property Dialog Box
-            href: ../relational-databases/databases/value-for-extended-property-dialog-box.md
-          - name: Database Object (Extended Properties Page)
-            href: ../relational-databases/databases/database-object-extended-properties-page.md
-          - name: Database Properties (General Page)
-            href: ../relational-databases/databases/database-properties-general-page.md
-          - name: Database Properties (Files Page)
-            href: ../relational-databases/databases/database-properties-files-page.md
-          - name: Database Properties (Filegroups Page)
-            href: ../relational-databases/databases/database-properties-filegroups-page.md
-          - name: Database Properties (Options Page)
-            href: ../relational-databases/databases/database-properties-options-page.md
-          - name: Database Properties (ChangeTracking Page)
-            href: ../relational-databases/databases/database-properties-changetracking-page.md
-          - name: Database Properties (Transaction Log Shipping Page)
-            href: ../relational-databases/databases/database-properties-transaction-log-shipping-page.md
+        - name: How-to 
+          - name: Manage
             items:
-            - name: Log Shipping Transaction Log Backup Settings
-              href: ../relational-databases/databases/log-shipping-transaction-log-backup-settings.md
-            - name: Secondary Database Settings
-              href: ../relational-databases/databases/secondary-database-settings.md
-            - name: Log Shipping Monitor Settings
-              href: ../relational-databases/databases/log-shipping-monitor-settings.md
-          - name: Database Properties (Mirroring Page)
-            href: ../relational-databases/databases/database-properties-mirroring-page.md
-          - name: Database Properties (Query Store Page)
-            href: ../relational-databases/databases/database-properties-query-store-page.md
-        - name: View a List of Databases on an Instance of SQL Server
-          href: ../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md
-        - name: View or Change the Compatibility Level of a Database
-          href: ../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md
-        - name: Create a User-Defined Data Type Alias
-          href: ../relational-databases/databases/create-a-user-defined-data-type-alias.md
-        - name: Database Snapshots
-          href: ../relational-databases/databases/database-snapshots-sql-server.md
+            - name: Create a Database
+              href: ../relational-databases/databases/create-a-database.md
+            - name: View databases
+              href: ../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md
+            - name: Add data files 
+              href: ../relational-databases/databases/add-data-or-log-files-to-a-database.md
+            - name: Manage properties 
+              href: ../relational-databases/databases/view-or-change-the-properties-of-a-database.md
+            - name: Change configuration settings
+              href: ../relational-databases/databases/change-the-configuration-settings-for-a-database.md
+            - name: Delete a Database
+              href: ../relational-databases/databases/delete-a-database.md
+            - name: Delete Data or Log Files from a Database
+              href: ../relational-databases/databases/delete-data-or-log-files-from-a-database.md
+            - name: Display Data and Log Space Information for a Database
+              href: ../relational-databases/databases/display-data-and-log-space-information-for-a-database.md
+            - name: Increase the Size of a Database
+              href: ../relational-databases/databases/increase-the-size-of-a-database.md
+            - name: Manage Metadata
+              href: ../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md
+            - name: Rename 
+              href: ../relational-databases/databases/rename-a-database.md
+            - name: Set Single-user Mode
+              href: ../relational-databases/databases/set-a-database-to-single-user-mode.md
+            - name: Shrink a Database
+              href: ../relational-databases/databases/shrink-a-database.md
+            - name: Shrink a File
+              href: ../relational-databases/databases/shrink-a-file.md
+            - name: Compatibility level
+              href: ../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md
+            - name: User defined data type alias
+              href: ../relational-databases/databases/create-a-user-defined-data-type-alias.md
+          - name: Move databases
+            items:            
+            - name: Migrate to a partially contained database
+              href: ../relational-databases/databases/migrate-to-a-partially-contained-database.md
+            - name: Copy Database Wizard
+              href: ../relational-databases/databases/use-the-copy-database-wizard.md
+            - name: Backup and Restore
+              href: ../relational-databases/databases/copy-databases-with-backup-and-restore.md
+            - name: Publish a Database 
+              href: ../relational-databases/databases/publish-a-database-sql-server-management-studio.md
+            - name: Detach & attach (T-SQL)
+              href: ../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
+            - name: Upgrade a Database (T-SQL)
+              href: ../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md
+            - name: Detach a Database
+              href: ../relational-databases/databases/detach-a-database.md
+            - name: Attach a Database
+              href: ../relational-databases/databases/attach-a-database.md
+            - name: User Databases
+              href: ../relational-databases/databases/move-user-databases.md
+            - name: System Databases
+              href: ../relational-databases/databases/move-system-databases.md
+          - name: Size estimation
+            items: 
+            - name: Of a Database
+              href: ../relational-databases/databases/estimate-the-size-of-a-database.md
+            - name: Of a Table
+              href: ../relational-databases/databases/estimate-the-size-of-a-table.md
+            - name: Of a clustered index
+              href: ../relational-databases/databases/estimate-the-size-of-a-clustered-index.md
+            - name: Of a nonclustered index
+              href: ../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md
+            - name: Of a heap
+              href: ../relational-databases/databases/estimate-the-size-of-a-heap.md
+          - name: Database snapshots
+            items:
+            - name: Create 
+              href: ../relational-databases/databases/create-a-database-snapshot-transact-sql.md
+            - name: View 
+              href: ../relational-databases/databases/view-a-database-snapshot-sql-server.md
+            - name: Revert to a Snapshot
+              href: ../relational-databases/databases/revert-a-database-to-a-database-snapshot.md
+            - name: Drop 
+              href: ../relational-databases/databases/drop-a-database-snapshot-transact-sql.md
+            - name: View size of sparse file
+              href: ../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
+        - name: Concepts
+          items: 
+          - name: Management
+            items:       
+            - name: Copy Databases to Other Servers
+              href: ../relational-databases/databases/copy-databases-to-other-servers.md   
+            - name: Move files
+              href: ../relational-databases/databases/move-database-files.md
+            - name: Database Detach and Attach
+              href: ../relational-databases/databases/database-detach-and-attach-sql-server.md          
+            - name: Storing data files in Azure
+              href: ../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md
+            - name: Files and filegroups
+              href: ../relational-databases/databases/database-files-and-filegroups.md
+            - name: States
+              href: ../relational-databases/databases/database-states.md
+            - name: File states
+              href: ../relational-databases/databases/file-states.md
+            - name: Identifiers
+              href: ../relational-databases/databases/database-identifiers.md
+            - name: Database snapshots
+              href: ../relational-databases/databases/database-snapshots-sql-server.md
+            - name: Instant file initialization
+              href: ../relational-databases/databases/database-instant-file-initialization.md
+          - name: System databases
+            items:
+            - name: Overview
+              href: ../relational-databases/databases/system-databases.md
+            - name: master 
+              href: ../relational-databases/databases/master-database.md
+            - name: model 
+              href: ../relational-databases/databases/model-database.md
+            - name: msdb 
+              href: ../relational-databases/databases/msdb-database.md
+            - name: Resource 
+              href: ../relational-databases/databases/resource-database.md
+            - name: tempdb 
+              href: ../relational-databases/databases/tempdb-database.md
+            - name: Rebuild System Databases
+              href: ../relational-databases/databases/rebuild-system-databases.md
+          - name: Contained databases
+            items:
+            - name: Overvivew
+              href: ../relational-databases/databases/contained-databases.md
+            - name: Modified Features 
+              href: ../relational-databases/databases/modified-features-contained-database.md
+            - name: Collations
+              href: ../relational-databases/databases/contained-database-collations.md
+            - name: Security best practices
+              href: ../relational-databases/databases/security-best-practices-with-contained-databases.md
+        - name: Reference
           items:
-          - name: View the Size of the Sparse File of a Database Snapshot (T-SQL)
-            href: ../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
-          - name: Create a Database Snapshot (T-SQL)
-            href: ../relational-databases/databases/create-a-database-snapshot-transact-sql.md
-          - name: View a Database Snapshot (SQL Server)
-            href: ../relational-databases/databases/view-a-database-snapshot-sql-server.md
-          - name: Revert a Database to a Database Snapshot
-            href: ../relational-databases/databases/revert-a-database-to-a-database-snapshot.md
-          - name: Drop a Database Snapshot (T-SQL)
-            href: ../relational-databases/databases/drop-a-database-snapshot-transact-sql.md
-        - name: Database Instant File Initialization
-          href: ../relational-databases/databases/database-instant-file-initialization.md
+            - name: Dialog boxes
+              items:
+              - name: Value for Extended Property 
+                href: ../relational-databases/databases/value-for-extended-property-dialog-box.md
+              - name: Extended Properties Page
+                href: ../relational-databases/databases/database-object-extended-properties-page.md
+              - name: Database Properties
+                items:
+                - name: General page
+                  href: ../relational-databases/databases/database-properties-general-page.md
+                - name: Files page
+                  href: ../relational-databases/databases/database-properties-files-page.md
+                - name: Filegroups page
+                  href: ../relational-databases/databases/database-properties-filegroups-page.md
+                - name: Options page
+                  href: ../relational-databases/databases/database-properties-options-page.md
+                - name: Change Tracking page
+                  href: ../relational-databases/databases/database-properties-changetracking-page.md
+                - name: Transaction log shipping page
+                  href: ../relational-databases/databases/database-properties-transaction-log-shipping-page.md
+                - name: Mirroring page
+                  href: ../relational-databases/databases/database-properties-mirroring-page.md
+                - name: Query store page
+                  href: ../relational-databases/databases/database-properties-query-store-page.md
     - name: Filestream, Filetable & BLOB
       items:
         - name: Overview
@@ -1061,53 +1237,53 @@
               href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
         - name: Filestream
           items:
-          - name: Enable and Configure FILESTREAM
+          - name: Enable and Configure 
             href: ../relational-databases/blob/enable-and-configure-filestream.md
-          - name: Create a FILESTREAM-Enabled Database
+          - name: Create a Database
             href: ../relational-databases/blob/create-a-filestream-enabled-database.md
-          - name: Create a Table for Storing FILESTREAM Data
+          - name: Create a Table 
             href: ../relational-databases/blob/create-a-table-for-storing-filestream-data.md
-          - name: Access FILESTREAM Data with T-SQL
+          - name: Access Data 
             href: ../relational-databases/blob/access-filestream-data-with-transact-sql.md
-          - name: Create Client Applications for FILESTREAM Data
+          - name: Create Client Applications 
             href: ../relational-databases/blob/create-client-applications-for-filestream-data.md
-          - name: Access FILESTREAM Data with OpenSqlFilestream
+          - name: Access data with OpenSqlFilestream
             href: ../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md
-          - name: Make Partial Updates to FILESTREAM Data
+          - name: Make Partial Updates t
             href: ../relational-databases/blob/make-partial-updates-to-filestream-data.md
-          - name: Avoid Conflicts with Database Operations in FILESTREAM Applications
+          - name: Avoid Conflicts 
             href: ../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md
-          - name: Move a FILESTREAM-Enabled Database
+          - name: Move a Database
             href: ../relational-databases/blob/move-a-filestream-enabled-database.md
-          - name: Set Up FILESTREAM on a Failover Cluster
+          - name: Set Up on a Failover Cluster
             href: ../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md
-          - name: Configure a Firewall for FILESTREAM Access
+          - name: Configure a Firewall
             href: ../relational-databases/blob/configure-a-firewall-for-filestream-access.md
-          - name: FILESTREAM Compatibility with Other SQL Server Features
+          - name: Interoperability
             href: ../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md
-          - name: FILESTREAM DDL, Functions, Stored Procedures, and Views
+          - name: DDL, Functions, Stored Procedures, and Views
             href: ../relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
         - name: FileTables
           items:
-          - name: Enable the Prerequisites for FileTable
+          - name: Prerequisites 
             href: ../relational-databases/blob/enable-the-prerequisites-for-filetable.md
-          - name: Create, Alter, and Drop FileTables
+          - name: Create, Alter, and Drop 
             href: ../relational-databases/blob/create-alter-and-drop-filetables.md
-          - name: Load Files into FileTables
+          - name: Load Files 
             href: ../relational-databases/blob/load-files-into-filetables.md
-          - name: Work with Directories and Paths in FileTables
+          - name: Directories and Paths 
             href: ../relational-databases/blob/work-with-directories-and-paths-in-filetables.md
-          - name: Access FileTables with T-SQL
+          - name: Access with T-SQL
             href: ../relational-databases/blob/access-filetables-with-transact-sql.md
-          - name: Access FileTables with File Input-Output APIs
+          - name: Access with File Input-Output APIs
             href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
-          - name: Manage FileTables
+          - name: Manage 
             href: ../relational-databases/blob/manage-filetables.md
-          - name: FileTable Schema
+          - name:  Schema
             href: ../relational-databases/blob/filetable-schema.md
-          - name: FileTable Compatibility with Other SQL Server Features
+          - name: Interoperability
             href: ../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md
-          - name: FileTable DDL, Functions, Stored Procedures, and Views
+          - name: DDL, Functions, Stored Procedures, and Views
             href: ../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md
         - name: Remote Blob Store (RBS)
           href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
@@ -1120,66 +1296,68 @@
         - name: Clustered and Nonclustered Indexes Described
           href: ../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
-          - name: Create Clustered Indexes
-            href: ../relational-databases/indexes/create-clustered-indexes.md
-          - name: Create Nonclustered Indexes
-            href: ../relational-databases/indexes/create-nonclustered-indexes.md
-          - name: Create Unique Indexes
-            href: ../relational-databases/indexes/create-unique-indexes.md
-          - name: Create Filtered Indexes
-            href: ../relational-databases/indexes/create-filtered-indexes.md
-          - name: Create Indexes with Included Columns
+          - name: Create
+            items: 
+            - name: Clustered Indexes
+              href: ../relational-databases/indexes/create-clustered-indexes.md
+            - name: Nonclustered Indexes
+              href: ../relational-databases/indexes/create-nonclustered-indexes.md
+            - name: Unique Indexes
+              href: ../relational-databases/indexes/create-unique-indexes.md
+            - name: Filtered Indexes
+              href: ../relational-databases/indexes/create-filtered-indexes.md
+            - name: With Included Columns
             href: ../relational-databases/indexes/create-indexes-with-included-columns.md
-          - name: Delete an Index
+          - name: Delete
             href: ../relational-databases/indexes/delete-an-index.md
-          - name: Modify an Index
+          - name: Modify
             href: ../relational-databases/indexes/modify-an-index.md
-          - name: Move an Existing Index to a Different Filegroup
+          - name: Move to a different filegroup
             href: ../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md
-          - name: Indexes on Computed Columns
+          - name: Computed Columns
             href: ../relational-databases/indexes/indexes-on-computed-columns.md
-          - name: SORT_IN_TEMPDB Option for Indexes
+          - name: SORT_IN_TEMPDB 
             href: ../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md
-          - name: Disable Indexes and Constraints
+          - name: Disable 
             href: ../relational-databases/indexes/disable-indexes-and-constraints.md
-          - name: Enable Indexes and Constraints
+          - name: Enable 
             href: ../relational-databases/indexes/enable-indexes-and-constraints.md
-          - name: Rename Indexes
+          - name: Rename 
             href: ../relational-databases/indexes/rename-indexes.md
-          - name: Set Index Options
+          - name: Set Options
             href: ../relational-databases/indexes/set-index-options.md
-          - name: Disk Space Requirements for Index DDL Operations
+          - name: Disk Space Index DDL Operations
             href: ../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md
             items:
-            - name: Transaction Log Disk Space for Index Operations
+            - name: Transaction Log Disk Space
               href: ../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md
-            - name: Index Disk Space Example
+            - name: Disk Space Example
               href: ../relational-databases/indexes/index-disk-space-example.md
-          - name: Reorganize and Rebuild Indexes
+          - name: Reorganize and Rebuild 
             href: ../relational-databases/indexes/reorganize-and-rebuild-indexes.md
-          - name: Specify Fill Factor for an Index
+          - name: Specify Fill Factor 
             href: ../relational-databases/indexes/specify-fill-factor-for-an-index.md
-          - name: Perform Index Operations Online
+          - name: Perform Online Operations
             href: ../relational-databases/indexes/perform-index-operations-online.md
             items:
-            - name: How Online Index Operations Work
+            - name: How it works
               href: ../relational-databases/indexes/how-online-index-operations-work.md
-            - name: Guidelines for Online Index Operations
+            - name: Guidelines 
               href: ../relational-databases/indexes/guidelines-for-online-index-operations.md
-          - name: Configure Parallel Index Operations
+          - name: Configure parallel operations
             href: ../relational-databases/indexes/configure-parallel-index-operations.md
           - name: Index Properties F1 Help
             href: ../relational-databases/indexes/index-properties-f1-help.md
         - name: Columnstore indexes
           items:
+          - name: What's new
+            href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md
           - name: Overview
             href: ../relational-databases/indexes/columnstore-indexes-overview.md
           - name: Design Guidance
             href: ../relational-databases/indexes/columnstore-indexes-design-guidance.md
           - name: Data loading Guidance
             href: ../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md
-          - name: What's new
-            href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md
           - name: Query performance
             href: ../relational-databases/indexes/columnstore-indexes-query-performance.md
           - name: Real-time operational analytics
@@ -1292,46 +1470,43 @@
     - name: Tables
       items:
         - name: Overview
-          href: ../relational-databases/tables/tables.md
-        - name: Create Tables (Database Engine)
-          href: ../relational-databases/tables/create-tables-database-engine.md
-        - name: Delete Tables (Database Engine)
-          href: ../relational-databases/tables/delete-tables-database-engine.md
-        - name: Duplicate Tables
-          href: ../relational-databases/tables/duplicate-tables.md
-        - name: Rename Tables (Database Engine)
-          href: ../relational-databases/tables/rename-tables-database-engine.md
-        - name: View the Table Definition
-          href: ../relational-databases/tables/view-the-table-definition.md
-          items:
-          - name: Table Properties - SSMS
-            href: ../relational-databases/tables/table-properties-ssms.md
-          - name: Column Properties (General Page)
-            href: ../relational-databases/tables/column-properties-general-page.md
-        - name: View the Dependencies of a Table
-          href: ../relational-databases/tables/view-the-dependencies-of-a-table.md
-        - name: Add Columns to a Table (Database Engine)
-          href: ../relational-databases/tables/add-columns-to-a-table-database-engine.md
-        - name: Delete Columns from a Table
-          href: ../relational-databases/tables/delete-columns-from-a-table.md
-        - name: Rename Columns (Database Engine)
-          href: ../relational-databases/tables/rename-columns-database-engine.md
-        - name: Copy Columns from One Table to Another (Database Engine)
-          href: ../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md
-        - name: Modify Columns (Database Engine)
-          href: ../relational-databases/tables/modify-columns-database-engine.md
-        - name: Change Column Order in a Table
-          href: ../relational-databases/tables/change-column-order-in-a-table.md
-        - name: Specify Computed Columns in a Table
-          href: ../relational-databases/tables/specify-computed-columns-in-a-table.md
-        - name: Specify Default Values for Columns
-          href: ../relational-databases/tables/specify-default-values-for-columns.md
-        - name: Use Sparse Columns
-          href: ../relational-databases/tables/use-sparse-columns.md
-        - name: Use Column Sets
-          href: ../relational-databases/tables/use-column-sets.md
-        - name: Use Table-Valued Parameters (Database Engine)
-          href: ../relational-databases/tables/use-table-valued-parameters-database-engine.md
+          href: ../relational-databases/tables/tables.md'
+        - name: Manage
+          items: 
+          - name: Create  
+            href: ../relational-databases/tables/create-tables-database-engine.md
+          - name: Delete  
+            href: ../relational-databases/tables/delete-tables-database-engine.md
+          - name: Duplicate 
+            href: ../relational-databases/tables/duplicate-tables.md
+          - name: Rename  
+            href: ../relational-databases/tables/rename-tables-database-engine.md
+          - name: View Table Definition
+            href: ../relational-databases/tables/view-the-table-definition.md
+          - name: View the dependencies 
+            href: ../relational-databases/tables/view-the-dependencies-of-a-table.md
+          - name: Add Columns
+            href: ../relational-databases/tables/add-columns-to-a-table-database-engine.md
+          - name: Delete Columns
+            href: ../relational-databases/tables/delete-columns-from-a-table.md
+          - name: Rename Columns
+            href: ../relational-databases/tables/rename-columns-database-engine.md
+          - name: Copy Columns 
+            href: ../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md
+          - name: Modify Columns 
+            href: ../relational-databases/tables/modify-columns-database-engine.md
+          - name: Change Column Order
+            href: ../relational-databases/tables/change-column-order-in-a-table.md
+          - name: Specify Computed Columns 
+            href: ../relational-databases/tables/specify-computed-columns-in-a-table.md
+          - name: Specify default values for Columns
+            href: ../relational-databases/tables/specify-default-values-for-columns.md
+          - name: Sparse Columns
+            href: ../relational-databases/tables/use-sparse-columns.md
+          - name: Column Sets
+            href: ../relational-databases/tables/use-column-sets.md
+          - name: Table-Valued Parameters
+            href: ../relational-databases/tables/use-table-valued-parameters-database-engine.md
         - name: Edge constraints
           href: ../relational-databases/tables/graph-edge-constraints.md
           items:
@@ -1343,118 +1518,136 @@
             href: ../relational-databases/tables/modify-edge-constraint.md
           - name: View
             href: ../relational-databases/tables/view-edge-constraint-properties.md
-        - name: Primary and foreign key constraints
-          href: ../relational-databases/tables/primary-and-foreign-key-constraints.md
+        - name: Primary keys
           items:
-          - name: Create Primary Keys
+          - name: Overview
+            items: ../relational-databases/tables/primary-and-foreign-key-constraints.md
+          - name: Create
             href: ../relational-databases/tables/create-primary-keys.md
-          - name: Modify Primary Keys
+          - name: Modify
             href: ../relational-databases/tables/modify-primary-keys.md
-          - name: Delete Primary Keys
+          - name: Delete
             href: ../relational-databases/tables/delete-primary-keys.md
-          - name: Create Foreign Key Relationships
+        - name: Foreign keys
+          items:
+          - name: Create relationships
             href: ../relational-databases/tables/create-foreign-key-relationships.md
-          - name: Modify Foreign Key Relationships
+          - name: Modify relationships
             href: ../relational-databases/tables/modify-foreign-key-relationships.md
-          - name: Delete Foreign Key Relationships
+          - name: Delete relationships 
             href: ../relational-databases/tables/delete-foreign-key-relationships.md
-          - name: View Foreign Key Properties
+          - name: View properties
             href: ../relational-databases/tables/view-foreign-key-properties.md
-          - name: Disable Foreign Key Constraints for Replication
+          - name: Disable constraints for replication
             href: ../relational-databases/tables/disable-foreign-key-constraints-for-replication.md
-          - name: Disable Foreign Key Constraints with INSERT and UPDATE Statements
+          - name: Disable constraints with INSERT & UPDATE
             href: ../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: Unique Constraints and Check Constraints
-          href: ../relational-databases/tables/unique-constraints-and-check-constraints.md
+        - name: Unique constraints
           items:
-          - name: Create Unique Constraints
+          - name: Overview
+            href: ../relational-databases/tables/unique-constraints-and-check-constraints.md
+          - name: Create
             href: ../relational-databases/tables/create-unique-constraints.md
-          - name: Modify Unique Constraints
+          - name: Modify
             href: ../relational-databases/tables/modify-unique-constraints.md
-          - name: Delete Unique Constraints
+          - name: Delete
             href: ../relational-databases/tables/delete-unique-constraints.md
-          - name: Create Check Constraints
+        - name: Check constraints
+          items:
+          - name: Create
             href: ../relational-databases/tables/create-check-constraints.md
-          - name: Modify Check Constraints
+          - name: Modify
             href: ../relational-databases/tables/modify-check-constraints.md
-          - name: Delete Check Constraints
+          - name: Delete
             href: ../relational-databases/tables/delete-check-constraints.md
-          - name: Disable Check Constraints for Replication
+          - name: Disable for replication
             href: ../relational-databases/tables/disable-check-constraints-for-replication.md
-          - name: Disable Check Constraints with INSERT and UPDATE Statements
+          - name: Disable constraints with INSERT & UPDATE
             href: ../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md
-        - name: Table Column Properties (SQL Server Management Studio)
-          href: ../relational-databases/tables/table-column-properties-sql-server-management-studio.md
-        - name: Temporal Tables
-          href: ../relational-databases/tables/temporal-tables.md
-          items:
-          - name: Getting Started with System-Versioned Temporal Tables
-            href: ../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
-            items:
-            - name: Creating a System-Versioned Temporal Table
+        - name: Temporal tables
+          items: 
+          - name: Overview
+            href: ../relational-databases/tables/temporal-tables.md
+          - name: Manage
+            items: 
+            - name: Getting started
+              href: ../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
+            - name: Create
               href: ../relational-databases/tables/creating-a-system-versioned-temporal-table.md
-            - name: Modifying Data in a System-Versioned Temporal Table
+            - name: Modify data
               href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
-            - name: Querying Data in a System-Versioned Temporal Table
+            - name: Query data
               href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
-            - name: Changing the Schema of a System-Versioned Temporal Table
+            - name: Change the schema
               href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
-            - name: Stopping System-Versioning on a System-Versioned Temporal Table
+            - name: Stop system-versioning
               href: ../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md
-          - name: Temporal Table Usage Scenarios
-            href: ../relational-databases/tables/temporal-table-usage-scenarios.md
-          - name: Temporal Table System Consistency Checks
-            href: ../relational-databases/tables/temporal-table-system-consistency-checks.md
-          - name: Partitioning with Temporal Tables
-            href: ../relational-databases/tables/partitioning-with-temporal-tables.md
-          - name: Temporal Table Considerations and Limitations
-            href: ../relational-databases/tables/temporal-table-considerations-and-limitations.md
-          - name: Temporal Table Security
-            href: ../relational-databases/tables/temporal-table-security.md
-          - name: Manage Retention of Historical Data in System-Versioned Temporal Tables
-            href: ../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
-          - name: System-Versioned Temporal Tables with Memory-Optimized Tables
-            href: ../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+            - name: Usage scenarios
+              href: ../relational-databases/tables/temporal-table-usage-scenarios.md
+            - name: Consistency checks
+              href: ../relational-databases/tables/temporal-table-system-consistency-checks.md
+            - name: Partitioning
+              href: ../relational-databases/tables/partitioning-with-temporal-tables.md
+            - name: Considerations & limitations
+              href: ../relational-databases/tables/temporal-table-considerations-and-limitations.md
+            - name: Retention of historical data
+              href: ../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
+            - name: Metadata views and functions
+              href: ../relational-databases/tables/temporal-table-metadata-views-and-functions.md
+          - name: Memory-optimized tables
             items:
-            - name: Creating a Memory-Optimized System-Versioned Temporal Table
+            - name: Overview
+              href: ../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+            - name: Create
               href: ../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-            - name: Working with Memory-Optimized System-Versioned Temporal Tables
+            - name: Work with
               href: ../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-            - name: Monitoring Memory-Optimized System-Versioned Temporal Tables
+            - name: Monitor
               href: ../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-            - name: Performance Considerations with Memory-Optimized System-Versioned Temporal Tables
+            - name: Performance considerations
               href: ../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
-          - name: Temporal Table Metadata Views and Functions
-            href: ../relational-databases/tables/temporal-table-metadata-views-and-functions.md
-        - name: "Tutorial: Using the hierarchyid Data Type"
-          href: ../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
-          items:
-          - name: "Lesson 1: Converting a Table to a Hierarchical Structure"
-            href: ../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
-          - name: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
-            href: ../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
+          - name: Tutorials
+            items:
+            - name: Using hierarchyid data type
+              href: ../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
+            - name: "Lesson 1: Converting a Table to a Hierarchical Structure"
+              href: ../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
+            - name: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
+              href: ../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
+          - name: Reference
+            items:
+            - name: Table Column Properties
+              href: ../relational-databases/tables/table-column-properties-sql-server-management-studio.md
+            - name: Table Properties
+              href: ../relational-databases/tables/table-properties-ssms.md
+            - name: Column Properties 
+              href: ../relational-databases/tables/column-properties-general-page.md
     - name: Track changes
       items:
         - name: Overview
           href: ../relational-databases/track-changes/track-data-changes-sql-server.md
-        - name: About Change Data Capture
-          href: ../relational-databases/track-changes/about-change-data-capture-sql-server.md
-        - name: Enable and Disable Change Data Capture
-          href: ../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md
-        - name: Administer and Monitor Change Data Capture
-          href: ../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
-        - name: Work with Change Data
-          href: ../relational-databases/track-changes/work-with-change-data-sql-server.md
-        - name: About Change Tracking
-          href: ../relational-databases/track-changes/about-change-tracking-sql-server.md
-        - name: Enable and Disable Change Tracking
-          href: ../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md
-        - name: Manage Change Tracking
-          href: ../relational-databases/track-changes/manage-change-tracking-sql-server.md
-        - name: Work with Change Tracking
-          href: ../relational-databases/track-changes/work-with-change-tracking-sql-server.md
-        - name: Change Data Capture and Other SQL Server Features
-          href: ../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
+        - name: Change data capture
+          items: 
+          - name: About 
+            href: ../relational-databases/track-changes/about-change-data-capture-sql-server.md
+          - name: Enable & disable 
+            href: ../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md
+          - name: Administer & monitor 
+            href: ../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
+          - name: Work with 
+            href: ../relational-databases/track-changes/work-with-change-data-sql-server.md
+        - name: Change tracking
+          items:
+          - name: About 
+            href: ../relational-databases/track-changes/about-change-tracking-sql-server.md
+          - name: Enable and disable 
+            href: ../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md
+          - name: Manage 
+            href: ../relational-databases/track-changes/manage-change-tracking-sql-server.md
+          - name: Work with 
+            href: ../relational-databases/track-changes/work-with-change-tracking-sql-server.md
+          - name: Interoperability
+            href: ../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: Triggers
       items:
         - name: Overview
@@ -1464,9 +1657,9 @@
         - name: DDL Triggers
           href: ../relational-databases/triggers/ddl-triggers.md
           items:
-          - name: Implement DDL Triggers
+          - name: Implement 
             href: ../relational-databases/triggers/implement-ddl-triggers.md
-          - name: Get Information About DDL Triggers
+          - name: Get Information 
             href: ../relational-databases/triggers/get-information-about-ddl-triggers.md
           - name: Use the EVENTDATA Function
             href: ../relational-databases/triggers/use-the-eventdata-function.md
@@ -1503,41 +1696,41 @@
           href: ../relational-databases/user-defined-functions/user-defined-functions.md
         - name: Deterministic and Nondeterministic Functions
           href: ../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md
-        - name: Scalar User-defined function inlining
+        - name: Scalar inlining
           href: ../relational-databases/user-defined-functions/scalar-udf-inlining.md
-        - name: Create User-defined Functions (Database Engine)
+        - name: Create 
           href: ../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md
         - name: Create CLR Functions
           href: ../relational-databases/user-defined-functions/create-clr-functions.md
-        - name: Create User-defined Aggregates
+        - name: Create Aggregates
           href: ../relational-databases/user-defined-functions/create-user-defined-aggregates.md
-        - name: Modify User-defined Functions
+        - name: Modify 
           href: ../relational-databases/user-defined-functions/modify-user-defined-functions.md
-        - name: Delete User-defined Functions
+        - name: Delete
           href: ../relational-databases/user-defined-functions/delete-user-defined-functions.md
-        - name: Execute User-defined Functions
+        - name: Execute 
           href: ../relational-databases/user-defined-functions/execute-user-defined-functions.md
-        - name: Rename User-defined Functions
+        - name: Rename 
           href: ../relational-databases/user-defined-functions/rename-user-defined-functions.md
-        - name: View User-defined Functions
+        - name: View 
           href: ../relational-databases/user-defined-functions/view-user-defined-functions.md
     - name: Views
       items:
         - name: Overview
           href: ../relational-databases/views/views.md
-        - name: Create Views
+        - name: Create 
           href: ../relational-databases/views/create-views.md
         - name: Create Indexed Views
           href: ../relational-databases/views/create-indexed-views.md
-        - name: Modify Views
+        - name: Modify 
           href: ../relational-databases/views/modify-views.md
         - name: Modify Data Through a View
           href: ../relational-databases/views/modify-data-through-a-view.md
-        - name: Get Information About a View
+        - name: Get Information 
           href: ../relational-databases/views/get-information-about-a-view.md
-        - name: Rename Views
+        - name: Rename
           href: ../relational-databases/views/rename-views.md
-        - name: Delete Views
+        - name: Delete 
           href: ../relational-databases/views/delete-views.md
     - name: XML data
       items:
@@ -1546,72 +1739,75 @@
         - name: XML Data Type and Columns
           href: ../relational-databases/xml/xml-data-type-and-columns-sql-server.md
           items:
-          - name: Compare Typed XML to Untyped XML
+          - name: Compare Typed to Untyped XML
             href: ../relational-databases/xml/compare-typed-xml-to-untyped-xml.md
-          - name: Create Instances of XML Data
+          - name: Create Instances
             href: ../relational-databases/xml/create-instances-of-xml-data.md
-          - name: Create XML Data Type Variables and Columns
+          - name: Create Variables and Columns
             href: ../relational-databases/xml/create-xml-data-type-variables-and-columns.md
-          - name: Change Existing Columns to XML Columns
+          - name: Change Existing Columns 
             href: ../relational-databases/xml/change-existing-columns-to-xml-columns.md
-          - name: Load XML Data
+          - name: Load 
             href: ../relational-databases/xml/load-xml-data.md
-          - name: Create Views over XML Columns
+          - name: Create Views over Columns
             href: ../relational-databases/xml/create-views-over-xml-columns.md
-          - name: Use XML in Computed Columns
+          - name: Computed Columns
             href: ../relational-databases/xml/use-xml-in-computed-columns.md
-          - name: Retrieve and Query XML Data
+          - name: Retrieve and Query 
             href: ../relational-databases/xml/retrieve-and-query-xml-data.md
-          - name: Add Namespaces to Queries with WITH XMLNAMESPACES
+          - name: Add namespaces to queries 
             href: ../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md
-          - name: Promote Frequently Used XML Values with Computed Columns
+          - name: Frequently used values with computed columns
             href: ../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md
-          - name: Define the Serialization of XML Data
+          - name: Define serialization
             href: ../relational-databases/xml/define-the-serialization-of-xml-data.md
-          - name: Use Full-Text Search with XML Columns
+          - name: Use Full-Text Search 
             href: ../relational-databases/xml/use-full-text-search-with-xml-columns.md
-          - name: Add Business Logic to XML Data
+          - name: Add Business Logic 
             href: ../relational-databases/xml/add-business-logic-to-xml-data.md
-          - name: Use XML Data in Applications
+          - name: Use in Applications
             href: ../relational-databases/xml/use-xml-data-in-applications.md
         - name: XML Indexes
           href: ../relational-databases/xml/xml-indexes-sql-server.md
           items:
-          - name: Create XML Indexes
+          - name: Create 
             href: ../relational-databases/xml/create-xml-indexes.md
-          - name: Modify XML Indexes
+          - name: Modify 
             href: ../relational-databases/xml/modify-xml-indexes.md
-          - name: Drop XML Indexes
+          - name: Drop 
             href: ../relational-databases/xml/drop-xml-indexes.md
-          - name: Selective XML Indexes (SXI)
+        - name: Selective XML Indexes (SXI)
+          items: 
+          - name: Overview
             href: ../relational-databases/xml/selective-xml-indexes-sxi.md
-          - name: Specify Paths and Optimization Hints for Selective XML Indexes
+          - name: Paths & optimization hints 
             href: ../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md
-          - name: Create, Alter, and Drop Selective XML Indexes
+          - name: Create, Alter, and Drop 
             href: ../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md
-          - name: Create, Alter, and Drop Secondary Selective XML Indexes
+          - name: Create, Alter, and Drop Secondary Indexes
             href: ../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md
         - name: XML Schema Collections
           href: ../relational-databases/xml/xml-schema-collections-sql-server.md
           items:
-          - name: Reference the Built-in XML Schema Collection (sys)
+          - name: Reference
             href: ../relational-databases/xml/reference-the-built-in-xml-schema-collection-sys.md
-          - name: View a Stored XML Schema Collection
+          - name: View 
             href: ../relational-databases/xml/view-a-stored-xml-schema-collection.md
-          - name: Grant Permissions on an XML Schema Collection
+          - name: Grant Permissions 
             href: ../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md
-          - name: Revoke Permissions on an XML Schema Collection
+          - name: Revoke Permissions 
             href: ../relational-databases/xml/revoke-permissions-on-an-xml-schema-collection.md
-          - name: Deny Permissions on an XML Schema Collection
+          - name: Deny Permissions 
             href: ../relational-databases/xml/deny-permissions-on-an-xml-schema-collection.md
-          - name: Preprocess a Schema to Merge Included Schemas
+          - name: Preprocess a schema to merge included schemas
             href: ../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md
-          - name: Requirements and Limitations for XML Schema Collections on the Server
-            href: ../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md
+          - name: Requirements and Limitations 
             items:
-            - name: Canonical Forms and Pattern Restrictions
+            - name: Overview
+              href: ../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md
+            - name: Canonical forms & pattern restrictions
               href: ../relational-databases/xml/canonical-forms-and-pattern-restrictions.md
-            - name: Wildcard Components and Content Validation
+            - name: Wildcard components & content validation
               href: ../relational-databases/xml/wildcard-components-and-content-validation.md
             - name: "The <xsd:redefine> Element"
               href: ../relational-databases/xml/the-xsd-redefine-element.md
@@ -1621,22 +1817,22 @@
               href: ../relational-databases/xml/values-for-xsd-simpletype-declarations.md
             - name: Enumeration Facets
               href: ../relational-databases/xml/enumeration-facets.md
-            - name: Mixed Type and Simple Content
+            - name: Mixed type and simple content
               href: ../relational-databases/xml/mixed-type-and-simple-content.md
-            - name: Large XML Schema Collections and Out-of-Memory Conditions
+            - name: Large collections & out-of-memory conditions
               href: ../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md
-            - name: Non-Deterministic Content Models
+            - name: Non-Deterministic content models
               href: ../relational-databases/xml/non-deterministic-content-models.md
-            - name: Unique Particle Attribution Constraint
+            - name: Unique particle attribution constraint
               href: ../relational-databases/xml/unique-particle-attribution-constraint.md
         - name: FOR XML
           href: ../relational-databases/xml/for-xml-sql-server.md
           items:
-          - name: Basic Syntax of the FOR XML Clause
+          - name: Basic Syntax 
             href: ../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md
-          - name: Invalid Characters and Escape Rules
+          - name: Invalid Characters and escape Rules
             href: ../relational-databases/xml/invalid-characters-and-escape-rules.md
-          - name: Use RAW Mode with FOR XML
+          - name: RAW Mode 
             href: ../relational-databases/xml/use-raw-mode-with-for-xml.md
             items:
             - name: "Example: Retrieving Product Model Information as XML"
@@ -1653,7 +1849,7 @@
               href: ../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
             - name: "Example: Querying XMLType Columns"
               href: ../relational-databases/xml/example-querying-xmltype-columns.md
-          - name: Use AUTO Mode with FOR XML
+          - name: AUTO Mode
             href: ../relational-databases/xml/use-auto-mode-with-for-xml.md
             items:
             - name: Use the BINARY BASE64 Option
@@ -1662,7 +1858,7 @@
               href: ../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
             - name: "Examples: Using AUTO Mode"
               href: ../relational-databases/xml/examples-using-auto-mode.md
-          - name: Use EXPLICIT Mode with FOR XML
+          - name: EXPLICIT Mode
             href: ../relational-databases/xml/use-explicit-mode-with-for-xml.md
             items:
             - name: "Example: Retrieving Employee Information"
@@ -1685,7 +1881,7 @@
               href: ../relational-databases/xml/example-specifying-the-cdata-directive.md
             - name: "Example: Specifying the XMLTEXT Directive"
               href: ../relational-databases/xml/example-specifying-the-xmltext-directive.md
-          - name: Use PATH Mode with FOR XML
+          - name: PATH Mode 
             href: ../relational-databases/xml/use-path-mode-with-for-xml.md
             items:
             - name: Columns without a Name
@@ -1704,13 +1900,13 @@
               href: ../relational-databases/xml/namespace-support-in-path-mode.md
             - name: "Examples: Using PATH Mode"
               href: ../relational-databases/xml/examples-using-path-mode.md
-          - name: TYPE Directive in FOR XML Queries
+          - name: TYPE directive queries
             href: ../relational-databases/xml/type-directive-in-for-xml-queries.md
-          - name: Generate XML from Rowsets with FOR XML
+          - name: Generate XML from rowsets
             href: ../relational-databases/xml/generate-xml-from-rowsets-with-for-xml.md
-          - name: Use FOR XML Results in Application Code
+          - name: Use results in application code
             href: ../relational-databases/xml/use-for-xml-results-in-application-code.md
-          - name: Use Nested FOR XML Queries
+          - name: Nested queries
             href: ../relational-databases/xml/use-nested-for-xml-queries.md
             items:
             - name: FOR XML Query Compared to Nested FOR XML Query
@@ -1723,16 +1919,17 @@
               href: ../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md
           - name: Generate Elements for NULL Values with the XSINIL Parameter
             href: ../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md
-          - name: FOR XML Support for Various SQL Server Data Types
-            href: ../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md
+          - name: Support for Data Types
             items:
-            - name: FOR XML Support for the xml Data Type
+            - name: Overview
+              href: ../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md
+            - name: xml Data Type
               href: ../relational-databases/xml/for-xml-support-for-the-xml-data-type.md
-            - name: FOR XML Support for the User-Defined Data Types (UDT)
+            - name: User-Defined Data Types (UDT)
               href: ../relational-databases/xml/for-xml-support-for-the-user-defined-data-types-udt.md
-            - name: FOR XML Support for String Data Types
+            - name: String Data Types
               href: ../relational-databases/xml/for-xml-support-for-string-data-types.md
-            - name: FOR XML Support for the timestamp Data Type
+            - name: Timestamp Data Type
               href: ../relational-databases/xml/for-xml-support-for-the-timestamp-data-type.md
           - name: Generate an Inline XSD Schema
             href: ../relational-databases/xml/generate-an-inline-xsd-schema.md
@@ -1743,7 +1940,7 @@
           items:
           - name: "Examples: Using OPENXML"
             href: ../relational-databases/xml/examples-using-openxml.md
-          - name: Specify Metaproperties in OPENXML
+          - name: Specify Metaproperties 
             href: ../relational-databases/xml/specify-metaproperties-in-openxml.md
           - name: XML System Stored Procedures
             href: ../relational-databases/xml/xml-system-stored-procedures.md
@@ -1751,91 +1948,101 @@
             href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Development
   items:
-    - name: Programming to interact with SQL Server ++
+    - name: Programming interaction ++
       href: ../connect/index.md
+      displayName: Connectivity, Connect, Connection
     - name: Data tier applications
       items:
       - name: Overview
         href: ../relational-databases/data-tier-applications/data-tier-applications.md
       - name: DAC Support For SQL Server Objects and Versions
         href: ../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
-      - name: Delete a Data-tier Application
+      - name: Delete 
         href: ../relational-databases/data-tier-applications/delete-a-data-tier-application.md
-      - name: Deploy a Data-tier Application
+      - name: Deploy 
         href: ../relational-databases/data-tier-applications/deploy-a-data-tier-application.md
-      - name: Export a Data-tier Application
+      - name: Export 
         href: ../relational-databases/data-tier-applications/export-a-data-tier-application.md
-      - name: Extract a DAC From a Database
+      - name: Extract a DAC from a database
         href: ../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md
       - name: Import a BACPAC File to Create a New User Database
         href: ../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md
-      - name: Monitor Data-tier Applications
+      - name: Monitor 
         href: ../relational-databases/data-tier-applications/monitor-data-tier-applications.md
-      - name: Register a Database As a DAC
+      - name: Register a database As a DAC
         href: ../relational-databases/data-tier-applications/register-a-database-as-a-dac.md
       - name: Unpack a DAC Package
         href: ../relational-databases/data-tier-applications/unpack-a-dac-package.md
-      - name: Upgrade a Data-tier Application
+      - name: Upgrade a data-tier Application
         href: ../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md
-      - name: Validate a DAC Package
+      - name: Validate a DAC package
         href: ../relational-databases/data-tier-applications/validate-a-dac-package.md
-      - name: Deploy a Database By Using a DAC
+      - name: Deploy a database By using a DAC
         href: ../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md
-    - name: CLR
+    - name: Common Language Runtime (CLR)
       items:
-        - name: Common Language Runtime (CLR) Integration Programming Concepts
-          href: ../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
-        - name: Building Database Objects with Common Language Runtime (CLR) Integration
-          href: ../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
-        - name: SQL Server Data Types in the .NET Framework
-          href: ../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
-        - name: Collation and CLR Integration Data Types
-          href: ../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
-        - name: Handling Large Object (LOB) Parameters in the CLR
-          href: ../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md
-        - name: Mapping CLR Parameter Data
-          href: ../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
-        - name: Nullability and Three-Value Logic Comparisons
-          href: ../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
-        - name: CLR User-Defined Functions
+        - name: Overview
+          items: 
+          - name: Integration programming concepts
+            href: ../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
+          - name: Building database objects 
+            href: ../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
+          - name: Data Types in the .NET Framework
+            href: ../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
+          - name: Collation & data types
+            href: ../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
+          - name: Large Object (LOB) Parameters
+            href: ../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md
+          - name: Mapping parameter data
+            href: ../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
+          - name: Nullability and three-value logic Comparisons
+            href: ../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
+        - name: User-Defined Functions
           href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md
           items:
-          - name: CLR Scalar-Valued Functions
+          - name: Scalar-Valued 
             href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md
-          - name: CLR Table-Valued Functions
+          - name: Table-Valued 
             href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md
-          - name: CLR User-Defined Aggregates
-            href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
+          - name: User-Defined Aggregates
             items:
-            - name: CLR User-Defined Aggregates - Requirements
+            - name: Overview
+              href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
+            - name: Requirements
               href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md
-            - name: CLR User-Defined Aggregate - Invoking Functions
+            - name:  Invoking Functions
               href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md
-        - name: CLR User-Defined Types
-          href: ../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+        - name: User-Defined Types
+          href: 
           items:
-          - name: Creating User-Defined Types
-            href: ../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md
+          - name: Overview
+            href: ../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+          - name: Create
             items:
-            - name: Creating User-Defined Types - Requirements
+            - name: Overview
+              href: ../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md
+            - name: Requirements
               href: ../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
-            - name: Creating User-Defined Types - Coding
+            - name: Coding
               href: ../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
-          - name: Registering User-Defined Types in SQL Server
+          - name: Register
             href: ../relational-databases/clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
-          - name: Working with User-Defined Types in SQL Server
-            href: ../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
+          - name: Working with
             items:
-            - name: Working with User-Defined Types - Defining UDT Tables and Columns
+            - name: Overview
+              href: ../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
+            - name: Defining UDT Tables and Columns
               href: ../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md
-            - name: Working with User-Defined Types - Manipulating UDT Data
+            - name: Manipulating UDT Data
               href: ../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md
-          - name: Accessing User-Defined Types in ADO.NET
-            href: ../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md
+          - name: Accessing in ADO.NET
+            href: 
             items:
-            - name: Accessing User-Defined Types - Retrieving UDT Data
+            - name: Overview
+              href: ../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md
+            - name: Retrieving UDT Data
               href: ../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md
-            - name: Accessing User-Defined Types - Updating UDT Columns with DataAdapters
+            - name: Updating UDT Columns with DataAdapters
               href: ../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
         - name: CLR Integration Custom Attributes for CLR Routines
           href: ../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md

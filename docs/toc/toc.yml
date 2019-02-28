@@ -1,7 +1,7 @@
 - name: Welcome
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Overview
-  href: /sql/database-engine/sql-server-database-engine-overview
+  href: ../toc/redirectfrom-overview-10.md ## /sql/database-engine/sql-server-database-engine-overview
   items:
   - name: What's new
     items:
@@ -46,12 +46,12 @@
   - name: SQL Server 2008 R2 SP2 
     href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Business continuity
-  href: /sql/database-engine/sql-server-business-continuity-dr
+  href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:
   - name: Overview
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: Backup & restore
-    href: /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
+    href: ../toc/redirectfrom-backup-restore-10.md ## /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
     items:
       - name: Overview
         href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
@@ -877,7 +877,7 @@
           - name: Upgrading Log Shipping to SQL Server 2016
             href: ../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
 - name: Database design
-  href: /sql/relational-databases/hierarchical-data-sql-server
+  href: ../toc/redirectfrom-database-design.md ## /sql/relational-databases/hierarchical-data-sql-server
   items:
     - name: Hierarchical Data
       href: ../relational-databases/hierarchical-data-sql-server.md
@@ -1753,7 +1753,7 @@
           - name: Use the value() and nodes() Methods with OPENXML
             href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Development
-  href: /sql/relational-databases/data-tier-applications/data-tier-applications
+  href: redirectfrom-development-10.md ## /sql/relational-databases/data-tier-applications/data-tier-applications
   items:
     - name: Programming to interact with SQL Server ++
       href: ../connect/index.md
@@ -3817,10 +3817,10 @@
   - name: Transaction Locking and Row Versioning Guide
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
 - name: Installation
-  href: /sql/database-engine/sql-server-database-engine-backward-compatibility
+  href: redirectfrom-installation-10.md ## /sql/database-engine/sql-server-database-engine-backward-compatibility
   items:
   - name: Release notes
-    href: /sql/database-engine/sql-server-database-engine-backward-compatibility
+    href: redirectfrom-release-notes-10.md ## /sql/database-engine/sql-server-database-engine-backward-compatibility
     items:
       - name: Backward compatibility
         href: ../database-engine/sql-server-database-engine-backward-compatibility.md
@@ -10200,7 +10200,7 @@
   - name: Local content with Help Viewer
     href: ../sql-server/sql-server-help-installation.md
 - name: Reference
-  href: /sql/sql-server/applies-to-includes
+  href: ../toc/redirectfrom-reference-10.md ## /sql/sql-server/applies-to-includes
   items:
     - name: Archived Content (SQL 2005 - 2012) +
       displayName: 2005, 2008, 2008 r2, 2012
@@ -10208,7 +10208,7 @@
     - name: SQL Docs include files
       href: ../sql-server/applies-to-includes.md
     - name: Database samples
-      href: /sql/samples/sql-samples-where-are
+      href: ../toc/redirectfrom-database-samples.md ## /sql/samples/sql-samples-where-are
       items:
         - name: Samples Overview
           href: ../samples/sql-samples-where-are.md
@@ -10219,12 +10219,12 @@
           - name: Install and configure
             href: ../samples/adventureworks-install-configure.md
         - name: Wide World Importers
-          href: /sql/samples/wide-world-importers-what-is
+          href: ../toc/redirectfrom-wide-world-importers.md ## /sql/samples/wide-world-importers-what-is
           items:
           - name: Overview
             href: ../samples/wide-world-importers-what-is.md
           - name: OLTP
-            href: /sql/samples/wide-world-importers-oltp-database-catalog
+            href: ../toc/redirectfrom-oltp-10.md ## /sql/samples/wide-world-importers-oltp-database-catalog
             items:
             - name: Database catalog
               href: ../samples/wide-world-importers-oltp-database-catalog.md
@@ -10233,7 +10233,7 @@
             - name: SQL Server features
               href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
           - name: Data Warehouse
-            href: /sql/samples/wide-world-importers-dw-database-catalog
+            href: ../toc/redirectfrom-data-warehouse-10.md ## /sql/samples/wide-world-importers-dw-database-catalog
             items:
             - name: Database catalog
               href: ../samples/wide-world-importers-dw-database-catalog.md
@@ -14757,7 +14757,7 @@
         href: ../relational-databases/system-views/systranschemas-transact-sql.md
     - name: Transact-SQL (T-SQL)
       displayName: tsql
-      href: /sql/t-sql/language-reference
+      href: ../toc/redirectfrom-transact-sql-t-sql.md ## /sql/t-sql/language-reference (redirect_url:)
       items:
         - name: Overview
           href: ../t-sql/language-reference.md

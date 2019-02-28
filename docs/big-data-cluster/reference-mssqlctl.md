@@ -5,7 +5,7 @@ description: Reference article for mssqlctl commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/27/2019
+ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

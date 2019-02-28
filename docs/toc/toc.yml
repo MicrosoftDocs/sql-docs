@@ -10202,11 +10202,11 @@
 - name: Reference
   href: ../toc/redirectfrom-reference-10.md ## /sql/sql-server/applies-to-includes
   items:
+    - name: SQL Docs include files
+      href: ../sql-server/applies-to-includes.md
     - name: Archived Content (SQL 2005 - 2012) +
       displayName: 2005, 2008, 2008 r2, 2012
       href: https://docs.microsoft.com/previous-versions/sql/
-    - name: SQL Docs include files
-      href: ../sql-server/applies-to-includes.md
     - name: Database samples
       href: ../toc/redirectfrom-database-samples.md ## /sql/samples/sql-samples-where-are
       items:

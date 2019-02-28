@@ -31,12 +31,10 @@ The following sections describe the new features and known issues for big data c
 
 ### What's in the CTP 2.3 release?
 
-- [Submit Jar or Py](big-data-cluster-create-apps.md) files with references to SQL Server big data clusters.
-- Execute Jar or Py files located in the HDFS file system (CTP 2.3)
 - [Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [Common CLI for application deployment and cluster management](big-data-cluster-create-apps.md).
 - [VS Code extension to deploy applications to SQL Server big data clusters](app-deployment-extension.md).
-- New syntax for **mssqlctl** tool usage.
+- New parameter ordering for the **mssqlctl** tool.
 - [Use Sparklyr in SQL Server 2019 Big data cluster](sparklyr-from-RStudio.md).
 - New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
 - Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster but leaves the namespace. Previously, this command deleted the entire namespace.

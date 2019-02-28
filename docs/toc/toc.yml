@@ -7204,16 +7204,22 @@
               href: ../big-data-cluster/data-ingestion-curl.md
             - name: Restore a database
               href: ../big-data-cluster/data-ingestion-restore-database.md
+          - name: Deploy apps
+            items:
+            - name: Deploy and manage with mssqlctl
+              href: ../big-data-cluster/big-data-cluster-create-apps.md
+            - name: Deploy and maange with VS Code
+              href: ../big-data-cluster/app-deployment-extension.md
           - name: Big Data/Machine Learning
             items:
             - name: Data wrangling using PROSE Code Accelerator
               href: ../big-data-cluster/use-prose-for-big-data-automation.md
-            - name: Deploy apps
-              href: ../big-data-cluster/big-data-cluster-create-apps.md
             - name: Training and Creating Machine Learning Models with Spark
               href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
             - name: Exporting ML models with Spark/Mleap
               href: ../big-data-cluster/export-model-with-spark-mleap.md
+            - name: Use Sparklyr from RStudio
+              href: ../big-data-cluster/sparklyr-from-RStudio.md  
           - name: Manage SQL Server big data cluster
             items:
             - name: Connect to a big data cluster
@@ -7230,10 +7236,38 @@
               href: ../big-data-cluster/notebooks-how-to-manage.md
           - name: Spark jobs
             items:
-            - name: Submit Spark jobs
+            - name: Submit Spark jobs in Azure Data Studio
               href: ../big-data-cluster/spark-submit-job.md
+            - name: Submit Spark jobs in IntelliJ
+              href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
             - name: Use extended Spark History Server
               href: ../big-data-cluster/spark-history-server.md
+        - name: Reference
+          items:
+          - name: mssqlctl reference
+            items:
+            - name: mssqlctl
+              href: ../big-data-cluster/reference-mssqlctl.md
+            - name: App Deploy
+              items:
+              - name: mssqlctl app 
+                href: ../big-data-cluster/reference-mssqlctl-app.md
+              - name: mssqlctl app template
+                href: ../big-data-cluster/reference-mssqlctl-app-template.md
+            - name: Cluster
+              items:
+              - name: mssqlctl cluster
+                href: ../big-data-cluster/reference-mssqlctl-cluster.md
+              - name: mssqlctl cluster config
+                href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+              - name: mssqlctl cluster debug
+                href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md              
+            - name: Storage
+              items:
+              - name: mssqlctl storage
+                href: ../big-data-cluster/reference-mssqlctl-storage.md
+              - name: mssqlctl storage mount
+                href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
         - name: Resources
           items:
           - name: Request access to big data clusters

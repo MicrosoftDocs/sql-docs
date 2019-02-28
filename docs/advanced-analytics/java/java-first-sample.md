@@ -4,10 +4,10 @@ description: Run Java sample code on SQL Server 2019 to learn steps for using th
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/24/2018  
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
@@ -22,7 +22,7 @@ This example demonstrates a Java class that receives two columns (ID and text) f
 
 + SQL Server Management Studio or another tool for running T-SQL.
 
-+ Java SE Development Kit (JDK) 1.10 on Windows, or JDK 1.8 on Linux.
++ Java SE Development Kit (JDK) 8 on Windows or Linux.
 
 Command-line compilation using **javac** is sufficient for this tutorial. 
 
@@ -236,7 +236,7 @@ This example passes the CLASSPATH parameter to provide the path to the Java file
 
 + On Linux, run the following code in SQL Server Management Studio or another tool used for running Transact-SQL. 
 
-+ On Windows, change **@myClassPath** to N'C:\myJavaCode\' (assuming it's the parent folder of \pkg) before executing the query in SQL Server Management Studio or another tool.
++ On Windows, change @myClassPath to N'C:\myJavaCode\' (assuming it's the parent folder of \pkg) before executing the query in SQL Server Management Studio or another tool.
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

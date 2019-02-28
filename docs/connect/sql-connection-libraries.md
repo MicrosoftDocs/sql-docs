@@ -13,7 +13,7 @@ ms.author: genemi
 
 This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
 
-- Linux (Ubuntu)
+- Linux
 - MacOS
 - Windows
 

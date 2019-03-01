@@ -38,6 +38,10 @@ The following section describes how to setup Azure Data Lake Storage Gen2 for te
 
 1. [Create a storage account with Data Lake Storage Gen2 capabilities](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. Create a blob container in this storage account for your external data.
+1. [Create a blob container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) in this storage account for your external data.
+
+1. Upload a CSV or Parquet file into the container. This is the external HDFS data that will be mounted to HDFS in the big data cluster.
+
+## 
 
 ## Next steps

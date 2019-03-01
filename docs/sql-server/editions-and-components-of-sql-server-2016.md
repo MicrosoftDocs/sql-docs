@@ -171,7 +171,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Multiple Filestream containers|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
 |NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
-|IO Resource Governance|Yes|No|No|No|No|  
+|IO Resource Governance|Yes|No|No|No|No|
+|Read-Ahead/Index Prefetching|Yes|No|No|No|No|
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.

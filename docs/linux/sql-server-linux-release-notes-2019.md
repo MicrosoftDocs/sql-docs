@@ -42,7 +42,7 @@ The following table lists the release history for SQL Server 2019 preview CTP re
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
-| [CTP 2.3](#CTP23)     | 15.0.1300.359  | 2019-3-01    |
+| [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
 | [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
@@ -59,7 +59,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server 2019 preview Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CTP22"></a> CTP 2.3 (Mar 2019)
+## <a id="CTP23"></a> CTP 2.3 (Mar 2019)
 
 The following sections provide package locations and known issues for the CTP 2.3 release. To learn more about new features for Linux on SQL Server 2019, see the [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 

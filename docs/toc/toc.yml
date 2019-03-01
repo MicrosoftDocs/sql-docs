@@ -6911,14 +6911,14 @@
             href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
         - name: Tools
           items:
-            - name: Overview
-              items: ../relational-databases/extended-events/extended-events-tools.md
-            - name: Use the SSMS XEvent Profiler
-              href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
-            - name: Use the system_health Session
-              href: ../relational-databases/extended-events/use-the-system-health-session.md
-            - name: Use the PowerShell Provider for Extended Events
-              href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
+          - name: Overview
+            href: ../relational-databases/extended-events/extended-events-tools.md
+          - name: Use the SSMS XEvent Profiler
+            href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
+          - name: Use the system_health Session
+            href: ../relational-databases/extended-events/use-the-system-health-session.md
+          - name: Use the PowerShell Provider for Extended Events
+            href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
       - name: SQL Trace
         items:
         - name: Overview

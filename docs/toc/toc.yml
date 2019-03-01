@@ -39,6 +39,148 @@
     href: ../sql-server/sql-server-2012-release-notes.md
   - name: SQL Server 2008 R2 SP2 
     href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
+- name: Big data cluster
+  items: 
+  - name: Overview
+    items:
+    - name: What are SQL Server big data clusters?
+      href: ../big-data-cluster/big-data-cluster-overview.md
+    - name: Release notes
+      href: ../big-data-cluster/big-data-cluster-release-notes.md
+  - name: Install
+    items:
+    - name: Install Tools
+      items:
+      - name: Install big data tools
+        href: ../big-data-cluster/deploy-big-data-tools.md
+      - name: Install mssqlctl
+        href: ../big-data-cluster/deploy-install-mssqlctl.md
+      - name: Deployment scripts
+        items:
+        - name: Azure Kubernetes Service
+          href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
+        - name: Deployment guidance
+          items:
+          - name: Deployment guidance
+            href: ../big-data-cluster/deployment-guidance.md
+          - name: Azure Kubernetes Service
+            href: ../big-data-cluster/deploy-on-aks.md
+          - name: Kubeadm
+            href: ../big-data-cluster/deploy-with-kubeadm.md
+          - name: Minikube
+            href: ../big-data-cluster/deploy-on-minikube.md
+    - name: Tutorials
+      items:
+      - name: 1_Load sample data
+        href: ../big-data-cluster/tutorial-load-sample-data.md
+      - name: 2_Query HDFS data
+        href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
+      - name: 3_Query Oracle data
+        href: ../big-data-cluster/tutorial-query-oracle.md
+      - name: 4_Load data pool with SQL
+        href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
+      - name: 5_Load data pool with Spark
+        href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
+      - name: 6_Run a Spark notebook
+        href: ../big-data-cluster/tutorial-notebook-spark.md
+    - name: Concepts
+      items:
+      - name: Controller
+        href: ../big-data-cluster/concept-controller.md
+      - name: Master instance
+        href: ../big-data-cluster/concept-master-instance.md
+      - name: Data pool
+        href: ../big-data-cluster/concept-data-pool.md
+      - name: Storage pool
+        href: ../big-data-cluster/concept-storage-pool.md
+      - name: Compute pool
+        href: ../big-data-cluster/concept-compute-pool.md
+      - name: Data persistence
+        href: ../big-data-cluster/concept-data-persistence.md
+      - name: Security
+        href: ../big-data-cluster/concept-security.md
+    - name: How-to guides
+      items:
+      - name: Data virtualization
+        items:
+        - name: Virtualize relational data
+          href: ../relational-databases/polybase/data-virtualization.md
+        - name: Virtualize CSV data
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+      - name: Data ingestion
+        items:
+        - name: Load data with curl
+          href: ../big-data-cluster/data-ingestion-curl.md
+        - name: Restore a database
+          href: ../big-data-cluster/data-ingestion-restore-database.md
+      - name: Deploy apps
+        items:
+        - name: Deploy & manage with mssqlctl
+          href: ../big-data-cluster/big-data-cluster-create-apps.md
+        - name: Deploy & maange with VS Code
+          href: ../big-data-cluster/app-deployment-extension.md
+      - name: Big Data/Machine Learning
+        items:
+        - name: Data wrangling using PROSE Code Accelerator
+          href: ../big-data-cluster/use-prose-for-big-data-automation.md
+        - name: Training & Creating Machine Learning Models with Spark
+          href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
+        - name: Exporting ML models with Spark/Mleap
+          href: ../big-data-cluster/export-model-with-spark-mleap.md
+        - name: Use Sparklyr from RStudio
+          href: ../big-data-cluster/sparklyr-from-RStudio.md  
+      - name: Manage SQL Server big data cluster
+        items:
+        - name: Connect to a big data cluster
+          href: ../big-data-cluster/connect-to-big-data-cluster.md
+        - name: Cluster administration portal
+          href: ../big-data-cluster/cluster-admin-portal.md
+        - name: Kubernetes troubleshooting
+          href: ../big-data-cluster/cluster-troubleshooting-commands.md
+      - name: Notebooks
+        items:
+        - name: Notebooks overview
+          href: ../big-data-cluster/notebooks-guidance.md
+        - name: Manage existing notebooks
+          href: ../big-data-cluster/notebooks-how-to-manage.md
+      - name: Spark jobs
+        items:
+        - name: Submit Spark jobs in Azure Data Studio
+          href: ../big-data-cluster/spark-submit-job.md
+        - name: Submit Spark jobs in IntelliJ
+          href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+        - name: Use extended Spark History Server
+          href: ../big-data-cluster/spark-history-server.md
+    - name: Reference
+      items:
+      - name: mssqlctl reference
+        items:
+        - name: mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl.md
+        - name: App Deploy
+          items:
+          - name: mssqlctl app 
+            href: ../big-data-cluster/reference-mssqlctl-app.md
+          - name: mssqlctl app template
+            href: ../big-data-cluster/reference-mssqlctl-app-template.md
+        - name: Cluster
+          items:
+          - name: mssqlctl cluster
+            href: ../big-data-cluster/reference-mssqlctl-cluster.md
+          - name: mssqlctl cluster config
+            href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+          - name: mssqlctl cluster debug
+            href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md              
+        - name: Storage
+          items:
+          - name: mssqlctl storage
+            href: ../big-data-cluster/reference-mssqlctl-storage.md
+          - name: mssqlctl storage mount
+            href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+    - name: Resources
+      items:
+      - name: Request access to big data clusters
+        href: https://aka.ms/eapsignup     
 - name: Business continuity
   href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:
@@ -7002,7 +7144,7 @@
           - name: A Guide to Query Processing
             href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
         - name: Natively Compiled Stored Procedures
-          href: 
+          items: 
           - name: Overview
             href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
           - name: Creating Natively Compiled Stored Procedures
@@ -7224,6 +7366,82 @@
       href: ../relational-databases/performance/joins.md
     - name: Subqueries
       href: ../relational-databases/performance/subqueries.md
+    - name: Data virtualization (Polybase)
+      items:
+      - name: Overview
+        items:
+        - name: What is PolyBase?
+          href: ../relational-databases/polybase/polybase-guide.md
+      - name: Concepts
+        items:
+        - name: Query scenarios
+          href: ../relational-databases/polybase/polybase-queries.md
+        - name: Push-down computation
+          href: ../relational-databases/polybase/polybase-pushdown-computation.md
+        - name: Scale-out groups
+          href: ../relational-databases/polybase/polybase-scale-out-groups.md
+      - name: How-to guides
+        items:
+        - name: Install
+          items:
+          - name: Install on Windows
+            href: ../relational-databases/polybase/polybase-installation.md
+          - name: Features & limitations
+            href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
+        - name: Configure external data sources
+          items:
+          - name: Hadoop
+            items:
+            - name: Connect to Hadoop
+              href: ../relational-databases/polybase/polybase-configure-hadoop.md
+            - name: Configuration settings
+              href: ../relational-databases/polybase/polybase-configuration.md
+          - name: Azure Blob Storage
+            href: ../relational-databases/polybase/polybase-configure-azure-blob-storage.md
+          - name: SQL Server
+            href: ../relational-databases/polybase/polybase-configure-sql-server.md
+          - name: Oracle
+            href: ../relational-databases/polybase/polybase-configure-oracle.md
+          - name: Teradata
+            href: ../relational-databases/polybase/polybase-configure-teradata.md
+          - name: MongoDB
+            href: ../relational-databases/polybase/polybase-configure-mongodb.md
+          - name: ODBC Generic Types
+            href: ../relational-databases/polybase/polybase-configure-odbc-generic.md
+        - name: Scale-out groups
+          items:
+          - name: Configure a scale-out group
+            href: ../relational-databases/polybase/configure-scale-out-groups-windows.md
+        - name: Data Virtualization Wizard
+          items:
+          - name: Virtualize relational data
+            href: ../relational-databases/polybase/data-virtualization.md
+          - name: Virtualize CSV data
+            href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: Troubleshoot
+          items:
+          - name: Monitor & troubleshoot
+            href: ../relational-databases/polybase/polybase-troubleshooting.md
+          - name: Kerberos connectivity
+            href: ../relational-databases/polybase/polybase-troubleshoot-connectivity.md
+          - name: PolyBase FAQ
+            href: ../relational-databases/polybase/polybase-faq.md
+      - name: Reference
+        items:
+        - name: T-SQL reference
+          href: ../relational-databases/polybase/polybase-t-sql-objects.md
+      - name: Resources
+        items:
+        - name: DBA Stack Exchange +
+          href: https://dba.stackexchange.com/questions/tagged/sql-server
+        - name: Stack Overflow +
+          href: https://stackoverflow.com/questions/tagged/sql-server
+        - name: MSDN Forums +
+          href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
+        - name: Submit feedback +
+          href: https://feedback.azure.com/forums/908035-sql-server
+        - name: Reddit +
+          href: https://www.reddit.com/r/SQLServer
     - name: Linked servers
       items:
         - name: Overview
@@ -7322,708 +7540,520 @@
         href: ../relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
-    - name: Advanced Analytics & Machine learning ++
-      href: ../advanced-analytics/index.md
-    - name: Analytics Platform System ++
-      displayName: APS, PDW, Parallel Data Warehouse
-      href: ../analytics-platform-system/index.md
-    - name: SQL Server Analysis Services (SSAS) ++
-      href: ../analysis-services/index.md
-    - name: SQL Server Reporting Services (SSRS) ++
-      href: ../reporting-services/index.md
-    - name: Big data cluster
-      items:
-        - name: Overview
-          items:
-          - name: What are SQL Server big data clusters?
-            href: ../big-data-cluster/big-data-cluster-overview.md
-          - name: Release notes
-            href: ../big-data-cluster/big-data-cluster-release-notes.md
-        - name: Install
-          items:
-          - name: Install Tools
-            items:
-            - name: Install big data tools
-              href: ../big-data-cluster/deploy-big-data-tools.md
-            - name: Install mssqlctl
-              href: ../big-data-cluster/deploy-install-mssqlctl.md
-          - name: Deployment scripts
-            items:
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-          - name: Deployment guidance
-            items:
-            - name: Deployment guidance
-              href: ../big-data-cluster/deployment-guidance.md
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/deploy-on-aks.md
-            - name: Kubeadm
-              href: ../big-data-cluster/deploy-with-kubeadm.md
-            - name: Minikube
-              href: ../big-data-cluster/deploy-on-minikube.md
-        - name: Tutorials
-          items:
-          - name: 1_Load sample data
-            href: ../big-data-cluster/tutorial-load-sample-data.md
-          - name: 2_Query HDFS data
-            href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
-          - name: 3_Query Oracle data
-            href: ../big-data-cluster/tutorial-query-oracle.md
-          - name: 4_Load data pool with SQL
-            href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
-          - name: 5_Load data pool with Spark
-            href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
-          - name: 6_Run a Spark notebook
-            href: ../big-data-cluster/tutorial-notebook-spark.md
-        - name: Concepts
-          items:
-          - name: Controller
-            href: ../big-data-cluster/concept-controller.md
-          - name: Master instance
-            href: ../big-data-cluster/concept-master-instance.md
-          - name: Data pool
-            href: ../big-data-cluster/concept-data-pool.md
-          - name: Storage pool
-            href: ../big-data-cluster/concept-storage-pool.md
-          - name: Compute pool
-            href: ../big-data-cluster/concept-compute-pool.md
-          - name: Data persistence
-            href: ../big-data-cluster/concept-data-persistence.md
-          - name: Security
-            href: ../big-data-cluster/concept-security.md
-        - name: How-to guides
-          items:
-          - name: Data virtualization
-            items:
-            - name: Virtualize relational data
-              href: ../relational-databases/polybase/data-virtualization.md
-            - name: Virtualize CSV data
-              href: ../relational-databases/polybase/data-virtualization-csv.md
-          - name: Data ingestion
-            items:
-            - name: Load data with curl
-              href: ../big-data-cluster/data-ingestion-curl.md
-            - name: Restore a database
-              href: ../big-data-cluster/data-ingestion-restore-database.md
-          - name: Deploy apps
-            items:
-            - name: Use mssqlctl
-              href: ../big-data-cluster/big-data-cluster-create-apps.md
-            - name: Use VS Code
-              href: ../big-data-cluster/app-deployment-extension.md
-          - name: Big Data/Machine Learning
-            items:
-            - name: Data wrangling using PROSE Code Accelerator
-              href: ../big-data-cluster/use-prose-for-big-data-automation.md
-            - name: Training and Creating Machine Learning Models with Spark
-              href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
-            - name: Exporting ML models with Spark/Mleap
-              href: ../big-data-cluster/export-model-with-spark-mleap.md
-            - name: Use Sparklyr from RStudio
-              href: ../big-data-cluster/sparklyr-from-RStudio.md  
-          - name: Manage SQL Server big data cluster
-            items:
-            - name: Connect to a big data cluster
-              href: ../big-data-cluster/connect-to-big-data-cluster.md
-            - name: Cluster administration portal
-              href: ../big-data-cluster/cluster-admin-portal.md
-            - name: Kubernetes troubleshooting
-              href: ../big-data-cluster/cluster-troubleshooting-commands.md
-          - name: Notebooks
-            items:
-            - name: Notebooks overview
-              href: ../big-data-cluster/notebooks-guidance.md
-            - name: Manage existing notebooks
-              href: ../big-data-cluster/notebooks-how-to-manage.md
-          - name: Spark jobs
-            items:
-            - name: Submit Spark jobs in Azure Data Studio
-              href: ../big-data-cluster/spark-submit-job.md
-            - name: Submit Spark jobs in IntelliJ
-              href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
-            - name: Use extended Spark History Server
-              href: ../big-data-cluster/spark-history-server.md
-    - name: Master Data Services
-      items:
-        - name: Introduction
-          href: ../master-data-services/master-data-services-overview-mds.md
-        - name: Overview
-          items:
-          - name: What's New 
-            href: ../master-data-services/what-s-new-in-master-data-services-mds.md
-          - name: Learn 
-            href: ../master-data-services/learn-sql-server-master-data-services.md
-          - name: "SQL Server Samples: Model Deployment Packages (MDS)"
-            href: ../master-data-services/sql-server-samples-model-deployment-packages-mds.md
-          - name: Features Supported by the Editions of SQL Server 2016
-            href: ../master-data-services/master-data-services-and-data-quality-services-features-support.md
-          - name: Backward Compatibility
-            href: ../master-data-services/backward-compatibility-master-data-services.md
-          - name: Deprecated Features
-            href: ../master-data-services/deprecated-master-data-services-features.md
-          - name: Discontinued Features
-            href: ../master-data-services/discontinued-master-data-services-features.md
-        - name: Install & configure
-          href: ../master-data-services/master-data-services-installation-and-configuration.md
-          items:
-          - name: Overview
-            href: ../master-data-services/install-windows/install-master-data-services.md
-          - name: Web Application Requirements
-            href: ../master-data-services/install-windows/web-application-requirements-master-data-services.md
-          - name: Database Requirements
-            href: ../master-data-services/install-windows/database-requirements-master-data-services.md
-          - name: Create a Master Data Services Database
-            href: ../master-data-services/install-windows/create-a-master-data-services-database.md
-          - name: Create a Master Data Manager Web Application
-            href: ../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
-          - name: Secure a Master Data Manager Web Application
-            href: ../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
-          - name: Associate a Master Data Services Database & Web Application
-            href: ../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
-          - name: Enable Data Quality Services Integration with Master Data Services
-            href: ../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
-          - name: Multi-Lingual & Global Deployments
-            href: ../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
-          - name: Installing Master Data Services in an AlwaysOn Environment
-            href: ../master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md
-          - name: Master Data Services Server Configuration Page
-            href: ../master-data-services/server-configuration-mds-configuration-manager.md
-          - name: Database Configuration Page
-            href: ../master-data-services/database-configuration-page-master-data-services-configuration-manager.md
-        - name: Features & Tasks
-          href: ../master-data-services/master-data-services-features-and-tasks.md
-          items:
-          - name: Connect to a Master Data Services Database Dialog Box
-            href: ../master-data-services/connect-to-a-master-data-services-database-dialog-box.md
-          - name: Create Database Wizard
-            href: ../master-data-services/create-database-wizard-master-data-services-configuration-manager.md
-          - name: Upgrade Database Wizard
-            href: ../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md
-          - name: Create Database Mail Profile & Account Dialog Box
-            href: ../master-data-services/create-database-mail-profile-and-account-dialog-box.md
-          - name: Web Configuration Page
-            href: ../master-data-services/web-configuration-page-master-data-services-configuration-manager.md
-          - name: Create Web Application Dialog Box
-            href: ../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md
-          - name: Create Website Dialog Box
-            href: ../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md
-          - name: Web Configuration Reference
-            href: ../master-data-services/web-configuration-reference-master-data-services.md
-          - name: Overview
-            href: ../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
-          - name: Connections
-            href: ../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md
-            items:
-            - name: Connect to an MDS Repository
-              href: ../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
-          - name: "Overview: Exporting Data to Excel (MDS Add-in for Excel)"
-            href: ../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
-            items:
-            - name: Filter Data before Exporting
-              href: ../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md
-            - name: Export Data to Excel from Master Data Services
-              href: ../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md
-            - name: Filter Dialog Box
-              href: ../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md
-            - name: Reorder Columns
-              href: ../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md
-          - name: Shortcut Query Files
-            href: ../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md
-            items:
-            - name: Save a Shortcut Query File
-              href: ../master-data-services/microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md
-            - name: Email a Shortcut Query File
-              href: ../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
-          - name: Refreshing Data
-            href: ../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
-          - name: "Overview: Importing Data from Excel (MDS Add-in for Excel)"
-            href: ../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
-            items:
-            - name: Import Data from Excel to Master Data Services
-              href: ../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md
-            - name: Delete a Row
-              href: ../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md
-            - name: View All Annotations or Transactions for a Member
-              href: ../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md
-            - name: Combine Data
-              href: ../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md
-            - name: Merge Conflicts
-              href: ../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md
-            - name: Change Sets & Approval
-              href: ../master-data-services/microsoft-excel-add-in/change-sets-and-approval-mds-add-in-for-excel.md
-          - name: Validating Data
-            href: ../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md
-            items:
-            - name: Apply Business Rules
-              href: ../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md
-          - name: Data Quality Matching
-            href: ../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md
-            items:
-            - name: Match Similar Data
-              href: ../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md
-            - name: Data Quality Matching Columns
-              href: ../master-data-services/microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md
-          - name: Building a Model
-            href: ../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md
-            items:
-            - name: Create an Entity
-              href: ../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md
-            - name: Create a Domain-based Attribute
-              href: ../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md
-            - name: Change the Attribute Type
-              href: ../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md
-          - name: Setting Properties for Master Data Services Add-in for Excel
-            href: ../master-data-services/microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md
-          - name: Models
-            href: ../master-data-services/models-master-data-services.md
-            items:
-            - name: Create a Model
-              href: ../master-data-services/create-a-model-master-data-services.md
-            - name: Edit Model
-              href: ../master-data-services/edit-model-master-data-services.md
-            - name: Delete a Model
-              href: ../master-data-services/delete-a-model-master-data-services.md
-          - name: Entities
-            href: ../master-data-services/entities-master-data-services.md
-            items:
-            - name: Entity Dependencies Explorer
-              href: ../master-data-services/entity-dependencies-explorer.md
-            - name: Create an Entity
-              href: ../master-data-services/create-an-entity-master-data-services.md
-            - name: Edit an Entity
-              href: ../master-data-services/edit-an-entity-master-data-services.md
-            - name: Delete an Entity
-              href: ../master-data-services/delete-an-entity-master-data-services.md
-            - name: Entity Sync Relationship
-              href: ../master-data-services/entity-sync-relationship-master-data-services.md
-            - name: Create & Execute an Entity Sync Relationship
-              href: ../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md
-            - name: Edit & Delete an Entity Sync Relationship
-              href: ../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md
-            - name: Approval Required
-              href: ../master-data-services/approval-required-master-data-services.md
-          - name: Custom Index
-            href: ../master-data-services/custom-index-master-data-services.md
-            items:
-            - name: Create an Index
-              href: ../master-data-services/create-an-index-master-data-services.md
-            - name: Edit & Delete an Index
-              href: ../master-data-services/edit-and-delete-an-index-master-data-services.md
-          - name: Attributes
-            href: ../master-data-services/attributes-master-data-services.md
-            items:
-            - name: Create a Text Attribute
-              href: ../master-data-services/create-a-text-attribute-master-data-services.md
-            - name: Create a Numeric Attribute
-              href: ../master-data-services/create-a-numeric-attribute-master-data-services.md
-            - name: Create a Date Attribute
-              href: ../master-data-services/create-a-date-attribute-master-data-services.md
-            - name: Create a Link Attribute
-              href: ../master-data-services/create-a-link-attribute-master-data-services.md
-            - name: Create a File Attribute
-              href: ../master-data-services/create-a-file-attribute-master-data-services.md
-            - name: Change an Attribute Name & Data Type
-              href: ../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md
-            - name: Delete an Attribute
-              href: ../master-data-services/delete-an-attribute-master-data-services.md
-            - name: Change the Order of Attributes
-              href: ../master-data-services/change-the-order-of-attributes.md
-          - name: Domain-Based Attributes
-            href: ../master-data-services/domain-based-attributes-master-data-services.md
-            items:
-            - name: Create a Domain-Based Attribute
-              href: ../master-data-services/create-a-domain-based-attribute-master-data-services.md
-          - name: Attribute Groups
-            href: ../master-data-services/attribute-groups-master-data-services.md
-            items:
-            - name: Create an Attribute Group
-              href: ../master-data-services/create-an-attribute-group-master-data-services.md
-            - name: Make an Attribute Group Visible to Users
-              href: ../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md
-            - name: Change an Attribute Group Name
-              href: ../master-data-services/change-an-attribute-group-name-master-data-services.md
-            - name: Delete an Attribute Group
-              href: ../master-data-services/delete-an-attribute-group-master-data-services.md
-            - name: Change Tracking
-              href: ../master-data-services/change-tracking-master-data-services.md
-              items:
-              - name: Add Attributes to a Change Tracking Group
-                href: ../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md
-              - name: Initiate Actions Based on Attribute Value Changes
-                href: ../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md
-          - name: "Overview: Importing Data from Tables"
-            href: ../master-data-services/overview-importing-data-from-tables-master-data-services.md
-            items:
-            - name: Import Data from Tables
-              href: ../master-data-services/import-data-from-tables-master-data-services.md
-            - name: View Errors that Occur During Staging
-              href: ../master-data-services/view-errors-that-occur-during-staging-master-data-services.md
-            - name: Leaf Member Staging Table
-              href: ../master-data-services/leaf-member-staging-table-master-data-services.md
-            - name: Consolidated Member Staging Table
-              href: ../master-data-services/consolidated-member-staging-table-master-data-services.md
-            - name: Relationship Staging Table
-              href: ../master-data-services/relationship-staging-table-master-data-services.md
-            - name: Staging Stored Procedure
-              href: ../master-data-services/staging-stored-procedure-master-data-services.md
-            - name: Staging Process Errors
-              href: ../master-data-services/staging-process-errors-master-data-services.md
-            - name: Import Statuses
-              href: ../master-data-services/import-statuses-master-data-services.md
-          - name: Members
-            href: ../master-data-services/members-master-data-services.md
-            items:
-            - name: Create a Leaf Member
-              href: ../master-data-services/create-a-leaf-member-master-data-services.md
-            - name: Create a Consolidated Member
-              href: ../master-data-services/create-a-consolidated-member-master-data-services.md
-            - name: Delete a Member or Collection
-              href: ../master-data-services/delete-a-member-or-collection-master-data-services.md
-            - name: Reactivate a Member or Collection
-              href: ../master-data-services/reactivate-a-member-or-collection-master-data-services.md
-            - name: Filter Operators
-              href: ../master-data-services/filter-operators-master-data-services.md
-            - name: Merge Conflicts
-              href: ../master-data-services/merge-conflicts-master-data-services.md
-          - name: Reserved Words
-            href: ../master-data-services/reserved-words-master-data-services.md
-          - name: Automatic Code Creation
-            href: ../master-data-services/automatic-code-creation-master-data-services.md
-            items:
-            - name: Automatically Generate Code Attribute Values
-              href: ../master-data-services/automatically-generate-code-attribute-values-master-data-services.md
-            - name: Automatically Generate Attribute Values Other Than Code
-              href: ../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md
-          - name: Business Rules
-            href: ../master-data-services/business-rules-master-data-services.md
-            items:
-            - name: Create & Publish a Business Rule
-              href: ../master-data-services/create-and-publish-a-business-rule-master-data-services.md
-            - name: Add Multiple Conditions to a Business Rule
-              href: ../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md
-            - name: Require Attribute Values
-              href: ../master-data-services/require-attribute-values-master-data-services.md
-            - name: Change a Business Rule Name
-              href: ../master-data-services/change-a-business-rule-name-master-data-services.md
-            - name: Configure Business Rules to Send Notifications
-              href: ../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md
-            - name: Validate Specific Members against Business Rules
-              href: ../master-data-services/validate-specific-members-against-business-rules-master-data-services.md
-            - name: Exclude a Business Rule
-              href: ../master-data-services/exclude-a-business-rule-master-data-services.md
-            - name: Delete a Business Rule
-              href: ../master-data-services/delete-a-business-rule-master-data-services.md
-            - name: Business Rule Conditions
-              href: ../master-data-services/business-rule-conditions-master-data-services.md
-            - name: Business Rule Actions
-              href: ../master-data-services/business-rule-actions-master-data-services.md
-            - name: Business Rules Extension
-              href: ../master-data-services/business-rules-extension-master-data-services.md
-            - name: Business Rule Examples
-              href: ../master-data-services/business-rule-examples-master-data-services.md
-          - name: Changesets
-            href: ../master-data-services/changesets-master-data-services.md
-            items:
-            - name: Create a Changeset
-              href: ../master-data-services/create-a-changeset-master-data-services.md
-            - name: Apply & Update a Changeset
-              href: ../master-data-services/apply-and-update-a-changeset-master-data-services.md
-            - name: Commit or Submit a Changeset
-              href: ../master-data-services/commit-or-submit-a-changeset-master-data-services.md
-            - name: Approve or Reject a Changeset
-              href: ../master-data-services/approve-or-reject-a-changeset-master-data-services.md
-            - name: Manage Changesets
-              href: ../master-data-services/manage-changesets-master-data-services.md
-          - name: Notifications
-            href: ../master-data-services/notifications-master-data-services.md
-            items:
-            - name: Configure Email Notifications
-              href: ../master-data-services/configure-email-notifications-master-data-services.md
-          - name: Transactions
-            href: ../master-data-services/transactions-master-data-services.md
-            items:
-            - name: Reverse a Transaction
-              href: ../master-data-services/reverse-a-transaction-master-data-services.md
-            - name: Change the Entity Transaction Log Type
-              href: ../master-data-services/change-the-entity-transaction-log-type-master-data-services.md
-            - name: Member Revision History
-              href: ../master-data-services/member-revision-history-master-data-services.md
-            - name: Rollback Member Revision History
-              href: ../master-data-services/rollback-member-revision-history-master-data-services.md
-          - name: Annotations
-            href: ../master-data-services/annotations-master-data-services.md
-            items:
-            - name: Annotate a Transaction
-              href: ../master-data-services/annotate-a-transaction-master-data-services.md
-          - name: Hierarchies
-            href: ../master-data-services/hierarchies-master-data-services.md
-            items:
-            - name: Explicit Hierarchies
-              href: ../master-data-services/explicit-hierarchies-master-data-services.md
-              items:
-              - name: Create an Explicit Hierarchy
-                href: ../master-data-services/create-an-explicit-hierarchy-master-data-services.md
-              - name: Change an Explicit Hierarchy Name
-                href: ../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md
-              - name: Delete an Explicit Hierarchy
-                href: ../master-data-services/delete-an-explicit-hierarchy-master-data-services.md
-            - name: Derived Hierarchies
-              href: ../master-data-services/derived-hierarchies-master-data-services.md
-              items:
-              - name: Recursive Hierarchies
-                href: ../master-data-services/recursive-hierarchies-master-data-services.md
-              - name: Derived Hierarchies with Explicit Caps
-                href: ../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md
-              - name: Create a Derived Hierarchy
-                href: ../master-data-services/create-a-derived-hierarchy-master-data-services.md
-              - name: Hide or Delete Levels in a Derived Hierarchy
-                href: ../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md
-              - name: Change a Derived Hierarchy Name
-                href: ../master-data-services/change-a-derived-hierarchy-name-master-data-services.md
-              - name: Delete a Derived Hierarchy
-                href: ../master-data-services/delete-a-derived-hierarchy-master-data-services.md
-              - name: Show Many-to-Many Relationships in Derived Hierarchies
-                href: ../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md
-          - name: Collections
-            href: ../master-data-services/collections-master-data-services.md
-            items:
-            - name: Create a Collection
-              href: ../master-data-services/create-a-collection-master-data-services.md
-            - name: Add Members to a Collection
-              href: ../master-data-services/add-members-to-a-collection-master-data-services.md
-          - name: "Overview: Exporting Data"
-            href: ../master-data-services/overview-exporting-data-master-data-services.md
-            items:
-            - name: Create a Subscription View to Export Data
-              href: ../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md
-            - name: Delete a Subscription View
-              href: ../master-data-services/delete-a-subscription-view-master-data-services.md
-            - name: Subscription View Formats
-              href: ../master-data-services/subscription-view-formats-master-data-services.md
-          - name: Versions
-            href: ../master-data-services/versions-master-data-services.md
-            items:
-            - name: Change a Version Name
-              href: ../master-data-services/change-a-version-name-master-data-services.md
-            - name: Lock a Version
-              href: ../master-data-services/lock-a-version-master-data-services.md
-            - name: Unlock a Version
-              href: ../master-data-services/unlock-a-version-master-data-services.md
-            - name: Commit a Version
-              href: ../master-data-services/commit-a-version-master-data-services.md
-            - name: Create a Version Flag
-              href: ../master-data-services/create-a-version-flag-master-data-services.md
-            - name: Change a Version Flag Name
-              href: ../master-data-services/change-a-version-flag-name-master-data-services.md
-            - name: Assign a Flag to a Version
-              href: ../master-data-services/assign-a-flag-to-a-version-master-data-services.md
-            - name: Copy a Version
-              href: ../master-data-services/copy-a-version-master-data-services.md
-            - name: Delete a Version
-              href: ../master-data-services/delete-a-version-master-data-services.md
-            - name: Purge Version Members
-              href: ../master-data-services/purge-version-members-master-data-services.md
-          - name: Validation
-            href: ../master-data-services/validation-master-data-services.md
-            items:
-            - name: Validate a Version against Business Rules
-              href: ../master-data-services/validate-a-version-against-business-rules-master-data-services.md
-            - name: Validation Statuses
-              href: ../master-data-services/validation-statuses-master-data-services.md
-            - name: Validation Stored Procedure
-              href: ../master-data-services/validation-stored-procedure-master-data-services.md
-          - name: Deploying Models
-            href: ../master-data-services/deploying-models-master-data-services.md
-            items:
-            - name: Create a Model Deployment Package by Using the Wizard
-              href: ../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md
-            - name: Create a Model Deployment Package by Using MDSModelDeploy
-              href: ../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md
-            - name: Model Deployment Options
-              href: ../master-data-services/model-deployment-options-master-data-services.md
-            - name: Deploy a Model Deployment Package by Using the Wizard
-              href: ../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md
-            - name: Deploy a Model Deployment Package by Using MDSModelDeploy
-              href: ../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
-            - name: Edit a Model Deployment Package
-              href: ../master-data-services/edit-a-model-deployment-package.md
-          - name: Security
-            href: ../master-data-services/security-master-data-services.md
-            items:
-            - name: Administrators
-              href: ../master-data-services/administrators-master-data-services.md
-              items:
-              - name: Create a Model Administrator
-                href: ../master-data-services/create-a-model-administrator-master-data-services.md
-              - name: Create an Entity Administrator
-                href: ../master-data-services/create-an-entity-administrator-master-data-services.md
-            - name: Users & Groups
-              href: ../master-data-services/users-and-groups-master-data-services.md
-              items:
-              - name: Add a User
-                href: ../master-data-services/add-a-user-master-data-services.md
-              - name: Add a Group
-                href: ../master-data-services/add-a-group-master-data-services.md
-              - name: Change a User's Email Address
-                href: ../master-data-services/change-a-user-s-email-address-master-data-services.md
-              - name: Delete Users or Groups
-                href: ../master-data-services/delete-users-or-groups-master-data-services.md
-            - name: Functional Area Permissions
-              href: ../master-data-services/functional-area-permissions-master-data-services.md
-              items:
-              - name: Assign Functional Area Permissions
-                href: ../master-data-services/assign-functional-area-permissions-master-data-services.md
-            - name: Model Object Permissions
-              href: ../master-data-services/model-object-permissions-master-data-services.md
-              items:
-              - name: Assign Model Object Permissions
-                href: ../master-data-services/assign-model-object-permissions-master-data-services.md
-              - name: Delete Model Object Permissions
-                href: ../master-data-services/delete-model-object-permissions-master-data-services.md
-              - name: Model Permissions
-                href: ../master-data-services/model-permissions-master-data-services.md
-              - name: Entity Permissions
-                href: ../master-data-services/entity-permissions-master-data-services.md
-              - name: Leaf Permissions
-                href: ../master-data-services/leaf-permissions-master-data-services.md
-              - name: Collection Permissions
-                href: ../master-data-services/collection-permissions-master-data-services.md
-              - name: Navigational Access
-                href: ../master-data-services/navigational-access-master-data-services.md
-            - name: Hierarchy Member Permissions
-              href: ../master-data-services/hierarchy-member-permissions-master-data-services.md
-              items:
-              - name: Assign Hierarchy Member Permissions
-                href: ../master-data-services/assign-hierarchy-member-permissions-master-data-services.md
-              - name: Immediately Apply Member Permissions
-                href: ../master-data-services/immediately-apply-member-permissions-master-data-services.md
-              - name: Delete Hierarchy Member Permissions
-                href: ../master-data-services/delete-hierarchy-member-permissions-master-data-services.md
-            - name: How Permissions Are Determined
-              href: ../master-data-services/how-permissions-are-determined-master-data-services.md
-            - name: Overlapping Model & Member Permissions
-              href: ../master-data-services/overlapping-model-and-member-permissions-master-data-services.md
-            - name: Overlapping User & Group Permissions
-              href: ../master-data-services/overlapping-user-and-group-permissions-master-data-services.md
-            - name: Test a User's Permissions
-              href: ../master-data-services/test-a-user-s-permissions-master-data-services.md
-        - name: Technical Reference
-          href: ../master-data-services/technical-reference-master-data-services.md
-          items:
-          - name: Master Data Services Database
-            href: ../master-data-services/master-data-services-database.md
-            items:
-            - name: System Settings
-              href: ../master-data-services/system-settings-master-data-services.md
-            - name: Database Object Security
-              href: ../master-data-services/database-object-security-master-data-services.md
-            - name: Database Logins, Users, & Roles
-              href: ../master-data-services/database-logins-users-and-roles-master-data-services.md
-          - name: Master Data Manager Web Application
-            href: ../master-data-services/master-data-manager-web-application.md
-            items:
-            - name: Explorer Functional Area
-              href: ../master-data-services/explorer-functional-area-master-data-manager.md
-            - name: Version Management Functional Area
-              href: ../master-data-services/version-management-functional-area-master-data-manager.md
-            - name: Integration Management Functional Area
-              href: ../master-data-services/integration-management-functional-area-master-data-manager.md
-            - name: System Administration Functional Area
-              href: ../master-data-services/system-administration-functional-area-master-data-manager.md
-            - name: User & Group Permissions Functional Area
-              href: ../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md
-            - name: Folder & File Permissions
-              href: ../master-data-services/folder-and-file-permissions-master-data-services.md
-          - name: Tracing
-            href: ../master-data-services/tracing-master-data-services.md
-        - name: Categorized Web Service Operations
-          href: ../master-data-services/develop/categorized-web-service-operations-master-data-services.md
-        - name: Create a Custom Workflow - Example
-          href: ../master-data-services/develop/create-a-custom-workflow-example.md
-        - name: Create a Custom Workflow - XML Description
-          href: ../master-data-services/develop/create-a-custom-workflow-xml-description.md
-        - name: Create a Custom Workflow
-          href: ../master-data-services/develop/create-a-custom-workflow-master-data-services.md
-        - name: Create Master Data Manager Web Service Proxy Classes
-          href: ../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
-        - name: Master Data Services Developer Documentation
-          href: ../master-data-services/develop/master-data-services-developer-documentation.md   
-    - name: Polybase
-      items:
+  - name: Advanced Analytics & Machine learning ++
+    href: ../advanced-analytics/index.md
+  - name: Analytics Platform System ++
+    displayName: APS, PDW, Parallel Data Warehouse
+    href: ../analytics-platform-system/index.md
+  - name: SQL Server Analysis Services (SSAS) ++
+    href: ../analysis-services/index.md
+  - name: SQL Server Reporting Services (SSRS) ++
+    href: ../reporting-services/index.md    
+  - name: Master Data Services
+    items:
+      - name: Introduction
+        href: ../master-data-services/master-data-services-overview-mds.md
       - name: Overview
         items:
-        - name: What is PolyBase?
-          href: ../relational-databases/polybase/polybase-guide.md
-      - name: Concepts
+        - name: What's New 
+          href: ../master-data-services/what-s-new-in-master-data-services-mds.md
+        - name: Learn 
+          href: ../master-data-services/learn-sql-server-master-data-services.md
+        - name: "SQL Server Samples: Model Deployment Packages (MDS)"
+          href: ../master-data-services/sql-server-samples-model-deployment-packages-mds.md
+        - name: Features Supported by the Editions of SQL Server 2016
+          href: ../master-data-services/master-data-services-and-data-quality-services-features-support.md
+        - name: Backward Compatibility
+          href: ../master-data-services/backward-compatibility-master-data-services.md
+        - name: Deprecated Features
+          href: ../master-data-services/deprecated-master-data-services-features.md
+        - name: Discontinued Features
+          href: ../master-data-services/discontinued-master-data-services-features.md
+      - name: Install & configure
+        href: ../master-data-services/master-data-services-installation-and-configuration.md
         items:
-        - name: Query scenarios
-          href: ../relational-databases/polybase/polybase-queries.md
-        - name: Push-down computation
-          href: ../relational-databases/polybase/polybase-pushdown-computation.md
-        - name: Scale-out groups
-          href: ../relational-databases/polybase/polybase-scale-out-groups.md
-      - name: How-to guides
+        - name: Overview
+          href: ../master-data-services/install-windows/install-master-data-services.md
+        - name: Web Application Requirements
+          href: ../master-data-services/install-windows/web-application-requirements-master-data-services.md
+        - name: Database Requirements
+          href: ../master-data-services/install-windows/database-requirements-master-data-services.md
+        - name: Create a Master Data Services Database
+          href: ../master-data-services/install-windows/create-a-master-data-services-database.md
+        - name: Create a Master Data Manager Web Application
+          href: ../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
+        - name: Secure a Master Data Manager Web Application
+          href: ../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
+        - name: Associate a Master Data Services Database & Web Application
+          href: ../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
+        - name: Enable Data Quality Services Integration with Master Data Services
+          href: ../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
+        - name: Multi-Lingual & Global Deployments
+          href: ../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
+        - name: Installing Master Data Services in an AlwaysOn Environment
+          href: ../master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md
+        - name: Master Data Services Server Configuration Page
+          href: ../master-data-services/server-configuration-mds-configuration-manager.md
+        - name: Database Configuration Page
+          href: ../master-data-services/database-configuration-page-master-data-services-configuration-manager.md
+      - name: Features & Tasks
+        href: ../master-data-services/master-data-services-features-and-tasks.md
         items:
-        - name: Install
+        - name: Connect to a Master Data Services Database Dialog Box
+          href: ../master-data-services/connect-to-a-master-data-services-database-dialog-box.md
+        - name: Create Database Wizard
+          href: ../master-data-services/create-database-wizard-master-data-services-configuration-manager.md
+        - name: Upgrade Database Wizard
+          href: ../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md
+        - name: Create Database Mail Profile & Account Dialog Box
+          href: ../master-data-services/create-database-mail-profile-and-account-dialog-box.md
+        - name: Web Configuration Page
+          href: ../master-data-services/web-configuration-page-master-data-services-configuration-manager.md
+        - name: Create Web Application Dialog Box
+          href: ../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md
+        - name: Create Website Dialog Box
+          href: ../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md
+        - name: Web Configuration Reference
+          href: ../master-data-services/web-configuration-reference-master-data-services.md
+        - name: Overview
+          href: ../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
+        - name: Connections
+          href: ../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md
           items:
-          - name: Install on Windows
-            href: ../relational-databases/polybase/polybase-installation.md
-          - name: Features & limitations
-            href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
-        - name: Configure external data sources
+          - name: Connect to an MDS Repository
+            href: ../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
+        - name: "Overview: Exporting Data to Excel (MDS Add-in for Excel)"
+          href: ../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
           items:
-          - name: Hadoop
+          - name: Filter Data before Exporting
+            href: ../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md
+          - name: Export Data to Excel from Master Data Services
+            href: ../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md
+          - name: Filter Dialog Box
+            href: ../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md
+          - name: Reorder Columns
+            href: ../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md
+        - name: Shortcut Query Files
+          href: ../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md
+          items:
+          - name: Save a Shortcut Query File
+            href: ../master-data-services/microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md
+          - name: Email a Shortcut Query File
+            href: ../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
+        - name: Refreshing Data
+          href: ../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
+        - name: "Overview: Importing Data from Excel (MDS Add-in for Excel)"
+          href: ../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
+          items:
+          - name: Import Data from Excel to Master Data Services
+            href: ../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md
+          - name: Delete a Row
+            href: ../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md
+          - name: View All Annotations or Transactions for a Member
+            href: ../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md
+          - name: Combine Data
+            href: ../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md
+          - name: Merge Conflicts
+            href: ../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md
+          - name: Change Sets & Approval
+            href: ../master-data-services/microsoft-excel-add-in/change-sets-and-approval-mds-add-in-for-excel.md
+        - name: Validating Data
+          href: ../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md
+          items:
+          - name: Apply Business Rules
+            href: ../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md
+        - name: Data Quality Matching
+          href: ../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md
+          items:
+          - name: Match Similar Data
+            href: ../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md
+          - name: Data Quality Matching Columns
+            href: ../master-data-services/microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md
+        - name: Building a Model
+          href: ../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md
+          items:
+          - name: Create an Entity
+            href: ../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md
+          - name: Create a Domain-based Attribute
+            href: ../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md
+          - name: Change the Attribute Type
+            href: ../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md
+        - name: Setting Properties for Master Data Services Add-in for Excel
+          href: ../master-data-services/microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md
+        - name: Models
+          href: ../master-data-services/models-master-data-services.md
+          items:
+          - name: Create a Model
+            href: ../master-data-services/create-a-model-master-data-services.md
+          - name: Edit Model
+            href: ../master-data-services/edit-model-master-data-services.md
+          - name: Delete a Model
+            href: ../master-data-services/delete-a-model-master-data-services.md
+        - name: Entities
+          href: ../master-data-services/entities-master-data-services.md
+          items:
+          - name: Entity Dependencies Explorer
+            href: ../master-data-services/entity-dependencies-explorer.md
+          - name: Create an Entity
+            href: ../master-data-services/create-an-entity-master-data-services.md
+          - name: Edit an Entity
+            href: ../master-data-services/edit-an-entity-master-data-services.md
+          - name: Delete an Entity
+            href: ../master-data-services/delete-an-entity-master-data-services.md
+          - name: Entity Sync Relationship
+            href: ../master-data-services/entity-sync-relationship-master-data-services.md
+          - name: Create & Execute an Entity Sync Relationship
+            href: ../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md
+          - name: Edit & Delete an Entity Sync Relationship
+            href: ../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md
+          - name: Approval Required
+            href: ../master-data-services/approval-required-master-data-services.md
+        - name: Custom Index
+          href: ../master-data-services/custom-index-master-data-services.md
+          items:
+          - name: Create an Index
+            href: ../master-data-services/create-an-index-master-data-services.md
+          - name: Edit & Delete an Index
+            href: ../master-data-services/edit-and-delete-an-index-master-data-services.md
+        - name: Attributes
+          href: ../master-data-services/attributes-master-data-services.md
+          items:
+          - name: Create a Text Attribute
+            href: ../master-data-services/create-a-text-attribute-master-data-services.md
+          - name: Create a Numeric Attribute
+            href: ../master-data-services/create-a-numeric-attribute-master-data-services.md
+          - name: Create a Date Attribute
+            href: ../master-data-services/create-a-date-attribute-master-data-services.md
+          - name: Create a Link Attribute
+            href: ../master-data-services/create-a-link-attribute-master-data-services.md
+          - name: Create a File Attribute
+            href: ../master-data-services/create-a-file-attribute-master-data-services.md
+          - name: Change an Attribute Name & Data Type
+            href: ../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md
+          - name: Delete an Attribute
+            href: ../master-data-services/delete-an-attribute-master-data-services.md
+          - name: Change the Order of Attributes
+            href: ../master-data-services/change-the-order-of-attributes.md
+        - name: Domain-Based Attributes
+          href: ../master-data-services/domain-based-attributes-master-data-services.md
+          items:
+          - name: Create a Domain-Based Attribute
+            href: ../master-data-services/create-a-domain-based-attribute-master-data-services.md
+        - name: Attribute Groups
+          href: ../master-data-services/attribute-groups-master-data-services.md
+          items:
+          - name: Create an Attribute Group
+            href: ../master-data-services/create-an-attribute-group-master-data-services.md
+          - name: Make an Attribute Group Visible to Users
+            href: ../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md
+          - name: Change an Attribute Group Name
+            href: ../master-data-services/change-an-attribute-group-name-master-data-services.md
+          - name: Delete an Attribute Group
+            href: ../master-data-services/delete-an-attribute-group-master-data-services.md
+          - name: Change Tracking
+            href: ../master-data-services/change-tracking-master-data-services.md
             items:
-            - name: Connect to Hadoop
-              href: ../relational-databases/polybase/polybase-configure-hadoop.md
-            - name: Configuration settings
-              href: ../relational-databases/polybase/polybase-configuration.md
-          - name: Azure Blob Storage
-            href: ../relational-databases/polybase/polybase-configure-azure-blob-storage.md
-          - name: SQL Server
-            href: ../relational-databases/polybase/polybase-configure-sql-server.md
-          - name: Oracle
-            href: ../relational-databases/polybase/polybase-configure-oracle.md
-          - name: Teradata
-            href: ../relational-databases/polybase/polybase-configure-teradata.md
-          - name: MongoDB
-            href: ../relational-databases/polybase/polybase-configure-mongodb.md
-          - name: ODBC Generic Types
-            href: ../relational-databases/polybase/polybase-configure-odbc-generic.md
-        - name: Scale-out groups
+            - name: Add Attributes to a Change Tracking Group
+              href: ../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md
+            - name: Initiate Actions Based on Attribute Value Changes
+              href: ../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md
+        - name: "Overview: Importing Data from Tables"
+          href: ../master-data-services/overview-importing-data-from-tables-master-data-services.md
           items:
-          - name: Configure a scale-out group
-            href: ../relational-databases/polybase/configure-scale-out-groups-windows.md
-        - name: Data Virtualization Wizard
+          - name: Import Data from Tables
+            href: ../master-data-services/import-data-from-tables-master-data-services.md
+          - name: View Errors that Occur During Staging
+            href: ../master-data-services/view-errors-that-occur-during-staging-master-data-services.md
+          - name: Leaf Member Staging Table
+            href: ../master-data-services/leaf-member-staging-table-master-data-services.md
+          - name: Consolidated Member Staging Table
+            href: ../master-data-services/consolidated-member-staging-table-master-data-services.md
+          - name: Relationship Staging Table
+            href: ../master-data-services/relationship-staging-table-master-data-services.md
+          - name: Staging Stored Procedure
+            href: ../master-data-services/staging-stored-procedure-master-data-services.md
+          - name: Staging Process Errors
+            href: ../master-data-services/staging-process-errors-master-data-services.md
+          - name: Import Statuses
+            href: ../master-data-services/import-statuses-master-data-services.md
+        - name: Members
+          href: ../master-data-services/members-master-data-services.md
           items:
-          - name: Virtualize relational data
-            href: ../relational-databases/polybase/data-virtualization.md
-          - name: Virtualize CSV data
-            href: ../relational-databases/polybase/data-virtualization-csv.md
-        - name: Troubleshoot
+          - name: Create a Leaf Member
+            href: ../master-data-services/create-a-leaf-member-master-data-services.md
+          - name: Create a Consolidated Member
+            href: ../master-data-services/create-a-consolidated-member-master-data-services.md
+          - name: Delete a Member or Collection
+            href: ../master-data-services/delete-a-member-or-collection-master-data-services.md
+          - name: Reactivate a Member or Collection
+            href: ../master-data-services/reactivate-a-member-or-collection-master-data-services.md
+          - name: Filter Operators
+            href: ../master-data-services/filter-operators-master-data-services.md
+          - name: Merge Conflicts
+            href: ../master-data-services/merge-conflicts-master-data-services.md
+        - name: Reserved Words
+          href: ../master-data-services/reserved-words-master-data-services.md
+        - name: Automatic Code Creation
+          href: ../master-data-services/automatic-code-creation-master-data-services.md
           items:
-          - name: Monitor & troubleshoot
-            href: ../relational-databases/polybase/polybase-troubleshooting.md
-          - name: Kerberos connectivity
-            href: ../relational-databases/polybase/polybase-troubleshoot-connectivity.md
-          - name: PolyBase FAQ
-            href: ../relational-databases/polybase/polybase-faq.md
-      - name: Reference
+          - name: Automatically Generate Code Attribute Values
+            href: ../master-data-services/automatically-generate-code-attribute-values-master-data-services.md
+          - name: Automatically Generate Attribute Values Other Than Code
+            href: ../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md
+        - name: Business Rules
+          href: ../master-data-services/business-rules-master-data-services.md
+          items:
+          - name: Create & Publish a Business Rule
+            href: ../master-data-services/create-and-publish-a-business-rule-master-data-services.md
+          - name: Add Multiple Conditions to a Business Rule
+            href: ../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md
+          - name: Require Attribute Values
+            href: ../master-data-services/require-attribute-values-master-data-services.md
+          - name: Change a Business Rule Name
+            href: ../master-data-services/change-a-business-rule-name-master-data-services.md
+          - name: Configure Business Rules to Send Notifications
+            href: ../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md
+          - name: Validate Specific Members against Business Rules
+            href: ../master-data-services/validate-specific-members-against-business-rules-master-data-services.md
+          - name: Exclude a Business Rule
+            href: ../master-data-services/exclude-a-business-rule-master-data-services.md
+          - name: Delete a Business Rule
+            href: ../master-data-services/delete-a-business-rule-master-data-services.md
+          - name: Business Rule Conditions
+            href: ../master-data-services/business-rule-conditions-master-data-services.md
+          - name: Business Rule Actions
+            href: ../master-data-services/business-rule-actions-master-data-services.md
+          - name: Business Rules Extension
+            href: ../master-data-services/business-rules-extension-master-data-services.md
+          - name: Business Rule Examples
+            href: ../master-data-services/business-rule-examples-master-data-services.md
+        - name: Changesets
+          href: ../master-data-services/changesets-master-data-services.md
+          items:
+          - name: Create a Changeset
+            href: ../master-data-services/create-a-changeset-master-data-services.md
+          - name: Apply & Update a Changeset
+            href: ../master-data-services/apply-and-update-a-changeset-master-data-services.md
+          - name: Commit or Submit a Changeset
+            href: ../master-data-services/commit-or-submit-a-changeset-master-data-services.md
+          - name: Approve or Reject a Changeset
+            href: ../master-data-services/approve-or-reject-a-changeset-master-data-services.md
+          - name: Manage Changesets
+            href: ../master-data-services/manage-changesets-master-data-services.md
+        - name: Notifications
+          href: ../master-data-services/notifications-master-data-services.md
+          items:
+          - name: Configure Email Notifications
+            href: ../master-data-services/configure-email-notifications-master-data-services.md
+        - name: Transactions
+          href: ../master-data-services/transactions-master-data-services.md
+          items:
+          - name: Reverse a Transaction
+            href: ../master-data-services/reverse-a-transaction-master-data-services.md
+          - name: Change the Entity Transaction Log Type
+            href: ../master-data-services/change-the-entity-transaction-log-type-master-data-services.md
+          - name: Member Revision History
+            href: ../master-data-services/member-revision-history-master-data-services.md
+          - name: Rollback Member Revision History
+            href: ../master-data-services/rollback-member-revision-history-master-data-services.md
+        - name: Annotations
+          href: ../master-data-services/annotations-master-data-services.md
+          items:
+          - name: Annotate a Transaction
+            href: ../master-data-services/annotate-a-transaction-master-data-services.md
+        - name: Hierarchies
+          href: ../master-data-services/hierarchies-master-data-services.md
+          items:
+          - name: Explicit Hierarchies
+            href: ../master-data-services/explicit-hierarchies-master-data-services.md
+            items:
+            - name: Create an Explicit Hierarchy
+              href: ../master-data-services/create-an-explicit-hierarchy-master-data-services.md
+            - name: Change an Explicit Hierarchy Name
+              href: ../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md
+            - name: Delete an Explicit Hierarchy
+              href: ../master-data-services/delete-an-explicit-hierarchy-master-data-services.md
+          - name: Derived Hierarchies
+            href: ../master-data-services/derived-hierarchies-master-data-services.md
+            items:
+            - name: Recursive Hierarchies
+              href: ../master-data-services/recursive-hierarchies-master-data-services.md
+            - name: Derived Hierarchies with Explicit Caps
+              href: ../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md
+            - name: Create a Derived Hierarchy
+              href: ../master-data-services/create-a-derived-hierarchy-master-data-services.md
+            - name: Hide or Delete Levels in a Derived Hierarchy
+              href: ../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md
+            - name: Change a Derived Hierarchy Name
+              href: ../master-data-services/change-a-derived-hierarchy-name-master-data-services.md
+            - name: Delete a Derived Hierarchy
+              href: ../master-data-services/delete-a-derived-hierarchy-master-data-services.md
+            - name: Show Many-to-Many Relationships in Derived Hierarchies
+              href: ../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md
+        - name: Collections
+          href: ../master-data-services/collections-master-data-services.md
+          items:
+          - name: Create a Collection
+            href: ../master-data-services/create-a-collection-master-data-services.md
+          - name: Add Members to a Collection
+            href: ../master-data-services/add-members-to-a-collection-master-data-services.md
+        - name: "Overview: Exporting Data"
+          href: ../master-data-services/overview-exporting-data-master-data-services.md
+          items:
+          - name: Create a Subscription View to Export Data
+            href: ../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md
+          - name: Delete a Subscription View
+            href: ../master-data-services/delete-a-subscription-view-master-data-services.md
+          - name: Subscription View Formats
+            href: ../master-data-services/subscription-view-formats-master-data-services.md
+        - name: Versions
+          href: ../master-data-services/versions-master-data-services.md
+          items:
+          - name: Change a Version Name
+            href: ../master-data-services/change-a-version-name-master-data-services.md
+          - name: Lock a Version
+            href: ../master-data-services/lock-a-version-master-data-services.md
+          - name: Unlock a Version
+            href: ../master-data-services/unlock-a-version-master-data-services.md
+          - name: Commit a Version
+            href: ../master-data-services/commit-a-version-master-data-services.md
+          - name: Create a Version Flag
+            href: ../master-data-services/create-a-version-flag-master-data-services.md
+          - name: Change a Version Flag Name
+            href: ../master-data-services/change-a-version-flag-name-master-data-services.md
+          - name: Assign a Flag to a Version
+            href: ../master-data-services/assign-a-flag-to-a-version-master-data-services.md
+          - name: Copy a Version
+            href: ../master-data-services/copy-a-version-master-data-services.md
+          - name: Delete a Version
+            href: ../master-data-services/delete-a-version-master-data-services.md
+          - name: Purge Version Members
+            href: ../master-data-services/purge-version-members-master-data-services.md
+        - name: Validation
+          href: ../master-data-services/validation-master-data-services.md
+          items:
+          - name: Validate a Version against Business Rules
+            href: ../master-data-services/validate-a-version-against-business-rules-master-data-services.md
+          - name: Validation Statuses
+            href: ../master-data-services/validation-statuses-master-data-services.md
+          - name: Validation Stored Procedure
+            href: ../master-data-services/validation-stored-procedure-master-data-services.md
+        - name: Deploying Models
+          href: ../master-data-services/deploying-models-master-data-services.md
+          items:
+          - name: Create a Model Deployment Package by Using the Wizard
+            href: ../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md
+          - name: Create a Model Deployment Package by Using MDSModelDeploy
+            href: ../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md
+          - name: Model Deployment Options
+            href: ../master-data-services/model-deployment-options-master-data-services.md
+          - name: Deploy a Model Deployment Package by Using the Wizard
+            href: ../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md
+          - name: Deploy a Model Deployment Package by Using MDSModelDeploy
+            href: ../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
+          - name: Edit a Model Deployment Package
+            href: ../master-data-services/edit-a-model-deployment-package.md
+        - name: Security
+          href: ../master-data-services/security-master-data-services.md
+          items:
+          - name: Administrators
+            href: ../master-data-services/administrators-master-data-services.md
+            items:
+            - name: Create a Model Administrator
+              href: ../master-data-services/create-a-model-administrator-master-data-services.md
+            - name: Create an Entity Administrator
+              href: ../master-data-services/create-an-entity-administrator-master-data-services.md
+          - name: Users & Groups
+            href: ../master-data-services/users-and-groups-master-data-services.md
+            items:
+            - name: Add a User
+              href: ../master-data-services/add-a-user-master-data-services.md
+            - name: Add a Group
+              href: ../master-data-services/add-a-group-master-data-services.md
+            - name: Change a User's Email Address
+              href: ../master-data-services/change-a-user-s-email-address-master-data-services.md
+            - name: Delete Users or Groups
+              href: ../master-data-services/delete-users-or-groups-master-data-services.md
+          - name: Functional Area Permissions
+            href: ../master-data-services/functional-area-permissions-master-data-services.md
+            items:
+            - name: Assign Functional Area Permissions
+              href: ../master-data-services/assign-functional-area-permissions-master-data-services.md
+          - name: Model Object Permissions
+            href: ../master-data-services/model-object-permissions-master-data-services.md
+            items:
+            - name: Assign Model Object Permissions
+              href: ../master-data-services/assign-model-object-permissions-master-data-services.md
+            - name: Delete Model Object Permissions
+              href: ../master-data-services/delete-model-object-permissions-master-data-services.md
+            - name: Model Permissions
+              href: ../master-data-services/model-permissions-master-data-services.md
+            - name: Entity Permissions
+              href: ../master-data-services/entity-permissions-master-data-services.md
+            - name: Leaf Permissions
+              href: ../master-data-services/leaf-permissions-master-data-services.md
+            - name: Collection Permissions
+              href: ../master-data-services/collection-permissions-master-data-services.md
+            - name: Navigational Access
+              href: ../master-data-services/navigational-access-master-data-services.md
+          - name: Hierarchy Member Permissions
+            href: ../master-data-services/hierarchy-member-permissions-master-data-services.md
+            items:
+            - name: Assign Hierarchy Member Permissions
+              href: ../master-data-services/assign-hierarchy-member-permissions-master-data-services.md
+            - name: Immediately Apply Member Permissions
+              href: ../master-data-services/immediately-apply-member-permissions-master-data-services.md
+            - name: Delete Hierarchy Member Permissions
+              href: ../master-data-services/delete-hierarchy-member-permissions-master-data-services.md
+          - name: How Permissions Are Determined
+            href: ../master-data-services/how-permissions-are-determined-master-data-services.md
+          - name: Overlapping Model & Member Permissions
+            href: ../master-data-services/overlapping-model-and-member-permissions-master-data-services.md
+          - name: Overlapping User & Group Permissions
+            href: ../master-data-services/overlapping-user-and-group-permissions-master-data-services.md
+          - name: Test a User's Permissions
+            href: ../master-data-services/test-a-user-s-permissions-master-data-services.md
+      - name: Technical Reference
+        href: ../master-data-services/technical-reference-master-data-services.md
         items:
-        - name: T-SQL reference
-          href: ../relational-databases/polybase/polybase-t-sql-objects.md
-      - name: Resources
-        items:
-        - name: DBA Stack Exchange +
-          href: https://dba.stackexchange.com/questions/tagged/sql-server
-        - name: Stack Overflow +
-          href: https://stackoverflow.com/questions/tagged/sql-server
-        - name: MSDN Forums +
-          href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
-        - name: Submit feedback +
-          href: https://feedback.azure.com/forums/908035-sql-server
-        - name: Reddit +
-          href: https://www.reddit.com/r/SQLServer
+        - name: Master Data Services Database
+          href: ../master-data-services/master-data-services-database.md
+          items:
+          - name: System Settings
+            href: ../master-data-services/system-settings-master-data-services.md
+          - name: Database Object Security
+            href: ../master-data-services/database-object-security-master-data-services.md
+          - name: Database Logins, Users, & Roles
+            href: ../master-data-services/database-logins-users-and-roles-master-data-services.md
+        - name: Master Data Manager Web Application
+          href: ../master-data-services/master-data-manager-web-application.md
+          items:
+          - name: Explorer Functional Area
+            href: ../master-data-services/explorer-functional-area-master-data-manager.md
+          - name: Version Management Functional Area
+            href: ../master-data-services/version-management-functional-area-master-data-manager.md
+          - name: Integration Management Functional Area
+            href: ../master-data-services/integration-management-functional-area-master-data-manager.md
+          - name: System Administration Functional Area
+            href: ../master-data-services/system-administration-functional-area-master-data-manager.md
+          - name: User & Group Permissions Functional Area
+            href: ../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md
+          - name: Folder & File Permissions
+            href: ../master-data-services/folder-and-file-permissions-master-data-services.md
+        - name: Tracing
+          href: ../master-data-services/tracing-master-data-services.md
+      - name: Categorized Web Service Operations
+        href: ../master-data-services/develop/categorized-web-service-operations-master-data-services.md
+      - name: Create a Custom Workflow - Example
+        href: ../master-data-services/develop/create-a-custom-workflow-example.md
+      - name: Create a Custom Workflow - XML Description
+        href: ../master-data-services/develop/create-a-custom-workflow-xml-description.md
+      - name: Create a Custom Workflow
+        href: ../master-data-services/develop/create-a-custom-workflow-master-data-services.md
+      - name: Create Master Data Manager Web Service Proxy Classes
+        href: ../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
+      - name: Master Data Services Developer Documentation
+        href: ../master-data-services/develop/master-data-services-developer-documentation.md   
 - name: Security
   items:
   - name: Overview

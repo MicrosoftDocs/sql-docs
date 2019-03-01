@@ -105,7 +105,7 @@ mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
 
 ## <a id="issues"></a> Known issues and limitations
 
-The following list provides some known issues and limitations when using HDFS tiering in SQL Server big data clusters:
+The following list provides known issues and current limitations when using HDFS tiering in SQL Server big data clusters:
 
 - If the size of the external directory being mounted is larger than the capacity of the cluster, mounting fails.
 
@@ -115,7 +115,7 @@ The following list provides some known issues and limitations when using HDFS ti
 
 - Mounts cannot be created within existing mounts.
 
-- If any of the ancestors of the mount-point do exist, they will be created with the permissions defaulted to r-xr-xr-x (555).
+- If any of the ancestors of the mount-point do not exist, they will be created with the permissions defaulted to r-xr-xr-x (555).
 
 - Mount creation can take some time depending on the number and size of files being mounted. During this process, the files under the mount aren't visible to users. While the mount is created, all files will be added to a temporary path, which defaults to `/_temporary/_mounts/<mount-location>`.
 

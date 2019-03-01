@@ -73,7 +73,7 @@ A public field of a user-defined type.
 *udt_name*  
 The name of a common language runtime (CLR) user-defined type.  
   
-`{ . &#124; :: }`  
+`{ . | :: }`  
 Specifies a method of a CLR user-define type. For an instance (non-static) method, use a period (**.**). For a static method, use two colons (**::**). To invoke a method, property, or field of a CLR user-defined type, you must have EXECUTE permission on the type.  
   
 _method_name_ **(** _argument_ [ **,**... *n* ] **)**  

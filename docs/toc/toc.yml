@@ -7206,9 +7206,9 @@
               href: ../big-data-cluster/data-ingestion-restore-database.md
           - name: Deploy apps
             items:
-            - name: Deploy and manage with mssqlctl
+            - name: Deploy & manage (mssqlctl)
               href: ../big-data-cluster/big-data-cluster-create-apps.md
-            - name: Deploy and manage with VS Code
+            - name: Deploy & manage (VS Code)
               href: ../big-data-cluster/app-deployment-extension.md
           - name: Big Data/Machine Learning
             items:

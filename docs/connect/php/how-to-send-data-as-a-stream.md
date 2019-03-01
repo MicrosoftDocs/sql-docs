@@ -34,8 +34,7 @@ specify the AdventureWorks database as the database in use. */
 $serverName = "(local)";  
 $connectionInfo = array( "Database"=>"AdventureWorks");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
+if ($conn === false) {
      echo "Could not connect.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }  
@@ -62,13 +61,10 @@ $params = array($productID, $name, $date, $email, $rating, $comments);
   
 /* Execute the query. All stream data is sent upon execution.*/  
 $stmt = sqlsrv_query($conn, $tsql, $params);  
-if( $stmt === false )  
-{  
+if ($stmt === false) {
      echo "Error in statement execution.\n";  
      die( print_r( sqlsrv_errors(), true));  
-}  
-else  
-{  
+} else {
      echo "The query was successfully executed.";  
 }  
   
@@ -90,8 +86,7 @@ specify the AdventureWorks database as the database in use. */
 $serverName = "(local)";  
 $connectionInfo = array( "Database"=>"AdventureWorks");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
+if ($conn === false) {
      echo "Could not connect.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }  
@@ -122,8 +117,7 @@ $options = array("SendStreamParamsAtExec" => 0);
   
 /* Execute the query. */  
 $stmt = sqlsrv_query($conn, $tsql, $params, $options);  
-if( $stmt === false )  
-{  
+if ($stmt === false) {
      echo "Error in statement execution.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }  
@@ -131,8 +125,7 @@ if( $stmt === false )
 /* Send up to 8K of parameter data to the server with each call to  
 sqlsrv_send_stream_data. Count the calls. */  
 $i = 1;  
-while( sqlsrv_send_stream_data( $stmt))   
-{  
+while (sqlsrv_send_stream_data($stmt)) {
      echo "$i call(s) made.\n";  
      $i++;  
 }  

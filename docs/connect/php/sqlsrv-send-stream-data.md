@@ -50,15 +50,14 @@ specify the AdventureWorks database as the database in use. */
 $serverName = "(local)";  
 $connectionInfo = array( "Database"=>"AdventureWorks");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
+if ($conn === false) {
      echo "Could not connect.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }  
   
 /* Define the query. */  
 $tsql = "UPDATE Production.ProductReview   
-         SET Comments = ( ?)   
+         SET Comments = (?)   
          WHERE ProductReviewID = 3";  
   
 /* Open parameter data as a stream and put it in the $params array. */
@@ -70,7 +69,7 @@ $params = array(&$comment);
 default behavior, which is to send all stream data at the time of query  
 execution. */  
 $options = array("SendStreamParamsAtExec"=>0);  
-$stmt = sqlsrv_prepare( $conn, $tsql, $params, $options);  
+$stmt = sqlsrv_prepare($conn, $tsql, $params, $options);
   
 /* Execute the statement. */  
 sqlsrv_execute( $stmt);  
@@ -78,8 +77,7 @@ sqlsrv_execute( $stmt);
 /* Send up to 8K of parameter data to the server with each call to  
 sqlsrv_send_stream_data. Count the calls. */  
 $i = 1;  
-while( sqlsrv_send_stream_data( $stmt))   
-{  
+while (sqlsrv_send_stream_data($stmt)) {
       echo "$i call(s) made.\n";  
       $i++;  
 }  

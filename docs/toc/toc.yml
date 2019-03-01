@@ -39,226 +39,6 @@
     href: ../sql-server/sql-server-2012-release-notes.md
   - name: SQL Server 2008 R2 SP2 
     href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
-- name: Big data
-  items: 
-  - name: Big data cluster
-    items:
-    - name: Overview
-      items:
-      - name: What are SQL Server big data clusters?
-        href: ../big-data-cluster/big-data-cluster-overview.md
-      - name: Release notes
-        href: ../big-data-cluster/big-data-cluster-release-notes.md
-    - name: Install
-      items:
-      - name: Install Tools
-        items:
-        - name: Install big data tools
-          href: ../big-data-cluster/deploy-big-data-tools.md
-        - name: Install mssqlctl
-          href: ../big-data-cluster/deploy-install-mssqlctl.md
-        - name: Deployment scripts
-          items:
-          - name: Azure Kubernetes Service
-            href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-          - name: Deployment guidance
-            items:
-            - name: Deployment guidance
-              href: ../big-data-cluster/deployment-guidance.md
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/deploy-on-aks.md
-            - name: Kubeadm
-              href: ../big-data-cluster/deploy-with-kubeadm.md
-            - name: Minikube
-              href: ../big-data-cluster/deploy-on-minikube.md
-      - name: Tutorials
-        items:
-        - name: 1_Load sample data
-          href: ../big-data-cluster/tutorial-load-sample-data.md
-        - name: 2_Query HDFS data
-          href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
-        - name: 3_Query Oracle data
-          href: ../big-data-cluster/tutorial-query-oracle.md
-        - name: 4_Load data pool with SQL
-          href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
-        - name: 5_Load data pool with Spark
-          href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
-        - name: 6_Run a Spark notebook
-          href: ../big-data-cluster/tutorial-notebook-spark.md
-      - name: Concepts
-        items:
-        - name: Controller
-          href: ../big-data-cluster/concept-controller.md
-        - name: Master instance
-          href: ../big-data-cluster/concept-master-instance.md
-        - name: Data pool
-          href: ../big-data-cluster/concept-data-pool.md
-        - name: Storage pool
-          href: ../big-data-cluster/concept-storage-pool.md
-        - name: Compute pool
-          href: ../big-data-cluster/concept-compute-pool.md
-        - name: Data persistence
-          href: ../big-data-cluster/concept-data-persistence.md
-        - name: Security
-          href: ../big-data-cluster/concept-security.md
-      - name: How-to guides
-        items:
-        - name: Data virtualization
-          items:
-          - name: Virtualize relational data
-            href: ../relational-databases/polybase/data-virtualization.md
-          - name: Virtualize CSV data
-            href: ../relational-databases/polybase/data-virtualization-csv.md
-        - name: Data ingestion
-          items:
-          - name: Load data with curl
-            href: ../big-data-cluster/data-ingestion-curl.md
-          - name: Restore a database
-            href: ../big-data-cluster/data-ingestion-restore-database.md
-        - name: Deploy apps
-          items:
-          - name: Deploy & manage with mssqlctl
-            href: ../big-data-cluster/big-data-cluster-create-apps.md
-          - name: Deploy & maange with VS Code
-            href: ../big-data-cluster/app-deployment-extension.md
-        - name: Big Data/Machine Learning
-          items:
-          - name: Data wrangling using PROSE Code Accelerator
-            href: ../big-data-cluster/use-prose-for-big-data-automation.md
-          - name: Training & Creating Machine Learning Models with Spark
-            href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
-          - name: Exporting ML models with Spark/Mleap
-            href: ../big-data-cluster/export-model-with-spark-mleap.md
-          - name: Use Sparklyr from RStudio
-            href: ../big-data-cluster/sparklyr-from-RStudio.md  
-        - name: Manage SQL Server big data cluster
-          items:
-          - name: Connect to a big data cluster
-            href: ../big-data-cluster/connect-to-big-data-cluster.md
-          - name: Cluster administration portal
-            href: ../big-data-cluster/cluster-admin-portal.md
-          - name: Kubernetes troubleshooting
-            href: ../big-data-cluster/cluster-troubleshooting-commands.md
-        - name: Notebooks
-          items:
-          - name: Notebooks overview
-            href: ../big-data-cluster/notebooks-guidance.md
-          - name: Manage existing notebooks
-            href: ../big-data-cluster/notebooks-how-to-manage.md
-        - name: Spark jobs
-          items:
-          - name: Submit Spark jobs in Azure Data Studio
-            href: ../big-data-cluster/spark-submit-job.md
-          - name: Submit Spark jobs in IntelliJ
-            href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
-          - name: Use extended Spark History Server
-            href: ../big-data-cluster/spark-history-server.md
-      - name: Reference
-        items:
-        - name: mssqlctl reference
-          items:
-          - name: mssqlctl
-            href: ../big-data-cluster/reference-mssqlctl.md
-          - name: App Deploy
-            items:
-            - name: mssqlctl app 
-              href: ../big-data-cluster/reference-mssqlctl-app.md
-            - name: mssqlctl app template
-              href: ../big-data-cluster/reference-mssqlctl-app-template.md
-          - name: Cluster
-            items:
-            - name: mssqlctl cluster
-              href: ../big-data-cluster/reference-mssqlctl-cluster.md
-            - name: mssqlctl cluster config
-              href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
-            - name: mssqlctl cluster debug
-              href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md              
-          - name: Storage
-            items:
-            - name: mssqlctl storage
-              href: ../big-data-cluster/reference-mssqlctl-storage.md
-            - name: mssqlctl storage mount
-              href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
-      - name: Resources
-        items:
-        - name: Request access to big data clusters
-          href: https://aka.ms/eapsignup   
-  - name: Polybase
-    items:
-      - name: Overview
-        items:
-        - name: What is PolyBase?
-          href: ../relational-databases/polybase/polybase-guide.md
-      - name: Concepts
-        items:
-        - name: Query scenarios
-          href: ../relational-databases/polybase/polybase-queries.md
-        - name: Push-down computation
-          href: ../relational-databases/polybase/polybase-pushdown-computation.md
-        - name: Scale-out groups
-          href: ../relational-databases/polybase/polybase-scale-out-groups.md
-      - name: How-to guides
-        items:
-        - name: Install
-          items:
-          - name: Install on Windows
-            href: ../relational-databases/polybase/polybase-installation.md
-          - name: Features & limitations
-            href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
-        - name: Configure external data sources
-          items:
-          - name: Hadoop
-            items:
-            - name: Connect to Hadoop
-              href: ../relational-databases/polybase/polybase-configure-hadoop.md
-            - name: Configuration settings
-              href: ../relational-databases/polybase/polybase-configuration.md
-          - name: Azure Blob Storage
-            href: ../relational-databases/polybase/polybase-configure-azure-blob-storage.md
-          - name: SQL Server
-            href: ../relational-databases/polybase/polybase-configure-sql-server.md
-          - name: Oracle
-            href: ../relational-databases/polybase/polybase-configure-oracle.md
-          - name: Teradata
-            href: ../relational-databases/polybase/polybase-configure-teradata.md
-          - name: MongoDB
-            href: ../relational-databases/polybase/polybase-configure-mongodb.md
-          - name: ODBC Generic Types
-            href: ../relational-databases/polybase/polybase-configure-odbc-generic.md
-        - name: Scale-out groups
-          items:
-          - name: Configure a scale-out group
-            href: ../relational-databases/polybase/configure-scale-out-groups-windows.md
-        - name: Data Virtualization Wizard
-          items:
-          - name: Virtualize relational data
-            href: ../relational-databases/polybase/data-virtualization.md
-          - name: Virtualize CSV data
-            href: ../relational-databases/polybase/data-virtualization-csv.md
-        - name: Troubleshoot
-          items:
-          - name: Monitor & troubleshoot
-            href: ../relational-databases/polybase/polybase-troubleshooting.md
-          - name: Kerberos connectivity
-            href: ../relational-databases/polybase/polybase-troubleshoot-connectivity.md
-          - name: PolyBase FAQ
-            href: ../relational-databases/polybase/polybase-faq.md
-      - name: Reference
-        items:
-        - name: T-SQL reference
-          href: ../relational-databases/polybase/polybase-t-sql-objects.md
-      - name: Resources
-        items:
-        - name: DBA Stack Exchange +
-          href: https://dba.stackexchange.com/questions/tagged/sql-server
-        - name: Stack Overflow +
-          href: https://stackoverflow.com/questions/tagged/sql-server
-        - name: MSDN Forums +
-          href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
-        - name: Submit feedback +
-          href: https://feedback.azure.com/forums/908035-sql-server
-        - name: Reddit +
-          href: https://www.reddit.com/r/SQLServer
 - name: Business continuity
   href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:
@@ -7551,6 +7331,118 @@
       href: ../analysis-services/index.md
     - name: SQL Server Reporting Services (SSRS) ++
       href: ../reporting-services/index.md
+    - name: Big data cluster
+      items:
+        - name: Overview
+          items:
+          - name: What are SQL Server big data clusters?
+            href: ../big-data-cluster/big-data-cluster-overview.md
+          - name: Release notes
+            href: ../big-data-cluster/big-data-cluster-release-notes.md
+        - name: Install
+          items:
+          - name: Install Tools
+            items:
+            - name: Install big data tools
+              href: ../big-data-cluster/deploy-big-data-tools.md
+            - name: Install mssqlctl
+              href: ../big-data-cluster/deploy-install-mssqlctl.md
+          - name: Deployment scripts
+            items:
+            - name: Azure Kubernetes Service
+              href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
+          - name: Deployment guidance
+            items:
+            - name: Deployment guidance
+              href: ../big-data-cluster/deployment-guidance.md
+            - name: Azure Kubernetes Service
+              href: ../big-data-cluster/deploy-on-aks.md
+            - name: Kubeadm
+              href: ../big-data-cluster/deploy-with-kubeadm.md
+            - name: Minikube
+              href: ../big-data-cluster/deploy-on-minikube.md
+        - name: Tutorials
+          items:
+          - name: 1_Load sample data
+            href: ../big-data-cluster/tutorial-load-sample-data.md
+          - name: 2_Query HDFS data
+            href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
+          - name: 3_Query Oracle data
+            href: ../big-data-cluster/tutorial-query-oracle.md
+          - name: 4_Load data pool with SQL
+            href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
+          - name: 5_Load data pool with Spark
+            href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
+          - name: 6_Run a Spark notebook
+            href: ../big-data-cluster/tutorial-notebook-spark.md
+        - name: Concepts
+          items:
+          - name: Controller
+            href: ../big-data-cluster/concept-controller.md
+          - name: Master instance
+            href: ../big-data-cluster/concept-master-instance.md
+          - name: Data pool
+            href: ../big-data-cluster/concept-data-pool.md
+          - name: Storage pool
+            href: ../big-data-cluster/concept-storage-pool.md
+          - name: Compute pool
+            href: ../big-data-cluster/concept-compute-pool.md
+          - name: Data persistence
+            href: ../big-data-cluster/concept-data-persistence.md
+          - name: Security
+            href: ../big-data-cluster/concept-security.md
+        - name: How-to guides
+          items:
+          - name: Data virtualization
+            items:
+            - name: Virtualize relational data
+              href: ../relational-databases/polybase/data-virtualization.md
+            - name: Virtualize CSV data
+              href: ../relational-databases/polybase/data-virtualization-csv.md
+          - name: Data ingestion
+            items:
+            - name: Load data with curl
+              href: ../big-data-cluster/data-ingestion-curl.md
+            - name: Restore a database
+              href: ../big-data-cluster/data-ingestion-restore-database.md
+          - name: Deploy apps
+            items:
+            - name: Use mssqlctl
+              href: ../big-data-cluster/big-data-cluster-create-apps.md
+            - name: Use VS Code
+              href: ../big-data-cluster/app-deployment-extension.md
+          - name: Big Data/Machine Learning
+            items:
+            - name: Data wrangling using PROSE Code Accelerator
+              href: ../big-data-cluster/use-prose-for-big-data-automation.md
+            - name: Training and Creating Machine Learning Models with Spark
+              href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
+            - name: Exporting ML models with Spark/Mleap
+              href: ../big-data-cluster/export-model-with-spark-mleap.md
+            - name: Use Sparklyr from RStudio
+              href: ../big-data-cluster/sparklyr-from-RStudio.md  
+          - name: Manage SQL Server big data cluster
+            items:
+            - name: Connect to a big data cluster
+              href: ../big-data-cluster/connect-to-big-data-cluster.md
+            - name: Cluster administration portal
+              href: ../big-data-cluster/cluster-admin-portal.md
+            - name: Kubernetes troubleshooting
+              href: ../big-data-cluster/cluster-troubleshooting-commands.md
+          - name: Notebooks
+            items:
+            - name: Notebooks overview
+              href: ../big-data-cluster/notebooks-guidance.md
+            - name: Manage existing notebooks
+              href: ../big-data-cluster/notebooks-how-to-manage.md
+          - name: Spark jobs
+            items:
+            - name: Submit Spark jobs in Azure Data Studio
+              href: ../big-data-cluster/spark-submit-job.md
+            - name: Submit Spark jobs in IntelliJ
+              href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+            - name: Use extended Spark History Server
+              href: ../big-data-cluster/spark-history-server.md
     - name: Master Data Services
       items:
         - name: Introduction
@@ -8056,6 +7948,82 @@
           href: ../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
         - name: Master Data Services Developer Documentation
           href: ../master-data-services/develop/master-data-services-developer-documentation.md   
+    - name: Polybase
+      items:
+      - name: Overview
+        items:
+        - name: What is PolyBase?
+          href: ../relational-databases/polybase/polybase-guide.md
+      - name: Concepts
+        items:
+        - name: Query scenarios
+          href: ../relational-databases/polybase/polybase-queries.md
+        - name: Push-down computation
+          href: ../relational-databases/polybase/polybase-pushdown-computation.md
+        - name: Scale-out groups
+          href: ../relational-databases/polybase/polybase-scale-out-groups.md
+      - name: How-to guides
+        items:
+        - name: Install
+          items:
+          - name: Install on Windows
+            href: ../relational-databases/polybase/polybase-installation.md
+          - name: Features & limitations
+            href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
+        - name: Configure external data sources
+          items:
+          - name: Hadoop
+            items:
+            - name: Connect to Hadoop
+              href: ../relational-databases/polybase/polybase-configure-hadoop.md
+            - name: Configuration settings
+              href: ../relational-databases/polybase/polybase-configuration.md
+          - name: Azure Blob Storage
+            href: ../relational-databases/polybase/polybase-configure-azure-blob-storage.md
+          - name: SQL Server
+            href: ../relational-databases/polybase/polybase-configure-sql-server.md
+          - name: Oracle
+            href: ../relational-databases/polybase/polybase-configure-oracle.md
+          - name: Teradata
+            href: ../relational-databases/polybase/polybase-configure-teradata.md
+          - name: MongoDB
+            href: ../relational-databases/polybase/polybase-configure-mongodb.md
+          - name: ODBC Generic Types
+            href: ../relational-databases/polybase/polybase-configure-odbc-generic.md
+        - name: Scale-out groups
+          items:
+          - name: Configure a scale-out group
+            href: ../relational-databases/polybase/configure-scale-out-groups-windows.md
+        - name: Data Virtualization Wizard
+          items:
+          - name: Virtualize relational data
+            href: ../relational-databases/polybase/data-virtualization.md
+          - name: Virtualize CSV data
+            href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: Troubleshoot
+          items:
+          - name: Monitor & troubleshoot
+            href: ../relational-databases/polybase/polybase-troubleshooting.md
+          - name: Kerberos connectivity
+            href: ../relational-databases/polybase/polybase-troubleshoot-connectivity.md
+          - name: PolyBase FAQ
+            href: ../relational-databases/polybase/polybase-faq.md
+      - name: Reference
+        items:
+        - name: T-SQL reference
+          href: ../relational-databases/polybase/polybase-t-sql-objects.md
+      - name: Resources
+        items:
+        - name: DBA Stack Exchange +
+          href: https://dba.stackexchange.com/questions/tagged/sql-server
+        - name: Stack Overflow +
+          href: https://stackoverflow.com/questions/tagged/sql-server
+        - name: MSDN Forums +
+          href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
+        - name: Submit feedback +
+          href: https://feedback.azure.com/forums/908035-sql-server
+        - name: Reddit +
+          href: https://www.reddit.com/r/SQLServer
 - name: Security
   items:
   - name: Overview

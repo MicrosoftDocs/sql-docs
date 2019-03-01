@@ -109,7 +109,7 @@ The following list provides some known issues and limitations when using HDFS ti
 
 - If the size of the external directory being mounted is larger than the capacity of the cluster, mounting fails.
 
-- If the mount is stuck in a `CREATING` state for a long time, it has most likely failed.
+- If the mount is stuck in a `CREATING` state for a long time, it has most likely failed. In this situation, cancel the command and delete the mount if necessary. Verify that your parameters and credentials are correct before retrying.
 
 - Mounts cannot be created on existing directories.
 

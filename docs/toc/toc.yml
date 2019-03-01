@@ -3,26 +3,26 @@
 - name: Overview
   href: ../toc/redirectfrom-overview-10.md ## /sql/database-engine/sql-server-database-engine-overview
   items:
-  - name: SQL 2019
-    items:
-    - name: What's new
+  - name: What's new in SQL Server
+    items: 
+    - name: SQL Server 2019
       href: ../sql-server/what-s-new-in-sql-server-ver15.md
-  - name: SQL 2017
-    items:
-    - name: What's new
+    - name: SQL Server 2017
       href: ../sql-server/what-s-new-in-sql-server-2017.md
-    - name: Editions & features
-      href: ../sql-server/editions-and-components-of-sql-server-2017.md
-    - name: Database engine
-      href: ../database-engine/whats-new-in-sql-server-2017.md
-  - name: SQL 2016
+    - name: SQL Server 2016
+      href: ../sql-server/what-s-new-in-sql-server-2016.md
+  - name: What's new in the database engine
     items:
-      - name: What's new
-        href: ../sql-server/what-s-new-in-sql-server-2016.md
-      - name: Editions & features
-        href: ../sql-server/editions-and-components-of-sql-server-2016.md
-      - name: Database engine
-        href: ../database-engine/whats-new-in-sql-server-2016.md
+    - name: SQL Server 2017
+      href: ../database-engine/whats-new-in-sql-server-2017.md
+    - name: SQL Server 2016
+      href: ../database-engine/whats-new-in-sql-server-2016.md
+  - name: Editions & Features
+    items: 
+    - name: SQL Server 2017
+      href: ../sql-server/editions-and-components-of-sql-server-2017.md
+    - name: SQL Server 2016
+      href: ../sql-server/editions-and-components-of-sql-server-2016.md
 - name: Release Notes
   items:
   - name: SQL Server 2019 

@@ -1501,43 +1501,43 @@
       href: ../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md
   - name: Stored procedures
     items:
-      - name: Overview
-        href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
-      - name: Create
-        href: ../relational-databases/stored-procedures/create-a-stored-procedure.md
-      - name: Modify
-        href: ../relational-databases/stored-procedures/modify-a-stored-procedure.md
-      - name: Delete
-        href: ../relational-databases/stored-procedures/delete-a-stored-procedure.md
-      - name: Execute
-        href: ../relational-databases/stored-procedures/execute-a-stored-procedure.md
-      - name: Specify parameters
-        href: ../relational-databases/stored-procedures/specify-parameters.md
-      - name: Grant permissions
-        href: ../relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
-      - name: Parameters
-        href: ../relational-databases/stored-procedures/parameters.md
-      - name: Properties
-        href: ../relational-databases/stored-procedures/stored-procedure-properties-general-page.md
-      - name: Return Data
-        href: ../relational-databases/stored-procedures/return-data-from-a-stored-procedure.md
-      - name: Recompile
-        href: ../relational-databases/stored-procedures/recompile-a-stored-procedure.md
-      - name: Rename
-        href: ../relational-databases/stored-procedures/rename-a-stored-procedure.md
-      - name: View definition
-        href: ../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
-      - name: View dependence
-        href: ../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
-      - name: OLE Automation Objects in T-SQL
-        href: ../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
-        items:
-        - name: OLE Automation Return Codes & Error Information
-          href: ../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md
-        - name: OLE Automation Result Sets
-          href: ../relational-databases/stored-procedures/ole-automation-result-sets.md
-        - name: OLE Automation Sample Script
-          href: ../relational-databases/stored-procedures/ole-automation-sample-script.md
+    - name: Overview
+      href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+    - name: Create
+      href: ../relational-databases/stored-procedures/create-a-stored-procedure.md
+    - name: Modify
+      href: ../relational-databases/stored-procedures/modify-a-stored-procedure.md
+    - name: Delete
+      href: ../relational-databases/stored-procedures/delete-a-stored-procedure.md
+    - name: Execute
+      href: ../relational-databases/stored-procedures/execute-a-stored-procedure.md
+    - name: Specify parameters
+      href: ../relational-databases/stored-procedures/specify-parameters.md
+    - name: Grant permissions
+      href: ../relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
+    - name: Parameters
+      href: ../relational-databases/stored-procedures/parameters.md
+    - name: Properties
+      href: ../relational-databases/stored-procedures/stored-procedure-properties-general-page.md
+    - name: Return Data
+      href: ../relational-databases/stored-procedures/return-data-from-a-stored-procedure.md
+    - name: Recompile
+      href: ../relational-databases/stored-procedures/recompile-a-stored-procedure.md
+    - name: Rename
+      href: ../relational-databases/stored-procedures/rename-a-stored-procedure.md
+    - name: View definition
+      href: ../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
+    - name: View dependence
+      href: ../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
+    - name: OLE Automation Objects in T-SQL
+      href: ../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
+      items:
+      - name: OLE Automation Return Codes & Error Information
+        href: ../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md
+      - name: OLE Automation Result Sets
+        href: ../relational-databases/stored-procedures/ole-automation-result-sets.md
+      - name: OLE Automation Sample Script
+        href: ../relational-databases/stored-procedures/ole-automation-sample-script.md
   - name: Tables
     items:
     - name: Overview
@@ -1593,7 +1593,7 @@
     - name: Primary keys
       items:
       - name: Overview
-        items: ../relational-databases/tables/primary-and-foreign-key-constraints.md
+        href: ../relational-databases/tables/primary-and-foreign-key-constraints.md
       - name: Create
         href: ../relational-databases/tables/create-primary-keys.md
       - name: Modify

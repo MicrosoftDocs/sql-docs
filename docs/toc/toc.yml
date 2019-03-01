@@ -8496,7 +8496,7 @@
         - name: Distributed Replay Utility (Command-line options)
           items:
           - name: Overview
-            items: ../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md
+            href: ../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md
           - name: Preprocess Option 
             href: ../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md
           - name: Replay Option 

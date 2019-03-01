@@ -2255,74 +2255,74 @@
       items:             
       - name: Overview
         href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
-        - name: Data Types 
-          href: ../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md
-        - name: srv_* Extended Stored Procedure APIs
-          items:
-            - name: srv_alloc 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-alloc-extended-stored-procedure-api.md
-            - name: srv_convert 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md
-            - name: srv_describe
-              href: ../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md
-            - name: srv_getbindtoken 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md
-            - name: srv_got_attention 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md
-            - name: srv_message_handler 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-message-handler-extended-stored-procedure-api.md
-            - name: srv_paramdata 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md
-            - name: srv_paraminfo 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md
-            - name: srv_paramlen 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md
-            - name: srv_parammaxlen 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md
-            - name: srv_paramname 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paramname-extended-stored-procedure-api.md
-            - name: srv_paramnumber 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paramnumber-extended-stored-procedure-api.md
-            - name: srv_paramset 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paramset-extended-stored-procedure-api.md
-            - name: srv_paramsetoutput 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md
-            - name: srv_paramstatus 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paramstatus-extended-stored-procedure-api.md
-            - name: srv_paramtype 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md
-            - name: srv_pfield 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md
-            - name: srv_pfieldex 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-pfieldex-extended-stored-procedure-api.md
-            - name: srv_rpcdb 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-rpcdb-extended-stored-procedure-api.md
-            - name: srv_rpcname 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-rpcname-extended-stored-procedure-api.md
-            - name: srv_rpcnumber 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-rpcnumber-extended-stored-procedure-api.md
-            - name: srv_rpcoptions 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-rpcoptions-extended-stored-procedure-api.md
-            - name: srv_rpcowner 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-rpcowner-extended-stored-procedure-api.md
-            - name: srv_rpcparams 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md
-            - name: srv_senddone 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-senddone-extended-stored-procedure-api.md
-            - name: srv_sendmsg 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md
-            - name: srv_sendrow 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md
-            - name: srv_setcoldata 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md
-            - name: srv_setcollen 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-setcollen-extended-stored-procedure-api.md
-            - name: srv_setutype 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md
-            - name: srv_willconvert 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md
-            - name: srv_wsendmsg 
-              href: ../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md
+      - name: Data Types 
+        href: ../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md
+      - name: srv_* Extended Stored Procedure APIs
+        items:
+        - name: srv_alloc 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-alloc-extended-stored-procedure-api.md
+        - name: srv_convert 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md
+        - name: srv_describe
+          href: ../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md
+        - name: srv_getbindtoken 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md
+        - name: srv_got_attention 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md
+        - name: srv_message_handler 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-message-handler-extended-stored-procedure-api.md
+        - name: srv_paramdata 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md
+        - name: srv_paraminfo 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md
+        - name: srv_paramlen 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md
+        - name: srv_parammaxlen 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md
+        - name: srv_paramname 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paramname-extended-stored-procedure-api.md
+        - name: srv_paramnumber 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paramnumber-extended-stored-procedure-api.md
+        - name: srv_paramset 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paramset-extended-stored-procedure-api.md
+        - name: srv_paramsetoutput 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md
+        - name: srv_paramstatus 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paramstatus-extended-stored-procedure-api.md
+        - name: srv_paramtype 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md
+        - name: srv_pfield 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md
+        - name: srv_pfieldex 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-pfieldex-extended-stored-procedure-api.md
+        - name: srv_rpcdb 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-rpcdb-extended-stored-procedure-api.md
+        - name: srv_rpcname 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-rpcname-extended-stored-procedure-api.md
+        - name: srv_rpcnumber 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-rpcnumber-extended-stored-procedure-api.md
+        - name: srv_rpcoptions 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-rpcoptions-extended-stored-procedure-api.md
+        - name: srv_rpcowner 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-rpcowner-extended-stored-procedure-api.md
+        - name: srv_rpcparams 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md
+        - name: srv_senddone 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-senddone-extended-stored-procedure-api.md
+        - name: srv_sendmsg 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md
+        - name: srv_sendrow 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md
+        - name: srv_setcoldata 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md
+        - name: srv_setcollen 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-setcollen-extended-stored-procedure-api.md
+        - name: srv_setutype 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md
+        - name: srv_willconvert 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md
+        - name: srv_wsendmsg 
+          href: ../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md
   - name: Express Local DB
     items:
     - name: Error messages

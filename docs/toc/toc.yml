@@ -151,36 +151,6 @@
           href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
         - name: Use extended Spark History Server
           href: ../big-data-cluster/spark-history-server.md
-    - name: Reference
-      items:
-      - name: mssqlctl reference
-        items:
-        - name: mssqlctl
-          href: ../big-data-cluster/reference-mssqlctl.md
-        - name: App Deploy
-          items:
-          - name: mssqlctl app 
-            href: ../big-data-cluster/reference-mssqlctl-app.md
-          - name: mssqlctl app template
-            href: ../big-data-cluster/reference-mssqlctl-app-template.md
-        - name: Cluster
-          items:
-          - name: mssqlctl cluster
-            href: ../big-data-cluster/reference-mssqlctl-cluster.md
-          - name: mssqlctl cluster config
-            href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
-          - name: mssqlctl cluster debug
-            href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md              
-        - name: Storage
-          items:
-          - name: mssqlctl storage
-            href: ../big-data-cluster/reference-mssqlctl-storage.md
-          - name: mssqlctl storage mount
-            href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
-    - name: Resources
-      items:
-      - name: Request access to big data clusters
-        href: https://aka.ms/eapsignup     
 - name: Business continuity
   href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:
@@ -1463,7 +1433,7 @@
   - name: Tables
     items:
     - name: Overview
-      href: ../relational-databases/tables/tables.md'
+      href: ../relational-databases/tables/tables.md
     - name: Manage
       items: 
       - name: Create  
@@ -15219,7 +15189,7 @@
             href: ../t-sql/spatial-geography/hasz-geography-data-type.md
           - name: InstanceOf
             href: ../t-sql/spatial-geography/instanceof-geography-data-type.md
-          - name: IsNull
+          - name: "IsNull"
             href: ../t-sql/spatial-geography/isnull-geography-data-type.md
           - name: IsValidDetailed
             href: ../t-sql/spatial-geography/isvaliddetailed-geography-data-type.md
@@ -15431,7 +15401,7 @@
             href: ../t-sql/spatial-geometry/hasz-geometry-datatype.md
           - name: InstanceOf
             href: ../t-sql/spatial-geometry/instanceof-geometry-data-type.md
-          - name: IsNull
+          - name: "IsNull"
             href: ../t-sql/spatial-geometry/isnull-geometry-data-type.md
           - name: IsValidDetailed
             href: ../t-sql/spatial-geometry/isvaliddetailed-geometry-datatype.md

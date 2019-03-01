@@ -6624,7 +6624,7 @@
         - name: Working with facets
           items:
           - name: Overview
-            items: ../relational-databases/policy-based-management/working-with-policy-based-management-facets.md
+            href: ../relational-databases/policy-based-management/working-with-policy-based-management-facets.md
           - name: View the Facets on an Object
             href: ../relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md
           - name: Properties

@@ -39,13 +39,13 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 <object_name> ::=
 {
-    [schema_name.]table_name.column_name
+    [schema_name].table_name.column_name
 }
 ```  
 
 ## Arguments  
 
-*object_name* ([schema_name.]table_name.column_name)
+*object_name* ([schema_name].table_name.column_name)
 
 Is the name of the database column from which to remove the classification. Currently only column classification is supported.
     - *schema_name* (optional) - Is the name of the schema to which the classified column belongs to.

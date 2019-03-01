@@ -900,7 +900,7 @@
           - name: Diagnostics Log
             href: ../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md
           - name: Recover from a failure
-             href: ../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md
+            href: ../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md
       - name: Concepts
         items:
         - name: Configuration

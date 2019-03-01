@@ -23,7 +23,7 @@ With tiering, applications can seamlessly access data in a variety of external s
 > [!NOTE]
 > HDFS Tiering is a feature developed by Microsoft, and an earlier version of it has been released as part of Apache Hadoop 3.1 distribution. For more information, see [https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) for details.
 
-The remaining sections of this article provides an example of how to configure HDFS tiering with an Azure Data Lake Storage Gen2 data soure.
+The following sections provide an example of how to configure HDFS tiering with an Azure Data Lake Storage Gen2 data source.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ The remaining sections of this article provides an example of how to configure H
 
 ## <a id="load"></a> Load data into Azure Data Lake Storage
 
-The following section describes how to setup Azure Data Lake Storage Gen2 for testing HDFS tiering. If you already have data stored in Azure Data Lake Storage, you can skip this section to use your own data.
+The following section describes how to set up Azure Data Lake Storage Gen2 for testing HDFS tiering. If you already have data stored in Azure Data Lake Storage, you can skip this section to use your own data.
 
 1. [Create a storage account with Data Lake Storage Gen2 capabilities](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -125,7 +125,7 @@ The following list provides some known issues and limitations when using HDFS ti
 
 - The mounts are read-only. You cannot create any directories or files under a mount.
 
-- We do not recommend mounting directories and files which can change. After the mount is created, any changes or updates to the remote location will not be reflected in the mount in HDFS. If changes do occur in the remote location, you can choose to delete and recreate the mount to reflect the updated state.
+- We do not recommend mounting directories and files that can change. After the mount is created, any changes or updates to the remote location will not be reflected in the mount in HDFS. If changes do occur in the remote location, you can choose to delete and recreate the mount to reflect the updated state.
 
 ## Next steps
 

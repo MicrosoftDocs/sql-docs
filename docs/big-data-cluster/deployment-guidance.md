@@ -89,20 +89,22 @@ The cluster configuration can be customized using a set of environment variables
 | **DOCKER_REPOSITORY** | Yes | TBD | The private repository within the above registry where images are stored.  It is required for the duration of the gated public preview. |
 | **DOCKER_USERNAME** | Yes | N/A | The username to access the container images in case they are stored in a private repository. It is required for the duration of the gated public preview. |
 | **DOCKER_PASSWORD** | Yes | N/A | The password to access the above private repository. It is required for the duration of the gated public preview.|
-| **DOCKER_EMAIL** | Yes | N/A | The email associated with the above private repository. It is required for the duration of the gated private preview. |
 | **DOCKER_IMAGE_TAG** | No | latest | The label used to tag the images. |
 | **DOCKER_IMAGE_POLICY** | No | Always | Always force a pull of the images.  |
-| **DOCKER_PRIVATE_REGISTRY** | Yes | 1 | For the timeframe of the gated public preview, this value has to be set to 1. |
+| **DOCKER_PRIVATE_REGISTRY** | Yes | N/A | For the timeframe of the gated public preview, you must set this value to "1". |
 | **CONTROLLER_USERNAME** | Yes | N/A | The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | Yes | N/A | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | Yes | N/A | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | Yes | N/A | The password of SA user for SQL master instance. |
 | **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) article for more details. If you deploy SQL Server big data cluster on minikube and USE_PERSISTENT_VOLUME=true, you must set the value for `STORAGE_CLASS_NAME=standard`. |
 | **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) article for more details. If you deploy SQL Server big data cluster on minikube, the default storage class name is different and you must override it by setting `STORAGE_CLASS_NAME=standard`. |
+| **CONTROLLER_PORT** | No | 30080 | The TCP/IP port that the controller service listens on the public network. |
 | **MASTER_SQL_PORT** | No | 31433 | The TCP/IP port that the master SQL instance listens on the public network. |
 | **KNOX_PORT** | No | 30443 | The TCP/IP port that Apache Knox listens on the public network. |
+| **PROXY_PORT** | No | 30777 | The TCP/IP port that proxy service listens on the public network. This is the port used for computing the portal URL. |
 | **GRAFANA_PORT** | No | 30888 | The TCP/IP port that the Grafana monitoring application listens on the public network. |
 | **KIBANA_PORT** | No | 30999 | The TCP/IP port that the Kibana log search application listens on the public network. |
+
 
 > [!IMPORTANT]
 >1. For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
@@ -120,7 +122,7 @@ Initialize the following environment variables, they are required for deploying 
 Using a CMD window (not PowerShell), configure the following environment variables. Do not use quotes around the values.
 
 ```cmd
-SET ACCEPT_EULA=Y
+SET ACCEPT_EULA=yes
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
@@ -132,7 +134,6 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -141,7 +142,7 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Initialize the following environment variables. In bash, you can use quotes around each value.
 
 ```bash
-export ACCEPT_EULA=Y
+export ACCEPT_EULA=yes
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
@@ -153,7 +154,6 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -266,17 +266,17 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > You should not install the new version of **mssqlctl** without uninstalling any older versions first.
 
 1. Install the latest version of **mssqlctl**. 
-   
+
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
    **Linux:**
-   
+
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

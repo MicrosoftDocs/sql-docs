@@ -4484,7 +4484,7 @@
     - name: Manage the Database Engine Services
       items:
       - name: Overview
-        items: ../database-engine/configure-windows/manage-the-database-engine-services.md
+        href: ../database-engine/configure-windows/manage-the-database-engine-services.md
       - name: Security Requirements 
         href: ../database-engine/configure-windows/security-requirements-for-managing-services.md
       - name: Windows Service Accounts & Permissions

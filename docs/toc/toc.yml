@@ -4853,55 +4853,55 @@
         - name: Subscriptions
           href: ../relational-databases/replication/subscribe-to-publications.md
           items:
-            - name: Create a Pull Subscription
-              href: ../relational-databases/replication/create-a-pull-subscription.md
-            - name: Create a Push Subscription
-              href: ../relational-databases/replication/create-a-push-subscription.md
-            - name: View & Modify Pull Subscription Properties
-              href: ../relational-databases/replication/view-and-modify-pull-subscription-properties.md
-            - name: View & Modify Push Subscription Properties
-              href: ../relational-databases/replication/view-and-modify-push-subscription-properties.md
-            - name: Reinitialize a subscription
-              href: ../relational-databases/replication/reinitialize-a-subscription.md
-            - name: Sync a Pull Subscription
-              href: ../relational-databases/replication/synchronize-a-pull-subscription.md
-            - name: Sync a Push Subscription
-              href: ../relational-databases/replication/synchronize-a-push-subscription.md
-            - name: Delete a Pull Subscription
-              href: ../relational-databases/replication/delete-a-pull-subscription.md
-            - name: Delete a Push Subscription
-              href: ../relational-databases/replication/delete-a-push-subscription.md
-            - name: Subscription Expiration & Deactivation
-              href: ../relational-databases/replication/subscription-expiration-and-deactivation.md
-            - name: Create a Subscription for a Non-SQL Server Subscriber
-              href: ../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md
-            - name: Specify a Merge Subscription Type & Conflict Resolution Priority
-              href: ../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md
-            - name: Specify Synchronization Schedules
-              href: ../relational-databases/replication/specify-synchronization-schedules.md
-            - name: Synchronize with Windows Synchronization Manager
-              href: ../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md
-            - name: Initialize a Subscription
-              href: ../relational-databases/replication/initialize-a-subscription.md
-              items:
-              - name: Initialize manually
-                href: ../relational-databases/replication/initialize-a-subscription-manually.md
-              - name: Create & apply the initial snapshot
-                href: ../relational-databases/replication/create-and-apply-the-initial-snapshot.md
-              - name: Modify Snapshot Options
-                href: ../relational-databases/replication/snapshot-options.md
-              - name: Initialize a transactional subscription without a snapshot
-                href: ../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md
-              - name: Initialize a Subscription with a Snapshot
-                href: ../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md
-              - name: Merge publication with parameterized filters
-                href: ../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
-              - name: Reinitialize Subscriptions
-                href: ../relational-databases/replication/reinitialize-subscriptions.md
+          - name: Create a Pull Subscription
+            href: ../relational-databases/replication/create-a-pull-subscription.md
+          - name: Create a Push Subscription
+            href: ../relational-databases/replication/create-a-push-subscription.md
+          - name: View & Modify Pull Subscription Properties
+            href: ../relational-databases/replication/view-and-modify-pull-subscription-properties.md
+          - name: View & Modify Push Subscription Properties
+            href: ../relational-databases/replication/view-and-modify-push-subscription-properties.md
+          - name: Reinitialize a subscription
+            href: ../relational-databases/replication/reinitialize-a-subscription.md
+          - name: Sync a Pull Subscription
+            href: ../relational-databases/replication/synchronize-a-pull-subscription.md
+          - name: Sync a Push Subscription
+            href: ../relational-databases/replication/synchronize-a-push-subscription.md
+          - name: Delete a Pull Subscription
+            href: ../relational-databases/replication/delete-a-pull-subscription.md
+          - name: Delete a Push Subscription
+            href: ../relational-databases/replication/delete-a-push-subscription.md
+          - name: Subscription Expiration & Deactivation
+            href: ../relational-databases/replication/subscription-expiration-and-deactivation.md
+          - name: Create a Subscription for a Non-SQL Server Subscriber
+            href: ../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md
+          - name: Specify a Merge Subscription Type & Conflict Resolution Priority
+            href: ../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md
+          - name: Specify Synchronization Schedules
+            href: ../relational-databases/replication/specify-synchronization-schedules.md
+          - name: Synchronize with Windows Synchronization Manager
+            href: ../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md
           - name: Synchronize Data
             href: ../relational-databases/replication/synchronize-data.md
           - name: Validate data
             href: ../relational-databases/replication/validate-data-at-the-subscriber.md
+          - name: Initialize a Subscription
+            href: ../relational-databases/replication/initialize-a-subscription.md
+            items:
+            - name: Initialize manually
+              href: ../relational-databases/replication/initialize-a-subscription-manually.md
+            - name: Create & apply the initial snapshot
+              href: ../relational-databases/replication/create-and-apply-the-initial-snapshot.md
+            - name: Modify Snapshot Options
+              href: ../relational-databases/replication/snapshot-options.md
+            - name: Initialize a transactional subscription without a snapshot
+              href: ../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md
+            - name: Initialize a Subscription with a Snapshot
+              href: ../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md
+            - name: Merge publication with parameterized filters
+              href: ../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
+            - name: Reinitialize Subscriptions
+              href: ../relational-databases/replication/reinitialize-subscriptions.md
       - name: Administer
         items:
         - name: Dist & Pub information scripts

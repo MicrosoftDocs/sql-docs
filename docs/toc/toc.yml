@@ -7208,7 +7208,7 @@
             items:
             - name: Deploy and manage with mssqlctl
               href: ../big-data-cluster/big-data-cluster-create-apps.md
-            - name: Deploy and maange with VS Code
+            - name: Deploy and manage with VS Code
               href: ../big-data-cluster/app-deployment-extension.md
           - name: Big Data/Machine Learning
             items:

@@ -38,6 +38,24 @@ Data types can be converted either implicitly or explicitly.
 Implicit conversions are not visible to the user. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically converts the data from one data type to another. For example, when a **smallint** is compared to an **int**, the **smallint** is implicitly converted to **int** before the comparison proceeds.
   
 **GETDATE()** implicitly converts to date style 0. **SYSDATETIME()** implicitly converts to date style 21.
+
+When using the **+** operator for string concatenation, **NULL** implicitly converts the data type length to one character length longer than the string it is added to.  The following code demonstrates:
+
+```sql
+CREATE VIEW dbo.Test
+AS
+	SELECT CAST(NULL AS VARCHAR(1)) AS VarCharOfLengthOne,
+	'' + NULL AS VarCharOfLengthTwo,
+	'' + '' + NULL AS VarCharOfLengthThree
+;
+GO
+
+SELECT isc.COLUMN_NAME, isc.CHARACTER_MAXIMUM_LENGTH, isc.CHARACTER_OCTET_LENGTH
+FROM INFORMATION_SCHEMA.COLUMNS isc WHERE isc.TABLE_SCHEMA = 'dbo' AND isc.TABLE_NAME = 'Test'
+GO
+
+DROP VIEW dbo.Test;
+```
   
 Explicit conversions use the CAST or CONVERT functions.
   

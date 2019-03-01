@@ -42,6 +42,22 @@ The following section describes how to setup Azure Data Lake Storage Gen2 for te
 
 1. Upload a CSV or Parquet file into the container. This is the external HDFS data that will be mounted to HDFS in the big data cluster.
 
-## 
+## Mount the remote HDFS storage
+
+The following steps mount the remote HDFS storage in Azure Data Lake into the local HDFS storage of your big data cluster.
+
+1. Open a command-prompt on a client machine that can access your big data cluster with **mssqlctl** and **kubectl**.
+
+1. Create a local file named **files.creds** that contains your Azure Data Lake Storage Gen2 account credentials using the following format:
+
+   ```text
+   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+   ```
+
+   > [!TIP]
+   > For more information on how to find the access key for your storage account, see [View and copy access keys](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
+
+1. Find the IP Address for the **endpoint-service-proxy** service in your big data cluster. Looke for the 
 
 ## Next steps

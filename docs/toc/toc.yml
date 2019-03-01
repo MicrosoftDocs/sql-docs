@@ -8161,7 +8161,7 @@
       - name: Protecting SQL Server Intellectual Property 
         items:
         - name: Overview
-          items: ../relational-databases/security/protecting-your-sql-server-intellectual-property.md
+          href: ../relational-databases/security/protecting-your-sql-server-intellectual-property.md
         - name: SQL injection
           href: ../relational-databases/security/sql-injection.md
         - name: TRUSTWORTHY database property

@@ -8378,7 +8378,7 @@
           - name: Samples
             items:
             - name: Overview
-              items: ../tools/dta/xml-input-file-samples-dta.md
+              href: ../tools/dta/xml-input-file-samples-dta.md
             - name: Simple XML Input File Sample
               href: ../tools/dta/simple-xml-input-file-sample-dta.md
             - name: XML Input File Sample with Inline Workload

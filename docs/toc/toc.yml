@@ -7224,7 +7224,7 @@
         - name: Natively Compiled Stored Procedures
           href: 
           - name: Overview
-            items: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
+            href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
           - name: Creating Natively Compiled Stored Procedures
             href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
           - name: Altering Natively Compiled T-SQL Modules

@@ -3,7 +3,7 @@
 - name: Overview
   href: ../toc/redirectfrom-overview-10.md ## /sql/database-engine/sql-server-database-engine-overview
   items:
-  - name: What's new in SQL Server
+  - name: New with SQL Server
     items: 
     - name: SQL Server 2019
       href: ../sql-server/what-s-new-in-sql-server-ver15.md
@@ -11,7 +11,7 @@
       href: ../sql-server/what-s-new-in-sql-server-2017.md
     - name: SQL Server 2016
       href: ../sql-server/what-s-new-in-sql-server-2016.md
-  - name: What's new in the database engine
+  - name: New with the database engine
     items:
     - name: SQL Server 2017
       href: ../database-engine/whats-new-in-sql-server-2017.md
@@ -23,22 +23,22 @@
       href: ../sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016
       href: ../sql-server/editions-and-components-of-sql-server-2016.md
-- name: Release Notes
-  items:
-  - name: SQL Server 2019 
-    href: ../sql-server/sql-server-ver15-release-notes.md
-  - name: SQL Server 2017 
-    href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
-  - name: SQL Server 2016 
-    href: ../sql-server/sql-server-2016-release-notes.md
-  - name: SQL Server 2014 
-    href: ../sql-server/sql-server-2014-release-notes.md
-  - name: SQL Server 2012 Service Pack release notes
-    href: ../sql-server/sql-server-2012-sp4-release-notes.md
-  - name: SQL Server 2012 
-    href: ../sql-server/sql-server-2012-release-notes.md
-  - name: SQL Server 2008 R2 SP2 
-    href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
+  - name: Release Notes
+    items:
+    - name: SQL Server 2019 
+      href: ../sql-server/sql-server-ver15-release-notes.md
+    - name: SQL Server 2017 
+      href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+    - name: SQL Server 2016 
+      href: ../sql-server/sql-server-2016-release-notes.md
+    - name: SQL Server 2014 
+      href: ../sql-server/sql-server-2014-release-notes.md
+    - name: SQL Server 2012 Service Pack release notes
+      href: ../sql-server/sql-server-2012-sp4-release-notes.md
+    - name: SQL Server 2012 
+      href: ../sql-server/sql-server-2012-release-notes.md
+    - name: SQL Server 2008 R2 SP2 
+      href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Big data cluster
   items: 
   - name: Overview

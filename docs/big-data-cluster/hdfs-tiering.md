@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Configure HDFS tiering on SQL Server 2019 big data clusters
 
-HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). At this time, CTP 2.3 only supports connecting to Azure Data Lake Storage Gen2, which is the focus on this article.
+HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). At this time, CTP 2.3 only supports connecting to Azure Data Lake Storage Gen2, which is the focus of this article.
 
 ## HDFS tiering overview
 
@@ -46,7 +46,7 @@ The following section describes how to set up Azure Data Lake Storage Gen2 for t
 
 The following steps mount the remote HDFS storage in Azure Data Lake into the local HDFS storage of your big data cluster.
 
-1. Open a command-prompt on a client machine that can access your big data cluster with **mssqlctl** and **kubectl**.
+1. Open a command-prompt on a client machine that can access your big data cluster.
 
 1. Create a local file named **files.creds** that contains your Azure Data Lake Storage Gen2 account credentials using the following format:
 
@@ -56,28 +56,28 @@ The following steps mount the remote HDFS storage in Azure Data Lake into the lo
    ```
 
    > [!TIP]
-   > For more information on how to find the access key for your storage account, see [View and copy access keys](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
+   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View and copy access keys](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
 
 1. Use **kubectl** to find the IP Address for the **endpoint-service-proxy** service in your big data cluster. Look for the **External-IP**.
 
-   ```cmd
+   ```bash
    kubectl get svc endpoint-service-proxy -n <your-cluster-name>
    ```
 
 1. Log in with **mssqlctl** using the service proxy endpoint with your cluster username and password:
 
-   ```cmd
+   ```bash
    mssqlctl login -e https://<IP-of-endpoint-service-proxy>:30777/ -u <username> -p <password>
    ```
 
-1. Mount the remote HDFS storage in Azure using **mssqlctl storage mount create**. Replace the `<placeholder values>` in the following command:
+1. Mount the remote HDFS storage in Azure using **mssqlctl storage mount create**. Replace the placeholder values before running the following command:
 
-   ```cmd
+   ```bash
    mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
-   > At this time, there is no message indicating whether the mount succeeded. See the [status](#status) section to check the status of your mounts.
+   > The mount create command is asynchronous. At this time, there is no message indicating whether the mount succeeded. See the [status](#status) section to check the status of your mounts.
 
 If mounted successfully, you should be able to query the HDFS data and run Spark jobs against it. It will appear in the HDFS for your big data cluster in the location specified by `--local-path`.
 
@@ -85,13 +85,13 @@ If mounted successfully, you should be able to query the HDFS data and run Spark
 
 To list the status of all mounts in your big data cluster, use the following command:
 
-```cmd
+```bash
 mssqlctl storage mount status
 ```
 
 To list the status of a mount at a specific path in HDFS, use the following command:
 
-```cmd
+```bash
 mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 ```
 
@@ -99,7 +99,7 @@ mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 
 To delete the mount, use the **mssqlctl storage mount delete** command, and specify the mount path in HDFS:
 
-```cmd
+```bash
 mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
 ```
 

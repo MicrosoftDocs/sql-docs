@@ -601,7 +601,7 @@
           href: ../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md
           items:
           - name: Always On Dashboard
-            items: ../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md
+            href: ../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md
           - name: T-SQL
             href: ../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md
           - name: SQL Server Management Studio

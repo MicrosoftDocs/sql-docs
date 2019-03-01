@@ -32,7 +32,7 @@ The remaining sections of this article provides an example of how to configure H
   - **mssqlctl**
   - **kubectl**
 
-## Load data into Azure Data Lake Storage
+## <a id="load"></a> Load data into Azure Data Lake Storage
 
 The following section describes how to setup Azure Data Lake Storage Gen2 for testing HDFS tiering. If you already have data stored in Azure Data Lake Storage, you can skip this section to use your own data.
 
@@ -42,7 +42,7 @@ The following section describes how to setup Azure Data Lake Storage Gen2 for te
 
 1. Upload a CSV or Parquet file into the container. This is the external HDFS data that will be mounted to HDFS in the big data cluster.
 
-## Mount the remote HDFS storage
+## <a id="mount"></a> Mount the remote HDFS storage
 
 The following steps mount the remote HDFS storage in Azure Data Lake into the local HDFS storage of your big data cluster.
 
@@ -58,6 +58,75 @@ The following steps mount the remote HDFS storage in Azure Data Lake into the lo
    > [!TIP]
    > For more information on how to find the access key for your storage account, see [View and copy access keys](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
 
-1. Find the IP Address for the **endpoint-service-proxy** service in your big data cluster. Looke for the 
+1. Use **kubectl** to find the IP Address for the **endpoint-service-proxy** service in your big data cluster. Look for the **External-IP**.
+
+   ```cmd
+   kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+   ```
+
+1. Log in with **mssqlctl** using the service proxy endpoint with your cluster username and password:
+
+   ```cmd
+   mssqlctl login -e https://<IP-of-endpoint-service-proxy>:30777/ -u <username> -p <password>
+   ```
+
+1. Mount the remote HDFS storage in Azure using **mssqlctl storage mount create**. Replace the `<placeholder values>` in the following command:
+
+   ```cmd
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   ```
+
+   > [!NOTE]
+   > At this time, there is no message indicating whether the mount succeeded. See the [status](#status) section to check the status of your mounts.
+
+If mounted successfully, you should be able to query the HDFS data and run Spark jobs against it. It will appear in the HDFS for your big data cluster in the location specified by `--local-path`.
+
+## <a id="status"></a> Get the status of mounts
+
+To list the status of all mounts in your big data cluster, use the following command:
+
+```cmd
+mssqlctl storage mount status
+```
+
+To list the status of a mount at a specific path in HDFS, use the following command:
+
+```cmd
+mssqlctl storage mount status --local-path <mount-path-in-hdfs>
+```
+
+## <a id="delete"></a> Delete the mount
+
+To delete the mount, use the **mssqlctl storage mount delete** command, and specify the mount path in HDFS:
+
+```cmd
+mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
+```
+
+## <a id="issues"></a> Known issues and limitations
+
+The following list provides some known issues and limitations when using HDFS tiering in SQL Server big data clusters:
+
+- If the size of the external directory being mounted is larger than the capacity of the cluster, mounting fails.
+
+- If the mount is stuck in a `CREATING` state for a long time, it has most likely failed.
+
+- Mounts cannot be created on existing directories.
+
+- Mounts cannot be created within existing mounts.
+
+- If any of the ancestors of the mount-point do exist, they will be created with the permissions defaulted to r-xr-xr-x (555).
+
+- Mount creation can take some time depending on the number and size of files being mounted. During this process, the files under the mount aren't visible to users. While the mount is created, all files will be added to a temporary path, which defaults to `/_temporary/_mounts/<mount-location>`.
+
+- The mount creation command is asynchronous. After the command is run, the mount status can be checked to understand the state of the mount.
+
+- When creating the mount, the argument used for **--local-path** is essentially a unique identifier of the mount. The same string (including the "/" in the end if present) must be used in subsequent commands.
+
+- The mounts are read-only. You cannot create any directories or files under a mount.
+
+- We do not recommend mounting directories and files which can change. After the mount is created, any changes or updates to the remote location will not be reflected in the mount in HDFS. If changes do occur in the remote location, you can choose to delete and recreate the mount to reflect the updated state.
 
 ## Next steps
+
+For more information about SQL Server 2019 big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

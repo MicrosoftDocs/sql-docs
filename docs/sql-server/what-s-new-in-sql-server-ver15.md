@@ -465,30 +465,32 @@ FROM sys.dm_exec_requests AS d
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 
-- [**SQL Server Powershell Module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer Powershell Module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
+- [**SQL Server PowerShell module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 
   - Upgrade from 21.0 to 21.1 to support SMO v150.
   - Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.
-  - Fixed issue in New-SqlAvailabilityGroup cmdlet when targeting SQL Server 2014.
-  - Added –LoadBalancedReadOnlyRoutingList parameter to Set-SqlAvailabilityReplica and New-SqlAvailabilityReplica.
-  - Updated AnalysisService Cmdlet to use cached login token from Login-AzureAsAccount for Azure Analysis Services.
+  - Fixed issue in `New-SqlAvailabilityGroup` cmdlet when targeting SQL Server 2014.
+  - Added `–LoadBalancedReadOnlyRoutingList` parameter to `Set-SqlAvailabilityReplica` and `New-SqlAvailabilityReplica`.
+  - Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.
 
-## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
+## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
 
-### Calculation groups in tabular models (CTP 2.3)
+### Calculation groups in tabular models (CTP 2.3) 
 
-Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures. 
+Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures.  
 
-A calculation group can have any number of calculation items. Each calculation item is defined by a DAX expression. Three new DAX functions are introduced to work with calculation groups:
+A calculation group can have any number of calculation items. Each calculation item is defined by a DAX expression. Three new DAX functions are introduced to work with calculation groups: 
 
-- `SELECTEDMEASURE()` - Returns a reference to the measure currently in context. 
-- `SELECTEDMEASURENAME()` - Returns a string containing the name of the measure currently in context. 
+- `SELECTEDMEASURE()` - Returns a reference to the measure currently in context.  
+
+- `SELECTEDMEASURENAME()` - Returns a string containing the name of the measure currently in context.  
+
 - `ISSELECTEDMEASURE(M1, M2, …)` - Returns a Boolean indicating whether the measure currently in context is one of those specified as an argument.
 
 In addition to new DAX functions, two new Dynamic Management Views are introduced:
 
-- `TMSCHEMA_CALCULATION_GROUPS` 
-- `TMSCHEMA_CALCULATION_ITEMS` 
+- `TMSCHEMA_CALCULATION_GROUPS`  
+- `TMSCHEMA_CALCULATION_ITEMS`  
 
 For this release, calculation groups do have some limitations:
 

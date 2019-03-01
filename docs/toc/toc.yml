@@ -8631,7 +8631,7 @@
         - name: SQL Native Client 11.0 Configuration
           items:
           - name: Overview
-            items: ../tools/configuration-manager/sql-native-client-11-0-configuration.md
+            href: ../tools/configuration-manager/sql-native-client-11-0-configuration.md
           - name: Flags Tab
             href: ../tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md
           - name: Client Protocols

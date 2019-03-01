@@ -154,7 +154,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> In CTP 2.3, you will see a security warning when accessing the web page, because big data clusters is currently using auto-generated SSL certificates. Also, in CTP 2.3, it does not show the status of the SQL Server master instance.
+> In CTP 2.3, you will see a security warning when accessing the web page, because big data clusters is currently using auto-generated SSL certificates.
 
 ## Connect to the cluster
 

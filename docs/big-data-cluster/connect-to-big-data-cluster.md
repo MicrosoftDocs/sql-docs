@@ -5,7 +5,7 @@ description: Learn how to connect to the SQL Server master instance and the HDFS
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/12/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -74,17 +74,9 @@ With the February 2019 release of Azure Data Studio, connecting to the SQL Serve
 In most cases, connecting to the SQL Server master instance gives you access to the HDFS and Spark as well through the **Data Services** node. However, you can still create a dedicated connection to the **HDFS/Spark gateway** if needed. The following steps describe how to connect with Azure Data Studio.
 
 1. From the command line, find the IP address of your HDFS/Spark gateway with one of the following commands.
-   
-   **AKS deployments:**
 
    ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
-
-   **Non-AKS deployments**:
-
-   ```
-   kubectl get svc service-security-nodeport -n <your-cluster-name>
+   kubectl get svc endpoint-security -n <your-cluster-name>
    ```
  
 1. In Azure Data Studio, press **F1** > **New Connection**.

@@ -2915,16 +2915,16 @@
       items: 
       - name: Overview
         href: ../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md
-        - name: Executing Queries 
-          href: ../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
-        - name: Execute a Statement Directly
-          href: ../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md
-        - name: Prepare & Execute a Statement
-          href: ../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md
-        - name: Set Cursor Options
-          href: ../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md
-        - name: Use a Statement
-          href: ../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md
+      - name: Executing Queries 
+        href: ../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
+      - name: Execute a Statement Directly
+        href: ../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md
+      - name: Prepare & Execute a Statement
+        href: ../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md
+      - name: Set Cursor Options
+        href: ../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md
+      - name: Use a Statement
+        href: ../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md
       - name: General 
         items: 
         - name: Allocate Handles & Connect to SQL Server

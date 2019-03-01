@@ -15259,7 +15259,7 @@
             href: ../t-sql/spatial-geography/extended-static-geography-methods.md
           - name: GeomFromGML
             href: ../t-sql/spatial-geography/geomfromgml-geography-data-type.md
-          - name: Null
+          - name: "Null"
             href: ../t-sql/spatial-geography/null-geography-data-type.md
           - name: Parse
             href: ../t-sql/spatial-geography/parse-geography-data-type.md
@@ -15461,7 +15461,7 @@
             href: ../t-sql/spatial-geometry/extended-static-geometry-methods.md
           - name: GeomFromGml
             href: ../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md
-          - name: Null
+          - name: "Null"
             href: ../t-sql/spatial-geometry/null-geometry-data-type.md
           - name: Parse
             href: ../t-sql/spatial-geometry/parse-geometry-data-type.md

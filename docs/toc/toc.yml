@@ -8179,7 +8179,7 @@
       - name: Authentication Access 
         items:
         - name: Overview
-          items: ../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+          href: ../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
         - name: Principals
           href: ../relational-databases/security/authentication-access/principals-database-engine.md
         - name: Server-level roles

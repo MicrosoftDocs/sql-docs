@@ -1,7 +1,7 @@
 ---
 title: "sqlsrv_send_stream_data | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/28/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -61,9 +61,10 @@ $tsql = "UPDATE Production.ProductReview
          SET Comments = ( ?)   
          WHERE ProductReviewID = 3";  
   
-/* Open parameter data as a stream and put it in the $params array. */  
-$comment = fopen( "data://text/plain,[ Insert lengthy comment.]", "r");  
-$params = array( &$comment);  
+/* Open parameter data as a stream and put it in the $params array. */
+$data = 'Insert any lengthy comment here.';
+$comment = fopen('data:text/plain,'.urlencode($data), 'r');
+$params = array(&$comment);
   
 /* Prepare the statement. Use the $options array to turn off the  
 default behavior, which is to send all stream data at the time of query  

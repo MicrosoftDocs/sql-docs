@@ -1,7 +1,7 @@
 ---
 title: "How to: Send Data as a Stream | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "02/28/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -56,9 +56,9 @@ $name = 'Customer Name';
 $date = date("Y-m-d");  
 $email = 'customer@name.com';  
 $rating = 3;  
-$comments = fopen( "data://text/plain,[ Insert lengthy comment here.]",  
-                  "r");  
-$params = array($productID, $name, $date, $email, $rating, $comments);  
+$data = 'Insert any lengthy comment here.';
+$comments = fopen('data:text/plain,'.urlencode($data), 'r');
+$params = array($productID, $name, $date, $email, $rating, $comments);
   
 /* Execute the query. All stream data is sent upon execution.*/  
 $stmt = sqlsrv_query($conn, $tsql, $params);  
@@ -112,8 +112,8 @@ $name = 'Customer Name';
 $date = date("Y-m-d");  
 $email = 'customer@name.com';  
 $rating = 3;  
-$comments = fopen( "data://text/plain,[ Insert lengthy comment here.]",  
-                  "r");  
+$data = 'Insert any lengthy comment here.';
+$comments = fopen('data:text/plain,'.urlencode($data), 'r');
 $params = array($productID, $name, $date, $email, $rating, $comments);  
   
 /* Turn off the default behavior of sending all stream data at  

@@ -42,7 +42,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 <object_name> ::=
 {
-    [schema_name.]table_name.column_name
+    [schema_name].table_name.column_name
 }
 
 <sensitivity_label_option> ::=  
@@ -56,7 +56,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## Arguments  
 
-*object_name* ([schema_name.]table_name.column_name)
+*object_name* ([schema_name].table_name.column_name)
 
 Is the name of the database column to be classified. Currently only column classification is supported.
     - *schema_name* (optional) - Is the name of the schema to which the classified column belongs to.

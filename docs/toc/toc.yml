@@ -4551,19 +4551,19 @@
       - name: Register a Service Principal Name for Kerberos Connections
         href: ../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md
     - name: Client Network Configuration
-        items:
-        - name: Overview
-          href: ../database-engine/configure-windows/client-network-configuration.md
-        - name: Configure Client Protocols
-          href: ../database-engine/configure-windows/configure-client-protocols.md
-        - name: Create or Delete a Server Alias for Use by a Client
-          href: ../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md
-        - name: Logging In to SQL Server
-          href: ../database-engine/configure-windows/logging-in-to-sql-server.md
-        - name: Open the ODBC Data Source Administrator
-          href: ../database-engine/configure-windows/open-the-odbc-data-source-administrator.md
-        - name: Check the ODBC SQL Server Driver Version (Windows)
-          href: ../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md
+      items:
+      - name: Overview
+        href: ../database-engine/configure-windows/client-network-configuration.md
+      - name: Configure Client Protocols
+        href: ../database-engine/configure-windows/configure-client-protocols.md
+      - name: Create or Delete a Server Alias for Use by a Client
+        href: ../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md
+      - name: Logging In to SQL Server
+        href: ../database-engine/configure-windows/logging-in-to-sql-server.md
+      - name: Open the ODBC Data Source Administrator
+        href: ../database-engine/configure-windows/open-the-odbc-data-source-administrator.md
+      - name: Check the ODBC SQL Server Driver Version (Windows)
+        href: ../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md
   - name: Uninstall SQL Server
     items:
     - name: Overview

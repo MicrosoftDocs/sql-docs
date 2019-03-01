@@ -58,7 +58,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   Partition **SWITCH IN** into history table  
   
- This example temporarily stops SYSTEM_VERSIONING to allow you to perform specific maintenance operations. If you stop versioning temporarily as a prerequisite for table maintenance, we strongly recommend doing this inside a transaction to keep data consistency.  
+ This example temporarily stops SYSTEM_VERSIONING to allow you to perform specific maintenance operations. If you stop versioning temporarily as a prerequisite for table maintenance, we strongly recommend doing this inside a transaction to keep data consistency.
+ 
+> [!NOTE]  
+>  When turning system versioning back on, do not forget to specify the HISTORY_TABLE argument.  Failing to do so will result in a new history table being created and associated with the current table.  The original history table will still exist as a normal table, but won't be associated with the current table.  
   
 ```  
 BEGIN TRAN   

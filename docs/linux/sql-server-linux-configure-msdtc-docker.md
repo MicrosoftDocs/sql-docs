@@ -36,7 +36,7 @@ docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 > [!IMPORTANT]

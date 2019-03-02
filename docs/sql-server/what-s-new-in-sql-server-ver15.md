@@ -31,6 +31,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ
   - Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more
   - Use Sparklyr in SQL Server 2019 big data clusters
+  - Mount external HDFS-compatible storage into big data cluster with HDFS tiering
 
 - [Database engine](#databaseengine)
   - Accelerated database recovery
@@ -109,6 +110,7 @@ Continue reading for more details about these features.
 - [Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
 - [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more (CTP 2.3)
 - [Use Sparklyr in SQL Server 2019 big data clusters](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
+- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](../big-data-cluster/hdfs-tiering.md) (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md) (CTP 2.2)
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)

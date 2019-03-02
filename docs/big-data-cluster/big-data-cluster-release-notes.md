@@ -36,6 +36,7 @@ The following sections describe the new features and known issues for big data c
 - [VS Code extension to deploy applications to SQL Server big data clusters](app-deployment-extension.md).
 - New parameter ordering for the **mssqlctl** tool.
 - [Use Sparklyr in SQL Server 2019 Big data cluster](sparklyr-from-RStudio.md).
+- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](hdfs-tiering.md).
 - New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
 - Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster but leaves the namespace. Previously, this command deleted the entire namespace.
 - Endpoint names have been changed and consolidated in this release:
@@ -69,14 +70,6 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
 
-#### Cluster administration portal
-
-The cluster administration portal does not display the endpoint for the SQL Server master instance. To find the IP address and port for the master instance, use the following **kubectl** command:
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### External tables
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
@@ -86,6 +79,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - If you query a storage pool external table, you might get an error if the underlying file is being copied into HDFS at the same time.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- If you are creating an external table to Oracle that use character data types, the Azure Data Studio virtualization wizard interprets these columns as VARCHAR in the external table definition. This will cause a failure in the external table DDL. Either modify the Oracle schema to use the NVARCHAR2 type, or create EXTERNAL TABLE statements manually and specify NVARCHAR instead of using the wizard.
 
 #### Spark and notebooks
 

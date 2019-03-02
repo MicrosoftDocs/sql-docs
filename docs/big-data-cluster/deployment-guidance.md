@@ -266,17 +266,17 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > You should not install the new version of **mssqlctl** without uninstalling any older versions first.
 
 1. Install the latest version of **mssqlctl**. 
-   
+
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
    **Linux:**
-   
+
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

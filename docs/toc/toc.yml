@@ -7198,6 +7198,8 @@
               href: ../relational-databases/polybase/data-virtualization.md
             - name: Virtualize CSV data
               href: ../relational-databases/polybase/data-virtualization-csv.md
+            - name: HDFS tiering
+              href: ../big-data-cluster/hdfs-tiering.md  
           - name: Data ingestion
             items:
             - name: Load data with curl

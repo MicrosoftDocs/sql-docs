@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ""
-ms.date: "01/20/2017"
+ms.date: "01/21/2017"
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
@@ -40,3 +40,8 @@ WideWorldImporters is designed to showcase many of the key features of SQL Serve
 |Unique constraints|A many to many construction (and unique constraints) are set up for `Warehouse.StockItemStockGroups`.|
 |Table partitioning|(Full version of the database) The tables `Sales.CustomerTransactions` and `Purchasing.SupplierTransactions` are both partitioned by year using the partition function `PF_TransactionDate` and the partition scheme `PS_TransactionDate`. Partitioning is used to improve the manageability of large tables.|
 |List processing|An example table type `Website.OrderIDList` is provided. It is used by an example procedure `Website.InvoiceCustomerOrders`. The procedure uses Common Table Expressions (CTEs), TRY/CATCH, JSON_MODIFY, XACT_ABORT, NOCOUNT, THROW, and XACT_STATE to demonstrates the ability to process a list of orders rather than just a single order, to minimize round trips from the application to the database engine.|
+|GZip compression|In the `Warehouse.VehicleTemperature` view, its table holds full sensor data. But when this data is more than a few months old, it is compressed to conserve space. The COMPRESS function uses GZip compression.<br/><br/>The view `Website.VehicleTemperatures` uses the DECOMPRESS function when retrieving data that was previously compressed.|
+|Query Store|Query Store is enabled on the database. After running a few queries, perform the following steps:<br/><br/>1. Open the database in Management Studio.<br/>2. Open the node Query Store, which is under the database.<br/>3. Open the report *Top Resource Consuming Queries*. See the query executions, and see the plans for the queries you just ran.|
+|STRING_SPLIT|The column `DeliveryInstructions` in the table `Sales.Invoices` has a comma-delimited value that can be used to demonstrate STRING_SPLIT.|
+|Audit|SQL Server Audit can be enabled for this sample database by running the following statement in the database:<br/><br/>`EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>In Azure SQL Database, auditing is enabled through the [Azure portal](https://portal.azure.com/).<br/><br/>Security operations involving logins, roles and permissions are logged on all systems where audit is enabled (including standard edition systems). Audit is directed to the application log because this is available on all systems and does not require additional permissions. A warning is given that for higher security, it should be redirected to the security log or to a file in a secure folder. A link is provided to describe the required additional configuration.<br/><br/>For evaluation/developer/enterprise edition systems, access to all financial transactional data is audited.|
+| &nbsp; | &nbsp; |

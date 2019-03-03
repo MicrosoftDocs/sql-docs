@@ -377,8 +377,6 @@ The following sections describe known issues with the General Availability (GA) 
 
 #### General
 
-- Upgrades to the GA release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are supported only from CTP 2.1 or higher. 
-
 - The length of the hostname where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed needs to be 15 characters or less. 
 
     - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.

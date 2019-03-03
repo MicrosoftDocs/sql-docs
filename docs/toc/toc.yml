@@ -7332,10 +7332,10 @@
   items: 
     - name: Cursors
       href: ../relational-databases/cursors.md
-    - name: Scripting
-      href: ../relational-databases/scripting/database-engine-scripting.md
     - name: Joins
       href: ../relational-databases/performance/joins.md
+    - name: Scripting
+      href: ../relational-databases/scripting/database-engine-scripting.md
     - name: Subqueries
       href: ../relational-databases/performance/subqueries.md
     - name: Data virtualization (Polybase)
@@ -7416,10 +7416,10 @@
           href: https://www.reddit.com/r/SQLServer
     - name: Linked servers
       items:
-        - name: Overview
-          href: ../relational-databases/linked-servers/linked-servers-database-engine.md
-        - name: Create Linked Servers
-          href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+      - name: Overview
+        href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+      - name: Create Linked Servers
+        href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
     - name: Full-text search
       items:
       - name: Overview

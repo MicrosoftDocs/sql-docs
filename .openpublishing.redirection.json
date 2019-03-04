@@ -5178,7 +5178,7 @@
       {
         "source_path": "docs/sql-operations-studio/insight-widgets.md",
         "redirect_url": "/sql/azure-data-studio/insight-widgets",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/sql-operations-studio/integrated-terminal.md",

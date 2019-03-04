@@ -1,7 +1,7 @@
 ---
 title: "SQLGetDiagField Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -22,6 +22,7 @@ ms.author: genemi
 manager: craigg
 ---
 # SQLGetDiagField Function
+
 **Conformance**  
  Version Introduced: ODBC 3.0 Standards Compliance: ISO 92  
   
@@ -30,8 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -188,13 +188,13 @@ SQLRETURN SQLGetDiagField(
 |*assertion-definition*|"CREATE ASSERTION"|SQL_DIAG_CREATE_ASSERTION|  
 |*character-set-definition*|"CREATE CHARACTER SET"|SQL_DIAG_CREATE_CHARACTER_SET|  
 |*collation-definition*|"CREATE COLLATION"|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 |*create-index-statement*|"CREATE INDEX"|SQL_DIAG_CREATE_INDEX|  
 |*create-table-statement*|"CREATE TABLE"|SQL_DIAG_CREATE_TABLE|  
 |*create-view-statement*|"CREATE VIEW"|SQL_DIAG_CREATE_VIEW|  
 |*cursor-specification*|"SELECT CURSOR"|SQL_DIAG_SELECT_CURSOR|  
 |*delete-statement-positioned*|"DYNAMIC DELETE CURSOR"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
 |*delete-statement-searched*|"DELETE WHERE"|SQL_DIAG_DELETE_WHERE|  
-n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
 |*drop-assertion-statement*|"DROP ASSERTION"|SQL_DIAG_DROP_ASSERTION|  
 |*drop-character-set-stmt*|"DROP CHARACTER SET"|SQL_DIAG_DROP_CHARACTER_SET|  
 |*drop-collation-statement*|"DROP COLLATION"|SQL_DIAG_DROP_COLLATION|  
@@ -204,7 +204,7 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 |*drop-table-statement*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
 |*drop-translation-statement*|"DROP TRANSLATION"|SQL_DIAG_DROP_TRANSLATION|  
 |*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
--statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grantstatement*|"GRANT"|SQL_DIAG_GRANT|
 |*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
 |*ODBC-procedure-extension*|"CALL"|SQL_DIAG_ CALL|  
 |*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
@@ -213,8 +213,32 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 |*update-statement-positioned*|"DYNAMIC UPDATE CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*update-statement-searched*|"UPDATE WHERE"|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*empty string*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## Sequence of Status Records  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+
+-->
+
+## Sequence of Status Records
+
  Status records are positioned in a sequence based on row number and the type of the diagnostic. The Driver Manager determines the final order in which to return status records that it generates. The driver determines the final order in which to return status records that it generates.  
   
  If diagnostic records are posted by both the Driver Manager and the driver, the Driver Manager is responsible for ordering them.  
@@ -248,7 +272,7 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
   
 |For information about|See|  
 |---------------------------|---------|  
-|Obtaining multiple fields of a diagnostic data structure|[SQLGetDiagRec Function](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|Obtaining multiple fields of a diagnostic data structure|[SQLGetDiagRec Function](sqlgetdiagrec-function.md)|  
   
 ## See Also  
  [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   

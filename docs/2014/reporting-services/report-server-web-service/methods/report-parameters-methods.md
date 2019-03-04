@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Report Parameters Methods
   You can use these methods to set and retrieve parameters for reports.  

@@ -26,6 +26,7 @@ manager: craigg
 # SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a tool to manage the services associated with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], to configure the network protocols used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and to manage the network connectivity configuration from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client computers. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console snap-in that is available from the Start menu, or can be added to any other [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console display. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) uses the **SQLServerManager\<version>.msc** file (such as **SQLServerManager13.msc** for [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) to open Configuration Manager. Here are the paths to the last four versions when Windows in installed on the C drive.  
   
 |||  

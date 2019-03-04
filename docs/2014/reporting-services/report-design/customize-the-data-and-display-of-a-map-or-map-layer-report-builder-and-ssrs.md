@@ -21,9 +21,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapgroupproperties.general.f1"
   - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS)
   After you add a map or map layer to a report by using a wizard, you might want to change the way the map looks in the report. You can make improvements by considering the following ideas:  

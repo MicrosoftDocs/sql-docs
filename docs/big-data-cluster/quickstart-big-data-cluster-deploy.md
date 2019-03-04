@@ -5,7 +5,7 @@ description: Walkthrough a deployment of SQL Server 2019 big data clusters (prev
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/17/2018
+ms.date: 02/28/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -79,7 +79,7 @@ Use the following steps to run the deployment script. This script will create an
    | **Controller user** | Username for the controller user (default: **admin**). |
 
    > [!IMPORTANT]
-   > Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 21 persistent volume claims. When choosing an Azure virtual machine size and number of nodes, make sure that total number of disks that can be attached across the nodes is greater than or equal to 21. For example, the [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) machine size supports 16 attached disks, so three nodes means that 48 disks can be attached.
+   > The default **Standard_L4s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) machine size supports 16 attached disks, so three nodes means that 48 disks can be attached.
 
    > [!NOTE]
    > The `sa` account is a system administrator on the SQL Server master instance that gets created during setup. After creating deployment, the `MSSQL_SA_PASSWORD` environment variable is discoverable by running `echo $MSSQL_SA_PASSWORD` in the master instance container. For security purposes, change your `sa` password on the master instance after deployment. For more information, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -102,7 +102,7 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -145,16 +145,16 @@ Open a new command window to use **kubectl** during the deployment process.
 
 ### Use the Cluster Administration Portal
 
-Once the Controller pod is running, you can also use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777/portal**). The credentials used to log into the portal match the values for **Controller user** and **Password** that you specified in the deployment script.
+Once the Controller pod is running, you can also use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `endpoint-service-proxy` (for example: **https://\<ip-address\>:30777/portal**). The credentials used to log into the portal match the values for **Controller user** and **Password** that you specified in the deployment script.
 
-You can get the IP address of the **service-proxy-lb** service by running this command in a bash or cmd window:
+You can get the IP address of the **endpoint-service-proxy** service by running this command in a bash or cmd window:
 
 ```bash
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> In CTP 2.2, you will see a security warning when accessing the web page, because big data clusters is currently using auto-generated SSL certificates. Also, in CTP 2.2, it does not show the status of the SQL Server master instance.
+> In CTP 2.3, you will see a security warning when accessing the web page, because big data clusters is currently using auto-generated SSL certificates.
 
 ## Connect to the cluster
 
@@ -165,56 +165,7 @@ When the deployment script finishes, the output notifies you of success:
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-The SQL Server big data cluster is now deployed on AKS. You can now use Azure Data Studio to connect to the SQL Server master instance and the HDFS/Spark endpoints using Azure Data Studio.
-
-### <a id="master"></a> Master instance
-
-The SQL Server master instance is a traditional SQL Server instance containing relational SQL Server databases. The following steps describe how to connect to the master instance using Azure Data Studio.
-
-1. From the command-line, find the IP of your master instance with the following command:
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. In Azure Data Studio, press **F1** > **New Connection**.
-
-1. In **Connection type**, select **Microsoft SQL Server**.
-
-1. Type the IP address of the SQL Server master instance in **Server name** (for example: **\<IP Address\>,31433**).
-
-1. Enter a SQL login **User name** (`SA`) and **Password** (the password you entered in the deployment script).
-
-1. Change the target **Database name** to one of your relational databases.
-
-   ![Connect to the master instance](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. Press **Connect**, and the **Server Dashboard** should appear.
-
-### <a id="hdfs"></a> HDFS/Spark gateway
-
-The **HDFS/Spark gateway** enables you to connect in order to work with the HDFS storage pool and to run Spark jobs. The following steps describe how to connect with Azure Data Studio.
-
-1. From the command-line, find the IP address of your HDFS/Spark gateway with the following command:
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. In Azure Data Studio, press **F1** > **New Connection**.
-
-1. In **Connection type**, select **SQL Server big data cluster**.
-   
-   > [!TIP]
-   > If you do not see the **SQL Server big data cluster** connection type, make sure you have installed the [SQL Server 2019 extension](../azure-data-studio/sql-server-2019-extension.md) and that you restarted Azure Data Studio after the extension completed installing.
-
-1. Type the IP address of the big data cluster in **Server name** (do not specify a port).
-
-1. Enter `root` for the **User** and specify the **Password** to your big data cluster that you entered in the deployment script.
-
-   ![Connect to HDFS/Spark gateway](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. Press **Connect**, and the **Server Dashboard** should appear.
+The SQL Server big data cluster is now deployed on AKS. You can now use Azure Data Studio to connect to the cluster. For more information, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## Clean up
 
@@ -230,6 +181,8 @@ az group delete -n <resource group name>
 ```
 
 ## Next steps
+
+The deployment script configured Azure Kubernetes Service and also deployed a SQL Server 2019 big data cluster. You can also choose to customize future deployments through manual installations. To learn more about how big data clusters are deployed as well as how to customize deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
 
 Now that the SQL Server big data cluster is deployed, you can load sample data and explore the tutorials:
 

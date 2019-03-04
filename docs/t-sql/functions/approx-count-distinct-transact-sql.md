@@ -1,7 +1,7 @@
 ---
 title: "APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2018"
+ms.date: "01/17/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -50,7 +50,7 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of an
 
 The function implementation guarantees up to a 2% error rate within a 97% probability. 
 
-`APPROX_COUNT_DISTINCT` requires less memory than an exhaustive COUNT DISTINCT operation.  Given the smaller memory footprint, `APPROX_COUNT_DISTINCT` is less likely to spill memory to disk compared to a precise COUNT DISTINCT operation. 
+`APPROX_COUNT_DISTINCT` requires less memory than an exhaustive COUNT DISTINCT operation.  Given the smaller memory footprint, `APPROX_COUNT_DISTINCT` is less likely to spill memory to disk compared to a precise COUNT DISTINCT operation. To learn more about the algorithm used to achieve this, see [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
 > With collation sensitive strings, the Public Preview version of APPROX_COUNT_DISTINCT uses a binary match and provides results that would have been generated in the presence of BIN collations and not BIN2. 

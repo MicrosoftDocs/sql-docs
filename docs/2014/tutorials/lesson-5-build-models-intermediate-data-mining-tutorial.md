@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logistic regression [Analysis Services]"
@@ -16,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 5: Building Neural Network and Logistic Regression Models (Intermediate Data Mining Tutorial)
   

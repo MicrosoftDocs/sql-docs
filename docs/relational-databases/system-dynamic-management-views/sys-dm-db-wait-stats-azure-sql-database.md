@@ -2,10 +2,8 @@
 title: "sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_wait_stats_TSQL"

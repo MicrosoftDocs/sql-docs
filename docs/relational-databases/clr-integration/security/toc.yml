@@ -1,6 +1,0 @@
-- name: CLR Integration Code Access Security
-  href: clr-integration-code-access-security.md
-- name: Security host protection attributes +
-  href: ../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
-- name: CLR Integration Security
-  href: clr-integration-security.md

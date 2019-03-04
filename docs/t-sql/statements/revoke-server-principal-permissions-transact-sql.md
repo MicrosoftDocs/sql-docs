@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "logins [SQL Server], revoking"
   - "REVOKE statement, logins"
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Server Principal Permissions (Transact-SQL)

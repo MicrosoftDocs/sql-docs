@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], certificates"
   - "GRANT statement, certificates"
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Certificate Permissions (Transact-SQL)

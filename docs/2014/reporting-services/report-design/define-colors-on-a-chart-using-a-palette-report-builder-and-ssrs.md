@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Define Colors on a Chart Using a Palette (Report Builder and SSRS)
   You can change the color palette for a chart by selecting a pre-defined palette or defining a custom palette. Custom palettes are report-specific.  

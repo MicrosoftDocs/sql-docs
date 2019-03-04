@@ -2,10 +2,9 @@
 title: "sys.database_service_objectives (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2016"
-ms.prod: ""
+ms.service: sql-database
 ms.prod_service: "sql-database, sql-data-warehouse"
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: conceptual
 keywords: 
   - "elastic pool"

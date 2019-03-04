@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "removing login accounts"
   - "dropping login accounts"
 ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

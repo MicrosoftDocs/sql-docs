@@ -5,8 +5,7 @@ ms.date: "11/08/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-
+ms.technology: replication
 ms.topic: "reference"
 dev_langs: 
   - "VB"

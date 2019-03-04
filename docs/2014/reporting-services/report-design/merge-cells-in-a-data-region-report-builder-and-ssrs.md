@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Merge Cells in a Data Region (Report Builder and SSRS)
   You can merge cells in a data region to combine cells, improve data region appearance, or provide spanning labels for column groups and row groups.  

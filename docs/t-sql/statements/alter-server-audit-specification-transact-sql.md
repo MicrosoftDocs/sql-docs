@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "audits [SQL Server], specification"
   - "ALTER SERVER AUDIT SPECIFICATION statement"
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)

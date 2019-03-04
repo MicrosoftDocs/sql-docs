@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # XML Device Information Settings
   The following table lists the device information settings for rendering in XML format.  

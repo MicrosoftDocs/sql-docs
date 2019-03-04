@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "row retrieval [SQL Server], WHERE clause"
   - "WHERE clause"
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "table mapping [SQLXML], explicit mapping"
   - "element/attribute mapping [SQLXML]"
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: douglasl
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -62,7 +62,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  No annotation is specified for the **ContactID** attribute. This results in a default mapping of the attribute to the column with the same name.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  

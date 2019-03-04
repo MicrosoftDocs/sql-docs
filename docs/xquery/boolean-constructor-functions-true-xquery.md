@@ -57,7 +57,7 @@ go
 DROP XML SCHEMA COLLECTION SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
 targetNamespace="QNameXSD" >  
       <element name="ROOT" type="boolean" nillable="true"/>  
 </schema>'  

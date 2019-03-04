@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to load sample data into a SQL Serve
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -64,7 +64,7 @@ The following steps describe how to use a Windows client to load the sample data
    | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**service-security-lb** or **service-security-nodeport**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**endpoint-security**).
 
 1. Run the bootstrap script.
 
@@ -100,12 +100,12 @@ The following steps describe how to use a Linux client to load the sample data i
    | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**service-security-lb** or **service-security-nodeport**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**endpoint-security**).
 
 1. Run the bootstrap script.
 
    ```bash
-   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
 ## Next steps

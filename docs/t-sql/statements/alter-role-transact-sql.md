@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "database roles [SQL Server], modifying"
   - "names [SQL Server], database roles"
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

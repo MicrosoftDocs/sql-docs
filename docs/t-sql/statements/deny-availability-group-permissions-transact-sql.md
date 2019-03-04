@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "DENY statement, availability groups"
   - "denying permissions, [SQL Server], availability groups"
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Availability Group Permissions (Transact-SQL)

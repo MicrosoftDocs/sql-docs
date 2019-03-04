@@ -15,9 +15,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.chartproperties.filters.f1"
   - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Filters page, Chart Dialog Boxes (Report Builder and SSRS)
   Click **Filters** in the:  

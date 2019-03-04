@@ -23,7 +23,7 @@ The following code shows how to create a new Microsoft Jet database with the [Cr
 Attribute VB_Name = "Create"  
 Option Explicit  
   
-' BeginCreateDatabseVB  
+' BeginCreateDatabaseVB  
 Sub CreateDatabase()  
     On Error GoTo CreateDatabaseError  
   

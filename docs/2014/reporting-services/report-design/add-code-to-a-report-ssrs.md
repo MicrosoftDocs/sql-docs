@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "adding code"
   - "reports [Reporting Services], code"
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Add Code to a Report (SSRS)
   In any expression, you can call your own custom code. You can provide code in the following two ways:  

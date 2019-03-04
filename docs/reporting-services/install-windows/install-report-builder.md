@@ -6,8 +6,8 @@ ms.prod_service: "reporting-services-native"
 
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone app, installed on your computer by you or an administrator. You can install it from the Microsoft Download Center, from a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server, or from a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

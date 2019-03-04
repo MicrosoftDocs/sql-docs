@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], definitions"
   - "column_constraint"
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER TABLE column_constraint (Transact-SQL)

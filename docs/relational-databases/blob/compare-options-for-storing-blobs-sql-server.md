@@ -1,7 +1,7 @@
 ---
 title: "Compare Options for Storing Blobs (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/04/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,6 +13,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Compare Options for Storing Blobs (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Discusses and compares the options that are available for storing files and documents in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -51,9 +52,14 @@ manager: craigg
 |**Windows application compatibility**|Yes|No|**Yes**|  
 |**Relational access to file attributes**|No|No|**Yes**|  
   
-##  <a name="CompareRBS"></a> Comparing FILESTREAM and Remote BLOB Store (RBS)  
- For a comparison of these two features, see this blog post from the RBS team: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](https://go.microsoft.com/fwlink/?LinkId=210317).  
-  
+## <a name="CompareRBS"></a> Comparing FILESTREAM and Remote BLOB Store (RBS)
+
+Another option for storing unstructured data involves a Remote BLOB Store (RBS). For more information, see [Remote Blob Store (RBS) (SQL Server)](remote-blob-store-rbs-sql-server).
+
+<!-- Suffers PageNotFound error. https://github.com/MicrosoftDocs/sql-docs/issues/1658 , 2019/03/04.
+For a comparison of these two features, see this blog post from the RBS team: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](https://go.microsoft.com/fwlink/?LinkId=210317).
+-->
+
 ##  <a name="more"></a> More Information  
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
  [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "TOP clause, about TOP clause"
   - "queries [SQL Server], results"
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "clauses [SQL Server], INTO"
   - "row additions [SQL Server], INTO clause"
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

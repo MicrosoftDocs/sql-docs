@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "MAXRECURSION hint"
   - "clauses [SQL Server], WITH common_table_expression"
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

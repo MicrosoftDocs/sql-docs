@@ -5153,7 +5153,7 @@
       {
         "source_path": "docs/sql-operations-studio/dashboards.md",
         "redirect_url": "/sql/azure-data-studio/dashboards",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/sql-operations-studio/download.md",
@@ -5178,7 +5178,7 @@
       {
         "source_path": "docs/sql-operations-studio/insight-widgets.md",
         "redirect_url": "/sql/azure-data-studio/insight-widgets",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/sql-operations-studio/integrated-terminal.md",
@@ -13793,6 +13793,11 @@
         {
             "source_path": "docs/analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/azure-data-studio/dashboards.md",
+            "redirect_url": "/sql/azure-data-studio/insight-widgets",
             "redirect_document_id": true
         }
     ]

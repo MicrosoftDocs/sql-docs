@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "words in predicate [full-text search]"
   - "column searches [full-text search]"
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # FREETEXT (Transact-SQL)

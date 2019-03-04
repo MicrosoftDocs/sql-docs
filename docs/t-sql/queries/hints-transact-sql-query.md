@@ -53,8 +53,8 @@ helpviewer_keywords:
   - "USE HINT query hint"
   - "QUERY_PLAN_PROFILE query hint"
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Hints (Transact-SQL) - Query

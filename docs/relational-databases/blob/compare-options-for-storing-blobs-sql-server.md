@@ -54,11 +54,7 @@ manager: craigg
   
 ## <a name="CompareRBS"></a> Comparing FILESTREAM and Remote BLOB Store (RBS)
 
-Another option for storing unstructured data involves a Remote BLOB Store (RBS). For more information, see [Remote Blob Store (RBS) (SQL Server)](remote-blob-store-rbs-sql-server).
-
-<!-- Suffers PageNotFound error. https://github.com/MicrosoftDocs/sql-docs/issues/1658 , 2019/03/04.
-For a comparison of these two features, see this blog post from the RBS team: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](https://go.microsoft.com/fwlink/?LinkId=210317).
--->
+Another option for storing unstructured data involves a Remote BLOB Store (RBS). For more information, see [Remote Blob Store (RBS) (SQL Server)](remote-blob-store-rbs-sql-server.md).
 
 ##  <a name="more"></a> More Information  
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  

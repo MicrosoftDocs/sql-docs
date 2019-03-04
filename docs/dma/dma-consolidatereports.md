@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
@@ -66,6 +66,9 @@ This inventory can be in one of two forms:
 - SQL Server table
 
 ### If using a CSV file
+> [!IMPORTANT]
+> Ensure that the inventory file is saved as a comma-separated (CSV) file.
+
 When using a csv file to import the data, ensure there are only two columns of data - **Instance Name** and **Database Name**, and that the columns don't have header rows.
  
  ![csv file contents](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -148,10 +151,7 @@ You can also use the LoadWarehouse script to provide the basic TSQL statements f
 
 1. Open the DMA Reports Power BI template in the Power BI Desktop.
 2. Enter server details that point to your **DMAWarehouse** database, and then select **Load**.
-
-    > [!IMPORTANT]
-    > Do not press Enter to accept the values.
-
+   
       ![DMA Reports Power BI template loaded](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    After the report has refreshed the data from the **DMAWarehouse** database, you're presented with a report similar to the following.

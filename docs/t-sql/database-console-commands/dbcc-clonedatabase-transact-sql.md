@@ -52,8 +52,8 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
-)  
+)
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]     
 ```  
   
 ## Arguments  

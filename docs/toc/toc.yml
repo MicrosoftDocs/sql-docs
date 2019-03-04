@@ -410,9 +410,9 @@
           - name: Connect to Azure Storage
             href: ../relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md  
   - name: Always On availability groups
+    href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
     items: 
-      - name: Overview
-        href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+      - name: Overview        
         items:
         - name: Availability modes
           href: ../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
@@ -596,7 +596,7 @@
             href: ../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
           - name: Listeners, clients, & failover
             href: ../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
-        - name: Interoperability with other features
+        - name: Interoperability
           items:
           - name: Replication, CT, & CDC
             href: ../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md
@@ -740,10 +740,9 @@
             - name: SQL Server error log
               href: ../database-engine/availability-groups/windows/sql-server-error-log-always-on-availability-groups.md
   - name: Always On failover cluster instance
+    href: ../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     items: 
       - name: Overview
-        href: ../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
-      - name: Always On failover cluster instances
         href: ../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
       - name: How-to
         items:
@@ -816,9 +815,9 @@
           - name: Logins & Jobs after role switching
             href: ../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md
   - name: Database mirroring
+    href: ../database-engine/database-mirroring/database-mirroring-sql-server.md
     items: 
       - name: Overview
-        href: ../database-engine/database-mirroring/database-mirroring-sql-server.md
         items:
         - name: Prerequisites, Restrictions, & Recommendations 
           href: ../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md
@@ -834,27 +833,27 @@
             items:
             - name: Deployment
               items:
-                - name: Set up
-                  href: ../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md
-                - name: Prepare a a database 
-                  href: ../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md
-                - name: Set up encryption
-                  href: ../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md
-                - name: Use the Trustworthy Property
-                  href: ../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
-                - name: Specify a server network address
-                  href: ../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md
-                - name: Establish a session
-                  href: ../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
-                  items:
-                  - name: "Example: Configure with Windows Authentication (T-SQL)"
-                    href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-                  - name: "Example: Configure with Certificates (T-SQL)"
-                    href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
-                - name: Upgrade
-                  href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
-                - name: Remove mirroring
-                  href: ../database-engine/database-mirroring/remove-database-mirroring-sql-server.md
+              - name: Set up
+                href: ../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md
+              - name: Prepare a a database 
+                href: ../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md
+              - name: Set up encryption
+                href: ../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md
+              - name: Use the Trustworthy Property
+                href: ../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+              - name: Specify a server network address
+                href: ../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md
+              - name: Establish a session
+                href: ../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
+                items:
+                - name: "Example: Configure with Windows Authentication (T-SQL)"
+                  href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
+                - name: "Example: Configure with Certificates (T-SQL)"
+                  href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
+              - name: Upgrade
+                href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
+              - name: Remove mirroring
+                href: ../database-engine/database-mirroring/remove-database-mirroring-sql-server.md
             - name: Witness
               items:
               - name: Add using Windows authentication
@@ -1011,9 +1010,8 @@
   - name: Hierarchical Data
     href: ../relational-databases/hierarchical-data-sql-server.md
   - name: Collation
+    href: ../relational-databases/collations/collation-and-unicode-support.md
     items:
-      - name: Overview
-        href: ../relational-databases/collations/collation-and-unicode-support.md
       - name: Server Collation
         href: ../relational-databases/collations/set-or-change-the-server-collation.md
       - name: Database Collation
@@ -1189,73 +1187,71 @@
             - name: Query store page
               href: ../relational-databases/databases/database-properties-query-store-page.md
   - name: Filestream, Filetable & BLOB
+    href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
     items:
-      - name: Overview
-        items: 
-          - name: BLOB 
-            href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
-          - name: Filestream 
-            href: ../relational-databases/blob/filestream-sql-server.md
-          - name: Filetable 
-            href: ../relational-databases/blob/filetables-sql-server.md
-          - name: Compare Options for Storing Blobs
-            href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
-          - name: Remote Blob Store (RBS)
-            href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
-      - name: Filestream
-        items:
-        - name: Enable & Configure 
-          href: ../relational-databases/blob/enable-and-configure-filestream.md
-        - name: Create a Database
-          href: ../relational-databases/blob/create-a-filestream-enabled-database.md
-        - name: Create a Table 
-          href: ../relational-databases/blob/create-a-table-for-storing-filestream-data.md
-        - name: Access Data 
-          href: ../relational-databases/blob/access-filestream-data-with-transact-sql.md
-        - name: Create Client Applications 
-          href: ../relational-databases/blob/create-client-applications-for-filestream-data.md
-        - name: Access data with OpenSqlFilestream
-          href: ../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md
-        - name: Make Partial Updates t
-          href: ../relational-databases/blob/make-partial-updates-to-filestream-data.md
-        - name: Avoid Conflicts 
-          href: ../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md
-        - name: Move a Database
-          href: ../relational-databases/blob/move-a-filestream-enabled-database.md
-        - name: Set Up on a Failover Cluster
-          href: ../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md
-        - name: Configure a Firewall
-          href: ../relational-databases/blob/configure-a-firewall-for-filestream-access.md
-        - name: Interoperability
-          href: ../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md
-        - name: DDL, Functions, Stored Procedures, & Views
-          href: ../relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
-      - name: FileTables
-        items:
-        - name: Prerequisites 
-          href: ../relational-databases/blob/enable-the-prerequisites-for-filetable.md
-        - name: Create, Alter, & Drop 
-          href: ../relational-databases/blob/create-alter-and-drop-filetables.md
-        - name: Load Files 
-          href: ../relational-databases/blob/load-files-into-filetables.md
-        - name: Directories & Paths 
-          href: ../relational-databases/blob/work-with-directories-and-paths-in-filetables.md
-        - name: Access with T-SQL
-          href: ../relational-databases/blob/access-filetables-with-transact-sql.md
-        - name: Access with File Input-Output APIs
-          href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
-        - name: Manage 
-          href: ../relational-databases/blob/manage-filetables.md
-        - name:  Schema
-          href: ../relational-databases/blob/filetable-schema.md
-        - name: Interoperability
-          href: ../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md
-        - name: DDL, Functions, Stored Procedures, & Views
-          href: ../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md
+    - name: Overview
+      items: 
+      - name: Filestream 
+        href: ../relational-databases/blob/filestream-sql-server.md
+      - name: Filetable 
+        href: ../relational-databases/blob/filetables-sql-server.md
+      - name: Compare Options for Storing Blobs
+        href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
+      - name: Remote Blob Store (RBS)
+        href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
+    - name: Filestream
+      items:
+      - name: Enable & Configure 
+        href: ../relational-databases/blob/enable-and-configure-filestream.md
+      - name: Create a Database
+        href: ../relational-databases/blob/create-a-filestream-enabled-database.md
+      - name: Create a Table 
+        href: ../relational-databases/blob/create-a-table-for-storing-filestream-data.md
+      - name: Access Data 
+        href: ../relational-databases/blob/access-filestream-data-with-transact-sql.md
+      - name: Create Client Applications 
+        href: ../relational-databases/blob/create-client-applications-for-filestream-data.md
+      - name: Access data with OpenSqlFilestream
+        href: ../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md
+      - name: Make Partial Updates t
+        href: ../relational-databases/blob/make-partial-updates-to-filestream-data.md
+      - name: Avoid Conflicts 
+        href: ../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md
+      - name: Move a Database
+        href: ../relational-databases/blob/move-a-filestream-enabled-database.md
+      - name: Set Up on a Failover Cluster
+        href: ../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md
+      - name: Configure a Firewall
+        href: ../relational-databases/blob/configure-a-firewall-for-filestream-access.md
+      - name: Interoperability
+        href: ../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md
+      - name: DDL, Functions, Stored Procedures, & Views
+        href: ../relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
+    - name: FileTables
+      items:
+      - name: Prerequisites 
+        href: ../relational-databases/blob/enable-the-prerequisites-for-filetable.md
+      - name: Create, Alter, & Drop 
+        href: ../relational-databases/blob/create-alter-and-drop-filetables.md
+      - name: Load Files 
+        href: ../relational-databases/blob/load-files-into-filetables.md
+      - name: Directories & Paths 
+        href: ../relational-databases/blob/work-with-directories-and-paths-in-filetables.md
+      - name: Access with T-SQL
+        href: ../relational-databases/blob/access-filetables-with-transact-sql.md
+      - name: Access with File Input-Output APIs
+        href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
+      - name: Manage 
+        href: ../relational-databases/blob/manage-filetables.md
+      - name:  Schema
+        href: ../relational-databases/blob/filetable-schema.md
+      - name: Interoperability
+        href: ../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md
+      - name: DDL, Functions, Stored Procedures, & Views
+        href: ../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md
   - name: Indexes
+    href: ../relational-databases/indexes/indexes.md
     items:
-      - name: Overview
-        href: ../relational-databases/indexes/indexes.md
       - name: Heaps (Tables without Clustered Indexes)
         href: ../relational-databases/indexes/heaps-tables-without-clustered-indexes.md
       - name: Clustered & Nonclustered Indexes Described
@@ -1314,11 +1310,10 @@
         - name: Index Properties F1 Help
           href: ../relational-databases/indexes/index-properties-f1-help.md
       - name: Columnstore indexes
+        hrefe: ../relational-databases/indexes/columnstore-indexes-overview.md
         items:
         - name: What's new
           href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md
-        - name: Overview
-          href: ../relational-databases/indexes/columnstore-indexes-overview.md
         - name: Design Guidance
           href: ../relational-databases/indexes/columnstore-indexes-design-guidance.md
         - name: Data loading Guidance
@@ -1332,23 +1327,20 @@
         - name: Defragment
           href: ../relational-databases/indexes/columnstore-indexes-defragmentation.md
   - name: SQL Graph
+    href: ../relational-databases/graphs/sql-graph-overview.md
     items:
-    - name: Overview
-      href: ../relational-databases/graphs/sql-graph-overview.md
     - name: Architecture
       href: ../relational-databases/graphs/sql-graph-architecture.md
     - name: Sample
       href: ../relational-databases/graphs/sql-graph-sample.md        
   - name: Sequence numbers
+    href: ../relational-databases/sequence-numbers/sequence-numbers.md
     items:
-    - name: Overview
-      href: ../relational-databases/sequence-numbers/sequence-numbers.md
     - name: Sequence Properties
       href: ../relational-databases/sequence-numbers/sequence-properties-general-page.md
   - name: Service broker
+    href: ../relational-databases/service-broker/event-notifications.md
     items:
-    - name: Overview
-      href: ../relational-databases/service-broker/event-notifications.md
     - name: Implement
       href: ../relational-databases/service-broker/implement-event-notifications.md
     - name: Configure Dialog Security
@@ -1356,9 +1348,8 @@
     - name: Get Information
       href: ../relational-databases/service-broker/get-information-about-event-notifications.md
   - name: Spatial data
+    href: ../relational-databases/spatial/spatial-data-sql-server.md
     items:
-    - name: Overview
-      href: ../relational-databases/spatial/spatial-data-sql-server.md
     - name: Data Types
       href: ../relational-databases/spatial/spatial-data-types-overview.md
     - name: Point
@@ -1394,9 +1385,8 @@
     - name: Create, Modify, & Drop Spatial Indexes
       href: ../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md
   - name: Stored procedures
+    href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
     items:
-    - name: Overview
-      href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
     - name: Create
       href: ../relational-databases/stored-procedures/create-a-stored-procedure.md
     - name: Modify
@@ -1433,9 +1423,8 @@
       - name: OLE Automation Sample Script
         href: ../relational-databases/stored-procedures/ole-automation-sample-script.md
   - name: Tables
+    href: ../relational-databases/tables/tables.md
     items:
-    - name: Overview
-      href: ../relational-databases/tables/tables.md
     - name: Manage
       items: 
       - name: Create  
@@ -1473,9 +1462,8 @@
       - name: Table-Valued Parameters
         href: ../relational-databases/tables/use-table-valued-parameters-database-engine.md
     - name: Edge constraints
+      href: ../relational-databases/tables/graph-edge-constraints.md
       items:
-      - name: Overview
-        href: ../relational-databases/tables/graph-edge-constraints.md
       - name: Create
         href: ../relational-databases/tables/create-edge-constraints.md
       - name: Delete
@@ -1485,9 +1473,8 @@
       - name: View
         href: ../relational-databases/tables/view-edge-constraint-properties.md
     - name: Primary keys
+      href: ../relational-databases/tables/primary-and-foreign-key-constraints.md
       items:
-      - name: Overview
-        href: ../relational-databases/tables/primary-and-foreign-key-constraints.md
       - name: Create
         href: ../relational-databases/tables/create-primary-keys.md
       - name: Modify
@@ -1509,9 +1496,8 @@
       - name: Disable constraints with INSERT & UPDATE
         href: ../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
     - name: Unique constraints
+      href: ../relational-databases/tables/unique-constraints-and-check-constraints.md
       items:
-      - name: Overview
-        href: ../relational-databases/tables/unique-constraints-and-check-constraints.md
       - name: Create
         href: ../relational-databases/tables/create-unique-constraints.md
       - name: Modify
@@ -1531,9 +1517,8 @@
       - name: Disable constraints with INSERT & UPDATE
         href: ../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md
     - name: Temporal tables
+      href: ../relational-databases/tables/temporal-tables.md
       items: 
-      - name: Overview
-        href: ../relational-databases/tables/temporal-tables.md
       - name: Manage
         items: 
         - name: Getting started
@@ -1561,9 +1546,8 @@
         - name: Metadata views & functions
           href: ../relational-databases/tables/temporal-table-metadata-views-and-functions.md
     - name: Memory-optimized tables
+      href: ../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
       items:
-      - name: Overview
-        href: ../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
       - name: Create
         href: ../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
       - name: Work with
@@ -1589,13 +1573,11 @@
       - name: Column Properties 
         href: ../relational-databases/tables/column-properties-general-page.md
   - name: Track changes
+    href: ../relational-databases/track-changes/track-data-changes-sql-server.md
     items:
-    - name: Overview
-      href: ../relational-databases/track-changes/track-data-changes-sql-server.md
     - name: Change data capture
+      href: ../relational-databases/track-changes/about-change-data-capture-sql-server.md
       items: 
-      - name: About 
-        href: ../relational-databases/track-changes/about-change-data-capture-sql-server.md
       - name: Enable & disable 
         href: ../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md
       - name: Administer & monitor 
@@ -1603,9 +1585,8 @@
       - name: Work with 
         href: ../relational-databases/track-changes/work-with-change-data-sql-server.md
     - name: Change tracking
+      href: ../relational-databases/track-changes/about-change-tracking-sql-server.md
       items:
-      - name: About 
-        href: ../relational-databases/track-changes/about-change-tracking-sql-server.md
       - name: Enable & disable 
         href: ../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md
       - name: Manage 
@@ -1615,51 +1596,49 @@
       - name: Interoperability
         href: ../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
   - name: Triggers
+    href: ../relational-databases/triggers/logon-triggers.md
     items:
-      - name: Overview
-        href: ../relational-databases/triggers/logon-triggers.md
-      - name: Capture Logon Trigger Event Data
-        href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
-      - name: Manage Trigger Security
-        href: ../relational-databases/triggers/manage-trigger-security.md
-      - name: DDL Triggers
-        href: ../relational-databases/triggers/ddl-triggers.md
-        items:
-        - name: Implement 
-          href: ../relational-databases/triggers/implement-ddl-triggers.md
-        - name: Get Information 
-          href: ../relational-databases/triggers/get-information-about-ddl-triggers.md
-        - name: Use the EVENTDATA Function
-          href: ../relational-databases/triggers/use-the-eventdata-function.md
-        - name: DDL Events
-          href: ../relational-databases/triggers/ddl-events.md
-        - name: DDL Event Groups
-          href: ../relational-databases/triggers/ddl-event-groups.md
-      - name: DML Triggers
-        href: ../relational-databases/triggers/dml-triggers.md
-        items:
-        - name: Create DML Triggers
-          href: ../relational-databases/triggers/create-dml-triggers.md
-        - name: Create CLR Triggers
-          href: ../relational-databases/triggers/create-clr-triggers.md
-        - name: Create DML Triggers to Handle Multiple Rows of Data
-          href: ../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md
-        - name: Create Nested Triggers
-          href: ../relational-databases/triggers/create-nested-triggers.md
-        - name: Specify First & Last Triggers
-          href: ../relational-databases/triggers/specify-first-and-last-triggers.md
-        - name: Use the inserted & deleted Tables
-          href: ../relational-databases/triggers/use-the-inserted-and-deleted-tables.md
-        - name: Modify or Rename DML Triggers
-          href: ../relational-databases/triggers/modify-or-rename-dml-triggers.md
-        - name: Get Information About DML Triggers
-          href: ../relational-databases/triggers/get-information-about-dml-triggers.md
-        - name: Delete or Disable DML Triggers
-          href: ../relational-databases/triggers/delete-or-disable-dml-triggers.md
+    - name: Capture Logon Trigger Event Data
+      href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
+    - name: Manage Trigger Security
+      href: ../relational-databases/triggers/manage-trigger-security.md
+    - name: DDL Triggers
+      href: ../relational-databases/triggers/ddl-triggers.md
+      items:
+      - name: Implement 
+        href: ../relational-databases/triggers/implement-ddl-triggers.md
+      - name: Get Information 
+        href: ../relational-databases/triggers/get-information-about-ddl-triggers.md
+      - name: Use the EVENTDATA Function
+        href: ../relational-databases/triggers/use-the-eventdata-function.md
+      - name: DDL Events
+        href: ../relational-databases/triggers/ddl-events.md
+      - name: DDL Event Groups
+        href: ../relational-databases/triggers/ddl-event-groups.md
+    - name: DML Triggers
+      href: ../relational-databases/triggers/dml-triggers.md
+      items:
+      - name: Create DML Triggers
+        href: ../relational-databases/triggers/create-dml-triggers.md
+      - name: Create CLR Triggers
+        href: ../relational-databases/triggers/create-clr-triggers.md
+      - name: Create DML Triggers to Handle Multiple Rows of Data
+        href: ../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md
+      - name: Create Nested Triggers
+        href: ../relational-databases/triggers/create-nested-triggers.md
+      - name: Specify First & Last Triggers
+        href: ../relational-databases/triggers/specify-first-and-last-triggers.md
+      - name: Use the inserted & deleted Tables
+        href: ../relational-databases/triggers/use-the-inserted-and-deleted-tables.md
+      - name: Modify or Rename DML Triggers
+        href: ../relational-databases/triggers/modify-or-rename-dml-triggers.md
+      - name: Get Information About DML Triggers
+        href: ../relational-databases/triggers/get-information-about-dml-triggers.md
+      - name: Delete or Disable DML Triggers
+        href: ../relational-databases/triggers/delete-or-disable-dml-triggers.md
   - name: User-defined functions
+    href: ../relational-databases/user-defined-functions/user-defined-functions.md
     items:
-    - name: Overview
-      href: ../relational-databases/user-defined-functions/user-defined-functions.md
     - name: Deterministic & Nondeterministic Functions
       href: ../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md
     - name: Scalar inlining
@@ -1681,9 +1660,8 @@
     - name: View 
       href: ../relational-databases/user-defined-functions/view-user-defined-functions.md
   - name: Views
+    href: ../relational-databases/views/views.md
     items:
-    - name: Overview
-      href: ../relational-databases/views/views.md
     - name: Create 
       href: ../relational-databases/views/create-views.md
     - name: Create Indexed Views
@@ -1699,13 +1677,11 @@
     - name: Delete 
       href: ../relational-databases/views/delete-views.md
   - name: XML data
+    href: ../relational-databases/xml/xml-data-sql-server.md
     items:
-    - name: Overview
-      href: ../relational-databases/xml/xml-data-sql-server.md
-    - name: XML Data Type & Columns      
-      items:
-      - name: Overview
-        href: ../relational-databases/xml/xml-data-type-and-columns-sql-server.md
+    - name: XML Data Type & Columns 
+      href: ../relational-databases/xml/xml-data-type-and-columns-sql-server.md      
+      items:       
       - name: Compare Typed to Untyped XML
         href: ../relational-databases/xml/compare-typed-xml-to-untyped-xml.md
       - name: Create Instances
@@ -1744,9 +1720,8 @@
       - name: Drop 
         href: ../relational-databases/xml/drop-xml-indexes.md
     - name: Selective XML Indexes (SXI)
+      href: ../relational-databases/xml/selective-xml-indexes-sxi.md
       items: 
-      - name: Overview
-        href: ../relational-databases/xml/selective-xml-indexes-sxi.md
       - name: Paths & optimization hints 
         href: ../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md
       - name: Create, Alter, & Drop 
@@ -1754,9 +1729,8 @@
       - name: Create, Alter, & Drop Secondary Indexes
         href: ../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md
     - name: XML Schema Collections
+      href: ../relational-databases/xml/xml-schema-collections-sql-server.md
       items:
-      - name: Overview
-        href: ../relational-databases/xml/xml-schema-collections-sql-server.md
       - name: Reference
         href: ../relational-databases/xml/reference-the-built-in-xml-schema-collection-sys.md
       - name: View 
@@ -1770,9 +1744,8 @@
       - name: Preprocess a schema to merge included schemas
         href: ../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md
       - name: Requirements & Limitations 
+        href: ../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md
         items:
-        - name: Overview
-          href: ../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md
         - name: Canonical forms & pattern restrictions
           href: ../relational-databases/xml/canonical-forms-and-pattern-restrictions.md
         - name: Wildcard components & content validation
@@ -1808,10 +1781,9 @@
         href: ../relational-databases/xml/generate-xml-from-rowsets-with-for-xml.md
       - name: Use results in application code
         href: ../relational-databases/xml/use-for-xml-results-in-application-code.md
-      - name: RAW Mode         
+      - name: RAW Mode  
+        href: ../relational-databases/xml/use-raw-mode-with-for-xml.md       
         items:
-        - name: Overview
-          href: ../relational-databases/xml/use-raw-mode-with-for-xml.md
         - name: "Example: Retrieving Product Model Information as XML"
           href: ../relational-databases/xml/example-retrieving-product-model-information-as-xml.md
         - name: "Example: Specifying XSINIL with the ELEMENTS Directive"
@@ -1826,20 +1798,18 @@
           href: ../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
         - name: "Example: Querying XMLType Columns"
           href: ../relational-databases/xml/example-querying-xmltype-columns.md
-      - name: AUTO Mode        
+      - name: AUTO Mode  
+        href: ../relational-databases/xml/use-auto-mode-with-for-xml.md      
         items:
-        - name: Overview
-          href: ../relational-databases/xml/use-auto-mode-with-for-xml.md
         - name: Use the BINARY BASE64 Option
           href: ../relational-databases/xml/use-the-binary-base64-option.md
         - name: AUTO Mode Heuristics in Shaping Returned XML
           href: ../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
         - name: "Examples: Using AUTO Mode"
           href: ../relational-databases/xml/examples-using-auto-mode.md
-      - name: EXPLICIT Mode        
+      - name: EXPLICIT Mode  
+        href: ../relational-databases/xml/use-explicit-mode-with-for-xml.md      
         items:
-        - name: Overview
-          href: ../relational-databases/xml/use-explicit-mode-with-for-xml.md
         - name: "Example: Retrieving Employee Information"
           href: ../relational-databases/xml/example-retrieving-employee-information.md
         - name: "Example: Specifying the ELEMENT Directive"
@@ -1891,9 +1861,8 @@
         - name: Shape XML with Nested FOR XML Queries
           href: ../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md
       - name: Support for Data Types
+        href: ../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md
         items:
-        - name: Overview
-          href: ../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md
         - name: xml Data Type
           href: ../relational-databases/xml/for-xml-support-for-the-xml-data-type.md
         - name: User-Defined Data Types (UDT)
@@ -1924,9 +1893,8 @@
     href: ../connect/index.md
     displayName: Connectivity, Connect, Connection
   - name: Data tier applications
+    href: ../relational-databases/data-tier-applications/data-tier-applications.md
     items:
-    - name: Overview
-      href: ../relational-databases/data-tier-applications/data-tier-applications.md
     - name: DAC Support For SQL Server Objects & Versions
       href: ../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
     - name: Delete 
@@ -1952,13 +1920,12 @@
     - name: Deploy a database By using a DAC
       href: ../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md
   - name: Common Language Runtime (CLR)
+    href: ../relational-databases/clr-integration/common-language-runtime-integration-overview.md
     items:
     - name: Overview
       items: 
       - name: Getting started
         href: ../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md
-      - name: Common Language Runtime Integration
-        href: ../relational-databases/clr-integration/common-language-runtime-integration-overview.md
       - name: Integration programming concepts
         href: ../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
       - name: Custom attributes for CLR routines
@@ -1980,25 +1947,22 @@
       - name: SqlTriggerContext Object
         href: ../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md
     - name: User-Defined Functions
+      href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md 
       items: 
-      - name: Overview
-        href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md            
       - name: Scalar-Valued 
         href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md
       - name: Table-Valued 
         href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md
       - name: User-Defined Aggregates
+        href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
         items:
-        - name: Overview
-          href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
         - name: Requirements
           href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md
         - name:  Invoking Functions
           href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md
     - name: User-Defined Types
-      items:
-      - name: Overview
-        href: ../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+      href: ../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+      items: 
       - name: Create
         items:
         - name: Overview
@@ -2010,18 +1974,15 @@
       - name: Register
         href: ../relational-databases/clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
       - name: Working with
+        href: ../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
         items:
-        - name: Overview
-          href: ../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
         - name: Defining UDT Tables & Columns
           href: ../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md
         - name: Manipulating UDT Data
           href: ../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md
       - name: Accessing in ADO.NET
-        href: 
-        items:
-        - name: Overview
-          href: ../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md
+        href: ../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md 
+        items:         
         - name: Retrieving UDT Data
           href: ../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md
         - name: Updating UDT Columns with DataAdapters
@@ -2038,9 +1999,8 @@
       - name: Transaction Lifetimes
         href: ../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md
     - name: Context Connection
+      href: ../relational-databases/clr-integration/data-access/context-connection.md
       items:
-      - name: Overview
-        href: ../relational-databases/clr-integration/data-access/context-connection.md
       - name: Restrictions
         href: ../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md
       - name: Context vs. regular connections
@@ -2048,9 +2008,8 @@
       - name: Impersonation & credentials 
         href: ../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md
     - name: Integration Code Access Security
+      href: ../relational-databases/clr-integration/security/clr-integration-code-access-security.md
       items:
-      - name: Overview
-        href: ../relational-databases/clr-integration/security/clr-integration-code-access-security.md
       - name: Host Protection Attributes
         href: ../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
       - name: Disallowed Types & Members in Microsoft.VisualBasic.dll
@@ -2066,9 +2025,8 @@
       - name: CLR Integration Security
         href: ../relational-databases/clr-integration/security/clr-integration-security.md
     - name: Managing Integration Assemblies
+      href: ../relational-databases/clr-integration/assemblies-database-engine.md
       items:
-      - name: Overview
-        href: ../relational-databases/clr-integration/assemblies-database-engine.md
       - name: Manage
         href: ../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
       - name: Alter
@@ -2086,9 +2044,8 @@
       - name:  Properties
         href: ../relational-databases/clr-integration/assemblies-properties.md
     - name: Integration
+      href: ../relational-databases/clr-integration/clr-integration-overview.md   
       items: 
-      - name: Overview
-        href: ../relational-databases/clr-integration/clr-integration-overview.md
       - name: What's new
         href: ../relational-databases/clr-integration/clr-integration-what-s-new.md
       - name: Enable
@@ -2110,9 +2067,8 @@
       - name: Data Access from CLR Database Objects
         href: ../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md
       - name: Data Types in the .NET Framework
+        href: ../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
         items: 
-        - name: Overview
-          href: ../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
         - name: Collation & data types
           href: ../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
         - name: Large Object (LOB) Parameters
@@ -2124,9 +2080,8 @@
   - name: Extended stored procedures
     items:
     - name: Programming
+      href: ../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
       items: 
-      - name: Overview
-        href: ../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
       - name: How it Works
         href: ../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md
       - name: Add
@@ -2146,9 +2101,8 @@
       - name: Unloading a DLL
         href: ../relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md
     - name: Reference
+      href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
       items:             
-      - name: Overview
-        href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
       - name: Data Types 
         href: ../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md
       - name: srv_* Extended Stored Procedure APIs
@@ -2220,9 +2174,8 @@
   - name: Express Local DB
     items:
     - name: Error messages
-      items: 
-      - name: Overview
-        href: ../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
+      href: ../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
+      items:      
       - name: LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
         href: ../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md
       - name: LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
@@ -2284,9 +2237,8 @@
       - name: LOCALDB_ERROR_XEVENT_FAILED
         href: ../relational-databases/express-localdb-error-messages/localdb-error-xevent-failed.md
     - name: Instance APIs
+      href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
       items:
-        - name: SQL Server Express LocalDB Reference - Instance APIs
-          href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
         - name: "Command-Line Management Tool: SqlLocalDB.exe"
           href: ../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md
         - name: SQL Server Express LocalDB Header & Version Information
@@ -2322,9 +2274,8 @@
         - name: LocalDBUnshareInstance 
           href: ../relational-databases/express-localdb-instance-apis/localdbunshareinstance-function.md
   - name: JSON
+    href: ../relational-databases/json/json-data-sql-server.md
     items:
-    - name: Overview
-      href: ../relational-databases/json/json-data-sql-server.md
     - name: Manage
       items: 
       - name: Store documents
@@ -2350,9 +2301,8 @@
       - name: Explicit Schema
         href: ../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md
     - name: Format Query Results 
+      href: ../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
       items:
-      - name: Overview
-        href: ../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
       - name: Format nested output with PATH ode
         href: ../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
       - name: Format with AUTO Mode
@@ -2372,11 +2322,10 @@
       - name: Use output
         href: ../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md
   - name: SQL Server Native Client
+    href: ../relational-databases/native-client/sql-server-native-client.md
     items:
     - name: Overview
       items:
-      - name: SQL Server Native Client
-        href: ../relational-databases/native-client/sql-server-native-client.md
       - name: Finding more information
         href: ../relational-databases/native-client/finding-more-sql-server-native-client-information.md
       - name:  Programming
@@ -2386,9 +2335,8 @@
       - name: When to Use SQL Server Native Client
         href: ../relational-databases/native-client/when-to-use-sql-server-native-client.md
     - name: Features
+      href: ../relational-databases/native-client/features/sql-server-native-client-features.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client/features/sql-server-native-client-features.md
       - name: Diagnostic Information Extended Events 
         href: ../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md
       - name: Changing Passwords Programmatically
@@ -2436,9 +2384,8 @@
       - name: Working with Snapshot Isolation
         href: ../relational-databases/native-client/features/working-with-snapshot-isolation.md
     - name: Applications
+      href: ../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
       items:
-        - name: Building Applications 
-          href: ../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
         - name: Components 
           href: ../relational-databases/native-client/applications/components-of-sql-server-native-client.md
         - name: Connecting to a Windows Azure 
@@ -2464,9 +2411,8 @@
       - name: SQL Server Native Client Error MSSQLSERVER_50000
         href: ../relational-databases/native-client/sql-server-native-client-error-mssqlserver-50000.md
   - name: Native Client OLE DB
+    href: ../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md
     items: 
-    - name: Overview
-      href: ../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md
     - name: FILESTREAM Support
       href: ../relational-databases/native-client/ole-db/filestream-support-ole-db.md
     - name: Large CLR User-Defined Types
@@ -2476,17 +2422,15 @@
     - name: Sparse Columns Support 
       href: ../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md
     - name: Schema Rowset Support 
+      href: ../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md
       - name: Distributed Query Support
         href: ../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md
       - name: LINKEDSERVERS Rowset
         href: ../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md
     - name: Stored Procedures
+      href: ../relational-databases/native-client/ole-db/stored-procedures.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client/ole-db/stored-procedures.md
       - name: Calling
         href: ../relational-databases/native-client/ole-db/stored-procedures-calling.md
       - name: Running
@@ -2506,9 +2450,8 @@
         - name: Use the OUTPUT Clause
           href: ../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md
     - name: Data source objects
+      href: ../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md
       items:              
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md
       - name: Information Properties
         href: ../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md
       - name: Data Source Properties 
@@ -2522,9 +2465,8 @@
       - name: Sessions
         href: ../relational-databases/native-client-ole-db-data-source-objects/sessions.md
     - name: Commands
+      href: ../relational-databases/native-client-ole-db-commands/commands.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-commands/commands.md
       - name: Parameters
         href: ../relational-databases/native-client-ole-db-commands/command-parameters.md
       - name: Syntax
@@ -2536,9 +2478,8 @@
       - name: Using IMultipleResults to Process Multiple Result Sets
         href: ../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md
     - name: Rowsets
+      href: ../relational-databases/native-client-ole-db-rowsets/rowsets.md
       items: 
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-rowsets/rowsets.md
       - name: Bookmarks
         href: ../relational-databases/native-client-ole-db-rowsets/bookmarks.md
       - name: Creating a Rowset with IOpenRowset
@@ -2568,9 +2509,8 @@
       - name: "Using IRow::GetColumns"
         href: ../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md
     - name: BLOBs & OLE OBjects
+      href: ../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
       - name: Getting Large Data
         href: ../relational-databases/native-client-ole-db-blobs/getting-large-data.md
       - name: Setting Large Data
@@ -2578,9 +2518,8 @@
       - name: Streaming Support for BLOB Output Parameters
         href: ../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md
     - name: Tables & Indexes
+      href: ../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md
       - name: Adding a column 
         href: ../relational-databases/native-client-ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md
       - name: Create index
@@ -2594,9 +2533,8 @@
       - name: Removing a column 
         href: ../relational-databases/native-client-ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md
     - name: Data Types
+      href: ../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md
       - name: Mapping in ITableDefinition
         href: ../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md
       - name: Mapping in Rowsets & Parameters
@@ -2604,9 +2542,8 @@
       - name: SSVARIANT Structure
         href: ../relational-databases/native-client-ole-db-data-types/ssvariant-structure.md
     - name: Table-Valued Parameters
+      href: ../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
       - name: Executing commands 
         href: ../relational-databases/native-client-ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md
       - name: Inserting data 
@@ -2624,9 +2561,8 @@
       - name: Type discovery
         href: ../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md
     - name: Date & Time Improvements
+      href: ../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md
       - name: Comparability for IRowsetFind
         href: ../relational-databases/native-client-ole-db-date-time/comparability-for-irowsetfind.md
       - name: Conversions
@@ -2646,9 +2582,8 @@
       - name: API Support 
         href: ../relational-databases/native-client-ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md
     - name: Transactions
+      href: ../relational-databases/native-client-ole-db-transactions/transactions.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-transactions/transactions.md
       - name: Isolation Levels
         href: ../relational-databases/native-client-ole-db-transactions/isolation-levels-ole-db.md
       - name: Distributed Transactions
@@ -2656,9 +2591,8 @@
       - name: Local Transactions
         href: ../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md
     - name: Errors in provider
+      href: ../relational-databases/native-client-ole-db-errors/errors.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-errors/errors.md
       - name: Error Interfaces
         href: ../relational-databases/native-client-ole-db-errors/information-in-error-interfaces.md
       - name: Retrieving Information
@@ -2670,9 +2604,8 @@
       - name: Message Results
         href: ../relational-databases/native-client-ole-db-errors/sql-server-message-results.md
     - name: Interfaces
+      href: ../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md
       - name: IBCPSession
         href: ../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md
       - name: "IBCPSession::BCPColFmt"
@@ -2728,9 +2661,8 @@
       - name: "ISSCommandWithParameters::SetParameterProperties "
         href: ../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
     - name: How-to Topics
+      href: ../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md
       - name: Processing Results 
         href: ../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
       - name: Execute a user-defined function & process return code 
@@ -2782,9 +2714,8 @@
   - name: Native Client ODBC
     items:
     - name: General
+      href: ../relational-databases/native-client/odbc/sql-server-native-client-odbc.md
       items: 
-      - name: Overview              
-        href: ../relational-databases/native-client/odbc/sql-server-native-client-odbc.md
       - name: API Implementation Details
         href: ../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md
       - name: Data Source Names & 64-Bit Operating Systems
@@ -2806,9 +2737,8 @@
       - name: Using Catalog Functions
         href: ../relational-databases/native-client/odbc/using-catalog-functions.md
     - name: How-to 
+      href: ../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md
       items: 
-      - name: Overview
-        href: ../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md
       - name: Executing Queries 
         href: ../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
       - name: Execute a Statement Directly
@@ -2864,9 +2794,8 @@
         - name: Use Table-Valued Parameters
           href: ../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md
       - name: Cursors
+        href: ../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md
         items: 
-        - name: Overview
-          href: ../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md
         - name: Fetch & Update Rowsets
           href: ../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md
         - name: Use Cursors
@@ -2874,9 +2803,8 @@
         - name: Use Rowset Binding
           href: ../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md
       - name: Bulk copy
+        href: ../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
         items:
-        - name: Overview
-          href: ../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
         - name: Bulk Copy a SELECT Result Set
           href: ../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc.md
         - name: Using a Format File
@@ -2888,9 +2816,8 @@
         - name: Create a Format File
           href: ../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md
       - name: Creating a driver application
+        href: ../relational-databases/native-client/odbc/creating-a-driver-application.md
         items:
-        - name: Overview
-          href: ../relational-databases/native-client/odbc/creating-a-driver-application.md
         - name: Asynchronous Mode & SQLCancel
           href: ../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md        
         - name: Multithreaded Applications
@@ -3000,9 +2927,8 @@
       - name: SQLTables
         href: ../relational-databases/native-client-odbc-api/sqltables.md
     - name: Driver Extensions - Bulk Copy Functions
+      href: ../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md
       items: 
-      - name: Overview
-        href: ../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md
       - name: bcp_batch
         href: ../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md
       - name: bcp_bind
@@ -3040,9 +2966,8 @@
       - name: bcp_writefmt
         href: ../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md
     - name: Performing Bulk Copy Operations 
+      href: ../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md
       items: 
-      - name: Overview
-        href: ../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md
       - name: Program Variables
         href: ../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md
       - name: Copying Text & Image Data
@@ -3054,9 +2979,8 @@
       - name: Using Data Files & Format Files
         href: ../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md
     - name: ODBC Communication
+      href: ../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md
       items: 
-      - name: Communicating with SQL Server 
-        href: ../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md
       - name: Allocating a Connection Handle
         href: ../relational-databases/native-client-odbc-communication/allocating-a-connection-handle.md
       - name: Allocating an Environment Handle
@@ -3068,9 +2992,8 @@
       - name: SQL Server Native Client ODBC Data Sources
         href: ../relational-databases/native-client-odbc-communication/sql-server-native-client-odbc-data-sources.md
     - name: Queries
+      href: ../relational-databases/native-client-odbc-queries/executing-queries-odbc.md
       items: 
-      - name: Overview
-        href: ../relational-databases/native-client-odbc-queries/executing-queries-odbc.md
       - name: Executing Statements
         href: ../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md
       - name: Batches of Statements
@@ -3096,9 +3019,8 @@
       - name: Using Statement Parameters
         href: ../relational-databases/native-client-odbc-queries/using-statement-parameters.md
     - name: Results
+      href: ../relational-databases/native-client-odbc-results/processing-results-odbc.md
       items: 
-      - name: Processing Results
-        href: ../relational-databases/native-client-odbc-results/processing-results-odbc.md
       - name: Assigning Storage
         href: ../relational-databases/native-client-odbc-results/assigning-storage.md
       - name: Autotranslation of Character Data
@@ -3112,9 +3034,8 @@
       - name: Mapping Data Types
         href: ../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md
     - name: Cursors
+      href: ../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md
       items: 
-      - name: Overview
-        href: ../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md
       - name: Implementation
         href: ../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md
       - name: Cursor Library
@@ -3146,25 +3067,22 @@
       - name: Positioned Updates
         href: ../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md
     - name: Scrolling & Fetching rows
+      href: ../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md
       items: 
-      - name: Overview
-        href: ../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md
       - name: Bookmarking Rows 
         href: ../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md
     - name: Stored procedures
+      href: ../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md
       items:
-      - name: Running Stored Procedures
-        href: ../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md
-      - name: Batching Stored Procedure Calls
-        href: ../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md
-      - name: Calling a Stored Procedure
+      - name: Call
         href: ../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md
-      - name: Processing Stored Procedure Results
+      - name: Batch calls
+        href: ../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md
+      - name: Process rResults
         href: ../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md
     - name: Text & image columns
+      href: ../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
       items: 
-      - name: Managing Text & Image Columns
-        href: ../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
       - name: Bound vs. Unbound Text & Image Columns
         href: ../relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
       - name: Data-at-Execution & Text, ntext, or Image Columns
@@ -3172,9 +3090,8 @@
       - name: Logged vs. Unlogged Modifications
         href: ../relational-databases/native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
     - name: Table-Valued Parameters
+      href: ../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
       items:
-      - name: Overview
-        href: ../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
       - name: Uses of ODBC Table-Valued Parameters
         href: ../relational-databases/native-client-odbc-table-valued-parameters/uses-of-odbc-table-valued-parameters.md
       - name: Additional metadata
@@ -3185,7 +3102,7 @@
         href: ../relational-databases/native-client-odbc-table-valued-parameters/cross-version-compatibility.md
       - name: Descriptor Fields for Constituent Columns
         href: ../relational-databases/native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md
-      - name: SQL 
+      - name: SQL  Type
         href: ../relational-databases/native-client-odbc-table-valued-parameters/odbc-sql-type-for-table-valued-parameters.md
       - name: API Summary
         href: ../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md
@@ -3203,10 +3120,9 @@
         href: ../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-diagnostic-record-fields.md
       - name: Metadata for Prepared Statements
         href: ../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md
-    - name: Date & Time 
+    - name: Date & Time Improvements
+      href: ../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md
       items:
-      - name: Improvements
-        href: ../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md
       - name: Bulk Copy Changes
         href: ../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md
       - name: Data Type Support 
@@ -3222,17 +3138,15 @@
       - name: sql_variant Support for Date & Time Types
         href: ../relational-databases/native-client-odbc-date-time/sql-variant-support-for-date-and-time-types.md
       - name: Conversions
+        href: ../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md
         items:
-        - name: datetime Data Type Conversions
-          href: ../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md
         - name: datetime Data Type Conversions from C to SQL
           href: ../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md
         - name: datetime Data Type Conversions from SQL to C
           href: ../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md
     - name: Errors
+      href: ../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md
       items: 
-      - name: Overview
-        href: ../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md
       - name: Diagnostic Records & Fields
         href: ../relational-databases/native-client-odbc-error-messages/diagnostic-records-and-fields.md
       - name: Error Messages
@@ -3244,11 +3158,10 @@
       - name: SQLSTATE (ODBC Error Codes)
         href: ../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md
   - name: Server Management Objects (SMO)
+    href: ../relational-databases/server-management-objects-smo/overview-smo.md
     items:
     - name: General
       items: 
-      - name: Overview 
-        href: ../relational-databases/server-management-objects-smo/overview-smo.md
       - name: SMO Programming Guide
         href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
       - name: Installing SMO
@@ -3372,6 +3285,7 @@
       - name: XML Schemas
         href: ../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md
   - name: SQLXML
+    href: ../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md
     items:
     - name: Overview
       items: 
@@ -3379,8 +3293,6 @@
         href: ../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md
       - name: Requirements
         href: ../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
-      - name: Programming Concepts
-        href: ../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md
       - name: SQLXML Is Not Installed in SQL Server
         href: ../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md
       - name: Using ADO to Queries
@@ -3388,11 +3300,10 @@
       - name: xml Data Type Support in SQLXML 4.0
         href: ../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md
     - name: Formatting
+      href: ../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md
       items: 
       - name: Client-side & Server-side
         href: ../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-      - name: Architecture of Client-side & Server-side 
-        href: ../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md
       - name: Client-side vs. Server-side 
         href: ../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
       - name: Client-side
@@ -3400,9 +3311,8 @@
       - name: Server-side 
         href: ../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md
     - name: Annotated XSD Schemas in SQLXML 4.0
+      href: ../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md
       items:
-      - name: Overview
-        href: ../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md
       - name: Introduction to Annotated XSD Schemas
         href: ../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md
       - name: Using Annotated XSD Schemas in Queries
@@ -3448,9 +3358,8 @@
       - name: XSD Annotations
         href: ../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md
     - name: Using XPath Queries
+      href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md
       items: 
-      - name: Overview
-        href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md
       - name: Guidelines & Limitations of SQLXML 4.0
         href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md
       - name: Introduction to Using XPath Queries
@@ -3464,9 +3373,8 @@
       - name: Converting Annotated XDR Schemas to Equivalent XSD Schemas
         href: ../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md
       - name: .NET framework classes
+        href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md
         items: 
-        - name: SQLXML 4.0 .NET Framework Support - Managed Classes
-          href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md
         - name: Accessing SQLXML Functionality in the .NET Environment
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md
         - name: Applying an XSL Transformation (SQLXML Managed Classes)
@@ -3494,9 +3402,8 @@
         - name: SQLXML 4.0 .NET Framework Support - Using DiffGrams to Modify Data
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data.md
       - name: Diffgram
+        href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md
         items: 
-        - name: DiffGram Examples
-          href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md
         - name: Executing a DiffGram by Using ADO
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md
         - name: Executing a DiffGram by Using SQLXML Managed Classes
@@ -3566,9 +3473,8 @@
         - name: Using an Updategram in a Sample ASP Application
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md              
       - name: Bulk-load XML
+        href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md
         items:
-        - name: Overview            
-          href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md
         - name: Annotation Interpretation - Other Annotations
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md
         - name: "Annotation Interpretation - sql:limit-field & sql:limit-value"
@@ -3593,10 +3499,9 @@
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md
         - name: XML Bulk Load Examples
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md
-      - name: Data access components provider
-        items:     
-        - name: SQLXML 4.0 Data Access Components - SQLXMLOLEDB Provider
-          href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md
+      - name: SQLXMLOLEDB Provider
+        href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md
+        items:    
         - name: Applying an XSL Transformation (SQLXMLOLEDB Provider)
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md
         - name: Executing SQL Queries (SQLXMLOLEDB Provider)
@@ -3613,10 +3518,9 @@
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md
         - name: Using the SQLXMLOLEDB Provider
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md
-      - name: Catching templates & XML schemas
+      - name: Caching templates & XML schemas
+        href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md
         items:
-        - name: Caching Templates, XSL, & Schemas
-          href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md
         - name: Schema Caching
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md
         - name: Template Caching
@@ -3624,9 +3528,8 @@
         - name: XSL Caching
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md
       - name: Security
+        href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md
         items: 
-        - name: SQLXML 4.0 Security Considerations
-          href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md
         - name: Annotated Schema Security Considerations
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md
         - name: Bulk Load Security Considerations
@@ -3638,14 +3541,13 @@
         - name: Updategram Security Considerations
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md
   - name: Windows Management Instrumentation (WMI)
+    href: ../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md
     items:        
     - name: Configuration Management
       items: 
-      - name: WMI Provider 
-        href: ../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md
-      - name: Access WMI Provider
+      - name: Access WMI Provider with VB Script
         href: ../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md
-      - name: Access WMI Provider
+      - name: Access WMI Provider with WQL
         href: ../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-wql.md
       - name: Understanding the WMI
         href: ../relational-databases/wmi-provider-configuration/understanding-the-wmi-provider-for-configuration-management.md
@@ -3653,7 +3555,7 @@
         href: ../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md
       - name: Working with the WMI Provider 
         href: ../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md
-      - name: WMI Provider for Configuration Management Classes
+      - name: Configuration Management Classes
         href: ../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
     - name: Configuration Classes
       items: 
@@ -3662,9 +3564,8 @@
       - name: SqlErrorLogFile Class
         href: ../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md
       - name: ClientNetLibInfo Class
+        href: ../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md
         items:
-        - name: Overview
-          href: ../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md
         - name: Date Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/date-property-clientnetlibinfo-class.md
         - name: FileName Property
@@ -3678,172 +3579,166 @@
         - name: Version Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/version-property-clientnetlibinfo-class.md
       - name: ClientNetworkProtocol Class
+        href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md
         items:
-        - name: Overview
-          href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md
-        - name: GetNextOrderValue Method (ClientNetworkProtocol Class)
+        - name: GetNextOrderValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/getnextordervalue-method-clientnetworkprotocol-class.md
-        - name: NumberOfFlags Property (ClientNetworkProtocol Class)
+        - name: NumberOfFlags Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/numberofflags-property-clientnetworkprotocol-class.md
-        - name: NumberOfProps Property (ClientNetworkProtocol Class)
+        - name: NumberOfProps Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/numberofprops-property-clientnetworkprotocol-class.md
-        - name: Properties Property (ClientNetworkProtocol Class)
+        - name: Properties Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/properties-property-clientnetworkprotocol-class.md
-        - name: ProtocolDisplayName Property (ClientNetworkProtocol Class)
+        - name: ProtocolDisplayName Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/protocoldisplayname-property-clientnetworkprotocol-class.md
-        - name: ProtocolDLL Property (ClientNetworkProtocol Class)
+        - name: ProtocolDLL Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/protocoldll-property-clientnetworkprotocol-class.md
-        - name: ProtocolName Property (ClientNetworkProtocol Class)
+        - name: ProtocolName Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/protocolname-property-clientnetworkprotocol-class.md
-        - name: ProtocolOrder Property (ClientNetworkProtocol Class)
+        - name: ProtocolOrder Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/protocolorder-property-clientnetworkprotocol-class.md
-        - name: SetDisable Method (ClientNetworkProtocol Class)
+        - name: SetDisable Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setdisable-method-clientnetworkprotocol-class.md
-        - name: SetEnable Method (ClientNetworkProtocol Class)
+        - name: SetEnable Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setenable-method-clientnetworkprotocol-class.md
-        - name: SetOrderValue Method (ClientNetworkProtocol Class)
+        - name: SetOrderValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md
-        - name: SetProtocolsOrder Method (ClientNetworkProtocol Class)
+        - name: SetProtocolsOrder Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setprotocolsorder-method-clientnetworkprotocol-class.md
-        - name: SupportAlias Property (ClientNetworkProtocol Class)
+        - name: SupportAlias Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/supportalias-property-clientnetworkprotocol-class.md
       - name: ClientNetworkProtocolProperty Class
+        href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md
         items: 
-        - name: Overview 
-          href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md
-        - name: PropertyIdx Property (ClientNetworkProtocolProperty Class)
+        - name: PropertyIdx Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md
-        - name: PropertyName Property (ClientNetworkProtocolProperty Class)
+        - name: PropertyName Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyname-property-clientnetworkprotocolproperty-class.md
-        - name: PropertyNumVal Property (ClientNetworkProtocolProperty Class)
+        - name: PropertyNumVal Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertynumval-property-clientnetworkprotocolproperty-class.md
-        - name: PropertyStrVal Property (ClientNetworkProtocolProperty Class)
+        - name: PropertyStrVal Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertystrval-property-clientnetworkprotocolproperty-class.md
-        - name: PropertyType Property (ClientNetworkProtocolProperty Class)
+        - name: PropertyType Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertytype-property-clientnetworkprotocolproperty-class.md
-        - name: PropertyValType Property (ClientNetworkProtocolProperty Class)
+        - name: PropertyValType Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyvaltype-property-clientnetworkprotocolproperty-class.md
-        - name: ProtocolName Property (ClientNetworkProtocolProperty Class)
+        - name: ProtocolName Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/protocolname-property-clientnetworkprotocolproperty-class.md
-        - name: SetFlag Method (ClientNetworkProtocolProperty Class)
+        - name: SetFlag Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setflag-method-clientnetworkprotocolproperty-class.md
-        - name: SetNumericalValue Method (ClientNetworkProtocolProperty Class)
+        - name: SetNumericalValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setnumericalvalue-method-clientnetworkprotocolproperty-class.md
-        - name: SetNumValue Method (ClientNetworkProtocolProperty Class)
+        - name: SetNumValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setnumvalue-method-clientnetworkprotocolproperty-class.md
-        - name: SetStringValue Method (ClientNetworkProtocolProperty Class)
+        - name: SetStringValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setstringvalue-method-clientnetworkprotocolproperty-class.md
-        - name: SetStrValue Method (ClientNetworkProtocolProperty Class)
+        - name: SetStrValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setstrvalue-method-clientnetworkprotocolproperty-class.md
       - name: ClientSettingsGeneralFlag Class
+        href: ../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md
         items:
-        - name: Overview
-          href: ../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md
-        - name: FlagIndex Property (ClientSettingsGeneralFlag Class)
+        - name: FlagIndex Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagindex-property-clientsettingsgeneralflag-class.md
-        - name: FlagName Property (ClientSettingsGeneralFlag Class)
+        - name: FlagName Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagname-property-clientsettingsgeneralflag-class.md
-        - name: FlagValue Property (ClientSettingsGeneralFlag Class)
+        - name: FlagValue Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagvalue-property-clientsettingsgeneralflag-class.md
-        - name: InstanceName Property (ClientSettingsGeneralFlag Class)
+        - name: InstanceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/instancename-property-clientsettingsgeneralflag-class.md
-        - name: SetValue Method (ClientSettingsGeneralFlag Class)
+        - name: SetValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/setvalue-method-clientsettingsgeneralflag-class.md
       - name: SecurityCertificate Class
+        href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md
         items:
         - name: Context Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/context-property-securitycertificate-class.md
-        - name: ExpirationDate Property (SecurityCertificate Class)
+        - name: ExpirationDate Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/expirationdate-property-securitycertificate-class.md
-        - name: FriendlyName Property (SecurityCertificate Class)
+        - name: FriendlyName Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/friendlyname-property-securitycertificate-class.md
-        - name: GetCurrentCertificate Method (SecurityCertificate Class)
+        - name: GetCurrentCertificate Method
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/getcurrentcertificate-method-securitycertificate-class.md
-        - name: IssuedBy Property (SecurityCertificate Class)
+        - name: IssuedBy Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/issuedby-property-securitycertificate-class.md
-        - name: IssuedTo Property (SecurityCertificate Class)
+        - name: IssuedTo Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/issuedto-property-securitycertificate-class.md
-        - name: Name Property (SecurityCertificate Class)
+        - name: Name Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/name-property-securitycertificate-class.md
-        - name: SecurityCertificate Class
-          href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md
-        - name: SetCurrentCertificate Method (SecurityCertificate Class)
+        - name: SetCurrentCertificate Method
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/setcurrentcertificate-method-securitycertificate-class.md
-        - name: SHA Property (SecurityCertificate Class)
+        - name: SHA Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/sha-property-securitycertificate-class.md
-        - name: StartDate Property (SecurityCertificate Class)
+        - name: StartDate Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/startdate-property-securitycertificate-class.md
-        - name: SystemStore Property (SecurityCertificate Class)
+        - name: SystemStore Property
           href: ../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/systemstore-property-securitycertificate-class.md
       - name: ServerNetworkProtocol Class
+        href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md
         items:
         - name: Enabled Property 
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/enabled-property-servernetworkprotocol-class.md
-        - name: InstanceName Property (ServerNetworkProtocol Class)
+        - name: InstanceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/instancename-property-servernetworkprotocol-class.md
-        - name: IpAddresses Property (ServerNetworkProtocol Class)
+        - name: IpAddresses Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/ipaddresses-property-servernetworkprotocol-class.md
-        - name: MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
+        - name: MultiIpConfigurationSupport Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/multiipconfigurationsupport-property-servernetworkprotocol-class.md
-        - name: Properties Property (ServerNetworkProtocol Class)
+        - name: Properties Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/properties-property-servernetworkprotocol-class.md
-        - name: ProtocolDisplayName Property (ServerNetworkProtocol Class)
+        - name: ProtocolDisplayName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocoldisplayname-property-servernetworkprotocol-class.md
-        - name: ProtocolDLL Property (ServerNetworkProtocol Class)
+        - name: ProtocolDLL Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocoldll-property-servernetworkprotocol-class.md
-        - name: ProtocolName Property (ServerNetworkProtocol Class)
+        - name: ProtocolName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md
-        - name: ServerNetworkProtocol Class
-          href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md
-        - name: SetDisable Method (ServerNetworkProtocol Class)
+        - name: SetDisable Method
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/setdisable-method-servernetworkprotocol-class.md
-        - name: SetEnable Method (ServerNetworkProtocol Class)
+        - name: SetEnable Method
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/setenable-method-servernetworkprotocol-class.md
       - name: ServerNetworkProtocolIpAddress Class
+        href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md
         items:
         - name: Enabled Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/enabled-property-servernetworkprotocolipaddress-class.md
-        - name: InstanceName Property (ServerNetworkProtocolIPAddress Class)
+        - name: InstanceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/instancename-property-servernetworkprotocolipaddress-class.md
-        - name: IpAddressName Property (ServerNetworkProtocolIPAddress Class)
+        - name: IpAddressName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/ipaddressname-property-servernetworkprotocolipaddress-class.md
-        - name: Properties Property (ServerNetworkProtocolIPAddress Class)
+        - name: Properties Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/properties-property-servernetworkprotocolipaddress-class.md
-        - name: ProtocolName Property (ServerNetworkProtocolIPAddress Class)
+        - name: ProtocolName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/protocolname-property-servernetworkprotocolipaddress-class.md
-        - name: ServerNetworkProtocolIPAddress Class
-          href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md
-        - name: SetDisable Method (ServerNetworkProtocolIPAddress Class)
+        - name: SetDisable Method
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/setdisable-method-servernetworkprotocolipaddress-class.md
-        - name: SetEnable Method (ServerNetworkProtocolIPAddress Class)
+        - name: SetEnable Method
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/setenable-method-servernetworkprotocolipaddress-class.md
       - name: ServerNetworkProtocolProperty Class
+        href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md
         items:
         - name: InstanceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/instancename-property-servernetworkprotocolproperty-class.md
-        - name: IPAddressName Property (ServerNetworkProtocolProperty Class)
+        - name: IPAddressName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/ipaddressname-property-servernetworkprotocolproperty-class.md
-        - name: PropertyName Property (ServerNetworkProtocolProperty Class)
+        - name: PropertyName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertyname-property-servernetworkprotocolproperty-class.md
-        - name: PropertyNumVal Property (ServerNetworkProtocolProperty Class)
+        - name: PropertyNumVal Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertynumval-property-servernetworkprotocolproperty-class.md
-        - name: PropertyStrVal Property (ServerNetworkProtocolProperty Class)
+        - name: PropertyStrVal Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertystrval-property-servernetworkprotocolproperty-class.md
-        - name: PropertyType Property (ServerNetworkProtocolProperty Class)
+        - name: PropertyType Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertytype-property-servernetworkprotocolproperty-class.md
-        - name: PropertyValType Property (ServerNetworkProtocolProperty Class)
+        - name: PropertyValType Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertyvaltype-property-servernetworkprotocolproperty-class.md
-        - name: ProtocolName Property (ServerNetworkProtocolProperty Class)
+        - name: ProtocolName Property
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/protocolname-property-servernetworkprotocolproperty-class.md
-        - name: ServerNetworkProtocolProperty Class
-          href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md
-        - name: SetFlag Method (ServerNetworkProtocolProperty Class)
+        - name: SetFlag Method
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setflag-method-servernetworkprotocolproperty-class.md
-        - name: SetNumericalValue Method (ServerNetworkProtocolProperty Class)
+        - name: SetNumericalValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setnumericalvalue-method-servernetworkprotocolproperty-class.md
-        - name: SetStringValue Method (ServerNetworkProtocolProperty Class)
+        - name: SetStringValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setstringvalue-method-servernetworkprotocolproperty-class.md
       - name: ServerSettings Class
+        href: ../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md
         items:
         - name: GeneralFlags Property 
           href: ../relational-databases/wmi-provider-configuration-classes/serversettings-class/generalflags-property-serversettings-class.md
@@ -3855,28 +3750,24 @@
           href: ../relational-databases/wmi-provider-configuration-classes/serversettings-class/numberofflags-property-serversettings-class.md
         - name: RemoveCertificate Method 
           href: ../relational-databases/wmi-provider-configuration-classes/serversettings-class/removecertificate-method-serversettings-class.md
-        - name: ServerSettings Class
-          href: ../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md
         - name: SetCurrentCertificate Method 
           href: ../relational-databases/wmi-provider-configuration-classes/serversettings-class/setcurrentcertificate-method-serversettings-class.md
         - name: SetDefaults Method 
           href: ../relational-databases/wmi-provider-configuration-classes/serversettings-class/setdefaults-method-serversettings-class.md
       - name: ServerSettingsGeneralFlag Class
+        href: ../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md
         items:
         - name: FlagName Property 
           href: ../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagname-property-serversettingsgeneralflag-class.md
-        - name: FlagValue Property ()
+        - name: FlagValue Property
           href: ../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagvalue-property-serversettingsgeneralflag-class.md
-        - name: InstanceName Property (ServerSettingsGeneralFlag Class)
+        - name: InstanceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/instancename-property-serversettingsgeneralflag-class.md
-        - name: ServerSettingsGeneralFlag Class
-          href: ../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md
-        - name: SetValue Method (ServerSettingsGeneralFlag Class)
+        - name: SetValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/setvalue-method-serversettingsgeneralflag-class.md
       - name: SInstance Class
+        href: ../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md
         items:
-        - name: Overview
-          href: ../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md
         - name: Properties
           items:
           - name: GeneralFlags Property
@@ -3896,117 +3787,111 @@
           - name: SetDefaults Method
             href: ../relational-databases/wmi-provider-configuration-classes/sinstance-class/setdefaults-method-sinstance-class.md
       - name: SqlServerAlias Class
+        href: ../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md
         items:
           - name: AliasName Property
             href: ../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/aliasname-property-sqlserveralias-class.md
-          - name: ConnectionString Property (SqlServerAlias Class)
+          - name: ConnectionString Property
             href: ../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/connectionstring-property-sqlserveralias-class.md
-          - name: ProtocolName Property (SqlServerAlias Class)
+          - name: ProtocolName Property
             href: ../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/protocolname-property-sqlserveralias-class.md
-          - name: ServerName Property (SqlServerAlias Class)
+          - name: ServerName Property
             href: ../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/servername-property-sqlserveralias-class.md
-          - name: SqlServerAlias Class
-            href: ../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md
       - name: SqlService Class
+        href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md
         items:
         - name: AcceptPause Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md
-        - name: AcceptStop Property (SqlService Class)
+        - name: AcceptStop Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptstop-property-sqlservice-class.md
-        - name: AdvancedProperties Property (SqlService Class)
+        - name: AdvancedProperties Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md
         - name: BinaryPath Property (SqlService Class )
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/binarypath-property-sqlservice-class.md
-        - name: Clustered Property (SqlService Class)
+        - name: Clustered Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/clustered-property-sqlservice-class.md
-        - name: Dependencies Property (SqlService Class)
+        - name: Dependencies Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/dependencies-property-sqlservice-class.md
-        - name: Description Property (SqlService Class)
+        - name: Description Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/description-property-sqlservice-class.md
-        - name: DisplayName Property (SqlService Class)
+        - name: DisplayName Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/displayname-property-sqlservice-class.md
-        - name: ErrorControl Property (SqlService Class)
+        - name: ErrorControl Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/errorcontrol-property-sqlservice-class.md
-        - name: ExitCode Property (SqlService Class)
+        - name: ExitCode Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/exitcode-property-sqlservice-class.md
-        - name: HostName Property (SqlService Class)
+        - name: HostName Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/hostname-property-sqlservice-class.md
-        - name: PauseService Method (SqlService Class)
+        - name: PauseService Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/pauseservice-method-sqlservice-class.md
-        - name: ProcessId Class (SqlService Class)
+        - name: ProcessId Class
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/processid-class-sqlservice-class.md
-        - name: ResumeService Method (SqlService Class)
+        - name: ResumeService Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/resumeservice-method-sqlservice-class.md
-        - name: ServiceName Property (SqlService Class)
+        - name: ServiceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/servicename-property-sqlservice-class.md
-        - name: SetServiceAccount Method (SqlService Class)
+        - name: SetServiceAccount Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/setserviceaccount-method-sqlservice-class.md
-        - name: SetServiceAccountPassword Method (SqlService Class)
+        - name: SetServiceAccountPassword Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/setserviceaccountpassword-method-sqlservice-class.md
-        - name: SetStartMode Method (SqlService Class)
+        - name: SetStartMode Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/setstartmode-method-sqlservice-class.md
-        - name: SqlService Class
-          href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md
-        - name: SqlServiceType Property (SqlService Class)
+        - name: SqlServiceType Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservicetype-property-sqlservice-class.md
-        - name: StartMode Property (SqlService Class)
+        - name: StartMode Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/startmode-property-sqlservice-class.md
-        - name: StartService Method (SqlService Class)
+        - name: StartService Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/startservice-method-sqlservice-class.md
-        - name: State Property (SqlService Class)
+        - name: State Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/state-property-sqlservice-class.md
-        - name: StopService Method (SqlService Class)
+        - name: StopService Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/stopservice-method-sqlservice-class.md
       - name: SqlServiceAdvancedProperty Class
+        href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md
         items:
         - name: IsReadOnly Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md
-        - name: PropertyIndex Property (SqlServiceAdvancedProperty Class)
+        - name: PropertyIndex Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyindex-property-sqlserviceadvancedproperty-class.md
-        - name: PropertyName Property (SqlServiceAdvancedProperty Class)
+        - name: PropertyName Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyname-property-sqlserviceadvancedproperty-class.md
-        - name: PropertyNumValue Property (SqlServiceAdvancedProperty Class)
+        - name: PropertyNumValue Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertynumvalue-property-sqlserviceadvancedproperty-class.md
-        - name: PropertyStrValue Property (SqlServiceAdvancedProperty Class)
+        - name: PropertyStrValue Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertystrvalue-property-sqlserviceadvancedproperty-class.md
-        - name: PropertyValueType Property (SqlServiceAdvancedProperty Class)
+        - name: PropertyValueType Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyvaluetype-property-sqlserviceadvancedproperty-class.md
-        - name: ServiceName Property (SqlServiceAdvancedProperty Class)
+        - name: ServiceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/servicename-property-sqlserviceadvancedproperty-class.md
-        - name: SetBoolValue Method (SqlServiceAdvancedProperty Class)
+        - name: SetBoolValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setboolvalue-method-sqlserviceadvancedproperty-class.md
-        - name: SetNumericalValue Method (SqlServiceAdvancedProperty Class)
+        - name: SetNumericalValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setnumericalvalue-method-sqlserviceadvancedproperty-class.md
-        - name: SetNumValue Method (SqlServiceAdvancedProperty Class)
+        - name: SetNumValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setnumvalue-method-sqlserviceadvancedproperty-class.md
-        - name: SetStringValue Method (SqlServiceAdvancedProperty Class )
+        - name: SetStringValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setstringvalue-method-sqlserviceadvancedproperty-class.md
-        - name: SetStrValue Method (SqlServiceAdvancedProperty Class)
+        - name: SetStrValue Method
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setstrvalue-method-sqlserviceadvancedproperty-class.md
-        - name: SqlServiceAdvancedProperty Class
-          href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md
-        - name: SqlServiceType Property (SqlServiceAdvancedProperty Class)
+        - name: SqlServiceType Property
           href: ../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlservicetype-property-sqlserviceadvancedproperty-class.md
       - name: CInstance Class 
+        href: ../relational-databases/wmi-provider-configuration-classes/cinstance-class.md
         items:
         - name: InstanceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/cinstance-class-instancename-property.md
-        - name: CInstance Class - SetDefaults Method
+        - name: SetDefaults Method
           href: ../relational-databases/wmi-provider-configuration-classes/cinstance-class-setdefaults-method.md
-        - name: CInstance Class
-          href: ../relational-databases/wmi-provider-configuration-classes/cinstance-class.md
       - name: ClientSettings Class  
+        href: ../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md
         items:
         - name: InstanceName Property
           href: ../relational-databases/wmi-provider-configuration-classes/clientsettings-class-instancename-property.md
-        - name: ClientSettings Class - SetDefaults Method
+        - name: SetDefaults Method
           href: ../relational-databases/wmi-provider-configuration-classes/clientsettings-class-setdefaults-method.md
-        - name: ClientSettings Class
-          href: ../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md
-    - name: WMI Provider for Server Events Concepts
+    - name: Server Events Concepts
+      href: ../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
       items:
-      - name: Overview
-        href: ../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
       - name: "Sample: Creating a SQL Server Agent Alert with the WMI Provider"
         href: ../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
       - name: "Sample: Using the WMI Event Provider with the .NET Framework"
@@ -4020,9 +3905,8 @@
       - name: Working with Server Events
         href: ../relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
 - name: Internals & Architecture
+  href:  ../relational-databases/sql-server-guides.md
   items:
-  - name: Overview
-    href:  ../relational-databases/sql-server-guides.md
   - name: Ghost record cleanup process
     href: ../relational-databases/ghost-record-cleanup-process-guide.md
   - name: Index Architecture & Design
@@ -4040,15 +3924,14 @@
   - name: Transaction Locking & Row Versioning Guide
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Memory Management Architecture    
+    href: ../relational-databases/memory-management-architecture-guide.md
     items:
-    - name: Overview
-      href: ../relational-databases/memory-management-architecture-guide.md
     - name: Reading pages
       href: ../relational-databases/reading-pages.md
     - name: Writing pages
       href: ../relational-databases/writing-pages.md
 - name: Installation
-  href: redirectfrom-release-notes-10.md ## /sql/database-engine/sql-server-database-engine-backward-compatibility
+  href: redirectfrom-installation-10.md ## /sql/sql-server/install/what-s-new-in-sql-server-installation
   items: 
   - name: Overview
     items:
@@ -4077,9 +3960,8 @@
     - name: Breaking changes in SQL Server 2016
       href: ../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md
   - name: Planning
+    href: ../sql-server/install/planning-a-sql-server-installation.md
     items:
-    - name: Reference
-      href: ../sql-server/install/planning-a-sql-server-installation.md
     - name: Hardware & Software Requirements
       href: ../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
     - name: Security Considerations 
@@ -4093,11 +3975,10 @@
     - name: File Locations
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
   - name: Install SQL Server
+    href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
     - name: Overview
       href: ../database-engine/install-windows/install-sql-server.md
-    - name: Reference
-      href: ../database-engine/install-windows/installation-for-sql-server.md 
     - name: Installation Wizard Help
       href: ../sql-server/install/instance-configuration.md
     - name: SQL Server Database Engine
@@ -4143,9 +4024,8 @@
     - name: Server BI Features
       href: ../sql-server/install/install-sql-server-business-intelligence-features.md
   - name: Upgrade SQL Server
+    href: ../database-engine/install-windows/upgrade-sql-server.md 
     items:
-    - name: Reference
-      href: ../database-engine/install-windows/upgrade-sql-server.md     
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
@@ -4184,9 +4064,8 @@
       - name: Change the Database Compatibility Mode & Use the Query Store
         href: ../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
   - name: Configuration
+    href: ../database-engine/configure-windows/database-engine-instances-sql-server.md
     items: 
-    - name: Database Engine reference 
-      href: ../database-engine/configure-windows/database-engine-instances-sql-server.md
     - name: Windows firewall
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Multi-Homed Computer 
@@ -4230,9 +4109,8 @@
     - name: Buffer Pool Extension
       href: ../database-engine/configure-windows/buffer-pool-extension.md
     - name: Server Configuration Options 
+      href: ../database-engine/configure-windows/server-configuration-options-sql-server.md
       items:
-      - name: Overview 
-        href: ../database-engine/configure-windows/server-configuration-options-sql-server.md
       - name: access check cache 
         href: ../database-engine/configure-windows/access-check-cache-server-configuration-options.md
       - name: ad hoc distributed queries
@@ -4376,9 +4254,8 @@
       - name: xp_cmdshell
         href: ../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md
     - name: Manage the Database Engine Services
+      href: ../database-engine/configure-windows/manage-the-database-engine-services.md
       items:
-      - name: Overview
-        href: ../database-engine/configure-windows/manage-the-database-engine-services.md
       - name: Security Requirements 
         href: ../database-engine/configure-windows/security-requirements-for-managing-services.md
       - name: Windows Service Accounts & Permissions
@@ -4445,9 +4322,8 @@
       - name: Register a Service Principal Name for Kerberos Connections
         href: ../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md
     - name: Client Network Configuration
+      href: ../database-engine/configure-windows/client-network-configuration.md
       items:
-      - name: Overview
-        href: ../database-engine/configure-windows/client-network-configuration.md
       - name: Configure Client Protocols
         href: ../database-engine/configure-windows/configure-client-protocols.md
       - name: Create or Delete a Server Alias for Use by a Client
@@ -4459,10 +4335,9 @@
       - name: Check the ODBC SQL Server Driver Version (Windows)
         href: ../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md
   - name: Uninstall SQL Server
+    href: ../sql-server/install/uninstall-sql-server.md
     items:
-    - name: Overview
-      href: ../sql-server/install/uninstall-sql-server.md
-    - name: Uninstall SQL Server 
+    - name: Overview 
       href: ../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
     - name: Remove Data Quality Server Objects
       href: ../sql-server/install/remove-data-quality-server-objects.md
@@ -6386,9 +6261,8 @@
       - name: Database Lifecycle Management
         href: ../relational-databases/database-lifecycle-management.md
       - name: Database mail
+        href: ../relational-databases/database-mail/database-mail.md
         items:
-        - name: Overview
-          href: ../relational-databases/database-mail/database-mail.md
         - name: Database Mail Configuration Objects
           href: ../relational-databases/database-mail/database-mail-configuration-objects.md
         - name: Create a Profile
@@ -6404,17 +6278,15 @@
         - name: Configure SQL Server Agent Mail to Use Database Mail
           href: ../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md
         - name: Log & Audits
+          href: ../relational-databases/database-mail/database-mail-log-and-audits.md
           items:
-          - name: Overview
-            href: ../relational-databases/database-mail/database-mail-log-and-audits.md
           - name: SQL Agent Job to archive events
             href: ../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
           - name: Check the Status of E-Mail Messages Sent With Database Mail
             href: ../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
       - name: Data compression
+        href: ../relational-databases/data-compression/data-compression.md
         items:
-        - name: Overview
-          href: ../relational-databases/data-compression/data-compression.md
         - name: Row Compression 
           href: ../relational-databases/data-compression/row-compression-implementation.md
         - name: Page Compression
@@ -6426,9 +6298,8 @@
         - name: Disable 
           href: ../relational-databases/data-compression/disable-compression-on-a-table-or-index.md
       - name: Maintenance Plans
+        href: ../relational-databases/maintenance-plans/maintenance-plans.md
         items:
-        - name: Overview
-          href: ../relational-databases/maintenance-plans/maintenance-plans.md
         - name: Create 
           href: ../relational-databases/maintenance-plans/create-a-maintenance-plan.md
         - name: Maintenance Plan Wizard
@@ -6478,9 +6349,8 @@
           - name: Servers
             href: ../relational-databases/maintenance-plans/maintenance-plan-servers.md
       - name: Policy-based management
+        href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
         items:
-        - name: Overview
-          href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
         - name: Manage
           items: 
           - name: Create a policy
@@ -6516,9 +6386,8 @@
           - name: Condition properties 
             href: ../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md
         - name: Working with facets
+          href: ../relational-databases/policy-based-management/working-with-policy-based-management-facets.md
           items:
-          - name: Overview
-            href: ../relational-databases/policy-based-management/working-with-policy-based-management-facets.md
           - name: View the Facets on an Object
             href: ../relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md
           - name: Properties
@@ -6594,6 +6463,13 @@
             href: ../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
           - name: Verify Max Worker Threads Setting
             href: ../relational-databases/policy-based-management/verify-max-worker-threads-setting.md
+        - name: "Tutorial: Administering Servers by Using Policy-Based Management"
+          href: ../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
+          items:
+            - name: "Lesson 1: Create & Apply an Off By Default Policy"
+              href: ../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
+            - name: "Lesson 2: Create & Apply a Naming Standards Policy"
+              href: ../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
         - name: Reference
           items: 
           - name: Object Explorer
@@ -6626,34 +6502,25 @@
               href: ../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md
             - name: View Policies
               href: ../relational-databases/policy-based-management/view-policies-dialog-box.md
-          - name: Evaluate policies Diaglot Box
+          - name: Evaluate policies Dialog Box
             items:                
             - name: Policy Selection Page
               href: ../relational-databases/policy-based-management/evaluate-policies-dialog-box-policy-selection-page.md
             - name: Evaluation Results Page
               href: ../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md
-          - name: Facet Properites Dialog Box
+          - name: Facet Properties Dialog Box
             items: 
             - name: General Page
               href: ../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md
             - name:  Dependent Policies Page
               href: ../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md
             - name: Dependent Conditions Page
-              href: ../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md             
-        - name: "Tutorial: Administering Servers by Using Policy-Based Management"
-          href: ../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
-          items:
-            - name: "Lesson 1: Create & Apply an Off By Default Policy"
-              href: ../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
-            - name: "Lesson 2: Create & Apply a Naming Standards Policy"
-              href: ../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
+              href: ../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md        
       - name: Transaction log management
         items:
         - name: Log File Viewer
-          href: 
+          href: ../relational-databases/logs/log-file-viewer.md
           items:
-          - name: Overview
-            href: ../relational-databases/logs/log-file-viewer.md
           - name: Open
             href: ../relational-databases/logs/open-log-file-viewer.md
           - name: View Offline
@@ -6661,9 +6528,8 @@
           - name: F1 Help
             href: ../relational-databases/logs/log-file-viewer-f1-help.md
         - name: Transaction log
+          href: ../relational-databases/logs/the-transaction-log-sql-server.md
           items:
-          - name: Overview
-            href: ../relational-databases/logs/the-transaction-log-sql-server.md
           - name: Manage size
             href: ../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md
           - name: Troubleshoot a full log (SQL Server Error 9002)
@@ -6671,15 +6537,13 @@
           - name: Control Transaction Durability
             href: ../relational-databases/logs/control-transaction-durability.md
         - name: Database Checkpoints
+          href: ../relational-databases/logs/database-checkpoints-sql-server.md
           items:
-          - name: Overview
-            href: ../relational-databases/logs/database-checkpoints-sql-server.md
           - name: Change the Target Recovery Time of a Database
             href: ../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
       - name: SQL Server utility  
+        href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
         items: 
-          - name: Overview
-            href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
           - name: Considerations for Running Utility & non-Utility Collection Sets on the Same Instance of SQL Server
             href: ../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
           - name: Create a SQL Server Utility Control Point
@@ -6715,9 +6579,8 @@
           - name: Utility Explorer F1 Help
             href: ../relational-databases/manage/utility-explorer-f1-help.md
   - name: Monitor
+    href: ../relational-databases/performance/monitor-and-tune-for-performance.md
     items: 
-      - name: Overview
-        href: ../relational-databases/performance/monitor-and-tune-for-performance.md
       - name: Monitor SQL Server Components
         href: ../relational-databases/performance/monitor-sql-server-components.md
       - name: Performance Dashboard
@@ -6727,15 +6590,13 @@
       - name: Live query stats
         href: ../relational-databases/performance/live-query-statistics.md
       - name: Activity Monitor
+        href: ../relational-databases/performance-monitor/activity-monitor.md
         items:
-        - name: Overview
-          href: ../relational-databases/performance-monitor/activity-monitor.md
         - name: Open Activity Monitor
           href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
       - name: Data collection
+        href: ../relational-databases/data-collection/data-collection.md
         items:
-        - name: Overview
-          href: ../relational-databases/data-collection/data-collection.md
         - name: System Data Collection Set Reports
           href: ../relational-databases/data-collection/system-data-collection-set-reports.md
         - name: Management Data Warehouse
@@ -6768,9 +6629,8 @@
           - name: Add a Collection Item to a Collection Set (T-SQL)
             href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
       - name: Extended events
+        href: ../relational-databases/extended-events/extended-events.md
         items:
-        - name: Overview
-          href: ../relational-databases/extended-events/extended-events.md
         - name: "Quickstart: Extended events in SQL Server"
           href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
         - name: Configure
@@ -6804,9 +6664,8 @@
           - name: Monitor System Activity 
             href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
         - name: Tools
+          href: ../relational-databases/extended-events/extended-events-tools.md
           items:
-          - name: Overview
-            href: ../relational-databases/extended-events/extended-events-tools.md
           - name: Use the SSMS XEvent Profiler
             href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
           - name: Use the system_health Session
@@ -6814,9 +6673,8 @@
           - name: Use the PowerShell Provider for Extended Events
             href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
       - name: SQL Trace
+        href: ../relational-databases/sql-trace/sql-trace.md
         items:
-        - name: Overview
-          href: ../relational-databases/sql-trace/sql-trace.md
         - name: Create & Run Traces Using T-SQL Stored Procedures
           href: ../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md
         - name: Create Manual Traces using Stored Procedures
@@ -6846,9 +6704,8 @@
         - name: Schedule Traces
           href: ../relational-databases/sql-trace/schedule-traces.md
       - name: Query store
+        href: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
         items:
-        - name: Monitoring Performance 
-          href: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
         - name: In-Memory OLTP
           href: ../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
         - name: Best Practice 
@@ -6858,9 +6715,8 @@
         - name: How Query Store Collects Data
           href: ../relational-databases/performance/how-query-store-collects-data.md
       - name: Server Performance & Activity Monitoring
+        href: ../relational-databases/performance/server-performance-and-activity-monitoring.md
         items: 
-        - name: Overview
-          href: ../relational-databases/performance/server-performance-and-activity-monitoring.md
         - name: Start System Monitor (Windows)
           href: ../relational-databases/performance/start-system-monitor-windows.md
         - name: Set Up a SQL Server Database Alert (Windows)
@@ -6878,9 +6734,8 @@
         - name: Save Showplan XML Statistics Profile Events Separately
           href: ../relational-databases/performance/save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md 
       - name: Performance monitor
+        href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
         items:
-        - name: Overview
-          href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
         - name: Run System Monitor
           href: ../relational-databases/performance-monitor/run-system-monitor.md
         - name: Monitor Disk Usage
@@ -6913,98 +6768,97 @@
           - name: Transactions
             href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
         - name: Using objects
+          href: ../relational-databases/performance-monitor/use-sql-server-objects.md
           items:
-          - name: Overview
-            href: ../relational-databases/performance-monitor/use-sql-server-objects.md
-          - name: SQL Server Agent
+          - name: SQL Server Agent objects
             items: 
-            - name: Alerts Object
+            - name: Alerts 
               href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-            - name: Jobs Object
+            - name: Jobs 
               href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
-            - name: JobSteps Object
+            - name: JobSteps 
               href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
-            - name: Statistics Object
+            - name: Statistics 
               href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
-          - name: SQL Server
+          - name: SQL Server objects
             items: 
-            - name: Access Methods Object
+            - name: Access Methods 
               href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
             - name: Availability Replica
               href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
-            - name: Backup Device Object
+            - name: Backup Device 
               href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
-            - name: Batch Resp Statistics Object
+            - name: Batch Resp Statistics 
               href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
-            - name: Broker Activation Object
+            - name: Broker Activation 
               href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
-            - name: Broker Statistics Object
+            - name: Broker Statistics 
               href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
-            - name: Broker TO Statistics Object
+            - name: Broker TO Statistics 
               href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
-            - name: Broker - DBM Transport Object
+            - name: Broker - DBM Transport 
               href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
-            - name: Buffer Manager Object
+            - name: Buffer Manager 
               href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
-            - name: Buffer Node Object
+            - name: Buffer Node 
               href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
-            - name: Catalog Metadata Object
+            - name: Catalog Metadata 
               href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
             - name: CLR Object
               href: ../relational-databases/performance-monitor/sql-server-clr-object.md
-            - name: Columnstore Object
+            - name: Columnstore 
               href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
-            - name: Cursor Manager by Type Object
+            - name: Cursor Manager by Type 
               href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
-            - name: Cursor Manager Total Object
+            - name: Cursor Manager Total 
               href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
-            - name: Database Mirroring Object
+            - name: Database Mirroring 
               href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
             - name: Database Replica
               href: ../relational-databases/performance-monitor/sql-server-database-replica.md
-            - name: Databases Object
+            - name: Databases 
               href: ../relational-databases/performance-monitor/sql-server-databases-object.md
-            - name: Deprecated Features Object
+            - name: Deprecated Features 
               href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
-            - name: ExecStatistics Object
+            - name: ExecStatistics 
               href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
-            - name: External Scripts Object
+            - name: External Scripts 
               href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
-            - name: FileTable Object
+            - name: FileTable 
               href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
-            - name: General Statistics Object
+            - name: General Statistics 
               href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
             - name: HTTP Storage
               href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
-            - name: Latches Object
+            - name: Latches 
               href: ../relational-databases/performance-monitor/sql-server-latches-object.md
-            - name: Locks Object
+            - name: Locks 
               href: ../relational-databases/performance-monitor/sql-server-locks-object.md
-            - name: LogPool FreePool Object
+            - name: LogPool FreePool 
               href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
-            - name: Memory Broker Clerks Object
+            - name: Memory Broker Clerks 
               href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
-            - name: Memory Manager Object
+            - name: Memory Manager 
               href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
             - name: Memory Node
               href: ../relational-databases/performance-monitor/sql-server-memory-node.md
-            - name: Plan Cache Object
+            - name: Plan Cache 
               href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
-            - name: Query Store Object
+            - name: Query Store 
               href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
-            - name: Resource Pool Stats Object
+            - name: Resource Pool Stats 
               href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
-            - name: SQL Errors Object
+            - name: SQL Errors 
               href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
-            - name: SQL Statistics Object
+            - name: SQL Statistics 
               href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
-            - name: Transactions Object
+            - name: Transactions 
               href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
-            - name: User Settable Object
+            - name: User Settable 
               href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
-            - name: Wait Statistics Object
+            - name: Wait Statistics 
               href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
-            - name: Workload Group Stats Object
+            - name: Workload Group Stats 
               href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Tune
     items: 
@@ -7027,23 +6881,21 @@
       - name: Showplan operators
         href: ../relational-databases/showplan-logical-and-physical-operators-reference.md
       - name: Database tuning advisor
+        href: ../relational-databases/performance/database-engine-tuning-advisor.md
         items:
-          - name: Overview
-            href: ../relational-databases/performance/database-engine-tuning-advisor.md
-          - name: Start 
-            href: ../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md
-          - name: Work with the Output 
-            href: ../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
-          - name: Columnstore index recommendations 
-            href: ../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
-          - name: Tuning Database using workload from Query Store
-            href: ../relational-databases/performance/tuning-database-using-workload-from-query-store.md
-          - name: Performance Improvements recommendations
-            href: ../relational-databases/performance/performance-improvements-using-dta-recommendations.md
+        - name: Start 
+          href: ../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md
+        - name: Work with the Output 
+          href: ../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+        - name: Columnstore index recommendations 
+          href: ../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+        - name: Tuning Database using workload from Query Store
+          href: ../relational-databases/performance/tuning-database-using-workload-from-query-store.md
+        - name: Performance Improvements recommendations
+          href: ../relational-databases/performance/performance-improvements-using-dta-recommendations.md
       - name: Execution plans 
+        href: ../relational-databases/performance/execution-plans.md
         items:
-        - name: Overview
-          href: ../relational-databases/performance/execution-plans.md
         - name: Query Profiling Infrastructure
           href: ../relational-databases/performance/query-profiling-infrastructure.md
         - name: Execution plans
@@ -7064,9 +6916,8 @@
           - name: Analyze an Actual Execution Plan
             href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
       - name: In-memory OLTP
+        href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
         items:
-        - name: Overview
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
         - name: Inventory of Technologies for Faster Performance
           href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
         - name: Usage Scenarios

@@ -55,20 +55,20 @@
         href: ../big-data-cluster/deploy-big-data-tools.md
       - name: Install mssqlctl
         href: ../big-data-cluster/deploy-install-mssqlctl.md
-      - name: Deployment scripts
-        items:
-        - name: Azure Kubernetes Service
-          href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: Deployment guidance
-          items:
-          - name: Deployment guidance
-            href: ../big-data-cluster/deployment-guidance.md
-          - name: Azure Kubernetes Service
-            href: ../big-data-cluster/deploy-on-aks.md
-          - name: Kubeadm
-            href: ../big-data-cluster/deploy-with-kubeadm.md
-          - name: Minikube
-            href: ../big-data-cluster/deploy-on-minikube.md
+    - name: Deployment scripts
+      items:
+      - name: Azure Kubernetes Service
+        href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
+    - name: Deployment guidance
+      items:
+      - name: Deployment guidance
+        href: ../big-data-cluster/deployment-guidance.md
+      - name: Azure Kubernetes Service
+        href: ../big-data-cluster/deploy-on-aks.md
+      - name: Kubeadm
+        href: ../big-data-cluster/deploy-with-kubeadm.md
+      - name: Minikube
+        href: ../big-data-cluster/deploy-on-minikube.md
   - name: Tutorials
     items:
     - name: 1_Load sample data

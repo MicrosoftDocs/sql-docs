@@ -76,6 +76,9 @@ SELECT...INTO creates a new table in the default filegroup and inserts the resul
 -   The identity column is from a remote data source.  
   
 If any one of these conditions is true, the column is created NOT NULL instead of inheriting the IDENTITY property. If an identity column is required in the new table but such a column is not available, or you want a seed or increment value that is different than the source identity column, define the column in the select list using the IDENTITY function. See "Creating an identity column using the IDENTITY function" in the Examples section below.  
+
+## Remarks  
+The `SELECT...INTO` statement operates in two parts - the new table is created, and then rows are inserted.  This means that if the inserts fail, they will all be rolled back, but the new (empty) table will remain.  If you need the entire operation to succeed or fail as a whole, use an [explicit transaction](../language-elements/begin-transaction-transact-sql.md).
   
 ## Limitations and Restrictions  
  You cannot specify a table variable or table-valued parameter as the new table.  

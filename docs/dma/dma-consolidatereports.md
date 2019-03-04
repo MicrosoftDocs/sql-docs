@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
@@ -67,7 +67,7 @@ This inventory can be in one of two forms:
 
 ### If using a CSV file
 > [!IMPORTANT]
-   > Ensure the Inventory file is saved as a comma seperated file.
+> Ensure that the inventory file is saved as a comma-separated (CSV) file.
 
 When using a csv file to import the data, ensure there are only two columns of data - **Instance Name** and **Database Name**, and that the columns don't have header rows.
  

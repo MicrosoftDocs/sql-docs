@@ -183,7 +183,7 @@ Static data masking operates at the column level. Select which columns to mask, 
 
 #### Static data masking vs. dynamic data masking
 
-Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The following table compares these two solutions:
+Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in [!INCLUDE[ssSQL16](../includes/sssql16-md.md)]. The following table compares these two solutions:
 
 |Static data masking |Dynamic data masking|
 |:----|:----|

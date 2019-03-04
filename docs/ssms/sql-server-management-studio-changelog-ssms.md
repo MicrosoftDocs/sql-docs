@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/27/2019"
+ms.date: "03/01/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -309,7 +309,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - Fixed a long outstanding issue where the DELETE key was not working in OE while trying to rename an object. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510
   - When displaying the properties of existing database files, the size appears under a column "Size (MB)" instead of "Initial Size (MB)" which is what is displayed when creating a new database. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024
   - Disabled the "Design" context-menu item on "Graph Tables" since there is no support for those kind of tables in the current version of SSMS.
-  - [New in Preview 5, in-cycle] Fixed an issue where the "New Job Schedule" dialog was not rendering properly on High DPI monitors. For details, see https://feedback.azure.com/admin/v3/suggestions/35541262 
+  - [New in Preview 5] Fixed an issue where the "New Job Schedule" dialog was not rendering properly on High DPI monitors. For details, see https://feedback.azure.com/admin/v3/suggestions/35541262 
   - [New in Preview 5] Fixed/improved the way  an issue where a database size ("Size (MB)") is displayed in Object Explorer details: only 2 decimal digits and formatted using the thousands separator. For details, see https://feedback.azure.com/forums/908035/suggestions/34379308
   - [New in Preview 5] Fixed an issue that was causing the creation of a "Spatial Index" to fail with an error like "To accomplish this action, set property PartitionScheme".
   - [New in Preview 5] Minor performance improvements in Object Explorer to avoid issuing extra queries, when possible.

@@ -35,8 +35,8 @@ helpviewer_keywords:
   - "FROM clause, UPDATE statement"
   - "WHERE clause, UPDATE statement"
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "AT TIME ZONE function"
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # AT TIME ZONE (Transact-SQL)

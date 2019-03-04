@@ -32,7 +32,6 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more
   - Use Sparklyr in SQL Server 2019 big data clusters
   - Mount external HDFS-compatible storage into big data cluster with HDFS tiering
-  - External library support on Windows for both Java and Python
 
 - [Database engine](#databaseengine)
   - Accelerated database recovery
@@ -40,6 +39,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Improved indirect checkpoint scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
+  - External library support on Windows for both Java and Python
 
 - [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
   - Calculation groups in tabular models reduce the number of measures by reusing calculation logic.

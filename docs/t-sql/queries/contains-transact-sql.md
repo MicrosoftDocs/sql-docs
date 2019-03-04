@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "inflectional forms [full-text search]"
   - "prefix searches [full-text search]"
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CONTAINS (Transact-SQL)

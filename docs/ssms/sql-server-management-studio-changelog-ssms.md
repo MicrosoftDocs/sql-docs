@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2019"
+ms.date: "03/02/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

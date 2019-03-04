@@ -34,7 +34,7 @@ helpviewer_keywords:
   - "database cloning [SQL Server]"
   - "DBCC CLONEDATABASE statement"
 ms.assetid: 
-author: "pamela" 
+author: "bluefooted" 
 ms.author: "pamela"
 manager: "amitban"
 ---

@@ -213,7 +213,7 @@ ms.date: 12/15/2018
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Manage, monitor, and tune</h3>
-                                                          <p><b>Maintenance Plans, SQL Profiler,  Automatic Tunic, In-memory OLTP, Partitions, Statistics, Indexes, Cardinality Estimation </b>  </p>
+                                                          <p><b>Maintenance Plans, SQL Profiler,  Automatic Tuning, In-memory OLTP, Partitions, Statistics, Indexes, Cardinality Estimation </b>  </p>
                                                       </div>
                                                   </div>
                                               </div>

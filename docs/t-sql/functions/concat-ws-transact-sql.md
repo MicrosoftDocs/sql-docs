@@ -32,7 +32,7 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 
 ## Arguments   
 separator  
-An expression of any character type (`char`', `nchar`', `nvarchar`, or `varchar`).
+An expression of any character type (`char`, `nchar`, `nvarchar`, or `varchar`).
 
 argument1, argument2, argument*N*  
 An expression of any type.

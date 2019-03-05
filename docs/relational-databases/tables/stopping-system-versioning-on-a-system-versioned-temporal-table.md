@@ -27,8 +27,8 @@ You can do that by setting **SYSTEM_VERSIONING** clause to **OFF**.
 -   History table as a regular table  
   
 ### Important remarks  
-  
--   No data loss happens when you set  **SYSTEM_VERSIONING = OFF** or drop the **SYSTEM_TIME** period.  
+-   History Table will **stop** caturing the updates for the duration of **SYSTEM_VERSIONING = OFF**.
+-   No data loss happens on the **temporal table** when you set  **SYSTEM_VERSIONING = OFF** or drop the **SYSTEM_TIME** period.
   
 -   When you set **SYSTEM_VERSIONING = OFF** and do not remove drop the **SYSTEM_TIME** period, the system will continue to update the period columns for every insert and update operation. Deletes on current table will be permanent.  
   

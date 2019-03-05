@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/27/2019"
+ms.date: "03/02/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

@@ -51,6 +51,8 @@
       href: ../big-data-cluster/big-data-cluster-release-notes.md
   - name: Install
     items:
+    - name: Get Started
+      href: ../big-data-cluster/deploy-get-started.md
     - name: Install Tools
       items:
       - name: Install big data tools

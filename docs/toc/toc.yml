@@ -12,6 +12,7 @@
     - name: SQL Server 2016
       href: ../sql-server/what-s-new-in-sql-server-2016.md
   - name: New with the database engine
+    href: ../database-engine/sql-server-database-engine-overview.md
     items:
     - name: SQL Server 2017
       href: ../database-engine/whats-new-in-sql-server-2017.md

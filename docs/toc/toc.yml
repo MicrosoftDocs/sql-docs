@@ -8248,6 +8248,7 @@
           href: ../tools/configuration-manager/ns-service-name-properties-advanced-tab.md
       - name: Report Server
         href: ../tools/configuration-manager/report-server-server-sql-server-configuration-manager.md
+        items: 
         - name: Log On Tab
           href: ../tools/configuration-manager/report-server-properties-log-on-tab.md
         - name: Service Tab

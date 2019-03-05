@@ -127,16 +127,14 @@ manager: craigg
 
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  is now supported on a Server Core installation of Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
 
-Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is supported on the Server Core mode of the editions of Windows Server indicated with an `y`. A value of `n` indicates installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  on the Server Code mode is not supported. 
-  
-| Windows Server | Data center | Enterprise | Standard | Web |
-| :------------- | :---------- | :--------- | :------- | :-- |
-| Windows Server 2019 | y  | N/A | y | n | 
-| Windows Server 2016 | y  | N/A | y | n | 
-| Windows Server 2012 R2 | y | N/A | y | n | 
-| Windows Server 2012 | y | y | N/A | n | 
-| Windows Server 2008 R2 SP1 | y | y | y | y |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is supported on the following Server Core mode of the editions of Windows Server:
+
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
   
  For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server 2014 on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   

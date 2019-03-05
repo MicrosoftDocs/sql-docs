@@ -109,7 +109,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - Smaller Download Size
     - The current size of the bundle is less than half of what SSMS 17.x is (~400 MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as large as it used to be.
   - SSMS is based on the new VS 2017 Isolated Shell
-    - This means a modern shell (we picked up VS 2107 15.6.4). The new shell unlocks all the accessibility fixes that went in both SSMS and Visual Studio.
+    - This means a modern shell (we picked up VS 2017 15.6.4). The new shell unlocks all the accessibility fixes that went in both SSMS and Visual Studio.
   - SSMS accessibility improvements
     - Much work went in to address Accessibility issues in all the tools (SSMS, DTA, and Profiler)
   - SSMS can be installed in custom folder

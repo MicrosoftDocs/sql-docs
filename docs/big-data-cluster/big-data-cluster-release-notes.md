@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -34,7 +34,7 @@ The following sections describe the new features and known issues for big data c
 - [Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [Common CLI for application deployment and cluster management](big-data-cluster-create-apps.md).
 - [VS Code extension to deploy applications to SQL Server big data clusters](app-deployment-extension.md).
-- New parameter ordering for the **mssqlctl** tool.
+- [Changes to the **mssqlctl** tool command usage](#mssqlctlctp23).
 - [Use Sparklyr in SQL Server 2019 Big data cluster](sparklyr-from-RStudio.md).
 - Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](hdfs-tiering.md).
 - New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
@@ -69,6 +69,18 @@ The following sections provide known issues for SQL Server big data clusters in 
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- The **mssqlctl** tool changed from a verb-noun command ordering to a noun-verb order. For example, `mssqlctl create cluster` is now `mssqlctl cluster create`.
+
+- The `--name` parameter is now required when creating a cluster with `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- For important information about upgrading to the latest version of big data clusters and **mssqlctl**, see [Upgrade to a new release](deployment-guidance.md#upgrade).
 
 #### External tables
 

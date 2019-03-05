@@ -141,7 +141,8 @@ Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is supported on
   
  For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server 2014 on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
-> **NOTE:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions that are supported on [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 64-bit x64 Standard edition are also supported on [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64-bit x64.  
+   >[!NOTE]
+   > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions that are supported on [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 64-bit x64 Standard edition are also supported on [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64-bit x64.  
   
  **Operating System Support:**  
   

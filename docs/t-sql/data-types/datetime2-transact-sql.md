@@ -50,7 +50,7 @@ Defines a date that is combined with a time of day that is based on 24-hour cloc
 |Time zone offset aware and preservation|No|  
 |Daylight saving aware|No|  
 
-<sup>1</sup> The first byte of a **datetime2** value stores the precision of the value, which means the actual storage required for a **datetime2** value will be the storage size indicated in the table above plus 1 additional byte to store the precision.  This makes the maximum size of a **datetime2** value 9 bytes – 1 byte to store precision + 8 bytes for data storage at maximum precision.
+<sup>1</sup> The first byte of a **datetime2** value stores the precision of the value, which means the actual storage required for a **datetime2** value is the storage size indicated in the table above plus 1 additional byte to store the precision.  This makes the maximum size of a **datetime2** value 9 bytes - 1 byte stores precision plus 8 bytes for data storage at maximum precision.
 
 For data type metadata, see [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) or [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precision and scale are variable for some date and time data types. To obtain the precision and scale for a column, see [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md), or [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   

@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/database-engine/sql-server-database-engine-backward-compatibility
+redirect_url: /sql/sql-server/install/what-s-new-in-sql-server-installation
 ---

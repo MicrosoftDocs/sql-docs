@@ -44,7 +44,7 @@ The following table defines how the precision and scale of the result are calcul
 -   Both expressions are **decimal**.  
 -   One expression is **decimal** and the other is a data type with a lower precedence than **decimal**.  
   
-The operand expressions are denoted as expression e1, with precision p1 and scale s1, and expression e2, with precision p2 and scale s2. The precision and scale for any expression that isn't **decimal** is that of the data type of the expression.
+The operand expressions are denoted as expression e1, with precision p1 and scale s1, and expression e2, with precision p2 and scale s2. The precision and scale for any expression that is not **decimal** is the precision and scale defined for the data type of the expression. The function max(a,b) means the following: take the greater value of "a" or "b". Similarly, min(a,b) indicates to take the smaller value of "a" or "b".
   
 |Operation|Result precision|Result scale *|  
 |---|---|---|

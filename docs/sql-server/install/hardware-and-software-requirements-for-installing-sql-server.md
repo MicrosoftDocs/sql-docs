@@ -134,7 +134,7 @@ The following requirements apply to all installations:
 
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  is now supported on a Server Core installation of Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
 
-Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is supported on the following Server Core mode of the editions of Windows Server:
+Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core mode is supported by the following editions of Windows Server:
 
 |                              |                                |
 | :------------------------    | :------------------------------|

@@ -3462,7 +3462,7 @@
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md
         - name: Introduction to Updategrams
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/introduction-to-updategrams-sqlxml-4-0.md
-        - name: NULL Handling
+        - name: "NULL Handling"
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/null-handling-sqlxml-4-0.md
         - name: Passing Parameters to Updategrams
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md
@@ -16030,7 +16030,7 @@
             href: ../t-sql/language-elements/slash-star-comment-transact-sql.md
           - name: CREATE DIAGNOSTICS SESSION
             href: ../t-sql/language-elements/create-diagnostics-session-transact-sql.md
-          - name: NULL & UNKNOWN
+          - name: "NULL & UNKNOWN"
             href: ../t-sql/language-elements/null-and-unknown-transact-sql.md
           - name: USE
             href: ../t-sql/language-elements/use-transact-sql.md

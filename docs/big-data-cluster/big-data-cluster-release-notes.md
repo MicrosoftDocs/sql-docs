@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -31,13 +31,12 @@ The following sections describe the new features and known issues for big data c
 
 ### What's in the CTP 2.3 release?
 
-- [Submit Jar or Py](big-data-cluster-create-apps.md) files with references to SQL Server big data clusters.
-- Execute Jar or Py files located in the HDFS file system (CTP 2.3)
 - [Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [Common CLI for application deployment and cluster management](big-data-cluster-create-apps.md).
 - [VS Code extension to deploy applications to SQL Server big data clusters](app-deployment-extension.md).
-- New syntax for **mssqlctl** tool usage.
+- [Changes to the **mssqlctl** tool command usage](#mssqlctlctp23).
 - [Use Sparklyr in SQL Server 2019 Big data cluster](sparklyr-from-RStudio.md).
+- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](hdfs-tiering.md).
 - New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
 - Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster but leaves the namespace. Previously, this command deleted the entire namespace.
 - Endpoint names have been changed and consolidated in this release:
@@ -71,13 +70,17 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
 
-#### Cluster administration portal
+#### <a id="mssqlctlctp23"></a> mssqlctl
 
-The cluster administration portal does not display the endpoint for the SQL Server master instance. To find the IP address and port for the master instance, use the following **kubectl** command:
+- The **mssqlctl** tool changed from a verb-noun command ordering to a noun-verb order. For example, `mssqlctl create cluster` is now `mssqlctl cluster create`.
 
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
+- The `--name` parameter is now required when creating a cluster with `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- For important information about upgrading to the latest version of big data clusters and **mssqlctl**, see [Upgrade to a new release](deployment-guidance.md#upgrade).
 
 #### External tables
 
@@ -88,6 +91,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - If you query a storage pool external table, you might get an error if the underlying file is being copied into HDFS at the same time.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- If you are creating an external table to Oracle that use character data types, the Azure Data Studio virtualization wizard interprets these columns as VARCHAR in the external table definition. This will cause a failure in the external table DDL. Either modify the Oracle schema to use the NVARCHAR2 type, or create EXTERNAL TABLE statements manually and specify NVARCHAR instead of using the wizard.
 
 #### Spark and notebooks
 

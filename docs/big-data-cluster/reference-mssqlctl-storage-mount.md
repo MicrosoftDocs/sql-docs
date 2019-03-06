@@ -5,7 +5,7 @@ description: Reference article for mssqlctl storage commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/27/2019
+ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -29,7 +29,7 @@ Create mounts of remote stores in HDFS.
 
 ```
 mssqlctl storage mount create
-   --mount-path
+   --local-path
    --remote-uri
    [--credential-file]
 ```
@@ -38,7 +38,7 @@ mssqlctl storage mount create
 
 | Parameters | Description |
 |---|---|
-| **--mount-path** | HDFS path where mount has to be create(destination of mount). Required. |
+| **--local-path** | HDFS path where mount has to be create(destination of mount). Required. |
 | **--remote-uri** | URI of the remote store that is to be mounted (source of mount). Required. |
 | **--credential-file** | File that contains the credentials to access the remote store. The credentials have to be specified as key=value pairs with one key=value per line. Any equals in the keys or values have to be escaped. No credentials are required by default. The required keys depend on the type of remote store being mounted and the type of authorization used. |
 
@@ -47,13 +47,13 @@ mssqlctl storage mount create
 To mount container "data" in ADLS Gen 2 account "adlsv2example" on HDFS path `/mounts/adlsv2/data` using the shared key:
 
 ```
-mssqlctl storage mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/ --mount-path /mounts/adlsv2/data --credentials credential_file
+mssqlctl storage mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/ --local-path /mounts/adlsv2/data --credentials credential_file
 ```
 
 To mount a remote HDFS cluster (`hdfs://namenode1:8080/`) on local HDFS path `/mounts/hdfs/`:
 
 ```
-mssqlctl storage mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
+mssqlctl storage mount create --remote-uri hdfs://namenode1:8080/ --local-path /mounts/hdfs/
 ```
 
 ## <a id="delete"></a> mssqlctl storage mount delete
@@ -62,21 +62,21 @@ Delete mounts of remote stores in HDFS.
 
 ```
 mssqlctl storage mount delete
-   --mount-path
+   --local-path
 ```
 
 ### Parameters
 
 | Parameters | Description |
 |---|---|
-| **--mount-path** | The HDFS path corresponding to the mount that has to be deleted. Required. |
+| **--local-path** | The HDFS path corresponding to the mount that has to be deleted. Required. |
 
 ### Examples
 
 Delete mount created at /mounts/adlsv2/data for a ADLS Gen 2 storage account.
 
 ```
-mssqlctl storage mount delete --mount-path /mounts/adlsv2/data
+mssqlctl storage mount delete --local-path /mounts/adlsv2/data
 ```
 
 ## <a id="status"></a> mssqlctl storage mount status
@@ -85,7 +85,7 @@ Status of mount(s).
 
 ```
 mssqlctl storage mount status
-   --mount-path
+   --local-path
 ```
 
 ### Parameters

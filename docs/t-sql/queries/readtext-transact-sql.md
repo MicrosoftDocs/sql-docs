@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "READTEXT statement"
   - "reading columns"
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # READTEXT (Transact-SQL)

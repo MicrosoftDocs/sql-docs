@@ -31,6 +31,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ
   - Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more
   - Use Sparklyr in SQL Server 2019 big data clusters
+  - Mount external HDFS-compatible storage into big data cluster with HDFS tiering
 
 - [Database engine](#databaseengine)
   - Accelerated database recovery
@@ -38,6 +39,10 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Improved indirect checkpoint scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
+  - External library support on Windows for both Java and Python
+
+- [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
+  - Calculation groups in tabular models reduce the number of measures by reusing calculation logic.
 
 ## Previous CTPs
 
@@ -106,6 +111,7 @@ Continue reading for more details about these features.
 - [Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
 - [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more (CTP 2.3)
 - [Use Sparklyr in SQL Server 2019 big data clusters](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
+- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](../big-data-cluster/hdfs-tiering.md) (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md) (CTP 2.2)
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
@@ -177,7 +183,7 @@ Static data masking operates at the column level. Select which columns to mask, 
 
 #### Static data masking vs. dynamic data masking
 
-Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The following table compares these two solutions:
+Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in [!INCLUDE[ssSQL16](../includes/sssql16-md.md)]. The following table compares these two solutions:
 
 |Static data masking |Dynamic data masking|
 |:----|:----|
@@ -470,11 +476,39 @@ FROM sys.dm_exec_requests AS d
   - Added `–LoadBalancedReadOnlyRoutingList` parameter to `Set-SqlAvailabilityReplica` and `New-SqlAvailabilityReplica`.
   - Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.
 
+## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
+
+### Calculation groups in tabular models (CTP 2.3) 
+
+Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures.  
+
+A calculation group can have any number of calculation items. Each calculation item is defined by a DAX expression. Three new DAX functions are introduced to work with calculation groups: 
+
+- `SELECTEDMEASURE()` - Returns a reference to the measure currently in context.  
+
+- `SELECTEDMEASURENAME()` - Returns a string containing the name of the measure currently in context.  
+
+- `ISSELECTEDMEASURE(M1, M2, …)` - Returns a Boolean indicating whether the measure currently in context is one of those specified as an argument.
+
+In addition to new DAX functions, two new Dynamic Management Views are introduced:
+
+- `TMSCHEMA_CALCULATION_GROUPS`  
+- `TMSCHEMA_CALCULATION_ITEMS`  
+
+For this release, calculation groups do have some limitations:
+
+- The `ALLSELECTED DAX` function is not yet supported.
+- Row Level Security defined on the calculation-group table is not yet supported.
+- Object Level Security defined on the calculation-group table is not yet supported.
+- DetailsRows expressions referring to calculation items are net yet supported.
+- MDX is not yet supported.
+
+Calculation groups require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
+
 ## Other services
 
 As of CTP 2.3, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
 
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
 

@@ -124,28 +124,25 @@ manager: craigg
 -   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64-bit edition installations on supported 64-bit operating systems, Management Tools are supported in WOW64. For more information about supported operating systems, select an edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] from the sections below.  
   
  **Server Core Support:**  
-  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is now supported on a Server Core installation of [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], [!INCLUDE[win8srv](../../includes/win8srv-md.md)], and [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2. Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is supported on the Server Core mode of the following editions of Windows Server:  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64-bit  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64-bit  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64-bit  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64-bit  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64-bit  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Enterprise 64-bit  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64-bit  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64-bit  
+
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  is now supported on a Server Core installation of Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
+
+Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core mode is supported by the following editions of Windows Server:
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
+   | &nbsp; | &nbsp; |
   
  For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server 2014 on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
-> **NOTE:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions that are supported on [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 64-bit x64 Standard edition are also supported on [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64-bit x64.  
+   >[!NOTE]
+   > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions that are supported on [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 64-bit x64 Standard edition are also supported on [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64-bit x64.  
   
  **Operating System Support:**  
   

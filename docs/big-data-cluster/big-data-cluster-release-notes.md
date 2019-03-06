@@ -94,6 +94,10 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - If you are creating an external table to Oracle that use character data types, the Azure Data Studio virtualization wizard interprets these columns as VARCHAR in the external table definition. This will cause a failure in the external table DDL. Either modify the Oracle schema to use the NVARCHAR2 type, or create EXTERNAL TABLE statements manually and specify NVARCHAR instead of using the wizard.
 
+#### Application Deployment
+
+- When calling an R, Python or MLeap application from the RESTful API, the call will time-out in 5 minutes.
+
 #### Spark and notebooks
 
 - POD IP addresses may change in the Kubernetes environment as PODs restarts. In the scenario where the master-pod restarts, the Spark session may fail with `NoRoteToHostException`. This is caused by JVM caches that don't get refreshed with new IP addresses.

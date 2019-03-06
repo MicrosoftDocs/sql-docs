@@ -263,13 +263,13 @@ The following hint names are supported:
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using minimum selectivity when estimating AND predicates for filters to account for correlation. This hint name is parallel to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 when used with cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and has similar effect when [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 is used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+   Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).   
+   Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
   Disables table variable deferred compilation. For more information, see [Table variable deferred compilation](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   Disables interleaved execution for multi-statement table-valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+   Disables interleaved execution for multi-statement table-valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    Instructs the query processor not to use a sort operation (batch sort) for optimized nested loop joins when generating a query plan. This hint name is parallel to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -284,7 +284,7 @@ The following hint names are supported:
 *  'DISABLE_PARAMETER_SNIFFING'      
    Instructs query optimizer to use average data distribution while compiling a query with one or more parameters. This instruction makes the query plan independent on the parameter value that was first used when the query was compiled. This hint name is parallel to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting PARAMETER_SNIFFING=OFF.
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback).
+  Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
   Disables scalar UDF inlining. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
 * 'DISALLOW_BATCH_MODE'    

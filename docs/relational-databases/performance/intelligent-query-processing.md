@@ -43,7 +43,7 @@ The following table details all intelligent query processing features, along wit
 | Interleaved Execution | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
 | Memory Grant Feedback (Batch Mode) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
 | Memory Grant Feedback (Row Mode) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
-| Scalar UDF Inlining | No, but planned for a future update | Yes, starting in SQL Server 2019 CTP 2.1 under compatibility level 150, public preview|
+| Scalar UDF Inlining | No | Yes, starting in SQL Server 2019 CTP 2.1 under compatibility level 150, public preview|
 | Table Variable Deferred Compilation | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
 
 ## Batch mode adaptive joins

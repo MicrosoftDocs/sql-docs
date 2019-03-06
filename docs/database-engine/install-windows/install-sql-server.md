@@ -89,3 +89,4 @@ manager: craigg
  [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
   
+This is a test

@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # mssqlctl
 
-The following article provides reference for the **mssqlctl** tool for SQL Server 2019 big data clusters (preview).
+The following article provides reference for the **mssqlctl** tool for [SQL Server 2019 big data clusters (preview)](big-data-cluster-overview.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
 
 ## <a id="commands"></a> Commands
 

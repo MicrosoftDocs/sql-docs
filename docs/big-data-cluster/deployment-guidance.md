@@ -113,6 +113,29 @@ The cluster configuration can be customized using a set of environment variables
 >1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
 >1. The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
+The following section details on YARN configurations options. Note : Thees are expert level configurations. The user is not required to specify any of these values and in that case the defaults take effect. Note that Yarn is Resource Manager for Spark. Spark runs in Storage pods and that can be controlled via CLUSTER_STORAGE_POOL_REPLICAS.
+
+| Yarn Environment variable | Required | Default value | Description |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | No | 2048  | Heap size for HDFS name and data node processes |
+| **YARN_HEAPSIZE**   | No | 2048  | Heap size for Yarn RM and NM processes |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | No | 18432  | Max total memory Yarn can use per K8 container  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | No | 6  | Max virtual cores Yarn can use on a node  |
+| **YARN_SCHEDULER_MAX_MEMORY** | No | 18432  | Max memory a Yarn container can use on a node  |
+| **YARN_SCHEDULER_MAX_VCORES** | No | 6  | Max memory a Yarn container can use on a nod  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | No | 0.3  | Ratio of total memory that Application Master can use   |
+
+This section details on Spark configurations options. Note : These are expert level configurations. The user is not required to specify any of these values and in that case the defaults take effect. At run time user can configure on per application basis through %%configure in the spark notebooks.
+
+| Spark Environment variable | Required | Default value | Description |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | No | 2048  | Memory used Spark driver  |
+| **SPARK_DRIVER_CORES** | No | 1  | Number of cores used by Spark driver  |
+| **SPARK_EXECUTOR_INSTANCES** | No | 3  | Memory used Spark driver  |
+| **SPARK_EXECUTOR_MEMORY** | No | 1536  | Memory used Spark executor |
+| **SPARK_EXECUTOR_CORES** | No | 1  | Number of cores used by Spark executors  |
+
+
 Setting the environment variables required for deploying a big data cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
 
 Initialize the following environment variables, they are required for deploying the cluster:

@@ -113,7 +113,7 @@ The cluster configuration can be customized using a set of environment variables
 >1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
 >1. The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
-The following section details on YARN configurations options. Note : Thees are expert level configurations. The user is not required to specify any of these values and in that case the defaults take effect. Note that Yarn is Resource Manager for Spark. Spark runs in Storage pods and that can be controlled via CLUSTER_STORAGE_POOL_REPLICAS.
+The following section details on YARN configurations options. Note : These are expert level configurations. The user is not required to specify any of these values and in that case the defaults take effect. Yarn is Resource Manager for Spark. Spark runs in Storage pods and that can be controlled via CLUSTER_STORAGE_POOL_REPLICAS.
 
 | Yarn Environment variable | Required | Default value | Description |
 |---|---|---|---|

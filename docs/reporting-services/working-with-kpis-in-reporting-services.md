@@ -82,7 +82,7 @@ To use data from a shared dataset, you can do the following steps.
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
 
-## Configuring Related Content
+## Configuring related content
 
 When you choose **Mobile Report**, you can choose the destination in a dialog.
 

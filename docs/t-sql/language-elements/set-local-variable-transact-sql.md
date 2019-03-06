@@ -85,7 +85,7 @@ A variable whose type is located in an assembly. For more information, see [Comm
 *mutator_method*  
 A method in the assembly that can change the state of the object. SQLMethodAttribute.IsMutator is applied to this method.  
   
-`{ **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }`  
+`{ += | -= | \*= | /= | %= | &= | ^= | |= }`  
 Compound assignment operator:  
   
  +=              Add and assign  

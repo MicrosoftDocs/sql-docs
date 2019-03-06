@@ -155,6 +155,32 @@
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Use extended Spark History Server
         href: ../big-data-cluster/spark-history-server.md
+  - name: Reference
+    items:
+    - name: mssqlctl reference
+      items:
+      - name: mssqlctl
+        href: ../big-data-cluster/reference-mssqlctl.md
+      - name: App Deploy
+        items:
+        - name: mssqlctl app 
+          href: ../big-data-cluster/reference-mssqlctl-app.md
+        - name: mssqlctl app template
+          href: ../big-data-cluster/reference-mssqlctl-app-template.md
+      - name: Cluster
+        items:
+        - name: mssqlctl cluster
+          href: ../big-data-cluster/reference-mssqlctl-cluster.md
+        - name: mssqlctl cluster config
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: mssqlctl cluster debug
+          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md 
+      - name: Storage
+        items:
+        - name: mssqlctl storage
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: mssqlctl storage mount
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Business continuity
   href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:

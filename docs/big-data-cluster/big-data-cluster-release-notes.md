@@ -96,7 +96,7 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 #### Application Deployment
 
-- When calling an R, Python or MLeap application from the RESTful API, the call will time-out in 5 minutes.
+- When calling an R, Python, or MLeap application from the RESTful API, the call times-out in 5 minutes.
 
 #### Spark and notebooks
 

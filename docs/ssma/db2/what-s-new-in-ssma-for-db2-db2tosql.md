@@ -1,5 +1,5 @@
 ---
-title: "What's New in SSMA  for DB2 (DB2ToSQL) | Microsoft Docs"
+title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
 ms.date: "03/06/2019"

@@ -1,5 +1,5 @@
 ---
-title: "What's New in SSMA  for Oracle (OracleToSQL) | Microsoft Docs"
+title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
 ms.date: "03/06/2019"

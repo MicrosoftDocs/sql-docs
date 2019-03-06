@@ -14,7 +14,7 @@ ms.date: 07/02/2017
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-A Key Performance Indicator (KPI) is a visual cue that communicates the amount of progress made toward a goal.  Key Performance Indicators are valuable for teams, managers, and businesses to evaluate quickly the progress made against measurable goals.   
+A *Key Performance Indicator (KPI)* is a visual cue that communicates the amount of progress made toward a goal.  Key Performance Indicators are valuable for teams, managers, and businesses to evaluate quickly the progress made against measurable goals.
   
 By using KPIs in SQL Server Reporting Services, you can easily visualize answers to the following questions:  
   
@@ -22,7 +22,7 @@ By using KPIs in SQL Server Reporting Services, you can easily visualize answers
   
 - How far ahead or behind am I?  
   
-- What is the minimum I have completed?  
+- What are the minimum amounts I have completed?  
   
 ## Creating a Dataset
 
@@ -32,9 +32,8 @@ A KPI will only use the first row of data from a shared dataset. Make sure that 
   
 ## Placement of KPIs  
   
-KPIs can be created in any folder in your report server.  Before you create a KPI, you will want to think about where is the right location to place it in. You will want to place it in a folder that will be visible to the users, at the same time being relevant to other reports, and KPIs, around it.  
-  
-## Adding a KPI  
+KPIs can be created in any folder in your report server.  Before you create a KPI, you will want to think about where is the right location to place it in. You can place it in a folder that is visible to the users, at the same time being relevant to other reports, and KPIs, around it.  
+## Adding a KPI
   
 After you have determined the location of your KPI, go to that folder and select **New** > **KPI** from the top menu.  
   
@@ -59,7 +58,7 @@ You can either assign static values, or use data from a shared dataset. When you
 >
 > **Note**: The **Value**, **Goal** and **Status** fields can only choose a value from the first row of a dataset's result. The **Trend set** field, however, can choose which column reflects the trend.  
   
-To use data from a shared dataset, you can do the following.  
+To use data from a shared dataset, you can do the following steps.
   
 1. Change the fields drop down box from **Set manually**, or **Not set**, to **Dataset field**.  
   
@@ -87,11 +86,13 @@ To use data from a shared dataset, you can do the following.
 
 When you choose **Mobile Report**, you can choose the destination in a dialog.
 
-Choose a mobile report in SQL Server Reporting Services 2016.
+   ![Mobile Report](media/rscreatekpi-related-content-mobile-report.png)
 
 When you now click on the KPI in the portal, a thumbnail of the mobile report shows under the related content dropdown. Clicking on this thumbnail can directly navigate you to this report.
 
 You can also specify a custom URL. This task can be anything: a website, a SharePoint site, a URL to an SSRS report (which would allow you to pass along hardcoded parameters).
+
+![Custom URL](media/rscreatekpi-related-content-custom-url.png)
 
 When you now click on the KPI, the URL shows under related content.
 
@@ -99,7 +100,7 @@ It's only possible to add one mobile report or one custom URL.
   
 ## Removing a KPI  
   
-To remove a KPI, you can do the following.  
+To remove a KPI, you can do the following steps.
   
 1. Select the **ellipsis (...)** of the KPI you want to remove. Select **Manage**.  
   

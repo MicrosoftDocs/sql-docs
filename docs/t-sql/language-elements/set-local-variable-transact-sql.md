@@ -73,7 +73,7 @@ A public field of a user-defined type.
 *udt_name*  
 The name of a common language runtime (CLR) user-defined type.  
   
-{ **.** | **::** }  
+`{ . | :: }`  
 Specifies a method of a CLR user-define type. For an instance (non-static) method, use a period (**.**). For a static method, use two colons (**::**). To invoke a method, property, or field of a CLR user-defined type, you must have EXECUTE permission on the type.  
   
 _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
@@ -85,7 +85,7 @@ A variable whose type is located in an assembly. For more information, see [Comm
 *mutator_method*  
 A method in the assembly that can change the state of the object. SQLMethodAttribute.IsMutator is applied to this method.  
   
-{ **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+`{ += | -= | *= | /= | %= | &= | ^= | |= }`  
 Compound assignment operator:  
   
  +=              Add and assign  
@@ -160,7 +160,7 @@ If *select_statement* contains an ORDER BY clause in which the columns aren't un
 READ ONLY  
 Prevents updates from being made through this cursor. The cursor can't be referenced in a WHERE CURRENT OF clause in an UPDATE or DELETE statement. This option overrides the default capability of a cursor to be updated. This keyword varies from the earlier READ_ONLY by having a space instead of an underscore between READ and ONLY.  
   
-UPDATE [OF *column_name*[ **,**... *n* ] ]  
+`UPDATE [OF column_name[ ,... n ] ]`  
 Defines updatable columns within the cursor. If OF *column_name* [**,**...*n*] is supplied, only the columns listed allow modifications. When no list is supplied, all columns can be updated, unless the cursor has been defined as READ_ONLY.  
   
 ## Remarks  

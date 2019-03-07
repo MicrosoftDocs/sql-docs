@@ -33,7 +33,7 @@ February 13, 2019 &nbsp; / &nbsp; version: 1.4.5
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
 
-## January 2019 Hotfix
+## January 2019 (Hotfix)
 
 January 16, 2019 &nbsp; / &nbsp; version: 1.3.9 &nbsp; / &nbsp; Hotfix release
 

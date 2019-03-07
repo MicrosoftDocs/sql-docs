@@ -5208,7 +5208,7 @@
       {
         "source_path": "docs/sql-operations-studio/release-notes.md",
         "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/azure-data-studio/release-notes.md",

@@ -117,5 +117,74 @@ After link a SQL Server Big Data Cluster, you can submit application to it.
 
     ![link Big Data cluster - run](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
 
+## Spark Console
+You can run Spark Local Console(Scala) or run Spark Livy Interactive Session Console(Scala).
+
+### Spark Local Console(Scala)
+Ensure you have satisfied the WINUTILS.EXE prerequisite.
+
+1. From the menu bar, navigate to **Run** > **Edit Configurations...**.
+
+2. From the **Run/Debug Configurations** window, in the left pane, navigate to **Apache Spark on SQL Server Big Data Cluster** > **[Spark on SQL] myApp**.
+
+3. From the main window, select the **Locally Run** tab.
+
+4. Provide the following values, and then select **OK**:
+
+    |Property |Value |
+    |----|----|
+    |Job main class|The default value is the main class from the selected file. You can change the class by selecting the ellipsis(**...**)  and choosing another class.|
+    |Environment variables|Ensure the value for HADOOP_HOME is correct.|
+    |WINUTILS.exe location|Ensure the path is correct.|
+
+    ![Local Console Set Configuration](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
+
+5. From Project, navigate to **myApp** > **src** > **main** > **scala** > **myApp**.  
+
+6. From the menu bar, navigate to **Tools** > **Spark Console** > **Run Spark Local Console(Scala)**.
+
+7. Then two dialogs may be displayed to ask you if you want to auto fix dependencies. If so, select **Auto Fix**.
+
+    ![Spark Auto Fix1](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
+
+    ![Spark Auto Fix2](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
+
+8. The console should look similar to the picture below. In the console window type `sc.appName`, and then press ctrl+Enter.  The result will be shown. You can terminate the local console by clicking red button.
+
+    ![Local Console Result](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
+
+
+### Spark Livy Interactive Session Console(Scala)
+It is only supported on IntelliJ 2018.2 and 2018.3.
+
+1. From the menu bar, navigate to **Run** > **Edit Configurations...**.
+
+2. From the **Run/Debug Configurations** window, in the left pane, navigate to **Apache Spark on SQL Server Big Data Cluster** > **[Spark on SQL] myApp**.
+
+3. From the main window, select the **Remotely Run in Cluster** tab.
+
+4. Provide the following values, and then select **OK**:
+
+    |Property |Value |
+    |----|----|
+    |Spark clusters (Linux only)|Select the SQL Server Big Data cluster on which you want to run your application.|
+    |Main class name|The default value is the main class from the selected file. You can change the class by selecting the ellipsis(**...**)  and choosing another class.|
+
+    ![Interactive Console Set Configuration](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
+
+5. From Project, navigate to **myApp** > **src** > **main** > **scala** > **myApp**.  
+
+6. From the menu bar, navigate to **Tools** > **Spark Console** > **Run Spark Livy Interactive Session Console(Scala)**.
+
+7. The console should look similar to the picture below. In the console window type `sc.appName`, and then press ctrl+Enter.  The result will be shown. You can terminate the local console by clicking red button.
+
+    ![Interactive Console Result](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
+
+### Send Selection to Spark Console
+
+It is convenient for you to foresee the script result by sending some code to the local console or Livy Interactive Session Console(Scala). You can highlight some code in the Scala file, then right-click **Send Selection To Spark Console**. The selected code will be sent to the console and be performed. The result will be displayed after the code in the console. The console will check the errors if existing.  
+
+   ![Send Selection to Spark Console](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
+
 ## Next steps
 For more information on SQL Server Big Data Cluster and related scenarios, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md)?

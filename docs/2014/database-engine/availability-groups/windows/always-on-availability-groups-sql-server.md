@@ -37,7 +37,7 @@ manager: craigg
   
     -   *Synchronous-commit mode*. This availability mode emphasizes high availability and data protection over performance, at the cost of increased transaction latency. A given availability group can support up to three synchronous-commit availability replicas, including the current primary replica.  
   
-     For more information, see [ Availability Modes;Always On Availability Groups;](availability-modes-always-on-availability-groups.md).  
+     For more information, see [Availability Modes;Always On Availability Groups;](availability-modes-always-on-availability-groups.md).  
   
 -   Supports several forms of availability-group failover:  automatic failover, planned manual failover (generally referred as simply "manual failover"), and forced manual failover (generally referred as simply "forced failover"). For more information, see [Failover and Failover Modes;Always On Availability Groups;](failover-and-failover-modes-always-on-availability-groups.md).  
   

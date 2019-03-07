@@ -1,7 +1,7 @@
 ---
 title: "Windows Collation Name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "03/06/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -36,7 +36,7 @@ Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVers
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -46,43 +46,53 @@ CollationDesignator_<ComparisonStyle>
 *CollationDesignator*
 Specifies the base collation rules used by the Windows collation. The base collation rules cover the following:
 
-- The sorting rules that are applied when dictionary sorting is specified. Sorting rules are based on alphabet or language.
-- The code page used to store non-Unicode character data.
+- The sorting and comparison rules that are applied when dictionary sorting is specified. Sorting rules are based on alphabet or language.
+- The code page used to store **varchar** data.
 
 Some examples are:
 
-- Latin1_General or French: both use code page 1252.
+- Latin1\_General or French: both use code page 1252.
 - Turkish: uses code page 1254.
 
-*CaseSensitivity*
+*CaseSensitivity*  
 **CI** specifies case-insensitive, **CS** specifies case-sensitive.
 
-*AccentSensitivity*
+*AccentSensitivity*  
 **AI** specifies accent-insensitive, **AS** specifies accent-sensitive.
 
-*KanatypeSensitive*
+*KanatypeSensitive*  
 **Omitted** specifies kanatype-insensitive, **KS** specifies kanatype-sensitive.
 
-*WidthSensitivity*
+*WidthSensitivity*  
 **Omitted** specifies width-insensitive, **WS** specifies width-sensitive.
 
-**BIN**
+*VariationSelectorSensitivity*  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+
+**Omitted** specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
+
+**BIN**  
 Specifies the backward-compatible binary sort order to be used.
 
-**BIN2**
+**BIN2**  
 Specifies the binary sort order that uses code-point comparison semantics.
 
 ## Remarks
 
- Depending on the version of the collations some code points may be undefined. For example compare:
+Depending on the version of the collation, some code points may not have sort weights and/or uppercase/lowercase mappings defined. For example, compare the output of the `LOWER` function when it is given the same character, but in different versions of the same collation:
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-The first line returns an uppercase character when the collation is Latin1_General_CI_AS, because this code point is undefined in this collation.
+The first statement shows both uppercase and lowercase forms of this character in the older collation (collation does not affect the availability of characters when working with Unicode data). However, the second statement shows that an uppercase character is returned when the collation is Latin1\_General\_CI\_AS because this code point does not have a lowercase mapping defined in that collation.
 
 When working with some languages, it can be critical to avoid the older collations. For example, this is true for Telegu.
 
@@ -92,24 +102,24 @@ In some cases Windows collations and [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 The following are some examples of Windows collation names:
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  Collation uses the Latin1 General dictionary sorting rules, code page 1252. Is case-insensitive and accent-sensitive. Collation uses the Latin1 General dictionary sorting rules and maps to code page 1252. Shows the version number of the collation if it is a Windows collation: _90 or _100. Is case-insensitive (CI), and accent-sensitive (AS).
+  Collation uses the Latin1 General dictionary sorting rules and maps to code page 1252. It is a version \_100 collation, and is case-insensitive (CI) and accent-sensitive (AS).
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  Collation uses the Estonian dictionary sorting rules, code page 1257. Is case-sensitive and accent-sensitive.
+  Collation uses the Estonian dictionary sorting rules and maps to code page 1257. It is a version \_80 collation (implied by no version number in the name), and is case-sensitive (CS) and accent-sensitive (AS).
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  Collation uses code page 1252 and binary sorting rules. The Latin1 General dictionary sorting rules are ignored.
+  Collation uses binary code point sorting rules and maps to code page 932. It is a version \_140 collation, and the Japanese Bushu Kakusu dictionary sorting rules are ignored.
 
 ## Windows Collations
 
 To list the Windows collations supported by your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute the following query.
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 The following table lists all Windows collations supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

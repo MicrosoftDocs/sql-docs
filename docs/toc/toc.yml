@@ -8013,7 +8013,7 @@
     - name: Install
       href: ../azure-data-studio/download.md
     - name: Release notes
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: Quickstarts
       items:
       - name: Connect & query SQL Server

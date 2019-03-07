@@ -17,14 +17,14 @@ One of the key scenarios for SQL Server Big Data Clusters is the ability to subm
 ## Prerequisites
 
 - SQL Server Big Data Cluster.
-- Oracle Java Development Kit. You can install it from the [Oracle website](https://aka.ms/azure-jdks).
+- Oracle Java Development Kit. You can install it from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - IntelliJ IDEA. You can install it from the [JetBrains website](https://www.jetbrains.com/idea/download/).
 - Azure Toolkit for IntelliJ extension. For installation instructions, see [Install Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
 ## Link SQL Server Big Data Cluster
 1. Open the IntelliJ IDEA tool.
 
-2. If you are using self-signed certificate, please disable SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
+2. If you are using self-signed certificate, disable SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
 
     ![link SQL Server Big Data Cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
@@ -62,7 +62,7 @@ One of the key scenarios for SQL Server Big Data Clusters is the ability to subm
 
    ![The Scala plugin installation dialog box](./media/spark-submit-job-intellij-tool-plugin/Choose-Scala-Plugin.PNG)
 
-5. In the **New Project** window, do the following:  
+5. In the **New Project** window, do the following steps:  
 
     ![Selecting the Spark SDK](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
@@ -74,7 +74,7 @@ One of the key scenarios for SQL Server Big Data Clusters is the ability to subm
 
 6. Select **Finish**.
 
-7. The Spark project automatically creates an artifact for you. To view the artifact, do the following:
+7. The Spark project automatically creates an artifact for you. To view the artifact, do the following steps:
 
    a. On the **File** menu, select **Project Structure**.
 

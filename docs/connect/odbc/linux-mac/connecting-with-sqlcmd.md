@@ -40,7 +40,7 @@ In the current release, the following options are available:
   
 - -C Trust server certificate.  
 
-- -d *database_name*  Issue a `USE `*database_name* statement when you start `sqlcmd`.  
+- -d *database_name*  Issue a `USE` *database_name* statement when you start `sqlcmd`.  
 
 - -D Causes the value passed to the `sqlcmd` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
   

@@ -17,7 +17,7 @@ manager: craigg
 The Scale Out Worker runs the Scale Out Worker service to pull execution tasks from Scale Out Master. Then the worker runs the packages locally with `ISServerExec.exe`.
 
 ## Configure the Scale Out Worker service
-You can configure the Scale Out Worker service by using the` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` file. You have to restart the service after updating the configuration file.
+You can configure the Scale Out Worker service by using the `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` file. You have to restart the service after updating the configuration file.
 
 |Configuration  |Description  |Default value|
 |---------|---------|---------|
@@ -39,7 +39,7 @@ You can configure the Scale Out Worker service by using the` \<drive\>:\Program 
 |TaskLogLevel|The task log level of the Scale Out Worker. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information, Warning, Error, Progress, CriticalError, Audit)|
 |TaskLogSegment|The time span of a task log file.|00:00:00|
 |TaskLogEnabled|Specifies whether the task log is enabled.|true|
-|ExecutionLogCacheFolder|The folder used to cache package execution log. If the value is empty, the` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` folder path is used. [account] is the account running Scale Out Worker service. By default, the account is SSISScaleOutWorker140.|Empty|
+|ExecutionLogCacheFolder|The folder used to cache package execution log. If the value is empty, the `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` folder path is used. [account] is the account running Scale Out Worker service. By default, the account is SSISScaleOutWorker140.|Empty|
 |ExecutionLogMaxBufferLogCount|The max number of execution logs cached, in one execution log buffer in memory.|10000|
 |ExecutionLogMaxInMemoryBufferCount|The max number of execution log buffers in memory for execution logs.|10|
 |ExecutionLogRetryCount|The retry count if execution logging fails.|3|

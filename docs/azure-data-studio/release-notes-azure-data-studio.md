@@ -1,4 +1,4 @@
----
+﻿---
 title: Release notes
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
@@ -12,13 +12,15 @@ author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
-# Azure Data Studio release notes
+# Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
 
 ## February 2019
 
 February 13, 2019 &nbsp; / &nbsp; version: 1.4.5
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -35,6 +37,8 @@ February 13, 2019 &nbsp; / &nbsp; version: 1.4.5
 
 January 16, 2019 &nbsp; / &nbsp; version: 1.3.9 &nbsp; / &nbsp; Hotfix release
 
+&nbsp;
+
 | Change | Details |
 | :----- | :------ |
 | Fixed a few issues discovered in 1.3.8. | See [January Hotfix Release, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).<br/><br/>For detailed information, see:<br/>&bull; &nbsp; [Change Log, on GitHub](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).<br/>&bull; &nbsp; [Releases, on GitHub](https://github.com/Microsoft/azuredatastudio/releases). |
@@ -43,6 +47,8 @@ January 16, 2019 &nbsp; / &nbsp; version: 1.3.9 &nbsp; / &nbsp; Hotfix release
 ## January 2019
 
 January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -60,6 +66,8 @@ January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
 ## November 2018
 
 November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -86,6 +94,8 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 
 October 29, 2018 &nbsp; / &nbsp; version: 1.1.4
 
+&nbsp;
+
 | Change | Details |
 | :----- | :------ |
 | Introducing the Azure Resource Explorer to browse Azure SQL Databases. | &nbsp; |
@@ -110,6 +120,8 @@ September 24, 2018 &nbsp; / &nbsp; version: 1.0 &nbsp; / &nbsp; GA release
 
 General Availability release of Azure Data Studio (formerly SQL Operations Studio).
 
+&nbsp;
+
 | Change | Details |
 | :----- | :------ |
 | Query Results Grid performance and UX improvements for large number of result sets. | &nbsp; |
@@ -119,6 +131,8 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
 | &nbsp; | &nbsp; |
 
 ### Announcing the SQL Server 2019 Preview extension
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -135,13 +149,15 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
 
 For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
-## August 2018 (Public Preview)
+## August 2018
 
 August 30, 2018 &nbsp; / &nbsp; version: 0.32.8 &nbsp; / &nbsp; Public Preview
 
 The *August Public Preview* focuses on bug fixes, product stabilization, and filling gaps in existing scenarios.
 
 _0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372))_
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -188,7 +204,7 @@ _0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https:/
 - [Issue #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Save As Excel Only Saves First Row of Data
 - [Issue #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Unable to connect on Ubuntu 16.04 to SQL in a container
 
-## July 2018 (Public Preview)
+## July 2018
 
 July 19, 2018 &nbsp; / &nbsp; version: 0.31.4 &nbsp; / &nbsp; Public Preview
 
@@ -197,6 +213,8 @@ The *July Public Preview* focuses on the following items:
 - The initial release of the SQL Server Agent configuration scenarios.
 - SQL Server Profiler session and view template enhancements.
 - Continued bug fixes for customer reported GitHub issues.
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -224,9 +242,11 @@ The *July Public Preview* focuses on the following items:
 - Fix [issue 1830](https://github.com/Microsoft/azuredatastudio/issues/1830): Setting iconPath in ButtonComponent after component() is called does not change icon
 - Fix [issue 1843](https://github.com/Microsoft/azuredatastudio/issues/1843): Better Table organization
 
-## June 2018 (Public Preview)
+## June 2018
 
 June 20, 2018 &nbsp; / &nbsp; version: 0.30.6 &nbsp; / &nbsp; Public Preview
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -249,11 +269,13 @@ June 20, 2018 &nbsp; / &nbsp; version: 0.30.6 &nbsp; / &nbsp; Public Preview
 - Fix [issue 1496](https://github.com/Microsoft/azuredatastudio/issues/1496): "New Profiler" context menu option in Object Explorer does nothing.
 - Fix [issue 1495](https://github.com/Microsoft/azuredatastudio/issues/1495): Query editor "Explain" query plan is broken.
 
-## May 2018 (Public Preview)
+## May 2018
 
 May 7, 2018 &nbsp; / &nbsp; version: 0.29.3 &nbsp; / &nbsp; Public Preview
 
 The *May Public Preview* is focused on stabilization and bug fixes.
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -275,11 +297,13 @@ The *May Public Preview* is focused on stabilization and bug fixes.
 - Fix [issue 1215](https://github.com/Microsoft/azuredatastudio/issues/1215): SQL Agent extension and the status bar
 - Fix [issue 1316](https://github.com/Microsoft/azuredatastudio/issues/1316): SQL Agent Don´t resize after change windows size
 
-## April 2018 (Public Preview)
+## April 2018
 
 April 25, 2018 &nbsp; / &nbsp; version: 0.28.6 &nbsp; / &nbsp; Public Preview
 
 The *April Public Preview* contains bug fixes and improvements.
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -312,6 +336,7 @@ The *April Public Preview* contains bug fixes and improvements.
 
 A highlight for the April Public Preview is the refresh of the source code for the Visual Studio Code 1.21 platform. This brings several updates to the core editor and workbench from the previous 1.19 sync point. Some examples include the following:
 
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -334,11 +359,13 @@ For additional details, checkout the [Visual Studio Code February Release Notes]
 
 For more information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).
 
-## March 2018 (Public Preview)
+## March 2018
 
 March 28, 2018 &nbsp; / &nbsp; version: 0.27.3 &nbsp; / &nbsp; Public Preview
 
 The *March Public Preview* continues to address the top GitHub issues, and is focused on improving our extensibility story. Specifically enabling Extension Manager, improving dashboard management, and providing SQL Agent and insights extensions. This release includes the following enhancements:
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -347,11 +374,13 @@ The *March Public Preview* continues to address the top GitHub issues, and is fo
 | Continue to fix important customer impacting [GitHub issues](https://github.com/Microsoft/azuredatastudio/issues). | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## February 2018 (Public Preview)
+## February 2018
 
 February 15, 2018 &nbsp; / &nbsp; version: 0.26.7 &nbsp; / &nbsp; Public Preview
 
 The *February Public Preview* includes some feature suggestions and high-priority bug fixes. This release includes the following enhancements:
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -375,11 +404,13 @@ The *February Public Preview* includes some feature suggestions and high-priorit
   - Fix [issue 225](https://github.com/Microsoft/azuredatastudio/issues/225): Keyword color mismatch.
   - Fix [issue 60](https://github.com/Microsoft/azuredatastudio/issues/60): Invalid sql syntax color highlighting when using temporary table in from clause.
 
-## January 2018 (Public Preview)
+## January 2018
 
 January 17, 2018 &nbsp; / &nbsp; version: 0.25.4 &nbsp; / &nbsp; Public Preview
 
 The *January Public Preview* includes some feature suggestions and high-priority bug fixes. This release includes the following enhancements:
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |
@@ -393,11 +424,13 @@ The *January Public Preview* includes some feature suggestions and high-priority
 | Fix missing Azure Account branding icon. | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## December 2017 (Public Preview)
+## December 2017
 
 December 19, 2017 &nbsp; / &nbsp; version: 0.24.1 &nbsp; / &nbsp; Public Preview
 
 The *December Public Preview* includes several bugs fixes across all feature areas, as well as the following enhancements:
+
+&nbsp;
 
 | Change | Details |
 | :----- | :------ |

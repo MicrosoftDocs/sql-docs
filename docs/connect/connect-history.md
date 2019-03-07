@@ -1,13 +1,14 @@
 ---
 title: "Driver history for Microsoft SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "5/4/2018"
+ms.date: 05/04/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
+ms.reviewer: genemi
 manager: craigg
 ---
 # Driver history for Microsoft SQL Server

@@ -21,6 +21,21 @@ The SQL Server engineering team keeps a close eye on the SQL Server [User Voice]
 
 The [User Voice](https://feedback.azure.com/forums/908035-sql-server) is also a great place to let the engineering team know what they could do better! If you have any recommendations or feature suggestions, please report it here as well. 
 
+## I want to give feedback about SQL Server documentation
+The best way to reach the SQL Server content team is through Git Issues. You'll find an option to submit a Git Issue at the bottom of most of our pages: 
+
+![Git Issue content feedback](media/sql-server-get-help/git-issues.png)
+
+If you have something else to share - an idea, a suggestion, feedback, anything! You can do so by filing a general Git Issue at [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+
+Just select the 'New Issue' button to get started. 
+
+![New Git Issue](media/sql-server-get-help/new-git-issue.png)
+
+
+The SQL Server content team also frequently solicits survey feedback. If you have some time to spare, please share your experiences with us at [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey).
+
+
 ## I want to make a suggestion about SQL Server Management Studio
 The SQL Server Management Studio (SSMS) team also closely monitors the SQL Server [User Voice](https://feedback.azure.com/forums/908035-sql-server) so if you have any issues to report, or suggestions to make, the User Voice is the best place to do so. 
 
@@ -89,7 +104,5 @@ Did you find something wrong with our documentation? Or do you have a contributi
 
 All public contributions are reviewed by the SQL content team for technical accuracy and consistency. 
 
-## I want to provide feedback for SQL Docs content
-If you've got some time to spare, and would like to share some thoughts on your SQL Docs experience, please take our survey! It can be found at [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) and should take you about 10-15 minutes. 
 
-If you have something to share with the SQL content team, an idea, a suggestion, feedback, anything! You can do so at [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+

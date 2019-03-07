@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # New Folder Page (Report Manager)
   Use the New Folder page to create a new folder in the report server folder hierarchy. The folder that you create is a virtual folder that is stored in a report server database. The folder is not created in the file system of your computer.  

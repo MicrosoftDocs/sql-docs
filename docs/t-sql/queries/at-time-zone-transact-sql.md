@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "AT TIME ZONE function"
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Converts an *inputdate* to the corresponding *datetimeoffset* value in the target time zone. If *inputdate* is provided without offset information, the function applies the offset of the time zone assuming that *inputdate* value is provided in the target time zone. If *inputdate* is provided as a *datetimeoffset* value, than **AT TIME ZONE** clause converts it into the target time zone using time zone conversion rules.  
+  Converts an *inputdate* to the corresponding *datetimeoffset* value in the target time zone. When *inputdate* is provided without offset information, the function applies the offset of the time zone assuming that *inputdate* is in the target time zone. If *inputdate* is provided as a *datetimeoffset* value, then **AT TIME ZONE** clause converts it into the target time zone using the time zone conversion rules.  
   
  **AT TIME ZONE** implementation relies on a Windows mechanism to convert **datetime** values across time zones.  
   
@@ -37,18 +37,18 @@ inputdate AT TIME ZONE timezone
  Is an expression that can be resolved to a **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value.  
   
  *timezone*  
- Name of the destination time zone. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relies on time zones that are stored in the Windows Registry. All time zones installed on the computer are stored in the following registry hive: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. A list of installed time zones is also exposed through the [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) view.  
+ Name of the destination time zone. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relies on time zones that are stored in the Windows Registry. Time zones installed on the computer are stored in the following registry hive: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. A list of installed time zones is also exposed through the [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) view.  
   
 ## Return Types  
- Returns the data type of **datetimeoffset**  
+ Returns the data type of **datetimeoffset**.  
   
 ## Return Value  
  The **datetimeoffset** value in the target time zone.  
   
 ## Remarks  
- **AT TIME ZONE** applies specific rules for converting input values in **smalldatetime**, **datetime** and **datetime2** data types, that fall into an interval that is affected by the DST change:  
+ **AT TIME ZONE** applies specific rules for converting input values in **smalldatetime**, **datetime**, and **datetime2** data types that fall into an interval affected by a DST change:  
   
--   When the clock is set ahead then there is a gap in local time which duration depends on the duration of the clock adjustment (usually 1 hour, but it can be 30 or 45 minutes, depending on time zone). In that case, points in time that belong to this gap are converted with the offset *after* DST change.  
+-   When the clock's set ahead, there's a gap in local time equal to the duration of the clock adjustment. This duration is usually 1 hour, but it can be 30 or 45 minutes, depending on time zone. Points in time that are in this gap are converted with the offset *after* DST change.  
   
     ```  
     /*  
@@ -163,5 +163,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## See Also  
  [Date and Time Types](../../t-sql/data-types/date-and-time-types.md)   
  [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

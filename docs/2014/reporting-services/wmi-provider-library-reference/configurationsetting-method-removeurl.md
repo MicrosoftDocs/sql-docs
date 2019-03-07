@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # RemoveURL Method (WMI MSReportServer_ConfigurationSetting)
   Removes a URL reserved for the report server. If there are multiple URLs that need to be removed, this must be done one by one calling this API.  

@@ -17,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Role Definitions
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a *role**definition* is a named collection of tasks that define the operations available on a report server. Role definitions provide the rules used by the report server to enforce security. When a user attempts to perform a task, such as publishing a report, the report server checks the user's role assignment to determine whether the task is included in their role definition. If the task is included in the role definition, the request is submitted.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a *role definition* is a named collection of tasks that define the operations available on a report server. Role definitions provide the rules used by the report server to enforce security. When a user attempts to perform a task, such as publishing a report, the report server checks the user's role assignment to determine whether the task is included in their role definition. If the task is included in the role definition, the request is submitted.  
   
 ## Using Roles to Authorize Access to a Report Server  
  A role becomes operative only when it is used in a role assignment. For more information about how roles provide security, see [Role Assignments](../../reporting-services/security/role-assignments.md).  
@@ -35,7 +35,7 @@ ms.author: maghan
  For more information, see [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## Creating a Role Definition  
- To create a role, you use Management Studio to specify a name and tasks it contains. You must create separate role definition for item and system tasks. Roles can include item-level tasks or system-level tasks, but not both. Creating a role definition consists of providing a name and choosing a set of tasks for the definition. To create a role definition, you must have permission to do so. The "Set security for individual items" task provides these permissions. By default, administrators and users who are assigned to the predefined **Content Manager** role can perform this task.  
+ To create a role, you use Management Studio to specify a name and tasks it contains. You must create separate role definitions for item and system tasks. Roles can include item-level tasks or system-level tasks, but not both. Creating a role definition consists of providing a name and choosing a set of tasks for the definition. To create a role definition, you must have permission to do so. The "Set security for individual items" task provides these permissions. By default, administrators and users who are assigned to the predefined **Content Manager** role can perform this task.  
   
  A role must have a unique name. To be valid, the role definition must contain at least one task. For more information, see [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   

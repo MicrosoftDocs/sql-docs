@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "upgrading caching for Lookup transformation"
   - "upgrading Lookup transformation"
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Upgrade Lookup Transformations

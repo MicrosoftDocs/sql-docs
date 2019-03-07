@@ -194,7 +194,7 @@ Joining to an MSTVF in a `FROM` clause is possible, but can result in poor perfo
 > [!IMPORTANT]
 > MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions.    
 > Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], optimizing an execution plan that uses MSTVFs can leverage interleaved execution, which results in using actual cardinality instead of the above heuristics.     
-> For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+> For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 
 > [!NOTE]  
 > ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the `INSERT` or `UPDATE` statement succeeds.

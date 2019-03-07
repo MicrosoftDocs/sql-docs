@@ -23,26 +23,11 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 **Use the [latest tools](#tools) for the best experience with SQL Server 2019.**
 
-## CTP 2.3
+## CTP 2.4
 
-Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3.
+Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
-- [Big data clusters](#bigdatacluster)
-  - Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ
-  - Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more
-  - Use Sparklyr in SQL Server 2019 big data clusters
-  - Mount external HDFS-compatible storage into big data cluster with HDFS tiering
 
-- [Database engine](#databaseengine)
-  - Accelerated database recovery
-  - Reduced recompilations for workloads using temporary tables across multiple scopes
-  - Improved indirect checkpoint scalability
-  - Query Store plan forcing support for fast forward and static cursors
-  - SQL Graph enables cascaded delete of edges upon deletion of nodes
-  - External library support on Windows for both Java and Python
-
-- [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
-  - Calculation groups in tabular models reduce the number of measures by reusing calculation logic.
 
 ## Previous CTPs
 
@@ -56,6 +41,11 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - Use Azure Data Studio to run Query books that provide a notebook experience (CTP 2.0)
   - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
   - Deploy Python and R apps (CTP 2.2)
+  - Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ (CTP 2.3)
+  - Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more (CTP 2.3)
+  - Use Sparklyr in SQL Server 2019 big data clusters (CTP 2.3)
+  - Mount external HDFS-compatible storage into big data cluster with HDFS tiering (CTP 2.3)
+
 
 - [Database engine](#databaseengine)
   - UTF-8 support (CTP 2.0)
@@ -81,6 +71,12 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - Improved diagnostic data for stats blocking (CTP 2.1)
   - Hybrid Buffer Pool (CTP 2.1)
   - Static data masking (CTP 2.1)
+  - Accelerated database recovery (CTP 2.3)
+  - Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
+  - Improved indirect checkpoint scalability (CTP 2.3)
+  - Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
+  - SQL Graph enables cascaded delete of edges upon deletion of nodes (CTP 2.3)
+  - External library support on Windows for both Java and Python (CTP 2.3)
 
 - [SQL Server on Linux](#sqllinux)
   - Replication support (CTP 2.0)
@@ -97,6 +93,9 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
 
 - [Security](#security)
   - Certificate management in SQL Server Configuration Manager (CTP 2.0)
+
+- [SQL Server Analysis Services](#ssas)
+  - Calculation groups in tabular models reduce the number of measures by reusing calculation logic. (CTP 2.3)
 
 - [Tools](#tools)
   - Azure Data Studio
@@ -507,7 +506,7 @@ Calculation groups require models be at the 1470 compatibility level, which is c
 
 ## Other services
 
-As of CTP 2.3, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
+As of CTP 2.4, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)

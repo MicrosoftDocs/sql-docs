@@ -32,7 +32,7 @@ To fail over, the secondary replica that will become the primary replica must be
 
 Manually fail over in two steps.
 
-   First,[ manually fail over by moving AG resource](#manualMove) from the cluster node that owns the resources to a new node.
+   First, [manually fail over by moving AG resource](#manualMove) from the cluster node that owns the resources to a new node.
 
    The cluster fails the AG resource over and adds a location constraint. This constraint configures the resource to run on the new node. Remove this constraint in order to successfully fail over in the future.
 

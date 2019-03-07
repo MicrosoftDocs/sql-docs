@@ -207,7 +207,7 @@ manager: kfile
 |Provides links to information about each of the mining model viewers|[Data Mining Model Viewers](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Learn how to create a lift chart, profit chart, or classification matrix, or test a mining structure|[Testing and Validation &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Learn about processing options and permissions|[Processing Data Mining Objects](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Provides more information about Analysis Services|[Multidimensional Model Databases ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Provides more information about Analysis Services|[Multidimensional Model Databases](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## See Also  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.xmlsource.f1"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "XML source [Integration Services]"
   - "XML Source Editor"
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # XML Source
@@ -93,6 +89,6 @@ manager: craigg
  [Extract Data by Using the XML Source](xml-source.md)  
   
 ## Related Content  
- Curated Answer, [Create an XML Destination for an SSIS Package](http://go.microsoft.com/fwlink/?LinkId=321993), on curatedviews.cloudapp.net.  
+ Curated Answer, [Create an XML Destination for an SSIS Package](https://go.microsoft.com/fwlink/?LinkId=321993), on curatedviews.cloudapp.net.  
   
   

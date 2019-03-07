@@ -5,9 +5,7 @@ ms.date: "03/16/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "JOIN"
@@ -33,11 +31,10 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], FROM clause"
   - "derived tables"
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 97
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -406,15 +403,15 @@ ON (p.ProductID = v.ProductID);
 ## Using APPLY  
  Both the left and right operands of the APPLY operator are table expressions. The main difference between these operands is that the *right_table_source* can use a table-valued function that takes a column from the *left_table_source* as one of the arguments of the function. The *left_table_source* can include table-valued functions, but it cannot contain arguments that are columns from the *right_table_source*.  
   
- The APPLY operator works in the following way to produce the table source for the FROM clause:  
+The APPLY operator works in the following way to produce the table source for the FROM clause:  
   
 1.  Evaluates *right_table_source* against each row of the *left_table_source* to produce rowsets.  
   
-     The values in the *right_table_source* depend on *left_table_source*. *right_table_source* can be represented approximately this way: `TVF(left_table_source.row)`, where `TVF` is a table-valued function.  
+    The values in the *right_table_source* depend on *left_table_source*. *right_table_source* can be represented approximately this way: `TVF(left_table_source.row)`, where `TVF` is a table-valued function.  
   
 2.  Combines the result sets that are produced for each row in the evaluation of *right_table_source* with the *left_table_source* by performing a UNION ALL operation.  
   
-     The list of columns produced by the result of the APPLY operator is the set of columns from the *left_table_source* that is combined with the list of columns from the *right_table_source*.  
+    The list of columns produced by the result of the APPLY operator is the set of columns from the *left_table_source* that is combined with the list of columns from the *right_table_source*.  
   
 ## Using PIVOT and UNPIVOT  
  The *pivot_column* and *value_column* are grouping columns that are used by the PIVOT operator. PIVOT follows the following process to obtain the output result set:  
@@ -482,7 +479,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ### C. Using the SQL-92 CROSS JOIN syntax  
  The following example returns the cross product of the two tables `Employee` and `Department` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. A list of all possible combinations of `BusinessEntityID` rows and all `Department` name rows are returned.  
   
-```wql    
+```sql    
 SELECT e.BusinessEntityID, d.Name AS Department  
 FROM HumanResources.Employee AS e  
 CROSS JOIN HumanResources.Department AS d  
@@ -576,32 +573,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### K. Using APPLY  
- The following example assumes that the following tables with the following schema exist in the database:  
+The following example assumes that the following tables and table-valued function exist in the database:  
+
+|Object Name|Column Names|      
+|---|---|   
+|Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+The `GetReports` table-valued function, returns the list of all employees that report directly or indirectly to the specified `MgrID`.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- There is also a table-valued function, `GetReports(MgrID)` that returns the list of all employees (`EmpID`, `EmpLastName`, `EmpSalary`) that report directly or indirectly to the specified `MgrID`.  
-  
- The example uses `APPLY` to return all departments and all employees in that department. If a particular department does not have any employees, there will not be any rows returned for that department.  
+The example uses `APPLY` to return all departments and all employees in that department. If a particular department does not have any employees, there will not be any rows returned for that department.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- If you want the query to produce rows for those departments without employees, which will produce null values for the `EmpID`, `EmpLastName` and `EmpSalary` columns, use `OUTER APPLY` instead.  
+If you want the query to produce rows for those departments without employees, which will produce null values for the `EmpID`, `EmpLastName` and `EmpSalary` columns, use `OUTER APPLY` instead.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### L. Using CROSS APPLY  
- The following example retrieves a snapshot of all query plans residing in the plan cache, by querying the `sys.dm_exec_cached_plans` dynamic management view to retrieve the plan handles of all query plans in the cache. Then the `CROSS APPLY` operator is specified to pass the plan handles to `sys.dm_exec_query_plan`. The XML Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
+The following example retrieves a snapshot of all query plans residing in the plan cache, by querying the `sys.dm_exec_cached_plans` dynamic management view to retrieve the plan handles of all query plans in the cache. Then the `CROSS APPLY` operator is specified to pass the plan handles to `sys.dm_exec_query_plan`. The XML Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
 ```sql
 USE master;  
@@ -704,7 +704,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than ‘SO5000’:  
+ A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than 'SO5000':  
   
 ```sql
 -- Uses AdventureWorks  
@@ -804,7 +804,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### R. Using a derived table  
- The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name ‘Smith’.  
+ The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name 'Smith'.  
   
 ```sql
 -- Uses AdventureWorks  

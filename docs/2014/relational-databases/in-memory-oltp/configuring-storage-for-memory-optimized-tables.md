@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-caps.latest.revision: 5
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Configuring Storage for Memory-Optimized Tables
@@ -26,7 +22,7 @@ manager: craigg
   
 -   When migrating disk-based tables to memory-optimized tables, make sure that the transaction log is on a storage media that can support increased transaction log activity. For example, if your storage media supports transaction log operations at 100 MB/sec, and memory-optimized tables result in five times greater performance, the transaction log's storage media must be able to also support five times performance improvement, to prevent the transaction log activity from becoming a performance bottleneck.  
   
--   Memory-optimized tables are persisted in files distributed across one or more containers. Each container should typically be mapped to its own spindle and is used both for increased storage capacity and improved performance. You need to ensure that that sequential IOPS of the storage media can support a 3 times increase in transaction log throughput.  
+-   Memory-optimized tables are persisted in files distributed across one or more containers. Each container should typically be mapped to its own spindle and is used both for increased storage capacity and improved performance. You need to ensure that sequential IOPS of the storage media can support a 3 times increase in transaction log throughput.  
   
      For example, if memory-optimized tables generate 500MB/sec of activity in the transaction log, the storage for memory-optimized tables must support 1.5GB/sec. The need to support a 3 times increase in transaction log throughput comes from the observation that the data and delta file pairs are first written with the initial data and then need to be read/re-written as part of a merge operation.  
   

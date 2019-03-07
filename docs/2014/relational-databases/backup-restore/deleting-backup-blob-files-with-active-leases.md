@@ -4,21 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Deleting Backup Blob Files with Active Leases
   When backing up to or restoring from Windows Azure storage, SQL Server acquires an infinite lease in order to lock exclusive access to the blob. When the backup or restore process is successfully completed, the lease is released. If a backup or restore fails, the backup process attempts to clean up any invalid blob. However, if the backup fails due to prolonged or sustained network connectivity failure, the backup  process may not be able gain access to the blob and the blob may remain orphaned. This means that the blob cannot be written to or deleted until the lease is released. This topic describes how to release the lease and deleting the blob..  
   
- For more information on the types of leases, read this [article](http://go.microsoft.com/fwlink/?LinkId=275664).  
+ For more information on the types of leases, read this [article](https://go.microsoft.com/fwlink/?LinkId=275664).  
   
  If the backup operation fails, it can result in a backup file that is not valid.  The backup blob file might also have an active lease, preventing it from being deleted or overwritten.  In order to delete or overwrite such blobs, the lease should first be broken.If there are backup failures, we recommend that you clean up leases and delete blobs. You can also choose cleanup periodically as part of storage management tasks.  
   
@@ -29,7 +25,7 @@ manager: craigg
   
 1.  **Identifying blobs that have leases:** If you have a script or a process that runs the backup processes, you might be able to capture the failure within the script or process and use that to clean up the blobs.   You can also use the LeaseStats and LeastState properties to identify the blobs that have leases on them. Once you have identified the blobs, we recommend that you review the list, verify the validity of the backup file before deleting the blob.  
   
-2.  **Breaking the lease:** An authorized request can break the lease without supplying a lease ID. See [here](http://go.microsoft.com/fwlink/?LinkID=275664) for more information.  
+2.  **Breaking the lease:** An authorized request can break the lease without supplying a lease ID. See [here](https://go.microsoft.com/fwlink/?LinkID=275664) for more information.  
   
     > [!TIP]  
     >  SQL Server issues a lease ID to establish exclusive access during the restore operation. The restore lease ID is BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  

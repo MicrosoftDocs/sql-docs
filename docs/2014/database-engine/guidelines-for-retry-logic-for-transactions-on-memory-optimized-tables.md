@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
-caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Guidelines for Retry Logic for Transactions on Memory-Optimized Tables
@@ -77,7 +73,7 @@ manager: craigg
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  
-  -- number of retries – tune based on the workload  
+  -- number of retries - tune based on the workload  
   DECLARE @retry INT = 10  
   
   WHILE (@retry > 0)  
@@ -89,7 +85,7 @@ BEGIN
       --       or  
   
       -- BEGIN TRANSACTION  
-      --   …  
+      --   ...  
       -- COMMIT TRANSACTION  
   
       SET @retry = 0  

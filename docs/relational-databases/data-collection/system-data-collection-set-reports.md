@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data collector [SQL Server], server activity"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "query statistics reports [SQL Server]"
   - "disk usage reports [SQL Server]"
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -54,7 +51,7 @@ manager: craigg
  The table below the graph lists data collection times and corresponding usage data.  
   
 #### Disk Usage for Database: <database_name> Subreport  
- The **Disk usage for database:***<database_name>* subreport is displayed when you click a database name in the summary table of the Disk Usage Collection Set report. This report provides a numerical and graphical breakdown of space usage by the data and transaction log files of the database. Space usage for data files is categorized as a percentage allocated to index pages, unallocated space, data pages, and unused space. These categories are defined as follows:  
+ The **Disk usage for database:**_<database_name>_ subreport is displayed when you click a database name in the summary table of the Disk Usage Collection Set report. This report provides a numerical and graphical breakdown of space usage by the data and transaction log files of the database. Space usage for data files is categorized as a percentage allocated to index pages, unallocated space, data pages, and unused space. These categories are defined as follows:  
   
 |Category|Definition|  
 |--------------|----------------|  

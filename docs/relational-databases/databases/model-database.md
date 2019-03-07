@@ -1,22 +1,17 @@
 ---
 title: "model Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2016"
+ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "template databases [SQL Server]"
   - "model database [SQL Server], about model databases"
   - "model database [SQL Server]"
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 52
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -42,9 +37,9 @@ manager: craigg
 |----------|------------------|-------------------|-----------------|  
 |Primary data|modeldev|model.mdf|Autogrow by 64 MB until the disk is full.|  
 |Log|modellog|modellog.ldf|Autogrow by 64 MB to a maximum of 2 terabytes.|  
-  
- For versions before [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], see [model Database](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)for default file growth values.  
-  
+
+For SQL Server 2014, see [model Database](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014) for default file growth values.  
+
  To move the **model** database or log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   
 ### Database Options  

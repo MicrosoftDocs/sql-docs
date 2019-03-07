@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], about database diagrams"
   - "database diagrams [SQL Server], designing"
   - "database diagrams [SQL Server], creating"
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -28,7 +24,7 @@ This walkthrough illustrates how to create and modify a database diagram and mak
 ## Prerequisites  
 In order to complete this walkthrough, you will need:  
   
--   Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] sample database  
+-   Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database  
   
 -   An account with database owner **dbo** privileges  
   
@@ -41,7 +37,7 @@ In order to complete this walkthrough, you will need:
   
 1.  On the **View** menu, click **Object Explorer**.  
   
-2.  Open the Databases node and then open the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] node.  
+2.  Open the Databases node and then open the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] node.  
   
 3.  Right-click the Database Diagrams node and choose **New Database Diagram**.  
   
@@ -212,7 +208,7 @@ This is a basic diagram with just two existing and two new tables, but it illust
 [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Add Tables to Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [Create Relationships Between Tables on a Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[Create XML Indexes](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[Create XML Indexes](../../relational-databases/xml/create-xml-indexes.md)  
 [Copy an Image of a Database Diagram to the Clipboard &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [Work with Diagram Layout &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

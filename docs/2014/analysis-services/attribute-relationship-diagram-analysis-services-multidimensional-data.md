@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1"
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Attribute Relationship Diagram (Attribute Relationship Designer Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the pane immediately under the toolbar on the **Attribute Relationships** tab to view the attribute relationship diagram, and to create, modify, and delete attribute relationships.  

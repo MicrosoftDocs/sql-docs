@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ARTXP"
@@ -27,10 +25,9 @@ helpviewer_keywords:
   - "COMPLEXITY_PENALTY parameter"
   - "PREDICTION_SMOOTHING parameter"
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Microsoft Time Series Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm includes two separate algorithms for analyzing time series:  
@@ -44,7 +41,7 @@ manager: "mblythe"
  This topic provides additional information about how each algorithm is implemented, and how you can customize the algorithm by setting parameters to fine-tune the analysis and prediction results.  
   
 ## Implementation of the Microsoft Time Series Algorithm  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research developed the original ARTXP algorithm that was used in SQL Server 2005, basing the implementation on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. Therefore, the ARTXP algorithm can be described as an autoregressive tree model for representing periodic time series data. This algorithm relates a variable number of past items to each current item that is being predicted. The name ARTXP derives from the fact that the autoregressive tree method (an ART algorithm) is applied to multiple unknown prior states. For a detailed explanation of the ARTXP algorithm, see [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research developed the original ARTXP algorithm that was used in SQL Server 2005, basing the implementation on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. Therefore, the ARTXP algorithm can be described as an autoregressive tree model for representing periodic time series data. This algorithm relates a variable number of past items to each current item that is being predicted. The name ARTXP derives from the fact that the autoregressive tree method (an ART algorithm) is applied to multiple unknown prior states. For a detailed explanation of the ARTXP algorithm, see [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966).  
   
  The ARIMA algorithm was added to the Microsoft Time Series algorithm in SQL Server 2008 to improve long-term prediction. It is an implementation of the process for computing autoregressive integrated moving averages that was described by Box and Jenkins. The ARIMA methodology makes it possible to determine dependencies in observations taken sequentially in time, and can incorporate random shocks as part of the model. The ARIMA method also supports multiplicative seasonality. Readers who want to learn more about the ARIMA algorithm are encouraged to read the seminal work by Box and Jenkins; this section is intended to provide specific details about how the ARIMA methodology has been implemented in the Microsoft Time Series algorithm.  
   
@@ -65,7 +62,7 @@ manager: "mblythe"
   
  The Microsoft Time Series algorithm works by taking values in a data series and attempting to fit the data to a pattern. If the data series is are not already stationary, the algorithm applies an order of difference. Each increase in the order of difference tends to make the time series more stationary.  
   
- For example, if you have the time series (z1, z2, …, zn) and perform calculations using one order of difference, you obtain a new series (y1, y2,…., yn-1), where *yi = zi+1-zi*. When the difference order is 2, the algorithm generates another series (x1, x2, …, xn-2), based on the y series that was derived from the first order equation. The correct amount of differencing depends on the data. A single order of differencing is most common in models that show a constant trend; a second order of differencing can indicate a trend that varies with time.  
+ For example, if you have the time series (z1, z2, ..., zn) and perform calculations using one order of difference, you obtain a new series (y1, y2,...., yn-1), where *yi = zi+1-zi*. When the difference order is 2, the algorithm generates another series (x1, x2, ..., xn-2), based on the y series that was derived from the first order equation. The correct amount of differencing depends on the data. A single order of differencing is most common in models that show a constant trend; a second order of differencing can indicate a trend that varies with time.  
   
  By default, the order of difference used in the Microsoft Time Series algorithm is -1, meaning that the algorithm will automatically detect the best value for the difference order. Typically, that best value is 1 (when differencing is required), but under certain circumstances the algorithm will increase that value to a maximum of 2.  
   
@@ -73,7 +70,7 @@ manager: "mblythe"
   
  Whenever the value of ARIMA_AR_ORDER is greater than 1, the algorithm multiplies the time series by a polynomial term. If one term of the polynomial formula resolves to a root of 1 or close to 1, the algorithm attempts to preserve the stability of the model by removing the term and increasing the difference order by 1. If the difference order is already at the maximum, the term is removed and the difference order does not change.  
   
- For example, if the value of AR = 2,   the resulting AR polynomial term might look like this: 1 – 1.4B + .45B^2 = (1- .9B) (1- 0.5B). Note the term (1- .9B) which has a root of about 0.9. The algorithm eliminates this term from the polynomial formula but cannot increase the difference order by one because it is already at the maximum value of 2.  
+ For example, if the value of AR = 2,   the resulting AR polynomial term might look like this: 1 - 1.4B + .45B^2 = (1- .9B) (1- 0.5B). Note the term (1- .9B) which has a root of about 0.9. The algorithm eliminates this term from the polynomial formula but cannot increase the difference order by one because it is already at the maximum value of 2.  
   
  It is important to note that the only way that you can **force** a change in difference order is to use the unsupported parameter, ARIMA_DIFFERENCE_ORDER. This hidden parameter controls how many times the algorithm performs differencing on the time series, and can be set by typing a custom algorithm parameter. However, we do not recommend that you change this value unless you are prepared to experiment and are familiar with the calculations involved. Also note that there is currently no mechanism, including hidden parameters, to let you control the threshold at which the increase in difference order is triggered.  
   
@@ -83,7 +80,7 @@ manager: "mblythe"
  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm supports the following parameters that affect the behavior, performance, and accuracy of the resulting mining model.  
   
 > [!NOTE]  
->  The Microsoft Time Series algorithm is available in all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; however, some advanced features, including parameters for customizing the time series analysis, are supported only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
+>  The Microsoft Time Series algorithm is available in all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; however, some advanced features, including parameters for customizing the time series analysis, are supported only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### Detection of Seasonality  
  Both ARIMA and ARTXP algorithms support detection of seasonality or periodicity. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses Fast Fourier transformation to detect seasonality before training. However, you can affect seasonality detection, and the results of time series analysis, by setting algorithm parameters.  

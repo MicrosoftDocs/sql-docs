@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addmergesubscription_TSQL"
   - "sp_addmergesubscription"
 helpviewer_keywords: 
   - "sp_addmergesubscription"
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addmergesubscription (Transact-SQL)
@@ -63,22 +56,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default. The publication must already exist.  
   
- [ **@subscriber =**] **'***subscriber***'**  
+ [ **@subscriber =**] **'**_subscriber_**'**  
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
   
- [ **@subscriber_db=**] **'***subscriber_db***'**  
+ [ **@subscriber_db=**] **'**_subscriber_db_**'**  
  Is the name of the subscription database. *subscriber_db*is **sysname**, with a default of NULL.  
   
- [ **@subscription_type=**] **'***subscription_type***'**  
+ [ **@subscription_type=**] **'**_subscription_type_**'**  
  Is the type of subscription. *subscription_type*is **nvarchar(15)**, with a default of PUSH. If **push**, a push subscription is added and the Merge Agent is added at the Distributor. If **pull**, a pull subscription is added without adding a Merge Agent at the Distributor.  
   
 > [!NOTE]  
 >  Anonymous subscriptions do not need to use this stored procedure.  
   
- [ **@subscriber_type=**] **'***subscriber_type***'**  
+ [ **@subscriber_type=**] **'**_subscriber_type_**'**  
  Is the type of Subscriber. *subscriber_type*is **nvarchar(15)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -91,7 +84,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [ **@subscription_priority=**] *subscription_priority*  
  Is a number indicating the priority for the subscription. *subscription_priority*is **real**, with a default of NULL. For local and anonymous subscriptions, the priority is 0.0. For global subscriptions, the priority must be less than 100.0.  
   
- [ **@sync_type=**] **'***sync_type***'**  
+ [ **@sync_type=**] **'**_sync_type_**'**  
  Is the subscription synchronization type. *sync_type*is **nvarchar(15)**, with a default of **automatic**. Can be **automatic** or **none**. If **automatic**, the schema and initial data for published tables are transferred to the Subscriber first. If **none**, it is assumed the Subscriber already has the schema and initial data for published tables. System tables and data are always transferred.  
   
 > [!NOTE]  
@@ -168,13 +161,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [ **@active_end_date=**] *active_end_date*  
  Is the date when the Merge Agent stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of NULL.  
   
- [ **@optional_command_line=**] **'***optional_command_line***'**  
+ [ **@optional_command_line=**] **'**_optional_command_line_**'**  
  Is the optional command prompt to execute. *optional_command_line*is **nvarchar(4000)**, with a default of NULL. This parameter is used to add a command that captures the output and saves it to a file or to specify a configuration file or attribute.  
   
- [ **@description=**] **'***description***'**  
+ [ **@description=**] **'**_description_**'**  
  Is a brief description of this merge subscription. *description*is **nvarchar(255)**, with a default of NULL. This value is displayed by the Replication Monitor in the **Friendly Name** column, which can be used to sort the subscriptions for a monitored publication.  
   
- [ **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
+ [ **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
  Specifies if the subscription can be synchronized through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager. *enabled_for_syncmgr* is **nvarchar(5)**, with a default of FALSE. If **false**, the subscription is not registered with Synchronization Manager. If **true**, the subscription is registered with Synchronization Manager and can be synchronized without starting [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [ **@offloadagent=** ] *remote_agent_activation*  
@@ -183,16 +176,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  This parameter has been deprecated and is only maintained for backward compatibility of scripts.  
   
- [ **@offloadserver=** ] **'***remote_agent_server_name***'**  
+ [ **@offloadserver=** ] **'**_remote_agent_server_name_**'**  
  Specifies the network name of server to be used for remote agent activation. *remote_agent_server_name*is **sysname**, with a default of NULL.  
   
- [ **@use_interactive_resolver=** ] **'***use_interactive_resolver***'**  
+ [ **@use_interactive_resolver=** ] **'**_use_interactive_resolver_**'**  
  Allows conflicts to be resolved interactively for all articles that allow interactive resolution. *use_interactive_resolver* is **nvarchar(5)**, with a default of FALSE.  
   
- [ **@merge_job_name=** ] **'***merge_job_name***'**  
+ [ **@merge_job_name=** ] **'**_merge_job_name_**'**  
  The *@merge_job_name* parameter is deprecated and cannot be set. *merge_job_name* is **sysname**, with a default of NULL.  
   
- [ **@hostname**= ] **'***hostname***'**  
+ [ **@hostname**= ] **'**_hostname_**'**  
  Overrides the value returned by [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) when this function is used in the WHERE clause of a parameterized filter. *Hostname* is **sysname**, with a default of NULL.  
   
 > [!IMPORTANT]  

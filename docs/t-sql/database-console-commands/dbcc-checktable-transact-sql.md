@@ -4,10 +4,8 @@ ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHECKTABLE_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "low overhead checks"
   - "table integrity checks [SQL Server]"
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
 author: uc-msft
 ms.author: umajay
 manager: craigg
@@ -49,7 +46,7 @@ DBCC CHECKTABLE
     ]     
 )    
     [ WITH     
-        { ALL_ERRORMSGS ]    
+        { [ ALL_ERRORMSGS ]    
           [ , EXTENDED_LOGICAL_CHECKS ]     
           [ , NO_INFOMSGS ]    
           [ , TABLOCK ]     
@@ -93,7 +90,7 @@ ALL_ERRORMSGS
  Displays an unlimited number of errors. All error messages are displayed by default. Specifying or omitting this option has no effect.  
     
 EXTENDED_LOGICAL_CHECKS  
- If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
+ If the compatibility level is 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
  For more information, see *Performing Logical Consistency Checks on Indexes* in the [Remarks](#remarks) section later in this topic.  
     
 NO_INFOMSGS  
@@ -119,7 +116,7 @@ Therefore, using the PHYSICAL_ONLY option may cause a much shorter run-time for 
 DATA_PURITY  
  Causes DBCC CHECKTABLE to check the table for column values that are not valid or out-of-range. For example, DBCC CHECKTABLE detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that are not valid.  
  Column-value integrity checks are enabled by default and do not require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use DBCC CHECKTABLE WITH DATA_PURITY to find and correct errors on a specific table; however, column-value checks on the table are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB and DBCC CHECKTABLE check column-value integrity by default.  
- Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](http://support.microsoft.com/kb/923247).  
+ Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](https://support.microsoft.com/kb/923247).  
  If PHYSICAL_ONLY is specified, column-integrity checks are not performed.  
     
 MAXDOP  

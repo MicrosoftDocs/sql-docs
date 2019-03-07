@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "Report Builder 1.0, SharePoint integration"
   - "model item security [Reporting Services]"
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: 15
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Set Permissions for Report Server Operations in a SharePoint Web Application
   For a report server that runs in SharePoint integrated mode, the security settings defined on the SharePoint site determine how you view and manage reports, report models, and shared data sources. If you are using the default SharePoint groups, permission levels, and permission assignments, you can work with reports and other documents using the current security settings.  
@@ -49,7 +46,7 @@ manager: "mblythe"
   
  If you are using predefined permission levels, no action is required because the above permissions are already included in Full Control, Design, Contribute, Read, and Limited Access. However, if you are using custom permission levels or editing the permissions assigned to a particular user or group, you must add the permission manually.  
   
- "Browse User Information" permission allows the report server to return information about the creator of the item and the user who last modified the item. Without this permission, the report server will return the following errors. For browse operations, the error is: “Report Server has encountered a SharePoint error. ---> System.UnauthorizedAccessException: Access is denied.” For publish operations, the error is: “The permissions granted to user ‘\<domain>\\<user\>' are insufficient for performing this operation.”  
+ "Browse User Information" permission allows the report server to return information about the creator of the item and the user who last modified the item. Without this permission, the report server will return the following errors. For browse operations, the error is: "Report Server has encountered a SharePoint error. ---> System.UnauthorizedAccessException: Access is denied." For publish operations, the error is: "The permissions granted to user '\<domain>\\<user\>' are insufficient for performing this operation."  
   
 ##  <a name="permissionReports"></a> Permissions for viewing and managing reports  
  Report definition permissions are defined through List permissions on the library that contains the report, but you can set permissions on individual reports if you want to restrict access. The following table provides a list of tasks and permissions that support each one.  

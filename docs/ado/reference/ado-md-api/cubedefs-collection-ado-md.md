@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CubeDefs collection [ADO MD]"
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

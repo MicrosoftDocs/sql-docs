@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
-author: "douglaslM"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Step 2: Adding and Configuring the Foreach Loop Container
@@ -59,7 +55,7 @@ manager: craigg
   
      This sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Click the **DOWNLOADS** tab.  
   
@@ -71,7 +67,7 @@ manager: craigg
   
 1.  Click **Variable Mappings**.  
   
-2.  On the **Variable Mappings** page, in the **Variable** column, click the empty cell and select **\<New Variable…>**.  
+2.  On the **Variable Mappings** page, in the **Variable** column, click the empty cell and select **\<New Variable...>**.  
   
 3.  In the **Add Variable** dialog box, for **Name**, type `varFileName`.  
   

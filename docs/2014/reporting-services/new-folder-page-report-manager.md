@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
-caps.latest.revision: 23
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # New Folder Page (Report Manager)
   Use the New Folder page to create a new folder in the report server folder hierarchy. The folder that you create is a virtual folder that is stored in a report server database. The folder is not created in the file system of your computer.  
@@ -33,7 +30,7 @@ manager: "mblythe"
   
 ## Options  
  **Name**  
- Specify the name of the folder. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. Do not use the characters ; ? : @ & = + , $ / * \< > | " or / when specifying a name.  
+ Specify the name of the folder. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. Do not use the characters ; ? : \@ & = + , $ / * \< > | " or / when specifying a name.  
   
  **Description**  
  Type a description of folder contents. This description appears in the Contents page to users who have permission to access the folder.  

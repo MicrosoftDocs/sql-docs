@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure Usage Data Collection for (PowerPivot for SharePoint
   Usage data collection is a farm-level SharePoint feature. PowerPivot for SharePoint uses and extends this system to provide reports in the PowerPivot Management Dashboard that show how PowerPivot data and services are used. Depending on how you install SharePoint, usage data collection might be turned off for the farm. A farm administrator must enable usage logging to create the usage data that appears in the PowerPivot Management Dashboard.  
@@ -84,9 +81,9 @@ manager: "mblythe"
 ##  <a name="jobs"></a> Configure the timer jobs used in usage data collection  
  PowerPivot server health and usage data is moved to different locations in the usage data collection system through two timer jobs.:  
   
--   The “Microsoft SharePoint Foundation Usage Data Import” timer job moves PowerPivot usage to the PowerPivot service application database.  
+-   The "Microsoft SharePoint Foundation Usage Data Import" timer job moves PowerPivot usage to the PowerPivot service application database.  
   
--   The “PowerPivot Management Dashboard Processing timer job” the data to PowerPivot workbook that is the source of data for built-in administrative reports.  
+-   The "PowerPivot Management Dashboard Processing timer job" the data to PowerPivot workbook that is the source of data for built-in administrative reports.  
   
  If you need to refresh the administrative reports that appear in the PowerPivot Management Dashboard more frequently, follow these steps.  
   

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Attribute pane formats [Analysis Services]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "formats [Analysis Services], Attribute pane"
   - "modifying Attribute pane format"
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # View Attributes in a Tree, List or Grid in Dimension Designer
   This procedure describes how to change the way that attributes are displayed in the Dimension Designer.  

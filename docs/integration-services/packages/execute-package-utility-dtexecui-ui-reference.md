@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.dtexecui.setvalues.f1"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DTExecUI utility"
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -65,7 +62,7 @@ manager: craigg
 |||  
 |-|-|  
 |Value|Description|  
-|**SQL Server**|Select this option when the package resides in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and provide a user name and password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Each user name and password adds the **/USER** *username* and **/PASSWORD** *password* options to the command prompt.|  
+|**SQL Server**|Select this option when the package resides in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and provide a user name and password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Each user name and password adds the **/USER** _username_ and **/PASSWORD** _password_ options to the command prompt.|  
 |**File system**|Select this option when the package resides in the file system.|  
 |**SSIS Package Store**|Select this option when the package resides in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store.|  
   
@@ -96,11 +93,11 @@ manager: craigg
 >  When possible, use Windows Authentication.  
   
  **Package**  
- Type the name of the package, or click the ellipsis button **(…)** to locate a package using the **Select an SSIS Package** dialog box.  
+ Type the name of the package, or click the ellipsis button **(...)** to locate a package using the **Select an SSIS Package** dialog box.  
   
 #### Package Source = File System  
  **Package**  
- Type the name of the package, or click the ellipsis button **(…)** to locate a package using the Open dialog box. By default, the dialog box lists only files that have the .dtsx extension.  
+ Type the name of the package, or click the ellipsis button **(...)** to locate a package using the Open dialog box. By default, the dialog box lists only files that have the .dtsx extension.  
   
 #### Package Source = SSIS Package Store  
  **Server**  
@@ -116,7 +113,7 @@ manager: craigg
  This option is not available when you run a package stored in the **SSIS Package Store**.  
   
  **Package**  
- Type the name of the package, or click the ellipsis button **(…)** to locate a package using the **Select an SSIS Package** dialog box.  
+ Type the name of the package, or click the ellipsis button **(...)** to locate a package using the **Select an SSIS Package** dialog box.  
   
 ## Configurations Page  
  Use the **Configurations** page of the **Execute Package Utility** dialog box to select the configuration files to load at run time, and to specify the order in which they load.  
@@ -204,7 +201,7 @@ manager: craigg
  List the checkpoint file the package uses, if you enable package checkpoints.  
   
  **Browse**  
- Click the browse button **(…)** to locate the checkpoint file using the **Open** dialog box, if you enable package checkpoints. If a checkpoint file is already specified, it is replaced by the selected file.  
+ Click the browse button **(...)** to locate the checkpoint file using the **Open** dialog box, if you enable package checkpoints. If a checkpoint file is already specified, it is replaced by the selected file.  
   
  **Override restart options**  
  Indicate whether to override restart options, if you enable package checkpoints.  
@@ -280,7 +277,7 @@ manager: craigg
  Click to close the **Execute Package Utility** dialog box.  
   
 ## Logging Page  
- Use the **Logging** page of the **Execute Package Utility** dialog box to make log providers available to the package at run time. Provide the package log provider type and the connection string for connecting to the log. Each log provider entry adds a **/LOGGER***classid* option to the command prompt.  
+ Use the **Logging** page of the **Execute Package Utility** dialog box to make log providers available to the package at run time. Provide the package log provider type and the connection string for connecting to the log. Each log provider entry adds a **/LOGGER**_classid_ option to the command prompt.  
   
 ### Options  
  **Log Provider**  
@@ -299,7 +296,7 @@ manager: craigg
  Click to close the **Execute Package Utility** dialog box.  
   
 ## Set Values Page  
- Use the **Set Values** page of the **Execute Package Utility** dialog box to set the property values of packages, executables, connections, variables, and log providers by typing the paths of properties and the property values. Each path entry adds a **/SET***propertypath;value* option to the command prompt.  
+ Use the **Set Values** page of the **Execute Package Utility** dialog box to set the property values of packages, executables, connections, variables, and log providers by typing the paths of properties and the property values. Each path entry adds a **/SET**_propertypath;value_ option to the command prompt.  
   
 ### Options  
  **Property Path**  

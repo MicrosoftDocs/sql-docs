@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_create_plan_guide"
@@ -18,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_create_plan_guide"
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-caps.latest.revision: 82
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_create_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a plan guide for associating query hints or actual query plans with queries in a database. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
@@ -50,45 +46,45 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## Arguments  
- [ @name = ] N'*plan_guide_name*'  
+ [ \@name = ] N'*plan_guide_name*'  
  Is the name of the plan guide. Plan guide names are scoped to the current database. *plan_guide_name* must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and cannot start with the number sign (#). The maximum length of *plan_guide_name* is 124 characters.  
   
- [ @stmt = ] N'*statement_text*'  
- Is a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement against which to create a plan guide. When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer recognizes a query that matches *statement_text*, *plan_guide_name* takes effect. For the creation of a plan guide to succeed, *statement_text* must appear in the context specified by the @type, @module_or_batch, and @params parameters.  
+ [ \@stmt = ] N'*statement_text*'  
+ Is a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement against which to create a plan guide. When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer recognizes a query that matches *statement_text*, *plan_guide_name* takes effect. For the creation of a plan guide to succeed, *statement_text* must appear in the context specified by the \@type, \@module_or_batch, and \@params parameters.  
   
- *statement_text* must be provided in a way that allows for the query optimizer to match it with the corresponding statement supplied within the batch or module identified by @module_or_batch and @params. For more information, see the "Remarks" section. The size of *statement_text* is limited only by available memory of the server.  
+ *statement_text* must be provided in a way that allows for the query optimizer to match it with the corresponding statement supplied within the batch or module identified by \@module_or_batch and \@params. For more information, see the "Remarks" section. The size of *statement_text* is limited only by available memory of the server.  
   
- [@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
+ [\@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
  Is the type of entity in which *statement_text* appears. This specifies the context for matching *statement_text* to *plan_guide_name*.  
   
  OBJECT  
  Indicates *statement_text* appears in the context of a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, scalar function, multistatement table-valued function, or [!INCLUDE[tsql](../../includes/tsql-md.md)] DML trigger in the current database.  
   
  SQL  
- Indicates *statement_text* appears in the context of a stand-alone statement or batch that can be submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through any mechanism. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements submitted by common language runtime (CLR) objects or extended stored procedures, or by using EXEC N'*sql_string*', are processed as batches on the server and, therefore, should be identified as @type **=** 'SQL'. If SQL is specified, the query hint PARAMETERIZATION { FORCED | SIMPLE } cannot be specified in the @hints parameter.  
+ Indicates *statement_text* appears in the context of a stand-alone statement or batch that can be submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through any mechanism. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements submitted by common language runtime (CLR) objects or extended stored procedures, or by using EXEC N'*sql_string*', are processed as batches on the server and, therefore, should be identified as \@type **=** 'SQL'. If SQL is specified, the query hint PARAMETERIZATION { FORCED | SIMPLE } cannot be specified in the \@hints parameter.  
   
  TEMPLATE  
- Indicates the plan guide applies to any query that parameterizes to the form indicated in *statement_text*. If TEMPLATE is specified, only the PARAMETERIZATION { FORCED | SIMPLE } query hint can be specified in the @hints parameter. For more information about TEMPLATE plan guides, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
+ Indicates the plan guide applies to any query that parameterizes to the form indicated in *statement_text*. If TEMPLATE is specified, only the PARAMETERIZATION { FORCED | SIMPLE } query hint can be specified in the \@hints parameter. For more information about TEMPLATE plan guides, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
+ [\@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
  Specifies either the name of the object in which *statement_text* appears, or the batch text in which *statement_text* appears. The batch text cannot include a USE*database* statement.  
   
  For a plan guide to match a batch submitted from an application, *batch_tex*t must be provided in the same format, character-for-character, as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No internal conversion is performed to facilitate this match. For more information, see the Remarks section.  
   
- [*schema_name*.]*object_name* specifies the name of a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, scalar function, multistatement table-valued function, or [!INCLUDE[tsql](../../includes/tsql-md.md)] DML trigger that contains *statement_text*. If *schema_name* is not specified, *schema_name* uses the schema of the current user. If NULL is specified and @type = 'SQL', the value of @module_or_batch is set to the value of @stmt. If @type = 'TEMPLATE**'**, @module_or_batch must be NULL.  
+ [*schema_name*.]*object_name* specifies the name of a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, scalar function, multistatement table-valued function, or [!INCLUDE[tsql](../../includes/tsql-md.md)] DML trigger that contains *statement_text*. If *schema_name* is not specified, *schema_name* uses the schema of the current user. If NULL is specified and \@type = 'SQL', the value of \@module_or_batch is set to the value of \@stmt. If \@type = 'TEMPLATE**'**, \@module_or_batch must be NULL.  
   
- [ @params = ]{ N'*@parameter_name data_type* [ ,*...n* ]' | NULL }  
- Specifies the definitions of all parameters that are embedded in *statement_text*. @params applies only when either of the following is true:  
+ [ \@params = ]{ N'*\@parameter_name data_type* [ ,*...n* ]' | NULL }  
+ Specifies the definitions of all parameters that are embedded in *statement_text*. \@params applies only when either of the following is true:  
   
--   @type = 'SQL' or 'TEMPLATE'. If 'TEMPLATE', @params must not be NULL.  
+-   \@type = 'SQL' or 'TEMPLATE'. If 'TEMPLATE', \@params must not be NULL.  
   
--   *statement_text* is submitted by using sp_executesql and a value for the @params parameter is specified, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internally submits a statement after parameterizing it. Submission of parameterized queries from database APIs (including ODBC, OLE DB, and ADO.NET) appear to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as calls to sp_executesql or to API server cursor routines; therefore, they can also be matched by SQL or TEMPLATE plan guides.  
+-   *statement_text* is submitted by using sp_executesql and a value for the \@params parameter is specified, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internally submits a statement after parameterizing it. Submission of parameterized queries from database APIs (including ODBC, OLE DB, and ADO.NET) appear to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as calls to sp_executesql or to API server cursor routines; therefore, they can also be matched by SQL or TEMPLATE plan guides.  
   
- *@parameter_name data_type* must be supplied in the exact same format as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] either by using sp_executesql or submitted internally after parameterization. For more information, see the Remarks section. If the batch does not contain parameters, NULL must be specified. The size of @params is limited only by available server memory.  
+ *\@parameter_name data_type* must be supplied in the exact same format as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] either by using sp_executesql or submitted internally after parameterization. For more information, see the Remarks section. If the batch does not contain parameters, NULL must be specified. The size of \@params is limited only by available server memory.  
   
- [@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
+ [\@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
  N'OPTION (*query_hint* [ ,*...n* ] )  
- Specifies an OPTION clause to attach to a query that matches @stmt. @hints must be syntactically the same as an OPTION clause in a SELECT statement, and can contain any valid sequence of query hints.  
+ Specifies an OPTION clause to attach to a query that matches \@stmt. \@hints must be syntactically the same as an OPTION clause in a SELECT statement, and can contain any valid sequence of query hints.  
   
  N'*XML_showplan*'  
  Is the query plan in XML format to be applied as a hint.  
@@ -99,23 +95,23 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Indicates that any existing hint specified in the OPTION clause of the query is not applied to the query. For more information, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ## Remarks  
- The arguments to sp_create_plan_guide must be provided in the order that is shown. When you supply values for the parameters of **sp_create_plan_guide**, all parameter names must be specified explicitly, or none at all. For example, if **@name =** is specified, then **@stmt =** , **@type =**, and so on, must also be specified. Likewise, if **@name =** is omitted and only the parameter value is provided, the remaining parameter names must also be omitted, and only their values provided. Argument names are for descriptive purposes only, to help understand the syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not verify that the specified parameter name matches the name for the parameter in the position where the name is used.  
+ The arguments to sp_create_plan_guide must be provided in the order that is shown. When you supply values for the parameters of **sp_create_plan_guide**, all parameter names must be specified explicitly, or none at all. For example, if **\@name =** is specified, then **\@stmt =** , **\@type =**, and so on, must also be specified. Likewise, if **\@name =** is omitted and only the parameter value is provided, the remaining parameter names must also be omitted, and only their values provided. Argument names are for descriptive purposes only, to help understand the syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not verify that the specified parameter name matches the name for the parameter in the position where the name is used.  
   
  You can create more than one OBJECT or SQL plan guide for the same query and batch or module. However, only one plan guide can be enabled at any given time.  
   
- Plan guides of type OBJECT cannot be created for an @module_or_batch value that references a stored procedure, function, or DML trigger that specifies the WITH ENCRYPTION clause or that is temporary.  
+ Plan guides of type OBJECT cannot be created for an \@module_or_batch value that references a stored procedure, function, or DML trigger that specifies the WITH ENCRYPTION clause or that is temporary.  
   
  Trying to drop or modify a function, stored procedure, or DML trigger that is referenced by a plan guide, either enabled or disabled, causes an error. Trying to drop a table that has a trigger defined on it that is referenced by a plan guide also causes an error.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Plan guides cannot be used in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Plan guides are visible in any edition. You can also attach a database that contains plan guides to any edition. Plan guides remain intact when you restore or attach a database to an upgraded version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You should verify the desirability of the plan guides in each database after performing a server upgrade.  
   
 ## Plan Guide Matching Requirements  
- For plan guides that specify @type = 'SQL' or @type = 'TEMPLATE' to successfully match a query, the values for *batch_text* and *@parameter_name data_type* [,*...n* ] must be provided in exactly the same format as their counterparts submitted by the application. This means you must provide the batch text exactly as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compiler receives it. To capture the actual batch and parameter text, you can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. For more information, see [Use SQL Server Profiler to Create and Test Plan Guides](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+ For plan guides that specify \@type = 'SQL' or \@type = 'TEMPLATE' to successfully match a query, the values for *batch_text* and *\@parameter_name data_type* [,*...n* ] must be provided in exactly the same format as their counterparts submitted by the application. This means you must provide the batch text exactly as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compiler receives it. To capture the actual batch and parameter text, you can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. For more information, see [Use SQL Server Profiler to Create and Test Plan Guides](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
- When @type = 'SQL' and @module_or_batch is set to NULL, the value of @module_or_batch is set to the value of @stmt. This means that the value for *statement_text* must be provided in exactly the same format, character-for-character, as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No internal conversion is performed to facilitate this match.  
+ When \@type = 'SQL' and \@module_or_batch is set to NULL, the value of \@module_or_batch is set to the value of \@stmt. This means that the value for *statement_text* must be provided in exactly the same format, character-for-character, as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No internal conversion is performed to facilitate this match.  
   
- When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] matches the value of *statement_text* to *batch_text* and *@parameter_name data_type* [,*...n* ], or if @type = **'**OBJECT', to the text of the corresponding query inside *object_name*, the following string elements are not considered:  
+ When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] matches the value of *statement_text* to *batch_text* and *\@parameter_name data_type* [,*...n* ], or if \@type = **'**OBJECT', to the text of the corresponding query inside *object_name*, the following string elements are not considered:  
   
 -   White space characters (tabs, spaces, carriage returns, or line feeds) inside the string.  
   

@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC]"
   - "data types [ODBC], about data types"
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -1,22 +1,15 @@
 ---
 title: "Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -89,9 +82,9 @@ Get-SPDiagnosticConfig
   
 1.  **Product:SQL Server Reporting Services**  
   
-2.  **Category:** Events related to the server will have the characters “Report Server”, at the beginning of the name. For example “Report Server Alerting Runtime” These events are also logged to the report server log files.  
+2.  **Category:** Events related to the server will have the characters "Report Server", at the beginning of the name. For example "Report Server Alerting Runtime" These events are also logged to the report server log files.  
   
-3.  **Category:** Events related to or communicated from a web front-end component do not contain “Report Server”. For example “Service Application Proxy” Report Server Alerting Runtime”. The WFE entries do contain a CorrelationID but the server entries do not.  
+3.  **Category:** Events related to or communicated from a web front-end component do not contain "Report Server". For example "Service Application Proxy" Report Server Alerting Runtime". The WFE entries do contain a CorrelationID but the server entries do not.  
   
 ##  <a name="bkmk_list"></a> List of SQL Server Reporting Services Events  
  The following table is a list of the events in the SQL Server Reporting Services Category:  
@@ -104,7 +97,7 @@ Get-SPDiagnosticConfig
 |Local Mode Rendering||  
 |SOAP Client Proxy||  
 |UI Pages||  
-|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including Power View, a feature of SQL Server Reporting Services Add-in.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of “SQL Server Reporting Services” and the **Area** of “Power View”.<br /><br /> The content of entries logged with the area of “Power View” is determined by the client application.|  
+|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including Power View, a feature of SQL Server Reporting Services Add-in.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of "SQL Server Reporting Services" and the **Area** of "Power View".<br /><br /> The content of entries logged with the area of "Power View" is determined by the client application.|  
 |Report Server Alerting Runtime||  
 |Report Server App Domain Manager||  
 |Report Server Buffered Response||  
@@ -112,7 +105,7 @@ Get-SPDiagnosticConfig
 |Report Server Catalog||  
 |Report Server Chunk||  
 |Report Server Cleanup||  
-|Report Server Configuration Manager|Sample entries:<br /><br /> MediumUsing report server internal url `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
+|Report Server Configuration Manager|Sample entries:<br /><br /> MediumUsing report server internal url `https://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
 |Report Server Crypto||  
 |Report Server Data Extension||  
 |Report Server DB Polling||  
@@ -142,19 +135,19 @@ Get-SPDiagnosticConfig
 |Shared Service|Sample entries:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="bkmk_powershell"></a> View a Log file with PowerShell  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain “**sql server reporting services**”:  
+ ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain "**sql server reporting services**":  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  There are also tools you can download which will allow you read ULS logs. For example, the [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), available on GitHub. 
   
- For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
+ For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
   
 ##  <a name="bkmk_trace"></a> Trace Log Location  
  The Trace Log files are usually found in the folder **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** but you can verify or change the path from the **Diagnostic Logging** page in SharePoint Central Administration.  
   
- For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

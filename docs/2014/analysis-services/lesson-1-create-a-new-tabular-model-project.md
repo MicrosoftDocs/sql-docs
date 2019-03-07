@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Lesson 1: Create a New Tabular Model Project
@@ -40,19 +37,19 @@ manager: craigg
 4.  Click **OK**.  
   
 ## Understanding the SQL Server Data Tools Tabular Model Authoring Environment  
- Now that you’ve created a new tabular model project, let’s take a moment to explore the tabular model authoring environment in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 or later).  
+ Now that you've created a new tabular model project, let's take a moment to explore the tabular model authoring environment in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 or later).  
   
- After your project is created, it opens in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. An empty model will appear in the model designer and the **Model.bim** file will be selected in the **Solution Explorer** window. When you add data, tables and columns will appear in the designer. If you don’t see the designer (the empty window with the Model.bim tab), in **Solution Explorer**, under `AW Internet Sales Tabular Model`, double click the **Model.bim** file.  
+ After your project is created, it opens in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. An empty model will appear in the model designer and the **Model.bim** file will be selected in the **Solution Explorer** window. When you add data, tables and columns will appear in the designer. If you don't see the designer (the empty window with the Model.bim tab), in **Solution Explorer**, under `AW Internet Sales Tabular Model`, double click the **Model.bim** file.  
   
  You can view the basic project properties in the **Properties** window. In **Solution Explorer**, click `AW Internet Sales Tabular Model`. Notice in the **Properties** window, in **Project File**, you will see **AW Internet Sales Tabular Model.smproj**. This is the project file name, and in **Project Folder**, you will see the project file location.  
   
  In **Solution Explorer**, right-click the `AW Internet Sales Tabular Model` project, and then click **Properties**. The **AW Internet Sales Tabular Model Property Pages** dialog box appears. These are the advanced project properties. You will set some of these properties later when you are ready to deploy your model.  
   
- Now, let’s look at the model properties. In **Solution Explorer**, click **Model.bim**. In the **Properties** window, you will now see the model properties, most important of which is the **DirectQuery Mode** property. This property specifies whether or not the model is deployed in In-Memory mode (Off) or DirectQuery mode (On). For this tutorial, you will author and deploy your model in In-Memory mode.  
+ Now, let's look at the model properties. In **Solution Explorer**, click **Model.bim**. In the **Properties** window, you will now see the model properties, most important of which is the **DirectQuery Mode** property. This property specifies whether or not the model is deployed in In-Memory mode (Off) or DirectQuery mode (On). For this tutorial, you will author and deploy your model in In-Memory mode.  
   
  When you create a new model, certain model properties are set automatically according to the Data Modeling settings that can be specified in the Tools\Options dialog box. Data Backup, Workspace Retention, and Workspace Server properties specify how and where the workspace database (your model authoring database) is backed up, retained in-memory, and built. You can change these settings later if necessary, but for now, just leave these properties as they are.  
   
- When you installed [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], several new menu items were added to the Visual Studio environment. Let’s look at the new menu items that are specific to authoring tabular models. Click on the **Model** menu. From here, you can launch the Table Import Wizard, view and edit existing connections, refresh workspace data, browse your model in [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel with the Analyze in Excel feature, create perspectives and roles, select the model view, and set calculation options.  
+ When you installed [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], several new menu items were added to the Visual Studio environment. Let's look at the new menu items that are specific to authoring tabular models. Click on the **Model** menu. From here, you can launch the Table Import Wizard, view and edit existing connections, refresh workspace data, browse your model in [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel with the Analyze in Excel feature, create perspectives and roles, select the model view, and set calculation options.  
   
  Click on the **Table** menu. Here, you can create and manage relationships between tables, create and manage, specify date table settings, create partitions, and edit table properties.  
   

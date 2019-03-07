@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.ardesigner.createrelationshipdialog.f1"
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes (Attribute Relationship Designer Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the **Create Attribute Relationship** dialog box to define new attribute relationships and the **Edit Attribute Relationship** dialog box to change an attribute relationship. For more information, see [Define Attribute Relationships](multidimensional-models/attribute-relationships-define.md).  
@@ -26,7 +23,7 @@ manager: "mblythe"
   
 2.  On the toolbar, click the New Attribute Relationship icon.  
   
-     —or—  
+     -or-  
   
      In the attribute relationship diagram or **Attributes** list, right-click an attribute, and then click **New Attribute Relationship**.  
   

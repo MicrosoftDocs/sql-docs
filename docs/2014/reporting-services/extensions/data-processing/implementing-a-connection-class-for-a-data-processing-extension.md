@@ -4,30 +4,27 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "connections [Reporting Services], data processing extensions"
   - "Connection class"
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-caps.latest.revision: 41
-author: "douglaslM"
-ms.author: "douglasl"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Implementing a Connection Class for a Data Processing Extension
   The **Connection** object represents a database connection or similar resource and is the starting point for users of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. It represents connections to database servers, though any entity with similar behavior can be exposed as a **Connection**.  
   
  To implement a **Connection** object, create a class that implements <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> and optionally implements <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
   
- In your implementation, you must ensure that a connection is created and opened before commands can be executed. Ensure that your implementation requires clients to open and close connections explicitly, rather than having your implementation open and close connections implicitly for the client. Perform your security checks when the connection is obtained. Requiring an existing connection for the other classes in your [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing extension will then ensure that security checks are always performed when working with your data source.  
+ In your implementation, you must ensure that a connection is created and opened before commands can be executed. Ensure that your implementation requires clients to open and close connections explicitly, rather than having your implementation open and close connections implicitly for the client. Perform your security checks when the connection is obtained. Requiring an existing connection for the other classes in your [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extension will then ensure that security checks are always performed when working with your data source.  
   
- The properties of the desired connection are represented as a connection string. It is strongly recommended that [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing extensions support the <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> property using the familiar name/value pair system defined by OLE DB.  
+ The properties of the desired connection are represented as a connection string. It is strongly recommended that [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extensions support the <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> property using the familiar name/value pair system defined by OLE DB.  
   
 > [!NOTE]  
 >  **Connection** objects are often resource-intensive to obtain, so you may want to consider pooling connections or other techniques to mitigate this.  
@@ -45,7 +42,7 @@ manager: craigg
 > [!NOTE]  
 >  Implementing <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> implicitly requires you to implement the members of the <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> and <xref:Microsoft.ReportingServices.Interfaces.IExtension> interfaces.  
 >   
->  For a sample **Connection** class implementation, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+>  For a sample **Connection** class implementation, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Reporting Services Extensions](../reporting-services-extensions.md)   

@@ -4,25 +4,22 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Performance Counters (SSAS)
   Using Performance Monitor, you can monitor the performance of a Microsoft SQL Server Analysis Services (SSAS) instance by using performance counters.  
   
  Performance Monitor is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) snap-in that tracks resource usage. You can start this MMC snap-in by typing in **PerfMon** at the command prompt or from Control Panel by clicking **Administrative Tools**, then **Performance Monitor**. Performance Monitor lets you track server and process performance and activity by using predefined objects and counters, and monitor events by using user-defined counters. Performance Monitor collects counts instead of data about the events, for example, memory usage, number of active transactions, or CPU activity. You can also set thresholds on specific counters to generate alerts that notify operators.  
   
- Performance Monitor can monitor remote and local instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Using Performance Monitor](http://technet.microsoft.com/library/cc749115.aspx).  
+ Performance Monitor can monitor remote and local instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Using Performance Monitor](https://technet.microsoft.com/library/cc749115.aspx).  
   
- To see the description of any counter that can be used with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], in Performance Monitor, open the **Add Counters** dialog box, select a performance object, and then click **Show Description**. The most important counters are CPU usage, memory usage, disk IO rate. It is recommended you start with these important counters, and move to more detailed counters when you have a better idea of what else could be improved through monitoring. For more information about which counters to include, see the [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ To see the description of any counter that can be used with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], in Performance Monitor, open the **Add Counters** dialog box, select a performance object, and then click **Show Description**. The most important counters are CPU usage, memory usage, disk IO rate. It is recommended you start with these important counters, and move to more detailed counters when you have a better idea of what else could be improved through monitoring. For more information about which counters to include, see the [SQL Server 2008 R2 Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Counters are grouped so you can more easily find related counters.  
   

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [SQL Server], saving"
   - "Table Designer, saving work"
   - "saving tables"
 ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Save Your Work in Table Designer (Visual Database Tools)
@@ -26,7 +22,7 @@ manager: craigg
   
 1.  Click anywhere in the Table Designer.  
   
-2.  From the **File** menu, choose **Save***tablename*.  
+2.  From the **File** menu, choose **Save**_tablename_.  
   
 3.  In the **Save** dialog box, click **Yes** to update the database.  
   

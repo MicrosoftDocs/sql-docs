@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], changing text size"
   - "text in database diagrams"
   - "appearance of database diagrams"
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Change the Font Color, Size, and Style in Diagrams (Visual Database Tools)

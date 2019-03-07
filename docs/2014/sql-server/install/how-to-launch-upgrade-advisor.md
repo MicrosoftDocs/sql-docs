@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "launching Upgrade Advisor"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Upgrade Advisor, launching"
   - "Upgrade Advisor [SQL Server], launching"
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # How to: Launch Upgrade Advisor

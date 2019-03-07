@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "SetNumericalValue Method (ServerNetworkProtocolProperty Class)"
@@ -19,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "SetNumericalValue method"
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetNumericalValue Method (ServerNetworkProtocolProperty Class)
@@ -54,6 +49,6 @@ NumValue
 ## Remarks  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

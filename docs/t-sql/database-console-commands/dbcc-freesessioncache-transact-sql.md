@@ -5,9 +5,7 @@ ms.date: "07/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FREESESSIONCACHE"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "clearing distributed query cache"
   - "flushing distributed query cache"
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
-caps.latest.revision: 15
 author: uc-msft
 ms.author: umajay
 manager: craigg

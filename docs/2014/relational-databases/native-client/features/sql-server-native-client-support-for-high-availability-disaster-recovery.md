@@ -1,19 +1,14 @@
 ---
 title: "SQL Server Native Client Support for High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-31"
+ms.date: 08/31/2016
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQL Server Native Client Support for High Availability, Disaster Recovery
@@ -29,7 +24,7 @@ manager: craigg
 ## Connecting With MultiSubnetFailover  
  Always specify `MultiSubnetFailover=Yes` when connecting to a SQL Server 2012 availability group listener or SQL Server 2012 Failover Cluster Instance. `MultiSubnetFailover` enables faster failover for all Availability Groups and failover cluster instance in SQL Server 2012 and will significantly reduce failover time for single and multi-subnet AlwaysOn topologies. During a multi-subnet failover, the client will attempt connections in parallel. During a subnet failover, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client will aggressively retry the TCP connection.  
   
- The `MultiSubnetFailover` connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance, and that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance by trying to connect to all the IP addresses. When `MultiSubnetFailover=Yes` is specified for a connection, the client retries TCP connection attempts faster than the operating system’s default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
+ The `MultiSubnetFailover` connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance, and that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance by trying to connect to all the IP addresses. When `MultiSubnetFailover=Yes` is specified for a connection, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
   
  For more information about connection string keywords, see [Using Connection String Keywords with SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   

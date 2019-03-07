@@ -1,16 +1,11 @@
 ---
 title: "Process Large Reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report processing [Reporting Services], large reports"
@@ -19,10 +14,8 @@ helpviewer_keywords:
   - "size [SQL Server], reports"
   - "distributing reports [Reporting Services], large reports"
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Process Large Reports
   Large reports present certain processing challenges and require certain configurations if they are to run properly. Large reports should not be run on demand unless they are configured to support pagination.  
@@ -34,7 +27,7 @@ manager: "kfile"
   
  For reports that contain volatile data, report size can change dramatically from one report run to the next. In this case, you should monitor the data source to determine how data volatility affects your report and whether you need to follow the steps prescribed in this topic.  
   
- For more information and tips on how to diagnose time-out errors and out-of-memory errors, see the article [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) on blogs.msdn.com.  
+ For more information and tips on how to diagnose time-out errors and out-of-memory errors, see the article [How to diagnose issues when running reports in the report server](https://go.microsoft.com/fwlink/?LinkId=85634) on blogs.msdn.com.  
   
 ## Configuration Recommendations  
  Recommendations for report execution, report rendering, and report access include the following items:  

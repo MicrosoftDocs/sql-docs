@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AffectEnum enumeration [ADO]"
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -25,7 +22,7 @@ Specifies which records are affected by an operation.
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|If there is not a [Filter](../../../ado/reference/ado-api/filter-property.md) applied to the **Recordset**, affects all records.<br /><br /> If the **Filter** property is set to a string criteria (such as "Author='Smith'"), then the operation affects visible records in the current chapter.<br /><br /> If the **Filter** property is set to a member of the [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) or an array of bookmarks, then the operation will affect all rows of the **Recordset**. **Note:**  **adAffectAll** is hidden in the Visual Basic Object Browser.|  
+|**adAffectAll**|3|If there is not a [Filter](../../../ado/reference/ado-api/filter-property.md) applied to the **Recordset**, affects all records.<br /><br /> If the **Filter** property is set to a string criteria (such as "Author='Smith'"), then the operation affects visible records in the current chapter.<br /><br /> If the **Filter** property is set to a member of the [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) or an array of bookmarks, then the operation will affect all rows of the **Recordset**. **Note:  adAffectAll** is hidden in the Visual Basic Object Browser.|  
 |**adAffectAllChapters**|4|Affects all records in all sibling chapters of the **Recordset**, including those not visible via any **Filter** that is currently applied.|  
 |**adAffectCurrent**|1|Affects only the current record.|  
 |**adAffectGroup**|2|Affects only records that satisfy the current [Filter](../../../ado/reference/ado-api/filter-property.md) property setting. You must set the **Filter** property to a **FilterGroupEnum** value or an array of **Bookmarks** to use this option.|  

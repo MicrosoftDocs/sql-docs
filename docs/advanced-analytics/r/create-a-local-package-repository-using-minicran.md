@@ -1,5 +1,6 @@
 ---
-title: Create a local R package repository using miniCRAN (SQL Server Machine Learning) | Microsoft Docs
+title: Create a local R package repository using miniCRAN - SQL Server Machine Learning Services
+description: Use miniCran to detect, assemble, and install R package dependencies into a single consolidated package.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -12,7 +13,7 @@ manager: cgronlun
 # Create a local R package repository using miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package, created by [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifies and downloads packages and  dependencies into a single folder, which you can copy to other computers for offline R package installation.
+[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package, created by [Andre de Vries](https://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifies and downloads packages and  dependencies into a single folder, which you can copy to other computers for offline R package installation.
 
 As an input, specify one or more packages. **miniCRAN** recursively reads the dependency tree for these packages and downloads only the listed packages and their dependencies from CRAN or similar repositories.
 
@@ -27,7 +28,7 @@ The goal of creating a local package repository is to provide a single location 
 
 Package repositories are useful in these scenarios:
 
-- **Security**: Many R users are accustomed to downloading and installing new R packages at will, from CRAN or one of its mirror sites. However, for security reasons, production servers running [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] typically do not have internet connectivity.
+- **Security**: Many R users are accustomed to downloading and installing new R packages at will, from CRAN or one of its mirror sites. However, for security reasons, production servers running [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] typically do not have internet connectivity.
 
 - **Easier offline installation**: To install package to an offline server requires that you also download all package dependencies, Using miniCRAN makes it easier to get all dependencies in the correct format.
 
@@ -94,7 +95,7 @@ Do **not** add dependencies to this initial list. The **igraph** package used by
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-   From this information, the miniCRAN package creates the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] later.
+   From this information, the miniCRAN package creates the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] later.
 
 At this point you should have a folder containing the packages you needed, and any additional packages that were required. The path should be similar to this example: C:\mylocalrepo\bin\windows\contrib\3.3 and it should contain a collection of zipped packages. Do not unzip the packages or rename any files.
 

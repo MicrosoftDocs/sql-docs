@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, collations"
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 12
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -164,7 +159,7 @@ JOIN #T2
   
 -   The reference may find multiple matches that were originally distinct. This will also raise an error.  
   
- We’ll illustrate this with a few examples. For these we assume there is a partially-contained database named `MyCDB` with its database collation set to the default collation, **Latin1_General_100_CI_AS_WS_KS_SC**. We assume that the instance collation is **Latin1_General_100_CS_AS_WS_KS_SC**. The two collations differ only in case sensitivity.  
+ We'll illustrate this with a few examples. For these we assume there is a partially-contained database named `MyCDB` with its database collation set to the default collation, **Latin1_General_100_CI_AS_WS_KS_SC**. We assume that the instance collation is **Latin1_General_100_CS_AS_WS_KS_SC**. The two collations differ only in case sensitivity.  
   
 ### Example 1  
  The following example illustrates the case where the reference finds exactly one match.  

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
-caps.latest.revision: 27
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # New Schedule: Edit Schedule Page (Report Manager)
   Use the New Schedule / Edit Schedule page to create a schedule for a report. Schedules are used with subscriptions, to refresh cached reports, and to create snapshots as standalone items or in report history.  

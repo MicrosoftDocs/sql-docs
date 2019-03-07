@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.specifycolumnusage.f1"
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specify Mining Model Column Usage (Data Mining Wizard)
   Use the **Specify Mining Model Column Usage** page to specify how the mining model columns will be used, and to add nested tables.  

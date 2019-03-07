@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: 13
-author: "HeidiSteen"
-ms.author: "heidist"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Analysis Services with Always On Availability Groups
@@ -103,11 +99,11 @@ manager: craigg
   
 3.  Modify the script, replacing placeholders with values that are valid for your deployment:  
   
-    -   Replace ‘Computer01’ with the name of the server instance that hosts the primary replica.  
+    -   Replace 'Computer01' with the name of the server instance that hosts the primary replica.  
   
-    -   Replace ‘Computer02’ with the name of the server instance that hosts the secondary replica.  
+    -   Replace 'Computer02' with the name of the server instance that hosts the secondary replica.  
   
-    -   Replace ‘contoso.com’ with the name of your domain, or omit it from the script if all computers are in the same domain. Keep the port number if the listener is using the default port. The port that is actually used by the listener is listed in the properties page in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    -   Replace 'contoso.com' with the name of your domain, or omit it from the script if all computers are in the same domain. Keep the port number if the listener is using the default port. The port that is actually used by the listener is listed in the properties page in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Execute the script.  
   
@@ -197,9 +193,9 @@ manager: craigg
 9. Repeat the processing or query command in the Analysis Services solution, and then watch the traces side by side in SQL Server Profiler. You should see evidence of processing on the other instance, which is now the new secondary replica.  
   
 ##  <a name="bkmk_whathappens"></a> What happens after a failover occurs  
- During a failover, a secondary replica transitions to the primary role and the former primary replica transitions to the secondary role. All client connections are terminated, ownership of the availability group listener moves with the primary replica role to a new SQL Server instance, and the listener endpoint is bound to the new instance’s virtual IP addresses and TCP ports. For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
+ During a failover, a secondary replica transitions to the primary role and the former primary replica transitions to the secondary role. All client connections are terminated, ownership of the availability group listener moves with the primary replica role to a new SQL Server instance, and the listener endpoint is bound to the new instance's virtual IP addresses and TCP ports. For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- If failover occurs during processing, the following error occurs in Analysis Services in the log file or output window: “OLE DB error: OLE DB or ODBC error: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01.”  
+ If failover occurs during processing, the following error occurs in Analysis Services in the log file or output window: "OLE DB error: OLE DB or ODBC error: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01."  
   
  This error should resolve if you wait a minute and try again. If the availability group is configured correctly for readable secondary replica, processing will resume on the new secondary replica when you retry processing.  
   
@@ -208,7 +204,7 @@ manager: craigg
 ##  <a name="bkmk_writeback"></a> Writeback when using an AlwaysOn availability database  
  Writeback is an Analysis Services feature that supports What If analysis in Excel. It is also commonly used for budgeting and forecasting tasks in custom applications.  
   
- Support for writeback requires a READWRITE client connection. In Excel, if you attempt to write back on a read-only connection, the following error will occur: “Data could not be retrieved from the external data source.” “Data could not be retrieved from the external data source.”  
+ Support for writeback requires a READWRITE client connection. In Excel, if you attempt to write back on a read-only connection, the following error will occur: "Data could not be retrieved from the external data source." "Data could not be retrieved from the external data source."  
   
  If you configured a connection to always access a readable secondary replica, you must now configure a new connection that uses a READWRITE connection to the primary replica.  
   

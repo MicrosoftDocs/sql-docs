@@ -3,18 +3,14 @@ title: "Set Up FILESTREAM on a Failover Cluster | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
+ms.technology: filestream
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], setting up on a failover cluster"
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Set Up FILESTREAM on a Failover Cluster

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "entities [Master Data Services], enabling for collections"
   - "entities [Master Data Services], enabling for explicit hierarchies"
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
-caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Enable an Entity for Explicit Hierarchies and Collections (Master Data Services)

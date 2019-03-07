@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.showplan.nestedloops.f1"
@@ -135,9 +132,8 @@ helpviewer_keywords:
   - "ActualRebinds attribute"
   - "execution plans [SQL Server], reading output"
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Showplan Logical and Physical Operators Reference
@@ -258,7 +254,7 @@ manager: craigg
 |![Remote update operator icon](../../2014/database-engine/media/remote-update-32x.gif "Remote update operator icon")|`Remote Update`|The `Remote Update` operator updates the input rows in a remote object. `Remote Update` is a logical and physical operator.|  
 |![Repartition streams parallelism operator icon](../../2014/database-engine/media/parallelism-repartition-stream.gif "Repartition streams parallelism operator icon")|**Repartition Streams**|The **Repartition Streams** operator consumes multiple streams and produces multiple streams of records. The record contents and format are not changed. If the query optimizer uses a bitmap filter, the number of rows in the output stream is reduced. Each record from an input stream is placed into one output stream. If this operator is order preserving, all input streams must be ordered and merged into several ordered output streams. If the output is partitioned, the `Argument` column contains a PARTITION COLUMNS:() predicate and the partitioning columns.If the output is ordered, the `Argument` column contains an ORDER BY:() predicate and the columns being ordered. **Repartition Streams** is a logical operator. The operator is used only in parallel query plans.|  
 |![Result language element icon](../../2014/database-engine/media/result-32x.gif "Result language element icon")|`Result`|The `Result` operator is the data returned at the end of a query plan. This is usually the root element of a Showplan. `Result` is a language element.|  
-|![RID lookup operator icon](../../2014/database-engine/media/rid-nonclust-locate-32x.gif "RID lookup operator icon")|`RID Lookup`|`RID Lookup` is a bookmark lookup on a heap using a supplied row identifier (RID). The `Argument` column contains the bookmark label used to look up the row in the table and the name of the table in which the row is looked up. `RID Lookup` is always accompanied by a NESTED LOOP JOIN. `RID Lookup` is a physical operator. For more information about bookmark lookups, see "[Bookmark Lookup](http://go.microsoft.com/fwlink/?LinkId=132568)" on the MSDN SQL Server blog.|  
+|![RID lookup operator icon](../../2014/database-engine/media/rid-nonclust-locate-32x.gif "RID lookup operator icon")|`RID Lookup`|`RID Lookup` is a bookmark lookup on a heap using a supplied row identifier (RID). The `Argument` column contains the bookmark label used to look up the row in the table and the name of the table in which the row is looked up. `RID Lookup` is always accompanied by a NESTED LOOP JOIN. `RID Lookup` is a physical operator. For more information about bookmark lookups, see "[Bookmark Lookup](https://go.microsoft.com/fwlink/?LinkId=132568)" on the MSDN SQL Server blog.|  
 |None|`Right Anti Semi Join`|The `Right Anti Semi Join` operator outputs each row from the second (bottom) input when a matching row in the first (top) input does not exist. A matching row is defined as a row that satisfies the predicate in the `Argument` column (if no predicate exists, each row is a matching row). `Right Anti Semi Join` is a logical operator.|  
 |None|`Right Outer Join`|The `Right Outer Join` operator returns each row that satisfies the join of the second (bottom) input with each matching row from the first (top) input. It also returns any rows from the second input that had no matching rows in the first input, joined with NULL. If no join predicate exists in the `Argument` column, each row is a matching row. `Right Outer Join` is a logical operator.|  
 |None|`Right Semi Join`|The `Right Semi Join` operator returns each row from the second (bottom) input when there is a matching row in the first (top) input. If no join predicate exists in the `Argument` column, each row is a matching row. `Right Semi Join` is a logical operator.|  

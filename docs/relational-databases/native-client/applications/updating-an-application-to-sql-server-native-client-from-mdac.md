@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Updating an Application to SQL Server Native Client from MDAC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|applications"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "MDAC [SQL Server]"
@@ -18,11 +13,10 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], vs. MDAC"
   - "SQL Server Native Client, updating applications"
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating an Application to SQL Server Native Client from MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +46,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports access to previous [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not contain XML integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports SELECT … FOR XML queries, but does not support any other XML functionality. However, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not contain XML integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports SELECT ... FOR XML queries, but does not support any other XML functionality. However, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports configuring client-side network libraries using only connection string attributes. If you need more complete network library configuration, you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
   
@@ -64,7 +58,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   Minor changes have occurred to warnings and errors. Warnings and errors returned by the server now retain the same severity when passed to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. You should ensure you have thoroughly tested your application if you depend on trapping particular warnings and errors.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client has stricter error checking than MDAC, which means that some applications that do not conform strictly to the ODBC and OLE DB specifications may behave differently. For example, the SQLOLEDB provider did not enforce the rule that parameter names must start with '@' for result parameters, but the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider does.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client has stricter error checking than MDAC, which means that some applications that do not conform strictly to the ODBC and OLE DB specifications may behave differently. For example, the SQLOLEDB provider did not enforce the rule that parameter names must start with '\@' for result parameters, but the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider does.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client behaves differently from MDAC in regards to failed connections. For example, MDAC returns cached property values for a connection that has failed, whereas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client reports an error to the calling application.  
   
@@ -108,7 +102,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client allows ambiguity in connection strings (for example, some keywords may be specified more than once, and conflicting keywords may be allowed with resolution based on position or precedence) for reasons of backward compatibility. Future releases of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client might not allow ambiguity in connection strings. It is good practice when modifying applications to use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to eliminate any dependency on connection string ambiguity.  
   
--   If you use an ODBC or OLE DB call to start transactions, there is a difference in behavior between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and MDAC; transactions will begin immediately with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, but transactions will begin after the first database access using MDAC. This can affect the behavior of stored procedures and batches because [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requires @@TRANCOUNT to be the same after a batch or stored procedure finishes execution as it was when the batch or stored procedure started.  
+-   If you use an ODBC or OLE DB call to start transactions, there is a difference in behavior between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and MDAC; transactions will begin immediately with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, but transactions will begin after the first database access using MDAC. This can affect the behavior of stored procedures and batches because [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requires \@\@TRANCOUNT to be the same after a batch or stored procedure finishes execution as it was when the batch or stored procedure started.  
   
 -   With [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction will cause a transaction to be started immediately. With MDAC the transaction start was delayed until the application executed a statement which required a transaction in implicit transaction mode. For more information, see [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   

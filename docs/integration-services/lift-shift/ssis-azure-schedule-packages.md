@@ -5,7 +5,6 @@ ms.date: "05/29/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
 author: swinarko
@@ -97,8 +96,8 @@ Before you can use SQL Server Agent on premises to schedule execution of package
         @srvproduct='',     
         @provider='sqlncli', -- Use SQL Server native client
         @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
-        @location=‘’,
-        @provstr=‘’,
+        @location='',
+        @provstr='',
         @catalog='SSISDB'  -- Add SSISDB as the initial catalog
     ```
 
@@ -107,8 +106,8 @@ Before you can use SQL Server Agent on premises to schedule execution of package
     ```sql
     -- Add your Azure SQL DB server admin credentials
     EXEC sp_addlinkedsrvlogin
-        @rmtsrvname = 'myLinkedServer’,
-        @useself = 'false’,
+        @rmtsrvname = 'myLinkedServer',
+        @useself = 'false',
         @rmtuser = 'myUsername', -- Add your server admin username
         @rmtpassword = 'myPassword' -- Add your server admin password
     ```

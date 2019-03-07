@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user instances"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "file database"
   - "LocalDB"
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server 2014 Express LocalDB
@@ -30,9 +26,9 @@ manager: craigg
 ## Description  
  The `LocalDB` setup program uses the SqlLocalDB.msi program to install the necessary files on the computer. Once installed, `LocalDB` is an instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] that can create and open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. The system database files for the database are stored in the users' local AppData path which is normally hidden. For example **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. User database files are stored where the user designates, typically somewhere in the **C:\Users\\<user\>\Documents\\** folder.  
   
- For more information about including `LocalDB` in an application, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation [Local Data Overview](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Walkthrough: Creating a SQL Server LocalDB Database](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx), and [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
+ For more information about including `LocalDB` in an application, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation [Local Data Overview](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Walkthrough: Creating a SQL Server LocalDB Database](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx), and [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
   
- For more information about the `LocalDB` API, see [SQL Server Express LocalDB Instance API Reference](http://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) and [LocalDBStartInstance Function](http://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
+ For more information about the `LocalDB` API, see [SQL Server Express LocalDB Instance API Reference](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) and [LocalDBStartInstance Function](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
   
  The SqlLocalDb utility can create new instances of `LocalDB`, start and stop an instance of `LocalDB`, and includes options to help you manage `LocalDB`.  For more information about the SqlLocalDb utility, see [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md).  
   
@@ -50,7 +46,7 @@ manager: craigg
 ### Automatic and Named Instances  
  `LocalDB` supports two kinds of instances: Automatic instances and named instances.  
   
--   Automatic instances of `LocalDB` are public. They are created and managed automatically for the user and can be used by any application. One automatic instance of `LocalDB` exists for every version of `LocalDB` installed on the user’s computer. Automatic instances of `LocalDB` provide seamless instance management. There is no need to create the instance; it just works. This allows for easy application installation and migration to a different computer. If the target machine has the specified version of `LocalDB` installed, the automatic instance of `LocalDB` for that version is available on the target machine as well. Automatic instances of `LocalDB` have a special pattern for the instance name that belongs to a reserved namespace. This prevents name conflicts with named instances of `LocalDB`. The name for the automatic instance is **MSSQLLocalDB**.  
+-   Automatic instances of `LocalDB` are public. They are created and managed automatically for the user and can be used by any application. One automatic instance of `LocalDB` exists for every version of `LocalDB` installed on the user's computer. Automatic instances of `LocalDB` provide seamless instance management. There is no need to create the instance; it just works. This allows for easy application installation and migration to a different computer. If the target machine has the specified version of `LocalDB` installed, the automatic instance of `LocalDB` for that version is available on the target machine as well. Automatic instances of `LocalDB` have a special pattern for the instance name that belongs to a reserved namespace. This prevents name conflicts with named instances of `LocalDB`. The name for the automatic instance is **MSSQLLocalDB**.  
   
 -   Named instances of `LocalDB` are private. They are owned by a single application that is responsible for creating and managing the instance. Named instances provide isolation from other instances and can improve performance by reducing resource contention with other database users. Named instances must be created explicitly by the user through the `LocalDB` management API or implicitly via the app.config file for a managed application (although managed application may also use the API, if desired). Each named instance of `LocalDB` has an associated `LocalDB` version that points to the respective set of `LocalDB` binaries. The instance name of a `LocalDB` is `sysname` data type and can have up to 128 characters. (This differs from regular named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which limits names to regular NetBIOS names of 16 ASCII chars.) The name of an instance of `LocalDB` can contain any Unicode characters that are legal within a filename.  A named instance that uses an automatic instance name becomes an automatic instance.  
   
@@ -101,13 +97,13 @@ REM Gather information about the instance of LocalDB
  To connect to a shared instance of `LocalDB` add **.\\** (dot + backslash) to the connection string to reference the namespace reserved for shared instances. For example, to connect to a shared instance of `LocalDB` named `AppData` use a connection string such as `(localdb)\.\AppData` as part of the connection string. A user connecting to a shared instance of `LocalDB` that they do not own must have a Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login.  
   
 ## Troubleshooting  
- For information about troubleshooting `LocalDB`, see [Troubleshooting SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
+ For information about troubleshooting `LocalDB`, see [Troubleshooting SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
 ## Permissions  
  An instance of [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]`LocalDB` is an instance created by a user for their use. Any user on the computer can create a database using an instance of `LocalDB`, storing files under their user profile and running the process under their credentials. By default, access to the instance of `LocalDB` is limited to its owner. The data contained in the `LocalDB` is protected by file system access to the database files. If user database files are stored in a shared location, the database can be opened by anyone with file system access to that location by using an instance of `LocalDB` that they own. If the database files are in a protected location, such as the users data folder, only that user, and any administrators with access to that folder, can open the database. The `LocalDB` files can only be opened by one instance of `LocalDB` at a time.  
   
 > [!NOTE]  
->  `LocalDB` always runs under the users security context; that is, `LocalDB` never runs with credentials from the local Administrator’s group. This means that all database files used by a `LocalDB` instance must be accessible using the owning user’s Windows account, without considering membership in the local Administrators group.  
+>  `LocalDB` always runs under the users security context; that is, `LocalDB` never runs with credentials from the local Administrator's group. This means that all database files used by a `LocalDB` instance must be accessible using the owning user's Windows account, without considering membership in the local Administrators group.  
   
 ## See Also  
  [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md)  

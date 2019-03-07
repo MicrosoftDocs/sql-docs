@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_procoption"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_procoption"
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_procoption (Transact-SQL)
@@ -40,13 +36,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## Arguments  
- [ **@ProcName =** ] **'***procedure***'**  
+ [ **@ProcName =** ] **'**_procedure_**'**  
  Is the name of the procedure for which to set an option. *procedure* is **nvarchar(776)**, with no default.  
   
- [ **@OptionName =** ] **'***option***'**  
+ [ **@OptionName =** ] **'**_option_**'**  
  Is the name of the option to set. The only value for *option* is **startup**.  
   
- [ **@OptionValue =** ] **'***value***'**  
+ [ **@OptionValue =** ] **'**_value_**'**  
  Is whether to set the option on (**true** or **on**) or off (**false** or **off**). *value* is **varchar(12)**, with no default.  
   
 ## Return Code Values  

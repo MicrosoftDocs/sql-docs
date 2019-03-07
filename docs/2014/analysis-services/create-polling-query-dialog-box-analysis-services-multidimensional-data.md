@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.createpollingquerydialog.f1"
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create Polling Query Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Create Polling Query** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a polling query in the **Notifications** tab of the **Storage Options** dialog box. A polling query is typically a singleton query that returns a value [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] can use to determine if changes have been made to a table or other relational object. You can display the **Create Polling Query** dialog box by clicking the ellipsis button (**...**) on the **Polling Query** column of the grid for the **Scheduled polling** option on the **Notifications** tab of the **Storage Options** dialog box. For more information about the **Notifications** tab of the **Storage Options** dialog box, see [Notifications &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  

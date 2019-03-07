@@ -1,20 +1,17 @@
-﻿---
+---
 title: "Quick Start: Extended events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Quick Start: Extended events in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ Blogs and other informal conversations sometimes refer to extended events by the
 
 
 > [!NOTE]
-> For information about extended event differences between Microsoft SQL Server and Azure SQL Database, see [Extended events in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
+> For information about extended event differences between Microsoft SQL Server and Azure SQL Database, see [Extended events in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
 
 
 ## Preparations before demo
@@ -53,7 +50,7 @@ Blogs and other informal conversations sometimes refer to extended events by the
 
 The following preliminaries would be required for you to actually perform the upcoming demonstration.
 
-1. [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+1. [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
   - Each month you should install the latest monthly update of SSMS.
 2. Log in to Microsoft SQL Server 2014 or higher, or in to an Azure SQL Database database where `SELECT @@version` returns a value whose first node is 12 or higher.
 3. Ensure that your account has the [server permission](../../t-sql/statements/grant-server-permissions-transact-sql.md) of **ALTER ANY EVENT SESSION**.
@@ -188,7 +185,7 @@ GO
 > [!NOTE]
 > For Azure SQL Database, in the preceding CREATE EVENT SESSION statement, the ON SERVER clause would be instead be ON DATABASE.
 > 
-> For more information about extended event differences between Microsoft SQL Server and Azure SQL Database, see [Extended events in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
+> For more information about extended event differences between Microsoft SQL Server and Azure SQL Database, see [Extended events in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
 
 
 #### Pre-DROP of the event session
@@ -412,7 +409,7 @@ Specific scenarios for event sessions aimed at assessing locks are described in 
 - [Find the Objects That Have the Most Locks Taken on Them](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - This scenario uses the target package0.histogram, which processes the raw event data before displaying it to you.
 - [Determine Which Queries Are Holding Locks](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - This scenario uses the [target package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), where the pair of events is sqlserver.lock_acquire and lock_release.
+  - This scenario uses the [target package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), where the pair of events is sqlserver.lock_acquire and lock_release.
 
 
 ## Terms and concepts in extended events
@@ -644,9 +641,9 @@ Here are links to documentation related to these SELECTs, and to permissions:
 - Details of built-in function [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT Server Permissions (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
-- For Azure SQL Database especially, [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
-- Blog: [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
+- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- For Azure SQL Database especially, [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)
+- Blog: [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - Zoomable [poster](https://aka.ms/sql-permissions-poster), as a PDF, that displays the hierarchy of all SQL Server permissions.
 
 

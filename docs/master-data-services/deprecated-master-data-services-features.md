@@ -5,13 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-caps.latest.revision: 18
 author: leolimsft
 ms.author: lle
 manager: "erikre"
@@ -51,7 +47,7 @@ Entity transaction log type "Attribute" is deprecated, please migrate to the "Me
 * [Member Revision History](../master-data-services/member-revision-history-master-data-services.md)
   
 ## External Resources  
- Blog post, [Deprecated: Explicit Hierarchies and Collections](http://go.microsoft.com/fwlink/p/?LinkId=615373), on msdn.com.  
+ Blog post, [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373), on msdn.com.  
   
 ## See Also  
  [Discontinued Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)  

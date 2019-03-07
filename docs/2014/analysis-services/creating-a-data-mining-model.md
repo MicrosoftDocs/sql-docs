@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining models, creating"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "estimation"
   - "classification [data mining]"
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Creating a Data Mining Model
   Data modeling is the step of data mining where you build patterns and trends by applying *algorithms* to data. Later you can use those patterns for analysis, or to make predictions.  
@@ -69,7 +66,7 @@ manager: "mblythe"
  [Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md).  
   
 ## Detect Categories (Analyze)  
- The **Detect Categories** tool lets you add any data set and apply clustering to find groupings of data. It’s useful for finding similarities and for creating groups to further analyze.  
+ The **Detect Categories** tool lets you add any data set and apply clustering to find groupings of data. It's useful for finding similarities and for creating groups to further analyze.  
   
  The **Detect Categories** tool uses the Microsoft Clustering algorithm.  
   
@@ -100,7 +97,7 @@ manager: "mblythe"
  [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
   
 ## Highlight Exceptions (Analyze)  
- The **Highlight Exceptions** tool analyzes patterns in a table of data and finds rows and values that don’t fit the pattern. You can then review and correct them and rerun the model, or flag values for later action.  
+ The **Highlight Exceptions** tool analyzes patterns in a table of data and finds rows and values that don't fit the pattern. You can then review and correct them and rerun the model, or flag values for later action.  
   
  The **Highlight Exceptions** tool uses the Microsoft Clustering algorithm.  
   

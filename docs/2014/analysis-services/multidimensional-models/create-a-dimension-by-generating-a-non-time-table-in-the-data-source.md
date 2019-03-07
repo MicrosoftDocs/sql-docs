@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Analysis Services], dimensions without data source"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "dimensions [Analysis Services], creating without data source"
   - "standard dimensions [Analysis Services]"
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create a Dimension by Generating a Non-Time Table in the Data Source
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use the Dimension Wizard in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to create a dimension without using an existing data source. You do this by selecting the **Generate a non-time table in the data source** option of the **Select Creation Method** page of the wizard. To create a new dimension table in the underlying data source, you must have permission to create objects in the underlying data source. When defining a dimension without a predefined data source view, you can either define the dimension from scratch or use a dimension template.  

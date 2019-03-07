@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Set Filter or Model Filter Dialog Box
   This dialog box helps you build the filters that you can apply to a data set.  The data set can be an external data set used for testing, or the case data for a mining model. The name of the dialog box changes depending on whether the filter is for an external data set or for a mining model.  
@@ -40,7 +37,7 @@ manager: "mblythe"
 |**And/Or**|Choose an operator to join multiple conditions.|  
 |**Mining Structure Column**|Click to select a data source, and then click successive lines in the grid to add columns from the data source.<br /><br /> The first line in the grid specifies the data source view. After you select a data source view, **Mining Structure Column** displays a table icon, and the **Value** field displays the combination of all criteria that you have defined for this data source.<br /><br /> After you have selected a data source, the **Mining Structure Column** box provides a dropdown list of individual columns in the data source.|  
 |**Operator**|Select an operator from the list.|  
-|**Value**|For tables, the **Value** field shows the combination of all filters applied to the data source. You can also click the build **(…)** button at the right of the text box to open the **Filter** dialog box and build a condition.|  
+|**Value**|For tables, the **Value** field shows the combination of all filters applied to the data source. You can also click the build **(...)** button at the right of the text box to open the **Filter** dialog box and build a condition.|  
   
  **Expression**  
  Displays the set of criteria that you built by using the grid.  

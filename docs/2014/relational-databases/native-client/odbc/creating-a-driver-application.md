@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, architecture"
@@ -24,9 +20,8 @@ helpviewer_keywords:
   - "ODBC, driver extensions"
   - "function calls [ODBC]"
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Creating a SQL Server Native Client ODBC Driver Application
@@ -106,7 +101,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- One design decision made early in the process of building an application is whether the application needs to have multiple ODBC calls outstanding at the same time. There are two methods for supporting multiple concurrent ODBC calls, which are described in the remaining topics in this section. For more information, see the [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250).  
+ One design decision made early in the process of building an application is whether the application needs to have multiple ODBC calls outstanding at the same time. There are two methods for supporting multiple concurrent ODBC calls, which are described in the remaining topics in this section. For more information, see the [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
 ## In This Section  
   

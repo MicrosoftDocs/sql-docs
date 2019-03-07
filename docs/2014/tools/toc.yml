@@ -1,0 +1,36 @@
+- name: Command Prompt Utility Reference (Database Engine)
+  href: command-prompt-utility-reference-database-engine.md
+  items:
+  - name: bcp Utility
+    href: bcp-utility.md
+  - name: dta Utility +
+    href: dta/dta-utility.md
+  - name: SqlLocalDB Utility
+    href: sqllocaldb-utility.md
+  - name: osql Utility
+    href: osql-utility.md
+  - name: Profiler Utility
+    href: profiler-utility.md
+  - name: sqlagent90 Application
+    href: sqlagent90-application.md
+  - name: sqlcmd Utility
+    href: sqlcmd-utility.md
+  - name: SQLdiag Utility
+    href: sqldiag-utility.md
+  - name: sqlmaint Utility
+    href: sqlmaint-utility.md
+  - name: sqllogship Application
+    href: sqllogship-application.md
+  - name: sqlps Utility
+    href: sqlps-utility.md
+  - name: sqlservr Application
+    href: sqlservr-application.md
+  - name: ssbdiagnose Utility (Service Broker) +
+    href: ssbdiagnose/ssbdiagnose-utility-service-broker.md
+  - name: Ssms Utility
+    href: ../ssms/ssms-utility.md
+    items:
+    - name: SQL Server Management Studio Keyboard Shortcuts
+      href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
+  - name: tablediff Utility
+    href: tablediff-utility.md

@@ -1,13 +1,11 @@
-﻿---
+---
 title: "GROUP BY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "03/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GROUP"
@@ -31,11 +29,10 @@ helpviewer_keywords:
   - "groups [SQL Server], tables divided into groups"
   - "summary values [SQL Server]"
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 80
-author: edmacauley
-ms.author: edmaca
+author: shkale-msft
+ms.author: shkale
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,6 +85,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -103,19 +101,20 @@ The column must appear in the FROM clause of the SELECT statement, but is not re
   
 The following statements are allowed:  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
+```  
   
 The following statements are not allowed:  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+```  
+
 The column expression cannot contain:
 
 - A column alias that is defined in the SELECT list. It can use a column alias for a derived table that is defined in the FROM clause.
@@ -130,7 +129,7 @@ Groups the SELECT statement results according to the values in a list of one or 
 
 For example, this query creates a Sales table with columns for Country, Region, and Sales. It inserts four rows and two of the rows have matching values for Country and Region.  
 
-```
+```sql
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
@@ -149,7 +148,7 @@ The Sales table contains these rows:
 
 This next query groups Country and Region and returns the aggregate sum for each combination of values.  
  
-``` 
+```sql 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
@@ -178,7 +177,7 @@ For example, `GROUP BY ROLLUP (col1, col2, col3, col4)` creates groups for each 
 
 Using the table from the previous example, this code runs a GROUP BY ROLLUP operation instead of a simple GROUP BY.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region);
@@ -201,7 +200,7 @@ GROUP BY CUBE creates groups for all possible combinations of columns. For GROUP
 
 Using the table from the previous examples, this code runs a GROUP BY CUBE operation on Country and Region. 
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY CUBE (Country, Region);
@@ -229,7 +228,7 @@ For example, `GROUP BY ROLLUP (Country, Region)` and `GROUP BY GROUPING SETS ( R
 
 When GROUPING SETS has two or more elements, the results are a union of the elements. This example returns the union of the ROLLUP and CUBE results for Country and Region.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
@@ -237,15 +236,14 @@ GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 
 The results are the same as this query that returns a union of the two GROUP BY statements.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region)
 UNION ALL
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
-GROUP BY CUBE (Country, Region)
-;
+GROUP BY CUBE (Country, Region);
 ```
 
 SQL does not consolidate duplicate groups generated for a GROUPING SETS list. For example, in `GROUP BY ( (), CUBE (Country, Region) )`, both elements return a row for the grand total and both rows will be listed in the results. 
@@ -253,7 +251,7 @@ SQL does not consolidate duplicate groups generated for a GROUPING SETS list. Fo
  ### GROUP BY ()  
 Specifies the empty group which generates the grand total. This is useful as one of the elements of a GROUPING SET. For example, this statement gives the total sales for each country and then gives the grand-total for all countries.
 
-```
+```sql
 SELECT Country, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
@@ -307,19 +305,19 @@ For a GROUP BY clause that uses ROLLUP, CUBE, or GROUPING SETS, the maximum numb
  
 -   The following example generates 4097 (2<sup>12</sup> + 1) grouping sets and will fail.  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
 -   The following example generates 4097 (2<sup>12</sup> + 1) groups and will fail. Both `CUBE ()` and the `()` grouping set produce a grand total row and duplicate grouping sets are not eliminated.  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
 -   This example uses the backwards compatible syntax. It generates 8192 (2<sup>13</sup>) grouping sets and will fail.  
   
-    ```  
+    ```sql
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
@@ -331,7 +329,7 @@ The GROUP BY clause supports all GROUP BY features that are included in the SQL-
   
 -   Grouping sets are not allowed in the GROUP BY clause unless they are part of an explicit GROUPING SETS list. For example, `GROUP BY Column1, (Column2, ...ColumnN`) is allowed in the standard but not in Transact-SQL.  Transact-SQL supports `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` and `GROUP BY Column1, Column2, ... ColumnN`, which are semantically equivalent. These are semantically equivalent to the previous `GROUP BY` example. This is to avoid the possibility that `GROUP BY Column1, (Column2, ...ColumnN`) might be misinterpreted as `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, which are not semantically equivalent.  
   
--   Grouping sets are not allowed inside grouping sets. For example, `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` is allowed in the SQL-2006 standard but not in Transact-SQL. Transact-SQL allows `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` or `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, which are semantically equivalent to the first GROUP BY example and have a more clear syntax.  
+-   Grouping sets are not allowed inside grouping sets. For example, `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` is allowed in the SQL-2006 standard but not in Transact-SQL. Transact-SQL allows `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` or `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, which are semantically equivalent to the first GROUP BY example and have a more clear syntax.  
   
 -   GROUP BY [ALL/DISTINCT] is only allowed in a simple GROUP BY clause that contains column expressions. It is not allowed with the GROUPING SETS, ROLLUP, CUBE, WITH CUBE or WITH ROLLUP constructs. ALL is the default and is implicit. It is also only allowed in the backwards compatible syntax.
   
@@ -341,7 +339,7 @@ The GROUP BY clause supports all GROUP BY features that are included in the SQL-
 |Feature|SQL Server Integration Services|SQL Server compatibility level 100 or higher|SQL Server 2008 or later with compatibility level 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT aggregates|Not supported for WITH CUBE or WITH ROLLUP.|Supported for WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE, or ROLLUP.|Same as compatibility level 100.|  
-|User-defined function with CUBE or ROLLUP name in the GROUP BY clause|User-defined function **dbo.cube(***arg1***,***...argN***)** or **dbo.rollup(***arg1***,**...*argN***)** in the GROUP BY clause is allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined function **dbo.cube (***arg1***,**...argN**)** or **dbo.rollup(**arg1**,***...argN***)** in the GROUP BY clause is not allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> The following error message is returned: "Incorrect syntax near the keyword 'cube'&#124;'rollup'."<br /><br /> To avoid this problem, replace `dbo.cube` with `[dbo].[cube]` or `dbo.rollup` with `[dbo].[rollup]`.<br /><br /> The following example is allowed: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined function **dbo.cube (***arg1***,***...argN*) or **dbo.rollup(***arg1***,***...argN***)** in the GROUP BY clause is allowed<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|User-defined function with CUBE or ROLLUP name in the GROUP BY clause|User-defined function **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** in the GROUP BY clause is allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined function **dbo.cube (**_arg1_**,**...argN**)** or **dbo.rollup(**arg1**,**_...argN_**)** in the GROUP BY clause is not allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> The following error message is returned: "Incorrect syntax near the keyword 'cube'&#124;'rollup'."<br /><br /> To avoid this problem, replace `dbo.cube` with `[dbo].[cube]` or `dbo.rollup` with `[dbo].[rollup]`.<br /><br /> The following example is allowed: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined function **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** in the GROUP BY clause is allowed<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Not supported|Supported|Supported|  
 |CUBE|Not supported|Supported|Not supported|  
 |ROLLUP|Not supported|Supported|Not supported|  
@@ -358,7 +356,7 @@ The GROUP BY clause supports all GROUP BY features that are included in the SQL-
 ### A. Use a simple GROUP BY clause  
  The following example retrieves the total for each `SalesOrderID` from the `SalesOrderDetail` table. This example uses AdventureWorks.  
   
-```  
+```sql  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
 FROM Sales.SalesOrderDetail AS sod  
 GROUP BY SalesOrderID  
@@ -368,7 +366,7 @@ ORDER BY SalesOrderID;
 ### B. Use a GROUP BY clause with multiple tables  
  The following example retrieves the number of employees for each `City` from the `Address` table joined to the `EmployeeAddress` table. This example uses AdventureWorks. 
   
-```  
+```sql  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
 FROM Person.BusinessEntityAddress AS bea   
     INNER JOIN Person.Address AS a  
@@ -380,7 +378,7 @@ ORDER BY a.City;
 ### C. Use a GROUP BY clause with an expression  
  The following example retrieves the total sales for each year by using the `DATEPART` function. The same expression must be present in both the `SELECT` list and `GROUP BY` clause.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -391,7 +389,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### D. Use a GROUP BY clause with a HAVING clause  
  The following example uses the `HAVING` clause to specify which of the groups generated in the `GROUP BY` clause should be included in the result set.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -405,7 +403,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### E. Basic use of the GROUP BY clause  
  The following example finds the total amount for all sales on each day. One row containing the sum of all sales is returned for each day.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales  
@@ -415,7 +413,7 @@ GROUP BY OrderDateKey ORDER BY OrderDateKey;
 ### F. Basic use of the DISTRIBUTED_AGG hint  
  This example uses the DISTRIBUTED_AGG query hint to force the appliance to shuffle the table on the `CustomerKey` column before performing the aggregation.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT CustomerKey, SUM(SalesAmount) AS sas  
@@ -427,7 +425,7 @@ ORDER BY CustomerKey DESC;
 ### G. Syntax Variations for GROUP BY  
  When the select list has no aggregations, each column in the select list must be included in the GROUP BY list. Computed columns in the select list can be listed, but are not required, in the GROUP BY list. These are examples of syntactically valid SELECT statements:  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName FROM DimCustomer GROUP BY LastName, FirstName;  
@@ -440,18 +438,19 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 ### H. Using a GROUP BY with multiple GROUP BY expressions  
  The following example groups results using multiple `GROUP BY` criteria. If, within each `OrderDateKey` group, there are subgroups that can be differentiated by `DueDateKey`, a new grouping will be defined for the result set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
-FROM FactInternetSalesGROUP BY OrderDateKey, DueDateKey   
+FROM FactInternetSales
+GROUP BY OrderDateKey, DueDateKey   
 ORDER BY OrderDateKey;  
 ```  
   
 ### I. Using a GROUP BY clause with a HAVING clause  
  The following example uses the `HAVING` clause to specify the groups generated in the `GROUP BY` clause that should be included in the result set. Only those groups with order dates in 2004 or later will be included in the results.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

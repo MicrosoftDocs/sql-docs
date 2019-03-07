@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rendering extensions [Reporting Services], custom extensions"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], custom extensions"
   - "delivery extensions [Reporting Services]"
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-caps.latest.revision: 32
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Custom extensions were detected on the report server (Upgrade Advisor)

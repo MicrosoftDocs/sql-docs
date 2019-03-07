@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "01/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], files"
@@ -34,7 +30,6 @@ helpviewer_keywords:
   - "primary files [SQL Server]"
   - "file types [SQL Server]"
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

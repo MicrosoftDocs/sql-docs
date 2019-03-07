@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "descriptors [ODBC], allocating and freeing"
   - "allocating and freeing descriptors [ODBC]"
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

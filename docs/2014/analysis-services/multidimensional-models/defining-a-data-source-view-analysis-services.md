@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "names [Analysis Services], data source views"
@@ -15,13 +13,12 @@ helpviewer_keywords:
   - "Data Source View Wizard"
   - "data source views [Analysis Services], creating"
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Defining a Data Source View (Analysis Services)
-  A data source view contains the logical model of the schema used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database objects—namely cubes, dimensions, and mining structures. A data source view is the metadata definition, stored in an XML format, of these schema elements used by the Unified Dimensional Model (UDM) and by the mining structures. A data source view:  
+  A data source view contains the logical model of the schema used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database objects-namely cubes, dimensions, and mining structures. A data source view is the metadata definition, stored in an XML format, of these schema elements used by the Unified Dimensional Model (UDM) and by the mining structures. A data source view:  
   
 -   Contains the metadata that represents selected objects from one or more underlying data sources, or the metadata that will be used to generate an underlying relational data store if you are following the top-down approach to schema generation.  
   
@@ -98,7 +95,7 @@ manager: "mblythe"
   
 4.  **Filter Available Objects**  
   
-     If the Available objects list contains a very large number of objects, you can reduce the list by applying a simple filter that species a string as selection criteria. For example, if you type **dbo** and click the **Filter** button, then only those items starting with "dbo" show up in the **Available objects** list. The filter can be a partial string (for example, “sal” returns sales and salary) but it cannot include multiple strings or operators.  
+     If the Available objects list contains a very large number of objects, you can reduce the list by applying a simple filter that species a string as selection criteria. For example, if you type **dbo** and click the **Filter** button, then only those items starting with "dbo" show up in the **Available objects** list. The filter can be a partial string (for example, "sal" returns sales and salary) but it cannot include multiple strings or operators.  
   
 5.  For relational data sources that do not have table relationships defined, a **Name Matching** page appears so that you can select the appropriate name matching method. For more information, see the [Specify Name Matching Criteria for Relationships](#bkmk_NameMatch) section in this topic.  
   

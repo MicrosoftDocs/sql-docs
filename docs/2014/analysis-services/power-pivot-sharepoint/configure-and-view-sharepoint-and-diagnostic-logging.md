@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure and View SharePoint Log Files  and Diagnostic Logging (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -74,7 +71,7 @@ manager: "mblythe"
   
 -   For errors that provide a correlation ID, copy the ID and use it as a search term in the log file.  
   
--   Search for error status "High" or "Exception". Search for “PowerPivot Service”.  
+-   Search for error status "High" or "Exception". Search for "PowerPivot Service".  
   
 -   If you know when the error occurred, use the date and time information to narrow the scope of entries you must scroll through.  
   
@@ -83,7 +80,7 @@ manager: "mblythe"
   
  The following instructions include links to popular SharePoint ULS Log Viewers that you can download from Codeplex.  
   
-1.  Go to [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) or [SharePoint ULS Log Viewer](http://go.microsoft.com/fwlink/?LinkId=150052) on the Codeplex site.  
+1.  Go to [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) or [SharePoint ULS Log Viewer](https://go.microsoft.com/fwlink/?LinkId=150052) on the Codeplex site.  
   
 2.  Click the **Downloads** tab.  
   

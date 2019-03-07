@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "discontinued functionality [Integration Services]"
   - "Integration Services, backward compatibility"
 ms.assetid: 5ee40ceb-37b9-47a9-b90d-ce1de74b10f7
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Discontinued Integration Services Functionality in SQL Server 2014

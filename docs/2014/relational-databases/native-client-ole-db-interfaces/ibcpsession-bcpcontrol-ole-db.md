@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 api_name: 
   - "IBCPSession::BCPControl (OLE DB)"
@@ -17,9 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "BCPControl method"
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
-caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # IBCPSession::BCPControl (OLE DB)
@@ -46,7 +41,7 @@ void *iValue);
 |BCP_OPTION_ABORT|Stops a bulk-copy operation that is already in progress. You can call the **BCPControl** method with an *eOption* argument of BCP_OPTION_ABORT from another thread to stop a running bulk-copy operation. The *iValue* argument is ignored.|  
 |BCP_OPTION_BATCH|The number of rows per batch. The default is 0, which indicates all rows in a table when data is being extracted, or all rows in the user data file when data is being copied to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A value less than 1 resets BCP_OPTION_BATCH to the default.|  
 |BCP_OPTION_DELAYREADFMT|A Boolean, if set to true, will cause [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) to read at execution. If false (the default), IBCPSession::BCPReadFmt will immediately read the format file. A sequence error will occur if `BCP_OPTION_DELAYREADFMT` is true and you call IBCPSession::BCPColumns or IBCPSession::BCPColFmt.<br /><br /> A sequence error will also occur if you call `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` after calling `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` and IBCPSession::BCPWriteFmt.<br /><br /> For more information, see [Metadata Discovery](../native-client/features/metadata-discovery.md).|  
-|BCP_OPTION_FILECP|The *iValue* argument contains the number of the code page for the data file. You can specify the number of the code page, such as 1252 or 850, or one of the following values:<br /><br /> -   BCP_FILECP_ACP: data in the file is in the Microsoft Windows® code page of the client.<br />-   BCP_FILECP_OEMCP: data in the file is in the OEM code page of the client (default).<br />-   BCP_FILECP_RAW: data in the file is in the code page of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|BCP_OPTION_FILECP|The *iValue* argument contains the number of the code page for the data file. You can specify the number of the code page, such as 1252 or 850, or one of the following values:<br /><br /> -   BCP_FILECP_ACP: data in the file is in the Microsoft Windows?? code page of the client.<br />-   BCP_FILECP_OEMCP: data in the file is in the OEM code page of the client (default).<br />-   BCP_FILECP_RAW: data in the file is in the code page of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |BCP_OPTION_FILEFMT|The version number of the data file format. This can be 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 120 is the default. This is useful for exporting and importing data in formats that were supported by earlier version of the server.  For example, to import data obtained from a text column in a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server into a **varchar(max)** column in a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later server, you should specify 80. Similarly, if you specify 80 while exporting data from a **varchar(max)** column, it will be saved just like text columns are saved in the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] format, and can be imported into a text column of a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.|  
 |BCP_OPTION_FIRST|The first row of data of the file or table to copy. The default is 1; a value less than 1 resets this option to its default.|  
 |BCP_OPTION_FIRSTEX|For BCP out operations, specifies the first row of the database table to copy into the data file.<br /><br /> For BCP in operations, specifies the first row of the data file to copy into the database table.<br /><br /> The *iValue* parameter is expected to be the address of a signed 64-bit integer that contains the value. The maximum value that can be passed to BCPFIRSTEX 2^63-1.|  

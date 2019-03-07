@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], account"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "adding account intelligence"
   - "account intelligence [Analysis Services]"
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create a Finance Account of parent-child type Dimension
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], an account type dimension is a dimension whose attributes represent a chart of accounts for financial reporting purposes.  
@@ -30,21 +27,21 @@ manager: "mblythe"
 ## Dimension Structure  
  An account dimension contains, at least, two attributes:  
   
--   A key attribute—an attribute that identifies individual accounts in the dimension table for the account dimension.  
+-   A key attribute-an attribute that identifies individual accounts in the dimension table for the account dimension.  
   
--   An account attribute—a parent attribute that describes how accounts are hierarchically arranged in the account dimension.  
+-   An account attribute-a parent attribute that describes how accounts are hierarchically arranged in the account dimension.  
   
      To identify an attribute as an account attribute, set the `Type` property of the attribute to `Account` and the `Usage` property to `Parent`.  
   
  Account dimensions can optionally contain the following attributes:  
   
--   An account type attribute—an attribute that defines the account type for each account in the dimension. The member names of the account type attribute map to the account types defined for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database or project, and indicate the aggregation function used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for those accounts. You can also use unary operators or custom rollup formulas to determine aggregation behavior for account attributes, but account types let you to easily apply consistent behavior to a chart of accounts without requiring changes to the underlying relational database.  
+-   An account type attribute-an attribute that defines the account type for each account in the dimension. The member names of the account type attribute map to the account types defined for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database or project, and indicate the aggregation function used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for those accounts. You can also use unary operators or custom rollup formulas to determine aggregation behavior for account attributes, but account types let you to easily apply consistent behavior to a chart of accounts without requiring changes to the underlying relational database.  
   
      To identify an account type attribute, set the `Type` property of the attribute to `AccountType`.  
   
--   An account name attribute—an attribute that is used for reporting purposes. You identify an account name attribute by setting the `Type` property of the attribute to `AccountName`.  
+-   An account name attribute-an attribute that is used for reporting purposes. You identify an account name attribute by setting the `Type` property of the attribute to `AccountName`.  
   
--   An account number attribute—an attribute that is used for reporting purposes. You identify an account number attribute by setting the `Type` property of the attribute to `AccountNumber`.  
+-   An account number attribute-an attribute that is used for reporting purposes. You identify an account number attribute by setting the `Type` property of the attribute to `AccountNumber`.  
   
  For more information about attribute types, see [Configure Attribute Types](attribute-properties-configure-attribute-types.md).  
   

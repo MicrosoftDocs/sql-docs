@@ -1,22 +1,15 @@
 ---
 title: "Previewing Reports in Report Builder | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
+ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Previewing Reports in Report Builder
   While you create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, it is helpful to preview the report often to verify that the report displays what you want. To preview your report, click **Run**. The report renders in preview mode.  

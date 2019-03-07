@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.movetabledb.f1"
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Move Table Dialog Box (SSAS)
   The **Move Table** dialog box enables you to change the order in which tables appear in the model designer. To access this dialog box, right-click the tab at the bottom of the table that you want to move, and then select **Move**.  

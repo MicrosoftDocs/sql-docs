@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ENCRYPTBYASYMKEY"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], asymmetric keys"
   - "asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function"
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ENCRYPTBYASYMKEY (Transact-SQL)
@@ -29,7 +26,7 @@ manager: craigg
 
 This function encrypts data with an asymmetric key.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -75,15 +72,15 @@ data type.
 **varbinary**, with a maximum size of 8,000 bytes.  
   
 ## Remarks  
-Encryption and decryption operations that use asymmetric keys consume significant resources, and therefore become very expensive, compared with symmetric key encryption and decryption. We suggest that developers avoid asymmetric key encryption and decryption operations on large datasets - for example, user data datasets stored in database tables. Instead, we suggest that developers first encrypt that data with a strong symmetric key, and then encrypt that symmetric key with an asymmetric key.  
+Encryption and decryption operations that use asymmetric keys consume significant resources, and so become expensive compared with symmetric key encryption and decryption. We suggest that developers avoid asymmetric key encryption and decryption operations on large datasets - for example, user data datasets stored in database tables. Instead, we suggest that developers first encrypt that data with a strong symmetric key, and then encrypt that symmetric key with an asymmetric key.  
   
 Depending on the algorithm, `ENCRYPTBYASYMKEY` returns **NULL** if the input exceeds a certain number of bytes. The specific limits:
 
-+ a 512 bit RSA key can encrypt up to 53 bytes
-+ a 1024 bit key can encrypt up to 117 bytes
-+ a 2048 bit key can encrypt up to 245 bytes
++ a 512-bit RSA key can encrypt up to 53 bytes
++ a 1024-bit key can encrypt up to 117 bytes
++ a 2048-bit key can encrypt up to 245 bytes
 
-Note that in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], both certificates and asymmetric keys serve as wrappers over RSA keys.  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], both certificates and asymmetric keys serve as wrappers over RSA keys.  
   
 ## Examples  
 This example encrypts the text stored in `@cleartext` with the asymmetric key `JanainaAsymKey02`. The statement inserts the encrypted data into the `ProtectedData04` table.  
@@ -99,5 +96,4 @@ GO
  [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

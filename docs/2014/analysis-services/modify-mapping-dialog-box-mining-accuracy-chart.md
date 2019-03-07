@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeldesigner.modifyconnections.f1"
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Modify Mapping Dialog Box (Mining Accuracy Chart)
   Use the **Modify Mapping** dialog box to change how the input columns are joined to the columns in the mining model. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will map the columns automatically based on the column name and data type, but you can use this dialog box to change the column mappings. If you make changes, you must ensure that the columns in the external data source have data types and content types that match the columns in the mining model that you are testing.  

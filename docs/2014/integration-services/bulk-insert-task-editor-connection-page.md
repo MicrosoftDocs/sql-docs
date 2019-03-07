@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.bulkinserttask.connection.f1"
 helpviewer_keywords: 
   - "Bulk Insert Task Editor"
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Bulk Insert Task Editor (Connection Page)
@@ -57,7 +54,7 @@ manager: craigg
   
 ### Format = Use File  
  **FormatFile**  
- Type the path of the format file or click the ellipsis button **(…)** to locate the format file.  
+ Type the path of the format file or click the ellipsis button **(...)** to locate the format file.  
   
 ### Format = Specify  
  `RowDelimiter`  

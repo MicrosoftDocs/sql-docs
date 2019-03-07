@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_detach_schedule"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_detach_schedule"
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -44,7 +40,7 @@ sp_detach_schedule
  [ **@job_id=** ] *job_id*  
  The job identification number of the job to remove the schedule from. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'**_job_name_**'**  
  The name of the job to remove the schedule from. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
@@ -53,7 +49,7 @@ sp_detach_schedule
  [ **@schedule_id=** ] *schedule_id*  
  The schedule identification number of the schedule to remove from the job. *schedule_id* is **int**, with a default of NULL.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'**_schedule_name_**'**  
  The name of the schedule to remove from the job. *schedule_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
@@ -79,7 +75,7 @@ sp_detach_schedule
   
  Note that the job owner can attach a job to a schedule and detach a job from a schedule without also having to be the schedule owner. However, a schedule cannot be deleted if the detach would leave it with no jobs unless the caller is the schedule owner.  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checks to determine whether the user owns the schedule. Only members of the **sysadmin** fixed server role can detach schedules from jobs owned by another user.  
   

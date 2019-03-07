@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.termextractiontrans.f1"
@@ -25,9 +22,8 @@ helpviewer_keywords:
   - "term extractions [Integration Services]"
   - "stemming words [Integration Services]"
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Term Extraction Transformation
@@ -51,7 +47,7 @@ manager: craigg
 ## Exclusion Terms  
  Optionally, the Term Extraction transformation can reference a column in a table that contains exclusion terms, meaning terms that the transformation should skip when it extracts terms from a data set. This is useful when a set of terms has already been identified as inconsequential in a particular business and industry, typically because the term occurs with such high frequency that it becomes a noise word. For example, when extracting terms from a data set that contains customer support information about a particular brand of cars, the brand name itself might be excluded because it is mentioned too frequently to have significance. Therefore, the values in the exclusion list must be customized to the data set you are working with.  
   
- When you add a term to the exclusion list, all the terms—words or noun phrases—that contain the term are also excluded. For example, if the exclusion list includes the single word *data*, then all the terms that contain this word, such as *data*, *data mining*, *data integrity*, and *data validation* will also be excluded. If you want to exclude only compounds that contain the word *data*, you must explicitly add those compound terms to the exclusion list. For example, if you want to extract incidences of *data*, but exclude *data validation*, you would add *data validation* to the exclusion list, and make sure that *data* is removed from the exclusion list.  
+ When you add a term to the exclusion list, all the terms-words or noun phrases-that contain the term are also excluded. For example, if the exclusion list includes the single word *data*, then all the terms that contain this word, such as *data*, *data mining*, *data integrity*, and *data validation* will also be excluded. If you want to exclude only compounds that contain the word *data*, you must explicitly add those compound terms to the exclusion list. For example, if you want to extract incidences of *data*, but exclude *data validation*, you would add *data validation* to the exclusion list, and make sure that *data* is removed from the exclusion list.  
   
  The reference table must be a table in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an Access database. The Term Extraction transformation uses a separate OLE DB connection to connect to the reference table. For more information, see [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
@@ -136,7 +132,7 @@ manager: craigg
   
 -   ASCII line-break characters 0x0d (carriage return) and 0x0a (line feed). To use this character as a sentence boundary, there must be two or more line-break characters in a row.  
   
--   Hyphens (–). To use this character as a sentence boundary, neither the character to the left nor to the right of the hyphen can be a letter.  
+-   Hyphens (-). To use this character as a sentence boundary, neither the character to the left nor to the right of the hyphen can be a letter.  
   
 -   Underscore (_). To use this character as a sentence boundary, neither the character to the left nor to the right of the hyphen can be a letter.  
   
@@ -144,7 +140,7 @@ manager: craigg
   
 -   Combinations of numbers, punctuation marks, and alphabetical characters. For example, *A23B#99* returns the term *A23B*.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, ", and '.  
   
     > [!NOTE]  
     >  Acronyms that include one or more periods (.) are not separated into multiple sentences.  

@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
-caps.latest.revision: 28
-author: "minewiskan"
-ms.author: "owend"
-manager: "kfile"
+author: minewiskan
+ms.author: owend
+manager: kfile
 ---
 # Exploring the Call Center Model (Intermediate Data Mining Tutorial)
   Now that you have built the exploratory model, you can use it to learn more about your data by using the following tools provided in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -23,7 +19,7 @@ manager: "kfile"
 -   [Microsoft Generic Content Tree Viewer](#bkmk_genviewer) **:** This standard viewer provides in-depth detail about the patterns and statistics discovered by the algorithm when it generated the model.  
   
 ##  <a name="bkmk_NNviewer"></a> Microsoft Neural Network Viewer  
- The viewer has three panes — **Input**, **Output**, and **Variables**.  
+ The viewer has three panes - **Input**, **Output**, and **Variables**.  
   
  By using the **Output** pane, you can select different values for the predictable attribute, or dependent variable. If your model contains multiple predictable attributes, you can select the attribute from the **Output Attribute** list.  
   
@@ -73,7 +69,7 @@ manager: "kfile"
   
 2.  For **Value**, select **AM**.  
   
-     The **Variables** pane updates to show the impact on the model when the shift is **AM**. All other selections remain the same — you are still comparing the lowest and highest service grades.  
+     The **Variables** pane updates to show the impact on the model when the shift is **AM**. All other selections remain the same - you are still comparing the lowest and highest service grades.  
   
 3.  For **Value**, select **PM1**.  
   

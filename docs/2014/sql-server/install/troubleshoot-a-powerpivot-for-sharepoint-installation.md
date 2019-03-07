@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Troubleshoot a PowerPivot for SharePoint Installation
@@ -20,9 +17,9 @@ manager: craigg
   
 -   Review release notes for both SharePoint and [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to get workarounds for known installation problems. Release notes are provided with the installation media or on the Microsoft site from which you downloaded the software.  
   
-    -   [SQL Server 2014 Release Notes](http://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
+    -   [SQL Server 2014 Release Notes](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
   
--   See the Technet wiki topic, [Troubleshooting Installations of PowerPivot (and other add-ins)](http://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx).  
+-   See the Technet wiki topic, [Troubleshooting Installations of PowerPivot (and other add-ins)](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx).  
   
 ## Issues  
   
@@ -37,6 +34,6 @@ manager: craigg
   
 4.  Verify **PowerPivot features Integration for Site Collections** is **Active**.  
   
- For additional causes of this issue, see [PowerPivot Gallery shows Red X's for Icons](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559).  
+ For additional causes of this issue, see [PowerPivot Gallery shows Red X's for Icons](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
   
   

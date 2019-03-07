@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourceviewwizard.selecttablesandviews.f1"
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Tables and Views (Data Source View Wizard) (Analysis Services)
   Use the **Select Tables and Views** page to select the tables or views from the data source that you want to include in the data source view.  

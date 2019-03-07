@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "5242 (Database Engine error)"
 ms.assetid: 712b1a10-2f87-41df-a111-1ed9f14102d4
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

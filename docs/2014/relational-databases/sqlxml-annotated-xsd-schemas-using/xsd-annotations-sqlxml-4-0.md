@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "annotated XSD schemas, annotations listed"
   - "XSD schemas [SQLXML], annotations"
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # XSD Annotations (SQLXML 4.0)

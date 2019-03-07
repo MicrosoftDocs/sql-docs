@@ -1,19 +1,17 @@
 ---
 title: Performance best practices for SQL Server on Linux | Microsoft Docs
-description: This article provide performance best practices and guidelines for running SQL Server 2017 on Linux.
+description: This article provide performance best practices and guidelines for running SQL Server on Linux.
 author: rgward 
 ms.author: bobward 
 manager: craigg
 ms.date: 09/14/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
-# Performance best practices and configuration guidelines for SQL Server 2017 on Linux
+# Performance best practices and configuration guidelines for SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -33,7 +31,7 @@ It is recommended to perform the following configuration tasks after you install
 
 - **Configure multiple tempdb data files**
 
-   Because a SQL Server on Linux installation does not offer an option to configure multiple tempdb files, we recommend that you consider creating multiple tempdb data files after installation. For more information, see the guidance in the article, [Recommendations to reduce allocation contention in SQL Server tempdb database](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
+   Because a SQL Server on Linux installation does not offer an option to configure multiple tempdb files, we recommend that you consider creating multiple tempdb data files after installation. For more information, see the guidance in the article, [Recommendations to reduce allocation contention in SQL Server tempdb database](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
 
 ### Advanced Configuration
 

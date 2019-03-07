@@ -3,10 +3,8 @@ title: "Debugging CLR Database Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "database objects [CLR integration], debugging"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "building database objects [CLR integration], debugging"
   - "common language runtime [SQL Server], debugging"
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: 46
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -24,7 +21,7 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides support for debugging [!INCLUDE[tsql](../../includes/tsql-md.md)] and common language runtime (CLR) objects in the database. The key aspects of debugging in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are the ease of setup and use, and the integration of the SQL Server debugger with the Microsoft Visual Studio debugger. Furthermore, debugging works across languages. Users can step seamlessly into CLR objects from [!INCLUDE[tsql](../../includes/tsql-md.md)], and vice versa. The Transact-SQL debugger in SQL Server Management Studio cannot be used to debug managed database objects, but you can debug the objects by using the debuggers in Visual Studio. Managed database object debugging in Visual Studio supports all common debugging features, such as "step into" and "step over" statements within routines executing on the server. Debuggers can set breakpoints, inspect the call stack, inspect variables, and modify variable values while debugging. Note that Visual Studio .NET 2003 cannot be used for CLR integration programming or debugging. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the .NET Framework pre-installed, and Visual Studio .NET 2003 cannot use the .NET Framework 2.0 assemblies.  
   
- For more information about debugging managed code using Visual Studio, see the "[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)" topic in the Visual Studio documentation.  
+ For more information about debugging managed code using Visual Studio, see the "[Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377)" topic in the Visual Studio documentation.  
   
 ## Debugging Permissions and Restrictions  
  Debugging is a highly privileged operation, and therefore only members of the **sysadmin** fixed server role are allowed to do so in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,7 +37,7 @@ manager: craigg
 ## Overview of Debugging Managed Database Objects  
  Debugging in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] follows a per-connection model. A debugger can detect and debug activities only to the client connection to which it is attached. Because the functionality of the debugger is not limited by the type of connection, both tabular data stream (TDS) and HTTP connections can be debugged. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow debugging existing connections. Debugging supports all common debugging features within routines executing on the server. The interaction between a debugger and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] happens through distributed Component Object Model (COM).  
   
- For more information and scenarios about debugging managed stored procedures, functions, triggers, user-defined types, and aggregates, see the "[SQL Server CLR Integration Database Debugging](http://go.microsoft.com/fwlink/?LinkId=120378)" topic in the Visual Studio documentation.  
+ For more information and scenarios about debugging managed stored procedures, functions, triggers, user-defined types, and aggregates, see the "[SQL Server CLR Integration Database Debugging](https://go.microsoft.com/fwlink/?LinkId=120378)" topic in the Visual Studio documentation.  
   
  The TCP/IP network protocol must be enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in order to use Visual Studio for remote development, debugging, and development. For more information about enabling TCP/IP protocol on the server, see [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -48,7 +45,7 @@ manager: craigg
   
 1.  Open Microsoft Visual Studio, create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] project, and establish a connection to a database on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Create a new type. In **Solution Explorer**, right-click the project, select **Add** and **New Item…** From the **Add New Item** window, select **Stored Procedure**, **User-Defined Function**, **User-Defined Type**, **Trigger**, **Aggregate**, or **Class**. Specify a name for the source file of the new type and click **Add**.  
+2.  Create a new type. In **Solution Explorer**, right-click the project, select **Add** and **New Item...** From the **Add New Item** window, select **Stored Procedure**, **User-Defined Function**, **User-Defined Type**, **Trigger**, **Aggregate**, or **Class**. Specify a name for the source file of the new type and click **Add**.  
   
 3.  Add code for the new type to the text editor. For sample code for an example stored procedure, see the section later in this topic.  
   

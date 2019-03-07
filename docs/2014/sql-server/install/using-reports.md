@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying reports"
@@ -35,9 +33,8 @@ helpviewer_keywords:
   - "warnings [Upgrade Advisor]"
   - "analyzing system [Upgrade Advisor], reports"
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
-caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Using Reports

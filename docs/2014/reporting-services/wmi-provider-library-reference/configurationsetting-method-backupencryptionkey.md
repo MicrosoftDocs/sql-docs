@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)"
@@ -18,10 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "BackupEncryptionKey method"
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-caps.latest.revision: 21
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)
   Backs up the encryption key for the specified report server instance. The encryption key is stored encrypted with a password.  

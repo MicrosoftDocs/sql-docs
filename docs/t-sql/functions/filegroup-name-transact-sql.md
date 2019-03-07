@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FILEGROUP_NAME_TSQL"
@@ -24,40 +22,38 @@ helpviewer_keywords:
   - "names [SQL Server], filegroups"
   - "viewing filegroup names"
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the filegroup name for the specified filegroup identification (ID) number.  
+This function returns the filegroup name for the specified filegroup identification (ID) number.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
 ## Arguments  
  *filegroup_id*  
- Is the filegroup ID number for which to return the filegroup name. *filegroup_id* is **smallint**.  
+
+The filegroup ID number whose filegroup name `FILEGROUP_NAME` will return. *filegroup_id* has a **smallint** data type.  
   
 ## Return Types  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## Remarks  
- *filegroup_id* corresponds to the **data_space_id** column in the **sys.filegroups** catalog view.  
+*filegroup_id* corresponds to the **data_space_id** column of the **sys.filegroups** catalog view.  
   
 ## Examples  
- The following example returns the filegroup name for the filegroup ID `1` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+This example returns the filegroup name for filegroup ID `1` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
-  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

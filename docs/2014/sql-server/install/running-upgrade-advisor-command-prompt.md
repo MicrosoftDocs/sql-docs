@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], running"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "UpgradeAdvisorWizardCmd utility"
   - "XML formats [Upgrade Advisor]"
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Running Upgrade Advisor (Command Prompt)
@@ -40,7 +37,7 @@ where <server_info> is any combination of the following:
  **-?**  
  Displays the command syntax.  
   
- **-ConfigFile** *filename*  
+ **-ConfigFile** _filename_  
  Is the path name and file name of an XML file that contains settings to use when you run the **UpgradeAdvisorWizardCmd** utility.  
   
  *<server_info>*  
@@ -48,22 +45,22 @@ where <server_info> is any combination of the following:
   
  *<server_info>* can be any combination of the following four arguments:  
   
- **-Server** *server_name*  
+ **-Server** _server_name_  
  Specifies the name of the computer to analyze. This can be the local computer, which is the default value, or a remote computer.  
   
- **-Instance** *instance_name*  
+ **-Instance** _instance_name_  
  Specifies the name of the instance to analyze. There is no default value. If you do not specify this parameter, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is not scanned. The value for a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is MSSQLSERVER. For a named instance, use the instance name.  
   
- **-ASInstance**  *AS_instance_name*  
+ **-ASInstance**  _AS_instance_name_  
  Specifies the name of the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to analyze. There is no default value. If you do not specify this value, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is not scanned. The value for a default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is MSSQLServerOLAPService. For a named instance, use the instance name.  
   
- **-RSInstance**  *RS_instance_name*  
+ **-RSInstance**  _RS_instance_name_  
  Specifies the name of the instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to analyze. There is no default value. If you do not specify this value, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is not scanned. The value for a default instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is ReportServer. For a named instance, use the instance name.  
   
- **-SqlUser** *login_id*  
+ **-SqlUser** _login_id_  
  If you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, this value is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that Upgrade Advisor will use to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you do not specify a login, Windows Authentication is used to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
- **-SqlPassword** *password*  
+ **-SqlPassword** _password_  
  If you use the **-SqlUser** argument, use this argument to specify the password for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
  **-CSV**  

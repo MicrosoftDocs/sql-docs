@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.browseservers.network.f1"
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Browse for Servers (Network Servers)
@@ -32,6 +28,6 @@ manager: craigg
   
 ## Options  
  **Select a SQL Server instance in the network for your connection**  
- Designate the server you want to connect to by clicking on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance displayed in the tree. You can show or hide portions of the tree view by clicking on the nodes marked with a **+** or **–** symbol.  
+ Designate the server you want to connect to by clicking on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance displayed in the tree. You can show or hide portions of the tree view by clicking on the nodes marked with a **+** or **-** symbol.  
   
   

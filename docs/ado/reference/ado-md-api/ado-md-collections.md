@@ -6,19 +6,17 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO MD collections"
   - "collections [ADO MD]"
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # ADO MD Collections
+
 |||  
 |-|-|  
 |[Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Contains the **Axis** objects that define a cellset.|  

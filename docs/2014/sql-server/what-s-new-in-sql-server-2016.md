@@ -4,15 +4,7 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "replication"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "new features [SQL Server]"
@@ -22,9 +14,8 @@ helpviewer_keywords:
   - "sql server 2014 sp1"
   - "sql server 2014 sp2"
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 70
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # What&#39;s New in SQL Server 2014
@@ -42,19 +33,17 @@ manager: craigg
   
 -   [What's New &#40;Integration Services&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
--   [What's New &#40;Replication&#41;](../relational-databases/replication/what-s-new-replication.md)  
-  
 -   [What's New &#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
   
 ## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) did not introduce significant new features.
 -  [SQL Server 2014 Service Pack 1 release information ](https://support.microsoft.com/en-us/kb/3058865).
--  [![Download Service Pack 1 for Microsoft® SQL Server® 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft® SQL Server® 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
+-  [![Download Service Pack 1 for Microsoft?? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft?? SQL Server?? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 
 ## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 2 (SP2)
 - [SQL Server 2014 Service Pack 2 release information](https://support.microsoft.com/en-us/kb/3171021).
--  [![Download Service Pack 2 for Microsoft® SQL Server® 2014](./media/what-s-new-in-sql-server-2016/download.png)](http://go.microsoft.com/fwlink/?LinkID=821558) [Download Service Pack 2 for Microsoft® SQL Server® 2014](http://go.microsoft.com/fwlink/?LinkID=821558).
+-  [![Download Service Pack 2 for Microsoft?? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [Download Service Pack 2 for Microsoft?? SQL Server?? 2014](https://go.microsoft.com/fwlink/?LinkID=821558).
 -  [![Download SQL Server 2014 SP2 Feature Pack](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164) [Download the SQL Server 2014 SP2 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=53164).
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP2) Includes the following improvements:
@@ -68,7 +57,7 @@ manager: craigg
 -    **Spatial Native Implementation:** Significant improvement in spatial query performance is introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 through native implementation. For more information, see the [knowledge base article KB3107399](https://support.microsoft.com/en-us/kb/3107399).
 
 ### Supportability and Diagnostics Improvements
--   **Database Cloning:** Clone database is a new DBCC command that enhances troubleshooting existing production databases by cloning the schema and metadata without the data. The clone is created with the command `DBCC clonedatabase(‘source_database_name’, ‘clone_database_name’)`.  **Note:** Cloned databases should not be used in production environments. Use the following command determine if a database has been generated from a cloned database: `select DATABASEPROPERTYEX('clonedb', 'isClone')`. The return value of **1** indicates the database is created from clonedatabase while **0** indicates it is not a clone.
+-   **Database Cloning:** Clone database is a new DBCC command that enhances troubleshooting existing production databases by cloning the schema and metadata without the data. The clone is created with the command `DBCC clonedatabase('source_database_name', 'clone_database_name')`.  **Note:** Cloned databases should not be used in production environments. Use the following command determine if a database has been generated from a cloned database: `select DATABASEPROPERTYEX('clonedb', 'isClone')`. The return value of **1** indicates the database is created from clonedatabase while **0** indicates it is not a clone.
 -   **Tempdb supportability:**  A new errorlog message that indicates the number of tempdb files and the size/autogrowth of tempdb data files present at server startup.
 -   **Database Instant File Initialization Logging:** A new errorlog message that indicates on server statup, the status of Database Instant File Initialization (enabled/disabled).
 -   **Module names in callstack:** The Xevent callstack now includes modules names + offset instead of absolute addresses.
@@ -89,10 +78,10 @@ manager: craigg
 ## Additional Information  
  [SQL Server 2014 Resources](../2014-toc/books-online-for-sql-server-2014.md)  
   
- [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/p/?linkID=296445)  
+ [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/p/?linkID=296445)  
   
- [SQL Server 2014 Resource Center](http://msdn.microsoft.com/sqlserver/dn135309)  
+ [SQL Server 2014 Resource Center](https://msdn.microsoft.com/sqlserver/dn135309)  
   
- [SQLCat Web Site](http://go.microsoft.com/fwlink/p/?linkID=220963)  
+ [SQLCat Web Site](https://go.microsoft.com/fwlink/p/?linkID=220963)  
   
   

@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.breakpt.location.file"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint location"
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
-caps.latest.revision: 7
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Edit a Breakpoint Location
@@ -42,5 +37,3 @@ manager: craigg
  [Specify a Breakpoint Action](specify-a-breakpoint-action.md)   
  [Specify a Breakpoint Condition](specify-a-breakpoint-condition.md)   
  [Specify a Breakpoint Filter](specify-a-breakpoint-filter.md)  
-  
-  

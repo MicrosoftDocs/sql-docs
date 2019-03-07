@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "mapping data types [ODBC]"
@@ -20,9 +16,8 @@ helpviewer_keywords:
   - "sql_variant data type"
   - "SQL Server Native Client ODBC driver, data types"
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Mapping Data Types (ODBC)
@@ -34,7 +29,7 @@ manager: craigg
 ## Dealing with sql_variant Data Type in ODBC  
  The **sql_variant** data type column can contain any of the data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] except large objects (LOBs), such as **text**, **ntext**, and **image**. For example, the column could contain **smallint** values for some rows, **float** values for other rows, and **char/nchar** values in the remainder.  
   
- The **sql_variant** data type is similar to the **Variant** data type in Microsoft Visual Basic®.  
+ The **sql_variant** data type is similar to the **Variant** data type in Microsoft Visual Basic??.  
   
 ### Retrieving Data from the Server  
  ODBC does not have a concept of variant types, limiting the use of the **sql_variant** data type with an ODBC driver in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if binding is specified, the **sql_variant** data type must be bound to one of the documented ODBC data types. **SQL_CA_SS_VARIANT_TYPE**, a new attribute specific to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, returns the data type of an instance in the **sql_variant** column to the user.  

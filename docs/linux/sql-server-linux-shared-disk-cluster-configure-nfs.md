@@ -5,10 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ---
@@ -97,7 +95,7 @@ Ensure that your security standards are enforced for accessing. When configuring
    * Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    * Verify that the files have been deleted. 
@@ -196,7 +194,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     mkdir <FolderName>
     ```
 
-    \<FolderName> is the name of the folder. The folder’s full path needs to be specified if not in the right location. The following example creates a folder named /var/opt/mssql/userdata.
+    \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The following example creates a folder named /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

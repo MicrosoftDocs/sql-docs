@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Map Report (Report Builder)
   This tutorial is designed to help you learn about the map features you can use to display report data against a geographic background.  
@@ -578,7 +575,7 @@ manager: "mblythe"
 ## Next Steps  
  This concludes the walkthrough for how to add a map to your report.  
   
- For more information, see [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md) and the blog entry [Cartographic Adjustment of Spatial Data for SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) on blogs.msdn.com.  
+ For more information, see [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md) and the blog entry [Cartographic Adjustment of Spatial Data for SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) on blogs.msdn.com.  
   
  For more tutorials, see [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md).  
   

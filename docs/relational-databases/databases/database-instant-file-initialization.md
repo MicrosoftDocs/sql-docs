@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "01/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "initializing files [SQL Server]"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "IFI [SQL Server]"
   - "database instant file initialization [SQL Server]"
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -38,9 +33,9 @@ File initialization causes these operations to take longer. However, when data i
 ## Instant File Initialization (IFI)  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data files can be initialized instantaneously to avoid zeroing operations. Instant file initialization allows for fast execution of the previously mentioned file operations. Instant file initialization reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.  
   
-> [!NOTE]  
+> [!NOTE]
 > Instant file initialization is available only on [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] or [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] or later versions.  
-
+> 
 > [!IMPORTANT]
 > Instant file initialization is available only for data files. Log files will always be zeroed when being created, or growing in size.
   

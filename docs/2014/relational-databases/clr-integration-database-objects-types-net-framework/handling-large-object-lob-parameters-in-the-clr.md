@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large data, CLR integration"
@@ -16,9 +12,8 @@ helpviewer_keywords:
   - "SqlBytes data type"
   - "SqlChars data type"
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Handling Large Object (LOB) Parameters in the CLR

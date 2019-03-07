@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)"
@@ -18,10 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "ListReportServersInDatabase method"
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
-caps.latest.revision: 18
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # ListReportServersInDatabase Method (WMI MSReportServer_ConfigurationSetting)
   Returns the list of report server installations that are present in the report server database, regardless of whether they have access to secure information.  

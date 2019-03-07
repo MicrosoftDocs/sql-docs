@@ -4,21 +4,19 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: scripting
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query expressions"
   - "unique resource names"
   - "URN"
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ---
 # Query Expressions and Uniform Resource Names
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins use two types of expression strings that are similar to XPath expressions. Query expressions are strings that specify a set of criteria used to enumerate one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object.  
@@ -71,22 +69,22 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  For example, specify Server for the **ServerCollection** class, Database for the **DatabaseCollection** class.  
   
- @*PropertyName*  
- Specifies the name of one of the properties of the class that is associated with the object specified in *Object*. The name of the property must be prefixed with the @ character. For example, specify @IsAnsiNull for the **Database** class property **IsAnsiNull**.  
+ \@*PropertyName*  
+ Specifies the name of one of the properties of the class that is associated with the object specified in *Object*. The name of the property must be prefixed with the \@ character. For example, specify \@IsAnsiNull for the **Database** class property **IsAnsiNull**.  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  Enumerates all objects where the specified Boolean property is set to TRUE.  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  Enumerates all objects where the specified Boolean property is set to FALSE.  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  Enumerates all objects where the specified string property contains at least one occurrence of the set of characters that is specified in '*PatternString*'.  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  Enumerates all objects where the value of the specified string property is exactly the same as the character pattern that is specified in '*PatternString*'.  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  Enumerates all objects where the value of the specified date property matches the date that is specified in '*DateString*'. *DateString* must follow the format yyyy-mm-dd hh:mi:ss.mmm  
   
 |||  
@@ -101,11 +99,11 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  The dates that are specified in this format can be evaluated against any date format that is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  Enumerates all objects where the specified property has a value of NULL.  
   
  not(\<*PropertyExpression*>)  
- Negates the evaluation value of the *PropertyExpression*, enumerating all objects that do not match the condition specified in *PropertyExpression*. For example, not(contains(@Name, 'xyz')) enumerates all objects that do not have the string xyz in their names.  
+ Negates the evaluation value of the *PropertyExpression*, enumerating all objects that do not match the condition specified in *PropertyExpression*. For example, not(contains(\@Name, 'xyz')) enumerates all objects that do not have the string xyz in their names.  
   
 ## Remarks  
  Query expressions are strings that enumerate the nodes in an SMO model hierarchy. Each node has a filter expression that specifies the criteria for determining which objects at that node are enumerated. Query expressions are modeled on the XPath expression language. Query expressions implement a small subset of the expressions that are supported by XPath, and also have some extensions that are not found in XPath. XPath expressions are strings that specify a set of criteria that are used to enumerate one or more of the tags in an XML document. For more information about XPath, see [W3C XPath Language](http://www.w3.org/TR/xpath20/).  

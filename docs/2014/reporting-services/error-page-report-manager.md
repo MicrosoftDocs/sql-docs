@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
-caps.latest.revision: 23
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Error Page (Report Manager)
-  Use the Error page to view details about an error condition. Server–based or session-based errors appear on this page. Validation errors that relate to specific page controls display inline next to the control.  
+  Use the Error page to view details about an error condition. Server-based or session-based errors appear on this page. Validation errors that relate to specific page controls display inline next to the control.  
   
 -   If you are browsing to a local report server and you see errors similar to the following, see: [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10160"
   - "sql12.rtp.rptdesigner.datasetproperties.query.f1"
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
-caps.latest.revision: 37
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Dataset Properties Dialog Box, Query
   Select **Query** on the **Dataset Properties** dialog box to choose a data source and create a query.  

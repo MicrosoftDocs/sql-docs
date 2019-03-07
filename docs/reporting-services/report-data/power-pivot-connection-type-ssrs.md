@@ -1,22 +1,15 @@
 ---
 title: "Power Pivot Connection Type (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 9
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Power Pivot Connection Type (SSRS)
   You can use SQL Server Analysis Services data processing extension to retrieve data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is published in a SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery.  
@@ -26,16 +19,16 @@ manager: "kfile"
 ## Prerequisites  
  The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source must be published in a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery on a SharePoint site.  
   
- To support connections from Report Builder to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, you must have SQL Server 2008 R2 ADOMD.NET on your workstation computer. This client library is installed with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, but if you are using a computer that does not have this application, you must download and install ADOMD.NET from the [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565).  
+ To support connections from Report Builder to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, you must have SQL Server 2008 R2 ADOMD.NET on your workstation computer. This client library is installed with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, but if you are using a computer that does not have this application, you must download and install ADOMD.NET from the [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565).  
   
 ## Data Source Type  
  Use report data source type **Microsoft SQL Server Analysis Services**.  
   
 ## Connection String  
- The connection string is the URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook published on SharePoint in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery or other library, for example, `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
+ The connection string is the URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook published on SharePoint in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery or other library, for example, `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## Credentials  
- Specify the credentials that you need to access the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook and SharePoint site, for example, Windows Authentication (Integrated Security). For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Specify the credentials that you need to access the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook and SharePoint site, for example, Windows Authentication (Integrated Security). For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ## Queries  
  After you connect to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source, use the MDX graphical query to build a query by browsing and selecting from the underlying data structures. After you build a query, run the query to see sample data in the results pane.  
@@ -64,7 +57,7 @@ manager: "kfile"
 -   The report contains only [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source.  
   
 ## See Also  
- [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

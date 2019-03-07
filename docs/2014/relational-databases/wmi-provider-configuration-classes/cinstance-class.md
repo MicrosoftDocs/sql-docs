@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CInstance Class"
@@ -19,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "CInstance class"
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CInstance Class

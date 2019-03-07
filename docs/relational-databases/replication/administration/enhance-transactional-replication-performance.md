@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"
@@ -23,7 +19,6 @@ helpviewer_keywords:
   - "transactional replication, performance"
   - "Log Reader Agent, performance"
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
-caps.latest.revision: 39
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -119,13 +114,45 @@ A value for this agent parameter can be specified using the **@subscriptionstrea
 
 For more information on implementing subscription streams, see [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
   
+### Blocking Monitor Thread
+
+Distribution Agent maintains a blocking monitor thread that detects blocking between sessions. If the blocking monitor thread detects blocking between the sessions, Distribution Agent switches to use one session to reapply the current batch of commands that could not be applied previously.
+
+The blocking monitor thread can detect blocking between Distribution Agent sessions. However, the blocking monitor thread cannot detect blocking in the following situations:
+- One of the sessions where blocking occurs is not a Distribution Agent session.
+- A session deadlock freezes the activities of Distribution Agent.
+
+In this situation, Distribution Agent coordinates all the sessions to commit together as soon as their commands are executed. A deadlock among the sessions occurs if the following conditions are true:
+
+- Blocking occurs between the Distribution Agent sessions and a session that is not a Distribution Agent session.
+- Distribution Agent is waiting for all the sessions to complete executing their commands before Distribution Agent coordinates all the sessions to commit together.
+
+For example, you configure the *SubscriptionStreams* parameter to 8. Session 10 through session 17 are Distribution Agent sessions. Session 18 is not a Distribution Agent session. Session 10 is blocked by session 18, and session 18 is blocked by session 11. 
+Additionally, session 10 and session 11 must be committed together. However, Distribution Agent cannot commit session 10 and session 11 together because of blocking. Therefore, Distribution Agent cannot coordinate these eight sessions to commit together until session 10 and session 11 complete executing their commands.
+
+This example results in a state in which no sessions are executing their commands. When the time that is specified in the **QueryTimeout** property is reached, Distribution Agent cancels all the sessions.
+
+> [!Note]
+> By default, the value of the **QueryTimeout** property is 5 minutes.
+
+You may notice the following trends from the Distribution Agent performance counters during this query time-out period: 
+
+- The value of the **Dist: Delivered Cmds/sec** performance counter is always 0.
+- The value of the **Dist: Delivered Trans/sec** performance counter is always 0.
+- The **Dist: Delivery Latency** performance counter reports an increase in value until the thread deadlock is resolved.
+
+The "Replication Distribution Agent" topic in SQL Server Books Online contains the following description for the *SubscriptionStreams* parameter:
+"If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches."
+
+Distribution Agent uses one session to retry the batch that could not be applied. After Distribution Agent successfully applies the batch, Distribution Agent resumes using multiple sessions without restarting.
+
 #### CommitBatchSize
 - Increase the value of the **-CommitBatchSize** parameter for the Distribution Agent.  
   
 Committing a set of transactions has a fixed overhead; by committing a larger number of transactions less frequently, the overhead is spread across a larger volume of data.  Increasing CommitBatchSize (up to 200) can improve performance as more transactions are committed to the subscriber. However, the benefit of increasing this parameter drops off as the cost of applying changes is gated by other factors, such as the maximum I/O of the disk that contains the log. Additionally, there is a trade-off to be considered: any failure that causes the Distribution Agent to start over must roll back and reapply a larger number of transactions. For unreliable networks, a lower value can result in fewer failures and a smaller number of transactions to roll back and reapply if a failure occurs.  
   
 
-##See more
+## See more
   
 [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

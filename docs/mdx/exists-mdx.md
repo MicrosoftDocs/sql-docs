@@ -36,7 +36,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
   
 ## Remarks  
   
-1.  Measure group rows with measures containing null values contribute to **Exists** when the MeasureGroupName argument is specified. This is the difference between this form of Exists and the Nonempty function: if the NullProcessing property of these measures is set to Preserve, this means the measures will show Null values when queries are run against that part of the cube; NonEmpty will always remove tuples from a set that that have Null measure values, whereas Exists with the MeasureGroupName argument will not filter tuples that have associated measure group rows, even if the measure values are Null.  
+1.  Measure group rows with measures containing null values contribute to **Exists** when the MeasureGroupName argument is specified. This is the difference between this form of Exists and the Nonempty function: if the NullProcessing property of these measures is set to Preserve, this means the measures will show Null values when queries are run against that part of the cube; NonEmpty will always remove tuples from a set that have Null measure values, whereas Exists with the MeasureGroupName argument will not filter tuples that have associated measure group rows, even if the measure values are Null.  
   
 2.  If *MeasureGroupName* parameter is used, results will depend on whether there are visible measures in the referenced measure group; if there are no visible measures in the referenced measure group then EXISTS will always return an empty set, regardless of the values of *Set_Expression1* and *Set_Expression2*.  
   

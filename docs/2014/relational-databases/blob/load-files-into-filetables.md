@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], migrating files"
   - "FileTables [SQL Server], bulk loading"
   - "FileTables [SQL Server], loading files"
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Load Files into FileTables
@@ -84,7 +81,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT with CHECK_CONSTRAINTS clause.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) without IGNORE_CONSTRAINTS clause.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) without IGNORE_CONSTRAINTS clause.  
   
 -   Bulk loading operations that do not enforce constraints fail unless the FileTable system-defined constraints have been disabled. This category includes the following operations:  
   
@@ -92,7 +89,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT without CHECK_CONSTRAINTS clause.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) with IGNORE_CONSTRAINTS clause.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) with IGNORE_CONSTRAINTS clause.  
   
 ###  <a name="HowToBulkLoad"></a> How To: Bulk Load Files into a FileTable  
  You can use various methods to bulk load files into a FileTable:  
@@ -109,7 +106,7 @@ UPDATE PhotoMetadata
   
     -   Disable the FileTable namespace and call without the **CHECK_CONSTRAINTS** clause. Then re-enable the FileTable namespace.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   Call with the **IGNORE_CONSTRAINTS** clause.  
   

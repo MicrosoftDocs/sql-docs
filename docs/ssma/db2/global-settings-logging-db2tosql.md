@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -30,15 +24,15 @@ The following options are available under **Messages Level**:
 |----------|---------------|  
 |**[all categories]**|Used to set the logging level for all of the following options.|  
 |**Collector**|Collects metadata about the source schema and saves it to the project.|  
-|**Converter**|Converts structures of source database objects, such as tables and stored procedures, into corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] structures.|  
-|**Data migrator**|Migrates data from the source database into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Formatter**|Sub-component of the Converter that generates scripts for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schema.|  
+|**Converter**|Converts structures of source database objects, such as tables and stored procedures, into corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] structures.|  
+|**Data migrator**|Migrates data from the source database into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Formatter**|Sub-component of the Converter that generates scripts for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema.|  
 |**Graphical user interface**|Messages that appear when you use the SSMA tool.|  
 |**Linker**|Resolves SQL identifiers and provides information to other components.|  
 |**Other**|All messages that are not in any other category.|  
 |**Parser**|Parses the source schema.|  
-|**Synchronizer**|Loads source database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**TreeConverter**|Converts objects in the source metadata into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadata.|  
+|**Synchronizer**|Loads source database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**TreeConverter**|Converts objects in the source metadata into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadata.|  
 |**Tester**|Messages that appear when you use the SSMA Tester.|  
   
 For each option under **Messages Level**, configure one of the following logging levels for SSMA:  

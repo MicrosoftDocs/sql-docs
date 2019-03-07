@@ -1,22 +1,15 @@
 ---
 title: "Generate Data Feeds from a Report (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Generate Data Feeds from a Report (Report Builder and SSRS)
@@ -65,7 +58,7 @@ You can generate Atom-compliant data feeds from paginated reports, and then use 
   
      The format of the URL is the following:  
   
-     `http://<server name>/ReportServer?%2f<ReportName>rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=<Identifier>`  
+     `https://<server name>/ReportServer?%2f<ReportName>rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=<Identifier>`  
   
 3.  Press ENTER.  
   
@@ -88,4 +81,4 @@ You can generate Atom-compliant data feeds from paginated reports, and then use 
 
 [Export Reports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

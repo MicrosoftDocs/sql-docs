@@ -5,9 +5,7 @@ ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "JSON_VALUE"
@@ -19,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: douglasl
+ms.reviewer: genemi
 manager: craigg
 ---
 # JSON_VALUE (Transact-SQL)
@@ -41,7 +39,7 @@ JSON_VALUE ( expression , path )
  *expression*  
  An expression. Typically the name of a variable or a column that contains JSON text.  
  
- If **JSON_VALUE** finds JSON that is not valid in *expression* before it finds the value identified by *path*, the function returns an error. If **JSON_VALUE* doesn't find the value identified by *path*, it scans the entire text and returns an error if it finds JSON that is not valid anywhere in *expression*.
+ If **JSON_VALUE** finds JSON that is not valid in *expression* before it finds the value identified by *path*, the function returns an error. If **JSON_VALUE** doesn't find the value identified by *path*, it scans the entire text and returns an error if it finds JSON that is not valid anywhere in *expression*.
   
  *path*  
  A JSON path that specifies the property to extract. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  

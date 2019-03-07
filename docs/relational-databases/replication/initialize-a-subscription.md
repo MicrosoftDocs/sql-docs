@@ -1,15 +1,11 @@
-﻿---
+---
 title: "Initialize a Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshot replication [SQL Server], initializing subscriptions"
@@ -19,11 +15,10 @@ helpviewer_keywords:
   - "initializing subscriptions [SQL Server replication], about initializing subscriptions"
   - "merge replication [SQL Server replication], initializing subscriptions"
 ms.assetid: d6013845-cb7a-4203-8e21-edce32f1d330
-caps.latest.revision: 32
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Initialize a Subscription
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

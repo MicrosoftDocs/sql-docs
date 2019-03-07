@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executesqltask.f1"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "batches [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 113
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Execute SQL Task
@@ -60,7 +56,7 @@ manager: craigg
 >  Valid SQL statements written outside the Execute SQL task may not be parsed successfully by the Execute SQL task.  
   
 > [!NOTE]  
->  The Execute SQL Task uses the `RecognizeAll` ParseMode enumeration value. For more information, see [ManagedBatchParser Namespace](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  The Execute SQL Task uses the `RecognizeAll` ParseMode enumeration value. For more information, see [ManagedBatchParser Namespace](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## Sending Multiple Statements in a Batch  
  If you include multiple statements in an Execute SQL task, you can group them and run them as a batch. To signal the end of a batch, use the GO command. All the SQL statements between two GO commands are sent in a batch to the OLE DB provider to be run. The SQL command can include multiple batches separated by GO commands.  
@@ -156,6 +152,6 @@ manager: craigg
   
 -   [Transact-SQL Reference &#40;Database Engine&#41;](/sql/t-sql/language-reference)  
   
--   Blog entry, [New Date and Time Functions in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783), on mssqltips.com  
+-   Blog entry, [New Date and Time Functions in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783), on mssqltips.com  
   
   

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "recovery [SQL Server replication], Oracle publishing"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], backup and restore"
   - "restoring [SQL Server replication], Oracle publishing"
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
-caps.latest.revision: 32
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Backup and Restore for Oracle Publishers

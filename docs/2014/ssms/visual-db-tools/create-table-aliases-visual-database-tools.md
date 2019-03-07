@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table aliases [SQL Server]"
   - "aliases [SQL Server], tables"
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Table Aliases (Visual Database Tools)
@@ -23,7 +19,7 @@ manager: craigg
   
 -   You want to make the statement in the [SQL Pane](visual-database-tools.md) shorter and easier to read.  
   
--   You refer to the table name often in your query — such as in qualifying column names — and want to be sure you stay within a specific character-length limit for your query. (Some databases impose a maximum length for queries.)  
+-   You refer to the table name often in your query - such as in qualifying column names - and want to be sure you stay within a specific character-length limit for your query. (Some databases impose a maximum length for queries.)  
   
 -   You are working with multiple instances of the same table (such as in a self-join) and need a way to refer to one instance or the other.  
   

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "auditing [Reporting Services]"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "report processing [Reporting Services], verifying execution"
   - "checking report execution"
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-caps.latest.revision: 36
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Verifying a Report Run
   To view information about the status of report processing, you can use log files or refer to status information that is displayed with the report in Report Manager.  

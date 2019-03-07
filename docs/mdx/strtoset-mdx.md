@@ -13,7 +13,7 @@ manager: kfile
 # StrToSet (MDX)
 
 
-  Returns the set specified by a Multidimensional Expressions (MDX)–formatted string.  
+  Returns the set specified by a Multidimensional Expressions (MDX)-formatted string.  
   
 ## Syntax  
   

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ClientSettings Class"
@@ -19,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "ClientSettings class"
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ClientSettings Class
@@ -30,6 +25,6 @@ manager: craigg
  This class enables programmatic management of the client.  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -49,7 +49,7 @@ manager: kfile
 ### Change the current service application.  
  To change current [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] service application in the management dashboard:  
   
-1.  At the top of the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] management dashboard, note the name of the current service application, for example **Default [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serivce Application**.  
+1.  At the top of the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] management dashboard, note the name of the current service application, for example **Default [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service Application**.  
   
 2.  In the **Actions** dashboard, click **List Service Applications**.  
   
@@ -107,7 +107,7 @@ manager: kfile
   
     7.  Click type a name for the connection and then click **Next**.  
   
-    8.  In Specify MDX Query, click **Design** to open the MDX query designer to assemble the data you want to work with **If you see the error message** “The Edit Mode property name is not formatted correctly.”, verify you edits the .ODC file.  
+    8.  In Specify MDX Query, click **Design** to open the MDX query designer to assemble the data you want to work with **If you see the error message** "The Edit Mode property name is not formatted correctly.", verify you edits the .ODC file.  
   
     9. Click **OK** and then click **Finish**.  
   
@@ -132,7 +132,7 @@ manager: kfile
     9. In Specify MDX Query, click **Design** to open the MDX query designer to assemble the data you want to work with, and then create PivotTable or PivotChart reports to visualize the data in Excel.  
   
 ## See Also  
- [Power Pivot Data Refresh with SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Power Pivot Data Refresh with SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configure Usage Data Collection for &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

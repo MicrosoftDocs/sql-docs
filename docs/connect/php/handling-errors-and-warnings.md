@@ -5,12 +5,9 @@ ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -18,7 +15,7 @@ manager: craigg
 # Handling Errors and Warnings
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-If you are using the PDO_SQLSRV driver, you can find more information about errors and error handling on the [PDO](http://php.net/manual/book.pdo.php) website.  
+If you are using the PDO_SQLSRV driver, you can find more information about errors and error handling on the [PDO](https://php.net/manual/book.pdo.php) website.  
   
 Topics in this section provide information about handling errors and warnings with the SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   

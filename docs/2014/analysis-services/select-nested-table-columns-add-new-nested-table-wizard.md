@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.selectnestedtablecolumns.f1"
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Nested Table Columns (Add New Nested Table Wizard)
   Use the **Select Nested Table Columns** page to select the attributes and measures to include in the nested table and to define how the mining model will use the attributes and measures.  

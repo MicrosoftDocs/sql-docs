@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [SQL Server], enabling"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], enabling"
   - "clustered indexes, enabling disabled indexes"
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
-caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Enable Indexes and Constraints
@@ -49,7 +45,7 @@ manager: craigg
   
 -   When the clustered index is disabled or enabled and the nonclustered index is disabled, the clustered index action has the following results on the disabled nonclustered index.  
   
-    |Clustered Index Action|Disabled Nonclustered Index …|  
+    |Clustered Index Action|Disabled Nonclustered Index ...|  
     |----------------------------|-----------------------------------|  
     |ALTER INDEX REBUILD.|Remains disabled.|  
     |ALTER INDEX ALL REBUILD.|Is rebuilt and enabled.|  

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], firewall systems"
   - "firewall systems, [Database Engine]"
   - "security [SQL Server], firewalls"
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-caps.latest.revision: 55
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure a Windows Firewall for Database Engine Access
@@ -44,7 +40,7 @@ manager: craigg
   
      [Security](#Security)  
   
--   **To configure a Widows Firewall for Database Engine access, using:**  
+-   **To configure a Windows Firewall for Database Engine access, using:**  
   
      [SQL Server Configuration Manager](#SSMSProcedure)  
   

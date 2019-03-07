@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "signing policies [Integration Services]"
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Implement a Signing Policy by Setting a Registry Value
@@ -40,7 +37,7 @@ manager: craigg
 |3|Block invalid and untrusted signatures and unsigned packages<br /><br /> This setting also blocks self-generated signatures.|  
   
 > [!NOTE]  
->  The recommended setting for `BlockedSignatureStates` is 3. This setting provides the greatest protection against unsigned packages or signatures that are either not valid or untrusted. However, the recommended setting may not be appropriate in all circumstances. For more information about signing digital assets, see the topic, "[Introduction to Code Signing](http://go.microsoft.com/fwlink/?LinkId=51414)," in the MSDN Library.  
+>  The recommended setting for `BlockedSignatureStates` is 3. This setting provides the greatest protection against unsigned packages or signatures that are either not valid or untrusted. However, the recommended setting may not be appropriate in all circumstances. For more information about signing digital assets, see the topic, "[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)," in the MSDN Library.  
   
 ### To implement a signing policy for packages  
   

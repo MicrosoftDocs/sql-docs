@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships [SQL Server], creating"
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Foreign Key Relationships
@@ -81,7 +77,7 @@ manager: craigg
   
 4.  Click the relationship in the **Selected Relationship** list.  
   
-5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**…**) to the right of the property.  
+5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**...**) to the right of the property.  
   
 6.  In the **Tables and Columns** dialog box, in the **Primary Key** drop-down list, choose the table that will be on the primary-key side of the relationship.  
   

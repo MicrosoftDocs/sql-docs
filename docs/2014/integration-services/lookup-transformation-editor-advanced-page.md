@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptransformation.advanced.f1"
 helpviewer_keywords: 
   - "Lookup Transformation Editor"
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Lookup Transformation Editor (Advanced Page)
@@ -47,7 +44,7 @@ manager: craigg
  Map input columns to parameters by using the **Set Query Parameters** dialog box.  
   
 ## External Resources  
- Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
  [Lookup Transformation Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   

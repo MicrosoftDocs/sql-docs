@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.replconflictviewer.cvmerge.f1"
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Microsoft Replication Conflict Viewer (Merge Replication)
@@ -68,7 +64,7 @@ manager: craigg
  **Show first five columns and other columns with conflicting data**  
  Select to display the first five columns and any columns that have conflicts. This is helpful when the table has a large number of columns, but you want to see only the columns most relevant to resolving the conflict. The first five columns are always included in this view, as fields that identify a row, such as the primary key or name fields, are often among the first columns of the table.  
   
- **Display Column Information** (**…**)  
+ **Display Column Information** (**...**)  
  Click to view column information: **Table Name**, **Column Name**, **Data Type**, and **Column Value**. **Column Value** is editable unless the value is displayed as read-only.  
   
  **Submit Winner**  

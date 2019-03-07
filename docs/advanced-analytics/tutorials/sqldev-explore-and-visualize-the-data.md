@@ -1,23 +1,23 @@
 ---
-title: Lesson 3 Explore and visualize data using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
+title: Lesson 1 Explore and visualize data using R and T-SQL - SQL Server Machine Learning
+description: Tutorial showing how to explore and visualize SQL Server data using R functions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/07/2018  
+ms.date: 10/29/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 3: Explore and visualize the data
+# Lesson 1: Explore and visualize the data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
-In this lesson, you'll review the sample data, and then generate some plots using [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) from [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and the generic [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) function in base R. These R functions are already included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+In this step, you'll review the sample data, and then generate some plots using [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) from [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and the generic [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) function in base R. These R functions are already included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
-A key objective is showing how to call R functions from [!INCLUDE[tsql](../../includes/tsql-md.md)] in stored procedures and save the results in application file formats:
+A key objective of this lesson is showing how to call R functions from [!INCLUDE[tsql](../../includes/tsql-md.md)] in stored procedures and save the results in application file formats:
 
 + Create a stored procedure using **RxHistogram** to generate an R plot as varbinary data. Use **bcp** to export the binary stream to an image file.
 + Create a stored procedure using **Hist** to generate a plot, saving results as JPG and PDF output.
@@ -29,11 +29,11 @@ A key objective is showing how to call R functions from [!INCLUDE[tsql](../../in
 
 Developing a data science solution usually includes intensive data exploration and data visualization. So first take a minute to review the sample data, if you haven't already.
 
-In the original dataset, the taxi identifiers and trip records were provided in separate files. However, to make the sample data easier to use, the two original datasets have been joined on the columns _medallion_, _hack\_license_, and _pickup\_datetime_.  The records were also sampled to get just 1% of the original number of records. The resulting down-sampled dataset has 1,703,957 rows and 23 columns.
+In the original public dataset, the taxi identifiers and trip records were provided in separate files. However, to make the sample data easier to use, the two original datasets have been joined on the columns _medallion_, _hack\_license_, and _pickup\_datetime_.  The records were also sampled to get just 1% of the original number of records. The resulting down-sampled dataset has 1,703,957 rows and 23 columns.
 
 **Taxi identifiers**
   
--   The _medallion_ column represents the taxi’s unique id number.
+-   The _medallion_ column represents the taxi's unique id number.
   
 -   The _hack\_license_ column contains the taxi driver's license number (anonymized).
   
@@ -56,16 +56,14 @@ In the original dataset, the taxi identifiers and trip records were provided in 
 
 ## Create a stored procedure using rxHistogram to plot the data
 
-To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotHistogram**.
+To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotRxHistogram**.
 
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **TaxiNYC_Sample** database, expand **Programmability**, and then expand **Stored Procedures** to view the procedures created in lesson 2.
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **NYCTaxi_Sample** database and select **New Query**.
 
-2. Right-click **PlotHistogram** and select **Modify** to view the source. You can execute this procedure to call **rxHistogram** on data contained in the tipped column of nyctaxi_sample table.
+2. Paste in the following script to create a stored procedure that plots the histogram. This example is named **RPlotRxHistogram*.
 
-3. Optionally, as a learning exercise, create your own copy of this stored procedure using the following example. Open a new query window and paste in the following script to create a stored procedure that plots the histogram. This example is named **PlotHistogram2** to avoid naming collisions with the pre-existing procedure.
-
-    ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram2]
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -87,13 +85,15 @@ To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learnin
     GO
     ```
 
-The stored procedure **PlotHistogram2** is identical to a pre-existing stored procedure **PlotHistogram** created by the `RunSQL_SQL_Walkthrough.ps1` script. 
+Key points to understand in this script include the following: 
   
-+ The variable `@query` defines the query text (`'SELECT tipped FROM nyctaxi_sample'`), which is passed to the R script as the argument to the script input variable, `@input_data_1`.
++ The variable `@query` defines the query text (`'SELECT tipped FROM nyctaxi_sample'`), which is passed to the R script as the argument to the script input variable, `@input_data_1`. For R scripts that run as external processes, you should have a one-to-one mapping between inputs to your script, and inputs to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure that starts the R session on SQL Server.
   
-+ The R script is fairly simple: an R variable (`image_file`) is defined to store the image, and then the **rxHistogram** function is called to generate the plot.
++ Within the R script, a variable (`image_file`) is defined to store the image. 
+
++ The **rxHistogram** function from the RevoScaleR library is called to generate the plot.
   
-+ The R device is set to **off** because you are running this command as an external script in SQL Server. Typically in R, when you issue a high-level plotting command, R opens a graphics window, called a *device*. You can change the size and colors and other aspects of the window, or you can turn the device off if you are writing to a file or handling the output some other way.
++ The R device is set to **off** because you are running this command as an external script in SQL Server. Typically in R, when you issue a high-level plotting command, R opens a graphics window, called a *device*. You can turn the device off if you are writing to a file or handling the output some other way.
   
 + The R graphics object is serialized to an R data.frame for output.
 
@@ -101,10 +101,10 @@ The stored procedure **PlotHistogram2** is identical to a pre-existing stored pr
 
 The stored procedure returns the image as a stream of varbinary data, which obviously you cannot view directly. However, you can use the **bcp** utility to get the varbinary data and save it as an image file on a client computer.
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], run the following statement:
+1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], run the following statement:
   
-    ```SQL
-    EXEC [dbo].[PlotHistogram]
+    ```sql
+    EXEC [dbo].[RxPlotHistogram]
     ```
   
     **Results**
@@ -112,22 +112,24 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
     *plot*
     *0xFFD8FFE000104A4649...*
   
-2.  Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments. For those using Windows identities, you can replace **-U** and **-P** with **-T**.
+2. Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments. For those using Windows identities, you can replace **-U** and **-P** with **-T**.
   
-     ```text
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  TaxiNYC_Sample  -U <user name> -P <password>
-     ```
+    ```powershell
+    bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+    ```
 
     > [!NOTE]
     > Command switches for bcp are case-sensitive.
   
-3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. Press ENTER at each prompt to accept the defaults, except for these changes:
+3. If the connection is successful, you will be prompted to enter more information about the graphic file format. 
+
+   Press ENTER at each prompt to accept the defaults, except for these changes:
     
-    -   For **prefix-length of field plot**, type 0
+   + For **prefix-length of field plot**, type 0
   
-    -   Type **Y** if you want to save the output parameters for later reuse.
+   + Type **Y** if you want to save the output parameters for later reuse.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -139,7 +141,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
     **Results**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -155,16 +157,16 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
 ## Create a stored procedure using Hist and multiple output formats
 
-Typically, data scientists generate multiple data visualizations to get insights into the data from different perspectives. In this example, the stored procedure uses the Hist function to create the histogram, exporting the binary data to popular formats such as .JPG, .PDF, and .PNG. 
+Typically, data scientists generate multiple data visualizations to get insights into the data from different perspectives. In this example, you will create a stored procedure called **RPlotHist** to write histograms, scatterplots, and other R graphics to .JPG and .PDF format.
 
-1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. The `RunSQL_SQL_Walkthrough.ps1` creates **PlotInOutputFiles** and adds it the database. Use right-click **Modify** to view the source.
+This stored procedure uses the **Hist** function to create the histogram, exporting the binary data to popular formats such as .JPG, .PDF, and .PNG. 
 
-2. Optionally, as a learning exercise, create your own copy of the procedure as **PlotInOutputFiles2**, with a unique name to avoid a naming conflict.
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **NYCTaxi_Sample** database and select **New Query**.
 
-    In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open a new **Query** window, and paste in the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.
+2. Paste in the following script to create a stored procedure that plots the histogram. This example is named **RPlotHist** .
   
-    ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
+    ```sql
+    CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -229,7 +231,7 @@ Typically, data scientists generate multiple data visualizations to get insights
   
 + The output of the SELECT query within the stored procedure is stored in the default R data frame, `InputDataSet`. Various R plotting functions can then be called to generate the actual graphics files. Most of the embedded R script represents options for these graphics functions,  such as `plot` or `hist`.
   
-+ All files are saved to the local folder _C:\temp\Plots\\_. The destination folder is defined by the arguments provided to the R script as part of the stored procedure.  You can change the destination folder by changing the value of the variable, `mainDir`.
++ All files are saved to the local folder C:\temp\Plots. The destination folder is defined by the arguments provided to the R script as part of the stored procedure.  You can change the destination folder by changing the value of the variable, `mainDir`.
 
 + To output the files to a different folder, change the value of the `mainDir` variable in the R script embedded in the stored procedure. You can also modify the script to output different formats, more files, and so on.
 
@@ -237,13 +239,13 @@ Typically, data scientists generate multiple data visualizations to get insights
 
 Run the following statement to export binary plot data to JPEG and PDF file formats.
 
-```SQL
-EXEC PlotInOutputFiles
+```sql
+EXEC RPlotHist
 ```
 
 **Results**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 
@@ -272,8 +274,8 @@ To view the plot, open the destination folder and review the files that were cre
 
 ## Next lesson
 
-[Lesson 4: Create data features using T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lesson 2: Create data features using T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## Previous lesson
 
-[Lesson 2: Prepare the tutorial environment using PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Set up NYC Taxi demo data](demo-data-nyctaxi-in-sql.md)

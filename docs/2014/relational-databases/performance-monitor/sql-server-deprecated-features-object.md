@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Deprecated Features"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "deprecation [SQL Server], performance counters"
   - "Deprecated Features object"
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 58
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Deprecated Features Object
@@ -29,7 +25,7 @@ manager: craigg
 |------------------------------------------------------|-----------------|  
 |'#' and '##' as the name of temporary tables and stored procedures|An identifier was encountered that did not contain any characters other than #. Use at least one additional character. Occurs once per compilation.|  
 |'::' function calling syntax|The :: function calling syntax was encountered for a table-valued function. Replace with `SELECT column_list FROM` *\< function_name>*`()`. For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)`with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Occurs once per compilation.|  
-|'@' and names that start with '@@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|An identifier was encountered that began with @ or @@. Do not use @ or @@ or names that begin with @@ as identifiers. Occurs once per compilation.|  
+|'\@' and names that start with '\@\@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|An identifier was encountered that began with \@ or \@\@. Do not use \@ or \@\@ or names that begin with \@\@ as identifiers. Occurs once per compilation.|  
 |ADDING TAPE DEVICE|The deprecated feature sp_addumpdevice'`tape`' was encountered. Use sp_addumpdevice'`disk`' instead. Occurs once per use.|  
 |ALL Permission|Total number of times the GRANT ALL, DENY ALL, or REVOKE ALL syntax was encountered. Modify the syntax to deny specific permissions. Occurs once per query.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Total number of times the deprecated feature TORN_PAGE_DETECTION option of ALTER DATABASE has been used since the server instance was started. Use the PAGE_VERIFY syntax instead. Occurs once per use in a DDL statement.|  
@@ -115,9 +111,9 @@ manager: craigg
 |PERMISSIONS|References to the PERMISSIONS intrinsic function were encountered. Query sys.fn_my_permissions instead. Occurs once per query.|  
 |ProcNums|The deprecated ProcNums syntax was encountered. Rewrite statements to remove the references. Occurs once per compilation.|  
 |READTEXT|The READTEXT syntax was encountered. Rewrite applications to use the `varchar(max)` data type and removed `text` data type syntax. Occurs once per query.|  
-|RESTORE DATABASE or LOG WITH DBO_ONLY|The RESTORE … WITH DBO_ONLY syntax was encountered. Use RESTORE … RESTRICTED_USER instead.|  
-|RESTORE DATABASE or LOG WITH MEDIAPASSWORD|The RESTORE … WITH MEDIAPASSWORD syntax was encountered. WITH MEDIAPASSWORD provides weak security and should be removed.|  
-|RESTORE DATABASE or LOG WITH PASSWORD|The RESTORE … WITH PASSWORD syntax was encountered. WITH PASSWORD provides weak security and should be removed.|  
+|RESTORE DATABASE or LOG WITH DBO_ONLY|The RESTORE ... WITH DBO_ONLY syntax was encountered. Use RESTORE ... RESTRICTED_USER instead.|  
+|RESTORE DATABASE or LOG WITH MEDIAPASSWORD|The RESTORE ... WITH MEDIAPASSWORD syntax was encountered. WITH MEDIAPASSWORD provides weak security and should be removed.|  
+|RESTORE DATABASE or LOG WITH PASSWORD|The RESTORE ... WITH PASSWORD syntax was encountered. WITH PASSWORD provides weak security and should be removed.|  
 |Returning results from trigger|This event occurs once per trigger invocation. Rewrite the trigger so that it does not return result sets.|  
 |ROWGUIDCOL|The ROWGUIDCOL syntax was encountered. Rewrite statements to use the $rowguid syntax. Occurs once per compilation.|  
 |SET ANSI_NULLS OFF|The SET ANSI_NULLS OFF syntax was encountered. Remove this deprecated syntax. Occurs once per compilation.|  
@@ -154,13 +150,13 @@ manager: craigg
 |sp_configure 'ft notify bandwidth (min)'|The ft notify bandwidth (min) option of sp_configure was encountered. Do not use. Occurs once per query.|  
 |sp_configure 'locks'|The locks option of sp_configure was encountered. Locks are no longer configurable. Do not use. Occurs once per query.|  
 |sp_configure 'open objects'|The open objects option of sp_configure was encountered. The number of open objects is no longer configurable. Do not use. Occurs once per query.|  
-|sp_configure 'priority boost'|The priority boost option of sp_configure was encountered. Do not use. Occurs once per query. Use the Windows start /high … program.exe option instead.|  
+|sp_configure 'priority boost'|The priority boost option of sp_configure was encountered. Do not use. Occurs once per query. Use the Windows start /high ... program.exe option instead.|  
 |sp_configure 'remote proc trans'|The remote proc trans option of sp_configure was encountered. Do not use. Occurs once per query.|  
 |sp_configure 'set working set size'|The set working set size option of sp_configure was encountered. The working set size is no longer configurable. Do not use. Occurs once per query.|  
 |sp_control_dbmasterkey_password|The sp_control_dbmasterkey_password stored procedure does not check whether a master key exists. This is permitted for backward compatibility, but displays a warning. This behavior is deprecated. In a future release the master key must exist and the password used in the stored procedure sp_control_dbmasterkey_password must be the same password as one of the passwords used to encrypt the database master key.|  
 |sp_create_removable|The sp_create_removable procedure was encountered. Use CREATE DATABASE instead. Occurs once per query.|  
 |sp_db_vardecimal_storage_format|Use of `vardecimal` storage format was encountered. Use data compression instead.|  
-|sp_dbcmptlevel|The sp_dbcmptlevel procedure was encountered. Use ALTER DATABASE … SET COMPATIBILITY_LEVEL instead. Occurs once per query.|  
+|sp_dbcmptlevel|The sp_dbcmptlevel procedure was encountered. Use ALTER DATABASE ... SET COMPATIBILITY_LEVEL instead. Occurs once per query.|  
 |sp_dbfixedrolepermission|The sp_dbfixedrolepermission procedure was encountered. Do not use. Occurs once per query.|  
 |sp_dboption|The sp_dboption procedure was encountered. Use ALTER DATABASE and DATABASEPROPERTYEX instead. Occurs once per compilation.|  
 |sp_dbremove|The sp_dbremove procedure was encountered. Use DROP DATABASE instead. Occurs once per query.|  
@@ -168,7 +164,7 @@ manager: craigg
 |sp_defaultlanguage|The sp_defaultlanguage procedure was encountered. Use ALTER LOGIN instead. Occurs once per compilation.|  
 |sp_denylogin|The sp_denylogin procedure was encountered. Use ALTER LOGIN DISABLE instead. Occurs once per query.|  
 |sp_depends|The sp_depends procedure was encountered. Use sys.dm_sql_referencing_entities and sys.dm_sql_referenced_entities instead. Occurs once per query.|  
-|sp_detach_db @keepfulltextindexfile|The @keepfulltextindexfile argument was encountered in a sp_detach_db statement. Do not use this argument.|  
+|sp_detach_db \@keepfulltextindexfile|The \@keepfulltextindexfile argument was encountered in a sp_detach_db statement. Do not use this argument.|  
 |sp_dropalias|The sp_dropalias procedure was encountered. Replace aliases with a combination of user accounts and database roles. Use sp_dropalias to remove aliases in upgraded databases. Occurs once per compilation.|  
 |sp_dropapprole|The sp_dropapprole procedure was encountered. Use DROP APPLICATION ROLE instead. Occurs once per query.|  
 |sp_dropextendedproc|The sp_dropextendedproc procedure was encountered. Use CLR instead. Occurs once per compilation.|  
@@ -181,10 +177,10 @@ manager: craigg
 |sp_fulltext_catalog|The sp_fulltext_catalog procedure was encountered. Use CREATE/ALTER/DROP FULLTEXT CATALOG instead. Occurs once per compilation.|  
 |sp_fulltext_column|The sp_fulltext_column procedure was encountered. Use ALTER FULLTEXT INDEX instead. Occurs once per compilation.|  
 |sp_fulltext_database|The sp_fulltext_database procedure was encountered. Use ALTER DATABASE instead. Occurs once per compilation.|  
-|sp_fulltext_service @action=clean_up|The clean_up option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
-|sp_fulltext_service @action=connect_timeout|The connect_timeout option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
-|sp_fulltext_service @action=data_timeout|The data_timeout option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
-|sp_fulltext_service @action=resource_usage|The resource_usage option of the sp_fulltext_service procedure was encountered. This option has no function. Occurs once per query.|  
+|sp_fulltext_service \@action=clean_up|The clean_up option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
+|sp_fulltext_service \@action=connect_timeout|The connect_timeout option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
+|sp_fulltext_service \@action=data_timeout|The data_timeout option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
+|sp_fulltext_service \@action=resource_usage|The resource_usage option of the sp_fulltext_service procedure was encountered. This option has no function. Occurs once per query.|  
 |sp_fulltext_table|The sp_fulltext_table procedure was encountered. Use CREATE/ALTER/DROP FULLTEXT INDEX instead. Occurs once per compilation.|  
 |sp_getbindtoken|The sp_getbindtoken procedure was encountered. Use Multiple Active Result Sets (MARS) or distributed transactions instead. Occurs once per compilation.|  
 |sp_grantdbaccess|The sp_grantdbaccess procedure was encountered. Use CREATE USER instead. Occurs once per query.|  

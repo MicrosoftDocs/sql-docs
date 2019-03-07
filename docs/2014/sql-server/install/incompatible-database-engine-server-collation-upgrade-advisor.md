@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
-caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Incompatible Database Engine Server Collation (Upgrade Advisor)
@@ -41,8 +38,8 @@ manager: craigg
 ## Corrective Action  
  The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] server collation property cannot be changed. You will not be able to complete an upgrade of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You will need to migrate your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to a new server which is using a compatible server collation. For more information, see the following:  
   
--   [Upgrade and Migrate Reporting Services](http://go.microsoft.com/fwlink/?LinkId=233227)  
+-   [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [Selecting a SQL Server Collation](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [Selecting a SQL Server Collation](https://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

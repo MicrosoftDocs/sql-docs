@@ -4,26 +4,24 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords: 
   - "sql12.portal.DevRef.f1"
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Developer Reference for SQL Server 2014
+
   The following features and technologies allow you to develop applications that access data in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
 ## Programming Reference Sections  
+
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Native XML](http://technet.microsoft.com/library/ms191274.aspx)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Native XML](https://technet.microsoft.com/library/ms191274.aspx)  
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQL Server Native Client Programming](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
@@ -58,12 +56,13 @@ manager: craigg
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Reporting Services Developer's Guide](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## Other Programming Resources  
+
  Developing a data-access application may require you to use one or more of the following technologies:  
   
- [Accessing Data in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=129902)  
+ [Accessing Data in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  
   
- [SQL Server Driver for PHP](http://go.microsoft.com/fwlink/?LinkID=119889)  
+ [SQL Server Driver for PHP](https://go.microsoft.com/fwlink/?LinkID=119889)  
   
- [JDBC](http://go.microsoft.com/fwlink/?LinkId=129903)  
+ [JDBC](https://go.microsoft.com/fwlink/?LinkId=129903)  
   
   

@@ -1,13 +1,11 @@
 ---
 title: "Row-Level Security | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2017"
+ms.date: "11/06/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: "security"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "access control predicates"
@@ -16,27 +14,28 @@ helpviewer_keywords:
   - "row level security described"
   - "predicate based security"
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 47
-author: CarlRabeler
-ms.author: carlraba
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Row-Level Security
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
   
- Row-Level Security enables customers to control access to rows in a database table based on the characteristics of the user executing a query (e.g., group membership or execution context).  
+ Row-Level Security enables customers to control access to rows in a database table based on the characteristics of the user executing a query (for example, group membership or execution context).  
   
- Row-Level Security (RLS) simplifies the design and coding of security in your application. RLS enables you to implement restrictions on data row access. For example ensuring that workers can access only those data rows that are pertinent to their department, or restricting a customer's data access to only the data relevant to their company.  
+ Row-Level Security (RLS) simplifies the design and coding of security in your application. RLS helps you implement restrictions on data row access. For example, you can ensure that workers access only those data rows that are pertinent to their department, or restrict customers' data access to only the data relevant to their company.  
   
  The access restriction logic is located in the database tier rather than away from the data in another application tier. The database system applies the access restrictions every time that data access is attempted from any tier. This makes your security system more reliable and robust by reducing the surface area of your security system.  
   
- Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+ Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
+> [!NOTE]
+> Azure SQL Data Warehouse supports filter predicates only. Block predicates aren't currently supported in Azure SQL DAta Warehouse.
 
 ##  <a name="Description"></a> Description  
  RLS supports two types of security predicates.  
@@ -45,9 +44,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 -   Block predicates explicitly block write operations (AFTER INSERT, AFTER UPDATE, BEFORE UPDATE, BEFORE DELETE) that violate the predicate.  
   
- Access to row-level data in a table is restricted by a security predicate defined as an inline table-valued function. The function is then invoked and enforced by a security policy. For filter predicates, there is no indication to the application that rows have been filtered from the result set; if all rows are filtered, then a null set will be returned. For block predicates, any operations that violate the predicate will fail with an error.  
+ Access to row-level data in a table is restricted by a security predicate defined as an inline table-valued function. The function is then invoked and enforced by a security policy. For filter predicates, the application is unaware of rows that are filtered from the result set; if all rows are filtered, then a null set will be returned. For block predicates, any operations that violate the predicate will fail with an error.  
   
- Filter predicates are applied while reading data from the base table, and it affects all get operations: **SELECT**, **DELETE** (i.e. user cannot delete rows that are filtered), and **UPDATE** (i.e. user cannot update rows that are filtered, although it is possible to update rows in such way that they will be subsequently filtered). Block predicates affect all write operations.  
+ Filter predicates are applied while reading data from the base table, and they affect all get operations: **SELECT**, **DELETE** (the user cannot delete rows that are filtered), and **UPDATE** (the user cannot update rows that are filtered, although it is possible to update rows in such way that they will be filtered afterward). Block predicates affect all write operations.  
   
 -   AFTER INSERT and AFTER UPDATE predicates can prevent users from updating rows to values that violate the predicate.  
   
@@ -59,7 +58,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 -   You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON`, then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need **SELECT** or **EXECUTE** permissions on these additional tables and functions in order to query the target table.
   
--   You may issue a query against a table that has a security predicate defined but disabled. Any rows that would have been filtered or blocked are not affected.  
+-   You may issue a query against a table that has a security predicate defined but disabled. Any rows that are filtered or blocked are not affected.  
   
 -   If the dbo user, a member of the **db_owner** role, or the table owner queries against a table that has a security policy defined and enabled, the rows are filtered or blocked as defined by the security policy.  
   
@@ -73,13 +72,13 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
  Filter predicates have the following behavior:  
   
--   Define a security policy that filters the rows of a table. The application is unaware that any rows have been filtered for **SELECT**, **UPDATE**, and **DELETE** operations, including situations where all the rows have been filtered out. The application can **INSERT** any rows, regardless of whether or not they will be filtered during any other operation.  
+-   Define a security policy that filters the rows of a table. The application is unaware of any rows that are filtered for **SELECT**, **UPDATE**, and **DELETE** operations, including situations where all the rows are filtered out. The application can **INSERT** any rows, regardless of whether they will be filtered during any other operation.  
   
  Block predicates have the following behavior:  
   
 -   Block predicates for UPDATE are split into separate operations for BEFORE and AFTER. Consequently, you cannot, for example, block users from updating a row to have a value higher than the current one. If this kind of logic is required, you must use triggers with the DELETED and INSERTED intermediate tables to reference the old and new values together.  
   
--   The optimizer will not check an AFTER UPDATE block predicate if none of the columns used by the predicate function were changed. For example: Alice should not be able to change a salary to be greater than 100,000, but she should be able to change the address of an employee whose salary is already greater than 100,000 (and thus already violates the predicate).  
+-   The optimizer will not check an AFTER UPDATE block predicate if none of the columns used by the predicate function were changed. For example: Alice should not be able to change a salary to be greater than 100,000, but she should be able to change the address of an employee whose salary is already greater than 100,000 (because it already violates the predicate).  
   
 -   No changes have been made to the bulk APIs, including BULK INSERT. This means that block predicates AFTER INSERT will apply to bulk insert operations just as they would regular insert operations.  
   
@@ -91,11 +90,11 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 -   A bank can create a policy to restrict access to rows of financial data based on the employee's business division, or based on the employee's role within the company.  
   
--   A multi-tenant application can create a policy to enforce a logical separation of each tenant's data rows from every other tenant's rows. Efficiencies are achieved by the storage of data for many tenants in a single table. Of course, each tenant can see only its data rows.  
+-   A multi-tenant application can create a policy to enforce a logical separation of each tenant's data rows from every other tenant's rows. Efficiencies are achieved by the storage of data for many tenants in a single table. Each tenant can see only its data rows.  
   
  RLS filter predicates are functionally equivalent to appending a **WHERE** clause. The predicate can be as sophisticated as business practices dictate, or the clause can be as simple as `WHERE TenantId = 42`.  
   
- In more formal terms, RLS introduces predicate based access control. It features a flexible, centralized, predicate-based evaluation that can take into consideration metadata or any other criteria the administrator determines as appropriate. The predicate is used as a criterion to determine whether or not the user has the appropriate access to the data based on user attributes. Label-based access control can be implemented by using predicate-based access control.  
+ In more formal terms, RLS introduces predicate based access control. It features a flexible, centralized, predicate-based evaluation that can take into consideration metadata or any other criteria the administrator determines as appropriate. The predicate is used as a criterion to determine if the user has the appropriate access to the data based on user attributes. Label-based access control can be implemented by using predicate-based access control.  
   
   
 ##  <a name="Permissions"></a> Permissions  
@@ -118,11 +117,11 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 -   It is highly recommended to create a separate schema for the RLS objects (predicate function and security policy).  
   
--   The **ALTER ANY SECURITY POLICY** permission is intended for highly-privileged users (such as a security policy manager). The security policy manager does not require **SELECT** permission on the tables they protect.  
+-   The **ALTER ANY SECURITY POLICY** permission is intended for highly privileged users (such as a security policy manager). The security policy manager doesn't require **SELECT** permission on the tables they protect.  
   
 -   Avoid type conversions in predicate functions to avoid potential runtime errors.  
   
--   Avoid recursion in predicate functions wherever possible to avoid performance degradation. The query optimizer will try to detect direct recursions, but is not guaranteed to find indirect recursions (i.e., where a second function calls the predicate function).  
+-   Avoid recursion in predicate functions wherever possible to avoid performance degradation. The query optimizer will try to detect direct recursions, but is not guaranteed to find indirect recursions (that is, where a second function calls the predicate function).  
   
 -   Avoid using excessive table joins in predicate functions to maximize performance.  
   
@@ -138,7 +137,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
    
   
 ##  <a name="SecNote"></a> Security Note: Side-Channel Attacks  
- **Malicious security policy manager:** It is important to observe that a malicious security policy manager, with sufficient permissions to create a security policy on top of a sensitive column and having permission to create or alter inline table valued functions, can collude with another user that has select permissions on a table to perform data exfiltration by maliciously creating inline table valued functions designed to use side channel attacks to infer data. Such attacks would require collusion (or excessive permissions granted to a malicious user) and would likely require several iterations of modifying the policy (requiring permission to remove the predicate in order to break the schema binding), modifying the inline table valued functions, and repeatedly running select statements on the target table. It is strongly recommended to limit permissions as it is necessary and to monitor for any suspicious activity such as constantly changing policies and inline table valued functions related to row-level security.  
+ **Malicious security policy manager:** It is important to observe that a malicious security policy manager, with sufficient permissions to create a security policy on top of a sensitive column and having permission to create or alter inline table-valued functions, can collude with another user who has select permissions on a table to perform data exfiltration by maliciously creating inline table-valued functions designed to use side channel attacks to infer data. Such attacks would require collusion (or excessive permissions granted to a malicious user) and would likely require several iterations of modifying the policy (requiring permission to remove the predicate in order to break the schema binding), modifying the inline table-valued functions, and repeatedly running select statements on the target table. We recommend you limit permissions as necessary and monitor for any suspicious activity, such as constantly changing policies and inline table-valued functions related to row-level security.  
   
  **Carefully crafted queries:** It is possible to cause information leakage through the use of carefully crafted queries. For example, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` would let a malicious user know that John Doe's salary is $100,000. Even though there is a security predicate in place to prevent a malicious user from directly querying other people's salary, the user can determine when the query returns a divide-by-zero exception.  
    
@@ -146,23 +145,23 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ##  <a name="Limitations"></a> Cross-Feature Compatibility  
  In general, row-level security will work as expected across features. However, there are a few exceptions. This section documents several notes and caveats for using row-level security with certain other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **DBCC SHOW_STATISTICS** reports statistics on unfiltered data, and thus can leak information otherwise protected by a security policy. For this reason, in order to view a statistics object for a table with a row-level security policy, the user must own the table or the user must be a member of the sysadmin fixed server role, the db_owner fixed database role, or the db_ddladmin fixed database role.  
+-   **DBCC SHOW_STATISTICS** reports statistics on unfiltered data, and can leak information otherwise protected by a security policy. For this reason, in order to view a statistics object for a table with a row-level security policy, the user must own the table or the user must be a member of the sysadmin fixed server role, the db_owner fixed database role, or the db_ddladmin fixed database role.  
   
 -   **Filestream** RLS is incompatible with Filestream.  
   
--   **Polybase** RLS is incompatible with Polybase.  
+-   **PolyBase** RLS is incompatible with PolyBase.  
   
 -   **Memory-Optimized Tables**The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see the **Row-Level Security in Memory Optimized Tables** section in [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Indexed views** In general, security policies can be created on top of views, and views can be created on top of tables that are bound by security policies. However, indexed views cannot be created on top of tables that have a security policy, because row lookups via the index would bypass the policy.  
   
--   **Change Data Capture** Change Data Capture can leak entire rows that should be filtered to members of **db_owner** or users who are members of the "gating" role specified when CDC is enabled for a table (note: you can explicitly set this to **NULL** to enable all users to access the change data). In effect, **db_owner** and members of this gating role can see all data changes on a table, even if there is a security policy on the table.  
+-   **Change Data Capture** Change Data Capture can leak entire rows that should be filtered to members of **db_owner** or users who are members of the "gating" role specified when CDC is enabled for a table (note: you can explicitly set this function to **NULL** to enable all users to access the change data). In effect, **db_owner** and members of this gating role can see all data changes on a table, even if there is a security policy on the table.  
   
 -   **Change Tracking** Change Tracking can leak the primary key of rows that should be filtered to users with both **SELECT** and **VIEW CHANGE TRACKING** permissions. Actual data values are not leaked; only the fact that column A was updated/inserted/deleted for the row with B primary key. This is problematic if the primary key contains a confidential element, such as a Social Security Number. However, in practice, this **CHANGETABLE** is almost always joined with the original table in order to get the latest data.  
   
 -   **Full-Text Search** A performance hit is expected for queries using the following Full-Text Search and Semantic Search functions, because of an extra join introduced to apply row-level security and avoid leaking the primary keys of rows that should be filtered: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
--   **Columnstore Indexes** RLS is compatible with both clustered and non-clustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan such that it does not use batch mode.  
+-   **Columnstore Indexes** RLS is compatible with both clustered and non-clustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.  
   
 -   **Partitioned Views** Block predicates cannot be defined on partitioned views, and partitioned views cannot be created on top of tables that use block predicates. Filter predicates are compatible with partitioned views.  
   
@@ -172,10 +171,13 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ##  <a name="CodeExamples"></a> Examples  
   
 ###  <a name="Typical"></a> A. Scenario for users who authenticate to the database  
- This short example creates three users, creates and populates a table with 6 rows, then creates an inline table valued function and a security policy for the table. The example shows how select statements are filtered for the various users.  
+ This short example creates three users, creates and populates a table with six rows, and then creates an inline table-valued function and a security policy for the table. The example shows how select statements are filtered for the various users.  
   
  Create three user accounts that will demonstrate different access capabilities.  
-  
+
+> [!NOTE]
+> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, so you must CREATE LOGIN for each user beforehand. Later, you will log in as the appropriate user to test this behavior.
+
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
@@ -194,7 +196,7 @@ CREATE TABLE Sales
     );  
 ```  
   
- Populate the table with 6 rows of data, showing 3 orders for each sales representative.  
+ Populate the table with six rows of data, showing three orders for each sales representative.  
   
 ```  
 INSERT Sales VALUES   
@@ -216,7 +218,7 @@ GRANT SELECT ON Sales TO Sales1;
 GRANT SELECT ON Sales TO Sales2;  
 ```  
   
- Create a new schema, and an inline table valued function. The function returns 1 when a row in the SalesRep column is the same as the user executing the query (`@SalesRep = USER_NAME()`) or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).  
+ Create a new schema, and an inline table-valued function. The function returns 1 when a row in the SalesRep column is the same as the user executing the query (`@SalesRep = USER_NAME()`) or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).  
   
 ```  
 CREATE SCHEMA Security;  
@@ -230,6 +232,9 @@ AS
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
 ```  
   
+> [!NOTE]
+> Azure SQL Data Warehouse doesn't support USER_NAME(), hence use SYSTEM_USER instead.
+
  Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.  
   
 ```  
@@ -254,8 +259,10 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;   
 REVERT;  
 ```  
-  
- The Manager should see all 6 rows. The Sales1 and Sales2 users should only see their own sales.  
+> [!NOTE]
+> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, so log in as the appropriate user to test the above behavior.
+
+ The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.  
   
  Alter the security policy to disable the policy.  
   
@@ -264,11 +271,14 @@ ALTER SECURITY POLICY SalesFilter
 WITH (STATE = OFF);  
 ```  
   
- Now the Sales1 and Sales2 users can see all 6 rows.  
+ Now the Sales1 and Sales2 users can see all six rows.  
   
   
 ###  <a name="MidTier"></a> B. Scenario for users who connect to the database through a middle-tier application  
- This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary .  
+> [!NOTE]
+> This example isn't applicable to Azure SQL Data Warehouse since both SESSION_CONTEXT and block predicates aren't currently supported.
+
+This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary.  
   
  Create a simple table to hold data.  
   
@@ -281,7 +291,7 @@ CREATE TABLE Sales (
 );  
 ```  
   
- Populate the table with 6 rows of data, showing 3 orders for each application user.  
+ Populate the table with six rows of data, showing three orders for each application user.  
   
 ```  
 INSERT Sales VALUES   
@@ -304,8 +314,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- Create a new schema and predicate function, which will use the application user ID stored in **SESSION_CONTEXT** to filter rows.  
-  
+ Create a new schema and predicate function, which will use the application user ID stored in **SESSION_CONTEXT** to filter rows.
+
 ```  
 CREATE SCHEMA Security;  
 GO  

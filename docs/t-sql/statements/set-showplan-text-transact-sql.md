@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SHOWPLAN_TEXT"
@@ -26,9 +24,8 @@ helpviewer_keywords:
   - "stopping statement execution"
   - "estimated execution information [SQL Server]"
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET SHOWPLAN_TEXT (Transact-SQL)
@@ -50,7 +47,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  When SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns execution information for each [!INCLUDE[tsql](../../includes/tsql-md.md)] statement without executing it. After this option is set ON, execution plan information about all subsequent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements is returned until the option is set OFF. For example, if a CREATE TABLE statement is executed while SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message from a subsequent SELECT statement involving that same table informing the user that the specified table does not exist. Therefore, subsequent references to this table fail. When SET SHOWPLAN_TEXT is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes statements without generating a report with execution plan information.  
   
- SET SHOWPLAN_TEXT is intended to return readable output for Microsoft Win32 command prompt applications such as the **osql** utility. SET SHOWPLAN_ALL returns more detailed output intended to be used with programs designed to handle its output.  
+ SET SHOWPLAN_TEXT is intended to return readable output for Microsoft Win32 command prompt applications such as the **sqlcmd** utility. SET SHOWPLAN_ALL returns more detailed output intended to be used with programs designed to handle its output.  
   
  SET SHOWPLAN_TEXT and SET SHOWPLAN_ALL cannot be specified in a stored procedure. They must be the only statements in a batch.  
   

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models [Analysis Services], feature selections"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "clustering algorithms [Analysis Services]"
   - "coding [Data Mining]"
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Feature Selection (Data Mining)
   *Feature selection* is a term commonly used in data mining to describe the tools and techniques available for reducing inputs to a manageable size for processing and analysis. Feature selection implies not only *cardinality reduction*, which means imposing an arbitrary or predefined cutoff on the number of attributes that can be considered when building a model, but also the choice of attributes, meaning that either the analyst or the modeling tool actively selects or discards attributes based on their usefulness for analysis.  
@@ -87,7 +84,7 @@ manager: "mblythe"
 #### Bayesian with K2 Prior  
  Analysis Services provides two feature selection scores that are based on Bayesian networks. A Bayesian network is a *directed* or *acyclic* graph of states and transitions between states, meaning that some states are always prior to the current state, some states are posterior, and the graph does not repeat or loop. By definition, Bayesian networks allow the use of prior knowledge. However, the question of which prior states to use in calculating probabilities of later states is important for algorithm design, performance, and accuracy.  
   
- The K2 algorithm for learning from a Bayesian network was developed by Cooper and Herskovits and is often used in data mining. It is scalable and can analyze multiple variables, but requires ordering on variables used as input. For more information, see [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) by Chickering, Geiger, and Heckerman.  
+ The K2 algorithm for learning from a Bayesian network was developed by Cooper and Herskovits and is often used in data mining. It is scalable and can analyze multiple variables, but requires ordering on variables used as input. For more information, see [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) by Chickering, Geiger, and Heckerman.  
   
  This scoring method is available for discrete and discretized attributes.  
   
@@ -96,7 +93,7 @@ manager: "mblythe"
   
  The Bayesian Dirichlet Equivalent with Uniform Prior (BDEU) method assumes a special case of the Dirichlet distribution, in which a mathematical constant is used to create a fixed or uniform distribution of prior states. The BDE score also assumes likelihood equivalence, which means that the data cannot be expected to discriminate equivalent structures. In other words, if the score for If A Then B is the same as the score for If B Then A, the structures cannot be distinguished based on the data, and causation cannot be inferred.  
   
- For more information about Bayesian networks and the implementation of these scoring methods, see [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885).  
+ For more information about Bayesian networks and the implementation of these scoring methods, see [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885).  
   
 ### Feature Selection Methods used by Analysis Services Algorithms  
  The following table lists the algorithms that support feature selection, the feature selection methods used by the algorithm, and the parameters that you set to control feature selection behavior:  

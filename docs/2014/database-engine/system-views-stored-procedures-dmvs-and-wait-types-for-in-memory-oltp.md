@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
-caps.latest.revision: 27
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP
@@ -28,7 +24,7 @@ manager: craigg
 |[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Check if a stored procedure is natively compiled.|**uses_native_compilation** column.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Check if a stored procedure is natively compiled.|**uses_native_compilation** column.|  
 |[sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Check if a table is memory-optimized.|**is_memory_optimized** column.|  
-|[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Check if a table is memory-optimized, and check a table’s durability setting.|**durability**, **durability_desc**, and **is_memory_optimized** columns.|  
+|[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Check if a table is memory-optimized, and check a table's durability setting.|**durability**, **durability_desc**, and **is_memory_optimized** columns.|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Show the hash indexes of a memory-optimized table.|In-memory OLTP specific.|  
   
 ### Metadata Functions  

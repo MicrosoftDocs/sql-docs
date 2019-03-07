@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "system requirements [SMO]"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "SQL Server Management Objects, system requirements"
   - "requirements [SMO]"
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
-caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # System Requirements
@@ -29,6 +26,6 @@ manager: craigg
  To develop applications by using SMO, you must have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 installed.  
   
 ## See Also  
- [Overview of SQL Server Installation](http://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
+ [Overview of SQL Server Installation](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

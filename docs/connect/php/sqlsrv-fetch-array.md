@@ -5,9 +5,7 @@ ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_fetch_array"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "retrieving data, as an array"
   - "API Reference, sqlsrv_fetch_array"
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg

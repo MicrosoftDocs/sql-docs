@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, running"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "packages [Integration Services], running"
   - "SQL Server Integration Services packages, running"
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
-caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Run a Package in SQL Server Data Tools

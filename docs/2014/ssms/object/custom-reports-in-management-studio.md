@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.summary.new.custom.report.f1"
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Custom Reports in Management Studio
@@ -69,7 +65,7 @@ manager: craigg
 >  Any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement can be embedded in and executed from a report. Running a report under a high-privileged user account makes it possible for any of these embedded instructions to execute without challenge.  
   
 ## Report Samples  
- [Report samples](http://go.microsoft.com/fwlink/?LinkId=81792), including the standard reports that are created by [!INCLUDE[msCoName](../../includes/msconame-md.md)], are available for download. These samples may be modified by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Report samples](https://go.microsoft.com/fwlink/?LinkId=81792), including the standard reports that are created by [!INCLUDE[msCoName](../../includes/msconame-md.md)], are available for download. These samples may be modified by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## See Also  
  [Add a Custom Report to Management Studio](add-a-custom-report-to-management-studio.md)   

@@ -1,14 +1,12 @@
 ---
 title: Troubleshoot SQL Server on Linux | Microsoft Docs
-description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
-author: annashres 
-ms.author: anshrest 
+description: Provides troubleshooting tips for using SQL Server on Linux.
+author: rothja 
+ms.author: jroth 
 manager: craigg
-ms.date: 04/30/2018
-ms.topic: article
+ms.date: 05/01/2018
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
@@ -90,23 +88,23 @@ You can stop or restart the SQL Server service as needed using the following com
 
 ## Access the log files
    
-The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in ‘superuser’ mode to browse this directory.
+The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in 'superuser' mode to browse this directory.
 
 The installer logs here: /var/opt/mssql/setup-< time stamp representing time of install>
-You can browse the errorlog files with any UTF-16 compatible tool like ‘vim’ or ‘cat’ like this: 
+You can browse the errorlog files with any UTF-16 compatible tool like 'vim' or 'cat' like this: 
 
    ```bash
    sudo cat errorlog
    ```
 
-If you prefer, you can also convert the files to UTF-8 to read them with ‘more’ or ‘less’ with the following command:
+If you prefer, you can also convert the files to UTF-8 to read them with 'more' or 'less' with the following command:
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## Extended events
 
-Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/en-us/library/bb630282.aspx):
+Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/library/bb630282.aspx):
 
 ## Crash dumps 
 
@@ -115,7 +113,7 @@ Look for dumps in the log directory in Linux. Check under the /var/opt/mssql/log
 For Core dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
 For SQL dumps 
    ```bash
@@ -188,6 +186,14 @@ As a last resort, you can choose to rebuild the master and model databases back 
    sudo systemctl start mssql-server
    ```
 
+## Improve performance
+
+There are many factors that affect performance, including database design, hardware, and workload demands. If you are looking to improve performance, start by reviewing the best practices in the article, [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md). Then explore some of the avilable tools for troubleshooting performance problems.
+
+- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [System dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Performance Dashboard in SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+
 ## Common issues
 
 1. You cannot connect to your remote SQL Server instance.
@@ -196,7 +202,7 @@ As a last resort, you can choose to rebuild the master and model databases back 
 
 2. ERROR: Hostname must be 15 characters or less.
 
-   This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
+   This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
 
 3. Resetting the system administration (SA) password.
 
@@ -229,7 +235,7 @@ As a last resort, you can choose to rebuild the master and model databases back 
    ```
 
    Resources:
-   [Special characters](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   [Special characters](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

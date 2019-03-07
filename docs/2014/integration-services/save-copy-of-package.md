@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.savecopyas.f1"
 helpviewer_keywords: 
   - "Save Copy of Package dialog box"
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
-caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Save Copy of Package
@@ -51,10 +48,10 @@ manager: craigg
  If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse **(…)** button and locate the folder in which to store the package.  
+ Type the package path, or click the browse **(...)** button and locate the folder in which to store the package.  
   
  **Protection level**  
- Click the browse **(…)** button and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Click the browse **(...)** button and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## See Also  
  [Import Package Dialog Box UI Reference](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   

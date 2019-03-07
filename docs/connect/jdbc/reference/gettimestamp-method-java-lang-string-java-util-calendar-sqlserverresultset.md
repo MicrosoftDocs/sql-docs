@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.getTimestamp (java.lang.String, java.util.Calendar)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 44474000-8951-49ee-93a5-c8cb879eaf55
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -51,7 +48,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String colName,
 ## Remarks  
  This getTimestamp method is specified by the getTimestamp method in the java.sql.ResultSet interface.  
   
- This method returns values only from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime and smalldatetime columns.  
+ This method returns values only from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime and smalldatetime columns.  
   
 ## See Also  
  [getTimestamp Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   

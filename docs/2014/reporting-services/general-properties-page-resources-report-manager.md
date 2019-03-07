@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
-caps.latest.revision: 25
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # General Properties Page, Resources (Report Manager)
   Use the General properties page for resources to rename, delete, move, or replace a resource. Information about who added the resource or modified the properties appears at the top of the page.  
@@ -33,7 +30,7 @@ manager: "mblythe"
   
 ## Options  
  **Name**  
- Specify a name for the resource. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the characters ; ? : @ & = + , $ / * \< > | " or / when specifying a name.  
+ Specify a name for the resource. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the characters ; ? : \@ & = + , $ / * \< > | " or / when specifying a name.  
   
  **Description**  
  Type a description of the resource. This description appears in the Contents page to users who have permission to access the resource.  

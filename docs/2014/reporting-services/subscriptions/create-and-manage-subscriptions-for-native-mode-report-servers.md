@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "standard subscriptions [Reporting Services]"
   - "subscriptions [Reporting Services], standard"
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 46
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   A standard subscription is one that is created by individual users who want to have a report delivered through e-mail or to a shared folder. A standard subscription is always defined through the report on which it is based.  
@@ -150,7 +147,7 @@ manager: "mblythe"
 >  A report server administrator cannot manage from one place all the individual subscriptions that are in use on a given report server. However, report server administrators can access each individual subscription to modify or delete it.  
   
 ##  <a name="bkmk_delete_subscription"></a> To Delete a Subscription  
- To delete a subscription”  
+ To delete a subscription"  
   
 1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md).  
   

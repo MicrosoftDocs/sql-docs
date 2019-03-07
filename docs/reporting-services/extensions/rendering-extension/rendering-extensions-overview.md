@@ -1,27 +1,18 @@
 ---
 title: "Rendering Extensions Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "extensions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: extensions
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "formats [Reporting Services], rendering extensions"
   - "rendering extensions [Reporting Services], about extensions"
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: 41
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Rendering Extensions Overview
   A rendering extension is a component or module of a report server that transforms report data and layout information into a device-specific format. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes seven rendering extensions: HTML, Excel, Word, CSV or Text, XML, Image, and PDF. You can create additional rendering extensions to generate reports in other formats.  
@@ -59,7 +50,7 @@ manager: "kfile"
   
  Writing a custom rendering extension is difficult. A rendering extension must typically support all possible combinations of report elements and requires that you implement hundreds of classes, interfaces, methods, and properties. If you must render a report in a format that is not included with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and decide to write your own managed code implementation of a rendering extension, the rendering extension code must implement the **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** interface, which is required by the report server.  
   
- For supplemental documentation and whitepapers on [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], see the latest technical resources at the [Reporting Services Web site](http://go.microsoft.com/fwlink/?LinkId=19951).  
+ For supplemental documentation and whitepapers on [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], see the latest technical resources at the [Reporting Services Web site](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## See Also  
  [Implementing a Rendering Extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

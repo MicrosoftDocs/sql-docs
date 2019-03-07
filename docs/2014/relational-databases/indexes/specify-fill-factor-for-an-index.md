@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "fill factor [SQL Server]"
   - "page splits [SQL Server]"
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
-caps.latest.revision: 45
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Specify Fill Factor for an Index
@@ -63,11 +59,11 @@ manager: craigg
   
 #### To specify a fill factor by using Table Designer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index’s fill factor.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index's fill factor.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Right-click the table on which you want to specify an index’s fill factor and select **Design**.  
+3.  Right-click the table on which you want to specify an index's fill factor and select **Design**.  
   
 4.  On the **Table Designer** menu, click **Indexes/Keys**.  
   
@@ -77,15 +73,15 @@ manager: craigg
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, select **Save***table_name*.  
+8.  On the **File** menu, select **Save**_table_name_.  
   
 #### To specify a fill factor in an index by using Object Explorer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index’s fill factor.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index's fill factor.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table on which you want to specify an index’s fill factor.  
+3.  Click the plus sign to expand the table on which you want to specify an index's fill factor.  
   
 4.  Click the plus sign to expand the **Indexes** folder.  
   

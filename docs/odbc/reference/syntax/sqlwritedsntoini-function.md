@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLWriteDSNToIni"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLWriteDSNToIni [ODBC]"
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,8 +33,8 @@ manager: craigg
 ```  
   
 BOOL SQLWriteDSNToIni(  
-     LPCSTR   lpszDSN,  
-     LPCSTR   lpszDriver);  
+     LPCSTR   lpszDSN,  
+     LPCSTR   lpszDriver);  
 ```  
   
 ## Arguments  

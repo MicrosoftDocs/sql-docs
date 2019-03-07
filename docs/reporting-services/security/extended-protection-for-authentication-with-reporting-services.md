@@ -1,34 +1,27 @@
 ---
 title: "Extended Protection for Authentication with Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Extended Protection for Authentication with Reporting Services
 
   Extended Protection is a set of enhancements to recent versions of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system. Extended protection enhances how credentials and authentication can be protected by applications. The feature itself does not directly provide protection against specific attacks such as credential forwarding, but it provides an infrastructure for applications such as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to enforce Extended Protection for Authentication.  
   
- The main authentication enhancements that are part of extended protection are service binding and channel binding. Channel binding uses a channel binding token (CBT), to verify that the channel established between two end points was not compromised. Service binding uses Service Principal Names (SPN) to validate the intended destination of authentication tokens. For more background information about extended protection, see [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922).  
+ The main authentication enhancements that are part of extended protection are service binding and channel binding. Channel binding uses a channel binding token (CBT), to verify that the channel established between two end points was not compromised. Service binding uses Service Principal Names (SPN) to validate the intended destination of authentication tokens. For more background information about extended protection, see [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922).  
   
 SQL Server Reporting Services (SSRS) supports and enforces Extended Protection that has been enabled in the operating system and configured in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication and could therefore benefit from Extended Protection support in the operating system and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extended protection features.  
   
 > [!IMPORTANT]  
->  By default, Windows does not enable Extended Protection. For information about how to enable Extended Protection in Windows, see [Extended Protection for Authentication](http://go.microsoft.com/fwlink/?LinkID=178431). Both the operating system and client authentication stack must support Extended Protection so that authentication succeeds. For older operating systems you may need to install more than one update for a complete, Extended Protection ready computer. For information on recent developments with Extended Protection, see [updated information with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=183362).  
+>  By default, Windows does not enable Extended Protection. For information about how to enable Extended Protection in Windows, see [Extended Protection for Authentication](https://go.microsoft.com/fwlink/?LinkID=178431). Both the operating system and client authentication stack must support Extended Protection so that authentication succeeds. For older operating systems you may need to install more than one update for a complete, Extended Protection ready computer. For information on recent developments with Extended Protection, see [updated information with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=183362).  
 
 ## Reporting Services Extended Protection Overview
 
@@ -39,12 +32,12 @@ SSRS supports and enforces extended protection that has been enabled in the oper
   
  Common issues that occur because of changes in extended protection settings or incorrectly configured settings are not be exposed with obvious error messages or dialog windows. Issues related to extended protection configuration and compatibility result in authentication failures and errors in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] trace logs.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Some data access technologies may not support extended protection. A data access technology is used to connect to SQL Server data sources and to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database. Failure of a data access technology to support extended protection impacts [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the following ways:  
->   
+> 
 >  -   The SQL Server that runs the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database cannot have extended protection enabled or the report server will not successfully connect to the catalog database and return authentication errors.  
 > -   SQL Servers that are used as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report data sources cannot have extended protection enabled or tries by the report server to connect to the report data source will fail and return authentication errors.  
->   
+> 
 >  The documentation for a data access technology should have information about support for extended protection.  
   
 ### Upgrade  
@@ -94,14 +87,14 @@ SSRS supports and enforces extended protection that has been enabled in the oper
 |Scenario|Scenario Diagram|How to secure|  
 |--------------|----------------------|-------------------|  
 |Indirect HTTP communication.<br /><br /> Gateway will enforce Client to Gateway channel binding. There is a Gateway to report server Service Binding.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Gateway device|Set **RSWindowsExtendedProtectionLevel** to **Allow** or **Require**.<br /><br /> Set **RSWindowsExtendedProtectionScenario** to **Any**.<br /><br /> <br /><br /> -Channel Binding from client to report server is not possible because the gateway impersonates a context and therefore creates a new NTLM token.<br /><br /> -There is no SSL from the Gateway to report server therefore channel binding cannot be enforced.<br /><br /> -Service Binding can be enforced.<br /><br /> -The Gateway device should be configured by your administrator to enforce channel binding.|  
-|Indirect HTTPS communication with a Secure Gateway. The Gateway will enforce Client to Gateway Channel Binding and the report server will enforce Gateway to report server Channel Binding.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Gateway device|Set **RSWindowsExtendedProtectionLevel** to **Allow** or **Require**.<br /><br /> Set **RSWindowsExtendedProtectionScenario** to **Direct**.<br /><br /> <br /><br /> -Channel Binding from client to report server is not possible because the gateway impersonates a context and therefore creates a new NTLM token.<br /><br /> -SSL from Gateway to the report sever means channel binding can be enforced.<br /><br /> -Service Binding is not required.<br /><br /> -The Gateway device should be configured by your administrator to enforce channel binding.|  
+|Indirect HTTPS communication with a Secure Gateway. The Gateway will enforce Client to Gateway Channel Binding and the report server will enforce Gateway to report server Channel Binding.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Gateway device|Set **RSWindowsExtendedProtectionLevel** to **Allow** or **Require**.<br /><br /> Set **RSWindowsExtendedProtectionScenario** to **Direct**.<br /><br /> <br /><br /> -Channel Binding from client to report server is not possible because the gateway impersonates a context and therefore creates a new NTLM token.<br /><br /> -SSL from Gateway to the report server means channel binding can be enforced.<br /><br /> -Service Binding is not required.<br /><br /> -The Gateway device should be configured by your administrator to enforce channel binding.|  
   
 ### Combination  
  This scenario describes Extranet or Internet environments where the client connects a Proxy. This is in combination with an intranet environment where a client connects to report server.  
   
 |Scenario|Scenario Diagram|How to secure|  
 |--------------|----------------------|-------------------|  
-|Indirect and direct access from client to report server service without SSL on either of the client to proxy or client to report sever connections.|1) Client application<br /><br /> 2) Report server<br /><br /> 3) Proxy<br /><br /> 4) Client application|Set **RSWindowsExtendedProtectionLevel** to **Allow** or **Require**.<br /><br /> Set **RSWindowsExtendedProtectionScenario** to **Any**.<br /><br /> <br /><br /> -Service Binding from client to report server can be enforced.<br /><br /> -The Proxy name must be known to the report server and the report server administrator should either create a URL reservation for it, with a host header or configure the Proxy name in the Windows registry entry **BackConnectionHostNames**.|  
+|Indirect and direct access from client to report server service without SSL on either of the client to proxy or client to report server connections.|1) Client application<br /><br /> 2) Report server<br /><br /> 3) Proxy<br /><br /> 4) Client application|Set **RSWindowsExtendedProtectionLevel** to **Allow** or **Require**.<br /><br /> Set **RSWindowsExtendedProtectionScenario** to **Any**.<br /><br /> <br /><br /> -Service Binding from client to report server can be enforced.<br /><br /> -The Proxy name must be known to the report server and the report server administrator should either create a URL reservation for it, with a host header or configure the Proxy name in the Windows registry entry **BackConnectionHostNames**.|  
 |Indirect and direct access from client to report server where the client establishes an SSL connection to the proxy or report server.|![RS_ExtendedProtection_CombinationSSL](../../reporting-services/security/media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Proxy<br /><br /> 4) Client application|Set **RSWindowsExtendedProtectionLevel** to **Allow** or **Require**.<br /><br /> Set **RSWindowsExtendedProtectionScenario** to **Proxy**.<br /><br /> <br /><br /> -Channel Binding can be used<br /><br /> -The Proxy name must be known to the report server and the report server administrator should either create a URL reservation for the proxy, with a host header or configure the Proxy name in the Windows registry entry **BackConnectionHostNames**.|  
   
 ## Configuring Reporting Rervices extended protection  
@@ -168,11 +161,11 @@ SSRS supports and enforces extended protection that has been enabled in the oper
 ## Next steps
 
 [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[Extended Protection for Authentication Overview](http://go.microsoft.com/fwlink/?LinkID=177943)   
-[Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft Security Advisory: Extended protection for authentication](http://go.microsoft.com/fwlink/?LinkId=179923)   
+[Extended Protection for Authentication Overview](https://go.microsoft.com/fwlink/?LinkID=177943)   
+[Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
+[Microsoft Security Advisory: Extended protection for authentication](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

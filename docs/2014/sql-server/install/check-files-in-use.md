@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Check Files In Use
@@ -24,7 +21,7 @@ manager: craigg
   
  To eliminate the requirement to restart your computer after installation, Setup displays a list of processes that are locking files. Stop or end the processes and applications in the list. Then click **Refresh check** to rerun the check. Click **Stop check** to end a check that is running. If locked files are not found, the table is empty. When all locked processes have been closed or stopped, click **Next** to continue.  
   
- Setup logs the information in the log files. For more information about how to view the log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) and [How to: Read a SQL Server Setup Log File](http://go.microsoft.com/fwlink/?LinkID=134490).  
+ Setup logs the information in the log files. For more information about how to view the log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) and [How to: Read a SQL Server Setup Log File](https://go.microsoft.com/fwlink/?LinkID=134490).  
   
  The following information is included in the log file:  
   

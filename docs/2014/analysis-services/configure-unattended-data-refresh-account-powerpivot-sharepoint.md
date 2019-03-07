@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure the PowerPivot Unattended Data Refresh Account (PowerPivot for SharePoint)
   The PowerPivot unattended data refresh account is a designated account for running PowerPivot data refresh jobs in a SharePoint farm. By configuring it, you enable the **Use the data refresh account configured by the administrator** option in a data refresh schedule page (see below). Workbook authors who schedule data refresh can choose this option if they want to use the PowerPivot unattended data refresh account to run a data refresh job. For more information about how to view the Credentials options in a data refresh schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
@@ -49,7 +46,7 @@ manager: "mblythe"
   
  You must decide in advance which Windows domain user account to use as the PowerPivot unattended data refresh account. This should be an account that is created specifically for this purpose so that you can monitor how it is used.  
   
- You must know the application identity of the PowerPivot System Service. You will give this service account **Full Control** permissions over the unattended data refresh account when you create the target application for it in step 1. These permissions allow the PowerPivot System Service to retrieve the credentials of the unattended data refresh account during data refresh. To get the required service account information, open the **Configure service accounts** page in Central Administration and select the service application pool used by the PowerPivot service application. By default, this is the **Service Application Pool – SharePoint Web Services System**.  
+ You must know the application identity of the PowerPivot System Service. You will give this service account **Full Control** permissions over the unattended data refresh account when you create the target application for it in step 1. These permissions allow the PowerPivot System Service to retrieve the credentials of the unattended data refresh account during data refresh. To get the required service account information, open the **Configure service accounts** page in Central Administration and select the service application pool used by the PowerPivot service application. By default, this is the **Service Application Pool - SharePoint Web Services System**.  
   
 ## Configure the unattended PowerPivot data refresh account  
  You can configure only one PowerPivot unattended data refresh account for each PowerPivot service application. Account information is stored in Secure Store Service in a target application that is set to a predefined Windows domain user account. Once the target application is created, you can specify it as the PowerPivot data refresh account in the configuration pages of a PowerPivot service application.  
@@ -142,7 +139,7 @@ manager: "mblythe"
   
  For this reason, you must grant the PowerPivot unattended data refresh account read-only permissions on all of the external data sources that are used in any data refresh operation that runs under the unattended account.  
   
- If you are an administrator of the data sources used in your organization, you can create a login and assign the necessary permissions. Otherwise, you must contact the data owners and provide the account information. Be sure to specify the Windows domain user account that maps to the PowerPivot unattended data refresh account. This is the account you specified in “(Step 1): Create a target application and set the credentials” in this topic.  
+ If you are an administrator of the data sources used in your organization, you can create a login and assign the necessary permissions. Otherwise, you must contact the data owners and provide the account information. Be sure to specify the Windows domain user account that maps to the PowerPivot unattended data refresh account. This is the account you specified in "(Step 1): Create a target application and set the credentials" in this topic.  
   
 ###  <a name="bkmk_verify"></a> Step 5: Verify account availability in data refresh configuration pages  
   
@@ -156,7 +153,7 @@ manager: "mblythe"
   
  If an error occurs, you can click **Configure schedule** in the data refresh history page to try different credentials. You might also need to inspect the data source connection information in the original workbook to view the connection string that is used during data refresh. The connection string will provide information about the server location and database that you can use to troubleshoot the problem.  
   
- For more information about troubleshooting, see [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/p/?LinkID=223279) on the TechNet Wiki.  
+ For more information about troubleshooting, see [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/p/?LinkID=223279) on the TechNet Wiki.  
   
 ##  <a name="bkmk_use"></a> Using the PowerPivot Unattended Data Refresh Account  
  Of the three credential options in PowerPivot data refresh scheduling page, only the first one corresponds to the unattended data refresh account. Be sure to select this option when setting up the data refresh schedule.  

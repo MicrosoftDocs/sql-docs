@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Virtual Memory Manager"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "manual memory options [SQL Server]"
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: 76
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Server Memory Server Configuration Options
@@ -32,7 +28,7 @@ manager: craigg
  The default setting for **min server memory** is 0, and the default setting for **max server memory** is 2147483647 MB. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources.  
   
 > [!NOTE]  
->  Setting **max server memory** to the minimum value can severely reduce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and even prevent it from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **–f** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](database-engine-service-startup-options.md).  
+>  Setting **max server memory** to the minimum value can severely reduce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and even prevent it from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **-f** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](database-engine-service-startup-options.md).  
   
  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using memory dynamically, it queries the system periodically to determine the amount of free memory. Maintaining this free memory prevents the operating system (OS) from paging. If less memory is free, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] releases memory to the OS. If more memory is free, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may allocate more memory. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds memory only when its workload requires more memory; a server at rest does not increase the size of its virtual address space.  
   
@@ -81,9 +77,9 @@ manager: craigg
 3.  If **Maximize data throughput for network applications** is selected, choose any other option, click **OK**, and then close the rest of the dialog boxes.  
   
 ## Lock Pages in Memory  
- This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The SQL Server **Lock Pages in Memory** option is set to ON in 32-bit and 64-bit instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows "Locked Pages in Memory” (LPIM) user right. In earlier versions of SQL Server, setting the Lock Pages option for a 32-bit instance of SQL Server, requires that the account with privileges to run sqlservr.exe have the LPIM user right and the 'awe_enabled' configuration option is set to ON.  
+ This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The SQL Server **Lock Pages in Memory** option is set to ON in 32-bit and 64-bit instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows "Locked Pages in Memory" (LPIM) user right. In earlier versions of SQL Server, setting the Lock Pages option for a 32-bit instance of SQL Server, requires that the account with privileges to run sqlservr.exe have the LPIM user right and the 'awe_enabled' configuration option is set to ON.  
   
- To disable the **Lock Pages In Memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the “Locked Pages in Memory” user right for the SQL Server startup account.  
+ To disable the **Lock Pages In Memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the "Locked Pages in Memory" user right for the SQL Server startup account.  
   
 ### To Disable Lock Pages in Memory  
  **To disable the lock pages in memory option:**  
@@ -132,9 +128,9 @@ manager: craigg
 |-|-------------|-------------|  
 |Conventional memory|Up to process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:<br /><br /> 2 GB<br /><br /> 3 GB with **/3gb** boot parameter*<br /><br /> 4 GB on WOW64\*\*|Up to process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:<br /><br /> 8 TB on x64 architecture|  
   
- ***/3gb** is an operating-system boot parameter. For more information, visit the [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ***/3gb** is an operating-system boot parameter. For more information, visit the [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- **WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a 64-bit operating system. For more information, visit the [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ **WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a 64-bit operating system. For more information, visit the [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## Examples  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_set_cache_window"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sp_syscollector_set_cache_window stored procedure"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Lesson 12: Create Roles
@@ -23,11 +20,11 @@ manager: craigg
   
  You will create three roles:  
   
--   Sales Manager – This role can include users in your organization for which you want to have Read permission to all model objects and data.  
+-   Sales Manager - This role can include users in your organization for which you want to have Read permission to all model objects and data.  
   
--   Sales Analyst US – This role can include users in your organization for which you want only to be able to browse data related to sales in the US (United States). For this role, you will use a DAX formula to define a *Row Filter*, which restricts members to browse data only for the United States.  
+-   Sales Analyst US - This role can include users in your organization for which you want only to be able to browse data related to sales in the US (United States). For this role, you will use a DAX formula to define a *Row Filter*, which restricts members to browse data only for the United States.  
   
--   Administrator – This role can include users for which you want to have Administrator permission, which allows unlimited access and permissions to perform administrative tasks on the model database.  
+-   Administrator - This role can include users for which you want to have Administrator permission, which allows unlimited access and permissions to perform administrative tasks on the model database.  
   
  Because Windows user and group accounts in your organization are unique, you can add accounts from your particular organization to members. However, for this tutorial, you can also leave the members blank. You will still be able to test the effect of each role later in Lesson 12: Analyze in Excel.  
   
@@ -72,7 +69,7 @@ manager: craigg
   
      `=Geography[Country Region Code] = "US"`  
   
-     A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of “US” be visible to the user.  
+     A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of "US" be visible to the user.  
   
      When you have finished building the formula, press ENTER.  
   

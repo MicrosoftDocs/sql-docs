@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "languages [SMO]"
@@ -18,9 +14,8 @@ helpviewer_keywords:
   - "programming environments [SMO]"
   - "development environments [SMO]"
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Programming Languages

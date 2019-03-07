@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10128"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
-caps.latest.revision: 12
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)
   Use the **Enter Data Source Credentials** dialog box to provide your credentials so that you can retrieve data from the data source.  

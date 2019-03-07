@@ -4,21 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 12: Adding Derived Column Transform to Add Columns Required by MDS
-  In this task, you add the Derive Column Transform to the data flow. You add two derived columns, **ImportType** and **BatchTag**, to the records passed to this transform. You should add these columns before uploading the data to staging tables in MDS. These two are required columns for the staging tables in MDS. See [Leaf Member Staging Tables](http://msdn.microsoft.com/library/ee633854.aspx) for more details.  
+  In this task, you add the Derive Column Transform to the data flow. You add two derived columns, **ImportType** and **BatchTag**, to the records passed to this transform. You should add these columns before uploading the data to staging tables in MDS. These two are required columns for the staging tables in MDS. See [Leaf Member Staging Tables](../master-data-services/leaf-member-staging-table-master-data-services.md) for more details.  
   
 1.  Drag-drop **Derived Column transform** from **Common** section in the **SSIS Toolbox** to the **Data Flow** tab.  
   
@@ -36,7 +30,7 @@ manager: craigg
   
      ![SSIS Variables Window](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS Variables Window")  
   
-7.  Type **ImportType** for the **Name** and **2** for the **value**. You specify the value as 2 because you want to add new members to an entity in MDS. For details about this parameter, see [Leaf Member Staging Table](http://msdn.microsoft.com/library/ee633854.aspx).  
+7.  Type **ImportType** for the **Name** and **2** for the **value**. You specify the value as 2 because you want to add new members to an entity in MDS. For details about this parameter, see [Leaf Member Staging Table](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
 8.  Click **Add Variable** toolbar button again.  
   

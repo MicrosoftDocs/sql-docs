@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 110">
+  <title>2 - hierarchy-data</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g>
+      <rect x="84.402" y="47.13" width="27.17" height="7.97" fill="#ff8c00"/>
+      <rect x="84.402" y="58.803" width="27.17" height="7.97" fill="#333"/>
+      <rect x="84.402" y="70.476" width="27.17" height="7.97" fill="#00b294"/>
+      <rect x="84.402" y="82.147" width="27.17" height="7.97" fill="#333"/>
+      <rect x="187.443" y="26.334" width="27.17" height="7.97" fill="#ff8c00"/>
+      <rect x="187.443" y="38.007" width="27.17" height="7.971" fill="#333"/>
+      <rect x="187.443" y="76.312" width="27.17" height="7.971" fill="#00b294"/>
+      <rect x="187.443" y="87.985" width="27.17" height="7.97" fill="#ff8c00"/>
+      <rect x="138.685" y="47.147" width="27.171" height="7.971" fill="#ff8c00"/>
+      <rect x="138.685" y="58.815" width="27.171" height="7.97" fill="#00b294"/>
+      <rect x="138.685" y="70.482" width="27.171" height="7.97" fill="#ff8c00"/>
+      <rect x="138.685" y="16.147" width="27.171" height="7.97" fill="#333"/>
+      <rect x="138.685" y="82.147" width="27.171" height="7.97" fill="#333"/>
+      <line x1="111.572" y1="47.13" x2="138.685" y2="24.116" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+      <line x1="111.572" y1="58.803" x2="138.685" y2="66.784" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+      <line x1="165.856" y1="58.815" x2="187.443" y2="45.977" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+      <line x1="165.856" y1="55.118" x2="187.443" y2="26.334" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+      <line x1="187.443" y1="84.282" x2="165.856" y2="70.482" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+      <line x1="187.443" y1="95.955" x2="165.856" y2="82.147" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+      <line x1="111.572" y1="70.476" x2="138.685" y2="78.45" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+      <line x1="111.572" y1="90.116" x2="138.685" y2="82.147" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+      <line x1="138.685" y1="55.118" x2="111.572" y2="55.099" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="0.456"/>
+    </g>
+  </g>
+</svg>

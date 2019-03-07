@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Drillthrough on Mining Models
   *Drillthrough* means the ability to query either a mining model or a mining structure and get detailed data that is not exposed in the model.  
@@ -21,7 +18,7 @@ manager: "mblythe"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides two different options for drilling through into case data. You can drill through to the cases that were used to build the data, or you can drill through to the cases in the mining structure.  
   
 ## Drillthrough to Model Cases vs. Drillthrough to Structure  
- Drilling through to **model cases** is useful for finding additional details about rules, patterns or clusters in a model. For example, you would not use customer contact information for analysis in a clustering model, even if the data was available, by by using drillthrough, you can gain access to that information from the model.  
+ Drilling through to **model cases** is useful for finding additional details about rules, patterns or clusters in a model. For example, you would not use customer contact information for analysis in a clustering model, even if the data was available, by using drillthrough, you can gain access to that information from the model.  
   
  In contrast, **drillthrough to structure** data is intended to provide access to information that was not made available in the model. For example, some structure columns might have been excluded from a model because the data type was incompatible or the data was not useful for analysis.  
   

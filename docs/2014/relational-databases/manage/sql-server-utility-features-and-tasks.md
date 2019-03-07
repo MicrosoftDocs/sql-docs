@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server utility [SQL Server]"
@@ -17,16 +14,15 @@ helpviewer_keywords:
   - "UCP"
   - "Multi-server management [SQL Server]"
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Utility Features and Tasks
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] customers have a requirement to manage their [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment as a whole, addressed in this release through the concept of application and multiserver management in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
 ## Benefits of the SQL Server Utility  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility models an organization’s [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-related entities in a unified view. Utility Explorer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility viewpoints in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) provide administrators a holistic view of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource health through an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that serves as a utility control point (UCP). The combination of summary and detailed data presented in the UCP for both underutilization and overutilization policies, and for a variety of key parameters, enables resource consolidation opportunities and resource overutilization to be identified with ease. Health policies are configurable, and can be adjusted to change either upper or lower resource utilization thresholds. You can change global monitoring policies, or configure individual monitoring policies for each entity managed in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility models an organization's [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-related entities in a unified view. Utility Explorer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility viewpoints in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) provide administrators a holistic view of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource health through an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that serves as a utility control point (UCP). The combination of summary and detailed data presented in the UCP for both underutilization and overutilization policies, and for a variety of key parameters, enables resource consolidation opportunities and resource overutilization to be identified with ease. Health policies are configurable, and can be adjusted to change either upper or lower resource utilization thresholds. You can change global monitoring policies, or configure individual monitoring policies for each entity managed in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
 ##  <a name="typical_scenarios"></a> Getting Started with SQL Server Utility  
  The typical user scenario begins with creation of a utility control point which establishes the central reasoning point for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. The UCP provides a consolidated view of resource health collected from managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. After the UCP is created, you enroll instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility so that they can be managed by the UCP.  

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.xmlsourceadapter.connectionmanager.f1"
 helpviewer_keywords: 
   - "XML Source Editor"
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # XML Source Editor (Connection Manager Page)

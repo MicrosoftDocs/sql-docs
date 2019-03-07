@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "arguments in catalog functions [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "arguments in catalog functions [ODBC], about arguments"
   - "functions [ODBC], catalog functions"
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

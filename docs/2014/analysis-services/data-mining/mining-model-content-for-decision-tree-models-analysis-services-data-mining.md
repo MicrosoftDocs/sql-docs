@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining model content, decision tree models"
   - "decision tree algorithms [Analysis Services]"
   - "decision trees [Analysis Services]"
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). It is important to remember that The Microsoft Decision Trees algorithm is a hybrid algorithm that can create models with very different functions: a decision tree can represent associations, rules, or even linear regression. The structure of the tree is essentially the same, but how you interpret the information will depend on the purpose for which you created the model.  
@@ -259,7 +256,7 @@ manager: "mblythe"
   
  For all other nodes in the tree (except leaf nodes), the score for each node represents the best split score for the current node, minus the split score for the parent node. Typically, the split score for a parent node should always be better than the split score on any one of its child nodes. That is because a decision trees model ideally splits on the most important attributes first.  
   
- There are many ways of calculating a score for a split, depending on the algorithm parameter you choose. A discussion of how the scores are calculated for each of the scoring methods is beyond the scope of this topic. For more information, see "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)", on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research Web site.  
+ There are many ways of calculating a score for a split, depending on the algorithm parameter you choose. A discussion of how the scores are calculated for each of the scoring methods is beyond the scope of this topic. For more information, see "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](https://go.microsoft.com/fwlink/?LinkId=45963)", on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research Web site.  
   
 > [!NOTE]  
 >  If you create a decision trees model that has both continuous and discrete predictable attributes, you will see completely different scores in the (All) nodes that represent each tree type. Each model should be considered independently, and the methods used for scoring regression are completely different from those used for scoring classification. The node score values cannot be compared.  

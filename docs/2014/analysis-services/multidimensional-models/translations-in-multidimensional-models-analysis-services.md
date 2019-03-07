@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.deletelanguagefirm.f1"
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Translations in Multidimensional Models
   Multilanguage support in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is accomplished by using translations. A translation contains a language identifier and bindings for properties of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects which can be presented in multiple languages. For example, you can define a translation for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to present the caption and description of that database in a specified language. For more information about translations, see [Cube Translations](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "session states [Reporting Services]"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "sessions [Reporting Services]"
   - "SessionHeader SOAP header"
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 45
-author: "douglaslM"
-ms.author: "douglasl"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Identifying Execution State
   Hypertext Transfer Protocol (HTTP) is a connectionless and stateless protocol, which means that it does not automatically indicate whether different requests come from the same client or even whether a single browser instance is still actively viewing a page or site. Sessions create a logical connection to maintain state between server and client over HTTP. The user-specific information relevant to a particular session is known as the session state.  

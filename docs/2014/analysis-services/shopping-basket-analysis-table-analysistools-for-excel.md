@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shopping basket analysis"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "association [data mining]"
   - "market basket analysis"
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Shopping Basket Analysis (Table AnalysisTools for Excel)
   ![Shopping Basket Tool](media/tat-shopbskt.gif "Shopping Basket Tool")  

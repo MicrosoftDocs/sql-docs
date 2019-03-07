@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
-caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Managing Memory for In-Memory OLTP
@@ -22,7 +18,7 @@ manager: craigg
   
 |Section|Description|  
 |-------------|-----------------|  
-|[Estimate Memory Requirements for Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Estimate a table’s memory needs.|  
+|[Estimate Memory Requirements for Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Estimate a table's memory needs.|  
 |[Bind a Database with Memory-Optimized Tables to a Resource Pool](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Step by step walkthrough to bind a database with a resource pool.|  
 |[Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Tools you can use to monitor your memory usage. Also covers troubleshooting if memory usage gets too high.|  
 |[Resolve Out Of Memory Issues](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|Steps to recover from an OOM (Out of Memory) situation.|  

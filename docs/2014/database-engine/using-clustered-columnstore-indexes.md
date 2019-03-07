@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
-caps.latest.revision: 6
-author: "barbkess"
-ms.author: "barbkess"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Using Clustered Columnstore Indexes
@@ -58,7 +54,7 @@ GO
  Use the [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql) statement to drop a clustered columnstore index. This operation will drop the index and convert the columnstore table to a rowstore heap.  
   
 ##  <a name="load"></a> Load Data into a Clustered Columnstore Index  
- You can add data to an existing clustered columnstore index by using any of the standard loading methods.  For example, the bcp bulk loading tool, Integration Services, and INSERT … SELECT can all load data into a clustered columnstore index.  
+ You can add data to an existing clustered columnstore index by using any of the standard loading methods.  For example, the bcp bulk loading tool, Integration Services, and INSERT ... SELECT can all load data into a clustered columnstore index.  
   
  Clustered columnstore indexes leverage the deltastore in order to prevent fragmentation of column segments in the columnstore.  
   
@@ -66,7 +62,7 @@ GO
  For partitioned data, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] first assigns each row to a partition, and then performs columnstore operations on the data within the partition. Each partition has its own rowgroups and at least one deltastore.  
   
 ### Deltastore loading scenarios  
- Rows accumulate in the deltastore until the number of rows is the maximum number of rows allowed for a rowgroup. When the deltastore contains the maximum number of rows per rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marks the rowgroup as “CLOSED”. A background process, called the “tuple-mover”, finds the CLOSED rowgroup and moves into the columnstore, where the rowgroup is compressed into column segments and the column segments are stored in the columnstore.  
+ Rows accumulate in the deltastore until the number of rows is the maximum number of rows allowed for a rowgroup. When the deltastore contains the maximum number of rows per rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marks the rowgroup as "CLOSED". A background process, called the "tuple-mover", finds the CLOSED rowgroup and moves into the columnstore, where the rowgroup is compressed into column segments and the column segments are stored in the columnstore.  
   
  For each clustered columnstore index there can be multiple deltastores.  
   
@@ -113,12 +109,12 @@ SELECT * FROM sys.column_store_row_groups
 -   If the row is in the deltastore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] updates the row in the deltastore.  
   
 ##  <a name="rebuild"></a> Rebuild a Clustered Columnstore Index  
- Use [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) or [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) to perform a full rebuild of an existing clustered columnstore index. Additionally, you can use ALTER INDEX … REBUILD to rebuild a specific partition.  
+ Use [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) or [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) to perform a full rebuild of an existing clustered columnstore index. Additionally, you can use ALTER INDEX ... REBUILD to rebuild a specific partition.  
   
 ### Rebuild Process  
  To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is “offline” and unavailable during the rebuild.  
+-   Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is "offline" and unavailable during the rebuild.  
   
 -   Defragments the columnstore by physically deleting rows that have been logically deleted from the table; the deleted bytes are reclaimed on the physical media.  
   

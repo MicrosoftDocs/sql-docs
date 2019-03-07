@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.databasedesigner.warnings.f1"
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Warnings (Database Designer) (Analysis Services - Multidimensional Data)
   Use the **Warnings** tab to view and dismiss rules globally, and to view and re-enable specific instances of dismissed warnings. The **Warnings** tab displays two grids: **Design Warning Rules** and **Dismissed Warnings**.  

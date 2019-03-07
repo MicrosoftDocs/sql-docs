@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SortOrder property [ADOX]"
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

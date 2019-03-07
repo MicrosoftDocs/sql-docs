@@ -5,9 +5,7 @@ ms.date: "01/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
@@ -17,36 +15,36 @@ manager: craigg
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkID=45250)).  
 
-An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-specific items that you would use in your Windows ODBC applications.
+An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific items that you would use in your Windows ODBC applications.
 
 ## Available Features  
-The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS and Linux:  
+The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS and Linux:  
 
--   [Communicating with SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
--   [Connection and query timeout support](http://msdn.microsoft.com/library/ms130822.aspx)  
--   [Cursors](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
--   [Date/Time Improvements (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
--   [Executing Queries (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [Handling Errors and Messages](http://msdn.microsoft.com/library/ms131289.aspx)  
--   [Kerberos authentication](http://msdn.microsoft.com/library/cc280459.aspx)  
--   [Large CLR User-Defined Types (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
--   [Performing Transactions (ODBC) (except distributed transactions)](http://msdn.microsoft.com/library/ms131706.aspx)  
--   [Processing Results (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [Running Stored Procedures](http://msdn.microsoft.com/library/ms131440.aspx)
--   [Sparse Columns Support (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL encryption](http://msdn.microsoft.com/library/ms131691.aspx)
--   [Table Valued Parameters](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [UTF-8 and UTF-16 for command and data API](http://msdn.microsoft.com/library/ff878241.aspx)
--   [Using Catalog Functions](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [Communicating with SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Connection and query timeout support](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [Cursors](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [Date/Time Improvements (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
+-   [Executing Queries (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
+-   [Handling Errors and Messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
+-   [Kerberos authentication](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+-   [Large CLR User-Defined Types (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
+-   [Performing Transactions (ODBC) (except distributed transactions)](https://msdn.microsoft.com/library/ms131706.aspx)  
+-   [Processing Results (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Running Stored Procedures](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
+-   [Sparse Columns Support (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
+-   [SSL encryption](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [Table Valued Parameters](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
+-   [UTF-8 and UTF-16 for command and data API](https://msdn.microsoft.com/library/ff878241.aspx)
+-   [Using Catalog Functions](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## Unsupported Features
 
 The following features have not been verified to work correctly in this release of the ODBC driver on macOS and Linux:
 
 -   Failover Cluster Connection
--   [Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
+-   [Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
 -   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 The following features are not available in this release of the ODBC driver on macOS and Linux: 
@@ -54,7 +52,7 @@ The following features are not available in this release of the ODBC driver on m
 -   Distributed Transactions (SQL_ATTR_ENLIST_IN_DTC attribute is not supported)  
 -   Database Mirroring  
 -   FILESTREAM  
--   Profiling ODBC driver performance, discussed in [SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=234099), and the following performance-related connection attributes:  
+-   Profiling ODBC driver performance, discussed in [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099), and the following performance-related connection attributes:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -62,7 +60,7 @@ The following features are not available in this release of the ODBC driver on m
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect  
--   C interval types such as SQL_C_INTERVAL_YEAR_TO_MONTH (documented in [Data Type Identifiers and Descriptors](http://msdn.microsoft.com/library/ms716351(VS.85).aspx))
+-   C interval types such as SQL_C_INTERVAL_YEAR_TO_MONTH (documented in [Data Type Identifiers and Descriptors](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   The SQL_CUR_USE_ODBC value of the SQL_ATTR_ODBC_CURSORS attribute of the SQLSetConnectAttr function.
 
 ## Character Set Support
@@ -104,7 +102,7 @@ Thus, in a typical Linux or Mac environment where the encoding is UTF-8, users o
 
 SQLWCHAR data must be UTF-16LE (Little Endian).
 
-When binding input parameters with SQLBindParameter, if a narrow character SQL type such as SQL_VARCHAR is specified, the driver converts the supplied data from the client encoding to the default (typically codepage 1252) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] encoding. For output parameters, the driver converts from the encoding specified in the collation information associated with the data to the client encoding. However, data loss is possible --- characters in the source encoding not representable in the target encoding will convert to a question mark ('?').
+When binding input parameters with SQLBindParameter, if a narrow character SQL type such as SQL_VARCHAR is specified, the driver converts the supplied data from the client encoding to the default (typically codepage 1252) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encoding. For output parameters, the driver converts from the encoding specified in the collation information associated with the data to the client encoding. However, data loss is possible --- characters in the source encoding not representable in the target encoding will convert to a question mark ('?').
 
 To avoid this data loss when binding input parameters, specify a Unicode SQL character type such as SQL_NVARCHAR. In this case, the driver converts from the client encoding to UTF-16, which can represent all Unicode characters. Furthermore, the target column or parameter on the server must also be either a Unicode type (**nchar**, **nvarchar**, **ntext**) or one with a collation/encoding, which can represent all the characters of the original source data. For avoiding data loss with output parameters, specify a Unicode SQL type, and either a Unicode C type (SQL_C_WCHAR), causing the driver to return data as UTF-16; or a narrow C type, and ensure that the client encoding can represent all the characters of the source data (this is always possible with UTF-8.)
 
@@ -116,14 +114,14 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
 
 ## Additional Notes  
 
-1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
+1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
 
     ```
-    sqlcmd –U <user> -P <pwd> -S <host>,33000
+    sqlcmd -U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  
-    > DAC connections must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication.  
+    > DAC connections must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.  
     
 2.  The UnixODBC driver manager returns "invalid attribute/option identifier" for all statement attributes when they are passed through SQLSetConnectAttr. On Windows, when SQLSetConnectAttr receives a statement attribute value, it causes the driver to set that value on all active statements which are children of the connection handle.  
 

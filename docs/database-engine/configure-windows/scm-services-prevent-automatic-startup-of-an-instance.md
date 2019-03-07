@@ -5,9 +5,7 @@ ms.date: "01/06/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic SQL Server startup"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "stopping SQL Server"
   - "preventing automatic startups [SQL Server]"
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -44,9 +41,9 @@ manager: craigg
   
 3.  In the details pane, right-click **MSSQLServer**, and then click **Properties.**  
   
-4.  In the **SQL Server \<***instancename***> Properties** dialog box, on the **Service** tab, in the **General** box, set the value of **Start Mode** to **Manual**.  
+4.  In the **SQL Server \<**_instancename_**> Properties** dialog box, on the **Service** tab, in the **General** box, set the value of **Start Mode** to **Manual**.  
   
-5.  Click **OK** to close the **SQL Server \<***instancename***> Properties** dialog box, and then close [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
+5.  Click **OK** to close the **SQL Server \<**_instancename_**> Properties** dialog box, and then close [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## See Also  
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

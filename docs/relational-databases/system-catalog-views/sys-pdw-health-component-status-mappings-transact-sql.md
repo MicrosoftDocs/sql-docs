@@ -1,17 +1,13 @@
-﻿---
+---
 title: "sys.pdw_health_component_status_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
-ms.component: "system-catalog-views"
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg

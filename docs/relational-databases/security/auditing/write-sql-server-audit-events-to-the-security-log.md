@@ -5,9 +5,7 @@ ms.date: "09/21/2017"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], Security Log"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "audits [SQL Server], writing to Security Log"
   - "security logs [SQL Server]"
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-caps.latest.revision: 19
-author: CarlRabeler
-ms.author: carlraba
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---  
 # Write SQL Server Audit Events to the Security Log  

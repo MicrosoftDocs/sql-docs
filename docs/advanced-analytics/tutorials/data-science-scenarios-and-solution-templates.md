@@ -1,5 +1,5 @@
 ---
-title: Data science scenarios and solution templates (SQL Server Machine Learning) | Microsoft Docs
+title: Data science scenarios and solution templates - SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -65,7 +65,7 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 
 See this announcement for more information: [New predictive maintenance template](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
-**How:** This solution focuses on answering the question, "When will an in-service machine fail?" The input data represents simulated sensor measurements for aircraft engines. Data obtained from monitoring the engine’s current operation conditions, such as the current working cycle, settings, and sensor measurements, are used to create three types of predictive models:
+**How:** This solution focuses on answering the question, "When will an in-service machine fail?" The input data represents simulated sensor measurements for aircraft engines. Data obtained from monitoring the engine's current operation conditions, such as the current working cycle, settings, and sensor measurements, are used to create three types of predictive models:
 
 -   **Regression models**, to predict how much longer an engine will last before it fails. The sample model predicts the metric "Remaining Useful Life" (RUL), also called "Time to Failure" (TTF).
   

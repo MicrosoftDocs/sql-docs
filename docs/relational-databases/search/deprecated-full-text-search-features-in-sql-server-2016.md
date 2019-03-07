@@ -1,26 +1,21 @@
-﻿---
+---
 title: "Deprecated Full-Text Search Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [full-text search]"
   - "full-text search [SQL Server], deprecated features"
   - "full-text queries [SQL Server], proximity"
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deprecated Full-Text Search Features in SQL Server 2016
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,12 +45,12 @@ Monitor your use of deprecated features by using the **SQL Server:Deprecated Fea
   
 |Deprecated feature|Replacement|Feature name|Feature ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS and CONTAINSTABLE generic NEAR operator:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|The custom NEAR operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS and CONTAINSTABLE generic NEAR operator:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|The custom NEAR operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG option:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|None.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> None.<sup>*</sup>|237<br /><br /> None.*|  
 |DATABASEPROPERTYEX property: IsFullTextEnabled|None.|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |sp_detach_db option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|None.|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service action values: resource_usage has no function.|None|sp_fulltext_service @action=resource_usage|200|  
   
- *The **SQL Server:Deprecated Features** object does not monitor occurrences of CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
+ &#42;The **SQL Server:Deprecated Features** object does not monitor occurrences of CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
   
   

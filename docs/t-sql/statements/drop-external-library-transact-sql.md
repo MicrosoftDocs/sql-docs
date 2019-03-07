@@ -1,13 +1,10 @@
-﻿---
+---
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/05/2018"
+ms.date: 02/28/2019
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP EXTERNAL LIBRARY"
@@ -16,15 +13,18 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "DROP EXTERNAL LIBRARY"
-author: "jeannt"
-ms.author: "jeannt"
-manager: craigg
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+author: dphansen
+ms.author: davidph
+manager: cgronlund
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Deletes an existing package library. Package libraries are used by supported external runtimes, such as R or Python.
+Deletes an existing package library. Package libraries are used by supported external runtimes, such as R, Python, or Java.
+
+> [!NOTE]
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows platform are supported in SQL Server 2019 CTP 2.3. Support for Linux is planned for a later release.
 
 ## Syntax
 

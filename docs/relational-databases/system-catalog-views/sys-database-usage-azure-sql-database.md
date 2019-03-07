@@ -1,15 +1,10 @@
-﻿---
+---
 title: "sys.database_usage (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: ""
+ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "database_usage"
@@ -22,9 +17,8 @@ helpviewer_keywords:
   - "database_usage"
   - "sys.database_usage"
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
@@ -50,7 +44,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
  The **sys.database_usage** view returns one row for each day of your subscription.  
   
 ## See Also  
- [SQL Database Pricing Details](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [Accounts and Billing in Windows Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [SQL Database Pricing Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Accounts and Billing in Windows Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

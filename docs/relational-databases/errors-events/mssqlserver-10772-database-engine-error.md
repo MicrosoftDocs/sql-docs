@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "10772 (Database Engine error)"
 ms.assetid: 20ca35b6-bbf4-4e6f-bf9d-9bed0d327cbc
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

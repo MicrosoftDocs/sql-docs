@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -21,9 +17,8 @@ helpviewer_keywords:
   - "Replication Management Objects"
   - "programming [SQL Server replication], RMO"
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 60
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Management Objects Concepts
@@ -34,16 +29,16 @@ manager: craigg
  [Configure Distribution](../configure-distribution.md)  
  Topics in this section show how to use RMO to configure publishing and distribution.  
   
- [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../publish/create-a-publication.md)  
  Topics in this section show how to use RMO to create, delete, and modify publications and articles.  
   
  [Subscribe to Publications](../subscribe-to-publications.md)  
  Topics in this section show how to use RMO to create, delete, and modify subscriptions.  
   
- [Secure a Replication Topology](../security/secure-a-replication-topology.md)  
+ [Secure a Replication Topology](../security/view-and-modify-replication-security-settings.md)  
  Topics in this section show how to use RMO to view and modify security settings.  
   
- [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-subscriptions-replication.md)  
+ [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-data.md)  
  Topics in this section show how to synchronize subscriptions.  
   
  [Monitoring Replication](../monitoring-replication.md)  

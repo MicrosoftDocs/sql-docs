@@ -1,13 +1,8 @@
 ---
 title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_CRYPTOGRAPHIC_TSQL"
@@ -25,9 +20,8 @@ helpviewer_keywords:
   - "CREATE CRYPTOGRAPHIC PROVIDER statement"
   - "33032 (Database Engine error)"
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)

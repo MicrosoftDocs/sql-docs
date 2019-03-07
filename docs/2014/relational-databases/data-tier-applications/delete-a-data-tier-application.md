@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.deletedacwizard.introduction.f1"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "wizard [DAC], delete"
   - "delete DAC"
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete a Data-tier Application
@@ -65,7 +61,7 @@ manager: craigg
   
 3.  Expand the **Data-tier Applications** node.  
   
-4.  Right-click the DAC to be deleted, and then select **Delete Data-tier Application…**  
+4.  Right-click the DAC to be deleted, and then select **Delete Data-tier Application...**  
   
 5.  Complete the wizard dialogs:  
   

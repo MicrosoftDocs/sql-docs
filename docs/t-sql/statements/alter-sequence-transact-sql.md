@@ -5,9 +5,7 @@ ms.date: "08/08/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SEQUENCE_TSQL"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "sequence number object, altering"
   - "ALTER SEQUENCE statement"
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER SEQUENCE (Transact-SQL)
@@ -56,7 +53,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  The next value that will be returned by the sequence object. If provided, the RESTART WITH value must be an integer that is less than or equal to the maximum and greater than or equal to the minimum value of the sequence object. If the WITH value is omitted, the sequence numbering restarts based on the original CREATE SEQUENCE options.  
   
  INCREMENT BY \<constant>  
- The value that is used to increment (or decrement if negative) the sequence object’s base value for each call to the NEXT VALUE FOR function. If the increment is a negative value the sequence object is descending, otherwise, it is ascending. The increment can not be 0.  
+ The value that is used to increment (or decrement if negative) the sequence object's base value for each call to the NEXT VALUE FOR function. If the increment is a negative value the sequence object is descending, otherwise, it is ascending. The increment can not be 0.  
   
  [ MINVALUE \<constant> | NO MINVALUE ]  
  Specifies the bounds for sequence object. If NO MINVALUE is specified, the minimum possible value of the sequence data type is used.  

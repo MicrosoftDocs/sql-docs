@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.specifyordering.columnselection.f1"
 ms.assetid: bf25d649-f35a-458b-a8f4-9b159b3b2abe
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select a Column Dialog Box (Business Intelligence Wizard)
   Use the **Select a Column** dialog box to select a column from a list of tables presented in a tree view. The Business Intelligence Wizard opens this dialog box.  

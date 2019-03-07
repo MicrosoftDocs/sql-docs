@@ -1,18 +1,16 @@
 ---
-title: "Database Snapshots with Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Create a database snapshot for an availability group"
+description: "Describes how to create a database snapshot for a database within an Always On availability group on either the primary or secondary database."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database snapshots [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

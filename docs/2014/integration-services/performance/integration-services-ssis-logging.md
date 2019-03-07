@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], logs"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "Text File log provider"
   - "SQL Server log provider"
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 64
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services (SSIS) Logging
@@ -196,7 +192,7 @@ manager: craigg
   
 -   The Derived Column transformation that is named "Calculate LineItemTotalCost" spent 356 ms. performing calculations on incoming rows.  
   
--   The Aggregate transformation that is named "Sum Quantity and LineItemTotalCost" spent a combined 220 ms—141 in PrimeOutput and 79 in ProcessInput—performing calculations and passing the data to the next transformation.  
+-   The Aggregate transformation that is named "Sum Quantity and LineItemTotalCost" spent a combined 220 ms-141 in PrimeOutput and 79 in ProcessInput-performing calculations and passing the data to the next transformation.  
   
 ## Related Tasks  
  The following list contains links to topics that show how to perform tasks related to the logging feature.  
@@ -210,7 +206,7 @@ manager: craigg
 -   [View Log Entries in the Log Events Window](../view-log-entries-in-the-log-events-window.md)  
   
 ## Related Content  
- [DTLoggedExec Tool for Full and Detail Logging (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [DTLoggedExec Tool for Full and Detail Logging (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## See Also  
  [View Log Entries in the Log Events Window](../view-log-entries-in-the-log-events-window.md)  

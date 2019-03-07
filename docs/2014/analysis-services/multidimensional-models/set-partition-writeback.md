@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "write-enabled partitions [Analysis Services]"
@@ -15,17 +13,16 @@ helpviewer_keywords:
   - "partitions [Analysis Services], write-enabled"
   - "writeback [Analysis Services], partitions"
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Set Partition Writeback
   If you write-enable a measure group, end users can change cube data while they browse it, where changes are saved in a separate table called a writeback table, not in the cube data or source data. End users who browse a write-enabled partition see the net effect of all changes in the writeback table for the partition.  
   
  You can browse or delete writeback data. You can also convert writeback data to a partition. On a write-enabled partition, you can use cube roles to grant read/write access to users and groups of users, and to limit access to specific cells or groups of cells in the partition.  
   
- For a short video introduction to writeback, see [Excel 2010 Writeback to Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). A more detailed exploration of this feature is available through this blog post series, [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+ For a short video introduction to writeback, see [Excel 2010 Writeback to Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394951). A more detailed exploration of this feature is available through this blog post series, [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 > [!NOTE]  
 >  Writeback is supported for SQL Server relational databases and data marts only, and only for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional models.  
@@ -59,7 +56,7 @@ manager: "mblythe"
   
 ## See Also  
  [Write-Enabled Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Enabling Write-back to an OLAP Cube at Cell Level in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Enabling and Securing Data Entry with Analysis Services Writeback](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Enabling Write-back to an OLAP Cube at Cell Level in Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Enabling and Securing Data Entry with Analysis Services Writeback](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

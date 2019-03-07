@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server replication], publication access list"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "PAL (publication access list)"
   - "logins [SQL Server replication], managing"
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
-caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Manage Logins in the Publication Access List
@@ -70,7 +66,7 @@ manager: craigg
   
 ## See Also  
  [Replication Agent Security Model](replication-agent-security-model.md)   
- [Secure a Replication Topology](secure-a-replication-topology.md)   
+ [Secure a Replication Topology](view-and-modify-replication-security-settings.md)   
  [Secure the Publisher](secure-the-publisher.md)  
   
   

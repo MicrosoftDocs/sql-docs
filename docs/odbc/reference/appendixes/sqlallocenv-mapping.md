@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLAllocEnv function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLAllocEnv"
 ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

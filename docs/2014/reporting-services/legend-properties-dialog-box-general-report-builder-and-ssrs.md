@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.legendproperties.general.f1"
   - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-caps.latest.revision: 8
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Legend Properties Dialog Box, General (Report Builder and SSRS)
   Use the **Legend** dialog box to define the appearance and layout of the legend in the chart. For more information, see [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  

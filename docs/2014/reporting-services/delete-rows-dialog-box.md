@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.deleterows.f1"
@@ -15,10 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete Rows dialog box"
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
-caps.latest.revision: 10
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Delete Rows Dialog Box
   Use the **Delete Rows** dialog box to delete rows from a table, matrix, or list data region. For rows that are associated with groups, you can also delete the group definitions.  

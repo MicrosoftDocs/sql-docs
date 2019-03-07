@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFreeHandle function [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "freeing descriptors [ODBC]"
   - "allocating and freeing descriptors [ODBC]"
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

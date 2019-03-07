@@ -1,29 +1,22 @@
-﻿---
+---
 title: "sys.resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/06/2018"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.date: "09/13/2018"
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
-  - "resource_stats"
-  - "sys.resource_stats"
-  - "sys.resource_stats_TSQL"
-  - "resource_stats_TSQL"
+  - resource_stats
+  - sys.resource_stats
+  - sys.resource_stats_TSQL
+  - resource_stats_TSQL
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "sys.resource_stats"
   - "resource_stats"
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-caps.latest.revision: 28
-author: "CarlRabeler"
+author: CarlRabeler
 ms.author: "carlrab"
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
@@ -31,7 +24,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 # sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Returns CPU usage and storage data for an Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is change in resource consumption. The data returned includes CPU usage, storage size change or database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
+  Returns CPU usage and storage data for an Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is a change in resource consumption. The data returned includes CPU usage, storage size change, and database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
   
  The **sys.resource_stats** view has different definitions depending on the version of the Azure SQL Database Server that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.  
   
@@ -47,9 +40,10 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |avg_cpu_percent|**numeric**|Average compute utilization in percentage of the limit of the service tier.|  
 |avg_data_io_percent|**numeric**|Average I/O utilization in percentage based on the limit of the service tier.|  
 |avg_log_write_percent|**numeric**|Average write resource utilization in percentage of the limit of the service tier.|  
-|max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
-|max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
+|max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
+|max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. |  
+|allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  For more context about these limits and service tiers, see the topics [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
@@ -62,7 +56,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
   
  When a database is a member of an elastic pool, resource statistics presented as percent values, are expressed as the percent of the max limit for the databases as set in the elastic pool configuration.  
   
- For a more granular view of this data, use **sys.dm_db_resource_stats** dynamic management view in a user database. This view captures data every 15-seconds and maintains historical data for 1 hour.  For more information, see [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ For a more granular view of this data, use **sys.dm_db_resource_stats** dynamic management view in a user database. This view captures data every 15 seconds and maintains historical data for 1 hour.  For more information, see [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## Examples  
  The following example returns all databases that are averaging at least 80% of compute utilization over the last one week.  

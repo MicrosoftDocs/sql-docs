@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_catalogs_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_catalogs"
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 # sp_catalogs (Transact-SQL)
@@ -38,7 +34,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## Arguments  
- [ **@server_name =**] **'***linked_svr***'**  
+ [ **@server_name =**] **'**_linked_svr_**'**  
  Is the name of a linked server. *linked_svr* is **sysname**, with no default.  
   
 ## Result Sets  

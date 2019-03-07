@@ -1,31 +1,24 @@
 ---
 title: "sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addpushsubscription_agent_TSQL"
   - "sp_addpushsubscription_agent"
 helpviewer_keywords: 
   - "sp_addpushsubscription_agent"
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addpushsubscription_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Adds a new scheduled agent job used to synchronize a push subscription to a transactional publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -96,10 +89,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 >  Do not use a blank password. Use a strong password. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
  [ **@job_login =** ] **'***job_login***'**  
- Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor and for connections to the Subscriber when using Windows Integrated authentication.  
+ Is the login for the account under which the agent runs. On Azure SQL Database Managed Instance use a SQL Server account. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor and for connections to the Subscriber when using Windows Integrated authentication.  
   
  [ **@job_password =** ] **'***job_password***'**  
- Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with no default.  
+ Is the password for the account under which the agent runs. *job_password* is **sysname**, with no default.  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
@@ -188,19 +181,19 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Is the name of the Publisher. *publisher* is **sysname**, with a default value of NULL.  
   
  [ **@subscriber_provider=** ] **'***subscriber_provider***'**  
- Is the unique programmatic identifier (PROGID) with which the OLE DB provider for the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source is registered. *subscriber_provider* is **sysname**, with default value of NULL. *subscriber_provider* must be unique for the OLE DB provider installed on the Distributor. *subscriber_provider* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the unique programmatic identifier (PROGID) with which the OLE DB provider for the non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source is registered. *subscriber_provider* is **sysname**, with default value of NULL. *subscriber_provider* must be unique for the OLE DB provider installed on the Distributor. *subscriber_provider* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  [ **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
- Is the name of the data source as understood by the OLE DB provider. *subscriber_datasrc* is **nvarchar(4000)**, with a default value of NULL. *subscriber_datasrc* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider. *subscriber_datasrc* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the name of the data source as understood by the OLE DB provider. *subscriber_datasrc* is **nvarchar(4000)**, with a default value of NULL. *subscriber_datasrc* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider. *subscriber_datasrc* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  [ **@subscriber_location=** ] **'***subscriber_location***'**  
- Is the location of the database as understood by the OLE DB provider. *subscriber_location* is **nvarchar(4000)**, with a default value of NULL. *subscriber_location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider. *subscriber_location* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the location of the database as understood by the OLE DB provider. *subscriber_location* is **nvarchar(4000)**, with a default value of NULL. *subscriber_location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider. *subscriber_location* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  [ **@subscriber_provider_string=** ] **'***subscriber_provider_string***'**  
- Is the OLE DB provider-specific connection string that identifies the data source. *subscriber_provider_string* is **nvarchar(4000)**, with a default value of NULL. *subscriber_provider_string* is passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *subscriber_provider_string* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the OLE DB provider-specific connection string that identifies the data source. *subscriber_provider_string* is **nvarchar(4000)**, with a default value of NULL. *subscriber_provider_string* is passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *subscriber_provider_string* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  [ **@subscriber_catalog=** ] **'***subscriber_catalog***'**  
- Is the catalog to be used when making a connection to the OLE DB provider. *subscriber_catalog* is **sysname**, with default value of NULL. *subscriber_catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. *subscriber_catalog* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the catalog to be used when making a connection to the OLE DB provider. *subscriber_catalog* is **sysname**, with default value of NULL. *subscriber_catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. *subscriber_catalog* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

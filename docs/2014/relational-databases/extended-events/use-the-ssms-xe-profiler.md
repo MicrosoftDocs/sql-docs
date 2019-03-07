@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server], system health session"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "system_health session [SQL Server extended events]"
   - "system health session [SQL Server extended events]"
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: yualan
+ms.author: alayu
 manager: craigg
 ---
 # Use the system_health Session

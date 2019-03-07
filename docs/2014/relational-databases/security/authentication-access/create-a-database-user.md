@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.DATABASEUSER.GENERAL.F1"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "users [SQL Server], adding"
   - "mapping database users"
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Database User
@@ -68,24 +64,24 @@ manager: craigg
   
 2.  Expand the database in which to create the new database user.  
   
-3.  Right-click the **Security** folder, point to **New**, and select **User…**.  
+3.  Right-click the **Security** folder, point to **New**, and select **User...**.  
   
-4.  In the **Database User – New** dialog box, on the **General** page, select one of the following user types from the **User type** list: **SQL user with login**, **SQL user without login**, **User mapped to a certificate**, **User mapped to an asymmetric key**, or **Windows user**.  
+4.  In the **Database User - New** dialog box, on the **General** page, select one of the following user types from the **User type** list: **SQL user with login**, **SQL user without login**, **User mapped to a certificate**, **User mapped to an asymmetric key**, or **Windows user**.  
   
-5.  In the **User name** box, enter a name for the new user. If you have chosen **Windows user** from the **User type** list, you can also click the ellipsis **(…)** to open the **Select User or Group** dialog box.  
+5.  In the **User name** box, enter a name for the new user. If you have chosen **Windows user** from the **User type** list, you can also click the ellipsis **(...)** to open the **Select User or Group** dialog box.  
   
-6.  In the **Login name** box, enter the login for the user. Alternately, click the ellipsis **(…)** to open the **Select Login** dialog box. **Login name** is available if you select either **SQL user with login** or **Windows user** from the **User type** list.  
+6.  In the **Login name** box, enter the login for the user. Alternately, click the ellipsis **(...)** to open the **Select Login** dialog box. **Login name** is available if you select either **SQL user with login** or **Windows user** from the **User type** list.  
   
-7.  In the **Default schema** box, specifies the schema that will own objects created by this user. Alternately, click the ellipsis **(…)** to open the **Select Schema** dialog box. **Default schema** is available if you select either **SQL user with login**, **SQL user without login**, or **Windows user** from the **User type** list.  
+7.  In the **Default schema** box, specifies the schema that will own objects created by this user. Alternately, click the ellipsis **(...)** to open the **Select Schema** dialog box. **Default schema** is available if you select either **SQL user with login**, **SQL user without login**, or **Windows user** from the **User type** list.  
   
-8.  In the **Certificate name** box, enter the certificate to be used for the database user. Alternately, click the ellipsis **(…)** to open the **Select Certificate** dialog box. **Certificate name** is available if you select **User mapped to a certificate** from the **User type** list.  
+8.  In the **Certificate name** box, enter the certificate to be used for the database user. Alternately, click the ellipsis **(...)** to open the **Select Certificate** dialog box. **Certificate name** is available if you select **User mapped to a certificate** from the **User type** list.  
   
-9. In the **Asymmetric key name**  box, enter the key to be used for the database user. Alternately, click the ellipsis **(…)** to open the **Select Asymmetric Key** dialog box. **Asymmetric key name** is available if you select **User mapped to an asymmetric key** from the **User type** list.  
+9. In the **Asymmetric key name**  box, enter the key to be used for the database user. Alternately, click the ellipsis **(...)** to open the **Select Asymmetric Key** dialog box. **Asymmetric key name** is available if you select **User mapped to an asymmetric key** from the **User type** list.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### Additional Options  
- The **Database User – New** dialog box also offers options on four additional pages: **Owned Schemas**, **Membership**, **Securables**, and **Extended Properties**.  
+ The **Database User - New** dialog box also offers options on four additional pages: **Owned Schemas**, **Membership**, **Securables**, and **Extended Properties**.  
   
 -   The **Owned Schemas** page lists all possible schemas that can be owned by the new database user. To add schemas to or remove them from a database user, under **Schemas owned by this user**, select or clear the check boxes next to the schemas.  
   
@@ -104,8 +100,8 @@ manager: craigg
      **Properties**  
      View or specify the extended properties for the object. Each extended property consists of a name/value pair of metadata associated with the object.  
   
-     **Ellipsis (…)**  
-     Click the ellipsis **(…)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](http://msdn.microsoft.com/library/ms189353.aspx).  
+     **Ellipsis (...)**  
+     Click the ellipsis **(...)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete**  
      Removes the selected extended property.  

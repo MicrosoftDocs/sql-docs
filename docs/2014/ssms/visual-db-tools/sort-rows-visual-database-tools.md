@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sorting rows [SQL Server]"
   - "sorting query results [SQL Server]"
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Sort Rows (Visual Database Tools)
@@ -62,7 +58,7 @@ manager: craigg
   
     ```  
   
--   **You can sort by derived columns** For example, you can create a result set in which each row contains a book title — with the books that pay the highest royalty per copy appearing first. The resulting SQL might look like this:  
+-   **You can sort by derived columns** For example, you can create a result set in which each row contains a book title - with the books that pay the highest royalty per copy appearing first. The resulting SQL might look like this:  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -75,7 +71,7 @@ manager: craigg
   
      To calculate a derived column, you can use SQL syntax, as in the preceding example, or you can use a user-defined function that returns a scalar value. For more information about user-defined functions, see the SQL Server documentation.  
   
--   **You can sort grouped rows** For example; you can create a result set in which each row describes a city, plus the number of authors in that city — with the cities containing many authors appearing first. The resulting SQL might look like this:  
+-   **You can sort grouped rows** For example; you can create a result set in which each row describes a city, plus the number of authors in that city - with the cities containing many authors appearing first. The resulting SQL might look like this:  
   
     ```  
     SELECT city, state, COUNT(*)  
@@ -87,7 +83,7 @@ manager: craigg
   
      Notice that the query uses `state` as a secondary sort column. Thus, if two states have the same number of authors, those states will appear in alphabetical order.  
   
--   **You can sort using international data** That is; you can sort a column using collating conventions that differ from the default conventions for that column. For example, you can write a query that retrieves all the book titles by Jaime Patiño. To display the titles in alphabetical order, you use a Spanish collating sequence for the title column. The resulting SQL might look like this:  
+-   **You can sort using international data** That is; you can sort a column using collating conventions that differ from the default conventions for that column. For example, you can write a query that retrieves all the book titles by Jaime Pati??o. To display the titles in alphabetical order, you use a Spanish collating sequence for the title column. The resulting SQL might look like this:  
   
     ```  
     SELECT title  
@@ -103,7 +99,7 @@ manager: craigg
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

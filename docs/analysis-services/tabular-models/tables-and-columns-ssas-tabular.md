@@ -1,5 +1,5 @@
 ---
-title: "Tables and Columns | Microsoft Docs"
+title: "Analysis Services tabular model tables and columns | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -61,7 +61,7 @@ manager: kfile
 |[Delete a Table](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Describes how to delete tables in your model workspace database that you no longer need.|  
 |[Rename a Table or Column](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Describes how to rename a table or column to make it more identifiable in your model.|  
 |[Set the Data Type of a Column](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Describes how to change the data type of a column. The data type defines how data in the column is stored and presented.|  
-|[Hide or freeze columns](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describes how to hide columns that you don’t want to display and how to keep an area of a model visible while you scroll to another area of the model by freezing (locking) specific columns in one area.|  
+|[Hide or freeze columns](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describes how to hide columns that you don't want to display and how to keep an area of a model visible while you scroll to another area of the model by freezing (locking) specific columns in one area.|  
 |[Calculated Columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Topics in this section describe how you can use calculated columns to add aggregated data to your model.|  
 |[Filter and Sort Data](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Topics in this section describe how you can filter or sort data by using controls in the model designer.|  
   

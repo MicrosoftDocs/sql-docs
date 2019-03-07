@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SCHEMABINDING clause"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "CREATE FUNCTION statement"
   - "valid statements [SQL Server]"
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Create User-defined Functions (Database Engine)
@@ -48,7 +44,7 @@ manager: craigg
   
 -   User-defined functions can not return multiple result sets. Use a stored procedure if you need to return multiple result sets.  
   
--   Error handling is restricted in a user-defined function. A UDF does not support TRY…CATCH, @ERROR or RAISERROR.  
+-   Error handling is restricted in a user-defined function. A UDF does not support TRY...CATCH, @ERROR or RAISERROR.  
   
 -   User-defined functions cannot call a stored procedure, but can call an extended stored procedure.  
   

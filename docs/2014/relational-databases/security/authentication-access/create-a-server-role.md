@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.serverrole.members.f1"
@@ -16,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SERVER ROLE, creating"
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Server Role
@@ -65,11 +61,11 @@ manager: craigg
   
 2.  Expand the **Security** folder.  
   
-3.  Right-click the **Server Roles** folder and select **New Server Role…**.  
+3.  Right-click the **Server Roles** folder and select **New Server Role...**.  
   
-4.  In the **New Server Role –***server_role_name* dialog box, on the **General** page, enter a name for the new server role in the **Server role name** box.  
+4.  In the **New Server Role -**_server_role_name_ dialog box, on the **General** page, enter a name for the new server role in the **Server role name** box.  
   
-5.  In the **Owner** box, enter the name of the server principal that will own the new role. Alternately, click the ellipsis **(…)** to open the **Select Server Login or Role** dialog box.  
+5.  In the **Owner** box, enter the name of the server principal that will own the new role. Alternately, click the ellipsis **(...)** to open the **Select Server Login or Role** dialog box.  
   
 6.  Under **Securables**, select one or more server-level securables. When a securable is selected, this server role can be granted or denied permissions on that securable.  
   

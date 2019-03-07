@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Projects
   A data mining project is part of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution. During the design process, the objects that you create in this project are available for testing and querying as part of a workspace database. When you want users to be able to query or browse the objects in the project, you must deploy the project to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] running in multidimensional mode.  
@@ -68,7 +65,7 @@ manager: "mblythe"
   
  A single data mining project can reference multiple data sources. Even though a mining model can use only one data source at a time, the project could have multiple models drawing on different data sources.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports data from many external providers, and SQL Server Data Mining can use both relational and cube data as a data source. However, if you develop both types of projects—models based on relational sources and models based on OLAP cubes—you might wish to develop and manage these in separate projects.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports data from many external providers, and SQL Server Data Mining can use both relational and cube data as a data source. However, if you develop both types of projects-models based on relational sources and models based on OLAP cubes-you might wish to develop and manage these in separate projects.  
   
 -   Typically models that are based on an OLAP cube should be developed within the OLAP design solution. One reason is that models based on a cube must process the cube to update data. Generally, you should use cube data only when that is the principal means of data storage and access, or when you require the aggregations, dimensions, and attributes created by the multidimensional project.  
   
@@ -158,7 +155,7 @@ manager: "mblythe"
   
  These visualizations are temporary, and are closed without saving when you exit the session with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Therefore, if you need to export these visualizations to another application for presentation or further analysis, use the **Copy** commands provided in each tab or pane of the viewer interface.  
   
- The Data Mining Add-ins for Excel also provides a Visio template that you can use to represent your models in a Visio diagram and annotate and modify the diagram using Visio tools. For more information, see [Microsoft SQL Server 2008 SP2 Data Mining Add-ins for Microsoft Office 2007](http://go.microsoft.com/fwlink/?LinkID=123146).  
+ The Data Mining Add-ins for Excel also provides a Visio template that you can use to represent your models in a Visio diagram and annotate and modify the diagram using Visio tools. For more information, see [Microsoft SQL Server 2008 SP2 Data Mining Add-ins for Microsoft Office 2007](https://go.microsoft.com/fwlink/?LinkID=123146).  
   
 
   

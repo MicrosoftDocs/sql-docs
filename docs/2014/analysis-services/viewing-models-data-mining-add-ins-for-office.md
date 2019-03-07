@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [Visio]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "diagram, creating"
   - "shapes, creating"
 ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Viewing Models (Data Mining Add-ins for Office)
   The Data Mining Add-ins for Excel provides the following ways to explore the analytical models that you have created:  
@@ -31,7 +28,7 @@ manager: "mblythe"
   
      [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
--   Use the **Document Model** wizard to generate a summary of the model’s metadata and the model’s content.  
+-   Use the **Document Model** wizard to generate a summary of the model's metadata and the model's content.  
   
      [Documenting Mining Models &#40;Data Mining Add-ins for Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Tabular Model Data Access
   Tabular model databases in Analysis Services can be accessed by most of the same clients, interfaces, and languages that you use to retrieve data or metadata from a multidimensional model. For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -24,7 +21,7 @@ manager: "mblythe"
  The following Microsoft client applications support native connections to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model databases.  
   
 ### Excel  
- You can connect to tabular model databases from Excel, using the data visualization and analysis capabilities in Excel to work with your data. To access the data, you define an Analysis Services data connection, specify a server that runs in tabular server mode, and then choose the database you want to use. For more information, see [Connect to or import data from SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ You can connect to tabular model databases from Excel, using the data visualization and analysis capabilities in Excel to work with your data. To access the data, you define an Analysis Services data connection, specify a server that runs in tabular server mode, and then choose the database you want to use. For more information, see [Connect to or import data from SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
  Excel is also the recommended application for browsing tabular models in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The tool includes an **Analyze in Excel** option that starts a new instance of Excel, creates an Excel workbook, and opens a data connection from the workbook to the model workspace database. When browsing tabular model data in Excel, be aware that Excel issues queries against the model using the Excel PivotTable client. Accordingly, operations within the Excel workbook result in MDX queries being sent to the workspace database, not DAX queries. If you are using SQL Profiler or another monitoring tool to monitor queries, you can expect to see MDX and not DAX in the profiler trace. For more information about the Analyze in Excel feature, see [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
@@ -33,7 +30,7 @@ manager: "mblythe"
   
  The [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client determines the structure of the specified model by sending a request to the specified data source, which returns a schema that can be used by the client to create queries against the model as a data source and perform operations based on the data. Subsequent operations in the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] user interface to filter data, perform calculations or aggregations, and display associated data are controlled by the client and cannot be programmatically manipulated.  
   
- The queries that are sent by the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client to the model are issued as DAX statements, which you can monitor by setting a trace on the model.  The client also issues a request to the server for the initial schema definition, which is presented according to the Conceptual Schema Definition Language (CSDL). For more information, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ The queries that are sent by the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client to the model are issued as DAX statements, which you can monitor by setting a trace on the model.  The client also issues a request to the server for the initial schema definition, which is presented according to the Conceptual Schema Definition Language (CSDL). For more information, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### SQL Server Management Studio  
  You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage instances that host tabular models, and to query the metadata and data in them. You can process models or the objects in a model, create and manage partitions, and set security that can be used for managing data access. For more information, see the following topics:  
@@ -50,7 +47,7 @@ manager: "mblythe"
   
 -   You cannot change the database context of the XMLA Query window after you have opened the **Query** window. Therefore, if you need to send a query to a different database or to a different instance, you must open that database or instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and open a new **XMLA Query** window within that context.  
   
- You can create traces against an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model as you would on a multidimensional solution. In this release, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides many new events that can be used to track memory usage, query and processing operations, and file usage. For more information, see [Analysis Services Trace Events](../trace-events/analysis-services-trace-events.md).  
+ You can create traces against an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model as you would on a multidimensional solution. In this release, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides many new events that can be used to track memory usage, query and processing operations, and file usage. For more information, see [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events).  
   
 > [!WARNING]  
 >  If you put a trace on a tabular model database, you might see some events that are categorized as DMX queries. However, data mining is not supported on tabular model data, and the DMX queries executed on the database are limited to SELECT statements on the model metadata. The events are categorized as DMX only because the same parser framework is used for MDX.  
@@ -71,7 +68,7 @@ manager: "mblythe"
 ### CSDL  
  The Conceptual Schema Definition Language is not a query language, per se, but it can be used to retrieve information about the model and model metadata, that can later be used to create reports or create queries against the model.  
   
- For information about how CSDL is used in tabular models, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+ For information about how CSDL is used in tabular models, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## Programmatic Interfaces  
  The principal interfaces that are used for interacting with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular models are the schema rowsets, XMLA, and the query clients and query tools provided by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -87,7 +84,7 @@ manager: "mblythe"
   
  You can also retrieve data directly from an Analysis Services instance in an XML-based format. You can retrieve the schema of the tabular model by using the DISCOVER_CSDL_METADATA rowset, or you can use an EXECUTE or DISCOVER command with existing ASSL elements, objects, or properties. For more information, see the following resources:  
   
--   [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+-   [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### Manipulate Analysis Services Objects  
  You can create, modify, delete, and process tabular models and objects in them, including tables, columns, perspectives, measures, and partitions, using XMLA commands, or by using AMO. Both AMO and XMLA have been updated to support additional properties that are used in tabular models for enhanced reporting and modeling.  
@@ -103,11 +100,11 @@ manager: "mblythe"
 ### Schema Rowsets  
  Client applications can use the schema rowsets to examine the metadata of tabular models and to retrieve support and monitoring information from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. In this release of SQL Server new schema rowsets have been added and existing schema rowsets extended to support features related to tabular models and to enhance monitoring and performance analysis across [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   [DISCOVER_CALC_DEPENDENCY Rowset](../schema-rowsets/xml/discover-calc-dependency-rowset.md)  
+-   [DISCOVER_CALC_DEPENDENCY Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   
      New schema rowset for tracking dependencies among the columns and references in a tabular model  
   
--   [DISCOVER_CSDL_METADATA Rowset](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)  
+-   [DISCOVER_CSDL_METADATA Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
   
      New schema rowset for obtaining the CSDL representation of a tabular model  
   
@@ -115,11 +112,11 @@ manager: "mblythe"
   
      New schema rowset for monitoring SQL Server Extended Events. For more information, see [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
--   [DISCOVER_TRACES Rowset](../schema-rowsets/xml/discover-traces-rowset.md)  
+-   [DISCOVER_TRACES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
   
      New `Type` column lets you filter traces by category. For more information, see [Create Profiler Traces for Replay &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
--   [MDSCHEMA_HIERARCHIES Rowset](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
+-   [MDSCHEMA_HIERARCHIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
   
      New `STRUCTURE_TYPE` enumeration supports identification of user-defined hierarchies created in tabular models. For more information, see [Hierarchies &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md).  
   

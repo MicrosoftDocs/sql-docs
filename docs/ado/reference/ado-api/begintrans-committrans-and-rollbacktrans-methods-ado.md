@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "CommitTrans method [ADO]"
   - "RollbackTrans method [ADO]"
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

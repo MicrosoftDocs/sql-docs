@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "old diagrams [SQL Server]"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "legacy database diagrams"
   - "diagrams [SQL Server], upgrading"
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)

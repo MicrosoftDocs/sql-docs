@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "isolation levels [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "transaction isolation [ODBC]"
   - "transactions [ODBC], isolation"
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

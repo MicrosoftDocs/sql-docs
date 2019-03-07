@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], about data mining"
   - "data mining [Analysis Services], development"
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: 62
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Solutions
   A data mining solution is an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution that contains one or more data mining projects.  
@@ -32,7 +29,7 @@ manager: "mblythe"
  [Solution Walkthroughs](#bkmk_Walkthru)  
   
 ##  <a name="bkmk_RelMD"></a> Relational vs. Multidimensional Solutions  
- A data mining solution can be based either on multidimensional data—that is, an existing cube—or on purely relational data, such as the tables and views in a data warehouse, or on text files, Excel workbooks, or other external data sources.  
+ A data mining solution can be based either on multidimensional data-that is, an existing cube-or on purely relational data, such as the tables and views in a data warehouse, or on text files, Excel workbooks, or other external data sources.  
   
 -   You can create data mining objects within an existing multidimensional database solution.  
   

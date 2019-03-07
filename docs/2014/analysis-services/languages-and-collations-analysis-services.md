@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows collations [Analysis Services]"
@@ -18,15 +16,14 @@ helpviewer_keywords:
   - "default languages"
   - "collations [Analysis Services]"
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Languages and Collations (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the languages and collations provided by [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating systems. `Language` and `Collation` properties are initially set at the instance level during installation, but can be changed afterwards at different levels of the object hierarchy.  
   
- In a multidimensional model (only), you can set these properties on a database or cube – you can also set them on translations that you create for objects within a cube.  
+ In a multidimensional model (only), you can set these properties on a database or cube - you can also set them on translations that you create for objects within a cube.  
   
  When setting `Language` and `Collation`, you are either specifying settings used by the data model during processing and query execution, or (for multidimensional models only) you are equipping a model with multiple translations so that foreign language speakers can work with the model in their native language. Explicitly setting `Language` and `Collation` properties on an object (database, model, or cube) is for situations where the development environment and production server are configured for different locales, and you want to be sure that the language and collation matches those of the intended target environment.  
   
@@ -49,7 +46,7 @@ manager: "mblythe"
 -   [GB18030 Support in Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> Objects that support Language and Collation properties  
- `Language` and `Collation` properties are often exposed together – where you can set `Language`, you can also set `Collation`.  
+ `Language` and `Collation` properties are often exposed together - where you can set `Language`, you can also set `Collation`.  
   
  You can set `Language` and `Collation` on these objects:  
   
@@ -91,7 +88,7 @@ manager: "mblythe"
   
 -   0x0416 or 1046 for **Portuguese (Brazil)**.  
   
- To view a longer list, see [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Encoding and Code Pages](http://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ To view a longer list, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Encoding and Code Pages](https://msdn.microsoft.com/goglobal/bb688114.aspx).  
   
 > [!NOTE]  
 >  The `Language` property does not determine the language for returning system messages, or which strings appear in the user interface. Errors, warnings, and messages are localized into all languages supported in Office and Office 365 and are used automatically when the client connection specifies one of the supported locales.  
@@ -101,7 +98,7 @@ manager: "mblythe"
   
  Collations control the case-sensitivity of all strings in a bicameral language script, with the exception of object identifiers. If you use upper and lower case characters in an object identifier, be forewarned that the case-sensitivity of object identifiers is not determined by the collation, but by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For object identifiers composed in English script, object identifiers are always case-insensitive, regardless of collation. Cyrillic and other bicameral languages do the opposite (always case-sensitive). See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) for details.  
   
- Collation in Analysis Services is compatible with that of the SQL Server relational database engine, assuming you maintain parity in the sort options you select for each service. For example, if the relational database is accent sensitive, you should configure the cube the same way. Problems can occur when collations settings diverge. For an example and workarounds, see [Blanks in a Unicode string have different processing outcomes based on collation](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). To learn more about collation and the database engine, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Collation in Analysis Services is compatible with that of the SQL Server relational database engine, assuming you maintain parity in the sort options you select for each service. For example, if the relational database is accent sensitive, you should configure the cube the same way. Problems can occur when collations settings diverge. For an example and workarounds, see [Blanks in a Unicode string have different processing outcomes based on collation](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). To learn more about collation and the database engine, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ###  <a name="bkmk_collationtype"></a> Collation Types  
  Analysis Services supports two collation types:  

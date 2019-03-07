@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLDescribeParam"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDescribeParam function [ODBC]"
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg

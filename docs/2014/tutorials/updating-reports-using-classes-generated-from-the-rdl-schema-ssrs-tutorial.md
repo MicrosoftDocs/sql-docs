@@ -4,20 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RDL [Reporting Services], generating"
   - "RDL [Reporting Services], tutorials"
   - "RDL [Reporting Services], serializing"
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-caps.latest.revision: 26
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Updating Reports Using Classes Generated from the RDL Schema (SSRS Tutorial)
   This tutorial illustrates how to use the XML Schema Definition Tool (Xsd.exe) to generate classes that allow you to serialize and deserialize report definition files (.rdl and .rdlc) with the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> class.  
@@ -51,10 +47,10 @@ manager: "mblythe"
   
 -   The [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database installed to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   A report installed on your report server. This tutorial uses the sample report, Company Sales 2012. For more information about sample reports, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   A report installed on your report server. This tutorial uses the sample report, Company Sales 2012. For more information about sample reports, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  The samples are not installed automatically during setup, but you can install them at any time. For information about samples, see [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  The samples are not installed automatically during setup, but you can install them at any time. For information about samples, see [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
  **Estimated time to complete the tutorial:** 30 minutes  
   

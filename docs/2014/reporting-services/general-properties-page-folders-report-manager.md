@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
-caps.latest.revision: 25
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # General Properties Page, Folders (Report Manager)
   Use the General properties page for folders to view and set properties for the folders that you create. Information about who created or modified the folder and when the folder was modified appear at the top of the General properties page.  
@@ -33,7 +30,7 @@ manager: "mblythe"
   
 ## Options  
  **Name**  
- Specify a name for the folder. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the characters ; ? : @ & = + , $ * \< > | " or / when specifying a name.  
+ Specify a name for the folder. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the characters ; ? : \@ & = + , $ * \< > | " or / when specifying a name.  
   
  **Description**  
  Type a description of the folder contents. This description appears on the Contents page for users who have permission to access the folder.  

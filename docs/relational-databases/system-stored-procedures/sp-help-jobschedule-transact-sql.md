@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_jobschedule"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobschedule"
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -45,12 +41,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id=** ] *job_id*  
  The job identification number. *job_id*is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'**_job_name_**'**  
  The name of the job. *job_name*is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'**_schedule_name_**'**  
  The name of the schedule item for the job. *schedule_name*is **sysname**, with a default of NULL.  
   
  [ **@schedule_id=** ] *schedule_id*  
@@ -86,7 +82,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identifier for the schedule.|  
 |**job_count**|**int**|Count of jobs returned.|  
   
-> **NOTE:**  **sp_help_jobschedule** returns values from the **dbo.sysjobschedules** and **dbo.sysschedules** system tables in **msdb**. **sysjobschedules** updates every 20 minutes. This might affect the values that are returned by this stored procedure.  
+> **NOTE:  sp_help_jobschedule** returns values from the **dbo.sysjobschedules** and **dbo.sysschedules** system tables in **msdb**. **sysjobschedules** updates every 20 minutes. This might affect the values that are returned by this stored procedure.  
   
 ## Remarks  
  The parameters of **sp_help_jobschedule** can be used only in certain combinations. If *schedule_id* is specified, neither *job_id* nor *job_name* can be specified. Otherwise, the *job_id* or *job_name* parameters can be used with *schedule_name*.  
@@ -100,7 +96,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of **SQLAgentUserRole** can only view properties of job schedules that they own.  
   

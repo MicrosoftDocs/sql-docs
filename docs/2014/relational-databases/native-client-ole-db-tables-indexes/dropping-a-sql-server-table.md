@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "tables [OLE DB]"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "removing tables"
   - "dropping tables"
 ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Dropping a SQL Server Table

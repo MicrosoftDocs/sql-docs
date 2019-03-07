@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_dropsubscriber_TSQL"
   - "sp_dropsubscriber"
 helpviewer_keywords: 
   - "sp_dropsubscriber"
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dropsubscriber (Transact-SQL)
@@ -44,10 +37,10 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## Arguments  
- [ **@subscriber=** ] **'***subscriber***'**  
+ [ **@subscriber=** ] **'**_subscriber_**'**  
  Is the name of the Subscriber to be dropped. *subscriber* is **sysname**, with no default.  
   
- [ **@reserved=** ] **'***reserved***'**  
+ [ **@reserved=** ] **'**_reserved_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@ignore_distributor =** ] *ignore_distributor*  

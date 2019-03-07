@@ -4,20 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLTablePrivileges function"
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLTablePrivileges
@@ -26,7 +21,7 @@ manager: craigg
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
   
 ## See Also  
- [SQLTablePrivileges Function](http://go.microsoft.com/fwlink/?LinkId=59373\)   
+ [SQLTablePrivileges Function](https://go.microsoft.com/fwlink/?LinkId=59373\)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@PACK_RECEIVED_TSQL"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "number of packets read"
   - "packets [SQL Server], number read"
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;PACK_RECEIVED (Transact-SQL)

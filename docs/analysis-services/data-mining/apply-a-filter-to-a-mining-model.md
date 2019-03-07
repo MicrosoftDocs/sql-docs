@@ -35,7 +35,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. Then, on the **Mining Model** menu, select **Set Model Filter**.  
   
@@ -85,7 +85,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      These are the only conditions available for the nested table in the **Model Filter** dialog box, because you are restricting the case table to only those cases that contain a certain value in the nested table. You will set the value for the condition on the nested table in the next step.  
   
-4.  Click the **Value** box, and then click the **(…)** button to build an expression.  
+4.  Click the **Value** box, and then click the **(...)** button to build an expression.  
   
      The **\<name>Filter** dialog box opens. This dialog box can set conditions only on the current table, which in this case is the nested table.  
   

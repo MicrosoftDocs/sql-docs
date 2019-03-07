@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "Broker event category [SQL Server]"
   - "event classes [SQL Server], Broker event category"
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Broker Event Category
@@ -42,6 +38,6 @@ manager: craigg
  Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](audit-broker-conversation-event-class.md).  
   
 ## See Also  
- [Security Audit Event Category](../../analysis-services/trace-events/security-audit-event-category.md)  
+ [Security Audit Event Category](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

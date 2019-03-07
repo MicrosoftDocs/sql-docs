@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Getting Started with Data Mining (Data Mining Add-ins for Excel)
   Data mining is the process of discovering meaningful patterns in data. Data mining is a natural complement to the process of exploring and understanding your data through traditional BI. Machine algorithms can process very large amounts of data and discover patterns and trends that would otherwise be hidden.  
   
- To do data mining, you collect data that is relevant to a specific question, such as “Who are my customers?” or “what products were purchased?” and then apply an algorithm to find statistical correlations in the data. The patterns and trends found through analysis are stored as a mining model. You can then apply the mining model to new data, in business scenarios such as these:  
+ To do data mining, you collect data that is relevant to a specific question, such as "Who are my customers?" or "what products were purchased?" and then apply an algorithm to find statistical correlations in the data. The patterns and trends found through analysis are stored as a mining model. You can then apply the mining model to new data, in business scenarios such as these:  
   
 -   Use past trends to forecast sales for the next quarter, inventory requirements, or customer satisfaction.  
   
@@ -49,19 +46,19 @@ manager: "mblythe"
 ## Define Your Goal  
  Before you get started, take a minute to consider the question you really want to answer. Exploration for its own sake is illuminating, but if you want to apply your findings to new data, you should be able to state clearly what you expect the model to produce, and how you will measure whether the model accomplishes your goals.  
   
- For example, rather than a goal of “finding new customers”, clarify your objective to something more concrete, such as “identify the demographics of customers that are likely to buy our product, with a probability of at least 65%”.  
+ For example, rather than a goal of "finding new customers", clarify your objective to something more concrete, such as "identify the demographics of customers that are likely to buy our product, with a probability of at least 65%".  
   
--   Your dataset should contain at least one “result” attribute that you can use for training and prediction. If there is no such attribute, you can manually label some training data, or use other columns to create a proxy for the outcome.  
+-   Your dataset should contain at least one "result" attribute that you can use for training and prediction. If there is no such attribute, you can manually label some training data, or use other columns to create a proxy for the outcome.  
   
-     For example, if you want to predict “the best prospects”, you should apply some business rule beforehand to label existing customers, so that data mining can learn from the examples you provide.  
+     For example, if you want to predict "the best prospects", you should apply some business rule beforehand to label existing customers, so that data mining can learn from the examples you provide.  
   
 -   If you are working with a value that changes over time, and want to predict future trends, think about the granularity of the results you need. Do you want predictions for a month, day, or yearly basis? Your data has to be analyzed using the same units that you want to predict.  
   
-     With cyclical patterns, if you don’t get good results with daily data, try different time slices, or try using week days, months, or even holidays.  
+     With cyclical patterns, if you don't get good results with daily data, try different time slices, or try using week days, months, or even holidays.  
   
 -   Before you launch a wizard to find new correlations in your data, take one more look at your data and consider what sort of existing relationships might be present in the dataset. Are there confounding variables? Are there duplicates or proxies?  
   
--   What are the metrics by which the model’s success will be evaluated? How will you know that the model is “good enough”?  
+-   What are the metrics by which the model's success will be evaluated? How will you know that the model is "good enough"?  
   
 -   Do you want to make predictions from the data mining model or just look for interesting patterns and associations?  
   
@@ -70,7 +67,7 @@ manager: "mblythe"
   
  Take a minute to view the distribution of values, and identify potential problems such as missing values or placeholders.  
   
- If you are planning to perform data mining against a data set that was so large or complex that you couldn’t analyze it with other methods, consider sampling or data reduction.  
+ If you are planning to perform data mining against a data set that was so large or complex that you couldn't analyze it with other methods, consider sampling or data reduction.  
   
 -   How is the data distributed?  
   
@@ -84,12 +81,12 @@ manager: "mblythe"
   
  After your model is complete, take some time to review the results and identify ways to amend the data or get better results. It is exceedingly rare that your first model provides all the answers. Data mining is typically an iterative process.  
   
- As you try binning your data different ways, or adding new columns, remember to use the **Document Model** wizard to capture a snapshot of each model’s metadata and results. Having a record will make it easier to track progress in your exploration.  
+ As you try binning your data different ways, or adding new columns, remember to use the **Document Model** wizard to capture a snapshot of each model's metadata and results. Having a record will make it easier to track progress in your exploration.  
   
  [Exploring and Cleaning Data](exploring-and-cleaning-data.md)  
   
 ## Validate Your Model  
- As you run each wizard or tool, the algorithm analyzes the contents of the data and determines whether a statistically valid pattern exists. If the algorithm cannot find valid patterns, you’ll get an error message. However, even if a model was successfully created, you’ll want to test the model to see if it validates your assumptions. You can use tools such as the [Accuracy Chart &#40;SQL Server Data Mining Add-ins&#41;](accuracy-chart-sql-server-data-mining-add-ins.md) or [Cross-Validation &#40;SQL Server Data Mining Add-ins&#41;](cross-validation-sql-server-data-mining-add-ins.md) to produce statistical measures of model quality.  
+ As you run each wizard or tool, the algorithm analyzes the contents of the data and determines whether a statistically valid pattern exists. If the algorithm cannot find valid patterns, you'll get an error message. However, even if a model was successfully created, you'll want to test the model to see if it validates your assumptions. You can use tools such as the [Accuracy Chart &#40;SQL Server Data Mining Add-ins&#41;](accuracy-chart-sql-server-data-mining-add-ins.md) or [Cross-Validation &#40;SQL Server Data Mining Add-ins&#41;](cross-validation-sql-server-data-mining-add-ins.md) to produce statistical measures of model quality.  
   
  As you assess the results of your first model, ask yourself questions such as these:  
   

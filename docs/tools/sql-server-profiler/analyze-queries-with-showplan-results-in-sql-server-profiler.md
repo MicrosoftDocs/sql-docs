@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "events [SQL Server], Showplan"
   - "Profiler [SQL Server Profiler], Showplan results"
   - "SQL Server Profiler, Showplan results"
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

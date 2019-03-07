@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "registry entries for data sources [ODBC], ODBC subkey"
   - "subkeys [ODBC], ODBC subkey"
   - "ODBC subkey [ODBC]"
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

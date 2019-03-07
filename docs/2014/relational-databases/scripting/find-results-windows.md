@@ -4,21 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.findresults1"
-  - "findresultswindow"
+f1_keywords:
   - "vs.findresults2"
 helpviewer_keywords: 
   - "Find Results Windows dialog box"
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Find Results Windows
@@ -94,5 +89,3 @@ manager: craigg
  and might conclude with this line of statistics:  
   
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
-  
-  

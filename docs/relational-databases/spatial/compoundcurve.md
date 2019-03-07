@@ -1,29 +1,23 @@
-﻿---
+---
 title: "CompoundCurve | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A **CompoundCurve** is a collection of zero or more continuous **CircularString** or **LineString** instances of either geometry or geography types.  
   
 > [!IMPORTANT]  
->  For a detailed description and examples of the new spatial features in this release, including the **CompoundCurve** subtype, download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  For a detailed description and examples of the new spatial features in this release, including the **CompoundCurve** subtype, download the white paper, [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  An empty **CompoundCurve** instance can be instantiated, but for a **CompoundCurve** to be valid it must meet the following criteria:  
   
@@ -31,14 +25,13 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 2.  The sequence of **CircularString** or **LineString** instances must be continuous.  
   
- If a **CompoundCurve** contains a sequence of multiple **CircularString** and **LineString** instances, the ending endpoint for every instance except for the last instance must be the starting endpoint for the next instance in the sequence. This means that if the ending point of a prior instance in the sequence is (4 3 7 2), the starting point for the next instance in the sequence must be (4 3 7 2). Note that Z(elevation) and M(measure) values for the point must also be the same. If there is a difference in the two points, a `System.FormatException` is thrown. Points in a **CircularString** do not have to have a Z or M value. If no Z or M values are given for the ending point of the prior instance, the starting point of the next instance cannot include Z or M values. If the ending point for the prior sequence is (4 3), the starting point for the next sequence must be (4 3); it cannot be (4 3 7 2). All points in a **CompoundCurve** instance must have either no Z value or the same Z value.  
+If a **CompoundCurve** contains a sequence of multiple **CircularString** and **LineString** instances, the ending endpoint for every instance except for the last instance must be the starting endpoint for the next instance in the sequence. This means that if the ending point of a prior instance in the sequence is (4 3 7 2), the starting point for the next instance in the sequence must be (4 3 7 2). Note that Z(elevation) and M(measure) values for the point must also be the same. If there is a difference in the two points, a `System.FormatException` is thrown. Points in a **CircularString** do not have to have a Z or M value. If no Z or M values are given for the ending point of the prior instance, the starting point of the next instance cannot include Z or M values. If the ending point for the prior sequence is (4 3), the starting point for the next sequence must be (4 3); it cannot be (4 3 7 2). All points in a **CompoundCurve** instance must have either no Z value or the same Z value.  
   
 ## CompoundCurve instances  
- The following illustration shows valid **CompoundCurve** types.  
+The following illustration shows valid **CompoundCurve** types.  
   
 ![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
-  
 ### Accepted instances  
  **CompoundCurve** instance is accepted if it is an empty instance or meets the following criteria.  
   
@@ -47,20 +40,20 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 2.  All of the circular arc segments in the **CompoundCurve** instance are connected. The first point for each succeeding circular arc segment is the same as the last point on the preceeding circular arc segment.  
   
     > [!NOTE]  
-    >  This includes the Z and M coordinates. So, all four coordinates X, Y, Z, and M must be the same.  
+    > This includes the Z and M coordinates. So, all four coordinates X, Y, Z, and M must be the same.  
   
 3.  None of the contained instances are empty instances.  
   
- The following example shows accepted **CompoundCurve** instances.  
+The following example shows accepted **CompoundCurve** instances.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 ```  
   
- The following example shows **CompoundCurve** instances that are not accepted. These instances throw `System.FormatException`.  
+The following example shows **CompoundCurve** instances that are not accepted. These instances throw `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0))';  
 ```  
@@ -72,28 +65,27 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
   
 2.  All circular arc segment instances contained by the **CompoundCurve** instance are valid instances.  
   
- The following example shows valid **CompoundCurve** instances.  
+The following example shows valid **CompoundCurve** instances.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
-  
 ```  
   
- `@g3` is valid because the **CircularString** instance is valid. For more information on the validity of the **CircularString** instance, see [CircularString](../../relational-databases/spatial/circularstring.md).  
+`@g3` is valid because the **CircularString** instance is valid. For more information on the validity of the **CircularString** instance, see [CircularString](../../relational-databases/spatial/circularstring.md).  
   
- The following example shows **CompoundCurve** instances that are not valid.  
+The following example shows **CompoundCurve** instances that are not valid.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4, 3 5))';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE((1 1, 1 1))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` is not valid because the second instance is not a valid LineString instance. `@g2` is not valid because the **LineString** instance is not valid. `@g3` is not valid because the **CircularString** instance is not valid. For more information on valid **CircularString** and **LineString** instances, see [CircularString](../../relational-databases/spatial/circularstring.md) and [LineString](../../relational-databases/spatial/linestring.md).  
+`@g1` is not valid because the second instance is not a valid LineString instance. `@g2` is not valid because the **LineString** instance is not valid. `@g3` is not valid because the **CircularString** instance is not valid. For more information on valid **CircularString** and **LineString** instances, see [CircularString](../../relational-databases/spatial/circularstring.md) and [LineString](../../relational-databases/spatial/linestring.md).  
   
 ## Examples  
   
@@ -140,7 +132,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- This produces the following output: 12.566370… which is the equivalent of 4∏. The `CompoundCurve` instance in the example stores a circle with a radius of 2. Both of the previous code examples did not have to use a `CompoundCurve`. For the first example a `LineString` instance would have been simpler, and a `CircularString` instance would have been simpler for the second example. However, the next example shows where a `CompoundCurve` provides a better alternative.  
+This produces the output `12.5663706143592` which is the equivalent of 4∏. The `CompoundCurve` instance in the example stores a circle with a radius of 2. Both of the previous code examples did not have to use a `CompoundCurve`. For the first example a `LineString` instance would have been simpler, and a `CircularString` instance would have been simpler for the second example. However, the next example shows where a `CompoundCurve` provides a better alternative.  
   
 ### F. Using a CompoundCurve to store a semicircle  
  The following example uses a `CompoundCurve` instance to store a semicircle.  
@@ -179,14 +171,14 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount  
 ```  
   
- The output is as follows:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
- The perimeter for Circle Two is approximately 4∏, which is the actual value for the perimeter. However, the perimeter for Circle One is significantly inaccurate. Circle One's `CompoundCurve` instance stores one circular arc segment (ABC) and two line segments (CD, DA). The `CompoundCurve` instance has to store two circular arc segments (ABC, CDA) to define a circle. A `LineString` instance defines the second set of points (4 2, 2 4, 0 2) in Circle One's `CompoundCurve` instance. You have to explicitly declare a `CircularString` instance inside a `CompoundCurve`.  
+The perimeter for Circle Two is approximately 4∏, which is the actual value for the perimeter. However, the perimeter for Circle One is significantly inaccurate. Circle One's `CompoundCurve` instance stores one circular arc segment (ABC) and two line segments (CD, DA). The `CompoundCurve` instance has to store two circular arc segments (ABC, CDA) to define a circle. A `LineString` instance defines the second set of points (4 2, 2 4, 0 2) in Circle One's `CompoundCurve` instance. You have to explicitly declare a `CircularString` instance inside a `CompoundCurve`.  
   
 ## See Also  
  [STIsValid &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

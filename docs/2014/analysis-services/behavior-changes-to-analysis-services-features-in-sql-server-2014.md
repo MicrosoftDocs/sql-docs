@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Behavior Changes to Analysis Services Features in SQL Server 2014
   This topic describes behavior changes in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] for multidimensional, tabular, data mining, and [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] deployments. Behavior changes affect how features work or interact in the current version as compared to earlier versions of SQL Server.  
@@ -37,7 +34,7 @@ manager: "mblythe"
   
 |Issue|Description|  
 |-----------|-----------------|  
-|SQL Server 2008 R2 PowerPivot workbooks will not silently upgrade and refresh the models when they are used in SQL Server 2012 SP1 PowerPivot for SharePoint 2013. Therefore Scheduled data refreshes will not work for SQL Server 2008 R2 PowerPivot workbooks.|The 2008 R2 workbooks will open in [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], however scheduled refreshes will not work. If you review the refresh history you will see an error message similar to the following:<br /> “The workbook contains an unsupported PowerPivot model. The PowerPivot model in the workbook is in the SQL Server 2008 R2 PowerPivot for Excel 2010 format. Supported PowerPivot models are the following: <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **How to upgrade a workbook:** The scheduled refreshes will not work until you upgrade the workbook to a 2012 workbook. To upgrade the workbook and model it contains, complete one of the following:<br /><br /> Download and open the workbook in Microsoft Excel 2010 with the SQL Server 2012 PowerPivot for Excel add-in installed. Then save the workbook and republish it to the SharePoint server.<br /><br /> Download and open the workbook in Microsoft Excel 2013. Then save the workbook and republish it to the SharePoint server.<br /><br /> <br /><br /> For more information on workbook upgrade, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
+|SQL Server 2008 R2 PowerPivot workbooks will not silently upgrade and refresh the models when they are used in SQL Server 2012 SP1 PowerPivot for SharePoint 2013. Therefore Scheduled data refreshes will not work for SQL Server 2008 R2 PowerPivot workbooks.|The 2008 R2 workbooks will open in [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], however scheduled refreshes will not work. If you review the refresh history you will see an error message similar to the following:<br /> "The workbook contains an unsupported PowerPivot model. The PowerPivot model in the workbook is in the SQL Server 2008 R2 PowerPivot for Excel 2010 format. Supported PowerPivot models are the following: <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **How to upgrade a workbook:** The scheduled refreshes will not work until you upgrade the workbook to a 2012 workbook. To upgrade the workbook and model it contains, complete one of the following:<br /><br /> Download and open the workbook in Microsoft Excel 2010 with the SQL Server 2012 PowerPivot for Excel add-in installed. Then save the workbook and republish it to the SharePoint server.<br /><br /> Download and open the workbook in Microsoft Excel 2013. Then save the workbook and republish it to the SharePoint server.<br /><br /> <br /><br /> For more information on workbook upgrade, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
 |Behavior change in DAX [ALL Function](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|Prior to [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], if you specify a [Date] column in Mark as Date Table, for use in time-intelligence, and that [Date] column is passed as an argument to the ALL function, in-turn, passed as a filter to a CALCULATE function, all filters for all columns in the table are ignored, regardless of any slicer on the date column.<br /><br /> For example,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Prior to [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], all filters are ignored for all columns of DateTable, regardless of the [Date] column passed as an argument to ALL.<br /><br /> In [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] and in PowerPivot in Excel 2013, the behavior will ignore filters only for the specified column passed as an argument to ALL.<br /><br /> To work around the new behavior, in effect ignore all columns as a filter for the entire table, you can exclude [Date] column from the argument, for example,<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> This will yield the same result as the behavior prior to [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
   
 ##  <a name="bkmk_sql2012"></a> Behavior Changes in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
@@ -46,7 +43,7 @@ manager: "mblythe"
 ### Analysis Services, Multidimensional Mode  
   
 #### NullProcessing option set to Preserve is no longer supported for distinct count measures  
- Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], it was possible to set [NullProcessing Element &#40;ASSL&#41;](scripting/properties/nullprocessing-element-assl.md) to `Preserve` for distinct count measures.  Unfortunately, this practice often produced invalid results and sometimes even crashed the processing job. As a result, this configuration is no longer valid in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Attempting to use it will cause the following validation error to occur: "Errors in the metadata manager. Preserve is not a valid NullProcessing value for the \<measurename> distinct count measure."  
+ Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], it was possible to set [NullProcessing Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) to `Preserve` for distinct count measures.  Unfortunately, this practice often produced invalid results and sometimes even crashed the processing job. As a result, this configuration is no longer valid in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Attempting to use it will cause the following validation error to occur: "Errors in the metadata manager. Preserve is not a valid NullProcessing value for the \<measurename> distinct count measure."  
   
 #### Cube browser in Management Studio and Cube Designer has been removed  
  The cube browser control that let you drag and drop fields onto a PivotTable structure in Management Studio or in Cube Designer has been removed from the product. The control was an Office Web Control (OWC) component. OWC was deprecated by Office and is no longer available.  
@@ -58,7 +55,7 @@ manager: "mblythe"
   
  In this release, permission requirements have changed for Excel workbooks that render PowerPivot data from an external file. In this release, you must have **Read** permissions (or more specifically, the **Open Items** permission) to connect to an external PowerPivot workbook from a client application. The additional permissions specify that a user has download rights to view the source data embedded in the workbook. The additional permissions reflect the fact that model data is wholly available to the client application or workbook that links to it, resulting in a better alignment between permission requirements and the actual data connection behavior.  
   
- To continue using a PowerPivot workbook as an external data source, you must increase SharePoint permissions for users who connect to external PowerPivot data. Until you change the permissions, users will get the following error if they try to access PowerPivot workbooks in a data source connection: “PowerPivot Web service returned an error (Access denied. The document you requested does not exist or you do not have permission to open the file.)”  
+ To continue using a PowerPivot workbook as an external data source, you must increase SharePoint permissions for users who connect to external PowerPivot data. Until you change the permissions, users will get the following error if they try to access PowerPivot workbooks in a data source connection: "PowerPivot Web service returned an error (Access denied. The document you requested does not exist or you do not have permission to open the file.)"  
   
 > [!WARNING]  
 >  The following steps instruct you to break permission inheritance at the library level and increase user permissions from **View Only** to **Read** for specific documents in this library. Before you proceed, carefully review existing permissions and documents and verify that these steps are appropriate for your site.  

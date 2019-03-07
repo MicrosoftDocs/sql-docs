@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [Integration Services], data flow components"
   - "components [Integration Services], data flow"
   - "error outputs [Integration Services]"
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configure an Error Output in a Data Flow Component

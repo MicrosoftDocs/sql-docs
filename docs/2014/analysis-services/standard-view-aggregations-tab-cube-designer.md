@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.aggregations.standard.f1"
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
-caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Standard View (Aggregations Tab, Cube Designer)
   Use the **Standard View** of the aggregation designer to view aggregations. You can also create and modify aggregation designs in this view by using the **Aggregation Design Wizard** or the **Usage Based Optimization Wizard**.  

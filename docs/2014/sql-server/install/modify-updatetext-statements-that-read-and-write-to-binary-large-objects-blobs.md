@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "UPDATETEXT statement"
   - "text [SQL Server], UPDATETEXT statements"
 ms.assetid: b85da6a7-42f6-4707-a25e-3ded8958b94f
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Modify UPDATETEXT statements that read and write to binary large objects (BLOBs)

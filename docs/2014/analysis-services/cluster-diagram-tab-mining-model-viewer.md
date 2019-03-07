@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.clustering.diagram.f1"
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cluster Diagram Tab (Mining Model Viewer)
   The **Cluster Diagram** tab provides a graphical view of all the clusters that the clustering model contains.  

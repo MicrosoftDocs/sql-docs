@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, alerts"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "displaying alerts"
   - "status information [SQL Server], alerts"
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View Information About an Alert
@@ -55,7 +51,7 @@ manager: craigg
   
 4.  Right-click the alert that has the information you want to view and select **Properties**.  
   
-     For more information on the available options contained in the *alert_name***alert properties** dialog box, see:  
+     For more information on the available options contained in the _alert_name_**alert properties** dialog box, see:  
   
     -   [Alert Properties-New Alert &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

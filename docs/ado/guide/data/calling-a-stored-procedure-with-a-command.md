@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "calling stored procedures [ADO]"
   - "stored procedures [ADO]"
   - "commands [ADO]"
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -131,4 +128,4 @@ End Function
 ```  
   
 ## See Also  
- [Knowledge Base article 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
+ [Knowledge Base article 117500](https://go.microsoft.com/fwlink/?LinkId=117500)

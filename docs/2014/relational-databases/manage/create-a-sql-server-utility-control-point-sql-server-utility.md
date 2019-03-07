@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.create.ucp.progress.F1"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "Create UCP"
   - "UCP"
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create a SQL Server Utility Control Point (SQL Server Utility)
@@ -74,7 +70,7 @@ manager: craigg
   
 -   This procedure must be run by a user with sysadmin permissions, the same permissions required to create a UCP.  
   
--   All managed instances of SQL Server must be removed from the UCP. Note that the UCP is a managed instance of SQL Server. For more information, see [How to: Remove an Instance of SQL Server from the SQL Server Utility](http://go.microsoft.com/fwlink/?LinkId=169392).  
+-   All managed instances of SQL Server must be removed from the UCP. Note that the UCP is a managed instance of SQL Server. For more information, see [How to: Remove an Instance of SQL Server from the SQL Server Utility](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use this procedure to remove a SQL Server UCP from the SQL Server Utility. After the operation is complete, a UCP can be created on the instance of SQL Server again.  
   
@@ -129,7 +125,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Specify Instance  
  Specify the following information about the UCP you are creating:  
   
--   **Instance Name** - To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog, click **Connect…**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName.  
+-   **Instance Name** - To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog, click **Connect...**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName.  
   
 -   **Utility Name** - Specify a name that will be used to identify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility on the network.  
   
@@ -141,7 +137,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  If the connection is encrypted, the encrypted connection will be used. If the connection is not encrypted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility will reconnect using an encrypted connection.  
   
- To continue, click **Connect…**.  
+ To continue, click **Connect...**.  
   
 ##  <a name="Agent_configuration"></a> Utility Collection Set Account  
  Specify a Windows domain account to run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection set. This account is used as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection set. Alternatively, you can use the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. To pass validation requirements, use the following guidelines to specify the account.  
@@ -218,7 +214,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Use the following example to create a new utility control point:  
   
 ```  
-> $UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
 > $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  

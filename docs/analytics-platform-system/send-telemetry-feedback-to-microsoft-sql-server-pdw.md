@@ -18,7 +18,7 @@ Analytics Platform System has an optional telemetry feature that sends Admin Con
 > In this release, Microsoft is not actively monitoring the telemetry data. The data is being collected for analysis purposes only.  
   
 ## <a name="privacy"></a>Privacy  
-To provide the maximum privacy protection, APS ships without enabling telemetry. Before enabling this feature, first review the [Microsoft Analytics Platform System Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=400902). To opt in, run the PowerShell script described below.  
+To provide the maximum privacy protection, APS ships without enabling telemetry. Before enabling this feature, first review the [Microsoft Analytics Platform System Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=400902). To opt in, run the PowerShell script described below.  
   
 ## <a name="enable"></a>Enable Telemetry  
 **DNS Forwarding:** Sending telemetry data to Microsoft requires Analytics Platform System to connect to the internet through a DNS forwarder. To enable this feature, you must enable DNS forwarding on all hosts and workload VMs. Invoke the `Enable-RemoteMonitoring` command with the `SetupDnsForwarder` option to properly configure DNS forwarding and enable telemetry. Invoke the `Enable-RemoteMonitoring` command without the `SetupDnsForwarder` option when DNS forwarding is already configured and you only want to enable Heartbeat Monitoring.  
@@ -28,7 +28,7 @@ To provide the maximum privacy protection, APS ships without enabling telemetry.
   
 #### To Enable Feedback  
   
-1.  Using an appliance domain administrator account, connect to the Control node (***appliance_domain*-CTL01**) and open a command prompt using your Windows administrator credentials.  
+1.  Using an appliance domain administrator account, connect to the Control node (<strong>*appliance_domain*-CTL01</strong>) and open a command prompt using your Windows administrator credentials.  
   
 2.  Navigate to the following directory: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -78,7 +78,7 @@ Disabling telemetry will stop all operations which communicate information about
   
 #### To Disable telemetry  
   
-1.  Using an appliance domain administrator account, connect to the Control node (***appliance_domain*-CTL01**) and open a PowerShell window with administrator privileges.  
+1.  Using an appliance domain administrator account, connect to the Control node (<strong>*appliance_domain*-CTL01</strong>) and open a PowerShell window with administrator privileges.  
   
 2.  Navigate to the following directory: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   

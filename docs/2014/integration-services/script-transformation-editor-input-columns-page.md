@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scriptcomponent.inputcolumn.f1"
 helpviewer_keywords: 
   - "Script Transformation Editor"
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Script Transformation Editor (Input Columns Page)

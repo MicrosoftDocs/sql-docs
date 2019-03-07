@@ -5,11 +5,9 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 11/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
 ms.custom: "sql-linux"
-ms.suite: "sql"
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ---
@@ -17,7 +15,7 @@ ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-You can create applications that connect to and use SQL Server 2017 on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
+You can create applications that connect to and use SQL Server on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
@@ -28,12 +26,12 @@ You can create applications that connect to and use SQL Server 2017 on Linux fro
 
 The best way to get started and build applications with SQL Server is to try it out for yourself.
 
-- Browse to [Getting Started Tutorials](http://aka.ms/sqldev).
+- Browse to [Getting Started Tutorials](https://aka.ms/sqldev).
 - Select your language and development platform.
 - Try the code samples.
 
 > [!TIP]
-> If you want to develop for SQL Server 2017 on Docker, take a look at the **macOS** tutorials.
+> If you want to develop for SQL Server on Docker, take a look at the **macOS** tutorials.
 
 ## Create new applications
 
@@ -41,11 +39,11 @@ If you're creating a new application, take a look at a list of the [Connectivity
 
 ## Use existing applications
 
-If you have an existing database application, you can simply change its connection string to target SQL Server 2017 on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes.md) in SQL Server 2017 on Linux.
+If you have an existing database application, you can simply change its connection string to target SQL Server on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes.md) in SQL Server on Linux.
 
 ## Use existing SQL tools on Windows with SQL Server on Linux
 
-Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also work with SQL Server 2017 on Linux. Although they do not run natively on Linux, you can still manage remote SQL Server instances on Linux. 
+Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also work with SQL Server on Linux. Although they do not run natively on Linux, you can still manage remote SQL Server instances on Linux. 
 
 See the following topics for more information:
 

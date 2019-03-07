@@ -1,6 +1,7 @@
 ---
-title: Configure a SQL Server availability group for read-scale on Windows | Microsoft Docs
-description:
+title: "Configure read-scale for an availability group"
+description: "Configure your Always On availability group for read-scale workloads on Windows."
+ms.custom: "seodec18"
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -9,11 +10,9 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ---
-# Configure a SQL Server availability group for read-scale on Windows
+# Configure read-scale for an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -45,7 +44,7 @@ CREATE AVAILABILITY GROUP [ag1]
 		    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = MANUAL,
 		    SEEDING_MODE = AUTOMATIC,
-                    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
+                    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
 		    ),
         N'<node2>' WITH (
 		    ENDPOINT_URL = N'tcp://<node2>:<5022>',

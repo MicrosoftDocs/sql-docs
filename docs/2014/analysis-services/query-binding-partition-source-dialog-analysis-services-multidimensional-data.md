@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.partitions.partitionfilterexpression.f1"
 ms.assetid: 697874d4-3f7a-4126-96f5-37cc8e2ee306
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Query Binding Detail (Partition Source Dialog Box) (Analysis Services - Multidimensional Data)
   Use the **Query Binding** option in the **Partition Source** dialog box to specify the query that provides the data for the partition. You can display this pane by selecting **Query Binding** from the **Binding type** option in the **Partition Source** dialog box.  

@@ -1,5 +1,6 @@
 ---
-title: Operationalize R code in SQL Server Machine Learning Services | Microsoft Docs
+title: Operationalize R code using stored procedures - SQL Server Machine Learning Services
+description: Embed R language code in a SQL Server stored procedure to make it available to any client application having access to a SQL Server database.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -37,7 +38,7 @@ Of course, converting your R code in SQL is easier if some optimizations are don
 
 + [Converting R code for use in R Services](converting-r-code-for-use-in-sql-server.md)
 
-+ [Generating an R stored procedure by using sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Use sqlrutils helper functions](ref-r-sqlrutils.md)
 
 ## Integrate R and Python with applications
 
@@ -58,14 +59,14 @@ This walkthrough provides examples of scoring using a stored procedure in both b
 See these solution templates for examples of how to integrate scoring in an application:
 
 + [Retail forecasting](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
-+ [Fraud detection](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
++ [Fraud detection](https://github.com/Microsoft/r-server-fraud-detection)
 + [Customer clustering](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
 ## Boost performance and scale
 
 Although the open source R language is known to have limitations, the RevoScaleR package APIs can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
 
-If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server’s highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
+If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server's highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
 
 For more information about how to improve performance in SQL Server Machine Learning, see:
 

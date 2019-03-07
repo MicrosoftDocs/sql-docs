@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Install Master Data Services
@@ -46,12 +42,12 @@ manager: craigg
 |Create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database for your master data.|[Create a Master Data Services Database](create-a-master-data-services-database.md)|  
 |Create a [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to create and configure a web application to host [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Create a Master Data Manager Web Application &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)|  
 |Associate a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database with a web application|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to associate your [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application with your [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|[Associate a Master Data Services Database and Web Application](associate-a-master-data-services-database-and-web-application.md)|  
-|Configure Internet Explorer Enhanced Security|When you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a Windows Server 2008 or Windows Server 2008 R2 computer, you might have to configure Internet Explorer Enhanced Security to allow scripting for the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site. Otherwise, browsing to the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site on the server computer will fail.|[Internet Explorer: Enhanced Security Configuration](http://go.microsoft.com/fwlink/p/?LinkId=223869)|  
-|Install the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Users who will work with master data can install the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[http://go.microsoft.com/fwlink/?LinkId=219530](http://go.microsoft.com/fwlink/?LinkId=219530)|  
+|Configure Internet Explorer Enhanced Security|When you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a Windows Server 2008 or Windows Server 2008 R2 computer, you might have to configure Internet Explorer Enhanced Security to allow scripting for the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site. Otherwise, browsing to the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site on the server computer will fail.|[Internet Explorer: Enhanced Security Configuration](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|Install the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Users who will work with master data can install the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[https://go.microsoft.com/fwlink/?LinkId=219530](https://go.microsoft.com/fwlink/?LinkId=219530)|  
 |Enable Data Quality Services (DQS) integration|For users of the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], enable integration with the DQS feature, which can be used to match similar data.|[Enable Data Quality Services Integration with Master Data Services](enable-data-quality-services-integration-with-master-data-services.md)|  
-|Deploy a sample model|Sample model packages are installed with Master Data Services, and can be deployed using MDSModelDeploy.exe.|[Deploying MDS Samples in SQL Server](http://go.microsoft.com/fwlink/?LinkId=251486&clcid=0x409)|  
+|Deploy a sample model|Sample model packages are installed with Master Data Services, and can be deployed using MDSModelDeploy.exe.|[Deploying MDS Samples in SQL Server](https://go.microsoft.com/fwlink/?LinkId=251486&clcid=0x409)|  
   
- If you encounter issues during the installation process or initial configuration, see [Troubleshooting Installation and Configuration Issues](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) on TechNet Wiki.  
+ If you encounter issues during the installation process or initial configuration, see [Troubleshooting Installation and Configuration Issues](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) on TechNet Wiki.  
   
  If you no longer need [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a computer, you can uninstall [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] and determine whether to remove items that are not affected by the uninstall process. For more information, see [Uninstall and Remove Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   

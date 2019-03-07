@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
-caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Tutorial: Preparing the Server for Replication
@@ -47,6 +43,6 @@ manager: craigg
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   
- [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
+ [SQL Server Replication Security](security/view-and-modify-replication-security-settings.md)  
   
   

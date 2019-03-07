@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpdistpublisher_TSQL"
   - "sp_helpdistpublisher"
 helpviewer_keywords: 
   - "sp_helpdistpublisher"
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpdistpublisher (Transact-SQL)
@@ -61,6 +54,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**thirdparty_flag**|**bit**|Whether the publication is enabled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or by a third party application:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, or Oracle Gateway Publisher.<br /><br /> **1** = Publisher has been integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using a third-party application.|  
 |**publisher_type**|**sysname**|Type of Publisher; can be one of the following:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|Name of the OLE DB data source on the Publisher.|  
+|**storage_connection_string**|**nvarchar(4000)**|Storage access key for working directory when distributor or publisher in Azure SQL Database.|  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

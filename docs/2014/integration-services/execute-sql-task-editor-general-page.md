@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executesqltask.general.f1"
 helpviewer_keywords: 
   - "Execute SQL Task Editor"
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Execute SQL Task Editor (General Page)
@@ -93,7 +90,7 @@ manager: craigg
   
 ### SQLSourceType = Direct input  
  **SQLStatement**  
- Type the SQL statement to execute in the option box, or click the browse button (…) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
+ Type the SQL statement to execute in the option box, or click the browse button (...) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
   
  **Related Topics:** [Query Builder](../../2014/integration-services/query-builder.md)  
   

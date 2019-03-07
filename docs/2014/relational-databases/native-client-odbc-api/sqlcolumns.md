@@ -4,20 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLColumns function"
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLColumns
@@ -37,7 +32,7 @@ manager: craigg
 |Column name|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Returns SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR for the **varchar(max)** data types.|  
-|TYPE_NAME|Returns “varchar”, “varbinary”, or “nvarchar” for the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** data types.|  
+|TYPE_NAME|Returns "varchar", "varbinary", or "nvarchar" for the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** data types.|  
 |COLUMN_SIZE|Returns SQL_SS_LENGTH_UNLIMITED for **varchar(max)** data types indicating that the size of the column is unlimited.|  
 |BUFFER_LENGTH|Returns SQL_SS_LENGTH_UNLIMITED for **varchar(max)** data types indicating that the size of the buffer is unlimited.|  
 |SQL_DATA_TYPE|Returns SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR for the **varchar(max)** data types.|  
@@ -88,7 +83,7 @@ manager: craigg
  For more information about sparse columns in ODBC, see [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLColumns Function](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns Function](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

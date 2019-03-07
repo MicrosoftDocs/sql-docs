@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unattended data refresh [Analysis Services with SharePoint]"
   - "scheduled data refresh [Analysis Services with SharePoint]"
   - "data refresh [Analysis Services with SharePoint]"
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Schedule a Data Refresh (PowerPivot for SharePoint)
   You can schedule data refresh to get automatic updates to PowerPivot data inside an Excel workbook that you published to a SharePoint site.  
@@ -151,7 +148,7 @@ manager: "mblythe"
   
  If you see a status message that is unexpected (for example, a refresh operation failed or was cancelled), you can investigate the problem by checking permissions and server availability.  
   
- Review the PowerPivot data refresh troubleshooting page on the TechNet WIKI for help on resolving data refresh problems. For more information see [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkId=251594).  
+ Review the PowerPivot data refresh troubleshooting page on the TechNet WIKI for help on resolving data refresh problems. For more information see [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
 >  SharePoint administrators can help you troubleshoot data refresh problems by viewing the consolidated data refresh reports in the PowerPivot Management Dashboard in Central Administration. For more information, see [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  

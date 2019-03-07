@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Managed  Backup to Windows Azure
@@ -70,7 +66,7 @@ manager: craigg
 |-|-|  
 |System Object|Description|  
 |**MSDB**|Stores the metadata, backup history for all the backups created by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|System stored procedure for enabling and configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|System stored procedure for enabling and configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|System stored procedure for enabling and configuring default settings [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the SQL Server instance.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|System stored procedure to pause and resume [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|System stored procedure to enable and configure monitoring for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Examples: enabling extended events, mail settings for notifications.|  
@@ -93,7 +89,7 @@ manager: craigg
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] names the Windows Azure storage container using the SQL Server Instance Name for all databases except availability databases.  For availability databases, the Availability Group GUID is used to name the Windows Azure storage container.  
   
- The backup file for non availability databases are named using the following convention: The name is created using the first 40 characters of the database name, the database GUID without the ‘-‘, and the timestamp. The underscore character is inserted between segments as separators. The **.bak** file extension is used for full backup and **.log** for log backups. For Avaialbility Group databases, in addition to the file naming convention described above, the Availability Group database GUID is added after the 40 characters of the database name. The Availability Group database GUID value is the value for group_database_id in sys.databases.  
+ The backup file for non availability databases are named using the following convention: The name is created using the first 40 characters of the database name, the database GUID without the '-', and the timestamp. The underscore character is inserted between segments as separators. The **.bak** file extension is used for full backup and **.log** for log backups. For Avaialbility Group databases, in addition to the file naming convention described above, the Availability Group database GUID is added after the 40 characters of the database name. The Availability Group database GUID value is the value for group_database_id in sys.databases.  
   
  **Full Database Backup:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agent schedules a full database backup if any of the following is true.  
   

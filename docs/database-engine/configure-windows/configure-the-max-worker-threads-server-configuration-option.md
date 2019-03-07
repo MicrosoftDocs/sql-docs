@@ -5,15 +5,12 @@ ms.date: "11/23/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "worker threads [SQL Server]"
   - "max worker threads option"
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -70,7 +67,8 @@ manager: craigg
     |Number of CPUs|32-bit computer|64-bit computer|  
     |------------|------------|------------| 
     |\<= 4 processors|256|512|
-    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU’s - 4) * 16)| 
+    |\> 4 processors and \< 64 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU's - 4) * 16)|
+    |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 + ((logical CPU's - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier.   We recommend 1024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  

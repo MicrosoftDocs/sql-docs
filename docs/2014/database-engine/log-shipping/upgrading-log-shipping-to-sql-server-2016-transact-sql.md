@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], upgrading"
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Log Shipping to SQL Server 2014 (Transact-SQL)
@@ -208,7 +204,7 @@ manager: craigg
   
 6.  Upgrade the original primary server (server A).  
   
-7.  On the database to which you failed over—the interim primary database (on server B), manually back up the transaction log using WITH NORECOVERY. This takes the database offline.  
+7.  On the database to which you failed over-the interim primary database (on server B), manually back up the transaction log using WITH NORECOVERY. This takes the database offline.  
   
 8.  Restore all transaction log backups that you created on the interim primary database (on server B) to every other secondary database (on server C) using WITH NORECOVERY. This allows log shipping to continue from the original primary database after its upgrade, without requiring a full database restore on each secondary database.  
   

@@ -5,9 +5,7 @@ ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE PARTITION SCHEME"
@@ -28,9 +26,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], filegroups"
   - "mapping partitions [SQL Server]"
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
@@ -62,14 +59,14 @@ AS PARTITION partition_function_name
  ALL  
  Specifies that all partitions map to the filegroup provided in *file_group_name*, or to the primary filegroup if **[**PRIMARY**]** is specified. If ALL is specified, only one *file_group_name* can be specified.  
   
- *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
  Specifies the names of the filegroups to hold the partitions specified by *partition_function_name*. *file_group_name* must already exist in the database.  
   
- If **[**PRIMARY**]** is specified, the partition is stored on the primary filegroup. If ALL is specified, only one *file_group_name* can be specified. Partitions are assigned to filegroups, starting with partition 1, in the order in which the filegroups are listed in [**,***...n*]. The same *file_group_name* can be specified more than one time in [**,***...n*]. If *n* is not sufficient to hold the number of partitions specified in *partition_function_name*, CREATE PARTITION SCHEME fails with an error.  
+ If **[**PRIMARY**]** is specified, the partition is stored on the primary filegroup. If ALL is specified, only one *file_group_name* can be specified. Partitions are assigned to filegroups, starting with partition 1, in the order in which the filegroups are listed in [**,**_...n_]. The same *file_group_name* can be specified more than one time in [**,**_...n_]. If *n* is not sufficient to hold the number of partitions specified in *partition_function_name*, CREATE PARTITION SCHEME fails with an error.  
   
  If *partition_function_name* generates less partitions than filegroups, the first unassigned filegroup is marked NEXT USED, and an information message displays naming the NEXT USED filegroup. If ALL is specified, the sole *file_group_name* maintains its NEXT USED property for this *partition_function_name*. The NEXT USED filegroup will receive an additional partition if one is created in an ALTER PARTITION FUNCTION statement. To create additional unassigned filegroups to hold new partitions, use ALTER PARTITION SCHEME.  
   
- When you specify the primary filegroup in *file_group_name* [ 1**,***...n*], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
+ When you specify the primary filegroup in *file_group_name* [ 1**,**_...n_], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
   
  Only PRIMARY is supported for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. See example E below. 
   

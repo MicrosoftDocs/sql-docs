@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Detect SCSI Host Adapter Issues
@@ -23,6 +19,6 @@ manager: craigg
 ## Best Practices Recommendations  
  Review the following Microsoft Knowledge Base article for more information about how to troubleshoot this error:  
   
--   [Microsoft Knowledge Base article 311081](http://go.microsoft.com/fwlink/?linkid=117744)  
+-   [Microsoft Knowledge Base article 311081](https://go.microsoft.com/fwlink/?linkid=117744)  
   
   

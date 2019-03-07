@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_settriggerorder (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_settriggerorder"
@@ -18,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_settriggerorder"
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-caps.latest.revision: 54
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +38,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## Arguments  
- [ **@triggername=** ] **'**[ *triggerschema***.**] *triggername***'**  
- Is the name of the trigger and the schema to which it belongs, if applicable, whose order is to be set or changed. [*triggerschema***.**]*triggername* is **sysname**. If the name does not correspond to a trigger or if the name corresponds to an INSTEAD OF trigger, the procedure returns an error. *triggerschema* cannot be specified for DDL or logon triggers.  
+ [ **@triggername=** ] **'**[ _triggerschema_**.**] _triggername_**'**  
+ Is the name of the trigger and the schema to which it belongs, if applicable, whose order is to be set or changed. [_triggerschema_**.**]*triggername* is **sysname**. If the name does not correspond to a trigger or if the name corresponds to an INSTEAD OF trigger, the procedure returns an error. *triggerschema* cannot be specified for DDL or logon triggers.  
   
- [ **@order=** ] **'***value***'**  
+ [ **@order=** ] **'**_value_**'**  
  Is the setting for the new order of the trigger. *value* is **varchar(10)** and it can be any one of the following values.  
   
 > [!IMPORTANT]  
@@ -57,7 +53,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**Last**|Trigger is fired last.|  
 |**None**|Trigger is fired in undefined order.|  
   
- [ **@stmttype=** ] **'***statement_type***'**  
+ [ **@stmttype=** ] **'**_statement_type_**'**  
  Specifies the SQL statement that fires the trigger. *statement_type* is **varchar(50)** and can be INSERT, UPDATE, DELETE, LOGON, or any [!INCLUDE[tsql](../../includes/tsql-md.md)] statement event listed in [DDL Events](../../relational-databases/triggers/ddl-events.md). Event groups cannot be specified.  
   
  A trigger can be designated as the **First** or **Last** trigger for a statement type only after that trigger has been defined as a trigger for that statement type. For example, trigger **TR1** can be designated **First** for INSERT on table **T1** if **TR1** is defined as an INSERT trigger. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns an error if **TR1**, which has been defined only as an INSERT trigger, is set as a **First**, or **Last**, trigger for an UPDATE statement. For more information, see the Remarks section.  

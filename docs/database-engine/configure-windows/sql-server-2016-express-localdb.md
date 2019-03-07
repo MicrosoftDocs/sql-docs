@@ -5,9 +5,7 @@ ms.date: "08/10/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user instances"
@@ -16,25 +14,26 @@ helpviewer_keywords:
   - "file database"
   - "LocalDB"
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
 # SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > For content related to previous versions of SQL Server, see [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
 
-Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.  
+Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.  
 
  **LocalDB** installation copies a minimal set of files necessary to start the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Once LocalDB is installed, you can initiate a connection using a special connection string. When connecting, the necessary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure is automatically created and started, enabling the application to use the database without complex configuration tasks. Developer Tools can provide developers with a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that lets them write and test [!INCLUDE[tsql](../../includes/tsql-md.md)] code without having to manage a full server instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  
  ## Try it out! 
   
--   To download and install SQL Server 2016 Express, go to **[SQL Server downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package. 
+-   To download and install SQL Server 2016 Express, go to **[SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package.through the **Visual Studio Installer**. In the **Visual Studio Installer**, you can install SQL Server Express LocalDB as part of the **.NET desktop development** workload or as an individual component.
+
+   > [!TIP]
+   > You can also install LocalDB as part of Visual Studio 2017. During Visual Studio installation, select the **.NET desktop development** workload, which includes SQL Server Express LocalDB.
   
--   Have an Azure account?  Then go **[here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.  
+-   Have an Azure account?  Then go **[here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.  
   
 ## Install LocalDB  
  Install **LocalDB** through the installation wizard or by using the SqlLocalDB.msi program. **LocalDB** is an option when installing [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
@@ -46,9 +45,9 @@ Select **LocalDB** on the **Feature Selection/Shared Features** page during inst
 ## Description  
  The **LocalDB** setup program uses the SqlLocalDB.msi program to install the necessary files on the computer. Once installed, **LocalDB** is an instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] that can create and open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. The system database files for the database are stored in the users' local AppData path which is normally hidden. For example **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. User database files are stored where the user designates, typically somewhere in the **C:\Users\\<user\>\Documents\\** folder.  
   
- For more information about including **LocalDB** in an application, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation [Local Data Overview](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Walkthrough: Creating a SQL Server LocalDB Database](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx), and [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
+ For more information about including **LocalDB** in an application, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation [Local Data Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Walkthrough: Creating a SQL Server LocalDB Database](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233763(v=vs.110)), and [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms171890(v=vs.110)).  
   
- For more information about the **LocalDB** API, see [SQL Server Express LocalDB Instance API Reference](http://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) and [LocalDBStartInstance Function](http://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
+ For more information about the **LocalDB** API, see [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
  The SqlLocalDb utility can create new instances of **LocalDB**, start and stop an instance of **LocalDB**, and includes options to help you manage **LocalDB**.  For more information about the SqlLocalDb utility, see [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md).  
   
@@ -66,7 +65,7 @@ Select **LocalDB** on the **Feature Selection/Shared Features** page during inst
 ### Automatic and Named Instances  
  **LocalDB** supports two kinds of instances: Automatic instances and named instances.  
   
--   Automatic instances of **LocalDB** are public. They are created and managed automatically for the user and can be used by any application. One automatic instance of **LocalDB** exists for every version of **LocalDB** installed on the user’s computer. Automatic instances of **LocalDB** provide seamless instance management. There is no need to create the instance; it just works. This allows for easy application installation and migration to a different computer. If the target machine has the specified version of **LocalDB** installed, the automatic instance of **LocalDB** for that version is available on the target machine as well. Automatic instances of **LocalDB** have a special pattern for the instance name that belongs to a reserved namespace. This prevents name conflicts with named instances of **LocalDB**. The name for the automatic instance is **MSSQLLocalDB**.  
+-   Automatic instances of **LocalDB** are public. They are created and managed automatically for the user and can be used by any application. One automatic instance of **LocalDB** exists for every version of **LocalDB** installed on the user's computer. Automatic instances of **LocalDB** provide seamless instance management. There is no need to create the instance; it just works. This allows for easy application installation and migration to a different computer. If the target machine has the specified version of **LocalDB** installed, the automatic instance of **LocalDB** for that version is available on the target machine as well. Automatic instances of **LocalDB** have a special pattern for the instance name that belongs to a reserved namespace. This prevents name conflicts with named instances of **LocalDB**. The name for the automatic instance is **MSSQLLocalDB**.  
   
 -   Named instances of **LocalDB** are private. They are owned by a single application that is responsible for creating and managing the instance. Named instances provide isolation from other instances and can improve performance by reducing resource contention with other database users. Named instances must be created explicitly by the user through the **LocalDB** management API or implicitly via the app.config file for a managed application (although managed application may also use the API, if desired). Each named instance of **LocalDB** has an associated **LocalDB** version that points to the respective set of **LocalDB** binaries. The instance name of a **LocalDB** is **sysname** data type and can have up to 128 characters. (This differs from regular named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which limits names to regular NetBIOS names of 16 ASCII chars.) The name of an instance of **LocalDB** can contain any Unicode characters that are legal within a filename.  A named instance that uses an automatic instance name becomes an automatic instance.  
   
@@ -117,15 +116,14 @@ REM Gather information about the instance of LocalDB
  To connect to a shared instance of **LocalDB** add **.\\** (dot + backslash) to the connection string to reference the namespace reserved for shared instances. For example, to connect to a shared instance of **LocalDB** named `AppData` use a connection string such as `(localdb)\.\AppData` as part of the connection string. A user connecting to a shared instance of **LocalDB** that they do not own must have a Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login.  
   
 ## Troubleshooting  
- For information about troubleshooting **LocalDB**, see [Troubleshooting SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
+ For information about troubleshooting **LocalDB**, see [Troubleshooting SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
 ## Permissions  
  An instance of [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** is an instance created by a user for their use. Any user on the computer can create a database using an instance of **LocalDB**, storing files under their user profile and running the process under their credentials. By default, access to the instance of **LocalDB** is limited to its owner. The data contained in the **LocalDB** is protected by file system access to the database files. If user database files are stored in a shared location, the database can be opened by anyone with file system access to that location by using an instance of **LocalDB** that they own. If the database files are in a protected location, such as the users data folder, only that user, and any administrators with access to that folder, can open the database. The **LocalDB** files can only be opened by one instance of **LocalDB** at a time.  
   
 > [!NOTE]  
->  **LocalDB** always runs under the users security context; that is, **LocalDB** never runs with credentials from the local Administrator’s group. This means that all database files used by a **LocalDB** instance must be accessible using the owning user’s Windows account, without considering membership in the local Administrators group.  
+>  **LocalDB** always runs under the users security context; that is, **LocalDB** never runs with credentials from the local Administrator's group. This means that all database files used by a **LocalDB** instance must be accessible using the owning user's Windows account, without considering membership in the local Administrators group.  
   
 ## See Also  
- [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md)  
-  
-  
+
+[SqlLocalDB Utility](../../tools/sqllocaldb-utility.md)

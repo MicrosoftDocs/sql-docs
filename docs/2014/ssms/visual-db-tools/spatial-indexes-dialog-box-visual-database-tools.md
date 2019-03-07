@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.spatialindexes"
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Spatial Indexes Dialog Box (Visual Database Tools)
@@ -86,7 +82,7 @@ manager: craigg
  Shows the name of the spatial index. When a new index is created, it is given a default name based on the table in the active window in Table Designer. You can change the name at any time.  
   
  **Description**  
- Describes the index. To write a more detailed description, click **Description** and then click the ellipsis button (**…**) that appears to the right of the property field. This provides a larger area in which to write text.  
+ Describes the index. To write a more detailed description, click **Description** and then click the ellipsis button (**...**) that appears to the right of the property field. This provides a larger area in which to write text.  
   
  **Table Designer Category**  
  When expanded, shows information about the properties of this spatial index.  
@@ -107,7 +103,7 @@ manager: craigg
  **Page Locks Allowed**  
  Specifies whether page-level locking is allowed on this index. Allowing or disallowing page-level locking affects database performance.  
   
- **Re-compute**  **Statistics**  
+ **Re-compute  Statistics**  
  Specifies whether to compute new statistics when the index is created. Recomputing statistics slows the building of indexes but usually improves query performance.  
   
  **Row Locks Allowed**  

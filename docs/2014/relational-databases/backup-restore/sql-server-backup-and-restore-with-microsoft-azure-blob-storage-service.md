@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Backup and Restore with Windows Azure Blob Storage Service
@@ -23,7 +19,7 @@ manager: craigg
 -   **Manage your backups  to Windows Azure:** Using the same methods used to backup to DISK and TAPE, you can now back up to Windows Azure storage by Specifying URL as the backup destination.  You can use this feature to manually backup or configure your own backup strategy like you would for a local storage or other off-site options. This feature is also referred to as **SQL Server Backup to URL**. For more information, see [SQL Server Backup to URL](sql-server-backup-to-url.md). This feature is available in SQL Server 2012 SP1 CU2 or later.  
   
     > [!NOTE]  
-    >  For SQL Server versions previous to SQL Server 2014, you can use the add-in SQL Server Backup to Windows Azure Tool to quickly and easily create backups to Windows Azure storage. For more information, see [download center](http://go.microsoft.com/fwlink/?LinkID=324399).  
+    >  For SQL Server versions previous to SQL Server 2014, you can use the add-in SQL Server Backup to Windows Azure Tool to quickly and easily create backups to Windows Azure storage. For more information, see [download center](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
 -   **Let SQL Server Manage backups to Windows Azure:** Configure SQL Server to manage the backup strategy and schedule backups for a single database, or several databases, or set defaults at the instance level. This feature is referred to as  **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. For more information see [SQL Server Managed  Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). This feature is available in SQL Server 2014 or later.  
   
@@ -44,11 +40,11 @@ manager: craigg
 ##  <a name="Billing"></a> Windows Azure Billing Considerations:  
  Understanding Windows Azure storage costs enables you to forecast the cost of creating and storing backups in Windows Azure.  
   
- The [Windows Azure pricing calculator](http://go.microsoft.com/fwlink/?LinkId=277060) can help estimate your costs.  
+ The [Windows Azure pricing calculator](https://go.microsoft.com/fwlink/?LinkId=277060) can help estimate your costs.  
   
- **Storage:** Charges are based on the space used and are calculated on a graduated scale and the level of redundancy. For more details, and up-to-date information, see the **Data Management** section of the [Pricing Details](http://go.microsoft.com/fwlink/?LinkId=277059) article.  
+ **Storage:** Charges are based on the space used and are calculated on a graduated scale and the level of redundancy. For more details, and up-to-date information, see the **Data Management** section of the [Pricing Details](https://go.microsoft.com/fwlink/?LinkId=277059) article.  
   
- **Data Transfers:** Inbound data transfers to Windows Azure are free. Outbound transfers are charged for the bandwidth use and calculated based on a graduated region-specific scale. For more details, see the [Data Transfers](http://go.microsoft.com/fwlink/?LinkId=277061) section of the Pricing Details article.  
+ **Data Transfers:** Inbound data transfers to Windows Azure are free. Outbound transfers are charged for the bandwidth use and calculated based on a graduated region-specific scale. For more details, see the [Data Transfers](https://go.microsoft.com/fwlink/?LinkId=277061) section of the Pricing Details article.  
   
 ## See Also  
  [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   

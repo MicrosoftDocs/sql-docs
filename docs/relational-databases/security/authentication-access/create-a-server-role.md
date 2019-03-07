@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Create a Server Role | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.SERVERROLE.GENERAL.F1"
@@ -16,11 +14,10 @@ f1_keywords:
 helpviewer_keywords: 
   - "SERVER ROLE, creating"
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
-author: CarlRabeler
-ms.author: carlraba
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Server Role
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -67,11 +64,11 @@ monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allvers
   
 2.  Expand the **Security** folder.  
   
-3.  Right-click the **Server Roles** folder and select **New Server Role…**.  
+3.  Right-click the **Server Roles** folder and select **New Server Role...**.  
   
-4.  In the **New Server Role –***server_role_name* dialog box, on the **General** page, enter a name for the new server role in the **Server role name** box.  
+4.  In the **New Server Role -**_server\_role\_name_ dialog box, on the **General** page, enter a name for the new server role in the **Server role name** box.  
   
-5.  In the **Owner** box, enter the name of the server principal that will own the new role. Alternately, click the ellipsis **(…)** to open the **Select Server Login or Role** dialog box.  
+5.  In the **Owner** box, enter the name of the server principal that will own the new role. Alternately, click the ellipsis **(...)** to open the **Select Server Login or Role** dialog box.  
   
 6.  Under **Securables**, select one or more server-level securables. When a securable is selected, this server role can be granted or denied permissions on that securable.  
   

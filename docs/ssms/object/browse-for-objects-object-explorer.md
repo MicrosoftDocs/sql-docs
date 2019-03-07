@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.matchingobjects.f1"
   - "sql13.swb.common.browseobjects.f1"
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

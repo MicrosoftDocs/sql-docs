@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
-caps.latest.revision: 15
-author: "minewiskan"
-ms.author: "owend"
-manager: "kfile"
+author: minewiskan
+ms.author: owend
+manager: kfile
 ---
 # Processing the Sequence Clustering Model
   After you create a new mining structure, you must deploy the changes that you made to the data mining solution, and then process the structure. After processing of both the new structure and the mining model is complete, you can browse the mining model.  

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.structure.createrelatedmodel.f1"
 ms.assetid: 7729e98e-6296-4ad9-b73c-fb0f29f4c54e
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # New Mining Model Dialog Box (Mining Structure View)
   Use the **New Mining Model** dialog box to add a new mining model to the mining structure.  

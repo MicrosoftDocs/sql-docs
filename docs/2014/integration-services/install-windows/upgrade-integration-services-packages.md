@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services, migrating"
   - "migrating packages [Integration Services]"
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
-caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Upgrade Integration Services Packages
@@ -26,7 +22,7 @@ manager: craigg
  For information on upgrading packages when you convert a project to the project deployment model, see [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md).  
   
 ## SQL Server 2000 Data Transformation Services Packages  
- Support for migrating or running Data Transformation Services (DTS) packages has been discontinued in in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The following DTS functionality has been discontinued.  
+ Support for migrating or running Data Transformation Services (DTS) packages has been discontinued in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The following DTS functionality has been discontinued.  
   
 -   DTS runtime  
   
@@ -44,7 +40,7 @@ manager: craigg
   
 -   Migrate the packages to [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] or [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], and then upgrade the packages to [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
-     For information about migrating DTS packages to [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] and [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], see [Migrating Data Transformation Services Packages](http://go.microsoft.com/fwlink/?LinkId=251870) (2005) and [Migrating Data Transformation Services Packages](http://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
+     For information about migrating DTS packages to [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] and [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], see [Migrating Data Transformation Services Packages](https://go.microsoft.com/fwlink/?LinkId=251870) (2005) and [Migrating Data Transformation Services Packages](https://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
   
 -   Recreate the DTS packages by using [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
@@ -81,7 +77,7 @@ manager: craigg
   
  To use [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to design packages that include [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] custom components, you need to modify the devenv.exe.config file that is located at *\<drive>*:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE.  
   
- To use these packages with customer applications that are built with the runtime for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], include redirection rules in the configuration section of the *.exe.config file for the executable. The rules redirect the runtime assemblies to version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). For more information about assembly version redirection, see [\<assemblyBinding> Element for \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ To use these packages with customer applications that are built with the runtime for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], include redirection rules in the configuration section of the *.exe.config file for the executable. The rules redirect the runtime assemblies to version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). For more information about assembly version redirection, see [\<assemblyBinding> Element for \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### Locating the Assemblies  
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies were upgraded to .NET 4.0. There is a separate global assembly cache for .NET 4, located in *\<drive>*:\Windows\Microsoft.NET\assembly. You can find all of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies under this path, usually in the GAC_MSIL folder.  
@@ -105,10 +101,10 @@ manager: craigg
   
 ## External Resources  
   
--   Technical article, [5 Tips for a Smooth SSIS Upgrade to SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=235321), on msdn.microsoft.com.  
+-   Technical article, [5 Tips for a Smooth SSIS Upgrade to SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=235321), on msdn.microsoft.com.  
   
--   Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157), on blogs.msdn.com.  
+-   Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://go.microsoft.com/fwlink/?LinkId=238157), on blogs.msdn.com.  
   
--   Webcast, [Upgrading SSIS Packages to SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=258674), on channel9.msdn.com.  
+-   Webcast, [Upgrading SSIS Packages to SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=258674), on channel9.msdn.com.  
   
   

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.databaseproperties.mirroring.f1"
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
-caps.latest.revision: 85
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Properties (Mirroring Page)
@@ -45,7 +41,7 @@ manager: craigg
   
  The server network address has the following basic syntax:  
   
- TCP**://***fully_qualified_domain_name***:***port*  
+ TCP**://**_fully_qualified_domain_name_**:**_port_  
   
  where  
   
@@ -120,7 +116,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |------------|--------------|-----------------|  
 |**High performance (asynchronous)**|Null (if exists, not used but the session requires a quorum)|To maximize performance, the mirror database always lags somewhat behind the principal database, never quite catching up. However, the gap between the databases is typically small. The loss of a partner has the following effect:<br /><br /> If the mirror server instance becomes unavailable, the principal continues.<br /><br /> If the principal server instance becomes unavailable, the mirror stops. But if the session has no witness (as recommended) or the witness is connected to the mirror server, the mirror server remains accessible as a warm standby; the database owner can force service to the mirror server instance (with possible data loss).|  
 |**High safety without automatic failover (synchronous)**|No|All committed transactions are guaranteed to be written to disk on the mirror server. Manual failover is possible if the partners are connected to each other. The loss of a partner has the following effect:<br /><br /> If the mirror server instance becomes unavailable, the principal continues.<br /><br /> If the principal server instance becomes unavailable, the mirror stops but is available as a warm standby; the database owner can force service to the mirror server instance (with possible data loss).|  
-|**High safety with automatic failover (synchronous)**|Yes (required)|Maximized availability by including a witness server instance to support automatic failover. Note that you can select the **High safety with automatic failover (synchronous)** option only if you have first specified a witness server address. Manual failover is possible whenever the partners are connected to each other. **\*\* Important \*\*** If the witness becomes disconnected, the partners must be connected to each other for the database to be available. For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> In the synchronous operating modes, all committed transactions are guaranteed to be written to disk on the mirror server. In the presence of a witness, the loss of a partner has the following effect:<br /><br /> If the principal server instance becomes unavailable, automatic failover occurs. The mirror server instance switches to the role of principal, and it offers its database as the principal database.<br /><br /> If the mirror server instance becomes unavailable, the principal continues.<br /><br /> <br /><br /> For more information, see [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
+|**High safety with automatic failover (synchronous)**|Yes (required)|Maximized availability by including a witness server instance to support automatic failover. Note that you can select the **High safety with automatic failover (synchronous)** option only if you have first specified a witness server address. Manual failover is possible whenever the partners are connected to each other. **&#42;&#42; Important &#42;&#42;** If the witness becomes disconnected, the partners must be connected to each other for the database to be available. For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> In the synchronous operating modes, all committed transactions are guaranteed to be written to disk on the mirror server. In the presence of a witness, the loss of a partner has the following effect:<br /><br /> If the principal server instance becomes unavailable, automatic failover occurs. The mirror server instance switches to the role of principal, and it offers its database as the principal database.<br /><br /> If the mirror server instance becomes unavailable, the principal continues.<br /><br /> <br /><br /> For more information, see [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
   
  After mirroring begins, you can change the operating mode and save the change by clicking **OK**.  
   

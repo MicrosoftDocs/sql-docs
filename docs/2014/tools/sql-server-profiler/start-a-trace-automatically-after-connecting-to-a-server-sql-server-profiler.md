@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic trace start"
   - "traces [SQL Server], starting"
   - "starting trace automatically"
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)

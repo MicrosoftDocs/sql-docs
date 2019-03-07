@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default members"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "members [Analysis Services], default"
   - "DefaultMember property"
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Define a Default Member
   The default member of an attribute hierarchy is used to evaluate expressions when an attribute hierarchy is not included in a query. The default member is ignored whenever a query includes an attribute hierarchy or user hierarchy that contains the attribute that sources the attribute hierarchy. This is because the member specified in the query is used.  
@@ -37,9 +34,9 @@ manager: "mblythe"
   
  The `DefaultMember` setting for an attribute applies to every hierarchy in which the attribute participates. You cannot use different settings for different hierarchies in a dimension. For example, if the [1998] member is the default member for a [Year] attribute, this setting applies to every hierarchy in the dimension. The `DefaultMember` setting in this case cannot be [1998] in one hierarchy and [1997] in a different hierarchy.  
   
- If you define a default member for a particular level in a hierarchy that does not aggregate naturally, you must define default members in all levels above that level in the hierarchy. For example, in the hierarchy All-Countries–Climate, you cannot define a default member for Climate unless you define a default member for Countries. Failing to do so creates query-time errors.  
+ If you define a default member for a particular level in a hierarchy that does not aggregate naturally, you must define default members in all levels above that level in the hierarchy. For example, in the hierarchy All-Countries-Climate, you cannot define a default member for Climate unless you define a default member for Countries. Failing to do so creates query-time errors.  
   
- When levels in a hierarchy aggregate naturally, you can define a default member for any attribute in the hierarchy without regard to other attributes in the hierarchy. For example, in the hierarchy Country–Province–City, you can define a default member for City such as [City].[Montreal] without defining the default member for State or for Country.  
+ When levels in a hierarchy aggregate naturally, you can define a default member for any attribute in the hierarchy without regard to other attributes in the hierarchy. For example, in the hierarchy Country-Province-City, you can define a default member for City such as [City].[Montreal] without defining the default member for State or for Country.  
   
 ## See Also  
  [Configure the &#40;All&#41; Level for Attribute Hierarchies](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  

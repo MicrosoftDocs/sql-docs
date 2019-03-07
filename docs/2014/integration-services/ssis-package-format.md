@@ -4,23 +4,20 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
-caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # SSIS Package Format
-  In the current release of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], significant changes were made to the package format (.dtsx file) to make it easier to read the format and to compare packages. You can also more reliably merge packages that don’t contain conflicting changes or changes stored in binary format.  
+  In the current release of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], significant changes were made to the package format (.dtsx file) to make it easier to read the format and to compare packages. You can also more reliably merge packages that don't contain conflicting changes or changes stored in binary format.  
   
- To view the current DTSX package file format, see [\[MS-DTSX\]: Data Transformation Services Package XML File Format Specification](http://go.microsoft.com/fwlink/?LinkId=233251).  
+ To view the current DTSX package file format, see [\[MS-DTSX\]: Data Transformation Services Package XML File Format Specification](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
- The following list outlines the file format changes. To view code examples of these changes, see [Package Format Changes in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=233255).  
+ The following list outlines the file format changes. To view code examples of these changes, see [Package Format Changes in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255).  
   
 -   Formatting conventions have been applied to make it easier to read and understand the .dtsx file.  
   

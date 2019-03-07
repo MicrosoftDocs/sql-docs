@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.kpisview.f1"
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # KPIs (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **KPIs** tab in Cube Designer to view and edit Key Performance Indicators (KPIs) for the selected cube.  

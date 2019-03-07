@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEPART_TSQL"
@@ -26,14 +24,14 @@ helpviewer_keywords:
   - "DATEPART function [SQL Server]"
   - "dates [SQL Server], dateparts"
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 57
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
 This function returns an integer representing the specified *datepart* of the specified *date*.
   
@@ -116,7 +114,7 @@ This table lists all *datepart* arguments, with corresponding return values, for
 ## Week and weekday datepart arguments
 For a **week** (**wk**, **ww**) or **weekday** (**dw**) *datepart*, the `DATEPART` return value depends on the value set by [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-January 1 of any year defines the starting number for the **week***datepart*. For example:
+January 1 of any year defines the starting number for the **week**_datepart_. For example:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
@@ -156,12 +154,12 @@ The numbering systems of different countries/regions might not comply with the I
   
 |First day of week|First week of year contains|Weeks assigned two times|Used by/in|  
 |---|---|---|---|
-|Sunday|1 January,<br /><br /> First Saturday,<br /><br /> 1–7 days of year|Yes|United States|  
-|Monday|1 January,<br /><br /> First Sunday,<br /><br /> 1–7 days of year|Yes|Most of Europe and the United Kingdom|  
-|Monday|4 January,<br /><br /> First Thursday,<br /><br /> 4–7 days of year|No|ISO 8601, Norway, and Sweden|  
+|Sunday|1 January,<br /><br /> First Saturday,<br /><br /> 1-7 days of year|Yes|United States|  
+|Monday|1 January,<br /><br /> First Sunday,<br /><br /> 1-7 days of year|Yes|Most of Europe and the United Kingdom|  
+|Monday|4 January,<br /><br /> First Thursday,<br /><br /> 4-7 days of year|No|ISO 8601, Norway, and Sweden|  
 |Monday|7 January,<br /><br /> First Monday,<br /><br /> 7 days of year|No||  
-|Wednesday|1 January,<br /><br /> First Tuesday,<br /><br /> 1–7 days of year|Yes||  
-|Saturday|1 January,<br /><br /> First Friday,<br /><br /> 1–7 days of year|Yes||  
+|Wednesday|1 January,<br /><br /> First Tuesday,<br /><br /> 1-7 days of year|Yes||  
+|Saturday|1 January,<br /><br /> First Friday,<br /><br /> 1-7 days of year|Yes||  
   
 ## TZoffset  
 `DATEPART` returns the **TZoffset** (**tz**) value as the number of minutes (signed). This statement returns a time zone offset of 310 minutes:

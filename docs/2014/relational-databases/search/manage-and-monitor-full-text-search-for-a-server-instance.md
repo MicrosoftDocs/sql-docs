@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], server management"
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
@@ -74,7 +70,7 @@ manager: craigg
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|Whether the full-text component is installed with the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|Whether operating system word breakers and filters are registered and used with this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
-|`VerifySignature`|Specifies whether only signed binaries are loaded by the the Full-Text Engine.|FULLTEXTSERVICEPROPERTY|  
+|`VerifySignature`|Specifies whether only signed binaries are loaded by the Full-Text Engine.|FULLTEXTSERVICEPROPERTY|  
   
 ##  <a name="monitor"></a> Monitoring Full-Text Search Activity  
  Several dynamic management views and functions are useful monitoring full-text search activity on a server instance.  

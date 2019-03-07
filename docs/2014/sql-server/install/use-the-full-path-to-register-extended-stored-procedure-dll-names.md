@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "registering DLL names"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "DLL names [SQL Server]"
   - "full path DLL name registration [SQL Server]"
 ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Use the full path to register extended stored procedure DLL names

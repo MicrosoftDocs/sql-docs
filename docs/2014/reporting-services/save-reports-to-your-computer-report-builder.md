@@ -4,23 +4,20 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-caps.latest.revision: 5
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Save Reports to Your Computer (Report Builder)
   In Report Builder, you can save a report definitions to your computer. However, when they are saved to your compute,r other users cannot view the reports and reports that reference shared data sources or store report items such as images and subreports externally might not run. It is recommended that you save reports to a report server or SharePoint site.  
   
 ### To save a report  
   
-1.  From the Report Builder button, click **Save**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save**. The **Save As**_\<Report Item>_ dialog box opens.  
   
     > [!NOTE]  
     >  If you are resaving a report, it is automatically resaved to its previous location. Use the **Save As** option to change location.  
@@ -33,7 +30,7 @@ manager: "mblythe"
   
 ### To save a report as a different name  
   
-1.  From the Report Builder button, click **Save As**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save As**. The **Save As**_\<Report Item>_ dialog box opens.  
   
 2.  Browse to the location on your computer where you want to save the report.  
   

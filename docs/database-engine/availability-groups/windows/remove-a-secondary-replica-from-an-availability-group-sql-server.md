@@ -1,12 +1,11 @@
 ---
-title: "Remove a Secondary Replica from an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove a secondary replica from an availability group"
+description: "Steps to remove a secondary replica from an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio. "
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.removesecondaryar.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

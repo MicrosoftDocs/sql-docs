@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server], events"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "traces [SQL Server], scheduling"
   - "stopping traces"
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Schedule Traces

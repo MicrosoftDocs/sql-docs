@@ -4,14 +4,8 @@ ms.custom: ""
 ms.date: "09/22/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server 2014"
 f1_keywords: 
   - "sql12.swb.roleproperties.database.f1"
   - "sql12.swb.roleproperties.general.f1"
@@ -40,9 +34,8 @@ helpviewer_keywords:
   - "authentication [SQL Server], roles"
   - "groups [SQL Server], roles"
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
-caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Database-Level Roles

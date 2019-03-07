@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.usagebasedoptimizationwizard.reviewresults.f1"
 ms.assetid: b206f39e-5fa3-4b5c-babf-c604c0dfd82a
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Review the Queries that will be Optimized (Usage-Based Optimization Wizard)
   Use the **Review the Queries that will be Optimized** page to display and select the queries, retrieved from the query log, which will be used by the Usage-Based Optimization Wizard to design aggregations for the selected partitions.  

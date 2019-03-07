@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server event classes, Errors and Warnings event category"
   - "event classes [SQL Server], Errors and Warnings event category"
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Errors and Warnings Event Category (Database Engine)

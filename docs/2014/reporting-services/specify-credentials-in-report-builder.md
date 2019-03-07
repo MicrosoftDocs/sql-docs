@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Specify Credentials in Report Builder
   Credentials authenticate the user who is attempting to retrieve data from a source of data. The owner of the source of data determines the type of credentials that must be used. For example, a database administrator might specify that the user must provide a Windows username and password.  
@@ -69,7 +66,7 @@ manager: "mblythe"
  When you specify prompted credentials, each user who accesses the report must enter a user name and password to retrieve the data. This option is recommended for reports that contain confidential data. Prompted credentials can be for a Windows account or a database login. If the database server does not recognize the credentials that you provide, or if the specified user does not has not been granted permission to retrieve the data, the connection fails.  
   
 ### No Credentials  
- Credentials are not required for this data source. To run this report on the report server, the unattended execution account must be configured. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Credentials are not required for this data source. To run this report on the report server, the unattended execution account must be configured. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## See Also  
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   

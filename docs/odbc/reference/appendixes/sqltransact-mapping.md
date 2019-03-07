@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], SQLTransact"
   - "SQLTransact function [ODBC], mapping"
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

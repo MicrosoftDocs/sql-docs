@@ -5,14 +5,11 @@ ms.date: "04/02/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.selectsourcetablesandviews.f1"
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: 96
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

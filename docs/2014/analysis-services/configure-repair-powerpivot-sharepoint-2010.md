@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure or Repair PowerPivot for SharePoint 2010 (PowerPivot Configuration Tool)
   To configure or repair an installation of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010, use the PowerPivot Configuration tool. The configuration tool starts by scanning the system and returns a list of actions needed to complete or repair an installation. The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] setup wizard installs the PowerPivot Configuration Tool for SharePoint 2010 as well as a PowerPivot Configuration Tool for SharePoint 2013. This topic describes the PowerPivot Configuration Tool for SharePoint 2010. For more information on SharePoint 2010, see [Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -111,7 +108,7 @@ manager: "mblythe"
 ||Site URL|Default, if needed|The tool creates the site URL, using the same URL naming conventions as SharePoint.|  
 ||Site Title|Default, if needed|The tool adds **PowerPivot Site** as the default title.|  
 |**Activate PowerPivot Feature in a Site Collection**|Site URL||URL of the site collection for which you are activating PowerPivot features.|  
-||Enable premium feature for this site||Enable the SharePoint site feature ”PremiumSite”.|  
+||Enable premium feature for this site||Enable the SharePoint site feature "PremiumSite".|  
 |**Create Secure Store Service Application**|Service Application Name||Type the name for the Secure Store service application.|  
 ||Database Server||Type the name of the database server to use for the Secure Store service application.|  
 |**Create Secure Store Service Application Proxy**|Service Application Name||Type the name for the Secure Store service application.|  
@@ -122,7 +119,7 @@ manager: "mblythe"
 ||Friendly Name for Target Application|||  
 ||Unattended Account User Name and Password||Type the credentials of a Windows user account that is used by the target application and used to run unattended data refresh.|  
 ||Site URL||Type the site URL of the site collection associated wit the target application. To associate with additional site collections, use SharePoint Central administration.|  
-|**Create Excel Services Service Application**|Service Application Name||Type a service application name. A service application database with the same name will be created on the SharePoint farm’s database server.|  
+|**Create Excel Services Service Application**|Service Application Name||Type a service application name. A service application database with the same name will be created on the SharePoint farm's database server.|  
 |**Add MSOLAP.5 as a Trusted Provider**|Service Application Name||Excel Services in SharePoint 2010 uses the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB provider to connect to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data. This step will add the version of the OLE DB provider installed with PowerPivot for SharePoint, as a trusted provider to Excel Services.|  
 ||PowerPivot Server Name|||  
 |||||  
@@ -160,7 +157,7 @@ manager: "mblythe"
 ### Install ADO.NET Data Services 3.5 SP1  
  ADO.NET Data Services is required for a data feed export of SharePoint lists. SharePoint 2010 does not include this component in the PrerequisiteInstaller program, so you must install it manually.  
   
-1.  Go to the hardware and software requirements documentation for SharePoint 2010, [Determine Hardware and Software Requirements (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Go to the hardware and software requirements documentation for SharePoint 2010, [Determine Hardware and Software Requirements (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
 2.  In Installing software prerequisites, find the link for ADO.NET Data Services 3.5 that corresponds to the operating system you are using.  
   

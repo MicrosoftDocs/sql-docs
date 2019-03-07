@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "comparing string data"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "converting string data"
   - "string comparisons"
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Comparing String Data
@@ -61,7 +57,7 @@ manager: craigg
  You can also specify a locale for a Flat File connection manager and a Multiple Flat Files connection manager.  
   
 ## Setting Comparison Options  
- The locale provides the basic rules for comparing string data. For example, the locale specifies the sort position of each letter in the alphabet. However, these rules may not be sufficient for the comparisons that some transformations perform, and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports a set of advanced comparison options that go beyond the comparison rules of a locale. These comparison options are set at the column level. For example, one of the comparison options lets you ignore nonspacing characters. The effect of this option is to ignore diacritics such as the accent, which makes "a" and "á" identical for comparison purposes.  
+ The locale provides the basic rules for comparing string data. For example, the locale specifies the sort position of each letter in the alphabet. However, these rules may not be sufficient for the comparisons that some transformations perform, and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports a set of advanced comparison options that go beyond the comparison rules of a locale. These comparison options are set at the column level. For example, one of the comparison options lets you ignore nonspacing characters. The effect of this option is to ignore diacritics such as the accent, which makes "a" and "å" identical for comparison purposes.  
   
  The following table describes the comparison options and a sort style.  
   

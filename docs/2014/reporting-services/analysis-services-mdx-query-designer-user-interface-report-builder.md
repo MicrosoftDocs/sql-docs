@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10012"
 helpviewer_keywords: 
   - "query designers, Analysis Services"
 ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
-caps.latest.revision: 18
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Analysis Services MDX Query Designer User Interface (Report Builder)
   Report Builder provides a graphical query designer for building Multidimensional Expression (MDX) queries for a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source. The MDX graphical query designer has two modes: design mode and query mode. Each mode provides a metadata pane from which you can drag members from the selected cubes to build an MDX query that retrieves data when the report is processed.  
@@ -55,7 +52,7 @@ manager: "mblythe"
  To specify your own additional properties, you must manually edit the MDX query in Query mode.  
   
 > [!NOTE]  
->  For more information about MDX and general information about the MDX query designer, see "MDX Query Editor (Analysis Services - Multidimensional Data)" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335). However, for a report to display data from an MDX query, you must build the query by using the MDX query designer that comes with Report Builder. Importing an .mdx query from a file is not supported.  
+>  For more information about MDX and general information about the MDX query designer, see "MDX Query Editor (Analysis Services - Multidimensional Data)" in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=98335). However, for a report to display data from an MDX query, you must build the query by using the MDX query designer that comes with Report Builder. Importing an .mdx query from a file is not supported.  
   
 ### Graphical MDX Query Designer Toolbar in Design Mode  
  The query designer toolbar provides buttons to help you design MDX queries using the graphical interface. The following table lists the buttons and their functions.  

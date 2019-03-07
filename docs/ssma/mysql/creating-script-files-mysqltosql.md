@@ -4,20 +4,14 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Creating script files, configuring console settings"
   - "Creating script files, Script commands"
   - "Creating script files, script file validation"
   - "Creating script files, server connection parameters"
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -42,13 +36,13 @@ If any of the elements are specified in the configuration node, they are set as 
   
 The user-configurable options include:  
   
-1.  **Output Window Provider:** If suppress-messages attribute is set to ‘true’, the command-specific messages do not get displayed on the console. The Attributes description is given below:  
+1.  **Output Window Provider:** If suppress-messages attribute is set to 'true', the command-specific messages do not get displayed on the console. The Attributes description is given below:  
   
     -   destination: Specifies whether the output needs to get printed to a file or stdout. This is false by default.  
   
     -   file-name: The path of the file (Optional).  
   
-    -   suppress-messages: Suppresses messages on the console. This is ‘false’ by default.  
+    -   suppress-messages: Suppresses messages on the console. This is 'false' by default.  
   
     **Example:**  
   
@@ -70,7 +64,7 @@ The user-configurable options include:
     *or*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <output-window  
   
@@ -82,7 +76,7 @@ The user-configurable options include:
   
        />  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
 2.  **Data Migration Connection Provider:** This specifies which source/target server is to be considered for data-migration.  Source-use-last-used indicates that the last used source server is used for data migration. Similarly target-use-last-used indicates that the last used target server is used for data migration. The user can also specify the server (source or target) by using the attributes source-server or target-server.  
@@ -120,7 +114,7 @@ The user-configurable options include:
   
     The modes include:  
   
-    -   **ask-user -** Prompts the user to continue(‘yes’) or error out (‘no’).  
+    -   **ask-user -** Prompts the user to continue('yes') or error out ('no').  
   
     -   **error-** The console displays an error and halts the execution.  
   
@@ -205,7 +199,7 @@ The user-configurable options include:
   
     -   skip: The console skips the objects that already exist on the database  
   
-    -   ask-user: Prompts the user for input (‘yes’/ ‘no’)  
+    -   ask-user: Prompts the user for input ('yes'/ 'no')  
   
     **Example:**  
   
@@ -226,7 +220,7 @@ The user-configurable options include:
     </convert-schema>  
     ```  
   
-6.  **Failed Prerequisites Provider:** This enables the user to handle any prerequisites that are required for processing a command. By default, strict-mode is ‘false’. If it is set to ‘true’, an exception gets generated for failure to meet the prerequisites.  
+6.  **Failed Prerequisites Provider:** This enables the user to handle any prerequisites that are required for processing a command. By default, strict-mode is 'false'. If it is set to 'true', an exception gets generated for failure to meet the prerequisites.  
   
     **Example:**  
   
@@ -238,9 +232,9 @@ The user-configurable options include:
     </output-providers>  
     ```  
   
-7.  **Stop Operation:** During the mid-operation, if the user wants to stop the operation, then **‘Ctrl+C’** hotkey can be used. SSMA for MySQL Console will wait for the operation to complete and terminates the console execution.  
+7.  **Stop Operation:** During the mid-operation, if the user wants to stop the operation, then **'Ctrl+C'** hotkey can be used. SSMA for MySQL Console will wait for the operation to complete and terminates the console execution.  
   
-    If the user wants to stop the execution immediately, then, **‘Ctrl+C’** hotkey can be pressed again for abrupt termination of the SSMA Console application  
+    If the user wants to stop the execution immediately, then, **'Ctrl+C'** hotkey can be pressed again for abrupt termination of the SSMA Console application  
   
 8.  **Progress Provider:** Informs the progress of each console command. This is disabled by default. The progress-reporting attributes comprise:  
   
@@ -272,7 +266,7 @@ The user-configurable options include:
     *or*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <progress-reporting  
   
@@ -282,7 +276,7 @@ The user-configurable options include:
   
         report-progress="<every-1%/every-2%/every-5%/every-10%/every-20%/off>"     (optional)/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
 9. **Logger Verbosity:** Sets log verbosity level. This corresponds with the All Categories option in the UI. By default, the log verbosity level is "error".  
@@ -314,14 +308,14 @@ The user-configurable options include:
     *or*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <log-verbosity level="<fatal-error/error/warning/info/debug>"/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-10. **Override Encrypted Password:** If ‘true’, the clear text password specified in the server definition section of the server connection file or in the script file, overrides the encrypted password stored in protected storage if exists. If no password is specified in clear text, the user is prompted to enter the password.  
+10. **Override Encrypted Password:** If 'true', the clear text password specified in the server definition section of the server connection file or in the script file, overrides the encrypted password stored in protected storage if exists. If no password is specified in clear text, the user is prompted to enter the password.  
   
     Here two cases arise:  
   
@@ -351,7 +345,7 @@ The script file contains a sequence of migration workflow commands in the XML fo
   
 For example, a typical data migration of a specific table in a MySQL database follows the hierarchy of: Database -&gt; Table.  
   
-When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](http://msdn.microsoft.com/en-us/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a) or, in a separate section within the script file for variable values.  
+When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](creating-variable-value-files-mysqltosql.md) or, in a separate section within the script file for variable values.  
   
 **Example:**  
   
@@ -395,7 +389,7 @@ You can execute the templates (files) after changing the parameters displayed th
 Complete list of script-commands can be found in [Executing the SSMA Console &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## Script File Validation  
-The user can easily validate his/her script file against the schema definition file **‘M2SSConsoleScriptSchema.xsd’** available in the ‘Schemas’ folder.  
+The user can easily validate his/her script file against the schema definition file **'M2SSConsoleScriptSchema.xsd'** available in the 'Schemas' folder.  
   
 ## Next Step  
 The next step in operating the console is [Creating Variable Value Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  

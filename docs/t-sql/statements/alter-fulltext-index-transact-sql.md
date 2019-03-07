@@ -5,9 +5,7 @@ ms.date: "04/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER FULLTEXT INDEX"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], associating with full-text indexes"
   - "ALTER FULLTEXT INDEX statement"
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 95
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER FULLTEXT INDEX (Transact-SQL)
@@ -79,7 +76,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  For information about the interaction of change tracking and WITH NO POPULATION, see "Remarks," later in this topic.  
   
  MANUAL  
- Specifies that the tracked changes will be propagated manually by calling the ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
+ Specifies that the tracked changes will be propagated manually by calling the ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
   
  AUTO  
  Specifies that the tracked changes will be propagated automatically as data is modified in the base table (*automatic population*). Although changes are propagated automatically, these changes might not be reflected immediately in the full-text index. AUTO is the default.  
@@ -125,7 +122,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Creates the additional key phrase and document similarity indexes that are part of statistical semantic indexing. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,***...n*]  
+ [ **,**_...n_]  
  Indicates that multiple columns may be specified for the ADD, ALTER, or DROP clauses. When multiple columns are specified, separate these columns with commas.  
   
  WITH NO POPULATION  
@@ -182,7 +179,7 @@ ALTER FULLTEXT INDEX ON table_name
  Changes the search property list that is associated with the index, if any.  
   
  OFF  
- Specifies that no property list be associated with the full-text index. When you turn off the search property list of a full-text index (ALTER FULLTEXT INDEX … SET SEARCH PROPERTY LIST OFF), property searching on the base table is no longer possible.  
+ Specifies that no property list be associated with the full-text index. When you turn off the search property list of a full-text index (ALTER FULLTEXT INDEX ... SET SEARCH PROPERTY LIST OFF), property searching on the base table is no longer possible.  
   
  By default, when you turn off an existing search property list, the full-text index automatically repopulates. If you specify WITH NO POPULATION when you turn off the search property list, automatic repopulation does not occur. However, we recommend that you eventually run a full population on this full-text index at your convenience. Repopulating the full-text index removes the property-specific metadata of each dropped search property, making the full-text index smaller and more efficient.  
   

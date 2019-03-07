@@ -4,22 +4,18 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence
   This topic describes [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] interoperability and coexistence with several features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features include the following: AlwaysOn Availability Groups, Database Mirroring, Backup Maintenance Plans, Log Shipping, Ad hoc backups, Detach Database, and Drop Database.  
   
 ### AlwaysOn Availability Groups  
- AlwaysOn Availability Groups that are configured as a Windows Azure–only solution supported for [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. On-premises only, or Hybrid AlwaysOn Availability Group configurations are not supported. For more information and other considerations, see [Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ AlwaysOn Availability Groups that are configured as a Windows Azure-only solution supported for [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. On-premises only, or Hybrid AlwaysOn Availability Group configurations are not supported. For more information and other considerations, see [Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### Database Mirroring  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is supported only on the principal database. If both the principal and the mirror are configured to use [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], the mirrored database is skipped and will not be backed up. However, in the event of a failover, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will start the backup process after the mirror has completed role switching and is online. The backups will be stored in a new container in this case. If the mirror is not configured to use [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in the event of a failover, no backups are taken. We recommend that you configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on both the principal and the mirror so backups continue in the event of a failover.  

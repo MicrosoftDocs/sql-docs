@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "04/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, security"
@@ -22,21 +18,20 @@ helpviewer_keywords:
   - "Merge Agent, security"
   - "replication [SQL Server], agents and profiles"
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: 72
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
 # Replication Agent Security Model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Manage Logins and Passwords in Replication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+  The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
   
 > [!IMPORTANT]  
 >  When a member of the **sysadmin** fixed server role configures replication, replication agents can be configured to impersonate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. This is done by not specifying a login and password for a replication agent; however, we do not recommend this approach. Instead, as a security best practice, we recommend that you specify an account for each agent that has the minimum permissions that are described in the section "Permissions That Are Required by Agents" later in this topic.  
   
  Replication agents, like all executables, run under the context of a Windows account. The agents make Windows Integrated Security connections by using this account. The account under which the agent runs depends on how the agent is started:  
   
--   Starting the agent from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job, the default: When a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job is used to start a replication agent, the agent runs under the context of an account that you specify when you configure replication. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent and replication, see the section "Agent Security under SQL Server Agent" later in this topic. For information about the permissions that are required for the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent runs, see [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900).  
+-   Starting the agent from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job, the default: When a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job is used to start a replication agent, the agent runs under the context of an account that you specify when you configure replication. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent and replication, see the section "Agent Security under SQL Server Agent" later in this topic. For information about the permissions that are required for the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent runs, see [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
 -   Starting the agent from an MS-DOS command line, either directly or through a script: The agent runs under the context of the account of the user that is running the agent at the command line.  
   
@@ -73,8 +68,8 @@ manager: craigg
 |Log Reader Agent|**\<Publisher>-\<PublicationDatabase>-\<integer>**|  
 |Merge Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
 |Merge Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
-|Distribution Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>***|  
-|Distribution Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>***\*|  
+|Distribution Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Distribution Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|  
 |Distribution Agent for push subscriptions to non-SQL Server Subscribers|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
 |Queue Reader Agent|**[\<Distributor>].\<integer>**|  
   
@@ -93,7 +88,7 @@ manager: craigg
   
 ## See Also  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

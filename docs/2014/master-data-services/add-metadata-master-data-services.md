@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined metadata [Master Data Services], adding"
   - "metadata [Master Data Services], adding"
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Add Metadata (Master Data Services)

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.shareddatasource.general.f1"
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
-caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Shared Data Source Properties Dialog Box, General
   Use the **Shared Data Source Properties** dialog box to display and modify connection information for a shared data source in the report.  

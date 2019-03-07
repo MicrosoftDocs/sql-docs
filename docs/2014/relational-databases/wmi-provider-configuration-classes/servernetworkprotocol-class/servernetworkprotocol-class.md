@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ServerNetworkProtocol Class"
@@ -19,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "ServerNetworkProtocol class"
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ServerNetworkProtocol Class
@@ -36,6 +31,6 @@ manager: craigg
 -   Enable and disable the server network protocol.  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

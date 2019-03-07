@@ -1,16 +1,11 @@
 ---
 title: "Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
@@ -21,17 +16,15 @@ helpviewer_keywords:
   - "security [Reporting Services], predefined roles"
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: 19
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions
   This topic compares role and task based authorization features in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode to the security features in SharePoint products. This topic compares terminology and characteristics of roles, tasks, SharePoint groups, permission levels, and permissions.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
  **In this topic:**  
   
@@ -50,11 +43,11 @@ manager: "kfile"
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Role:** For example “Content Manager”.|**Group:** For example the default “Viewers” group.|  
-|---|**Permission level group:** For example “View Only” for the “Viewers” group.|  
-|**Tasks:** for example “Manage Reports”.|**Permissions:** For example, within the “View Only” group there are list related permissions of view items, view versions, and view application pages.|  
+|**Role:** For example "Content Manager".|**Group:** For example the default "Viewers" group.|  
+|---|**Permission level group:** For example "View Only" for the "Viewers" group.|  
+|**Tasks:** for example "Manage Reports".|**Permissions:** For example, within the "View Only" group there are list related permissions of view items, view versions, and view application pages.|  
   
- For more information on SharePoint permissions, see [Permission levels and permissions](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) and [Determine permission levels and groups in SharePoint 2013](http://technet.microsoft.com/library/cc262690.aspx).  
+ For more information on SharePoint permissions, see [Permission levels and permissions](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) and [Determine permission levels and groups in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Compare Native mode Roles and SharePoint Groups  
  The following table compares the predefined role definitions in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in native mode to standard SharePoint groups. If the SharePoint groups do not match the specific role that you want, you can create a custom group and assign permission levels in SharePoint.  

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1"
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Insert Function Dialog Box (SSAS)
   The **Insert Function** dialog box enables you to choose from a list of functions that can be used when building formulas. To access this dialog box from the model designer, in the formula bar above each table, click the function (**fx**) button. For more information about choosing functions to use in formulas, see DAX Introduction and Build a Formula.  

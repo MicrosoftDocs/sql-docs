@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "execution context [Analysis Services]"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "Context object"
   - "query context [Analysis Services]"
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Accessing Query Context in Stored Procedures
   The execution context of a stored procedure is available within the code of the stored procedure as the `Context` object of the ADOMD.NET server object model. This is a read-only context and cannot be modified by the stored procedure. The following properties are available on this object.  

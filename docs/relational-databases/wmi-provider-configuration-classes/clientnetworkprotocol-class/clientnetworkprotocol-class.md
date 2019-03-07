@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ClientNetworkProtocol Class"
@@ -18,7 +15,6 @@ apilocation:
 helpviewer_keywords: 
   - "ClientNetworkProtocol class"
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
-caps.latest.revision: 28
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

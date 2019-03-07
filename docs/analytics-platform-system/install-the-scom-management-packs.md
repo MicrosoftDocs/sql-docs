@@ -20,13 +20,13 @@ Follow these steps to download and install the System Center Operations Manager 
 System Center Operations Manager must be installed and running. SQL Server PDW 2012 requires System Center Operations Manager 2007 R2, System Center Operations Manager 2012, or System Center Operations Manager 2012 service pack 1.  
   
 ## <a name="Step1"></a>Step 1: Download the Management Packs  
-For the APS PDW workload, download the [System Center Management Pack for the Microsoft Analytics Platform System](http://go.microsoft.com/fwlink/?LinkId=396857).  
+For the APS PDW workload, download the [System Center Management Pack for the Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
-For the appliance management, download the [SQL Server Appliance Base Management Pack](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436).  
+For the appliance management, download the [SQL Server Appliance Base Management Pack](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436).  
   
-For older versions of PDW without APS, download the[System Center Monitoring Pack for Microsoft SQL Server 2012 Parallel Data Warehouse Appliance](http://go.microsoft.com/fwlink/p/?LinkId=282661).  
+For older versions of PDW without APS, download the[System Center Monitoring Pack for Microsoft SQL Server 2012 Parallel Data Warehouse Appliance](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
-For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>Step 2: Install the Management Packs  
   

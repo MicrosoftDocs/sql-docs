@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Use Data Feeds (PowerPivot for SharePoint)
   Data feeds are one or more data streams that are generated from an online data source and streamed to a destination document or application. If you are using PowerPivot for Excel, data feeds can help you get existing corporate or business data from arbitrary data sources into the PowerPivot window in your Excel 2010 workbook. After you import a data feed to a workbook, you can reference it later in any data refresh operations that you schedule on a SharePoint server.  
@@ -60,7 +57,7 @@ manager: "mblythe"
 ##  <a name="rsreport"></a> Create a Data Feed from a Reporting Services Report  
  If you have a deployment of SQL Server 2008 R2 Reporting Services, you can use the new Atom rendering extension to generate a data feed from an existing report. For best results, you should have Excel 2010 with the PowerPivot for Excel on your workstation. The PowerPivot client application will launch in response to the data feed export, automatically adding and relating the tables and columns as they are streamed in.  
   
- For instructions on how to export a data feed from a report, see [Generate Data Feeds from a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) in the [Report Builder help file](http://go.microsoft.com/fwlink/?LinkId=154494).  
+ For instructions on how to export a data feed from a report, see [Generate Data Feeds from a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) in the [Report Builder help file](https://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
 >  To set up a recurring data refresh schedule that re-imports report data into a PowerPivot workbook that is published to a SharePoint library, the report server must be configured for SharePoint integration. For more information about using PowerPivot for SharePoint and Reporting Services together, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  

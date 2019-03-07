@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "machine data sources [ODBC]"
   - "data sources [ODBC], machine"
 ms.assetid: 371bb5b5-1258-4657-acb5-d2b688b2ab4c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

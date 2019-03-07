@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table constraints [SQL Server]"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], check"
   - "CHECK constraints, attaching"
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
-caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Check Constraints
@@ -49,7 +45,7 @@ manager: craigg
   
 1.  In **Object Explorer**, expand the table to which you want to add a check constraint, right-click **Constraints** and click **New Constraint**.  
   
-2.  In the **Check Constraints** dialog box, click in the **Expression** field and then click the ellipses **(…)**.  
+2.  In the **Check Constraints** dialog box, click in the **Expression** field and then click the ellipses **(...)**.  
   
 3.  In the **Check Constraint Expression** dialog box, type the SQL expressions for the check constraint. For example, to limit the entries in the `SellEndDate` column of the `Product` table to a value that is either greater than or equal to the date in the `SellStartDate` column or is a NULL value, type:  
   

@@ -1,19 +1,14 @@
-﻿---
+---
 title: "sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.component: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
@@ -48,7 +43,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |source_info|**nvarchar(4000)**|For a reader, specification of the source tables and columns.||  
 |destination_info|**nvarchar(4000)**|For a writer, specification of the destination tables.||  
   
- For information about the maximum rows retained by this view, see [Maximum System View Values](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9).  
+ For information about the maximum rows retained by this view, see [Maximum System View Values](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9).  
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

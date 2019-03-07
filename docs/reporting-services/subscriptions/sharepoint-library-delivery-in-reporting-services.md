@@ -1,26 +1,19 @@
 ---
 title: "SharePoint Library Delivery in Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "subscriptions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: subscriptions
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], report delivery"
   - "delivering reports [Reporting Services]"
   - "subscriptions [Reporting Services], SharePoint library delivery"
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # SharePoint Library Delivery in Reporting Services
   A report server that is configured for SharePoint integration includes a delivery extension that you can use to send a report to a SharePoint library.  
@@ -75,7 +68,7 @@ manager: "kfile"
  Specifies an optional **Title** property for the report in the target library. This is a standard property for all items stored in a library. Users can specify whether to show or hide this property when viewing library contents on a SharePoint site.  
   
  Path  
- Specifies a fully qualified URL to the SharePoint library, including the SharePoint Web application and site. For example: `http://mySharePointWeb/MySite/MyDocLib`; where `http://mySharePointWeb` indicates the Web application, "MySite" is the SharePoint site, and "MyDocLib" is the SharePoint library where the report will be delivered.  
+ Specifies a fully qualified URL to the SharePoint library, including the SharePoint Web application and site. For example: `https://mySharePointWeb/MySite/MyDocLib`; where `https://mySharePointWeb` indicates the Web application, "MySite" is the SharePoint site, and "MyDocLib" is the SharePoint library where the report will be delivered.  
   
  You cannot specify a page, site, or list. The target container must be a library in the same site or farm.  
   

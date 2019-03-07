@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.migrationwizard.f1"
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services Project Conversion Wizard
@@ -184,7 +181,7 @@ manager: craigg
  **Remove configurations from all packages after conversion**  
  It is recommended that you remove all configurations from the project by selecting this option.  
   
- If you don’t select this option, only the configurations that you selected to replace with parameters are removed.  
+ If you don't select this option, only the configurations that you selected to replace with parameters are removed.  
   
 ##  <a name="createParameters"></a> Set Options on the Create Parameters Page  
  Select the parameter name and scope for each configuration property.  
@@ -217,7 +214,7 @@ manager: craigg
  The **Set Parameter Details** dialog box also lists the data type of the parameter value and the origin of the parameter.  
   
 ##  <a name="review"></a> Set the Options on the Review page  
- Use the **Review** page to confirm the options that you’ve selected for the conversion of the project.  
+ Use the **Review** page to confirm the options that you've selected for the conversion of the project.  
   
  **Previous**  
  Click to change an option.  

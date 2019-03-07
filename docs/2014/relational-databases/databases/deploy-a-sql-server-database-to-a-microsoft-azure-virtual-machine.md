@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.deploymentwizard.deploymentsettings.f1"
@@ -42,9 +40,8 @@ helpviewer_keywords:
   - "Deploy a SQL Server database to Azure"
   - "Azure VM"
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Deploy a SQL Server Database to a Microsoft Azure Virtual Machine
@@ -60,7 +57,7 @@ manager: craigg
 -   Your Windows Azure publishing profile.  
   
     > [!CAUTION]  
-    >  SQL Server currently supports publishing profile version 2.0. To download the supported version of the publishing profile, see [Download Publishing Profile 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+    >  SQL Server currently supports publishing profile version 2.0. To download the supported version of the publishing profile, see [Download Publishing Profile 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
 -   The management certificate uploaded to your Windows Azure subscription.  
   
@@ -82,7 +79,7 @@ manager: craigg
   
 -   Credentials with Backup operator privileges on the database you plan to deploy, from the source instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- For more information about running SQL Server in Windows Azure virtual machines, see [Getting Ready to Migrate to SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx).  
+ For more information about running SQL Server in Windows Azure virtual machines, see [Getting Ready to Migrate to SQL Server in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx).  
   
  On computers running Windows Server operating systems, you must use the following configuration settings to run this wizard:  
   
@@ -120,9 +117,9 @@ manager: craigg
 ###  <a name="filestream"></a> Considerations for Deploying a FILESTREAM-enabled Database to an Azure VM  
  Note the following guidelines and restrictions when deploying databases that have BLOBS stored in FILESTREAM objects:  
   
--   The deployment feature cannot deploy a FILESTREAM-enabled database into a new VM. If FILESTREAM is not enabled in the VM before you run the wizard, the database restore operation will fail and the wizard operation will not be able to complete successfully. To successfully deploy a database that uses FILESTREAM, enable FILESTREAM in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the host VM before launching the wizard. For more information, see [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx).  
+-   The deployment feature cannot deploy a FILESTREAM-enabled database into a new VM. If FILESTREAM is not enabled in the VM before you run the wizard, the database restore operation will fail and the wizard operation will not be able to complete successfully. To successfully deploy a database that uses FILESTREAM, enable FILESTREAM in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the host VM before launching the wizard. For more information, see [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
--   If your database utilizes In-Memory OLTP, you can deploy the database to an Azure VM without any modifications to the database. For more information, see [In-Memory OLTP (In-Memory Optimization)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
+-   If your database utilizes In-Memory OLTP, you can deploy the database to an Azure VM without any modifications to the database. For more information, see [In-Memory OLTP (In-Memory Optimization)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
 ###  <a name="geography"></a> Considerations for Geographic Distribution of Assets  
  Note that the following assets must be located in the same geographic region:  
@@ -176,7 +173,7 @@ manager: craigg
   
 2.  In **Object Explorer**, expand the instance name, then expand the **Databases** node.  
   
-3.  Right-click the database you want to deploy, select **Tasks**, and then select **Deploy Database to Windows Azure VM…**  
+3.  Right-click the database you want to deploy, select **Tasks**, and then select **Deploy Database to Windows Azure VM...**  
   
 
   
@@ -189,16 +186,16 @@ manager: craigg
   
 -   **Next** - Proceeds to the **Source Settings** page.  
   
--   **Cancel** – Cancels the operation and closes the wizard.  
+-   **Cancel** - Cancels the operation and closes the wizard.  
   
--   **Help** – Launches the MSDN Help topic for the wizard.  
+-   **Help** - Launches the MSDN Help topic for the wizard.  
   
 ##  <a name="Source_settings"></a> Source Settings  
  Use this page to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database you want to deploy to the Windows Azure VM. You will also specify a temporary location for files to be saved from the local machine before they are transferred to Windows Azure. This can be a shared, network location.  
   
  **Options**  
   
--   Click **Connect…** and then specify connection details for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database to deploy.  
+-   Click **Connect...** and then specify connection details for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database to deploy.  
   
 -   Use the **Select Database** drop-down list to specify the database to deploy.  
   
@@ -209,34 +206,34 @@ manager: craigg
   
  **Options**  
   
--   **Management Certificate** – Use this option to specify a certificate from the local certificate store that matches the management certificate from Windows Azure.  
+-   **Management Certificate** - Use this option to specify a certificate from the local certificate store that matches the management certificate from Windows Azure.  
   
--   **Publishing Profile** – Use this option if you already have a publishing profile downloaded to your computer.  
+-   **Publishing Profile** - Use this option if you already have a publishing profile downloaded to your computer.  
   
--   **Sign In** – Use this option to sign in to Windows Azure using a Microsoft account – for example, a Live ID or Hotmail account – to generate and download a new management certificate. Note that the number of certificates per subscription is limited.  
+-   **Sign In** - Use this option to sign in to Windows Azure using a Microsoft account - for example, a Live ID or Hotmail account - to generate and download a new management certificate. Note that the number of certificates per subscription is limited.  
   
--   **Subscription** – Select, type, or paste your Windows Azure subscription ID that matches the management certificate from the local certificate store or a publishing profile.  
+-   **Subscription** - Select, type, or paste your Windows Azure subscription ID that matches the management certificate from the local certificate store or a publishing profile.  
   
 ##  <a name="Deployment_settings"></a> Deployment Settings Page  
  Use this page to specify the destination server and to provide details about your new database.  
   
  **Options**  
   
--   **Azure Virtual Machine** – Specify details for the VM that will host the SQL Server database:  
+-   **Azure Virtual Machine** - Specify details for the VM that will host the SQL Server database:  
   
--   **Cloud Service name** – Specify the name of the service that hosts the VM. To create a new Cloud Service, specify a name for the new Cloud Service.  
+-   **Cloud Service name** - Specify the name of the service that hosts the VM. To create a new Cloud Service, specify a name for the new Cloud Service.  
   
--   **Virtual Machine name** – Specify the name of the VM that will host the SQL Server database. To create a new Windows Azure VM, specify a name for the new VM.  
+-   **Virtual Machine name** - Specify the name of the VM that will host the SQL Server database. To create a new Windows Azure VM, specify a name for the new VM.  
   
--   **Settings** – Use the Settings button to create a new VM to host the SQL Server database. If you are using an existing VM, the information you provide will be used to authenticate your credentials.  
+-   **Settings** - Use the Settings button to create a new VM to host the SQL Server database. If you are using an existing VM, the information you provide will be used to authenticate your credentials.  
   
--   **Storage account** – Select the storage account from the drop-down list. To create a new storage account, specify a name for the new account. Note that storage accounts associated with an Affinity Group will not be available in the drop-down list.  
+-   **Storage account** - Select the storage account from the drop-down list. To create a new storage account, specify a name for the new account. Note that storage accounts associated with an Affinity Group will not be available in the drop-down list.  
   
--   **Target Database** – Specify details for the target database.  
+-   **Target Database** - Specify details for the target database.  
   
--   **Server Connection** – Connection details for the server.  
+-   **Server Connection** - Connection details for the server.  
   
--   **Database** – Specify or confirm the name of a new database. If the database name already exists on the destination SQL Server instance, we suggest that you specify a modified database name.  
+-   **Database** - Specify or confirm the name of a new database. If the database name already exists on the destination SQL Server instance, we suggest that you specify a modified database name.  
   
 ##  <a name="Summary"></a> Summary Page  
  Use this page to review the specified settings for the operation. To complete the deploy operation using the specified settings, click **Finish**. To cancel the deploy operation and exit the wizard, click **Cancel**.  
@@ -254,7 +251,7 @@ manager: craigg
  [Export a Data-tier Application](../data-tier-applications/export-a-data-tier-application.md)   
  [Import a BACPAC File to Create a New User Database](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Azure SQL Database Backup and Restore](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [SQL Server Deployment in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133141.aspx)   
- [Getting Ready to Migrate to SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx)  
+ [SQL Server Deployment in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Getting Ready to Migrate to SQL Server in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

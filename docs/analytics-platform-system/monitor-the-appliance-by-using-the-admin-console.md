@@ -58,28 +58,7 @@ Summarizes the PDW storage utilization.
   
 Performance Monitor  
 Displays PDW performance monitor graphs.  
-  
-**HDInsight**  
-Home  
-Provides a quick summary of the HDInsight state.  
-  
-HDFS  
-Summarizes the HDInsight space utilization and lists the top 10 space consumers.  
-  
-Map/Reduce  
-Summarizes the status of MapReduce jobs.  
-  
-Health  
-Displays the HDInsight topology with indicators showing the health of each monitored component within each node. Allows you to view the current status of individual nodes and properties of the node components.  
-  
-Displays hardware and software alerts.  
-  
-Storage  
-Summarizes the HDInsight storage utilization.  
-  
-Performance Monitor  
-Displays performance monitor graphs.  
-  
+ 
 > [!NOTE]  
 > The admin console has a 1024x768 screen resolution. The admin console displays best with a screen resolution of 1280 X 1024 or higher.  
   

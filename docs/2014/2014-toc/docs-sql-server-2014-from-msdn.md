@@ -1,12 +1,11 @@
 ---
 title: SQL Server 2014 docs are moving | Microsoft Docs
 description: The Microsoft documentation for SQL Server 2014 will move before July 2018, from MSDN to here on docs.
-author: MightyPen
+author: mightypen
 manager: craigg
-ms.prod-service: sql-database
+ms.prod: "sql-server-2014"
 ms.custom:
 ms.topic: article
-ms.workload: "On Demand"
 ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk

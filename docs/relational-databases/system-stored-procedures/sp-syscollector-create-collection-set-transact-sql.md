@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_create_collection_set_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_create_collection_set"
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -75,7 +71,7 @@ sp_syscollector_create_collection_set
  Is the number of days that the collected data is saved in the management data warehouse. *days_until_expiration* is **smallint** with a default value of 730 (two years). *days_until_expiration* must be 0 or a positive integer.  
   
  [ **@proxy_id =** ] *proxy_id*  
- Is the unique identifier for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account. *proxy_id* is **int** with a default value of NULL. If specified, *proxy_name* must be NULL. To obtain *proxy_id*, query the sysproxies system table. The dc_admin fixed database role must have permission to access the proxy. For more information, see [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+ Is the unique identifier for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account. *proxy_id* is **int** with a default value of NULL. If specified, *proxy_name* must be NULL. To obtain *proxy_id*, query the sysproxies system table. The dc_admin fixed database role must have permission to access the proxy. For more information, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
  [ **@proxy_name =** ] '*proxy_name*'  
  Is the name of the proxy account. *proxy_name* is **sysname** with a default value of NULL. If specified, *proxy_id* must be NULL. To obtain *proxy_name*, query the sysproxies system table.  

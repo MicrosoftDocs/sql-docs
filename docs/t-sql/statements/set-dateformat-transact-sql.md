@@ -1,13 +1,11 @@
-﻿---
+---
 title: "SET DATEFORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEFORMAT"
@@ -26,16 +24,15 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEFORMAT"
   - "dateparts [SQL Server], dateformat"
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
-caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Sets the order of the month, day, and year date parts for interpreting **date**, **smalldatetime**, **datetime**, **datetime2** and **datetimeoffset** character strings.  
+  Sets the order of the month, day, and year date parts for interpreting date character strings. These strings are of type **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset**.  
   
  For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
@@ -48,15 +45,15 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## Arguments  
- *format* | **@***format_var*  
+ *format* | **@**_format_var_  
  Is the order of the date parts. Valid parameters are **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Can be either Unicode or double-byte character sets (DBCS) converted to Unicode. The U.S. English default is **mdy**. For the default DATEFORMAT of all support languages, see [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
 ## Remarks  
- The DATEFORMAT **ydm** is not supported for **date**, **datetime2** and **datetimeoffset** data types.  
+ The DATEFORMAT **ydm** isn't supported for **date**, **datetime2**, and **datetimeoffset** data types.  
   
- The effect of the DATEFORMAT setting on the interpretation of character strings might be different for **datetime** and **smalldatetime** values than for **date**, **datetime2** and **datetimeoffset** values, depending on the string format. This setting affects the interpretation of character strings as they are converted to date values for storage in the database. It does not affect the display of date data type values that are stored in the database or the storage format.  
+ The DATEFORMAT setting may interpret character strings differently for date data types, depending on their string format. For example, **datetime** and **smalldatetime** interpretations may not match **date**, **datetime2**, or **datetimeoffset**. DATEFORMAT affects the interpretation of character strings as they're converted to date values for the database. It doesn't affect the display of date data type values, nor their storage format in the database.  
   
- Some character strings formats, for example ISO 8601, are interpreted independently of the DATEFORMAT setting.  
+ Some character string formats, for example ISO 8601, are interpreted independently of the DATEFORMAT setting.  
   
  The setting of SET DATEFORMAT is set at execute or run time and not at parse time.  
   
@@ -88,6 +85,4 @@ GO
   
 ## See Also  
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 

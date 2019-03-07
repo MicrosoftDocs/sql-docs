@@ -18,7 +18,7 @@ manager: kfile
   
  You only need to perform this step once for each Excel Services service application.  
   
- Each physical server that handles a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data request, such as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint server or an Excel Services server, must have the OLE DB provider installed on the computer. A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installation always includes the OLE DB provider, but if Excel Services is running on a computer that does not have [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, you must install the provider manually. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Each physical server that handles a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data request, such as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint server or an Excel Services server, must have the OLE DB provider installed on the computer. A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installation always includes the OLE DB provider, but if Excel Services is running on a computer that does not have [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, you must install the provider manually. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 ## Add a trusted provider to Excel Services  
   

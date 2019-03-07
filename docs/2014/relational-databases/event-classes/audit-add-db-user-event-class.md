@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Audit Add DB User event class"
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
-caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Audit Add DB User Event Class
@@ -33,7 +29,7 @@ manager: craigg
 |**ColumnPermissions**|**int**|Indicator of whether a column permission was set. Parse the statement text to determine which permissions were applied to which columns.|44|Yes|  
 |**DatabaseID**|**int**|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |**DatabaseName**|**nvarchar**|Name of the database where the username is being added or removed.|35|Yes|  
-|**DBUserName**|**nvarchar**|Issuer’s username in the database.|40|Yes|  
+|**DBUserName**|**nvarchar**|Issuer's username in the database.|40|Yes|  
 |**EventClass**|**int**|Type of event = 109.|27|No|  
 |**EventSequence**|**int**|Sequence of a given event within the request.|51|No|  
 |**EventSubClass**|**int**|Type of event subclass.<br /><br /> 1=Add<br /><br /> 2=Drop<br /><br /> 3=Grant database access<br /><br /> 4=Revoke database access|21|Yes|  

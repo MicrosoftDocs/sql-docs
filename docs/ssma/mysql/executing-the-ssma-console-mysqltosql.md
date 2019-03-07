@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Script file commands, Database connection commands"
   - "Script file commands, Manageability commands"
@@ -20,7 +15,6 @@ helpviewer_keywords:
   - "Script file commands, Report commands"
   - "Script file commands, Script generation commands"
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 25
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -46,7 +40,7 @@ The Project commands handle creating projects, opening, saving, and exiting proj
   
 3.  `overwrite-if-exists`Optional attribute indicates if an existing project should be overwritten. {boolean}  
   
-4.  `project-type:`Optional attribute. Indicates the project type i.e. “sql-server-2005” project or “sql-server-2008” project or “sql-server-2012” or “sql-server-2014” project or “sql-azure” project. Default is “sql-server-2008”.  
+4.  `project-type:`Optional attribute. Indicates the project type i.e. "sql-server-2005" project or "sql-server-2008" project or "sql-server-2012" or "sql-server-2014" project or "sql-azure" project. Default is "sql-server-2008".  
   
 **Syntax Example:**  
   
@@ -59,13 +53,13 @@ The Project commands handle creating projects, opening, saving, and exiting proj
   
    overwrite-if-exists="<true/false>"   (optional)  
   
-   project-type==”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”   (optional)  
+   project-type=="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"   (optional)  
   
 />  
 ```  
-Attribute ‘overwrite-if-exists’ is **false** by default.  
+Attribute 'overwrite-if-exists' is **false** by default.  
   
-Attribute ‘project-type’ is **sql-server-2008** by default.  
+Attribute 'project-type' is **sql-server-2008** by default.  
   
 **Command**  
   
@@ -131,7 +125,7 @@ close-project
   
 />  
 ```  
-Attribute ‘if-modified’ is optional, **ignore** by default.  
+Attribute 'if-modified' is optional, **ignore** by default.  
   
 ## Database Connection Script File Commands  
 The Database Connection commands help connect to the database.  
@@ -140,7 +134,7 @@ The Database Connection commands help connect to the database.
   
 2.  The **windows-authentication** and **port** parameters are not applicable when connecting to SQL Azure.  
   
-3.  For more information on ‘Creating Script Files’, see [Creating Script Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md).  
+3.  For more information on 'Creating Script Files', see [Creating Script Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md).  
   
 **Command**  
   
@@ -402,7 +396,7 @@ migrate-data
 ```xml  
 <migrate-data  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true">  
   
@@ -429,7 +423,7 @@ or
   
    object-type="<object-category>"  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true"/>  
 ```  
@@ -463,7 +457,7 @@ Schema mapping of source database to the target schema.
 The Manageability commands help synchronize the target database objects with the source database.  
   
 > [!NOTE]  
-> The default console output setting for the migration commands is ‘Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
+> The default console output setting for the migration commands is 'Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
   
 **Command**  
   
@@ -626,7 +620,7 @@ Requires one or several metabase nodes as command line parameter.
   
    object-type="<object-category>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
    overwrite="<true/false>"   (optional)  
   
@@ -639,7 +633,7 @@ or
   
    metabase="<source/target>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
       <metabase-object object-name="<object-name>"  
   

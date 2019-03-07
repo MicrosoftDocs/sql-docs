@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "model filter [data mining]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "filters [data mining]"
   - "filters [Analysis Services]"
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Model Filter Syntax and Examples (Analysis Services - Data Mining)
   This section provides detailed information about the syntax for model filters, together with sample expressions.  
@@ -83,7 +80,7 @@ manager: "mblythe"
   
  If the argument, *avPredicate*, applies to a discretized column, the value used in the filter can be any value in a specific bucket.  
   
- In other words, you do not define the condition as `AgeDisc = ’25-35’`, but instead compute and then use a value from that interval.  
+ In other words, you do not define the condition as `AgeDisc = '25-35'`, but instead compute and then use a value from that interval.  
   
  Example:  `AgeDisc = 27`  means any value in the same interval as 27, which in this case is 25-35.  
   
@@ -120,7 +117,7 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
 
@@ -139,7 +136,7 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
@@ -150,7 +147,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’
   
  The first condition in the filter, `Age > 30`, applies to a column in the case table. The remaining conditions apply to the nested table.  
   
- The second condition, `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`, checks for the presence of at least one purchase in the nested table that included milk. The third condition, `Quantity>=2`, means that the customer must have purchased at least two units of milk in a single transaction.  
+ The second condition, `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`, checks for the presence of at least one purchase in the nested table that included milk. The third condition, `Quantity>=2`, means that the customer must have purchased at least two units of milk in a single transaction.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -165,7 +162,7 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
@@ -186,7 +183,7 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
 
@@ -207,7 +204,7 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
@@ -228,7 +225,7 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  

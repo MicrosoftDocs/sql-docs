@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Install Distributed Replay from the Command Prompt
@@ -40,7 +36,7 @@ manager: craigg
 |/CTLRSVCACCOUNT<br /><br /> **Optional**|Service account for the Distributed Replay controller service.|Checks account and password|  
 |/CTLRSVCPASSWORD<br /><br /> **Optional**|Password for the Distributed Replay controller service account.|Checks account and password|  
 |/CTLRSTARTUPTYPE<br /><br /> **Optional**|Startup type for the Distributed Replay controller service.|Automatic<br /><br /> Disabled<br /><br /> Manual|  
-|/CTLRUSERS<br /><br /> **Optional**|Specify which users have permissions for the Distributed Replay controller service.|Set of user account strings using “ ” (space) for delimiter<br /><br /> **Important**: When you configure the Distributed Replay controller service, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:<br /><br /> Domain user account<br /><br /> User created local user account<br /><br /> Administrator<br /><br /> Virtual account and MSA (Managed Service Account)<br /><br /> Network Services, Local Services, and System<br /><br /> <br /><br /> Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted.|  
+|/CTLRUSERS<br /><br /> **Optional**|Specify which users have permissions for the Distributed Replay controller service.|Set of user account strings using " " (space) for delimiter<br /><br /> **Important**: When you configure the Distributed Replay controller service, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:<br /><br /> Domain user account<br /><br /> User created local user account<br /><br /> Administrator<br /><br /> Virtual account and MSA (Managed Service Account)<br /><br /> Network Services, Local Services, and System<br /><br /> <br /><br /> Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted.|  
 |/CLTSVCACCOUNT<br /><br /> **Optional**|Service account for the Distributed Replay client service.|Checks account and password|  
 |/CLTSVCPASSWORD<br /><br /> **Optional**|Password for the Distributed Replay client service account.|Checks account and password|  
 |/CLTSTARTUPTYPE<br /><br /> **Optional**|Startup type for the Distributed Replay client service.|Automatic<br /><br /> Disabled<br /><br /> Manual|  

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases"
   - "adding Access files"
@@ -31,22 +26,21 @@ helpviewer_keywords:
   - "scanning for database files"
   - "searching for database files"
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
 ---
 # Adding and Removing Access Database Files (AccessToSQL)
-To migrate Access data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you must add one or more Access databases to the SSMA project. These databases must be Access 97 or later versions. If you have databases from an earlier version of Access, you must convert the databases to a newer version. You do this by opening and saving the databases in Access 97 or a later version before you add them to SSMA.  
+To migrate Access data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you must add one or more Access databases to the SSMA project. These databases must be Access 97 or later versions. If you have databases from an earlier version of Access, you must convert the databases to a newer version. You do this by opening and saving the databases in Access 97 or a later version before you add them to SSMA.  
   
 ## What Happens When You Add Access Database Files?  
-When you add an Access database to an SSMA project, SSMA reads database metadata, and then adds this metadata to the project file. This metadata describes the database and its objects. SSMA uses the metadata when it converts objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure syntax, and when it migrates data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. You can browse this metadata in Access Metadata Explorer and review properties of individual database objects.  
+When you add an Access database to an SSMA project, SSMA reads database metadata, and then adds this metadata to the project file. This metadata describes the database and its objects. SSMA uses the metadata when it converts objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure syntax, and when it migrates data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can browse this metadata in Access Metadata Explorer and review properties of individual database objects.  
   
 > [!NOTE]  
-> An Access database can be split into multiple files: a back-end database that contains tables, and front-end databases that contain queries, forms, reports, macros, modules, and shortcuts. If you want to migrate a split database to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, add the front-end database to SSMA.  
+> An Access database can be split into multiple files: a back-end database that contains tables, and front-end databases that contain queries, forms, reports, macros, modules, and shortcuts. If you want to migrate a split database to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, add the front-end database to SSMA.  
   
 ## Permissions that are required by SSMA  
-To migrate an Access database to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, the Users group and the Admin user must have Administer permissions. For information about how to migrate databases with workgroup protection, see [Preparing Access Databases for Migration](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+To migrate an Access database to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, the Users group and the Admin user must have Administer permissions. For information about how to migrate databases with workgroup protection, see [Preparing Access Databases for Migration](preparing-access-databases-for-migration-accesstosql.md).  
   
 ## Selecting Databases to Add  
 If you want to add one or more databases to an SSMA project, and the files are all in one known location, you can add the files by using the following procedure.  
@@ -129,9 +123,9 @@ You can remove an Access database from a project by following these steps.
 2.  Right-click the database, and then select **Remove Database**.  
   
 ## Next Step  
-The next step in the migration process is to [connect to SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+The next step in the migration process is to [connect to SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Creating and Managing Projects](http://msdn.microsoft.com/en-us/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)  
   

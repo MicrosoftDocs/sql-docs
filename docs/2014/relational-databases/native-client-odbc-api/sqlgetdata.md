@@ -4,20 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLGetData function"
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLGetData
@@ -94,7 +89,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
 ```  
   
 ## See Also  
- [SQLGetData Function](http://go.microsoft.com/fwlink/?LinkId=59350)   
+ [SQLGetData Function](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

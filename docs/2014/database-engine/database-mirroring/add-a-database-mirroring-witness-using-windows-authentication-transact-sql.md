@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "witness [SQL Server], establishing"
   - "Windows authentication [SQL Server]"
   - "database mirroring [SQL Server], witness"
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Add a Database Mirroring Witness Using Windows Authentication (Transact-SQL)
@@ -50,17 +46,17 @@ manager: craigg
   
 3.  Connect to the principal server and issue the following statement:  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=***<server_network_address>*  
+     ALTER DATABASE *<database_name>* SET WITNESS **=**_<server_network_address>_  
   
      where *<database_name>* is the name of the database to be mirrored (this name is the same on both partners), and *<server_network_address>* is the server network address of the witness server instance.  
   
      The syntax for a server network address is as follows:  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP**://**\<_system-address>_**:**\<*port>*  
   
      where \<*system-address>* is a string that unambiguously identifies the destination computer system, and \<*port>* is the port number used by the mirroring endpoint of the partner server instance. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     For example, on the principal server instance, the following ALTER DATABASE statement sets the witness. The database name is **AdventureWorks**, the system address is DBSERVER3—the name of the witness system, and the port used by the database mirroring endpoint of the witness is `7022`:  
+     For example, on the principal server instance, the following ALTER DATABASE statement sets the witness. The database name is **AdventureWorks**, the system address is DBSERVER3-the name of the witness system, and the port used by the database mirroring endpoint of the witness is `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   

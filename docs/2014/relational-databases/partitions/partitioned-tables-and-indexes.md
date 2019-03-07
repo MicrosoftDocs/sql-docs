@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned tables [SQL Server], about partitioned tables"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], architecture"
   - "partitioned indexes [SQL Server], about partitioned indexes"
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Partitioned Tables and Indexes
@@ -107,15 +103,15 @@ manager: craigg
 ## Related Content  
  You may find the following white papers on partitioned table and index strategies and implementations useful.  
   
--   [Partitioned Table and Index Strategies Using SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Partitioned Table and Index Strategies Using SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [How to Implement an Automatic Sliding Window](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [How to Implement an Automatic Sliding Window](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [Bulk Loading into a Partitioned Table](http://msdn.microsoft.com/library/cc966380.aspx)  
+-   [Bulk Loading into a Partitioned Table](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Project REAL: Data Lifecycle -- Partitioning](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Project REAL: Data Lifecycle -- Partitioning](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
--   [Query Processing Enhancements on Partitioned Tables and Indexes](http://msdn.microsoft.com/library/ms345599.aspx)  
+-   [Query Processing Enhancements on Partitioned Tables and Indexes](https://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   

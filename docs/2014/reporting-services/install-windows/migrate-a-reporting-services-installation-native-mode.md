@@ -1,29 +1,18 @@
 ---
 title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.custom: ""
-ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "manual Reporting Services migrations"
-  - "Report Server Windows service"
-  - "custom Reporting Services installations"
-  - "automatic Reporting Services migrations"
-  - "Reporting Services, upgrades"
-  - "upgrading Reporting Services"
-  - "migrating Reporting Services"
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
-caps.latest.revision: 51
-author: "markingmyname"
-ms.author: "maghan"
-manager: craigg
+ms.date: "08/10/2017"
 ---
+
 # Migrate a Reporting Services Installation (Native Mode)
+
   This topic provides step-by-step instructions for migrating one of the following supported versions of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode deployment to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance:  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -32,7 +21,7 @@ manager: craigg
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requires more steps, see [You cannot use SQL Server 2005 to host Report Server 2014 Databases](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requires more steps, see [You cannot use SQL Server 2005 to host Report Server 2014 Databases](https://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  

@@ -1,13 +1,11 @@
-﻿---
+---
 title: "CREATE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_MASTER_KEY_TSQL"
@@ -23,11 +21,10 @@ helpviewer_keywords:
   - "cryptography [SQL Server], Database Master Key"
   - "database master key [SQL Server], creating"
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +62,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 For SQL Server and Parallel Data Warehouse, the Master Key is typically protected by the Service Master Key and at least one password. In case of the database being physically moved to a different server (log shipping, restoring backup, etc.), the database will contain a copy of the master Key encrypted by the original server Service Master Key (unless this encryption was explicitly removed using ALTER MASTER KEY DDL), and a copy of it encrypted by each password specified during either CREATE MASTER KEY or subsequent ALTER MASTER KEY DDL operations. In order to recover the Master Key, and all the data encrypted using the Master Key as the root in the key hierarchy after the database has been moved, the user will have either use OPEN MASTER KEY statement using one of the password used to protect the Master Key, restore a backup of the Master Key, or restore a backup of the original Service Master Key on the new server. 
 
-For [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], the password protection is not considered to be a safety mechanism to prevent a data loss scenario in situations where the database may be moved from one server to another, as the Service Master Key protection on the Master Key is managed by Microsoft Azure platform. Therefore, the Maser Key password is optional in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
+For [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], the password protection is not considered to be a safety mechanism to prevent a data loss scenario in situations where the database may be moved from one server to another, as the Service Master Key protection on the Master Key is managed by Microsoft Azure platform. Therefore, the Master Key password is optional in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
   
 > [!IMPORTANT]  
 >  You should back up the master key by using [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md) and store the backup in a secure, off-site location.  

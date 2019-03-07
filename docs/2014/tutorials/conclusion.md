@@ -4,17 +4,11 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1e6fde6-c3a7-4b91-b176-fa465325dd21
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Conclusion
@@ -22,6 +16,6 @@ manager: craigg
   
 ## For more information:  
   
- [Enterprise Information Management (EIM): Bringing together SSIS, DQS, and MDS (Video)](http://go.microsoft.com/fwlink/?LinkId=258672)  
+ [Enterprise Information Management (EIM): Bringing together SSIS, DQS, and MDS (Video)](https://go.microsoft.com/fwlink/?LinkId=258672)  
   
   

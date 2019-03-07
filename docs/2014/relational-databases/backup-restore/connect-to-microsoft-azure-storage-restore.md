@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.restore.connectstorage.f1"
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Connect to Windows Azure Storage (Restore)
@@ -28,7 +24,7 @@ manager: craigg
  Specify the Windows Azure storage account access key.  
   
  **Use secure endpoints (HTTPS)** check box  
- Select this option to make a secure connection to Windows Azure storage – recommended.  
+ Select this option to make a secure connection to Windows Azure storage - recommended.  
   
  **Save account key** check box  
  Select this check box if you want SQL Server to remember the access key for this storage account.  

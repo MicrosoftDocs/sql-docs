@@ -1,8 +1,0 @@
-# [Log File Viewer](log-file-viewer.md)
-## [Open Log File Viewer](open-log-file-viewer.md)
-## [View Offline Log Files](view-offline-log-files.md)
-## [Log File Viewer F1 Help](log-file-viewer-f1-help.md)
-# [The Transaction Log (SQL Server)](the-transaction-log-sql-server.md)
-## [Manage the Size of the Transaction Log File](manage-the-size-of-the-transaction-log-file.md)
-## [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
-## [Control Transaction Durability](control-transaction-durability.md)

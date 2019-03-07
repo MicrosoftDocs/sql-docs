@@ -1,22 +1,15 @@
 ---
 title: "URL Examples for Items on a Report Server - SharePoint Mode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # URL Examples for Items on a Report Server - SharePoint Mode
   To publish reports and related items to a SharePoint library, you can either publish the content using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] authoring tools such as Report Designer or you can upload the content by using SharePoint site actions.  
@@ -50,21 +43,21 @@ manager: "kfile"
  Using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL proxy endpoint is not supported. A proxy endpoint includes a port number, for example, `http:*//servername:8080/reportserver*`.  
   
 ### URL for a SharePoint Server Site or Subsite  
- When you deploy a report or report data source, you must use a URL to a SharePoint site and subsite, if there is one. In the URL, the site name appears immediately after the server name., for example, `http://*servername/site*` or `http://*servername/site/subsite*`.  
+ When you deploy a report or report data source, you must use a URL to a SharePoint site and subsite, if there is one. In the URL, the site name appears immediately after the server name., for example, `https://*servername/site*` or `https://*servername/site/subsite*`.  
   
  On a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web application, the site and subsite frequently correspond to the tabs on the main site. To find the site name or subsite name, click **Home**, and then **All Site Content**. Scroll to the bottom and look for **Sites and Workspaces**. The list of sites appears in this section.  
   
 ### URL for a SharePoint Library  
  When you deploy a report or related item to a SharePoint library, you must use a URL to the SharePoint library. The URL to use for a library differs depending on the version of SharePoint you are using.  
   
- On [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 or [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], the library appears after the server name, for example, `http://*servername/*Shared Documents`.  
+ On [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 or [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], the library appears after the server name, for example, `https://*servername/*Shared Documents`.  
   
- On [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], the library appears after the site and subsite. For example, `http://*servername/site/*Documents`.  
+ On [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], the library appears after the site and subsite. For example, `https://*servername/site/*Documents`.  
   
  To find the path information for a new SharePoint library or for an unfamiliar site, open a browser and locate the SharePoint library where you want to publish your reports. If the library is empty, upload any file. Right-click the file and select **Properties** to open the **Properties** window. The address of the file contains the URL values that you need for a publish operation.  
   
 ### Fully qualified URLs for Items on a SharePoint Site  
- Items that are stored in a SharePoint library are always addressed through a fully qualified URL that starts with the Web application (`http://*server*`) as the root node, and concludes with the name of the file that you are referencing.  
+ Items that are stored in a SharePoint library are always addressed through a fully qualified URL that starts with the Web application (`https://*server*`) as the root node, and concludes with the name of the file that you are referencing.  
   
  File names in the URL must include a file name extension.  
   
@@ -86,7 +79,7 @@ manager: "kfile"
  To specify drillthrough reports, include the URL in an expression. For example, to specify the report that is named SalesDetails as a drillthrough report, in the Action for the text box or placeholder text, set ReportName to the following expression:  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### Reserved Names on SharePoint Sites  
@@ -97,11 +90,11 @@ manager: "kfile"
   
 |Target|Example URL|  
 |------------|-----------------|  
-|A SharePoint server.|`http://TestServer`|  
-|A SharePoint server site or subsite.|`http://TestServer/toplevelsite/subsite`|  
-|The Company Sales sample report in **Shared Documents** on a [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] or [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] deployment.|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|The Company Sales sample report in **Documents/Doc** folder on a [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] instance.|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|The Company Sales sample report in **Report Center** on an [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] instance.|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|A SharePoint server.|`https://TestServer`|  
+|A SharePoint server site or subsite.|`https://TestServer/toplevelsite/subsite`|  
+|The Company Sales sample report in **Shared Documents** on a [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] or [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] deployment.|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|The Company Sales sample report in **Documents/Doc** folder on a [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] instance.|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|The Company Sales sample report in **Report Center** on an [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] instance.|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> Publishing from an Authoring Tool to a SharePoint Library  
  When you use a report authoring tool to publish reports and related files to a library, the files are validated before they are added. If you upload reports and related files by using the **Upload** action on a SharePoint library, no validation check occurs. You will not know whether the file is valid until you access the report by managing, editing, or running it.  

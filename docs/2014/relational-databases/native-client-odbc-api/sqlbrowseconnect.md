@@ -4,20 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLBrowseConnect function"
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLBrowseConnect
@@ -28,7 +23,7 @@ manager: craigg
 |Keyword|List returned?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|N/A|No|Name of the data source returned by **SQLDataSources**. The DSN keyword cannot be used if the DRIVER keyword is used.|  
-|DRIVER|N/A|No|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver name is {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. The DRIVER keyword cannot be used if the DSN keyword is used.|  
+|DRIVER|N/A|No|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver name is {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. The DRIVER keyword cannot be used if the DSN keyword is used.|  
   
 ## Level 2  
   
@@ -72,7 +67,7 @@ manager: craigg
 |Documented SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
 ## See Also  
- [SQLBrowseConnect Function](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect Function](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

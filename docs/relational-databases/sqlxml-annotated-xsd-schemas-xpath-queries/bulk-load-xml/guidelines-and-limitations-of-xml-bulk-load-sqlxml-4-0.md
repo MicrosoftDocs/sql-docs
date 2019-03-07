@@ -1,24 +1,20 @@
-﻿---
+---
 title: "Guidelines and Limitations of XML Bulk Load (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML Bulk Load [SQLXML], about XML Bulk Load"
   - "bulk load [SQLXML], about bulk load"
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines and Limitations of XML Bulk Load (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 -   An XML document is checked for being well-formed, but it is not validated.  
   
-     XML Bulk Load checks the XML document to determine whether it is well-formed—that is, to ensure that the XML conforms to the syntax requirements of the World Wide Web Consortium's XML 1.0 recommendation. If the document is not well-formed, XML Bulk Load cancels processing and returns an error. The only exception to this is when the document is a fragment (for example, the document has no single root element), in which case XML Bulk Load will load the document.  
+     XML Bulk Load checks the XML document to determine whether it is well-formed-that is, to ensure that the XML conforms to the syntax requirements of the World Wide Web Consortium's XML 1.0 recommendation. If the document is not well-formed, XML Bulk Load cancels processing and returns an error. The only exception to this is when the document is a fragment (for example, the document has no single root element), in which case XML Bulk Load will load the document.  
   
      XML Bulk Load does not validate the document with respect to any XML-Data or DTD schema that is defined or referenced within the XML data file. In addition, XML Bulk Load does not validate the XML data file against the mapping schema supplied.  
   

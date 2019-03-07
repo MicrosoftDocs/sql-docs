@@ -3,10 +3,8 @@ title: "Dropping an Assembly | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "removing assemblies"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "assemblies [CLR integration], removing"
   - "dropping assemblies"
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

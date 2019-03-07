@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 24
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Exporting to Microsoft Excel (Report Builder and SSRS)
   The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel rendering extension renders a report to the native format of [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. With the Excel rendering extension, the width of columns in Excel more accurately reflects the width of columns in reports.  
@@ -25,9 +22,9 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  To avoid an error message when exporting a report that is larger than 10MB to Excel, install the latest service pack for [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. The issue was fixed is SP2.  
 >   
->  For more information about the issue, see [FIX: SSRS 2012 cannot export a report that is larger than 10 MB to Excel format](http://go.microsoft.com/fwlink/p/?LinkId=402513)  
+>  For more information about the issue, see [FIX: SSRS 2012 cannot export a report that is larger than 10 MB to Excel format](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
->  To obtain the latest service pack for [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], see [How to obtain the latest service pack for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
+>  To obtain the latest service pack for [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], see [How to obtain the latest service pack for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
 >  When you define a parameter of type `String`, the user is presented with a text box that can take any value. If a report parameter is not tied to a query parameter and the parameter values are included in the report, it is possible for a report user to type expression syntax, script, or a URL into the parameter value, and render the report to Excel. If another user then views the report and clicks the rendered parameter contents, the user may inadvertently execute the malicious script or link.  
@@ -69,7 +66,7 @@ manager: "mblythe"
   
 -   The text effect "Overline" is not supported in Excel.  
   
--   Excel adds a default padding of approximately 3.75 points to the left and right sides of cells. If a text box’s padding settings are less than 3.75 points and is just barely wide enough to accommodate the text, the text may wrap in Excel.  
+-   Excel adds a default padding of approximately 3.75 points to the left and right sides of cells. If a text box's padding settings are less than 3.75 points and is just barely wide enough to accommodate the text, the text may wrap in Excel.  
   
     > [!NOTE]  
     >  To work around this issue, increase the width of the text box in the report.  
@@ -165,7 +162,7 @@ manager: "mblythe"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- The EXCELOPENXML extension defines the Excel renderer for Excel 2007-2010. The EXCEL extension defines the Excel 2003 version. `Visible = “false”` indicates the Excel 2003 renderer is hidden. For more information, see [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ The EXCELOPENXML extension defines the Excel renderer for Excel 2007-2010. The EXCEL extension defines the Excel 2003 version. `Visible = "false"` indicates the Excel 2003 renderer is hidden. For more information, see [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### Differences Between the Excel 2007-2010 and Excel 2003 Renderers  
  Reports, rendered by using the Excel or Excel 2003 renderers are typically identical and only under rare circumstances will you notice differences between the two formats. The following table compares the Excel and the Excel 2003 renderers.  
@@ -260,10 +257,10 @@ manager: "mblythe"
  The root node of the map is the report name, the \<*reportname*>.rdl, and it is not interactive. The document map links font is Arial, 10pt.  
   
 ### Drillthrough Links  
- Drillthrough links that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Drillthrough links for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the drillthrough link opens the client’s default browser and navigates to the HTML view of the target.  
+ Drillthrough links that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Drillthrough links for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the drillthrough link opens the client's default browser and navigates to the HTML view of the target.  
   
 ### Hyperlinks  
- Hyperlinks that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Hyperlinks for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the hyperlink opens the client’s default browser and navigates to the target URL.  
+ Hyperlinks that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Hyperlinks for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the hyperlink opens the client's default browser and navigates to the target URL.  
   
 ### Interactive Sorting  
  Excel does not support interactive sort.  

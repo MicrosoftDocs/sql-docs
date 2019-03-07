@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.translations.translationspane.f1"
 ms.assetid: 51f33f3b-6b7f-41bf-a620-97fd5189e633
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Translations (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Translations** tab in Cube Designer to create and modify perspectives for the selected cube.  

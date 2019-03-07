@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "hierarchies [XQuery]"
   - "XQuery, hierarchies"
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
-caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -36,9 +29,9 @@ manager: craigg
   
  Each <`Location`> element has its own set of attributes and one <`step`> child element. This <`step`> child element is the first manufacturing step at the work center location.  
   
-```  
+```sql
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
                 ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >  
             {   
@@ -69,7 +62,7 @@ WHERE ProductModelID=7
   
  This is a partial result:  
   
-```  
+```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
    <Location LocationID="10" SetupHours="0.5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
@@ -88,10 +81,10 @@ WHERE ProductModelID=7
 ### B. Find all telephone numbers in the AdditionalContactInfo column  
  The following query retrieves additional telephone numbers for a specific customer contact by searching the whole hierarchy for the <`telephoneNumber`> element. Because the <`telephoneNumber`> element can appear anywhere in the hierarchy, the query uses the descendant and self operator (//) in the search.  
   
-```  
+```sql
 SELECT AdditionalContactInfo.query('  
- declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
- declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+ declare namespace ci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+ declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
 for $ph in /ci:AdditionalContactInfo//act:telephoneNumber  
    return  
       $ph/act:number  
@@ -102,13 +95,13 @@ WHERE ContactID = 1
   
  This is the result:  
   
-```  
+```xml
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  
 \</act:number>  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   112-111-1111  
 \</act:number>  
 ```  

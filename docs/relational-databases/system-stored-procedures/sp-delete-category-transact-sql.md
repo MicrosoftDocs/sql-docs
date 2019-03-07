@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_category_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_category"
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -39,7 +35,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@class =**] **'***class***'**  
+ [ **@class =**] **'**_class_**'**  
  The class of the category. *class* is **varchar(8)**, with no default, and must have one of these values.  
   
 |Value|Description|  
@@ -48,7 +44,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**ALERT**|Deletes an alert category.|  
 |**OPERATOR**|Deletes an operator category.|  
   
- [ **@name =**] **'***name***'**  
+ [ **@name =**] **'**_name_**'**  
  The name of the category to be removed. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

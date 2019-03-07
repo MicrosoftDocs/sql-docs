@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLEndTran"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLEndTran function [ODBC]"
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -39,9 +36,9 @@ manager: craigg
 ```  
   
 SQLRETURN SQLEndTran(  
-     SQLSMALLINT   HandleType,  
-     SQLHANDLE     Handle,  
-     SQLSMALLINT   CompletionType);  
+     SQLSMALLINT   HandleType,  
+     SQLHANDLE     Handle,  
+     SQLSMALLINT   CompletionType);  
 ```  
   
 ## Arguments  

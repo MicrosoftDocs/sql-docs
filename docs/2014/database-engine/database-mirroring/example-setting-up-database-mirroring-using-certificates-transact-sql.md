@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "authentication [SQL Server], database mirroring"
   - "database mirroring [SQL Server], security"
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)
@@ -30,7 +26,7 @@ manager: craigg
   
  The initial principal role is taken by HOST_A, and the mirror role is taken by HOST_B.  
   
- Setting up database mirroring using certificates involves four general stages, of which three stages—1, 2, and 4—are demonstrated by this example. These stages are as follows:  
+ Setting up database mirroring using certificates involves four general stages, of which three stages-1, 2, and 4-are demonstrated by this example. These stages are as follows:  
   
 1.  [Configuring Outbound Connections](#ConfiguringOutboundConnections)  
   

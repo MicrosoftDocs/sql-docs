@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "enumerators [Integration Services]"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "enumerated constants [Integration Services]"
   - "property expressions [Integration Services]"
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Enumerated Constants in Property Expressions
@@ -27,7 +23,7 @@ manager: craigg
   
  This topic lists only the numeric values equivalent to friendly names of enumerators whose members are commonly used in property expressions. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model includes many additional enumerators that you use when you program the object model to build packages programmatically or code custom package elements such as tasks and data flow components.  
   
- In addition to the custom properties for packages and package objects, the Properties window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] includes a set of properties that are available to packages, tasks, and the Foreach Loop, For Loop, and Sequence containers. The common properties that are set by values from enumerators—`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`, and `Transaction Option`—are listed in Common Properties section.  
+ In addition to the custom properties for packages and package objects, the Properties window in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] includes a set of properties that are available to packages, tasks, and the Foreach Loop, For Loop, and Sequence containers. The common properties that are set by values from enumerators-`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`, and `Transaction Option`-are listed in Common Properties section.  
   
  The following sections provide information about enumerated constants:  
   
@@ -44,7 +40,7 @@ manager: craigg
 ##  <a name="Package"></a> Package  
  The following tables lists the friendly names and the numeric value equivalents for properties of packages that you set by using values from an enumerator.  
   
- `PackageType` property—Set by using values from the `DTSPackageType` enumeration.  
+ `PackageType` property-Set by using values from the `DTSPackageType` enumeration.  
   
 |Friendly name in DTSPackageType|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -55,7 +51,7 @@ manager: craigg
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- `CheckpointUsage` property—Set by using values from the `DTSCheckpointUsage` enumeration.  
+ `CheckpointUsage` property-Set by using values from the `DTSCheckpointUsage` enumeration.  
   
 |Friendly name in DTSCheckpointUsage|Numeric value|  
 |-----------------------------------------|-------------------|  
@@ -63,7 +59,7 @@ manager: craigg
 |IfExists|1|  
 |Always|2|  
   
- `PackagePriorityClass` property—Set by using values from the `DTSPriorityClass` enumeration.  
+ `PackagePriorityClass` property-Set by using values from the `DTSPriorityClass` enumeration.  
   
 |Friendly name in DTSPriorityClass|Numeric value|  
 |---------------------------------------|-------------------|  
@@ -73,7 +69,7 @@ manager: craigg
 |BelowNormal|3|  
 |Idle|4|  
   
- `ProtectionLevel` property—Set by using values from the `DTSProtectionLevel` enumeration.  
+ `ProtectionLevel` property-Set by using values from the `DTSProtectionLevel` enumeration.  
   
 |Friendly name in DTSProtectionLevel|Numeric value|  
 |-----------------------------------------|-------------------|  
@@ -85,7 +81,7 @@ manager: craigg
 |ServerStorage|5|  
   
 ##  <a name="PrecedenceConstraints"></a> Precedence Constraints  
- `EvalOp` property—Set by using values from the `DTSPrecedenceEvalOp` enumeration.  
+ `EvalOp` property-Set by using values from the `DTSPrecedenceEvalOp` enumeration.  
   
 |Friendly name in DTSPrecedenceEvalOp|Numeric value|  
 |------------------------------------------|-------------------|  
@@ -94,7 +90,7 @@ manager: craigg
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- `Value` property—Set by using values from the `DTSExecResult` enumeration.  
+ `Value` property-Set by using values from the `DTSExecResult` enumeration.  
   
 |Friendly Name|Numeric Value|  
 |-------------------|-------------------|  
@@ -107,7 +103,7 @@ manager: craigg
  The Foreach Loop includes a set of enumerators with properties that can be set by property expressions.  
   
 ### Foreach ADO Enumerator  
- `Type` property—Set by using values from the `ADOEnumerationType` enumeration.  
+ `Type` property-Set by using values from the `ADOEnumerationType` enumeration.  
   
 |Friendly name in ADOEnumerationType|Numeric value|  
 |-----------------------------------------|-------------------|  
@@ -116,7 +112,7 @@ manager: craigg
 |EnumerateRowsInFirstTable|2|  
   
 ### Foreach Nodelist Enumerator  
- `SourceDocumentType`, `InnerXPathStringSourceType`, and **OuterXPathStringSourceType** properties—Set by using values from the `SourceType` enumeration.  
+ `SourceDocumentType`, `InnerXPathStringSourceType`, and **OuterXPathStringSourceType** properties-Set by using values from the `SourceType` enumeration.  
   
 |Friendly name in SourceType|Numeric value|  
 |---------------------------------|-------------------|  
@@ -124,7 +120,7 @@ manager: craigg
 |Variable|1|  
 |DirectInput|2|  
   
- `EnumerationType` property—Set by using values from the `EnumerationType` enumeration.  
+ `EnumerationType` property-Set by using values from the `EnumerationType` enumeration.  
   
 |Friendly name in EnumerationType|Numeric value|  
 |--------------------------------------|-------------------|  
@@ -133,7 +129,7 @@ manager: craigg
 |NodeText|2|  
 |ElementCollection|3|  
   
- `InnerElementType` property—Set by using values from the `InnerElementType` enumeration.  
+ `InnerElementType` property-Set by using values from the `InnerElementType` enumeration.  
   
 |Friendly name in InnerElementType|Numeric value|  
 |---------------------------------------|-------------------|  
@@ -145,7 +141,7 @@ manager: craigg
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes numerous tasks with properties that can be set by property expressions.  
   
 ### Analysis Services Execute DDL Task  
- `SourceType` property—Set by using values from the `DDLSourceType` enumeration.  
+ `SourceType` property-Set by using values from the `DDLSourceType` enumeration.  
   
 |Friendly name in DDLSourceType|Numeric value|  
 |------------------------------------|-------------------|  
@@ -154,7 +150,7 @@ manager: craigg
 |Variable|2|  
   
 ### Bulk Insert Task  
- `DataFileType` property—Set by using values from the `DTSBulkInsert_DataFileType` enumeration.  
+ `DataFileType` property-Set by using values from the `DTSBulkInsert_DataFileType` enumeration.  
   
 |Friendly name in DTSBulkInsert_DataFileType|Numeric value|  
 |--------------------------------------------------|-------------------|  
@@ -164,7 +160,7 @@ manager: craigg
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
 ### Execute SQL Task  
- `ResultSetType` property—Set by using values from the `ResultSetType` enumeration.  
+ `ResultSetType` property-Set by using values from the `ResultSetType` enumeration.  
   
 |Friendly name in ResultSetType|Numeric Value|  
 |------------------------------------|-------------------|  
@@ -173,7 +169,7 @@ manager: craigg
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- `SqlStatementSourceType` property—Set by using values from the `SqlStatementSourceType` enumeration.  
+ `SqlStatementSourceType` property-Set by using values from the `SqlStatementSourceType` enumeration.  
   
 |Friendly name in SqlStatementSourceType|Numeric Value|  
 |---------------------------------------------|-------------------|  
@@ -182,7 +178,7 @@ manager: craigg
 |Variable|3|  
   
 ### File System Task  
- `Operation` property—Set by using values from the `DTSFileSystemOperation` enumeration.  
+ `Operation` property-Set by using values from the `DTSFileSystemOperation` enumeration.  
   
 |Friendly name in DTSFileSystemOperation|Numeric value|  
 |---------------------------------------------|-------------------|  
@@ -197,7 +193,7 @@ manager: craigg
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- `Attributes` property—Set by using values from the `DTSFileSystemAttributes` enumeration.  
+ `Attributes` property-Set by using values from the `DTSFileSystemAttributes` enumeration.  
   
 |Friendly name in DTSFileSystemAttributes|Numeric value|  
 |----------------------------------------------|-------------------|  
@@ -208,7 +204,7 @@ manager: craigg
 |System|8|  
   
 ### FTP Task  
- `Operation` property—Set by using values from the `DTSFTPOp` enumeration.  
+ `Operation` property-Set by using values from the `DTSFTPOp` enumeration.  
   
 |Friendly name in DTSFTPOp|Numeric value|  
 |-------------------------------|-------------------|  
@@ -222,7 +218,7 @@ manager: craigg
 |RemoveDirRemote|7|  
   
 ### Message Queue Task  
- `MessageType` property—Set by using values from the `MQMessageType` enumeration.  
+ `MessageType` property-Set by using values from the `MQMessageType` enumeration.  
   
 |Friendly name in MQMessageType|Numeric value|  
 |------------------------------------|-------------------|  
@@ -231,7 +227,7 @@ manager: craigg
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- `StringCompareType` property—Set by using values from the `MQStringMessageCompare` enumeration.  
+ `StringCompareType` property-Set by using values from the `MQStringMessageCompare` enumeration.  
   
 |Friendly name in MQStringMessageCompare|Numeric value|  
 |---------------------------------------------|-------------------|  
@@ -240,7 +236,7 @@ manager: craigg
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- `TaskType` property—Set by using values from the `MQType` enumeration.  
+ `TaskType` property-Set by using values from the `MQType` enumeration.  
   
 |Friendly name in MQType|Numeric value|  
 |-----------------------------|-------------------|  
@@ -248,7 +244,7 @@ manager: craigg
 |DTSMQType_Receiver|1|  
   
 ### Send Mail Task  
- `MessageSourceType` property—Set by using values from the `SendMailMessageSourceType` enumeration.  
+ `MessageSourceType` property-Set by using values from the `SendMailMessageSourceType` enumeration.  
   
 |Friendly Name in SendMailMessageSourceType|Numeric Value|  
 |------------------------------------------------|-------------------|  
@@ -256,7 +252,7 @@ manager: craigg
 |FileConnection|1|  
 |Variable|2|  
   
- `Priority` property—Set by using values from the `MailPriority` enumeration.  
+ `Priority` property-Set by using values from the `MailPriority` enumeration.  
   
 |Friendly Name in MailPriority|Numeric Value|  
 |-----------------------------------|-------------------|  
@@ -265,14 +261,14 @@ manager: craigg
 |Low|5|  
   
 ### Transfer Database Task  
- `Action` property—Set by using values from the `TransferAction` enumeration.  
+ `Action` property-Set by using values from the `TransferAction` enumeration.  
   
 |Friendly name in TransferAction|Numeric value|  
 |-------------------------------------|-------------------|  
 |Copy|0|  
 |Move|1|  
   
- `Method` property—Set by using values from the `TransferMethod` enumeration.  
+ `Method` property-Set by using values from the `TransferMethod` enumeration.  
   
 |Friendly name in TransferMethod|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -280,7 +276,7 @@ manager: craigg
 |DatabaseOnline|1|  
   
 ### Transfer Error Messages Task  
- `IfObjectExists` property—Set by using values from the `IfObjectExists` enumeration.  
+ `IfObjectExists` property-Set by using values from the `IfObjectExists` enumeration.  
   
 |Friendly Name in IfObjectExists|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -289,7 +285,7 @@ manager: craigg
 |Skip|2|  
   
 ### Transfer Jobs Task  
- `IfObjectExists` property—Set by using values from the `IfObjectExists` enumeration.  
+ `IfObjectExists` property-Set by using values from the `IfObjectExists` enumeration.  
   
 |Friendly Name in IfObjectExists|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -298,7 +294,7 @@ manager: craigg
 |Skip|2|  
   
 ### Transfer Logins Task  
- `IfObjectExists` property—Set by using values from the `IfObjectExists` enumeration.  
+ `IfObjectExists` property-Set by using values from the `IfObjectExists` enumeration.  
   
 |Friendly name in IfObjectExists|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -306,7 +302,7 @@ manager: craigg
 |Overwrite|1|  
 |Skip|2|  
   
- `LoginsToTransfer` property—Set by using values from the `LoginsToTransfer` enumeration.  
+ `LoginsToTransfer` property-Set by using values from the `LoginsToTransfer` enumeration.  
   
 |Friendly name in LoginsToTransfer|Numeric value|  
 |---------------------------------------|-------------------|  
@@ -315,7 +311,7 @@ manager: craigg
 |AllLoginsFromSelectedDatabases|2|  
   
 ### Transfer Master Stored Procedures Task  
- `IfObjectExists` property—Set by using values from the `IfObjectExists` enumeration.  
+ `IfObjectExists` property-Set by using values from the `IfObjectExists` enumeration.  
   
 |Friendly name in IfObjectExists|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -324,7 +320,7 @@ manager: craigg
 |Skip|2|  
   
 ### Transfer SQL Server Objects Task  
- `ExistingData` property—Set by using values from the `ExistingData` enumeration.  
+ `ExistingData` property-Set by using values from the `ExistingData` enumeration.  
   
 |Friendly name in ExistingData|Numeric Value|  
 |-----------------------------------|-------------------|  
@@ -332,7 +328,7 @@ manager: craigg
 |Append|1|  
   
 ### Web Service Task  
- `OutputType` property—Set by using values from the `DTSOutputType` enumeration.  
+ `OutputType` property-Set by using values from the `DTSOutputType` enumeration.  
   
 |Friendly name in DTSOutputType|Numeric value|  
 |------------------------------------|-------------------|  
@@ -340,7 +336,7 @@ manager: craigg
 |Variable|1|  
   
 ### WMI Data Reader Task  
- `OverwriteDestination` property—Set by using values from the `OverwriteDestination` enumeration.  
+ `OverwriteDestination` property-Set by using values from the `OverwriteDestination` enumeration.  
   
 |Friendly name in OverwriteDestination|Numeric value|  
 |-------------------------------------------|-------------------|  
@@ -348,7 +344,7 @@ manager: craigg
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- `OutputType` property—Set by using values from the `OutputType` enumeration.  
+ `OutputType` property-Set by using values from the `OutputType` enumeration.  
   
 |Friendly name in OutputType|Numeric value|  
 |---------------------------------|-------------------|  
@@ -356,14 +352,14 @@ manager: craigg
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- `DestinationType` property—Set by using values from the `DestinationType` enumeration.  
+ `DestinationType` property-Set by using values from the `DestinationType` enumeration.  
   
 |Friendly name in DestinationType|Numeric value|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variable|1|  
   
- `WqlQuerySourceType` property—Set by using values from the `QuerySourceType` enumeration.  
+ `WqlQuerySourceType` property-Set by using values from the `QuerySourceType` enumeration.  
   
 |Friendly Name in QuerySourceType|Numeric Value|  
 |--------------------------------------|-------------------|  
@@ -371,21 +367,21 @@ manager: craigg
 |DirectInput|1|  
 |Variable|2|  
   
- WMI Event Watcher `ActionAtEvent` property—Set by using values from the `ActionAtEvent` enumeration.  
+ WMI Event Watcher `ActionAtEvent` property-Set by using values from the `ActionAtEvent` enumeration.  
   
 |Friendly Name in ActionAtEvent|Numeric Value|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- `ActionAtTimeout` property—Set by using values from the `ActionAtTimeout` enumeration.  
+ `ActionAtTimeout` property-Set by using values from the `ActionAtTimeout` enumeration.  
   
 |Friendly name in ActionAtTimeout|Numeric value|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- `AfterEvent` property—Set by using values from the `AfterEvent` enumeration.  
+ `AfterEvent` property-Set by using values from the `AfterEvent` enumeration.  
   
 |Friendly name in AfterEvent|Numeric value|  
 |---------------------------------|-------------------|  
@@ -393,7 +389,7 @@ manager: craigg
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `AfterTimeout` property—Set by using values from the `AfterTimeout` enumeration.  
+ `AfterTimeout` property-Set by using values from the `AfterTimeout` enumeration.  
   
 |Friendly name in AfterTimeout|Numeric value|  
 |-----------------------------------|-------------------|  
@@ -401,7 +397,7 @@ manager: craigg
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `WqlQuerySourceType` property—Set by using values from the `QuerySourceType` enumeration.  
+ `WqlQuerySourceType` property-Set by using values from the `QuerySourceType` enumeration.  
   
 |Friendly name in QuerySourceType|Numeric value|  
 |--------------------------------------|-------------------|  
@@ -410,7 +406,7 @@ manager: craigg
 |Variable|2|  
   
 ### XML Task  
- `OperationType` property—Set by using values from the `DTSXMLOperation` enumeration.  
+ `OperationType` property-Set by using values from the `DTSXMLOperation` enumeration.  
   
 |Friendly name in DTSXMLOperation|Numeric value|  
 |--------------------------------------|-------------------|  
@@ -421,7 +417,7 @@ manager: craigg
 |Diff|4|  
 |Patch|5|  
   
- `SourceType`, `SecondOperandType`, and `XPathSourceType` properties—Set by using values from the `DTSXMLSourceType` enumeration.  
+ `SourceType`, `SecondOperandType`, and `XPathSourceType` properties-Set by using values from the `DTSXMLSourceType` enumeration.  
   
 |Friendly name in DTSXMLSourceType|Numeric value|  
 |---------------------------------------|-------------------|  
@@ -429,21 +425,21 @@ manager: craigg
 |Variable|1|  
 |DirectInput|2|  
   
- `DestinationType` and **DiffGramDestinationType** properties—Set by using values from the `DTSXMLSaveResultTo` enumeration.  
+ `DestinationType` and **DiffGramDestinationType** properties-Set by using values from the `DTSXMLSaveResultTo` enumeration.  
   
 |Friendly name in DTSXMLSaveResultTo|Numeric value|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variable|1|  
   
- `ValidationType` property—Set by using values from the `DTSXMLValidationType` enumeration.  
+ `ValidationType` property-Set by using values from the `DTSXMLValidationType` enumeration.  
   
 |Friendly name in DTSXMLValidationType|Numeric value|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
 |XSD|1|  
   
- `XPathOperation` property—Set by using values from the `DTSXMLXPathOperation` enumeration.  
+ `XPathOperation` property-Set by using values from the `DTSXMLXPathOperation` enumeration.  
   
 |Friendly name in DTSXMLXPathOperation|Numeric Value|  
 |-------------------------------------------|-------------------|  
@@ -451,7 +447,7 @@ manager: craigg
 |Values|1|  
 |NodeList|2|  
   
- `DiffOptions` property—Set by using values from the `DTSXMLDiffOptions` enumeration. The options in this enumerator are not mutually exclusive. To use multiple options, provide a comma-separated list of the options to apply.  
+ `DiffOptions` property-Set by using values from the `DTSXMLDiffOptions` enumeration. The options in this enumerator are not mutually exclusive. To use multiple options, provide a comma-separated list of the options to apply.  
   
 |Friendly name in DTSXMLDiffOptions|Numeric Value|  
 |----------------------------------------|-------------------|  
@@ -465,7 +461,7 @@ manager: craigg
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- `DiffAlgorithm` property—Set by using values from the `DTSXMLDiffAlgorithm` enumeration.  
+ `DiffAlgorithm` property-Set by using values from the `DTSXMLDiffAlgorithm` enumeration.  
   
 |Friendly name in DTSXMLDiffAlgorithm|Numeric value|  
 |------------------------------------------|-------------------|  
@@ -481,7 +477,7 @@ manager: craigg
 ### All Maintenance Tasks  
  All maintenance tasks use the following enumerations to set the specified properties.  
   
- `DatabaseSelectionType` property—Set by using values from the `DatabaseSelection` enumeration.  
+ `DatabaseSelectionType` property-Set by using values from the `DatabaseSelection` enumeration.  
   
 |Friendly name in DatabaseSelection|Numeric value|  
 |----------------------------------------|-------------------|  
@@ -491,7 +487,7 @@ manager: craigg
 |User|3|  
 |Specific|4|  
   
- `TableSelectionType` property—Set by using values from the `TableSelection` enumeration.  
+ `TableSelectionType` property-Set by using values from the `TableSelection` enumeration.  
   
 |Friendly name in TableSelection|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -499,7 +495,7 @@ manager: craigg
 |All|1|  
 |Specific|2|  
   
- `ObjectTypeSelection` property—Set by using values from the `ObjectType` enumeration.  
+ `ObjectTypeSelection` property-Set by using values from the `ObjectType` enumeration.  
   
 |Friendly name in ObjectType|Numeric value|  
 |---------------------------------|-------------------|  
@@ -508,21 +504,21 @@ manager: craigg
 |TableView|2|  
   
 ### Back Up Database Task  
- `DestinationCreationType` property—Set by using values from the `DestinationType` enumeration.  
+ `DestinationCreationType` property-Set by using values from the `DestinationType` enumeration.  
   
 |Friendly name in DestinationType|Numeric value|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |Manual|1|  
   
- `ExistingBackupsAction` property—Set by using values from the `ActionForExistingBackups` enumeration.  
+ `ExistingBackupsAction` property-Set by using values from the `ActionForExistingBackups` enumeration.  
   
 |Friendly name in ActionForExistingBackups|Numeric value|  
 |-----------------------------------------------|-------------------|  
 |Append|0|  
 |Overwrite|1|  
   
- `BackupAction` property—Set by using values from the `BackupTaskType` enumeration. This property works with the `BackupIsIncremental` property to define the type of backup that the task performs.  
+ `BackupAction` property-Set by using values from the `BackupTaskType` enumeration. This property works with the `BackupIsIncremental` property to define the type of backup that the task performs.  
   
 |Friendly name in BackupTaskType|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -530,7 +526,7 @@ manager: craigg
 |Files|1|  
 |Log|2|  
   
- `BackupDevice` property—Set by using values from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `DeviceType` enumeration.  
+ `BackupDevice` property-Set by using values from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `DeviceType` enumeration.  
   
 |Friendly name in DeviceType|Numeric value|  
 |---------------------------------|-------------------|  
@@ -541,14 +537,14 @@ manager: craigg
 |VirtualDevice|4|  
   
 ### Maintenance Cleanup Task  
- `FileTypeSelected` property—Set by using values from the `FileType` enumeration.  
+ `FileTypeSelected` property-Set by using values from the `FileType` enumeration.  
   
 |Friendly name in FileType|Numeric value|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- `OlderThanTimeUnitType` property—Set by using values from the `TimeUnitType` enumeration.  
+ `OlderThanTimeUnitType` property-Set by using values from the `TimeUnitType` enumeration.  
   
 |Friendly Name in TimeUnitType|Numeric Value|  
 |-----------------------------------|-------------------|  
@@ -558,7 +554,7 @@ manager: craigg
 |Year|3|  
   
 ### Update Statistics Task  
- `UpdateType` property—Set by using values from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `StatisticsTarget` enumeration.  
+ `UpdateType` property-Set by using values from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `StatisticsTarget` enumeration.  
   
 |Friendly name in StatisticsTarget|Numeric value|  
 |---------------------------------------|-------------------|  
@@ -569,7 +565,7 @@ manager: craigg
 ##  <a name="CommonProperties"></a> Common Properties  
  Packages, tasks, and the Foreach Loop, For Loop, and Sequence containers can use the following enumerations to set the specified properties.  
   
- `ForceExecutionResult` property—Set by using values from the `DTSForcedExecResult` enumeration.  
+ `ForceExecutionResult` property-Set by using values from the `DTSForcedExecResult` enumeration.  
   
 |Friendly name in DTSForcedExecResult|Numeric value|  
 |------------------------------------------|-------------------|  
@@ -578,9 +574,9 @@ manager: craigg
 |Failure|1|  
 |Completion|2|  
   
- `IsolationLevel` property—Set by the .NET Framework `IsolationLevel` enumeration. For more information, see the .NET Framework Class Library in the [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel` property-Set by the .NET Framework `IsolationLevel` enumeration. For more information, see the .NET Framework Class Library in the [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
   
- `LoggingMode` property—Set by using values from the `DTSLoggingMode` enumeration.  
+ `LoggingMode` property-Set by using values from the `DTSLoggingMode` enumeration.  
   
 |Friendly name in DTSLoggingMode|Numeric value|  
 |-------------------------------------|-------------------|  
@@ -588,7 +584,7 @@ manager: craigg
 |Enabled|1|  
 |Disabled|2|  
   
- `TransactionOption` property—Set by using values from the `DTSTransactionOption` enumeration.  
+ `TransactionOption` property-Set by using values from the `DTSTransactionOption` enumeration.  
   
 |Friendly name in DTSTransactionOption|Numeric value|  
 |-------------------------------------------|-------------------|  

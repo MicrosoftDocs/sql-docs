@@ -16,8 +16,6 @@ manager: kfile
   
  The following topics describe MDX queries and the cellsets they produce, and provide more detailed information about basic MDX syntax.  
   
-> [!NOTE]  
->  For more information about performance issues related to MDX queries and calculations, see the section “Writing Efficient MDX” in the [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## In This Section  
   

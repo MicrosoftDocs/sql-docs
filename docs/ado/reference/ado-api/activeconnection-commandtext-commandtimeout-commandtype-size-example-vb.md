@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "ActiveConnection property [ADO], Visual Basic example"
   - "Direction property [ADO], Visual Basic example"
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

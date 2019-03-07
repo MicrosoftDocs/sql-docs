@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tql"
   - "templates [Transact-SQL], creating"
   - "templates [Transact-SQL]"
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -64,7 +61,7 @@ manager: craigg
   
 10. In Query Editor, type **EXECUTE dbo.WorkOrdersForBlade**, and then press F5 to execute the query. Confirm that the **Results** pane returns a list of work orders for blades.  
   
-11. Edit the template script (the script in step 7), replacing the product name Blade with the parameter ***<*product_name**, `nvarchar(50)`, **name*>***, in four places.  
+11. Edit the template script (the script in step 7), replacing the product name Blade with the parameter <strong>*<*product_name</strong>, `nvarchar(50)`, <strong>name*>*</strong>, in four places.  
   
     > [!NOTE]  
     >  Parameters require three elements: the name of the parameter that you want to replace, the data type of the parameter, and a default value for the parameter.  

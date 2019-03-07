@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [data mining]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "query builder [data mining]"
   - "DMX"
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Query (SQL Server Data Mining Add-ins)
   ![Query Model button, Data Mining ribbon](media/dmc-query.gif "Query Model button, Data Mining ribbon")  
@@ -27,7 +24,7 @@ manager: "mblythe"
   
  The **Query** wizard also provides an advanced editor for creating or modifying data mining models, for generating custom queries, or for working with structures not supported in the other tools, such as nested datasets.  
   
--   Use the text editor to type or paste in the Data Mining Extensions (DMX) statements you’ve created elsewhere.  
+-   Use the text editor to type or paste in the Data Mining Extensions (DMX) statements you've created elsewhere.  
   
 -   Use the interactive Query Builder to compose a custom DMX statement with the help of templates and dialog boxes.  
   

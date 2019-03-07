@@ -81,7 +81,6 @@ manager: kfile
     </return>  
     ```  
   
-## See Also  
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+
   
   

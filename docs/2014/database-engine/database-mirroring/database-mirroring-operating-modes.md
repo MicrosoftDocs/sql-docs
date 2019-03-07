@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], operating modes"
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Database Mirroring Operating Modes
@@ -46,7 +42,7 @@ manager: craigg
 > [!NOTE]  
 >  Most editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support only synchronous database mirroring ("Safety Full Only"). For information about editions that fully support database mirroring, see "High Availability (AlwaysOn)" in [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- When transaction safety is set to OFF, the database mirroring session operates asynchronously. Asynchronous operation supports only one operating mode—high-performance mode. This mode enhances performance at the expense of high availability. High-performance mode uses just the principal server and the mirror server. Problems on the mirror server never impact the principal server. On the loss of the principal server, the mirror database is marked DISCONNECTED but is available as a warm standby.  
+ When transaction safety is set to OFF, the database mirroring session operates asynchronously. Asynchronous operation supports only one operating mode-high-performance mode. This mode enhances performance at the expense of high availability. High-performance mode uses just the principal server and the mirror server. Problems on the mirror server never impact the principal server. On the loss of the principal server, the mirror database is marked DISCONNECTED but is available as a warm standby.  
   
  High-performance mode, supports only one form of role switching: forced service (with possible data loss), which uses the mirror server as a warm standby server. Forced service is one of the possible responses to the failure of the principal server. Because data loss is possible, you should consider other alternatives before forcing service to the mirror. For more information, see [Responding to Failure of the Principal](#WhenPrincipalFails), later in this topic.  
   
@@ -144,7 +140,7 @@ manager: craigg
   
  Unlike the two partners, the witness does not serve the database. The witness simply supports automatic failover by verifying whether the principal server is up and functioning. The mirror server initiates automatic failover only if the mirror and the witness remain connected to each other after both have been disconnected from the principal server.  
   
- When a witness is set, the session requires *quorum*—a relationship between at least two server instances that allows the database to be made available. For more information, see [Database Mirroring Witness](database-mirroring-witness.md) and [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ When a witness is set, the session requires *quorum*-a relationship between at least two server instances that allows the database to be made available. For more information, see [Database Mirroring Witness](database-mirroring-witness.md) and [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Automatic failover requires the following conditions:  
   

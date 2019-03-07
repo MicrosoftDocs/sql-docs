@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "saving traces"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "importing trace templates"
   - "SQL Server Profiler, templates"
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

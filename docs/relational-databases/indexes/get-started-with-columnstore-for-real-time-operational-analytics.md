@@ -1,20 +1,17 @@
-﻿---
+---
 title: "Get started with Columnstore for real time operational analytics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get started with Columnstore for real time operational analytics
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -118,7 +115,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 >  A filtered nonclustered columnstore index is only supported on disk-based tables. It is not supported on memory-optimized tables  
   
 ### Example A: Access hot data from btree index, warm data from columnstore index  
- This example uses a filtered condition (accountkey > 0) to establish which rows will be in the columnstore index. The goal is to design the filtered condition and subsequent queries to access frequently changing “hot” data from the btree index, and to access the more stable “warm” data from the columnstore index.  
+ This example uses a filtered condition (accountkey > 0) to establish which rows will be in the columnstore index. The goal is to design the filtered condition and subsequent queries to access frequently changing "hot" data from the btree index, and to access the more stable "warm" data from the columnstore index.  
   
  ![Combined indexes for warm and hot data](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
   
@@ -127,7 +124,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 ```  
 --Use a filtered condition to separate hot data in a rowstore table  
--- from “warm” data in a columnstore index.  
+-- from "warm" data in a columnstore index.  
   
 -- create the table  
 CREATE TABLE  orders (  
@@ -200,9 +197,9 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Insert/Query workload:**If your workload is primarily inserting data and querying it, the default COMPRESSION_DELAY of 0 is the recommended option. The newly inserted rows will get compressed once 1 million rows have been inserted into a single delta rowgroup.  
     Some example of such workload are (a) traditional DW workload (b) click-stream analysis when you need to analyze the click pattern in a web application.  
   
--   **OLTP workload:** If the workload is DML heavy (i.e. heavy mix of Update, Delete and Insert), you may see columnstore index fragmentation by examining the DMV sys. dm_db_column_store_row_group_physical_stats. If you see that > 10% rows are marked deleted in recently compressed rowgroups, you can use COMPRESSION_DELAY option to add time delay when rows become eligible for compression. For example, if for your workload, the newly inserted stays ‘hot’ (i.e. gets updated multiple times) for say 60 minutes, you should choose COMPRESSION_DELAY to be 60.  
+-   **OLTP workload:** If the workload is DML heavy (i.e. heavy mix of Update, Delete and Insert), you may see columnstore index fragmentation by examining the DMV sys. dm_db_column_store_row_group_physical_stats. If you see that > 10% rows are marked deleted in recently compressed rowgroups, you can use COMPRESSION_DELAY option to add time delay when rows become eligible for compression. For example, if for your workload, the newly inserted stays 'hot' (i.e. gets updated multiple times) for say 60 minutes, you should choose COMPRESSION_DELAY to be 60.  
   
- We expect most customers do not need to anything. The default value of COMPRESSION_DELAY option should work for them.  
+ We expect most customers do not need to do anything. The default value of COMPRESSION_DELAY option should work for them.  
 For advance users, we recommend running the query below and collect % of deleted rows over the last 7 days.  
   
 ```  
@@ -215,7 +212,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- If the number of deleted rows in compressed rowgroups > 20%, plateauing in older rowgroups with < 5% variation (referred to as cold rowgroups) set COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time). Note that this approach works best with a stable and relatively homogeneous workload.  
+ If the number of deleted rows in compressed rowgroups > 20%, plateauing in older rowgroups with < 5% variation (referred to as cold rowgroups) set COMPRESSION_DELAY = (youngest_rowgroup_created_time -  current_time). Note that this approach works best with a stable and relatively homogeneous workload.  
   
 ## See Also  
  [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md)   

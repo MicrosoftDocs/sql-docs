@@ -1,20 +1,17 @@
-﻿---
+---
 title: "Use Large CLR UDTs (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: connectivity
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Large CLR UDTs (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +24,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  Compile the first (C#) code listing to a DLL.  Then, copy the DLL to the root directory of the C drive.  
   
- Execute the second ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to add the assembly to the master database.  
+ Execute the second ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to add the assembly to the master database.  
   
  Compile with ole32.lib oleaut32.lib and execute the third (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
- Execute the fourth ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the assembly to the master database.  
+ Execute the fourth ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the assembly to the master database.  
   
 ```  
 // compile with: /target: library  

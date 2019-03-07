@@ -1,31 +1,25 @@
-﻿---
+---
 title: "Spatial Indexes Overview | Microsoft Docs"
-ms.custom: ""
 ms.date: "09/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "spatial indexes [SQL Server]"
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Indexes Overview
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports spatial data and spatial indexes. A *spatial index* is a type of extended index that allows you to index a spatial column. A spatial column is a table column that contains data of a spatial data type, such as **geometry** or **geography**.  
   
 > [!IMPORTANT]  
->  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including features that affect spatial indexes, download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including features that affect spatial indexes, download the white paper, [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="about"></a> About Spatial Indexes  
   
@@ -101,7 +95,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
  For example, consider the preceding illustration, which shows an octagon that fits completely into cell 15 of the level-1 grid. In the figure, cell 15 has been tessellated, dissecting the octagon into nine level-2 cells. This illustration assumes that the cells-per-object limit is 9 or more. If the cells-per-object limit were 8 or less, however, cell 15 would not be tessellated, and only that cell 15 would be counted for the object.  
   
- By default, the cells-per-object limit is 16 cells per object, which provides a satisfactory trade-off between space and precision for most spatial indexes. However, the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement supports a CELLS_PER_OBJECT**=***n* clause that enables you to specify a cells-per-object limit between 1 and 8192, inclusive.  
+ By default, the cells-per-object limit is 16 cells per object, which provides a satisfactory trade-off between space and precision for most spatial indexes. However, the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement supports a CELLS_PER_OBJECT**=**_n_ clause that enables you to specify a cells-per-object limit between 1 and 8192, inclusive.  
   
 > [!NOTE]  
 >  The **cells_per_object** setting of a spatial index is visible in the [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view.  
@@ -130,7 +124,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 >  You can explicitly specify this tessellation scheme by using the USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) clause of the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
 ##### The Bounding Box  
- Geometric data occupies a plane that can be infinite. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], however, a spatial index requires a finite space. To establish a finite space for decomposition, the geometry grid tessellation scheme requires a rectangular *bounding box*. The bounding box is defined by four coordinates, **(***x-min***,***y-min***)** and **(***x-max***,***y-max***)**, which are stored as properties of the spatial index. These coordinates represent the following:  
+ Geometric data occupies a plane that can be infinite. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], however, a spatial index requires a finite space. To establish a finite space for decomposition, the geometry grid tessellation scheme requires a rectangular *bounding box*. The bounding box is defined by four coordinates, **(**_x-min_**,**_y-min_**)** and **(**_x-max_**,**_y-max_**)**, which are stored as properties of the spatial index. These coordinates represent the following:  
   
 -   *x-min* is the x-coordinate of the lower-left corner of the bounding box.  
   
@@ -143,11 +137,11 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 > [!NOTE]  
 >  These coordinates are specified by the BOUNDING_BOX clause of the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
- The **(***x-min***,***y-min***)** and **(***x-max***,***y-max***)** coordinates determine the placement and dimensions of the bounding box. The space outside of the bounding box is treated as a single cell that is numbered 0.  
+ The **(**_x-min_**,**_y-min_**)** and **(**_x-max_**,**_y-max_**)** coordinates determine the placement and dimensions of the bounding box. The space outside of the bounding box is treated as a single cell that is numbered 0.  
   
  The spatial index decomposes the space inside the bounding box. The level-1 grid of the grid hierarchy fills the bounding box. To place a geometric object in the grid hierarchy, the spatial index compares the coordinates of the object to the bounding-box coordinates.  
   
- The following illustration shows the points defined by the **(***x-min***,***y-min***)** and **(***x-max***,***y-max***)** coordinates of the bounding box. The top-level of the grid hierarchy is shown as a 4x4 grid. For the purpose of illustration, the lower levels are omitted. The space outside of the bounding box is indicated by a zero (0). Note that object 'A' extends partly beyond the box, and object 'B' lies completely outside the box in cell 0.  
+ The following illustration shows the points defined by the **(**_x-min_**,**_y-min_**)** and **(**_x-max_**,**_y-max_**)** coordinates of the bounding box. The top-level of the grid hierarchy is shown as a 4x4 grid. For the purpose of illustration, the lower levels are omitted. The space outside of the bounding box is indicated by a zero (0). Note that object 'A' extends partly beyond the box, and object 'B' lies completely outside the box in cell 0.  
   
  ![Bounding box showing coordinates and cell 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0.")  
   

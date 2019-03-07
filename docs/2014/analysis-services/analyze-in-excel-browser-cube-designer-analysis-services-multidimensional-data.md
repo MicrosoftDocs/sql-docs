@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.browsecube.datapane.f1"
   - "sql12.asvs.ssms.analyzeinexcel.f1"
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Analyze in Excel (Browser Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   **Analyze in Excel** provides the cube developer with a way to quickly review how a project would look to the end user. The **Analyze in Excel** feature opens Microsoft Excel, creates a data source connection to the workspace database, and automatically adds a PivotTable to the worksheet. This feature replaces the Office Web Control that provided an embedded PivotTable in the Browser tab in previous releases.  

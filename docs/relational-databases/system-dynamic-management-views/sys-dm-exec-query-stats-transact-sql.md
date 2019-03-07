@@ -1,13 +1,11 @@
 ---
 title: "sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2018"
+ms.date: "12/18/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_exec_query_stats_TSQL"
@@ -19,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_stats dynamic management view"
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 |**min_physical_reads**|**bigint**|Minimum number of physical reads that this plan has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**max_physical_reads**|**bigint**|Maximum number of physical reads that this plan has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**total_logical_writes**|**bigint**|Total number of logical writes performed by executions of this plan since it was compiled.<br /><br /> Will always be 0 querying a memory-optimized table.|  
-|**last_logical_writes**|**bigint**|Number of the number of buffer pool pages dirtied the last time the plan was executed. If a page is already dirty (modified) no writes are counted.<br /><br /> Will always be 0 querying a memory-optimized table.|  
+|**last_logical_writes**|**bigint**|Number of buffer pool pages dirtied during the most recently completed execution of the plan.<br /><br />After a page is read, the page becomes dirty only the first time it is modified. When a page becomes dirty, this number is incremented. Subsequent modifications of an already dirty page do not affect this number.<br /><br />This number will always be 0 when querying a memory-optimized table.|  
 |**min_logical_writes**|**bigint**|Minimum number of logical writes that this plan has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**max_logical_writes**|**bigint**|Maximum number of logical writes that this plan has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**total_logical_reads**|**bigint**|Total number of logical reads performed by executions of this plan since it was compiled.<br /><br /> Will always be 0 querying a memory-optimized table.|  

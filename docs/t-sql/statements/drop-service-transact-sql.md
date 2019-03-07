@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_SERVICE_TSQL"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "DROP SERVICE statement"
   - "removing services"
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP SERVICE (Transact-SQL)

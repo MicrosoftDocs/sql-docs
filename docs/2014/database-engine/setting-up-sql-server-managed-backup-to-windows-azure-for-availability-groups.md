@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Setting up SQL Server Managed Backup to Windows Azure for Availability Groups
@@ -59,7 +55,7 @@ manager: craigg
   
 -   If you are configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] after you configure the Availability Group, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will attempt to copy any existing backups based and copy them over to the storage container.  If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is unable to find or access existing backups, it will schedule a full database backup. This is done specifically to optimize the backup operations for Availability Group databases.  
   
--   You may want to consider disabling the instance level settings if you are creating a new availability database, and you don’t intend to apply the instance level settings to the database  
+-   You may want to consider disabling the instance level settings if you are creating a new availability database, and you don't intend to apply the instance level settings to the database  
   
 -   When using encryption, use the same certificate on all the replicas. This facilitates continued and uninterrupted backup operations in the event of a failover or restores to a different replica.  
   

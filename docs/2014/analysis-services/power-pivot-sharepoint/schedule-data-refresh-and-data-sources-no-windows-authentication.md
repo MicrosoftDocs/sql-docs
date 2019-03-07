@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Schedule Data Refresh and Data Sources That Do Not Support Windows Authentication (PowerPivot for SharePoint)
   This topic describes a workflow of PowerPivot for SharePoint schedule data fresh that can use data sources that do **NOT** support Windows Authentication. For example Oracle or IDM DB2 data sources. The illustrations and steps in this topic reference Oracle data sources but the same workflow applies to other data sources.  
@@ -30,7 +27,7 @@ manager: "mblythe"
   
 -   **(2) OracleAuthentication:** A Secure Store Target Application ID that is set with Oracle credentials.  
   
--   **(3)** The PowerPivot Service application is configure to use the target application “PowerPivotDataRefresh” for the **Unattended Data Refresh Account**.  
+-   **(3)** The PowerPivot Service application is configure to use the target application "PowerPivotDataRefresh" for the **Unattended Data Refresh Account**.  
   
 -   **(4)** PowerePivot Workbook uses Oracle data. The workbook refresh settings specify the data source connection to use the target application **(2)** for credentials.  
   
@@ -112,13 +109,13 @@ manager: "mblythe"
   
 11. Type the Oracle User ID and Oracle Password and then click **OK**.  
   
- For more information, see section “To Create a target application for SQL Server Authentication” in [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ For more information, see section "To Create a target application for SQL Server Authentication" in [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
   
 ## To Configure the PowerPivot Service Application  
   
 1.  In SharePoint central administration, click Manage Service Applications.  
   
-2.  Click the name of your PowerPivot Service Application, for example “Default PowerPivot Service Application”.  
+2.  Click the name of your PowerPivot Service Application, for example "Default PowerPivot Service Application".  
   
 3.  Click **Configure service application settings** in the Actions section.  
   
@@ -163,8 +160,8 @@ manager: "mblythe"
   
 ## More Information  
   
--   [Configure the Secure Store Service in SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
+-   [Configure the Secure Store Service in SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
--   See the "Scheduled Data Refresh” section of [PowerPivot Data Refresh with SharePoint 2013 and SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   See the "Scheduled Data Refresh" section of [PowerPivot Data Refresh with SharePoint 2013 and SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

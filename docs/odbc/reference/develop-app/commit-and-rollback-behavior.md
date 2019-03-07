@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "interoperability [ODBC], transaction support"
   - "transactions [ODBC], DBMS support"
 ms.assetid: 2ac8f012-e46d-41ca-81bb-e4a3246e3241
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

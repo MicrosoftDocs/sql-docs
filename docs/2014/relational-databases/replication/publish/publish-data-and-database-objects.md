@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined types [SQL Server replication]"
@@ -41,9 +38,8 @@ helpviewer_keywords:
   - "publications [SQL Server replication], modifying"
   - "user-defined functions [SQL Server replication]"
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publish Data and Database Objects
@@ -53,8 +49,8 @@ manager: craigg
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tables|X|X|  
 |Partitioned Tables|X|X|  
-|Stored Procedures – Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|X|  
-|Stored Procedures – Execution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|no|  
+|Stored Procedures - Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|X|  
+|Stored Procedures - Execution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|no|  
 |Views|X|X|  
 |Indexed Views|X|X|  
 |Indexed Views as Tables|X|no|  

@@ -1,20 +1,18 @@
 ---
-title: "Always On Availability Groups wait types (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Identify waits associated with availability groups"
+description: "Identify waits associated with Always On availability groups using Transact-SQL (T-SQL) and extended events."
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# Always On Availability Groups wait types
+# Identify waits associated with availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When troubleshooting Always On Availability Groups latency, wait statistics can be monitored for accumulation using the availability groups-specific wait types in the dynamic management view (DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   

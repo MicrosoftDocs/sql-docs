@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server], traces"
   - "filters [SQL Server], SPIDs"
   - "traces [SQL Server], filters"
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

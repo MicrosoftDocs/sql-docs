@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services, about Analysis Services - Multidimensional Data"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "multidimensional data [Analysis Services]"
   - "SSAS, about Analysis Services - Multidimensional Data"
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is an online analytical data engine used in decision support and business intelligence (BI) solutions, providing the analytical data for business reports and client applications such as Excel, Reporting Services reports, and other third-party BI tools. A typical workflow for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] includes building an OLAP or tabular data model, deploy the model as a database to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, process the database to load it with data, and then assign permissions to allow data access. When it's ready to go, this multi-purpose data model can be accessed by any client application supporting [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] as a data source.  
@@ -64,7 +61,7 @@ manager: "mblythe"
  [Analysis Services Tutorials &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installation for SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Developer's Guide &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)   
- [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

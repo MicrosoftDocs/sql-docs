@@ -4,22 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ErrorList"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "error list window"
   - "SQL Server Management Studio [SQL Server], error list window"
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Error List Window (Management Studio)
@@ -87,5 +82,3 @@ manager: craigg
   
  **Project**  
  Displays the name of the project that includes the script file.  
-  
-  

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorials [Analysis Services]"
   - "Analysis Services, tutorials"
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Multidimensional Modeling (Adventure Works Tutorial)

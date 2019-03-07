@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_jobstep"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_jobstep"
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -63,22 +59,22 @@ sp_update_jobstep
  [ **@job_id =**] *job_id*  
  The identification number of the job to which the step belongs. *job_id*is **uniqueidentifier**, with a default of NULL. Either *job_id* or *job_name* must be specified but both cannot be specified.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'**_job_name_**'**  
  The name of the job to which the step belongs. *job_name*is **sysname**, with a default of NULL. Either *job_id* or *job_name* must be specified but both cannot be specified.  
   
  [ **@step_id =**] *step_id*  
  The identification number for the job step to be modified. This number cannot be changed. *step_id*is **int**, with no default.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [ **@step_name =**] **'**_step_name_**'**  
  Is a new name for the step. *step_name*is **sysname**, with a default of NULL.  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [ **@subsystem =**] **'**_subsystem_**'**  
  The subsystem used by Microsoft SQL Server Agent to execute *command*. *subsystem* is **nvarchar(40)**, with a default of NULL.  
   
- [ **@command =**] **'***command***'**  
+ [ **@command =**] **'**_command_**'**  
  The command(s) to be executed through *subsystem*. *command* is **nvarchar(max)**, with a default of NULL.  
   
- [ **@additional_parameters =**] **'***parameters***'**  
+ [ **@additional_parameters =**] **'**_parameters_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
@@ -110,13 +106,13 @@ sp_update_jobstep
  [ **@on_fail_step_id =**] *fail_step_id*  
  The identification number of the step in this job to execute if the step fails and *fail_action* is **4**. *fail_step_id* is **int**, with a default of NULL.  
   
- [ **@server =**] **'***server***'**  
+ [ **@server =**] **'**_server_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server* is **nvarchar(128)**, with a default of NULL.  
   
- [ **@database_name =**] **'***database***'**  
+ [ **@database_name =**] **'**_database_**'**  
  The name of the database in which to execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] step. *database*is **sysname**. Names that are enclosed in brackets ([ ]) are not allowed. The default value is NULL.  
   
- [ **@database_user_name =**] **'***user***'**  
+ [ **@database_user_name =**] **'**_user_**'**  
  The name of the user account to use when executing a [!INCLUDE[tsql](../../includes/tsql-md.md)] step. *user*is **sysname**, with a default of NULL.  
   
  [ **@retry_attempts =**] *retry_attempts*  
@@ -128,7 +124,7 @@ sp_update_jobstep
  [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [ **@output_file_name =**] **'**_file_name_**'**  
  The name of the file in which the output of this step is saved. *file_name* is **nvarchar(200)**, with a default of NULL. This parameter is only valid with commands running in [!INCLUDE[tsql](../../includes/tsql-md.md)] or CmdExec subsystems.  
   
  To set output_file_name back to NULL, you must set *output_file_name* to an empty string (' ') or to a string of blank characters, but you cannot use the **CHAR(32)** function. For example, set this argument to an empty string as follows:  
@@ -149,7 +145,7 @@ sp_update_jobstep
  [ **@proxy_id**= ] *proxy_id*  
  The ID number of the proxy that the job step runs as. *proxy_id* is type **int**, with a default of NULL. If no *proxy_id* is specified, no *proxy_name* is specified, and no *user_name* is specified, the job step runs as the service account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+ [ **@proxy_name**= ] **'**_proxy_name_**'**  
  The name of the proxy that the job step runs as. *proxy_name* is type **sysname**, with a default of NULL. If no *proxy_id* is specified, no *proxy_name* is specified, and no *user_name* is specified, the job step runs as the service account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## Return Code Values  
@@ -169,7 +165,7 @@ sp_update_jobstep
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Only members of **sysadmin** can update a job step owned by another user.  
   
@@ -190,7 +186,7 @@ GO
 ```  
   
 ## See Also  
- [View or Modify Jobs](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

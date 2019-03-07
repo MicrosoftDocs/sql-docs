@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. Master data management (MDM) describes the efforts made by an organization to discover and define non-transactional lists of data, with the goal of compiling maintainable master lists. An MDM project generally includes an evaluation and restructuring of internal business processes along with the implementation of MDM technology. The result of a successful MDM solution is reliable, centralized data that can be analyzed, resulting in better business decisions.  
   
- With the right training, most business users should be able to implement a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] solution. In addition, you can use MDS to manage any domain; it's not specific to managing lists of customers, products, or accounts. When MDS is first installed, it does not include the structure for any domains—you define the domains you need by creating models for them.  
+ With the right training, most business users should be able to implement a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] solution. In addition, you can use MDS to manage any domain; it's not specific to managing lists of customers, products, or accounts. When MDS is first installed, it does not include the structure for any domains-you define the domains you need by creating models for them.  
   
  Other Master Data Services features include hierarchies, granular security, transactions, data versioning, and business rules.  
   
@@ -34,10 +31,10 @@ manager: craigg
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], which you use to manage data and create new entities and attributes.  
   
- For a summary of MDS resources, see the [SQL Server Master Data Services Portal](http://go.microsoft.com/fwlink/?LinkID=214272).  
+ For a summary of MDS resources, see the [SQL Server Master Data Services Portal](https://go.microsoft.com/fwlink/?LinkID=214272).  
   
 |||  
 |-|-|  
-|**Browse Content by Area**<br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Master Data Services Overview](master-data-services-overview-mds.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Master Data Services Features and Tasks](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Technical Reference (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developer’s Guide (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
+|**Browse Content by Area**<br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Master Data Services Overview](master-data-services-overview-mds.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Master Data Services Features and Tasks](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Technical Reference (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developer's Guide (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
   
   

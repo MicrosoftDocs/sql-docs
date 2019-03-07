@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Builder 1.0, locating and starting tool"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "tutorials [Reporting Services]"
   - "Report Manager [Reporting Services]"
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: 54
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: How to Locate and Start Reporting Services Tools (SSRS)
   This tutorial introduces the tools used to configure a report server, manage report server content and operations, and create and publish reports. The purpose of this tutorial is to help new users understand how to find and open each tool. If you are already familiar with the tools, you can move on to other tutorials that can help you learn important skills for using [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. For more information about other tutorials, see [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

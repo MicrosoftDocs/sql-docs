@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "LoadFromFile method [ADO]"
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

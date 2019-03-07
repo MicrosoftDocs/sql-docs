@@ -1,36 +1,27 @@
 ---
-title: Working with R data types in SQL Server Machine Learning | Microsoft Docs
+title: R-to-SQL data type conversions - SQL Server Machine Learning Services
+description: Review the implicit and explicit data type converstions between R and SQL Server in data science and machine learning solutions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 12/10/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# R libraries and R data types
+# Data type mappings betweenR and SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the R libraries that are included and the data types that are supported in the following products:
+For R solutions that run on the R integration feature in SQL Server Machine Learning Services, review the list of unsupported data types, and data type conversions that might be performed implicitly when data is passed between R libraries and SQL Server.
 
-+ SQL Server 2016 R Services (In-Database)
-+ SQL Server Machine Learning Services (In-Database)
+## Base R version
 
-This topic also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between R and SQL Server.
+SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R, are aligned with specific releases of Microsoft R Open. For example, the latest release, SQL Server 2017 Machine Learning Services, is built on Microsoft R Open 3.3.3.
 
-## R Libraries
+To view the R version associated with a particular instance of SQL Server, open **RGui**. For the default instance, the path would be as follows: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-Both products, R Services and Machine Learning Services with R, are aligned with specific releases of Microsoft R Open. For example, the latest release, SQL Server 2017 Machine Learning Services, is built on Microsoft R Open 3.3.3.
-
-To view the R version associated with a particular instance of SQL Server, open RGui.
-
-1. For the default instance, the path would be as follows: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. A message is displayed that lists the R distribution and the Microsoft R Open version number.
-
-To find the version of R included in a particular version of Microsoft R Server, see [R Server - What’s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
-
-Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+The tool loads base R and other libraries. Package version information is provided in a notification for each package that is loaded at session start up. 
 
 ## R and SQL Data Types
 
@@ -70,7 +61,7 @@ The following table shows the changes in data types and values when data from [!
 
 Of the categories of data types supported by the [SQL Server type system](../../t-sql/data-types/data-types-transact-sql.md), the following types are likely to pose problems when passed to R code:
 
-+ Data types listed in the **Other** section of the SQL type system topic: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
++ Data types listed in the **Other** section of the SQL type system article: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
 + All spatial types
 + **image**
 
@@ -97,14 +88,14 @@ For more information, see [SQL Server 2016 improvements in handling some data ty
 
 In general, whenever you have any doubt about how a particular data type or data structure is being used in R, use the  `str()` function to get the internal structure and type of the R object. The result of the function is printed to the R console and is also available in the query results, in the **Messages** tab in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. 
 
-When retrieving data from a database for use in R code, you should always eliminate columns that cannot be used in R, as well as columns that are not useful for analysis, such as GUIDS (uniqueidentifier), timestamps and other columns used for auditing, or lineage informatioh created by ETL processes. 
+When retrieving data from a database for use in R code, you should always eliminate columns that cannot be used in R, as well as columns that are not useful for analysis, such as GUIDS (uniqueidentifier), timestamps and other columns used for auditing, or lineage information created by ETL processes. 
 
 Note that inclusion of unnecessary columns can greatly reduce the performance of R code, especially if high cardinality columns are used as factors. Therefore, we recommend that you use SQL Server system stored procedures and information views to get the data types for a given table in advance, and eliminate or convert incompatible columns. For more information, see [Information Schema Views in Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
 If a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type is not supported by R, but you need to use the columns of data in the R script, we recommend that you use the [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) functions to ensure that the data type conversions are performed as intended before using the data in your R script.  
 
 > [!WARNING]
-If you use the **rxDataStep** to drop incompatible columns while moving data, be aware that the arguments _varsToKeep_ and _varsToDrop_ are not supported for the **RxSqlServerData** data source type.
+> If you use the **rxDataStep** to drop incompatible columns while moving data, be aware that the arguments _varsToKeep_ and _varsToDrop_ are not supported for the **RxSqlServerData** data source type.
 
 
 ## Examples
@@ -115,7 +106,7 @@ The following example demonstrates how data is transformed when making the round
 
 The query gets a series of values from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, and uses the stored procedure  [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to output the values using the R runtime.
 
-```SQL
+```sql
 CREATE TABLE MyTable (    
  c1 int,    
  c2 varchar(10),    
@@ -183,6 +174,5 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## See Also
+## See also
 
-[Python Libraries and Data Types](../python/python-libraries-and-data-types.md)

@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_articlecolumn"
   - "sp_articlecolumn_TSQL"
 helpviewer_keywords: 
   - "sp_articlecolumn"
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 # sp_articlecolumn (Transact-SQL)
@@ -49,16 +42,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication that contains this article. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@column=**] **'***column***'**  
+ [ **@column=**] **'**_column_**'**  
  Is the name of the column to be added or dropped. *column* is **sysname**, with a default of NULL. If NULL, all columns are published.  
   
- [ **@operation=**] **'***operation***'**  
+ [ **@operation=**] **'**_operation_**'**  
  Specifies whether to add or drop columns in an article. *operation* is **nvarchar(5)**, with a default of add. **add** marks the column for replication. **drop** unmarks the column.  
   
  [ **@refresh_synctran_procs=**] *refresh_synctran_procs*  
@@ -82,13 +75,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require subscriptions to be reinitialized, an error occurs and no changes are made. **1** specifies that changes to the article cause existing subscriptions to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@publisher=** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ [ **@publisher=** ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ **@internal=** ] **'***internal***'**  
+ [ **@internal=** ] **'**_internal_**'**  
  Internal use only.  
   
 ## Return Code Values  

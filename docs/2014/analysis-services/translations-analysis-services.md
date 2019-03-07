@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence Development Studio, translations [Analysis Services]"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "attribute translations [Analysis Services]"
   - "translations [Analysis Services]"
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Translations (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensional only  
@@ -49,7 +46,7 @@ manager: "mblythe"
   
 4.  Right-click any field and select **Explore Data**. You will see English, Spanish, and French translations of each member.  
   
- Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and `FormatString` property. See [Currency Conversions &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](scripting/properties/formatstring-element-assl.md) for details.  
+ Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and `FormatString` property. See [Currency Conversions &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl) for details.  
   
  [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) in the Analysis Services Tutorial will walk you through the steps for creating and testing translations.  
   

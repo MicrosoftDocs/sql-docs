@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.decisiontree.f1"
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Decision Tree Tab (Mining Model Viewer)
   The **DecisionTree** pane displays a visual representation of the decision rules that are created in a decision tree model. Decision rules describe path paths towards a certain outcome.  

@@ -4,23 +4,18 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
+f1_keywords:
   - "vs.regularexpressionbuilder"
 helpviewer_keywords: 
   - "regular expressions [SQL Server Management Studio]"
   - "Query Editor [SQL Server Management Studio], regular expression searches"
   - "searches [SQL Server Management Studio], regular expressions"
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 24
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Search Text with Regular Expressions
@@ -28,7 +23,7 @@ manager: craigg
   
 #### To find using regular expressions  
   
-1.  To enable the use of regular expressions in the **Find what** field during **QuickFind**, **FindinFiles**, **Quick Replace**, or **Replace in Files** operations, select the **Use** option under **Find Options**and choose **Regular expressions**.  
+1.  To enable the use of regular expressions in the **Find what** field during **QuickFind**, **FindinFiles**, **Quick Replace**, or **Replace in Files** operations, select the **Use** option under **Find Options** and choose **Regular expressions**.  
   
 2.  The triangular **Reference List** button next to the **Find what** field then becomes available. Click this button to display a list of the most commonly used regular expressions. When you choose any item from the Expression Builder, it is inserted into the **Find what** string.  
   
@@ -61,9 +56,9 @@ manager: craigg
   
 |Expression|Syntax|Description|  
 |----------------|------------|-----------------|  
-|Minimal — zero or more|@|Matches zero or more occurrences of the preceding expression, matching as few characters as possible.|  
-|Minimal — one or more|#|Matches one or more occurrences of the preceding expression, matching as few characters as possible.|  
-|Repeat n times|^n|Matches n occurrences of the preceding expression. For example, [0-9]^4 matches any 4-digit sequence.|  
+|Minimal - zero or more|@|Matches zero or more occurrences of the preceding expression, matching as few characters as possible.|  
+|Minimal - one or more|#|Matches one or more occurrences of the preceding expression, matching as few characters as possible.|  
+|Repeat n times|^n|Matches n occurrences of the preceding expression. For example, [0-9]^4 matches any four digit sequence.|  
 |Grouping|()|Groups a subexpression.|  
 |nth tagged text|\n|In a **Find or Replace** expression, indicates the text matched by the nth tagged expression, where n is a number from 1 to 9.<br /><br /> In a **Replace** expression, \0 inserts the entire matched text.|  
 |Right-justified field|\\(w,n)|In a **Replace** expression, right-justifies the nth tagged expression in a field at least *w* characters wide.|  
@@ -133,5 +128,3 @@ manager: craigg
 ## See Also  
  [Search and Replace](search-and-replace.md)   
  [Search Text with Wildcards](search-text-with-wildcards.md)  
-  
-  

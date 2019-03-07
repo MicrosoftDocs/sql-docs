@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "model filter [data mining]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "filtering input rows [Analysis Services]"
   - "filtering data [Analysis Services]"
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Apply a Filter to a Mining Model
   If your mining structure contains a nested table, you can apply a filter to the case table, the nested table, or both.  
@@ -44,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. Then, on the **Mining Model** menu, select **Set Model Filter**.  
   
@@ -94,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      These are the only conditions available for the nested table in the **Model Filter** dialog box, because you are restricting the case table to only those cases that contain a certain value in the nested table. You will set the value for the condition on the nested table in the next step.  
   
-4.  Click the **Value** box, and then click the **(…)** button to build an expression.  
+4.  Click the **Value** box, and then click the **(...)** button to build an expression.  
   
      The **\<name>Filter** dialog box opens. This dialog box can set conditions only on the current table, which in this case is the nested table.  
   

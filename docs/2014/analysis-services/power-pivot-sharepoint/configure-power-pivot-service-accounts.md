@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure PowerPivot Service Accounts
   A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation includes two services that support server operations. The **SQL Server Analysis Services (PowerPivot)** service is a Windows service that provides PowerPivot data processing and query support on an application server. The login account for this service is always specified during SQL Server Setup when you install Analysis Services in SharePoint integrated mode.  
@@ -108,7 +105,7 @@ manager: "mblythe"
   
 |Requirement|Description|  
 |-----------------|-----------------|  
-|Provisioning requirement|PowerPivot System Service is a shared resource on the farm that becomes available when you create a service application. The service application pool must be specified when the service application is created. It can be specified two ways: using the PowerPivot Configuration Tool, or through PowerShell commands.<br /><br /> You might have configured the application pool identity to run under a unique account. But if you didn’t, consider changing it now to run under a different account.|  
+|Provisioning requirement|PowerPivot System Service is a shared resource on the farm that becomes available when you create a service application. The service application pool must be specified when the service application is created. It can be specified two ways: using the PowerPivot Configuration Tool, or through PowerShell commands.<br /><br /> You might have configured the application pool identity to run under a unique account. But if you didn't, consider changing it now to run under a different account.|  
 |Domain user account requirement|The application pool identity must be a Windows domain user account. Built-in machine accounts (such as Network Service or Local Service) are prohibited.|  
 |Permission requirements|This account does not need local system Administrator permissions on the computer. However, this account must have Analysis Services system administrator permissions on the local [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] that is installed on the same computer. These permissions are granted automatically by SQL Server Setup or when you set or change the application pool identity in Central Administration.<br /><br /> Administrative permissions are required for forwarding queries to the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. They are also required for monitoring health, closing inactive sessions, and listening for trace events.<br /><br /> The account must have connect, read, and write permissions to the PowerPivot service application database. These permissions are granted automatically when the application is created, and updated automatically when you change accounts or passwords in Central Administration.<br /><br /> The PowerPivot service application will check that a SharePoint user is authorized to view data before retrieving the file, but it does not impersonate the user. There are no permission requirements for impersonation.|  
 |Scale-out requirements|None.|  
@@ -157,7 +154,7 @@ manager: "mblythe"
   
     1.  Right-click the application pool name and select **Advanced Settings**.  
   
-    2.  Select **Identity** and click the … button to open the Application Pool Identity dialog box.  
+    2.  Select **Identity** and click the ... button to open the Application Pool Identity dialog box.  
   
     3.  Click **Set**.  
   

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "ServerName Property (SqlServerAlias Class)"
@@ -19,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "ServerName property"
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ServerName Property (SqlServerAlias Class)

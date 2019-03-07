@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication [SQL Server replication], article options"
   - "articles [SQL Server replication], merge replication options"
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
-caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Article Options for Merge Replication
@@ -27,11 +23,11 @@ manager: craigg
   
 -   Specify that deletes for one or more articles should not be tracked by replication triggers and system tables. This option can be useful in many application scenarios. These include scenarios that use batch deletes that do not need to be replicated. For more information, see [Optimize Merge Replication Performance with Conditional Delete Tracking](optimize-merge-replication-performance-with-conditional-delete-tracking.md).  
   
--   Specify the processing order of articles to make sure that articles are processed in the order required by your application. For more information, see [Specify the Processing Order of Merge Articles](specify-the-processing-order-of-merge-articles.md).  
+-   Specify the processing order of articles to make sure that articles are processed in the order required by your application. For more information, see [Specify Merge Replication properties](../publish/specify-merge-replication-properties.md).  
   
 -   Specify that a set of related records should be processed as a unit (by default, merge replication processes changes to tables on a row-by-row basis). For more information, see [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md).  
   
--   Use conflict detection and resolution for cases in which the same data could be changed at more than one node in a topology. For more information, see [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+-   Use conflict detection and resolution for cases in which the same data could be changed at more than one node in a topology. For more information, see [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 -   Specify schema options, such as whether constraints and triggers are copied to the Subscriber. For more information, see [Specify Schema Options](../publish/specify-schema-options.md).  
   

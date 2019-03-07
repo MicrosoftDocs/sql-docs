@@ -1,18 +1,15 @@
 ---
 title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "02/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -21,6 +18,31 @@ manager: craigg
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## What's New in Version 5.6
+
+- Support for PHP 7.3
+- Support for Microsoft ODBC Driver 17.3 on all platforms
+- Support for macOS Mojave (requires ODBC Driver 17.3 or above)
+- Support for Ubuntu 18.10 and Suse Linux 15 (both require ODBC Driver 17.3 or above)
+- Dropped support for PHP 7.0
+- Dropped support for Linux Ubuntu 17.10 and macOS El Capitan
+- Support for Azure AD Access Token (in Linux and macOS, requires ODBC Driver 17.2+ and unixODBC 2.3.6+)
+- Support for Authentication with Azure AD using Managed Identity for Azure Resources (requires ODBC Driver 17.3+)
+- New fetch functionalities:
+  - New PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE flag for pdo_sqlsrv to return datetime as objects
+  - Add ReturnDatesAsStrings option to statement level for sqlsrv
+  - New options at connection and statement levels for both drivers for formatting decimal values in the fetched results
+- Support for static compilation of drivers if users choose to build from source
+- Improved performance by caching metadata on fetches and speeding up Unicode string conversions
+
+## What's New in Version 5.3
+
+- Support for Microsoft ODBC Driver 17.2 on all platforms
+- Support for macOS High Sierra (requires ODBC Driver 17 and above)
+- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Support Ubuntu 18.04 LTS (requires ODBC Driver 17.2)
+- Support for Connection Resiliency in Linux or macOS as well (requires ODBC Driver 17.2)
 
 ## What's New in Version 5.2
 
@@ -71,7 +93,7 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 
 - Support for PHP 5.4.  PHP 5.2 is not supported in version 3 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
-- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. For more information, see [Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
+- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information, see [Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
 - AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
 - Support for the high-availability, disaster recovery features. For more information, see [Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).

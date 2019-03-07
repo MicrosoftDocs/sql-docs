@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], backward compatibility"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "backward compatibility [ODBC], cursor library"
   - "cursor library [ODBC], backward compatibility"
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

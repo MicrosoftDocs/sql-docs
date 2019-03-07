@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures, creating"
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Advanced Modeling (Data Mining Add-ins for Excel)
   You can use the **Advanced** data modeling options to create custom data mining structures and models with parameters different from those created by the wizards. The two wizards described in this section help you create a completely new data mining structure, and a new mining model to apply to an existing data mining structure.  

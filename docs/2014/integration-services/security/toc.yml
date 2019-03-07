@@ -1,0 +1,35 @@
+- name: Security
+  href: security-overview-integration-services.md
+- name: Threat and Vulnerability Mitigation
+  href: ../threat-and-vulnerability-mitigation-integration-services.md
+- name: Integration Services Roles (SSIS Service)
+  href: integration-services-roles-ssis-service.md
+  items:
+  - name: Package Roles Dialog Box UI Reference
+    href: ../package-roles-dialog-box-ui-reference.md
+- name: Access to the Integration Services Service
+  href: ../access-to-the-integration-services-service.md
+- name: Access to Files Used by Packages
+  href: ../access-to-files-used-by-packages.md
+- name: Access Control for Sensitive Data in Packages
+  href: access-control-for-sensitive-data-in-packages.md
+  items:
+  - name: Set or Change the Protection Level of Packages
+    href: ../set-or-change-the-protection-level-of-packages.md
+  - name: Package and Project Protection Level Dialog Box
+    href: ../package-and-project-protection-level-dialog-box.md
+  - name: Package and Project Password
+    href: ../package-and-project-password.md
+- name: Identify the Source of Packages with Digital Signatures
+  href: identify-the-source-of-packages-with-digital-signatures.md
+  items:
+  - name: Implement a Signing Policy by Setting a Registry Value
+    href: ../implement-a-signing-policy-by-setting-a-registry-value.md
+  - name: Sign a Package by Using a Digital Certificate
+    href: ../sign-a-package-by-using-a-digital-certificate.md
+  - name: Digital Signing Dialog Box UI Reference
+    href: ../digital-signing-dialog-box-ui-reference.md
+- name: Create a User-Defined Role
+  href: ../create-a-user-defined-role.md
+- name: Assign a Reader and Writer Role to a Package
+  href: ../assign-a-reader-and-writer-role-to-a-package.md

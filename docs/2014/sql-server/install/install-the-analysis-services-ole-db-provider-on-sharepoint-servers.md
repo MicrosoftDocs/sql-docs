@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
-caps.latest.revision: 34
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Install the Analysis Services OLE DB Provider on SharePoint Servers
@@ -47,7 +44,7 @@ manager: craigg
 ##  <a name="bkmk_why"></a> Why you need to install the OLE DB Provider  
  There are two scenarios that call for manually installing the OLE DB provider on servers in the farm.  
   
- **The most common scenario** is when you have older and newer versions of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that are saved in document libraries in the farm. If analysts in your organization are using the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, and they save those workbooks to a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation, the older workbook will not work. Its connection string will reference an older version of the provider, which won’t be on the server unless you install it. Installing both versions will enable data access for PowerPivot workbooks created in older and newer versions of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Setup does not install the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of the provider, so you must install it manually if you are using workbooks from a previous version.  
+ **The most common scenario** is when you have older and newer versions of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that are saved in document libraries in the farm. If analysts in your organization are using the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, and they save those workbooks to a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation, the older workbook will not work. Its connection string will reference an older version of the provider, which won't be on the server unless you install it. Installing both versions will enable data access for PowerPivot workbooks created in older and newer versions of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Setup does not install the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version of the provider, so you must install it manually if you are using workbooks from a previous version.  
   
  **The second scenario** is when you have a server in a SharePoint farm that runs Excel Services, but not [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. In this case, the application server that runs Excel Services must be manually updated to use a newer version of the provider. This is necessary for connecting to a PowerPivot for SharePoint instance. If Excel Services is using an older version of the provider, the connection request will fail. Note that the provider must be installed by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup or the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation package (spPowerPivot.msi) in order to ensure that all components required support [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] are installed.  
   
@@ -109,15 +106,15 @@ manager: craigg
   
 #### Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack.  
   
-1.  Browse to [Microsoft® SQL Server® 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580)  
+1.  Browse to [Microsoft® SQL Server® 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)  
   
 2.  Click **Install Instructions**.  
   
-3.  See the section “Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1”. Download the file and start the installation.  
+3.  See the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1". Download the file and start the installation.  
   
 4.  On the **Feature Selection** page, select **Analysis Services OLE DB Provider for SQL Server**. Unselect the other components and complete the installation. For more information on spPowerPivot.msi, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+5.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
   
 ##  <a name="bkmk_kj"></a> Install the SQL Server 2008 R2 OLE DB Provider to host earlier version workbooks  
@@ -125,7 +122,7 @@ manager: craigg
   
 #### Step 1: Download and install the client library  
   
-1.  On the [SQL Server 2008 R2 Feature Pack page](http://go.microsoft.com/fwlink/?LinkId=159570), find Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2.  
+1.  On the [SQL Server 2008 R2 Feature Pack page](https://go.microsoft.com/fwlink/?LinkId=159570), find Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2.  
   
 2.  Download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program. Although the file name contains SQLServer2008, it is the correct file for the SQL Server 2008 R2 version of the provider.  
   

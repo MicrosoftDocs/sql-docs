@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data [SQL Server]"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], LSN boundaries"
   - "change data capture [SQL Server], query functions"
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Work with Change Data (SQL Server)
@@ -78,7 +74,7 @@ manager: craigg
  The following sections describe common scenarios for querying change data capture data by using the query functions cdc.fn_cdc_get_all_changes_<capture_instance> and cdc.fn_cdc_get_net_changes_<capture_instance>.  
   
 ### Querying for All Changes Within the Capture Instance Validity Interval  
- The most straightforward request for change data is one that returns all of the current change data in a capture instance’s validity interval. To make this request, first determine the lower and upper LSN boundaries of the validity interval. Then, use these values to identify the parameters @from_lsn and @to_lsn passed to the query function cdc.fn_cdc_get_all_changes_<capture_instance> or cdc.fn_cdc_get_net_changes_<capture_instance>. Use the function [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) to obtain the lower bound, and [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) to obtain the upper bound. See the template Enumerate All Changes for the Valid Range for sample code to query for all current valid changes by using the query function cdc.fn_cdc_get_all_changes_<capture_instance>. See the template Enumerate Net Changes for the Valid Range for a similar example of using the function cdc.fn_cdc_get_net_changes_<capture_instance>.  
+ The most straightforward request for change data is one that returns all of the current change data in a capture instance's validity interval. To make this request, first determine the lower and upper LSN boundaries of the validity interval. Then, use these values to identify the parameters @from_lsn and @to_lsn passed to the query function cdc.fn_cdc_get_all_changes_<capture_instance> or cdc.fn_cdc_get_net_changes_<capture_instance>. Use the function [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) to obtain the lower bound, and [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) to obtain the upper bound. See the template Enumerate All Changes for the Valid Range for sample code to query for all current valid changes by using the query function cdc.fn_cdc_get_all_changes_<capture_instance>. See the template Enumerate Net Changes for the Valid Range for a similar example of using the function cdc.fn_cdc_get_net_changes_<capture_instance>.  
   
 ### Querying for All New Changes Since the Last Set of Changes  
  For typical applications, querying for change data will be an ongoing process, making periodic requests for all of the changes that occurred since the last request. For such queries, you can use the function [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) to derive the lower bound of the current query from the upper bound of the previous query. This method ensures that no rows are repeated because the query interval is always treated as a closed interval where both end-points are included in the interval. Then, use the function [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) to obtain the high end-point for the new request interval. See the template Enumerate All Changes Since Previous Request for sample code to systematically move the query window to obtain all changes since the last request.  

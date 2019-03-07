@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "VIA protocol"
@@ -33,9 +30,8 @@ helpviewer_keywords:
   - "FASTFIRSTROW hint"
   - "SET DISABLE_DEF_CNST_CHK"
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
-caps.latest.revision: 93
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Discontinued Database Engine Functionality in SQL Server 2014
@@ -54,7 +50,7 @@ manager: craigg
 |Category|Discontinued feature|Replacement|  
 |--------------|--------------------------|-----------------|  
 |Backup and Restore|**BACKUP { DATABASE &#124; LOG } WITH PASSWORD** and **BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD** are discontinued. **RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD**continues to be deprecated.|None|  
-|Backup and Restore|**RESTORE { DATABASE &#124; LOG } … WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } … … WITH RESTRICTED_USER**|  
+|Backup and Restore|**RESTORE { DATABASE &#124; LOG } ... WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ... WITH RESTRICTED_USER**|  
 |Compatibility level|80 compatibility level|Databases must be set to at least compatibility level 90.|  
 |Configuration Options|`sp_configure 'user instance timeout'` and `'user instances enabled'`|Use the Local Database feature. For more information, see [SqlLocalDB Utility](../tools/sqllocaldb-utility.md)|  
 |Connection protocols|Support for the VIA protocol is discontinued.|Use TCP instead.|  
@@ -71,9 +67,9 @@ manager: craigg
 |Service Broker programmability in SMO|The **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** class no longer implements the **Microsoft.SqlServer.Management.Smo.IObjectPermission** interface.||  
 |SET options|`SET DISABLE_DEF_CNST_CHK`|None.|  
 |System tables|sys.database_principal_aliases|Use roles instead of aliases.|  
-|Transact-SQL|`RAISERROR` in the format `RAISERROR integer 'string'` is discontinued.|Rewrite the statement using the current **RAISERROR(…)** syntax.|  
+|Transact-SQL|`RAISERROR` in the format `RAISERROR integer 'string'` is discontinued.|Rewrite the statement using the current **RAISERROR(...)** syntax.|  
 |Transact-SQL syntax|`COMPUTE / COMPUTE BY`|Use `ROLLUP`|  
-|Transact-SQL syntax|Use of **\*=** and **=\***|Use ANSI join syntax. For more information, see [FROM (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL syntax|Use of **\*=** and **=&#42;**|Use ANSI join syntax. For more information, see [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Replaced by database_file_size_change event, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Additional XEvent changes**  

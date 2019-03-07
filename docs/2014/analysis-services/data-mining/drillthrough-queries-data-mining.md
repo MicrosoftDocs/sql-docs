@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "AllowDrillThrough property"
   - "drillthrough [Analysis Services]"
   - "drillthrough [DMX]"
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Drillthrough Queries (Data Mining)
   A *drillthrough query* lets you retrieve details from the underlying cases or structure data, by sending a query to the mining model. Drillthrough is useful if you want to view the cases that were used to train the model, versus the cases that are used to test the model, or if you want to see additional details from the case data.  
@@ -26,7 +23,7 @@ manager: "mblythe"
   
 -   Drilling through to the **model cases**  
   
-     Drillthrough to model cases is used when you want to go from a specific pattern in the model—such as a cluster or branch of a decision tree—and view details about the individual cases.  
+     Drillthrough to model cases is used when you want to go from a specific pattern in the model-such as a cluster or branch of a decision tree-and view details about the individual cases.  
   
 -   Drilling through to the **structure cases**  
   
@@ -67,7 +64,7 @@ manager: "mblythe"
 -   If the mining structure does not allow drillthrough but the mining model does, you can view information only from the model cases, and not from the mining structure.  
   
 ###  <a name="bkmk_Security"></a> Security Issues for Drillthrough  
- If you want to drill through to structure cases from the model, you must verify that both the mining structure and the mining model have the [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) property set to `True`. Moreover, you must be a member of a role that has drillthrough permissions on both the structure and the model. For information about how to create roles, see [Role Designer &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). see.  
+ If you want to drill through to structure cases from the model, you must verify that both the mining structure and the mining model have the [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) property set to `True`. Moreover, you must be a member of a role that has drillthrough permissions on both the structure and the model. For information about how to create roles, see [Role Designer &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). see.  
   
  Drillthrough permissions are set separately on the structure and model. The model permission lets you drill through from the model, even if you do not have permissions on the structure. Drillthrough permissions on the structure provide the additional ability to include structure columns in drillthrough queries from the model, by using the [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) function.  
   

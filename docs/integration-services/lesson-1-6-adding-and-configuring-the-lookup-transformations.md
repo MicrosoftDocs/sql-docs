@@ -1,45 +1,41 @@
 ---
-title: "Step 6: Adding and Configuring the Lookup Transformations | Microsoft Docs"
+title: "Step 6: Add and configure the Lookup transformations | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/03/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 1-6 - Adding and Configuring the Lookup Transformations
-After you have configured the Flat File source to extract data from the source file, the next task is to define the Lookup transformations needed to obtain the values for the **CurrencyKey** and **DateKey**. A Lookup transformation performs a lookup by joining data in the specified input column to a column in a reference dataset. The reference dataset can be an existing table or view, a new table, or the result of an SQL statement. In this tutorial, the Lookup transformation uses an OLE DB connection manager to connect to the database that contains the data that is the source of the reference dataset.  
+# Lesson 1-6: Add and configure the Lookup transformations
+
+After you have configured the Flat File source to extract data from the source file, you define the Lookup transformations needed to obtain the values for **CurrencyKey** and **DateKey**. A Lookup transformation performs a lookup by joining data in the specified input column to a column in a reference dataset. The reference dataset can be an existing table or view, a new table, or the result of an SQL statement. In this tutorial, the Lookup transformation uses an OLE DB connection manager to connect to the database that contains the source data of the reference dataset.  
   
 > [!NOTE]  
-> You can also configure the Lookup transformation to connect to a cache that contains the reference dataset. For more information, see [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md).  
+> You can also configure the Lookup transformation to connect to a cache that contains the reference dataset. For more information, see [Lookup transformation](../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-For this tutorial, you will add and configure the following two Lookup transformation components to the package:  
+In this task, you add and configure the following two Lookup transformation components to the package:  
   
--   One transformation to perform a lookup of values from the **CurrencyKey** column of the **DimCurrency** dimension table based on matching **CurrencyID** column values from the flat file.  
+-   One transformation that does a lookup of values from the **CurrencyKey** column of the **DimCurrency** dimension table, based on matching **CurrencyID** column values from the flat file.  
   
--   One transformation to perform a lookup of values from the **DateKey** column of the **DimDate** dimension table based on matching **CurrencyDate** column values from the flat file.  
+-   One transformation that does a lookup of values from the **DateKey** column of the **DimDate** dimension table, based on matching **CurrencyDate** column values from the flat file.  
   
-In both cases, the Lookup transformation will utilize the OLE DB connection manager that you previously created.  
+In both cases, the Lookup transformation uses the OLE DB connection manager you previously created.  
   
-### To add and configure the Lookup Currency Key transformation  
+## Add and configure the Lookup Currency Key transformation  
   
-1.  In the **SSIS Toolbox**, expand **Common**, and then drag **Lookup** onto the design surface of the **Data Flow** tab. Place Lookup directly below the **Extract Sample Currency Data** source.  
+1.  In the **SSIS Toolbox**, expand **Common**, and then drag **Lookup** onto the design surface of the **Data Flow** tab. Place **Lookup** directly below the **Extract Sample Currency Data** source.  
   
-2.  Click the **Extract Sample Currency Data** flat file source and drag the blue arrow onto the newly added **Lookup** transformation to connect the two components.  
+2.  Select the **Extract Sample Currency Data** flat file source and drag its blue arrow onto the newly added **Lookup** transformation to connect the two components.  
   
-3.  On the **Data Flow** design surface, click **Lookup** in the **Lookup** transformation, and change the name to **Lookup Currency Key**.  
+3.  On the **Data Flow** design surface, select **Lookup** in the **Lookup** transformation, and change the name to **Lookup Currency Key**.  
   
-4.  Double-click the **Lookup CurrencyKey** transformation to display the Lookup Transformation Editor.  
+4.  Double-click the **Lookup Currency Key** transformation to display the **Lookup Transformation Editor**.  
   
 5.  On the **General** page, make the following selections:  
   
@@ -51,7 +47,7 @@ In both cases, the Lookup transformation will utilize the OLE DB connection mana
   
     1.  In the **OLE DB connection manager** dialog box, ensure that **localhost.AdventureWorksDW2012** is displayed.  
   
-    2.  Select **Use results of an SQL query**, and then type or copy the following SQL statement:  
+    2.  Select **Use results of an SQL query**, and then enter or paste the following SQL statement:  
   
         ```sql
         SELECT * FROM [dbo].[DimCurrency]
@@ -60,6 +56,7 @@ In both cases, the Lookup transformation will utilize the OLE DB connection mana
             'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
 	        'MXN', 'SAR', 'USD', 'VEB')
         ```  
+    3.  Select **Preview** to verify the query results.
   
 7.  On the **Columns** page, make the following selections:  
   
@@ -67,21 +64,21 @@ In both cases, the Lookup transformation will utilize the OLE DB connection mana
   
     2.  In the **Available Lookup Columns** list, select the check box to the left of **CurrencyKey**.  
   
-8.  Click **OK** to return to the **Data Flow** design surface.  
+8.  Select **OK** to return to the **Data Flow** design surface.  
   
-9. Right-click the Lookup Currency Key transformation, click **Properties**.  
+9. Right-click the Lookup Currency Key transformation and select **Properties**.  
   
-10. In the Properties window, verify that the **LocaleID** property is set to **English (United States)** and the **DefaultCodePage** property is set to **1252**.  
+10. In the **Properties** window, verify that the **LocaleID** property is **English (United States)** and the **DefaultCodePage** property is **1252**.  
   
-### To add and configure the  Lookup DateKey transformation  
+## Add and configure the Lookup Date Key transformation  
   
-1.  In the **SSIS Toolbox**, drag **Lookup** onto the **Data Flow** design surface. Place Lookup directly below the **Lookup Currency Key** transformation.  
+1.  In the **SSIS Toolbox**, drag **Lookup** onto the **Data Flow** design surface. Place this **Lookup** directly below the **Lookup Currency Key** transformation.  
   
-2.  Click the **Lookup Currency Key** transformation and drag the green arrow onto the newly added **Lookup** transformation to connect the two components.  
+2.  Select the **Lookup Currency Key** transformation and drag its blue arrow onto the new **Lookup** transformation to connect the two components.  
   
-3.  In the **Input Output Selection** dialog box, click **Lookup Match Output** in the **Output** list box, and then click **OK**.  
+3.  In the **Input Output Selection** dialog, select **Lookup Match Output** in the **Output** list box, and then select **OK**.  
   
-4.  On the **Data Flow** design surface, click **Lookup** in the newly added **Lookup** transformation, and change the name to **Lookup Date Key**.  
+4.  On the **Data Flow** design surface, select the name **Lookup** in the newly added **Lookup** transformation and change that name to **Lookup Date Key**.  
   
 5.  Double-click the **Lookup Date Key** transformation.  
   
@@ -89,9 +86,9 @@ In both cases, the Lookup transformation will utilize the OLE DB connection mana
   
 7.  On the **Connection** page, make the following selections:  
   
-    1.  In the **OLEDB connection manager** dialog box, ensure that **localhost.AdventureWorksDW2012** is displayed.  
+    1.  In the **OLEDB connection manager** dialog, ensure that **localhost.AdventureWorksDW2012** is displayed.  
   
-    2.  In the **Use a table or view** box, type or select **[dbo].[DimDate]**.  
+    2.  In the **Use a table or view** box, enter or select **[dbo].[DimDate]**.  
   
 8.  On the **Columns** page, make the following selections:  
   
@@ -101,17 +98,17 @@ In both cases, the Lookup transformation will utilize the OLE DB connection mana
   
 9. On the **Advanced** page, review the caching options.  
   
-10. Click **OK** to return to the **Data Flow** design surface.  
+10. Select **OK** to return to the **Data Flow** design surface.  
   
-11. Right-click the Lookup Date Key transformation and click **Properties.**  
+11. Right-click the **Lookup Date Key** transformation and select **Properties**.
   
-12. In the Properties window, verify that the **LocaleID** property is set to **English (United States)** and the **DefaultCodePage** property is set to **1252**.  
+12. In the **Properties** window, verify that the **LocaleID** property is **English (United States)** and the **DefaultCodePage** property is **1252**.  
   
-## Next Task in Lesson  
-[Step 7: Adding and Configuring the OLE DB Destination](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+## Go to next task
+[Step 7: Add and configure the OLE DB destination](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## See Also  
-[Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
+## See also  
+[Lookup transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
   

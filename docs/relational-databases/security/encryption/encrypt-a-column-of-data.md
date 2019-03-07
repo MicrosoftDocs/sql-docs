@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Encrypt a Column of Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2017"
+ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], columns"
@@ -15,60 +13,50 @@ helpviewer_keywords:
   - "column level encryption"
   - "cell level encryption"
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Encrypt a Column of Data
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  This topic describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
+  This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
+
+## Security  
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Security](#Security)  
-  
--   [To encrypt a column of data, using Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+### Permissions  
  The following permissions are necessary to perform the steps below:  
   
--   CONTROL permission on the database.  
+- CONTROL permission on the database.  
   
--   CREATE CERTIFICATE permission on the database. Only Windows logins, SQL Server logins, and application roles can own certificates. Groups and roles cannot own certificates.  
+- CREATE CERTIFICATE permission on the database. Only Windows logins, SQL Server logins, and application roles can own certificates. Groups and roles cannot own certificates.  
   
--   ALTER permission on the table.  
+- ALTER permission on the table.  
   
--   Some permission on the key and must not have been denied VIEW DEFINITION permission.  
+- Some permission on the key and must not have been denied VIEW DEFINITION permission.  
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+## Using Transact-SQL  
 
-To use the following examples you must have a database master key. If your database does not already have a database master key, create one by executing the following statement providing your password:   
-```  
+To use the following examples, you must have a database master key. If your database does not already have a database master key, create one by executing the following statement providing your password:
+
+```sql  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-Always backup your database master key. For more information on database master keys, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
-#### To encrypt a column of data using a simple symmetric encryption  
+Always back up your database master key. For more information on database master keys, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
+
+### To encrypt a column of data using symmetric encryption that includes an authenticator  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2. On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3. Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
-    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -117,15 +105,15 @@ Always backup your database master key. For more information on database master 
     GO  
     ```  
   
-#### To encrypt a column of data using symmetric encryption that includes an authenticator  
+### To encrypt a column of data using a simple symmetric encryption  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2. On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3. Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
   
@@ -182,5 +170,3 @@ Always backup your database master key. For more information on database master 
 -   [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  

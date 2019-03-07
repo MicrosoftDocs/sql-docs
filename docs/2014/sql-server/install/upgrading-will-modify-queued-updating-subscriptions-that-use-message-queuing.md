@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication]"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "queues [SQL Server replication]"
   - "queued updating subscriptions [SQL Server replication]"
 ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrading will modify queued updating subscriptions that use Message Queuing

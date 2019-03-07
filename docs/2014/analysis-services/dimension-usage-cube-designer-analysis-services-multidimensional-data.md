@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.dimensionusagepane.f1"
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Dimension Usage (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Dimension Usage** tab in Cube Designer to view and edit the dimension relationships between cube dimensions and measure groups in the cube.  

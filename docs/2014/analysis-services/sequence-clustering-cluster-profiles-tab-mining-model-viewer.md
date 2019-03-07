@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1"
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Sequence Clustering Cluster Profiles Tab (Mining Model Viewer
   The **Cluster Profiles** tab in the **Microsoft Sequence Clustering Viewer** provides a color-coded view of sequences that are included in each cluster.  

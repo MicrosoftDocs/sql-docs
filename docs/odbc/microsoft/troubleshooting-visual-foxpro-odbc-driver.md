@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "set ANSI [ODBC]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "positioned updates [ODBC]"
   - "background fetching [ODBC]"
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data preparation"
   - "relabel"
   - "data cleaning"
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Relabel (SQL Server Data Mining Add-ins)
   ![Office 13 icon for Relabel tool](media/dm13-relabel.gif "Office 13 icon for Relabel tool")  
@@ -50,7 +47,7 @@ manager: "mblythe"
   
 5.  Type a new value into the row under **New Labels**. You can also choose a value from the list of existing values. As you type new values, they become available for re-use right away.  
   
-6.  When you have entered enough rows, click **Next**, and on the **Select Destination** page, choose where you’ll save the relabeled data.  
+6.  When you have entered enough rows, click **Next**, and on the **Select Destination** page, choose where you'll save the relabeled data.  
   
     -   **Add as a new column to the current worksheet**  
   

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Log operations in Analysis Services
-  An Analysis Services instance will log server notifications, errors, and warnings to the msmdsrv.log file – one for each instance you install. Administrators refer to this log for insights into routine and extraordinary events alike. In recent releases, logging has been enhanced to include more information. Log records now include product version and edition information, as well as processor, memory, connectivity, and blocking events. You can review the entire change list at [Logging improvements](http://support.microsoft.com/kb/2965035).  
+  An Analysis Services instance will log server notifications, errors, and warnings to the msmdsrv.log file - one for each instance you install. Administrators refer to this log for insights into routine and extraordinary events alike. In recent releases, logging has been enhanced to include more information. Log records now include product version and edition information, as well as processor, memory, connectivity, and blocking events. You can review the entire change list at [Logging improvements](https://support.microsoft.com/kb/2965035).  
   
  Besides the built-in logging feature, many administrators and developers also use tools provided by the Analysis Services community to collect data about server operations, such as **ASTrace**. See [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) for the download links.  
   
@@ -46,7 +43,7 @@ manager: "mblythe"
 |OlapQueryLog table in a relational database|Query log|Collect inputs for the Usage Optimization Wizard|No|  
 |SQLDmp\<guid>.mdmp files|Crashes and exceptions|Deep troubleshooting|No|  
   
- We highly recommend the following link for additional information resources not covered in this topic: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+ We highly recommend the following link for additional information resources not covered in this topic: [Initial data collection tips from Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> General information on log file configuration settings  
  You can find sections for each log in the msmdsrv.ini server configuration file, located in the \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config folder. See [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) for instructions on editing the file.  
@@ -121,7 +118,7 @@ manager: "mblythe"
   
  Allow the query log to accumulate sufficient data for the Usage Based Optimization Wizard. If query volumes are cyclical, capture enough traffic to have a representative set of data. See [Usage Based Optimization Wizard](https://msdn.microsoft.com/library/ms189706.aspx) for instructions on how to run the wizard.  
   
- See [Configuring the Analysis Services Query Log](http://technet.microsoft.com/library/Cc917676) to learn more about query log configuration. Although the paper is quite old, query log configuration has not changed in recent releases and the information it contains still applies.  
+ See [Configuring the Analysis Services Query Log](https://technet.microsoft.com/library/Cc917676) to learn more about query log configuration. Although the paper is quite old, query log configuration has not changed in recent releases and the information it contains still applies.  
   
 ##  <a name="bkmk_mdmp"></a> Mini dump (.mdmp) files  
  Dump files capture data used for analyzing extraordinary events. Analysis Services automatically generates mini dumps (.mdmp) in response to a server crash, exception, and some configuration errors. The feature is enabled, but does not send crash reports automatically.  
@@ -146,7 +143,7 @@ manager: "mblythe"
   
  **Configure Crash Reports**  
   
- Unless otherwise directed by Microsoft Support, most administrators use the default settings. This older KB article is still used to provide instruction on how to configure dump files: [How to configure Analysis Services to generate memory dump files](http://support.microsoft.com/kb/919711).  
+ Unless otherwise directed by Microsoft Support, most administrators use the default settings. This older KB article is still used to provide instruction on how to configure dump files: [How to configure Analysis Services to generate memory dump files](https://support.microsoft.com/kb/919711).  
   
  The configuration setting most likely to be modified is the `CreateAndSendCrashReports` setting used to determine whether a memory dump file will be generated.  
   
@@ -162,18 +159,18 @@ manager: "mblythe"
   
  The following links provide more background:  
   
--   [Looking Deeper into SQL Server using Minidumps](http://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [Looking Deeper into SQL Server using Minidumps](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
--   [How to create a user mode dump file](http://support.microsoft.com/kb/931673)  
+-   [How to create a user mode dump file](https://support.microsoft.com/kb/931673)  
   
--   [How to use the Sqldumper.exe utility to generate a dump file in SQL Server](http://support.microsoft.com/kb/917825)  
+-   [How to use the Sqldumper.exe utility to generate a dump file in SQL Server](https://support.microsoft.com/kb/917825)  
   
 ##  <a name="bkmk_tips"></a> Tips and best practices  
  This section is a recap of the tips mentioned throughout this article.  
   
 -   Configure the msmdsrv.log file to control the size and number of msmdsrv log file. The settings are not enabled by default, so be sure to add them as post-installation step. See [MSMDSRV service log file](#bkmk_msmdsrv) in this topic.  
   
--   Review this blog post from Microsoft Customer Support to learn what resources they use to get information about server operations: [Initial Data Collection](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   Review this blog post from Microsoft Customer Support to learn what resources they use to get information about server operations: [Initial Data Collection](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   Use ASTrace2012, rather than a query log, to find out who is querying cubes. The query log is typically used to provide input into the Usage Based Optimization Wizard, and the data it captures is not easy to read or interpret. ASTrace2012 is a community tool, widely used, that captures query operations. See [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   

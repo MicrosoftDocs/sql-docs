@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "Full Text event category [SQL Server]"
   - "SQL Server event classes, Full Text event category"
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
-caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Full Text Event Category

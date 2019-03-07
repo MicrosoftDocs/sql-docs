@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_copysnapshot"
   - "sp_copysnapshot_TSQL"
 helpviewer_keywords: 
   - "sp_copysnapshot"
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_copysnapshot (Transact-SQL)
@@ -41,16 +34,16 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication whose snapshot contents are to be copied. *publication* is **sysname**, with no default.  
   
- [ **@destination_folder=**] **'***destination_folder***'**  
+ [ **@destination_folder=**] **'**_destination_folder_**'**  
  Is the name of the folder where the contents of the publication snapshot are to be copied. *destination_folder*is **nvarchar(255)**, with no default. The *destination_folder* can be an alternate location such as on another server, on a network drive, or on removable media (such as CD-ROMs or removable disks).  
   
- [ **@subscriber=**] **'***subscriber***'**  
+ [ **@subscriber=**] **'**_subscriber_**'**  
  Is the name of the Subscriber. *subscriber* is sysname, with a default of NULL.  
   
- [ **@subscriber_db=**] **'***subscriber_db***'**  
+ [ **@subscriber_db=**] **'**_subscriber_db_**'**  
  Is the name of the subscription database. *subscriber_db* is sysname, with a default of NULL.  
   
 ## Return Code Values  
@@ -63,7 +56,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_copysnapshot**.  
   
 ## See Also  
- [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Alternate Snapshot Folder Locations](../../relational-databases/replication/snapshot-options.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

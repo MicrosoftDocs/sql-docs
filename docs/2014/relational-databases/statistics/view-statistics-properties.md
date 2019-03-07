@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.statistics.details.f1"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "viewing statistics properties"
   - "statistics [SQL Server], viewing properties"
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # View Statistics Properties
@@ -50,15 +46,15 @@ manager: craigg
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table in which you want to view the statistic’s properties.  
+3.  Click the plus sign to expand the table in which you want to view the statistic's properties.  
   
 4.  Click the plus sign to expand the **Statistics** folder.  
   
 5.  Right-click the Statistics object of which you want to view the properties and select **Properties**.  
   
-6.  In the **Statistics Properties -** *statistics_name* dialog box, in the **Select a page** pane, select **Details**.  
+6.  In the **Statistics Properties -** _statistics_name_ dialog box, in the **Select a page** pane, select **Details**.  
   
-     The following properties show on the **Details** page in the **Statistics Properties -** *statistics_name* dialog box.  
+     The following properties show on the **Details** page in the **Statistics Properties -** _statistics_name_ dialog box.  
   
      **Table Name**  
      Displays the name of the table described by the statistics.  

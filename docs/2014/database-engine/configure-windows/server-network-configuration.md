@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Named Pipes [SQL Server], configuring"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "ports [SQL Server], changing"
   - "server configuration [SQL Server]"
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: 47
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Server Network Configuration
@@ -46,7 +42,7 @@ manager: craigg
  Support for Extended Protection for Authentication by using channel binding and service binding is available for operating systems that support Extended Protection. For more information, see [Connect to the Database Engine Using Extended Protection](connect-to-the-database-engine-using-extended-protection.md).  
   
 ## Authenticating by Using Kerberos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports Kerberos authentication. For more information, see [Register a Service Principal Name for Kerberos Connections](register-a-service-principal-name-for-kerberos-connections.md) and [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports Kerberos authentication. For more information, see [Register a Service Principal Name for Kerberos Connections](register-a-service-principal-name-for-kerberos-connections.md) and [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ### Registering a Server Principal Name (SPN)  
  The Kerberos authentication service uses an SPN to authenticate a service. For more information, see [Register a Service Principal Name for Kerberos Connections](register-a-service-principal-name-for-kerberos-connections.md).  

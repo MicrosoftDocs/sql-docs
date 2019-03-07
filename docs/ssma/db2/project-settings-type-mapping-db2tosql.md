@@ -4,21 +4,15 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
+manager: craigg 
 ---
 # Project Settings (Type Mapping) (DB2ToSQL)
-The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts DB2 data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types.  
+The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts DB2 data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  
   
 The Type Mapping page is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
@@ -35,7 +29,7 @@ The following table shows the **Type Mapping** tab options:
 The mapped DB2 data type.  
   
 **Target Type**  
-The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type for the specified DB2 data type.  
+The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type for the specified DB2 data type.  
   
 See the tables in the next section for the default SSMA for DB2 type mappings.  
   
@@ -57,7 +51,7 @@ In SSMA for DB2, you can set custom type mappings for arguments, columns, local 
 ### Default Argument Type and Return Value Type Mapping  
 The following table contains the default data type mapping for arguments and return values.  
   
-|DB2 Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Data Type|  
+|DB2 Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Type|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float[53]|  
@@ -79,13 +73,13 @@ The following table contains the default data type mapping for arguments and ret
 |integer|int|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw[\*..8000]<sup>*</sup>|varbinary[*]|  
-|long raw[8001..\*]<sup>*</sup>|varbinary(max)|  
+|long raw[\*..8000]<sup>\*</sup>|varbinary[\*]|  
+|long raw[8001..\*]<sup>\*</sup>|varbinary(max)|  
 |national char|nvarchar(max)|  
 |national char varying|nvarchar(max)|  
 |national character|nvarchar(max)|  
-|national character varying<sup>**</sup>|nvarchar(max)|  
-|national character varying<sup>*</sup>|nvarchar(max)|  
+|national character varying<sup>\*\*</sup>|nvarchar(max)|  
+|national character varying<sup>\*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |nclob|nvarchar(max)|  
 |number|float[53]|  
@@ -106,82 +100,82 @@ The following table contains the default data type mapping for arguments and ret
 |varchar2|varchar(max)|  
 |xmltype|xml|  
   
-<sup>*</sup> Applies to return value type mapping only.  
+<sup>\*</sup> Applies to return value type mapping only.  
   
-<sup>**</sup> Applies to argument type mapping only.  
+<sup>\*\*</sup> Applies to argument type mapping only.  
   
 ### Default Column Type Mapping  
 The following table contains the default type mapping for columns.  
   
-|DB2 Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Data Type|  
+|DB2 Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Type|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float[53]|  
 |binary_float|float[53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|char varying[*..\*]|varchar[*]|  
-|char[*..\*]|char[*]|  
+|char varying[\*..\*]|varchar[\*]|  
+|char[\*..\*]|char[\*]|  
 |character|char|  
-|character varying[*..\*]|varchar[*]|  
-|character[*..\*]|char[*]|  
+|character varying[\*..\*]|varchar[\*]|  
+|character[\*..\*]|char[\*]|  
 |clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|dec[*..\*]|dec[*][0]|  
-|dec[*..\*][\*..\*]|dec[*][\*]|  
+|dec[\*..\*]|dec[\*][0]|  
+|dec[\*..\*][\*..\*]|dec[\*][\*]|  
 |decimal|decimal[38][0]|  
-|decimal[*..\*]|decimal[*][0]|  
-|decimal[*..\*][\*..\*]|decimal[*][\*]|  
+|decimal[\*..\*]|decimal[\*][0]|  
+|decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
 |double precision|float[53]|  
 |float|float[53]|  
-|float[*..53]|float[*]|  
-|float[54..*]|float[53]|  
+|float[\*..53]|float[\*]|  
+|float[54..\*]|float[53]|  
 |int|int|  
 |integer|int|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw[*..8000]|varbinary[*]|  
-|long raw[8001..*]|varbinary(max)|  
+|long raw[\*..8000]|varbinary[\*]|  
+|long raw[8001..\*]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|long[*..8000]|varchar[*]|  
-|long[8001..*]|varchar(max)|  
+|long[\*..8000]|varchar[\*]|  
+|long[8001..\*]|varchar(max)|  
 |national char|nchar|  
-|national char varying[*..\*]|nvarchar[*]|  
-|national char[*..\*]|nchar[*]|  
+|national char varying[\*..\*]|nvarchar[\*]|  
+|national char[\*..\*]|nchar[\*]|  
 |national character|nchar|  
-|national character varying[*..\*]|nvarchar[*]|  
-|national character[*..\*]|nchar[*]|  
+|national character varying[\*..\*]|nvarchar[\*]|  
+|national character[\*..\*]|nchar[\*]|  
 |nchar|nchar|  
-|nchar[*]|nchar[*]|  
+|nchar[\*]|nchar[\*]|  
 |nclob|nvarchar(max)|  
 |number|float[53]|  
-|number[*..\*]|numeric[*]|  
-|number[*..\*][\*..\*]|numeric[*][\*]|  
+|number[\*..\*]|numeric[\*]|  
+|number[\*..\*][\*..\*]|numeric[\*][\*]|  
 |numeric|numeric|  
-|numeric[*..\*]|numeric[*]|  
-|numeric[*..\*][\*..\*]|numeric[*][\*]|  
-|nvarchar2[*..\*]|nvarchar[*]|  
-|raw[*..\*]|varbinary[*]|  
+|numeric[\*..\*]|numeric[\*]|  
+|numeric[\*..\*][\*..\*]|numeric[\*][\*]|  
+|nvarchar2[\*..\*]|nvarchar[\*]|  
+|raw[\*..\*]|varbinary[\*]|  
 |real|float[53]|  
 |rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |timestamp with local time zone|datetimeoffset|  
-|timestamp with local time zone[*..\*]|datetimeoffset[*]|  
+|timestamp with local time zone[\*..\*]|datetimeoffset[\*]|  
 |timestamp with time zone|datetimeoffset|  
-|timestamp with time zone[*..\*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2[*]|  
+|timestamp with time zone[\*..\*]|datetimeoffset[\*]|  
+|timestamp[\*..\*]|datetime2[\*]|  
 |Urowid|uniqueidentifier|  
-|urowid[*..\*]|uniqueidentifier|  
-|varchar[*..\*]|varchar[*]|  
-|varchar2[*..\*]|varchar[*]|  
+|urowid[\*..\*]|uniqueidentifier|  
+|varchar[\*..\*]|varchar[\*]|  
+|varchar2[\*..\*]|varchar[\*]|  
 |Xmltype|xml|  
   
 ### Default Local Variable Type Mapping  
 The following table contains the default type mapping for local variables.  
   
-|DB2 Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Data Type|  
+|DB2 Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Type|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float[53]|  
@@ -190,79 +184,79 @@ The following table contains the default type mapping for local variables.
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
-|char varying[*..8000]|varchar[*]|  
-|char varying[8001..*]|varchar(max)|  
-|char[*..8000]|char[*]|  
-|char[8001..*]|varchar(max)|  
+|char varying[\*..8000]|varchar[\*]|  
+|char varying[8001..\*]|varchar(max)|  
+|char[\*..8000]|char[\*]|  
+|char[8001..\*]|varchar(max)|  
 |Character|char|  
-|character varying[*..8000]|varchar[*]|  
-|character varying[8001..*]|varchar(max)|  
-|character[*..8000]|char[*]|  
-|character[8001..*]|varchar(max)|  
+|character varying[\*..8000]|varchar[\*]|  
+|character varying[8001..\*]|varchar(max)|  
+|character[\*..8000]|char[\*]|  
+|character[8001..\*]|varchar(max)|  
 |clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|dec[*..\*]|dec[*][0]|  
-|dec[*..\*][\*..\*]|dec[*][\*]|  
+|dec[\*..\*]|dec[\*][0]|  
+|dec[\*..\*][\*..\*]|dec[\*][\*]|  
 |decimal|decimal[38][0]|  
-|decimal[*..\*]|decimal[*][0]|  
-|decimal[*..\*][\*..\*]|decimal[*][\*]|  
+|decimal[\*..\*]|decimal[\*][0]|  
+|decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
 |double precision|float[53]|  
 |Float|float[53]|  
-|float[*..53]|float[*]|  
-|float[54..*]|float[53]|  
+|float[\*..53]|float[\*]|  
+|float[54..\*]|float[53]|  
 |Int|int|  
 |Integer|int|  
-|integer[*..\*]|numeric[*][0]|  
+|integer[\*..\*]|numeric[\*][0]|  
 |Long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw[*..8000]|varbinary[*]|  
-|long raw[8001..*]|varbinary(max)|  
+|long raw[\*..8000]|varbinary[\*]|  
+|long raw[8001..\*]|varbinary(max)|  
 |national char|nchar|  
-|national char varying[*..4000]|nvarchar[*]|  
-|national char varying[4001..*]|nvarchar(max)|  
-|national char[*..4000]|nchar[*]|  
-|national char[4001..*]|nvarchar(max)|  
+|national char varying[\*..4000]|nvarchar[\*]|  
+|national char varying[4001..\*]|nvarchar(max)|  
+|national char[\*..4000]|nchar[\*]|  
+|national char[4001..\*]|nvarchar(max)|  
 |national character|nchar|  
-|national character[*..4000]|nvarchar[*]|  
-|national character[4001..*]|nvarchar(max)|  
-|national character varying [*..4000]|nvarchar[*]|  
-|national character varying [4001..*]|nvarchar(max)|  
+|national character[\*..4000]|nvarchar[\*]|  
+|national character[4001..\*]|nvarchar(max)|  
+|national character varying [\*..4000]|nvarchar[\*]|  
+|national character varying [4001..\*]|nvarchar(max)|  
 |Nchar|nchar|  
-|nchar[*..4000]|nchar[*]|  
-|nchar[4001..*]|nvarchar(max)|  
-|nchar varying [*..4000]|nvarchar[*]|  
-|nchar varying [4001..*]|nvarchar(max)|  
+|nchar[\*..4000]|nchar[\*]|  
+|nchar[4001..\*]|nvarchar(max)|  
+|nchar varying [\*..4000]|nvarchar[\*]|  
+|nchar varying [4001..\*]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |Number|float[53]|  
-|number[*..\*]|numeric[*]|  
-|number[*..\*][\*..\*]|numeric[*][\*]|  
+|number[\*..\*]|numeric[\*]|  
+|number[\*..\*][\*..\*]|numeric[\*][\*]|  
 |Numeric|numeric[38][0]|  
-|numeric[*..\*]|numeric[*]|  
-|numeric[*..\*][\*..\*]|numeric[*][\*]|  
-|nvarchar2[*..4000]|nvarchar[*]|  
-|nvarchar2[4001..*]|nvarchar(max)|  
+|numeric[\*..\*]|numeric[\*]|  
+|numeric[\*..\*][\*..\*]|numeric[\*][\*]|  
+|nvarchar2[\*..4000]|nvarchar[\*]|  
+|nvarchar2[4001..\*]|nvarchar(max)|  
 |pls_integer|int|  
-|raw[*..8000]|varbinary[*]|  
-|raw[8001..*]|varbinary(max)|  
+|raw[\*..8000]|varbinary[\*]|  
+|raw[8001..\*]|varbinary(max)|  
 |Real|float[53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
-|string[*..8000]|varchar[*]|  
-|string[8001..*]|varchar(max)|  
+|string[\*..8000]|varchar[\*]|  
+|string[8001..\*]|varchar(max)|  
 |timestamp|datetime2|  
 |timestamp with local time zone|datetimeoffset|  
 |timestamp with time zone|datetimeoffset|  
-|timestamp with local time zone[*..\*]|datetimeoffset[*]|  
-|timestamp with time zone[*..\*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2[*]|  
+|timestamp with local time zone[\*..\*]|datetimeoffset[\*]|  
+|timestamp with time zone[\*..\*]|datetimeoffset[\*]|  
+|timestamp[\*..\*]|datetime2[\*]|  
 |Urowid|uniqueidentifier|  
-|urowid[*..\*]|uniqueidentifier|  
-|varchar[*..8000]|varchar[*]|  
-|varchar[8001..*]|varchar(max)|  
-|varchar2[*..8000]|varchar[*]|  
-|varchar2[8001..*]|varcha(max)|  
+|urowid[\*..\*]|uniqueidentifier|  
+|varchar[\*..8000]|varchar[\*]|  
+|varchar[8001..\*]|varchar(max)|  
+|varchar2[\*..8000]|varchar[\*]|  
+|varchar2[8001..\*]|varcha(max)|  
 |Xmltype|xml|  
   
 ## See Also  

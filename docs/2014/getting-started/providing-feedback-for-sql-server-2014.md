@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sending feedback to Microsoft"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "product feedback [SQL Server]"
   - "automatic error or usage reporting"
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Providing Feedback for SQL Server 2014
@@ -34,7 +31,7 @@ manager: craigg
   
  You can find the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback page in many ways.  
   
--   Go to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback [Web page](http://go.microsoft.com/fwlink/?linkid=34178).  
+-   Go to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback [Web page](https://go.microsoft.com/fwlink/?linkid=34178).  
   
 -   On the Help toolbar of the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Send Feedback** button, or select the **Community/Send Feedback** command.  
   
@@ -46,7 +43,7 @@ manager: craigg
   
 -   Access Help from the utility.  
   
--   Select the **Help** check box on the **Toolbars** tab of the **Tools/Customize…** command.  
+-   Select the **Help** check box on the **Toolbars** tab of the **Tools/Customize...** command.  
   
 ## Automatic Error and Usage Reporting  
  You can enable features to automatically report errors and to send data about how you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] software and services. [!INCLUDE[msCoName](../includes/msconame-md.md)] uses this information to improve [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. All the data is confidential.  

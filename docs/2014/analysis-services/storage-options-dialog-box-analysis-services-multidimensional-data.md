@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagesettingsdialog.f1"
 ms.assetid: 58b26088-f4b1-4962-b824-3e360e955671
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Storage Options Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to specify custom storage mode, proactive caching, and notification options for dimensions, cubes, measure groups, and partitions. You can display the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by clicking **Options** on the **Storage Settings** dialog box. For more information about the **Storage Settings** dialog box, see [Storage Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md).  

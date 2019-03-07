@@ -27,8 +27,8 @@ manager: kfile
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>Prepare the SharePoint 2013 Farm  
   
-  > [!TIP]  
-    >  Review the authentication method your existing web applications are configured for. SharePoint 2013 web applications default to claims-based authentication. SharePoint 2010 web applications configured for classic-mode authentication require additional steps to migrate databases from SharePoint 2010 to SharePoint 2013. If your web applications are configured for classic-mode authentication, review the SharePoint 2013 documentation.  
+> [!TIP]
+>  Review the authentication method your existing web applications are configured for. SharePoint 2013 web applications default to claims-based authentication. SharePoint 2010 web applications configured for classic-mode authentication require additional steps to migrate databases from SharePoint 2010 to SharePoint 2013. If your web applications are configured for classic-mode authentication, review the SharePoint 2013 documentation.  
   
 1.  Install a new SharePoint Server 2013 farm.  
   
@@ -36,10 +36,10 @@ manager: kfile
   
 3.  Run the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 installation package **spPowerPivot.msi** on each server in the SharePoint farm. For more information, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-4.  In SharePoint 2013 Central Administration, configure the Excel Services service application to use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint mode server created in the previous step. For more information, see the “Configure Basic Analysis Services SharePoint Integration” section of [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+4.  In SharePoint 2013 Central Administration, configure the Excel Services service application to use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint mode server created in the previous step. For more information, see the "Configure Basic Analysis Services SharePoint Integration" section of [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ##  <a name="bkmk_backup_restore"></a>Backup, Copy, Restore the Databases  
- The “SharePoint database-attach upgrade” process is a sequence of steps to back up, copy, and restore [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] related content and service application databases to the SharePoint 2013 farm.  
+ The "SharePoint database-attach upgrade" process is a sequence of steps to back up, copy, and restore [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] related content and service application databases to the SharePoint 2013 farm.  
   
 1.  **Set Database to read-only:** In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], right-click the database name and click **Properties**. On the **Options** page, set the **Database read-Only** property to **True**.  
   
@@ -99,7 +99,7 @@ manager: kfile
   
 1.  In SharePoint Central Administration, click **Manage Service Applications**.  
   
-2.  Find the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] service application, for example “Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Service Application”, click the name of the service application and click **Properties** in the SharePoint ribbon.  
+2.  Find the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] service application, for example "Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Service Application", click the name of the service application and click **Properties** in the SharePoint ribbon.  
   
 3.  Update the database server name-instance and the database name. To the correct names for the database you backed up, copied, and restored. Once you click **Ok**, the service application database is upgraded. Errors will be in the ULS log.  
   

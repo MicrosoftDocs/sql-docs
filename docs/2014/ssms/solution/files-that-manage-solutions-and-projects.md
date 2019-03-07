@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], files"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - ".sqlsuo files"
   - "files [SQL Server Management Studio], projects"
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Files That Manage Solutions and Projects

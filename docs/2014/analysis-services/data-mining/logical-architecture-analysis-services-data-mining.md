@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], about mining structures"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "mining models [Analysis Services], about data mining models"
   - "architecture [Analysis Services]"
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Logical Architecture (Analysis Services - Data Mining)
   Data mining is a process that involves the interaction of multiple components.  
@@ -48,7 +45,7 @@ manager: "mblythe"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  A data mining structure is a logical data container that defines the data domain from which mining models are built. A single mining structure can support multiple mining models.  
   
- When you need to use the data in the data mining solution, Analysis Services reads the data from the source and generates a cache of aggregates and other information. By default this cache is persisted so that training data can be reused to support additional models. If you need to delete the cache, change the `CacheMode` property on the mining structure object to the value, `ClearAfterProcessing`. For more information, see [AMO Data Mining Classes](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ When you need to use the data in the data mining solution, Analysis Services reads the data from the source and generates a cache of aggregates and other information. By default this cache is persisted so that training data can be reused to support additional models. If you need to delete the cache, change the `CacheMode` property on the mining structure object to the value, `ClearAfterProcessing`. For more information, see [AMO Data Mining Classes](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] also provides the ability to separate your data into training and testing data sets, so that you can test your mining models on a representative, randomly selected set of data. The data is not actually stored separately; rather, case data in the structure cache is marked with a property that indicates whether that particular case is used for training or for testing. If the cache is deleted, that information cannot be retrieved.  
   

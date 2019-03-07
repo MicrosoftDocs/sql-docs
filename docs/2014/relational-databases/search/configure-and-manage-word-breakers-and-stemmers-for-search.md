@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "conjugating verbs [full-text search]"
   - "word breakers [full-text search]"
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: 88
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Configure and Manage Word Breakers and Stemmers for Search
@@ -31,7 +27,7 @@ manager: craigg
  Using language-specific word breakers enables the resulting terms to be more accurate for that language. Where there is a word breaker for the language family, but not for the specific sub-language, the major language is used. For example, the French word breaker is used to handle text that is French Canadian. If no word breaker is available for a particular language, the neutral word breaker is used. With the neutral word breaker, words are broken at neutral characters such as spaces and punctuation marks.  
   
 ##  <a name="register"></a> Registering Word Breakers  
- For the word breakers of a language to be used, they must be registered. For registered word breakers, associated linguistic resources—stemmers, noise words (stopwords), and thesaurus files—also become available to full-text indexing and querying operations. To view a list of the languages whose word breakers are currently registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+ For the word breakers of a language to be used, they must be registered. For registered word breakers, associated linguistic resources-stemmers, noise words (stopwords), and thesaurus files-also become available to full-text indexing and querying operations. To view a list of the languages whose word breakers are currently registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
  SELECT * FROM sys.fulltext_languages  
   

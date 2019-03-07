@@ -1,25 +1,19 @@
-﻿---
+---
 title: "Use the EVENTDATA Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "EVENTDATA function"
   - "DDL triggers, EVENTDATA function"
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the EVENTDATA Function
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +123,7 @@ GO
 > [!NOTE]  
 >  To return event data, we recommend that you use the XQuery **value()** method instead of the **query()** method. The **query()** method returns XML and ampersand-escaped carriage return and line-feed (CRLF) instances in the output, while the **value()** method renders CRLF instances invisible in the output.  
   
- A similar DDL trigger example is provided with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To obtain the example, locate the Database Triggers folder by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This folder is located under the **Programmability** folder of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Right-click **ddlDatabseTriggerLog** and select **Script Database Trigger as**. By default, DDL trigger **ddlDatabseTriggerLog** is disabled.  
+ A similar DDL trigger example is provided with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To obtain the example, locate the Database Triggers folder by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This folder is located under the **Programmability** folder of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Right-click **ddlDatabaseTriggerLog** and select **Script Database Trigger as**. By default, DDL trigger **ddlDatabaseTriggerLog** is disabled.  
   
 ## See Also  
  [DDL Events](../../relational-databases/triggers/ddl-events.md)   

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "17053 (Database Engine error)"
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

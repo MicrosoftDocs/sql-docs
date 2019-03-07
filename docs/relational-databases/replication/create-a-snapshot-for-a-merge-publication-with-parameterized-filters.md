@@ -1,51 +1,56 @@
 ---
 title: "Create a Snapshot for a Merge Publication with Parameterized Filters | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/03/2016"
+ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameterized filters [SQL Server replication], snapshots"
   - "snapshots [SQL Server replication], parameterized filters and"
   - "filters [SQL Server replication], parameterized"
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
-caps.latest.revision: 45
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
 # Create a Snapshot for a Merge Publication with Parameterized Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to create a snapshot for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+This topic describes how to create a snapshot for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+
+When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. First, a schema snapshot is created that contains all objects required by replication and the schema of the published objects, but not the data. Then, each subscription is initialized with a snapshot that includes the objects and schema from the schema snapshot and the data that belongs to the subscription's partition. If more than one subscription receives a given partition (in other words, they receive the same schema and data), the snapshot for that partition is created only once; multiple subscriptions are initialized from the same snapshot. For more information about parameterized row filters, see [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- **In This Topic**  
+ You can create snapshots for publications with parameterized filters in one of three ways:  
   
--   **Before you begin:**  
+-   **Pre-generate snapshots for each partition.** Using this option allows you to control when snapshots are generated.    
+     You can also choose to have the snapshots refreshed on a schedule. New Subscribers that subscribe to a partition for which a snapshot has been created will receive an up-to-date snapshot.   
+-   **Allow Subscribers to request snapshot generation** and application the first time they synchronize. Using this option allows new Subscribers to synchronize without requiring intervention from an administrator ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must be running at the Publisher to allow the snapshot to be generated).  
   
-     [Recommendations](#Recommendations)  
+    > [!NOTE]  
+    >  If the filtering for one or more articles in the publication yields non-overlapping partitions that are unique for each subscription, metadata is cleaned up whenever the Merge Agent runs. This means that the partitioned snapshot expires more quickly. When using this option, you should consider allowing Subscribers to initiate snapshot generation and delivery. For more information about filtering options, see [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
--   **To create a snapshot for a merge publication with parameterized filters, using:**  
+-   **Manually generate a snapshot for each Subscriber with the Snapshot Agent**. The Subscriber must then provide the snapshot location to the Merge Agent, so it can retrieve and apply the correct snapshot.  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+    > [!NOTE]  
+    >  This option is supported for backward compatibility and does not allow FTP snapshot shares.  
   
-     [Transact-SQL](#TsqlProcedure)  
+ The most flexible approach is to use a combination of pre-generated and Subscriber-requested snapshot options: snapshots are pre-generated and refreshed on a scheduled basis (usually during off-peak times), but a Subscriber can generate its own snapshot if a subscription that requires a new partition is created.  
   
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+ Consider [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], which has a mobile work force that delivers inventory to individual stores. Each sales person receives a subscription based on their login, which retrieves the data for the stores they service. The administrator chooses to pre-generate snapshots and refresh them every Sunday. Occasionally a new user is added to the system and needs data for a partition that does not have a snapshot available. The administrator also chooses to allow Subscriber-initiated snapshots to avoid the situation where a Subscriber cannot subscribe to the publication because the snapshot is not yet available. When the new Subscriber connects for the first time, the snapshot is generated for the specified partition and applied at the Subscriber ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must be running at the Publisher to allow the snapshot to be generated).  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+ To create a snapshot for a publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-###  <a name="Recommendations"></a> Recommendations  
+## Security Settings for the Snapshot Agent  
+ The Snapshot Agent creates snapshots for each partition. For pre-generated snapshots and snapshots requested by a Subscriber, the agent runs and makes connections under the credentials that were specified when the snapshot agent job for the publication was created (the job is created by the New Publication Wizard or **sp_addpublication_snapshot**). To change the credentials, use **sp_changedynamicsnapshot_job**. For more information, see [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
+
+  
+##  <a name="Recommendations"></a> Recommendations  
   
 -   When generating a snapshot for a merge publication using parameterized filters, you must first generate a standard (schema) snapshot that contains all of the published data and Subscriber metadata for the subscription. For more information, see [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). After you have created the schema snapshot, you can generate the snapshot that contains the Subscriber-specific partition of the published data.  
   
--   If the filtering for one or more articles in the publication yields non-overlapping partitions that are unique for each subscription, metadata is cleaned up whenever the Merge Agent runs. This means that the partitioned snapshot expires more quickly. When using this option, you should consider allowing Subscribers to initiate snapshot generation and delivery. For more information about filtering options, see the "Setting 'partition options'" section of [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   If the filtering for one or more articles in the publication yields non-overlapping partitions that are unique for each subscription, metadata is cleaned up whenever the Merge Agent runs. This means that the partitioned snapshot expires more quickly. When using this option, you should consider allowing Subscribers to initiate snapshot generation and delivery. 
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Generate snapshots for partitions on the **Data Partitions** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). You can allow Subscribers to initiate snapshot generation and delivery and/or generate snapshots.  
@@ -274,7 +279,7 @@ PAUSE
 >  When filtering for an article yields non-overlapping partitions that are unique for each subscription (by specifying a value of F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription for P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption when creating a merge article), metadata is cleaned up whenever the Merge Agent runs. This means that the partitioned snapshot expires more quickly. When you use this option, you should consider allowing Subscribers to request snapshot generation. For more information, see the section Using the Appropriate Filtering Options in the topic [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To create a publication that allows Subscribers to initiate snapshot generation and delivery  
   
@@ -412,7 +417,6 @@ PAUSE
 ## See Also  
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

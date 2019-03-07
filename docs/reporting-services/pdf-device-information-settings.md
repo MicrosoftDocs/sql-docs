@@ -1,25 +1,18 @@
 ---
 title: "PDF Device Information Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2018"
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "device information settings [Reporting Services], PDF rendering"
   - "PDF [Reporting Services]"
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: 41
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # PDF Device Information Settings
   The following table lists the device information settings for rendering reports in PDF format.  

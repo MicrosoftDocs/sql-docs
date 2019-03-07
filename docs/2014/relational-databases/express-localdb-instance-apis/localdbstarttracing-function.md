@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "LocalDBStartTracing"
@@ -17,9 +13,8 @@ api_location:
 topic_type: 
   - "apiref"
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # LocalDBStartTracing Function

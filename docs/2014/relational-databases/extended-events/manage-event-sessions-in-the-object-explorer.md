@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Manage Event Sessions in the Object Explorer
@@ -94,7 +90,7 @@ STATE = STOP
   
 4.  Expand the **Template** drop down box.  
   
-5.  Click **\<File From …>Open** and browse for the session (XML file) you want to import.  
+5.  Click **\<File From ...>Open** and browse for the session (XML file) you want to import.  
   
  The session appears under the **Sessions** node. By default, the session is not started.  
   

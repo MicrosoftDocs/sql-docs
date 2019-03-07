@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ADO.NET [CLR integration]"
   - "UDTs [CLR integration], ADO.NET"
   - "user-defined types [CLR integration], ADO.NET"
 ms.assetid: 4b0d876c-8066-490e-8e18-327c0e942b19
-caps.latest.revision: 12
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

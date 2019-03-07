@@ -1,23 +1,16 @@
 ---
 title: "Configure the web portal | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "the web portal [Reporting Services], configuring"
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the web portal
 
@@ -29,7 +22,7 @@ To use the web portal, you must satisfy the following prerequisites:
 
 - You must have a minimally configured report server. For more information about minimally configuring a report server, see [Configure a Report Server](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
 
-- Your report server must run in native mode. You cannot use the web portal with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a ‘migration’. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- Your report server must run in native mode. You cannot use the web portal with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a 'migration'. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 - You must also have Internet Explorer 11 or later with scripting enabled. For more information, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
@@ -37,7 +30,7 @@ To use the web portal, you must satisfy the following prerequisites:
 
 The web portal is a Web application that users access in a Web browser. Minimally, you must define the URL used to open the application in a browser window. The URL consists of a host name, port, and virtual directory. Default values for this URL include the host name and port values that you defined for the Report Server Web service URL, plus the **reports** virtual directory name. If you have a named instance, the virtual directory is **reports_instance**, where **instance** is the name of your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance.
 
-By default, the the web portal URL consists of a unique virtual directory name, plus the port and host name that is defined for the Report Server Web service that runs in the same instance. In most cases, the host name is the network name of the report server computer, but it can also be an IP address or host header that resolves the computer. To configure the web portal to use the default URL, use the **Web Portal URL** page in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.
+By default, the web portal URL consists of a unique virtual directory name, plus the port and host name that is defined for the Report Server Web service that runs in the same instance. In most cases, the host name is the network name of the report server computer, but it can also be an IP address or host header that resolves the computer. To configure the web portal to use the default URL, use the **Web Portal URL** page in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.
 
 > [!TIP]
 > If you try to access the web portal on a remote computer and you receive connection error messages in your browser, a common cause is Firewall settings. For more information, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).
@@ -82,7 +75,7 @@ You can create a custom brand package to alter the colors used for the web porta
 
 2. Open Internet Explorer.
 
-3. Enter the web portal URL. By default, it is http://\<**your-server-name**>/reports, but if you installed Reporting Services as a named instance, the default URL will be http://\<**your-server-name**>/reports\<**_instancename**>.
+3. Enter the web portal URL. By default, it is https://\<**your-server-name**>/reports, but if you installed Reporting Services as a named instance, the default URL will be https://\<**your-server-name**>/reports\<**_instancename**>.
 
 4. Select **Site Settings**.
 
@@ -101,4 +94,4 @@ You can create a custom brand package to alter the colors used for the web porta
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configure a Native Mode Report Server for Local Administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
- More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

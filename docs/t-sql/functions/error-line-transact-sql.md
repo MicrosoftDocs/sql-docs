@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ERROR_LINE"
@@ -22,15 +20,14 @@ helpviewer_keywords:
   - "ERROR_LINE function"
   - "CATCH block"
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-This function returns the line number of occurrence of an error that caused the CATCH block of a TRY…CATCH construct to execute.  
+This function returns the line number of occurrence of an error that caused the CATCH block of a TRY...CATCH construct to execute.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +52,7 @@ A call to `ERROR_LINE` can happen anywhere within the scope of a CATCH block.
   
 `ERROR_LINE` returns the line number at which the error occurred. This happens regardless of the location of the `ERROR_LINE` call within the scope of the CATCH block, and regardless of the number of calls to `ERROR_LINE`. This contrasts with functions, such as @@ERROR. @@ERROR returns an error number in the statement immediately following the one that causes an error, or in the first statement of a CATCH block.  
   
-In nested CATCH blocks, `ERROR_LINE` returns the error line number specific to the scope of the CATCH block in which it is referenced. For example, the CATCH block of a TRY…CATCH construct could contain a nested TRY…CATCH construct. Within the nested CATCH block, `ERROR_LINE` returns the line number for the error that invoked the nested CATCH block. If `ERROR_LINE` runs in the outer CATCH block, it returns the line number for the error that invoked that specific CATCH block.  
+In nested CATCH blocks, `ERROR_LINE` returns the error line number specific to the scope of the CATCH block in which it is referenced. For example, the CATCH block of a TRY...CATCH construct could contain a nested TRY...CATCH construct. Within the nested CATCH block, `ERROR_LINE` returns the line number for the error that invoked the nested CATCH block. If `ERROR_LINE` runs in the outer CATCH block, it returns the line number for the error that invoked that specific CATCH block.  
   
 ## Examples  
   

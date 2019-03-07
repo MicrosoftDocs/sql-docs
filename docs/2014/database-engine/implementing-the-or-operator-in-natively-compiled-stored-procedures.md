@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
-caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Implementing the OR Operator in Natively Compiled Stored Procedures
@@ -44,7 +40,7 @@ manager: craigg
   
 5.  Use the content of the memory-optimized table variable as the result from the query.  
   
- The following sample uses tables from the AdventureWorks2012 database that were updated for [!INCLUDE[hek_2](../includes/hek-2-md.md)]. To download the files for this sample, goto [AdventureWorks Databases – 2012, 2008R2 and 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). To apply [!INCLUDE[hek_2](../includes/hek-2-md.md)] code sample to AdventureWorks2012, go to [SQL Server 2014 In-Memory OLTP Sample](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ The following sample uses tables from the AdventureWorks2012 database that were updated for [!INCLUDE[hek_2](../includes/hek-2-md.md)]. To download the files for this sample, goto [AdventureWorks Databases - 2012, 2008R2 and 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). To apply [!INCLUDE[hek_2](../includes/hek-2-md.md)] code sample to AdventureWorks2012, go to [SQL Server 2014 In-Memory OLTP Sample](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Add the following stored procedure to the database. We will convert this stored procedure to use native compilation.  
   
@@ -159,7 +155,7 @@ GO
   
 5.  Use the content of the memory-optimized table variable as the result from the query.  
   
- The following sample uses tables from the AdventureWorks2012 database that were updated for [!INCLUDE[hek_2](../includes/hek-2-md.md)]. To download the files for this sample, goto [AdventureWorks Databases – 2012, 2008R2 and 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). To apply [!INCLUDE[hek_2](../includes/hek-2-md.md)] code sample to AdventureWorks2012, go to [SQL Server 2014 In-Memory OLTP Sample](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ The following sample uses tables from the AdventureWorks2012 database that were updated for [!INCLUDE[hek_2](../includes/hek-2-md.md)]. To download the files for this sample, goto [AdventureWorks Databases - 2012, 2008R2 and 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). To apply [!INCLUDE[hek_2](../includes/hek-2-md.md)] code sample to AdventureWorks2012, go to [SQL Server 2014 In-Memory OLTP Sample](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Add the following stored procedure to the database. We will convert this stored procedure to use native compilation. This sample uses INNER JOIN conditions.  
   

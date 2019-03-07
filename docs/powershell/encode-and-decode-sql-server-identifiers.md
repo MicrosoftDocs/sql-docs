@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: scripting
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -65,7 +62,7 @@ Set-Location (Encode-SqlName "Table:Test")
  Use the **Decode-Sqlname** cmdlet to replace the hexadecimal encodings with the characters represented by the encoding.  
   
 ### Examples (Decoding)  
- This example returns “Table:Test”:  
+ This example returns "Table:Test":  
   
 ```  
 Decode-SqlName "Table%3ATest"  

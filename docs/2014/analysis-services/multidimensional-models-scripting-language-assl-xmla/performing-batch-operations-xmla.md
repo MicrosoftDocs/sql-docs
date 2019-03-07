@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "multiple projects"
@@ -20,35 +18,34 @@ helpviewer_keywords:
   - "batches [XML for Analysis]"
   - "nontransactional batches"
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Performing Batch Operations (XMLA)
-  You can use the [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) command in XML for Analysis (XMLA) to run multiple XMLA commands using a single XMLA [Execute](../xmla/xml-elements-methods-execute.md) method. You can run multiple commands contained in the `Batch` command either as a single transaction or in individual transactions for each command, in serial or in parallel. You can also specify out-of-line bindings and other properties in the `Batch` command for processing multiple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects.  
+  You can use the [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) command in XML for Analysis (XMLA) to run multiple XMLA commands using a single XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) method. You can run multiple commands contained in the `Batch` command either as a single transaction or in individual transactions for each command, in serial or in parallel. You can also specify out-of-line bindings and other properties in the `Batch` command for processing multiple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects.  
   
 ## Running Transactional and Nontransactional Batch Commands  
  The `Batch` command executes commands in one of two ways:  
   
  **Transactional**  
- If the `Transaction` attribute of the `Batch` command is set to true, the `Batch` command run commands all of the commands contained by the `Batch` command in a single transaction—a *transactional* batch.  
+ If the `Transaction` attribute of the `Batch` command is set to true, the `Batch` command run commands all of the commands contained by the `Batch` command in a single transaction-a *transactional* batch.  
   
  If any command fails in a transactional batch, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rolls back any command in the `Batch` command that ran before the command that failed and the `Batch` command immediately ends. Any commands in the `Batch` command that have not yet run are not executed. After the `Batch` command ends, the `Batch` command reports any errors that occurred for the failed command.  
   
  **Nontransactional**  
- If the `Transaction` attribute is set to false, the `Batch` command runs each command contained by the `Batch` command in a separate transaction—a *nontransactional* batch. If any command fails in a nontransactional batch, the `Batch` command continues to run commands after the command which failed. After the `Batch` command tries to run all the commands that the `Batch` command contains, the `Batch` command reports any errors that occurred.  
+ If the `Transaction` attribute is set to false, the `Batch` command runs each command contained by the `Batch` command in a separate transaction-a *nontransactional* batch. If any command fails in a nontransactional batch, the `Batch` command continues to run commands after the command which failed. After the `Batch` command tries to run all the commands that the `Batch` command contains, the `Batch` command reports any errors that occurred.  
   
  All results returned by commands contained in a `Batch` command are returned in the same order in which the commands are contained in the `Batch` command. The results returned by a `Batch` command vary based on whether the `Batch` command is transactional or nontransactional.  
   
 > [!NOTE]  
->  If a `Batch` command contains a command that does not return output, such as the [Lock](../xmla/xml-elements-commands/lock-element-xmla.md) command, and that command successfully runs, the `Batch` command returns an empty [root](../xmla/xml-elements-properties/root-element-xmla.md) element within the results element. The empty `root` element ensures that each command contained in a `Batch` command can be matched with the appropriate `root` element for that command's results.  
+>  If a `Batch` command contains a command that does not return output, such as the [Lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) command, and that command successfully runs, the `Batch` command returns an empty [root](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla) element within the results element. The empty `root` element ensures that each command contained in a `Batch` command can be matched with the appropriate `root` element for that command's results.  
   
 ### Returning Results from Transactional Batch Results  
- Results from commands run within a transactional batch are not returned until the entire `Batch` command is completed. The results are not returned after each command runs because any command that fails within a transactional batch would cause the entire `Batch` command and all containing commands to be rolled back. If all commands start and run successfully, the [return](../xmla/xml-elements-properties/return-element-xmla.md) element of the [ExecuteResponse](../xmla/xml-elements-objects-executeresponse.md) element returned by the `Execute` method for the `Batch` command contains one [results](../xmla/xml-elements-properties/results-element-xmla.md) element, which in turn contains one `root` element for each successfully run command contained in the `Batch` command. If any command in the `Batch` command cannot be started or fails to complete, the `Execute` method returns a SOAP fault for the `Batch` command that contains the error of the command that failed.  
+ Results from commands run within a transactional batch are not returned until the entire `Batch` command is completed. The results are not returned after each command runs because any command that fails within a transactional batch would cause the entire `Batch` command and all containing commands to be rolled back. If all commands start and run successfully, the [return](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/return-element-xmla) element of the [ExecuteResponse](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects-executeresponse) element returned by the `Execute` method for the `Batch` command contains one [results](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/results-element-xmla) element, which in turn contains one `root` element for each successfully run command contained in the `Batch` command. If any command in the `Batch` command cannot be started or fails to complete, the `Execute` method returns a SOAP fault for the `Batch` command that contains the error of the command that failed.  
   
 ### Returning Results from Nontransactional Batch Results  
- Results from commands run within a nontransactional batch are returned in the order in which the commands are contained within the `Batch` command and as they are returned by each command. If no command contained in the `Batch` command can be successfully started, the `Execute` method returns a SOAP fault that contains an error for the `Batch` command. If at least one command is successfully started, the `return` element of the `ExecuteResponse` element returned by the `Execute` method for the `Batch` command contains one `results` element, which in turn contains one `root` element for each command contained in the `Batch` command. If one or more commands in a nontransactional batch cannot be started or fails to complete, the `root` element for that failed command contains an [error](../xmla/xml-elements-properties/error-element-xmla.md) element describing the error.  
+ Results from commands run within a nontransactional batch are returned in the order in which the commands are contained within the `Batch` command and as they are returned by each command. If no command contained in the `Batch` command can be successfully started, the `Execute` method returns a SOAP fault that contains an error for the `Batch` command. If at least one command is successfully started, the `return` element of the `ExecuteResponse` element returned by the `Execute` method for the `Batch` command contains one `results` element, which in turn contains one `root` element for each command contained in the `Batch` command. If one or more commands in a nontransactional batch cannot be started or fails to complete, the `root` element for that failed command contains an [error](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla) element describing the error.  
   
 > [!NOTE]  
 >  As long as at least one command in a nontransactional batch can be started, the nontransactional batch is considered to have successfully run, even if every command contained in the nontransactional batch returns an error in the results of the `Batch` command.  
@@ -56,7 +53,7 @@ manager: "mblythe"
 ## Using Serial and Parallel Execution  
  You can use the `Batch` command to run included commands in serial or in parallel. When the commands are run in serial, the next command included in the `Batch` command cannot start until the currently running command in the `Batch` command is completed. When the commands are run in parallel, multiple commands can be executed simultaneously by the `Batch` command.  
   
- To run commands in parallel, you add the commands to be run in parallel to the [Parallel](../xmla/xml-elements-properties/parallel-element-xmla.md) property of the `Batch` command. Currently, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can run only contiguous, sequential [Process](../xmla/xml-elements-commands/process-element-xmla.md) commands in parallel. Any other XMLA command, such as [Create](../xmla/xml-elements-commands/create-element-xmla.md) or [Alter](../xmla/xml-elements-commands/alter-element-xmla.md), included in the `Parallel` property is run serially.  
+ To run commands in parallel, you add the commands to be run in parallel to the [Parallel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/parallel-element-xmla) property of the `Batch` command. Currently, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can run only contiguous, sequential [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) commands in parallel. Any other XMLA command, such as [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) or [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla), included in the `Parallel` property is run serially.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tries to run all `Process` commands included in the `Parallel` property in parallel, but cannot guarantee that all included `Process` commands can be run in parallel. The instance analyzes each `Process` command and, if the instance determines that the command cannot be run in parallel, the `Process` command is run in serial.  
   
@@ -107,20 +104,20 @@ manager: "mblythe"
   
 -   The `ProcessAffectedObjects` attribute of the `Batch` command indicates whether the instance should also process any object that requires reprocessing as a result of a `Process` command included in the `Batch` command processing a specified object.  
   
--   The [Bindings](../xmla/xml-elements-properties/bindings-element-xmla.md) property contains a collection of out-of-line bindings used by all of the `Process` commands in the `Batch` command.  
+-   The [Bindings](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla) property contains a collection of out-of-line bindings used by all of the `Process` commands in the `Batch` command.  
   
--   The [DataSource](../xmla/xml-elements-properties/source-element-xmla.md) property contains an out-of-line binding for a data source used by all of the `Process` commands in the `Batch` command.  
+-   The [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) property contains an out-of-line binding for a data source used by all of the `Process` commands in the `Batch` command.  
   
--   The [DataSourceView](../xmla/xml-elements-properties/datasourceview-element-xmla.md) property contains an out-of-line binding for a data source view used by all of the `Process` commands in the `Batch` command.  
+-   The [DataSourceView](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla) property contains an out-of-line binding for a data source view used by all of the `Process` commands in the `Batch` command.  
   
--   The [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) property specifies the way in which the `Batch` command handles errors encountered by all `Process` commands contained in the `Batch` command.  
+-   The [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) property specifies the way in which the `Batch` command handles errors encountered by all `Process` commands contained in the `Batch` command.  
   
     > [!IMPORTANT]  
     >  A `Process` command cannot include the `Bindings`, `DataSource`, `DataSourceView`, or `ErrorConfiguration` properties, if the `Process` command is contained in a `Batch` command. If you must specify these properties for a `Process` command, provide the necessary information in the corresponding properties of the `Batch` command that contains the `Process` command.  
   
 ## See Also  
- [Batch Element &#40;XMLA&#41;](../xmla/xml-elements-commands/batch-element-xmla.md)   
- [Process Element &#40;XMLA&#41;](../xmla/xml-elements-commands/process-element-xmla.md)   
+ [Batch Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)   
+ [Process Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)   
  [Multidimensional Model Object Processing](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Developing with XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

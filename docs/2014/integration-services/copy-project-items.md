@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Integration Services], copying"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "copying packages"
   - "data source views [Integration Services], copying"
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Copy Project Items

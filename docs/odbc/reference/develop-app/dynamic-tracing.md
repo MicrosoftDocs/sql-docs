@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tracing options [ODBC], dynamic"
   - "dynamic tracing [ODBC]"
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

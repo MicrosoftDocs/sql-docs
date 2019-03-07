@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Dimension Designer"
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Dimension Designer (Analysis Services - Multidimensional Data)
   Use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to browse the data that the dimension contains, and to modify various properties of an existing dimension: attributes, hierarchies, levels, attribute relationships, and translations.  
@@ -26,7 +23,7 @@ manager: "mblythe"
   
     -   Right-click a dimension and then click **Open** or **View Designer**.  
   
-         —or—  
+         -or-  
   
     -   Double-click a dimension.  
   

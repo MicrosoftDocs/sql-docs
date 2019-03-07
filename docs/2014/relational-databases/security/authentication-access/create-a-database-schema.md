@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.schemas.general.f1"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "database schemas"
   - "schemas [SQL Server], creating"
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
-caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Database Schema
@@ -72,7 +68,7 @@ manager: craigg
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### Additional Options  
- The **Schema– New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  
+ The **Schema- New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  
   
 -   The **Permissions** page lists all possible securables and the permissions on those securables that can be granted to the login.  
   

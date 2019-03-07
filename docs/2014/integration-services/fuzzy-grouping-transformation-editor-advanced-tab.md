@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fuzzygroupingtransformation.advanced.f1"
 helpviewer_keywords: 
   - "Fuzzy Grouping Transformation Editor"
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Fuzzy Grouping Transformation Editor (Advanced Tab)

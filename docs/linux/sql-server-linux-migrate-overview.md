@@ -5,10 +5,8 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: "sql-linux"
@@ -17,10 +15,10 @@ ms.custom: "sql-linux"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-You can migrate your databases and data to SQL Server 2017 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
+You can migrate your databases and data to SQL Server running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
 
 ## Migrate from SQL Server on Windows
-If you want to migrate SQL Server databases on Windows to SQL Server 2017 on Linux, the recommended technique is to use SQL Server backup and restore.
+If you want to migrate SQL Server databases on Windows to SQL Server on Linux, the recommended technique is to use SQL Server backup and restore.
 
 1. Create a backup of the database on the Windows machine.
 2. Transfer the backup file to the target SQL Server Linux machine.
@@ -35,7 +33,7 @@ It is also possible to export your database to a BACPAC file (a compressed file 
 - [Export and import a database with SSMS or SqlPackage.exe](sql-server-linux-migrate-ssms.md)
 
 ## Migrate from other database servers
-You can migrate databases on other database systems to SQL Server 2017 on Linux. This includes Microsoft Access, DB2, MySQL, Oracle, and Sybase databases. In this scenario, use the SQL Server Management Assistant (SSMA) to automate the migration to SQL Server on Linux. For more information, see [Use SSMA to migrate databases to SQL Server on Linux](sql-server-linux-migrate-ssma.md).  
+You can migrate databases on other database systems to SQL Server on Linux. This includes Microsoft Access, DB2, MySQL, Oracle, and Sybase databases. In this scenario, use the SQL Server Management Assistant (SSMA) to automate the migration to SQL Server on Linux. For more information, see [Use SSMA to migrate databases to SQL Server on Linux](sql-server-linux-migrate-ssma.md).  
 
 ## Migrate structured data
 There are also techniques for importing raw data. You might have structured data files that were exported from other databases or data sources. In this case, you can use the bcp tool to bulk insert the data. Or you can run SQL Server Integration Services on Windows to import the data into a SQL Server database on Linux. SQL Server Integration Services enables you to run more complex transformations on the data during the import. 

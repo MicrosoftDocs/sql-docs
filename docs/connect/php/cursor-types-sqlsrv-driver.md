@@ -1,16 +1,13 @@
 ---
 title: "Cursor Types (SQLSRV Driver) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -187,7 +184,7 @@ echo "Employee ID = $EmployeeID \n";
 ?>  
 ```  
   
-The following sample shows a client-side cursor using [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+The following sample shows a client-side cursor using [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) and a different client buffer size.
   
 ```  
 <?php  
@@ -201,7 +198,7 @@ if ( $conn === false ) {
 }  
   
 $tsql = "select * from HumanResources.Employee";  
-$stmt = sqlsrv_prepare( $conn, $tsql, array(), array("Scrollable"=>SQLSRV_CURSOR_CLIENT_BUFFERED));  
+$stmt = sqlsrv_prepare( $conn, $tsql, array(), array("Scrollable" => SQLSRV_CURSOR_CLIENT_BUFFERED, "ClientBufferMaxKBSize" => 51200));
   
 if (! $stmt ) {  
    echo "Statement could not be prepared.\n";  

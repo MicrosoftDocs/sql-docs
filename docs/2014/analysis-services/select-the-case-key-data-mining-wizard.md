@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.selectcasekey.f1"
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select the Case Key (Data Mining Wizard)
   Use the **Select the Case Key** page to select the attribute of the source cube dimension that will be the key of the mining structure. This attribute must be in a hierarchy or have its attribute hierarchy enabled.  

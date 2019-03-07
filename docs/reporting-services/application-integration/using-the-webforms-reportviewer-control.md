@@ -1,26 +1,17 @@
 ---
 title: "Using the WebForms ReportViewer Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/12/2017"
+ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "application-integration"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: application-integration
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "ReportViewer controls"
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-caps.latest.revision: 25
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Using the WebForms ReportViewer Control
   To view reports deployed to a report server or reports that exist on the local file system, you can use the WebForms ReportViewer control to render them in a Web application.  
@@ -87,7 +78,7 @@ protected void Page_Init(object sender, EventArgs e)
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =  
-            new Uri("http://<Server Name>/reportserver");  
+            new Uri("https://<Server Name>/reportserver");  
         serverReport.ReportPath =  
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -123,7 +114,7 @@ Partial Class _Default
   
             'Set the report server URL and report path  
             serverReport.ReportServerUrl = _  
-                New Uri("http://<Server Name>/reportserver")  
+                New Uri("https://<Server Name>/reportserver")  
             serverReport.ReportPath = _  
                 "/AdventureWorks Sample Reports/Sales Order Detail"  
   

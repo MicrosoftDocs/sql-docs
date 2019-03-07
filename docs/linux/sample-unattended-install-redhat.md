@@ -1,15 +1,14 @@
 ---
-title: Unattended install for SQL Server on Red Hat Enterprise Linux | Microsoft Docs
+title: Unattended install for SQL Server on Red Hat Enterprise Linux
+titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on Red Hat Enterprise Linux
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux
@@ -79,6 +78,7 @@ sudo ACCEPT_EULA=Y yum install -y mssql-tools unixODBC-devel
 echo Adding SQL Server tools to your path...
 echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
 
 # Optional SQL Server Agent installation:
 if [ ! -z $SQL_INSTALL_AGENT ]

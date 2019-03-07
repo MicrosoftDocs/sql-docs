@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.termlookup.advanced.f1"
 helpviewer_keywords: 
   - "Term Lookup Transformation Editor"
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Term Lookup Transformation Editor (Advanced Tab)

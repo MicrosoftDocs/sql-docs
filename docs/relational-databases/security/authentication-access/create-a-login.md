@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Create a Login | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.login.status.f1"
@@ -22,11 +20,10 @@ helpviewer_keywords:
   - "Create login [SQL Server]"
   - "SQL Server logins"
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
-author: CarlRabeler
-ms.author: carlraba
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Login
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +37,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  As a security principal, permissions can be granted to logins. The scope of a login is the whole [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login. Permissions that have the scope of the whole instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (for example, the **CREATE ENDPOINT** permission) can be granted to a login.  
   
-> **NOTE:** When a login connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] the identify is validated at the master database. Use contained database users to authenticate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] connections at the database level. When using contained database users a login is not necessary. A contained database is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (and the master database) that hosts the database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports contained database users for both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication. When using [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine contained database users with database level firewall rules. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **NOTE:** When a login connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] the identify is validated at the master database. Use contained database users to authenticate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] connections at the database level. When using contained database users a login is not necessary. A contained database is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (and the master database) that hosts the database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports contained database users for both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication. When using [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine contained database users with database level firewall rules. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Security  
 
@@ -53,19 +50,19 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 1.  In Object Explorer, expand the folder of the server instance in which you want to create the new login.  
   
-2.  Right-click the **Security** folder, point to **New**, and select **Login…**.  
+2.  Right-click the **Security** folder, point to **New**, and select **Login...**.  
   
-3.  In the **Login – New** dialog box, on the **General** page, enter the name of a user in the **Login name** box. Alternately, click **Search…** to open the **Select User or Group** dialog box.  
+3.  In the **Login - New** dialog box, on the **General** page, enter the name of a user in the **Login name** box. Alternately, click **Search...** to open the **Select User or Group** dialog box.  
   
-     If you click **Search…**:  
+     If you click **Search...**:  
   
-    1.  Under **Select this object type**, click **Object Types…** to open the **Object Types** dialog box and select any or all of the following: **Built-in security principals**, **Groups**, and **Users**. **Built-in security principals** and **Users** are selected by default. When finished, click **OK**.  
+    1.  Under **Select this object type**, click **Object Types...** to open the **Object Types** dialog box and select any or all of the following: **Built-in security principals**, **Groups**, and **Users**. **Built-in security principals** and **Users** are selected by default. When finished, click **OK**.  
   
-    2.  Under **From this location**, click **Locations…** to open the **Locations** dialog box and select one of the available server locations. When finished, click **OK**.  
+    2.  Under **From this location**, click **Locations...** to open the **Locations** dialog box and select one of the available server locations. When finished, click **OK**.  
   
-    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Click **Advanced…** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Click **Advanced...** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Click **OK**.  
   
@@ -96,7 +93,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### Additional Options  
- The **Login – New** dialog box also offers options on four additional pages: **Server Roles**, **User Mapping**, **Securables**, and **Status**.  
+ The **Login - New** dialog box also offers options on four additional pages: **Server Roles**, **User Mapping**, **Securables**, and **Status**.  
   
 ### Server Roles  
  The **Server Roles** page lists all possible roles that can be assigned to the new login. The following options are available:  
@@ -132,7 +129,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  The **User Mapping** page lists all possible databases and the database role memberships on those databases that can be applied to the login. The databases selected determine the role memberships that are available for the login. The following options are available on this page:  
   
  **Users mapped to this login**  
- Select the databases that this login can access. When you select a database, its valid database roles are displayed in the **Database role membership for:** *database_name* pane.  
+ Select the databases that this login can access. When you select a database, its valid database roles are displayed in the **Database role membership for:** _database_name_ pane.  
   
  **Map**  
  Allow the login to access the databases listed below.  
@@ -146,10 +143,10 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  **Default Schema**  
  Specifies the default schema of the user. When a user is first created, its default schema is **dbo**. It is possible to specify a default schema that does not yet exist. You cannot specify a default schema for a user that is mapped to a Windows group, a certificate, or an asymmetric key.  
   
- **Guest account enabled for:**  *database_name*  
+ **Guest account enabled for:**  _database_name_  
  Read-only attribute indicating whether the Guest account is enabled on the selected database. Use the **Status** page of the **Login Properties** dialog box of the Guest account to enable or disable the Guest account.  
   
- **Database role membership for:**  *database_name*  
+ **Database role membership for:**  _database_name_  
  Select the roles for the user in the specified database. All users are members of the **public** role in every database and cannot be removed. For more information about database roles, see [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### Securables  
@@ -162,23 +159,23 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 1.  Click **Search**.  
   
-2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects…**, **All objects of the types…**, or **The server***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server**_server\_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **NOTE:** Selecting **The server***server_name* automatically fills the upper grid with all of that servers' securable objects.  
+    > **NOTE:** Selecting **The server**_server\_name_ automatically fills the upper grid with all of that servers' securable objects.  
   
-3.  If you select **Specific objects…**:  
+3.  If you select **Specific objects...**:  
   
-    1.  In the **Select Objects** dialog box, under **Select these object types**, click **Object Types…**.  
+    1.  In the **Select Objects** dialog box, under **Select these object types**, click **Object Types...**.  
   
     2.  In the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Under **Enter the object names to select (examples)**, click **Browse…**.  
+    3.  Under **Enter the object names to select (examples)**, click **Browse...**.  
   
     4.  In the **Browse for Objects** dialog box, select any of the available objects of the type that you selected in the **Select Object Types** dialog box, and then click **OK**.  
   
     5.  In the **Select Objects** dialog box, click **OK**.  
   
-4.  If you select **All objects of the types…**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  If you select **All objects of the types...**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Name**  
  The name of each principal or securable that is added to the grid.  

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.tracefileproperties.eventsselection.f1"
 helpviewer_keywords: 
   - "Trace File Properties dialog box"
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Trace File Properties (Events Selection Tab)

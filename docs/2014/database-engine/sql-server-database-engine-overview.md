@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server]"
   - "SQL Server Database Engine"
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
-caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SQL Server Database Engine
@@ -39,6 +35,6 @@ manager: craigg
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [XQuery Reference](/sql/xquery/xquery-language-reference-sql-server)  
   
 ## See Also  
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

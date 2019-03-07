@@ -5,9 +5,7 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], troubleshooting"
   - "troubleshooting [SQL Server], database mirroring"
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: 69
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -36,7 +33,7 @@ manager: craigg
 |[Network access](#NetworkAccess)|Documents the requirement that each the server instance be able to access the ports of the other server instance or instances over TCP.|  
 |[Mirror database preparation](#MirrorDbPrep)|Summarizes the requirements for preparing the mirror database to enable mirroring to start.|  
 |[Failed create-file operation](#FailedCreateFileOp)|Describes how to respond to a failed create-file operation.|  
-|[Starting mirroring by Using Transact-SQL](#StartDbm)|Describes the required order for ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** statements.|  
+|[Starting mirroring by Using Transact-SQL](#StartDbm)|Describes the required order for ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** statements.|  
 |[Cross-Database Transactions](#CrossDbTxns)|An automatic failover could lead to automatic and possibly incorrect resolution of in-doubt transactions. For this reason database mirroring does not support cross-database transactions.|  
   
 ##  <a name="Accounts"></a> Accounts  
@@ -141,7 +138,7 @@ manager: craigg
  For more information, see [Removing Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md), or [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Starting mirroring by Using Transact-SQL  
- The order in which the ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** statements are issued is very important.  
+ The order in which the ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** statements are issued is very important.  
   
 1.  The first statement must be run on the mirror server. When this statement is issued, the mirror server does not try to contact any other server instance. Instead, the mirror server instructs its database to wait until the mirror server has been contacted by the principal server.  
   

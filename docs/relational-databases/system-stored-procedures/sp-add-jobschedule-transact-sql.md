@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_jobschedule"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_jobschedule"
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -53,13 +49,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  Job identification number of the job to which the schedule is added. *job_id* is **uniqueidentifier**, with no default.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'**_job_name_**'**  
  Name of the job to which the schedule is added. *job_name* is **nvarchar(128)**, with no default.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@name=** ] **'***name***'**  
+ [ **@name=** ] **'**_name_**'**  
  Name of the schedule. *name* is **nvarchar(128)**, with no default.  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -124,7 +120,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_date=** ] *active_start_date*  
  Date on which job execution can begin. *active_start_date* is **int**, with no default. The date is formatted as YYYYMMDD. If *active_start_date* is set, the date must be greater than or equal to 19900101.  
   
- After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
+ After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  [ **@active_end_date=** ] *active_end_date*  
  Date on which job execution can stop. *active_end_date* is **int**, with no default. The date is formatted as YYYYMMDD.  
@@ -132,13 +128,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  Time on any day between *active_start_date* and *active_end_date* to begin job execution. *active_start_time* is **int**, with no default. The time is formatted as HHMMSS on a 24-hour clock.  
   
- [ **@active_end_time=***active_end_time*  
+ [ **@active_end_time=**_active_end_time_  
  Time on any day between *active_start_date* and *active_end_date* to end job execution. *active_end_time* is **int**, with no default. The time is formatted as HHMMSS on a 24-hour clock.  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+ [ **@schedule_id=**_schedule_id_**OUTPUT**  
  Schedule identification number assigned to the schedule if it is created successfully. *schedule_id* is an output variable of type **int**, with no default.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**= ] _schedule_uid_**OUTPUT**  
  A unique identifier for the schedule. *schedule_uid* is a variable of type **uniqueidentifier**.  
   
 ## Return Code Values  
@@ -159,7 +155,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
  
  ## Example
  The following example assigns a job schedule to `SaturdayReports` which will execute every Saturday at 2:00 AM.
@@ -174,9 +170,9 @@ EXEC msdb.dbo.sp_add_jobschedule
 ```
   
 ## See Also  
- [Create and Attach Schedules to Jobs](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
- [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
- [Create a Schedule](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
+ [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
+ [Schedule a Job](../../ssms/agent/schedule-a-job.md)   
+ [Create a Schedule](../../ssms/agent/create-a-schedule.md)   
  [SQL Server Agent Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   

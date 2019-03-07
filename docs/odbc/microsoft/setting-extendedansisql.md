@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extendedANSISQL [ODBC], setting"
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

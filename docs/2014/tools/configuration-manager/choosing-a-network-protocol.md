@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "configmgr-client"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shared memory [SQL Server]"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "Banyan VINES"
   - "protocols [SQL Server], client configuration"
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Choosing a Network Protocol

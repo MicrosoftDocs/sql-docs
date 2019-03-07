@@ -4,23 +4,23 @@ description: This article highlights what's new for SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/20/2018
-ms.topic: article
+ms.date: 02/21/2018
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ---
-# What's new for SQL Server 2017 on Linux
+# What's new for SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article describes the major features and services available for SQL Server 2017 running on Linux.
 
+SQL Server 2019 preview has been released. This article does not cover SQL Server 2019 preview releases. To learn about SQL Server 2019 preview, see [What's new in SQL Server 2019 preview for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+
 > [!NOTE]
-> In addition to these capabilities in this article, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes.md).
+> In addition to these capabilities in this article, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes.md).
 
 ## SQL Server Database Engine
 
@@ -28,7 +28,7 @@ This article describes the major features and services available for SQL Server 
 - Support for native Linux paths.
 - IPV6 support.
 - Support for database files on NFS.
-- Enabled [Transparent Layer Security](sql-server-linux-encrypted-connections.md) (TLS) encryption.
+- Enabled [Transport Layer Security](sql-server-linux-encrypted-connections.md) (TLS) encryption.
 - Enabled [Active Directory Authentication](sql-server-linux-active-directory-authentication.md).
 - [Availability Groups functionality](sql-server-linux-availability-group-overview.md) for high availability.
 - [Full-text Search](sql-server-linux-setup-full-text-search.md) support.

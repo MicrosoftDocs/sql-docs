@@ -1,95 +1,53 @@
 ---
-title: Native scoring| Microsoft Docs
+title: Native scoring using PREDICT T-SQL statement - SQL Server Machine Learning Services
+description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pre-trained model written in R or Python on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 08/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
 
-# Native scoring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# Native scoring using the PREDICT T-SQL function
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This topic describes features in SQL Server 2017 that provide scoring on machine learning models in near realtime.
+Native scoring uses [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) and the native C++ extension capabilities in SQL Server 2017 to generate prediction values or *scores* for new data inputs in near-real-time. This methodology offers the fastest possible processing speed of forecasting and prediction workloads, but comes with platform and library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
 
-+ What is native scoring vs. realtime scoring
-+ How it works
-+ Supported platforms and requirements
-
-## What is native scoring and how is it different from realtime scoring?
-
-In SQL Server 2016, Microsoft created an extensibility framework that allows R scripts to be executed from T-SQL. This framework supports any operation you might perform in R, ranging from simple functions to training complex machine learning models. However, the dual-process architecture requires invoking an external R process for every call, regardless of the complexity of the operation. If you are loading a pre-trained model from a table and scoring against it on data already in SQL Server, the overhead of calling the external R process represents an unnecessary performance cost.
-
-_Scoring_ is a two-step process. First, you specify a pre-trained model to load from a table. Second, pass new input data to the function, to generate prediction values (or _scores_). The input can be either tabular or single rows. You can choose to output a single column value representing a probability, or you might output several values, such as a confidence interval, error, or other useful complement to the prediction.
-
-When the input includes many rows of data, it is usually faster to insert the prediction values into a table as part of the scoring process.  Generating a single score is more typical in a scenario where you get input values from a form or user request, and return the score to a client application. To improve performance when generating successive scores, SQL Server might cache the model so that it can be reloaded into memory.
-
-To support fast scoring, SQL Server Machine Learning Services (and Microsoft Machine Learning Server) provide built-in scoring libraries that work in R or in T-SQL. There are different options depending on which version you have.
-
-**Native scoring**
-
-+ The PREDICT function in Transact-SQL supports _native scoring_ in any instance of SQL Server 2017. It requires only that you have a model already trained, which you can call using T-SQL. Native scoring using T-SQL has these advantages:
-
-    + No additional configuration is required.
-    + The R runtime is not called. There is no need to install R.
-
-**Realtime scoring**
-
-+ **sp_rxPredict** is a stored procedure for realtime scoring that can be used to generates scores from any supported model type, without calling the R runtime.
-
-  This stored procedure is also available in SQL Server 2016, if you upgrade the R components using the standalone installer of Microsoft R Server. sp_rxPredict is also supported in SQL Server 2017. Therefore, you might use this function when generating scores with a model type not supported by the PREDICT function.
-
-+ The rxPredict function can be used for fast scoring within R code.
-
-For all of these scoring methods, you must use a model that was trained using one of the supported RevoScaleR or MicrosoftML algorithms.
-
-For an example of realtime scoring in action, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
+Native scoring requires that you have an already trained model. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can call the PREDICT function in Transact-SQL to invoke native scoring against new data that you provide as an input parameter. The PREDICT function returns scores over data inputs you provide.
 
 ## How native scoring works
 
-Native scoring uses native C++ libraries from Microsoft that can read the model from a special binary format and generate scores. Because a model can be published and used for scoring without having to call the R interpreter, the overhead of multiple process interactions is reduced. Hence, native scoring supports much faster prediction performance in enterprise production scenarios.
+Native scoring uses native C++ libraries from Microsoft that can read an already trained model, previously stored in a special binary format or saved to disk as raw byte stream, and generate scores for new data inputs that you provide. Because the model is trained, published, and stored, it can be used for scoring without having to call the R or Python interpreter. As such, the overhead of multiple process interactions is reduced, resulting in much faster prediction performance in enterprise production scenarios.
 
-To generate scores using this library, you call the scoring function, and pass the following required inputs:
+To use native scoring, call the PREDICT T-SQL function and pass the following required inputs:
 
-+ A compatible model. See the [Requirements](#Requirements) section for details.
-+ Input data, typically defined as a SQL query
++ A compatible model based on a supported algorithm.
++ Input data, typically defined as a SQL query.
 
 The function returns predictions for the input data, together with any columns of source data that you want to pass through.
 
-For code samples, along with instructions on how to prepare the models in the required binary format, see this article:
+## Prerequisites
 
-+ [How to perform realtime scoring](r/how-to-do-realtime-scoring.md)
+PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server 2017 Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux), or Azure SQL Database. You do not need to install R, Python, or enable additional features.
 
-For a complete solution that includes native scoring, see these samples from the SQL Server development team:
++ The model must be trained in advance using one of the supported **rx** algorithms listed below.
 
-+ Deploy your ML script: [Using a Python model](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Deploy your ML script: [Using an R model](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
-## Requirements
+<a name="bkmk_native_supported_algos"></a> 
 
-Supported platforms are as follows:
+## Supported algorithms
 
-+ SQL Server 2017 Machine Learning Services (includes Microsoft R Server 9.1.0)
-    
-    Native scoring using PREDICT requires SQL Server 2017.
-    It works on any version of SQL Server 2017, including Linux.
++ revoscalepy models
 
-    You can also perform realtime scoring using sp_rxPredict. To use this stored procedure requires that you enable [SQL Server CLR integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
-
-+ SQL Server 2016
-
-   Realtime scoring using sp_rxPredict is possible with SQL Server 2016, and can also be run on Microsoft R Server. This option requires SQLCLR to be enabled, and that you install the Microsoft R Server upgrade.
-   For more information, see [Realtime scoring](Real-time-scoring.md)
-
-### Model preparation
-
-+ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](#bkmk_native_supported_algos).
-+ The model must be saved using the new serialization function provided in Microsoft R Server 9.1.0. The serialization function is optimized to support fast scoring.
-
-### <a name="bkmk_native_supported_algos"></a> Algorithms that support native scoring
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + RevoScaleR models
 
@@ -99,14 +57,112 @@ Supported platforms are as follows:
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-If you need to use models from MicrosoftML, use realtime scoring with sp_rxPredict.
+If you need to use models from MicrosoftML or microsoftml, use [real-time scoring with sp_rxPredict](real-time-scoring.md).
 
-### Restrictions
+Unsupported model types include the following types:
 
-The following model types are not supported:
-
-+ Models containing other, unsupported types of R transformations
-+ Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR
++ Models containing other transformations
++ Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR or revoscalepy equivalents
 + PMML models
-+ Models created using other R libraries from CRAN or other repositories
-+ Models containing any other R transformation
++ Models created using other open-source or third-party libraries
+
+## Example: PREDICT (T-SQL)
+
+In this example, you create a model, and then call the real-time prediction function from T-SQL.
+
+### Step 1. Prepare and save the model
+
+Run the following code to create the sample database and required tables.
+
+```sql
+CREATE DATABASE NativeScoringTest;
+GO
+USE NativeScoringTest;
+GO
+DROP TABLE IF EXISTS iris_rx_data;
+GO
+CREATE TABLE iris_rx_data (
+  "Sepal.Length" float not null, "Sepal.Width" float not null
+  , "Petal.Length" float not null, "Petal.Width" float not null
+  , "Species" varchar(100) null
+);
+GO
+```
+
+Use the following statement to populate the data table with data from the **iris** dataset.
+
+```sql
+INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
+EXECUTE sp_execute_external_script
+  @language = N'R'
+  , @script = N'iris_data <- iris;'
+  , @input_data_1 = N''
+  , @output_data_1_name = N'iris_data';
+GO
+```
+
+Now, create a table for storing models.
+
+```sql
+DROP TABLE IF EXISTS ml_models;
+GO
+CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
+  , model_version nvarchar(100) not null
+  , native_model_object varbinary(max) not null);
+GO
+```
+
+The following code creates a model based on the **iris** dataset and saves it to the table named **models**.
+
+```sql
+DECLARE @model varbinary(max);
+EXECUTE sp_execute_external_script
+  @language = N'R'
+  , @script = N'
+    iris.sub <- c(sample(1:50, 25), sample(51:100, 25), sample(101:150, 25))
+    iris.dtree <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris[iris.sub, ])
+    model <- rxSerializeModel(iris.dtree, realtimeScoringOnly = TRUE)
+    '
+  , @params = N'@model varbinary(max) OUTPUT'
+  , @model = @model OUTPUT
+  INSERT [dbo].[ml_models]([model_name], [model_version], [native_model_object])
+  VALUES('iris.dtree','v1', @model) ;
+```
+
+> [!NOTE] 
+> Be sure to use the [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
+
+You can run a statement such as the following to view the stored model in binary format:
+
+```sql
+SELECT *, datalength(native_model_object)/1024. as model_size_kb
+FROM ml_models;
+```
+
+### Step 2. Run PREDICT on the model
+
+The following simple PREDICT statement gets a classification from the decision tree model using the **native scoring** function. It predicts the iris species based on attributes you provide, petal length and width.
+
+```sql
+DECLARE @model varbinary(max) = (
+  SELECT native_model_object
+  FROM ml_models
+  WHERE model_name = 'iris.dtree'
+  AND model_version = 'v1');
+SELECT d.*, p.*
+  FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
+  WITH(setosa_Pred float, versicolor_Pred float, virginica_Pred float) as p;
+go
+```
+
+If you get the error, "Error occurred during execution of the function PREDICT. Model is corrupt or invalid", it usually means that your query didn't return a model. Check whether you typed the model name correctly, or if the models table is empty.
+
+> [!NOTE]
+> Because the columns and values returned by **PREDICT** can vary by model type, you must define the schema of the returned data by using a **WITH** clause.
+
+## Next steps
+
+For a complete solution that includes native scoring, see these samples from the SQL Server development team:
+
++ Deploy your ML script: [Using a Python model](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Deploy your ML script: [Using an R model](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

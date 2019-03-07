@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "data collector [SQL Server], functions"
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
-caps.latest.revision: 11
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

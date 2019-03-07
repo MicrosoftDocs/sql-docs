@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.createprocessingquerydialog.f1"
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create Processing Query Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Create Processing Query** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a processing query in the **Notifications** tab of the **Storage Options** dialog box. A processing query is query that returns a rowset containing the changes made to a table associated with an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object since the last time the table was polled, in order to incrementally update the multidimensional OLAP (MOLAP) cache for the object. Analysis Services uses another query, referred to as a polling query, to poll a table associated with an object and determine whether the table has changed. Processing queries are not necessary when fully updating the MOLAP cache for the object.  

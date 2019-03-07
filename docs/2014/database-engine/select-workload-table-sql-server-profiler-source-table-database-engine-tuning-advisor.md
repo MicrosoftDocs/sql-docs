@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.replay.tools.sourcetable.f1"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "Select Workload Table dialog box"
   - "Source Table dialog box"
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Profiler - Source Table-Database Engine Tuning Advisor - Select Workload Table

@@ -1,13 +1,11 @@
-﻿---
+---
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2017"
+ms.date: "12/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ORDER_TSQL"
@@ -38,11 +36,10 @@ helpviewer_keywords:
   - "sort orders [SQL Server], ORDER BY clause"
   - "FETCH clause"
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 68
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +92,14 @@ ORDER BY order_by_expression
   
  Multiple sort columns can be specified. Column names must be unique. The sequence of the sort columns in the ORDER BY clause defines the organization of the sorted result set. That is, the result set is sorted by the first column and then that ordered list is sorted by the second column, and so on.  
   
- The column names referenced in the ORDER BY clause must correspond to either a column in the select list or to a column defined in a table specified in the FROM clause without any ambiguities.  
+ The column names referenced in the ORDER BY clause must correspond to either a column or column alias in the select list or to a column defined in a table specified in the FROM clause without any ambiguities. If the ORDER BY clause references a column alias from the select list, the column alias must be used standalone, and not as a part of some expression in ORDER BY clause, for example:
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  Specifies that the ORDER BY operation should be performed according to the collation specified in *collation_name*, and not according to the collation of the column as defined in the table or view. *collation_name* can be either a Windows collation name or a SQL collation name. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE is applicable only for columns of  type **char**, **varchar**, **nchar**, and **nvarchar**.  
@@ -133,7 +137,7 @@ ORDER BY order_by_expression
  In a SELECT TOP (*N*) statement, always use an ORDER BY clause. This is the only way to predictably indicate which rows are affected by TOP. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 ## Interoperability  
- When used with a SELECT…INTO statement to insert rows from another source, the ORDER BY clause does not guarantee the rows are inserted in the specified order.  
+ When used with a SELECT...INTO statement to insert rows from another source, the ORDER BY clause does not guarantee the rows are inserted in the specified order.  
   
  Using OFFSET and FETCH in a view does not change the updateability property of the view.  
   
@@ -185,7 +189,7 @@ ORDER BY order_by_expression
   
  See the example "Running multiple queries in a single transaction" in the Examples section later in this topic.  
   
- If consistent execution plans are important in your paging solution, consider using the OPTIMIZE FOR query hint for the OFFSET and FETCH parameters. See "Specifying expressions for OFFSET and FETCH values" in the Examples section later in this topic. For more information about OPTIMZE FOR, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ If consistent execution plans are important in your paging solution, consider using the OPTIMIZE FOR query hint for the OFFSET and FETCH parameters. See "Specifying expressions for OFFSET and FETCH values" in the Examples section later in this topic. For more information about OPTIMIZE FOR, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Examples  
   
@@ -205,7 +209,7 @@ ORDER BY order_by_expression
 #### A. Specifying a single column defined in the select list  
  The following example orders the result set by the numeric `ProductID` column. Because a specific sort order is not specified, the default (ascending order) is used.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -216,7 +220,7 @@ ORDER BY ProductID;
 #### B. Specifying a column that is not defined in the select list  
  The following example orders the result set by a column that is not included in the select list, but is defined in the table specified in the FROM clause.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -228,7 +232,7 @@ ORDER BY ListPrice;
 #### C. Specifying an alias as the sort column  
  The following example specifies the column alias `SchemaName` as the sort order column.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -241,7 +245,7 @@ ORDER BY SchemaName;
 #### D. Specifying an expression as the sort column  
  The following example uses an expression as the sort column. The expression is defined by using the DATEPART function to sort the result set by the year in which employees were hired.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -255,7 +259,7 @@ ORDER BY DATEPART(year, HireDate);
 #### A. Specifying a descending order  
  The following example orders the result set by the numeric column `ProductID` in descending order.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -267,7 +271,7 @@ ORDER BY ProductID DESC;
 #### B. Specifying an ascending order  
  The following example orders the result set by the `Name` column in ascending order. The characters are sorted alphabetically, not numerically. That is, 10 sorts before 2.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -279,7 +283,7 @@ ORDER BY Name ASC ;
 #### C. Specifying both ascending and descending order  
  The following example orders the result set by two columns. The query result set is first sorted in ascending order by the `FirstName` column and then sorted in descending order by the `LastName` column.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -291,7 +295,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> Specifying a collation  
  The following example shows how specifying a collation in the ORDER BY clause can change the order in which the query results are returned. A table is created that contains a column defined by using a case-insensitive, accent-insensitive collation. Values are inserted with a variety of case and accent differences. Because a collation is not specified in the ORDER BY clause, the first query uses the collation of the column when sorting the values. In the second query, a case-sensitive, accent-sensitive collation is specified in the ORDER BY clause, which changes the order in which the rows are returned.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -312,7 +316,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> Specifying a conditional order  
  The following examples use the CASE expression in an ORDER BY clause to conditionally determine the sort order of the rows based on a given column value. In the first example, the value in the `SalariedFlag` column of the `HumanResources.Employee` table is evaluated. Employees that have the `SalariedFlag` set to 1 are returned in order by the `BusinessEntityID` in descending order. Employees that have the `SalariedFlag` set to 0 are returned in order by the `BusinessEntityID` in ascending order. In the second example, the result set is ordered by the column `TerritoryName` when the column `CountryRegionName` is equal to 'United States' and by `CountryRegionName` for all other rows.  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -321,7 +325,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -333,7 +337,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> Using ORDER BY in a ranking function  
  The following example uses the ORDER BY clause in the ranking functions ROW_NUMBER, RANK, DENSE_RANK, and NTILE.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -359,7 +363,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### A. Specifying integer constants for OFFSET and FETCH values  
  The following example specifies an integer constant as the value for the OFFSET and FETCH clauses. The first query returns all rows sorted by the column `DepartmentID`. Compare the results returned by this query with the results of the two queries that follow it. The next query uses the clause `OFFSET 5 ROWS` to skip the first 5 rows and return all remaining rows. The final query uses the clause `OFFSET 0 ROWS` to start with the first row and then uses `FETCH NEXT 10 ROWS ONLY` to limit the rows returned to 10 rows from the sorted result set.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -384,7 +388,7 @@ ORDER BY DepartmentID
 #### B. Specifying variables for OFFSET and FETCH values  
  The following example declares the variables `@StartingRowNumber` and `@FetchRows` and specifies these variables in the OFFSET and FETCH clauses.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -401,7 +405,7 @@ ORDER BY DepartmentID ASC
 #### C. Specifying expressions for OFFSET and FETCH values  
  The following example uses the expression `@StartingRowNumber - 1` to specify the OFFSET value and the expression `@EndingRowNumber - @StartingRowNumber + 1` to specify the FETCH value. In addition, the query hint, OPTIMIZE FOR, is specified. This hint can be used to provide a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -420,7 +424,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### D. Specifying a constant scalar subquery for OFFSET and FETCH values  
  The following example uses a constant scalar subquery to define the value for the FETCH clause. The subquery returns a single value from the column `PageSize` in the table `dbo.AppSettings`.  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -440,7 +444,7 @@ ORDER BY DepartmentID ASC
 #### E. Running multiple queries in a single transaction  
  The following example shows one method of implementing a paging solution that ensures stable results are returned in all requests from the query. The query is executed in a single transaction using the snapshot isolation level, and the column specified in the ORDER BY clause ensures column uniqueness.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -484,7 +488,7 @@ GO
 ###  <a name="Union"></a> Using ORDER BY with UNION, EXCEPT, and INTERSECT  
  When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -502,7 +506,7 @@ ORDER BY ListPrice ASC;
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -512,7 +516,7 @@ ORDER BY EmployeeKey;
   
  The following example orders a result set by the numerical `EmployeeKey` column in descending order.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -522,7 +526,7 @@ ORDER BY EmployeeKey DESC;
   
  The following example orders a result set by the `LastName` column.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -532,7 +536,7 @@ ORDER BY LastName;
   
  The following example orders by two columns. This query first sorts in ascending order by the `FirstName` column, and then sorts common `FirstName` values in descending order by the `LastName` column.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

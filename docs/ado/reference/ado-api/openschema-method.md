@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "OpenSchema method [ADO]"
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -59,7 +56,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Remote Data Service Usage** The **OpenSchema** method is not available on a client-side [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  
   
 > [!NOTE]
->  In Visual Basic, columns that have a four-byte unsigned integer (DBTYPE UI4) in the **Recordset** returned from the **OpenSchema** method on the **Connection** object cannot be compared to other variables. For more information about OLE DB data types, see [Data Types in OLE DB (OLE DB)](http://msdn.microsoft.com/en-us/6039292f-74e0-49b2-b133-17bc117ebf6a) and [Appendix A: Data Types](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6) in the Microsoft OLE DB Programmer's Reference.  
+>  In Visual Basic, columns that have a four-byte unsigned integer (DBTYPE UI4) in the **Recordset** returned from the **OpenSchema** method on the **Connection** object cannot be compared to other variables. For more information about OLE DB data types, see [Data Types in OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) and [Appendix A: Data Types](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) in the Microsoft OLE DB Programmer's Reference.  
   
 > [!NOTE]
 >  **Visual C/C++ Users** When not using client-side cursors, retrieving the "ORDINAL_POSITION" of a column schema in ADO returns a variant of type VT_R8 in MDAC 2.7, MDAC 2.8, and Windows Data Access Components (Windows DAC) 6.0, while the type used in MDAC 2.6 was VT_I4. Programs written for MDAC 2.6 that only look for a variant returned of type VT_I4 would get a zero for every ordinal if run under MDAC 2.7, MDAC 2.8, and Windows DAC 6.0 without modification. This change was made because the data type that OLE DB returns is DBTYPE_UI4, and in the signed VT_I4 type there is not enough room to contain all possible values without possibly truncation occurring and thereby causing a loss of data.  

@@ -1,4 +1,5 @@
 ---
+title: "Analysis Services log properties | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -150,9 +151,6 @@ manager: kfile
  A Boolean property that specifies whether to create the query log table.  
   
  The default value for this property is false, which indicates the server will not automatically create the log table and will not log query events.  
-  
-> [!NOTE]  
->  For more information about configuring the query log, see [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
 ## Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

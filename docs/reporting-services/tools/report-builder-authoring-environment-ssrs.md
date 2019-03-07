@@ -1,25 +1,18 @@
 ---
 title: "Report Builder authoring environment (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Report Builder authoring environment (SSRS)
-  Report Builder [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] is a stand-alone authoring environment for creating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports outside of Visual Studio. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the report. You can install it from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or from the Microsoft Download Center.  
+  Report Builder [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone authoring environment for creating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports outside of Visual Studio. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the report. You can install it from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or from the Microsoft Download Center.  
   
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) from the Microsoft Download Center.  
   
@@ -44,7 +37,7 @@ manager: "kfile"
   
 -   Save your report and related items to a SharePoint library, a report server, or your local computer.  
   
- Report Builder and Report Designer share many features. Read more about [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
+ Report Builder and Report Designer share many features. Read more about [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
 ## See Also  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   

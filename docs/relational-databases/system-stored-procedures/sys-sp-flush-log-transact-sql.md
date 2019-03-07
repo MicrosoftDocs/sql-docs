@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_flush_log_TSQL"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_flush_log"
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
-caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sys.sp_flush_log (Transact-SQL)
@@ -30,7 +26,7 @@ manager: craigg
 
   Flushes to disk the  transaction log of the current database, thereby hardening all previously committed delayed durable transactions.  
   
- If you choose to use delayed transaction durability because of the performance benefits, but you also want to have a guaranteed limit on the amount of data that is lost on server crash or failover, then execute `sys.sp_flush_log` on a regular schedule. For example, if you want to make sure you don’t lose more than x seconds worth of data, you would execute `sp_flush_log` every x seconds.  
+ If you choose to use delayed transaction durability because of the performance benefits, but you also want to have a guaranteed limit on the amount of data that is lost on server crash or failover, then execute `sys.sp_flush_log` on a regular schedule. For example, if you want to make sure you don't lose more than x seconds worth of data, you would execute `sp_flush_log` every x seconds.  
   
  Executing `sys.sp_flush_log` guarantees that all previously committed delayed durable transactions are made durable. See the conceptual topic [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md) for more information.  
   

@@ -4,16 +4,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "OLE DB provider for ODBC [ADO]"
   - "providers [ADO], OLE DB provider for ODBC"
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -134,7 +131,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  ODBC provides a specific syntax for calling stored procedures. For the [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) property of a **Command** object, the *CommandText* argument to the **Execute** method on a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object, or the *Source* argument to the **Open** method on a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, passes in a string with this syntax:
 
 ```
-"{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
+"{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
  Each **?** references an object in the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection. The first **?** references **Parameters**(0), the next **?** references **Parameters**(1), and so on.
@@ -224,7 +221,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## Dynamic Properties
  The Microsoft OLE DB Provider for ODBC inserts several dynamic properties into the **Properties** collection of the unopened [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), and [Command](../../../ado/reference/ado-api/command-object-ado.md) objects.
 
- The following tables are a cross-index of the ADO and OLE DB names for each dynamic property. The OLE DB Programmer's Reference refers to an ADO property name by the term, "Description." You can find more information about these properties in the OLE DB Programmer's Reference. Search for the OLE DB property name in the Index or see [Appendix C: OLE DB Properties](http://msdn.microsoft.com/en-us/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ The following tables are a cross-index of the ADO and OLE DB names for each dynamic property. The OLE DB Programmer's Reference refers to an ADO property name by the term, "Description." You can find more information about these properties in the OLE DB Programmer's Reference. Search for the OLE DB property name in the Index or see [Appendix C: OLE DB Properties](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## Connection Dynamic Properties
  The following properties are added to the **Connection** object's **Properties** collection.
@@ -426,7 +423,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Updatability|DBPROP_UPDATABILITY|
 |Use Bookmarks|DBPROP_BOOKMARKS|
 
- For details regarding specific implementation and functional information about the Microsoft OLE DB Provider for ODBC, see the [OLE DB Programmer's Reference](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) or visit the Data Access and Storage Developer Center Web site on MSDN.
+ For details regarding specific implementation and functional information about the Microsoft OLE DB Provider for ODBC, see the [OLE DB Programmer's Reference](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) or visit the Data Access and Storage Developer Center Web site on MSDN.
 
 ## See Also
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

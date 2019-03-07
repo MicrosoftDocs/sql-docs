@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords: 
   - "entitization rules [XML in SQL Server]"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], serialization"
   - "typed XML"
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Define the Serialization of XML Data
@@ -32,7 +28,7 @@ manager: craigg
  For example:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
 ```  
   
  This is the result:  
@@ -46,13 +42,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
  For example:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  This is the result:  
   
 ```  
-<Δ/>  
+<??/>  
 ```  
   
  If the SQL target type is VARCHAR or NCHAR, the result is serialized in the encoding that corresponds to the database's collation code page without a byte order mark or XML declaration. If the target type is too small or the value cannot be mapped to the target collation code page, an error is raised.  
@@ -60,10 +56,10 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
  For example:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
 ```  
   
- This may result in an error, if the current collation's code page cannot represent the Unicode character Δ, or it will represent it in the specific encoding.  
+ This may result in an error, if the current collation's code page cannot represent the Unicode character ??, or it will represent it in the specific encoding.  
   
  When returning XML results to the client side, the data will be sent in UTF-16 encoding. The client-side provider will then expose the data according to its API rules.  
   
@@ -98,7 +94,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
 ```  
 <a a="  
-    𐌀>">     
+    ????>">     
 </a>  
 ```  
   

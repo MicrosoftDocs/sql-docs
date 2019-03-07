@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], diagnostic information"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], diagnostic information"
   - "diagnostic information [ODBC], desktop database drivers"
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections"
   - "getting started"
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Connect to a Data Mining Server
   ![Connections button](media/misc-connection.gif "Connections button")  
@@ -53,11 +50,11 @@ manager: "mblythe"
 ## Troubleshooting Connections  
  This section provides answers to some common questions about connections to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- **I get a message saying “No connection found.”**  
+ **I get a message saying "No connection found."**  
   
  If the text in the lower part of the button says **No Connection**, it means that you have not created a connection to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, or that the connection failed. You can continue to work with data in Excel from Access or other sources, but to create a data mining model or run a prediction query you must have an active connection.  
   
- **Suppose I don’t have permission to use the server?**  
+ **Suppose I don't have permission to use the server?**  
   
  If you do not have sufficient permissions to store your mining models on the server, or if you want to experiment with data mining and not save your work, you can use the Table Analysis Tools, which create temporary data structures and temporary models. You still need to be able to store temporary models on the server. Ask your administrator to enable use of *session mining models* on the server.  
   
@@ -65,7 +62,7 @@ manager: "mblythe"
   
  **I lost my connection; did I lose all my work?**  
   
- If you terminate the connection to the server, your results and data will not be lost, because they are stored in Excel. However, if you created some temporary models, those models will be deleted from the server after a short time. So if you lose the connection temporarily, sometime the models won’t be deleted yet.  
+ If you terminate the connection to the server, your results and data will not be lost, because they are stored in Excel. However, if you created some temporary models, those models will be deleted from the server after a short time. So if you lose the connection temporarily, sometime the models won't be deleted yet.  
   
  Any data or results that were generated will not be lost, because all reports and tables are stored in Excel.  
   

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e61297fc-a418-4553-b85e-40a3062606f1
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Instance Selection (Uninstall)
-  On the Instance Selection — Uninstall page, use the drop-down box to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to uninstall.  
+  On the Instance Selection - Uninstall page, use the drop-down box to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to uninstall.  
   
 ## Options  
  You can specify an entire instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or you can specify that only the shared features and Management Tools are uninstalled.  

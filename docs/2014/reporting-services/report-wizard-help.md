@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.rptwizardhelp.f1"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "Report Wizard"
   - "Report Designer [Reporting Services], wizards"
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
-caps.latest.revision: 33
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Wizard Help
   This section provides F1 Help for the Report Wizard. The Report Wizard automates the process of creating tabular and matrix reports. The following table describes the topics in this section.  

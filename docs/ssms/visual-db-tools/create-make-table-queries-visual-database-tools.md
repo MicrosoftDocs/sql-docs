@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], types"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "Make Table query"
   - "adding tables"
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -66,7 +62,7 @@ In order to use a Make Table query successfully:
   
     To create a destination table in another database, specify a fully qualified table name including the name of the target database, the owner (if required), and the name of the table.  
   
-4.  Specify the columns to copy by adding them to the query. For details, see [Add Columns to Queries (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Columns will be copied only if you add them to the query. To copy entire rows, choose **\&#42; (All Columns)**.  
+4.  Specify the columns to copy by adding them to the query. For details, see [Add Columns to Queries (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Columns will be copied only if you add them to the query. To copy entire rows, choose **&#42; (All Columns)**.  
   
     The Query and View Designer adds the columns you choose to the **Column** column of the Criteria pane.  
   

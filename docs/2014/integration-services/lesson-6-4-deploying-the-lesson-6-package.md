@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-caps.latest.revision: 4
-author: "douglaslM"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Step 4: Deploying the Lesson 6 Package
@@ -28,7 +24,7 @@ manager: craigg
   
 -   Execute the package in SSMS.  
   
-### To Locate or add the the SSISDB catalog  
+### To Locate or add the SSISDB catalog  
   
 1.  Click Start, point to All Programs, point to Microsoft SQL Server 2012, and then click SQL Management Studio.  
   

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], assigning"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, assigning"
   - "assigning job to category"
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Assign a Job to a Job Category
@@ -47,7 +43,7 @@ manager: craigg
   
 4.  Right-click the job you want to edit and select **Properties**.  
   
-5.  In the **Job Properties -***job_name* dialog box, in the **Category** list, select the job category you want to assign to the job.  
+5.  In the **Job Properties -**_job_name_ dialog box, in the **Category** list, select the job category you want to assign to the job.  
   
 6.  Click **OK**.  
   

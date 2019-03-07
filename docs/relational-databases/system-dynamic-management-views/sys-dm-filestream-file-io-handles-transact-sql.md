@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_filestream_file_io_handles"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_filestream_file_io_handle catalog view"
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
   
 |Column|Type|Description|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|Shows the address of the internal NSO structure associated with the client’s handle. Is nullable.|  
+|**handle_context_address**|**varbinary(8)**|Shows the address of the internal NSO structure associated with the client's handle. Is nullable.|  
 |**creation_request_id**|**int**|Shows a field from the REQ_PRE_CREATE I/O request used to create this handle. Is not nullable.|  
 |**creation_irp_id**|**int**|Shows a field from the REQ_PRE_CREATE I/O request used to create this handle. Is not nullable|  
 |**handle_id**|**int**|Shows the unique ID of this handle that is assigned by the driver. Is not nullable.|  

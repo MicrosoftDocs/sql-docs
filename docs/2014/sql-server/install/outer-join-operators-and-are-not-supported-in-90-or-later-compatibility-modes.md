@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "outer joins"
@@ -15,19 +13,18 @@ helpviewer_keywords:
   - "*= join"
   - "joins [SQL Server]"
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
-# Outer join operators *= and =* are not supported in 90 or later compatibility modes
-  Upgrade Advisor detected the use of outer join operators *= and =\*. These operators are not supported in 90 or later compatibility modes. When you upgrade, user databases maintain their compatibility mode. Statements that use these operators will fail.  
+# Outer join operators \*= and =\* are not supported in 90 or later compatibility modes
+  Upgrade Advisor detected the use of outer join operators \*= and =\*. These operators are not supported in 90 or later compatibility modes. When you upgrade, user databases maintain their compatibility mode. Statements that use these operators will fail.  
   
 ## Component  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
- Before you change the database compatibility mode to 90 or later, modify statements that use the outer join operators *= and =\* to use equivalent OUTER JOIN keywords. The following example shows a query that uses the `*=` operator and an equivalent query that uses the `LEFT OUTER JOIN` keywords.  
+ Before you change the database compatibility mode to 90 or later, modify statements that use the outer join operators \*= and =\* to use equivalent OUTER JOIN keywords. The following example shows a query that uses the `\*=` operator and an equivalent query that uses the `LEFT OUTER JOIN` keywords.  
   
 ```  
 -- This query uses an old-style outer join operator.  

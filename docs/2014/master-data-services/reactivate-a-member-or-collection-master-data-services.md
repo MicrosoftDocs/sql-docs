@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collections [Master Data Services], reactivating"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "reactivating collections [Master Data Services]"
   - "leaf members [Master Data Services], reactivating"
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Reactivate a Member or Collection (Master Data Services)
@@ -33,7 +29,7 @@ manager: craigg
   
  When you reactivate a member, its attributes and its membership in hierarchies and collections are restored.  
   
- You can also reactivate collections. When you do, the collection’s attributes and the members that belong to the collection are restored.  
+ You can also reactivate collections. When you do, the collection's attributes and the members that belong to the collection are restored.  
   
  When either a collection or member is reactivated, all previous transactions are restored.  
   

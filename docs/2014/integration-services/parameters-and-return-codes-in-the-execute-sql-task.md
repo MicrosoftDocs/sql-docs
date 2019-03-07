@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "return codes [Integration Services]"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "parameterized SQL statements [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Parameters and Return Codes in the Execute SQL Task
@@ -43,18 +40,18 @@ manager: craigg
 -   [Configuring parameters and return codes in the Execute SQL Task Editor](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> Using Parameter Names and Markers  
- Depending on the connection type that the Execute SQL task uses, the syntax of the SQL command uses different parameter markers. For example, the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager type requires that the SQL command uses a parameter marker in the format **@varParameter**, whereas OLE DB connection type requires the question mark (?) parameter marker.  
+ Depending on the connection type that the Execute SQL task uses, the syntax of the SQL command uses different parameter markers. For example, the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager type requires that the SQL command uses a parameter marker in the format **\@varParameter**, whereas OLE DB connection type requires the question mark (?) parameter marker.  
   
- The names that you can use as parameter names in the mappings between variables and parameters also vary by connection manager type. For example, the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager type uses a user-defined name with a @ prefix, whereas the OLE DB connection manager type requires that you use the numeric value of a 0-based ordinal as the parameter name.  
+ The names that you can use as parameter names in the mappings between variables and parameters also vary by connection manager type. For example, the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager type uses a user-defined name with a \@ prefix, whereas the OLE DB connection manager type requires that you use the numeric value of a 0-based ordinal as the parameter name.  
   
  The following table summarizes the requirements for SQL commands for the connection manager types that the Execute SQL task can use.  
   
 |Connection type|Parameter marker|Parameter name|Example SQL command|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|@\<parameter name>|@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL and OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL and OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### Using Parameters with ADO.NET and ADO Connection Managers  
  [!INCLUDE[vstecado](../includes/vstecado-md.md)] and ADO connection managers have specific requirements for SQL commands that use parameters:  
@@ -145,7 +142,7 @@ manager: craigg
   
 -   The ADO connection type could use any two parameter names, such as Param1 and Param2, but the parameters must be mapped by their ordinal position in the parameter list.  
   
--   The [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection type uses the parameter names @parmMinProductID and @parmMaxProductID.  
+-   The [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection type uses the parameter names \@parmMinProductID and \@parmMaxProductID.  
   
 ##  <a name="Stored_procedures"></a> Using Parameters with Stored Procedures  
  SQL commands that run stored procedures can also use parameter mapping. The rules for how to use parameter markers and parameter names depends on the type of connection manager that the Execute SQL uses, just like the rules for parameterized queries.  
@@ -155,7 +152,7 @@ manager: craigg
 |Connection type|EXEC syntax|  
 |---------------------|-----------------|  
 |EXCEL and OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
 |ADO|If IsQueryStoredProcedure is set to `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> If IsQueryStoredProcedure is set to `True`, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|If IsQueryStoredProcedure is set to `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> If IsQueryStoredProcedure is set to `True`, `uspGetBillOfMaterials`|  
   
@@ -166,14 +163,14 @@ manager: craigg
 ##  <a name="Return_codes"></a> Getting Values of Return Codes  
  A stored procedure can return an integer value, called a return code, to indicate the execution status of a procedure. To implement return codes in the Execute SQL task, you use parameters of the `ReturnValue` type.  
   
- The following table lists by connection type some examples of EXEC commands that implement return codes. All examples use an `input` parameter. The rules for how to use parameter markers and parameter names are the same for all parameter types—`Input`, `Output`, and `ReturnValue`.  
+ The following table lists by connection type some examples of EXEC commands that implement return codes. All examples use an `input` parameter. The rules for how to use parameter markers and parameter names are the same for all parameter types-`Input`, `Output`, and `ReturnValue`.  
   
  Some syntax does not support parameter literals. In that case, you must provide the parameter value by using a variable.  
   
 |Connection type|EXEC syntax|  
 |---------------------|-----------------|  
 |EXCEL and OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
 |ADO|If IsQueryStoreProcedure is set to `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> If IsQueryStoreProcedure is set to `True`, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure is set to `True`.<br /><br /> `myStoredProcedure`|  
   
@@ -195,9 +192,9 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [Stored procedures with output parameters](http://go.microsoft.com/fwlink/?LinkId=157786), on blogs.msdn.com  
+-   Blog entry, [Stored procedures with output parameters](https://go.microsoft.com/fwlink/?LinkId=157786), on blogs.msdn.com  
   
--   CodePlex sample, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com  
+-   CodePlex sample, [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com  
   
 ## See Also  
  [Execute SQL Task](control-flow/execute-sql-task.md)   

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.roleproperties.selectroll.f1"
@@ -28,9 +25,8 @@ helpviewer_keywords:
   - "users [SQL Server], principals"
   - "##MS_SQLReplicationSigningCertificate##"
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 54
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Principals (Database Engine)
@@ -86,7 +82,7 @@ manager: craigg
  Each database includes a **guest**. Permissions granted to the **guest** user are inherited by users who have access to the database, but who do not have a user account in the database. The **guest** user cannot be dropped, but it can be disabled by revoking it's `CONNECT` permission. The `CONNECT` permission can be revoked by executing `REVOKE CONNECT FROM GUEST` within any database other than master or tempdb.  
   
 ## Client and Database Server  
- By definition, a client and a database server are security principals and can be secured. These entities can be mutually authenticated before a secure network connection is established. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) authentication protocol, which defines how clients interact with a network authentication service.  
+ By definition, a client and a database server are security principals and can be secured. These entities can be mutually authenticated before a secure network connection is established. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) authentication protocol, which defines how clients interact with a network authentication service.  
   
 ## Related Tasks  
  The following topics are included in this section of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online:  

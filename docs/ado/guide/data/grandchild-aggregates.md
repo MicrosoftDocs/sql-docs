@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "grandchild aggregates [ADO]"
   - "data shaping [ADO], grandchild aggregates"
 ms.assetid: 4162d35f-2ce1-4218-80a5-b6933348837e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

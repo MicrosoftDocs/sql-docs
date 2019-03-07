@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_check_TSQL"
   - "sp_check_subset_filter"
@@ -24,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_check_subset_filter"
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_check_subset_filter (Transact-SQL)

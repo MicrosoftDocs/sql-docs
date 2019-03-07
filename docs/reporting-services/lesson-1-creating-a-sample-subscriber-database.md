@@ -1,23 +1,14 @@
 ---
 title: "Lesson 1: Creating a Sample Subscriber Database | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 45
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Lesson 1: Creating a Sample Subscriber Database
@@ -75,4 +66,4 @@ This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../includes/ssma
 [Create a Database](../relational-databases/databases/create-a-database.md)  
 [Create a Basic Table Report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

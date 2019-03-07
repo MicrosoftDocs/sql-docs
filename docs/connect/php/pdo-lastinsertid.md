@@ -1,16 +1,13 @@
 ---
 title: "PDO::lastInsertId | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/11/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -18,7 +15,7 @@ manager: craigg
 # PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Returns the identifier for the row most recently inserted into a table in the database. The table must have an IDENTITY NOT NULL column. If a sequence name is provided, `lastInsertId` returns the most recently inserted sequence number for the provided sequence name (for more information about sequence numbers, see [here](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Returns the identifier for the row most recently inserted into a table in the database. The table must have an IDENTITY NOT NULL column. If a sequence name is provided, `lastInsertId` returns the most recently inserted sequence number for the provided sequence name (for more information about sequence numbers, see [here](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## Syntax  
   
@@ -42,17 +39,16 @@ Starting with 5.0, the optional parameter is regarded as a sequence name, and th
 If a table name is provided for versions after 4.3, `lastInsertId` returns an empty string.
 Sequences are supported only in SQL Server 2012 and above.
   
-## Example  
+## Example
   
-```  
+```
 <?php
 $server = "myserver";
 $databaseName = "mydatabase";
 $uid = "myusername";
 $pwd = "mypasword";
 
-try{
-    $database = "tempdb";
+try {
     $conn = new PDO("sqlsrv:Server=$server;Database=$databaseName", $uid, $pwd);
     
     // One sequence, two tables
@@ -69,9 +65,9 @@ try{
     $sql = "CREATE SEQUENCE $sequenceName AS INTEGER START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE 100 CYCLE";
     $stmt = $conn->query($sql);
 
-    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 20 )");
-    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 40 )");
-    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 60 )");
+    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 20)");
+    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 40)");
+    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 60)");
     $ret = $conn->exec("INSERT INTO $tableName2 VALUES( '20' )");
     
     // return the last sequence number if sequence name is provided
@@ -126,19 +122,31 @@ try{
     $stmt = $conn->query("DROP TABLE $tableName");
     $stmt = $conn->query("DROP SEQUENCE $sequence1");
     $stmt = $conn->query("DROP SEQUENCE $sequence2");
-    $stmt = null;
     
-    $conn = null;
-}
-    catch (Exception $e){
+    unset($stmt);
+    unset($conn);
+} catch (Exception $e) {
     echo "Exception $e\n";
 }
-   
+
 ?>
-```  
-  
+```
+
+The expected output is:
+
+```
+Last sequence number = 3
+Last inserted ID     = 1
+Last inserted ID when a table name is supplied =
+
+Last sequence number of sequence1    = 3
+Last sequence number of sequenceNeg1 = 198
+Last sequence number when a table name is supplied = 
+
+```
+
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helprotect"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helprotect"
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helprotect (Transact-SQL)
@@ -46,18 +42,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## Arguments  
- [ **@name =** ] **'***object_statement***'**  
- Is the name of the object in the current database, or a statement, that has the permissions to report. *object_statement* is **nvarchar(776)**, with a default of NULL, which returns all object and statement permissions. If the value is an object (table, view, stored procedure, or extended stored procedure), it must be a valid object in the current database. The object name can include an owner qualifier in the form *owner***.***object*.  
+ [ **@name =** ] **'**_object_statement_**'**  
+ Is the name of the object in the current database, or a statement, that has the permissions to report. *object_statement* is **nvarchar(776)**, with a default of NULL, which returns all object and statement permissions. If the value is an object (table, view, stored procedure, or extended stored procedure), it must be a valid object in the current database. The object name can include an owner qualifier in the form _owner_**.**_object_.  
   
  If *object_statement* is a statement, it can be a CREATE statement.  
   
- [ **@username =** ] **'***security_account***'**  
+ [ **@username =** ] **'**_security_account_**'**  
  Is the name of the principal for which permissions are returned. *security_account* is **sysname**, with a default of NULL, which returns all principals in the current database. *security_account* must exist in the current database.  
   
- [ **@grantorname =** ] **'***grantor***'**  
+ [ **@grantorname =** ] **'**_grantor_**'**  
  Is the name of the principal that granted permissions. *grantor* is **sysname**, with a default of NULL, which returns all information for permissions granted by any principal in the database.  
   
- [ **@permissionarea =** ] **'***type***'**  
+ [ **@permissionarea =** ] **'**_type_**'**  
  Is a character string that indicates whether to display object permissions (character string **o**), statement permissions (character string **s**), or both (**os**). *type* is **varchar(10)**,with a default of **os**. *type* can be any combination of **o** and **s**, with or without commas or spaces between **o** and **s**.  
   
 ## Return Code Values  

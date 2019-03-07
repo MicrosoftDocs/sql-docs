@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "interoperability [ODBC], multiple active statements and connections"
   - "multiple active statements and connections [ODBC]"
 ms.assetid: a6571356-b23e-4f10-a17b-bce09460b71e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

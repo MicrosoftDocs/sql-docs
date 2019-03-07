@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_filestream_force_garbage_collection"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server]"
   - "sp_filestream_force_garbage_collection"
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,7 +37,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## Arguments  
- **@dbname** = *database_name***'**  
+ **@dbname** = _database_name_**'**  
  Signifies the name of the database to run the garbage collector on.  
   
 > [!NOTE]  
@@ -65,7 +61,7 @@ sp_filestream_force_garbage_collection
 |*file_name*|Indicates the FILESTREAM container name|  
 |*num_collected_items*|Indicates the number of FILESTREAM items (files/directories) that have been garbage collected (deleted) in this container.|  
 |*num_marked_for_collection_items*|Indicates the number of FILESTREAM items (files/directories) that have been marked for garbage collection in this container. These items have not been deleted yet, but may be eligible for deletion following the garbage collection phase.|  
-|*num_unprocessed_items*|Indicates the number of eligible FILESTREAM items (files or directories) that were not processed for garbage collection in this FILESTREAM container. Items may be unprocessed for various reasons, including the following:<br /><br /> Files that need to be pinned down because Log backup or CheckPoint has not been taken.<br /><br /> Files in the FULL or BULK_LOGGED recovery model.<br /><br /> There is a long-running active transaction.<br /><br /> The replication log reader job has not run. See the white paper [FILESTREAM Storage in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) for more information.|  
+|*num_unprocessed_items*|Indicates the number of eligible FILESTREAM items (files or directories) that were not processed for garbage collection in this FILESTREAM container. Items may be unprocessed for various reasons, including the following:<br /><br /> Files that need to be pinned down because Log backup or CheckPoint has not been taken.<br /><br /> Files in the FULL or BULK_LOGGED recovery model.<br /><br /> There is a long-running active transaction.<br /><br /> The replication log reader job has not run. See the white paper [FILESTREAM Storage in SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) for more information.|  
 |*last_collected_xact_seqno*|Returns the last corresponding log sequence number (LSN) up to which the files have been garbage collected for the specified FILESTREAM container.|  
   
 ## Remarks  

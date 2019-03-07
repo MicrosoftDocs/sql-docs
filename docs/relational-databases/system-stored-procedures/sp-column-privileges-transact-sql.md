@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_column_privileges (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_column_privileges_TSQL"
@@ -18,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_column_privileges"
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +47,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  If the current user owns a table with the specified name, that table's columns are returned. If *table_owner* is not specified and the current user does not own a table with the specified *table_name*, sp_column privileges looks for a table with the specified *table_name* owned by the database owner. If one exists, that table's columns are returned.  
   
  [ @table_qualifier= ] '*table_qualifier*'  
- Is the name of the table qualifier. *table_qualifier* is *sysname*, with a default of NULL. Various DBMS products support three-part naming for tables (*qualifier***.***owner***.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment.  
+ Is the name of the table qualifier. *table_qualifier* is *sysname*, with a default of NULL. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment.  
   
  [ @column_name= ] '*column*'  
  Is a single column used when only one column of catalog information is being obtained. *column* is **nvarchar(**384**)**, with a default of NULL. If *column* is not specified, all columns are returned. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *column* represents the column name as listed in the sys.columns table. *column* can include wildcard characters using wildcard matching patterns of the underlying DBMS. For maximum interoperability, the gateway client should assume only ISO standard pattern matching (the % and _ wildcard characters).  

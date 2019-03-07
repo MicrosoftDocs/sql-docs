@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Lock Pages in Memory option"
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Enable the Lock Pages in Memory Option (Windows)
@@ -39,7 +35,7 @@ manager: craigg
   
 5.  In the pane, double-click **Lock pages in memory**.  
   
-6.  In the **Local Security Setting – Lock pages in memory** dialog box, click **Add User or Group**.  
+6.  In the **Local Security Setting - Lock pages in memory** dialog box, click **Add User or Group**.  
   
 7.  In the **Select Users, Service Accounts, or Groups** dialog box, add an account with privileges to run sqlservr.exe.  
   

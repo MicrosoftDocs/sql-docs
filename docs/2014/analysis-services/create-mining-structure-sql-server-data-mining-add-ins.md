@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures, creating"
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create Mining Structure (SQL Server Data Mining Add-ins)
   ![Create Mining Structure button, Data Mining ribbon](media/dmc-createstruct.gif "Create Mining Structure button, Data Mining ribbon")  
@@ -51,7 +48,7 @@ manager: "mblythe"
   
      Remember that you can always ignore columns when you build the model, but to add columns later requires that you reprocess the structure and model.  
   
-5.  Click the browse **(…)** button to set the content type, data type, and modeling flags.  
+5.  Click the browse **(...)** button to set the content type, data type, and modeling flags.  
   
     > [!NOTE]  
     >  If the column contains numeric data, you should always open this dialog box to ensure that the correct data type is chosen. In some cases, even if the input data is a number, you will want to treat it as a categorical variable, or discrete value, instead of a continuous number.  

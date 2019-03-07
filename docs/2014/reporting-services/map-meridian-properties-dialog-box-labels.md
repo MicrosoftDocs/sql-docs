@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1"
   - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-caps.latest.revision: 6
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Map Meridian Properties Dialog Box, Labels
   Use the **MapMeridian Properties** dialog box to change label options for the vertical grid in the map viewport. A meridian represents the following value depending on the specified coordinate system for the viewport:  

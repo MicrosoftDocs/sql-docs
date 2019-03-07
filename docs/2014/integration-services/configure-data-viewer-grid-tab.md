@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.grid.f1"
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configure Data Viewer (Grid Tab)

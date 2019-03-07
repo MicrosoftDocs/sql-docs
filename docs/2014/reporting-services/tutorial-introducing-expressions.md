@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 8
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Introducing Expressions
   Expressions help you create powerful and flexible reports. This tutorial teaches you to create and implement expressions that use common functions and operators. You will use the **Expression** dialog box to write expressions that concatenate name values, look up values in a separate dataset, display different pictures based on field values, and so on.  
@@ -41,7 +38,7 @@ manager: "mblythe"
   
 7.  [Use an Indicator to Show Sales Comparison](#Indicator)  
   
-8.  [Make the Report a “Green Bar” Report](#GreenBar)  
+8.  [Make the Report a "Green Bar" Report](#GreenBar)  
   
 ### Other Optional Steps  
   
@@ -369,7 +366,7 @@ manager: "mblythe"
 11. Click **Run** to preview the report.  
   
 ##  <a name="Count"></a> 6. Count Days Since Last Purchase  
- Add a column and then use the **Now** function or the `ExecutionTime` built-in global variable to calculate the number of days from today since a person’s last purchases.  
+ Add a column and then use the **Now** function or the `ExecutionTime` built-in global variable to calculate the number of days from today since a person's last purchases.  
   
 #### To add the Days Ago column  
   
@@ -415,9 +412,9 @@ manager: "mblythe"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7. Use an Indicator to Show Sales Comparison  
- Add a new column and use an indicator to show whether a person’s year-to-date (YTD) purchases are above or below the average YTD purchases. The **Round** function removes decimals from values.  
+ Add a new column and use an indicator to show whether a person's year-to-date (YTD) purchases are above or below the average YTD purchases. The **Round** function removes decimals from values.  
   
- The configuration of the indicator and its states requires many steps. If you want to, in the “To configure the indicator” procedure, you can skip ahead and copy/paste the completed expressions from this tutorial into the **Expression** dialog box.  
+ The configuration of the indicator and its states requires many steps. If you want to, in the "To configure the indicator" procedure, you can skip ahead and copy/paste the completed expressions from this tutorial into the **Expression** dialog box.  
   
 #### To add the + or - AVG Sales column  
   
@@ -519,7 +516,7 @@ manager: "mblythe"
   
 38. Click **Run** to preview the report.  
   
-##  <a name="GreenBar"></a> 8. Make the Report a “Green Bar” Report  
+##  <a name="GreenBar"></a> 8. Make the Report a "Green Bar" Report  
  Use a parameter to specify the color to apply to alternating rows in the report, making it a barred report.  
   
 #### To add a parameter  
@@ -598,7 +595,7 @@ manager: "mblythe"
   
 15. If the cursor is not already immediately after `Count(`, place it there.  
   
-16. Delete the left parenthesis and then type **,“Expressions”)**  
+16. Delete the left parenthesis and then type **,"Expressions")**  
   
     > [!NOTE]  
     >  Expressions is the name of the dataset in which to count data rows.  
@@ -618,7 +615,7 @@ manager: "mblythe"
   
 22. If the cursor is not already immediately after `Parameters!RowColor.Value`, place it there.  
   
-23. Type **, “White”)**  
+23. Type **, "White")**  
   
      The completed expression: `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   

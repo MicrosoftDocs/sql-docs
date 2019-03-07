@@ -3,21 +3,15 @@ title: "Database Properties (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2015"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.general.f1"
   - "sql13.swb.databaseproperties.segments.f1"
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
-caps.latest.revision: 30
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Properties (General Page)

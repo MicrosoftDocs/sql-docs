@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
-caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Lesson 3: Rename Columns
@@ -37,7 +34,7 @@ manager: craigg
 2.  Double click the **CustomerKey** column name, then type `Customer  Id`, and then press ENTER.  
   
     > [!TIP]  
-    >  You can also rename a column in the **Column Name** property in the column’s **Properties** window, or in Diagram View.  
+    >  You can also rename a column in the **Column Name** property in the column's **Properties** window, or in Diagram View.  
   
 3.  Rename the remaining columns in the **Customer** table, as well as the columns in the remaining tables, replacing the source name with the friendly name:  
   

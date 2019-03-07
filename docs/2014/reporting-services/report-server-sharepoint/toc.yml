@@ -1,0 +1,42 @@
+- name: Add the Report Viewer Web Part to a Web Page
+  href: add-reporting-services-content-types-to-a-sharepoint-library.md
+  items:
+  - name: Report Viewer Web Part on a SharePoint Site
+    href: ../report-viewer-web-part-on-a-sharepoint-site.md
+  - name: Connect Filter or Documents Web Part
+    href: ../connect-filter-or-documents-web-part-reporting-services-sharepoint-integrated-mode.md
+  - name: Customize the Report Viewer Web Part
+    href: ../customize-the-report-viewer-web-part.md
+- name: Report Server (SharePoint Mode)
+  href: ../reporting-services-report-server-sharepoint-mode.md
+  items:
+  - name: SharePoint Service and Service Applications
+    href: ../reporting-services-sharepoint-service-and-service-applications.md
+    items:
+    - name: Manage a Reporting Services SharePoint Service Application
+      href: ../manage-a-reporting-services-sharepoint-service-application.md
+    - name: Backup and Restore Reporting Services SharePoint Service Applications
+      href: ../backup-and-restore-reporting-services-sharepoint-service-applications.md
+- name: PowerShell cmdlets for Reporting Services SharePoint Mode
+  href: ../powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+- name: Configuration and Administration (SharePoint Mode)
+  href: ../configure-administer-report-server-reporting-services-sharepoint-mode.md
+  items:
+  - name: Reporting Services Site Collection Features
+    href: ../reporting-services-site-collection-features.md
+  - name: Activate the Report Server and Power View Integration Features in SharePoint
+    href: ../activate-the-report-server-and-power-view-integration-features-in-sharepoint.md
+  - name: Reporting Services Site Settings and Site Features (SharePoint Mode)
+    href: ../reporting-services-site-settings-and-site-features-sharepoint-mode.md
+  - name: Activate the Report Server File Sync Feature
+    href: ../activate-report-server-file-sync-feature-sharepoint-central-administration.md
+  - name: Add Report Server Content Types to a Library (Reporting Services in SharePoint Integrated Mode)
+    href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
+  - name: Local Mode vs. Connected Mode Reports in the Report Viewer
+    href: ../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md
+  - name: Upload Documents to a SharePoint Library
+    href: ../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+  - name: Set Processing Options
+    href: ../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+- name: SharePoint Integration with 2008 and 2008 R2  Report Servers
+  href: ../sharepoint-integration-with-2008-and-2008-r2-report-servers.md

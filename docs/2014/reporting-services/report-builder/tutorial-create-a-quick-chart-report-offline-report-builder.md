@@ -4,25 +4,22 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports, creating"
   - "tutorials, getting started"
   - "creating reports"
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-caps.latest.revision: 25
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
-  In this tutorial, you'll create a pie chart by using a wizard, and then you'll modify it a little, just to get an idea of what's possible. You can do this tutorial two different ways. Both methods have the same outcome—a pie chart like the one in the following illustration:  
+  In this tutorial, you'll create a pie chart by using a wizard, and then you'll modify it a little, just to get an idea of what's possible. You can do this tutorial two different ways. Both methods have the same outcome-a pie chart like the one in the following illustration:  
   
- !["My First Pie Chart" in Run view](../media/rs-my1stpierunview.gif ""My First Pie Chart" in Run view")  
+ !["My First Pie Chart" in Run view](../media/rs-my1stpierunview.gif "My First Pie Chart in Run view")  
   
 ## Prerequisites  
  Whether you use XML data or a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query, you need to have access to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Report Builder. You can run the stand-alone version or the ClickOnce version available from Report Manager or a SharePoint site. Only the first step, how to open Report Builder, is different for ClickOnce versions. For more information, see [Install, Uninstall, and Report Builder Support](../install-uninstall-and-report-builder-support.md).  

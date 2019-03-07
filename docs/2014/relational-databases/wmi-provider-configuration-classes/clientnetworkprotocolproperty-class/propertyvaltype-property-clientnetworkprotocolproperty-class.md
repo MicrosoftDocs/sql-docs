@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "PropertyValType Property (ClientNetworkProtocolProperty Class)"
@@ -19,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "PropertyValType property"
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # PropertyValType Property (ClientNetworkProtocolProperty Class)

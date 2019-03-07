@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "many-to-many relationships [Analysis Services]"
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Define a Many-to-Many Relationship and Many-to-Many Relationship Properties
   This topic explains many-to-many dimensions in Analysis Services, including when to use them and how to create them.  
@@ -172,16 +169,16 @@ manager: "mblythe"
   
 3.  Always remember to deploy and reconnect after changing a model. In Excel, use the Refresh button on the PivotTable Analyze ribbon.  
   
-4.  Avoid using linked measure groups in multiple many-to-many relationships, especially when those relationships are in different cubes. Doing so can result in ambiguous aggregations. For more information, see [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
+4.  Avoid using linked measure groups in multiple many-to-many relationships, especially when those relationships are in different cubes. Doing so can result in ambiguous aggregations. For more information, see [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  Use the following links to get additional information that helps you master the concepts.  
   
- [How do I define a many-to-many dimension in Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [How do I define a many-to-many dimension in Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [The many-to-many Revolution 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [The many-to-many Revolution 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Tutorial: Many-to-many dimension example for SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Tutorial: Many-to-many dimension example for SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## See Also  
  [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

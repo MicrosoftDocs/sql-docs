@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.database_mirroring_witnesses"
@@ -22,9 +19,8 @@ helpviewer_keywords:
   - "sys.database_mirroring_witnesses catalog view"
   - "witness [SQL Server], sys.database_mirroring_witnesses catalog view"
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-caps.latest.revision: 46
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
@@ -32,7 +28,7 @@ manager: craigg
 
   Contains a row for every witness role that a server plays in a database mirroring partnership. 
   
-  In a database mirroring session, automatic failover requires a witness server. Ideally, the witness resides on a separate computer from both the principal and mirror servers. The witness does not serve the database. Instead, it monitors the status of the principal and mirror servers. If the principal server fails, the witness may initiate automatic failover to the witness server. 
+  In a database mirroring session, automatic failover requires a witness server. Ideally, the witness resides on a separate computer from both the principal and mirror servers. The witness does not serve the database. Instead, it monitors the status of the principal and mirror servers. If the principal server fails, the witness may initiate automatic failover to the mirror server. 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

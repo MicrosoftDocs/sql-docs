@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_mergesubscription_cleanup"
   - "sp_mergesubscription_cleanup_TSQL"
 helpviewer_keywords: 
   - "sp_mergesubscription_cleanup"
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_mergesubscription_cleanup (Transact-SQL)

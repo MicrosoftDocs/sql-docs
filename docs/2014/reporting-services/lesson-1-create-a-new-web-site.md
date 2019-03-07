@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Lesson 1: Create a New Web Site
-  In this lesson you’ll learn how to create a new website project using the ASP.NET website template for Visual C#.  
+  In this lesson you'll learn how to create a new website project using the ASP.NET website template for Visual C#.  
   
 ### To create a new website  
   
@@ -31,6 +28,6 @@ manager: "mblythe"
  The website project opens.  
   
 ## Next Task  
- You’ve successfully created a new website project. Next, you will create a data connection and a data table for the parent report. See [Lesson 2: Define a Data Connection and Data Table for Parent Report](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ You've successfully created a new website project. Next, you will create a data connection and a data table for the parent report. See [Lesson 2: Define a Data Connection and Data Table for Parent Report](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

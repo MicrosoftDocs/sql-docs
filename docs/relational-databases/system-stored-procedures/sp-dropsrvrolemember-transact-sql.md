@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropsrvrolemember"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropsrvrolemember"
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_dropsrvrolemember (Transact-SQL)
@@ -41,10 +37,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## Arguments  
- [ @loginame **=** ] **'***login***'**  
+ [ @loginame **=** ] **'**_login_**'**  
  Is the name of a login to remove from the fixed server role. *login* is **sysname**, with no default. *login* must exist.  
   
- [ @rolename **=** ] **'***role***'**  
+ [ @rolename **=** ] **'**_role_**'**  
  Is the name of a server role. *role* is **sysname**, with a default of NULL. *role* must be one of the following values:  
   
 -   sysadmin  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, browsing"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "clustering [data mining]"
   - "mining model, clustering"
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Browsing a Clustering Model
   When you open a clustering model using **Browse**, the model is displayed in an interactive viewer, similar to the clustering viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The viewer helps you explore the clusters that were created, and understand cluster characteristics. You can also compare and contrast individual segments with other segments or with the population.  
@@ -63,7 +60,7 @@ manager: "mblythe"
   
 5.  Now, click the **Shading Variable** dropdown list and choose the **Age** variable. As you do so, a list of values appears in the **State** text box.  
   
-     The Age column used as input to this model contains continuous numeric values, but for the purpose of clustering, the algorithm always discretizes numbers. Here you can see the bins, or groups that the algorithm created, such as “Very Low (\<=27)” and “Very High (>=63)”.  
+     The Age column used as input to this model contains continuous numeric values, but for the purpose of clustering, the algorithm always discretizes numbers. Here you can see the bins, or groups that the algorithm created, such as "Very Low (\<=27)" and "Very High (>=63)".  
   
 6.  From the **State** dropdown lists, select **Very High** and see how the diagram changes.  
   
@@ -118,9 +115,9 @@ manager: "mblythe"
   
     -   The width of the diamond represents the variance of the attribute at that node. Therefore, a thinner diamond indicates that the node can create a more accurate prediction.  
   
-5.  To make more room in the graph, right-click a cluster you don’t need to view right away, and select **Hide Column**. This doesn’t delete it from the model, just collapses the column temporarily.  
+5.  To make more room in the graph, right-click a cluster you don't need to view right away, and select **Hide Column**. This doesn't delete it from the model, just collapses the column temporarily.  
   
-     To view clusters that you’ve hidden, you can click and drag the column edge, or select the cluster name from the list, **More clusters**.  
+     To view clusters that you've hidden, you can click and drag the column edge, or select the cluster name from the list, **More clusters**.  
   
 6.  Scroll down the attribute list till you find Bike Buyer, and then find the cluster that has the highest percentage of Yes values.  
   
@@ -140,9 +137,9 @@ manager: "mblythe"
   
 -   Right-click any cell and select **Drillthrough model columns** to output the underlying data to a new worksheet in Excel.  
   
--   Right-click the cluster’s column heading and select **Drillthrough to structure data** to get detailed information about the cluster members that wasn’t included in the model.  
+-   Right-click the cluster's column heading and select **Drillthrough to structure data** to get detailed information about the cluster members that wasn't included in the model.  
   
-     For example, if you are profiling customers, you might leave the contact information in the underlying data (the mining structure) but not include it in the model, because it’s not useful for analysis. However, after customers have been assigned to clusters, you can view the detailed data by using drillthrough.  
+     For example, if you are profiling customers, you might leave the contact information in the underlying data (the mining structure) but not include it in the model, because it's not useful for analysis. However, after customers have been assigned to clusters, you can view the detailed data by using drillthrough.  
   
  [Back To Top](#BKMK_Tabs)  
   
@@ -173,11 +170,11 @@ manager: "mblythe"
   
 5.  Click **Copy to Excel**.  
   
-     Note that the new cluster characteristics chart is added on its own worksheet. You can move it onto the same worksheet as the other profile to make it easier to compare them, which you’ll do in the next step.  
+     Note that the new cluster characteristics chart is added on its own worksheet. You can move it onto the same worksheet as the other profile to make it easier to compare them, which you'll do in the next step.  
   
  **Tips**  
   
--   Note that the primary characteristic of the customer in the Over 65 cluster is that they don’t buy your product! If you want to know why this is so, you can browse clusters and compare groups, or you might create a related model using an algorithm that is good at exploring causes and outcomes, such as a decision tree model or a Naïve Bayes model.  
+-   Note that the primary characteristic of the customer in the Over 65 cluster is that they don't buy your product! If you want to know why this is so, you can browse clusters and compare groups, or you might create a related model using an algorithm that is good at exploring causes and outcomes, such as a decision tree model or a Naïve Bayes model.  
   
 -   If you want to get a complete list of attributes and probabilities for this cluster (or all clusters) you can create a query. For examples of queries on clustering models, see [Clustering Model Query Examples](data-mining/clustering-model-query-examples.md).  
   
@@ -186,7 +183,7 @@ manager: "mblythe"
 ###  <a name="BKMK_ClusterDiscrimination"></a> Cluster Discrimination  
  You use the **Cluster Discrimination** tab to compare attributes between two clusters, or between a cluster and all the other cases in the data set.  
   
- To highlight the features of this viewer, we’ll compare it to the side-by-side tables in Excel that you created based on the **Cluster Characteristics** view.  
+ To highlight the features of this viewer, we'll compare it to the side-by-side tables in Excel that you created based on the **Cluster Characteristics** view.  
   
 ##### Explore cluster discrimination  
   
@@ -202,7 +199,7 @@ manager: "mblythe"
   
      Note that, under the covers, the **Cluster Discrimination** viewer sends complex queries to the data mining server, to extract the attributes that are most important in distinguishing between the two groups, making it easier to compare two sets of customers.  
   
-2.  Click either of the **Favors…** columns.  
+2.  Click either of the **Favors...** columns.  
   
      The bar to the right of the attribute and value list shows which features or values are most important as a characteristic of the selected cluster.  
   

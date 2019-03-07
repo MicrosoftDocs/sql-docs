@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, null values"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "ELEMENTS directive"
   - "XSINIL parameter"
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
-caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Generate Elements for NULL Values with the XSINIL Parameter

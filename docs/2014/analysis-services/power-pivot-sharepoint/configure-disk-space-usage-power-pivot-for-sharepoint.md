@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure Disk Space Usage (PowerPivot for SharePoint)
   A PowerPivot for SharePoint deployment uses the disk space of the host computer to cache PowerPivot databases for faster reloads. Every PowerPivot database that is loaded in memory is first cached to disk so that it can be quickly reloaded later to service new requests. By default, PowerPivot for SharePoint uses all available disk space to cache its databases, but can modify this behavior by setting properties that limit how much disk space is used.  
@@ -48,11 +45,11 @@ manager: "mblythe"
   
  At the system level, you can create email alerts that notify you when disk space is low. Microsoft System Center includes an email alert feature. You can also use File Server Resource Manager, Task Scheduler, or PowerShell script to set up alerts. The following links provide useful information for setting up notifications about low disk space:  
   
--   [What's New in File Server Resource Manager](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [What's New in File Server Resource Manager](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [File Server Resource Manager Step-by-Step Guide for Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [File Server Resource Manager Step-by-Step Guide for Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Setting low disk space alerts on Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Setting low disk space alerts on Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## How to limit the amount of disk space used for storing cached files  
   
@@ -64,7 +61,7 @@ manager: "mblythe"
   
 3.  In Disk Usage, set a value (in gigabytes) for **Total disk space** to set an upper limit on the amount of space used for caching purposes. The default is 0, which allows Analysis Services to use all available disk space.  
   
-4.  In Disk Usage, in the **Delete cached databases in last ‘n’ hours** setting, specify last-used criteria for emptying the cache when disk space is at the maximum limit.  
+4.  In Disk Usage, in the **Delete cached databases in last 'n' hours** setting, specify last-used criteria for emptying the cache when disk space is at the maximum limit.  
   
      The default is 4 hours, meaning that all databases that have been inactive for 4 hours or more are deleted from the file system. Databases that are inactive but still in memory are unloaded and then deleted from the file system.  
   

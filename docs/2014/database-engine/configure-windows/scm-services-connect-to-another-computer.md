@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], other computers"
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Connect to Another Computer (SQL Server Configuration Manager)
@@ -61,7 +57,7 @@ manager: craigg
   
 10. Right-click **SQL Server Configuration Manager**, and then click **New Window from here**.  
   
-11. On the **Window** menu, click **Console Root**, to switch back to the first widow, and delete the window.  
+11. On the **Window** menu, click **Console Root**, to switch back to the first window, and delete the window.  
   
 12. On the **File** menu, click **Save As**, and save the file in the desired folder, with an appropriate name with the `.msc` file extension. Close the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   

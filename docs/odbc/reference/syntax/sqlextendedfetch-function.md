@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLExtendedFetch"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLExtendedFetch function [ODBC]"
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -31,7 +28,7 @@ manager: craigg
  **Summary**  
  **SQLExtendedFetch** fetches the specified rowset of data from the result set and returns data for all bound columns. Rowsets can be specified at an absolute or relative position or by bookmark.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 3*.x*, **SQLExtendedFetch** has been replaced by **SQLFetchScroll**. ODBC 3*.x* applications should not call **SQLExtendedFetch**; instead they should call **SQLFetchScroll**. The Driver Manager maps **SQLFetchScroll** to **SQLExtendedFetch** when working with an ODBC 2*.x* driver. ODBC 3*.x* drivers should support **SQLExtendedFetch** if they want to work with ODBC 2*.x* applications that call it. For more information, see "Comments" and [Block Cursors, Scrollable Cursors, and Backward Compatibility](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Appendix G: Driver Guidelines for Backward Compatibility.  
   
 ## Syntax  

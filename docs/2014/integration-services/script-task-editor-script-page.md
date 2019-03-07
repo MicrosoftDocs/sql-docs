@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scripttask.script.f1"
 helpviewer_keywords: 
   - "Script Task Editor"
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Script Task Editor (Script Page)
@@ -41,13 +38,13 @@ manager: craigg
  If you change the name of the method in the VSTA project, you must change the value of the **EntryPoint** property.  
   
  **ReadOnlyVariables**  
- Type a comma-separated list of read-only variables that are available to the script, or click the ellipsis (**…**) button and select the variables in the **Select variables** dialog box.  
+ Type a comma-separated list of read-only variables that are available to the script, or click the ellipsis (**...**) button and select the variables in the **Select variables** dialog box.  
   
 > [!NOTE]  
 >  Variable names are case sensitive.  
   
  **ReadWriteVariables**  
- Type a comma-separated list of read/write variables that are available to the script, or click the ellipsis (**…**) button and select the variables in the **Select variables** dialog box.  
+ Type a comma-separated list of read/write variables that are available to the script, or click the ellipsis (**...**) button and select the variables in the **Select variables** dialog box.  
   
 > [!NOTE]  
 >  Variable names are case sensitive.  

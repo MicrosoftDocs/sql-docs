@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Discontinued SQL Server Features in SQL Server 2014
@@ -38,7 +35,7 @@ manager: craigg
 ## Discontinued Features in SQL Server 2008  
   
 ### Discontinued SQL-DMO from SQL Server Express Installation  
- SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has been removed from [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. We recommend that you modify applications that currently use this feature as soon as possible. If you must support SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, install the Backward Compatibility Components from the [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=51230). Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) for new development work.  
+ SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has been removed from [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. We recommend that you modify applications that currently use this feature as soon as possible. If you must support SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, install the Backward Compatibility Components from the [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=51230). Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) for new development work.  
   
 ### Discontinued Option for Web Assistant  
  The `sp_configure` option to enable Web Assistant has been removed from [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. We recommend that you use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instead.  

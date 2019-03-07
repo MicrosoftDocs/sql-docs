@@ -3,7 +3,6 @@ title: "Using Always Encrypted with the PHP Drivers for SQL Server | Microsoft D
 ms.date: "01/08/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
@@ -30,7 +29,7 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 ## Enabling Always Encrypted in a PHP Application
 
-The easiest way to enable the encryption of parameters targeting the encrypted columns, and the decryption of query results is by setting the value of the `ColumnEncryption` connection string keyword to `Enabled`. The following are examples of enabling Always Encrypted in the SQLSRV and PDO_SQLSRV drivers:
+The easiest way to enable the encryption of parameters targeting the encrypted columns and the decryption of query results is by setting the value of the `ColumnEncryption` connection string keyword to `Enabled`. The following are examples of enabling Always Encrypted in the SQLSRV and PDO_SQLSRV drivers:
 
 SQLSRV:
 ```
@@ -57,6 +56,7 @@ If Always Encrypted is not enabled, queries with parameters that target encrypte
 The following table summarizes the behavior of queries, depending on whether Always Encrypted is enabled or not:
 
 |Query characteristic|Always Encrypted is enabled and application can access the keys and key metadata|Always Encrypted is enabled and application cannot access the keys or key metadata|Always Encrypted is disabled|
+|---|---|---|---|
 |Parameters targeting encrypted columns.|Parameter values are transparently encrypted.|Error|Error|
 |Retrieving data from encrypted columns, without parameters targeting encrypted columns.|Results from encrypted columns are transparently decrypted. The application receives plaintext column values. |Error|Results from encrypted columns are not decrypted. The application receives encrypted values as byte arrays.|
  
@@ -239,7 +239,7 @@ Because Always Encrypted is a client-side encryption technology, most of the per
 
 If Always Encrypted is enabled for a connection, the ODBC Driver will, by default, call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them.
 
-Since the PHP drivers allow the user to bind a parameter in a prepared statement without providing the SQL type, when binding a parameter in an Always Encrypted enabled connection, the PHP Drivers call [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) on the parameter to get the SQL type, column size, and decimal digits. The metadata is then used to call [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). These extra `SQLDescribeParam` calls do not require extra round-trip to the database as the ODBC Driver has already stored the information on the client side when `sys.sp_describe_parameter_encryption` was called.
+Since the PHP drivers allow the user to bind a parameter in a prepared statement without providing the SQL type, when binding a parameter in an Always Encrypted enabled connection, the PHP Drivers call [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) on the parameter to get the SQL type, column size, and decimal digits. The metadata is then used to call [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). These extra `SQLDescribeParam` calls do not require extra round-trips to the database as the ODBC Driver has already stored the information on the client side when `sys.sp_describe_parameter_encryption` was called.
 
 The preceding behaviors ensure a high level of transparency to the client application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
@@ -257,19 +257,59 @@ To encrypt or decrypt data, the driver needs to obtain a CEK that is configured 
 
 To obtain the plaintext value of an ECEK, the driver first obtains the metadata about both the CEK and its corresponding CMK, and then it uses this information to contact the key store containing the CMK and requests it to decrypt the ECEK. The driver communicates with a key store using a key store provider.
 
-For Microsoft Driver 5.2.0 for PHP for SQL Server, only Windows Certificate Store Provider is supported. The two other Keystore Providers supported by the ODBC Driver (Azure Key Vault and Custom Keystore Provider) are not yet supported.
+For Microsoft Driver 5.3.0 for PHP for SQL Server, only Windows Certificate Store Provider and Azure Key Vault are supported. The other Keystore Provider supported by the ODBC Driver (Custom Keystore Provider) is not yet supported.
 
 ### Using the Windows Certificate Store Provider
 
-The ODBC Driver for SQL Server   on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no additional configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no additional configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+
+### Using Azure Key Vault
+
+Azure Key Vault offers a way to store encryption keys, passwords, and other secrets using Azure and can be used to store keys for Always Encrypted. The ODBC Driver for SQL Server (version 17 and higher) includes a built-in master key store provider for Azure Key Vault. The following connection options handle Azure Key Vault configuration: `KeyStoreAuthentication`, `KeyStorePrincipalId`, and `KeyStoreSecret`. 
+ -   `KeyStoreAuthentication` can take one of two possible string values: `KeyVaultPassword` and `KeyVaultClientSecret`. These values control what kind of authentication credentials are used with the other two keywords.
+ -   `KeyStorePrincipalId` takes a string representing an identifier for the account seeking to access the Azure Key Vault. 
+     -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStorePrincipalId` must be the name of an Azure ActiveDirectory user.
+     -   If `KeyStoreAuthentication` is set to `KeyVaultClientSecret`, then `KeyStorePrincipalId` must be an application client ID.
+ -   `KeyStoreSecret` takes a string representing a credential secret. 
+     -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStoreSecret` must be the user's password. 
+     -   If `KeyStoreAuthentication` is set to `KeyVaultClientSecret`, then `KeyStoreSecret` must be the application secret associated with the application client ID.
+
+All three options must be present in the connection string to use Azure Key Vault. In addition, `ColumnEncryption` must be set to `Enabled`. If `ColumnEncryption` is set to `Disabled` but the Azure Key Vault options are present, the script will proceed without errors but no encryption will be performed.
+
+The following examples show how to connect to SQL Server using Azure Key Vault.
+
+SQLSRV:
+
+Using an Azure Active Directory account:
+```
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
+$conn = sqlsrv_connect($server, $connectionInfo);
+```
+Using an Azure application client ID and secret:
+```
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
+$conn = sqlsrv_connect($server, $connectionInfo);
+```
+
+PDO_SQLSRV:
+Using an Azure Active Directory account:
+```
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
+$conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
+```
+Using an Azure application client ID and secret:
+```
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
+$conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
+```
 
 ## Limitations of the PHP drivers when using Always Encrypted
 
 SQLSRV and PDO_SQLSRV:
- -   Linux/MacOS support
-  -   Linux/MacOS do not support Windows Certificate Store Provider and that is the only Keystore Provider currently supported by the PHP drivers
+ -   Linux/macOS do not support Windows Certificate Store Provider
  -   Forcing parameter encryption
  -   Enabling Always Encrypted at the statement level 
+ -   When using the Always Encrypted feature and non-UTF8 locales on Linux and macOS (such as "en_US.ISO-8859-1"), inserting null data or an empty string into an encrypted char(n) column may not work unless Code Page 1252 has been installed on your system
  
 SQLSRV only:
  -   Using `sqlsrv_query` for binding parameter without specifying the SQL type

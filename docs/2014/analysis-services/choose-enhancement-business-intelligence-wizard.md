@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.bienhancement.f1"
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Choose Enhancement (Business Intelligence Wizard)
   Use the **Choose Enhancement** page to choose the business intelligence enhancement to add to your cube or dimension.  

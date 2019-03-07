@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "LocalDBGetInstances"
@@ -17,9 +13,8 @@ api_location:
 topic_type: 
   - "apiref"
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # LocalDBGetInstances Function
@@ -39,10 +34,10 @@ HRESULT LocalDBGetInstances(
   
 ## Parameters  
  *pInstanceNames*  
- [Output] When this function returns, contains the names of both named and default LocalDB instances on the user’s workstation.  
+ [Output] When this function returns, contains the names of both named and default LocalDB instances on the user's workstation.  
   
  *lpdwNumberOfInstances*  
- [Input/Output] On input, contains the number of slots for instance names in the *pInstanceNames* buffer. On output, contains the number of LocalDB instances found on the user’s workstation.  
+ [Input/Output] On input, contains the number of slots for instance names in the *pInstanceNames* buffer. On output, contains the number of LocalDB instances found on the user's workstation.  
   
 ## Returns  
  S_OK  

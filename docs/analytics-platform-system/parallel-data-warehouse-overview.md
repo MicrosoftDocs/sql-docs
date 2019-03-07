@@ -12,7 +12,7 @@ ms.reviewer: martinle
 ---
 
 # Parallel Data Warehouse components - Analytics Platform System
-This articles explains the appliance software and the non-appliance software components of Analytics Platform System.  
+This article explains the appliance software and the non-appliance software components of Analytics Platform System.  
   
 <!-- MISSING LINKS
 
@@ -35,7 +35,7 @@ To learn more about Analytics Platform System, see:
   
 ![Parallel Data Warehouse software](media/parallel-data-warehouse-software.png "Parallel Data Warehouse software")  
   
-## <a name="sec1"></a>Appliance Software – Query Processing and User Data Storage  
+## <a name="sec1"></a>Appliance Software - Query Processing and User Data Storage  
   
 ### Control Node  
 MPP Engine  
@@ -50,7 +50,7 @@ The MPP Engine is the brains of the Massively Parallel Processing (MPP) system. 
 -   Tracks hardware and software status.  
   
 ### Data Movement Service (DMS)  
-Data Movement Service (DMS) is part of the “secret sauce” of PDW. It does the following:  
+Data Movement Service (DMS) is part of the "secret sauce" of PDW. It does the following:  
   
 -   Transfers data to and from the SQL Server PDW nodes.  
   
@@ -85,7 +85,7 @@ Data Movement Service (DMS) runs on each Compute node to do the following:
   
 -   DMS transfers data from each Compute node directly to the backup server.  
   
--   Using PolyBase, DMS transfers data to and from an external Hadoop cluster, or the HDInsight Region on the appliance.  
+-   Using PolyBase, DMS transfers data to and from an external Hadoop cluster or Azure Storage Blob.  
   
 ### Compute node databases 
 Each Compute node runs an instance of SQL Server to process queries and manage user data.  
@@ -120,37 +120,35 @@ Windows Failover Clustering provides the ability to restart processes on a passi
 Windows Storage Spaces manages user data as a storage pool for a small group of Compute nodes. If a Compute node fails, the data is still accessible through another Compute node in the group.  
   
 ### Hyper-V  
-Microsoft Hyper-V Server provides a simple and reliable virtualization solution. Analytics Platform System uses virtualizations to balance CPU resources and to provide high availability for the PDW nodes and appliance fabric components .  
+Microsoft Hyper-V Server provides a simple and reliable virtualization solution. Analytics Platform System uses virtualizations to balance CPU resources and to provide high availability for the PDW nodes and appliance fabric components.  
   
 ## <a name="sec2"></a>Non-relational data
-PolyBase technology to integrates SQL Server PDW data with external Hadoop data. The Hadoop data can be stored on any of these Hadoop Data sources:  
+PolyBase technology integrates SQL Server PDW data with external Hadoop data. The Hadoop data can be stored on any of these Hadoop Data sources:  
   
--   Hortonworks for Linux or Windows Server  
+-   Hortonworks Hadoop Distribution  
   
--   Cloudera on Linux  
-  
--   HDInsight running on APS  
+-   Cloudera Distribution of Hadoop  
   
 -   HDInsight data stored on Azure Storage Blob  
   
 ## Query Tools   
   
-Queries are written with Transact\-SQL modified to fit the MPP nature of the queries. All queries are submitted to the Control node which generates a parallel query plan to run the query across the Compute nodes.  
+Queries are written with Transact\-SQL modified to fit the MPP nature of the queries. All queries are submitted to the Control node, which generates a parallel query plan to run the query across the Compute nodes.  
   
 ### SQL Server Data Tools (SSDT)  
 SQL Server Data Tools runs inside of Visual Studio and is our recommended GUI tool for submitting queries to SQL Server PDW. It is similar to SQL Server Management Studio by allowing you to navigate through an object explorer.  
   
-If you don’t already have Visual Studio, you can download the tools that you need for free. 
+If you don't already have Visual Studio, you can download the tools that you need for free. 
 <!-- MISSING LINKS
 For more information, see [Install SQL Server database tooling  for Visual Studio &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-database-tooling-for-visual-studio-sql-server-pdw.md).  
 -->
   
 ### sqlcmd Command-Line Query Tool  
-sqlcmd is the SQL Server command-line tool for running Transact\-SQL statements and system commands. It works with SQL Server PDW and is our recommended command-line tool for querying SQL Server PDW.With sqlcmd you can run Transact\-SQL statements interactively from the command-line, as a batch file, or from Windows PowerShell.  
+sqlcmd is the SQL Server command-line tool for running Transact\-SQL statements and system commands. It works with SQL Server PDW and is our recommended command-line tool for querying SQL Server PDW. With sqlcmd you can run Transact\-SQL statements interactively from the command-line, as a batch file, or from Windows PowerShell.  
   
 <!-- MISSING LINKS
 
-If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
+If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
 ### Integration Services  
@@ -169,7 +167,7 @@ For more information, see [Connect With SQL Server Linked Server &#40;SQL Server
   
 ## Business Intelligence Tools
   
-Analysis Services  
+### Analysis Services  
 SQL Server PDW is a valid data source for Analysis Services databases and Excel PowerPivot models. Using the OLE DB provider, you can configure an Analysis Services cube to use either multidimensional online analytical processing (MOLAP) or relational online analytical processing (ROLAP) storage.  
   
 <!-- MISSING LINKS
@@ -212,14 +210,14 @@ For more information, see [Install dwloader Command-Line Loader &#40;SQL Server 
 -->
   
 ### PolyBase for Hadoop Integration  
-With PolyBase technology, you can load non-relational data from an Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster, the HDI Region on APS, or in a Azure Storage Blob.  
+With PolyBase technology, you can load non-relational data from a Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster or in an Azure Storage Blob.  
 
 <!-- MISSING LINKS
 For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).
 -->  
   
 ## Database Backup and Restore  
-SQL Server PDW uses Transact\-SQL database backup and restore commands to backup and restore user databases, in parallel, to and from a backup server. SQL Server PDW writes the backup to a directory in a Windows file share, and then likewise restores data from a Windows file share.  
+SQL Server PDW uses Transact-SQL database backup and restore commands to backup and restore user databases, in parallel, to and from a backup server. SQL Server PDW writes the backup to a directory in a Windows file share, and then likewise restores data from a Windows file share.  
   
 For more information, see [Plan for Backup and Loading Hardware](backup-and-loading-hardware.md) and [Backup and Restore Overview](backup-and-restore-overview.md)  
   

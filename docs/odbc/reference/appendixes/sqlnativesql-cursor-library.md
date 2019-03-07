@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLNativeSql function [ODBC], Cursor Library"
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

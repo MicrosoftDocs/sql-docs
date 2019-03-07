@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: scripting
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PowerShell [SQL Server], provider"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "PowerShell [SQL Server], SMO"
   - "SQL Server Management Objects, PowerShell"
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg

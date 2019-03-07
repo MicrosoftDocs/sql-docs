@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.kpidefinitionpane.f1"
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # KPI Form Editor (KPIs Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **KPI Form Editor** pane on the **KPIs** tab in Cube Designer to create or modify the selected Key Performance Indicator (KPI).  
@@ -58,10 +55,10 @@ manager: "mblythe"
   
  Drag selected elements from the **Calculation Tools** pane to this option to include the MDX syntax for the selected element.  
   
- It is recommended that this expression returns a decimal number between –1 and 1. A lower number represents a negative situation, while a higher number represents a positive situation.  
+ It is recommended that this expression returns a decimal number between -1 and 1. A lower number represents a negative situation, while a higher number represents a positive situation.  
   
 > [!NOTE]  
->  Values below –1 and above 1 are possible but may not be interpreted correctly by third-party client applications.  
+>  Values below -1 and above 1 are possible but may not be interpreted correctly by third-party client applications.  
   
  **Trend**  
  Expand to view the **Trend graphic** and **Trend expression** options.  
@@ -77,10 +74,10 @@ manager: "mblythe"
   
  Drag selected elements from the **Calculation Tools** pane to this option to include the MDX syntax for the selected element.  
   
- The trend expression can be based on any time-based criteria that makes sense in a given business context. It is recommended that this expression returns a decimal number between –1 and 1. A lower number represents a negative trend over time; a higher number represents a positive trend over time.  
+ The trend expression can be based on any time-based criteria that makes sense in a given business context. It is recommended that this expression returns a decimal number between -1 and 1. A lower number represents a negative trend over time; a higher number represents a positive trend over time.  
   
 > [!NOTE]  
->  Values below –1 and above 1 are possible but may not be interpreted correctly by third-party client applications.  
+>  Values below -1 and above 1 are possible but may not be interpreted correctly by third-party client applications.  
   
  **Additional Properties**  
  Expand to view the **Display folder**, **Parent KPI**, **Current time member**, **Weight**, and **Description** options.  

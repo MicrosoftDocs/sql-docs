@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data definition language [SQL Server]"
   - "DDL statements [SQL Server]"
   - "DML triggers, removing DDL operations"
 ms.assetid: e49ba7d5-787f-4052-b985-b699195d982b
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Remove DDL operations on the inserted and deleted tables inside DML triggers

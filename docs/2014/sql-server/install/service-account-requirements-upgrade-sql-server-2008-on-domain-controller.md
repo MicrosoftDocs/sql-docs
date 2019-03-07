@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "domain controllers"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "network service accounts"
   - "local service accounts"
 ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Service account requirements for upgrading to SQL Server 2008 on a domain controller

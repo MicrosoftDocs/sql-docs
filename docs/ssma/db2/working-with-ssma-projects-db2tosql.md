@@ -4,34 +4,28 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
 ---
 # Working with SSMA Projects (DB2ToSQL)
-To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you first create an SSMA project. The project is a file that contains the following information:  
+To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you first create an SSMA project. The project is a file that contains the following information:  
   
--   Metadata about the DB2 databases you want to migrate to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Metadata about the DB2 databases you want to migrate to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Metadata about the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] that will receive the migrated objects and data.  
+-   Metadata about the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that will receive the migrated objects and data.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connection information.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection information.  
   
 -   Project settings.  
   
-When you open a project, it is disconnected from DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. That lets you work offline. For information about reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], see [Connecting to SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+When you open a project, it is disconnected from DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. That lets you work offline. For information about reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Connecting to SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
   
 ## Reviewing Default Project Settings  
-SSMA contains several settings for converting and loading database objects, migrating data, and synchronizing SSMA with DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. The default settings are appropriate for many users. However, before you create a new SSMA project, you should review the settings. If you want to, you can change the default settings that will be used for all your new projects.  
+SSMA contains several settings for converting and loading database objects, migrating data, and synchronizing SSMA with DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The default settings are appropriate for many users. However, before you create a new SSMA project, you should review the settings. If you want to, you can change the default settings that will be used for all your new projects.  
   
 **To review default project settings**  
   
@@ -49,14 +43,14 @@ SSMA contains several settings for converting and loading database objects, migr
   
     -   For information about system object settings, see [Project Settings&#40;Loading System objects&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md).  
   
-    -   For information about settings for synchronization to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], see [Project Settings&#40;Synchronization&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+    -   For information about settings for synchronization to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Project Settings&#40;Synchronization&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
     -   For information about GUI settings, see [Project Settings &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md).  
   
     -   For information about data type mapping settings, see [Project Settings &#40;Type Mapping&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
   
 ## Creating New Projects  
-To migrate data from DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must first create a project.  
+To migrate data from DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must first create a project.  
   
 **To create a project**  
   
@@ -68,13 +62,13 @@ To migrate data from DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssno
   
 3.  In the **Location** box, enter or select a folder for the project, and then click **OK**.  
   
-4.  In the **Migration To** drop down, select the version of target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] used for migration. The options available are:  
+4.  In the **Migration To** drop down, select the version of target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] used for migration. The options available are:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -101,7 +95,7 @@ When you save a project, SSMA retains the project settings, and optionally the d
         SSMA will parse the DB2 schemas and save the metadata to the project file.  
   
 ## Opening Projects  
-When you open a project, it is disconnected from DB2 and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. That lets you work offline. To update metadata, load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. To migrate data, you must reconnect to DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+When you open a project, it is disconnected from DB2 and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. That lets you work offline. To update metadata, load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To migrate data, you must reconnect to DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **To open a project**  
   
@@ -113,10 +107,10 @@ When you open a project, it is disconnected from DB2 and from [!INCLUDE[ssNoVers
   
 2.  To reconnect to DB2, on the **File** menu, click **Reconnect to DB2**.  
   
-3.  To reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], on the **File** menu, click **Reconnect to SQL Server**.  
+3.  To reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], on the **File** menu, click **Reconnect to SQL Server**.  
   
 ## Next Step  
-The next step in the migration process is to [Connecting to DB2 Database](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
+The next step in the migration process is to [Connecting to DB2 Database](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
   
 ## See Also  
 [Migrating DB2 Databases to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

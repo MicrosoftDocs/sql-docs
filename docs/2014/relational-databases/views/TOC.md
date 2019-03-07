@@ -1,8 +1,0 @@
-# [Views](views.md)
-## [Create Views](create-views.md)
-## [Create Indexed Views](create-indexed-views.md)
-## [Modify Views](modify-views.md)
-## [Modify Data Through a View](modify-data-through-a-view.md)
-## [Get Information About a View](get-information-about-a-view.md)
-## [Rename Views](rename-views.md)
-## [Delete Views](delete-views.md)

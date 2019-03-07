@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "sql:column function"
   - "sql:column() function"
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -54,7 +47,7 @@ sql:column("columnName")
   
  The query constructs XML that has the following form:  
   
-```  
+```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
@@ -67,9 +60,9 @@ sql:column("columnName")
   
 -   To make the query more interesting, the **ProductModelName** attribute value is obtained from the **CatalogDescription** column of **xml type**. Because the XML product model catalog information is not stored for all the product models, the `if` statement is used to retrieve the value only if it exists.  
   
-    ```  
+    ```sql
     SELECT P.ProductID, CatalogDescription.query('  
-    declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
                ProductID=       "{ sql:column("P.ProductID") }"  
                ProductName=     "{ sql:column("P.Name") }"  
@@ -109,10 +102,10 @@ ProductID               Result
   
  The following query constructs XML that contains product-specific information. This information includes the ProductID, ProductName, ProductPrice, and, if available, the ProductModelName for all products that belong to a specific product model, ProductModelID=19. The XML is then assigned to the @x variable of **xml** type.  
   
-```  
+```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        <Product   
            ProductID=       "{ sql:column("P.ProductID") }"  
            ProductName=     "{ sql:column("P.Name") }"  
@@ -132,7 +125,7 @@ select @x
 ```  
   
 ## See Also  
- [SQL Server XQuery Extension Functions](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery Extension Functions](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Compare Typed XML to Untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Create Instances of XML Data](../relational-databases/xml/create-instances-of-xml-data.md)   

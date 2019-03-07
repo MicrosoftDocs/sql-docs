@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitionwizard.specifydsvandfacttables.f1"
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specify Source Information (Partition Wizard)
   Use the **Specify Source Information** page to select the measure group in which to create the partition, and also the data source view and filter tables for your partition.  

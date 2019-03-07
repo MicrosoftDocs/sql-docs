@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Lesson 1: Create Windows Azure Storage Account and Container
@@ -26,7 +22,7 @@ manager: craigg
   
 -   Use a stored access policy to manage shared access signatures for a container or its blobs. The stored access policy gives you an additional measure of control over your shared access signatures and also provides a straightforward means to revoke them.  
   
- For more information, see [Manage Access to Windows Azure Storage Resources](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ For more information, see [Manage Access to Windows Azure Storage Resources](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## Create Storage Account  
  To create a storage account on the Windows Azure Management Portal, follow these steps:  
@@ -55,7 +51,7 @@ manager: craigg
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  To create a container programmatically, you can also use REST APIs. For more information, see [Create Container](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) and also [Windows Azure Storage Services REST API Reference](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  To create a container programmatically, you can also use REST APIs. For more information, see [Create Container](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) and also [Windows Azure Storage Services REST API Reference](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Next Lesson:**  
   

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "07/14/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.DATABASEUSER.MEMBERSHIP.F1"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "adding a member to a role"
   - "join a role"
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Join a Role
@@ -74,9 +70,9 @@ manager: craigg
   
 4.  Right-click the role you want to edit and select **Properties**.  
   
-5.  In the **Server Role Properties –***server_role_name* dialog box, on the **Members** page, click **Add**.  
+5.  In the **Server Role Properties -**_server_role_name_ dialog box, on the **Members** page, click **Add**.  
   
-6.  In the **Select Server Login or Role** dialog box, under **Enter the object names to select (examples)**, enter the login or server role to add to this server role. Alternately, click **Browse…** and select any or all of the available objects in the **Browse for Objects** dialog box. Click **OK** to return to the **Server Role Properties –***server_role_name* dialog box.  
+6.  In the **Select Server Login or Role** dialog box, under **Enter the object names to select (examples)**, enter the login or server role to add to this server role. Alternately, click **Browse...** and select any or all of the available objects in the **Browse for Objects** dialog box. Click **OK** to return to the **Server Role Properties -**_server_role_name_ dialog box.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -96,9 +92,9 @@ manager: craigg
   
 7.  Right-click the role you want to edit and select **Properties**.  
   
-8.  In the **Database Role Properties –***database_role_name* dialog box, in the **General** page, click **Add**.  
+8.  In the **Database Role Properties -**_database_role_name_ dialog box, in the **General** page, click **Add**.  
   
-9. In the **Select Database User or Role** dialog box, under **Enter the object names to select (examples)**, enter the login or database role to add to this database role. Alternately, click **Browse…** and select any or all of the available objects in the **Browse for Objects** dialog box. Click **OK** to return to the **Database Role Properties –***database_role_name* dialog box.  
+9. In the **Select Database User or Role** dialog box, under **Enter the object names to select (examples)**, enter the login or database role to add to this database role. Alternately, click **Browse...** and select any or all of the available objects in the **Browse for Objects** dialog box. Click **OK** to return to the **Database Role Properties -**_database_role_name_ dialog box.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

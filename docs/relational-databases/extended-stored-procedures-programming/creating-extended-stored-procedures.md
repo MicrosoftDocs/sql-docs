@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "warnings [SQL Server]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], creating"
   - "messages [SQL Server], extended stored procedures"
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

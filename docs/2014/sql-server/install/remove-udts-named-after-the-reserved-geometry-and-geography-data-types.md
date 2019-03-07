@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry data type [SQL Server], UDTs"
   - "geography data type [SQL Server], UDTs"
 ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Remove UDTs named after the reserved GEOMETRY and GEOGRAPHY data types

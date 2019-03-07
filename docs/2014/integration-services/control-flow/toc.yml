@@ -1,0 +1,336 @@
+- name: Control Flow
+  href: control-flow.md
+- name: Control Flow Tab
+  href: ../control-flow-tab.md
+- name: Integration Services Containers
+  href: integration-services-containers.md
+  items:
+  - name: Foreach Loop Container
+    href: foreach-loop-container.md
+    items:
+    - name: Configure a Foreach Loop Container
+      href: ../configure-a-foreach-loop-container.md
+    - name: Loop through Excel Files and Tables by Using a Foreach Loop Container
+      href: loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+    - name: Add Enumeration to a Control Flow
+      href: ../add-enumeration-to-a-control-flow.md
+    - name: For Each Item Columns Dialog Box UI Reference
+      href: ../for-each-item-columns-dialog-box-ui-reference.md
+    - name: Foreach Loop Editor (General Page)
+      href: ../foreach-loop-editor-general-page.md
+    - name: Foreach Loop Editor (Collection Page)
+      href: ../foreach-loop-editor-collection-page.md
+    - name: Foreach Loop Editor (Variable Mappings Page)
+      href: ../foreach-loop-editor-variable-mappings-page.md
+    - name: Select SMO Enumeration Dialog Box
+      href: ../select-smo-enumeration-dialog-box.md
+    - name: Schema Restrictions Dialog Box
+      href: ../schema-restrictions-dialog-box.md
+  - name: For Loop Container
+    href: for-loop-container.md
+    items:
+    - name: For Loop Editor
+      href: ../for-loop-editor.md
+    - name: Configure a For Loop Container
+      href: ../configure-a-for-loop-container.md
+    - name: Add Iteration to a Control Flow
+      href: ../add-iteration-to-a-control-flow.md
+  - name: Sequence Container
+    href: sequence-container.md
+  - name: Task Host Container
+    href: task-host-container.md
+- name: Integration Services Tasks
+  href: integration-services-tasks.md
+  items:
+  - name: Analysis Services Execute DDL Task
+    href: analysis-services-execute-ddl-task.md
+    items:
+    - name: Analysis Services Execute DDL Task Editor (General Page)
+      href: ../analysis-services-execute-ddl-task-editor-general-page.md
+    - name: Analysis Services Execute DDL Task Editor (DDL Page)
+      href: ../analysis-services-execute-ddl-task-editor-ddl-page.md
+  - name: Analysis Services Processing Task
+    href: analysis-services-processing-task.md
+    items:
+    - name: Analysis Services Processing Task Editor (General Page)
+      href: ../analysis-services-processing-task-editor-general-page.md
+    - name: Analysis Services Processing Task Editor (Analysis Services Page)
+      href: ../analysis-services-processing-task-editor-analysis-services-page.md
+  - name: Back Up Database Task
+    href: back-up-database-task.md
+  - name: Bulk Insert Task
+    href: bulk-insert-task.md
+    items:
+    - name: Bulk Insert Task Editor (General Page)
+      href: ../bulk-insert-task-editor-general-page.md
+    - name: Bulk Insert Task Editor (Connection Page)
+      href: ../bulk-insert-task-editor-connection-page.md
+    - name: Bulk Insert Task Editor (Options Page)
+      href: ../bulk-insert-task-editor-options-page.md
+  - name: CDC Control Task
+    href: cdc-control-task.md
+    items:
+    - name: CDC Control Task Editor
+      href: ../cdc-control-task-editor.md
+    - name: CDC Control Task Custom Properties
+      href: cdc-control-task-custom-properties.md
+  - name: Check Database Integrity Task
+    href: check-database-integrity-task.md
+  - name: Data Mining Query Task
+    href: data-mining-query-task.md
+    items:
+    - name: Data Mining Query Task Editor (Mining Model Tab)
+      href: ../data-mining-query-task-editor-mining-model-tab.md
+    - name: Data Mining Query Task Editor (Query Tab)
+      href: ../data-mining-query-task-editor-query-tab.md
+    - name: Data Mining Query Task Editor (Output Tab)
+      href: ../data-mining-query-task-editor-output-tab.md
+    - name: Data Mining Query
+      href: data-mining-query.md
+  - name: Data Profiling Task and Viewer
+    href: data-profiling-task-and-viewer.md
+    items:
+    - name: Setup of the Data Profiling Task
+      href: setup-of-the-data-profiling-task.md
+    - name: Data Profile Viewer
+      href: data-profile-viewer.md
+    - name: Data Profile Viewer F1 Help
+      href: ../data-profile-viewer-f1-help.md
+    - name: Data Profiling Task
+      href: data-profiling-task.md
+      items:
+      - name: Data Profiling Task Editor (General Page)
+        href: data-profiling-task-editor-general-page.md
+      - name: Single Table Quick Profile Form (Data Profiling Task)
+        href: single-table-quick-profile-form-data-profiling-task.md
+      - name: Data Profiling Task Editor (Profile Requests Page)
+        href: data-profiling-task-editor-profile-requests-page.md
+      - name: Candidate Key Profile Request Options (Data Profiling Task)
+        href: candidate-key-profile-request-options-data-profiling-task.md
+      - name: Column Length Distribution Profile Request Options (Data Profiling Task)
+        href: column-length-distribution-profile-request-options-data-profiling-task.md
+      - name: Column Null Ratio Profile Request Options (Data Profiling Task)
+        href: column-null-ratio-profile-request-options-data-profiling-task.md
+      - name: Column Pattern Profile Request Options (Data Profiling Task)
+        href: column-pattern-profile-request-options-data-profiling-task.md
+      - name: Column Statistics Profile Request Options (Data Profiling Task)
+        href: column-statistics-profile-request-options-data-profiling-task.md
+      - name: Column Value Distribution Profile Request Options (Data Profiling Task)
+        href: column-value-distribution-profile-request-options-data-profiling-task.md
+      - name: Functional Dependency Profile Request Options (Data Profiling Task)
+        href: functional-dependency-profile-request-options-data-profiling-task.md
+      - name: Value Inclusion Profile Request Options (Data Profiling Task)
+        href: value-inclusion-profile-request-options-data-profiling-task.md
+      - name: Incorporate a Data Profiling Task in Package Workflow
+        href: incorporate-a-data-profiling-task-in-package-workflow.md
+  - name: Execute Package Task
+    href: execute-package-task.md
+    items:
+    - name: Execute Package Task Editor
+      href: ../execute-package-task-editor.md
+  - name: Execute Process Task
+    href: execute-process-task.md
+    items:
+    - name: Execute Process Task Editor (General Page)
+      href: ../execute-process-task-editor-general-page.md
+    - name: Execute Process Task Editor (Process Page)
+      href: ../execute-process-task-editor-process-page.md
+  - name: Execute SQL Task
+    href: execute-sql-task.md
+    items:
+    - name: Parameters and Return Codes in the Execute SQL Task
+      href: ../parameters-and-return-codes-in-the-execute-sql-task.md
+    - name: Result Sets in the Execute SQL Task
+      href: ../result-sets-in-the-execute-sql-task.md
+    - name: Execute SQL Task Editor (General Page)
+      href: ../execute-sql-task-editor-general-page.md
+    - name: Execute SQL Task Editor (Parameter Mapping Page)
+      href: ../execute-sql-task-editor-parameter-mapping-page.md
+    - name: Execute SQL Task Editor (Result Set Page)
+      href: ../execute-sql-task-editor-result-set-page.md
+    - name: MERGE in Integration Services Packages
+      href: merge-in-integration-services-packages.md
+    - name: Map Query Parameters to Variables in an Execute SQL Task
+      href: ../map-query-parameters-to-variables-in-an-execute-sql-task.md
+    - name: Map Result Sets to Variables in an Execute SQL Task
+      href: ../map-result-sets-to-variables-in-an-execute-sql-task.md
+  - name: Execute T-SQL Statement Task
+    href: execute-t-sql-statement-task.md
+  - name: File System Task
+    href: file-system-task.md
+    items:
+    - name: File System Task Editor (General Page)
+      href: ../file-system-task-editor-general-page.md
+  - name: FTP Task
+    href: ftp-task.md
+    items:
+    - name: FTP Task Editor (General Page)
+      href: ../ftp-task-editor-general-page.md
+    - name: FTP Task Editor (File Transfer Page)
+      href: ../ftp-task-editor-file-transfer-page.md
+  - name: History Cleanup Task
+    href: history-cleanup-task.md
+  - name: Maintenance Cleanup Task
+    href: maintenance-cleanup-task.md
+  - name: Message Queue Task
+    href: message-queue-task.md
+    items:
+    - name: Message Queue Task Editor (General Page)
+      href: ../message-queue-task-editor-general-page.md
+    - name: Message Queue Task Editor (Receive Page)
+      href: ../message-queue-task-editor-receive-page.md
+    - name: Message Queue Task Editor (Send Page)
+      href: ../message-queue-task-editor-send-page.md
+    - name: Select a Package
+      href: select-a-package.md
+  - name: Notify Operator Task
+    href: notify-operator-task.md
+  - name: Rebuild Index Task
+    href: rebuild-index-task.md
+  - name: Reorganize Index Task
+    href: reorganize-index-task.md
+  - name: Script Task
+    href: script-task.md
+    items:
+    - name: Script Task Editor (General Page)
+      href: ../script-task-editor-general-page.md
+    - name: Script Task Editor (Script Page)
+      href: ../script-task-editor-script-page.md
+    - name: Select Variables Page
+      href: select-variables-page.md
+  - name: Send Mail Task
+    href: send-mail-task.md
+    items:
+    - name: Send Mail Task Editor (General Page)
+      href: ../send-mail-task-editor-general-page.md
+    - name: Send Mail Task Editor (Mail Page)
+      href: ../send-mail-task-editor-mail-page.md
+  - name: Shrink Database Task
+    href: shrink-database-task.md
+  - name: Transfer Database Task
+    href: transfer-database-task.md
+    items:
+    - name: Transfer Database Task Editor (General Page)
+      href: ../transfer-database-task-editor-general-page.md
+    - name: Transfer Database Task Editor (Databases Page)
+      href: ../transfer-database-task-editor-databases-page.md
+    - name: Source database files
+      href: ../source-database-files.md
+    - name: Destination Database Files
+      href: ../destination-database-files.md
+  - name: Transfer Error Messages Task
+    href: transfer-error-messages-task.md
+    items:
+    - name: Transfer Error Messages Task Editor (General Page)
+      href: ../transfer-error-messages-task-editor-general-page.md
+    - name: Transfer Error Messages Task Editor (Messages Page)
+      href: ../transfer-error-messages-task-editor-messages-page.md
+  - name: Transfer Jobs Task
+    href: transfer-jobs-task.md
+    items:
+    - name: Transfer Jobs Task Editor (General Page)
+      href: ../transfer-jobs-task-editor-general-page.md
+    - name: Transfer Jobs Task Editor (Jobs Page)
+      href: ../transfer-jobs-task-editor-jobs-page.md
+  - name: Transfer Logins Task
+    href: transfer-logins-task.md
+    items:
+    - name: Transfer Logins Task Editor (General Page)
+      href: ../transfer-logins-task-editor-general-page.md
+    - name: Transfer Logins Task Editor (Logins Page)
+      href: ../transfer-logins-task-editor-logins-page.md
+  - name: Transfer Master Stored Procedures Task
+    href: transfer-master-stored-procedures-task.md
+    items:
+    - name: Transfer Master Stored Procedures Task Editor (General Page)
+      href: ../transfer-master-stored-procedures-task-editor-general-page.md
+    - name: Transfer Master Stored Procedures Task Editor (Stored Procedures Page)
+      href: ../transfer-master-stored-procedures-task-editor-stored-procedures-page.md
+  - name: Transfer SQL Server Objects Task
+    href: transfer-sql-server-objects-task.md
+    items:
+    - name: Transfer SQL Server Objects Task Editor (General Page)
+      href: ../transfer-sql-server-objects-task-editor-general-page.md
+    - name: Transfer SQL Server Objects Task Editor (Objects Page)
+      href: ../transfer-sql-server-objects-task-editor-objects-page.md
+    - name: Select Objects to Transfer
+      href: select-objects-to-transfer.md
+  - name: Update Statistics Task
+    href: update-statistics-task.md
+  - name: Web Service Task
+    href: web-service-task.md
+    items:
+    - name: Web Service Task Editor (General Page)
+      href: ../web-service-task-editor-general-page.md
+    - name: Web Service Task Editor (Input Page)
+      href: ../web-service-task-editor-input-page.md
+    - name: Web Service Task Editor (Output Page)
+      href: ../web-service-task-editor-output-page.md
+  - name: WMI Data Reader Task
+    href: wmi-data-reader-task.md
+    items:
+    - name: WMI Data Reader Task Editor (General Page)
+      href: ../wmi-data-reader-task-editor-general-page.md
+    - name: WMI Data Reader Task Editor (WMI Options Page)
+      href: ../wmi-data-reader-task-editor-wmi-options-page.md
+  - name: WMI Event Watcher Task
+    href: wmi-event-watcher-task.md
+    items:
+    - name: WMI Event Watcher Task Editor (General Page)
+      href: ../wmi-event-watcher-task-editor-general-page.md
+    - name: WMI Event Watcher Task Editor (WMI Options Page)
+      href: ../wmi-event-watcher-task-editor-wmi-options-page.md
+  - name: XML Task
+    href: xml-task.md
+    items:
+    - name: Validate XML with the XML Task
+      href: validate-xml-with-the-xml-task.md
+    - name: XML Task Editor (General Page)
+      href: ../xml-task-editor-general-page.md
+  - name: Azure Blob Upload Task
+    href: azure-blob-upload-task.md
+  - name: Azure Blob Download Task
+    href: azure-blob-download-task.md
+  - name: Azure HDInsight Hive Task
+    href: azure-hdinsight-hive-task.md
+  - name: Azure HDInsight Pig Task
+    href: azure-hdinsight-pig-task.md
+  - name: Azure HDInsight Create Cluster Task
+    href: azure-hdinsight-create-cluster-task.md
+  - name: Azure HDInsight Delete Cluster Task
+    href: azure-hdinsight-delete-cluster-task.md
+  - name: Azure SQL DW Upload Task
+    href: ../azure-sql-dw-upload-task.md
+  - name: Azure Data Lake Store File System Task
+    href: ../azure-data-lake-store-file-system-task.md
+- name: Integration Services Transactions
+  href: ../integration-services-transactions.md
+  items:
+  - name: Inherited Transactions
+    href: ../inherited-transactions.md
+  - name: Multiple Transactions
+    href: ../multiple-transactions.md
+  - name: Configure a Package to Use Transactions
+    href: ../configure-a-package-to-use-transactions.md
+- name: Precedence Constraints
+  href: precedence-constraints.md
+  items:
+  - name: Add Expressions to Precedence Constraints
+    href: ../add-expressions-to-precedence-constraints.md
+    items:
+    - name: Use an Expression in a Precedence Constraint
+      href: ../use-an-expression-in-a-precedence-constraint.md
+  - name: Multiple Precedence Constraints
+    href: ../multiple-precedence-constraints.md
+  - name: Precedence Constraint Editor
+    href: ../precedence-constraint-editor.md
+  - name: Set the Value of a Precedence Constraint by Using the Shortcut Menu
+    href: ../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md
+  - name: Set the Properties of a Precedence Constraint
+    href: ../set-the-properties-of-a-precedence-constraint.md
+  - name: Connect Tasks and Containers by Using a Default Precedence Constraint
+    href: ../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md
+- name: Add or Delete a Task or a Container in a Control Flow
+  href: add-or-delete-a-task-or-a-container-in-a-control-flow.md
+- name: Set the Properties of a Task or Container
+  href: ../set-the-properties-of-a-task-or-container.md

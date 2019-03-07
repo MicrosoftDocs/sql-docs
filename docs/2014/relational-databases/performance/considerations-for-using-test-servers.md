@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "overhead [Database Engine Tuning Advisor]"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "production servers [SQL Server]"
   - "offload tuning overhead [SQL Server]"
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Considerations for Using Test Servers
@@ -36,7 +32,7 @@ manager: craigg
   
 -   The user who wants to use a test server to tune a database on a production server must exist on both servers, or this scenario will not work.  
   
--   The extended stored procedure, **xp_msver**, must be enabled to use the test server/production server scenario. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor uses this extended stored procedure to fetch the number of processors and the available memory of the production server to use while tuning the test server. If **xp_msver** is not enabled, [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor assumes the hardware characteristics of the computer where [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor is running. If the hardware characteristics of the computer where [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor is running are not available, one processor and 1024 megabytes (MBs) of memory are assumed. This extended stored procedure is turned on by default when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Surface Area Configuration](../security/surface-area-configuration.md) and [xp_msver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+-   The extended stored procedure, **xp_msver**, must be enabled to use the test server/production server scenario. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor uses this extended stored procedure to fetch the number of processors and the available memory of the production server to use while tuning the test server. If **xp_msver** is not enabled, [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor assumes the hardware characteristics of the computer where [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor is running. If the hardware characteristics of the computer where [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor is running are not available, one processor and 1024 megabytes (MBs) of memory are assumed. This extended stored procedure is turned on by default when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Surface Area Configuration](../security/surface-area-configuration.md) and [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor expects the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to be the same on both the test server and the production server. If there are two different editions, the edition on the test server takes precedence. For example, if the test server is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor will not include indexed views, partitioning, and online operations in its recommendations even if the production server is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise.  
   

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "EditModeEnum enumeration [ADO]"
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cursorfetch"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorfetch"
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_cursorfetch (Transact-SQL)
@@ -92,7 +88,7 @@ sp_cursorfetch cursor
 |*\<nrows>*|Set to|  
 |-----------------|------------|  
 |If not open|0|  
-|For KEYSET and STATIC cursors|Typically, the current keyset size.<br /><br /> **–m** if the cursor is in asynchronous creation with *m* rows found to this point.|  
+|For KEYSET and STATIC cursors|Typically, the current keyset size.<br /><br /> **-m** if the cursor is in asynchronous creation with *m* rows found to this point.|  
 |For DYNAMIC cursors|-1|  
   
 ## Remarks  

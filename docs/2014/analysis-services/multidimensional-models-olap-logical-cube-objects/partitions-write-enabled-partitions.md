@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "storage [Analysis Services], partitions"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "writeback [Analysis Services], partitions"
   - "storing data [Analysis Services], partitions"
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Write-Enabled Partitions
   The data in a cube is generally read-only. However, for certain scenarios, you may want to write-enable a partition. Write-enabled partitions are used to enable business users to explore scenarios by changing cell values and analyzing the effects of the changes on cube data. When you write-enable a partition, client applications can record changes to the data in the partition. These changes, known as writeback data, are stored in a separate table and do not overwrite any existing data in a measure group. However, they are incorporated into query results as if they are part of the cube data.  
@@ -29,7 +26,7 @@ manager: "mblythe"
  You can write-enable an entire cube or only certain partitions in the cube. Write-enabled dimensions are different but complementary. A write-enabled partition lets users update partition cells, whereas a write-enabled dimension lets users update dimension members. You can also use these two features in combination. For example, a write-enabled cube or a write-enabled partition does not have to include any write-enabled dimensions. **Related topic:**[Write-Enabled Dimensions](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
->  If you want to write-enable a cube that has a Microsoft Access database as a data source, do not use Microsoft OLE DB Provider for ODBC Drivers in the data source definitions for the cube, its partitions, or its dimensions. Instead, you can use Microsoft Jet 4.0 OLE DB Provider, or any version of the Jet Service Pack that includes Jet 4.0 OLE. For more information, see the Microsoft Knowledge Base article [How to obtain the latest service pack for the Microsoft Jet 4.0 Database Engine](http://support.microsoft.com/?kbid=239114).  
+>  If you want to write-enable a cube that has a Microsoft Access database as a data source, do not use Microsoft OLE DB Provider for ODBC Drivers in the data source definitions for the cube, its partitions, or its dimensions. Instead, you can use Microsoft Jet 4.0 OLE DB Provider, or any version of the Jet Service Pack that includes Jet 4.0 OLE. For more information, see the Microsoft Knowledge Base article [How to obtain the latest service pack for the Microsoft Jet 4.0 Database Engine](https://support.microsoft.com/?kbid=239114).  
   
  A cube can be write-enabled only if all its measures use the `Sum` aggregate function. Linked measure groups and local cubes cannot be write-enabled.  
   

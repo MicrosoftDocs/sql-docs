@@ -1,24 +1,20 @@
-﻿---
+---
 title: "SQLBindCol | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLBindCol function"
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLBindCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  Reporting data truncation is an expensive process for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver. You can avoid truncation by ensuring that all bound data buffers are wide enough to return data. For character data, the width should include space for a string terminator when the default driver behavior for string termination is used. For example, binding a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** column to an array of five characters results in truncation for every value fetched. Binding the same column to an array of six characters avoids the truncation by providing a character element in which to store the null terminator. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) can be used to efficiently retrieve long character and binary data without truncation.  
   
- For large value data types, if the user supplied buffer isn’t large enough to hold the entire value of the column, **SQL_SUCCESS_WITH_INFO** is returned and the “string data; right truncation” warning is issued. The **StrLen_or_IndPtr** argument will contain the number of chars/bytes stored in the buffer.  
+ For large value data types, if the user supplied buffer isn't large enough to hold the entire value of the column, **SQL_SUCCESS_WITH_INFO** is returned and the "string data; right truncation" warning is issued. The **StrLen_or_IndPtr** argument will contain the number of chars/bytes stored in the buffer.  
   
 ## SQLBindCol Support for Enhanced Date and Time Features  
  Result column values of date/time types are converted as described in [Conversions from SQL to C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Note that to retrieve time and datetimeoffset columns as their corresponding structures (**SQL_SS_TIME2_STRUCT** and **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* must be specified as **SQL_C_DEFAULT** or **SQL_C_BINARY**.  
@@ -43,7 +39,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  **SQLBindCol** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLBindCol Function](http://go.microsoft.com/fwlink/?LinkId=59327)   
+ [SQLBindCol Function](https://go.microsoft.com/fwlink/?LinkId=59327)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

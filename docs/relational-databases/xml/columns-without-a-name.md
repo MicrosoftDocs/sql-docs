@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns without"
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -38,7 +34,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ')   
 FROM Production.ProductModel  
@@ -49,20 +45,16 @@ GO
   
  This is the partial result:  
   
- `<row>`  
-  
- `<ProductModelID>7</ProductModelID>`  
-  
- `<Name>HL Touring Frame</Name>`  
-  
- `<MI:Location ...LocationID="10" ...></MI:Location>`  
-  
- `<MI:Location ...LocationID="20" ...></MI:Location>`  
-  
- `...`  
-  
- `</row>`  
-  
+```xml
+<row>
+  <ProductModelID>7</ProductModelID>
+  <Name>HL Touring Frame</Name>
+  <MI:Location ...LocationID="10" ...></MI:Location>
+  <MI:Location ...LocationID="20" ...></MI:Location>
+  ...
+</row>
+```
+
 ## See Also  
  [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   

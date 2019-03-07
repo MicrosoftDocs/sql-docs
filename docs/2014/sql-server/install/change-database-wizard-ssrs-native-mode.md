@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.changedatabase.F1"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "Change Database Wizard"
   - "report server database, create"
 ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
-caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Change Database Wizard (SSRS Native Mode)

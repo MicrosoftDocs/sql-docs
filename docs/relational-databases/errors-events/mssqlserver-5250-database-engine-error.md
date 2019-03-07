@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "5250 (Database Engine error)"
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

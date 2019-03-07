@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "member properties [Analysis Services], attribute relationships"
@@ -25,10 +23,9 @@ helpviewer_keywords:
   - "storing data [Analysis Services], attribute relationships"
   - "relationships [Analysis Services], attributes"
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Attribute Relationships
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], attributes within a dimension are always related either directly or indirectly to the key attribute. When you define a dimension based on a star schema, which is where all dimension attributes are derived from the same relational table, an attribute relationship is automatically defined between the key attribute and each non-key attribute of the dimension. When you define a dimension based on a snowflake schema, which is where dimension attributes are derived from multiple related tables, an attribute relationship is automatically defined as follows:  
@@ -77,7 +74,7 @@ manager: "mblythe"
   
 -   The City attribute as an attribute relationship to the Customer attribute.  
   
- For navigating data in the cube, you can also create a user-defined hierarchy that does not represent a natural hierarchy in the data (which is called an *ad hoc* or *reporting* hierarchy). For example, you could create a user-defined hierarchy based on `{Age, Gender}`. Users do not see any difference in how the two hierarchies behave, although the natural hierarchy benefits from aggregating and indexing structures — hidden from the user — that account for the natural relationships in the source data.  
+ For navigating data in the cube, you can also create a user-defined hierarchy that does not represent a natural hierarchy in the data (which is called an *ad hoc* or *reporting* hierarchy). For example, you could create a user-defined hierarchy based on `{Age, Gender}`. Users do not see any difference in how the two hierarchies behave, although the natural hierarchy benefits from aggregating and indexing structures - hidden from the user - that account for the natural relationships in the source data.  
   
  The `SourceAttribute` property of a level determines which attribute is used to describe the level. The `KeyColumns` property on the attribute specifies the column in the data source view that supplies the members. The `NameColumn` property on the attribute can specify a different name column for the members.  
   

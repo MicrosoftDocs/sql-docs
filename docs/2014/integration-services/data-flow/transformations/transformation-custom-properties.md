@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -41,9 +38,8 @@ helpviewer_keywords:
   - "Copy Column transformation custom properties [Integration Services]"
   - "Character Map transformation custom properties [Integration Services]"
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Transformation Custom Properties
@@ -79,16 +75,16 @@ manager: craigg
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|A value between 1 and 100 that specifies the percentage by which memory can be extended during the aggregation. The default value of this property is **25**.|  
 |CountDistinctKeys|Integer|A value that specifies the exact number of distinct counts that the aggregation can write. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence.|  
-|CountDistinctScale|Integer (enumeration)|A value that describes the approximate number of distinct values in a column that the aggregation can count. This property can have one of the following values:<br /><br /> **Low** (1)—indicates up to 500,000 key values<br /><br /> **Medium** (2)—indicates up to 5 million key values<br /><br /> **High** (3)—indicates more than 25 million key values.<br /><br /> **Unspecified** (0)—indicates no CountDistinctScale value is used. Using the **Unspecified** (0) option may affect performance in large data sets.|  
+|CountDistinctScale|Integer (enumeration)|A value that describes the approximate number of distinct values in a column that the aggregation can count. This property can have one of the following values:<br /><br /> **Low** (1)-indicates up to 500,000 key values<br /><br /> **Medium** (2)-indicates up to 5 million key values<br /><br /> **High** (3)-indicates more than 25 million key values.<br /><br /> **Unspecified** (0)-indicates no CountDistinctScale value is used. Using the **Unspecified** (0) option may affect performance in large data sets.|  
 |Keys|Integer|A value that specifies the exact number of Group By keys that the aggregation writes. If a KeyScalevalue is specified, the value in Keys takes precedence.|  
-|KeyScale|Integer (enumeration)|A value that describes approximately how many Group By key values the aggregation can write. This property can have one of the following values:<br /><br /> **Low** (1)—indicates up to 500,000 key values.<br /><br /> **Medium** (2)—indicates up to 5 million key values.<br /><br /> **High** (3)—indicates more than 25 million key values.<br /><br /> **Unspecified** (0)—indicates that no KeyScale value is used.|  
+|KeyScale|Integer (enumeration)|A value that describes approximately how many Group By key values the aggregation can write. This property can have one of the following values:<br /><br /> **Low** (1)-indicates up to 500,000 key values.<br /><br /> **Medium** (2)-indicates up to 5 million key values.<br /><br /> **High** (3)-indicates more than 25 million key values.<br /><br /> **Unspecified** (0)-indicates that no KeyScale value is used.|  
   
  The following table describes the custom properties of the output of the Aggregate transformation. All properties are read/write.  
   
 |Property|Data type|Description|  
 |--------------|---------------|-----------------|  
 |Keys|Integer|A value that specifies the exact number of Group By keys that the aggregation can write. If a KeyScale value is specified, the value in Keys takes precedence.|  
-|KeyScale|Integer (enumeration)|A value that describes approximately how many Group By key values the aggregation can write. This property can have one of the following values:<br /><br /> **Low** (1)—indicates up to 500,000 key values,<br /><br /> **Medium** (2)—indicates up to 5 million key values,<br /><br /> **High** (3)—indicates more than 25 million key values.<br /><br /> **Unspecified** (0)—indicates no KeyScale value is used.|  
+|KeyScale|Integer (enumeration)|A value that describes approximately how many Group By key values the aggregation can write. This property can have one of the following values:<br /><br /> **Low** (1)-indicates up to 500,000 key values,<br /><br /> **Medium** (2)-indicates up to 5 million key values,<br /><br /> **High** (3)-indicates more than 25 million key values.<br /><br /> **Unspecified** (0)-indicates no KeyScale value is used.|  
   
  The following table describes the custom properties of the output columns of the Aggregate transformation. All properties are read/write.  
   
@@ -98,7 +94,7 @@ manager: craigg
 |AggregationComparisonFlags|Integer|A value that specifies how the Aggregate transformation compares string data in a column. For more information, see [Comparing String Data](../comparing-string-data.md).|  
 |AggregationType|Integer (enumeration)|A value that specifies the aggregation operation to be performed on the column. This property can have one of the following values:<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Group by** (0)|  
 |CountDistinctKeys|Integer|When the aggregation type is **Count distinct**, a value that specifies the exact number of keys that the aggregation can write. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence.|  
-|CountDistinctScale|Integer (enumeration)|When the aggregation type is **Count distinct**, a value that describes approximately how many key values the aggregation can write. This property can have one of the following values:<br /><br /> **Low** (1)—indicates up to 500,000 key values,<br /><br /> **Medium** (2)—indicates up to 5 million key values,<br /><br /> **High** (3)—indicates more than 25 million key values.<br /><br /> **Unspecified** (0)—indicates no CountDistinctScale value is used.|  
+|CountDistinctScale|Integer (enumeration)|When the aggregation type is **Count distinct**, a value that describes approximately how many key values the aggregation can write. This property can have one of the following values:<br /><br /> **Low** (1)-indicates up to 500,000 key values,<br /><br /> **Medium** (2)-indicates up to 5 million key values,<br /><br /> **High** (3)-indicates more than 25 million key values.<br /><br /> **Unspecified** (0)-indicates no CountDistinctScale value is used.|  
 |IsBig|Boolean|A value that indicates whether the column contains a value larger than 4 billion or a value with more precision than a double-precision floating-point value. The value can be 0 or 1. 0 indicates that IsBig is `False` and the column does not contain a large value or precise value. The default value of this property is 1.|  
   
  The input and the input columns of the Aggregate transformation have no custom properties.  
@@ -269,7 +265,7 @@ manager: craigg
 |--------------|---------------|-----------------|  
 |ExactFuzzy|Integer (enumeration)|A value that specifies whether the transformation performs a fuzzy match or an exact match. The valid values are **Exact** and **Fuzzy**. The default value for this property is **Fuzzy**.|  
 |FuzzyComparisonFlags|Integer (enumeration)|A value that specifies how the transformation compares the string data in a column. This property can have one of the following values:<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> For more information, see [Comparing String Data](../comparing-string-data.md).|  
-|LeadingTrailingNumeralsSignificant|Integer (enumeration)|A value that specifies the significance of numerals. This property can have one of the following values:<br /><br /> **LeadingNumeralsSignificant** (1)—use if leading numerals are significant.<br /><br /> **TrailingNumeralsSignificant** (2)—use if trailing numerals are significant.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3)—use if both leading and trailing numerals are significant.<br /><br /> **NumeralsNotSpecial** (0)—use if numerals are not significant.|  
+|LeadingTrailingNumeralsSignificant|Integer (enumeration)|A value that specifies the significance of numerals. This property can have one of the following values:<br /><br /> **LeadingNumeralsSignificant** (1)-use if leading numerals are significant.<br /><br /> **TrailingNumeralsSignificant** (2)-use if trailing numerals are significant.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3)-use if both leading and trailing numerals are significant.<br /><br /> **NumeralsNotSpecial** (0)-use if numerals are not significant.|  
 |MinSimilarity|Double|The similarity threshold used for the join on the column, specified as a value between 0 and 1. Only rows greater than the threshold qualify as matches.|  
 |ToBeCleaned|Boolean|A value that specifies whether the column is used to identify duplicates; that is, whether this is a column on which you are grouping. The default value of this property is `False`.|  
   

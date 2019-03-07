@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing publications"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "articles [SQL Server replication], deleting"
   - "deleting publications"
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
-caps.latest.revision: 35
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

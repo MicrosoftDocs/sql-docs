@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visio shapes, dependency network"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "data mining layout toolbar"
   - "dependency network"
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Dependency Network Diagram Walkthrough (Data Mining Add-ins)
   Several different types of data mining models use a network graph as a way of exploring relationships in the data. You can import these models into Visio using the **Dependency Network** shape and then continue to customize and enhance the layout. The **Data Mining Shapes for Visio** include the following custom controls for working with dependency network diagrams:  

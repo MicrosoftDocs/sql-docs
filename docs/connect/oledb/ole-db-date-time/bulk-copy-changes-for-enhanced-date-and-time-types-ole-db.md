@@ -5,20 +5,17 @@ ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, bulk copy operations"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -115,7 +112,7 @@ manager: craigg
 |-|No conversion is supported.<br />|  
 |1|If the data supplied is not valid, an error is posted. For datetimeoffset values, the time portion must be within range after conversion to UTC, even if no conversion to UTC is requested. This is because TDS and the server always normalize the time in datetimeoffset values for UTC. So the client must check that time components are within the range supported after conversion to UTC.|  
 |2|The time component is ignored.|  
-|3|If truncation with data loss occurs, an error is posted. For datetime2, the number of fractional seconds digits (the scale) is determined from the destination column’s size according to the following table. For column sizes larger than the range in the table, a scale of 9 is implied. This conversion should allow for up to nine fractional second digits, the maximum allowed by OLE DB.<br /><br /> **Type:** DBTIME2<br /><br /> **Implied scale 0** 8<br /><br /> **Implied scale 1..9** 1..9<br /><br /> <br /><br /> **Type:** DBTIMESTAMP<br /><br /> **Implied scale 0:** 19<br /><br /> **Implied scale 1..9:** 21..29<br /><br /> <br /><br /> **Type:** DBTIMESTAMPOFFSET<br /><br /> **Implied scale 0:** 26<br /><br /> **Implied scale 1..9:** 28..36|  
+|3|If truncation with data loss occurs, an error is posted. For datetime2, the number of fractional seconds digits (the scale) is determined from the destination column's size according to the following table. For column sizes larger than the range in the table, a scale of 9 is implied. This conversion should allow for up to nine fractional second digits, the maximum allowed by OLE DB.<br /><br /> **Type:** DBTIME2<br /><br /> **Implied scale 0** 8<br /><br /> **Implied scale 1..9** 1..9<br /><br /> <br /><br /> **Type:** DBTIMESTAMP<br /><br /> **Implied scale 0:** 19<br /><br /> **Implied scale 1..9:** 21..29<br /><br /> <br /><br /> **Type:** DBTIMESTAMPOFFSET<br /><br /> **Implied scale 0:** 26<br /><br /> **Implied scale 1..9:** 28..36|  
 |4|The date component is ignored.|  
 |5|The timezone is set to UTC (for example, 00:00).|  
 |6|The time is set to zero.|  

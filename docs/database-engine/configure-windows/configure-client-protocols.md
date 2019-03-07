@@ -5,9 +5,7 @@ ms.date: "07/27/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default protocols"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "protocols [SQL Server], client configuration"
   - "default protocols, client"
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

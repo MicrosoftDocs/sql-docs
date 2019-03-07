@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Report Viewer"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "analyzing system [Upgrade Advisor]"
   - "analyzing system [Upgrade Advisor], about analysis"
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
-caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Advisor Overview

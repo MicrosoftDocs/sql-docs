@@ -5,9 +5,7 @@ ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC USEROPTIONS"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "active SET options"
   - "SET statement, active SET options"
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
-caps.latest.revision: 41
 author: uc-msft
 ms.author: umajay
 manager: craigg

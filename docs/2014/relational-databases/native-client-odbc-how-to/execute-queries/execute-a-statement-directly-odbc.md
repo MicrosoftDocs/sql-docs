@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "statement execution"
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Execute a Statement Directly (ODBC)
@@ -24,9 +19,9 @@ manager: craigg
   
 1.  If the statement has parameter markers, use [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) to bind each parameter to a program variable. Fill the program variables with data values, and then set up any data-at-execution parameters.  
   
-2.  Call [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement.  
+2.  Call [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement.  
   
-3.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+3.  If data-at-execution input parameters are used, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
 ### To execute a statement multiple times by using column-wise parameter binding  
   
@@ -52,9 +47,9 @@ manager: craigg
   
      Put S data values and S data lengths into the bound parameter arrays.  
   
-3.  Call [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement. The driver efficiently executes the statement S times, once for each set of parameters.  
+3.  Call [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement. The driver efficiently executes the statement S times, once for each set of parameters.  
   
-4.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+4.  If data-at-execution input parameters are used, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
 ### To execute a statement multiple times by using row-wise parameter binding  
   
@@ -78,11 +73,11 @@ manager: craigg
   
 4.  Fill the bound parameter buffer array with data values.  
   
-5.  Call [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement. The driver efficiently executes the statement S times, once for each set of parameters.  
+5.  Call [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement. The driver efficiently executes the statement S times, once for each set of parameters.  
   
-6.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+6.  If data-at-execution input parameters are used, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
- **Note** Column-wise and row-wise binding are more typically used in conjunction with [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) and [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) than with [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Note** Column-wise and row-wise binding are more typically used in conjunction with [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) and [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) than with [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## See Also  
  [Executing Queries How-to Topics &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  

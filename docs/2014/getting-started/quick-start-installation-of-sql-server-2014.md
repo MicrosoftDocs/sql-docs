@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "data-quality-services"
@@ -14,16 +13,14 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
   - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "quick start installation [SQL Server]"
   - "installation [SQL Server]"
   - "installing SQL Server, quick start installations"
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Quick-Start Installation of SQL Server 2014
@@ -79,7 +76,7 @@ manager: craigg
   
      See [SQL Server Failover Cluster Installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) for procedural information about installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] failover cluster.  
   
- By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code for non-Express editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843). To read about support for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sample databases and sample code for [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], see [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391).  
+ By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code for non-Express editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the [CodePlex Web site](https://go.microsoft.com/fwlink/?LinkId=87843). To read about support for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sample databases and sample code for [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], see [Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
 ## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation  
  Regardless of whether you use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation Wizard or the command prompt to install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], setup involves one or more of the following steps:  

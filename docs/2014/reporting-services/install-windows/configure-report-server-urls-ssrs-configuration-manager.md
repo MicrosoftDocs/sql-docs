@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Server Windows service, virtual directories"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "virtual directories [Reporting Services]"
   - "Report Manager [Reporting Services], virtual directories"
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Configure Report Server URLs  (SSRS Configuration Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], URLs are used to access the Report Server Web service and Report Manager. Before you can use either application, you must configure at least one URL each for the Web service and Report Manager. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both application URLs that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications.  

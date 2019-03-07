@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "expressions [Integration Services], creating"
   - "expressions [Integration Services], property expressions"
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Add or Change a Property Expression
@@ -35,15 +31,15 @@ manager: craigg
   
     -   Right-click the item and then click **Properties**.  
   
-3.  Click in the **Expressions** box and then click the ellipsis (…).  
+3.  Click in the **Expressions** box and then click the ellipsis (...).  
   
 4.  In the **Property Expressions Editor**, select a property in the **Property** list, and then do one of the following:  
   
     -   Type or change the property expression directly in the **Expression** column, and then click **OK**.  
   
-         —or—  
+         -or-  
   
-    -   Click the ellipsis (…) in the expression row of the property to open the **Expression Builder**.  
+    -   Click the ellipsis (...) in the expression row of the property to open the **Expression Builder**.  
   
 5.  (Optional) In the **Expression Builder**, do any of the following tasks:  
   

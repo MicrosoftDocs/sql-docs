@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "file extensions [SQL Server]"
   - "associating file extensions [SQL Server]"
   - "Query Editor [SQL Server Management Studio], associating file extensions"
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
-caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Associate File Extensions to a Code Editor
@@ -36,7 +33,7 @@ manager: craigg
   
 5.  In the **Registered file** types box, click on your new extension, and then click **Change**.  
   
-6.  In the **Open With** dialog box, click **SSMS – SQL Server Management Studio**, and then click **OK**.  
+6.  In the **Open With** dialog box, click **SSMS - SQL Server Management Studio**, and then click **OK**.  
   
 7.  Click **Close** to close the **Folder Options** dialog box, and then close Windows Explorer.  
   

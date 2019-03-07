@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial lesson 11: Create roles | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -21,11 +21,11 @@ In this lesson, you create roles. Roles provide model database object and data s
   
 You create three roles:  
   
--   **Sales Manager** – This role can include users in your organization for which you want to have Read permission to all model objects and data.  
+-   **Sales Manager** - This role can include users in your organization for which you want to have Read permission to all model objects and data.  
   
--   **Sales Analyst US** – This role can include users in your organization for which you want only to be able to browse data related to sales in the United States. For this role, you use a DAX formula to define a *Row Filter*, which restricts members to browse data only for the United States.  
+-   **Sales Analyst US** - This role can include users in your organization for which you want only to be able to browse data related to sales in the United States. For this role, you use a DAX formula to define a *Row Filter*, which restricts members to browse data only for the United States.  
   
--   **Administrator** – This role can include users for which you want to have Administrator permission, which allows unlimited access and permissions to perform administrative tasks on the model database.  
+-   **Administrator** - This role can include users for which you want to have Administrator permission, which allows unlimited access and permissions to perform administrative tasks on the model database.  
   
 Because Windows user and group accounts in your organization are unique, you can add accounts from your particular organization to members. However, for this tutorial, you can also leave the members blank. You test the effect of each role later in Lesson 12: Analyze in Excel.  
   
@@ -65,7 +65,7 @@ This article is part of a tabular modeling tutorial, which should be completed i
     =DimGeography[CountryRegionCode] = "US" 
     ```
     
-    A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of “US” are visible to the user.  
+    A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of "US" are visible to the user.  
     ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
 6.  Optional: Click the **Members** tab, and then click **Add**. In the **Select Users or Groups** dialog box, enter the Windows users or groups from your organization you want to include in the role.  

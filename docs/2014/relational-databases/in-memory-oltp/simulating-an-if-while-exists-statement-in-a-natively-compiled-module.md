@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
-caps.latest.revision: 5
-author: "stevestein"
-ms.author: "sstein"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Simulating an EXISTS Clause in a Natively Compiled Stored Procedure
@@ -20,7 +16,7 @@ manager: craigg
   
 ```tsql  
 DECLARE @exists BIT = 0  
-SELECT TOP 1 @exists = 1 FROM MyTable WHERE …  
+SELECT TOP 1 @exists = 1 FROM MyTable WHERE ...  
 IF @exists = 1  
 ```  
   

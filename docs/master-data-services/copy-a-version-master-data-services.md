@@ -5,16 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "versions [Master Data Services], copying"
   - "copying versions [Master Data Services]"
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg

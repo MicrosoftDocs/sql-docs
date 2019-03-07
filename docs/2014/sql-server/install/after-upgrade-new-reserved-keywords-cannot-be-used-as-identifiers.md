@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "keywords [SQL Server], after upgrade"
   - "keywords [SQL Server], reserved"
   - "keywords [SQL Server]"
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # After upgrade, new reserved keywords cannot be used as identifiers
@@ -54,7 +51,7 @@ manager: craigg
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [Delimited Identifiers (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=112509)  
+ [Delimited Identifiers (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

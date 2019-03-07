@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server], database projects"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], about projects"
   - "projects [SQL Server Management Studio]"
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Build Database Projects by Using SQL Server Management Studio

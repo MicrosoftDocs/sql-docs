@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "remote Distributors [SQL Server replication]"
   - "Publishers [SQL Server replication]"
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
-caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)
@@ -31,7 +27,7 @@ manager: craigg
   
 4.  On the **Distributor Password** page, in the **Password** and **Confirm password** text boxes, specify a strong password for the **distributor_admin** account, which replication uses to connect from the Publisher to the Distributor to perform administrative tasks.  
   
-5.  To view and modify settings for a Publisher, click the properties button (**…**).  
+5.  To view and modify settings for a Publisher, click the properties button (**...**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -45,7 +41,7 @@ manager: craigg
   
 4.  On the **Publishers** page, in the **Password** and **Confirm password** text boxes, specify a strong password for the **distributor_admin** account, which replication uses to connect from the Publisher to the Distributor to perform administrative tasks.  
   
-5.  To view and modify settings for a Publisher, click the properties button (**…**).  
+5.  To view and modify settings for a Publisher, click the properties button (**...**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

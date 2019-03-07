@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SQL Server Data Mining Add-Ins for Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Data Mining Add-ins for Office is a lightweight set of tools for predictive analytics that lets you use data in Excel to build analytical models for prediction, recommendation, or exploration.  
@@ -40,11 +37,11 @@ manager: "mblythe"
   
      Advanced users can build custom DMX queries with the drag-and-drop **Advanced Query Editor**, or automate predictions using Excel VBA.  
   
--   **Document and manage.** After you’ve created a data set and built some models, document your work and your insights by generating a statistical summary of the data and model parameters.  
+-   **Document and manage.** After you've created a data set and built some models, document your work and your insights by generating a statistical summary of the data and model parameters.  
   
--   **Explore and visualize.** Data mining is not an activity that can be fully automated – you need to explore and understand your results to take meaningful action. The add-ins help you with exploration by providing interactive viewers in Excel, Visio templates that let you customize model diagrams, and the ability to export charts and tables to Excel for additional filtering or modification.  
+-   **Explore and visualize.** Data mining is not an activity that can be fully automated - you need to explore and understand your results to take meaningful action. The add-ins help you with exploration by providing interactive viewers in Excel, Visio templates that let you customize model diagrams, and the ability to export charts and tables to Excel for additional filtering or modification.  
   
--   **Deploy and integrate.** When you’ve created a useful model, put your model into production, by using the management tools to export the model from your experimental server to another instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Deploy and integrate.** When you've created a useful model, put your model into production, by using the management tools to export the model from your experimental server to another instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      You can also leave the model on the server where you created it, but refresh the training data and run predictions using Integration Services or DMX scripts.  
   
@@ -79,8 +76,8 @@ manager: "mblythe"
   
 -   Standard  
   
- Depending on the edition of SQL Server Analysis Services that you connect to, some of the advanced algorithms might not be available. For information, see [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
+ Depending on the edition of SQL Server Analysis Services that you connect to, some of the advanced algorithms might not be available. For information, see [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
- For additional help with installation, see this page on the Download Center: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ For additional help with installation, see this page on the Download Center: [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

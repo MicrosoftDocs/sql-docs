@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_change_subscription_properties_TSQL"
   - "sp_change_subscription_properties"
 helpviewer_keywords: 
   - "sp_change_subscription_properties"
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 # sp_change_subscription_properties (Transact-SQL)
@@ -44,19 +37,19 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'**_publisher_**'**  
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'**_publisher_db_**'**  
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@property=**]  **'***property***'**  
+ [ **@property=**]  **'**_property_**'**  
  Is the property to be changed. *property* is **sysname**.  
   
- [ **@value=**]  **'***value***'**  
+ [ **@value=**]  **'**_value_**'**  
  Is the new value of the property. *value* is **nvarchar(1000)**, with no default.  
   
  [ **@publication_type =** ] *publication_type*  

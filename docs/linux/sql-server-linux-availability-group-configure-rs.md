@@ -1,17 +1,15 @@
 ---
-title: Configure a SQL Server Availability Group for read-scale on Linux | Microsoft Docs
-description: 
+title: Configure a SQL Server Availability Group for read-scale on Linux
+titleSuffix: SQL Server
+description: Learn about configuring a SQL Server Always On Availability Group (AG) for read-scale workloads on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 02/14/2018
-ms.topic: article
+ms.date: 01/09/2019
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
-ms.assetid: 
 ---
 # Configure a SQL Server Availability Group for read-scale on Linux
 
@@ -19,14 +17,14 @@ ms.assetid:
 
 You can configure a SQL Server Always On Availability Group (AG) for read-scale workloads on Linux. There are two types of architectures for AGs. A architecture for high availability uses a cluster manager to provide improved business continuity. This architecture also can include read-scale replicas. To create the high-availability architecture, see [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md). The other architecture supports only read-scale workloads. This article explains how to create an AG without a cluster manager for read-scale workloads. This architecture provides read-scale only. It doesn't provide high availability.
 
->[!NOTE]
->An availability group with `CLUSTER_TYPE = NONE` can include replicas hosted on different operating system platforms. It cannot support high availability. 
+> [!NOTE]
+> An availability group with `CLUSTER_TYPE = NONE` can include replicas hosted on different operating system platforms. It cannot support high availability. 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## Create the AG
 
-Create the AG. Set `CLUSTER_TYPE = NONE`. In addition, set each replica with `FAILOVER_MODE = NONE`. Client applications running analytics or reporting workloads can directly connect to the secondary databases. You also can create a read-only routing list. Connections to the primary replica forward read connection requests to each of the secondary replicas from the routing list in a round-robin fashion.
+Create the AG. Set `CLUSTER_TYPE = NONE`. In addition, set each replica with `FAILOVER_MODE = MANUAL`. Client applications running analytics or reporting workloads can directly connect to the secondary databases. You also can create a read-only routing list. Connections to the primary replica forward read connection requests to each of the secondary replicas from the routing list in a round-robin fashion.
 
 The following Transact-SQL script creates an AG named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the AG. Update the following script for your environment. Replace the `<node1>` and `<node2>` values with the names of the SQL Server instances that host the replicas. Replace the `<5022>` value with the port you set for the endpoint. Run the following Transact-SQL script on the primary SQL Server replica:
 
@@ -39,7 +37,7 @@ CREATE AVAILABILITY GROUP [ag1]
 		    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = MANUAL,
 		    SEEDING_MODE = AUTOMATIC,
-                    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
+                    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
 		    ),
         N'<node2>' WITH ( 
 		    ENDPOINT_URL = N'tcp://<node2>:<5022>', 
@@ -79,7 +77,6 @@ There are two ways to connect to read-only secondary replicas. Applications can 
 
 ## Next steps
 
-* [Configure a distributed Availability Group](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [Learn more about availability groups](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [Configure a distributed Availability Group](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Learn more about availability groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Perform a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-

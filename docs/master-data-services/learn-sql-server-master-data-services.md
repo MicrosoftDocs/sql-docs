@@ -5,15 +5,11 @@ ms.date: "02/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: master-data-services
+ms.topic: quickstart
 keywords: 
   - "learn sql"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-caps.latest.revision: 19
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -48,8 +44,8 @@ manager: craigg
     * Master Data Services Security API Sample  
   
 ## SQL Server Certification  
-* [Microsoft SQL Server Training and Certification](https://www.microsoft.com/en-us/learning/sql-training.aspx)  
-* [Microsoft Certification Exam List](https://www.microsoft.com/en-us/learning/exam-list.aspx)  
+* [Microsoft SQL Server Training and Certification](https://www.microsoft.com/learning/sql-training.aspx)  
+* [Microsoft Certification Exam List](https://www.microsoft.com/learning/exam-list.aspx)  
 * [Microsoft Born to Learn Blog (Training and Certification Community)](https://borntolearn.mslearn.net/b/weblog/archive/2016/03)  
   
   

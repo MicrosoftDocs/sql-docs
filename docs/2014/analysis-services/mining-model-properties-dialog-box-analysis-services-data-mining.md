@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.miningmodelproperties.f1"
 helpviewer_keywords: 
   - "Mining Model Properties dialog box"
 ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Mining Model Properties Dialog Box (Analysis Services - Data Mining)
   Use the **Mining Model Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of a mining model in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Mining Model Properties** dialog box by right-clicking a mining model in **Object Explorer** and selecting **Properties**.  

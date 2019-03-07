@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/25/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "c2wts.exe.config"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "C2WTS"
   - "WSS_WPG"
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 11
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Claims to Windows Token Service (C2WTS) and Reporting Services
@@ -27,7 +24,7 @@ manager: craigg
   
  The tokens created by c2WTS will only work with constrained delegation (constrains to specific services) and the configuration option "using any authentication protocol". As noted earlier, if your data sources are on the same computer as the shared service, then constrained delegation is not needed.  
   
- If your environment will use Kerberos constrained delegation, then the SharePoint Server service and external data sources need to reside in the same Windows domain. Any service that relies on the Claims to Windows token service (c2WTS) must use Kerberos **constrained** delegation to allow c2WTS to use Kerberos protocol transition to translate claims into Windows credentials. These requirements are true for all SharePoint Shared Services. For more information, see [Overview of Kerberos authentication for Microsoft SharePoint 2010 Products  (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx).  
+ If your environment will use Kerberos constrained delegation, then the SharePoint Server service and external data sources need to reside in the same Windows domain. Any service that relies on the Claims to Windows token service (c2WTS) must use Kerberos **constrained** delegation to allow c2WTS to use Kerberos protocol transition to translate claims into Windows credentials. These requirements are true for all SharePoint Shared Services. For more information, see [Overview of Kerberos authentication for Microsoft SharePoint 2010 Products  (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx).  
   
  The procedure is summarized in this topic.  
   
@@ -59,15 +56,15 @@ manager: craigg
   
     2.  Key configuration options on the delegation tab are the following:  
   
-        -   Select “Trust this user for delegation to specified services only”  
+        -   Select "Trust this user for delegation to specified services only"  
   
-        -   Select “Use any authentication protocol”  
+        -   Select "Use any authentication protocol"  
   
-         For more information, see the “configure Kerberos constrained delegation for computers and service accounts” section of the following white paper, [Configuring Kerberos authentication for SharePoint 2010 and SQL Server 2008 R2 products](http://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
+         For more information, see the "configure Kerberos constrained delegation for computers and service accounts" section of the following white paper, [Configuring Kerberos authentication for SharePoint 2010 and SQL Server 2008 R2 products](http://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
   
-2.  Configure c2WTS ‘AllowedCallers’  
+2.  Configure c2WTS 'AllowedCallers'  
   
-     c2WTS requires the ‘callers’ identities explicitly listed in the configuration file, **c2wtshost.exe.config**. c2WTS does not accept requests from all authenticated users in the system unless it is configured to do so. In this case the ‘caller’ is the WSS_WPG Windows group. The c2wtshost.exe.confi file is saved in the following location:  
+     c2WTS requires the 'callers' identities explicitly listed in the configuration file, **c2wtshost.exe.config**. c2WTS does not accept requests from all authenticated users in the system unless it is configured to do so. In this case the 'caller' is the WSS_WPG Windows group. The c2wtshost.exe.confi file is saved in the following location:  
   
      **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
@@ -92,12 +89,12 @@ manager: craigg
   
     1.  Configure the service to use the service account you configured in the previous step.  
   
-    2.  Change the Startup type to “**Automatic**” and start the service.  
+    2.  Change the Startup type to "**Automatic**" and start the service.  
   
-4.  Start the SharePoint ‘Claims to Windows Token Service’: Start the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that will be performing the action. For example if you have a server that is a WFE and another server that is an Application Server that has the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. c2WTS is not needed on the WFE.  
+4.  Start the SharePoint 'Claims to Windows Token Service': Start the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that will be performing the action. For example if you have a server that is a WFE and another server that is an Application Server that has the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. c2WTS is not needed on the WFE.  
   
 ## See Also  
- [Claims to Windows Token Service (c2WTS) Overview (http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
- [Overview of Kerberos authentication for Microsoft SharePoint 2010 Products (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
+ [Claims to Windows Token Service (c2WTS) Overview (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
+ [Overview of Kerberos authentication for Microsoft SharePoint 2010 Products (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
   
   

@@ -1,16 +1,11 @@
 ---
 title: "Secure My Reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "denying My Reports folder access"
@@ -19,15 +14,13 @@ helpviewer_keywords:
   - "security [Reporting Services], My Reports folder"
   - "My Reports folder [Reporting Services]"
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: 34
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Secure My Reports
   The My Reports feature provides a user-managed workspace for working with reports. In order to serve its intended purpose, the My Reports folder requires less restrictive permissions than other folders that are available for general use. Users who have permissions to only view and run reports in other folders might require an expanded set of permissions to manage their My Reports folders and content that they own. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a specialized role assignment and role definition for this purpose.  
   
-> [!NOTE]  
+> [!NOTE]
 >  My Reports is available only in Report Manager. It is not available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## Role Assignment for My Reports  

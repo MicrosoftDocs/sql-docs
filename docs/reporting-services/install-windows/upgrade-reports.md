@@ -1,15 +1,10 @@
 ---
 title: "Upgrade Reports (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2018"
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], upgrading"
@@ -21,10 +16,8 @@ helpviewer_keywords:
   - "report definition files [Reporting Services]"
   - ".rdl files"
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 70
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Upgrade Reports (SSRS)
@@ -146,4 +139,4 @@ Report definition (.rdl) files are automatically upgraded in the following ways:
 [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

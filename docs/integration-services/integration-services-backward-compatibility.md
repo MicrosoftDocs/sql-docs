@@ -5,9 +5,7 @@ ms.date: "06/14/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [Integration Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Integration Services, backward compatibility"
   - "backward compatibility [Integration Services]"
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 84
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

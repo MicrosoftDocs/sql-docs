@@ -1,23 +1,17 @@
 ---
 title: "Troubleshooter: Find errors with SQL Server transactional replication | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/26/2018"
+ms.date: "04/27/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-
-
 # Troubleshooter: Find errors with SQL Server transactional replication 
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step in creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 
 
@@ -45,7 +39,7 @@ Errors can occur in any step of this process. Finding those errors can be the mo
 1. Use Replication Monitor to identify at which point replication is encountering the error (which agent?):
    - If errors are occurring in the **Publisher to Distributor** section, the issue is with the Log Reader Agent. 
    - If errors are occurring in the **Distributor to Subscriber** section, the issue is with the Distribution Agent.  
-2. Look through that agent's job history in Job Activity Monitor to identify details of the error. If the job history is not showing enough details, you can [enable verbose logging](#enable-verbose-logging) on that specific agent.
+2. Look through that agent's job history in Job Activity Monitor to identify details of the error. If the job history is not showing enough details, you can [enable verbose logging](#enable-verbose-logging-on-any-agent) on that specific agent.
 3. Try to determine a solution for the error.
 
 
@@ -253,7 +247,7 @@ You can use verbose logging to see more detailed information about errors occurr
     
 1. To disable verbose logging, follow the same previous steps to remove the entire `-Output` line that you added earlier. 
 
-For more information, see [Enabling verbose logging for replication agents](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
+For more information, see [Enabling verbose logging for replication agents](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 
 
 ## See also

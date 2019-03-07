@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "statistical information [XML for Analysis]"
@@ -19,34 +17,33 @@ helpviewer_keywords:
   - "XML for Analysis, aggregations"
   - "iterative aggregation process [XMLA]"
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Designing Aggregations (XMLA)
-  Aggregation designs are associated with the partitions of a particular measure group to make sure that the partitions use the same structure when storing aggregations. Using the same storage structure for partitions lets you to easily define partitions that can be later merged using the [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) command. For more information about aggregation designs, see [Aggregations and Aggregation Designs](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+  Aggregation designs are associated with the partitions of a particular measure group to make sure that the partitions use the same structure when storing aggregations. Using the same storage structure for partitions lets you to easily define partitions that can be later merged using the [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) command. For more information about aggregation designs, see [Aggregations and Aggregation Designs](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
- To define aggregations for an aggregation design, you can use the [DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) command in XML for Analysis (XMLA). The `DesignAggregations` command has properties that identify which aggregation design to use as a reference and how to control the design process based upon that reference. Using the `DesignAggregations` command and its properties, you can design aggregations iteratively or in batch, and then view the resulting design statistics to evaluate the design process.  
+ To define aggregations for an aggregation design, you can use the [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) command in XML for Analysis (XMLA). The `DesignAggregations` command has properties that identify which aggregation design to use as a reference and how to control the design process based upon that reference. Using the `DesignAggregations` command and its properties, you can design aggregations iteratively or in batch, and then view the resulting design statistics to evaluate the design process.  
   
 ## Specifying an Aggregation Design  
- The [Object](../xmla/xml-elements-properties/object-element-xmla.md) property of the `DesignAggregations` command must contain an object reference to an existing aggregation design. The object reference contains a database identifier, cube identifier, measure group identifier, and aggregation design identifier. If the aggregation design does not already exist, an error occurs.  
+ The [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) property of the `DesignAggregations` command must contain an object reference to an existing aggregation design. The object reference contains a database identifier, cube identifier, measure group identifier, and aggregation design identifier. If the aggregation design does not already exist, an error occurs.  
   
 ## Controlling the Design Process  
  You can use the following properties of the `DesignAggregations` command to control the algorithm used to define aggregations for the aggregation design:  
   
--   The [Steps](../xmla/xml-elements-properties/steps-element-xmla.md) property determines how many iterations the `DesignAggregations` command should take before it returns control to the client application.  
+-   The [Steps](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/steps-element-xmla) property determines how many iterations the `DesignAggregations` command should take before it returns control to the client application.  
   
--   The [Time](../xmla/xml-elements-properties/time-element-xmla.md) property determines how many milliseconds the `DesignAggregations` command should take before it returns control to the client application.  
+-   The [Time](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/time-element-xmla) property determines how many milliseconds the `DesignAggregations` command should take before it returns control to the client application.  
   
--   The [Optimization](../xmla/xml-elements-properties/optimization-element-xmla.md) property determines the estimated percentage of performance improvement the `DesignAggregations` command should try to achieve. If you are iteratively designing aggregations, you only have to send this property on the first command.  
+-   The [Optimization](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla) property determines the estimated percentage of performance improvement the `DesignAggregations` command should try to achieve. If you are iteratively designing aggregations, you only have to send this property on the first command.  
   
--   The [Storage](../xmla/xml-elements-properties/storage-element-xmla.md) property determines the estimated amount of disk storage, in bytes, used by the `DesignAggregations` command. If you are iteratively designing aggregations, you only have to send this property on the first command.  
+-   The [Storage](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) property determines the estimated amount of disk storage, in bytes, used by the `DesignAggregations` command. If you are iteratively designing aggregations, you only have to send this property on the first command.  
   
--   The [Materialize](../xmla/xml-elements-properties/materialize-element-xmla.md) property determines whether the `DesignAggregations` command should create the aggregations defined during the design process. If you are iteratively designing aggregations, this property should be set to false until you are ready to save the designed aggregations. When set to true, the current design process ends and the defined aggregations are added to the specified aggregation design.  
+-   The [Materialize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla) property determines whether the `DesignAggregations` command should create the aggregations defined during the design process. If you are iteratively designing aggregations, this property should be set to false until you are ready to save the designed aggregations. When set to true, the current design process ends and the defined aggregations are added to the specified aggregation design.  
   
 ## Specifying Queries  
- The DesignAggregations command supports usage-based optimization command by including one or more `Query` elements in the [Queries](../xmla/xml-elements-properties/queries-element-xmla.md) property. The `Queries` property can contain one or more [Query](../xmla/xml-elements-properties/query-element-xmla.md) elements. If the `Queries` property does not contain any `Query` elements, the aggregation design specified in the `Object` element uses a default structure that contains a general set of aggregations. This general set of aggregations is designed to meet the criteria specified in the `Optimization` and `Storage` properties of the `DesignAggregations` command.  
+ The DesignAggregations command supports usage-based optimization command by including one or more `Query` elements in the [Queries](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) property. The `Queries` property can contain one or more [Query](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) elements. If the `Queries` property does not contain any `Query` elements, the aggregation design specified in the `Object` element uses a default structure that contains a general set of aggregations. This general set of aggregations is designed to meet the criteria specified in the `Optimization` and `Storage` properties of the `DesignAggregations` command.  
   
  Each `Query` element represents a goal query that the design process uses to define aggregations that target the most frequently used queries. You can either specify your own goal queries, or you can use the information stored by an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in the query log to retrieve information about the most frequently used queries. The Usage-Based Optimization Wizard uses the query log to retrieve goal queries based on time, usage, or a specified user when it sends a `DesignAggregations` command. For more information, see [Usage-Based Optimization Wizard F1 Help](../usage-based-optimization-wizard-f1-help.md).  
   
@@ -65,7 +62,7 @@ manager: "mblythe"
  For example, the string "011" would refer to a query involving a dimension with three attributes, from which the second and third attributes are included in the query.  
   
 > [!NOTE]  
->  Some attributes are excluded from consideration in the dataset. For more information about excluded attributes, see [Query Element &#40;XMLA&#41;](../xmla/xml-elements-properties/query-element-xmla.md).  
+>  Some attributes are excluded from consideration in the dataset. For more information about excluded attributes, see [Query Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla).  
   
  Each dimension in the measure group that contains the aggregation design is represented by a *Dataset* value in the `Query` element. The order of *Dataset* values must match the order of dimensions included in the measure group.  
   

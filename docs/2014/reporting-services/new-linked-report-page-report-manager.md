@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
-caps.latest.revision: 22
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # New Linked Report Page (Report Manager)
   Use the New Linked Report page to create a linked report. A linked report is a report with settings and properties of its own, but links to the report definition of another report. Linked reports are useful when you have a base report that you want to vary for specific groups or users; for example, a regional report that returns different data based on a regional code that you specify as a parameter. A linked report is typically created from a parameterized report when you want to vary and then save different parameter values with each report instance. However, you can create a linked report from any report to which you have access.  
@@ -45,7 +40,7 @@ manager: "mblythe"
   
 ## Options  
  **Name**  
- Specify the name of the linked report. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. However, you must not use the characters ; ? : @ & = + , $ / * \< > | " or / when specifying a name.  
+ Specify the name of the linked report. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. However, you must not use the characters ; ? : \@ & = + , $ / * \< > | " or / when specifying a name.  
   
  **Description**  
  Type a description of the report contents. This description appears in the Contents page to users who have permission to access the report.  

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerBlob"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -39,7 +36,7 @@ public class SQLServerBlob
 ```  
   
 ## Remarks  
- A BLOB is stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] as an IMAGE data type.  
+ A BLOB is stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as an IMAGE data type.  
   
 ## See Also  
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   

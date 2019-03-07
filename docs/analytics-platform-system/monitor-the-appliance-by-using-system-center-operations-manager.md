@@ -22,7 +22,7 @@ Use System Center Operations Manager (SCOM) to monitor the Analytics Platform Sy
   
 2.  SQL Server 2008 R2 Native Client or SQL Server 2012 Native Client must be installed.  
   
-3.  The management packs to monitor SQL Server PDW and HDInsight must be installed, imported, and configured. Use the following articles for instructions to perform these tasks.  
+3.  The management packs to monitor SQL Server PDW must be installed, imported, and configured. Use the following articles for instructions to perform these tasks.  
   
     -   [Install the SCOM Management Packs &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
   
@@ -42,7 +42,7 @@ Alerts are where you can find the current alerts to manage.
 ![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### Appliances  
-Appliances are where you will find the currently discovered and monitored SQL Server PDW Appliances in your environment. If an appliance does not show up here and you have created the ODBC connection for it, then there may be something wrong with your PDWWatcher account. If they show up as “Not monitored”, there may be something wrong with your PDWMonitor account. Be patient since SCOM does not make changes in real time, but periodically checks for new appliances to monitor and periodically sends queries to appliances for monitoring.  
+Appliances are where you will find the currently discovered and monitored SQL Server PDW Appliances in your environment. If an appliance does not show up here and you have created the ODBC connection for it, then there may be something wrong with your PDWWatcher account. If they show up as "Not monitored", there may be something wrong with your PDWMonitor account. Be patient since SCOM does not make changes in real time, but periodically checks for new appliances to monitor and periodically sends queries to appliances for monitoring.  
   
 ![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   

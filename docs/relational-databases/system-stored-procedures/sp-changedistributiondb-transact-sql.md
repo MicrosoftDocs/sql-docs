@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changedistributiondb_TSQL"
   - "sp_changedistributiondb"
 helpviewer_keywords: 
   - "sp_changedistributiondb"
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_changedistributiondb (Transact-SQL)
@@ -41,10 +34,10 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## Arguments  
- [ **@database=**]  **'***database***'**  
+ [ **@database=**]  **'**_database_**'**  
  Is the name of the distribution database. *database* is **sysname**, with no default.  
   
- [ **@property=**]  **'***property***'**  
+ [ **@property=**]  **'**_property_**'**  
  Is the property to change for the given database. *property* is **sysname**, and can be one of these values.  
   
 |Value|Description|  
@@ -54,7 +47,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Minimum distribution retention period.|  
 |NULL (default)|All available *property* values are printed.|  
   
- [ **@value=**]  **'***value***'**  
+ [ **@value=**]  **'**_value_**'**  
  Is the new value for the specified property. *value* is **nvarchar(255)**, with a default of NULL.  
   
 ## Return Code Values  

@@ -1,18 +1,14 @@
-﻿---
+---
 title: "DBCC SHRINKLOG (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2018"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-caps.latest.revision: 11
-author: edmacauley
+author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"

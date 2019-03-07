@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.udfproperties.general.f1"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], viewing"
   - "status information [SQL Server], user-defined functions"
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # View User-defined Functions
@@ -50,7 +46,7 @@ manager: craigg
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To show a user-defined function’s properties  
+#### To show a user-defined function's properties  
   
 1.  In **Object Explorer**, click the plus sign next to the database that contains the function to which you want to view the properties, and then click the plus sign to expand the **Programmability** folder.  
   
@@ -66,7 +62,7 @@ manager: craigg
   
 4.  Right-click the function of which you want to view the properties and select **Properties**.  
   
-     The following properties appear in the **Function Properties –** *function_name* dialog box.  
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
      **Database**  
      The name of the database containing this function.  

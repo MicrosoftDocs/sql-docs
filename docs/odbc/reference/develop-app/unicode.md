@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Unicode [ODBC]"
   - "Unicode [ODBC], about Unicode"
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -21,7 +18,7 @@ manager: craigg
 # Unicode
 Unicode defines encoding for characters in many languages.  
   
- For more information about the Unicode standard, see [The Unicode Consortium](http://www.unicode.org).  
+ For more information about the Unicode standard, see [The Unicode Consortium](https://www.unicode.org).  
   
  Unicode defines a universal character set. A Windows ANSI code page defines a character set, typically containing characters for one language. It may be more difficult to write an application that is required to use different code pages.  
   

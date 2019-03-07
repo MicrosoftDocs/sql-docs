@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Conditional Split transformation"
   - "splitting dataset"
   - "datasets [Integration Services], splitting"
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Split a Dataset by Using the Conditional Split Transformation
@@ -62,7 +58,7 @@ manager: craigg
  [Integration Services Transformations](integration-services-transformations.md)   
  [Integration Services Paths](../integration-services-paths.md)   
  [Integration Services Data Types](../integration-services-data-types.md)   
- [Data Flow Task]((../../control-flow/data-flow-task.md)   
+ [Data Flow Task](../../control-flow/data-flow-task.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../../expressions/integration-services-ssis-expressions.md)  
   
   

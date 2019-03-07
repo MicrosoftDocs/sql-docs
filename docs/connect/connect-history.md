@@ -1,16 +1,15 @@
 ---
 title: "Driver history for Microsoft SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "5/4/2018"
+ms.date: 05/04/2018
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-manager: kenvh
+ms.reviewer: genemi
+manager: craigg
 ---
 # Driver history for Microsoft SQL Server
 
@@ -90,9 +89,9 @@ These components are still supported in the current release of MDAC/WDAC, but th
 
 * **SQLOLEDB:** The Microsoft OLE DB Provider for SQL Server (SQLOLEDB), which supports access to Microsoft SQL Server, has been deprecated. Its connectivity to future versions of SQL Server may not be supported. The ability to connect to versions earlier than SQL Server 7 will be removed from the operating system after Windows 7. New applications should use the Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL), which supports new SQL Server features. Existing applications should migrate to the Microsoft OLE DB Driver for SQL Server as well for better performance, reliability, and supportability. For more information, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).
 * **SQLODBC:** The Microsoft SQL Server ODBC Driver (SQLODBC), which supports access to Microsoft SQL Server, has been deprecated. Its connectivity to future versions of SQL Server may not be supported. The ability to connect to versions earlier than SQL Server 7 will be removed from the operating system after Windows 7. New applications should use the Microsoft ODBC Driver for SQL Server on Windows, which supports new SQL Server features. Existing applications should migrate to the Microsoft ODBC Driver for SQL Server as well for better performance, reliability, and supportability. For relevant information, see [Updating an Application to SQL Server Native Client from MDAC](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).
-* **Microsoft Jet Database Engine 4.0:** Starting with version 2.6, MDAC no longer contains Jet components. In other words, MDAC 2.6, 2.7, and 2.8 do not contain Microsoft Jet, the Microsoft Jet OLE DB Provider, the ODBC Desktop Database Drivers, or Jet Data Access Objects (DAO). The Microsoft Jet Database Engine 4.0 components entered a state of functional deprecation and sustained engineering, and have not received feature level enhancements since becoming a part of Microsoft Windows in Windows 2000.
+* **Microsoft Jet Database Engine 4.0:** Starting with version 2.6, MDAC no longer contains Jet components. In other words, MDAC 2.6, 2.7, and 2.8 do not contain Microsoft Jet, the Microsoft Jet OLE DB Provider, the ODBC Desktop Database Drivers, or Jet Data Access Objects (DAO). 
 
-  There is no 64-bit version of the Jet Database Engine, the Jet OLEDB Driver, the Jet ODBC Drivers, or Jet DAO available. For more information, see [KB article 957570](http://support.microsoft.com/kb/957570). On 64-bit versions of Windows, 32-bit Jet runs under the Windows WOW64 subsystem. For more information on WOW64, see the [MSDN WOW64 documentation](https://msdn.microsoft.com/library/windows/desktop/aa384274(v=vs.85).aspx). Native 64-bit applications cannot communicate with the 32-bit Jet drivers running in WOW64.
+  There is no 64-bit version of the Jet Database Engine, the Jet OLEDB Driver, the Jet ODBC Drivers, or Jet DAO available. For more information, see [KB article 957570](https://support.microsoft.com/kb/957570). On 64-bit versions of Windows, 32-bit Jet runs under the Windows WOW64 subsystem. For more information on WOW64, see the [MSDN WOW64 documentation](/windows/desktop/WinProg64/wow64-implementation-details). Native 64-bit applications cannot communicate with the 32-bit Jet drivers running in WOW64.
 
   Instead of Microsoft Jet, Microsoft recommends using [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express) when developing new, non-Microsoft Access applications requiring a relational data store. These new or converted Jet applications can continue to use Jet with the intention of using Microsoft Office 2003 and earlier files (.mdb and .xls) for non-primary data storage. However, for these applications, you should plan to migrate from Jet to the 2007 Office System Driver. You can [download the 2007 Office System Driver](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891), which allows you to read from and write to pre-existing files in either Office 2003 (.mdb and .xls) or the Office 2007 (*.accdb, *.xlsm, *.xlsx and *.xlsb) file formats.
 
@@ -105,8 +104,8 @@ These components are still supported in the current release of MDAC/WDAC, but th
 * **MSDADS:** With the Microsoft OLE DB Provider for Data Shaping (MSDADS), you can create hierarchical relationships between keys, fields, or rowsets in an application. No major feature enhancements have been made since MDAC 2.1. This Provider has been deprecated. Microsoft recommends that you use XML, instead of MSDADS.
 * **Oracle ODBC and Oracle OLE DB:** The Microsoft Oracle ODBC Driver (Oracle ODBC) and Microsoft OLE DB Provider for Oracle (Oracle OLE DB) provide access to Oracle database servers. They are built by using Oracle Call Interface (OCI) version 7 and provide full support for Oracle 7. Also, it uses Oracle 7 emulation to provide limited support for Oracle 8 databases. Oracle no longer supports applications that use OCI version 7 calls. These technologies are deprecated. If you are using Oracle data sources, you should migrate to Oracle-supplied driver and provider.
 * **RDS:** Remote Data Services (RDS) is a proprietary Microsoft mechanism for accessing remote ADO Recordset objects across the Internet or an Intranet. RDS is deprecated; no major feature enhancements have been made to RDS since MDAC 2.1. Microsoft has released the .NET Framework, which has extensive SOAP capabilities and replaces RDS components. All RDS server components will be removed from the operating system after Windows 7.
-* **JRO:** Jet Replication Objects (JRO) is deprecated. JRO is used within ADO with Jet (*.mdb) databases to create and compress Jet Databases (.mdb’s) and perform Jet Replication Management. MDAC 2.7 will be its last release. JRO will not be available on the 64-bit Windows operating system. JRO is not supported in the Microsoft Access 2007 file format (*.accdb).
-* **16-bit ODBC Support:** If you are using 16-bit applications, you should migrate to a 32-bit application. 16-bit functionality is deprecated and is being removed from 64-bit operating systems. For more information, see [Knowledge base article 896458](http://support.microsoft.com/kb/896458).
+* **JRO:** Jet Replication Objects (JRO) is deprecated. JRO is used within ADO with Jet (*.mdb) databases to create and compress Jet Databases (.mdb's) and perform Jet Replication Management. MDAC 2.7 will be its last release. JRO will not be available on the 64-bit Windows operating system. JRO is not supported in the Microsoft Access 2007 file format (*.accdb).
+* **16-bit ODBC Support:** If you are using 16-bit applications, you should migrate to a 32-bit application. 16-bit functionality is deprecated and is being removed from 64-bit operating systems. For more information, see [Knowledge base article 896458](https://support.microsoft.com/kb/896458).
 * **OLEDB Simple Provider (MSDAOSP):** OLEDB Simple Provider offers a framework for quickly building OLE DB providers over simple data. MSDAOSP is deprecated.
 * **ODBC Cursor Library:** ODBC Cursor Library (ODBCCR32.dll) provides limited client-side data cursors. ODBC Cursor Library has been deprecated; your application can use server-side cursor implementations as a replacement.
 * **OLE DB Out-of-Process Interface Remoting:** OLEDB Interface remoting (msdaps.dll) was an attempt to allow OLE DB providers to run out of process. OLEDB Out-of-Process Interface remoting is deprecated.
@@ -135,7 +134,11 @@ Obsolete technologies are technologies that have not been enhanced or updated in
 
 The following components are considered obsolete:
 
-* **DB-Library:** DB-Library is a SQL Server–specific programming model that includes C APIs. There have been no feature enhancements to the DB-Library since SQL Server 6.5. Its final release was with SQL Server 2000, and it will not be ported to the 64-bit Windows operating system.
-* **Embedded SQL (E-SQL):** E-SQL is a SQL Server–specific programming model that enables Transact-SQL statements to be embedded in Visual C code. No feature enhancements have been made to the E-SQL since SQL Server 6.5. Its final release was with SQL Server 2000, and it will not be ported to the 64-bit Windows operating system.
+* **DB-Library:** DB-Library is a SQL Server-specific programming model that includes C APIs. There have been no feature enhancements to the DB-Library since SQL Server 6.5. Its final release was with SQL Server 2000, and it will not be ported to the 64-bit Windows operating system.
+* **Embedded SQL (E-SQL):** E-SQL is a SQL Server-specific programming model that enables Transact-SQL statements to be embedded in Visual C code. No feature enhancements have been made to the E-SQL since SQL Server 6.5. Its final release was with SQL Server 2000, and it will not be ported to the 64-bit Windows operating system.
 * **Data Access Objects (DAO):** DAO provides access to JET (Access) databases. This API can be used from Microsoft Visual Basic, Microsoft Visual C++, and scripting languages. It was included with Microsoft Office 2000 and Office XP. DAO 3.6 is the final version of this technology. It will not be available on the 64-bit Windows operating system.
 * **Remote Data Objects (RDO):** RDO was designed specifically to access remote ODBC relational data sources, and made it easier to use ODBC without complex application code. It was included with Microsoft Visual Basic versions 4, 5, and 6. RDO version 2.0 was the final version of this technology.
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_fulltext_semantic_register_language_statistics_db"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_semantic_register_language_statistics_db"
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -36,12 +32,12 @@ manager: craigg
   
 ```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
-    [ @dbname = ] ‘database_name’;  
+    [ @dbname = ] 'database_name';  
 GO  
 ```  
   
 ##  <a name="Arguments"></a> Arguments  
- [ @dbname = ] ‘*database_name*’  
+ [ @dbname = ] '*database_name*'  
  Is the name of the Semantic Language Statistics database to be registered for the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The database must already be attached. *database_name* is **sysname**, and may not be NULL.  
   
 ## Return Code Value  

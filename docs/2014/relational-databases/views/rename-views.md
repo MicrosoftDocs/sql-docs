@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
   - "renaming views"
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
-caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Rename Views
@@ -58,7 +54,7 @@ manager: craigg
   
 2.  Right-click the view you wish to rename and select **Rename**.  
   
-3.  Enter the view’s new name.  
+3.  Enter the view's new name.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To rename a view**  
@@ -68,6 +64,6 @@ manager: craigg
  For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) and [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Renaming a View  
- Ensure that all objects, scripts, and applications that reference the view’s old name now use the new name.  
+ Ensure that all objects, scripts, and applications that reference the view's old name now use the new name.  
   
   

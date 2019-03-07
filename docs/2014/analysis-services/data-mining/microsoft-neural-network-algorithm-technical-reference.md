@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "HIDDEN_NODE_RATIO parameter"
@@ -28,10 +26,9 @@ helpviewer_keywords:
   - "coding [Data Mining]"
   - "HOLDOUT_SEED parameter"
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Microsoft Neural Network Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network uses a *Multilayer Perceptron* network, also called a *Back-Propagated Delta Rule network*, composed of up to three layers of neurons, or *perceptrons*. These layers are an input layer, an optional hidden layer, and an output layer.  
@@ -100,7 +97,7 @@ manager: "mblythe"
   
  **Discrete values**  
   
- μ = p – the prior probability of a state  
+ μ = p - the prior probability of a state  
   
  StdDev  = sqrt(p(1-p))  
   

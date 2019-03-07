@@ -5,12 +5,9 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: master-data-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -38,7 +35,7 @@ manager: craigg
 ## QueryOpener Application  
  All users who install the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] have an application called QueryOpener installed. This application is used to open shortcut query files in the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]. If you double-click a shortcut query file, this application is automatically used to open the file in the Add-in.  
   
- When you open a shortcut query file with this application, you are prompted to make the connection a “safe” connection, which means you trust content from this location. (You can make a connection safe by selecting **Always allow connection to this address** in the prompt window.) Each time you mark a connection as safe, it is added to a list. If you want to clear this list, open the **Settings** dialog box and in the **Servers Added to Safe List** section, click **Clear All**.  
+ When you open a shortcut query file with this application, you are prompted to make the connection a "safe" connection, which means you trust content from this location. (You can make a connection safe by selecting **Always allow connection to this address** in the prompt window.) Each time you mark a connection as safe, it is added to a list. If you want to clear this list, open the **Settings** dialog box and in the **Servers Added to Safe List** section, click **Clear All**.  
   
  The default location for the application is *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
   

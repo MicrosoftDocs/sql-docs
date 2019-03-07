@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "11/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_update_account_sp"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_update_account_sp"
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 51
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sysmail_update_account_sp (Transact-SQL)
@@ -54,37 +50,37 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** = ] *account_id*  
  The account ID to update. *account_id* is **int**, with a default of NULL. At least one of *account_id* or *account_name* must be specified. If both are specified, the procedure changes the name of the account.  
   
- [ **@account_name** = ] **'***account_name***'**  
+ [ **@account_name** = ] **'**_account_name_**'**  
  The name of the account to update. *account_name* is **sysname**, with a default of NULL. At least one of *account_id* or *account_name* must be specified. If both are specified, the procedure changes the name of the account.  
   
- [ **@email_address** = ] **'***email_address***'**  
+ [ **@email_address** = ] **'**_email_address_**'**  
  The new e-mail address to send the message from. This address must be an internet e-mail address. The server name in the address is the server that Database Mail uses to send mail from this account. *email_address* is **nvarchar(128)**, with a default of NULL.  
   
- [ **@display_name** = ] **'***display_name***'**  
+ [ **@display_name** = ] **'**_display_name_**'**  
  The new display name to use on e-mail messages from this account. *display_name* is **nvarchar(128)**, with no default.  
   
- [ **@replyto_address** = ] **'***replyto_address***'**  
+ [ **@replyto_address** = ] **'**_replyto_address_**'**  
  The new address to use in the Reply-To header of e-mail messages from this account. *replyto_address* is **nvarchar(128)**, with no default.  
   
- [ **@description** = ] **'***description***'**  
+ [ **@description** = ] **'**_description_**'**  
  The new description for the account. *description* is **nvarchar(256)**, with a default of NULL.  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
+ [ **@mailserver_name** = ] **'**_server_name_**'**  
  The new name of the SMTP mail server to use for this account. The computer that runs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to resolve the *server_name* to an IP address. *server_name* is **sysname**, with no default.  
   
- [ **@mailserver_type** = ] **'***server_type***'**  
+ [ **@mailserver_type** = ] **'**_server_type_**'**  
  The new type of the mail server. *server_type* is **sysname**, with no default. Only a value of **'SMTP'** is supported.  
   
  [ **@port** = ] *port_number*  
  The new port number of the mail server. *port_number* is **int**, with no default.  
   
- [ **@timeout** = ] **'***timeout***'**  
+ [ **@timeout** = ] **'**_timeout_**'**  
  Timeout parameter for SmtpClient.Send of a single email message. *Timeout* is **int** in seconds, with no default.  
   
- [ **@username** = ] **'***username***'**  
+ [ **@username** = ] **'**_username_**'**  
  The new user name to use to log on to the mail server. *User name* is **sysname**, with no default.  
   
- [ **@password** = ] **'***password***'**  
+ [ **@password** = ] **'**_password_**'**  
  The new password to use to log on to the mail server. *password* is **sysname**, with no default.  
   
  [ **@use_default_credentials** = ] use_default_credentials  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding nodes"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], creating"
   - "removing nodes"
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: 75
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create a New SQL Server Failover Cluster (Setup)
@@ -64,7 +60,7 @@ manager: craigg
   
  For more information about remote installation, see [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- For more information about installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in a Windows failover cluster, see [How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ For more information about installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in a Windows failover cluster, see [How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## Prerequisites  
  Before you begin, review the following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online topics:  
@@ -121,17 +117,17 @@ manager: craigg
   
 11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](../../install/instance-configuration.md).  
   
-     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Name** — Specify a network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. This is the name that is used to identify your failover cluster on the network.  
+     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Name** - Specify a network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. This is the name that is used to identify your failover cluster on the network.  
   
     > [!NOTE]  
     >  This is known as the virtual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] name in earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters.  
   
-     **Instance ID** — By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a nondefault instance ID, select the **Instance ID** box and provide a value.  
+     **Instance ID** - By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a nondefault instance ID, select the **Instance ID** box and provide a value.  
   
     > [!NOTE]  
     >  Typical stand-alone instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], whether default or named instances, do not use a nondefault value for the **Instance ID** box.  
   
-     **Instance root directory** — By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or click the ellipsis button to locate an installation folder.  
+     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or click the ellipsis button to locate an installation folder.  
   
      **Detected [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances and features on this computer** - The grid shows instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Click **Next** to continue.  
   
@@ -150,7 +146,7 @@ manager: craigg
   
 14. On the Cluster Network Configuration page, specify the network resources for your failover cluster instance:  
   
-    -   **Network Settings** — Specify the IP type and IP address for your failover cluster instance.  
+    -   **Network Settings** - Specify the IP type and IP address for your failover cluster instance.  
   
      Click **Next** to continue.  
   
@@ -164,7 +160,7 @@ manager: craigg
   
 16. Work flow for the rest of this topic depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]).  
   
-17. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
+17. On the Server Configuration - Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
   
      You can assign the same login account to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. The startup type is set to manual for all cluster-aware services, including full-text search and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, and cannot be changed during installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have complete their tasks. For more information, see [Server Configuration - Service Accounts](../../install/server-configuration-service-accounts.md) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -176,7 +172,7 @@ manager: craigg
   
 18. Use the **Server Configuration - Collation** tab to specify nondefault collations for the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. For more information, see [Server Configuration - Collation](../../install/server-configuration-collation.md).  
   
-19. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration — Account Provisioning page to specify the following:  
+19. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - Account Provisioning page to specify the following:  
   
     -   Security Mode - select Windows Authentication or Mixed Mode Authentication for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If you select Mixed Mode Authentication, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system administrator account.  
   
@@ -198,11 +194,11 @@ manager: craigg
   
 21. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - FILESTREAM page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information about FILESTREAM, see [Database Engine Configuration - Filestream](../../install/database-engine-configuration-filestream.md). Click **Next** to continue.  
   
-22. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration — Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. For more information, see [Analysis Services Configuration - Account Provisioning](../../install/analysis-services-configuration-account-provisioning.md).  
+22. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. For more information, see [Analysis Services Configuration - Account Provisioning](../../install/analysis-services-configuration-account-provisioning.md).  
   
      When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, click **Next**.  
   
-23. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration — Data Directories page to specify nondefault installation directories. To install to default directories, click **Next**.  
+23. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
     >  If you specify nondefault installation directories, make sure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The data directories should be located on the shared cluster disk for the failover cluster.  
@@ -268,7 +264,7 @@ manager: craigg
   
 11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](../../install/instance-configuration.md).  
   
-     **Instance ID** — By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a nondefault instance ID, select the **Instance ID** text box and provide a value.  
+     **Instance ID** - By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a nondefault instance ID, select the **Instance ID** text box and provide a value.  
   
     > [!NOTE]  
     >  Typical stand-alone instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], whether default or named instances, do not use a nondefault value for the **Instance ID** text box.  
@@ -276,7 +272,7 @@ manager: craigg
     > [!IMPORTANT]  
     >  Use the same InstanceID for all the nodes that are prepared for the failover cluster  
   
-     **Instance root directory** — By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or click the ellipsis button to locate an installation folder.  
+     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or click the ellipsis button to locate an installation folder.  
   
      **Installed instances** - The grid shows instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Click **Next** to continue.  
   
@@ -292,7 +288,7 @@ manager: craigg
   
 14. Work flow for the rest of this topic depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
   
-15. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
+15. On the Server Configuration - Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
   
      You can assign the same login account to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. The startup type is set to manual for all cluster-aware services, including full-text search and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, and cannot be changed during installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have complete their tasks. For more information, see [Server Configuration - Service Accounts](../../install/server-configuration-service-accounts.md) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -360,13 +356,13 @@ manager: craigg
   
 10. On the Cluster Network Configuration page, specify the network resources for your failover cluster instance:  
   
-    -   **Network Settings** — Specify the IP type and IP address for all the nodes and subnets for your failover cluster instance. You can specify multiple IP addresses for a multi-subnet failover cluster, but only one IP address per subnet is supported. Every prepared node should be an owner of at least one IP address. If you have multiple subnets in your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you will be prompted to set the IP address resource dependency to OR.  
+    -   **Network Settings** - Specify the IP type and IP address for all the nodes and subnets for your failover cluster instance. You can specify multiple IP addresses for a multi-subnet failover cluster, but only one IP address per subnet is supported. Every prepared node should be an owner of at least one IP address. If you have multiple subnets in your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you will be prompted to set the IP address resource dependency to OR.  
   
      Click **Next** to continue.  
   
 11. Work flow for the rest of this topic depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
   
-12. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration — Account Provisioning page to specify the following:  
+12. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - Account Provisioning page to specify the following:  
   
     -   Security Mode - select Windows Authentication or Mixed Mode Authentication for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If you select Mixed Mode Authentication, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system administrator account.  
   
@@ -383,11 +379,11 @@ manager: craigg
   
      For more information, see [Database Engine Configuration - Data Directories](../../install/database-engine-configuration-data-directories.md).  
   
-14. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration — Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. For more information, see [Analysis Services Configuration - Account Provisioning](../../install/analysis-services-configuration-account-provisioning.md).  
+14. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. For more information, see [Analysis Services Configuration - Account Provisioning](../../install/analysis-services-configuration-account-provisioning.md).  
   
      When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, click **Next**.  
   
-15. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration — Data Directories page to specify nondefault installation directories. To install to default directories, click **Next**.  
+15. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
     >  If you specify nondefault installation directories, make sure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The data directories should be located on the shared cluster disk for the failover cluster.  
@@ -403,7 +399,7 @@ manager: craigg
 19. After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes. To complete the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation process, click **Close**. With this step, all the prepared nodes for the same failover cluster are now part of the completed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.  
   
 ## Next Steps  
- **Configure your new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation** — To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Configure your new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation** - To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  For more information about log file locations, see [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

@@ -1,13 +1,11 @@
-﻿---
+---
 title: "smalldatetime (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "smalldatetime_TSQL"
@@ -21,11 +19,10 @@ helpviewer_keywords:
   - "date and time [SQL Server], smalldatetime"
   - "data types [SQL Server], date and time"
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,30 +37,30 @@ Defines a date that is combined with a time of day. The time is based on a 24-ho
 |||  
 |-|-|  
 |Syntax|**smalldatetime**|  
-|Usage|DECLARE @MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
+|Usage|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |Default string literal formats<br /><br /> (used for down-level client)|Not applicable|  
 |Date range|1900-01-01 through 2079-06-06<br /><br /> January 1, 1900, through June 6, 2079|  
 |Time range|00:00:00 through 23:59:59<br /><br /> 2007-05-09 23:59:59 will round to<br /><br /> 2007-05-10 00:00:00|  
-|Element ranges|YYYY is four digits, ranging from 1900, to 2079, that represent a year.<br /><br /> MM is two digits, ranging from 01 to 12, that represent a month in the specified year.<br /><br /> DD is two digits, ranging from 01 to 31 depending on the month, that represent a day of the specified month.<br /><br /> hh is two digits, ranging from 00 to 23, that represent the hour.<br /><br /> mm is two digits, ranging from 00 to 59, that represent the minute.<br /><br /> ss is two digits, ranging from 00 to 59, that represent the second. Values that are 29.998 seconds or less are rounded down to the nearest minute, Values of 29.999 seconds or more are rounded up to the nearest minute.|  
+|Element ranges|YYYY is four digits, ranging from 1900, to 2079, that represent a year.<br /><br /> MM is two digits, ranging from 01 to 12, that represent a month in the specified year.<br /><br /> DD is two digits, ranging from 01 to 31 depending on the month, that represent a day of the specified month.<br /><br /> hh is two digits, ranging from 00 to 23, that represent the hour.<br /><br /> mm is two digits, ranging from 00 to 59, that represent the minute.<br /><br /> ss is two digits, ranging from 00 to 59, that represent the second. Values that are 29.998 seconds or less are rounded down to the nearest minute. Values of 29.999 seconds or more are rounded up to the nearest minute.|  
 |Character length|19 positions maximum|  
 |Storage size|4 bytes, fixed.|  
 |Accuracy|One minute|  
 |Default value|1900-01-01 00:00:00|  
-|Calendar|Gregorian<br /><br /> (Does not include the complete range of years.)|  
+|Calendar|Gregorian<br /><br /> (Doesn't include the complete range of years.)|  
 |User-defined fractional second precision|No|  
 |Time zone offset aware and preservation|No|  
 |Daylight saving aware|No|  
   
 ## ANSI and ISO 8601 Compliance  
-**smalldatetime** is not ANSI or ISO 8601 compliant.
+**smalldatetime** isn't ANSI or ISO 8601 compliant.
   
 ## Converting date and time data
-When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it can't recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### Converting smalldatetime to other date and time types
 This section describes what occurs when a **smalldatetime** data type is converted to other date and time data types.
   
-In the case of conversion to **date**, the  year, month, and day are copied. The following code shows the results of converting a `smalldatetime` value to a `date` value.
+For a conversion to **date**, the  year, month, and day are copied. The following code shows the results of converting a `smalldatetime` value to a `date` value.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -111,7 +108,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-In the case of conversion to **datetimeoffset(n)**, the **smalldatetime** value is copied to the **datetimeoffset(n)** value. The fractional seconds are set to 0, and the time zone offset is set to +00:0. The following code shows the results of converting a `smalldatetime` value to a `datetimeoffset(4)` value.
+For a conversion to **datetimeoffset(n)**, the **smalldatetime** value is copied to the **datetimeoffset(n)** value. The fractional seconds are set to 0, and the time zone offset is set to +00:0. The following code shows the results of converting a `smalldatetime` value to a `datetimeoffset(4)` value.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -188,5 +185,4 @@ SELECT
   
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cursors [ODBC], block"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "block cursors [ODBC]"
   - "result sets [ODBC], block cursors"
 ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

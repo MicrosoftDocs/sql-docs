@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logistic regression [Analysis Services]"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "regression algorithms [Analysis Services]"
   - "HOLDOUT_SEED parameter"
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Microsoft Logistic Regression Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm is a variation of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm, where the *HIDDEN_NODE_RATIO* parameter is set to 0. This setting will create a neural network model that does not contain a hidden layer, and that therefore is equivalent to logistic regression.  
@@ -44,25 +41,25 @@ manager: "mblythe"
 ### Scoring Inputs  
  *Scoring* in the context of a neural network model or logistic regression model means the process of converting the values that are present in the data into a set of values that use the same scale and therefore can be compared to each other. For example, suppose the inputs for Income range from 0 to 100,000 whereas the inputs for [Number of Children] range from 0 to 5. This conversion process allows you to *score*, or compare, the importance of each input regardless of the difference in values.  
   
- For each state that appears in the training set, the model generates an input. For discrete or discretized inputs, an additional input is created to represent the Missing state, if the missing state appears at least once in the training set. For continuous inputs, at most two input nodes are created: one for Missing values, if present in the training data, and one input for all existing, or non-null, values. Each input is scaled to a numeric format using the z-score normalization method, (x – μ)/StdDev.  
+ For each state that appears in the training set, the model generates an input. For discrete or discretized inputs, an additional input is created to represent the Missing state, if the missing state appears at least once in the training set. For continuous inputs, at most two input nodes are created: one for Missing values, if present in the training data, and one input for all existing, or non-null, values. Each input is scaled to a numeric format using the z-score normalization method, (x - μ)/StdDev.  
   
  During z-score normalization, the mean (μ) and standard deviation are obtained over the complete training set.  
   
  **Continuous values**  
   
- Value is present:   (X – μ)/σ // X is the actual value being encoded)  
+ Value is present:   (X - μ)/σ // X is the actual value being encoded)  
   
  Value is absent:    -   μ/σ  // negative mu divided by sigma)  
   
  **Discrete values**  
   
- μ = p – (the prior probability of a state)  
+ μ = p - (the prior probability of a state)  
   
  StdDev  = sqrt(p(1-p))  
   
- Value is present:     (1 – μ)/σ// (One minus mu) divided by sigma)  
+ Value is present:     (1 - μ)/σ// (One minus mu) divided by sigma)  
   
- Value is absent:     (– μ)/σ// negative mu divided by sigma)  
+ Value is absent:     (- μ)/σ// negative mu divided by sigma)  
   
 ### Understanding Logistic Regression Coefficients  
  There are various methods in the statistical literature for performing logistic regression, but an important part of all methods is assessing the fit of the model. A variety of goodness-to-fit statistics have been proposed, among them odds ratios and covariate patterns. A discussion of how to measure the fit of a model is beyond the scope of this topic; however, you can retrieve the value of the coefficients in the model and use them to design your own measures of fit.  
@@ -80,9 +77,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- For each output value, this query returns the coefficients and an ID that points back to the related input node. It also returns a row that contains the value of the output and the intercept. Each input X has its own coefficient (Ci), but the nested table also contains a “free” coefficient (Co), calculated according to the following formula:  
+ For each output value, this query returns the coefficients and an ID that points back to the related input node. It also returns a row that contains the value of the output and the intercept. Each input X has its own coefficient (Ci), but the nested table also contains a "free" coefficient (Co), calculated according to the following formula:  
   
- F(X) = X1*C1 + X2\*C2 + … +Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  Activation: exp(F(X)) / (1 + exp(F(X)) )  
   

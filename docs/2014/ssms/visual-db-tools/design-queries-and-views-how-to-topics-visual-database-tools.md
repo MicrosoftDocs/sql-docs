@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
-  - "• vs.solutionexplorer.file.query"
+  - "vs.solutionexplorer.file.query"
 helpviewer_keywords: 
   - "queries [Visual Database Tools]"
   - "View Designer, about View Designer"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], about Query Designer"
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)
@@ -59,5 +55,3 @@ manager: craigg
 ## Related Sections  
  [Design Tables &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)  
  Detailed steps for designing and maintaining database structure through tables, columns, keys, indexes, stored procedures, and more.  
-  
-  

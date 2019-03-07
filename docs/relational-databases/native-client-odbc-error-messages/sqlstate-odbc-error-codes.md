@@ -1,13 +1,11 @@
-﻿---
+---
 title: "SQLSTATE (ODBC Error Codes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: connectivity
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, errors"
@@ -19,7 +17,7 @@ ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSTATE (ODBC Error Codes)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +27,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  For more information about the state error codes, see the following topics:  
   
--   [Appendix A: ODBC Error Codes](http://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Appendix A: ODBC Error Codes](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
--   [SQLSTATE Mappings](http://go.microsoft.com/fwlink/?LinkId=89355)  
+-   [SQLSTATE Mappings](https://go.microsoft.com/fwlink/?LinkId=89355)  
   
 ## See Also  
  [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

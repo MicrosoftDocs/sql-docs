@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.indexproperties.fragmentation.f1"
@@ -30,9 +27,8 @@ helpviewer_keywords:
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
-caps.latest.revision: 64
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Reorganize and Rebuild Indexes
@@ -104,11 +100,11 @@ manager: craigg
   
 #### To check the fragmentation of an index  
   
-1.  In Object Explorer, Expand the database that contains the table on which you want to check an index’s fragmentation.  
+1.  In Object Explorer, Expand the database that contains the table on which you want to check an index's fragmentation.  
   
 2.  Expand the **Tables** folder.  
   
-3.  Expand the table on which you want to check an index’s fragmentation.  
+3.  Expand the table on which you want to check an index's fragmentation.  
   
 4.  Expand the **Indexes** folder.  
   
@@ -309,6 +305,6 @@ manager: craigg
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## See Also  
- [Microsoft SQL Server 2000 Index Defragmentation Best Practices](http://technet.microsoft.com/library/cc966523.aspx)  
+ [Microsoft SQL Server 2000 Index Defragmentation Best Practices](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

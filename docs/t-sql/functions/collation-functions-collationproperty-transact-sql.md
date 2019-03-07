@@ -5,9 +5,7 @@ ms.date: "10/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COLLATIONPROPERTY_TSQL"
@@ -18,16 +16,15 @@ helpviewer_keywords:
   - "collations [SQL Server], properties"
   - "COLLATIONPROPERTY function"
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation Functions - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-This function returns the property of a specified collation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This function returns the requested property of a specified collation.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,10 +43,10 @@ The collation property. The *property* argument has a **varchar(128)** data type
   
 |Property name|Description|  
 |---|---|
-|**CodePage**|Non-Unicode code page of the collation. See [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) and [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) to translate these values, and to see their character mappings.|  
-|**LCID**|Windows LCID of the collation. See [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) to translate these values (you will first need to convert to **varbinary**).|  
-|**ComparisonStyle**|Windows comparison style of the collation. Returns 0 for all binary collations - both (\_BIN) and (\_BIN2) - as well as when all properties are case sensitive. Bitmask values:<br /><br /> Ignore case : 1<br /><br /> Ignore accent : 2<br /><br /> Ignore Kana : 65536<br /><br /> Ignore width : 131072<br /><br /> Note: the variation-selector-sensitive (\_VSS) option is not represented in this value, even though it affects the comparison behavior.|  
-|**Version**|The version of the collation, derived from the collation ID version field. Returns an integer value between 0 and 3.<br /><br /> Collations with "140" in the name return 3.<br /><br /> Collations with "100" in the name return 2.<br /><br /> Collations with "90" in the name return 1.<br /><br /> All other collations return 0.|  
+|**CodePage**|Non-Unicode code page of the collation. This is the character set used for **varchar** data. See [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx) and [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx) to translate these values, and to see their character mappings.<br /><br />Base data type: **int**|  
+|**LCID**|Windows locale ID of the collation. This is the culture used for sorting and comparison rules. See [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx) to translate these values (you will first need to convert to **varbinary**).<br /><br />Base data type: **int**|  
+|**ComparisonStyle**|Windows comparison style of the collation. Returns 0 for binary collations - both (\_BIN) and (\_BIN2) - as well as when all properties are sensitive - (\_CS\_AS\_KS\_WS) and (\_CS\_AS\_KS\_WS\_SC) and (\_CS\_AS\_KS\_WS\_VSS). Bitmask values:<br /><br /> Ignore case : 1<br /><br /> Ignore accent : 2<br /><br /> Ignore Kana : 65536<br /><br /> Ignore width : 131072<br /><br /> Note: the variation-selector-sensitive (\_VSS) option is not represented in this value, even though it affects the comparison behavior.<br /><br />Base data type: **int**|  
+|**Version**|The version of the collation. Returns a value between 0 and 3.<br /><br /> Collations with "140" in the name return 3.<br /><br /> Collations with "100" in the name return 2.<br /><br /> Collations with "90" in the name return 1.<br /><br /> All other collations return 0.<br /><br />Base data type: **tinyint**|  
   
 ## Return types
 **sql_variant**

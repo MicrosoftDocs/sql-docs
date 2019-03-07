@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.webservicestask.output.f1"
 helpviewer_keywords: 
   - "Web Service Task Editor"
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Web Service Task Editor (Output Page)
@@ -37,13 +34,13 @@ manager: craigg
   
 ### OutputType = File Connection  
  **File**  
- Select a File connection manager in the list or click \<**New Connection…**> to create a new connection manager.  
+ Select a File connection manager in the list or click \<**New Connection...**> to create a new connection manager.  
   
  **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### OutputType = Variable  
  **Variable**  
- Select a variable in the list or click \<**New Variable…**> to create a new variable.  
+ Select a variable in the list or click \<**New Variable...**> to create a new variable.  
   
  **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   

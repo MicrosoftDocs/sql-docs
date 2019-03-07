@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.categorygroupproperties.filters.f1"
@@ -17,10 +15,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.chartproperties.filters.f1"
   - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
-caps.latest.revision: 14
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Filters page, Chart Dialog Boxes (Report Builder and SSRS)
   Click **Filters** in the:  

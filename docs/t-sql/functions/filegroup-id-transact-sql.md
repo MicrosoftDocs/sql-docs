@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FILEGROUP_ID_TSQL"
@@ -21,45 +19,42 @@ helpviewer_keywords:
   - "IDs [SQL Server], filegroups"
   - "names [SQL Server], filegroups"
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FILEGROUP_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the filegroup identification (ID) number for a specified filegroup name.  
+This function returns the filegroup identification (ID) number for a specified filegroup name.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
 ## Arguments  
- **'** *filegroup_name* **'**  
- Is an expression of type **sysname** that represents the filegroup name for which to return the filegroup ID.  
+*filegroup_name*
+An expression of type **sysname**, representing the filegroup name whose filegroup ID `FILEGROUP_ID` will return.  
   
 ## Return Types  
- **int**  
+**int**  
   
 ## Remarks  
- *filegroup_name* corresponds to the **name** column in the **sys.filegroups** catalog view.  
+*filegroup_name* corresponds to the **name** column in the **sys.filegroups** catalog view.  
   
 ## Examples  
- The following example returns the filegroup ID for the filegroup named `PRIMARY` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+This example returns the filegroup ID for the filegroup named `PRIMARY` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
-  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 Filegroup ID  

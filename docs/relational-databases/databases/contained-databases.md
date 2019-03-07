@@ -1,15 +1,11 @@
-﻿---
+---
 title: "Contained Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database"
@@ -17,11 +13,10 @@ helpviewer_keywords:
   - "partially contained database"
   - "contained database, understanding"
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 37
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Contained Databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +66,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
      Authorized Windows users and members of authorized Windows groups can connect directly to the database and do not need logins in the **master** database. The database trusts the authentication by Windows.  
   
- Users based on logins in the **master** database can be granted access to a contained database, but that would create a dependency on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Therefore, creating users based on logins see comment for partially contained databases.  
+ Users based on logins in the **master** database can be granted access to a contained database, but that would create a dependency on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Therefore, creating users based on logins requires partial containment.
   
 > [!IMPORTANT]  
 >  Enabling partially contained databases delegates control over access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the owners of the database. For more information, see [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  

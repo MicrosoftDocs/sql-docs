@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.currencyconversion.conversiontype.f1"
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Conversion Type (Business Intelligence Wizard)
   Use the **Select Conversion Type** page to define the relationship between local currencies and reporting currencies for transactions stored in multiple currencies. A local currency is the currency in which the transactions for measures selected in the **Select Measures** page are stored. A reporting currency is the currency in which the transactions selected in the **Select Measures** page are translated.  

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "credentials [SQL Server], creating"
   - "authentication [SQL Server], credentials"
   - "logins [SQL Server], credentials"
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
-caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Credential
@@ -59,13 +55,13 @@ manager: craigg
   
 1.  In Object Explorer, expand  the **Security** folder.  
   
-2.  Right-click the **Credentials** folder and select **New Credential…**.  
+2.  Right-click the **Credentials** folder and select **New Credential...**.  
   
 3.  In the **New Credential** dialog box, in the **Credential Name** box, type a name for the credential.  
   
 4.  In the **Identity** box, type the name of the account used for outgoing connections (when leaving the context of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Typically, this will be a Windows user account, but the identity can be an account of another type.  
   
-     Alternately, click the ellipsis **(…)** to open the **Select User or Group** dialog box.  
+     Alternately, click the ellipsis **(...)** to open the **Select User or Group** dialog box.  
   
 5.  In the **Password** and **Confirm password** boxes, type the password of the account specified in the **Identity** box. If **Identity** is a Windows user account, this is the Windows password. The **Password** can be blank, if no password is required.  
   

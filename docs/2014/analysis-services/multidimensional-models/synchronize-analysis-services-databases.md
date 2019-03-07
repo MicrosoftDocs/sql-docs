@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services deployments, Synchronize Database Wizard"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "Synchronize Database Wizard"
   - "synchronization [Analysis Services]"
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Synchronize Analysis Services Databases
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes a database synchronization feature that makes two [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases equivalent by copying the data and metadata a database on a source server to a database on a destination server. Use the Synchronize Database feature to accomplish any of the following tasks:  
@@ -38,7 +35,7 @@ manager: "mblythe"
  To synchronize databases, run the Synchronize Database Wizard to immediately synchronize the databases, or use it to generate a synchronization script that you can run later. Either approach can be used to increase the availability and scalability of your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases and cube.  
   
 > [!NOTE]  
->  The following whitepapers, written for previous versions of Analysis Services, still apply to scalable multidimensional solutions built using SQL Server 2012. For more information, see [Scale-Out Querying with Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) and [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=253137.)  
+>  The following whitepapers, written for previous versions of Analysis Services, still apply to scalable multidimensional solutions built using SQL Server 2012. For more information, see [Scale-Out Querying with Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) and [Scale-Out Querying for Analysis Services with Read-Only Databases](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
 ## Prerequisites  
  On the destination (or target) server from which you initiate database synchronization, you must be a member of the Analysis Services server administrator role. On the source server, your Windows user account must have Full Control permissions on the source database. If you are synchronizing database interactively, remember that synchronization runs under the security context of your Windows user identity. If your account is denied access to specific objects, those objects will be excluded from the operation. For more information about server administrator roles and database permissions, see [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) and [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
@@ -52,7 +49,7 @@ manager: "mblythe"
  Turn off lazy aggregation processing if you are using it on the source server. Aggregations that are processing in the background can interfere with database synchronization. For more information about setting this server property, see [OLAP Properties](../server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  Database size is a factor in determining whether synchronization is a suitable approach. There are no hard requirements, but if synchronization is too slow, consider synchronizing multiple servers in parallel, as described in this technical paper: [Analysis Services Synchronization Best Practices](http://go.microsoft.com/fwlink/?LinkID=253136).  
+>  Database size is a factor in determining whether synchronization is a suitable approach. There are no hard requirements, but if synchronization is too slow, consider synchronizing multiple servers in parallel, as described in this technical paper: [Analysis Services Synchronization Best Practices](https://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## Synchronize Database Wizard  
  Use the Synchronize Database Wizard to perform one-way synchronization from a source to a destination database, or to generate a script that specifies a database synchronization operation. You can synchronize both local and remote partitions during the synchronization process and choose whether to include roles.  
@@ -185,7 +182,7 @@ manager: "mblythe"
  If you did not synchronize roles or membership, remember to specify user access permissions now on the destination database.  
   
 ## See Also  
- [Synchronize Element &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Deploy Model Solutions Using XMLA](deploy-model-solutions-using-xmla.md)   
  [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   

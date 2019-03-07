@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "slice cubes [Analysis Services]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "cubes [Analysis Services], slicing"
   - "filtering data [Analysis Services]"
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Filter the Source Cube for a Mining Structure
   When you create a mining structure that is based on data in a multidimensional model (an OLAP cube), you can *slice* the cube that the mining structure is based on. Slicing lets you create subsets of data, as a kind of filter on the data that is used to train the mining model.  

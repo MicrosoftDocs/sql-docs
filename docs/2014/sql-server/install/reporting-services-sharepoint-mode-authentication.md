@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade SharePoint Mode [Reporting Services]"
   - "SharePoint integration"
   - "SharePoint Mode"
 ms.assetid: 2c19794a-dd55-4fe5-b901-6dd93e9f6beb
-caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services SharePoint Mode Authentication
@@ -26,11 +23,11 @@ manager: craigg
   
 -   The **SSRS Application Pool Account Name:** option is read only. The value is automatically populated with the current value from the existing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation that you are upgrading.  
   
--   The **SSRS Application Pool Account Password:** option will be disabled if the application pool account does not require a password. For example, “NT Authority\NetworkSerivce”. If the application pool account does require a password, you cannot continue with upgrade until you type the correct password.  
+-   The **SSRS Application Pool Account Password:** option will be disabled if the application pool account does not require a password. For example, "NT Authority\NetworkService". If the application pool account does require a password, you cannot continue with upgrade until you type the correct password.  
   
- For more information, see [Upgrade and Migrate Reporting Services](http://go.microsoft.com/fwlink/?LinkID=245628) (http://go.microsoft.com/fwlink/?LinkID=245628).  
+ For more information, see [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
   
 ## See Also  
- [Upgrade and Migrate Reporting Services](http://go.microsoft.com/fwlink/?LinkID=245628)  
+ [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)  
   
   

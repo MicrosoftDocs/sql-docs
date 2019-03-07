@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Defining and Browsing Translations
@@ -42,9 +39,9 @@ manager: craigg
   
 6.  In the row for the **Caption** object for the **Month Name** attribute, type `Mes del Año` in the **Spanish (Spain)** translation column and `Mois d'Année` in the **French (France)** translation column.  
   
-     Notice that when you enter these translations, an ellipsis (**…**) appears. Clicking this ellipsis will enable you to specify a column in the underlying table that provides translations for each member of the attribute hierarchy.  
+     Notice that when you enter these translations, an ellipsis (**...**) appears. Clicking this ellipsis will enable you to specify a column in the underlying table that provides translations for each member of the attribute hierarchy.  
   
-7.  Click the ellipsis (**…**) for the **Spanish (Spain)** translation for the **Month Name** attribute.  
+7.  Click the ellipsis (**...**) for the **Spanish (Spain)** translation for the **Month Name** attribute.  
   
      The **Attribute Data Translation** dialog box appears.  
   
@@ -52,7 +49,7 @@ manager: craigg
   
      ![Attribute Data Translation dialog box](../../2014/tutorials/media/l9-translations-4.gif "Attribute Data Translation dialog box")  
   
-9. Click **OK**, and then click the ellipsis (**…**) for the **French (France)** translation for the **Month Name** attribute.  
+9. Click **OK**, and then click the ellipsis (**...**) for the **French (France)** translation for the **Month Name** attribute.  
   
 10. In the **Translation columns** list, select **FrenchMonthName**, and then click **OK**.  
   

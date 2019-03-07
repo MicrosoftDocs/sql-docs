@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: reporting-services-native
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -16,10 +13,9 @@ helpviewer_keywords:
   - "Reporting Services, Web service"
   - "Web service [Reporting Services], tutorials"
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
-caps.latest.revision: 45
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Accessing the Report Server Web Service Using Visual Basic or Visual C# (SSRS Tutorial)
   The following tutorial shows you how to access the Report Server Web service from an application created with [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] or [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -44,10 +40,10 @@ manager: "mblythe"
   
 -   Sufficient permissions to be able to access the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Report Server Web service on the computer where your report server is located.  
   
--   A report installed on your report server. This tutorial uses the sample report, Company Sales. For more information about sample reports, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   A report installed on your report server. This tutorial uses the sample report, Company Sales. For more information about sample reports, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  The samples are not installed automatically during setup, but you can install them at any time. For information about samples, see [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  The samples are not installed automatically during setup, but you can install them at any time. For information about samples, see [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
  **Estimated time to complete the tutorial:** 60 minutes  
   

@@ -1,13 +1,11 @@
 ---
 title: "GetAncestor (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GetAncestor_TSQL"
@@ -17,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GetAncestor [Database Engine]"
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # GetAncestor (Database Engine)
@@ -71,7 +68,7 @@ WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;
 ```  
   
 ### B. Returning the grandchildren of a parent  
-`GetAncestor(2)` returns the employees that are two levels down in the hierarchy from the current node. These are the grandchildren of the current node. The following example uses `GetAncestor(2)`.
+`GetAncestor(2)` returns the employees that are two levels down in the hierarchy from the current node. These employees are the grandchildren of the current node. The following example uses `GetAncestor(2)`.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -96,8 +93,8 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;  
 ```  
   
-### D. Returning a hierarchy level if a table is not present  
-`GetAncestor` returns the selected level in the hierarchy even if a table is not present. For example the following code designates a current employee and returns the `hierarchyid` of the ancestor of the current employee without reference to a table.
+### D. Returning a hierarchy level if a table isn't present  
+`GetAncestor` returns the selected level in the hierarchy even if a table isn't present. For example, the following code specifies a current employee and returns the `hierarchyid` of the ancestor of the current employee without reference to a table.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid ;  
@@ -116,8 +113,7 @@ this.GetAncestor(1)
   
 ## See also
 [IsDescendantOf &#40;Database Engine&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

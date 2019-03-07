@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dbmmonitor.main.f1"
 helpviewer_keywords: 
   - "Database Mirroring Monitor [SQL Server], interface"
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Database Mirroring Monitor Overview
@@ -43,7 +39,7 @@ manager: craigg
   
  For each registered database, the following information is displayed:  
   
- *<Database_name>* **(** *\<Status>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Database_name>*  
  The name of a mirrored database that is registered with the Database Mirroring Monitor.  
@@ -62,9 +58,9 @@ manager: craigg
  *<PRINCIPAL_SERVER>*  
  The name of the partner that is currently the principal server instance. The name is in the following format:  
   
- *<SYSTEM_NAME>*[**\\***<instance_name>*]  
+ *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
   
- where *<SYSTEM_NAME>* is the name of the system on which the server instance resides. For a non-default server instance, the instance name is also displayed: *<SYSTEM_NAME>***\\***<instance_name>*.  
+ where *<SYSTEM_NAME>* is the name of the system on which the server instance resides. For a non-default server instance, the instance name is also displayed: _<SYSTEM_NAME>_**\\**_<instance_name>_.  
   
  *<MIRROR_SERVER>*  
  The name of the partner that is currently the mirror server instance. The format is the same as for the principal server.  
@@ -79,7 +75,7 @@ manager: craigg
   
  A system administrator can view the current configuration of warnings for the database by selecting the **Warnings** tabbed page. From there, the administrator can launch the **Set Warning Thresholds** dialog box to enable and configure one or more warning thresholds.  
   
- In the banner above the tabs, the detail pane displays the last time the monitor refreshed the status information as, **Last refresh:***\<date>**\<time>*. Usually, the Database Mirroring Monitor retrieves status information from the principal and mirror server instances at different times. The older of these two refresh times is displayed.  
+ In the banner above the tabs, the detail pane displays the last time the monitor refreshed the status information as, **Last refresh:**_\<date>_*\<time>*. Usually, the Database Mirroring Monitor retrieves status information from the principal and mirror server instances at different times. The older of these two refresh times is displayed.  
   
 ## Action Menu  
  The **Action** menu always contains the following commands:  
@@ -87,14 +83,14 @@ manager: craigg
 |Command|Description|  
 |-------------|-----------------|  
 |**Register Mirrored Database...**|Opens the **Register Mirrored Database** dialog box. Use this dialog box to register one or more mirrored databases on a given server instance by adding the database or databases to the Database Mirroring Monitor. When a database is added, Database Mirroring Monitor locally caches information about the database, its partners, and how to connect to the partners.|  
-|**Manage Server Instance Connections…**|When you select this command, the **Manage Server Connections** dialog box opens. There, you can choose a server instance for which you want to specify credentials for the monitor to use when connecting to a given partner.<br /><br /> To edit the credentials for a partner, locate its entry in the **Server instances** grid, and click **Edit** on that row. The **Connect to Server** dialog box appears with the server instance name fixed and the credential controls initialized to the current cached value. Change the authentication information as necessary and click **Connect**. If the credentials have sufficient privileges, the **Connect Using** column is updated with the new credentials.|  
+|**Manage Server Instance Connections...**|When you select this command, the **Manage Server Connections** dialog box opens. There, you can choose a server instance for which you want to specify credentials for the monitor to use when connecting to a given partner.<br /><br /> To edit the credentials for a partner, locate its entry in the **Server instances** grid, and click **Edit** on that row. The **Connect to Server** dialog box appears with the server instance name fixed and the credential controls initialized to the current cached value. Change the authentication information as necessary and click **Connect**. If the credentials have sufficient privileges, the **Connect Using** column is updated with the new credentials.|  
   
  If you select a database, the **Action** menu also contains the following commands.  
   
 |Command|Description|  
 |-------------|-----------------|  
 |**Unregister This Database**|Removes the selected database from Database Mirroring Monitor.|  
-|**Set Warning Thresholds…**|Opens the **Set Warning Thresholds** dialog box. There a system administrator can enable or disable warnings for the database on each of the partners and change the threshold of each warning. We recommend setting a threshold for a given warning on both partners to ensure that the warning persists if the database fails over. The appropriate threshold for each partner depends on the performance capabilities of that partner's system.<br /><br /> An event is written to the event log for a performance only if its value is at or above its threshold when the status table is being updated. If a peak value reaches the threshold momentarily between status updates that peak is missed.|  
+|**Set Warning Thresholds...**|Opens the **Set Warning Thresholds** dialog box. There a system administrator can enable or disable warnings for the database on each of the partners and change the threshold of each warning. We recommend setting a threshold for a given warning on both partners to ensure that the warning persists if the database fails over. The appropriate threshold for each partner depends on the performance capabilities of that partner's system.<br /><br /> An event is written to the event log for a performance only if its value is at or above its threshold when the status table is being updated. If a peak value reaches the threshold momentarily between status updates that peak is missed.|  
   
  **To monitor database mirroring by using SQL Server Management Studio to**  
   

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetConnectOption"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetConnectAttr function [ODBC]"
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -31,7 +28,7 @@ manager: craigg
  **Summary**  
  **SQLGetConnectAttr** returns the current setting of a connection attribute.  
   
-> [!NOTE]  
+> [!NOTE]
 >  For more information about what the Driver Manager maps this function to when an ODBC 3*.x* application is working with an ODBC 2*.x* driver, see [Mapping Replacement Functions for Backward Compatibility of Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## Syntax  
@@ -39,11 +36,11 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetConnectAttr(  
-     SQLHDBC        ConnectionHandle,  
-     SQLINTEGER     Attribute,  
-     SQLPOINTER     ValuePtr,  
-     SQLINTEGER     BufferLength,  
-     SQLINTEGER *   StringLengthPtr);  
+     SQLHDBC        ConnectionHandle,  
+     SQLINTEGER     Attribute,  
+     SQLPOINTER     ValuePtr,  
+     SQLINTEGER     BufferLength,  
+     SQLINTEGER *   StringLengthPtr);  
 ```  
   
 ## Arguments  

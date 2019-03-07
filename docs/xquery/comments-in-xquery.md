@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "comments [XQuery]"
   - "XQuery, comments"
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
-caps.latest.revision: 11
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -43,7 +36,7 @@ SELECT @x.query('
 ```  
 SELECT Instructions.query('  
 (: declare prefix and namespace binding in the prolog. :)  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   (: Following expression retrieves the <Location> element children of the <root> element. :)  
   /AWMI:root/AWMI:Location  
 ') as Result  

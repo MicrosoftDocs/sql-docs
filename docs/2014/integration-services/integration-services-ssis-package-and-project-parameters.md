@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services (SSIS) Parameters
@@ -100,6 +96,6 @@ manager: craigg
  [Set Parameter Values After the Project Is Deployed](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## Related Content  
- Blog entry, [SSIS Quick Tip: Required Parameters](http://go.microsoft.com/fwlink/?LinkId=239781), on mattmasson.com.  
+ Blog entry, [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781), on mattmasson.com.  
   
   

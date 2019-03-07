@@ -1,16 +1,11 @@
 ---
 title: "Upload a File or Report in the Report Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reports
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing reports [Reporting Services], uploading files"
@@ -19,10 +14,8 @@ helpviewer_keywords:
   - "uploading files [Reporting Services]"
   - "files [Reporting Services], uploading"
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Upload a File or Report in the report server
 The web portal of the report server provides an upload feature so that you can add reports and other files to a report server without having to publish those items from a client application. Files that you upload from the file system are stored as items on the report server. The type of file you upload determines how it is stored:  
@@ -37,7 +30,7 @@ The web portal of the report server provides an upload feature so that you can a
   
 4.  Browse to the file you want to upload. You can upload a report definition file, an image, a document, or any file that you want to make available on the report server.  
   
-5.  Type a name for the new item. An item name can include spaces, but cannot include the reserved characters: ; ? : @ & = + , $ / * < > |.  
+5.  Type a name for the new item. An item name can include spaces, but cannot include the reserved characters: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|.  
   
 6.  If you want to replace an existing item with the new item, select **Overwrite item if it exists**.  
   

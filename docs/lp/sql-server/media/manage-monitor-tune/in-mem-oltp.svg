@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 110">
+  <title>6 - in-mem-oltp</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g>
+      <path d="M113.485,97.275a2.7,2.7,0,0,0,2.787,2.787H184.04a2.7,2.7,0,0,0,2.787-2.787V48.723H113.485Z" fill="#a0a1a2"/>
+      <path d="M184.04,37.575H116.272a2.7,2.7,0,0,0-2.787,2.787v8.361h73.342V40.362a2.7,2.7,0,0,0-2.787-2.787" fill="#7a7a7a"/>
+      <rect x="141.062" y="53.563" width="18.482" height="11.148" fill="#fff"/>
+      <rect x="141.062" y="68.672" width="18.482" height="11.148" fill="#fcd116"/>
+      <rect x="163.064" y="68.672" width="18.482" height="11.148" fill="#fcd116"/>
+      <rect x="163.064" y="53.563" width="18.482" height="11.148" fill="#fff"/>
+      <rect x="119.059" y="53.563" width="18.482" height="11.148" fill="#fff"/>
+      <rect x="119.059" y="68.672" width="18.482" height="11.148" fill="#fff"/>
+      <rect x="119.059" y="83.634" width="18.482" height="11.148" fill="#fcd116"/>
+      <rect x="141.062" y="83.634" width="18.482" height="11.148" fill="#fcd116"/>
+      <rect x="163.064" y="83.634" width="18.482" height="11.148" fill="#fcd116"/>
+      <path d="M116.272,37.575a3,3,0,0,0-2.787,2.787V97.275a3,3,0,0,0,2.787,2.787h3.08l58.087-62.487Z" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+    </g>
+    <g>
+      <ellipse cx="150.156" cy="37.589" rx="24.962" ry="26.479" fill="none" stroke="#3c3c41" stroke-miterlimit="10" stroke-width="2.096"/>
+      <ellipse cx="150.156" cy="37.589" rx="18.722" ry="19.859" fill="none" stroke="#3c3c41" stroke-miterlimit="10" stroke-width="2.096"/>
+      <ellipse cx="150.156" cy="37.589" rx="12.481" ry="13.239" fill="none" stroke="#3c3c41" stroke-miterlimit="10" stroke-width="2.096"/>
+      <ellipse cx="150.156" cy="37.589" rx="6.241" ry="6.62" fill="none" stroke="#3c3c41" stroke-miterlimit="10" stroke-width="2.096"/>
+    </g>
+  </g>
+</svg>

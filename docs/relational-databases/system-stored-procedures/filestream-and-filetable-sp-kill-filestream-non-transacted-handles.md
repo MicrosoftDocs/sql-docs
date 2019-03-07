@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_kill_filestream_non_transacted_handles_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_kill_filestream_non_transacted_handles"
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -31,7 +27,7 @@ manager: craigg
 ## Syntax  
   
 ```sql  
-sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
+sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @handle_id = ] @handle_id]]  
 ```  
   
 ## Arguments  
@@ -74,10 +70,10 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 sp_kill_filestream_non_transacted_handles  
   
 -- Close all open handles in myFileTable.  
-sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’  
+sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable'  
   
 -- Close a specific handle in myFileTable.  
-sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @handle_id = 0xFFFAAADD  
+sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable', @handle_id = 0xFFFAAADD  
 ```  
   
  The following example shows how to use a script to get a *handle_id* and close it.  

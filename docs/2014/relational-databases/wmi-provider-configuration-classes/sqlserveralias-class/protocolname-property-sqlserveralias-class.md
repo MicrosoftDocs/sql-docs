@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "ProtocolName Property (SqlServerAlias Class)"
@@ -19,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "ProtocolName property"
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ProtocolName Property (SqlServerAlias Class)

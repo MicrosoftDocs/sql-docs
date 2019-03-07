@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "merging partitions [XMLA]"
@@ -16,13 +14,12 @@ helpviewer_keywords:
   - "partitions [Analysis Services], XML for Analysis"
   - "XML for Analysis, partitions"
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Merging Partitions (XMLA)
-  If partitions have the same aggregation design and structure, you can merge the partition by using the [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) command in XML for Analysis (XMLA). Merging partitions is an important action to perform when you manage partitions, especially those partitions that contain historical data partitioned by date.  
+  If partitions have the same aggregation design and structure, you can merge the partition by using the [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) command in XML for Analysis (XMLA). Merging partitions is an important action to perform when you manage partitions, especially those partitions that contain historical data partitioned by date.  
   
  For example, a financial cube may use two partitions:  
   
@@ -33,7 +30,7 @@ manager: "mblythe"
  Both partitions use different storage settings, but use the same aggregation design. Instead of processing the cube across years of historical data at the end of the year, you can instead use the `MergePartitions` command to merge the partition for the current year into the partition for previous years. This preserves the aggregation data without requiring a potentially time-consuming full processing of the cube.  
   
 ## Specifying Partitions to Merge  
- When the `MergePartitions` command runs, the aggregation data stored in the source partitions specified in the [Source](../xmla/xml-elements-properties/source-element-xmla.md) property is added to the target partition specified in the [Target](../xmla/xml-elements-properties/target-element-xmla.md) property.  
+ When the `MergePartitions` command runs, the aggregation data stored in the source partitions specified in the [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) property is added to the target partition specified in the [Target](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) property.  
   
 > [!NOTE]  
 >  The `Source` property can contain more than one partition object reference. However, the `Target` property cannot.  
@@ -50,7 +47,7 @@ manager: "mblythe"
 ### Code  
   
 ```  
-<MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<MergePartitions xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Sources>  
     <Source>  
       <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.jobactivitymon.filter.f1"
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Job Activity Monitor (Filter Settings)
@@ -57,7 +53,7 @@ manager: craigg
  This unnamed box provides a short description of the criteria as they are selected.  
   
  **Apply filter**  
- To apply the filter, click **Apply****filter** and then click **OK**. To retain the filter settings in the **Filter****Settings** dialog box, but not apply them, uncheck **Apply****filter**, and then click **OK**, to display all rows.  
+ To apply the filter, click **Apply filter** and then click **OK**. To retain the filter settings in the **Filter Settings** dialog box, but not apply them, uncheck **Apply filter**, and then click **OK**, to display all rows.  
   
  **Clear**  
  Returns the filter settings back to the default settings.  

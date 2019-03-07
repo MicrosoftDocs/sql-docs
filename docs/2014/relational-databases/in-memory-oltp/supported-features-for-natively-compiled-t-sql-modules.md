@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 34
-author: "stevestein"
-ms.author: "sstein"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Supported Constructs in Natively Compiled Stored Procedures
@@ -128,7 +124,7 @@ manager: craigg
   
 -   Variable assignment in the SELECT list.  
   
--   WHERE … AND  
+-   WHERE ... AND  
   
  <sup>1</sup> ORDER BY and TOP are supported in natively compiled stored procedures, with some restrictions:  
   
@@ -142,7 +138,7 @@ manager: craigg
   
     ```tsql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  However, a constant in the `TOP` clause results in better performance compared to using a variable.  

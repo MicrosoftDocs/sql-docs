@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
-caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Specify an Image as a Pointer on a Gauge (Report Builder and SSRS)
   The gauge contains three built-in styles that can be used to customize the appearance of the pointer. For a radial gauge, the built in styles are: Needle, Marker and Bar. For a linear gauge, the built-in styles are Marker, Bar, and Thermometer. If a unique pointer is required, the user can create and specify an image which can be used as a fully functional pointer.  

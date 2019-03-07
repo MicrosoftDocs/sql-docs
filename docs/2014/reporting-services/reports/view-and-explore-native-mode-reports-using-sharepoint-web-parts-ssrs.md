@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: 6
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides several Web Parts that work with specific versions of a report server and in particular deployment modes.  
@@ -86,7 +83,7 @@ manager: "mblythe"
     Install-SPWebPartPack -LiteralPath "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -GlobalInstall  
     ```  
   
-4.  You should see a message similar to the following, indicating the Web Part was deployed.”  
+4.  You should see a message similar to the following, indicating the Web Part was deployed."  
   
     > Name               SolutionId                                             Deployed  
   
@@ -94,7 +91,7 @@ manager: "mblythe"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     For more information on using PowerShell, see [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     For more information on using PowerShell, see [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx).  
   
 #### Install Web Parts Using STSADM.exe  
   
@@ -110,7 +107,7 @@ manager: "mblythe"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  You should see a message of “Operation completed successfully.”  
+4.  You should see a message of "Operation completed successfully."  
   
      Specifying `-globalinstall` adds the Web Parts to the global assembly cache (GAC). This step is necessary if you want to connect the Web Parts.  
   
@@ -138,7 +135,7 @@ manager: "mblythe"
   
 7.  In **Report Manager URL**, type a URL to a Report Manager instance that is associated with the native mode report server you want to access. By default, a Report Manager URL has the following syntax: **http://\<servername>/reports**.  
   
-8.  In **Report Path**, specify a forward slash, followed by the folder path, and the report name. Do **not** include the server name or Report Manager virtual directory. For example to open the ‘Company Sales’ report in the Adventure Works folder specify **/Adventure Works/Company Sales**. The following is another example where the report ‘Products’ is in the report server root folder **/Products**.  
+8.  In **Report Path**, specify a forward slash, followed by the folder path, and the report name. Do **not** include the server name or Report Manager virtual directory. For example to open the 'Company Sales' report in the Adventure Works folder specify **/Adventure Works/Company Sales**. The following is another example where the report 'Products' is in the report server root folder **/Products**.  
   
 9. Click **OK**.  
   

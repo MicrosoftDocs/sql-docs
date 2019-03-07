@@ -1,24 +1,20 @@
-﻿---
+---
 title: "SQLDriverConnect | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLDriverConnect function"
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +28,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  For a discussion of connection string keywords that are valid for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- When the **SQLDriverConnect***DriverCompletion* parameter value is SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE, or SQL_DRIVER_COMPLETE_REQUIRED, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver retrieves keyword values from the displayed dialog box. If the keyword value is passed in the connection string and the user does not alter the value for the keyword in the dialog box, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver uses the value from the connection string. If the value is not set in the connection string and the user makes no assignment in the dialog box, the driver uses the default.  
+ When the **SQLDriverConnect**_DriverCompletion_ parameter value is SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE, or SQL_DRIVER_COMPLETE_REQUIRED, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver retrieves keyword values from the displayed dialog box. If the keyword value is passed in the connection string and the user does not alter the value for the keyword in the dialog box, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver uses the value from the connection string. If the value is not set in the connection string and the user makes no assignment in the dialog box, the driver uses the default.  
   
  **SQLDriverConnect** must be given a valid *WindowHandle* when any *DriverCompletion* value requires (or could require) the display of the driver's connection dialog box. An invalid handle returns SQL_ERROR.  
   
- Specify either the DRIVER or DSN keywords. ODBC states that a driver uses the leftmost of these two keywords and ignores the other if both are specified. If DRIVER is specified, or is the leftmost of the two, and the **SQLDriverConnect***DriverCompletion* parameter value is SQL_DRIVER_NOPROMPT, the SERVER keyword and an appropriate value are required.  
+ Specify either the DRIVER or DSN keywords. ODBC states that a driver uses the leftmost of these two keywords and ignores the other if both are specified. If DRIVER is specified, or is the leftmost of the two, and the **SQLDriverConnect**_DriverCompletion_ parameter value is SQL_DRIVER_NOPROMPT, the SERVER keyword and an appropriate value are required.  
   
  When SQL_DRIVER_NOPROMPT is specified, user authentication keywords must be present with values. The driver ensures that either the string "Trusted_Connection=yes" or both the UID and PWD keywords are present.  
   
@@ -80,7 +76,7 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## See Also  
- [SQLDriverConnect Function](http://go.microsoft.com/fwlink/?LinkId=59340)   
+ [SQLDriverConnect Function](https://go.microsoft.com/fwlink/?LinkId=59340)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

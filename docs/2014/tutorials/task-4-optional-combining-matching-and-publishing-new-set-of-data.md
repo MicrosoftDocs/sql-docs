@@ -4,21 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 4 (Optional): Combining, Matching, and Publishing New Set of Data
-  Over time, you will want to add more data to the MDS repository. Before adding data, it can be useful to compare the new data to the data that’s already managed in MDS, to ensure that you are not adding duplicate or inaccurate data. In the Master Data Services Add-in for Excel, you can combine data from two worksheets and the compare the data to identify and remove duplicates before publishing the data to MDS. The matching feature of MDS Excel Add-in uses the DQS matching functionality to identify matches in the data. In this task, you will combine data from a two worksheets into one and then perform the matching activity to identify and remove duplicates before publishing to MDS. See [Data Quality Matching in the MDS Add-in for Excel](http://msdn.microsoft.com/library/hh548681.aspx) and [Combine Data](http://msdn.microsoft.com/library/hh548680.aspx) topics for more details.  
+  Over time, you will want to add more data to the MDS repository. Before adding data, it can be useful to compare the new data to the data that's already managed in MDS, to ensure that you are not adding duplicate or inaccurate data. In the Master Data Services Add-in for Excel, you can combine data from two worksheets and the compare the data to identify and remove duplicates before publishing the data to MDS. The matching feature of MDS Excel Add-in uses the DQS matching functionality to identify matches in the data. In this task, you will combine data from a two worksheets into one and then perform the matching activity to identify and remove duplicates before publishing to MDS. See [Data Quality Matching in the MDS Add-in for Excel](https://msdn.microsoft.com/library/hh548681.aspx) and [Combine Data](https://msdn.microsoft.com/library/hh548680.aspx) topics for more details.  
   
 1.  Launch new instance of **Excel**. Click **Start**, point to **Run**, type **Excel**, and click **OK**.  
   
@@ -40,7 +34,7 @@ manager: craigg
   
 8.  Open **Suppliers.xls** file (the original input file that is included in the tutorial files) and copy all (three) rows from the **CombineAndCleanse** worksheet to **Sheet2**.  
   
-9. Switch back to the **Supplier** sheet in the **Book 1 – Microsoft Excel** (not the **Cleansed and Matched Supplier List** Excel) that is connected to **MDS**.  
+9. Switch back to the **Supplier** sheet in the **Book 1 - Microsoft Excel** (not the **Cleansed and Matched Supplier List** Excel) that is connected to **MDS**.  
   
 10. Click **Master Data** on the menu bar.  
   
@@ -96,7 +90,7 @@ manager: craigg
   
 27. Select the **duplicate row (orange)**, right-click, and click **Delete** to delete the row.  
   
-28. Delete the **CLUSTER_ID** column since you don’t need it anymore.  
+28. Delete the **CLUSTER_ID** column since you don't need it anymore.  
   
 29. Click **Publish** to publish the other two new records with **Codes S66** and **S57** to MDS.  
   
@@ -108,7 +102,7 @@ manager: craigg
   
 33. **Sort** the list by **Code** and look for records with **S57** and **S66** as codes. You can also use the **Filter** button on the toolbar to search for a specific record in the list.  
   
-34. Now, close **Book1 – Microsoft Excel** window without saving the file.  
+34. Now, close **Book1 - Microsoft Excel** window without saving the file.  
   
 ## Next Step  
  [Task 5: Creating a Domain-Based Attribute from Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  

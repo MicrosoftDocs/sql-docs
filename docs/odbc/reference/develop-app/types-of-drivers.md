@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver compatibility issues [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "backward compatibility [ODBC], application and driver compatibility"
   - "compatibility [ODBC], application and driver compatibility"
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -24,7 +21,7 @@ manager: craigg
 ODBC drivers can be classified as follows:  
   
 -   **32-bit ODBC 2.**  
-     ***x* Driver** A 32-bit driver that:  
+     **_x_ Driver** A 32-bit driver that:  
   
     -   Exports only ODBC 2*.x* functions.  
   

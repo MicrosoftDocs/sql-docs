@@ -6,19 +6,17 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO MD, methods"
   - "methods [ADO MD]"
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # ADO MD Methods
+
 |||  
 |-|-|  
 |[Close](../../../ado/reference/ado-md-api/close-method-ado-md.md)|Closes an open cellset.|  

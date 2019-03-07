@@ -5,16 +5,13 @@ ms.date: "05/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: 20
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a System-Versioned Temporal Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -28,7 +25,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 -   Temporal table with a user-defined history table created beforehand: you create a history table that fits best your needs and then reference that table during temporal table creation.  
   
 ## Creating a temporal table with an anonymous history table  
- Creating a temporal table with an "anonymous" history table is a convenient option for quick object creation, especially in prototypes and test environments. It is also the simplest way to create a temporal table since it doesn’t require any parameter in **SYSTEM_VERSIONING** clause. In the example below, a new table is created with system-versioning enabled without defining the name of the history table.  
+ Creating a temporal table with an "anonymous" history table is a convenient option for quick object creation, especially in prototypes and test environments. It is also the simplest way to create a temporal table since it doesn't require any parameter in **SYSTEM_VERSIONING** clause. In the example below, a new table is created with system-versioning enabled without defining the name of the history table.  
   
 ```  
 CREATE TABLE Department   
@@ -91,7 +88,7 @@ WITH
   
 -   If the specified schema does not exist, the **CREATE TABLE** statement will fail.  
   
--   If the table specified by the **HISTORY_TABLE** parameter already exists, it will be validated against the newly created temporal table in terms of [schema consistency and temporal data consistency](http://msdn.microsoft.com/library/dn935015.aspx). If you specify an invalid history table,  the **CREATE TABLE** statement will fail.  
+-   If the table specified by the **HISTORY_TABLE** parameter already exists, it will be validated against the newly created temporal table in terms of [schema consistency and temporal data consistency](https://msdn.microsoft.com/library/dn935015.aspx). If you specify an invalid history table,  the **CREATE TABLE** statement will fail.  
   
 ## Creating a temporal table with a user-defined history table  
  Creating a temporal table with user-defined history table is a convenient option when the user wants to specify a history table with specific storage options and additional indexes. In the example below, a user-defined history table is created with a schema that is aligned with the temporal table that will be created. To this user-defined history table,  a clustered columnstore index and additional non clustered rowstore (B-tree) index is created for point lookups. After this user-defined history table is created, the system-versioned temporal table is created specifying the user-defined history table as the default history table.  

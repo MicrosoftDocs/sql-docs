@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vs.Print"
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Print Dialog Box
@@ -25,7 +21,7 @@ manager: craigg
  Specifies the printer. Select a printer from the list. The printer you select becomes the default printer until you close [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or select a different printer. The information that appears in the fields below the list applies to the selected printer.  
   
  **Status**  
- Describes the state of the selected printer—for example, busy or ready.  
+ Describes the state of the selected printer-for example, busy or ready.  
   
  **Type**  
  Identifies the selected printer.  

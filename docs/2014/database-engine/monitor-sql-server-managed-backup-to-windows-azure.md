@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Monitor SQL Server Managed Backup to Windows Azure
@@ -197,7 +193,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ### Using PowerShell to Setup Custom Health Monitoring  
  The **Test-SqlSmartAdmin** cmdlet can be used to create custom health monitoring. For example, the notification option described in the previous section can be configured at the instance level.  If you have several instances of SQL Server configured to use [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], the PowerShell cmdlet can be used to create scripts in gather the status and health of backups for all the instances.  
   
- The **Test-SqlSmartAdmin** cmdlet assesses the errors and warnings returned by the SQL Server Policy Based Management policies and reports out a rolled up status.  By default this cmdlet uses the system policies. To include any custom policy use the `–AllowUserPolicies` parameter.  
+ The **Test-SqlSmartAdmin** cmdlet assesses the errors and warnings returned by the SQL Server Policy Based Management policies and reports out a rolled up status.  By default this cmdlet uses the system policies. To include any custom policy use the `-AllowUserPolicies` parameter.  
   
  Following is a sample PowerShell script that returns a report of errors and warnings based on the system policies and any user policies created:  
   
@@ -250,14 +246,14 @@ smart_backup_files;
   
 -   **Available - A:** This is a normal backup file. The backup has been completed, and also verified that it is available in the Windows Azure storage.  
   
--   **Copy in Progress –B:** This status is specifically for Availability Group databases. If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detects a break in the backup log chain, it will first attempt identify the  backup that might have caused the break in backup chain. On finding the backup file it attempts to copy the file to Windows Azure storage. When the copying process is in progress it will display this status.  
+-   **Copy in Progress -B:** This status is specifically for Availability Group databases. If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detects a break in the backup log chain, it will first attempt identify the  backup that might have caused the break in backup chain. On finding the backup file it attempts to copy the file to Windows Azure storage. When the copying process is in progress it will display this status.  
   
--   **Copy Failed – F:** Similar to Copy In Progress, this is specific t Availability Group databases. If the copy process fails, the status is marked as F.  
+-   **Copy Failed - F:** Similar to Copy In Progress, this is specific t Availability Group databases. If the copy process fails, the status is marked as F.  
   
--   **Corrupted – C:** If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is unable to verify the backup file in the storage by performing a RESTORE HEADER_ONLY command even after multiple attempts, it marks this file as corrupted. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup to ensure that the corrupted file does not result in a break of the backup chain.  
+-   **Corrupted - C:** If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is unable to verify the backup file in the storage by performing a RESTORE HEADER_ONLY command even after multiple attempts, it marks this file as corrupted. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup to ensure that the corrupted file does not result in a break of the backup chain.  
   
--   **Deleted – D:** The corresponding file cannot be found in the Windows Azure storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup if the deleted file results in a break in the backup chain.  
+-   **Deleted - D:** The corresponding file cannot be found in the Windows Azure storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup if the deleted file results in a break in the backup chain.  
   
--   **Unknown – U:** This status indicated that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has not yet been able to verify file existence and its properties in the Windows Azure storage. The next time the process runs, which is approximately every 15 minutes, this status will be updated.  
+-   **Unknown - U:** This status indicated that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has not yet been able to verify file existence and its properties in the Windows Azure storage. The next time the process runs, which is approximately every 15 minutes, this status will be updated.  
   
   

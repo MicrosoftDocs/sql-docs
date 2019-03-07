@@ -1,12 +1,11 @@
 ---
-title: "Use the Add Replica to Availability Group Wizard (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Add replica to an availability group using wizard in SSMS - SQL Server"
+ms.description: "Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.addreplicawizard.f1"
@@ -14,12 +13,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], wizards"
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Use the Add Replica to Availability Group Wizard (SQL Server Management Studio)
+# Add a replica to your Always On Availability group using the Availability Group Wizard in SQL Server Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Add Replica to Availability Group Wizard** to help you a add new secondary replica to an existing Always On availability group.  
   
@@ -79,7 +77,7 @@ manager: craigg
     |**Endpoints**|Use this tab to verify the existing database mirroring endpoint, if any, for each new secondary replica. If this endpoint is lacking on a server instance whose service accounts use Windows Authentication, the wizard will attempt to create the endpoint automatically.<br /><br /> <br /><br /> Note: If any server instance is running under a non-domain user account, you need to do make a manual change to your server instance before you can proceed in the wizard. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.|  
     |**Backup Preferences**|Use this tab to specify your backup preference for the availability group as a whole, if you wish to modify the current setting, and to specify your backup priorities for the individual availability replicas.|  
   
-6.  If the selected replicas contain databases that have a database master key, enter the passwords for the database master keys on the **Enter Passwords** page. The **Status** column indicates **Password required** for databases that have a database master key. After you enter the passwords, click **Refresh**. If you entered the passwords correctly, the Status column indicates **Password entered**.  
+6.  If the selected replicas contain databases that have a database master key, enter the passwords for the database master keys in the **Password** column. The **Status** column indicates **Password required** for databases that have a database master key. **Next** is grayed out until the correct password is entered into the **Password** column. After you enter the passwords, click **Refresh**. If you entered the passwords correctly, the Status column indicates **Password entered**, and **Next** will become available.  
   
 7.  On the **Select Initial Data Synchronization** page, choose how you want your new secondary databases to be created and joined to the availability group. Choose one of the following options:  
   

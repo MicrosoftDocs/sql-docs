@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hexadecimal data"
   - "HEX function"
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -42,7 +39,7 @@ HEX(integer_expression)
   
  The return result does not include qualifiers such as the 0x prefix. To include a prefix, use the + (Concatenate) operator. For more information, see [+ &#40;Concatenate&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/concatenate-ssis-expression.md).  
   
- The letters A – F, used in HEX notations, appear as uppercase characters.  
+ The letters A - F, used in HEX notations, appear as uppercase characters.  
   
  The length of the resulting string for integer data types is as follows:  
   

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2016"
+ms.date: "01/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUERY_STORE_RUNTIME_STATS_INTERVAL"
@@ -21,23 +18,22 @@ helpviewer_keywords:
   - "sys.query_store_runtime_stats_interval catalog view"
   - "query_store_runtime_stats_interval catalog view"
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats_interval (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contains  information about the start and end time of each interval over which runtime execution statistics information for a query has been collected.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_interval_id**|**bigint**|Primary key.|  
-|**start_time**|**datetimeoffset**|Start time of the interval.|  
-|**end_time**|**datetimeoffset**|End time of the interval.|  
-|**comment**|**nvarchar(32)**|Always NULL.|  
+|**runtime_stats_interval_id**|**bigint**|Primary key.|
+|**start_time**|**datetimeoffset**|Start time of the interval.|
+|**end_time**|**datetimeoffset**|End time of the interval.|
+|**comment**|**nvarchar(32)**|Always NULL.|
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

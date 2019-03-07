@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addqueued_artinfo"
   - "sp_addqueued_artinfo_TSQL"
 helpviewer_keywords: 
   - "sp_addqueued_artinfo"
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addqueued_artinfo (Transact-SQL)
@@ -51,28 +44,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## Arguments  
- [ **@artid=** ] **'***artid***'**  
+ [ **@artid=** ] **'**_artid_**'**  
  Is the name of the article ID. *artid* is **int**, with no default  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article to be scripted. *article* is **sysname**, with no default  
   
- [ **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'**_publisher_**'**  
  Is the name of the Publisher server. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'**_publisher_db_**'**  
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication to be scripted. *publication* is **sysname**, with no default.  
   
- [ **@dest_table=** ] *'dest_table***'**  
+ [ **@dest_table=** ] _'dest_table_**'**  
  Is the name of the destination table. *dest_table* is **sysname**, with no default.  
   
- [**@owner =** ] **'***owner***'**  
+ [**@owner =** ] **'**_owner_**'**  
  Is the owner of the subscription. *owner* is **sysname**, with no default.  
   
- [ **@cft_table=** ] **'***cft_table***'**  
+ [ **@cft_table=** ] **'**_cft_table_**'**  
  Name of the queued updating conflict table for this article. *cft_table*is **sysname**, with no default.  
   
 ## Return Code Values  

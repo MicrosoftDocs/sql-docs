@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # String Storage and Collation in Tabular Models
   Strings (text values) are stored in a highly compressed format in tabular models; because of this compression, you can get unexpected results when you retrieve entire or partial strings. Also, because string locale and collations are inherited hierarchically from the closest parent object, if the string language is not explicitly defined, the locale and collation of the parent can affect how each string is stored and whether the string is unique or conflated with similar strings as defined by the parent collation.  
@@ -52,7 +49,7 @@ manager: "mblythe"
 |trEE|  
 |PlAnT|  
   
- If you use the column, **Classification – English**, in your model, wherever you display plant classification you will see not the original values, with their various uses of upper and lower case, but only the first instance. The reason is that all the uppercase and lowercase variants of **tree** are considered equivalent in this collation and locale; therefore, only one string was preserved and the first instance of that string that is encountered by the system is the one that is saved.  
+ If you use the column, **Classification - English**, in your model, wherever you display plant classification you will see not the original values, with their various uses of upper and lower case, but only the first instance. The reason is that all the uppercase and lowercase variants of **tree** are considered equivalent in this collation and locale; therefore, only one string was preserved and the first instance of that string that is encountered by the system is the one that is saved.  
   
 > [!WARNING]  
 >  You might decide that you want to define which string will be the first to store, according to what you consider correct, but this could be very hard to so. There is no simple way to determine in advance which row should be processed first by the engine, given that all values are considered to be the same. Instead, if you need to set the standard value, you should cleanse all your strings before loading the model.  
@@ -68,7 +65,7 @@ manager: "mblythe"
   
 -   The collation defines the ordering of the characters and their equivalence.  
   
- It is important to note that a language identifier not only identifies a language but, also the country or region where the language is used. Each language identifier also has a default collation specification. For more information about language identifiers, see [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). You can use the LCID Dec column to get the correct ID when manually inserting a value. For more information about the SQL concept of collations, see [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). For information about the collation designators and the comparison styles for Windows collation names, see [Windows Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). The topic, [SQL Server Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql), maps the Windows collation names to the names used for SQL.  
+ It is important to note that a language identifier not only identifies a language but, also the country or region where the language is used. Each language identifier also has a default collation specification. For more information about language identifiers, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). You can use the LCID Dec column to get the correct ID when manually inserting a value. For more information about the SQL concept of collations, see [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). For information about the collation designators and the comparison styles for Windows collation names, see [Windows Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). The topic, [SQL Server Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql), maps the Windows collation names to the names used for SQL.  
   
  Once your tabular model database has been created, all new objects in the model will inherit the language and collation attributes from the database attributes. This is true for all objects. The inheritance path begins at the object, looks at the parent for any language and collation attributes to inherit, and if none are found, continues to the top and finds the language and collation attributes at the database level. In other words, if you do not specify the language and collation attributes for an object, by default, the object inherits the attributes of its closest parent.  
   

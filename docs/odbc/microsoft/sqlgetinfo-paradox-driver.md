@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Paradox driver [ODBC], SQLGetInfo"
   - "SQLGetInfo function [ODBC], Paradox Driver"
 ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -24,11 +21,11 @@ manager: craigg
   
  **SQLGetInfo** supports the SQL_FILE_USAGE information type. The returned value is a 16-bit integer that indicates how the driver directly treats files in a data source:  
   
--   SQL_FILE_NOT_SUPPORTED — The driver is not a single-tier driver.  
+-   SQL_FILE_NOT_SUPPORTED - The driver is not a single-tier driver.  
   
--   SQL_FILE_TABLE — A single-tier driver treats files in a data source as tables.  
+-   SQL_FILE_TABLE - A single-tier driver treats files in a data source as tables.  
   
--   SQL_FILE_QUALIFIER — A single-tier driver treats files in a data source as a qualifier.  
+-   SQL_FILE_QUALIFIER - A single-tier driver treats files in a data source as a qualifier.  
   
  The ODBC driver returns SQL_FILE_TABLE because each file is a table.  
   

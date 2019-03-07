@@ -4,23 +4,17 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Project Options Setting"
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
 ---
 # Setting Project Options (SybaseToSQL)
-For each SSMA project, you can set project level options. These options specify object conversion, object loading, SQL azure, user interface, and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, verify that the configuration options are appropriate for the project.  
+For each SSMA project, you can set project level options. These options specify object conversion, object loading, SQL azure, user interface, and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, verify that the configuration options are appropriate for the project.  
   
 SSMA lets you configure default options for all projects. These options are applied to any new project you create. You can then customize the options for each project.  
   
@@ -47,7 +41,7 @@ It also has four modes for configuring these settings:
   
 4.  Custom  
   
-The Default mode is recommended for most users. The Optimistic mode keeps more of the current Sybase Adaptive Server Enterprise (ASE) syntax, and is easier to read. However, keeping current syntax might not be accurate. If the ASE syntax must be converted to equivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure syntax, the Full mode performs a complete conversion, but the resulting code might be more difficult to read. In the Custom mode, you set the options.  
+The Default mode is recommended for most users. The Optimistic mode keeps more of the current Sybase Adaptive Server Enterprise (ASE) syntax, and is easier to read. However, keeping current syntax might not be accurate. If the ASE syntax must be converted to equivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure syntax, the Full mode performs a complete conversion, but the resulting code might be more difficult to read. In the Custom mode, you set the options.  
   
 The settings are described in the User Interface Reference section of this documentation. For more information about the settings and how the settings are applied in each mode, see the following topics:  
   
@@ -99,7 +93,7 @@ The next step in the migration depends on your project needs:
   
 -   If you want to custom the mapping of source and target data types, see [Mapping Sybase ASE and SQL Server Data Types &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
   
--   Otherwise, you can convert the Sybase database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions. For more information, see [Converting Sybase ASE Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
+-   Otherwise, you can convert the Sybase database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure object definitions. For more information, see [Converting Sybase ASE Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
   
 ## See Also  
 [Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

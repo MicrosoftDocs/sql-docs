@@ -5,12 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -53,7 +50,7 @@ manager: craigg
   
 -   The MSXDBCDC.dbo.xdbcdc_trace table, which is used for general logging and tracing by the Oracle CDC Service main process.  
   
--   The \<cdc-database>.cdc.xdbcdc_trace table, which is used for general logging and tracing by Oracle CDC Instances. This means that errors related to a specific Oracle CDC Instance are logged to that instance’s trace table.  
+-   The \<cdc-database>.cdc.xdbcdc_trace table, which is used for general logging and tracing by Oracle CDC Instances. This means that errors related to a specific Oracle CDC Instance are logged to that instance's trace table.  
   
  Information is logged by the Oracle CDC service when the service:  
   

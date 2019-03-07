@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, categories"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "categories [SQL Server Agent jobs]"
   - "removing job category"
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete a Job Category
@@ -48,13 +44,13 @@ manager: craigg
   
 3.  Right-click the **Jobs** folder and select **Manage Job Categories**.  
   
-4.  In the **Manage Job Categories***server_name* dialog box, select the job category to delete.  
+4.  In the **Manage Job Categories**_server_name_ dialog box, select the job category to delete.  
   
 5.  Click **Delete**.  
   
 6.  In the **Job Categories** dialog box, click **Yes**.  
   
-7.  Close the **Manage Job Categories***server_name* dialog box.  
+7.  Close the **Manage Job Categories**_server_name_ dialog box.  
   
 
   

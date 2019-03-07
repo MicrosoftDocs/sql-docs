@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, Invoke-PolicyEvaluation"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "Cmdlets [SQL Server], Invoke-PolicyEvaluation"
   - "PowerShell [SQL Server], Invoke-PolicyEvaluation"
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: 18
-author: "mgblythe"
-ms.author: "mblythe"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Invoke-PolicyEvaluation cmdlet

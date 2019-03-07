@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "assemblies [CLR integration], modifying"
@@ -16,9 +12,8 @@ helpviewer_keywords:
   - "altering assemblies"
   - "ALTER ASSEMBLY statement"
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Altering an Assembly

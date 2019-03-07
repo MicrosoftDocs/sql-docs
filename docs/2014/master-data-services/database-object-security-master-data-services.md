@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database [Master Data Services], object security"
   - "security [Master Data Services], database objects"
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Database Object Security (Master Data Services)
@@ -40,7 +36,7 @@ manager: craigg
 -   [Configuring System Settings](#SysSettings)  
   
 ##  <a name="Staging"></a> Staging Data  
- In the following table, each securable has “name” as part of the name. This indicates the name of the staging table that is specified when an entity is created. For more information, see [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ In the following table, each securable has "name" as part of the name. This indicates the name of the staging table that is specified when an entity is created. For more information, see [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 |Action|Securables|Permissions|  
 |------------|----------------|-----------------|  
@@ -48,7 +44,7 @@ manager: craigg
 |Load the data from the Leaf staging table into the appropriate MDS database tables.|stg.udp_name_Leaf|EXECUTE|  
 |Load consolidated members and their attributes into the staging table.|stg.name_Consolidated|Required: INSERT<br /><br /> Optional: SELECT and UPDATE|  
 |Load the data from the Consolidated staging table into the appropriate MDS database tables.|stg.udp_name_Consolidated|EXECUTE|  
-|Load leaf and consolidated members’ relationships to each other in an explicit hierarchy into the staging table.|stg.name_Relationship|Required: INSERT<br /><br /> Optional: SELECT and UPDATE|  
+|Load leaf and consolidated members' relationships to each other in an explicit hierarchy into the staging table.|stg.name_Relationship|Required: INSERT<br /><br /> Optional: SELECT and UPDATE|  
 |Load the data from the Relationship staging table into the appropriate MDS tables.|stg.udp_name_Relationship|EXECUTE|  
 |View errors that occurred when data from the staging tables was being inserted into the MDS database tables.|stg.udp_name_Relationship|SELECT|  
   

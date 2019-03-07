@@ -3,11 +3,8 @@ title: "FileTables (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2016"
 ms.prod: "sql-server-2014"
+ms.technology: filestream
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], overview"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "FileTable [SQL Server], see FileTables [SQL Server]"
   - "FileTable [SQL Server]"
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # FileTables (SQL Server)

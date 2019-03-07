@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "11/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: 23
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -89,7 +84,5 @@ manager: craigg
   
 -   ANSI_PADDING must be ON.  
   
-## See Also  
- [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   

@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CubeDef object [ADO MD], members"
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

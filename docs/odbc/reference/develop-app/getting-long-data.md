@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "long data [ODBC]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SQLGetData function [ODBC], getting long data"
   - "retrieving long data [ODBC]"
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

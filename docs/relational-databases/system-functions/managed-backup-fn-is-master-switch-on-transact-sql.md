@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_is_master_switch_on"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "smart_admin.fn_is_master_switch_on"
   - "fn_is_master_switch_on"
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

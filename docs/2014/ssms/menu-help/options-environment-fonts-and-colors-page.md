@@ -4,17 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Environment.Fonts_And_Colors"
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Options (Environment: Fonts and Colors Page)
@@ -42,7 +36,7 @@ manager: craigg
  The **Use Defaults** button resets the value for the default font and color values of the list item that you selected from the **Show settings for** list.  
   
  **Font (bold type indicates fixed-width fonts)**  
- Lists all the fonts installed on your system. When this drop-down list is first opened, the current font for the element you chose from the **Show settings for** list is selected. Fixed fonts — which are easier to align in an editor — appear in bold.  
+ Lists all the fonts installed on your system. When this drop-down list is first opened, the current font for the element you chose from the **Show settings for** list is selected. Fixed fonts - which are easier to align in an editor - appear in bold.  
   
  **Size**  
  Lists available point sizes for the selected font. Changing the size of the font affects all **Display items** entries for a **Show settings for** selection.  

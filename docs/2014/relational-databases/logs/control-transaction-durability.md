@@ -4,20 +4,14 @@ ms.custom: ""
 ms.date: "05/19/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 helpviewer_keywords: 
   - "delayed durability"
   - "Lazy Commit"
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Control Transaction Durability
@@ -91,19 +85,19 @@ manager: craigg
  You, the DBA, can control whether users can use delayed transaction durability on a database with the following statement. You must set the delayed durability setting with ALTER DATABASE.  
   
 ```tsql  
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
  `DISABLED`  
  [default] With this setting, all transactions that commit on the database are fully durable, regardless of the commit level setting (DELAYED_DURABILITY=[ON | OFF]). There is no need for stored procedure change and recompilation. This allows you to ensure that no data is ever put at risk by delayed durability.  
   
  `ALLOWED`  
- With this setting, each transaction’s durability is determined at the transaction level – DELAYED_DURABILITY = { *OFF* | ON }. See [Atomic block level control – Natively Compiled Stored Procedures](control-transaction-durability.md#compiledproccontrol) and [COMMIT level control –Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) for more information.  
+ With this setting, each transaction's durability is determined at the transaction level - DELAYED_DURABILITY = { *OFF* | ON }. See [Atomic block level control - Natively Compiled Stored Procedures](control-transaction-durability.md#compiledproccontrol) and [COMMIT level control -Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) for more information.  
   
  `FORCED`  
  With this setting, every transaction that commits on the database is delayed durable. Whether the transaction specifies fully durable (DELAYED_DURABILITY = OFF) or makes no specification, the transaction is delayed durable. This setting is useful when delayed transaction durability is useful for a database and you do not want to change any application code.  
   
-###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures  
+###  <a name="CompiledProcControl"></a> Atomic block level control - Natively Compiled Stored Procedures  
  The following code goes inside the atomic block.  
   
 ```tsql  
@@ -119,14 +113,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **Example Code:**  
   
 ```tsql  
-CREATE PROCEDURE <procedureName> …  
+CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
 (  
     DELAYED_DURABILITY = ON,  
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
     LANGUAGE = N'English'  
-    …  
+    ...  
 )  
 END  
 ```  
@@ -138,7 +132,7 @@ END
 |`DELAYED_DURABILITY = OFF`|Atomic block starts a new fully durable transaction.|Atomic block creates a save point in the existing transaction, then begins the new transaction.|  
 |`DELAYED_DURABILITY = ON`|Atomic block starts a new delayed durable transaction.|Atomic block creates a save point in the existing transaction, then begins the new transaction.|  
   
-###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+###  <a name="bkmk_T-SQLControl"></a> COMMIT level control -[!INCLUDE[tsql](../../includes/tsql-md.md)]  
  The COMMIT syntax is extended so you can force delayed transaction durability. If DELAYED_DURABILITY is DISABLED or FORCED at the database level (see above) this COMMIT option is ignored.  
   
 ```tsql  

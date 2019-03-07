@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.semiadditivememberdetection.f1"
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Define Semiadditive Behavior (Business Intelligence Wizard)
   Use the **Define Semiadditive Behavior** page to enable or disable semi-additive behavior on measures. Semi-additive behavior determines how measures that are contained by a cube are aggregated over a time dimension.  

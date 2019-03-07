@@ -13,7 +13,7 @@ manager: kfile
 # MDX Data Definition - ALTER CUBE
 
 
-  Alters the structure of a specified cube, typically used to support dimension writeback. For more information about using writeback in an application, see this blog post: [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
+  Alters the structure of a specified cube, typically used to support dimension writeback. For more information about using writeback in an application, see this blog post: [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Note that concurrent dimension writebacks can result in a deadlock, where the first writeback is blocked from a commit because of the shared lock held by the second writeback. There is no error that is generated in this situation, but neither operation is able to progress. Eventually both time out and the changes are rolled back.  
   

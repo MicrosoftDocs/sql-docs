@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.kb.kbanalyze.f1"
@@ -15,9 +12,8 @@ f1_keywords:
   - "sql12.dqs.kb.kbmap.f1"
   - "sql12.dqs.kb.kbterms.f1"
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Perform Knowledge Discovery
@@ -146,15 +142,15 @@ manager: craigg
   
 2.  Find any corrections that Data Quality Services has proposed by setting **Filter** to **Error**. Verify that the value is in fact in error, and that the value in the **Correct To** column is appropriate.  
   
-3.  Set **Filter** to **All Values** and verify that the state of the values is appropriate. To change a value’s state, select the value, and then click the **Set selected domain values as corrected** (check) button, the **set selected domain values as errors** (cross) button, or the **set selected domain values as invalid** (triangle) button.  
+3.  Set **Filter** to **All Values** and verify that the state of the values is appropriate. To change a value's state, select the value, and then click the **Set selected domain values as corrected** (check) button, the **set selected domain values as errors** (cross) button, or the **set selected domain values as invalid** (triangle) button.  
   
-4.  To change a value’s state, proceed as follows:  
+4.  To change a value's state, proceed as follows:  
   
-    1.  **Set selected domain values as corrected**: To change a value’s state from Error or Invalid to Correct, select the value, and then click the **Set selected domain values as corrected** (check) from the down-arrow in the icon bar or from the Type drop-down list. If the in-error or invalid value is grouped with a correct value, delete that value after the operation.  
+    1.  **Set selected domain values as corrected**: To change a value's state from Error or Invalid to Correct, select the value, and then click the **Set selected domain values as corrected** (check) from the down-arrow in the icon bar or from the Type drop-down list. If the in-error or invalid value is grouped with a correct value, delete that value after the operation.  
   
-    2.  **Set selected domain values as errors**: To change a value’s state from Correct or Invalid to Error, select the value, and then click the **Set selected domain values as errors** (cross) icon from the down-arrow in the icon bar or from the Type drop-down list. You can either enter a correction in the **Correct to** column, or leave it blank.  
+    2.  **Set selected domain values as errors**: To change a value's state from Correct or Invalid to Error, select the value, and then click the **Set selected domain values as errors** (cross) icon from the down-arrow in the icon bar or from the Type drop-down list. You can either enter a correction in the **Correct to** column, or leave it blank.  
   
-    3.  **Set selected domain values as invalid**: To change a value’s state from Correct or Error to Invalid, select the value, and then click the **Set selected domain values as invalid** (triangle) icon from the down-arrow in the icon bar or from the Type drop-down list. You can either enter a correction in the **Correct to** column, or leave it blank.  
+    3.  **Set selected domain values as invalid**: To change a value's state from Correct or Error to Invalid, select the value, and then click the **Set selected domain values as invalid** (triangle) icon from the down-arrow in the icon bar or from the Type drop-down list. You can either enter a correction in the **Correct to** column, or leave it blank.  
   
     4.  **Correct to**: After setting a value as in error or invalid, enter a new value in the **Correct To** column. DQS will add a new row for the replacement value, designate it as correct, and then group the two values. The new value will be shown as the leading value, with the leading value in bold and the in-error or invalid value indented.  
   
@@ -194,7 +190,7 @@ manager: craigg
   
     -   **Cancel** to terminate the Knowledge Discovery activity, losing your work, and return to the DQS home page.  
   
-    -   **Close** to return to the DQS home page while saving your work. The knowledge base will be locked to you, and the state of the knowledge base in the knowledge base table in the **Open Knowledge Base** screen will be **Discovery – Value Management**.  
+    -   **Close** to return to the DQS home page while saving your work. The knowledge base will be locked to you, and the state of the knowledge base in the knowledge base table in the **Open Knowledge Base** screen will be **Discovery - Value Management**.  
   
     -   Click **Back** to return to the **Discover** page. After clicking **Close**, to perform the Domain Management activity, you would have to click **Knowledge Discovery** from the **Open knowledge base** screen, proceed to the **Knowledge Base Management: Manage Domain Terms** screen, click **Finish**, and then click either **Yes** to publish the knowledge base or **No** to save the work on the knowledge base and exit.  
   
@@ -204,11 +200,11 @@ manager: craigg
 ##  <a name="Meaning"></a> The Meaning of Correct, Error, and Invalid Values  
  Each value in the **Value** table of the **Domain Values** page is assigned a **Type** setting of **Correct**, **Error**, or **Invalid**. The type of the value is generated initially by the knowledge discovery activity, and you can change it as you see fit. The final type, based upon both discovery and interactive changes, is generated by the cleansing activity. These settings have the following meanings:  
   
--   **Correct:** This is a value that belongs to the domain and does not have any syntax errors. For example, “Chicago” in a City domain is correct.  
+-   **Correct:** This is a value that belongs to the domain and does not have any syntax errors. For example, "Chicago" in a City domain is correct.  
   
--   **Error:** This is a value that belongs to the domain, but is an incorrect value. For example, “Shicago” instead of “Chicago” in a City domain is in error. DQS designates a value as in error it detects a syntax error and an associated correction in the discovery process. Syntax errors include misspellings.  
+-   **Error:** This is a value that belongs to the domain, but is an incorrect value. For example, "Shicago" instead of "Chicago" in a City domain is in error. DQS designates a value as in error it detects a syntax error and an associated correction in the discovery process. Syntax errors include misspellings.  
   
--   **Invalid:** This is a value that does not belong to the domain, and does not have a correction. For example, the value “12345” in a City domain is invalid. DQS designates a value as invalid when it fails a domain rule.  
+-   **Invalid:** This is a value that does not belong to the domain, and does not have a correction. For example, the value "12345" in a City domain is invalid. DQS designates a value as invalid when it fails a domain rule.  
   
  You can manually change the Type of a value to either of the two other values. DQS does not enforce validity and error semantics on manual operations. You can enter a correction for an Invalid value without changing its status. You can designate a value as invalid even if it did not fail a domain rule. You can designate a value as in error even if the discovery process did not indicate that it has a syntax error. You can also remove a correction to an Error value, which is marked as Correct, without changing its status.  
   

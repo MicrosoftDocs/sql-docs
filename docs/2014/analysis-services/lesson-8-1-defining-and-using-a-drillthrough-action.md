@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Defining and Using a Drillthrough Action
@@ -52,7 +49,7 @@ manager: craigg
   
 8.  In the **Maximum Rows** box, type `10`.  
   
-9. In the **Caption** box, type `Drillthrough to Order Details…`.  
+9. In the **Caption** box, type `Drillthrough to Order Details...`.  
   
      These settings limit the number of rows returned and specify the caption that appears in the client application menu. The following image shows these settings in the **AdditionalProperties** box.  
   

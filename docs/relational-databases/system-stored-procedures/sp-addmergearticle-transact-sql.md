@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addmergearticle"
   - "sp_addmergearticle_TSQL"
 helpviewer_keywords: 
   - "sp_addmergearticle"
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-caps.latest.revision: 69
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addmergearticle (Transact-SQL)
@@ -75,16 +68,16 @@ sp_addmergearticle [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@article=** ] **'***article***'**  
+ [ **@article=** ] **'**_article_**'**  
  Is the name of the article. The name must be unique within the publication. *article* is **sysname**, with no default. *article* must be on the local computer running [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and must conform to the rules for identifiers.  
   
- [ **@source_object=** ] **'***source_object***'**  
+ [ **@source_object=** ] **'**_source_object_**'**  
  Is the database object to be published. *source_object* is **sysname**, with no default. For more information about the types of objects that can be published using merge replication, see [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [ **@type=** ] **'***type***'**  
+ [ **@type=** ] **'**_type_**'**  
  Is the type of article. *type* is **sysname**, with a default of **table**, and can be one of the following values.  
   
 |Value|Description|  
@@ -96,19 +89,19 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**synonym schema only**|Synonym with schema only.|  
 |**view schema only**|View with schema only.|  
   
- [ **@description=** ] **'***description***'**  
+ [ **@description=** ] **'**_description_**'**  
  Is a description of the article. *description* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@column_tracking=** ] **'***column_tracking***'**  
+ [ **@column_tracking=** ] **'**_column_tracking_**'**  
  Is the setting for column-level tracking. *column_tracking* is **nvarchar(10)**, with a default of FALSE. **true**turns on column tracking. **false** turns off column tracking and leaves conflict detection at the row level. If the table is already published in other merge publications, you must use the same column tracking value used by existing articles based on this table. This parameter is specific to table articles only.  
   
 > [!NOTE]  
 >  If row tracking is used for conflict detection (the default), the base table can include a maximum of 1,024 columns, but columns must be filtered from the article so that a maximum of 246 columns is published. If column tracking is used, the base table can include a maximum of 246 columns.  
   
- [ **@status=** ] **'***status***'**  
+ [ **@status=** ] **'**_status_**'**  
  Is the status of the article. *status* is **nvarchar(10)**, with a default of **unsynced**. If **active**, the initial processing script to publish the table is run. If **unsynced**, the initial processing script to publish the table is run at the next time the Snapshot Agent runs.  
   
- [ **@pre_creation_cmd=** ] **'***pre_creation_cmd***'**  
+ [ **@pre_creation_cmd=** ] **'**_pre_creation_cmd_**'**  
  Specifies what the system is to do if the table exists at the subscriber when applying the snapshot. *pre_creation_cmd* is **nvarchar(10)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -118,7 +111,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**drop** (default)|Drops the table before re-creating it. Required to support [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers.|  
 |**truncate**|Truncates the destination table.|  
   
- [ **@creation_script=** ] **'***creation_script***'**  
+ [ **@creation_script=** ] **'**_creation_script_**'**  
  Is the path and name of an optional article schema script used to create the article in the subscription database. *creation_script* is **nvarchar(255)**, with a default of NULL.  
   
 > [!NOTE]  
@@ -162,7 +155,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x100000000**|Use this option to replicate the FILESTREAM attribute if it is specified on **varbinary(max)** columns. Do not specify this option if you are replicating tables to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Subscribers. Replicating tables that have FILESTREAM columns to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Subscribers is not supported, regardless of how this schema option is set. See related option **0x800000000**.|  
 |**0x200000000**|Converts date and time data types (**date**, **time**, **datetimeoffset**, and **datetime2**) introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to data types that are supported on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**0x400000000**|Replicates the compression option for data and indexes. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-|**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> See related option **0x100000000**.|  
+|**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> See related option **0x100000000**.|  
 |**0x1000000000**|Converts common language runtime (CLR) user-defined types (UDTs) to **varbinary(max)** so that columns of type UDT can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x2000000000**|Converts the **hierarchyid** data type to **varbinary(max)** so that columns of type **hierarchyid** can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information about how to use **hierarchyid** columns in replicated tables, see [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Replicates any filtered indexes on the table. For more information about filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
@@ -174,32 +167,32 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  The *schema_option* parameter only affects replication options for the initial snapshot. Once the initial schema has been generated by the Snapshot Agent and applied at the Subscriber, the replication of publication schema changes to the Subscriber occur based on schema change replication rules and the *replicate_ddl* parameter setting specified in [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- [ **@subset_filterclause=** ] **'***subset_filterclause***'**  
+ [ **@subset_filterclause=** ] **'**_subset_filterclause_**'**  
  Is a WHERE clause specifying the horizontal filtering of a table article without the word WHERE included. *subset_filterclause* is of **nvarchar(1000)**, with a default of an empty string.  
   
 > [!IMPORTANT]  
 >  For performance reasons, we recommended that you not apply functions to column names in parameterized row filter clauses, such as `LEFT([MyColumn]) = SUSER_SNAME()`. If you use [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in a filter clause and override the HOST_NAME value, you might have to convert data types by using [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). For more information about best practices for this case, see the section "Overriding the HOST_NAME() Value" in [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- [ **@article_resolver=** ] **'***article_resolver***'**  
+ [ **@article_resolver=** ] **'**_article_resolver_**'**  
  Is the COM-based resolver used to resolve conflicts on the table article or the .NET Framework assembly invoked to execute custom business logic on the table article. *article_resolver* is **varchar(255)**, with a default of NULL. Available values for this parameter are listed in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Custom Resolvers. If the value provided is not one of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] resolvers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the specified resolver instead of the system-supplied resolver. Use **sp_enumcustomresolvers** to enumerate the list of available custom resolvers. For more information, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) and [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- [ **@resolver_info=** ] **'***resolver_info***'**  
+ [ **@resolver_info=** ] **'**_resolver_info_**'**  
  Is used to specify additional information required by a custom resolver. Some of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Resolvers require a column provided as input to the resolver. *resolver_info* is **nvarchar(255)**, with a default of NULL. For more information, see [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
- [ **@source_owner=** ] **'***source_owner***'**  
+ [ **@source_owner=** ] **'**_source_owner_**'**  
  Is the name of the owner of the *source_object*. *source_owner* is **sysname**, with a default of NULL. If NULL, the current user is assumed to be the owner.  
   
- [ **@destination_owner=** ] **'***destination_owner***'**  
+ [ **@destination_owner=** ] **'**_destination_owner_**'**  
  Is the owner of the object in the subscription database, if not 'dbo'. *destination_owner* is **sysname**, with a default of NULL. If NULL, 'dbo' is assumed to be the owner.  
   
- [ **@vertical_partition=** ] **'***column_filter***'**  
+ [ **@vertical_partition=** ] **'**_column_filter_**'**  
  Enables and disables column filtering on a table article. *vertical_partition* is **nvarchar(5)** with a default of FALSE.  
   
  **false** indicates there is no vertical filtering and publishes all columns.  
   
  **true** clears all columns except the declared primary key and ROWGUID columns. Columns are added by using **sp_mergearticlecolumn**.  
   
- [ **@auto_identity_range=** ] **'***automatic_identity_range***'**  
+ [ **@auto_identity_range=** ] **'**_automatic_identity_range_**'**  
  Enables and disables automatic identity range handling for this table article on a publication at the time it is created. *auto_identity_range* is **nvarchar(5)**, with a default of FALSE. **true** enables automatic identity range handling, while **false** disables it.  
   
 > [!NOTE]  
@@ -224,16 +217,16 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** specifies that the signature will be verified to see if it is from a trusted source.  
   
- [ **@destination_object=** ] **'***destination_object***'**  
+ [ **@destination_object=** ] **'**_destination_object_**'**  
  Is the name of the object in the subscription database. *destination_object* is **sysname**, with a default value of what is in **@source_object**. This parameter can be specified only if the article is a schema-only article, such as stored procedures, views, and UDFs. If the article specified is a table article, the value in *@source_object* overrides the value in *destination_object*.  
   
- [ **@allow_interactive_resolver=** ] **'***allow_interactive_resolver***'**  
+ [ **@allow_interactive_resolver=** ] **'**_allow_interactive_resolver_**'**  
  Enables or disables the use of the Interactive Resolver on an article. *allow_interactive_resolver* is **nvarchar(5)**, with a default of FALSE. **true** enables the use of the Interactive Resolver on the article; **false** disables it.  
   
 > [!NOTE]  
 >  Interactive Resolver is not supported by [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers.  
   
- [ **@fast_multicol_updateproc=** ] **'***fast_multicol_updateproc***'**  
+ [ **@fast_multicol_updateproc=** ] **'**_fast_multicol_updateproc_**'**  
  This parameter has been deprecated and is maintained for backward compatibility of scripts.  
   
  [ **@check_permissions=** ] *check_permissions*  
@@ -253,7 +246,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** specifies that adding an article may cause the snapshot to be invalid, and if there are existing subscriptions that require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated. *force_invalidate_snapshot* is set to **1** when adding an article to a publication with an existing snapshot.  
   
- [ **@published_in_tran_pub=** ] **'***published_in_tran_pub***'**  
+ [ **@published_in_tran_pub=** ] **'**_published_in_tran_pub_**'**  
  Indicates that an article in a merge publication is also published in a transactional publication. *published_in_tran_pub* is **nvarchar(5)**, with a default of FALSE. **true** specifies that the article is also published in a transactional publication.  
   
  [ **@force_reinit_subscription=** ] *force_reinit_subscription*  
@@ -263,7 +256,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** means that changes to the merge article causes existing subscriptions to be reinitialized, and gives permission for the subscription reinitialization to occur. *force_reinit_subscription* is set to **1** when *subset_filterclause* specifies a parameterized row filter.  
   
- [ **@logical_record_level_conflict_detection=** ] **'***logical_record_level_conflict_detection***'**  
+ [ **@logical_record_level_conflict_detection=** ] **'**_logical_record_level_conflict_detection_**'**  
  Specifies the level of conflict detection for an article that is a member of a logical record. *logical_record_level_conflict_detection* is **nvarchar(5)**, with a default of FALSE.  
   
  **true** specifies that a conflict will be detected if changes are made anywhere in the logical record.  
@@ -273,7 +266,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Because logical records are not supported by [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers, you must specify a value of **false** for *logical_record_level_conflict_detection* to support these Subscribers.  
   
- [ **@logical_record_level_conflict_resolution=** ] **'***logical_record_level_conflict_resolution***'**  
+ [ **@logical_record_level_conflict_resolution=** ] **'**_logical_record_level_conflict_resolution_**'**  
  Specifies the level of conflict resolution for an article that is a member of a logical record. *logical_record_level_conflict_resolution* is **nvarchar(5)**, with a default of FALSE.  
   
  **true** specifies that the entire winning logical record overwrites the losing logical record.  
@@ -297,7 +290,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  If the source table for an article is already published in another publication, then the value of *partition_options* must be the same for both articles.  
   
  [ **@processing_order=** ] *processing_order*  
- Indicates the processing order of articles in a merge publication. *processing_order* is **int**, with a default of 0. **0** specifies that the article is unordered, and any other value represents the ordinal value of the processing order for this article. Articles are processed in order from lowest to highest value. If two articles have the same value, processing order is determined by the order of the article nickname in the [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) system table. For more information, see [Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ Indicates the processing order of articles in a merge publication. *processing_order* is **int**, with a default of 0. **0** specifies that the article is unordered, and any other value represents the ordinal value of the processing order for this article. Articles are processed in order from lowest to highest value. If two articles have the same value, processing order is determined by the order of the article nickname in the [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) system table. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
  [ **@subscriber_upload_options=** ] *subscriber_upload_options*  
  Defines restrictions on updates made at a Subscriber with a client subscription. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* is **tinyint**, and can be one of the following values.  
@@ -325,7 +318,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  For backward compatibility, when the value of *identityrangemanagementoption* is NULL, the value of *auto_identity_range* is checked. However, when the value of *identityrangemanagementoption* is not NULL, then the value of *auto_identity_range* is ignored. For more information, see [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [ **@delete_tracking=** ] **'***delete_tracking***'**  
+ [ **@delete_tracking=** ] **'**_delete_tracking_**'**  
  Indicates whether deletes are replicated. *delete_tracking* is **nvarchar(5)**, with a default of TRUE. **false** indicates that deletes are not replicated, and **true** indicates that deletes are replicated, which is the usual behavior for merge replication. When *delete_tracking* is set to **false**, rows deleted at the Subscriber must be manually removed at the Publisher, and rows deleted at the Publisher must be manually removed at the Subscriber.  
   
 > [!IMPORTANT]  
@@ -334,13 +327,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *delete_tracking* options cannot be set using the **New Publication Wizard** or the **Publication Properties** dialog box.  
   
- [ **@compensate_for_errors=** ] **'***compensate_for_errors***'**  
+ [ **@compensate_for_errors=** ] **'**_compensate_for_errors_**'**  
  Indicates if compensating actions are taken when errors are encountered during synchronization. *compensate_for_errors i*s **nvarchar(5)**, with a default of FALSE. When set to **true**, changes that cannot be applied at a Subscriber or Publisher during synchronization always lead to compensating actions to undo the change; however, one incorrectly configured Subscriber that generates an error can cause changes at other Subscribers and Publishers to be undone. **false** disables these compensating actions, however, the errors are still logged as with compensation and subsequent merges continues to attempt to apply the changes until successful.  
   
 > [!IMPORTANT]  
 >  Although data in the affected rows might appear to be out of convergence, as soon as you address any errors, changes can be applied and data will converge. If the source table for an article is already published in another publication, then the value of *compensate_for_errors* must be the same for both articles.  
   
- [ **@stream_blob_columns=** ] **'***stream_blob_columns***'**  
+ [ **@stream_blob_columns=** ] **'**_stream_blob_columns_**'**  
  Specifies that a data stream optimization be used when replicating binary large object columns. *stream_blob_columns* is **nvarchar(5)**, with a default of FALSE. **true** means that the optimization will be attempted. *stream_blob_columns* is set to true when FILESTREAM is enabled. This allows replication of FILESTREAM data to perform optimally and reduce memory utilization. To force FILESTREAM table articles to not use blob streaming, use **sp_changemergearticle** to set *stream_blob_columns* to false.  
   
 > [!IMPORTANT]  
@@ -359,11 +352,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  If you specify a value of **3** for *partition_options*, there can be only a single subscription for each partition of data in that article. If a second subscription is created in which the filtering criterion of the new subscription resolves to the same partition as the existing subscription, the existing subscription is dropped.  
   
- When specifying a value of 3 for *partition_options*, metadata is cleaned-up whenever the Merge Agent runs and the partitioned snapshot expires more quickly. When using this option, you should consider enabling subscriber requested partitioned snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ When specifying a value of 3 for *partition_options*, metadata is cleaned-up whenever the Merge Agent runs and the partitioned snapshot expires more quickly. When using this option, you should consider enabling subscriber requested partitioned snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  Adding an article with a static horizontal filter, using *subset_filterclause*, to an existing publication with articles that have parameterized filters requires the subscriptions be reinitialized.  
   
- When specifying *processing_order*, we recommend leaving gaps between the article order values, which makes it easier to set new values in the future. For example, if you have three articles Article1, Article2, and Article3, set *processing_order* to 10, 20, and 30, rather than 1, 2, and 3. For more information, see [Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ When specifying *processing_order*, we recommend leaving gaps between the article order values, which makes it easier to set new values in the future. For example, if you have three articles Article1, Article2, and Article3, set *processing_order* to 10, 20, and 30, rather than 1, 2, and 3. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## Default Schema Option Table  
  This table describes the default value that is set by the stored procedure if a NULL value is specified for *schema_option*, which depends on article type.  

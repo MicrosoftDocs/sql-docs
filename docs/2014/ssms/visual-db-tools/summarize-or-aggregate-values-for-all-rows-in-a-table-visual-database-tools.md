@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "summarizing query results"
   - "aggregate functions [SQL Server], summarizing query results"
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)
@@ -43,7 +39,7 @@ FROM titles
  When you create a single aggregation value for all rows in a table, you display only the aggregate values themselves. For example, if you are totaling the value of the `price` column of the `titles` table, you would not also display individual titles, publisher names, and so on.  
   
 > [!NOTE]  
->  If you are subtotaling — that is, creating groups — you can display column values for each group. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
+>  If you are subtotaling - that is, creating groups - you can display column values for each group. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
   
 ### To aggregate values for all rows  
   

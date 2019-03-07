@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 32
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Reporting Services Data Alerts
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts are a data driven alerting solution that helps you be informed about report data that is interesting or important to you, and at a relevant time. By using data alerts you no longer have to seek out information, it comes to you.  
@@ -27,11 +24,11 @@ manager: "mblythe"
 ##  <a name="AlertingWF"></a> Data Alerts Architecture and Workflow  
  The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts:  
   
--   **Define and save data alert definitions**—you run a report, create rules that identify interesting data values, define a recurrence pattern for sending the data alert message, and specify the recipients of the alert message.  
+-   **Define and save data alert definitions**-you run a report, create rules that identify interesting data values, define a recurrence pattern for sending the data alert message, and specify the recipients of the alert message.  
   
--   **Run data alert definitions**—Alerting service processes alert definitions at a scheduled time, retrieves report data, creates data alert instances based on rules in the alert definition.  
+-   **Run data alert definitions**-Alerting service processes alert definitions at a scheduled time, retrieves report data, creates data alert instances based on rules in the alert definition.  
   
--   **Deliver data alert messages to recipients**—Alerting service creates an alert instance and sends an alert message to recipients by email.  
+-   **Deliver data alert messages to recipients**-Alerting service creates an alert instance and sends an alert message to recipients by email.  
   
  In addition, as a data alert owner you can view information about your data alerts and delete and edit your data alert definitions. An alert has only one owner, the person who created it.  
   
@@ -184,7 +181,7 @@ manager: "mblythe"
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   
@@ -285,11 +282,11 @@ manager: "mblythe"
 -   **Provision Subscriptions and Data Alerts** in which you find out whether Reporting Services can use SQL Server Agent for data alerts and download scripts that allow access to SQL Server Agent. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="Globalization"></a> Globalization of Data Alerts  
- Certain script such as Arabic and Hebrew are written right to left. Data alerts support right-to-left scripts as well as left-to-right scripts. Data alerts detect culture and alter the appearance and behavior of the user interface and the layout of data alert messages accordingly. The culture is derived from the regional setting of the operating system on the user’s computer. The culture is saved each time you update and then resave the data alert definition.  
+ Certain script such as Arabic and Hebrew are written right to left. Data alerts support right-to-left scripts as well as left-to-right scripts. Data alerts detect culture and alter the appearance and behavior of the user interface and the layout of data alert messages accordingly. The culture is derived from the regional setting of the operating system on the user's computer. The culture is saved each time you update and then resave the data alert definition.  
   
  Whether data satisfies the rules in the alert definition can be affected by the culture in the alert definition. String comparisons are most commonly affected by culture specific rules.  
   
- Determining whether report data satisfies the rules in the alert definition can be affected by the culture in the alert definition. This most commonly occurs in of strings. For example, in an alert definition with the German culture, a rule that compares the English letter “o” and the German letter “ö” would not be satisfied. In the same alert definition using the English culture the rule would be satisfied.  
+ Determining whether report data satisfies the rules in the alert definition can be affected by the culture in the alert definition. This most commonly occurs in of strings. For example, in an alert definition with the German culture, a rule that compares the English letter "o" and the German letter "ö" would not be satisfied. In the same alert definition using the English culture the rule would be satisfied.  
   
  Data formatting is also based the culture of the alert definition. For example, if the culture uses a period as the decimal symbol, then the value displays as 45.67; whereas a culture that uses a comma as the decimal symbol, displays 45,67.  
   

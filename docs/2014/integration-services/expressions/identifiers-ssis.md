@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "regular identifiers [Integration Services]"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], identifiers"
   - "qualified identifiers [Integration Services]"
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Identifiers (SSIS)
@@ -35,7 +31,7 @@ manager: craigg
   
 -   The first character of the name must be a letter as defined by the Unicode Standard 2.0, or an underscore (_).  
   
--   Subsequent characters can be letters or numbers as defined in the Unicode Standard 2.0, the underscore (_), @, $, and # characters.  
+-   Subsequent characters can be letters or numbers as defined in the Unicode Standard 2.0, the underscore (_), \@, $, and # characters.  
   
 > [!IMPORTANT]  
 >  Embedded spaces and special characters, other than the ones listed, are not valid in regular identifiers. In order to use spaces and special characters, you must use a qualified identifier instead of a regular identifier.  
@@ -83,15 +79,15 @@ manager: craigg
 >  If both elements in dotted notation are enclosed in one pair of brackets, the expression evaluator interprets the pair as a single identifier, not a source-column combination.  
   
 ## Variables in Expressions  
- Variables, when referenced in expressions, must include the @ prefix. For example, the **Counter** variable is referenced by using @Counter. The @ character is not part of the variable name; it only identifies the variable to the expression evaluator. If you build expressions by using the dialog boxes that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides, the @ character is automatically added to the variable name. It is not valid to include spaces between the @ character and the variable name.  
+ Variables, when referenced in expressions, must include the \@ prefix. For example, the **Counter** variable is referenced by using \@Counter. The \@ character is not part of the variable name; it only identifies the variable to the expression evaluator. If you build expressions by using the dialog boxes that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides, the \@ character is automatically added to the variable name. It is not valid to include spaces between the \@ character and the variable name.  
   
  Variable names follow the same rules as those for other regular identifiers:  
   
 -   The first character of the name must be a letter as defined by the Unicode Standard 2.0, or an underscore (_).  
   
--   Subsequent characters can be letters or numbers as defined in the Unicode Standard 2.0, the underscore (_), @, $, and # characters.  
+-   Subsequent characters can be letters or numbers as defined in the Unicode Standard 2.0, the underscore (_), \@, $, and # characters.  
   
- If a variable name contains characters other than those listed, the variable must be enclosed in brackets. For example, variable names with spaces must be enclosed in brackets. The opening bracket follows the @ character. For example, the **My Name** variable is referenced as @[My Name]. It is not valid to include spaces between the variable name and the brackets.  
+ If a variable name contains characters other than those listed, the variable must be enclosed in brackets. For example, variable names with spaces must be enclosed in brackets. The opening bracket follows the \@ character. For example, the **My Name** variable is referenced as \@[My Name]. It is not valid to include spaces between the variable name and the brackets.  
   
 > [!NOTE]  
 >  The names of user-defined and system variables are case-sensitive.  
@@ -119,6 +115,6 @@ manager: craigg
 ```  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
   
   

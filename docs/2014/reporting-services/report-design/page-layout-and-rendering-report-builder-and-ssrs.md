@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Page Layout and Rendering (Report Builder and SSRS)
   When you author reports it is important to understand the behavior of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] renderers to ensure the rendered report looks the way you want, including page layout and page breaks. You likely also want to make sure the rendered report fits on the paper size that you or your organization commonly uses.  

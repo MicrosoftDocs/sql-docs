@@ -1,25 +1,18 @@
 ---
 title: "XML Device Information Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML [Reporting Services], rendering"
   - "device information settings [Reporting Services], PDF rendering"
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-caps.latest.revision: 43
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # XML Device Information Settings
   The following table lists the device information settings for rendering in XML format.  
@@ -30,7 +23,7 @@ manager: "kfile"
 |**MIMEType**|The Multipurpose Internet Mail Extensions (MIME) type of the XML file.||  
 |**UseFormattedValues**|**true**<br /><br /> **false**|Indicates whether to render the formatted value of a text box when generating the XML data.<br /><br /> A value of false indicates that the underlying value of the text box is used.|  
 |**Indented**|**true**<br /><br /> **false**|Indicates whether to generate indented XML. The default value of **false** generates non-indented, compressed XML.|  
-|**OmitNamespace**|**true**<br /><br /> **false**|Indicates whether to omit the default namespace from the XML.<br /><br /> If true, the XML does not specify a default namespace.<br /><br /> If false, the XML specifies a default namespace with the value of the report’s DataSchema property. The DataSchema property defaults to the report name.<br /><br /> The default value is**false**.|  
+|**OmitNamespace**|**true**<br /><br /> **false**|Indicates whether to omit the default namespace from the XML.<br /><br /> If true, the XML does not specify a default namespace.<br /><br /> If false, the XML specifies a default namespace with the value of the report's DataSchema property. The DataSchema property defaults to the report name.<br /><br /> The default value is**false**.|  
 |**OmitSchema**|**true**<br /><br /> **false**|Indicates whether to omit the schema location from the XML. The location is the SchemaLocation attribute.<br /><br /> The default value of OmitSchema depends on the value of OmitNamespace:<br /><br /> If OmitNamespace = False, then OmitSchema = **False** by default. The user can override the default by setting OmitSchema = True.<br /><br /> If OmitNamespace = True, then OmitSchema will function as **True** regardless of the value explicitly configured for OmitShema.|  
 |**Encoding**|The Internet Assigned Numbers Authority (IANA) name of a character encoding that is supported by the .NET Framework.|The default value is **UTF-8**. Examples of other values include ASCII, UTF-7, and UTF-16.|  
 |**FileExtension**|The file extension to use for the generated file.||  

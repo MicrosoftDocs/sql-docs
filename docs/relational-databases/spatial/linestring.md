@@ -1,25 +1,19 @@
-﻿---
+---
 title: "LineString | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "LineString geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +24,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
  ![Examples of geometry LineString instances](../../relational-databases/spatial/media/linestring.gif "Examples of geometry LineString instances")  
   
- As shown in the illustration:  
+As shown in the illustration:  
   
 -   Figure 1 is a simple, nonclosed **LineString** instance.  
   
@@ -41,69 +35,69 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 -   Figure 4 is a closed, nonsimple **LineString** instance, and therefore is not a ring.  
   
 ### Accepted Instances  
- Accepted **LineString** instances can be input into a geometry variable, but they may not be valid **LineString** instances. The following criteria must be met for a **LineString** instance to be accepted. The instance must be formed of at least two points or it must be empty. The following LineString instances are accepted.  
+Accepted **LineString** instances can be input into a geometry variable, but they may not be valid **LineString** instances. The following criteria must be met for a **LineString** instance to be accepted. The instance must be formed of at least two points or it must be empty. The following LineString instances are accepted.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` shows that a **LineString** instance can be accepted, but not valid.  
+`@g3` shows that a **LineString** instance can be accepted, but not valid.  
   
- The following **LineString** instance is not accepted. It will throw a `System.FormatException`.  
+The following **LineString** instance is not accepted. It will throw a `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### Valid Instances  
- For a **LineString** instance to be valid it must meet the following criteria.  
+For a **LineString** instance to be valid it must meet the following criteria.  
   
 1.  The **LineString** instance must be accepted.  
-  
 2.  If a **LineString** instance is not empty then it must contain at least two distinct points.  
-  
 3.  The **LineString** instance cannot overlap itself over an interval of two or more consecutive points.  
   
- The following **LineString** instances are valid.  
+The following **LineString** instances are valid.  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- The following **LineString** instances are not valid.  
+The following **LineString** instances are not valid.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  The detection of **LineString** overlaps is based on floating-point calculations, which are not exact.  
+> The detection of **LineString** overlaps is based on floating-point calculations, which are not exact.  
   
 ## Examples  
- The following example shows how to create a `geometry``LineString` instance with three points and an SRID of 0:  
+### Example A.    
+The following example shows how to create a `geometry``LineString` instance with three points and an SRID of 0:  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- Each point in the `LineString` instance may contain Z (elevation) and M (measure) values. This example adds M values to the `LineString` instance created in the example above. M and Z can be null values.  
+### Example B.   
+Each point in the `LineString` instance may contain Z (elevation) and M (measure) values. This example adds M values to the `LineString` instance created in the example above. M and Z can be null values.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- The following example shows how to create a `geometry LineString` instance with two points that are the same. A call to `IsValid` indicates that the **LineString** instance is not valid and a call to `MakeValid` will convert the **LineString** instance into a **Point**.  
+### Example C.   
+The following example shows how to create a `geometry LineString` instance with two points that are the same. A call to `IsValid` indicates that the **LineString** instance is not valid and a call to `MakeValid` will convert the **LineString** instance into a **Point**.  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,11 +112,10 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- The above code snippet will return the following:  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  

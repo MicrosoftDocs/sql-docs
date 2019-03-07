@@ -17,7 +17,7 @@ manager: kfile
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides two different options for drilling through into case data. You can drill through to the cases that were used to build the data, or you can drill through to the cases in the mining structure.  
   
 ## Drillthrough to Model Cases vs. Drillthrough to Structure  
- Drilling through to **model cases** is useful for finding additional details about rules, patterns or clusters in a model. For example, you would not use customer contact information for analysis in a clustering model, even if the data was available, by by using drillthrough, you can gain access to that information from the model.  
+ Drilling through to **model cases** is useful for finding additional details about rules, patterns or clusters in a model. For example, you would not use customer contact information for analysis in a clustering model, even if the data was available, by using drillthrough, you can gain access to that information from the model.  
   
  In contrast, **drillthrough to structure** data is intended to provide access to information that was not made available in the model. For example, some structure columns might have been excluded from a model because the data type was incompatible or the data was not useful for analysis.  
   

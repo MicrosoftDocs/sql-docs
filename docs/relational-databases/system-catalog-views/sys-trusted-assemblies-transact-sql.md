@@ -1,14 +1,9 @@
-﻿---
+---
 title: "sys.trusted_assemblies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "trusted_assemblies_TSQL"
@@ -20,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trusted_assemblies"
 ms.assetid: 
-caps.latest.revision: 
-author: "tmullaney"
-ms.author: "thmullan"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

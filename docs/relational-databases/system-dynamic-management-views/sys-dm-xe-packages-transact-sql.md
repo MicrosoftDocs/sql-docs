@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_xe_packages_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_xe_packages dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -32,12 +29,12 @@ manager: craigg
  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|The name of package. The description is exposed from the package itself. Is not nullable.|  
+|name|**nvarchar(256)**|The name of package. The description is exposed from the package itself. Is not nullable.|  
 |guid|**uniqueidentifier**|The GUID that identifies the package. Is not nullable.|  
-|description|**nvarchar(256)**|The package description. descriptionis set by the package author and is not nullable.|  
+|description|**nvarchar(3072)**|The package description. descriptionis set by the package author and is not nullable.|  
 |capabilities|**int**|Bitmap describing the capabilities of this package. Is nullable.|  
 |capabilities_desc|**nvarchar(256)**|A list of all the capabilities possible for this package. Is nullable.|  
-|module_guid|**uniqueidentifier**|The GUID of the module that exposes this package. Is not nullable.|  
+|module_guid|**nvarchar(60)**|The GUID of the module that exposes this package. Is not nullable.|  
 |module_address|**varbinary(8)**|The base address where the module containing the package is loaded. A single module may expose several packages. Is not nullable.|  
   
 ## Permissions  

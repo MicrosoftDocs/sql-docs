@@ -4,14 +4,12 @@ ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Installing Updates from the Command Prompt
@@ -86,6 +84,6 @@ The name of the update package can vary and may include a language, edition, and
  *You cannot specify this parameter to apply an update to a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You must specify the /instanceID parameter instead. 
  
 ## See also 
- [Overview of SQL Server Servicing Installation](http://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
+ [Overview of SQL Server Servicing Installation](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
  
  

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
-caps.latest.revision: 17
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm
@@ -41,7 +38,7 @@ manager: craigg
   
 |Step|Link|  
 |----------|----------|  
-|Determine the service account of the Analysis Services instance that is already in the farm|Each additional instance you install must run under the same account as the first instance. Use either approach to determine the service account:<br /><br /> In Central Administration, in the Security section, click **Configure Service Accounts**. Select **Windows Service – SQL Server Analysis Services**. After you select the service, the service account name will appear in the page.<br /><br /> On a server that already has a PowerPivot service installation, open the **Services** console application in Administrative Tools. Double-click **SQL Server Analysis Services**. Click the **Log On** tab to view the service account.<br />**\*\* Important \*\*** Only use Central Administration to change service accounts. If you use another tool or approach, permissions will not be updated correctly in the farm.|  
+|Determine the service account of the Analysis Services instance that is already in the farm|Each additional instance you install must run under the same account as the first instance. Use either approach to determine the service account:<br /><br /> In Central Administration, in the Security section, click **Configure Service Accounts**. Select **Windows Service - SQL Server Analysis Services**. After you select the service, the service account name will appear in the page.<br /><br /> On a server that already has a PowerPivot service installation, open the **Services** console application in Administrative Tools. Double-click **SQL Server Analysis Services**. Click the **Log On** tab to view the service account.<br />**\*\* Important \*\*** Only use Central Administration to change service accounts. If you use another tool or approach, permissions will not be updated correctly in the farm.|  
 |Run Setup to install a second instance of PowerPivot for SharePoint|[Install PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> Choose an application server that is joined to the farm, but does not have an existing PowerPivot instance on the server.<br /><br /> During Setup, when prompted to specify a service account, enter the account from the previous step. All instances of the Analysis Services service must run under the same domain account. This requirement enables the use of the managed accounts feature in SharePoint that lets you update the password in one place for all service instances of the same type.|  
 |Configure the second instance|You can use either approach to configure the instance: [PowerPivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md) or [PowerPivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)<br /><br /> When configuring a second instance, you only need to provision the local services. All other configuration tasks (such as creating service applications or configuring data refresh) are performed during the initial configuration, and used by subsequent instances that you install.|  
 |Post-installation tasks|No further steps are specifically required. You do not need to create service applications, activate features, deploy solutions, or change service application identity. Existing Web applications and service applications will discover and use the new server software automatically.<br /><br /> Optionally, if you installed a second server for the purpose of using one server for queries and one for data refresh, you can configure server instance properties now to specify the type of requests handled by each server. For more information, see [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](../../analysis-services/configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md).|  

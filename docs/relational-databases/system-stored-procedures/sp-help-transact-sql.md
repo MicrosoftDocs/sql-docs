@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_help (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help"
@@ -18,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help"
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-caps.latest.revision: 60
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ sp_help [ [ @objname = ] 'name' ]
  0 (success) or 1 (failure)  
   
 ## Result Sets  
- The result sets that are returned depend on whether *name* is specified, when it is specified, and what database object it is.  
+ The result sets that are returned depend on whether *name* is specified, when it is specified, and which database object it is.  
   
 1.  If **sp_help** is executed with no arguments, summary information of objects of all types that exist in the current database is returned.  
   

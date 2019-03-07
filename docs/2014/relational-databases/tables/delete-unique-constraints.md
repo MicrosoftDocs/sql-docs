@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing constraints"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "deleting constraints"
   - "constraints [SQL Server], unique"
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
-caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete Unique Constraints
@@ -63,7 +59,7 @@ manager: craigg
   
 4.  Click **Delete**.  
   
-5.  On the **File** menu, click **Save** *table name*.  
+5.  On the **File** menu, click **Save** _table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

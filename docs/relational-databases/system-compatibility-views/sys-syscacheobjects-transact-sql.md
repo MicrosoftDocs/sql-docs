@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.syscacheobjects_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "syscacheobjects system table"
   - "sys.syscacheobjects compatibility view"
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: 37
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.browseservers.local.f1"
 ms.assetid: c9c5db1c-79f5-4e79-a36e-13f118daac46
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Browse for Servers (Local Servers)
@@ -22,6 +18,6 @@ manager: craigg
   
 ## Options  
  **Select the server to connect to**  
- Designate the server you want to connect to by clicking on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance displayed in the tree. You can show or hide portions of the tree view by clicking on the nodes marked with a **+** or **–** symbol.  
+ Designate the server you want to connect to by clicking on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance displayed in the tree. You can show or hide portions of the tree view by clicking on the nodes marked with a **+** or **-** symbol.  
   
   

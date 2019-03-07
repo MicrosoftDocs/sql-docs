@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.slicesourcecube.f1"
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Slice Source Cube (Data Mining Wizard)
   You can use the **Slice Source Cube** dialog box to restrict the data used to train the model. Typically a cube contains data related to many different dimensions and attributes, such as all stores, all regions, and all products. It is not practical to train a model on unlimited combinations of attributes, so you use this dialog box to choose a specific set to use in training a model.  
@@ -49,7 +46,7 @@ manager: "mblythe"
  **Operator**  
  Select the operator to use in building a slice expression.  
   
- For example, if you chose Geography as the hierarchy, you could select the operator = and then type “Europe” as the filter, to get cube data for Europe only.  
+ For example, if you chose Geography as the hierarchy, you could select the operator = and then type "Europe" as the filter, to get cube data for Europe only.  
   
  **Filter Expression**  
  Type an expression to use as a criterion when filtering the cube on the selected dimension.  

@@ -5,9 +5,7 @@ ms.date: "08/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "row constructor [SQL Server]"
   - "table value constructor [SQL Server]"
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Table Value Constructor (Transact-SQL)
@@ -55,7 +52,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Is a constant, a variable, or an expression. The expression cannot contain an EXECUTE statement.  
   
 ## Limitations and Restrictions  
- Table value constructors can be used in one of two ways: directly in the VALUES list of an INSERT … VALUES statement, or as a derived table anywhere that derived tables are allowed. Error 10738 is returned if the number of rows exceeds the maximum. To insert more rows than the limit allows, use one of the following methods:  
+ Table value constructors can be used in one of two ways: directly in the VALUES list of an INSERT ... VALUES statement, or as a derived table anywhere that derived tables are allowed. Error 10738 is returned if the number of rows exceeds the maximum. To insert more rows than the limit allows, use one of the following methods:  
   
 -   Create multiple INSERT statements  
   

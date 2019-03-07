@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], monitoring"
   - "change data capture [SQL Server], administering"
   - "change data capture [SQL Server], jobs"
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
@@ -29,7 +25,7 @@ manager: craigg
  To understand capture job behavior, you must understand how the configurable parameters are used by `sp_cdc_scan`.  
   
 #### maxtrans Parameter  
- The *maxtrans* parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If, during the scan, the number of transactions to be proessed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to *maxtrans*.  
+ The *maxtrans* parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If, during the scan, the number of transactions to be processed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to *maxtrans*.  
   
 #### maxscans Parameter  
  The *maxscans* parameter specifies the maximum number of scan cycles that are attempted to drain the log before either returning (continuous = 0) or executing a waitfor (continuous = 1).  
@@ -65,7 +61,7 @@ manager: craigg
 ### Structure of the Cleanup Job  
  Change data capture uses a retention based cleanup strategy to manage change table size. The cleanup mechanism consists of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] job that is created when the first database table is enabled. A single cleanup job handles cleanup for all database change tables and applies the same retention value to all defined capture instances.  
   
- The cleanup job is initiated by running the parameterless stored procedure `sp_MScdc_cleanup_job`. This stored procedure starts by extracting the configured retention and threshold values for the cleanup job from `msdb.dbo.cdc_jobs`. The retention value is used to compute a new low watermark for the change tables. The specified number of minutes is substracted from the maximum *tran_end_time* value from the `cdc.lsn_time_mapping` table to obtain the new low water mark expressed as a datetime value. The CDC.lsn_time_mapping table is then used to convert this datetime value to a corresponding `lsn` value. If the same commit time is shared by multiple entries in the table, the `lsn` that corresponds to the entry that has the smallest `lsn` is chosen as the new low watermark. This `lsn` value is passed to `sp_cdc_cleanup_change_tables` to remove change table entries from the database change tables.  
+ The cleanup job is initiated by running the parameterless stored procedure `sp_MScdc_cleanup_job`. This stored procedure starts by extracting the configured retention and threshold values for the cleanup job from `msdb.dbo.cdc_jobs`. The retention value is used to compute a new low watermark for the change tables. The specified number of minutes is subtracted from the maximum *tran_end_time* value from the `cdc.lsn_time_mapping` table to obtain the new low water mark expressed as a datetime value. The CDC.lsn_time_mapping table is then used to convert this datetime value to a corresponding `lsn` value. If the same commit time is shared by multiple entries in the table, the `lsn` that corresponds to the entry that has the smallest `lsn` is chosen as the new low watermark. This `lsn` value is passed to `sp_cdc_cleanup_change_tables` to remove change table entries from the database change tables.  
   
 > [!NOTE]  
 >  The advantage of using the commit time of the recent transaction as the base for computing the new low watermark is that it lets the changes remain in change tables for the specified time. This happens even when the capture process is running behind. All entries that have the same commit time as the current low watermark continue to be represented within the change tables by choosing the smallest `lsn` that has the shared commit time for the actual low watermark.  
@@ -73,7 +69,7 @@ manager: craigg
  When a cleanup is performed, the low watermark for all capture instances is initially updated in a single transaction. It then tries to remove obsolete entries from the change tables and the cdc.lsn_time_mapping table. The configurable threshold value limits how many entries are deleted in any single statement. Failure to perform the delete on any individual table will not prevent the operation from being attempted on the remaining tables.  
   
 ### Cleanup Job Customization  
- For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Beacuse the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases’ change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
+ For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases' change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
   
 ##  <a name="Monitor"></a> Monitor the Change Data Capture Process  
  Monitoring the change data capture process lets you determine if changes are being written correctly and with a reasonable latency to the change tables. Monitoring can also help you to identify any errors that might occur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) and [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
@@ -81,18 +77,24 @@ manager: craigg
 ### Identify Sessions with Empty Result Sets  
  Every row in sys.dm_cdc_log_scan_sessions represents a log scan session (except the row with an ID of 0). A log scan session is equivalent to one execution of [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). During a session, the scan can either return changes or return an empty result. If the result set is empty, the empty_scan_count column in sys.dm_cdc_log_scan_sessions is set to 1. If there are consecutive empty result sets, such as if the capture job is running continuously, the empty_scan_count in the last existing row is incremented. For example, if sys.dm_cdc_log_scan_sessions already contains 10 rows for scans that returned changes and there are five empty results in a row, the view contains 11 rows. The last row has a value of 5 in the empty_scan_count column. To determine sessions that had an empty scan, run the following query:  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### Determine Latency  
  The sys.dm_cdc_log_scan_sessions management view includes a column that records the latency for each capture session. Latency is defined as the elapsed time between a transaction being committed on a source table and the last captured transaction being committed on the change table. The latency column is populated only for active sessions. For sessions with a value greater than 0 in the empty_scan_count column, the latency column is set to 0. The following query returns the average latency for the most recent sessions:  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  You can use latency data to determine how fast or slow the capture process is processing transactions. This data is most useful when the capture process is running continuously. If the capture process is running on a schedule, latency can be high because of the lag between transactions being committed on the source table and the capture process running at its scheduled time.  
   
  Another important measure of capture process efficiency is throughput. This is the average number of commands per second that are processed during each session. To determine the throughput of a session, divide the value in the command_count column by the value in the duration column. The following query returns the average throughput for the most recent sessions:  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### Use Data Collector to Collect Sampling Data  
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector lets you collect snapshots of data from any table or dynamic management view and build a performance data warehouse. When change data capture is enabled on a database, it is useful to take snapshots of the sys.dm_cdc_log_scan_sessions view and the sys.dm_cdc_errors view at regular intervals for later analysis. The following procedure sets up a data collector for collecting sample data from the sys.dm_cdc_log_scan_sessions management view.  
@@ -103,7 +105,7 @@ manager: craigg
   
 2.  Execute the following code to create a custom collector for change data capture.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  
@@ -125,10 +127,10 @@ manager: craigg
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -141,7 +143,7 @@ manager: craigg
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  

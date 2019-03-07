@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Built-in Globals and Users References (Report Builder and SSRS)
   The Built-in fields collection, which includes both the `Globals` and the `User` collections, represent global values provided by Reporting Services when a report is processed. The `Globals` collection provides values such as the name of the report, the time when report processing began, and current page numbers for the report header or footer. The `User` collection provides the user identifier and language settings. These values can be used in expressions to filter results in a report.  
@@ -75,7 +72,7 @@ manager: "mblythe"
 |`Language`|`String`|The language of the user running the report. For example, `en-US`.|  
 |`UserID`|`String`|The ID of the user running the report. If you are using Windows Authentication, this value is the domain account of the current user. The value is determined by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] security extension, which can use Windows Authentication or custom authentication.|  
   
- For more information about supporting multiple languages in a report, see "Solution Design Considerations for Multi-Lingual or Global Deployments" in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [SQL Server Books Online](http://go.microsoft.com/fwlink/?LinkId=120955).  
+ For more information about supporting multiple languages in a report, see "Solution Design Considerations for Multi-Lingual or Global Deployments" in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [SQL Server Books Online](https://go.microsoft.com/fwlink/?LinkId=120955).  
   
 ### Using Locale Settings  
  You can use expressions to refer to the locale settings on a client computer through the `User.Language` value to determine how a report appears to the user. For example, you can create a report that uses a different query expression based on the locale value. The query may change to retrieve localized information from a different column depending on the language returned. You can also use an expression in the language settings of the report or report items based on this variable.  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.extractdacwizard.buildandsave.f1"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], extract"
   - "wizard [DAC], extract"
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Extract a DAC From a Database
@@ -49,7 +45,7 @@ manager: craigg
   
 2.  Expand the **Databases** node.  
   
-3.  Right-click the node for the database from which the DAC is to be extracted, point to **Tasks**, and then select **Extract Data-tier Application…**  
+3.  Right-click the node for the database from which the DAC is to be extracted, point to **Tasks**, and then select **Extract Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.foreachitemcolumns.f1"
 helpviewer_keywords: 
   - "For Each Item Columns dialog box"
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # For Each Item Columns Dialog Box UI Reference

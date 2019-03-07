@@ -1,23 +1,14 @@
 ---
 title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
+ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Lesson 6: Adding Grouping and Totals (Reporting Services)
 In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
@@ -37,7 +28,7 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
   
 4.  From the **Report Data** pane, drag the **Order** field to the **Row Groups** pane. Place it below Date and above **(Details)**.
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
     Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
   
@@ -88,7 +79,7 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
   
 4.  On the **Format** menu, click **Background Color**, click **Orange**, and click **OK**.  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![Set background color to Orange](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>To add a grand total to a report  
   
@@ -117,9 +108,9 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
 2.  Click the **Project** menu and then click **tutorial Properties...**  
   
 3.  In the **TargetServerURL** type the name of your report server, for example   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` works if your designing the report on the report server.  
+    - `https://localhost/reportserver` works if your designing the report on the report server.  
   
   
 4. Note the TargetReportFolder is tutorial, the name of the project.  This is the name of the folder that the report will deploy to in the next steps.  
@@ -133,7 +124,7 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
     > Skipping 'Sales Orders.rdl'. Item is up to date.  
     > Build complete -- 0 errors, 0 warnings  
     > ------ Deploy started: Project: tutorial, Configuration: Debug ------  
-    > Deploying to http://[server name]/reportserver  
+    > Deploying to https://[server name]/reportserver  
     > Deploying report '/tutorial/Sales Orders'.  
     > Deploy complete -- 0 errors, 0 warnings  
     > ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
@@ -147,15 +138,15 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
   
     Browse to [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal URL.   
     **Note:** The *portal* URL is "Reports", not the Report *Server* URL of "Reportserver".  For example:   
-    - `http://<server name>/reports`.  
-     - `http://localhost/reports` works if your designing the report on the report server.  
+    `https://<server name>/reports`.  
+    `https://localhost/reports` works if you're designing the report on the report server.  
   
 8.  Browse to the folder that contains the report. The default name is *tutorial*, the name of the project or the name you typed into the TargetReportFolder fiedl in the project properties.   
 Click the name of the report **Sales Orders** to view the rendered report in the browser.  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** You have successfully completed the Creating a Basic Table Report tutorial.**  
+You have successfully completed the Creating a Basic Table Report tutorial.  
   
 ## See Also  
 [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

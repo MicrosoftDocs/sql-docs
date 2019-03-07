@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], deploying"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "properties [Reporting Services], deployment"
   - "deploying reports [Reporting Services]"
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 41
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Set Deployment Properties (Reporting Services)
   In[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you must specify the report server and optionally the folders for reports and shared data sources so that you can publish the items in a Report Server project to a report server. The properties and values that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] needs to build, preview an deploy reports are stored in project configurations of the Report Server project. You can create multiple named sets for these project properties, so that you can conveniently switch between property sets. Each set of properties is a configuration. For example, you can have a configuration for publishing reports to a test server and a different configuration for publishing reports to a production server.  

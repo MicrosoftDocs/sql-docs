@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-caps.latest.revision: 6
-author: "mgblythe"
-ms.author: "mblythe"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Install SQL Server PowerShell
@@ -33,7 +29,7 @@ manager: craigg
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports starting Windows PowerShell sessions from the Object Explorer tree. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supports Windows PowerShell job steps.  
   
- If Windows PowerShell 2.0 has not been installed, or has been uninstalled, you must install it by following the instructions on the [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) page.  
+ If Windows PowerShell 2.0 has not been installed, or has been uninstalled, you must install it by following the instructions on the [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) page.  
   
  If Windows PowerShell is uninstalled after Setup finishes, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features for Windows PowerShell will not function. Windows PowerShell can be uninstalled by Windows users, and uninstalling Windows PowerShell might be required by some Windows operating system upgrades. To use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell features, you must reinstall PowerShell 2.0 by using the Windows Management Framework.  
   

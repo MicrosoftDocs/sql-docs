@@ -20,6 +20,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 The intelligent query processing (QP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort. 
 
+![Intelligent Query Processing](./media/3_iqpfeaturefamily.png)
+
 You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database.  You can set this using Transact-SQL. For example:  
 
 ```sql

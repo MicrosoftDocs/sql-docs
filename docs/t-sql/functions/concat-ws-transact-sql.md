@@ -58,7 +58,7 @@ If a scenario involves null values separated by a delimiter, consider the `ISNUL
 ## Examples   
 
 ### A.  Concatenating values with separator
-This example concatenates three columns from the sys.databases table, separating the values with a  `- `.   
+This example concatenates three columns from the sys.databases table, separating the values with a  `-`.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo

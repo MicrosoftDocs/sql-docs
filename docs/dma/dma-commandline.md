@@ -219,8 +219,8 @@ Configuration file contents when using source connections:
 <?xml version="1.0" encoding="utf-8" ?>
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
-  <SourcePlatform>source platform</SourcePlatform> <!-- optional. The default is SqlOnPrem-->
-  <TargetPlatform>target platform</TargetPlatform> <!-- optional. The defatul is ManagedSqlServer>
+  <SourcePlatform>source platform</SourcePlatform> <!-- optional. The default is SqlOnPrem -->
+  <TargetPlatform>target platform</TargetPlatform> <!-- optional. The defatul is ManagedSqlServer -->
   <SourceConnections>
     <SourceConnection>connection string 1</SourceConnection>
     <SourceConnection>connection string 2</SourceConnection>

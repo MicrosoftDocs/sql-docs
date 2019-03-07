@@ -18,33 +18,26 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-The intelligent query processing (QP) feature family includes features with broad impact. They improve the performance of existing workloads with minimal implementation effort. To automatically benefit from this feature family, move to the applicable database compatibility level.
+The intelligent query processing (QP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort. 
 
-At a general level, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a query as follows:
-1. The query optimization process generates a set of feasible execution plans for a specific query. During this time, the cost of plan options is estimated and the plan with the lowest estimated cost is used.
-1. The query execution process takes the plan chosen by the query optimizer and uses it for execution.
-
-For more information on query processing and execution modes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md).
-
-Sometimes the plan chosen by the Query Optimizer is not optimal for a variety of reasons. For example, the estimated number of rows flowing through the query plan may be incorrect. The estimated costs help determine which plan gets selected for use in execution. If cardinality estimates are incorrect, the original plan is still used despite the poor original assumptions.
-
-You can make workloads automatically eligible for intelligent query processing by enabling the applicable compatibility level for the database.  You can set this using Transact-SQL. For example:  
+You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database.  You can set this using Transact-SQL. For example:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 ```
+
 The following table details all intelligent query processing features, along with any requirement they have for database compatibility level.
 
 | **IQP Feature** | **Supported in Azure SQL Database** | **Supported in SQL Server** |
 | --- | --- | --- |
-| Adaptive Joins (Batch Mode) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
-| Approximate Count Distinct | Yes, public preview| Yes, starting in SQL Server 2019 CTP 2.0, public preview|
-| Batch Mode on Rowstore | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
-| Interleaved Execution | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
-| Memory Grant Feedback (Batch Mode) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
-| Memory Grant Feedback (Row Mode) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
-| Scalar UDF Inlining | No | Yes, starting in SQL Server 2019 CTP 2.1 under compatibility level 150, public preview|
-| Table Variable Deferred Compilation | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
+| [Adaptive Joins (Batch Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
+| [Approximate Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Yes, public preview| Yes, starting in SQL Server 2019 CTP 2.0, public preview|
+| [Batch Mode on Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
+| [Interleaved Execution](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
+| [Memory Grant Feedback (Batch Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|
+| [Memory Grant Feedback (Row Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
+| [Scalar UDF Inlining](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | No | Yes, starting in SQL Server 2019 CTP 2.1 under compatibility level 150, public preview|
+| [Table Variable Deferred Compilation](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|
 
 ## Batch mode adaptive joins
 

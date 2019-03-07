@@ -71,7 +71,7 @@ Logging in SSISDB is done by the login **##MS_SSISLogDBWorkerAgentLogin##**, for
 ### 6.3 Update the connection string used for logging.
 Call the stored procedure `[catalog].[update_logdb_info]` with the following parameter values:
 
--   `@server_name = '[Availability Group Listener DNS name],[Port]' `
+-   `@server_name = '[Availability Group Listener DNS name],[Port]'`
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 

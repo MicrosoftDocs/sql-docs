@@ -42,7 +42,7 @@ manager: craigg
   
  **Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
- *Download the new Microsoft OLE DB Driver for SQL Server: [https://www.microsoft.com/download/details.aspx?id=56730 ](https://www.microsoft.com/download/details.aspx?id=56730).  
+ *Download the new Microsoft OLE DB Driver for SQL Server: [https://www.microsoft.com/download/details.aspx?id=56730](https://www.microsoft.com/download/details.aspx?id=56730).  
 
 > [!IMPORTANT]  
 >  To connect to an availability group listener, a client must use a TCP connection string.  

@@ -45,6 +45,11 @@
             "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql",
             "redirect_document_id": true
         }, 
+	            {
+            "source_path": "docs/sql/relational-databases/performance/adaptive-query-processing.md",
+            "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing",
+            "redirect_document_id": true 
+        },
         {
             "source_path": "docs/advanced-analytics/tutorials/wrap-python-in-tsql-stored-procedure.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-iris-in-sql",

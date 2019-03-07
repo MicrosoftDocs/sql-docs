@@ -6881,7 +6881,7 @@
       - name: Considerations for Using Test Servers
         href: ../relational-databases/performance/considerations-for-using-test-servers.md
       - name: Intelligent Query Processing
-        href: ../relational-databases/performance/intelligent-query-processing.md  
+        href: ../relational-databases/performance/intelligent-query-processing.md
       - name: Performance Center 
         href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
       - name: Reduce the Production Server Tuning Load

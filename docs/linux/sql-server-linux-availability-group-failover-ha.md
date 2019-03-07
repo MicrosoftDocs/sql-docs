@@ -73,7 +73,7 @@ During a manual failover, the `pcs` command `move` or `crm` command `migrate` ad
    crm config show
    ```
 
-An example of the constraint which gets created becuase of a manual failover. 
+An example of the constraint which gets created because of a manual failover. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **RHEL/Ubuntu example**

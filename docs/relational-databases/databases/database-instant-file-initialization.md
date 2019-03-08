@@ -1,7 +1,7 @@
 ---
 title: "Database Instant File Initialization | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2018"
+ms.date: "03/07/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -46,15 +46,17 @@ Instant file initialization is only available if the [!INCLUDE[ssNoVersion](../.
   
 To grant an account the `Perform volume maintenance tasks` permission:  
   
-1.  On the computer where the backup file will be created, open the **Local Security Policy** application (`secpol.msc`).  
+1.  On the computer where the data file will be created, open the **Local Security Policy** application (`secpol.msc`).  
   
 2.  In the left pane, expand **Local Policies**, and then click **User Rights Assignment**.  
   
 3.  In the right pane, double-click **Perform volume maintenance tasks**.  
   
-4.  Click **Add User or Group** and add any user accounts that are used for backups.  
+4.  Click **Add User or Group** and add the account that runs the SQL Server service.  
   
 5.  Click **Apply**, and then close all **Local Security Policy** dialog boxes.  
+
+1. Restart the SQL Server service.
 
 > [!NOTE]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this permission can be granted to the service account at install time, during setup. If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).

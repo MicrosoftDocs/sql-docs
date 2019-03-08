@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "displaying procedure cache information"
   - "DBCC PROCCACHE statement"
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "logs [SQL Server], shrinking"
   - "reducing database size"
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

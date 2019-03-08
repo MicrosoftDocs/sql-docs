@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "session trace flags [SQL Server]"
   - "displaying trace flag status"
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

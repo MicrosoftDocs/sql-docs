@@ -32,7 +32,7 @@ helpviewer_keywords:
   - "checking database objects"
   - "page count accuracy [SQL Server]"
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

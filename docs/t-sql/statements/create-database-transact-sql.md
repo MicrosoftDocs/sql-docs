@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Analytics Platform System
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "03/08/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -1284,7 +1284,7 @@ To create a database, a login must be one of the following:
 
 - The server-level principal login
 - The Azure AD administrator for the local Azure SQL Server
-- A login that is a member of the `dbmanager` database role
+- A login that is a member of the `dbcreator` database role
 
 ## Examples
 

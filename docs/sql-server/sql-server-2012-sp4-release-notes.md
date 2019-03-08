@@ -17,7 +17,7 @@ monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 This topic contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
 
 The Service Packs are available online only, not on the installation media, and can be downloaded as follows:
-- [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
+- [SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937)
 - [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
 - [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
 - [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
@@ -240,7 +240,7 @@ This release introduces several forward compatibility scenarios for DAC packages
 - [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185)
 - [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
-- [How to identify your SQL Server version and edition ](https://support.microsoft.com/help/321185) 
+- [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185) 
 - [How to determine the version and edition of SQL Server](https://support.microsoft.com/kb/321185)  
 - [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 

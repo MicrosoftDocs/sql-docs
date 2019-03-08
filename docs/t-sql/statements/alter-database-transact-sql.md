@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "03/08/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -766,10 +766,10 @@ You can use catalog views, system functions, and system stored procedures to ret
 
 ## Permissions
 
-Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.
+Only the server-level principal login (created by the provisioning process) or members of the `dbcreator` database role can alter a database.
 
 > [!IMPORTANT]
-> The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.
+> The owner of the database cannot alter the database unless they are a member of the `dbcreator` role.
 
 ## Examples
 

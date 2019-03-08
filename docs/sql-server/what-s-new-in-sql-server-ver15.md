@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 02/28/2019
-ms.prod: "sql-server-2018"
+ms.date: 03/01/2019
+ms.prod: "sql-server-2019"
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: "article"
@@ -458,7 +458,7 @@ FROM sys.dm_exec_requests AS d
   - Supports scenarios using SQL Server big data cluster. (CTP 2.0)
   
   > [!TIP]
-  > For the latest improvements to Azure Data Studio, see the [Azure Data Studio release notes](../azure-data-studio/release-notes.md).
+  > For the latest improvements to Azure Data Studio, see the [Azure Data Studio release notes](../azure-data-studio/release-notes-azure-data-studio.md).
 
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md): Supports [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

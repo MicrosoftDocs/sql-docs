@@ -6872,8 +6872,6 @@
               href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Tune
     items: 
-      - name: Adaptive Query Processing
-        href: ../relational-databases/performance/adaptive-query-processing.md
       - name: Automatic Tuning
         href: ../relational-databases/automatic-tuning/automatic-tuning.md
       - name: Cardinality estimation
@@ -8013,7 +8011,7 @@
     - name: Install
       href: ../azure-data-studio/download.md
     - name: Release notes
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: Quickstarts
       items:
       - name: Connect & query SQL Server

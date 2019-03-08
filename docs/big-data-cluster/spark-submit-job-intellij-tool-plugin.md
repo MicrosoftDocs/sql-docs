@@ -155,7 +155,7 @@ Ensure you have satisfied the WINUTILS.EXE prerequisite.
 
 
 ### Spark Livy Interactive Session Console(Scala)
-It is only supported on IntelliJ 2018.2 and 2018.3.
+The Spark Livy Interactive Session Console(Scala) is only supported on IntelliJ 2018.2 and 2018.3.
 
 1. From the menu bar, navigate to **Run** > **Edit Configurations...**.
 
@@ -180,11 +180,11 @@ It is only supported on IntelliJ 2018.2 and 2018.3.
 
     ![Interactive Console Result](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
 
-### Send Selection to Spark Console
+### Send Selection To Spark Console
 
-It is convenient for you to foresee the script result by sending some code to the local console or Livy Interactive Session Console(Scala). You can highlight some code in the Scala file, then right-click **Send Selection To Spark Console**. The selected code will be sent to the console and be performed. The result will be displayed after the code in the console. The console will check the errors if existing.  
+For convenience, you can see the script result by sending some code to the Local Console or Livy Interactive Session Console(Scala). You can highlight some code in the Scala file, then right-click **Send Selection To Spark Console**. The selected code will be sent to the console and be performed. The result will be displayed after the code in the console. The console will check the errors if existing.  
 
-   ![Send Selection to Spark Console](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
+   ![Send Selection To Spark Console](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## Next steps
 For more information on SQL Server Big Data Cluster and related scenarios, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md)?

@@ -692,7 +692,7 @@ manager: kfile
   
 1.  From the **Report Builder** button, click **Save As**.  
   
-2.  Click **Desktop`, `My Documents**, or **My computer**, and then browse to the folder where you want to save the report.  
+2.  Click **Desktop**, **My Documents**, or **My computer**, and then browse to the folder where you want to save the report.  
   
 3.  In **Name**, replace the default name with **Sales Comparison Summary**.  
   

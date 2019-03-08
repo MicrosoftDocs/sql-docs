@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "output buffers"
   - "current output buffer"
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

@@ -739,40 +739,6 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
--- Azure SQL Database Syntax
-ALTER DATABASE { database_name | CURRENT }
-{
-    <file_and_filegroup_options>
-  | SET <option_spec> [ ,...n ]
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
-}
-[;]
-
-<file_and_filegroup_options>::=
-  <add_or_modify_files>::=
-  <filespec>::=
-  <add_or_modify_filegroups>::=
-  <filegroup_updatability_option>::=
-
-<option_spec> ::=
-{
-    <auto_option>
-  | <change_tracking_option>
-  | <cursor_option>
-  | <db_encryption_option>
-  | <db_update_option>
-  | <db_user_access_option>
-  | <delayed_durability_option>
-  | <parameterization_option>
-  | <query_store_options>
-  | <snapshot_option>
-  | <sql_option>
-  | <target_recovery_time_option>
-  | <temporal_history_retention>
-}
-
-```
-
 ## Arguments
 
 *database_name*

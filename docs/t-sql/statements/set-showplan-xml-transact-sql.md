@@ -56,7 +56,7 @@ SET SHOWPLAN_XML { ON | OFF }
   
  The document containing the XML schema for the XML output by SET SHOWPLAN_XML is copied during setup to a local directory on the computer on which Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. It can be found on the drive containing the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation files, at:  
   
- \Microsoft SQL Server\130\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
+ \Microsoft SQL Server\140\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
  The Showplan Schema can also be found at [this Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   

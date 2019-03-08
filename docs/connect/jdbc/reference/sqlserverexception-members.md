@@ -21,7 +21,7 @@ manager: craigg
 
 |Name|Description|  
 |----------|-----------------|  
-|[SQLServerException ](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initializes a new instance of the SQLServerException class.|  
+|[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initializes a new instance of the SQLServerException class.|  
   
 ## Fields  
  None.  

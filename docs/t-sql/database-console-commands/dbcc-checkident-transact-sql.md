@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "identity values [SQL Server], reseeding"
   - "reporting current identity values"
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

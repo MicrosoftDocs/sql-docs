@@ -13809,6 +13809,11 @@
             "source_path": "docs/azure-data-studio/dashboards.md",
             "redirect_url": "/sql/azure-data-studio/insight-widgets",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/2014/analysis-services/review-aggregation-usage-usage-based-optimiation-wizard.md",
+            "redirect_url": "/sql/analysis-services/review-aggregation-usage-usage-based-optimization-wizard?view=sql-server-2014",
+            "redirect_document_id": true
         }
     ]
 }

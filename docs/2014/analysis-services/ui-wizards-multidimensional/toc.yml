@@ -185,8 +185,8 @@
     href: ../specify-query-criteria-usage-based-optimization-wizard.md
   - name: Review the Queries that will be Optimized (Usage-Based Optimization Wizard)
     href: ../review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md
-  - name: Review Aggregation Usage (Usage-Based Optimiation Wizard)
-    href: ../review-aggregation-usage-usage-based-optimiation-wizard.md
+  - name: Review Aggregation Usage (Usage-Based Optimization Wizard)
+    href: ../review-aggregation-usage-usage-based-optimization-wizard.md
   - name: Specify Object Counts (Usage-Based Optimization Wizard)
     href: ../specify-object-counts-usage-based-optimization-wizard.md
   - name: Set Aggregation Options (Usage-Based Optimization Wizard)

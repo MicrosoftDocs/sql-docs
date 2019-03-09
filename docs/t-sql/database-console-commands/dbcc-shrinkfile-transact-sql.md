@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "reducing database size"
   - "DBCC SHRINKFILE statement"
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

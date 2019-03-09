@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "DBCC statement syntax information"
   - "DBCC HELP statement"
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

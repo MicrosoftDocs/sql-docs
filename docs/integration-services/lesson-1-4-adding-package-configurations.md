@@ -26,6 +26,8 @@ You will create two configuration files, DataTransferConfig.dtsConfig and LoadXM
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] recognizes that the DataTransferConfig.dtsConfig and LoadXMLData.dtsConfig are dependencies of the DataTransfer and LoadXMLData packages, and automatically includes the configuration files when you create the deployment bundle in the next lesson.  
   
 ### To create indirect configuration for the DataTransfer package  
+
+Check the project's current Deployment Model, and set it to **Package Deployment Model**, if needed. On the **Project** menu, click **Convert to Package Deployment Model**
   
 1.  In Solution Explorer, double-click DataTransfer.dtsx.  
   

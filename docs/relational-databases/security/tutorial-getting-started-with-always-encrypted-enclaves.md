@@ -177,6 +177,9 @@ In this step, you will create a database with some sample data, which you will e
 3. Make sure you are connected to the newly created database. Create a new table, named Employees.
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,

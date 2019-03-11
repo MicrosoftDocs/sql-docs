@@ -228,7 +228,7 @@ In this step, you will create a column master key and a column encryption key th
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
     4. Select **Allow enclave computations**.
     5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
-    6. Select your key if it already exists, or follow the directions on the form to create a new key.
+    6. Select your certificate if it already exists, or click the **Generate Certificate** button to create a new one.
     7. Select **OK**.
 
         ![Allow enclave computations](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)

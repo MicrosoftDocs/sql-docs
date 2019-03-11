@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/17/2018"
+ms.date: "03/11/2019"
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ""
@@ -179,7 +179,7 @@ Use the following guidelines to develop installation commands that have correct 
 -   [Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
 -   [Instance ID or InstanceID Configuration](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#InstanceID) 
-/FTSVCACCOUNT  
+
 ##  <a name="Install"></a> Installation Parameters  
  Use the parameters in the following table to develop command line scripts for installation.  
   

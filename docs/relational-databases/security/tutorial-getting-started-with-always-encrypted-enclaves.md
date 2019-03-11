@@ -302,6 +302,7 @@ Now, you can run rich queries against the encrypted columns. Some query processi
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. Try the same query again in the query window that does not have Always Encrypted enabled, and note the failure that occurs.
 
 ## Next Steps
 See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases. You can also try the following:

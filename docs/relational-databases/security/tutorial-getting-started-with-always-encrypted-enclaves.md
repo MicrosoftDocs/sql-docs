@@ -250,6 +250,7 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
     3. Select Connection \> Change Connection.
     4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
     5. Select **Connect**.
+    6. If prompted to enable parameterization for Always Encrypted queries, click **Yes**.
 2. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.

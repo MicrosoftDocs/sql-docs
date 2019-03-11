@@ -136,8 +136,8 @@ In this step, you will enable the functionality of Always Encrypted using enclav
 2. Configure the secure enclave type to VBS.
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. Restart your SQL Server instance for the previous change to take effect. You can restart the instance in SSMS by right-clicking on it in Object Explorer and selecting Restart. Once the instance restarts, reconnect to it.
@@ -146,7 +146,7 @@ In this step, you will enable the functionality of Always Encrypted using enclav
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
     The query should return a row that looks like the following:  
@@ -158,7 +158,7 @@ In this step, you will enable the functionality of Always Encrypted using enclav
 5. To enable rich computations on encrypted columns, run the following query:
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -171,7 +171,7 @@ In this step, you will create a database with some sample data, which you will e
 2. Create a new database, named ContosoHR.
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2;
     ```
 
 3. Make sure you are connected to the newly created database. Create a new table, named Employees.
@@ -184,7 +184,7 @@ In this step, you will create a database with some sample data, which you will e
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
+    ) ON [PRIMARY];
     GO
     ```
 
@@ -200,7 +200,7 @@ In this step, you will create a database with some sample data, which you will e
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
+            , $31692);
     GO
 
     INSERT INTO [dbo].[Employees]
@@ -212,7 +212,7 @@ In this step, you will create a database with some sample data, which you will e
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
+            , $55415);
     GO
     ```
 
@@ -263,25 +263,25 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
     ALTER COLUMN [SSN] [char] (11)
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
+    (ONLINE = ON);
     GO
-    DBCC FREEPROCCACHE
+    DBCC FREEPROCCACHE;
     GO
 
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
+    (ONLINE = ON);
     GO
-    DBCC FREEPROCCACHE
+    DBCC FREEPROCCACHE;
     GO
     ```
 
 4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns. With the Always Encrypted enabled query window, try the same query to see the data decrypted.
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## Step 7: Run rich queries against encrypted columns
@@ -297,8 +297,8 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 2. In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

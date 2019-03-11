@@ -30,13 +30,13 @@ Creates a Workload Management Classifier.  The classifier assigns incoming reque
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## Syntax  
+## Syntax
   
-```t-sql
+```sql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    ( WORKLOAD_GROUP = ‘name’  
-     ,MEMBERNAME = ‘security_account’
+    ( WORKLOAD_GROUP = 'name'  
+     ,MEMBERNAME = 'security_account'
  [ [ , ] IMPORTANCE = { LOW | BELOW NORMAL | NORMAL | ABOVE NORMAL | HIGH }])
 [;]
 ```
@@ -84,7 +84,7 @@ Importance influences the order in which requests are scheduled, thus giving fir
 
  The following example shows how to create a workload classifier named `wgcELTRole`. It uses the staticrc20 workload group, the user `ELTRole`, and sets the importance to `above_normal`.
   
-```t-sql
+```sql
 CREATE WORKLOAD CLASSIFIER wgcELTRole
   WITH (WORKLOAD_GROUP = 'staticrc20'
        ,MEMBERNAME = 'ELTRole'
@@ -98,4 +98,4 @@ GO
 Catalog view [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
 Catalog view [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
 Catalog view [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
-SQL Data Warehouse [Classification](/azure/sql-data-warehouse/classification)
+[SQL Data Warehouse Classification](/azure/sql-data-warehouse/classification)

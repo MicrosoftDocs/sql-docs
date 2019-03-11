@@ -32,7 +32,7 @@ monikerRange: "||=azure-sqldw-latest||=sqlallproducts-allversions"
   
 ## Syntax  
   
-```
+```sql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
   
@@ -53,7 +53,7 @@ DROP WORKLOAD CLASSIFIER classifier_name;
 
  The following example drops the workload classifier named `wgcELTROLE`.  
   
-```
+```sql
 DROP WORKLOAD CLASSIFIER wgcELTRole;
 ```
 

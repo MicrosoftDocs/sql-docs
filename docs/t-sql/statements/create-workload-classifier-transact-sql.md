@@ -20,6 +20,7 @@ ms.assetid:
 author: ronortloff
 ms.author: rortloff
 manager: craigg
+monikerRange: "||=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL) (Preview)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

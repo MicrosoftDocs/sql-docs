@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "space [SQL Server], transaction logs"
   - "DBCC SQLPERF statement"
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

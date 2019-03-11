@@ -31,7 +31,7 @@ To use notebooks, you must install the following prerequisites:
 ## Connect to the SQL Server big data cluster end point
 
 You can connect to different end points in the cluster. You can connect to the Microsoft SQL Server connection type or to the SQL Server big data cluster end point.
-In Azure Data Studio (preview), press F1, and click **New Connection** and you can connect to your SQL Server big data cluster end point.
+In Azure Data Studio, press F1, and click **New Connection** and you can connect to your SQL Server big data cluster end point.
 
 ![image1](media/notebooks-guidance/image1.png)
 

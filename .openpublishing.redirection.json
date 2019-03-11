@@ -45,6 +45,11 @@
             "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql",
             "redirect_document_id": true
         }, 
+	            {
+            "source_path": "docs/sql/relational-databases/performance/adaptive-query-processing.md",
+            "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing",
+            "redirect_document_id": true 
+        },
         {
             "source_path": "docs/advanced-analytics/tutorials/wrap-python-in-tsql-stored-procedure.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-iris-in-sql",
@@ -5153,7 +5158,7 @@
       {
         "source_path": "docs/sql-operations-studio/dashboards.md",
         "redirect_url": "/sql/azure-data-studio/dashboards",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/sql-operations-studio/download.md",
@@ -5178,7 +5183,7 @@
       {
         "source_path": "docs/sql-operations-studio/insight-widgets.md",
         "redirect_url": "/sql/azure-data-studio/insight-widgets",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/sql-operations-studio/integrated-terminal.md",
@@ -5207,7 +5212,12 @@
       },
       {
         "source_path": "docs/sql-operations-studio/release-notes.md",
-        "redirect_url": "/sql/azure-data-studio/release-notes",
+        "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/azure-data-studio/release-notes.md",
+        "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
         "redirect_document_id": true
       },
       {
@@ -13793,6 +13803,11 @@
         {
             "source_path": "docs/analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/azure-data-studio/dashboards.md",
+            "redirect_url": "/sql/azure-data-studio/insight-widgets",
             "redirect_document_id": true
         }
     ]

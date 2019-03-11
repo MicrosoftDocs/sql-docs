@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server 2019 big data clusters (preview) on 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -79,30 +79,32 @@ The cluster configuration can be customized using a set of environment variables
 
 | Environment variable | Required | Default value | Description |
 |---|---|---|---|
-| **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Y').  |
+| **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Yes').  |
 | **CLUSTER_NAME** | Yes | N/A | The name of the Kubernetes namespace to deploy SQLServer big data cluster into. |
 | **CLUSTER_PLATFORM** | Yes | N/A | The platform the Kubernetes cluster is deployed. Can be `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.2 only valued allowed is 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.3 only valued allowed is 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | The number of data pool replicas to build out. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | The number of storage pool replicas to build out. |
 | **DOCKER_REGISTRY** | Yes | TBD | The private registry where the images used to deploy the cluster are stored. |
 | **DOCKER_REPOSITORY** | Yes | TBD | The private repository within the above registry where images are stored.  It is required for the duration of the gated public preview. |
 | **DOCKER_USERNAME** | Yes | N/A | The username to access the container images in case they are stored in a private repository. It is required for the duration of the gated public preview. |
 | **DOCKER_PASSWORD** | Yes | N/A | The password to access the above private repository. It is required for the duration of the gated public preview.|
-| **DOCKER_EMAIL** | Yes | N/A | The email associated with the above private repository. It is required for the duration of the gated private preview. |
 | **DOCKER_IMAGE_TAG** | No | latest | The label used to tag the images. |
 | **DOCKER_IMAGE_POLICY** | No | Always | Always force a pull of the images.  |
-| **DOCKER_PRIVATE_REGISTRY** | Yes | 1 | For the timeframe of the gated public preview, this value has to be set to 1. |
+| **DOCKER_PRIVATE_REGISTRY** | Yes | N/A | For the timeframe of the gated public preview, you must set this value to "1". |
 | **CONTROLLER_USERNAME** | Yes | N/A | The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | Yes | N/A | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | Yes | N/A | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | Yes | N/A | The password of SA user for SQL master instance. |
 | **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) article for more details. If you deploy SQL Server big data cluster on minikube and USE_PERSISTENT_VOLUME=true, you must set the value for `STORAGE_CLASS_NAME=standard`. |
 | **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) article for more details. If you deploy SQL Server big data cluster on minikube, the default storage class name is different and you must override it by setting `STORAGE_CLASS_NAME=standard`. |
+| **CONTROLLER_PORT** | No | 30080 | The TCP/IP port that the controller service listens on the public network. |
 | **MASTER_SQL_PORT** | No | 31433 | The TCP/IP port that the master SQL instance listens on the public network. |
 | **KNOX_PORT** | No | 30443 | The TCP/IP port that Apache Knox listens on the public network. |
+| **PROXY_PORT** | No | 30777 | The TCP/IP port that proxy service listens on the public network. This is the port used for computing the portal URL. |
 | **GRAFANA_PORT** | No | 30888 | The TCP/IP port that the Grafana monitoring application listens on the public network. |
 | **KIBANA_PORT** | No | 30999 | The TCP/IP port that the Kibana log search application listens on the public network. |
+
 
 > [!IMPORTANT]
 >1. For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
@@ -120,7 +122,7 @@ Initialize the following environment variables, they are required for deploying 
 Using a CMD window (not PowerShell), configure the following environment variables. Do not use quotes around the values.
 
 ```cmd
-SET ACCEPT_EULA=Y
+SET ACCEPT_EULA=yes
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
@@ -132,7 +134,6 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -141,7 +142,7 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Initialize the following environment variables. In bash, you can use quotes around each value.
 
 ```bash
-export ACCEPT_EULA=Y
+export ACCEPT_EULA=yes
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
@@ -153,7 +154,6 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -184,7 +184,7 @@ If you are deploying with kubeadm on your own physical or virtual machines, you 
 The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server big data cluster on your Kubernetes cluster, run the following command:
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
@@ -197,7 +197,7 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -210,21 +210,23 @@ When the deployment finishes, the output notifies you of success:
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Get the SQL Server Master instance and SQL Server big data cluster IP addresses
+## <a id="masterip"></a> Get big data cluster endpoints
 
-After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the SQL Server big data cluster IP. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well. You can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777/portal**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address-of-endpoint-master-pool\>,31433**). Similarly, you can connect to the SQL Server big data cluster (HDFS/Spark Gateway) IP associated with the **endpoint-security** service.
 
-### AKS
-
-If you are using AKS, Azure provides the Azure LoadBalancer service. Run following command:
+The following kubectl commands retrieve common endpoints for the big data cluster:
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-Look for the **External-IP** value that is assigned to the service. Then, connect to the SQL Server master instance using the IP address at port 31433 (Ex: **\<ip-address\>,31433**) and to SQL Server big data cluster endpoint using the external-IP for `service-security-lb` service. 
+Look for the **External-IP** value that is assigned to each service.
+
+All cluster endpoints are also outlined in the **Service Endpoints** tab in the Cluster Administration Portal. You can access the portal using the external IP address and port number for the `endpoint-service-proxy` (for example: **https://\<ip-address-of-endpoint-service-proxy\>:30777/portal**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above. You can also use the Cluster Administration Portal to monitor the deployment.
+
+For more information on how to connect, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
 ### Minikube
 
@@ -248,8 +250,11 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
 1. Delete the old cluster with the `mssqlctl delete cluster` command.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > Use the version of **mssqlctl** that matches your cluster. Do not delete an older cluster with the newer version of **mssqlctl**.
 
 1. Uninstall any old versions of **mssqlctl**.
 
@@ -261,17 +266,17 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > You should not install the new version of **mssqlctl** without uninstalling any older versions first.
 
 1. Install the latest version of **mssqlctl**. 
-   
+
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
    **Linux:**
-   
+
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]
@@ -323,14 +328,11 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    | Service | Description |
    |---|---|
    | **endpoint-master-pool** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Supports tools and clients that manage the cluster. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **service-security-lb**<br/>**service-security-nodeport** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+   | **endpoint-controller** | Supports tools and clients that manage the cluster. |
+   | **endpoint-service-proxy** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **endpoint-security** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
 
-   > [!NOTE]
-   > The service names can vary depending on your Kubernetes environment. When deploying on Azure Kubernetes Service (AKS), the service names end with **-lb**. For minikube and kubeadm deployments, the service names end with **-nodeport**.
-
-1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **service-proxy-lb** service to start before accessing this portal, so it won't be available at the beginning of a deployment.
+1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **endpoint-service-proxy** service to start before accessing this portal, so it won't be available at the beginning of a deployment.
 
 > [!TIP]
 > For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).

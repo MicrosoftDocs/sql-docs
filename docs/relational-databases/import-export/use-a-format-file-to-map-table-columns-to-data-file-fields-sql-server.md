@@ -96,10 +96,10 @@ Compare the changes:
 
 ```
 The modified format file now reflects:
-* The first data field in `myRemap.bcp` is mapped to the first column, ` myRemap.. PersonID`
+* The first data field in `myRemap.bcp` is mapped to the first column, `myRemap.. PersonID`
 * The second data field in `myRemap.bcp` is mapped to the third column, `myRemap.. LastName`
 * The third data field in `myRemap.bcp` is mapped to the second column, `myRemap.. FirstName`
-* The fourth data field in `myRemap.bcp` is mapped to the fourth column, ` myRemap.. Gender`
+* The fourth data field in `myRemap.bcp` is mapped to the fourth column, `myRemap.. Gender`
 
 ### Creating an XML Format File <a name="xml_format_file"></a>  
 Please review [XML Format Files (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) for detailed information.  The following command will use the [bcp utility](../../tools/bcp-utility.md) to create an xml format file, `myRemap.xml`, based on the schema of `myRemap`.  In addition, the qualifier `c` is used to specify character data, `t,` is used to specify a comma as a field terminator, and `T` is used to specify a trusted connection using integrated security.  The `x` qualifier must be used to generate an XML-based format file.  At a command prompt, enter the following command:

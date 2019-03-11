@@ -1,7 +1,7 @@
 ---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "03/07/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -390,7 +390,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
       }
     | { SPLIT | MERGE } RANGE (boundary_value)
     | SWITCH [ PARTITION source_partition_number
-        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET_PARTITION = ON | OFF )
+        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET = ON | OFF )
 }
 [;]
 

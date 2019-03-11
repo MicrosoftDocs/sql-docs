@@ -3,7 +3,7 @@ title: Troubleshoot data collection for machine learning - SQL Server Machine Le
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -86,7 +86,7 @@ To get the R version and RevoScaleR versions, open an R command prompt, or open 
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-The R console displays the version information on startup. For example, the following version represents the default configuration for SQL Server 2017 CTP 2.0:
+The R console displays the version information on startup. For example, the following version represents the default configuration for SQL Server 2017:
 
     *Microsoft R Open 3.3.3*
 
@@ -117,7 +117,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 If Machine Learning Services is not running, you can determine the installed Python version by looking at the pythonlauncher.config file. We recommend that you make and open a copy of the file so that you don't accidentally change any properties.
 
-1. For SQL Server 2017 only: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. For SQL Server 2017 only: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
 2. Get the value for **PYTHONHOME**.
 3. Get the value of the current working directory.
 
@@ -205,7 +205,7 @@ You can get these logs from the following default locations:
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
 > The exact folder name differs based on the instance name. Depending on your configuration, the folder might be on a different drive.

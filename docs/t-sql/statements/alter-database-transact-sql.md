@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "03/08/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -739,40 +739,6 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
--- Azure SQL Database Syntax
-ALTER DATABASE { database_name | CURRENT }
-{
-    <file_and_filegroup_options>
-  | SET <option_spec> [ ,...n ]
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
-}
-[;]
-
-<file_and_filegroup_options>::=
-  <add_or_modify_files>::=
-  <filespec>::=
-  <add_or_modify_filegroups>::=
-  <filegroup_updatability_option>::=
-
-<option_spec> ::=
-{
-    <auto_option>
-  | <change_tracking_option>
-  | <cursor_option>
-  | <db_encryption_option>
-  | <db_update_option>
-  | <db_user_access_option>
-  | <delayed_durability_option>
-  | <parameterization_option>
-  | <query_store_options>
-  | <snapshot_option>
-  | <sql_option>
-  | <target_recovery_time_option>
-  | <temporal_history_retention>
-}
-
-```
-
 ## Arguments
 
 *database_name*
@@ -800,10 +766,10 @@ You can use catalog views, system functions, and system stored procedures to ret
 
 ## Permissions
 
-Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.
+Only the server-level principal login (created by the provisioning process) or members of the `dbcreator` database role can alter a database.
 
 > [!IMPORTANT]
-> The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.
+> The owner of the database cannot alter the database unless they are a member of the `dbcreator` role.
 
 ## Examples
 

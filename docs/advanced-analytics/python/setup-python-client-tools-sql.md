@@ -300,4 +300,4 @@ You can now import **revoscalepy**, **microsoftml**, or **azureml** modules. You
 Now that you have tools and a working connection to SQL Server, expand your skills by running through the Python quickstarts using [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [Quickstart: Verify Python exists in SQL Server ](../tutorials/quickstart-python-verify.md)
+> [Quickstart: Verify Python exists in SQL Server](../tutorials/quickstart-python-verify.md)

@@ -15,7 +15,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Install SQL Server 2014
-## [ Download SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+## [Download SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Thank you to [Scott Hanselman](http://www.hanselman.com/) for collecting all of the installer package links in one place!**
   
  This topic provides an overview of different installation options we have for installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information about the various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that can be installed, and the installation process, see [Installation for SQL Server 2014](installation-for-sql-server.md).  

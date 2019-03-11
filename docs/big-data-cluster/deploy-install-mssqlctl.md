@@ -5,7 +5,7 @@ description: Learn how to install the mssqlctl tool for installing and managing 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/14/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -38,7 +38,7 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 1. Install **mssqlctl** with the following command:
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl installation
@@ -68,7 +68,7 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

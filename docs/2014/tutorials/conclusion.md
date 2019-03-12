@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1e6fde6-c3a7-4b91-b176-fa465325dd21
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Conclusion

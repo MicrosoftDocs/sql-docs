@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Add an Additional Reporting Services Web Front-end to a Farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode includes components needed for application servers and web front-end (WFE) servers. This topic focuses on installing the required [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components for a WFE server, including the application pages used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features such as subscriptions, data alerts, and [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. The primary [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation needed for a WFE is to install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint 2010 products.  

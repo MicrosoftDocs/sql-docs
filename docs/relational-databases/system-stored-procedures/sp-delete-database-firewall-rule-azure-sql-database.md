@@ -2,10 +2,8 @@
 title: "sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2017"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_database_firewall_rule"

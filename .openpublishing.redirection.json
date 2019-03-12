@@ -45,6 +45,11 @@
             "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql",
             "redirect_document_id": true
         }, 
+	            {
+            "source_path": "docs/sql/relational-databases/performance/adaptive-query-processing.md",
+            "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing",
+            "redirect_document_id": true 
+        },
         {
             "source_path": "docs/advanced-analytics/tutorials/wrap-python-in-tsql-stored-procedure.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-iris-in-sql",
@@ -271,329 +276,334 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md",
+            "redirect_url": "/sql/database-engine/availability-groups/windows/distributed-availability-groups",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/2014/relational-database/replication/what-s-new-replication.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/sql-server-replication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/alternate-snapshot-folder-locations.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options?view=sql-server-2014",
             "redirect_document_id": false
         },
             
         {
             "source_path": "docs/2014/relational-database/replication/compressed-snapshots.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options?view=sql-server-2014",
             "redirect_document_id": false
         }, 
         {
             "source_path": "docs/2014/relational-database/replication/create-and-apply-the-snapshot.md",
-            "redirect_url": "/sql/relational-database/replication/create-and-apply-the-initial-snapshot?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/create-and-apply-the-initial-snapshot?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md",
-            "redirect_url": "/sql/relational-database/replication/execute-scripts-before-and-after-a-snapshot-is-applied?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/snapshots-for-merge-publications-with-parameterized-filters.md",
-            "redirect_url": "/sql/relational-database/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/synchronize-subscriptions-replication.md",
-            "redirect_url": "/sql/relational-database/replication/synchronize-data?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/synchronize-data?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/transfer-snapshots-through-ftp.md",
-            "redirect_url": "/sql/relational-database/replication/publish/deliver-a-snapshot-through-ftp?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/deliver-a-snapshot-through-ftp?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/view-conflict-information-for-merge-publications.md",
-            "redirect_url": "/sql/relational-database/replication/view-and-resolve-data-conflicts-for-merge-publications?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/administration/administration-replication.md",
-            "redirect_url": "/sql/relational-database/replication/adminstration/frequently-asked-questions-for-replication-administrators?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/agents/replication-agents.md",
-            "redirect_url": "/sql/relational-database/replication/agents/replication-agents-overview?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/agents/replication-agents-overview?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/merge/specify-the-processing-order-of-merge-articles.md",
-            "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/monitor/monitoring-replication-overview.md",
-            "redirect_url": "/sql/relational-database/replication/monitor/monitoring-replication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/monitor/monitoring-replication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/specify-snapshot-format-sql-server-management-studio.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md",
-            "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md",
-            "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
             "redirect_document_id": false 
         },
         {
             "source_path": "docs/2014/relational-database/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md",
-            "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor.md",
-            "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md",
-            "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/compress-snapshot-files-sql-server-management-studio.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/create-updatable-subscription-to-transactional-publication.md",
-            "redirect_url": "/sql/relational-database/replication/create-an-updatable-subscription-to-a-transactional-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md",
-            "redirect_url": "/sql/relational-database/replication/publish/create-an-updatable-subscription-to-a-transactional-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md",
-            "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/specify-that-a-merge-table-article-is-download-only.md",
-            "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md",
-            "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md",
-            "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/specify-the-default-snapshot-location-sql-server-management-studio.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publish/specify-the-processing-order-of-merge-table-articles.md",
-            "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/specify-merge-replication-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/security/manage-logins-and-passwords-in-replication.md",
-            "redirect_url": "/sql/relational-database/replication/security/identity-and-access-control-replication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/security/identity-and-access-control-replication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/security/secure-a-replication-topology.md",
-            "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/security/secure-deployment-replication.md",
-            "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/security/secure-development-replication.md",
-            "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/security/security-and-protection-replication.md",
-            "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/security/security-overview-replication.md",
-            "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/advanced-merge-replication-resolve-merge-replication-conflicts.md",
-            "redirect_url": "/sql/relational-database/replication/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/validate-replicated-data.md",
-            "redirect_url": "/sql/relational-database/replication/validate-data-at-the-subscriber?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/validate-data-at-the-subscriber?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distribution-database-properties.md",
-            "redirect_url": "/sql/relational-database/replication/distribution-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distributor-properties-general.md",
-            "redirect_url": "/sql/relational-database/replication/distribution-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distributor-properties-publishers.md",
-            "redirect_url": "/sql/relational-database/replication/distribution-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publisher-properties-distributor.md",
-            "redirect_url": "/sql/relational-database/replication/publisher-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publisher-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publisher-properties-publisher-general.md",
-            "redirect_url": "/sql/relational-database/replication/publisher-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publisher-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publisher-properties-publisher-publication-databases.md",
-            "redirect_url": "/sql/relational-database/replication/publisher-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publisher-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publisher-properties-publisher-subscribers.md",
-            "redirect_url": "/sql/relational-database/replication/publisher-properties?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publisher-properties?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/technical-reference-replication.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/sql-server-replication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/properties-reference-replication.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/sql-server-replication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publication-properties-agent-security.md",
-            "redirect_url": "/sql/relational-database/replication/publication-properties-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publication-properties-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publication-properties-data-partitions.md",
-            "redirect_url": "/sql/relational-database/replication/publication-properties-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publication-properties-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publication-properties-filter-rows.md",
-            "redirect_url": "/sql/relational-database/replication/publication-properties-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publication-properties-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publication-properties-ftp-snapshot-and-internet.md",
-            "redirect_url": "/sql/relational-database/replication/publication-properties-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publication-properties-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publication-properties-general.md",
-            "redirect_url": "/sql/relational-database/replication/publication-properties-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publication-properties-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publication-properties-publication-access-list.md",
-            "redirect_url": "/sql/relational-database/replication/publication-properties-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publication-properties-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/publication-properties-snapshot.md",
-            "redirect_url": "/sql/relational-database/replication/publication-properties-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publication-properties-publication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/replication-features-and-tasks.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/sql-server-replication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/subscription-properties-publisher.md",
-            "redirect_url": "/sql/relational-database/replication/subscription-properties-subscription?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/subscription-properties-subscriber?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/subscription-properties-subscription.md",
-            "redirect_url": "/sql/relational-database/replication/subscription-properties-subscriber?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/subscription-properties-subscriber?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/tools-reference-replication.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/sql-server-replication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/replication-monitor-main-page.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/sql-server-replication?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distributor-information-agents.md",
-            "redirect_url": "/sql/relational-database/replication/distributor-information-publications?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-information-publications?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md",
-            "redirect_url": "/sql/relational-database/replication/distributor-information-publications?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-information-publications?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md",
-            "redirect_url": "/sql/relational-database/replication/distributor-information-publications?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-information-publications?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md",
-            "redirect_url": "/sql/relational-database/replication/distributor-information-publications?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/distributor-information-publications?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md",
-            "redirect_url": "/sql/relational-database/replication/subscription-synchronization-history?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/subscription-synchronization-history?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md",
-            "redirect_url": "/sql/relational-database/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-2014",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-database/replication/merge/create-a-publication.md",
-            "redirect_url": "/sql/relational-database/replication/merge/create-a-publication?view=sql-server-2014",
+            "redirect_url": "/sql/relational-databases/replication/publish/create-a-publication?view=sql-server-2014",
             "redirect_document_id": true
         },    
         {
@@ -1739,337 +1749,337 @@
         },
         {
             "source_path": "docs/relational-database/replication/alternate-snapshot-folder-locations.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/compressed-snapshots.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options",
             "redirect_document_id": false
         }, 
         {
             "source_path": "docs/relational-database/replication/create-and-apply-the-snapshot.md",
-            "redirect_url": "/sql/relational-database/replication/create-and-apply-the-initial-snapshot",
+            "redirect_url": "/sql/relational-databases/replication/create-and-apply-the-initial-snapshot",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/transactional/publication-types-for-transactional-replication.md",
-            "redirect_url": "/sql/relational-database/replication/transactional/transactional-replication",
+            "redirect_url": "/sql/relational-databases/replication/transactional/transactional-replication",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/execute-scripts-before-and-after-a-snapshot-is-applied.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/snapshots-for-merge-publications-with-parameterized-filters.md",
-            "redirect_url": "/sql/relational-database/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters",
+            "redirect_url": "/sql/relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/synchronize-subscriptions-replication.md",
-            "redirect_url": "/sql/relational-database/replication/synchronize-data",
+            "redirect_url": "/sql/relational-databases/replication/synchronize-data",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/transfer-snapshots-through-ftp.md",
-            "redirect_url": "/sql/relational-database/replication/publish/deliver-a-snapshot-through-ftp",
+            "redirect_url": "/sql/relational-databases/replication/publish/deliver-a-snapshot-through-ftp",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/view-conflict-information-for-merge-publications.md",
-            "redirect_url": "/sql/relational-database/replication/view-and-resolve-data-conflicts-for-merge-publications",
+            "redirect_url": "/sql/relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/administration/administration-replication.md",
-            "redirect_url": "/sql/relational-database/replication/adminstration/frequently-asked-questions-for-replication-administrators",
+            "redirect_url": "/sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/agents/replication-agents.md",
-            "redirect_url": "/sql/relational-database/replication/agents/replication-agents-overview",
+            "redirect_url": "/sql/relational-databases/replication/agents/replication-agents-overview",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/concepts/developer-s-guide-how-to-topics-replication.md",
-            "redirect_url": "/sql/relational-database/replication/concepts/replication-developer-documentation",
+            "redirect_url": "/sql/relational-databases/replication/concepts/replication-developer-documentation",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/merge/specify-the-processing-order-of-merge-articles.md",
-            "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
+            "redirect_url": "/sql/relational-databases/replication/merge/specify-merge-replication-properties",
             "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/monitor/monitoring-replication-overview.md",
-           "redirect_url": "/sql/relational-database/replication/monitor/monitoring-replication",
+           "redirect_url": "/sql/relational-databases/replication/monitor/monitoring-replication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md",
-           "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor",
+           "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md",
-           "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor",
+           "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor",
            "redirect_document_id": false 
         },
         {
            "source_path": "docs/relational-database/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md",
-           "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor",
+           "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor.md",
-           "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor",
+           "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md",
-           "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor",
+           "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/compress-snapshot-files-sql-server-management-studio.md",
-           "redirect_url": "/sql/relational-database/replication/snapshot-options",
+           "redirect_url": "/sql/relational-databases/replication/snapshot-options",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/create-updatable-subscription-to-transactional-publication.md",
-           "redirect_url": "/sql/relational-database/replication/publish/create-an-updatable-subscription-to-a-transactional-publication",
+           "redirect_url": "/sql/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md",
-           "redirect_url": "/sql/relational-database/replication/publish/create-an-updatable-subscription-to-a-transactional-publication",
+           "redirect_url": "/sql/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md",
-           "redirect_url": "/sql/relational-database/replication/snapshot-options",
+           "redirect_url": "/sql/relational-databases/replication/snapshot-options",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md",
-           "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
+           "redirect_url": "/sql/relational-databases/replication/merge/specify-merge-replication-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-that-a-merge-table-article-is-download-only.md",
-           "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
+           "redirect_url": "/sql/relational-databases/replication/merge/specify-merge-replication-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md",
-           "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
+           "redirect_url": "/sql/relational-databases/replication/merge/specify-merge-replication-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md",
-           "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
+           "redirect_url": "/sql/relational-databases/replication/merge/specify-merge-replication-properties",
            "redirect_document_id": false
         },
         {
           "source_path": "docs/relational-database/replication/publish/specify-the-default-snapshot-location-sql-server-management-studio.md",
-          "redirect_url": "/sql/relational-database/replication/snapshot-options",
+          "redirect_url": "/sql/relational-databases/replication/snapshot-options",
           "redirect_document_id": false
         },
         {
           "source_path": "docs/relational-database/replication/publish/specify-the-processing-order-of-merge-table-articles.md",
-          "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
+          "redirect_url": "/sql/relational-databases/replication/merge/specify-merge-replication-properties",
           "redirect_document_id": false
         },
         {
           "source_path": "docs/relational-database/replication/security/manage-logins-and-passwords-in-replication.md",
-          "redirect_url": "/sql/relational-database/replication/security/identity-and-access-control-replication",
+          "redirect_url": "/sql/relational-databases/replication/security/identity-and-access-control-replication",
           "redirect_document_id": false
         },
         {
           "source_path": "docs/relational-database/replication/security/secure-a-replication-topology.md",
-          "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings",
+          "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings",
           "redirect_document_id": false
         },
         {
           "source_path": "docs/relational-database/replication/security/secure-deployment-replication.md",
-          "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings",
+          "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings",
           "redirect_document_id": false
         },
         {
           "source_path": "docs/relational-database/replication/security/secure-development-replication.md",
-          "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings",
+          "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings",
           "redirect_document_id": false
         },
         {
           "source_path": "docs/relational-database/replication/security/security-and-protection-replication.md",
-          "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings",
+          "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings",
           "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/security/security-overview-replication.md",
-           "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings",
+           "redirect_url": "/sql/relational-databases/replication/security/view-and-modify-replication-security-settings",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/advanced-merge-replication-resolve-merge-replication-conflicts.md",
-           "redirect_url": "/sql/relational-database/replication/advanced-merge-replication-conflict-detection-and-resolution",
+           "redirect_url": "/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/validate-replicated-data.md",
-           "redirect_url": "/sql/relational-database/replication/validate-data-at-the-subscriber",
+           "redirect_url": "/sql/relational-databases/replication/validate-data-at-the-subscriber",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/distribution-database-properties.md",
-           "redirect_url": "/sql/relational-database/replication/distribution-properties",
+           "redirect_url": "/sql/relational-databases/replication/distributor-properties",
            "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/what-s-new-replication.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication",
+            "redirect_url": "/sql/relational-databases/replication/sql-server-replication",
             "redirect_document_id": false
          },
         {
            "source_path": "docs/relational-database/replication/distributor-properties-general.md",
-           "redirect_url": "/sql/relational-database/replication/distribution-properties",
+           "redirect_url": "/sql/relational-databases/replication/distributor-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/distributor-properties-publishers.md",
-           "redirect_url": "/sql/relational-database/replication/distribution-properties",
+           "redirect_url": "/sql/relational-databases/replication/distributor-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publisher-properties-distributor.md",
-           "redirect_url": "/sql/relational-database/replication/publisher-properties",
+           "redirect_url": "/sql/relational-databases/replication/publisher-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publisher-properties-publisher-general.md",
-           "redirect_url": "/sql/relational-database/replication/publisher-properties",
+           "redirect_url": "/sql/relational-databases/replication/publisher-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publisher-properties-publisher-publication-databases.md",
-           "redirect_url": "/sql/relational-database/replication/publisher-properties",
+           "redirect_url": "/sql/relational-databases/replication/publisher-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publisher-properties-publisher-subscribers.md",
-           "redirect_url": "/sql/relational-database/replication/publisher-properties",
+           "redirect_url": "/sql/relational-databases/replication/publisher-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/technical-reference-replication.md",
-           "redirect_url": "/sql/relational-database/replication/sql-server-replication",
+           "redirect_url": "/sql/relational-databases/replication/sql-server-replication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/properties-reference-replication.md",
-           "redirect_url": "/sql/relational-database/replication/sql-server-replication",
+           "redirect_url": "/sql/relational-databases/replication/sql-server-replication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publication-properties-agent-security.md",
-           "redirect_url": "/sql/relational-database/replication/publication-properties-publication",
+           "redirect_url": "/sql/relational-databases/replication/publication-properties-publication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publication-properties-data-partitions.md",
-           "redirect_url": "/sql/relational-database/replication/publication-properties-publication",
+           "redirect_url": "/sql/relational-databases/replication/publication-properties-publication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publication-properties-filter-rows.md",
-           "redirect_url": "/sql/relational-database/replication/publication-properties-publication",
+           "redirect_url": "/sql/relational-databases/replication/publication-properties-publication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publication-properties-ftp-snapshot-and-internet.md",
-           "redirect_url": "/sql/relational-database/replication/publication-properties-publication",
+           "redirect_url": "/sql/relational-databases/replication/publication-properties-publication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publication-properties-general.md",
-           "redirect_url": "/sql/relational-database/replication/publication-properties-publication",
+           "redirect_url": "/sql/relational-databases/replication/publication-properties-publication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publication-properties-publication-access-list.md",
-           "redirect_url": "/sql/relational-database/replication/publication-properties-publication",
+           "redirect_url": "/sql/relational-databases/replication/publication-properties-publication",
            "redirect_document_id": false
         },
         {
           "source_path": "docs/relational-database/replication/publication-properties-snapshot.md",
-          "redirect_url": "/sql/relational-database/replication/publication-properties-publication",
+          "redirect_url": "/sql/relational-databases/replication/publication-properties-publication",
           "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/replication-features-and-tasks.md",
-           "redirect_url": "/sql/relational-database/replication/sql-server-replication",
+           "redirect_url": "/sql/relational-databases/replication/sql-server-replication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/subscription-properties-publisher.md",
-           "redirect_url": "/sql/relational-database/replication/subscription-properties-subscriber",
+           "redirect_url": "/sql/relational-databases/replication/subscription-properties-subscriber",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/subscription-properties-subscription.md",
-           "redirect_url": "/sql/relational-database/replication/subscription-properties-subscriber",
+           "redirect_url": "/sql/relational-databases/replication/subscription-properties-subscriber",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/create-modify-and-delete-publications-and-articles-replication.md",
-           "redirect_url": "/sql/relational-database/replication/publish/create-a-publication",
+           "redirect_url": "/sql/relational-databases/replication/publish/create-a-publication",
            "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/replication/publish/specify-snapshot-format-sql-server-management-studio.md",
-            "redirect_url": "/sql/relational-database/replication/snapshot-options",
+            "redirect_url": "/sql/relational-databases/replication/snapshot-options",
             "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/tools-reference-replication.md",
-           "redirect_url": "/sql/relational-database/replication/sql-server-replication",
+           "redirect_url": "/sql/relational-databases/replication/sql-server-replication",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/distributor-information-agents.md",
-           "redirect_url": "/sql/relational-database/replication/distributor-information-publications",
+           "redirect_url": "/sql/relational-databases/replication/distributor-information-publications",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md",
-           "redirect_url": "/sql/relational-database/replication/distributor-information-publications",
+           "redirect_url": "/sql/relational-databases/replication/distributor-information-publications",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md",
-           "redirect_url": "/sql/relational-database/replication/distributor-information-publications",
+           "redirect_url": "/sql/relational-databases/replication/distributor-information-publications",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md",
-           "redirect_url": "/sql/relational-database/replication/distributor-information-publications",
+           "redirect_url": "/sql/relational-databases/replication/distributor-information-publications",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md",
-           "redirect_url": "/sql/relational-database/replication/subscription-synchronization-history",
+           "redirect_url": "/sql/relational-databases/replication/subscription-synchronization-history",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md",
-           "redirect_url": "/sql/relational-database/replication/merge/advanced-merge-replication-conflict-detection-and-resolution",
+           "redirect_url": "/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution",
            "redirect_document_id": false
         },            
         {
@@ -2269,22 +2279,22 @@
         },
         {
             "source_path": "docs/relational-database/policy-based-management/lesson-1-1-create-the-off-by-default-policy.md",
-            "redirect_url": "/sql/relational-database/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
+            "redirect_url": "/sql/relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md",
-            "redirect_url": "/sql/relational-database/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
+            "redirect_url": "/sql/relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/policy-based-management/lesson-2-1-create-the-finance-name-policy.md",
-            "redirect_url": "/sql/relational-database/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy",
+            "redirect_url": "/sql/relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-database/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md",
-            "redirect_url": "/sql/relational-database/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy",
+            "redirect_url": "/sql/relational-databases/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy",
             "redirect_document_id": false
         },
         {
@@ -2983,7 +2993,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/analysis-services/tabular-models/data-sources-ssas-tabular.md",
+            "source_path": "docs/analysis-services/rename-columns.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false
         },
@@ -5148,7 +5158,7 @@
       {
         "source_path": "docs/sql-operations-studio/dashboards.md",
         "redirect_url": "/sql/azure-data-studio/dashboards",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/sql-operations-studio/download.md",
@@ -5173,7 +5183,7 @@
       {
         "source_path": "docs/sql-operations-studio/insight-widgets.md",
         "redirect_url": "/sql/azure-data-studio/insight-widgets",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/sql-operations-studio/integrated-terminal.md",
@@ -5202,7 +5212,12 @@
       },
       {
         "source_path": "docs/sql-operations-studio/release-notes.md",
-        "redirect_url": "/sql/azure-data-studio/release-notes",
+        "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/azure-data-studio/release-notes.md",
+        "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
         "redirect_document_id": true
       },
       {
@@ -13788,6 +13803,11 @@
         {
             "source_path": "docs/analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/azure-data-studio/dashboards.md",
+            "redirect_url": "/sql/azure-data-studio/insight-widgets",
             "redirect_document_id": true
         }
     ]

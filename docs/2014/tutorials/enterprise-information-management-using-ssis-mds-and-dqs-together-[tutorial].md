@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Enterprise Information Management using SSIS, MDS, and DQS Together [Tutorial]

@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/22/2019"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -211,38 +211,38 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Allows setting the auto drop functionality for [global temporary tables](create-table-transact-sql.md). The default is ON, which means that the global temporary tables are automatically dropped when not in use by any session. When set to OFF, global temporary tables need to be explicitly dropped using a DROP TABLE statement or will be automatically dropped on server restart.
 
-- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] logical server, this option can be set in the individual user databases of the logical server.
-- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance, this option is set in `TempDB` and the setting of the individual user databases has no effect.
+- With [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single databases and elastic pools, this option can be set in the individual user databases of the SQL Database server.
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, this option is set in `TempDB` and the setting of the individual user databases has no effect.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md)
+Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Allows you to enable or disable Adaptive joins at the database or statement scope while still maintaining database compatibility level 140 and higher. Adaptive Joins is a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+Allows you to enable or disable Adaptive joins at the database or statement scope while still maintaining database compatibility level 140 and higher. Adaptive Joins is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (feature is in public preview)
 
-Allows you to enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017 (row mode is supported in SQL Server 2019 and Azure SQL Database).
+Allows you to enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in SQL Server 2017 (row mode is supported in SQL Server 2019 and Azure SQL Database).
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Allows you to enable or disable batch mode memory grant feedback at the database scope while still maintaining database compatibility level 140 and higher. Batch mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017.
+Allows you to enable or disable batch mode memory grant feedback at the database scope while still maintaining database compatibility level 140 and higher. Batch mode memory grant feedback a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in SQL Server 2017.
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Allows you to enable or disable batch mode adaptive joins at the database scope while still maintaining database compatibility level 140 and higher. Batch mode adaptive joins is a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017.
+Allows you to enable or disable batch mode adaptive joins at the database scope while still maintaining database compatibility level 140 and higher. Batch mode adaptive joins is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in SQL Server 2017.
 
 BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 

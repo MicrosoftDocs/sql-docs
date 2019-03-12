@@ -1,7 +1,7 @@
 ---
 title: "Choose a Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -15,12 +15,15 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
-  After the Welcome page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Choose a Data Source**. On this page, you provide info about the source of your data and about how to connect to it.
+  After the Welcome page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard displays **Choose a Data Source**. On this page, you provide information about the source of your data and about how to connect to it.
   
 For info about the data sources that you can use, see [What data sources and destinations can I use?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
+> [!NOTE]
+> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard utilizes SQL Serer Integration Services (SSIS). Therefore the same limitations that apply to SSIS, also apply to the wizard.  For example ErrorCode and ErrorColumn columns, which are added by default as described in [Error handling in data](../../integration-services/data-flow/error-handling-in-data.md).
+
 ## Screen shot of the Choose a Data Source page 
-The following screen shot shows the first part of the **Choose a Data Source** page of the wizard. The rest of the  page has a variable number of options which depend on the data source that you choose here.
+The following image shows the first part of the **Choose a Data Source** page of the wizard. The rest of the  page has a variable number of options which depend on the data source that you choose here.
 
 ![Choose source](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -60,10 +63,12 @@ To connect to a commonly used data source, see one of the following pages.
 
 For info about how to connect to a data source that's not listed here, see [The Connection Strings Reference](https://www.connectionstrings.com/). This third-party site contains sample connection strings and more info about data providers and the connection info they require.
 
-## What's next?  
+## What's next?
  After you provide info about the source of your data and about how to connect to it, the next page is **Choose a Destination**. On this page, you provide info about the destination for your data and about how to connect to it. For more info, see [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
- 
+
 ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

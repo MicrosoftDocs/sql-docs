@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Model Item Security Page (Report Manager)
   Use this page to secure parts of a model by granting or revoking read-only permissions on particular items. Model item security affects ad hoc data exploration at run time and the ability to use parts of a published model when creating reports in Report Builder. To use this feature, you must have Content Manager permissions.  

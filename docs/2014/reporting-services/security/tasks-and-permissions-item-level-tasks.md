@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Item-Level Tasks
   An item-level task is a collection of permissions that relate to a report, folder, report model, resource, or shared data source. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes system-level tasks that apply to the report server site as a whole. For more information, see [System-Level Tasks](tasks-and-permissions-system-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and Permissions](tasks-and-permissions.md).  

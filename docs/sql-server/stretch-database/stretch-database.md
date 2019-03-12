@@ -1,15 +1,14 @@
 ---
 title: "Stretch Database | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database"
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Stretch Database

@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Empty and Null Data Points in Charts (Report Builder and SSRS)
   If you are displaying fields with empty or null values in your chart, the chart may not look as you expect. Charts process empty values differently depending on the specified chart type:  

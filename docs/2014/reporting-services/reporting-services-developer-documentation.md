@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Developer&#39;s Guide (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offers several programming interfaces that you can leverage in your own applications. You can use the existing features and capabilities of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] to build custom reporting and management tools into Web sites and Windows applications, or you can extend the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] platform.  

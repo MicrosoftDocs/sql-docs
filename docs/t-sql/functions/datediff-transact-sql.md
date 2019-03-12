@@ -36,9 +36,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 This function returns the count (as a signed integer value) of the specified datepart boundaries crossed between the specified *startdate* and *enddate*.
   
 See [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md) for a function that handles larger differences between the *startdate* and *enddate* values. See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.

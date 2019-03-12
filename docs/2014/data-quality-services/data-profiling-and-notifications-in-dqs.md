@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Data Profiling and Notifications in DQS

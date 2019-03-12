@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Rendering and Execution Methods
   You can use these methods to manage item execution and caching, and report rendering.  

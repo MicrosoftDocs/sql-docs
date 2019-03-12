@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Custom Report Item Implementation Requirements
   This topic will discuss the prerequisites for developing and deploying custom report items.  

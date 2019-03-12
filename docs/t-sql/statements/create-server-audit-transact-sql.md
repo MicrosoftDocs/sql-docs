@@ -65,7 +65,7 @@ CREATE SERVER AUDIT audit_name
 }  
   
 <predicate_factor>::=   
-    event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
+    event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
 ## Arguments  
@@ -73,7 +73,7 @@ CREATE SERVER AUDIT audit_name
  Determines the location of the audit target. The options are a binary file, The Windows Application log, or the Windows Security log. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot write to the Windows Security log without configuring additional settings in Windows. For more information, see [Write SQL Server Audit Events to the Security Log](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
 > [!IMPORTANT]
-> In Azure SQL Database Managed Instance, SQL Audit works at the server level. Locations can only be `URL` or `EXTERNAL_MONITOR`.
+> In Azure SQL Database managed instance, SQL Audit works at the server level. Locations can only be `URL` or `EXTERNAL_MONITOR`.
   
  FILEPATH ='*os_file_path*'  
  The path of the audit log. The file name is generated based on the audit name and audit GUID.  

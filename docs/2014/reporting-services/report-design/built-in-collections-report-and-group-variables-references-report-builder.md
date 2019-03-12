@@ -17,9 +17,9 @@ f1_keywords:
   - "10292"
   - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report and Group Variables Collections References (Report Builder and SSRS)
   When you have a complex calculation that is used more than once in expressions in a report, you might want to create a variable. You can create a report variable or a group variable. Variable names must be unique in a report.  

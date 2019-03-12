@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Tutorial: Format Text (Report Builder)
@@ -353,7 +353,7 @@ The report is saved to the report server. The name of report server that you are
 
 There are many ways to format text in Report Builder. [Tutorial: Creating a Free Form Report](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contains more examples.  
 
-[Report Builder Tutorials ](../reporting-services/report-builder-tutorials.md) 
+[Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
 [Formatting Report Items](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 

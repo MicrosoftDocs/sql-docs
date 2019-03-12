@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Add a Moving Average to a Chart (Report Builder and SSRS)
 A moving average is an average of the data in your series, calculated over a defined period of time. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, the moving average can be shown on the chart to identify significant trends.  

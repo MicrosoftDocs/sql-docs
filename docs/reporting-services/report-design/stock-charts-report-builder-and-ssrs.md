@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Stock Charts (Report Builder and SSRS)

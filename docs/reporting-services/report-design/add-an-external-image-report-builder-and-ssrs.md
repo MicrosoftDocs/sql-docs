@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Add an External Image (Report Builder and SSRS)
   External images can be on a report server in native mode or SharePoint integrated mode, or on any other Web site. When you include external images in your report, you must verify that the image exists and that the report reader has permissions to access the image. For more information, see [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  

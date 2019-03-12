@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # DatabaseServerName Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the name of the server on which the report server database is installed. Read/write.  

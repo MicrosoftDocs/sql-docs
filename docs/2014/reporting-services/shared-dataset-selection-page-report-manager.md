@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Shared Dataset Selection Page (Report Manager)
   Use the Shared Dataset Selection page to review and modify the shared datasets that are currently associated with a report.  

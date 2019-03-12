@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, report creation"
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Reporting Services Reports (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] reports are XML based report definitions that include report data and report layout elements. On a client file system, report definitions have the file extension .rdl. After a report is published, it is a report item stored on the report server or SharePoint site. Reports are one part of the server-based reporting platform provided by [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

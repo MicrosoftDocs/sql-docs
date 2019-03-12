@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Site Settings Page (Report Manager)
   Use the Site Settings page to change the application title, set server-wide defaults for report history limits and report processing timeout values, manage system-level role assignments, and manage shared schedules. You must have Content Manager and System Administrator permissions to view this page.  

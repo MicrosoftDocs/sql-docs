@@ -39,9 +39,6 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
 For information about older versions, see:
@@ -404,3 +401,7 @@ For information about the Business Intelligence Client features supported by the
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+
+
+this is a test

@@ -156,8 +156,8 @@ f1_keywords:
   - "10190"
   - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Gauges (Report Builder and SSRS)
   In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, a gauge data region displays a single value from your dataset. An individual gauge is always positioned inside a gauge panel, where you can add child or adjacent gauges. Inside a single gauge panel, you can create multiple gauges that share common functions such as filtering, grouping, or sorting.  

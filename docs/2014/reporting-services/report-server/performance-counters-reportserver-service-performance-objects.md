@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
   This topic describes performance counters for the following [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] performance objects:  

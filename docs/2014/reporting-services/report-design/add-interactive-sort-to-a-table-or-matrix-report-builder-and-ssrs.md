@@ -11,9 +11,9 @@ f1_keywords:
   - "10121"
   - "sql12.rtp.rptdesigner.textboxproperties.intrctvsort.f1"
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)
   Add interactive sort buttons to enable users to change the sort order of rows and columns in tables and matrices. This feature is supported only in rendering formats that support user interaction, such as HTML.  

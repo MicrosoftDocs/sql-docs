@@ -146,7 +146,7 @@ Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core 
 | Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
    | &nbsp; | &nbsp; |
 
-For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server 2014 on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
   
 ### Features Supported on 32-bit Client Operating Systems  

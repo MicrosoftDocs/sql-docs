@@ -118,26 +118,29 @@ To enable the lock pages in memory option:
   
 ## Providing the maximum amount of memory to SQL Server  
 Memory can be configured up to the process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions. For more information, see [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
-  
-## Examples  
-  
-### Example A  
- The following example sets the `max server memory` option to 4 GB:  
-  
-```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'max server memory', 4096;  
-GO  
-RECONFIGURE;  
-GO  
-```  
-  
+
+## Examples
+
+### Example A. Set the max server memory option to 4 GB.
+ The following example sets the `max server memory` option to 4 GB.  Note that although `'show advanced options'` specifies the name of the option as `max server memory (MB)`, the example demonstrates omitting the `(MB)`.
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'max server memory', 4096;
+GO
+RECONFIGURE;
+GO
+```
+This will output a statement similar to:
+
+> Configuration option 'max server memory (MB)' changed from 2147483647 to 4096. Run the RECONFIGURE statement to install.
+
 ### Example B. Determining Current Memory Allocation  
  The following query returns information about currently allocated memory.  
-  
+
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
@@ -152,6 +155,14 @@ SELECT
 	process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
+
+### Example C. Determining value for 'max server memory (MB)'
+The following query returns information about the currently configured value and the value in use by SQL Server.  This query will return results regardless of whether 'show advanced options' is true.
+
+```sql
+SELECT c.value, c.value_in_use
+FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
+```
   
 ## See Also  
  [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md)   

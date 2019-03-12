@@ -29,6 +29,7 @@ With version 2.1 and above, when you install Data Migration Assistant, it will a
 ```
 DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
+\[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
 /AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
@@ -40,8 +41,9 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | How to use dmacmd.exe help text        | N
 |`/AssessmentName`     |   Name of the assessment project   | Y
 |`/AssessmentDatabases`     | Space-delimited list of connection strings. Database name (Initial Catalog) is case-sensitive. | Y
-|`/AssessmentTargetPlatform`     | Target platform for the assessment, supported values: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 and SqlServerWindows2017. Default is SqlServerWindows2017   | N
-|`/AssessmentEvaluateFeatureParity`  | Run feature parity rules  | N
+|`/AssessmentSourcePlatform`     | Source platform for the assessment, supported values: SqlOnPrem, RdsSqlServer. Target Readiness Assessment also support Cassandra as source platform. Default is SqlOnPrem   | N
+|`/AssessmentTargetPlatform`     | Target platform for the assessment, supported values: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 and SqlServerWindows2017. Target Readiness Assessment also support CosmosDB as target platform. Default is SqlServerWindows2017   | N
+|`/AssessmentEvaluateFeatureParity`  | Run feature parity rules. If source platform is RdsSqlServer, feature parity evaluation is not supported for target platform AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
 |`/AssessmentEvaluateRecommendations`     | Run feature recommendations        | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendationsis required)
 |`/AssessmentOverwriteResult`     | Overwrite the result file    | N
@@ -141,15 +143,33 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
+**Single-database assessment for target platform SQL Azure Database, save results to .json and .csv file**
+
+```
+DmaCmd.exe /AssessmentName="TestAssessment" 
+/AssessmentDatabases="Server=SQLServerInstanceName;Initial
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentSourcePlatform="SqlOnPrem"
+/AssessmentTargetPlatform="AzureSqlDatabase"
+/AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentResultJson="C:\\temp\\AssessmentReport.json"
+
+```
+
 **Multiple-database Target Readiness assessment**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /AssessmentName="TestAssessment" 
+/AssessmentSourcePlatform=SourcePlatform
+/AssessmentTargetPlatform=TargetPlatform
 /SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
 /AssessmentOverwriteResult  
 /AssessmentResultJson="C:\Results\test2016.json"
 
+(/AssessmentSourcePlatform and /AssessmentTargetPlatform are optional.)
 ```
 
 **Target Readiness assessment for all databases on a server using Windows authentication**
@@ -186,6 +206,8 @@ Configuration file contents when using source connections:
 <?xml version="1.0" encoding="utf-8" ?>
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
+  <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
+  <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
   <SourceConnections>
     <SourceConnection>connection string 1</SourceConnection>
     <SourceConnection>connection string 2</SourceConnection>

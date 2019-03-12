@@ -96,6 +96,7 @@
     "fileMetadata": {
 
       "feedback_system": {
+        "advanced-analytics/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
         "linux/**/*.md": "GitHub",
         "sql-server/**/*.md": "GitHub"

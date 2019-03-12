@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Control Report Distribution
   You can configure a report server to reduce the security risks associated with e-mail and file share distribution.  

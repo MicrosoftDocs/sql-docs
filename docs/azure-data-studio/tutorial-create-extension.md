@@ -32,16 +32,15 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 
 - [Node.js](https://nodejs.org) installed and available in your `$PATH`. Node.js includes [npm](https://www.npmjs.com/), the Node.js Package Manager, which is used to install the extension generator.
 - [Visual Studio Code](https://code.visualstudio.com) to debug the extension.
-- The Azure Data Studio [Debug extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Ensure `sqlops` is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'sqlops' command in PATH* option.
-- SQL Operations Studio Debug extension (optional). This lets you test your extension without needing to package and install it into Azure Data Studio.
+- The Azure Data Studio [Debug extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (optional). This lets you test your extension without needing to package and install it into Azure Data Studio.
+- Ensure `azuredatastudio` is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'azuredatastudio' command in PATH* option.
 
 
 ## Install the extension generator
 
 To simplify the process of creating extensions, we've built an [extension generator](https://code.visualstudio.com/docs/extensions/yocode) using Yeoman. To install it, run the following from the command prompt:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## Create your extension
 
@@ -49,13 +48,13 @@ To create an extension:
 
 1. Launch the extension generator with the following command:
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. Choose **New Keymap** from the list of extension types:
 
    ![extension generator](./media/tutorial-create-extension/extension-generator.png)
 
-3. Follow the steps to fill in the extension name (for this tutorial, use **ssmskeymap**), and add a description.
+3. Follow the steps to fill in the extension name (for this tutorial, use **ssmskeymap2**), and add a description.
 
 Completing the previous steps creates a new folder. Open the folder in Visual Studio Code and you're ready to create your own key binding extension!
 

@@ -54,6 +54,6 @@ manager: kfile
   
 ## See also  
  [Partitions](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
- [Process partitions in the workspace databse](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [Process partitions in the workspace database](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

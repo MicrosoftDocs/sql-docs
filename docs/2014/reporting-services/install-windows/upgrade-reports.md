@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Upgrade Reports
   Report definition (.rdl) files are automatically upgraded in the following ways:  

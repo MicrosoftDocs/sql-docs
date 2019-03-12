@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "DiffGrams [SQLXML], accessing SQLXML functionality"
   - ".NET Framework [SQLXML], accessing SQLXML functionality"
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -74,7 +74,7 @@ class Test
 1.  Save this XSD schema (MySchema.xml) in a folder:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="Con" sql:relation="Person.Contact" >  
        <xsd:complexType>  

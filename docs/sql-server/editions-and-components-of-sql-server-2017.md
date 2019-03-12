@@ -38,6 +38,7 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 # Editions and supported features of SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
 For information about older versions, see:
@@ -188,6 +189,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
 |IO Resource Governance|Yes|No|No|No|No|  
+|Read-Ahead|Yes|No|No|No|No|
+|Advanced Scanning|Yes|No|No|No|No|
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
 |Automatic Tuning|Yes|No|No|No|No|
 |Batch Mode Adaptive Joins|Yes|No|No|No|No|

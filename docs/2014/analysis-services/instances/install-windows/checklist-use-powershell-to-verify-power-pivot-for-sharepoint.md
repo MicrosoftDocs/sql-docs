@@ -27,7 +27,7 @@ manager: craigg
   
 |||  
 |-|-|  
-|[Prepare your PowerShell environment](#bkmk_prerequisites)<br /><br /> [Symptoms and Recommended Actions](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows Service](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService and PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot Service Application(s) and proxies](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Databases](#bkmk_databases)<br /><br /> [SharePoint Features](#bkmk_features)<br /><br /> [Timer Jobs](#bkmk_timer_jobs)<br /><br /> [Health Rules](#bkmk_health_rules)<br /><br /> **(E)** [Windows and ULS Logs](#bkmk_logs)<br /><br /> [MSOLAP Provider](#bkmk_msolap)<br /><br /> [ADOMD.Net client Library](#bkmk_adomd)<br /><br /> [Health Data Collection Rules](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Manual Verification Steps](#bkmk_manual)<br /><br /> [More Resources](#bkmk_more_resources)<br /><br /> [Full PowerShell Script](#bkmk_full_script)|![powershell verification of powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "powershell verification of powerpivot")|  
+|[Prepare your PowerShell environment](#bkmk_prerequisites)<br /><br /> [Symptoms and Recommended Actions](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows Service](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService and PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot Service Application(s) and proxies](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Databases](#bkmk_databases)<br /><br /> [SharePoint Features](#bkmk_features)<br /><br /> [Timer Jobs](#bkmk_timer_jobs)<br /><br /> [Health Rules](#bkmk_health_rules)<br /><br /> **(E)** [Windows and ULS Logs](#bkmk_logs)<br /><br /> [MSOLAP Provider](#bkmk_msolap)<br /><br /> [ADOMD.Net client Library](#bkmk_adomd)<br /><br /> [Health Data Collection Rules](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Manual Verification Steps](#bkmk_manual)<br /><br /> [More Resources](#bkmk_more_resources)<br /><br /> [Full PowerShell Script](#bkmk_full_script)|![powershell verification of powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "powershell verification of powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Prepare your PowerShell environment  
  The steps in this section prepare your PowerShell environment. The steps may not be required, depending on how your scripting environment is currently configured.  
@@ -81,7 +81,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService and PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService and PowerPivotEngineService  
  The scripts in this section verify the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] system services. There is one system service for a SharePoint 2013 deployment and two services for a SharePoint 2010 deployment.  
   
  **PowerPivotSystemService**  
@@ -100,7 +100,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  **Skip this script if** you are using SharePoint 2013. The PowerPivotEngineService is not part of a SharePoint 2013 deployment. If you run the Get-PowerPivot**Engine**Service cmdlet on SharePoint 2013, you will see an error message similar to the following. This error message is returned even if you have run the Add-PSSnapin command described in the prerequisites section of this topic.  
@@ -461,7 +461,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

@@ -2,10 +2,8 @@
 title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
-ms.prod: ""
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_operation_status_TSQL"

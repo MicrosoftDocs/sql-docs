@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], report creation"
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Design Reports with Report Designer (SSRS)
   Use Report Designer to create full-featured [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports and reporting solutions. Report Designer provides a graphical interface in which you can define data sources, datasets and queries, report layout positions for data regions and fields, and interactive features such as parameters and sets of reports that work together.  

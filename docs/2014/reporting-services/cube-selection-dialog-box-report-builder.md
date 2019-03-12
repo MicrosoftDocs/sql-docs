@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Cube Selection Dialog Box (Report Builder)
   Use the **Cube Selection** dialog box to select a different cube as a data source for your report. By selecting a different cube, your query may no longer be valid.  

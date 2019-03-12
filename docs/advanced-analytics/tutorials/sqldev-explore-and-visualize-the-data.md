@@ -15,7 +15,7 @@ manager: cgronlun
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
-In this lesson, you'll review the sample data, and then generate some plots using [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) from [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and the generic [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) function in base R. These R functions are already included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+In this step, you'll review the sample data, and then generate some plots using [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) from [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and the generic [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) function in base R. These R functions are already included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
 A key objective of this lesson is showing how to call R functions from [!INCLUDE[tsql](../../includes/tsql-md.md)] in stored procedures and save the results in application file formats:
 
@@ -101,7 +101,7 @@ Key points to understand in this script include the following:
 
 The stored procedure returns the image as a stream of varbinary data, which obviously you cannot view directly. However, you can use the **bcp** utility to get the varbinary data and save it as an image file on a client computer.
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], run the following statement:
+1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], run the following statement:
   
     ```sql
     EXEC [dbo].[RxPlotHistogram]
@@ -112,22 +112,22 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
     *plot*
     *0xFFD8FFE000104A4649...*
   
-2.  Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments. For those using Windows identities, you can replace **-U** and **-P** with **-T**.
+2. Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments. For those using Windows identities, you can replace **-U** and **-P** with **-T**.
   
-     ```powershell
-     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
-     ```
+    ```powershell
+    bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+    ```
 
     > [!NOTE]
     > Command switches for bcp are case-sensitive.
   
-3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. 
+3. If the connection is successful, you will be prompted to enter more information about the graphic file format. 
 
    Press ENTER at each prompt to accept the defaults, except for these changes:
     
-    -   For **prefix-length of field plot**, type 0
+   + For **prefix-length of field plot**, type 0
   
-    -   Type **Y** if you want to save the output parameters for later reuse.
+   + Type **Y** if you want to save the output parameters for later reuse.
   
     ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 

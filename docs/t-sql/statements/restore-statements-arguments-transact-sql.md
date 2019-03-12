@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "RESTORE statement, arguments"
   - "RESTORE statement"
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # RESTORE Statements - Arguments (Transact-SQL)

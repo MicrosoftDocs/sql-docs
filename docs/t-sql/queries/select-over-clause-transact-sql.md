@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "rowsets [SQL Server], ordering"
   - "OVER clause"
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

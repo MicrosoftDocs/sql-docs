@@ -23,9 +23,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 # TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
-
 Removes the space character `char(32)` or other specified characters from the start or end of a string.  
  
 ## Syntax   
@@ -37,7 +34,7 @@ TRIM ( [ characters FROM ] string )
 ## Arguments   
 
 characters   
-Is a literal, variable, or function call of any non-LOB character type (`nvarchar`, `varchar`, `nchar`, or `char`) containing characters that should be removed. `nvarchar(max)` and `varchar(max)` types are not allowed.
+Is a literal, variable, or function call of any non-LOB character type (`nvarchar`, `varchar`, `nchar`, or `char`) containing characters that should be removed. `nvarchar(max)` and `varchar(max)` types aren't allowed.
 
 string   
 Is an expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char`) where characters should be removed.
@@ -46,7 +43,7 @@ Is an expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char
 Returns a character expression with a type of string argument where the space character `char(32)` or other specified characters are removed from both sides. Returns `NULL` if input string is `NULL`.
 
 ## Remarks   
-By default `TRIM` function removes the space character `char(32)` from both sides. This is equivalent to `LTRIM(RTRIM(@string))`. Behavior of `TRIM ` function with specified characters is identical to behavior of `REPLACE` function where characters from start or end are replaced with empty strings.
+By default `TRIM` function removes the space character `char(32)` from both sides. This behavior is equivalent to `LTRIM(RTRIM(@string))`. Behavior of `TRIM` function with specified characters is identical to behavior of `REPLACE` function where characters from start or end are replaced with empty strings.
 
 
 ## Examples
@@ -78,4 +75,5 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+

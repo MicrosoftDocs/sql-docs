@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.serieslabelproperties.borders.f1"
   - "sql12.rtp.rptdesigner.seriesproperties.borders.f1"
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Formatting Series Colors on a Chart (Report Builder and SSRS)
   Reporting Services provides several built-in palettes for charts, or you can define a custom palette. By default, charts use the built-in **BrightPastel** color palette to fill each series. These colors also appear in the legend. When multiple series are added to the chart, the chart assigns the series a color in the order that the colors have been defined in the palette.  

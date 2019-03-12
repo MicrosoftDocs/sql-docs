@@ -5,9 +5,10 @@ description: This article describes the compute pool in a SQL Server 2019 big da
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
@@ -18,9 +19,6 @@ This article describes the role of *SQL Server compute pools* in a SQL Server 20
 ## Compute pool architecture
 
 A compute pool is made of one or more compute pods running in Kubernetes. The automated creation and management of these pods is coordinated by the [SQL Server master instance](concept-master-instance.md). Each pod contains a set of base services and an instance of the SQL Server database engine.
-
-> [!NOTE]
-> CTP 2.2 only supports a single compute pool per cluster.
 
 ## Scale-out groups
 

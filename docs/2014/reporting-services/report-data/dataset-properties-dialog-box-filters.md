@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Dataset Properties Dialog Box, Filters
   Select **Filters** on the **Dataset Properties** dialog box to create filters for the dataset.  

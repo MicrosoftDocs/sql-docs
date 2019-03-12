@@ -1,0 +1,21 @@
+# YamlMime:ZonePivotGroups
+# GitHub repository = 'MicrosoftDocs/sql-docs-pr'
+groups:
+- id: cs1-command-shell
+  title: Command shell
+  prompt: Choose your command shell
+  pivots:
+  - id: cs1-bash
+    title: Bash
+  - id: cs1-powershell
+    title: PowerShell
+- id: ld2-linux-distribution
+  title: Linux distribution
+  prompt: Choose your Linux distribution
+  pivots:
+  - id: ld2-rhel
+    title: Red Hat (RHEL)
+  - id: ld2-sles
+    title: SUSE (SLES)
+  - id: ld2-ubuntu
+    title: Ubuntu

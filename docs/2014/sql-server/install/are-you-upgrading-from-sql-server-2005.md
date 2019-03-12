@@ -8,8 +8,8 @@ ms.technology:
   - "database-engine"
 ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
-author: douglaslms
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Are you upgrading from SQL Server 2005?

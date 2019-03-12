@@ -16,7 +16,7 @@ manager: kfile
   Analysis Services foundational documentation is organized by model type and server mode so that you can focus on just the tools, tasks, and features that are available in the mode you installed. Server administration tasks that span multiple modes can be found in Instance Management.  
   
 ## In This Section  
- [Comparing Tabular and Multidimensional Solutions ](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [Comparing Tabular and Multidimensional Solutions](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
  [Tools and applications used in Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
@@ -26,9 +26,9 @@ manager: kfile
 
 [Multidimensional Models](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
   
- [Data Mining ](../analysis-services/data-mining/data-mining-ssas.md)  
+ [Data Mining](../analysis-services/data-mining/data-mining-ssas.md)  
   
- [Power Pivot for SharePoint ](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 ## See Also  
  [Analysis Services](../analysis-services/analysis-services.md)   

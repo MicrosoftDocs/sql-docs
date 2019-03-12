@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Display Percentage Values on a Pie Chart (Report Builder and SSRS)
   By default, categories are shown in the legend to identify each value. If you have labeled the pie chart using category labels, you may want show percentages in the legend.  

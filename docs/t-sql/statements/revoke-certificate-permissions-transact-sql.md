@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], certificates"
   - "REVOKE statement, certificates"
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Certificate Permissions (Transact-SQL)

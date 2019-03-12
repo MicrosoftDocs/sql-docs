@@ -90,10 +90,10 @@ XMLLocalName :: =
   
 |Order|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https\://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https\://www.adventure-works.com|  
   
  **Example #2**: `Customers {}/Customer`  
   

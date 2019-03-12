@@ -5,9 +5,10 @@ description: Learn how to install the mssqlctl tool for installing and managing 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ---
 
 # Install mssqlctl to manage SQL Server 2019 big data clusters
@@ -17,7 +18,7 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 **mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
-> If you installed a previous version of **mssqlctl**, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
+> If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
 
 ## <a id="windows"></a> Windows mssqlctl installation
 
@@ -28,10 +29,21 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 
 1. Open a new Windows PowerShell session so that it gets the latest path with Python in it.
 
-2. Install **mssqlctl** with the following command:
+1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
 
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   If you are unisntalling mssqlctl corresponding to CTP version 2.2 or lower run:
+   ```powershell
+   pip3 uninstall mssqlctl
+   ```
+   
+   For CTP2.3 or higher run:
+   ```powershell
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   ```
+1. Install **mssqlctl** with the following command:
+
+   ```powershell
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl installation
@@ -43,15 +55,35 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    ```bash
    sudo apt-get update && /
    sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
+   sudo apt-get install -y python3-pip
+   ```
+
+1. Upgrade pip3:
+
+   ```bash
    sudo -H pip3 install --upgrade pip
+   ```
+
+1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
+
+   If you are unisntalling mssqlctl corresponding to CTP version 2.2 or lower run:
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+   
+   For CTP2.3 or higher run:
+   ```bash
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
+
+   > [!NOTE]
+   > The `--user` switch installs mssqlctl to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./mssqlctl` from there.
 
 ## Next steps
 

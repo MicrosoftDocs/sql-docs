@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Value for Extended Property Dialog Box
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Use the **Value for** *\<property name>* dialog box to enter or view a value. This is a common dialog box that can be opened from several locations.  
+  Use the **Value for** _\<property name>_ dialog box to enter or view a value. This is a common dialog box that can be opened from several locations.  
   
 ## UIElement List  
  **Extended property name**  

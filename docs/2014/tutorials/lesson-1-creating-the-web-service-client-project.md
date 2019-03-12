@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Lesson 1: Creating the Web Service Client Project
   For this walkthrough, you will create a simple console application that accesses the Report Server Web service. This walkthrough assumes you are developing in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  

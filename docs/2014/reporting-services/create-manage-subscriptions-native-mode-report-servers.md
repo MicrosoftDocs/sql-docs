@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create and Manage Subscriptions for Native Mode Report Servers
   This section contains topics about subscription processing, oversight, and control. Subscription management varies for standard subscriptions and data-driven subscriptions. Standard subscriptions are typically user-owned and managed. In contrast, data-driven subscriptions are typically created and maintained by a report server administrator.  

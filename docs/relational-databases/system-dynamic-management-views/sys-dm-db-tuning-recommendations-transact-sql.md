@@ -56,6 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
  Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
 
  `currentValue` field in the `state` column might have the following values:
+ 
  | Status | Description |
  |--------|-------------|
  | `Active` | Recommendation is active and not yet applied. User can take recommendation script and execute it manually. |
@@ -82,27 +83,95 @@ JSON document in `state` column contains the reason that describes why is the re
 
  Statistic in the details column do not show runtime plan statistics (for example, current CPU time). The recommendation details are taken at the time of regression detection and describe why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified performance regression. Use `regressedPlanId` and `recommendedPlanId` to query [Query Store catalog views](../../relational-databases/performance/how-query-store-collects-data.md) to find exact runtime plan statistics.
 
-## Using tuning recommendations information  
-You can use the following query to get the [!INCLUDE[tsql](../../includes/tsql-md.md)] script that will fix the issue:  
+## Examples of using tuning recommendations information  
+
+### Example 1
+The following gets the generated [!INCLUDE[tsql](../../includes/tsql-md.md)] script that forces a good plan for any given query:  
  
 ```sql
 SELECT name, reason, score,
-		JSON_VALUE(details, '$.implementationDetails.script') as script,
-		details.* 
+	JSON_VALUE(details, '$.implementationDetails.script') AS script,
+	details.* 
 FROM sys.dm_db_tuning_recommendations
-	CROSS APPLY OPENJSON(details, '$.planForceDetails')
-				WITH (	query_id int '$.queryId',
-						regressed_plan_id int '$.regressedPlanId',
-						last_good_plan_id int '$.recommendedPlanId') as details
-WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
+CROSS APPLY OPENJSON(details, '$.planForceDetails')
+	WITH (	[query_id] int '$.queryId',
+			regressed_plan_id int '$.regressedPlanId',
+			last_good_plan_id int '$.recommendedPlanId') AS details
+WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
-  
- For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+### Example 2
+The following gets the generated [!INCLUDE[tsql](../../includes/tsql-md.md)] script that forces a good plan for any given query and additional information about the estimated gain:
+
+```sql
+SELECT reason, score,
+      script = JSON_VALUE(details, '$.implementationDetails.script'),
+      planForceDetails.*,
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  *(regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+FROM sys.dm_db_tuning_recommendations
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
+            regressedPlanErrorCount int,
+            recommendedPlanErrorCount int,
+            regressedPlanExecutionCount int,
+            regressedPlanCpuTimeAverage float,
+            recommendedPlanExecutionCount int,
+            recommendedPlanCpuTimeAverage float
+          ) AS planForceDetails;
+```
+
+### Example 3
+The following gets the generated [!INCLUDE[tsql](../../includes/tsql-md.md)] script that forces a good plan for any given query and additional information that includes the query text and the query plans stored in Query Store:
+
+```sql
+WITH cte_db_tuning_recommendations
+AS (SELECT reason,
+		score,
+		query_id,
+		regressedPlanId,
+		recommendedPlanId,
+		current_state = JSON_VALUE(state, '$.currentValue'),
+		current_state_reason = JSON_VALUE(state, '$.reason'),
+		script = JSON_VALUE(details, '$.implementationDetails.script'),
+		estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+				* (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+		error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+	FROM sys.dm_db_tuning_recommendations
+	CROSS APPLY OPENJSON(Details, '$.planForceDetails')
+	WITH ([query_id] int '$.queryId',
+		regressedPlanId int '$.regressedPlanId',
+		recommendedPlanId int '$.recommendedPlanId',
+		regressedPlanErrorCount int,	
+		recommendedPlanErrorCount int,
+		regressedPlanExecutionCount int,
+		regressedPlanCpuTimeAverage float,
+		recommendedPlanExecutionCount int,
+		recommendedPlanCpuTimeAverage float
+		)
+	)
+SELECT qsq.query_id,
+	qsqt.query_sql_text,
+	dtr.*,
+	CAST(rp.query_plan AS XML) AS RegressedPlan,
+	CAST(sp.query_plan AS XML) AS SuggestedPlan
+FROM cte_db_tuning_recommendations AS dtr
+INNER JOIN sys.query_store_plan AS rp ON rp.query_id = dtr.query_id
+	AND rp.plan_id = dtr.regressedPlanId
+INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
+	AND sp.plan_id = dtr.recommendedPlanId
+INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
+INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
+```
+
+For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## Permissions  
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+Requires `VIEW SERVER STATE` permission in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].   
+Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   

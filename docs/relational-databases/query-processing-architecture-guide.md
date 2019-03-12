@@ -1,7 +1,7 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/15/2018"
+ms.date: "02/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -48,7 +48,6 @@ For more information on columnstore indexes, see [Columnstore Index Architecture
 Processing a single [!INCLUDE[tsql](../includes/tsql-md.md)] statement is the most basic way that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes SQL statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
 
 ### Logical Operator Precedence
-
 When more than one logical operator is used in a statement, `NOT` is evaluated first, then `AND`, and finally `OR`. Arithmetic, and bitwise, operators are handled before logical operators. For more information, see [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
 In the following example, the color condition pertains to product model 21, and not to product model 20, because `AND` has precedence over `OR`.
@@ -82,7 +81,6 @@ GO
 ```
 
 ### Optimizing SELECT statements
-
 A `SELECT` statement is non-procedural; it does not state the exact steps that the database server should use to retrieve the requested data. This means that the database server must analyze the statement to determine the most efficient way to extract the requested data. This is referred to as optimizing the `SELECT` statement. The component that does this is called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan or just a plan. The contents of a query plan are described in more detail later in this topic.
 
 The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` statement are illustrated in the following diagram:
@@ -120,7 +118,6 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relie
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is important because it enables the database server to adjust dynamically to changing conditions in the database without requiring input from a programmer or database administrator. This enables programmers to focus on describing the final result of the query. They can trust that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will build an efficient execution plan for the state of the database every time the statement is run.
 
 ### Processing a SELECT Statement
-
 The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses to process a single SELECT statement include the following: 
 
 1. The parser scans the `SELECT` statement and breaks it into logical units such as keywords, expressions, operators, and identifiers.
@@ -129,18 +126,97 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 4. The relational engine starts executing the execution plan. As the steps that require data from the base tables are processed, the relational engine requests that the storage engine pass up data from the rowsets requested from the relational engine.
 5. The relational engine processes the data returned from the storage engine into the format defined for the result set and returns the result set to the client.
 
-### Processing Other Statements
+### <a name="ConstantFolding"></a> Constant Folding and Expression Evaluation 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../includes/tsql-md.md)] literal, such as 3, 'ABC', '2005-12-31', 1.0e3, or 0x12345678.
 
-The basic steps described for processing a `SELECT` statement apply to other SQL statements such as `INSERT`, `UPDATE`, and `DELETE`. `UPDATE` and `DELETE` statements both have to target the set of rows to be modified or deleted. The process of identifying these rows is the same process used to identify the source rows that contribute to the result set of a `SELECT` statement. The `UPDATE` and `INSERT` statements may both contain embedded `SELECT statements that provide the data values to be updated or inserted.
+#### Foldable Expressions
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses constant folding with the following types of expressions:
+- Arithmetic expressions, such as 1+1, 5/3*2, that contain only constants.
+- Logical expressions, such as 1=1 and 1>2 AND 3>4, that contain only constants.
+- Built-in functions that are considered foldable by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions are not foldable. Deterministic built-in functions are foldable, with some exceptions.
+
+> [!NOTE] 
+> An exception is made for large object types. If the output type of the folding process is a large object type (text, image, nvarchar(max), varchar(max), or varbinary(max)), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
+
+#### Nonfoldable Expressions
+All other expression types are not foldable. In particular, the following types of expressions are not foldable:
+- Nonconstant expressions such as an expression whose result depends on the value of a column.
+- Expressions whose results depend on a local variable or parameter, such as @x.
+- Nondeterministic functions.
+- User-defined functions (both [!INCLUDE[tsql](../includes/tsql-md.md)] and CLR).
+- Expressions whose results depend on language settings.
+- Expressions whose results depend on SET options.
+- Expressions whose results depend on server configuration options.
+
+#### Examples of Foldable and Nonfoldable Constant Expressions
+Consider the following query:
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+If the `PARAMETERIZATION` database option is not set to `FORCED` for this query, then the expression `117.00 + 1000.00` is evaluated and replaced by its result, `1117.00`, before the query is compiled. Benefits of this constant folding include the following:
+- The expression does not have to be evaluated repeatedly at run time.
+- The value of the expression after it is evaluated is used by the Query Optimizer to estimate the size of the result set of the portion of the query `TotalDue > 117.00 + 1000.00`.
+
+On the other hand, if `dbo.f` is a scalar user-defined function, the expression `dbo.f(100)` is not folded, because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold expressions that involve user-defined functions, even if they are deterministic. For more information on parameterization, see [Forced Parameterization](#ForcedParam) later in this article.
+
+#### <a name="ExpressionEval"></a>Expression Evaluation 
+In addition, some expressions that are not constant folded but whose arguments are known at compile time, whether the arguments are parameters or constants, are evaluated by the result-set size (cardinality) estimator that is part of the optimizer during optimization.
+
+Specifically, the following built-in functions and special operators are evaluated at compile time if all their inputs are known: `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST`, and `CONVERT`. The following operators are also evaluated at compile time if all their inputs are known:
+- Arithmetic operators: +, -, \*, /, unary -
+- Logical Operators: `AND`, `OR`, `NOT`
+- Comparison operators: <, >, <=, >=, <>, `LIKE`, `IS NULL`, `IS NOT NULL`
+
+No other functions or operators are evaluated by the Query Optimizer during cardinality estimation.
+
+#### Examples of Compile-Time Expression Evaluation
+Consider this stored procedure:
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+During optimization of the `SELECT` statement in the procedure, the Query Optimizer tries to evaluate the expected cardinality of the result set for the condition `OrderDate > @d+1`. The expression `@d+1` is not constant-folded, because `@d` is a parameter. However, at optimization time, the value of the parameter is known. This allows the Query Optimizer to accurately estimate the size of the result set, which helps it select a good query plan.
+
+Now consider an example similar to the previous one, except that a local variable `@d2` replaces `@d+1` in the query and the expression is evaluated in a SET statement instead of in the query.
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+When the `SELECT` statement in *MyProc2* is optimized in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the value of `@d2` is not known. Therefore, the Query Optimizer uses a default estimate for the selectivity of `OrderDate > @d2`, (in this case 30 percent).
+
+### Processing Other Statements
+The basic steps described for processing a `SELECT` statement apply to other SQL statements such as `INSERT`, `UPDATE`, and `DELETE`. `UPDATE` and `DELETE` statements both have to target the set of rows to be modified or deleted. The process of identifying these rows is the same process used to identify the source rows that contribute to the result set of a `SELECT` statement. The `UPDATE` and `INSERT` statements may both contain embedded `SELECT` statements that provide the data values to be updated or inserted.
 
 Even Data Definition Language (DDL) statements, such as `CREATE PROCEDURE` or `ALTER TABLE`, are ultimately resolved to a series of relational operations on the system catalog tables and sometimes (such as `ALTER TABLE ADD COLUMN`) against the data tables.
 
 ### Worktables
-
 The relational engine may need to build a worktable to perform a logical operation specified in an SQL statement. Worktables are internal tables that are used to hold intermediate results. Worktables are generated for certain `GROUP BY`, `ORDER BY`, or `UNION` queries. For example, if an `ORDER BY` clause references columns that are not covered by any indexes, the relational engine may need to generate a worktable to sort the result set into the order requested. Worktables are also sometimes used as spools that temporarily hold the result of executing a part of a query plan. Worktables are built in tempdb and are dropped automatically when they are no longer needed.
 
 ### View Resolution
-
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query processor treats indexed and nonindexed views differently: 
 
 * The rows of an indexed view are stored in the database in the same format as a table. If the Query Optimizer decides to use an indexed view in a query plan, the indexed view is treated the same way as a base table.
@@ -186,7 +262,6 @@ WHERE OrderDate > '20020531';
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio Showplan feature shows that the relational engine builds the same execution plan for both of these `SELECT` statements.
 
 ### Using Hints with Views
-
 Hints that are placed on views in a query may conflict with other hints that are discovered when the view is expanded to access its base tables. When this occurs, the query returns an error. For example, consider the following view that contains a table hint in its definition:
 
 ```sql
@@ -454,7 +529,7 @@ The only difference between the execution plans for these queries is the value s
 
 Separating constants from the SQL statement by using parameters helps the relational engine recognize duplicate plans. You can use parameters in the following ways: 
 
-* In Transact-SQL, use `sp_executesql`: 
+* In [!INCLUDE[tsql](../includes/tsql-md.md)] , use `sp_executesql`: 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -467,7 +542,7 @@ Separating constants from the SQL statement by using parameters helps the relati
      @MyIntParm
    ```
 
-   This method is recommended for Transact-SQL scripts, stored procedures, or triggers that generate SQL statements dynamically. 
+   This method is recommended for [!INCLUDE[tsql](../includes/tsql-md.md)]  scripts, stored procedures, or triggers that generate SQL statements dynamically. 
 
 * ADO, OLE DB, and ODBC use parameter markers. Parameter markers are question marks (?) that replace a constant in an SQL statement and are bound to a program variable. For example, you would do the following in an ODBC application: 
 
@@ -1117,7 +1192,7 @@ GO
  [Extended Events](../relational-databases/extended-events/extended-events.md)  
  [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Adaptive query processing](../relational-databases/performance/adaptive-query-processing.md)   
+ [Intelligent query processing](../relational-databases/performance/intelligent-query-processing.md)   
  [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md)    
  [Execution Plans](../relational-databases/performance/execution-plans.md)    
  [Performance Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

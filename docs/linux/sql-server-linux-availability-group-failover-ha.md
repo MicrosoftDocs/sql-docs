@@ -32,7 +32,7 @@ To fail over, the secondary replica that will become the primary replica must be
 
 Manually fail over in two steps.
 
-   First,[ manually fail over by moving AG resource](#manualMove) from the cluster node that owns the resources to a new node.
+   First, [manually fail over by moving AG resource](#manualMove) from the cluster node that owns the resources to a new node.
 
    The cluster fails the AG resource over and adds a location constraint. This constraint configures the resource to run on the new node. Remove this constraint in order to successfully fail over in the future.
 
@@ -73,7 +73,7 @@ During a manual failover, the `pcs` command `move` or `crm` command `migrate` ad
    crm config show
    ```
 
-An example of the constraint which gets created becuase of a manual failover. 
+An example of the constraint which gets created because of a manual failover. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **RHEL/Ubuntu example**

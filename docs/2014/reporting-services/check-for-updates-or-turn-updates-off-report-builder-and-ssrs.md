@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Check for Updates or Turn Updates Off (Report Builder and SSRS)
   Every time you open a report, Report Builder checks to see if the published instances of report parts in that report have been updated on the report server or SharePoint site integrated with a report server. It also checks for changes in the report parts' dependent items, such as the dataset and parameters. If any report parts or their dependencies have been updated on the site or server, an information bar in your report displays the number of updated parts. You can choose to view and accept or reject the updates, or dismiss the information bar.  

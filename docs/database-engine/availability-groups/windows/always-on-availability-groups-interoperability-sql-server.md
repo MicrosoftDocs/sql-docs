@@ -66,7 +66,7 @@ The following features interoperate with [!INCLUDE[ssHADR](../../../includes/ssh
   [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping](https://msdn.microsoft.com/library/jj635217)
   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)
   [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)
-  [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)
+  [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## See Also
 

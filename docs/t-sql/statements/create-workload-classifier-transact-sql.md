@@ -26,21 +26,21 @@ monikerRange: "||=azure-sqldw-latest||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Creates a Workload Management Classifier.  The classifier assigns incoming requests to a workload group based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.  
+Creates a Workload Management Classifier.  The classifier assigns incoming requests to a workload group and assigns importance based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax
-  
+
 ```sql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     ( WORKLOAD_GROUP = 'name'  
      ,MEMBERNAME = 'security_account'
- [ [ , ] IMPORTANCE = { LOW | BELOW NORMAL | NORMAL | ABOVE NORMAL | HIGH }])
+ [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }])
 [;]
 ```
-  
+
 ## Arguments
 
  *classifier_name*  
@@ -83,15 +83,14 @@ Importance influences the order in which requests are scheduled, thus giving fir
 ## Examples
 
  The following example shows how to create a workload classifier named `wgcELTRole`. It uses the staticrc20 workload group, the user `ELTRole`, and sets the importance to `above_normal`.
-  
+
 ```sql
 CREATE WORKLOAD CLASSIFIER wgcELTRole
   WITH (WORKLOAD_GROUP = 'staticrc20'
        ,MEMBERNAME = 'ELTRole'
       ,IMPORTANCE = above_normal);
-GO
 ```
-  
+
 ## See Also
 
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)  

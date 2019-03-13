@@ -1,9 +1,9 @@
 ---
-title: "SQL Data Warehouse and Parallel Data Warehouse Catalog Views | Microsoft Docs"
+title: 'SQL Data Warehouse and Parallel Data Warehouse Catalog Views | Microsoft Docs'
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.service: sql-data-warehouse
-ms.reviewer: ""
+ms.reviewer: "jrasnick"
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -57,10 +57,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 
 [sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (Preview)
 
-[sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview) 
-
-[sys.workload_management_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)  (Preview) 
-  
+[sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)
+ 
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views  
  The following catalog views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:
 

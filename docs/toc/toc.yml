@@ -11993,8 +11993,6 @@
           href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
         - name: sys.workload-management-workload-classifiers
           href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
-        - name: sys.workload-management-workload-classifier-details
-          href: ../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md
       - name: Stretch Database
         items:
         - name: sys.remote_data_archive_databases

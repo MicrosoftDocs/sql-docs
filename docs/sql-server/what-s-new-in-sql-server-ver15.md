@@ -134,8 +134,8 @@ Continue reading for more details about these features.
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
->[!NOTE]
->This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+> [!NOTE]
+> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
 
 If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 
@@ -168,7 +168,12 @@ The error message ID 8152 `String or binary data would be truncated` is familiar
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
-The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. For CTP 2.1 and CTP 2.2, this is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
+The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. 
+
+**CTP 2.1 and CTP 2.2** This is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
+
+**CTP 2.4** Error message 2628 becomes the default truncation message and replaces error message 8152 under database compatibility level 150. A new database scoped configuration `VERBOSE_TRUNCATION_WARNINGS` is introduced to switch between error message 2628 and 8152 when the database compatibility level is 150. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+For database compatibility level 140 or lower, error message 2628 remains an opt-in error message that requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
 
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
@@ -206,9 +211,11 @@ This feature may provide significant storage savings, depending on the character
 
 For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
 
-CTP 2.1 Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
+**CTP 2.1** Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
 
-CTP 2.2 Adds support to use UTF-8 character encoding with SQL Server Replication.
+**CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
+
+**CTP 2.4** Adds support to use UTF-8 character encoding with a BIN2 collation.
 
 ### Resumable online index create (CTP 2.0)
 

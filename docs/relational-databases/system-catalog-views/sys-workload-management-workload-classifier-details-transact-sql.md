@@ -11,23 +11,24 @@ dev_langs:
 author: "ronortloff"
 ms.author: "rortloff"
 manager: craigg
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # sys.workload_management_workload_classifier_details (Transact-SQL) (Preview)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   Returns details for each classifier.  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|
-|classifier_id|**int**|ID of the classifier. Is not nullable.|
-|classifier_type|**sysname**|Joinable to [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md)|'membername'|
-|classifier_value|**sysname**|The value of the classifier.|| 
- 
-  
+|classifier_id|**int**|ID of the classifier. Joinable to [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md). Is not nullable.|
+|classifier_type|**sysname**|The entity on which classification is being done. Is not nullable.|[SQL DATA Warehouse Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)|
+|classifier_value|**sysname**|The value of the classifier. Is not nullable.||
+
 ## Permissions
-Requires Control Database permission.
 
+Requires VIEW SERVER STATE permission.
 
-## Next steps  
- For a list of all the catalog views for SQL Data Warehouse and Parallel Data Warehouse, see [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload classifier see [CREATE WORKLOAD CLASSIFIER](../../t-sql/statements/create-workload-classifier-transact-sql.md)
+## Next steps
+  
+ For a list of all the catalog views for SQL Data Warehouse and Parallel Data Warehouse, see [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload classifier, see [CREATE WORKLOAD CLASSIFIER](../../t-sql/statements/create-workload-classifier-transact-sql.md). For more information on workload classification see [SQL DATA Warehouse Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

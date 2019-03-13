@@ -20,34 +20,36 @@ ms.assetid:
 author: ronortloff
 ms.author: rortloff
 manager: craigg
+monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL) (Preview)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Creates a Workload Management Classifier.  The classifier assigns incoming requests to a workload group based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.  
+Creates a Workload Management Classifier.  The classifier assigns incoming requests to a workload group and assigns importance based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## Syntax  
-  
-```  
+## Syntax
+
+```sql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    ( WORKLOAD_GROUP = ‘name’  
-     ,MEMBERNAME = ‘security_account’ 
- [ [ , ] IMPORTANCE = { LOW | BELOW NORMAL | NORMAL | ABOVE NORMAL | HIGH }])
+    ( WORKLOAD_GROUP = 'name'  
+     ,MEMBERNAME = 'security_account'
+ [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }])
 [;]
-  
-```  
-  
-## Arguments  
+```
+
+## Arguments
+
  *classifier_name*  
  Specifies the name by which the workload classifier is identified.  classifier_name is a sysname.  It can be up to 128 characters long and must be unique within the instance.
 
 WORKLOAD_GROUP = *'name'*
 When the conditions are met by the classifier rules, name maps the request to a workload group.  name is a sysname.  It can be up to 128 characters long and must be a valid workload group name at the time of classifier creation.
 
-For the purposes of the WLM Importance preview, WORKLOAD_GROUP should map to an existing resource class:
+WORKLOAD_GROUP should map to an existing resource class:
 
 |Static Resource Classes|Dynamic Resource Classes|
 |------------------------|-----------------------|
@@ -63,40 +65,35 @@ For the purposes of the WLM Importance preview, WORKLOAD_GROUP should map to an 
 MEMBERNAME = *'security_account'*
 This is the security account being added to the role.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.
 
-IMPORTANCE = { LOW | BELOW NORMAL | NORMAL | ABOVE NORMAL | HIGH }
+IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }
 Specifies the relative importance of a request.  Importance is one of the following:
 
+- LOW
+- BELOW_NORMAL
+- NORMAL (default)
+- ABOVE_NORMAL
+- HIGH  
 
+Importance influences the order in which requests are scheduled, thus giving first access to resources and locks.
 
--   LOW 
--   BELOW_NORMAL
--   NORMAL (default)
--   ABOVE_NORMAL
--   HIGH  
+## Permissions
 
-Importance influences the order which requests are scheduled, thus giving first access to resources and locks.
-
-> [!NOTE]  
-> Internally each importance setting is stored as a number that is used for calculations. 
-  
-## Permissions  
  Requires CONTROL DATABASE permission.  
   
-## Examples  
+## Examples
+
  The following example shows how to create a workload classifier named `wgcELTRole`. It uses the staticrc20 workload group, the user `ELTRole`, and sets the importance to `above_normal`.
-  
-```  
-CREATE WORKLOAD CLASSIFIER wgcELTRole 
+
+```sql
+CREATE WORKLOAD CLASSIFIER wgcELTRole
   WITH (WORKLOAD_GROUP = 'staticrc20'
        ,MEMBERNAME = 'ELTRole'
       ,IMPORTANCE = above_normal);
- 
-GO  
-```  
-  
-## See Also  
+```
+
+## See Also
+
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)  
-Catalog view [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)   
-Catalog view [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)   
-Catalog view [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
-  
+Catalog view [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
+Catalog view [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
+[SQL Data Warehouse Classification](/azure/sql-data-warehouse/classification)

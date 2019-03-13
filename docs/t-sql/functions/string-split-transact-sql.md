@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "11/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -18,8 +18,10 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+monikerRange:"= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions" 
 ---
 # STRING_SPLIT (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 A table-valued function that splits a string into rows of substrings, based on a specified separator character.
@@ -34,11 +36,12 @@ To change the compatibility level of a database, refer to [View or Change the Co
   
 ## Syntax  
   
-```  
+```sql
 STRING_SPLIT ( string , separator )  
-```  
+```
   
-## Arguments  
+## Arguments
+
  *string*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar**, **varchar**, **nchar**, or **char**).  
   
@@ -76,20 +79,21 @@ In a practice run, the preceding SELECT returned following result table:
 
 ## Examples  
   
-### A. Split comma-separated value string  
+### A. Split comma-separated value string
+
 Parse a comma-separated list of values and return all non-empty tokens:  
-  
-```sql  
+
+```sql
 DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
   
 SELECT value  
 FROM STRING_SPLIT(@tags, ',')  
-WHERE RTRIM(value) <> '';  
-```  
-  
+WHERE RTRIM(value) <> '';
+```
+
 STRING_SPLIT will return empty string if there is nothing between separator. Condition RTRIM(value) <> '' will remove empty tokens.  
   
-### B. Split comma-separated value string in a column  
+### B. Split comma-separated value string in a column
 Product table has a column with comma-separate list of tags shown in the following example:  
   
 |ProductId|Name|Tags|  

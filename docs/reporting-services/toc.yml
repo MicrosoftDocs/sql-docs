@@ -333,7 +333,7 @@
   href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Pin to Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
-- name: Report Builder in SQL Server 2016 Overview
+- name: Report Builder in SQL Server Overview
   href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
 - name: Start Report Builder
   href: ../reporting-services/report-builder/start-report-builder.md
@@ -932,7 +932,7 @@
   href: ../reporting-services/reports/clickthrough-reports-ssrs.md
 - name: View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
-- name: Report Data Overview
+- name: Report Data in SSRS Overview
   href: ../reporting-services/report-data/report-data-ssrs.md
 - name: Data Sources Supported by Reporting Services
   href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
@@ -1191,7 +1191,7 @@
       href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
 - name: Configure SSL Connections on a Native Mode Report Server
   href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
-- name: Schedules Overview
+- name: SSRS Schedules Overview
   href: ../reporting-services/subscriptions/schedules.md
 - name: Create, Modify, and Delete Schedules
   href: ../reporting-services/subscriptions/create-modify-and-delete-schedules.md
@@ -1386,29 +1386,29 @@
     href: ../reporting-services/render-a-report-history-snapshot-using-url-access.md
 - name: Relational Databases
   items:
-  -name: How To  Manage Login Users and Schemas
-  href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
-  -name: Dynamic Data Masking
-  href: ../relational-databases/security/dynamic-data-masking.md
-  -name: SQL Server Express Localdb Reference
-  href: ../relational-databases/sql-server-express-localdb-reference.md
-  -name: SQL tools vs. Native Helpers
-  href: ../relational-databases/sqltoolsvsnativehelpers.md
-  -name: SQL tools vs. Native Helpers Visible Window Fram 
-  href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
-  -name: Edge Constraint Clauses
-  href: ../relational-databases/system-catalog-views/sys-edge-constraint-clauses-transact-sql.md
-  -name: Edge Constraint Transactions
-  href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
-  -name: Tuning Recommendations
-  href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
-  -name: Enum SQL Agent Subsystems 
-  href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
-  -name: Delete Pincipal Profile
-  href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
-  -name: WMI Provider Error 0x8007052f
-  href: ../relational-databases/wmi-provider-error-0x8007052f.md
-- name: Reporting Services WMI Provider Library Reference Overview
+  - name: How To  Manage Login Users and Schemas
+    href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+  - name: Dynamic Data Masking
+    href: ../relational-databases/security/dynamic-data-masking.md
+  - name: SQL Server Express Localdb Reference
+    href: ../relational-databases/sql-server-express-localdb-reference.md
+  - name: SQL tools vs. Native Helpers
+    href: ../relational-databases/sqltoolsvsnativehelpers.md
+  - name: SQL tools vs. Native Helpers Visible Window Fram 
+    href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+  - name: Edge Constraint Clauses
+    href: ../relational-databases/system-catalog-views/sys-edge-constraint-clauses-transact-sql.md
+  - name: Edge Constraint Transactions
+    href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
+  - name: Tuning Recommendations
+    href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
+  - name: Enum SQL Agent Subsystems 
+    href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
+  - name: Delete Pincipal Profile
+    href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
+  - name: WMI Provider Error 0x8007052f
+    href: ../relational-databases/wmi-provider-error-0x8007052f.md
+- name: WMI Provider Library Reference Overview
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
 - name: MSReportServer_Instance Class
   href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md
@@ -1564,7 +1564,7 @@
       href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md
     - name: ConfigurationSetting Method - SetExtendedProtectionSettings
       href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md
-- name: Troubleshoot Reporting Services Overview
+- name: Troubleshoot Reporting Services
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
 - name: Errors and Events Reference
   href: ../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md

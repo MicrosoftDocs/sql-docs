@@ -1386,19 +1386,19 @@
     href: ../reporting-services/render-a-report-history-snapshot-using-url-access.md
 - name: Relational Databases
   items:
-  - name: How To  Manage Login Users and Schemas
+  - name: How To Manage Logins, Users, and Schemas
     href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
   - name: Dynamic Data Masking
     href: ../relational-databases/security/dynamic-data-masking.md
-  - name: SQL Server Express Localdb Reference
+  - name: SQL Server Express LocalDB Reference
     href: ../relational-databases/sql-server-express-localdb-reference.md
-  - name: SQL tools vs. Native Helpers
+  - name: SqlToolsVSNativeHelpers
     href: ../relational-databases/sqltoolsvsnativehelpers.md
-  - name: SQL tools vs. Native Helpers Visible Window Fram 
+  - name: SqlToolsVSNativeHelpers - FrameWindowVisible
     href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
-  - name: Edge Constraint Clauses
+  - name: sp_enum_sqlagent_subsystems
     href: ../relational-databases/system-catalog-views/sys-edge-constraint-clauses-transact-sql.md
-  - name: Edge Constraint Transactions
+  - name: sysmail_delete_principalprofile_sp
     href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
   - name: Tuning Recommendations
     href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md

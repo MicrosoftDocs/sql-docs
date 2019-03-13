@@ -293,7 +293,7 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-Allows you to enable or disable the new `String or binary data would be truncated` error message. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new, more specific error message (2628) for this scenario:  
+Allows you to enable or disable the new `String or binary data would be truncated` error message. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new, more specific error message (2628) for this scenario:  
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -301,7 +301,7 @@ When set to ON under database compatibility level 150, truncation errors raise t
 
 When set to OFF under database compatibility level 150, truncation errors raise the previous error message 8152.
 
-For database compatibility level 140 or lower, error message 2628 remains an opt-in error message that requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled, and this database scoped configuration has no effect.
+For database compatibility level 140 or lower, error message 2628 remains an opt-in error message that requires [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled, and this database scoped configuration has no effect.
 
 ## <a name="Permissions"></a> Permissions
 

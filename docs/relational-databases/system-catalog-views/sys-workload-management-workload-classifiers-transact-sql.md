@@ -11,7 +11,7 @@ dev_langs:
 author: "ronortloff"
 ms.author: "rortloff"
 manager: craigg
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # sys.workload_management_workload_classifiers (Transact-SQL) (Preview)
 

@@ -1,10 +1,10 @@
 ---
 title: "sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs"
-ms.custom
+ms.custom:
 ms.date: "02/08/2019"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
-ms.reviewer: ""
+ms.reviewer: "jrasnick"
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -28,6 +28,7 @@ name|**sysname**|Name of the classifier. Must be unique to the instance. Is not 
 |create_time|**datetime**|Time the classifier was created. Is not nullable.||
 modify_time|**datetime**|Time the classifier was last modified. Is not nullable.||
 is_enabled|**bit**|Displays whether the classifier is enabled or not. Is enabled by default. Is not nullable.|0 = the classifier is not enabled </br> 1 = the classifier is enabled|
+|&nbsp;||||
   
 ## Permissions
 

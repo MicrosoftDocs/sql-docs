@@ -27,8 +27,6 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
-
-
 ## Previous CTPs
 
 Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
@@ -134,8 +132,8 @@ Continue reading for more details about these features.
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
->[!NOTE]
->This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+> [!NOTE]
+> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
 
 If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 
@@ -168,7 +166,12 @@ The error message ID 8152 `String or binary data would be truncated` is familiar
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
-The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. For CTP 2.1 and CTP 2.2, this is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
+The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. 
+
+**CTP 2.1 and CTP 2.2** This is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
+
+**CTP 2.4** Error message 2628 becomes the default truncation message and replaces error message 8152 under database compatibility level 150. A new database scoped configuration `VERBOSE_TRUNCATION_WARNINGS` is introduced to switch between error message 2628 and 8152 when the database compatibility level is 150. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+For database compatibility level 140 or lower, error message 2628 remains an opt-in error message that requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
 
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
@@ -206,9 +209,11 @@ This feature may provide significant storage savings, depending on the character
 
 For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
 
-CTP 2.1 Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
+**CTP 2.1** Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
 
-CTP 2.2 Adds support to use UTF-8 character encoding with SQL Server Replication.
+**CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
+
+**CTP 2.4** Adds support to use UTF-8 character encoding with a BIN2 collation.
 
 ### Resumable online index create (CTP 2.0)
 
@@ -295,7 +300,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
   **(CTP 2.3)** Extending this feature further, you can define cascaded delete actions on an Edge Constraint. You can define the actions that the database engine takes when a user deletes the node(s), that a given edge connects.
 
-### Database scoped default setting for online and resumable DDL operations  (CTP 2.0)
+### Database scoped default setting for online and resumable DDL operations (CTP 2.0)
 
 - **Database scoped default setting for online and resumable DDL operations** allows a default behavior setting for `ONLINE` and `RESUMABLE` index operations at the database level, rather than defining these options for each individual index DDL statement such as index create or rebuild.
 
@@ -311,7 +316,7 @@ Without this feature, you have to specify the online and resumable options direc
 
 For more information on index resumable operations, see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
-### <a id="ha"></a>Always On Availability Groups - more synchronous replicas  (CTP 2.0)
+### <a id="ha"></a>Always On Availability Groups - more synchronous replicas (CTP 2.0)
 
 - **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.
 
@@ -377,6 +382,8 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling mechanisms. Lightweight profiling is now enabled by default. It was introduced in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
 For more information on lightweight profiling, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
+
+**CTP 2.3** A new database scoped configuration `LIGHTWEIGHT_QUERY_PROFILING` is introduced to enable or disable the lightweight query profiling infrastructure.
 
 ### <a id="polybase"></a>New PolyBase connectors
 

@@ -3939,6 +3939,11 @@
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: Pages & Extents Architecture
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: Reading pages
+      href: ../relational-databases/reading-pages.md
+    - name: Writing pages
+      href: ../relational-databases/writing-pages.md
   - name: Post-migration Validation & Optimization
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Query Processing Architecture
@@ -3951,11 +3956,6 @@
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Memory Management Architecture    
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: Reading pages
-      href: ../relational-databases/reading-pages.md
-    - name: Writing pages
-      href: ../relational-databases/writing-pages.md
 - name: Installation
   href: redirectfrom-installation-10.md ## /sql/sql-server/install/what-s-new-in-sql-server-installation
   items: 

@@ -1,7 +1,7 @@
 ---
 title: "sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs"
 ms.custom:
-ms.date: "02/08/2019"
+ms.date: "03/13/2019"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"

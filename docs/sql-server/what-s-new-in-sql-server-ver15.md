@@ -207,9 +207,11 @@ This feature may provide significant storage savings, depending on the character
 
 For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
 
-CTP 2.1 Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
+**CTP 2.1** Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
 
-CTP 2.2 Adds support to use UTF-8 character encoding with SQL Server Replication.
+**CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
+
+**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation.
 
 ### Resumable online index create (CTP 2.0)
 

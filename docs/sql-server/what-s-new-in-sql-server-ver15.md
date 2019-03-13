@@ -75,6 +75,7 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
   - SQL Graph enables cascaded delete of edges upon deletion of nodes (CTP 2.3)
   - External library support on Windows for both Java and Python (CTP 2.3)
+  - New `query_post_execution_plan_profile` Extended Event (CTP 2.4) 
 
 - [SQL Server on Linux](#sqllinux)
   - Replication support (CTP 2.0)
@@ -122,6 +123,37 @@ Continue reading for more details about these features.
 ## <a id="databaseengine"></a> Database Engine
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
+
+### New query_post_execution_plan_profile Extended Event (CTP 2.4)
+
+The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. For more information, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
+
+#### Example 1 - Extended Event session using standard profiling
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text)
+    )
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanOld.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### Example 2 - Extended Event session using lightweight profiling
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
 
 ### Accelerated database recovery (CTP 2.3)
 
@@ -213,7 +245,7 @@ For more information, see [Collation and Unicode Support](../relational-database
 
 **CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
 
-**CTP 2.4** Adds support to use UTF-8 character encoding with a BIN2 collation.
+**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).
 
 ### Resumable online index create (CTP 2.0)
 

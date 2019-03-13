@@ -1,9 +1,9 @@
 ---
-title: "SQL Data Warehouse and Parallel Data Warehouse Catalog Views | Microsoft Docs"
+title: 'SQL Data Warehouse and Parallel Data Warehouse Catalog Views | Microsoft Docs'
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.service: sql-data-warehouse
-ms.reviewer: ""
+ms.reviewer: "jrasnick"
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +16,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 # SQL Data Warehouse and Parallel Data Warehouse Catalog Views
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  
+ This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  
   
  All [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views begin with **sys.pdw**.  
   
@@ -53,8 +53,12 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
  [sys.pdw_table_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
   
- [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)  
-  
+ [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
+
+[sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (Preview)
+
+[sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)
+ 
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views  
  The following catalog views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:
 

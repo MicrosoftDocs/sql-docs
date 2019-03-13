@@ -11989,6 +11989,10 @@
           href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
         - name: sys.pdw_table_mappings
           href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+        - name: sys.workload-management-workload-classifier-details
+          href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+        - name: sys.workload-management-workload-classifiers
+          href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
       - name: Stretch Database
         items:
         - name: sys.remote_data_archive_databases
@@ -16667,6 +16671,8 @@
             href: ../t-sql/statements/create-user-transact-sql.md
           - name: VIEW
             href: ../t-sql/statements/create-view-transact-sql.md
+          - name: WORKLOAD CLASSIFIER
+            href: ../t-sql/statements/create-workload-classifier-transact-sql.md
           - name: WORKLOAD GROUP
             href: ../t-sql/statements/create-workload-group-transact-sql.md
           - name: XML INDEX
@@ -16809,6 +16815,8 @@
             href: ../t-sql/statements/drop-user-transact-sql.md
           - name: VIEW
             href: ../t-sql/statements/drop-view-transact-sql.md
+          - name: WORKLOAD CLASSIFIER
+            href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
           - name: WORKLOAD GROUP
             href: ../t-sql/statements/drop-workload-group-transact-sql.md
           - name: XML SCHEMA COLLECTION

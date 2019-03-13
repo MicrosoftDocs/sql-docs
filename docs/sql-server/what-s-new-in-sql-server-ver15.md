@@ -211,7 +211,7 @@ For more information, see [Collation and Unicode Support](../relational-database
 
 **CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
 
-**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation.
+**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).
 
 ### Resumable online index create (CTP 2.0)
 

@@ -189,6 +189,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
 |IO Resource Governance|Yes|No|No|No|No|  
+|Read-Ahead|Yes|No|No|No|No|
+|Advanced Scanning|Yes|No|No|No|No|
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
 |Automatic Tuning|Yes|No|No|No|No|
 |Batch Mode Adaptive Joins|Yes|No|No|No|No|
@@ -401,7 +403,3 @@ For information about the Business Intelligence Client features supported by the
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-this is a test

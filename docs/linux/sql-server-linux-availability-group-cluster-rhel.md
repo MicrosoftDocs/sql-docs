@@ -5,7 +5,7 @@ description: Learn about availability group clusters when running Red Hat Enterp
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux, seodec18"
@@ -138,10 +138,10 @@ To update the property value to `true` run:
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-To update the `ag1` resource property `failure-timeout` to `60s` run:
+To update the `ag_cluster` resource property `failure-timeout` to `60s` run:
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 

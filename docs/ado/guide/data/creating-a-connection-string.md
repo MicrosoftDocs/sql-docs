@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/20/2017"
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ manager: craigg
 # Creating a Connection String
 A connection string consists of a list of argument/value pairs (that is, parameters), separated by semi-colons. For example:  
   
-```  
+```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
@@ -38,7 +38,7 @@ A connection string consists of a list of argument/value pairs (that is, paramet
   
  The HelloData application in [HelloData: A Simple ADO Application](../../../ado/guide/data/hellodata-a-simple-ado-application.md) used the following connection string:  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
@@ -47,7 +47,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  According to the OLE DB Provider for SQL Server documentation, you can substitute "Server" for the *Data Source* parameter and "Database" for the *Initial Catalog* parameter. Thus, the following connection string would produce results identical to the one above:  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```

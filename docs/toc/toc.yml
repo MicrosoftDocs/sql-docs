@@ -4396,6 +4396,7 @@
       - name: Advanced Page
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -8419,22 +8420,14 @@
     items:
     - name: Download SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Overview
-      items: 
-      - name: Changelog for SSDT
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: Data-Tier Application Framework - License Terms
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: Previous releases of SSDT & SSDT-BI
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Azure Active Directory support
-        href: ../ssdt/azure-active-directory.md
-      - name: SQL Server Tools
-        href: ../ssdt/sql-server-tools.md
-      - name: License Terms - SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: License Terms - SSDT (VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: Changelog for SSDT
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Previous releases of SSDT & SSDT-BI
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Azure Active Directory support
+      href: ../ssdt/azure-active-directory.md
+    - name: SQL Server Tools
+      href: ../ssdt/sql-server-tools.md
     - name: Project-Oriented Offline Database Development
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -9775,8 +9768,6 @@
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md          
     - name: Resources
       items:
-      - name: License Terms
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: User Assistance in SSMS
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data
@@ -11350,10 +11341,6 @@
             href: ../powershell/encode-and-decode-sql-server-identifiers.md
           - name: Escape SQL Server Identifiers
             href: ../powershell/escape-sql-server-identifiers.md
-        - name: Resources
-          items:
-          - name: SQL Server PowerShell License Terms
-            href: ../powershell/sql-server-powershell-license-terms.md
         - name: Cmdlet reference
           items:
           - name: SqlServer cmdlets
@@ -11989,6 +11976,10 @@
           href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
         - name: sys.pdw_table_mappings
           href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+        - name: sys.workload-management-workload-classifier-details
+          href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+        - name: sys.workload-management-workload-classifiers
+          href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
       - name: Stretch Database
         items:
         - name: sys.remote_data_archive_databases
@@ -16667,6 +16658,8 @@
             href: ../t-sql/statements/create-user-transact-sql.md
           - name: VIEW
             href: ../t-sql/statements/create-view-transact-sql.md
+          - name: WORKLOAD CLASSIFIER
+            href: ../t-sql/statements/create-workload-classifier-transact-sql.md
           - name: WORKLOAD GROUP
             href: ../t-sql/statements/create-workload-group-transact-sql.md
           - name: XML INDEX
@@ -16809,6 +16802,8 @@
             href: ../t-sql/statements/drop-user-transact-sql.md
           - name: VIEW
             href: ../t-sql/statements/drop-view-transact-sql.md
+          - name: WORKLOAD CLASSIFIER
+            href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
           - name: WORKLOAD GROUP
             href: ../t-sql/statements/drop-workload-group-transact-sql.md
           - name: XML SCHEMA COLLECTION

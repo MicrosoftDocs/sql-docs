@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 03/01/2019
+ms.date: 03/14/2019
 ms.prod: "sql-server-2019"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -26,6 +26,10 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ## CTP 2.4
 
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
+
+- [SQL Server Analysis Services](#ssas)
+  - Many-to-many relationships in tabular models. 
+  - Property settings for resource governance. 
 
 ## Previous CTPs
 
@@ -530,6 +534,22 @@ FROM sys.dm_exec_requests AS d
   - Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.
 
 ## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
+
+### Many-to-many relationships in tabular models (CTP 2.4)
+
+This feature allows many-to-many relationships between tables where both columns are non-unique. A relationship can be defined between a dimension and fact table at a granularity higher than the key column of the dimension. This avoids having to normalize dimension tables and can improve the user experience because the resulting model has a smaller number of tables with logically grouped columns. For this CTP 2.4 release, many-to-many relationships are engine-only features. 
+
+Many-to-many relationships require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. For this CTP 2.4 release, many-to-many relationships can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
+
+### Memory settings for resource governance 
+
+The memory settings described here are already available in Azure Analysis Services. Beginning with CTP 2.4, they are now also supported by SQL Server 2019 Analysis Services. 
+
+ - **Memory\QueryMemoryLimit** - This memory property can be used to limit memory spools built by DAX queries submitted to the model. 
+ - **DbpropMsmdRequestMemoryLimit** - This XMLA property can be used to override the Memory\QueryMemoryLimit server property value for a connection.
+ - **OLAP\Query\RowsetSerializationLimit** - This server property limits the number of rows returned in a rowset, protecting server resources from extensive data export usage. This property applies to both applies to both DAX and MDX queries. 
+
+These properties require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. These properties can be set by using the latest version of SQL Server Management Studio (SSMS). Additional information for this feature will be provided in the Analysis Services blog.
 
 ### Calculation groups in tabular models (CTP 2.3) 
 

@@ -86,6 +86,7 @@
           "folder_relative_path_in_docset": "."
         }
       },
+      "extendBreadcrumb": true,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
       "feedback_product_url": "https://feedback.azure.com/forums/908035-sql-server/",
@@ -95,6 +96,7 @@
     "fileMetadata": {
 
       "feedback_system": {
+        "advanced-analytics/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
         "linux/**/*.md": "GitHub",
         "sql-server/**/*.md": "GitHub"
@@ -158,6 +160,7 @@
         "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "ssdt/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
+        "toc/**/*.md": "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions",
         "tools/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "t-sql/**/*.md": "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "xquery/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"

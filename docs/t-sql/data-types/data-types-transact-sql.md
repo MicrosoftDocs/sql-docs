@@ -22,9 +22,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Data types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplies a set of system data types that define all the types of data that can be used with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can also define your own data types in [!INCLUDE[tsql](../../includes/tsql-md.md)] or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alias data types are based on the system-supplied data types. For more information about alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). User-defined types obtain their characteristics from the methods and operators of a class that you create by using one of the programming languages support by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].

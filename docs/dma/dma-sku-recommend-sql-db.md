@@ -2,7 +2,7 @@
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
 ms.custom: ""
-ms.date: "01/11/2019"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---

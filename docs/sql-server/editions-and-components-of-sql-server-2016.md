@@ -37,9 +37,6 @@ manager: craigg
 # Editions and supported features of SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 This topic provides details of features supported by the SQL Server editions.  At this time there are no changes to features supported by editions for SQL Server 2017.  
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -174,7 +171,9 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Multiple Filestream containers|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
 |NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
-|IO Resource Governance|Yes|No|No|No|No|  
+|IO Resource Governance|Yes|No|No|No|No|
+|Read-Ahead|Yes|No|No|No|No|
+|Advanced Scanning|Yes|No|No|No|No|
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.

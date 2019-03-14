@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 02/04/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -12,11 +12,7 @@ manager: craigg
 monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # SQL Server 2019 preview release notes
-
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
@@ -32,7 +28,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.3 (January 2018)
+## CTP 2.3
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.3 is described in `license_Eval.rtf` with your installation media.
@@ -105,6 +101,22 @@ Limited support may be found at one of the following locations:
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3, 2.2, CTP 2.1, 2.0.
+
+### System Dynamic Management Views
+
+- **Issue and customer impact**: The system table-valued function [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) returns random values in the `dependency` column.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
+
+### SQL Server Analysis Services (SSAS)
+
+- **Issue and customer impact**: For tabular models with dynamic security, under some circumstances a user can see data from another user belonging to the same role.
+
+  **Scenario**: There are at least 2 roles in the model. One of the roles doesn't have any dynamic security expression that contains `USERNAME` or `USERPRINCIPALNAME`. The second role with dynamic row-level security is defined for user A and user B by using expressions that contain `USERNAME` or `USERPRINCIPLENAME`. User A and user B can connect and query data, however, user B may see data secured only for user A under certain circumstances.
+
+- **Workaround**: Add a dummy measure in the model. For example `[DummyMeasure] := UserName()`. This ensures that dynamic expressions are evaluated for the row level security expressions.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

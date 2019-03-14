@@ -27,8 +27,8 @@ You can do that by setting **SYSTEM_VERSIONING** clause to **OFF**.
 -   History table as a regular table  
   
 ### Important remarks  
-  
--   No data loss happens when you set  **SYSTEM_VERSIONING = OFF** or drop the **SYSTEM_TIME** period.  
+-   History Table will **stop** caturing the updates for the duration of **SYSTEM_VERSIONING = OFF**.
+-   No data loss happens on the **temporal table** when you set  **SYSTEM_VERSIONING = OFF** or drop the **SYSTEM_TIME** period.
   
 -   When you set **SYSTEM_VERSIONING = OFF** and do not remove drop the **SYSTEM_TIME** period, the system will continue to update the period columns for every insert and update operation. Deletes on current table will be permanent.  
   
@@ -58,7 +58,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   Partition **SWITCH IN** into history table  
   
- This example temporarily stops SYSTEM_VERSIONING to allow you to perform specific maintenance operations. If you stop versioning temporarily as a prerequisite for table maintenance, we strongly recommend doing this inside a transaction to keep data consistency.  
+ This example temporarily stops SYSTEM_VERSIONING to allow you to perform specific maintenance operations. If you stop versioning temporarily as a prerequisite for table maintenance, we strongly recommend doing this inside a transaction to keep data consistency.
+ 
+> [!NOTE]  
+>  When turning system versioning back on, do not forget to specify the HISTORY_TABLE argument.  Failing to do so will result in a new history table being created and associated with the current table.  The original history table will still exist as a normal table, but won't be associated with the current table.  
   
 ```  
 BEGIN TRAN   

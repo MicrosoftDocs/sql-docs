@@ -23,9 +23,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 # TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 Removes the space character `char(32)` or other specified characters from the start or end of a string.  
  
 ## Syntax   
@@ -46,7 +43,7 @@ Is an expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char
 Returns a character expression with a type of string argument where the space character `char(32)` or other specified characters are removed from both sides. Returns `NULL` if input string is `NULL`.
 
 ## Remarks   
-By default `TRIM` function removes the space character `char(32)` from both sides. This behavior is equivalent to `LTRIM(RTRIM(@string))`. Behavior of `TRIM ` function with specified characters is identical to behavior of `REPLACE` function where characters from start or end are replaced with empty strings.
+By default `TRIM` function removes the space character `char(32)` from both sides. This behavior is equivalent to `LTRIM(RTRIM(@string))`. Behavior of `TRIM` function with specified characters is identical to behavior of `REPLACE` function where characters from start or end are replaced with empty strings.
 
 
 ## Examples

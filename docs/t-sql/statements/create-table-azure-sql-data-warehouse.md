@@ -33,7 +33,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     ( 
       { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
     )  
-    [ WITH [ <table_option> [ ,...n ] ) ]  
+    [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
    
 <column_options> ::=
@@ -156,7 +156,7 @@ Creates one or more table partitions. These partitions are horizontal table slic
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
 ### <a name="DataTypes"></a> Data types
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [ Data types for tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 

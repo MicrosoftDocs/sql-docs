@@ -4,7 +4,7 @@ description: Learn how to install SQL Server Machine Learning Services (R, Pytho
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 02/14/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -451,7 +451,7 @@ You can download packages from [https://packages.microsoft.com/](https://package
 
 |||
 |--|----|
-| mssql/mlservices packages | [ https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/mlservices packages | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### Package list

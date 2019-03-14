@@ -16,11 +16,8 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # Download and install SQL Server Data Tools (SSDT) for Visual Studio
-
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 **SQL Server Data Tools** is a modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
 
@@ -43,7 +40,7 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 
 ## SSDT for VS 2017 (standalone installer)
 
-[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.0) ](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - Before installing SSDT for Visual Studio 2017 (15.9.0), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.

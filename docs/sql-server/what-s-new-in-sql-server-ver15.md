@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 02/04/2019
-ms.prod: "sql-server-2018"
+ms.date: 03/01/2019
+ms.prod: "sql-server-2019"
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: "article"
@@ -14,9 +14,6 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
 **Try [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
@@ -24,13 +21,17 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
 
+**Use the [latest tools](#tools) for the best experience with SQL Server 2019.**
+
 ## CTP 2.3
 
 Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3.
 
-- [Big data clusters](#bigdatacluster) 
-  - Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ
-  - Common CLI for application deployment and cluster management
+- [Big data clusters](#bigdatacluster)
+  - Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ
+  - Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more
+  - Use Sparklyr in SQL Server 2019 big data clusters
+  - Mount external HDFS-compatible storage into big data cluster with HDFS tiering
 
 - [Database engine](#databaseengine)
   - Accelerated database recovery
@@ -38,6 +39,7 @@ Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE
   - Improved indirect checkpoint scalability
   - Query Store plan forcing support for fast forward and static cursors
   - SQL Graph enables cascaded delete of edges upon deletion of nodes
+  - External library support on Windows for both Java and Python
 
 - [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
   - Calculation groups in tabular models reduce the number of measures by reusing calculation logic.
@@ -97,9 +99,8 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - Certificate management in SQL Server Configuration Manager (CTP 2.0)
 
 - [Tools](#tools)
-  - SQL Server Management Studio (SSMS) 18.0 (preview) (CTP 2.0)
-  - Azure Data Studio (CTP 2.0)
-  - Azure Data Studio (CTP 2.1)
+  - Azure Data Studio
+  - SQL Server Management Studio (SSMS) 18.0 (preview)
 
 Continue reading for more details about these features.
 
@@ -107,11 +108,12 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
-- [Submit Jar or Py](../big-data-cluster/big-data-cluster-create-apps.md) files with references to SQL Server big data clusters. (CTP 2.3)
-- Execute Jar or Py files located in the HDFS file system (CTP 2.3)
-- Common CLI for app deployment and cluster management simplifies app deployment (CTP 2.3)
+- [Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
+- [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more (CTP 2.3)
+- [Use Sparklyr in SQL Server 2019 big data clusters](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
+- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](../big-data-cluster/hdfs-tiering.md) (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
-- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-overview.md)<!--../big-data-cluster//big-data-cluster-create-apps.md-->. (CTP 2.1) 
+- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md) (CTP 2.2)
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)
 - Run Advanced analytics and machine learning with Spark (CTP 2.0)
@@ -136,7 +138,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 >[!NOTE]
 >This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
 
-Customers with critical databases, that are prone to large transactions, are invited to experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
+If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 
 ### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
 
@@ -153,7 +155,7 @@ The end result is a reduction in extraneous recompilations and CPU-overhead.
 
 ### Improved indirect checkpoint scalability (CTP 2.3)
 
-In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
+In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint, which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
 
 ### Scalar UDF inlining (CTP 2.1)
 
@@ -181,7 +183,7 @@ Static data masking operates at the column level. Select which columns to mask, 
 
 #### Static data masking vs. dynamic data masking
 
-Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The following table compares these two solutions:
+Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in [!INCLUDE[ssSQL16](../includes/sssql16-md.md)]. The following table compares these two solutions:
 
 |Static data masking |Dynamic data masking|
 |:----|:----|
@@ -201,13 +203,15 @@ Full support for the widely used UTF-8 character encoding as an import or export
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
-This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with Latin strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII (Latin) strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
 
 For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
 
-CTP 2.1 Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
+**CTP 2.1** Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
 
-CTP 2.2 Adds support to use UTF-8 character encoding with SQL Server Replication.
+**CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
+
+**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).
 
 ### Resumable online index create (CTP 2.0)
 
@@ -306,13 +310,13 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands. 
 
-Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
+Without this feature, you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
 For more information on index resumable operations, see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Always On Availability Groups - more synchronous replicas  (CTP 2.0)
 
-- **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] . You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
+- **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.
 
 - **Secondary-to-primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use secondary-to-primary replica connection redirection in the following cases:
 
@@ -377,6 +381,8 @@ The lightweight query profiling infrastructure (LWP) provides query performance 
 
 For more information on lightweight profiling, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
 
+**CTP 2.3** A new database scoped configuration `LIGHTWEIGHT_QUERY_PROFILING` is introduced to enable or disable the lightweight query profiling infrastructure.
+
 ### <a id="polybase"></a>New PolyBase connectors
 
 - **New connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new connectors to external data for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
@@ -437,9 +443,15 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>Tools
 
-- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
+- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [SQL Server 2019 Preview extension](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
-  - Update to the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
+  - AAD is now supported. (CTP 2.3)
+  - Notebook view UI has moved into Azure Data Studio core. (CTP 2.3)
+  - Added new wizard to create external data sources from HDFS to SQL Server Big Data Cluster. (CTP 2.3)
+  - Improved Notebook viewer UI. (CTP 2.3)
+  - Added new Notebook APIs. (CTP 2.3)
+  - Added "Reinstall Notebook dependencies" command to assist with Python package updates. (CTP 2.3)
+  - Connect and manage SQL Server 2019 big data clusters. (CTP 2.1)
   - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. (CTP 2.0) 
   - Quickly visualize data with built-in charting of your result sets. (CTP 2.0)
   - Create custom dashboards for your servers and databases using customizable widgets. (CTP 2.0)  
@@ -448,31 +460,44 @@ FROM sys.dm_exec_requests AS d
   - Enhance your experience with custom theming and extensions.(CTP 2.0)
   - And explore your Azure resources with a built-in subscription and resource browser. (CTP 2.0)
   - Supports scenarios using SQL Server big data cluster. (CTP 2.0)
+  
+  > [!TIP]
+  > For the latest improvements to Azure Data Studio, see the [Azure Data Studio release notes](../azure-data-studio/release-notes-azure-data-studio.md).
 
-- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
+- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md): Supports [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. (CTP 2.0)
+  - Launch Azure Data Studio from SSMS. (CTP 2.3)
   - Support for Always Encrypted with secure enclaves. (CTP 2.0)
   - Smaller download size. (CTP 2.0)
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 
-## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
+- [**SQL Server PowerShell module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 
-### Calculation groups in tabular models (CTP 2.3)
+  - Upgrade from 21.0 to 21.1 to support SMO v150.
+  - Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.
+  - Fixed issue in `New-SqlAvailabilityGroup` cmdlet when targeting SQL Server 2014.
+  - Added `–LoadBalancedReadOnlyRoutingList` parameter to `Set-SqlAvailabilityReplica` and `New-SqlAvailabilityReplica`.
+  - Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.
 
-Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures. 
+## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
 
-A calculation group can have any number of calculation items. Each calculation item is defined by a DAX expression. Three new DAX functions are introduced to work with calculation groups:
+### Calculation groups in tabular models (CTP 2.3) 
 
-- `SELECTEDMEASURE()` - Returns a reference to the measure currently in context. 
-- `SELECTEDMEASURENAME()` - Returns a string containing the name of the measure currently in context. 
+Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures.  
+
+A calculation group can have any number of calculation items. Each calculation item is defined by a DAX expression. Three new DAX functions are introduced to work with calculation groups: 
+
+- `SELECTEDMEASURE()` - Returns a reference to the measure currently in context.  
+
+- `SELECTEDMEASURENAME()` - Returns a string containing the name of the measure currently in context.  
+
 - `ISSELECTEDMEASURE(M1, M2, …)` - Returns a Boolean indicating whether the measure currently in context is one of those specified as an argument.
 
 In addition to new DAX functions, two new Dynamic Management Views are introduced:
 
-- `TMSCHEMA_CALCULATION_GROUPS` 
-- `TMSCHEMA_CALCULATION_ITEMS` 
+- `TMSCHEMA_CALCULATION_GROUPS`  
+- `TMSCHEMA_CALCULATION_ITEMS`  
 
 For this release, calculation groups do have some limitations:
 
@@ -480,6 +505,7 @@ For this release, calculation groups do have some limitations:
 - Row Level Security defined on the calculation-group table is not yet supported.
 - Object Level Security defined on the calculation-group table is not yet supported.
 - DetailsRows expressions referring to calculation items are net yet supported.
+- MDX is not yet supported.
 
 Calculation groups require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
 

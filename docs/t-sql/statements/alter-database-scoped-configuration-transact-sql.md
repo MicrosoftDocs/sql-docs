@@ -39,7 +39,8 @@ This statement enables several database configuration settings at the **individu
 - Enable or disable collection of execution statistics for natively compiled T-SQL modules.
 - Enable or disable online by default options for DDL statements that support the ONLINE= syntax.
 - Enable or disable resumable by default options for DDL statements that support the RESUMABLE= syntax.
-- Enable or disable the auto-drop functionality of global temporary tables
+- Enable or disable the auto-drop functionality of global temporary tables. 
+- Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -62,17 +63,19 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
-    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
-    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
-    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
 }
 ```
 
@@ -81,6 +84,10 @@ ALTER DATABASE SCOPED CONFIGURATION
 FOR SECONDARY
 
 Specifies the settings for secondary databases (all secondary databases must have the identical values).
+
+CLEAR PROCEDURE_CACHE    
+
+Clears the procedure (plan) cache for the database, and can be executed both on the primary and the secondaries.  
 
 MAXDOP **=** {\<value> | PRIMARY }
 **\<value>**
@@ -134,10 +141,6 @@ PRIMARY
 
 This value is only valid on secondaries while the database in on the primary, and specifies that the value for this setting on all secondaries is the value set for the primary. If the configuration for the primary changes, the value on the secondaries changes accordingly without the need to set the secondaries value explicitly. PRIMARY is the default setting for the secondaries.
 
-CLEAR PROCEDURE_CACHE
-
-Clears the procedure (plan) cache for the database, and can be executed both on the primary and the secondaries.
-
 IDENTITY_CACHE **=** { **ON** | OFF }
 
 **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -146,6 +149,67 @@ Enables or disables identity cache at the database level. The default is **ON**.
 
 > [!NOTE]
 > This option can only be set for the PRIMARY. For more information, see [identity columns](create-table-transact-sql-identity-property.md).
+
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE]
+> For database compatibility level 130 or lower, this database scoped configuration has no effect.
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Allows you to enable or disable batch mode memory grant feedback at the database scope while still maintaining database compatibility level 140 and higher. Batch mode memory grant feedback a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+
+> [!NOTE]
+> For database compatibility level 130 or lower, this database scoped configuration has no effect.
+
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Allows you to enable or disable batch mode adaptive joins at the database scope while still maintaining database compatibility level 140 and higher. Batch mode adaptive joins is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+
+> [!NOTE]
+> For database compatibility level 130 or lower, this database scoped configuration has no effect.
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+
+Allows you to select options to cause the engine to automatically elevate supported operations to online. The default is OFF, which means operations will not be elevated to online unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_ONLINE. These options will only apply to operations that are supported for online.
+
+FAIL_UNSUPPORTED
+
+This value elevates all supported DDL operations to ONLINE. Operations that do not support online execution will fail and throw a warning.
+
+WHEN_SUPPORTED
+
+This value elevates operations that support ONLINE. Operations that do not support online will be run offline.
+
+> [!NOTE]
+> You can override the default setting by submitting a statement with the ONLINE option specified.
+
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (feature is in public preview)
+
+Allows you to select options to cause the engine to automatically elevate supported operations to resumable. The default is OFF, which means operations are not be elevated to resumable unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_RESUMABLE. These options only apply to operations that are supported for resumable.
+
+FAIL_UNSUPPORTED
+
+This value elevates all supported DDL operations to RESUMABLE. Operations that do not support resumable execution fail and throw a warning.
+
+WHEN_SUPPORTED
+
+This value elevates operations that support RESUMABLE. Operations that do not support resumable are run non-resumably.
+
+> [!NOTE]
+> You can override the default setting by submitting a statement with the RESUMABLE option specified.
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
@@ -171,41 +235,34 @@ Statement-level execution statistics for natively compiled T-SQL modules are col
 
 For more information about performance monitoring of natively compiled [!INCLUDE[tsql](../../includes/tsql-md.md)] modules see [Monitoring Performance of Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
-ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (feature is in public preview)
 
-Allows you to select options to cause the engine to automatically elevate supported operations to online. The default is OFF, which means operations will not be elevated to online unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_ONLINE. These options will only apply to operations that are supported for online.
-
-FAIL_UNSUPPORTED
-
-This value elevates all supported DDL operations to ONLINE. Operations that do not support online execution will fail and throw a warning.
-
-WHEN_SUPPORTED
-
-This value elevates operations that support ONLINE. Operations that do not support online will be run offline.
+Allows you to enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (row mode is supported in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 > [!NOTE]
-> You can override the default setting by submitting a statement with the ONLINE option specified.
+> For database compatibility level 140 or lower, this database scoped configuration has no effect.
 
-ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (feature is in public preview)
 
-Allows you to select options to cause the engine to automatically elevate supported operations to resumable. The default is OFF, which means operations are not be elevated to resumable unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_RESUMABLE. These options only apply to operations that are supported for resumable.
-
-FAIL_UNSUPPORTED
-
-This value elevates all supported DDL operations to RESUMABLE. Operations that do not support resumable execution fail and throw a warning.
-
-WHEN_SUPPORTED
-
-This value elevates operations that support RESUMABLE. Operations that do not support resumable are run non-resumably.
+Allows you to enable or disable batch mode on rowstore at the database scope while still maintaining database compatibility level 150 and higher. Batch mode on rowstore is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
 
 > [!NOTE]
-> You can override the default setting by submitting a statement with the RESUMABLE option specified.
+> For database compatibility level 140 or lower, this database scoped configuration has no effect.
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
+
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (feature is in public preview)
+
+Allows you to enable or disable table variable deferred compilation at the database scope while still maintaining database compatibility level 150 and higher. Table variable deferred compilation is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+
+> [!NOTE]
+> For database compatibility level 140 or lower, this database scoped configuration has no effect.
+
+GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
 
@@ -214,47 +271,11 @@ Allows setting the auto drop functionality for [global temporary tables](create-
 - With [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single databases and elastic pools, this option can be set in the individual user databases of the SQL Database server.
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, this option is set in `TempDB` and the setting of the individual user databases has no effect.
 
-DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md)
-
-DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-Allows you to enable or disable Adaptive joins at the database or statement scope while still maintaining database compatibility level 140 and higher. Adaptive Joins is a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (feature is in public preview)
-
-Allows you to enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017 (row mode is supported in SQL Server 2019 and Azure SQL Database).
-
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-Allows you to enable or disable batch mode memory grant feedback at the database scope while still maintaining database compatibility level 140 and higher. Batch mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017.
-
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
-
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-Allows you to enable or disable batch mode adaptive joins at the database scope while still maintaining database compatibility level 140 and higher. Batch mode adaptive joins is a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017.
-
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}
-
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (feature is in public preview)
-
-Allows you to enable or disable batch mode on rowstore at the database scope while still maintaining database compatibility level 150 and higher. Batch mode on rowstore is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
-
-DEFERRED_COMPILATION_TV = { ON | OFF}
-
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (feature is in public preview)
-
-Allows you to enable or disable table variable deferred compilation at the database scope while still maintaining database compatibility level 150 and higher. Table variable deferred compilation is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+Allows you to enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md). The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling mechanisms and is enabled by default.
 
 ## <a name="Permissions"></a> Permissions
 

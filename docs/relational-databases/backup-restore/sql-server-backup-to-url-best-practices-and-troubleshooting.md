@@ -146,7 +146,7 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
   
 If you turn on the verbose logging using the trace flag 3051 you may also see the following message in the logs:  
   
-`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.) ` 
+`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
  **Default Proxy Settings not picked up:**  
   

@@ -15,7 +15,7 @@ manager: craigg
 # System Requirements, Installation, and Driver Files
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports connections to SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)], and [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports connections to SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)], and [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows can be installed on a computer that also has one or more versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   

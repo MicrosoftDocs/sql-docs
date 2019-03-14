@@ -14,9 +14,6 @@ manager: craigg
 ---
 # Download and install Azure Data Studio
 
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
 
@@ -35,11 +32,12 @@ For details about the latest release, see the [release notes](release-notes.md).
 
 ## Get Azure Data Studio for Windows
 
-This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip:
+This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip file.
+
+The *user installer* is recommended because it does not require administrator privileges, which simplifies both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+
 
 **User Installer** (recommended)
-
-The user installer is recommended because it does not require administrator privileges, which simplifies both installs and upgrades.
 
 1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2072725).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.

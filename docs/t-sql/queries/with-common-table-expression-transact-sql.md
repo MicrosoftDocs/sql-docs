@@ -24,16 +24,13 @@ helpviewer_keywords:
   - "MAXRECURSION hint"
   - "clauses [SQL Server], WITH common_table_expression"
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Specifies a temporary named result set, known as a common table expression (CTE). This is derived from a simple query and defined within the execution scope of a single SELECT, INSERT, UPDATE, DELETE or MERGE statement. This clause can also be used in a CREATE VIEW statement as part of its defining SELECT statement. A common table expression can include references to itself. This is referred to as a recursive common table expression.  
   

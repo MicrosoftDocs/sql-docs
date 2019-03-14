@@ -32,6 +32,8 @@ manager: craigg
 -   [Syntax Rules](#syntaxRules)  
   
 -   [Using dtexec from the xp_cmdshell](#cmdshell)  
+
+-   [Using dtexec from Bash](#bash)
   
 -   [Syntax](#syntax)  
   
@@ -133,7 +135,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **IMPORTANT!!** In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **xp_cmdshell** option is disabled by default on new installations. The option can be enabled by running the **sp_configure** system stored procedure. For more information, see [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
-  
+
+##  <a name="bash"></a> Using dtexec from Bash
+
+The **Bash** shell is a popular shell for Linux. It can also be used on Windows. You can run dtexec from the Bash prompt. Notice that a semicolon (`;`) is a command delimiter operator in Bash. This is particularly important when passing in values to the package using the `/Conn[ection]` or `/Par[arameter]` or '`/Set` options since they use the semicolon to separate the name and the value of the item provided. The following example shows how to properly escape the semicolon and other items when using Bash and passing in values to a package:
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> Syntax  
   
 ```  

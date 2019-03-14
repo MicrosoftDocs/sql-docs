@@ -22,16 +22,13 @@ helpviewer_keywords:
   - "rowsets [SQL Server], ordering"
   - "OVER clause"
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - OVER Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   Determines the partitioning and ordering of a rowset before the associated window function is applied. That is, the OVER clause defines a window or user-specified set of rows within a query result set. A window function then computes a value for each row in the window. You can use the OVER clause with functions to compute aggregated values such as moving averages, cumulative aggregates, running totals, or a top N per group results.  
   

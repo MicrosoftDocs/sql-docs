@@ -40,7 +40,7 @@ This statement enables several database configuration settings at the **individu
 - Enable or disable online by default options for DDL statements that support the `ONLINE =` syntax.
 - Enable or disable resumable by default options for DDL statements that support the `RESUMABLE =` syntax.
 - Enable or disable the auto-drop functionality of global temporary tables.
-- Enable or disable T-SQL Scalar UDF inlining.
+- Enable or disable [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) features.
 - Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Enable or disable the new `String or binary data would be truncated` error message.
 

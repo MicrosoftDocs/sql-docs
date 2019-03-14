@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
 
-**Use the [latest tools](#tools) for the best experience with SQL Server 2019.**
+**Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
 ## CTP 2.4
 
@@ -43,9 +43,9 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - Use Azure Data Studio to run Query books that provide a notebook experience (CTP 2.0)
   - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
   - Deploy Python and R apps (CTP 2.2)
-  - Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ (CTP 2.3)
+  - Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ (CTP 2.3)
   - Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more (CTP 2.3)
-  - Use Sparklyr in SQL Server 2019 big data clusters (CTP 2.3)
+  - Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters (CTP 2.3)
   - Mount external HDFS-compatible storage into big data cluster with HDFS tiering (CTP 2.3)
 
 
@@ -81,6 +81,7 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - External library support on Windows for both Java and Python (CTP 2.3)
   - New `query_post_execution_plan_profile` Extended Event (CTP 2.4) 
   - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query (CTP 2.4)
+  - Transparent data encryption (TDE) scan - suspend and resume (CTP 2.4)
 
 - [SQL Server on Linux](#sqllinux)
   - Replication support (CTP 2.0)
@@ -111,9 +112,9 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
-- [Submit Spark jobs on SQL Server 2019 big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
+- [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
 - [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more (CTP 2.3)
-- [Use Sparklyr in SQL Server 2019 big data clusters](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
+- [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
 - Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](../big-data-cluster/hdfs-tiering.md) (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md) (CTP 2.2)
@@ -173,6 +174,24 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+### Transparent data encryption (TDE) scan - suspend and resume (CTP 2.4)
+
+In order to enable TDE on a database, SQL Server must perform an encryption scan which reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk.  To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
+
+Use the following syntax to pause the TDE encryption scan:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND
+```
+
+Similarly, the following syntax resumes the TDE encryption scan:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME
+```
+
+To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view . There is also a new column called `encryption_scan_state_timestamp` which will contain the date and time of the last encryption scan state change. Also note that if the SQL Server instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
 
 ### Accelerated database recovery (CTP 2.3)
 
@@ -496,7 +515,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>Tools
 
-- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [SQL Server 2019 Preview extension](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
+- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Preview extension](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
   - AAD is now supported. (CTP 2.3)
   - Notebook view UI has moved into Azure Data Studio core. (CTP 2.3)
@@ -504,7 +523,7 @@ FROM sys.dm_exec_requests AS d
   - Improved Notebook viewer UI. (CTP 2.3)
   - Added new Notebook APIs. (CTP 2.3)
   - Added "Reinstall Notebook dependencies" command to assist with Python package updates. (CTP 2.3)
-  - Connect and manage SQL Server 2019 big data clusters. (CTP 2.1)
+  - Connect and manage [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. (CTP 2.1)
   - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. (CTP 2.0) 
   - Quickly visualize data with built-in charting of your result sets. (CTP 2.0)
   - Create custom dashboards for your servers and databases using customizable widgets. (CTP 2.0)  
@@ -539,17 +558,17 @@ FROM sys.dm_exec_requests AS d
 
 This feature allows many-to-many relationships between tables where both columns are non-unique. A relationship can be defined between a dimension and fact table at a granularity higher than the key column of the dimension. This avoids having to normalize dimension tables and can improve the user experience because the resulting model has a smaller number of tables with logically grouped columns. For this CTP 2.4 release, many-to-many relationships are engine-only features. 
 
-Many-to-many relationships require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. For this CTP 2.4 release, many-to-many relationships can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
+Many-to-many relationships require models be at the 1470 compatibility level, which is currently supported only in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 and later. For this CTP 2.4 release, many-to-many relationships can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
 
 ### Memory settings for resource governance 
 
-The memory settings described here are already available in Azure Analysis Services. Beginning with CTP 2.4, they are now also supported by SQL Server 2019 Analysis Services. 
+The memory settings described here are already available in Azure Analysis Services. Beginning with CTP 2.4, they are now also supported by [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Analysis Services. 
 
  - **Memory\QueryMemoryLimit** - This memory property can be used to limit memory spools built by DAX queries submitted to the model. 
  - **DbpropMsmdRequestMemoryLimit** - This XMLA property can be used to override the Memory\QueryMemoryLimit server property value for a connection.
  - **OLAP\Query\RowsetSerializationLimit** - This server property limits the number of rows returned in a rowset, protecting server resources from extensive data export usage. This property applies to both applies to both DAX and MDX queries. 
 
-These properties require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. These properties can be set by using the latest version of SQL Server Management Studio (SSMS). Additional information for this feature will be provided in the Analysis Services blog.
+These properties require models be at the 1470 compatibility level, which is currently supported only in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 and later. These properties can be set by using the latest version of SQL Server Management Studio (SSMS). Additional information for this feature will be provided in the Analysis Services blog.
 
 ### Calculation groups in tabular models (CTP 2.3) 
 
@@ -576,7 +595,7 @@ For this release, calculation groups do have some limitations:
 - DetailsRows expressions referring to calculation items are net yet supported.
 - MDX is not yet supported.
 
-Calculation groups require models be at the 1470 compatibility level, which is currently supported only in SQL Server 2019 CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
+Calculation groups require models be at the 1470 compatibility level, which is currently supported only in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
 
 ## Other services
 

@@ -122,7 +122,7 @@ Memory can be configured up to the process virtual address space limit in all [!
 ## Examples
 
 ### Example A. Set the max server memory option to 4 GB.
- The following example sets the `max server memory` option to 4 GB.  Note that although `'show advanced options'` specifies the name of the option as `max server memory (MB)`, the example demonstrates omitting the `(MB)`.
+ The following example sets the `max server memory` option to 4 GB.  Note that although `sp_configure` specifies the name of the option as `max server memory (MB)`, the example demonstrates omitting the `(MB)`.
 
 ```sql
 sp_configure 'show advanced options', 1;

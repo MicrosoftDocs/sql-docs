@@ -188,4 +188,6 @@ The interval between DCM pages and BCM pages is the same as the interval between
 
 ## See Also
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[Heaps &#40;Tables without Clustered Indexes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[Heaps &#40;Tables without Clustered Indexes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[Reading Pages](../relational-databases/reading-pages.md)   
+[Writing Pages](../relational-databases/writing-pages.md)   

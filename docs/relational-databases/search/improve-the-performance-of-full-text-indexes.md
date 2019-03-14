@@ -1,10 +1,8 @@
 ---
 title: "Improve the Performance of Full-Text Indexes | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,8 +13,9 @@ helpviewer_keywords:
   - "full-text search [SQL Server], performance"
   - "batches [SQL Server], full-text search"
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -35,11 +35,11 @@ To change the compatibility level of a database, refer to [View or Change the Co
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
+
 ```sql
 STRING_SPLIT ( string , separator )  
 ```
-  
+
 ## Arguments
 
  *string*  
@@ -94,6 +94,7 @@ WHERE RTRIM(value) <> '';
 STRING_SPLIT will return empty string if there is nothing between separator. Condition RTRIM(value) <> '' will remove empty tokens.  
   
 ### B. Split comma-separated value string in a column
+
 Product table has a column with comma-separate list of tags shown in the following example:  
   
 |ProductId|Name|Tags|  
@@ -103,13 +104,13 @@ Product table has a column with comma-separate list of tags shown in the followi
 |3|HL Mountain Frame|bike,mountain|  
   
 Following query transforms each list of tags and joins them with the original row:  
-  
+
 ```sql  
 SELECT ProductId, Name, value  
 FROM Product  
     CROSS APPLY STRING_SPLIT(Tags, ',');  
-```  
-  
+```
+
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 |ProductId|Name|value|  
@@ -125,9 +126,10 @@ FROM Product
   >[!NOTE]
   > The order of the output may vary as the order is _not_ guaranteed to match the order of the substrings in the input string.
   
-### C. Aggregation by values  
+### C. Aggregation by values
+
 Users must create a report that shows the number of products per each tag, ordered by number of products, and to filter only the tags with more than two products.  
-  
+
 ```sql  
 SELECT value as tag, COUNT(*) AS [Number of articles]  
 FROM Product  
@@ -135,36 +137,38 @@ FROM Product
 GROUP BY value  
 HAVING COUNT(*) > 2  
 ORDER BY COUNT(*) DESC;  
-```  
-  
-### D. Search by tag value  
+```
+
+### D. Search by tag value
+
 Developers must create queries that find articles by keywords. They can use following queries:  
   
 To find products with a single tag (clothing):  
-  
-```sql  
+
+```sql
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));  
-```  
-  
+```
+
 Find products with two specified tags (clothing and road):  
-  
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
     WHERE value IN ('clothing', 'road'));  
-```  
-  
-### E. Find rows by list of values  
+```
+
+### E. Find rows by list of values
+
 Developers must create a query that finds articles by a list of IDs. They can use following query:  
-  
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
-JOIN STRING_SPLIT('1,2,3',',')   
+JOIN STRING_SPLIT('1,2,3',',')
     ON value = ProductId;  
 ```  
 
@@ -174,15 +178,14 @@ The preceding STRING_SPLIT usage is a replacement for a common anti-pattern. Suc
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
-```  
-  
-## See Also  
-[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)     
-[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)     
-[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)    
-[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)     
-[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)     
-[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)     
-[String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)      
-  
-  
+```
+
+## See Also
+
+[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
+[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)
+[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)
+[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)
+[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)
+[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)
+[String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

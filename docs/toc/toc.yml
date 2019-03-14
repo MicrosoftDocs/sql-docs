@@ -132,7 +132,9 @@
       - name: Exporting ML models with Spark/Mleap
         href: ../big-data-cluster/export-model-with-spark-mleap.md
       - name: Use Sparklyr from RStudio
-        href: ../big-data-cluster/sparklyr-from-RStudio.md  
+        href: ../big-data-cluster/sparklyr-from-RStudio.md
+      - name: GPU support and TensorFlow
+        href: ../big-data-cluster/spark-gpu-tensorflow.md
     - name: Manage SQL Server big data cluster
       items:
       - name: Connect to a big data cluster

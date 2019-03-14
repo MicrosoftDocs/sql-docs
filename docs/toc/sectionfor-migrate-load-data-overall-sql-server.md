@@ -12,3 +12,5 @@ manager: craigg
 ROBOTS: NOINDEX
 ---
 # Section for: Migrate and load data in SQL Server
+
+See the table of contents under this expandable parent node.

@@ -225,10 +225,14 @@
       href: r/creating-multiple-models-using-rxexecby.md
   - name: Deploy
     items: 
+    - name: Operationalize using stored procedures
+      href: r/operationalizing-your-r-code.md
     - name: Convert R code for SQL Server
       href: r/converting-r-code-for-use-in-sql-server.md
     - name: Create a stored procedure using sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+    - name: SSIS and SSRS integration
+      href: r/creating-workflows-that-use-r-in-sql-server.md
   - name: Predictions
     items:
     - name: How to generate predictions
@@ -314,17 +318,3 @@
       href: common-issues-external-script-execution.md
     - name: R scripting errors
       href: r-script-execution-errors.md
-  - name: Blogs
-    items:
-    - name: SQL Server
-      href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: R Server
-      href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
-    - name: Machine Learning
-      href: https://blogs.technet.microsoft.com/machinelearning/
-  - name: Forums
-    items:
-    - name: SQL Server
-      href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
-    - name: Machine Learning Server
-      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR

@@ -66,6 +66,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
     | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
     | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
@@ -176,6 +177,15 @@ Allows you to enable or disable batch mode adaptive joins at the database scope 
 
 > [!NOTE]
 > For database compatibility level 130 or lower, this database scoped configuration has no effect.
+
+TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
+
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]  (feature is in public preview)
+
+Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope while still maintaining database compatibility level 150 and higher. T-SQL Scalar UDF inlining a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+
+> [!NOTE] 
+> For database compatibility level 140 or lower, this database scoped configuration has no effect.
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 

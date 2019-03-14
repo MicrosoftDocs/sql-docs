@@ -76,6 +76,7 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - SQL Graph enables cascaded delete of edges upon deletion of nodes (CTP 2.3)
   - External library support on Windows for both Java and Python (CTP 2.3)
   - New `query_post_execution_plan_profile` Extended Event (CTP 2.4) 
+  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query (CTP 2.4)
 
 - [SQL Server on Linux](#sqllinux)
   - Replication support (CTP 2.0)
@@ -123,6 +124,20 @@ Continue reading for more details about these features.
 ## <a id="databaseengine"></a> Database Engine
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
+
+### New DMF sys.dm_exec_query_plan_stats (CTP 2.4)
+
+The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query, based on lightweight profiling. For more information, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
+
+```sql
+SELECT *   
+FROM sys.dm_exec_cached_plans   
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)   
+WHERE objtype ='Trigger';  
+GO
+```     
+
+This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled. 
 
 ### New query_post_execution_plan_profile Extended Event (CTP 2.4)
 

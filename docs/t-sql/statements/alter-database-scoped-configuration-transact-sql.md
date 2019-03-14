@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/28/2019"
+ms.date: "03/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -40,6 +40,7 @@ This statement enables several database configuration settings at the **individu
 - Enable or disable online by default options for DDL statements that support the ONLINE= syntax.
 - Enable or disable resumable by default options for DDL statements that support the RESUMABLE= syntax.
 - Enable or disable the auto-drop functionality of global temporary tables. 
+- Enable or disable [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) features.
 - Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -62,7 +63,6 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
-    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
     | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
     | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }

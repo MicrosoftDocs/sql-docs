@@ -33,7 +33,7 @@ It helps to first understand the Kerberos protocol at a high level. There are th
 1. Secured resource (HDFS, MR2, YARN, Job History, etc.)
 1. Key distribution center (referred to as a domain controller in Active Directory)
 
-Each Hadoop secured resource is registered in the **Key Distribution Center (KDC)** with a unique **Service Principal Name (SPN)** when Kerberos is configured on the Hadoop cluster. The goal is for the client to obtain a temporary user ticket, called a **Ticket Granting Ticket (TGT)**, in order to request another temporary ticket, called a **Service Ticket (ST)**, from the KDC against the particular SPN that it wants to access.  
+Each Hadoop secured resource is registered in the **Key Distribution Center (KDC)** with a unique **Service Principal Name (SPN)** when Kerberos is configured on the Hadoop cluster. The goal is for the client to obtain a temporary user ticket, called a **Ticket Granting Ticket (TGT)**, in order to request another temporary ticket, called a **Service Ticket (ST)**, from the KDC against the particular SPN that it wants to access.  
 
 In PolyBase, when authentication is requested against any Kerberos-secured resource, the following four-round-trip handshake takes place:
 
@@ -97,7 +97,7 @@ The tool runs independently of SQL Server, so it does not need to be running, no
 | *Name Node Port* | The port of the name node. Refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. For example, 8020. |
 | *Service Principal* | The admin service principal to your KDC. Matches the "IDENTITY" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Service Password* | Instead of typing your password at the console, store it in a file and pass the file path here. The contents of the file should match what you use as your "SECRET" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
-| *Remote HDFS file path (optional) * | The path of an existing file to access. If not specified, the root "/" will be used. |
+| *Remote HDFS file path (optional) * | The path of an existing file to access. If not specified, the root "/" will be used. |
 
 ## Example
 
@@ -205,12 +205,12 @@ If the tool was run and the file properties of the target path were *not* printe
 
 ## Debugging tips
 
-### MIT KDC  
+### MIT KDC  
 
-All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If Kerberos is properly configured on the Hadoop cluster, there should be one SPN for each one of the services available in the cluster (for example: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC private key.  
+All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If Kerberos is properly configured on the Hadoop cluster, there should be one SPN for each one of the services available in the cluster (for example: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC private key.  
 
-Also consider using [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) to verify the admin credentials on the KDC locally. An example usage would be: `kinit identity@MYREALM.COM`. A prompt for a password indicates the identity exists.  
-The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includes all of the requests for tickets including the client IP that made the request. There should be two requests from the SQL Server machine's IP wherein the tool was run: first for the TGT from the Authenticating Server as an **AS\_REQ**, followed by a **TGS\_REQ** for the ST from the Ticket Granting Server.
+Also consider using [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) to verify the admin credentials on the KDC locally. An example usage would be: `kinit identity@MYREALM.COM`. A prompt for a password indicates the identity exists.  
+The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includes all of the requests for tickets including the client IP that made the request. There should be two requests from the SQL Server machine's IP wherein the tool was run: first for the TGT from the Authenticating Server as an **AS\_REQ**, followed by a **TGS\_REQ** for the ST from the Ticket Granting Server.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -220,7 +220,7 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which inclu
 
 ### Active Directory 
 
-In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If Kerberos is properly configured on the Hadoop cluster, there is one SPN for each one of the services available (for example: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
+In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If Kerberos is properly configured on the Hadoop cluster, there is one SPN for each one of the services available (for example: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
 
 ### General debugging tips
 

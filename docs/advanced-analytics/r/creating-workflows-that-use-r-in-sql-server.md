@@ -13,7 +13,7 @@ manager: cgronlun
 # Create SSIS and SSRS workflows with R on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to combine relational data, data science functions from the Microsoft R libaries, and BI features such as Integration Services and Reporting Services available in SQL Server. Learn which capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lend themselves to a data science solutions. This article also reminds you that code and data on SQL Server, such as the embedded R code in stored procedures, is easily consumed in visualizations provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+This article explains how to combine relational data, data science functions from the Microsoft R libraries, and BI features such as Integration Services and Reporting Services available in SQL Server. Learn which capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lend themselves to a data science solution. This article also reminds you that code and data on SQL Server, such as the embedded R code in stored procedures, is easily consumed in visualizations provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
 ## Bring compute power to the data
 

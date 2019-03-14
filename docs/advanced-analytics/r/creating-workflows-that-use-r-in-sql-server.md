@@ -13,7 +13,7 @@ manager: cgronlun
 # Create SSIS and SSRS workflows with R on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to combine relational data, data science functions from the Microsoft R libraries, and BI features such as Integration Services and Reporting Services available in SQL Server. Learn which capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lend themselves to a data science solution. This article also reminds you that code and data on SQL Server, such as the embedded R code in stored procedures, is easily consumed in visualizations provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+This article explains how to use stored procedures in two important SQL Server features, SQL Server Integration Services (SSIS), and SQL Server Reporting Services SSRS, in way that combines relational data, data science functions from the Microsoft R libraries, and BI features for coordinated data transformations and visualization. Learn which capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lend themselves to a data science solution. This article also reminds you that code and data on SQL Server, such as the embedded R code in stored procedures, is easily consumed in visualizations provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
 ## Bring compute power to the data
 
@@ -28,7 +28,7 @@ By using the right combination of SQL and R for different data processing and an
 
 <a name="bkmk_ssis"></a> 
 
-## Use SQL Server Integration Services (SSIS) for data transformation and automation
+## Use SSIS for data transformation and automation
 
 Data science workflows are highly iterative and involve much transformation of data, including scaling, aggregations, computation of probabilities, and renaming and merging of attributes. Data scientists are accustomed to doing many of these tasks in R, Python, or another language; however, executing such workflows on enterprise data requires seamless integration with ETL tools and processes.
 
@@ -45,11 +45,9 @@ Here are some ideas for how you can automate your data processing and modeling p
 
 The following example originates from a now-retired MSDN blog post authored by Jimmy Wong at this URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`.
 
-This example shows you how to automate tasks using SSIS. You should be familiar with Management Studio, SSIS, SSIS Designer, and T-SQL. Steps in the SSIS package include three [Execute T-SQL tasks](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) that insert training data into a table, model the data, and score the data to get prediction output.
+This example shows you how to automate tasks using SSIS. You create stored procedures with embedded R using SQL Server Management Studio, and then execute those stored procedures from [Execute T-SQL tasks](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in an SSIS package.
 
-+ Call R using the [Execute T-SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) to generate data and save it into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-+ Use  a stored procedure to train an R model and store it in the database.
-+ Perform scoring on the model using the [Script T-SQL task](https://docs.microsoft.com/ql/integration-services/control-flow/script-task) and the [Execute T-SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task).
+To step through this example, you should be familiar with Management Studio, SSIS, SSIS Designer, package design, and T-SQL. The SSIS package uses three [Execute T-SQL tasks](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) that insert training data into a table, model the data, and score the data to get prediction output.
 
 ### Create tables
 
@@ -190,7 +188,7 @@ In SSIS Designer, press F5 to execute the package. You should see an outcome sim
 
 <a name="bkmk_ssrs"></a> 
 
-##  Use Reporting Services for visualization
+## Use SSRS for visualizations
 
 Although R can create charts and interesting visualizations, it is not well-integrated with external data sources, meaning that each chart or graph has to be individually produced. Sharing also can be difficult.
 
@@ -211,4 +209,4 @@ This CodePlex project provides the code to help you create a custom report item 
 
 ## Next steps
 
-The SSIS and SSRS examples in this article illustrate alternative methods for using embedded R in stored procedures in production scenarios. One of the main takeaways is that you can make R or Python script available to any application or tool if it can accept output from a stored procedure. For more information, see [Operationalize R code using stored procedures in SQL Server Machine Learning Services](operationalizing-your-r-code.md).
+The SSIS and SSRS examples in this article illustrate two cases of executing stored procedures that contain embedded R or Python script. A key takeaway is that you can make R or Python script available to any application or tool that can send an execution request on a stored procedure. An additional takeaway for SSIS is that you can create packages that automate and schedule wide range of operations, such as data acquisition, cleansing, manipulation, and so forth, with R or Python data science functionality included in the chain of operations. For more information and ideas, see [Operationalize R code using stored procedures in SQL Server Machine Learning Services](operationalizing-your-r-code.md).

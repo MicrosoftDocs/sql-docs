@@ -230,7 +230,7 @@
     items: 
     - name: Operationalize using stored procedures
       href: ../advanced-analytics/r/operationalizing-your-r-code.md
-    - name: Create SSIS and SSRS workflows with R on SQL Server
+    - name: Create SSIS and SSRS workflows with R
       href: ../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md
     - name: Convert R code for SQL Server
       href: ../advanced-analytics/r/converting-r-code-for-use-in-sql-server.md

@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sys.dm_server_registry (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns configuration and installation information that is stored in the Windows registry for the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Returns one row per registry key. Use this dynamic management view to return information such as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services that are available on the host machine or network configuration values for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

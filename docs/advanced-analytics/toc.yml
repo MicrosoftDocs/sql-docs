@@ -227,7 +227,11 @@
     - name: Create multiple models using rxExecBy
       href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
   - name: Deploy
-    items:
+    items: 
+    - name: Operationalize using stored procedures
+      href: ../advanced-analytics/r/operationalizing-your-r-code.md
+    - name: Create SSIS and SSRS workflows with R
+      href: ../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md
     - name: Convert R code for SQL Server
       href: ../advanced-analytics/r/converting-r-code-for-use-in-sql-server.md
     - name: Create a stored procedure using sqlrutils
@@ -315,17 +319,3 @@
       href: ../advanced-analytics/common-issues-external-script-execution.md
     - name: R scripting errors
       href: ../advanced-analytics/r-script-execution-errors.md
-  - name: Blogs
-    items:
-    - name: SQL Server +
-      href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: R Server +
-      href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
-    - name: Machine Learning +
-      href: https://blogs.technet.microsoft.com/machinelearning/
-  - name: Forums
-    items:
-    - name: SQL Server +
-      href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
-    - name: Machine Learning Server +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR

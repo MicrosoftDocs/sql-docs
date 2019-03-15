@@ -147,12 +147,6 @@ To create a SQL Server credential, follow these steps:
        WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
        , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
     GO   
-
-    USE master  
-    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
     ```  
   
 4.  To see all available credentials, you can run the following statement in a query window connected to your instance:  

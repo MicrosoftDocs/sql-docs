@@ -52,7 +52,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## Remarks
 This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. See KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
+This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

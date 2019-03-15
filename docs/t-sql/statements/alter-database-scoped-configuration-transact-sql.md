@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/12/2019"
+ms.date: "03/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -184,7 +184,7 @@ TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (feature is in public preview)
 
-Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope while still maintaining database compatibility level 150 and higher. T-SQL Scalar UDF inlining a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope while still maintaining database compatibility level 150 and higher. T-SQL Scalar UDF inlining is part of the [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
 
 > [!NOTE]
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.

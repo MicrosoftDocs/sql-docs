@@ -68,7 +68,7 @@ The following steps create a database named **tutorialdb**:
 
 3. From the toolbar select **Run** to execute the query. Notifications appear in the **MESSAGES** pane to show query progress.
 
->![TIP]
+>[!TIP]
 > You can click **F5** on your keyboard to execute the statement instead of using **Run**.
 
 After the query completes, right-click **Databases** and select **Refresh** to see **tutorialdb** in the list under the **Databases** node.

@@ -43,12 +43,12 @@
 - name: Big data cluster
   href: ../toc/redirectfrom-big-data-cluster.md ## /sql/big-data-cluster/big-data-cluster-overview
   items: 
-  - name: Overview
+  - name: Overview of big data cluster
     items:
     - name: What are SQL Server big data clusters?
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
-      href: ../big-data-cluster/big-data-cluster-release-notes.md
+      href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: Install
     items:
     - name: Install Tools
@@ -8021,6 +8021,8 @@
         href: ../azure-data-studio/quickstart-sql-database.md
       - name: Connect & query Azure SQL Data Warehouse
         href: ../azure-data-studio/quickstart-sql-dw.md
+      - name: Connect & query PostgreSQL
+        href: ../azure-data-studio/quickstart-postgres.md
     - name: Tutorials
       items:
       - name: T-SQL Editor
@@ -8058,6 +8060,8 @@
     - name: Extensions
       href: ../azure-data-studio/extensions.md
       items:
+      - name: PostgreSQL
+        href: ../azure-data-studio/postgres-extension.md
       - name: SQL Server 2019 (preview)
         href: ../azure-data-studio/sql-server-2019-extension.md
       - name: SQL Server Agent (preview)

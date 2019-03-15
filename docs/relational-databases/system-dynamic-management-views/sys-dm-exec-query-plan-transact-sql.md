@@ -37,16 +37,20 @@ sys.dm_exec_query_plan ( plan_handle )
 ```  
   
 ## Arguments  
- *plan_handle*  
- Uniquely identifies a query plan for a batch that is cached or is currently executing.  
+*plan_handle*  
+Uniquely identifies a query plan for a batch that is cached or is currently executing. *plan_handle* is **varbinary(64)**. 
+
+The *plan_handle* can be obtained from the following dynamic management objects:  
   
- *plan_handle* is **varbinary(64)**. *plan_handle* can be obtained from the following dynamic management objects:  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
-  
- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## Table Returned  
   

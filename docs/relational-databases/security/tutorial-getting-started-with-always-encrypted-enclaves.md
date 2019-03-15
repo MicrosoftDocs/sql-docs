@@ -18,7 +18,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
-- How to create a simple environment for testing and evaluating Always Encrypted with secure enclaves.
+- How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
 - How to encrypt data in-place and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
@@ -34,7 +34,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 - Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter
 - [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
-Alternatively, you can install SSMS on another machine.
+As an alternative, you can install SSMS on another machine.
 
 >[!WARNING] 
 >In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted.
@@ -133,11 +133,11 @@ If all else fails, run Clear-HgsClientHostKey and repeat steps 4-7.
 In this step, you will enable the functionality of Always Encrypted using enclaves in your SQL Server instance.
 
 1. Open SSMS, connect to your SQL Server instance as sysadmin, and open a new query window.
-2. Configure the secure enclave type to VBS.
+2. Set the secure enclave type to Virtualization Based Security (VBS).
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. Restart your SQL Server instance for the previous change to take effect. You can restart the instance in SSMS by right-clicking on it in Object Explorer and selecting Restart. Once the instance restarts, reconnect to it.
@@ -146,10 +146,10 @@ In this step, you will enable the functionality of Always Encrypted using enclav
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    The query should return a row that looks like the following:  
+    The query should return the following result:  
 
     | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -158,7 +158,7 @@ In this step, you will enable the functionality of Always Encrypted using enclav
 5. To enable rich computations on encrypted columns, run the following query:
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -171,7 +171,7 @@ In this step, you will create a database with some sample data, which you will e
 2. Create a new database, named ContosoHR.
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. Make sure you are connected to the newly created database. Create a new table, named Employees.
@@ -184,8 +184,7 @@ In this step, you will create a database with some sample data, which you will e
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. Add a few employee records to the Employees table.
@@ -200,9 +199,8 @@ In this step, you will create a database with some sample data, which you will e
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -212,8 +210,7 @@ In this step, you will create a database with some sample data, which you will e
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## Step 5: Provision enclave-enabled keys
@@ -232,7 +229,7 @@ In this step, you will create a column master key and a column encryption key th
     7. Select **OK**.
 
         ![Allow enclave computations](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. Create a new enclave-enabled column encryption key:
 
     1. Right-click **Always Encrypted Keys** and select **New Column Encryption Key**.
@@ -248,40 +245,40 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.
     3. Select Connection \> Change Connection.
-    4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
+    4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. Select **Connect**.
-2. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
+    6. Change the database context to the ContosoHR database.
+1. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.
     3. Select Connection \> Change Connection.
     4. Select on **Options**. Navigate to the **Always Encrypted** tab, make sure **Enable Always Encrypted** is not selected.
     5. Select **Connect**.
-3. Encrypt the SSN and Salary columns. In the query window with Always Encrypted enabled, paste in and execute the below statements:
+    6. Change the database context to the ContosoHR database.
+1. Encrypt the SSN and Salary columns. In the query window with Always Encrypted enabled, paste in and execute the below script:
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > Notice the ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE statement to clear the query plan cache for the database in the above script. After you have altered the table, you need to clear the plans for all batches and stored procedures that access the table, to refresh parameters encryption information. 
 
 4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns. With the Always Encrypted enabled query window, try the same query to see the data decrypted.
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## Step 7: Run rich queries against encrypted columns
@@ -292,13 +289,13 @@ Now, you can run rich queries against the encrypted columns. Some query processi
     1. Select **Query** from the main menu of SSMS.
     2. Select **Query Options...**.
     3. Navigate to **Execution** > **Advanced**.
-    4. Select or unselect Enable Parameterization for Always Encrypted.
-    5. Select OK.
+    4. Select **Enable Parameterization for Always Encrypted**.
+    5. Select **OK**.
 2. In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

@@ -45,9 +45,9 @@ sys.dm_exec_query_statistics_xml(session_id)
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID of the session. Not nullable.|
 |request_id|**int**|ID of the request. Not nullable.|
-|sql_handle|**varbinary(64)**|Hash map of SQL text of the request. Nullable.|
-|plan_handle|**varbinary(64)**|Hash map of query plan. Nullable.|
-|query_plan|**xml**|Showplan XML with partial statistics. Nullable.|
+|sql_handle|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure that the query is part of. Nullable.|
+|plan_handle|**varbinary(64)**|Is a token that uniquely identifies a query execution plan for a batch that is currently executing. Nullable.|
+|query_plan|**xml**|Contains the runtime Showplan representation of the query execution plan that is specified with *plan_handle* containing partial statistics. The Showplan is in XML format. One plan is generated for each batch that contains, for example ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, stored procedure calls, and user-defined function calls. Nullable.|
 
 ## Remarks
 This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. See KB [3190871](https://support.microsoft.com/en-us/help/3190871)

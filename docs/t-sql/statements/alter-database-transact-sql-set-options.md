@@ -150,7 +150,7 @@ SET
     DATE_CORRELATION_OPTIMIZATION { ON | OFF }
   
 <db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_state_option> ::=
     { ONLINE | OFFLINE | EMERGENCY }
@@ -495,12 +495,14 @@ The current setting of this option can be determined by examining the is_date_co
 
 Controls the database encryption state.
 
-ENCRYPTION {ON | OFF}
+ENCRYPTION {ON | OFF | SUSPEND | RESUME}
 Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+
+In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later, SUSPEND and RESUME options can be used to pause and resume the encryption scan after TDE has been enabled or disabled, or after the encryption key has been changed.
 
 When encryption is enabled at the database level, all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to **READ ONLY**, the database encryption operation will fail.
 
-You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+You can see the encryption state of the database as well as the state of the encryption scan by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
 **\<db_state_option> ::=**
 

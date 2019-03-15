@@ -73,10 +73,8 @@
         href: ../big-data-cluster/deploy-with-kubeadm.md
       - name: Minikube
         href: ../big-data-cluster/deploy-on-minikube.md
-    - name: Sample data
-      items:
-      - name: Load sample data
-        href: ../big-data-cluster/tutorial-load-sample-data.md
+    - name: Load sample data
+      href: ../big-data-cluster/tutorial-load-sample-data.md
   - name: Concepts
     items:
     - name: Controller

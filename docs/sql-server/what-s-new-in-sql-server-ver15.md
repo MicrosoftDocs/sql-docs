@@ -191,7 +191,7 @@ Similarly, the following syntax resumes the TDE encryption scan:
 ALTER DATABASE <db_name> SET ENCRYPTION RESUME
 ```
 
-To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view . There is also a new column called `encryption_scan_state_timestamp` which will contain the date and time of the last encryption scan state change. Also note that if the SQL Server instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
+To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view . There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the SQL Server instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
 
 ### Accelerated database recovery (CTP 2.3)
 

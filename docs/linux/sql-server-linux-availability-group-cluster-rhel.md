@@ -83,7 +83,7 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-For more information, see [Pacemaker - The Open Source, High Availability Cluster](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+For more information, see [Pacemaker - The Open Source, High Availability Cluster](https://clusterlabs.org/pacemaker/). 
 
 After you have configured the subscription, complete the following steps to configure Pacemaker:
 

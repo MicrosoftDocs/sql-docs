@@ -52,23 +52,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## Remarks
 This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. See KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure.  
-  
-**Standard** statistics profiling infrastructure can be enabled by using:
-  -  [SET STATISTICS XML ON](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE ON](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  the `query_post_execution_showplan` extended event.  
-  
-**Lightweight** statistics profiling infrastructure is available in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and can be enabled:
-  -  Globally by using trace flag 7412.
-  -  Using the [*query_thread_profile*](https://support.microsoft.com/kb/3170113) extended event.
-  
-> [!NOTE]
-> Once enabled by trace flag 7412, lightweight profiling will be enabled to any consumer of the query execution statistics profiling infrastructure instead of standard profiling, such as the DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> However, standard profiling is still used for SET STATISTICS XML, *Include Actual Plan* action in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], and `query_post_execution_showplan` xEvent.
-
-> [!IMPORTANT]
-> In TPC-C like workload tests, enabling the lightweight statistics profiling infrastructure adds a 1.5 to 2 percent overhead. In contrast, the standard statistics profiling infrastructure can add up to 90 percent overhead for the same workload scenario.
+This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

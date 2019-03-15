@@ -140,6 +140,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
       SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
       SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
+      SET DOCKER_EMAIL=<your email address>
       SET DOCKER_PRIVATE_REGISTRY=1
       ```
 
@@ -166,6 +167,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
       export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
       export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
+      export DOCKER_EMAIL="<your email address>"
       export DOCKER_PRIVATE_REGISTRY="1"
       ```
 

@@ -111,7 +111,7 @@ If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database i
 |**is_temporal_retention_enabled**|**bit**|Indicates whether temporal retention policy cleanup task is enabled.<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|The catalog collation setting:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|The catalog collation setting:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**Is_result_set_caching**|**int**|Reserved for internal use.</br>**Applies to**: Azure SQL Data Warehouse
+|**Is_result_set_caching**|**int**|**Applies to**: Azure SQL Data Warehouse (Reserved for internal use)
   
 ## Permissions  
  If the caller of `sys.databases` is not the owner of the database and the database is not `master` or `tempdb`, the minimum permissions required to see the corresponding row are `ALTER ANY DATABASE` or the `VIEW ANY DATABASE` server-level permission, or `CREATE DATABASE` permission in the `master` database. The database to which the caller is connected can always be viewed in `sys.databases`.  

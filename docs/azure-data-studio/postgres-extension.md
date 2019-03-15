@@ -14,9 +14,9 @@ manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# PostgreSQL for Azure Data Studio (preview)
+# PostgreSQL extension (preview)
 
-The PostgreSQL extension for Azure Data Studio (preview) enables you to connect to, query, and develop for PostgreSQL using the capabilities of Azure Data Studio. 
+The PostgreSQL extension (preview) enables you to connect to, query, and develop for Postgres using the capabilities of Azure Data Studio. 
 
 The Azure Data Studio functionality available for PostgreSQL includes:
 

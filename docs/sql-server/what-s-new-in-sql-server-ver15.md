@@ -80,6 +80,7 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - SQL Graph enables cascaded delete of edges upon deletion of nodes (CTP 2.3)
   - External library support on Windows for both Java and Python (CTP 2.3)
   - New `query_post_execution_plan_profile` Extended Event (CTP 2.4) 
+  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query (CTP 2.4)
   - Transparent data encryption (TDE) scan - suspend and resume (CTP 2.4)
 
 - [SQL Server on Linux](#sqllinux)
@@ -158,6 +159,20 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+### New DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
+
+The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example: 
+
+```sql
+SELECT *    
+FROM sys.dm_exec_cached_plans    
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)    
+WHERE objtype ='Trigger';   
+GO 
+```      
+
+This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
 
 ### Transparent data encryption (TDE) scan - suspend and resume (CTP 2.4)
 

@@ -62,15 +62,15 @@ This is an opt-in feature and requires [trace flag](../../t-sql/database-console
 
 This system function works under the **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-Under the following conditions, a Showplan output equivalent to an actual execution plan is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
+Under the following conditions, a Showplan output equivalent to an actual execution plan **is returned** in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
 
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute in parallel or include joins between large tables with no search predicates.
+-   The plan is cacheable and can be found in the [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) DMV.
 
-Under the following conditions, a Showplan output without query operators is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
+    **AND**
 
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute in serial and include joins between large tables with search predicates.
+-   The plan may be affected by runtime conditions such as available memory or available DOP. This typically includes plans executed in parallel **OR** include the Hash Match and Spool operators **OR** use dynamic memory grant. 
 
-Under the following conditions, no Showplan output is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
+Under the following conditions, Showplan output **is not returned** in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
   
 -   If the query plan that is specified by using *plan_handle* has been evicted from the plan cache, the **query_plan** column of the returned table is null. For example, this condition may occur if there is a time delay between when the plan handle was captured and when it was used with **sys.dm_exec_query_plan_stats**.  
   
@@ -79,8 +79,13 @@ Under the following conditions, no Showplan output is returned in the **query_pl
 -   If a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or stored procedure contains a call to a user-defined function or a call to dynamic SQL, for example using EXEC (*string*), the compiled XML Showplan for the user-defined function is not included in the table returned by **sys.dm_exec_query_plan_stats** for the batch or stored procedure. Instead, you must make a separate call to **sys.dm_exec_query_plan_stats** for the plan handle that corresponds to the user-defined function.  
   
 When an ad hoc query uses simple or forced parameterization, the **query_plan** column will contain only the statement text and not the actual query plan. To return the query plan, call **sys.dm_exec_query_plan** for the plan handle of the prepared parameterized query. You can determine whether the query was parameterized by referencing the **sql** column of the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) view or the text column of the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management view.  
-  
-Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates error 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.  
+
+In any other scenario not covered above, a **simplified<sup>1</sup>** Showplan output **is returned** in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**.
+
+<sup>1</sup> This refers to a Showplan that only contains the root node operator (SELECT). 
+
+> [!NOTE] 
+> Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates error 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

@@ -30,13 +30,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Syntax  
   
 ```  
-  
-dm_exec_cached_plan_dependent_objects(plan_handle)  
+sys.dm_exec_cached_plan_dependent_objects(plan_handle)  
 ```  
   
 ## Arguments  
- *plan_handle*  
- Uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache. *plan_handle* is **varbinary(64)**. The *plan_handle* can be obtained from the following dynamic management objects:  
+*plan_handle*  
+Uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache. *plan_handle* is **varbinary(64)**.   
+
+The *plan_handle* can be obtained from the following dynamic management objects:  
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   

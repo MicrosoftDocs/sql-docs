@@ -23,17 +23,16 @@ manager: craigg
 # sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
+Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
   
- The XML schema for the Showplan is published and available at [this Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). It is also available in the directory where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
+The XML schema for the Showplan is published and available at [this Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). It is also available in the directory where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
-sys.dm_exec_query_plan ( plan_handle )  
+sys.dm_exec_query_plan(plan_handle)  
 ```  
   
 ## Arguments  
@@ -93,7 +92,7 @@ The *plan_handle* can be obtained from the following dynamic management objects:
   
  First, retrieve the server process ID (SPID) for the process that is executing the query or batch by using the `sp_who` stored procedure:  
   
-```  
+```sql  
 USE master;  
 GO  
 exec sp_who;  
@@ -102,7 +101,7 @@ GO
   
  The result set that is returned by `sp_who` indicates that the SPID is `54`. You can use the SPID with the `sys.dm_exec_requests` dynamic management view to retrieve the plan handle by using the following query:  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -112,39 +111,44 @@ GO
   
  The table that is returned by **sys.dm_exec_requests** indicates that the plan handle for the slow-running query or batch is `0x06000100A27E7C1FA821B10600`, which you can specify as the *plan_handle* argument with `sys.dm_exec_query_plan` to retrieve the execution plan in XML format as follows. The execution plan in XML format for the slow-running query or batch is contained in the **query_plan** column of the table returned by `sys.dm_exec_query_plan`.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
+SELECT * 
+FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
 GO  
 ```  
   
 ### B. Retrieve every query plan from the plan cache  
  To retrieve a snapshot of all query plans residing in the plan cache, retrieve the plan handles of all query plans in the cache by querying the `sys.dm_exec_cached_plans` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_cached_plans`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_query_plan` as follows. The XML Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_cached_plans AS cp 
+CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
 GO  
 ```  
   
 ### C. Retrieve every query plan for which the server has gathered query statistics from the plan cache  
  To retrieve a snapshot of all query plans for which the server has gathered statistics that currently reside in the plan cache, retrieve the plan handles of these plans in the cache by querying the `sys.dm_exec_query_stats` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_query_stats`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_query_plan` as follows. The XML Showplan output for each plan for which the server has gathered statistics currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_stats qs CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_query_stats AS qs 
+CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
 GO  
 ```  
   
 ### D. Retrieve information about the top five queries by average CPU time  
  The following example returns the plans and average CPU time for the top five queries.  
   
-```  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-Plan_handle, query_plan   
+   plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
 CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
 ORDER BY total_worker_time/execution_count DESC;  
@@ -161,4 +165,3 @@ GO
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   
-

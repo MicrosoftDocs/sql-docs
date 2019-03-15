@@ -35,7 +35,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## Arguments  
 *plan_handle*  
-Uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache. *plan_handle* is **varbinary(64)**.   
+Is a token that uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache. *plan_handle* is **varbinary(64)**.   
 
 The *plan_handle* can be obtained from the following dynamic management objects:  
   
@@ -58,7 +58,7 @@ The *plan_handle* can be obtained from the following dynamic management objects:
 |**cacheobjtype**|**nvarchar(50)**|The Plan cache object type. Column is not nullable. Possible values are<br /><br /> Executable plan<br /><br /> CLR compiled function<br /><br /> CLR compiled procedure<br /><br /> Cursor|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+ Requires `VIEW SERVER STATE` permission on the server.  
   
 ## Physical Joins  
  ![Relationship diagram](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "Relationship diagram")  

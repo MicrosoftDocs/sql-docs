@@ -21,14 +21,14 @@ This quickstart shows how to use [!INCLUDE[name-sos](../includes/name-sos-short.
 To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], the PostgreSQL extension for [!INCLUDE[name-sos](../includes/name-sos-short.md), and access to a PostgreSQL server.
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
-- [Install the PostgreSQL extension for (../includes/name-sos-short.md)](postgres-extension.md).
-- [Install PostgreSQL](https://www.postgresql.org/download/). Alternatively, you can create one in the cloud using [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli). 
+- [Install the PostgreSQL extension for Azure Data Studio](postgres-extension.md).
+- [Install PostgreSQL](https://www.postgresql.org/download/). (Alternatively, you can create a Postgres database in the cloud using [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli)). 
 
 ## Connect to PostgreSQL
 
 1. Start **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
 
-2. The first time you start *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* the **Connection** dialog opens. If the **Connection** dialog doesn't open, click the **New Connection** icon in the **SERVERS** page:
+2. The first time you start [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** dialog opens. If the **Connection** dialog doesn't open, click the **New Connection** icon in the **SERVERS** page:
 
    ![New Connection Icon](media/quickstart-postgresql/new-connection-icon.png)
 
@@ -69,7 +69,7 @@ The following steps create a database named **tutorialdb**:
 3. From the toolbar select **Run** to execute the query. Notifications appear in the **MESSAGES** pane to show query progress.
 
 >[!TIP]
-> You can click **F5** on your keyboard to execute the statement instead of using **Run**.
+> You can use **F5** on your keyboard to execute the statement instead of using **Run**.
 
 After the query completes, right-click **Databases** and select **Refresh** to see **tutorialdb** in the list under the **Databases** node.
 
@@ -127,3 +127,6 @@ Paste the following snippet into the query window and click **Run**:
 
    ![View results](media/quickstart-postgresql/view-results.png)
 
+## Next Steps
+
+Learn about the [scenarios available for Postgres in Azure Data Studio](postgres-extension.md). 

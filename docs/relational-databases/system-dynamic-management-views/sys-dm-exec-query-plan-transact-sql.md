@@ -37,9 +37,9 @@ sys.dm_exec_query_plan(plan_handle)
   
 ## Arguments  
 *plan_handle*  
-Uniquely identifies a query plan for a batch that is cached or is currently executing. *plan_handle* is **varbinary(64)**. 
+Is a token that uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache, or is currently executing. *plan_handle* is **varbinary(64)**.   
 
-The *plan_handle* can be obtained from the following dynamic management objects:  
+The *plan_handle* can be obtained from the following dynamic management objects:
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -75,7 +75,7 @@ The *plan_handle* can be obtained from the following dynamic management objects:
  Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates error 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL. You can use the [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) dynamic management function to return the output of the query plan in text format.  
   
 ## Permissions  
- To execute **sys.dm_exec_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the VIEW SERVER STATE permission on the server.  
+ To execute **sys.dm_exec_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the `VIEW SERVER STATE` permission on the server.  
   
 ## Examples  
  The following examples show how to use the **sys.dm_exec_query_plan** dynamic management view.  

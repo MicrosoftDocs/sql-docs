@@ -43,12 +43,12 @@
 - name: Big data cluster
   href: ../toc/redirectfrom-big-data-cluster.md ## /sql/big-data-cluster/big-data-cluster-overview
   items: 
-  - name: Overview
+  - name: Overview of big data cluster
     items:
     - name: What are SQL Server big data clusters?
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
-      href: ../big-data-cluster/big-data-cluster-release-notes.md
+      href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: Install
     items:
     - name: Install Tools

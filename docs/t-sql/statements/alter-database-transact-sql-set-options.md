@@ -150,7 +150,7 @@ SET
     DATE_CORRELATION_OPTIMIZATION { ON | OFF }
   
 <db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_state_option> ::=
     { ONLINE | OFFLINE | EMERGENCY }
@@ -495,12 +495,14 @@ The current setting of this option can be determined by examining the is_date_co
 
 Controls the database encryption state.
 
-ENCRYPTION {ON | OFF}
+ENCRYPTION {ON | OFF | SUSPEND | RESUME}
 Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+
+In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later, SUSPEND and RESUME options can be used to pause and resume the encryption scan after TDE has been enabled or disabled, or after the encryption key has been changed.
 
 When encryption is enabled at the database level, all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to **READ ONLY**, the database encryption operation will fail.
 
-You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+You can see the encryption state of the database as well as the state of the encryption scan by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
 **\<db_state_option> ::=**
 
@@ -551,7 +553,7 @@ SINGLE_USER
 
 Specifies that only one user at a time can access the database. If you specify SINGLE_USER and other users connect to the database, the ALTER DATABASE statement is blocked until all users disconnect from the specified database. To override this behavior, see the WITH \<termination> clause.
 
-The database remains in SINGLE_USER mode even if the user that set the option logs off. At that point, a different user, but only one, can connect to the database.
+The database remains in SINGLE_USER mode even if the user that set the option signs off. At that point, a different user, but only one, can connect to the database.
 
 Before you set the database to SINGLE_USER, verify the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF. When set to ON, the background thread used to update statistics takes a connection against the database, and you'll be unable to access the database in single-user mode. To view the status of this option, query the is_auto_update_stats_async_on column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. If the option is set to ON, perform the following tasks:
 

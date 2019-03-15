@@ -134,7 +134,7 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+SET DOCKER_PRIVATE_REGISTRY=1
 ```
 
 ### Linux
@@ -142,8 +142,8 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Initialize the following environment variables. In bash, you can use quotes around each value.
 
 ```bash
-export ACCEPT_EULA=yes
-export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
+export ACCEPT_EULA="yes"
+export CLUSTER_PLATFORM="<minikube or aks or kubernetes>"
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
 export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"

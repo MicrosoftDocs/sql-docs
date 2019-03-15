@@ -46,7 +46,7 @@ The following steps use the Azure CLI to create an AKS cluster that supports GPU
 1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named `gpucluster` in the `sqlbigdatagroupgpu` resource group.
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-osdisk-size 50 --kubernetes-version 1.11.7 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.7 --location eastus
    ```
 
    > [!NOTE]
@@ -66,7 +66,9 @@ The following steps use the Azure CLI to create an AKS cluster that supports GPU
    kubectl create namespace gpu-resources
    ```
 
-1. Save the contents of the following YAML file to a file named **nvidia-device-plugin-ds.yaml**. Save this to a working directory on your machine. Update the `image: nvidia/k8s-device-plugin:1.11` half-way down the manifest to match your Kubernetes version. For example, if your AKS cluster runs Kubernetes version 1.12, update the tag to `image: nvidia/k8s-device-plugin:1.12`.
+1. Save the contents of the following YAML file to a file named **nvidia-device-plugin-ds.yaml**. Save this to the working directory on your machine that you are running **kubectl** from.
+
+   Update the `image: nvidia/k8s-device-plugin:1.11` half-way down the manifest to match your Kubernetes version. For example, if your AKS cluster runs Kubernetes version 1.12, update the tag to `image: nvidia/k8s-device-plugin:1.12`.
 
    ```yaml
    apiVersion: extensions/v1beta1
@@ -127,7 +129,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
 
       ```cmd
       SET ACCEPT_EULA=yes
-      SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
+      SET CLUSTER_PLATFORM=aks
 
       SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
       SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
@@ -136,9 +138,9 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
 
       SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
       SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
-      SET DOCKER_USERNAME=marinchcreus3
+      SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_PRIVATE_REGISTRY="1"
+      SET DOCKER_PRIVATE_REGISTRY=1
       ```
 
    1. Deploy the big data cluster:
@@ -153,7 +155,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
 
       ```bash
       export ACCEPT_EULA=yes
-      export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
+      export CLUSTER_PLATFORM="aks"
 
       export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
       export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
@@ -162,7 +164,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
 
       export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
       export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
-      export DOCKER_USERNAME="marinchcreus3"
+      export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PRIVATE_REGISTRY="1"
       ```

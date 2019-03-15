@@ -452,7 +452,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### N. Using a label and a query hint with the DELETE statement  
- This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION Clause (Transact-SQL)](../queries/option-clause-transact-sql).
   
 ```sql
 -- Uses AdventureWorks  

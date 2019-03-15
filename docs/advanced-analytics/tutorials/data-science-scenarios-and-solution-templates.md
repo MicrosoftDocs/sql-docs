@@ -51,7 +51,7 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 
 ## Customer churn
 
-[Customer churn prediction template (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[Customer churn prediction template (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **What:** Analyzing and predicting customer churn is important in any industry where the loss of customers to competitors must be managed and prevented:  banking, telecommunications, and retail, to name a few. The goal of churn analysis is to identify which customers are likely to churn, and then take appropriate actions to retain such customers and keep their business.
 
@@ -59,7 +59,7 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
   
 ## Predictive maintenance
 
-[Predictive maintenance template (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[Predictive maintenance template (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **What:** Predictive maintenance aims to increase the efficiency of maintenance tasks by capturing past failures and using that information to predict when or where a device might fail. The ability to forecast device obsolescence is especially valuable for applications that rely on distributed data or sensors. this method could also be applied to monitor or predict error in IoT (Internet of Things) devices.
 

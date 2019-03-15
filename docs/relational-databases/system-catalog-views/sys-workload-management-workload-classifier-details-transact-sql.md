@@ -1,7 +1,7 @@
 ---
 title: "sys.workload_management_workload_classifier_details (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/08/2019"
+ms.date: "03/13/2019"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -31,4 +31,4 @@ Requires VIEW SERVER STATE permission.
 
 ## Next steps
   
- For a list of all the catalog views for SQL Data Warehouse and Parallel Data Warehouse, see [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload classifier, see [CREATE WORKLOAD CLASSIFIER](../../t-sql/statements/create-workload-classifier-transact-sql.md). For more information on workload classification see [SQL DATA Warehouse Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+ For a list of all the catalog views for SQL Data Warehouse and Parallel Data Warehouse, see [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload classifier, see [CREATE WORKLOAD CLASSIFIER](../../t-sql/statements/create-workload-classifier-transact-sql.md). For more information on workload classification, see [SQL DATA Warehouse Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

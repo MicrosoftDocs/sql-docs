@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/06/2019"
+ms.date: "03/13/2019"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"

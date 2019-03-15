@@ -27,10 +27,16 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
+- [Database engine](#databaseengine)
+  - New `query_post_execution_plan_profile` Extended Event
+  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query
+  - Transparent data encryption (TDE) scan - suspend and resume
+
 - [SQL Server Analysis Services](#ssas)
   - Many-to-many relationships in tabular models. 
   - Property settings for resource governance. 
 
+<!-----
 ## Previous CTPs
 
 Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
@@ -79,7 +85,7 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
   - SQL Graph enables cascaded delete of edges upon deletion of nodes (CTP 2.3)
   - External library support on Windows for both Java and Python (CTP 2.3)
-  - New `query_post_execution_plan_profile` Extended Event (CTP 2.4) 
+  - New `query_post_execution_plan_profile` Extended Event (CTP 2.4)
   - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query (CTP 2.4)
   - Transparent data encryption (TDE) scan - suspend and resume (CTP 2.4)
 
@@ -101,13 +107,15 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
 
 - [SQL Server Analysis Services](#ssas)
   - Calculation groups in tabular models reduce the number of measures by reusing calculation logic. (CTP 2.3)
+  - Many-to-many relationships in tabular models. (CTP 2.4)
+  - Property settings for resource governance. (CTP 2.4)
 
 - [Tools](#tools)
   - Azure Data Studio
   - SQL Server Management Studio (SSMS) 18.0 (preview)
 
 Continue reading for more details about these features.
-
+------>
 ## <a id="bigdatacluster"></a>Big data clusters
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:

@@ -9,7 +9,7 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"

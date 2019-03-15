@@ -45,6 +45,11 @@
             "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql",
             "redirect_document_id": true
         }, 
+	            {
+            "source_path": "docs/sql/relational-databases/performance/adaptive-query-processing.md",
+            "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing",
+            "redirect_document_id": true 
+        },
         {
             "source_path": "docs/advanced-analytics/tutorials/wrap-python-in-tsql-stored-procedure.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-iris-in-sql",
@@ -5207,7 +5212,17 @@
       },
       {
         "source_path": "docs/sql-operations-studio/release-notes.md",
-        "redirect_url": "/sql/azure-data-studio/release-notes",
+        "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/azure-data-studio/release-notes.md",
+        "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/big-data-cluster/big-data-cluster-release-notes.md",
+        "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
         "redirect_document_id": true
       },
       {
@@ -13798,6 +13813,31 @@
         {
             "source_path": "docs/azure-data-studio/dashboards.md",
             "redirect_url": "/sql/azure-data-studio/insight-widgets",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssdt/sql-server-data-tools-license-terms-vs2017.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-data-tools-license-terms-vs2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssms/sql-server-management-studio-license-terms.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-management-studio-license-terms",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssdt/data-tier-application-framework-license-terms.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/data-tier-application-framework-license-terms",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssdt/sql-server-data-tools-license-terms.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-data-tools-license-terms",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/powershell/sql-server-powershell-license-terms.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-powershell-license-terms",
             "redirect_document_id": true
         }
     ]

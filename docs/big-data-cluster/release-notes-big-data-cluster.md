@@ -5,53 +5,40 @@ description: This article describes the latest updates and known issues for SQL 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/04/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
+# Release notes for big data clusters on SQL Server
 
-# Release notes for SQL Server 2019 big data clusters
-
-This article provides the latest updates and known issues for the latest release of SQL Server big data clusters. The following table links you to the section for the releases covered in this article.
-
-| Release | Date |
-|---|---|
-| [CTP 2.3](#ctp23) | February 2019 |
-| [CTP 2.2](#ctp22) | December 2018 |
-| [CTP 2.1](#ctp21) | November 2018 |
-| [CTP 2.0](#ctp20) | October 2018 |
+This article lists the updates and know issues for the most recent releases of SQL Server big data clusters.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="ctp23"></a> CTP 2.3 (February 2019)
+## <a id="ctp23"></a> CTP 2.3 (SQL 2019)
 
-The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.3.
+February 2019 &nbsp; &nbsp; / &nbsp; &nbsp; SQL Server 2019 &nbsp; &nbsp; / &nbsp; &nbsp; CTP2.3
 
-### What's in the CTP 2.3 release?
+### New features
 
-- [Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md).
-- [Common CLI for application deployment and cluster management](big-data-cluster-create-apps.md).
-- [VS Code extension to deploy applications to SQL Server big data clusters](app-deployment-extension.md).
-- [Changes to the **mssqlctl** tool command usage](#mssqlctlctp23).
-- [Use Sparklyr in SQL Server 2019 Big data cluster](sparklyr-from-RStudio.md).
-- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](hdfs-tiering.md).
-- New unified connection experience for the [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md).
-- Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster but leaves the namespace. Previously, this command deleted the entire namespace.
-- Endpoint names have been changed and consolidated in this release:
+| New feature | Details |
+| :---------- | :------ |
+| [Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md). | &nbsp; |
+| [Common CLI for application deployment and cluster management](big-data-cluster-create-apps.md). | &nbsp; |
+| [VS Code extension to deploy applications to SQL Server big data clusters](app-deployment-extension.md). | &nbsp; |
+| [Changes to the **mssqlctl** tool command usage](#mssqlctlctp23). | &nbsp; |
+| [Use Sparklyr in SQL Server 2019 Big data cluster](sparklyr-from-RStudio.md). | &nbsp; |
+| Mount external HDFS-compatible storage into big data cluster with **HDFS tiering**. | See [HDFS tiering](hdfs-tiering.md). |
+| New unified connection experience for the SQL Server master instance and the HDFS/Spark Gateway. | See [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md). |
+| Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
+| _Security_ endpoint names have been changed and consolidated. | _Previous endpoints:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-security-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-security-nodeport**<br/><br/>_New endpoint:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-security** |
+| _Proxy_ endpoint names have been changed and consolidated. | _Previous endpoints:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-proxy-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-proxy-nodeport**<br/><br/>_New endpoint:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-service-proxy** |
+| _Controller_ endpoint names have been changed and consolidated. | _Previous endpoints:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-mssql-controller-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-mssql-controller-nodeport**<br/><br/>_New endpoint:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-controller** |
+| &nbsp; | &nbsp; |
 
-   | Previous endpoints | New endpoint |
-   |---|---|
-   | **service-security-lb**<br/>**service-security-nodeport** | **endpoint-security** |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | **endpoint-service-proxy** |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | **endpoint-controller** |
-
-### Known issues
-
-The following sections provide known issues for SQL Server big data clusters in CTP 2.3.
-
-#### Deployment
+### Known issues: Deployment
 
 - Upgrading a big data data cluster from a previous release is not supported.
 
@@ -70,7 +57,33 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
 
-#### <a id="mssqlctlctp23"></a> mssqlctl
+### Known issues: kubeadm deployments
+
+If you use kubeadm to deploy Kubernetes on multiple machines, the cluster administration portal does not correctly display the endpoints needed to connect to the big data cluster. If you are experiencing this problem, use the following work around to discover the service endpoint IP addresses:
+
+- If you are connecting from within the cluster, query Kubernetes for the service IP for the endpoint that you want to connect to. For example, the following **kubectl** command displays the IP address of the SQL Server master instance:
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- If you are connecting from outside the cluster, use the following steps to connect:
+
+   1. Get the IP address of the node running the SQL Server master instance: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`.
+
+   1. Connect to SQL Server master instance using this IP address.
+
+   1. Query the **cluster_endpoint_table** in master database for other external endpoints.
+
+      If this fails with a connection timeout, it is possible the respective node is firewalled. In this case, you must contact your Kubernetes cluster administrator and ask for the node IP that is exposed externally. This could be any node. You can then use that IP and the corresponding port to connect to various services running in the cluster. For example, the administrator can find this IP by running:
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
+
+### <a id="mssqlctlctp23"></a> Known issues: mssqlctl
 
 - The **mssqlctl** tool changed from a verb-noun command ordering to a noun-verb order. For example, `mssqlctl create cluster` is now `mssqlctl cluster create`.
 
@@ -82,7 +95,7 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - For important information about upgrading to the latest version of big data clusters and **mssqlctl**, see [Upgrade to a new release](deployment-guidance.md#upgrade).
 
-#### External tables
+### Known issues: External tables
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
 
@@ -94,7 +107,11 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - If you are creating an external table to Oracle that use character data types, the Azure Data Studio virtualization wizard interprets these columns as VARCHAR in the external table definition. This will cause a failure in the external table DDL. Either modify the Oracle schema to use the NVARCHAR2 type, or create EXTERNAL TABLE statements manually and specify NVARCHAR instead of using the wizard.
 
-#### Spark and notebooks
+### Known issues: Application deployment
+
+- When calling an R, Python, or MLeap application from the RESTful API, the call times-out in 5 minutes.
+
+### Known issues: Spark and notebooks
 
 - POD IP addresses may change in the Kubernetes environment as PODs restarts. In the scenario where the master-pod restarts, the Spark session may fail with `NoRoteToHostException`. This is caused by JVM caches that don't get refreshed with new IP addresses.
 
@@ -102,7 +119,7 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - In a notebook, if you click the **Add Text** command, the text cell is added in preview mode rather than edit mode. You can click on the preview icon to toggle to edit mode and edit the cell.
 
-#### HDFS
+### Known issues: HDFS
 
 - If you right-click on a file in HDFS to preview it, you might see the following error:
 
@@ -112,7 +129,7 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
 
-#### Security
+### Known issues: Security
 
 - The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
 

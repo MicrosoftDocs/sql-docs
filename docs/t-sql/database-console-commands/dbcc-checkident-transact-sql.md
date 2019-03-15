@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/10/2018"
+ms.date: "03/07/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "identity values [SQL Server], reseeding"
   - "reporting current identity values"
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---
@@ -71,9 +71,9 @@ DBCC CHECKIDENT
   
 |DBCC CHECKIDENT command|Identity correction or corrections made|  
 |-----------------------------|---------------------------------------------|  
-|DBCC CHECKIDENT ( *table_name*, NORESEED )|Current identity value isn't reset. DBCC CHECKIDENT returns the current identity value and the current maximum value of the identity column. If the two values aren't the same, you should reset the identity value to avoid potential errors or gaps in the sequence of values.|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> or<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|If the current identity value for a table is less than the maximum identity value stored in the identity column, it's reset using the maximum value in the identity column. See the 'Exceptions' section that follows.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Current identity value is set to the *new_reseed_value*. If no rows were inserted into the table since the table was created, or if all rows were removed by using the TRUNCATE TABLE statement, the first row inserted after you run DBCC CHECKIDENT uses *new_reseed_value* as the identity.<br /><br /> If rows are present in the table, the next row is inserted with the *new_reseed_value* + the [current increment](../../t-sql/functions/ident-incr-transact-sql.md) value. In version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and earlier, the next row inserted uses *new_reseed_value* + the [current increment](../../t-sql/functions/ident-incr-transact-sql.md) value.<br /><br /> If the table isn't empty, setting the identity value to a number less than the maximum value in the identity column can result in one of the following conditions:<br /><br /> -If a PRIMARY KEY or UNIQUE constraint exists on the identity column, error message 2627 will be generated on later insert operations into the table. This error is because the generated identity value will conflict with existing values.<br /><br /> -If a PRIMARY KEY or UNIQUE constraint doesn't exist, later insert operations will result in duplicate identity values.|  
+|DBCC CHECKIDENT ( *table_name*, NORESEED )|Current identity value is not reset. DBCC CHECKIDENT returns the current identity value and the current maximum value of the identity column. If the two values are not the same, you should reset the identity value to avoid potential errors or gaps in the sequence of values.|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> or<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|If the current identity value for a table is less than the maximum identity value stored in the identity column, it is reset using the maximum value in the identity column. See the 'Exceptions' section that follows.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Current identity value is set to the *new_reseed_value*. If no rows have been inserted into the table since the table was created, or if all rows have been removed by using the TRUNCATE TABLE statement, the first row inserted after you run DBCC CHECKIDENT uses *new_reseed_value* as the identity.<br /><br /> If rows are present in the table, or if all rows have been removed by using the DELETE statement, the next row inserted uses *new_reseed_value* + the [current increment](../../t-sql/functions/ident-incr-transact-sql.md) value.<br /><br /> If the table is not empty, setting the identity value to a number less than the maximum value in the identity column can result in one of the following conditions:<br /><br /> -If a PRIMARY KEY or UNIQUE constraint exists on the identity column, error message 2627 will be generated on later insert operations into the table because the generated identity value will conflict with existing values.<br /><br /> -If a PRIMARY KEY or UNIQUE constraint does not exist, later insert operations will result in duplicate identity values.|  
   
 ## Exceptions  
  The following table lists conditions when DBCC CHECKIDENT doesn't automatically reset the current identity value, and provides methods for resetting the value.  
@@ -130,8 +130,8 @@ GO
 ```  
   
 ### C. Forcing the current identity value to a new value  
- The following example forces the current identity value in the `AddressTypeID` column in the `AddressType` table to a value of 10. Because the table has existing rows, the next row inserted will use 11 as the value, that is, the new current increment value defined for the column value plus 1.  
-  
+ The following example forces the current identity value in the `AddressTypeID` column in the `AddressType` table to a value of 10. Because the table has existing rows, the next row inserted will use 11 as the value – the new current identity value defined for the column plus 1 (which is the column's increment value).  
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -161,4 +161,5 @@ GO
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
+
   

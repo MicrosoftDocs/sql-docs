@@ -129,6 +129,25 @@ The following requirements apply to all installations:
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 > 
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products  
+
+**Server Core Support:**
+
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  is now supported on a Server Core installation of Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
+
+Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core mode is supported by the following editions of Windows Server:
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
+   | &nbsp; | &nbsp; |
+
+For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+
   
 ### Features Supported on 32-bit Client Operating Systems  
  Windows client operating systems, for example Windows 10 and Windows 8.1 are available as 32-bit or 64-bit architectures.   All SQL Server features are supported on 64-bit client operating systems. On supported 32-bit client operating systems Microsoft supports the following features:  

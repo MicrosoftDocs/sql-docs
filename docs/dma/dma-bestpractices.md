@@ -2,7 +2,7 @@
 title: "Best practices for Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn best practices for migrating SQL Server databases with Data Migration Assistant
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Best Practices"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---

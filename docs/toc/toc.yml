@@ -43,12 +43,12 @@
 - name: Big data cluster
   href: ../toc/redirectfrom-big-data-cluster.md ## /sql/big-data-cluster/big-data-cluster-overview
   items: 
-  - name: Overview
+  - name: Overview of big data cluster
     items:
     - name: What are SQL Server big data clusters?
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
-      href: ../big-data-cluster/big-data-cluster-release-notes.md
+      href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: Install
     items:
     - name: Get Started
@@ -157,6 +157,32 @@
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Use extended Spark History Server
         href: ../big-data-cluster/spark-history-server.md
+  - name: Reference
+    items:
+    - name: mssqlctl reference
+      items:
+      - name: mssqlctl
+        href: ../big-data-cluster/reference-mssqlctl.md
+      - name: App Deploy
+        items:
+        - name: mssqlctl app 
+          href: ../big-data-cluster/reference-mssqlctl-app.md
+        - name: mssqlctl app template
+          href: ../big-data-cluster/reference-mssqlctl-app-template.md
+      - name: Cluster
+        items:
+        - name: mssqlctl cluster
+          href: ../big-data-cluster/reference-mssqlctl-cluster.md
+        - name: mssqlctl cluster config
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: mssqlctl cluster debug
+          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md 
+      - name: Storage
+        items:
+        - name: mssqlctl storage
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: mssqlctl storage mount
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Business continuity
   href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:
@@ -3464,7 +3490,7 @@
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md
         - name: Introduction to Updategrams
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/introduction-to-updategrams-sqlxml-4-0.md
-        - name: NULL Handling
+        - name: "NULL Handling"
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/null-handling-sqlxml-4-0.md
         - name: Passing Parameters to Updategrams
           href: ../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md
@@ -3915,6 +3941,11 @@
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: Pages & Extents Architecture
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: Reading pages
+      href: ../relational-databases/reading-pages.md
+    - name: Writing pages
+      href: ../relational-databases/writing-pages.md
   - name: Post-migration Validation & Optimization
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Query Processing Architecture
@@ -3927,11 +3958,6 @@
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Memory Management Architecture    
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: Reading pages
-      href: ../relational-databases/reading-pages.md
-    - name: Writing pages
-      href: ../relational-databases/writing-pages.md
 - name: Installation
   href: redirectfrom-installation-10.md ## /sql/sql-server/install/what-s-new-in-sql-server-installation
   items: 
@@ -4372,6 +4398,7 @@
       - name: Advanced Page
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -6848,8 +6875,6 @@
               href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Tune
     items: 
-      - name: Adaptive Query Processing
-        href: ../relational-databases/performance/adaptive-query-processing.md
       - name: Automatic Tuning
         href: ../relational-databases/automatic-tuning/automatic-tuning.md
       - name: Cardinality estimation
@@ -7989,7 +8014,7 @@
     - name: Install
       href: ../azure-data-studio/download.md
     - name: Release notes
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: Quickstarts
       items:
       - name: Connect & query SQL Server
@@ -8397,22 +8422,14 @@
     items:
     - name: Download SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Overview
-      items: 
-      - name: Changelog for SSDT
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: Data-Tier Application Framework - License Terms
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: Previous releases of SSDT & SSDT-BI
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Azure Active Directory support
-        href: ../ssdt/azure-active-directory.md
-      - name: SQL Server Tools
-        href: ../ssdt/sql-server-tools.md
-      - name: License Terms - SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: License Terms - SSDT (VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: Changelog for SSDT
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Previous releases of SSDT & SSDT-BI
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Azure Active Directory support
+      href: ../ssdt/azure-active-directory.md
+    - name: SQL Server Tools
+      href: ../ssdt/sql-server-tools.md
     - name: Project-Oriented Offline Database Development
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -9753,8 +9770,6 @@
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md          
     - name: Resources
       items:
-      - name: License Terms
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: User Assistance in SSMS
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data
@@ -11328,10 +11343,6 @@
             href: ../powershell/encode-and-decode-sql-server-identifiers.md
           - name: Escape SQL Server Identifiers
             href: ../powershell/escape-sql-server-identifiers.md
-        - name: Resources
-          items:
-          - name: SQL Server PowerShell License Terms
-            href: ../powershell/sql-server-powershell-license-terms.md
         - name: Cmdlet reference
           items:
           - name: SqlServer cmdlets
@@ -11967,6 +11978,10 @@
           href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
         - name: sys.pdw_table_mappings
           href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+        - name: sys.workload-management-workload-classifier-details
+          href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+        - name: sys.workload-management-workload-classifiers
+          href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
       - name: Stretch Database
         items:
         - name: sys.remote_data_archive_databases
@@ -16032,7 +16047,7 @@
             href: ../t-sql/language-elements/slash-star-comment-transact-sql.md
           - name: CREATE DIAGNOSTICS SESSION
             href: ../t-sql/language-elements/create-diagnostics-session-transact-sql.md
-          - name: NULL & UNKNOWN
+          - name: "NULL & UNKNOWN"
             href: ../t-sql/language-elements/null-and-unknown-transact-sql.md
           - name: USE
             href: ../t-sql/language-elements/use-transact-sql.md
@@ -16645,6 +16660,8 @@
             href: ../t-sql/statements/create-user-transact-sql.md
           - name: VIEW
             href: ../t-sql/statements/create-view-transact-sql.md
+          - name: WORKLOAD CLASSIFIER
+            href: ../t-sql/statements/create-workload-classifier-transact-sql.md
           - name: WORKLOAD GROUP
             href: ../t-sql/statements/create-workload-group-transact-sql.md
           - name: XML INDEX
@@ -16787,6 +16804,8 @@
             href: ../t-sql/statements/drop-user-transact-sql.md
           - name: VIEW
             href: ../t-sql/statements/drop-view-transact-sql.md
+          - name: WORKLOAD CLASSIFIER
+            href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
           - name: WORKLOAD GROUP
             href: ../t-sql/statements/drop-workload-group-transact-sql.md
           - name: XML SCHEMA COLLECTION

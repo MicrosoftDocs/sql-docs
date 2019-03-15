@@ -58,15 +58,16 @@ sp_procoption [ @ProcName = ] 'procedure'
  The following example sets a procedure for automatic execution.  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+EXEC sp_procoption @ProcName = N'<procedure name>'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';   
 ```  
   
  The following example stops a procedure from executing automatically.  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
+EXEC sp_procoption @ProcName = N'<procedure name>'      
+    , @OptionName = 'startup'
     , @OptionValue = 'off';   
 ```  
   

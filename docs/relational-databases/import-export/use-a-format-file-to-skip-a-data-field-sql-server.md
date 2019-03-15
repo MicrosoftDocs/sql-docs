@@ -99,7 +99,7 @@ Compare the changes made:
 
 The modified format file now reflects:
 * 4 data fields
-* The first data field in `myTestSkipField.bcp` is mapped to the first column, ` myTestSkipField.. PersonID`
+* The first data field in `myTestSkipField.bcp` is mapped to the first column, `myTestSkipField.. PersonID`
 * The second data field in `myTestSkipField.bcp` is not mapped to any column.
 * The third data field in `myTestSkipField.bcp` is mapped to the second column, `myTestSkipField.. FirstName`
 * The fourth data field in `myTestSkipField.bcp` is mapped to the third column, `myTestSkipField.. LastName`

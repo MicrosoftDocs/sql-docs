@@ -576,7 +576,7 @@ The memory settings described here are already available in Azure Analysis Servi
  - **DbpropMsmdRequestMemoryLimit** - This XMLA property can be used to override the Memory\QueryMemoryLimit server property value for a connection.
  - **OLAP\Query\RowsetSerializationLimit** - This server property limits the number of rows returned in a rowset, protecting server resources from extensive data export usage. This property applies to both applies to both DAX and MDX queries. 
 
-These properties require models be at the 1470 compatibility level, which is currently supported only in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 and later. These properties can be set by using the latest version of SQL Server Management Studio (SSMS). Additional information for this feature will be provided in the Analysis Services blog.
+These properties can be set by using the latest version of SQL Server Management Studio (SSMS). Additional information for this feature will be provided in the Analysis Services blog.
 
 ### Calculation groups in tabular models (CTP 2.3) 
 

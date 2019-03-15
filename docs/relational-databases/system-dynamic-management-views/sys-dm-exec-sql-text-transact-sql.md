@@ -36,7 +36,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## Arguments  
 *sql_handle*  
-Uniquely identifies a batch that has executed or is currently executing. *sql_handle* is **varbinary(64)**. 
+Is a token that uniquely identifies a batch that has executed or is currently executing. *sql_handle* is **varbinary(64)**. 
 
 The *sql_handle* can be obtained from the following dynamic management objects:  
   
@@ -53,7 +53,7 @@ The *sql_handle* can be obtained from the following dynamic management objects:
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-Uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache, or is currently executing. *plan_handle* is **varbinary(64)**.   
+Is a token that uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache, or is currently executing. *plan_handle* is **varbinary(64)**.   
 
 The *plan_handle* can be obtained from the following dynamic management objects:    
   

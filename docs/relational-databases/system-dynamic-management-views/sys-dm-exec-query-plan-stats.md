@@ -18,15 +18,15 @@ author: "pmasl"
 ms.author: "pelopes"
 manager: amitban
 ---
-# sys.sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# sys.dm_exec_query_plan_stats (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Returns the equivalent of the last known actual execution plan for a cached query plan. 
 
 ## Syntax
 
 ```
-sys.dm_exec_query_plan_stats ( plan_handle )  
+sys.dm_exec_query_plan_stats(plan_handle)  
 ``` 
 
 ## Arguments 
@@ -56,9 +56,9 @@ The *plan_handle* can be obtained from the following dynamic management objects:
 |**query_plan**|**xml**|Contains the last known runtime Showplan representation of the actual query execution plan that is specified with *plan_handle*. The Showplan is in XML format. One plan is generated for each batch that contains, for example ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, stored procedure calls, and user-defined function calls.<br /><br /> Column is nullable.| 
 
 ## Remarks
-This system function is available starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
+This system function is available starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.   
+This is an opt-in feature and requires [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.   
 
 This system function works under the **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 

@@ -72,20 +72,28 @@ Observe the following guidelines when performing server upgrades or updates in o
   
  ![AG Upgrade in HADR Scenario](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "AG Upgrade in HADR Scenario")  
   
-1.  Remove automatic failover on all synchronous-commit replicas  
+1.  Make all your synchronous commit replicas asynchronous  
   
 2.  Upgrade all remote secondary replica instances running asynchronous-commit secondary replicas  
   
 3.  Upgrade the all local replica secondary instances that are not currently running the primary replica  
+
+4.  Make one of your local upgraded replicas synchronous  
+
+5.  Manually fail over the AG to the local synchronous-commit secondary replica  
+
+6.  Make asynchronous the local replica instance that formerly hosted the primary replica.    
+
+7.  Upgrade or update the local replica instance that formerly hosted the primary replica. 
+
+8.  Change back the synchronization mode configuration for each replica back to its original state.  
   
-4.  Manually fail over the AG to a local synchronous-commit secondary replica  
-  
-5.  Upgrade or update the local replica instance that formerly hosted the primary replica  
-  
-6.  Configure automatic failover partners as desired  
+9.  Configure automatic failover partners as desired  
   
  If necessary, you can perform an extra manual failover to return the AG to its original configuration.  
-  
+ 
+ Optionally, you can upgrade each synchronous replica by changing it to asynchronous, upgrading/updating, and then making it synchronous  again. 
+ 
 ## AG with One Remote Secondary Replica  
  If you have deployed an AG only for disaster recovery, you may need to fail over the AG to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:  
   

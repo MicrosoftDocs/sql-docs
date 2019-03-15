@@ -5221,6 +5221,11 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "docs/big-data-cluster/big-data-cluster-release-notes.md",
+        "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "docs/sql-operations-studio/server-groups.md",
         "redirect_url": "/sql/azure-data-studio/server-groups",
         "redirect_document_id": true

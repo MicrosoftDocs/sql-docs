@@ -37,7 +37,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
   - Property settings for resource governance. 
 
 <!-----
-## Previous CTPs
+ Previous CTPs
 
 Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

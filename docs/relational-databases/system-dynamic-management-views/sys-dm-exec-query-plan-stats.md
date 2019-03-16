@@ -78,7 +78,10 @@ Under the following conditions, a **simplified <sup>1</sup>** Showplan output is
 
 Under the following conditions, **no output is returned** from **sys.dm_exec_query_plan_stats**:
 
--   The query plan that is specified by using *plan_handle* has been evicted from the plan cache or was not a cacheable plan in the first place. 
+-   The query plan that is specified by using *plan_handle* has been evicted from the plan cache.
+
+-   The query plan was not cacheable in the first place. For more information, see [Execution Plan Caching and Reuse
+](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
 > Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.  

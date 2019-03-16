@@ -138,20 +138,6 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
 
-### New DMF sys.dm_exec_query_plan_stats (CTP 2.4)
-
-The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query, based on lightweight profiling. For more information, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
-
-```sql
-SELECT *   
-FROM sys.dm_exec_cached_plans   
-CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)   
-WHERE objtype ='Trigger';  
-GO
-```     
-
-This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled. 
-
 ### New query_post_execution_plan_profile Extended Event (CTP 2.4)
 
 The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. For more information, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
@@ -162,8 +148,7 @@ CREATE EVENT SESSION [QueryPlanOld] ON SERVER
 ADD EVENT sqlserver.query_post_execution_showplan(
     ACTION(sqlos.task_time, sqlserver.database_id, 
     sqlserver.database_name, sqlserver.query_hash_signed, 
-    sqlserver.query_plan_hash_signed, sqlserver.sql_text)
-    )
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
 ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanOld.xel')
 WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
@@ -182,6 +167,20 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+### New DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
+
+The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example: 
+
+```sql
+SELECT *    
+FROM sys.dm_exec_cached_plans    
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)    
+WHERE objtype ='Trigger';   
+GO 
+```      
+
+This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
 
 ### Transparent data encryption (TDE) scan - suspend and resume (CTP 2.4)
 

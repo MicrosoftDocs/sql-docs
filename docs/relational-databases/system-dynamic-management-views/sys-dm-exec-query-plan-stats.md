@@ -76,12 +76,12 @@ Under the following conditions, a **simplified <sup>1</sup>** Showplan output is
 
 <sup>1</sup> This refers to a Showplan that only contains the root node operator (SELECT). 
 
-Under the following conditions, a **no output is returned** from **sys.dm_exec_query_plan_stats**:
+Under the following conditions, **no output is returned** from **sys.dm_exec_query_plan_stats**:
 
--   The query plan that is specified by using *plan_handle* has been evicted from the plan cache or is not a cacheable plan. 
+-   The query plan that is specified by using *plan_handle* has been evicted from the plan cache or was not a cacheable plan in the first place. 
   
 > [!NOTE] 
-> Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates error 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.  
+> Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

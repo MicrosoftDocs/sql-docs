@@ -8060,7 +8060,7 @@
     - name: Extensions
       href: ../azure-data-studio/extensions.md
       items:
-      - name: PostgreSQL
+      - name: PostgreSQL extension (preview)
         href: ../azure-data-studio/postgres-extension.md
       - name: SQL Server 2019 (preview)
         href: ../azure-data-studio/sql-server-2019-extension.md

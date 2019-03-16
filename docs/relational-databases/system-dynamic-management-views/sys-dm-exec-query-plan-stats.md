@@ -64,22 +64,22 @@ This system function works under the **lightweight** query execution statistics 
 
 Under the following conditions, a Showplan output **equivalent to an actual execution plan** is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
 
--   The plan can be found in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).
-
+-   The plan can be found in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
+    **AND**    
 -   The query being executed is complex or resource consuming.
 
 Under the following conditions, a **simplified <sup>1</sup>** Showplan output is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
 
--   The plan can be found in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).
-
--   The query is simple enough, as usual seen in OLTP workloads.
+-   The plan can be found in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
+    **AND**    
+-   The query is simple enough, usually categorized as part of an OLTP workload.
 
 <sup>1</sup> This refers to a Showplan that only contains the root node operator (SELECT). 
 
 Under the following conditions, **no output is returned** from **sys.dm_exec_query_plan_stats**:
 
--   The query plan that is specified by using *plan_handle* has been evicted from the plan cache.
-
+-   The query plan that is specified by using *plan_handle* has been evicted from the plan cache.     
+    **OR**    
 -   The query plan was not cacheable in the first place. For more information, see [Execution Plan Caching and Reuse
 ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   

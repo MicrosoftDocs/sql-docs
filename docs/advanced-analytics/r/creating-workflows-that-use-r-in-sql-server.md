@@ -27,14 +27,16 @@ The examples in this article are mostly about R and SSIS, but the concepts and s
 
 Data science workflows are highly iterative and involve much transformation of data, including scaling, aggregations, computation of probabilities, and renaming and merging of attributes. Data scientists are accustomed to doing many of these tasks in R, Python, or another language; however, executing such workflows on enterprise data requires seamless integration with ETL tools and processes.
 
-Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] enables you to run complex operations in R via Transact-SQL and stored procedures, you can integrate R-specific tasks with existing ETL processes without minimal re-development work. Rather than perform a chain of memory-intensive tasks in R, data preparation can be optimized using the most efficient tools, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] enables you to run complex operations in R via Transact-SQL and stored procedures, you can integrate data science tasks with existing ETL processes. Rather than perform a chain of memory-intensive tasks, data preparation can be optimized using the most efficient tools, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 Here are some ideas for how you can automate your data processing and modeling pipelines using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
-+ Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tasks to create necessary data features in the SQL database
-+ Use conditional branching to switch compute context for R jobs
-+ Run R jobs that generate their own data in the database, and share that data with applications
-+ When using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], load R script saved in a text variable and run it in SQL Server
++ Extract data from on premises or cloud sources to build training data 
++ Build and run R or Python models as part of a data integration workflow
++ Retrain models on a regular (scheduled) basis
++ Load results from R or Python script to other destinations such as Excel, Power BI, Oracle, and Teradata, to name a few
++ Use SSIS tasks to create data features in the SQL database
++ Use conditional branching to switch compute context for R and Python jobs
 
 ## SSIS example
 

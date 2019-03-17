@@ -4,7 +4,7 @@ description: Integration scenarios combining SQL Server Machine Learning Service
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 03/15/2019  
+ms.date: 03/17/2019  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -13,7 +13,13 @@ manager: cgronlun
 # Create SSIS and SSRS workflows with R on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to use stored procedures in two important SQL Server features, SQL Server Integration Services (SSIS), and SQL Server Reporting Services SSRS, in way that combines relational data, data science functions from the Microsoft R libraries, and BI features for coordinated data transformations and visualization. Learn which capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lend themselves to a data science solution. This article also reminds you that code and data on SQL Server, such as the embedded R code in stored procedures, is easily consumed in visualizations provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+This article explains how to use embedded R and Python script using the language and data science capabilites of SQL Server Machine Learning Services with two important SQL Server features: SQL Server Integration Services (SSIS) and SQL Server Reporting Services SSRS. R and Python libraries in SQL Server provide statistical and predictive functions. SSIS and SSRS provide coordinated ETL transformation and visualizations, respectively. This article explains how to put all of these features together in this workflow pattern:
+
+> [!div class="checklist"]
+> * Create a stored procedure that contains executable R or Python
+> * Execute the stored procedure from SSIS or SSRS
+
+The examples in this article are mostly about R and SSIS, but the concepts and steps apply equally to Python. The second section provides guidance and links for SSRS visualizaitons.
 
 ## Bring compute power to the data
 
@@ -49,12 +55,12 @@ This example shows you how to automate tasks using SSIS. You create stored proce
 
 To step through this example, you should be familiar with Management Studio, SSIS, SSIS Designer, package design, and T-SQL. The SSIS package uses three [Execute T-SQL tasks](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) that insert training data into a table, model the data, and score the data to get prediction output.
 
-### Create tables
+### Load training data
 
-Run the following script in SQL Server Management Studio to create a few tables: one to store the data and another to store a model. The role of the ssis_iris table is to act as training data in an operationalization scenario. 
+Run the following script in SQL Server Management Studio to create a table for storing the data. You should create and use a test database for this exercise. 
 
 ```T-SQL
-Use irissql
+Use test-db
 GO
 
 Create table ssis_iris (
@@ -64,17 +70,9 @@ Create table ssis_iris (
 	, "Species" varchar(100) null
 );
 GO
-
-Create table ssis_iris_models (
-	model_name varchar(30) not null default('default model') primary key,
-	model varbinary(max) not null
-);
-GO
 ```
 
-### Create a stored procedure that loads training data
-
-This script creates a stored procedure that loads Iris into a data frame using the built-in R data set.
+Create a stored procedure that loads data into data frame. This example is using the built-in Iris data set. 
 
 ```T-SQL
 Create procedure load_iris
@@ -89,13 +87,11 @@ begin
 end;
 ```
 
-### Define an Execute SQL task that refreshes the model
-
-In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task).
+In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) that executes the stored procedure you just defined.
 
 ![Insert data](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Insert data")
 
-The script for SQLStatement is as follows. The script removes existing data and then reloads new data using the **load_iris** stored procedure you created in the previous step.
+The script for SQLStatement is as follows. The script removes existing data, specifies which data to insert, and then calls the stored procedure to provide the data.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -103,9 +99,22 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-### Create a stored procedure that generates a model
+### Generates a model
 
-This stored procedure is code that creates a linear model using [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). RevoScaleR and revoscalepy libraries are loaded automatically in R and Python sessions on SQL Server.
+Run the following script in SQL Server Management Studio to creat a table that stores a model. 
+
+```T-SQL
+Use test-db
+GO
+
+Create table ssis_iris_models (
+	model_name varchar(30) not null default('default model') primary key,
+	model varbinary(max) not null
+);
+GO
+```
+
+Create a stored procedure that generates a linear model using [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). RevoScaleR and revoscalepy libraries are automatically available in R and Python sessions on SQL Server so there is no need to import the library.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -124,9 +133,7 @@ end;
 GO
 ```
 
-### Define an Execute SQL task that runs the model-generation stored procedure
-
-In this step, [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) executes the **generate_iris_rx_model** stored procedure, creating the model and inserting it into the ssis_iris_models table.
+In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) to execute the **generate_iris_rx_model** stored procedure. The model is serialized and saved to the ssis_iris_models table.
 
 ![Generates a linear model](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Generates a linear model")
 
@@ -140,9 +147,9 @@ After this task completes, you can query the ssis_iris_models to see that it con
 
 ### Predict (score) outcomes using the "trained" model
 
-In this simplistic example, the assumption is that ssis_iris_model is a trained model. Since the purpose of a trained model is to generate predictions, we are now ready to run a prediction using it. 
+Now that you have code that loads training data and generates a model, the only step left is using the model to generate predictions. 
 
-To do this, put the R script in the SQL query to trigger the [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) built-in R function on ssis_iris_model. A stored procedure in SQL Server called **predict_species_length** accomplishes this task.
+To do this, put the R script in the SQL query to trigger the [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) built-in R function on ssis_iris_model. A stored procedure called **predict_species_length** accomplishes this task.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -170,9 +177,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-### Define an Execute SQL task that predicts outcomes
-
-Using [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task), execute the **predict_species_length** stored procedure to generate predicted petal length.
+In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) that executes the **predict_species_length** stored procedure to generate predicted petal length.
 
 ![Generate predictions](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "Generate predictions")
 

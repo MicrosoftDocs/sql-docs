@@ -1,14 +1,14 @@
 ---
-title: "What&#39;s new - SQL Server Machine Learning Services"
+title: What's new - SQL Server Machine Learning Services | Microsoft Docs
 description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning
-
 ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
+ms.custom: sqlseattle
+ms.prod: sql
+ms.technology: machine-learning
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # What's new in SQL Server Machine Learning Services

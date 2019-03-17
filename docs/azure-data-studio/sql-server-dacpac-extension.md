@@ -40,4 +40,4 @@ This experience is currently in its initial preview. Please report issues and fe
 
 ## Next steps
 
-To learn more about dacpac's, [check our documentation.](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+To learn more about dacpac's, [check our documentation.](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)

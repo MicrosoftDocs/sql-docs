@@ -1,15 +1,6 @@
 ---
 title: "sp_rxPredict | Microsoft Docs"
-ms.custom: ""
-<<<<<<< HEAD
-<<<<<<< HEAD
-ms.date: "08/14/2018"
-=======
 ms.date: "08/20/2018"
->>>>>>> 29732579600bae690b7a61198a97b8cae5605c64
-=======
-ms.date: "08/20/2018"
->>>>>>> 469f4d6d039bfa0866c573339f78a9ac260e5a47
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -25,15 +16,7 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 author: "HeidiSteen"
 ms.author: "heidist"
-<<<<<<< HEAD
-<<<<<<< HEAD
 manager: craigg
-=======
-manager: cgronlun
->>>>>>> 29732579600bae690b7a61198a97b8cae5605c64
-=======
-manager: cgronlun
->>>>>>> 469f4d6d039bfa0866c573339f78a9ac260e5a47
 ---
 # sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +26,6 @@ Generates a predicted value for a given input consisting of a machine learning m
 Provides scoring on R and Python machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` R function in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), and the [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python function in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). It is written in C++ and is optimized specifically for scoring operations.
 
 Although the model must be created using R or Python, once it is serialized and stored in a binary format on a target database engine instance, it can be consumed from that database engine instance even when R or Python integration is not installed. For more information, see [Real-time scoring with sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-**This topic applies to**:  
-- [SQL Server 2017 Machine Learning Services (In-Database) with R](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)
-- [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install), with [upgraded R components](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server) providing the MicrosoftML library
-=======
-**This article applies to**:  
-- SQL Server 2017  
-- SQL Server 2016 R Services with [upgraded R components](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server)
->>>>>>> 29732579600bae690b7a61198a97b8cae5605c64
-=======
->>>>>>> 469f4d6d039bfa0866c573339f78a9ac260e5a47
 
 ## Syntax
 
@@ -87,33 +57,9 @@ To enable use of the stored procedure, SQLCLR must be enabled on the instance.
 
 The user needs `EXECUTE` permission on the database.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-### Supported algorithms
-
-+ RevoScaleR models
-=======
-### Supported platforms
- 
-- SQL Server 2017 Machine Learning Services (includes R Server 9.2)  
-- SQL Server 2017 Machine Learning Server (Standalone) 
-- SQL Server R Services 2016, with an upgrade of the R Services instance to R Server 9.1.0 or later  
->>>>>>> 29732579600bae690b7a61198a97b8cae5605c64
-
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
-  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
-  
-  Models marked with \* also support native scoring with the PREDICT function.
-=======
-
 ### Supported algorithms
 
 To create and train model, use one of the supported algorithms for R or Python, provided by [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [SQL Server 2017 Machine Learning Services (R or Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017), or [SQL Server 2017 Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
-
->>>>>>> 469f4d6d039bfa0866c573339f78a9ac260e5a47
 
 #### R: RevoScaleR models
 

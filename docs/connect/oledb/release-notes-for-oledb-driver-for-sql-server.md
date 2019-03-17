@@ -18,7 +18,21 @@ ms.author: v-makmie
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 
+<!--
+USE THE TABLE FORMAT!
+Hello, from now on, please use the table-based format standard for all new Release Notes content.
+See section "## 18.2.1" for a live example in this article.
+Thank you. For questions, contact GeneMi. (2019/03/16)
+-->
+
 ## 18.2.1
+
+<!--
+USE THE TABLE FORMAT!
+Hello, from now on, please use the table-based format standard for all new Release Notes content.
+See section "## 18.2.1" for a live example in this article.
+Thank you. For questions, contact GeneMi. (2019/03/16)
+-->
 
 February 2019
 

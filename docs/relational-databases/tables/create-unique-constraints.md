@@ -5,9 +5,7 @@ ms.date: "10/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "UNIQUE_TSQL"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "constraints [SQL Server], creating"
   - "constraints [SQL Server], unique"
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

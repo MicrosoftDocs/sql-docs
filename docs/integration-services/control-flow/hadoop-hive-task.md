@@ -5,14 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoophivetask.f1"
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
   
 |Field|Description|  
 |-----------|-----------------|  
-|**Hadoop Connection**|Specify an existing Hadoop Connection Manager or create a new one. This connection manager indicates  where the the WebHCat service is hosted.|  
+|**Hadoop Connection**|Specify an existing Hadoop Connection Manager or create a new one. This connection manager indicates  where the WebHCat service is hosted.|  
 |**SourceType**|Specify the source type of the query. Available values are **ScriptFile** and **DirectInput**.|  
 |**InlineScript**|When the value of **SourceType** is **DirectInput**, specify the hive script.|  
 |**HadoopScriptFilePath**|When the value of **SourceType** is **ScriptFile**, specify the script file path on Hadoop.|  

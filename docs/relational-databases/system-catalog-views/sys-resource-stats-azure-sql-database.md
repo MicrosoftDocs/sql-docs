@@ -1,15 +1,9 @@
-﻿---
+---
 title: "sys.resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/13/2018"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - resource_stats
@@ -22,7 +16,6 @@ helpviewer_keywords:
   - "sys.resource_stats"
   - "resource_stats"
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: "carlrab"
 manager: craigg
@@ -47,8 +40,8 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |avg_cpu_percent|**numeric**|Average compute utilization in percentage of the limit of the service tier.|  
 |avg_data_io_percent|**numeric**|Average I/O utilization in percentage based on the limit of the service tier.|  
 |avg_log_write_percent|**numeric**|Average write resource utilization in percentage of the limit of the service tier.|  
-|max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
-|max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
+|max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
+|max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. |  
 |allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   

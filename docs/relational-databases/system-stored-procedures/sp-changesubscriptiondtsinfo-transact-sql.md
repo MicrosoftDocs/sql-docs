@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changesubscriptiondtsinfo"
   - "sp_changesubscriptiondtsinfo_TSQL"
 helpviewer_keywords: 
   - "sp_changesubscriptiondtsinfo"
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -45,16 +38,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
  [ **@job_id=**] *job_id*  
  Is the job ID of the Distribution Agent for the push subscription. *job_id* is **varbinary(16)**, with no default. To find the Distribution Job ID, run **sp_helpsubscription** or **sp_helppullsubscription**.  
   
- [ **@dts_package_name**= ] **'***dts_package_name***'**  
+ [ **@dts_package_name**= ] **'**_dts_package_name_**'**  
  Specifies the name of the DTS package. *dts_package_name* is a **sysname**, with a default of NULL. For example, to specify a package named **DTSPub_Package**, you would specify `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**= ] **'***dts_package_password***'**  
+ [ **@dts_package_password**= ] **'**_dts_package_password_**'**  
  Specifies the password on the package. *dts_package_password* is **sysname** with a default of NULL, which specifies that the password property is to be left unchanged.  
   
 > [!NOTE]  
 >  A DTS package must have a password.  
   
- [ **@dts_package_location**= ] **'***dts_package_location***'**  
+ [ **@dts_package_location**= ] **'**_dts_package_location_**'**  
  Specifies the package location. *dts_package_location* is a **nvarchar(12)**, with a default of NULL, which specifies that the package location is to be left unchanged. The location of the package can be changed to **distributor** or **subscriber**.  
   
 ## Return Code Values  

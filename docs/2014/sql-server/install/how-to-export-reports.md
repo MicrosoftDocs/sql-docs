@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "flat-file report versions [Upgrade Advisor]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "reports [Upgrade Advisor], exporting"
   - "distributing reports"
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg

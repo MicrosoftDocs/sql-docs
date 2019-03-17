@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65555"
   - "vdt.dlgbox.schema.addtable"
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

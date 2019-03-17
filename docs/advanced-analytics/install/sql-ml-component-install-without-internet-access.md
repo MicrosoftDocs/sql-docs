@@ -1,10 +1,10 @@
 ---
-title: Install SQL Server machine learning R and Python components without internet access | Microsoft Docs
-description: Offline or disconnected Machine Learning R and Python setup on isolated SQL Server instance.
+title: Install R language and Python components without internet access - SQL Server Machine Learning
+description: Offline or disconnected Machine Learning R and Python setup on isolated SQL Server instance behind a network firewall.
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 08/02/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -17,8 +17,8 @@ By default, installers connect to Microsoft download sites to get required and u
 
 In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
 
-+ SQL Server 2017 includes R and Python. 
-+ SQL Server 2016 is R-only. 
++ SQL Server 2017 includes R and Python 
++ SQL Server 2016 is R-only.
 
 On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
 
@@ -70,7 +70,9 @@ One way to get an .iso file containing the installation media is through [Visual
 
 ## Transfer files
 
-Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as **Downloads** or the setup user's %temp* folder.
+Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as the setup user's %TEMP* folder.
+
+The %TEMP% folder is required for Python CAB files. For R, you can use %TEMP% or set the myrcachedirectory parameter to the CAB path.
 
 The following screenshot shows SQL Server 2017 CAB and ISO files. SQL Server 2016 downloads look different: fewer files (no Python), and the installation media file name is for 2016.
 
@@ -92,6 +94,47 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 
 5. Continue following the on-screen prompts to complete the installation.
 
+<a name="apply-cu"></a>
+
+## Apply cumulative updates
+
+We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
+
+1. Start with a baseline instance. You can only apply cumulative updates to existing installations of SQL Server:
+
+  + SQL Server 2017 initial release
+  + SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
+
+2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
+
+  + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Select the latest cumulative update to download the executable.
+
+4. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
+
+5. Transfer all files, executable and CAB files, to the same folder on the offline computer.
+
+6. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
+
+  ![Select features from the feature tree](media/cumulative-update-feature-selection.png "feature list")
+
+5. Continue through the wizard, accepting the licensing terms for R and Python distributions. During installation, you are prompted to choose the folder location containing the updated CAB files.
+
+## Set environment variables
+
+For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+
+1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+
+2. Create a new User or System variable. 
+
+  + Set variable name to `MKL_CBWR`
+  + Set the variable value to `AUTO`
+
+This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
+
 ## Post-install configuration
 
 After installation is finished, restart the service and then configure the server to enable script execution:
@@ -103,30 +146,6 @@ An initial offline installation of either SQL Server 2017 Machine Learning Servi
 
 + [Verify installation](sql-machine-learning-services-windows-install.md#verify-installation)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#verify-installation)).
 + [Additional configuration as needed](sql-machine-learning-services-windows-install.md#additional-configuration)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#bkmk_FollowUp)).
-
-<a name="slipstream-upgrades"></a>
-
-## Slipstream upgrades
-
-Slipstream setup refers to the ability to apply a patch or update to a failed instance installation, to repair existing problems. The advantage of this method is that the SQL Server is updated at the same time that you perform setup, avoiding a separate restart later.
-
-When a server does not have Internet access, service updates are applied by downloading an updated SQL Server installer and corresponding versions of language-specific CAB files. 
-
-1. Start with a baseline instance. Slipstream upgrades are supported on these releases of SQL Server:
-
-  + SQL Server 2017 initial release
-  + SQL Server 2016 initial release
-  + SQL Server 2016 SP 1
-  + SQL Server 2016 SP 2
-
-2. Get an updated version of the SQL Server installer for a given cumulative update. Any update to the machine learning (R and Python) features is in tandem with a cumulative update of the underlying database engine instance.
-
-  + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
-
-4. Place all files in the same folder, run Setup. During installation, you are prompted to choose the folder location for the updated CAB files.
 
 ## Next steps
 

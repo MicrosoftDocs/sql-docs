@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "assessing SQL"
   - "assessing syntax"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "SQL, assessing"
   - "syntax, assessing"
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

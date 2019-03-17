@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "10/13/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_xtp_control_query_exec_stats_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_control_query_exec_stats"
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

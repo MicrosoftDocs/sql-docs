@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
-caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -40,7 +34,7 @@ The following table shows which MySQL objects are converted, and the resulting [
 |Database Conversion|Databases as MySQL objects are not directly converted by SSMA for MySQL. MySQL databases are treated more like a schema names and all the physical parameters are lost during conversion. SSMA for MySQL uses [Mapping MySQL Databases to SQL Server Schemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) to map objects from MySQL database to appropriate SQL Server database/schema pair.|  
 |Trigger Conversion|**SSMA creates triggers based on the following rules:**<br /><br />BEFORE triggers are converted into INSTEAD OF T-SQL triggers<br /><br />AFTER triggers are converted into AFTER T-SQL triggers with or without iterations per rows.|  
 |View Conversion|SSMA creates views with dependent objects|  
-|Statement Conversion|-   Each SQL Statement object may contain a single MySQL statement (like DDL, DML, and other types of statements) or BEGIN ... END block.<br />-   **MultiStatement Conversion:BEGIN … END block conversion**SQL Statement can also contain a BEGIN ... END block like one in procedure, function or trigger definition. Those blocks should be converted the same way they are being converted for the single MySQL statement objects.|  
+|Statement Conversion|-   Each SQL Statement object may contain a single MySQL statement (like DDL, DML, and other types of statements) or BEGIN ... END block.<br />-   **MultiStatement Conversion:BEGIN ... END block conversion**SQL Statement can also contain a BEGIN ... END block like one in procedure, function or trigger definition. Those blocks should be converted the same way they are being converted for the single MySQL statement objects.|  
   
 ## Converting MySQL Database Objects  
 To convert MySQL database objects, you first select the objects that you want to convert, and then have SSMA perform the conversion. To view output messages during the conversion, on the **View** menu, select **Output**.  

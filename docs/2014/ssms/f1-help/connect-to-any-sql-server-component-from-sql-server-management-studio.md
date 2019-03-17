@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], SQL Server Management Studio"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "components [SQL Server], connections"
   - "SQL Server Management Studio [SQL Server], connections"
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

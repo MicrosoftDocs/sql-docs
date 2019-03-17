@@ -4,12 +4,9 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "SOAP [Reporting Services], Web applications"
   - "impersonation [Reporting Services]"
@@ -82,7 +79,7 @@ private void Page_Load(object sender, System.EventArgs e)
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Using the SOAP API in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
   
   

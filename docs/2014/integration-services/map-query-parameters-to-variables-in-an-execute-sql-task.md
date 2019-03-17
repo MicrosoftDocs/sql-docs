@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [Integration Services], parameter mapping"
@@ -17,12 +15,12 @@ helpviewer_keywords:
   - "Execute SQL task [Integration Services]"
   - "variables [Integration Services], mapping parameters to"
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
 ---
 # Map Query Parameters to Variables in an Execute SQL Task
+
   This topic describes how to use a parameterized SQL statement in the Execute SQL task and create mappings between variables and the parameters in the SQL statement.  
   
  To learn more about the Execute SQL task, the parameter markers, and parameter names you use with different connection types, see [Execute SQL Task](control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
@@ -79,10 +77,10 @@ manager: craigg
   
     |Connection type|Parameter name|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET and SQLMOBILE|@\<parameter name>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL and OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL and OLE DB|0, 1, 2, 3, ...|  
   
 10. From the **Variable Name** list, select a variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
   

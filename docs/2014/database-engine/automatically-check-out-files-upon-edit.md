@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "checking out files"
   - "automatic file check outs"
 ms.assetid: afa9f637-3d14-4d64-be51-0e8167e21d2b
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg

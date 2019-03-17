@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "search conditions [SQL Server], combining"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "AND, Criteria pane"
   - "multiple AND clauses"
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

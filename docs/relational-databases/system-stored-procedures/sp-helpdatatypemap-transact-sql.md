@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpdatatypemap"
   - "sp_helpdatatypemap_TSQL"
 helpviewer_keywords: 
   - "sp_helpdatatypemap"
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -27,7 +20,7 @@ manager: craigg
 # sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns information on the defined data type mappings between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management systems (DBMS). This stored procedure is executed at the Distributor on any database.  
+  Returns information on the defined data type mappings between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management systems (DBMS). This stored procedure is executed at the Distributor on any database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -93,7 +86,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- **sp_helpdatatypemap** defines data type mappings both from non-SQL Server Publishers and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ **sp_helpdatatypemap** defines data type mappings both from non-SQL Server Publishers and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers to non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  When the specified combination of source and destination DBMS is not supported, **sp_helpdatatypemap** returns an empty result set.  
   

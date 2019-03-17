@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced"
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg

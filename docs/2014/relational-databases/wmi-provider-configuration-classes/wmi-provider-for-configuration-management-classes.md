@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "WMI Classes"
@@ -20,7 +16,6 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, classes"
   - "classes [WMI]"
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
-caps.latest.revision: 27
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

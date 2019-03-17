@@ -41,7 +41,7 @@ Up to this point in the tutorial, each cube dimension that you defined was based
   
     Notice that the **Geography** cube dimension does not currently have a relationship with either the **Internet Sales** measure group or the **Reseller Sales** measure group.  
   
-8.  Click the ellipsis button (**…**) in the **Full Name** cell at the intersection of the **Customer** dimension and the **Internet Sales** measure group.  
+8.  Click the ellipsis button (**...**) in the **Full Name** cell at the intersection of the **Customer** dimension and the **Internet Sales** measure group.  
   
     In the **Define Relationship** dialog box, notice that a **Regular** relationship is defined between the **DimCustomer** dimension table and the **FactInternetSales** measure group table based on the **CustomerKey** column in each of these tables. All the relationships that you have defined within this tutorial up to this point have been regular relationships.  
   
@@ -51,7 +51,7 @@ Up to this point in the tutorial, each cube dimension that you defined was based
   
 9. Click **Cancel**.  
   
-10. Click the ellipsis button (**…**) in the unnamed cell at the intersection of the **Geography** dimension and the **Reseller Sales** measure group.  
+10. Click the ellipsis button (**...**) in the unnamed cell at the intersection of the **Geography** dimension and the **Reseller Sales** measure group.  
   
     In the **Define Relationship** dialog box, notice that no relationship is currently defined between the Geography cube dimension and the Reseller Sales measure group. You cannot define a regular relationship because there is no direct relationship between the dimension table for the Geography dimension and the fact table for the Reseller Sales measure group.  
   
@@ -83,7 +83,7 @@ In the next task, you will solve this problem by defining an attribute that is b
   
     The Geography Key attribute in the Reseller dimension will only be used to link the Geography dimension to the Reseller Sales fact table. Because it will not be used for browsing, there is no value in defining this attribute hierarchy as visible. Additionally, ordering and optimizing the attribute hierarchy will only negatively affect processing performance. However, the attribute must be enabled to serve as the link between the two dimensions.  
   
-4.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, click the **Dimension Usage** tab, and then click the ellipsis button (**…**) at the intersection of the **Reseller Sales** measure group and the **Geography** cube dimension.  
+4.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, click the **Dimension Usage** tab, and then click the ellipsis button (**...**) at the intersection of the **Reseller Sales** measure group and the **Geography** cube dimension.  
   
 5.  In the **Select relationship type** list, select **Referenced**.  
   

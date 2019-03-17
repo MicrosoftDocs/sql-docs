@@ -5,18 +5,13 @@ ms.custom: ""
 ms.date: "05/18/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "connection-manager"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSCM.F1"
   - "sql14.dts.designer.afpadlscm.f1"
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
-caps.latest.revision: 7
 author: "yanancai"
 ms.author: "yanacai"
 ms.reviewer: "douglasl"

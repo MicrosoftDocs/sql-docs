@@ -58,7 +58,7 @@ manager: kfile
  The default is 0.5.  
   
  *MAXIMUM_STATES*  
- Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is greater than the maximum number of states, the algorithm uses the attribute’s most popular states and treats the remaining states as missing.  
+ Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is greater than the maximum number of states, the algorithm uses the attribute's most popular states and treats the remaining states as missing.  
   
  The default is 100.  
   

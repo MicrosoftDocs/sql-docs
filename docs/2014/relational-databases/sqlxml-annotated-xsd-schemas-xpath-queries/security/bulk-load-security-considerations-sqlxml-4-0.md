@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, XML Bulk Load"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "security [SQLXML], XML Bulk Load"
   - "XML Bulk Load [SQLXML], security"
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

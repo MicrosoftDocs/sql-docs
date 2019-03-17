@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpmergearticlecolumn"
   - "sp_helpmergearticlecolumn_TSQL"
 helpviewer_keywords: 
   - "sp_helpmergearticlecolumn"
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

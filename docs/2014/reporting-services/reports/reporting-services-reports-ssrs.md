@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, report creation"
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-caps.latest.revision: 52
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Reporting Services Reports (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] reports are XML based report definitions that include report data and report layout elements. On a client file system, report definitions have the file extension .rdl. After a report is published, it is a report item stored on the report server or SharePoint site. Reports are one part of the server-based reporting platform provided by [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -61,7 +58,7 @@ manager: craigg
 ## Create Reports  
  To create a report:  
   
--   **Determine the purpose of report.** Identify the purpose of the report for the audience that uses it. A well-designed report provides information to report readers that leads to insight and action. Design decisions made during this step influence your choice of report parameters, report layout design, and report viewing experience. For more information, see [Planning a Report &#40;Report Builder&#41;](../report-design/planning-a-report-report-builder.md) and [Report Design Tips &#40;Report Builder and SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+-   **Determine the purpose of report.** Identify the purpose of the report for the audience that uses it. A well-designed report provides information to report readers that leads to insight and action. Design decisions made during this step influence your choice of report parameters, report layout design, and report viewing experience. For more information, see [Planning a Report &#40;Report Builder&#41;](../report-design/planning-a-report-report-builder.md) and [Report Design Tips &#40;Report Builder and SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 -   **Choose the type of query.** Determine whether to use a generalized, shared dataset query or a dataset query specific to your set of reports. A shared dataset with a generalized query is easy to maintain for use by multiple reports, but each report designer must filter the data as needed for their specific set of reports. For more information, see [Report Data &#40;SSRS&#41;](../report-data/report-data-ssrs.md).  
   
@@ -114,10 +111,10 @@ manager: craigg
 -   **Consider which components can be re-used.**  Determine if any of the data sources or dataset queries can be shared for re-use. If so, on the report server or SharePoint site, create shared data sources and shared datasets. Determine if the data regions are suitable for re-use as report parts. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## Preview Reports  
- Each report authoring tool supports previewing a report. For more information, see [Preview](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Report Builder &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md), and [Previewing Reports in Report Builder](../report-builder/previewing-reports-in-report-builder.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ Each report authoring tool supports previewing a report. For more information, see [Preview](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Report Builder &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md), and [Previewing Reports in Report Builder](../report-builder/previewing-reports-in-report-builder.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 ## Save or Publish Reports  
- Each authoring tool supports saving a report locally or publishing the report to a report server or SharePoint site. For more information, see [Save and Deploy](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Report Builder &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md), and [Saving Reports &#40;Report Builder&#41;](../report-builder/saving-reports-report-builder.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ Each authoring tool supports saving a report locally or publishing the report to a report server or SharePoint site. For more information, see [Save and Deploy](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Report Builder &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md), and [Saving Reports &#40;Report Builder&#41;](../report-builder/saving-reports-report-builder.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 ## View Reports  
  In addition to previewing a report saved locally or published to a report server, you can provide a variety of viewing experiences for your report readers. To view a report:  
@@ -130,7 +127,7 @@ manager: craigg
   
 -   **Print.**  A report reader can print a report or pages of a report depending on the way in which it is viewed. For more information, see [Print Reports &#40;Report Builder and SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Web or Windows Form application.**  Use Visual Studio to develop an ASP.NET AJAX application or Windows Form application that hosts the Report Viewer control. The control can point to published reports on a report server. For more information, see [Microsoft Reports](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Web or Windows Form application.**  Use Visual Studio to develop an ASP.NET AJAX application or Windows Form application that hosts the Report Viewer control. The control can point to published reports on a report server. For more information, see [Microsoft Reports](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## Manage Reports  
  To manage a published report:  

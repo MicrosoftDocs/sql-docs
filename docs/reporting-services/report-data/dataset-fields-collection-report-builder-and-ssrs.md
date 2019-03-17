@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-data
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -52,7 +51,7 @@ ms.author: maghan
 ### Using Extended Field Properties  
  Data sources that support multidimensional queries, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], support field properties on fields. Field properties appear in the result set for a query, but are not visible in the **Report Data** pane. They are still available to use in your report. To refer to a property for a field, drag the field onto the report, and change the default property **Value** to the field name of the property you want. For example, in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube, you can define formats for values in the cube cells. The formatted value is available by using the field property **FormattedValue**. To use the value directly instead of using a value and setting the format property of the text box, drag the field to the text box and change the default expression `=Fields!FieldName.Value` to `=Fields!FieldName.FormattedValue`.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Not all **Field** properties can be used for all data sources. The **Value** and **IsMissing** properties are defined for all data sources. Other predefined properties (such as **Key**, **UniqueName**, and **ParentUniqueName** for multidimensional data sources) are supported only if the data source provides those properties. Custom properties are supported by some data providers. For more information, see specific topics about extended field properties for your data source type in [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). For example, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
@@ -73,9 +72,9 @@ ms.author: maghan
   
 -   **Data source** The data types supported by the version of the type of data source to which you are connecting.  
   
-     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include **int**, **datetime**, and **varchar**. Data types introduced by [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] added support for **date**, **time**, **datetimetz**, and **datetime2**. For more information, see [Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include **int**, **datetime**, and **varchar**. Data types introduced by [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] added support for **date**, **time**, **datetimetz**, and **datetime2**. For more information, see [Data Types (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Data provider or data processing extension** The data types supported by the version of the data provider of the data processing extension you select when you connect to the data source. Data providers based on the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] use data types supported by the CLR. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider data types, see [Data Type Mappings (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) and [Working with Base Types](http://go.microsoft.com/fwlink/?LinkId=112177) on MSDN.  
+-   **Data provider or data processing extension** The data types supported by the version of the data provider of the data processing extension you select when you connect to the data source. Data providers based on the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] use data types supported by the CLR. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider data types, see [Data Type Mappings (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) and [Working with Base Types](https://go.microsoft.com/fwlink/?LinkId=112177) on MSDN.  
   
      For example, typical data types supported by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] include **Int32** and **String**. Calendar dates and times are supported by the **DateTime** structure. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 introduced support for the **DateTimeOffset** structure for dates with a time zone offset.  
   
@@ -93,7 +92,7 @@ ms.author: maghan
     |**DateTimeTZ**|**DateTimeOffset**|Date and time with time zone offset|  
     |**DateTime2**|**DateTime**|Date and time with fractional milliseconds|  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types, see [Data Types (Database Engine)](http://go.microsoft.com/fwlink/?linkid=98362) and [Date and Time Data Types and Functions (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types, see [Data Types (Database Engine)](https://go.microsoft.com/fwlink/?linkid=98362) and [Date and Time Data Types and Functions (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
   
  For more information about including references to a dataset field from an expression, see [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -103,7 +102,7 @@ ms.author: maghan
   
   
 ## See Also  
- [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

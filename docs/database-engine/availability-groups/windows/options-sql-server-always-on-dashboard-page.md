@@ -1,17 +1,15 @@
 ---
 title: "Options (SQL Server Always On, Dashboard Page) | Microsoft Docs"
-ms.custom: ""
+description: "A description of the 'Options' page found on the SQL Server Always On Dashboard."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Alwayson.Dashboard"
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

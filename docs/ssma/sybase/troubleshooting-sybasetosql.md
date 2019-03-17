@@ -4,17 +4,11 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Sybase Console,Troubleshooting"
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
   - "granting permissions [SQL Server], symmetric keys"
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
-caps.latest.revision: 28
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Symmetric Key Permissions (Transact-SQL)

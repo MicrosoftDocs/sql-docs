@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "diagrams [SQL Server], creating"
   - "database diagrams [SQL Server], creating"
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

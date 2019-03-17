@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSreplication_options"
   - "MSreplication_options_TSQL"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_options system table"
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg

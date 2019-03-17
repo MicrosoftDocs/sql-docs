@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], about encryption"
   - "security [SQL Server], encryption"
   - "cryptography [SQL Server], about cryptography"
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-caps.latest.revision: 16
 author: aliceku
 ms.author: aliceku
 manager: craigg
@@ -59,7 +56,7 @@ manager: craigg
  Information about how to use a certificate to encrypt data.  
   
 ## External Resources  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Security and Protection](http://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Security and Protection](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
  Current information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security.  
   
 ## See Also  

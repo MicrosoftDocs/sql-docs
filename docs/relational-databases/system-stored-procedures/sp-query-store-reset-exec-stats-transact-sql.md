@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_query_store_reset_exec_stats_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sp_query_store_reset_exec_stats"
   - "sys.sp_query_store_reset_exec_stats"
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg

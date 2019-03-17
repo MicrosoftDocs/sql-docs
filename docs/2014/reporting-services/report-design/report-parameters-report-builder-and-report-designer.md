@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 f1_keywords: 
   - "sql12.rtp.rptdesigner.subreportproperties.parameters.f1"
   - "sql12.rtp.rptdesigner.reportparameters.general.f1"
@@ -19,17 +15,16 @@ f1_keywords:
   - "10070"
   - "sql12.rtp.rptdesigner.reportparameters.advanced.f1"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 36
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Parameters (Report Builder and Report Designer)
   This topic describes the common uses for SSRS report parameters, the properties you can set, and much more about parameters. Report parameters enable you to control report data, connect related reports together, and vary report presentation.  
   
 [!INCLUDE[applies](../../includes/applies-md.md)] SharePoint mode and Native mode
   
- For a demonstration on how to add a parameter to a report, see [Tutorial: Adding Parameters to a Report (SSRS)](http://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
+ For a demonstration on how to add a parameter to a report, see [Tutorial: Adding Parameters to a Report (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
   
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Common Uses for Parameters  
@@ -218,19 +213,19 @@ manager: craigg
   
 -   [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [How to use SSRS parameters with stored procedures](http://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [How to use SSRS parameters with stored procedures](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
+## Did this Article Help You? We're Listening  
+ What information are you looking for, and did you find it? We're listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> Related Content  
- [Configuring SSRS Report Parameters (quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Configuring SSRS Report Parameters (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [Bursting the mysteries of InvalidReportParameterException in Reporting service](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [Bursting the mysteries of InvalidReportParameterException in Reporting service](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
- [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   

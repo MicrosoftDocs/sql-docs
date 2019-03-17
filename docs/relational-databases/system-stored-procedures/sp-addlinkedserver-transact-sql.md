@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addlinkedserver_TSQL"
@@ -42,30 +39,30 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## Arguments  
- [ **@server=** ] **'***server***'**  
+ [ **@server=** ] **'**_server_**'**  
  Is the name of the linked server to create. *server* is **sysname**, with no default.  
   
- [ **@srvproduct=** ] **'***product_name***'**  
+ [ **@srvproduct=** ] **'**_product_name_**'**  
  Is the product name of the OLE DB data source to add as a linked server. *product_name* is **nvarchar(**128**)**, with a default of NULL. If **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*, and *catalog* do not have to be specified.  
   
- [ **@provider=** ] **'***provider_name***'**  
+ [ **@provider=** ] **'**_provider_name_**'**  
  Is the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to this data source. *provider_name* must be unique for the specified OLE DB provider installed on the current computer. *provider_name* is **nvarchar(**128**)**, with a default of NULL; however, if *provider_name* is omitted, SQLNCLI is used. (Use SQLNCLI and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider.) The OLE DB provider is expected to be registered with the specified PROGID in the registry.  
   
- [ **@datasrc=** ] **'***data_source***'**  
+ [ **@datasrc=** ] **'**_data_source_**'**  
  Is the name of the data source as interpreted by the OLE DB provider. *data_source* is **nvarchar(**4000**)**. *data_source* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider.  
   
- [ **@location=** ] **'***location***'**  
+ [ **@location=** ] **'**_location_**'**  
  Is the location of the database as interpreted by the OLE DB provider. *location* is **nvarchar(**4000**)**, with a default of NULL. *location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider.  
   
- [ **@provstr=** ] **'***provider_string***'**  
+ [ **@provstr=** ] **'**_provider_string_**'**  
  Is the OLE DB provider-specific connection string that identifies a unique data source. *provider_string* is **nvarchar(**4000**)**, with a default of NULL. *provstr* is either passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider.  
   
  When the linked server is created against the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the instance can be specified by using the SERVER keyword as SERVER=*servername*\\*instancename* to specify a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* is the name of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running, and *instancename* is the name of the specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which the user will be connected.  
   
-> [!NOTE]  
+> [!NOTE]
 >  To access a mirrored database, a connection string must contain the database name. This name is necessary to enable failover attempts by the data access provider. The database can be specified in the **@provstr** or **@catalog** parameter. Optionally, the connection string can also supply a failover partner name.  
   
- [ **@catalog=** ] **'***catalog***'**  
+ [ **@catalog=** ] **'**_catalog_**'**  
  Is the catalog to be used when a connection is made to the OLE DB provider. *catalog* is **sysname**, with a default of NULL. *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.  
   
 ## Return Code Values  
@@ -102,8 +99,8 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
  **sp_addlinkedserver** cannot be executed within a user-defined transaction.  
   
-> [!IMPORTANT]  
->  When a linked server is created by using **sp_addlinkedserver**, a default self-mapping is added for all local logins. For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.  
+> [!IMPORTANT]
+>  When a linked server is created by using **sp_addlinkedserver**, a default self-mapping is added for all local logins. For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.  
   
 ## Permissions  
  The `sp_addlinkedserver` statement requires the `ALTER ANY LINKED SERVER` permission. (The SSMS **New Linked Server** dialog box is implemented in a way that requires membership in the `sysadmin` fixed server role.)  
@@ -267,11 +264,11 @@ EXEC sp_addlinkedserver
 ### G. Add a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a Linked Server For Use With Distributed Queries on Cloud and On-Premise Databases  
  You can add a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a linked server and then use it with distributed queries that span the on-premises and cloud databases. This is a component for database hybrid solutions spanning on-premises corporate networks and the Windows Azure cloud.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] box product contains the distributed query feature, which allows you to write queries to combine data from local data sources and data from remote sources (including data from non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources) defined as linked servers. Every [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (except the virtual master) can be added as an individual linked server and then used directly in your database applications as any other database.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] box product contains the distributed query feature, which allows you to write queries to combine data from local data sources and data from remote sources (including data from non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources) defined as linked servers. Every [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (except the virtual master) can be added as an individual linked server and then used directly in your database applications as any other database.  
   
  The benefits of using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] include manageability, high availability, scalability, working with a familiar development model, and a relational data model. The requirements of your database application determine how it would use [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] in the cloud. You can move all of your data at once to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or progressively move some of your data while keeping the remaining data on-premises. For such a hybrid database application, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] can now be added as linked servers and the database application can issue distributed queries to combine data from [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and on-premise data sources.  
   
- Here’s a simple example explaining how to connect to a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] using distributed queries:  
+ Here's a simple example explaining how to connect to a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] using distributed queries:  
   
 ```  
 ------ Configure the linked server  

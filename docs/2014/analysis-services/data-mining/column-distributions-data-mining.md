@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "normal distribution type [data mining]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "continuous columns"
   - "distributions [data mining]"
 ms.assetid: 87e700de-32be-4bc8-b01d-ba4ee1ab48de
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

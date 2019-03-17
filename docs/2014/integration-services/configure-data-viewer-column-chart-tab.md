@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.columnchart.f1"
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg

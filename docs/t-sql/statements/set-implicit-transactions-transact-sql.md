@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "IMPLICIT_TRANSACTIONS"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "SET IMPLICIT_TRANSACTIONS statement"
   - "IMPLICIT_TRANSACTIONS option"
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-caps.latest.revision: 45
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

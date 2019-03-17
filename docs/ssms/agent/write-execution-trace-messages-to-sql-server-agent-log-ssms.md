@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], SQL Server Agent"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Agent, errors"
   - "errors [SQL Server Agent]"
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -71,7 +67,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 2.  Right-click **SQL Server Agent** and select **Properties**.  
   
-3.  In the **SQL Server Agent Properties –**_server\_name_ dialog box, under **Error log** on the **General** page, select the **Include execution trace messages** check box.  
+3.  In the **SQL Server Agent Properties -**_server\_name_ dialog box, under **Error log** on the **General** page, select the **Include execution trace messages** check box.  
   
 4.  Click **OK**.  
   

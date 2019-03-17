@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "System Monitor [SQL Server], running"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "starting Windows NT System Monitor"
   - "RPC"
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

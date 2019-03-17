@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dc.reporthistory.calendar.f1"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "collection sets [SQL Server], viewing reports"
   - "reports [SQL Server], viewing collection set"
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

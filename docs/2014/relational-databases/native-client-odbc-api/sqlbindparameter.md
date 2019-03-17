@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLBindParameter function"
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -54,6 +51,6 @@ manager: craigg
   
 ## See Also  
  [ODBC API Implementation Details](odbc-api-implementation-details.md)   
- [SQLBindParameter Function](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter Function](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

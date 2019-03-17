@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "function_order_columns"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.function_order_columns catalog view"
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

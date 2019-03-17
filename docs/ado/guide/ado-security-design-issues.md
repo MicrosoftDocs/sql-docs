@@ -1,10 +1,8 @@
 ---
 title: "ADO Security Design Issues | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,7 +10,6 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, security"
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -29,7 +26,7 @@ The following sections describe security design features in ActiveX Data Objects
 ### Revised and improved security warning message box now used to alert users
  For ADO 2.7 and earlier, the following warning message appears when a scripted Web page tries to run ADO code from an untrusted provider:
 
-```
+```console
 This page accesses data on another domain. Do you want to allow this? To
 avoid this message in Internet Explorer, you can add a secure Web site to
 your Trusted Sites zone on the Security tab of the Internet Options dialog
@@ -38,7 +35,7 @@ box.
 
  For ADO 2.8 and later, the preceding message no longer appears. Instead, the following message appears in this context:
 
-```
+```console
 This Website uses a data provider that may be unsafe. If you trust the
 Website, click OK, otherwise click Cancel.
 ```
@@ -63,7 +60,7 @@ Website, click OK, otherwise click Cancel.
 -   If the site does not appear in the Trusted Sites zone list, the code is blocked and access to local files is denied.
 
     > [!NOTE]
-    >  In ADO 2.8 and later, the user is not alerted or advised to add sites to the Trusted Sites zone list. Therefore the management of the Trusted Sites list is the responsibility of those who are deploying or supporting Web site–based applications that require access to the local file system.
+    >  In ADO 2.8 and later, the user is not alerted or advised to add sites to the Trusted Sites zone list. Therefore the management of the Trusted Sites list is the responsibility of those who are deploying or supporting Web site-based applications that require access to the local file system.
 
 ### Access blocked to the ActiveCommand property on Recordset objects
  When running in Internet Explorer, ADO 2.8 now blocks access to the [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) property for an active **Recordset** object and returns an error. The error occurs regardless of whether the page comes from a Web site registered in the Trusted Sites list.
@@ -84,7 +81,7 @@ Website, click OK, otherwise click Cancel.
 
  In the case where a security warning now appears, the message box informs users:
 
-```
+```console
 This Website is using your identity to access a data source. If you trust this Website, click OK, otherwise click Cancel.
 ```
 

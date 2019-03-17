@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "intrinsic cell properties [MDX]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "cell properties [MDX]"
   - "CELL PROPERTIES keyword"
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -58,10 +55,10 @@ SELECT [<axis_specification>
 |`FORMAT_STRING`|The format string used to create the `FORMATTED_VALUE` property value. For more information, see [FORMAT_STRING Contents &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md).|  
 |`FORMATTED_VALUE`|The character string that represents a formatted display of the `VALUE` property.|  
 |`LANGUAGE`|The locale where the `FORMAT_STRING` will be applied. `LANGUAGE` is usually used for currency conversion.|  
-|`UPDATEABLE`|A value that indicates whether the cell can be updated. This property can have one of the following values:<br /><br /> `MD_MASK_ENABLED` (0x00000000)   The cell can be updated.<br /><br /> `MD_MASK_NOT_ENABLED` (0x10000000)   The cell cannot be updated.<br /><br /> `CELL_UPDATE_ENABLED` (0x00000001)   Cell can be updated in the cellset.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE` (0x00000002)   The cell can be updated with an update statement. The update may fail if a leaf cell is updated that is not write-enabled.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA` (0x10000001)   The cell cannot be updated because the cell has a calculated member among its coordinates; the cell was retrieved with a set in the where clause. A cell can be updated even though a formula affects, or a calculated cell is on, the value of a cell (is somewhere along the aggregation path). In this scenario, the final value of the cell may not be the updated value, because the calculation will affect the result<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE` (0x10000002)   The cell cannot be updated because non-sum measures (count, min, max, distinct count, semi-additive) can not be updated.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE` (0x10000003)   The cell cannot be updated because the cell does not exist as it is at the intersection of a measure and a dimension member unrelated to the measure’s measure group.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE` (0x10000005)    The cell cannot be updated because the cell is secured.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL` (0x10000006)   Reserved for future use.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE` (0x10000007)   The cell cannot be updated because of internal reasons.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE` (0x10000009)   The cell cannot be updated because update is not supported in mining model, indirect, or data mining dimensions.|  
+|`UPDATEABLE`|A value that indicates whether the cell can be updated. This property can have one of the following values:<br /><br /> `MD_MASK_ENABLED` (0x00000000)   The cell can be updated.<br /><br /> `MD_MASK_NOT_ENABLED` (0x10000000)   The cell cannot be updated.<br /><br /> `CELL_UPDATE_ENABLED` (0x00000001)   Cell can be updated in the cellset.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE` (0x00000002)   The cell can be updated with an update statement. The update may fail if a leaf cell is updated that is not write-enabled.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA` (0x10000001)   The cell cannot be updated because the cell has a calculated member among its coordinates; the cell was retrieved with a set in the where clause. A cell can be updated even though a formula affects, or a calculated cell is on, the value of a cell (is somewhere along the aggregation path). In this scenario, the final value of the cell may not be the updated value, because the calculation will affect the result<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE` (0x10000002)   The cell cannot be updated because non-sum measures (count, min, max, distinct count, semi-additive) can not be updated.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE` (0x10000003)   The cell cannot be updated because the cell does not exist as it is at the intersection of a measure and a dimension member unrelated to the measure's measure group.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE` (0x10000005)    The cell cannot be updated because the cell is secured.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL` (0x10000006)   Reserved for future use.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE` (0x10000007)   The cell cannot be updated because of internal reasons.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE` (0x10000009)   The cell cannot be updated because update is not supported in mining model, indirect, or data mining dimensions.|  
 |`VALUE`|The unformatted value of the cell.|  
   
- Only the `CELL_ORDINAL`, `FORMATTED_VALUE`, and `VALUE` cell properties are required. All cell properties, intrinsic or provider-specific, are defined in the `PROPERTIES` schema rowset, including their data types and provider support. For more information about the `PROPERTIES` schema rowset, see [MDSCHEMA_PROPERTIES Rowset](../../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Only the `CELL_ORDINAL`, `FORMATTED_VALUE`, and `VALUE` cell properties are required. All cell properties, intrinsic or provider-specific, are defined in the `PROPERTIES` schema rowset, including their data types and provider support. For more information about the `PROPERTIES` schema rowset, see [MDSCHEMA_PROPERTIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  By default, if the `CELL PROPERTIES` keyword is not used, the cell properties returned are `VALUE`, `FORMATTED_VALUE`, and `CELL_ORDINAL` (in that order). If the `CELL PROPERTIES` keyword is used, only those cell properties explicitly stated with the keyword are returned.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server Management Studio], query associations"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], query connections"
   - "query associations [SQL Server Management Studio]"
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_estimated_rowsize_reduction_for_vardecimal"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "estimate decimal compression"
   - "table compression [SQL Server]"
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -45,7 +41,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## Arguments  
- [ **@table=** ] **'***table***'**  
+ [ **@table=** ] **'**_table_**'**  
  Is the three part name of the table for which the storage format is to be changed. *table* is **nvarchar(776)**.  
   
 ## Return Code Values  

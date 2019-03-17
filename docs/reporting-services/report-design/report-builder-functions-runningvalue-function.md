@@ -4,13 +4,12 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Report Builder Functions - RunningValue Function
   Returns a running aggregate of all non-null numeric values specified by the expression, evaluated for the given scope.  
@@ -43,7 +42,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** cannot be used in a filter or sort expression.  
   
- The set of data for which the running value is calculated must have the same data type. To convert data that has multiple numeric data types to the same data type, use conversion functions like **CInt**, **CDbl** or **CDec**. For more information, see [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ The set of data for which the running value is calculated must have the same data type. To convert data that has multiple numeric data types to the same data type, use conversion functions like **CInt**, **CDbl** or **CDec**. For more information, see [Type Conversion Functions](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  *Scope* cannot be an expression.  
   

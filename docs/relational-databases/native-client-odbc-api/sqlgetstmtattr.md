@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLGetStmtAttr function"
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -51,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## See Also  
- [SQLSetStmtAttr Function](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [SQLSetStmtAttr Function](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

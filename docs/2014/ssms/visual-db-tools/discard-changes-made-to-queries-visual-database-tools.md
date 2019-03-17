@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reverting queries"
   - "queries [SQL Server], discarding changes"
   - "discarding query changes"
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "09/23/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "credentials [Reporting Services]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "stored credentials [Reporting Services]"
   - "data sources [Reporting Services], stored credentials"
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Store Credentials in a Reporting Services Data Source
   You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server uses to access external data for a report. Stored credentials are used if the report runs unattended, for example a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscription that publishes a report as an e-mail. The report server retrieves and uses the credentials when report processing is scheduled or triggered. This topic walks you through configuring stored credentials for both Native mode and SharePoint mode report servers.  
@@ -40,11 +37,11 @@ manager: craigg
 ##  <a name="bkmk_top"></a> Security policy requirements for stored credentials  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") It is required that the account you use for stored credentials, is configured for one of the following security policies on the report server. It is recommended you select the policy with the minimum level of permissions you require for your environment.  
   
-1.  **Allow log on locally**. For more information, see [Allow log on locally](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
+1.  **Allow log on locally**. For more information, see [Allow log on locally](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Log on as a batch job**. For more information, see [Log on as a batch job](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Log on as a batch job**. For more information, see [Log on as a batch job](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
-3.  For general information on policies, see [Edit security settings on a Group Policy object](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
+3.  For general information on policies, see [Edit security settings on a Group Policy object](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Configure stored credentials for a report-specific data source (Native mode)  
   

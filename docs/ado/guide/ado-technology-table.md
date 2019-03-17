@@ -3,8 +3,6 @@ title: "ADO Technology Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,7 +10,6 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, technologies"
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

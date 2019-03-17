@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourcewizard.selectdataconnection.f1"
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

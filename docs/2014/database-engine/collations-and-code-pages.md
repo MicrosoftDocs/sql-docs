@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg

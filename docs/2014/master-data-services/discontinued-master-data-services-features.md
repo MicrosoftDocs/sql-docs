@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -26,7 +22,7 @@ manager: craigg
 ### Security  
  To make assigning security easier, you can no longer assign model object permissions to the Derived Hierarchy, Explicit Hierarchy, and Attribute Group objects.  
   
--   Derived hierarchy permissions are now based on the model. For example, if you want a user to have permission to a derived hierarchy, you must assign **Update** to the model object. Then you can assign **Deny** access to any entities you don’t want the user to have access to.  
+-   Derived hierarchy permissions are now based on the model. For example, if you want a user to have permission to a derived hierarchy, you must assign **Update** to the model object. Then you can assign **Deny** access to any entities you don't want the user to have access to.  
   
 -   Explicit hierarchy permissions are now based on the entity. For example, if the user has **Update** permissions to an Account entity, then all explicit hierarchies for the entity will be updateable.  
   

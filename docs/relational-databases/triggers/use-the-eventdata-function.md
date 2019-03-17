@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "EVENTDATA function"
@@ -125,7 +123,7 @@ GO
 > [!NOTE]  
 >  To return event data, we recommend that you use the XQuery **value()** method instead of the **query()** method. The **query()** method returns XML and ampersand-escaped carriage return and line-feed (CRLF) instances in the output, while the **value()** method renders CRLF instances invisible in the output.  
   
- A similar DDL trigger example is provided with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To obtain the example, locate the Database Triggers folder by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This folder is located under the **Programmability** folder of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Right-click **ddlDatabseTriggerLog** and select **Script Database Trigger as**. By default, DDL trigger **ddlDatabseTriggerLog** is disabled.  
+ A similar DDL trigger example is provided with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To obtain the example, locate the Database Triggers folder by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This folder is located under the **Programmability** folder of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Right-click **ddlDatabaseTriggerLog** and select **Script Database Trigger as**. By default, DDL trigger **ddlDatabaseTriggerLog** is disabled.  
   
 ## See Also  
  [DDL Events](../../relational-databases/triggers/ddl-events.md)   

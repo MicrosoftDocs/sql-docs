@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Host a Report Server Database in a SQL Server Failover Cluster
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides failover clustering support so that you can use multiple disks for one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances. Failover clustering is supported only for the report server database; you cannot run the Report Server service as part of a failover cluster.  

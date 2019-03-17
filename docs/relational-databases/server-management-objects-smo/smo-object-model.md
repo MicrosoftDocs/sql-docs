@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "object models [SMO]"
   - "SMO [SQL Server], object model"
   - "SQL Server Management Objects, object model"
 ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "08/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.options.f1"
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 67
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -43,7 +38,7 @@ manager: craigg
 ## Automatic  
  **Auto Close**  
  Specify whether the database shuts down cleanly and frees resources after the last user exits. Possible values are **True** and **False**. When **True**, the database is shut down cleanly and its resources are freed after the last user logs off.  
-  
+
  **Auto Create Incremental Statistics**  
  Specify whether to use the incremental option when per partition statistics are created. For information about incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
@@ -62,6 +57,18 @@ manager: craigg
  When **False**, queries that initiate an automatic update of out-of-date statistics, wait until the updated statistics can be used in the query optimization plan.  
   
  Setting this option to **True** has no effect unless **Auto Update Statistics** is also set to **True**.  
+
+## Azure
+When connected to Azure SQL Database, this section has settings to control the Service Level Objective (SLO). The default SLO for a new database is Standard S2.
+
+  **Current Service Level Objective**
+  The specific SLO to use. Valid values are constrained by the selected edition. If your desired SLO value is not in the list, you can type the value.
+
+  **Edition**
+  The Azure SQL Database edition to use, such as Basic or Premium. If the edition value you need is not in the list, you can type the value, which must match the value used in Azure REST APIs.
+  
+  **Max Size**
+  The maximum size of the database. If the desired size value is not in the list, you can type the value. Leave blank for the default size of the given edition and SLO.
   
 ## Containment  
  In a contained database, some settings usually configured at the server level can be configured at the database level.  
@@ -94,10 +101,10 @@ manager: craigg
  In SQL Server 2016 and in Azure SQL Database, there are a number of configuration properties that can be scoped to the database level. For more information for all of these settings, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Legacy Cardinality Estimation**  
- Specify the query optimizer cardinality estimation model for the primary independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specify the query optimizer cardinality estimation model for the primary independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Legacy Cardinality Estimation for Secondary**  
- Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Max DOP**  
  Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for the primary that should be used for statements.  
@@ -106,16 +113,16 @@ manager: craigg
  Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for secondaries, if any, that should be used for statements.  
   
  **Parameter Sniffing**  
- Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/kb/980653).  
   
  **Parameter Sniffing for Secondary**  
- Enables or disables parameter sniffing on secondaries, if any. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Enables or disables parameter sniffing on secondaries, if any. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/kb/980653).  
   
  **Query Optimizer Fixes**  
- Enables or disables query optimization hotfixes on the primary regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Enables or disables query optimization hotfixes on the primary regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/kb/974006).  
   
  **Query Optimizer Fixes for Secondary**  
- Enables or disables query optimization hotfixes on secondaries, if any, regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Enables or disables query optimization hotfixes on secondaries, if any, regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/kb/974006).  
   
 ## FILESTREAM  
  **FILESTREAM Directory Name**  

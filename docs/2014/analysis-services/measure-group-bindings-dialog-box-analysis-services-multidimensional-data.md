@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1"
 helpviewer_keywords: 
   - "Measure Group Bindings dialog box"
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -41,7 +38,7 @@ manager: craigg
 |------------|----------------|  
 |**Dimension Columns**|Displays the columns from the dimension table on which the attribute selected in **Attributes** is based.|  
 |**Measure Group Columns**|Select either **Inherited from dimension** to use the measure group relationship inherited from the dimension, or select a column from the fact table on which the measure group is based to explicitly define a relationship.|  
-|**Null Processing**|Select a null processing option for the attribute. For more information about null processing options, see [NullProcessing Element &#40;ASSL&#41;](scripting/properties/nullprocessing-element-assl.md).|  
+|**Null Processing**|Select a null processing option for the attribute. For more information about null processing options, see [NullProcessing Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl).|  
   
 ## See Also  
  [Define Relationship Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   

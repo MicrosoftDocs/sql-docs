@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
-caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Deploy Scheduled Policies to Multiple Instances
@@ -69,7 +65,7 @@ manager: craigg
     > [!NOTE]  
     >  If you right-click **Local Server Groups** or the Central Management Server itself, the policies will be deployed to all managed servers. If you right-click a specific server group, the policies will only be deployed to servers in that group. If you right-click a specific registered server, the policies will only be deployed to that server.  
   
-3.  Next to **Files to import**, click the ellipsis button (**…**).  
+3.  Next to **Files to import**, click the ellipsis button (**...**).  
   
 4.  In the **Select Policy** dialog box, browse to the folder location where you saved the scheduled policies. For this example, browse to the location **C:\Scheduled_BP_Policies**.  
   

@@ -5,9 +5,7 @@ ms.date: "08/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XML query plans [SQL Server]"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "execution plans [SQL Server], saving"
   - "saving execution plans"
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-caps.latest.revision: 25
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -39,7 +36,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     GO  
     ```  
   
-     To turn [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) on, use the following statement:  
+    To turn [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) on, use the following statement:  
   
     ```sql  
     SET STATISTICS XML ON;  

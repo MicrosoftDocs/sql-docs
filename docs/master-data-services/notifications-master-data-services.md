@@ -5,10 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "notifications [Master Data Services]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "e-mail [Master Data Services]"
   - "e-mail [Master Data Services], about e-mail notifications"
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -55,6 +51,6 @@ manager: craigg
   
 -   [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Troubleshooting Email Notifications (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
+-   [Troubleshooting Email Notifications (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
   
   

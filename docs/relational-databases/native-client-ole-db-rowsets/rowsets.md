@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rowsets [OLE DB], about rowsets"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "OLE DB rowsets, about rowsets"
   - "rowsets [OLE DB]"
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Audit Server Object Take Ownership event class"
 ms.assetid: 780fde57-3970-4063-a634-04879b6ef141
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

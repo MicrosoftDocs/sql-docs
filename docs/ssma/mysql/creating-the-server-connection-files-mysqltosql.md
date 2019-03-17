@@ -4,18 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Server connection file validation"
   - "Server connection files"
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
-caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -86,11 +80,11 @@ Server information can be specified either in the servers section of the script 
 ```  
   
 ## Server Connection File Validation  
-The user can easily validate his/her server connection file against the schema definition file **‘M2SSConsoleScriptServersSchema.xsd’** available in the ‘Schemas’ folder.  
+The user can easily validate his/her server connection file against the schema definition file **'M2SSConsoleScriptServersSchema.xsd'** available in the 'Schemas' folder.  
   
 ## Next Step  
 The next step in operating the console is [Executing the SSMA Console &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## See Also  
-[Executing the SSMA Console (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Executing the SSMA Console (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

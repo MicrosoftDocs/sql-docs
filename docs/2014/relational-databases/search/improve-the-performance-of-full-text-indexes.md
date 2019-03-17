@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/26/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance [SQL Server], full-text search"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "full-text search [SQL Server], performance"
   - "batches [SQL Server], full-text search"
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -55,7 +52,7 @@ manager: craigg
 ##  <a name="tuning"></a> Tuning the Performance of Full-Text Indexes  
  To maximize the performance of your full-text indexes, implement the following best practices:  
   
--   To use all processors or cores to the maximum, set [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)‘`max full-text crawl ranges`’ to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   To use all processors or cores to the maximum, set [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Make sure that the base table has a clustered index. Use an integer data type for the first column of the clustered index. Avoid using GUIDs in the first column of the clustered index. A multi-range population on a clustered index can produce the highest population speed. We recommend that the column serving as the full-text key be an integer data type.  
   
@@ -123,12 +120,12 @@ manager: craigg
 > [!IMPORTANT]  
 >  For essential information about the formulas, see <sup>1</sup>, <sup>2</sup>, and <sup>3</sup>, below.  
   
-|Platform|Estimating fdhost.exe memory requirements in MB—*F*<sup>1</sup>|Formula for calculating max server memory—*M*<sup>2</sup>|  
+|Platform|Estimating fdhost.exe memory requirements in MB-*F*<sup>1</sup>|Formula for calculating max server memory-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **=minimum(** *T* **,** 2000**)–*`F`*–** 500|  
-|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|_F_ **=** _Number of crawl ranges_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000**)-*`F`*-** 500|  
+|x64|_F_ **=** _Number of crawl ranges_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as *T***–** sigma**(***F*i**)**.  
+ <sup>1</sup> If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as _T_**-** sigma**(**_F_i**)**.  
   
  <sup>2</sup> 500 MB is an estimate of the memory required by other processes in the system. If the system is doing additional work, increase this value accordingly.  
   
@@ -136,11 +133,11 @@ manager: craigg
   
  **Example: Estimating the Memory Requirements of fdhost.exe**  
   
- This example is for an AMD64 computer that has 8GM of RAM and 4 dual core processors. The first calculation estimates of memory needed by fdhost.exe—*F*. The number of crawl ranges is `8`.  
+ This example is for an AMD64 computer that has 8GM of RAM and 4 dual core processors. The first calculation estimates of memory needed by fdhost.exe-*F*. The number of crawl ranges is `8`.  
   
  `F = 8*10*8=640`  
   
- The next calculation obtains the optimal value for `max server memory`—*M*. *T*he total physical memory available on this system in MB—*T*—is `8192`.  
+ The next calculation obtains the optimal value for `max server memory`-*M*. *T*he total physical memory available on this system in MB-*T*-is `8192`.  
   
  `M = 8192-640-500=7052`  
   
@@ -200,7 +197,7 @@ GO
   
  For security reasons, filters are loaded by filter daemon host processes. A server instance uses a multithreaded process for all multithreaded filters and a single-threaded process for all single-threaded filters. When a document that uses a multithreaded filter contains an embedded document that uses a single-threaded filter, the Full-Text Engine launches a single-threaded process for the embedded document. For example, on encountering a Word document that contains a PDF document, the Full-Text Engine uses the multithreaded process for the Word content and launches a single-threaded process for the PDF content. A single-threaded filter might not work well in this environment, however, and could destabilize the filtering process. In certain circumstances where such embedding is common, destabilization might lead to filtering-process crashes. When this occurs, the Full-Text Engine re-routes any failed document (for example, a Word document that contains embedded PDF content) to the single-threaded filtering process. If re-routing occurs frequently, it results in performance degradation of the full-text indexing process.  
   
- To work around this problem, mark the filter for the container document (Word in this case) as a single-threaded filter. You can change the filter registry value to mark a given filter as a single-threaded filter. To mark a filter as a single-threaded filter, you need to set the **ThreadingModel** registry value for the filter to `Apartment Threaded`. For information about single-threaded apartments, see the white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159).  
+ To work around this problem, mark the filter for the container document (Word in this case) as a single-threaded filter. You can change the filter registry value to mark a given filter as a single-threaded filter. To mark a filter as a single-threaded filter, you need to set the **ThreadingModel** registry value for the filter to `Apartment Threaded`. For information about single-threaded apartments, see the white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159).  
   
   
   

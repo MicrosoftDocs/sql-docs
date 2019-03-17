@@ -1,5 +1,6 @@
 ---
-title: Active Directory authentication tutorial for SQL Server on Linux | Microsoft Docs
+title: "Tutorial: Active Directory authentication for SQL Server on Linux"
+titleSuffix: SQL Server
 description: This tutorial provides the configuration steps for AAD authentication for SQL Server on Linux.
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,9 +8,7 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"
@@ -159,10 +158,24 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
    
    > SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SID's). SSSD must be configured and running in order for SQL Server to create AD logins successfully. Realmd usually does this automatically as part of joining the domain, but in some cases you must do this separately.
    >
-   > Check out the following to configure [SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+   > Check out the following to configure [SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+
+5. Verify your domain is configured in `/etc/krb5.conf`
+    ```/etc/krb5.conf
+    [libdefaults]
+    default_realm = CONTOSO.COM
+
+    [realms]
+    CONTOSO.COM = {
+    }
+
+    [domain_realm]
+    contoso.com = CONTOSO.COM
+    .contoso.com = CONTOSO.COM
+    ```
 
   
-5. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user.
+6. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user.
 
    The following example uses **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 

@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.selectapackage.f1"
 helpviewer_keywords: 
   - "Select a Package dialog box"
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -54,7 +51,7 @@ manager: craigg
   
 ### Location = DTSX file  
  **File name**  
- Provide the path of a package or click the browse button **(…)** and locate the package.  
+ Provide the path of a package or click the browse button **(...)** and locate the package.  
   
 ## See Also  
  [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  

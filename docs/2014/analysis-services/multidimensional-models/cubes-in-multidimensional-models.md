@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLAP objects [Analysis Services], cubes"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "cubes [Analysis Services]"
   - "OLAP [Analysis Services], cubes"
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

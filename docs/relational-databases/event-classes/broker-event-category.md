@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server event classes, Broker event category"
   - "Broker event category [SQL Server]"
   - "event classes [SQL Server], Broker event category"
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
-caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

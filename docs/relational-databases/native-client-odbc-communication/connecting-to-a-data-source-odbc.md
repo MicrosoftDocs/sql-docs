@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "checking connection states"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data sources"
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg

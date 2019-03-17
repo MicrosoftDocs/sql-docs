@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Progress Report: Online Index Operation event class [SQL Server]"
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

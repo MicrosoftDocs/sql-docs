@@ -4,14 +4,11 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Report Builder Tutorials
 
@@ -69,7 +66,7 @@ Follow the steps in this tutorial to learn how to use expressions to concatenate
 ## Next steps
 
 [Report Design View](../reporting-services/report-builder/report-design-view-report-builder.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Tutorial: Create a Quick Chart Report Offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

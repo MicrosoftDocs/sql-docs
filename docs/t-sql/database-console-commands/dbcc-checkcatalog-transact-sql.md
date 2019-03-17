@@ -5,9 +5,7 @@ ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC_CHECKCATALOG_TSQL"
@@ -23,8 +21,7 @@ helpviewer_keywords:
   - "integrity [SQL Server], catalogs"
   - "consistency [SQL Server], catalogs"
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 51
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

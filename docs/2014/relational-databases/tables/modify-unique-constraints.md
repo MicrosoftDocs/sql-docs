@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying constraints"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "constraints [SQL Server], modifying"
   - "constraints [SQL Server], unique"
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -48,7 +44,7 @@ manager: craigg
   
 1.  In the **Object Explorer**, right-click the table containing the unique constraint and select **Design**.  
   
-2.  On the **Table Designer** menu, click **Indexes/Keys…**.  
+2.  On the **Table Designer** menu, click **Indexes/Keys...**.  
   
 3.  In the **Indexes/Keys** dialog box, under **Selected Primary/Unique Key or Index**, select the constraint you wish to edit.  
   
@@ -56,12 +52,12 @@ manager: craigg
   
     |To|Follow these steps|  
     |--------|------------------------|  
-    |Change the columns that the constraint is associated with|1) In the grid under **(General)**, click **Columns** and then click the ellipses **(…)** to the right of the property.<br /><br /> 2) In the **Index Columns** dialog box, specify the new column or sort order or both for the index.|  
+    |Change the columns that the constraint is associated with|1) In the grid under **(General)**, click **Columns** and then click the ellipses **(...)** to the right of the property.<br /><br /> 2) In the **Index Columns** dialog box, specify the new column or sort order or both for the index.|  
     |Rename the constraint|In the grid under **Identity**, type a new name in the **Name** box. Make sure that your new name does not duplicate a name in the **Selected Primary/Unique Key or Index** list.|  
     |Set the clustered option|In the grid under **Table Designer**, select **Create As Clustered** and from the dropdown choose Yes to create a clustered index and No to create a non-clustered one. Only one clustered index can exist per table. If a clustered index already exists in this table, you must clear this setting on the original index.|  
     |Define a fill factor|In the grid under **Table Designer**, expand the **Fill Specification** category and type an integer from 0 to 100 in the **Fill Factor** box.|  
   
-5.  On the **File** menu, click **Save***table name*.  
+5.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> **To modify a unique constraint**  
   

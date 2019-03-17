@@ -5,9 +5,7 @@ ms.date: "08/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_xtp_transactions"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_transactions dynamic management view"
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg

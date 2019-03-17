@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_stored_procedures_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_stored_procedures"
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -41,10 +37,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@sp_name =** ] **'***name***'**  
+ [ **@sp_name =** ] **'**_name_**'**  
  Is the name of the procedure used to return catalog information. *name* is **nvarchar(390)**, with a default of NULL. Wildcard pattern matching is supported.  
   
- [ **@sp_owner =** ] **'***schema***'**  
+ [ **@sp_owner =** ] **'**_schema_**'**  
  Is the name of the schema to which the procedure belongs. *schema* is **nvarchar(384)**, with a default of NULL. Wildcard pattern matching is supported. If *owner* is not specified, the default procedure visibility rules of the underlying DBMS apply.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the current schema contains a procedure with the specified name, that procedure is returned. If a nonqualified stored procedure is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] searches for the procedure in the following order:  
@@ -55,10 +51,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   The **dbo** schema in the current database.  
   
- [ **@qualifier =** ] **'***qualifier***'**  
- Is the name of the procedure qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables in the form (*qualifier***.***schema***.***name*. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* represents the database name. In some products, it represents the server name of the database environment of the table.  
+ [ **@qualifier =** ] **'**_qualifier_**'**  
+ Is the name of the procedure qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables in the form (_qualifier_**.**_schema_**.**_name_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* represents the database name. In some products, it represents the server name of the database environment of the table.  
   
- [ **@fUsePattern =** ] **'***fUsePattern***'**  
+ [ **@fUsePattern =** ] **'**_fUsePattern_**'**  
  Determines whether the underscore (_), percent (%), or brackets [ ]) are interpreted as wildcard characters. *fUsePattern* is **bit**, with a default of 1.  
   
  **0** = Pattern matching is off.  

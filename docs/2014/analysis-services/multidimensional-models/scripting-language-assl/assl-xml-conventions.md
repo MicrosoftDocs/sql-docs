@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "whitespace [Analysis Services Scripting Language]"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "hierarchies [Analysis Services Scripting Language]"
   - "inherited defaults [Analysis Services Scripting Language]"
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
   
  To represent the object hierarchy, ASSL uses the following XML conventions:  
   
--   All objects and properties are represented as elements, except for standard XML attributes such as ‘xml:lang’.  
+-   All objects and properties are represented as elements, except for standard XML attributes such as 'xml:lang'.  
   
 -   Both element names and enumeration values follow the Microsoft .NET Framework naming convention of Pascal casing with no underscores.  
   
@@ -48,7 +45,7 @@ manager: craigg
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -77,7 +74,7 @@ manager: craigg
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -85,7 +82,7 @@ manager: craigg
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -120,10 +117,10 @@ manager: craigg
  Analysis Services uses the following standard XML Schema definition language (XSD) data types:  
   
  `Int`  
- An integer value in the range of -231 to 231 – 1.  
+ An integer value in the range of -231 to 231 - 1.  
   
  `Long`  
- An integer value in range of -263 to 263 – 1.  
+ An integer value in range of -263 to 263 - 1.  
   
  `String`  
  A string value that conforms to the following global rules:  

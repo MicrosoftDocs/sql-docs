@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.validate.options.f1"
 helpviewer_keywords: 
   - "Subscription Validation Options dialog box"
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -34,6 +30,6 @@ manager: craigg
   
 ## See Also  
  [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)   
- [Validate Replicated Data](validate-replicated-data.md)  
+ [Validate Replicated Data](validate-data-at-the-subscriber.md)  
   
   

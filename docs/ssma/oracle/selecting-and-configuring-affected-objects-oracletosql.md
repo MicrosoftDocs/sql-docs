@@ -4,15 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Columns Comparison Settings"
   - "Selection of Affected Objects"
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
@@ -45,7 +42,7 @@ The Table tab contains the grid view of the table selected. The grid contains th
 -   Nullable  
   
 ## Sql  
-SQL tab contains the “Create table” SQL of the table selected.  
+SQL tab contains the "Create table" SQL of the table selected.  
   
 ## Data  
 Data tab displays data present in the table selected.  

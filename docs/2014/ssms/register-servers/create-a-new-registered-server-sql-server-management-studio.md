@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.registerserver.general.sqlce.f1"
@@ -14,7 +12,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Registered Servers [SQL Server], creating new registered servers"
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

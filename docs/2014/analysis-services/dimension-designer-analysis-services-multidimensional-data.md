@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Dimension Designer"
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
   
     -   Right-click a dimension and then click **Open** or **View Designer**.  
   
-         —or—  
+         -or-  
   
     -   Double-click a dimension.  
   

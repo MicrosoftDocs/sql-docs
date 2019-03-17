@@ -4,12 +4,9 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "Windows applications [Reporting Services]"
   - "Web Browser controls [Reporting Services]"
@@ -97,14 +94,14 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
  You direct the <xref:System.Windows.Forms.WebBrowser> control to a URL by calling its **Navigate** method. You can assign a specific URL access string to your <xref:System.Windows.Forms.WebBrowser> control at run time as shown in the following example.  
   
 ```vb  
-Dim url As String = "http://localhost/reportserver?/" & _  
+Dim url As String = "https://localhost/reportserver?/" & _  
                     "AdventureWorks2012 Sample Reports/" & _  
                     "Company Sales&rs:Command=Render"  
 WebBrowser1.Navigate(url)  
 ```  
   
 ```csharp  
-string url = "http://localhost/reportserver?/" +  
+string url = "https://localhost/reportserver?/" +  
              "AdventureWorks2012 Sample Reports/" +  
              "Company Sales&rs:Command=Render";  
 webBrowser1.Navigate(url);  

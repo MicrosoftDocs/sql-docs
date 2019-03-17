@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OBJECT_ID"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "viewing object IDs"
   - "verifying object exists"
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-caps.latest.revision: 63
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

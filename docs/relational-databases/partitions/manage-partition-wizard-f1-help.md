@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "partitions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.managepartition.createjob.f1"
@@ -24,8 +21,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "wizards [SQL Server Management Studio] See Manage Partition Wizard"
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Manage Partition Wizard F1 Help

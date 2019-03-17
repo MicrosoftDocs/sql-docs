@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server], creating"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "severity levels [SQL Server]"
   - "alerts [SQL Server], severity levels"
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

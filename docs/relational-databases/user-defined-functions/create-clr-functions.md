@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "udf"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CLR functions [SQL Server]"
   - "user-defined functions [SQL Server], CLR"
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
-caps.latest.revision: 34
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -32,10 +28,10 @@ manager: craigg
   
 -   Create the function that references the registered assembly by using the [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) statement.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Deploying a SQL Server Project in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR functions in the database for all methods annotated with the **SqlFunction** attribute. For more information, see [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  The ability of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) is enabled by using [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ## Accessing External Resources  
@@ -54,7 +50,7 @@ manager: craigg
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## Accessing Native Code  
- CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](http://go.microsoft.com/fwlink/?LinkID=181929) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
+ CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](https://go.microsoft.com/fwlink/?LinkID=181929) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
   
 ## See Also  
  [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

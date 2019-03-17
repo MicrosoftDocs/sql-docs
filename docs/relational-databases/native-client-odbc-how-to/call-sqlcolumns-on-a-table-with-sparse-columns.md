@@ -5,7 +5,6 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
 yms.tgt_pltfrm: ""
 ms.topic: "reference"
@@ -32,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Compile with /EHsc /D, "UNICODE", and odbc32.lib.  
   
- The second ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table created by this sample.  
+ The second ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table created by this sample.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "network protocols [SQL Server], disabling"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "surface area configuration [SQL Server], connection protocols"
   - "connections [SQL Server], enabling remote using Configuration Manager"
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -33,7 +30,7 @@ manager: craigg
 >  During setup of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a login is added for the BUILTIN\Users group. This allows all authenticated users of the computer to access the instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] as a member of the public role. The BUILTIN\Users login can be safely removed to restrict [!INCLUDE[ssDE](../../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] up to [!INCLUDE[sssql14](../../includes/sssql14-md.md)] only support TLS 1.0 and SSL 3.0 by default. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail unless you have installed the appropriate update to add support for TLS 1.1 and 1.2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which is listed <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">here</a>. Starting from [!INCLUDE[sssql15](../../includes/sssql15-md.md)], all release versions of SQL Server include TLS 1.2 support without further updates required.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] up to [!INCLUDE[sssql14](../../includes/sssql14-md.md)] only support TLS 1.0 and SSL 3.0 by default. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail unless you have installed the appropriate update to add support for TLS 1.1 and 1.2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which is listed <a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">here</a>. Starting from [!INCLUDE[sssql15](../../includes/sssql15-md.md)], all release versions of SQL Server include TLS 1.2 support without further updates required.
   
  **In This Topic**  
   
@@ -49,13 +46,13 @@ manager: craigg
   
 1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, in the console pane, expand **SQL Server  Network Configuration**.  
   
-2.  In the console pane, click **Protocols for** *\<instance name>*.  
+2.  In the console pane, click **Protocols for** _\<instance name>_.  
   
 3.  In the details pane, right-click the protocol you want to change, and then click **Enable** or **Disable**.  
   
 4.  In the console pane, click **SQL Server Services**.  
   
-5.  In the details pane, right-click **SQL Server (***\<instance name>***)**, and then click **Restart**, to stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+5.  In the details pane, right-click **SQL Server (**_\<instance name>_**)**, and then click **Restart**, to stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server PowerShell  
   
@@ -65,7 +62,7 @@ manager: craigg
   
 2.  Start Windows PowerShell from the taskbar, or click Start, then All Programs, then Accessories, then Windows PowerShell, then Windows PowerShell.  
   
-3.  Import the **sqlps** module by entering **Import-Module “sqlps”**  
+3.  Import the **sqlps** module by entering **Import-Module "sqlps"**  
   
 4.  Execute the following statements to enable both the TCP and named pipes protocols. Replace `<computer_name>` with the name of the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you are configuring a named instance, replace `MSSQLSERVER` with the instance name.  
   

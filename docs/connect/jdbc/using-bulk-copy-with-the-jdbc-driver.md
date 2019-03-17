@@ -5,12 +5,9 @@ ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -43,7 +40,7 @@ The BulkCopyDemoMatchingColumns and BulkCopyDemoDifferentColumns tables are both
 A few of the code samples demonstrate how to use one SQLServerBulkCopy class to write to multiple tables. For these samples, the BulkCopyDemoOrderHeader and BulkCopyDemoOrderDetail tables are used as the destination tables. These tables are based on the Sales.SalesOrderHeader and Sales.SalesOrderDetail tables in AdventureWorks.  
   
 > [!NOTE]  
-> The SQLServerBulkCopy code samples are provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT … SELECT statement to copy the data.  
+> The SQLServerBulkCopy code samples are provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ### Table setup  
 
@@ -141,7 +138,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
 The following application demonstrates how to load data using the SQLServerBulkCopy class. In this example, a ResultSet is used to copy data from the Production.Product table in the SQL Server AdventureWorks database to a similar table in the same database.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT … SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -235,7 +232,7 @@ You can perform multiple bulk copy operations using a single instance of a SQLSe
 If you perform several bulk copy operations using the same SQLServerBulkCopy object, there are no restrictions on whether source or target information is equal or different in each operation. However, you must ensure that column association information is properly set each time you write to the server.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT … SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -364,7 +361,7 @@ In the example, the source table and destination table each include an Identity 
 The bulk copy operation is executed with the **BatchSize** property set to 10. When the operation encounters the invalid row, an exception is thrown. In this first example, the bulk copy operation is non-transacted. All batches copied up to the point of the error are committed; the batch containing the duplicate key is rolled back, and the bulk copy operation is halted before processing any other batches.  
   
 > [!NOTE]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT … SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -473,7 +470,7 @@ You can pass a Connection object that has transactions enabled as a parameter in
 The following application is similar to **BulkCopyNonTransacted**, with one exception: in this example, the bulk copy operation is included in a larger, external transaction. When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.
 
 > [!NOTE]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT … SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -572,7 +569,7 @@ public class BulkCopyExistingTransactions {
   
 1. Open **SQL Server Management Studio** and connect to the SQL Server with the AdventureWorks database.  
   
-2. Expand the databases, right-click the AdventureWorks database, select **Tasks** and **Export Data**…  
+2. Expand the databases, right-click the AdventureWorks database, select **Tasks** and **Export Data**...  
   
 3. For the Data Source, select the **Data source** that allows you to connect to your SQL Server (e.g. SQL Server Native Client 11.0), check the configuration and then **Next**  
   
@@ -580,7 +577,7 @@ public class BulkCopyExistingTransactions {
   
 5. Select **Write a query to specify the data to transfer** and **Next**.  Enter your **SQL Statement** SELECT ProductID, Name, ProductNumber FROM Production.Product, and **Next**  
   
-6. Check the configuration: You can leave the Row delimiter as {CR}{LF} and Column Delimiter as Comma {,}.  Select **Edit Mappings**… and check that the data **Type** is correct for each column (e.g. integer for ProductID and Unicode string for the others).  
+6. Check the configuration: You can leave the Row delimiter as {CR}{LF} and Column Delimiter as Comma {,}.  Select **Edit Mappings**... and check that the data **Type** is correct for each column (e.g. integer for ProductID and Unicode string for the others).  
   
 7. Skip ahead to **Finish** and run the export.  
 
@@ -756,7 +753,7 @@ The SQLServerBulkCopy class can be used to write data only to SQL Server tables.
 | String getColumnName(int column)    | Get the name of the given column.                                                                                                                                                                                                                                                                      |
 | Int getColumnType(int column)       | Get the JDBC data type of the given column.                                                                                                                                                                                                                                                            |
 | Int getPrecision(int column)        | Get the precision for the given column.                                                                                                                                                                                                                                                                |
-| Object[] getRowData()               | Gets the data for the current row as an array of Objects.<br /><br /> Each Object must match the Java language Type that is used to represent the indicated JDBC data type for the given column.  For more information, see ‘Understanding the JDBC Driver Data Types’ for the appropriate mappings. |
+| Object[] getRowData()               | Gets the data for the current row as an array of Objects.<br /><br /> Each Object must match the Java language Type that is used to represent the indicated JDBC data type for the given column.  For more information, see 'Understanding the JDBC Driver Data Types' for the appropriate mappings. |
 | Int getScale(int column)            | Get the scale for the given column.                                                                                                                                                                                                                                                                    |
 | Boolean isAutoIncrement(int column) | Indicates whether the column represents an identity column.                                                                                                                                                                                                                                            |
 | Boolean next()                      | Advances to the next data row.                                                                                                                                                                                                                                                                         |
@@ -773,7 +770,7 @@ Implementation Notes and Limitations:
   
 3. The delimiter specified for the CSV file shouldn't appear anywhere in the data and should be escaped properly if it is a restricted character in Java regular expressions.  
   
-4. In the CSV file implementation, double quotes are treated as part of the data. For example, the line hello,”world”,”hello,world” would be treated as having four columns with the values hello, “world”, “hello and world” if the delimiter is a comma.  
+4. In the CSV file implementation, double quotes are treated as part of the data. For example, the line hello,"world","hello,world" would be treated as having four columns with the values hello, "world", "hello and world" if the delimiter is a comma.  
   
 5. New line characters are used as row terminators and aren't allowed anywhere in the data.  
   

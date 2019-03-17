@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SYS.SP_QUERY_STORE_FORCE_PLAN"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.sp_query_store_force_plan"
   - "sp_query_store_force_plan"
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "fn_cdc_is_bit_set"
   - "sys.fn_cdc_is_bit_set_TSQL"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "sys.fn_cdc_is_bit_set"
   - "fn_cdc_is_bit_set"
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

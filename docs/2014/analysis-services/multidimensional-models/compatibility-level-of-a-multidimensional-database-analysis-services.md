@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -21,7 +18,7 @@ manager: craigg
  This topic describes compatibility level for multidimensional databases only. For more information about tabular solutions, see [Compatibility Level &#40;SSAS Tabular SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
 > [!NOTE]  
->  Tabular models have additional database compatibility levels that are not applicable to multidimensional models. Compatibility level `1103` does not exist for multidimensional models. See [What is new for the Tabular model in SQL Server 2012 SP1 and compatibility level](http://go.microsoft.com/fwlink/?LinkId=301727) for more information about `1103` for tabular solutions.  
+>  Tabular models have additional database compatibility levels that are not applicable to multidimensional models. Compatibility level `1103` does not exist for multidimensional models. See [What is new for the Tabular model in SQL Server 2012 SP1 and compatibility level](https://go.microsoft.com/fwlink/?LinkId=301727) for more information about `1103` for tabular solutions.  
   
  **Compatibility Levels for multidimensional databases**  
   

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "IDENT_INCR"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "IDENT_INCR function"
   - "identity columns [SQL Server], IDENT_INCR function"
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -27,9 +24,9 @@ manager: craigg
 # IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the increment value (returned as **numeric** (**@@**MAXPRECISION,0)) specified during the creation of an identity column in a table or view that has an identity column.  
+  Returns the increment value (as **numeric** (**@@**MAXPRECISION, 0)) specified when creating a table or view's identity column.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -40,15 +37,15 @@ IDENT_INCR ( 'table_or_view' )
   
 ## Arguments  
  **'** *table_or_view* **'**  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) specifying the table or view to check for a valid identity increment value. *table_or_view* can be a character string constant enclosed in quotation marks, a variable, a function, or a column name. *table_or_view* is **char**, **nchar**, **varchar**, or **nvarchar**.  
+ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) specifying the table or view to check for a valid identity increment value. *table_or_view* can be a character string constant enclosed in quotation marks. It can also be a variable, a function, or a column name. *table_or_view* is **char**, **nchar**, **varchar**, or **nvarchar**.  
   
-## Return Types  
+## Return types  
  **numeric**  
   
 ## Exceptions  
- Returns NULL on error or if a caller does not have permission to view the object.  
+ Returns NULL on error or if a caller doesn't have object view permission.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as IDENT_INCR may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables they own or have permissions for. Without user object permission, a metadata-emitting, built-in function, such as IDENT_INCR, may return NULL. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Examples  
   
@@ -63,7 +60,7 @@ GO
 ```  
   
 ### B. Returning the increment value from multiple tables  
- The following example returns the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that include an identity column with an increment value.  
+ The following example returns the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that includes an identity column with an increment value.  
   
 ```  
 USE AdventureWorks2012;  

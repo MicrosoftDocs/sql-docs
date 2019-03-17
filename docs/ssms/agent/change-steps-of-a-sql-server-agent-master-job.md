@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -61,13 +57,13 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 4.  Right-click the job where you want to modify steps and select **Properties**.  
   
-5.  In the **Job Properties –**_job\_name_ dialog box, under **Select a page**, select **Steps**.  
+5.  In the **Job Properties -**_job\_name_ dialog box, under **Select a page**, select **Steps**.  
   
-6.  Click **Edit** to open the **Job Step Properties –**_job\_step\_name_ dialog box. For more information on the available options in this dialog box, see [Job Step Properties - New Job Step &#40;General Page&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) and [Job Step Properties - New Job Step &#40;Advanced Page&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Click **Edit** to open the **Job Step Properties -**_job\_step\_name_ dialog box. For more information on the available options in this dialog box, see [Job Step Properties - New Job Step &#40;General Page&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) and [Job Step Properties - New Job Step &#40;Advanced Page&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  When finished, click **OK**.  
   
-8.  In the **Job Properties –**_job\_name_ dialog box, click **OK**.  
+8.  In the **Job Properties -**_job\_name_ dialog box, click **OK**.  
   
 ## <a name="TsqlProcedure"></a>Using Transact-SQL  
   
@@ -93,5 +89,5 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
     GO  
     ```  
   
-For more information, see [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b).  
+For more information, see [sp_update_jobstep (Transact-SQL)](https://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b).  
   

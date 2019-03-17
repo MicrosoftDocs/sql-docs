@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changeqreader_agent_TSQL"
   - "sp_changeqreader_agent"
 helpviewer_keywords: 
   - "sp_changeqreader_agent"
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -41,10 +34,10 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## Arguments  
- [ **@job_login**= ] **'***job_login***'**  
+ [ **@job_login**= ] **'**_job_login_**'**  
  Is the login for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL.  
   
- [ **@job_password**= ] **'***job_password***'**  
+ [ **@job_password**= ] **'**_job_password_**'**  
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with a default of NULL.  
   
  [ **@frompublisher=** ] *frompublisher*  

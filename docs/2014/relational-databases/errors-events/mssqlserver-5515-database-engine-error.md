@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "5515 (Database Engine error)"
 ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -33,6 +30,6 @@ manager: craigg
  The specified container directory for the FILESTREAM file cannot be opened.  
   
 ## User Action  
- For the error cause, see the specific Windows status code. For more information, see the [Events and Errors Message Center](http://go.microsoft.com/fwlink/?linkid=47660).  
+ For the error cause, see the specific Windows status code. For more information, see the [Events and Errors Message Center](https://go.microsoft.com/fwlink/?linkid=47660).  
   
   

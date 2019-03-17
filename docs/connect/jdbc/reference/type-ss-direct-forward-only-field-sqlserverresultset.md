@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.TYPE_SS_DIRECT_FORWARD_ONLY"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f8eb2fc2-f624-4fd5-a408-ae4bb1de4913
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

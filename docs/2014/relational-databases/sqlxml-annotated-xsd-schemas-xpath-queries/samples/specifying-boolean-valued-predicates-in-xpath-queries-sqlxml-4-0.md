@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XPath queries [SQLXML], predicates"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "Boolean-valued predicates"
   - "multiple predicates"
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

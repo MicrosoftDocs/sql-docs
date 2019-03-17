@@ -5,9 +5,7 @@ ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "="
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "equals operator (=)"
   - "= (equals operator)"
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
-caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

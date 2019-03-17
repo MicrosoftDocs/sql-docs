@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -37,7 +34,7 @@ UTF-8 for SQL_CHAR data and UTF-16 for SQL_WCHAR data.
 
 **Are there ODBC samples that I can download and run with the driver to experiment with or evaluate it?**
 
-See [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) for a sample. This is also applicable to the macOS ODBC driver. 
+See [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) for a sample. This is also applicable to the macOS ODBC driver. 
 
 **Is the ODBC driver on Linux or macOS open source?**
 

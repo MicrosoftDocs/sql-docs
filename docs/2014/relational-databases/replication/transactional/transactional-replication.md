@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, about transactional replication"
   - "transactional replication"
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -23,29 +19,13 @@ manager: craigg
   
  Transactional replication is typically used in server-to-server environments and is appropriate in each of the following cases:  
   
--   You want incremental changes to be propagated to Subscribers as they occur.  
-  
--   The application requires low latency between the time changes are made at the Publisher and the changes arrive at the Subscriber.  
-  
--   The application requires access to intermediate data states. For example, if a row changes five times, transactional replication allows an application to respond to each change (such as firing a trigger), not simply the net data change to the row.  
-  
--   The Publisher has a very high volume of insert, update, and delete activity.  
-  
+-   You want incremental changes to be propagated to Subscribers as they occur.    
+-   The application requires low latency between the time changes are made at the Publisher and the changes arrive at the Subscriber.    
+-   The application requires access to intermediate data states. For example, if a row changes five times, transactional replication allows an application to respond to each change (such as firing a trigger), not simply the net data change to the row.    
+-   The Publisher has a very high volume of insert, update, and delete activity.    
 -   The Publisher or Subscriber is a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, such as Oracle.  
   
  By default, Subscribers to transactional publications should be treated as read-only, because changes are not propagated back to the Publisher. However, transactional replication does offer options that allow updates at the Subscriber.  
-  
- **In This Topic**  
-  
- [How Transactional Replication Works](#HowWorks)  
-  
- [Initial Dataset](#Dataset)  
-  
- [Snapshot Agent](#SnapshotAgent)  
-  
- [Log Reader Agent](#LogReaderAgent)  
-  
- [Distribution Agent](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> How Transactional Replication Works  
  Transactional replication is implemented by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Snapshot Agent, Log Reader Agent, and Distribution Agent. The Snapshot Agent prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database on the Distributor.  
@@ -80,5 +60,17 @@ manager: craigg
   
 ##  <a name="DistributionAgent"></a> Distribution Agent  
  The Distribution Agent runs at the Distributor for push subscriptions and at the Subscriber for pull subscriptions. The agent moves transactions from the distribution database to the Subscriber. If a subscription is marked for validation, the Distribution Agent also checks whether data at the Publisher and Subscriber match.  
+
+## Publication types
+
+  
+Transactional replication offers four publication types:  
+  
+|Publication Type|Description|  
+|----------------------|-----------------|  
+|Standard transactional publication|Appropriate for topologies in which all data at the Subscriber is read-only (transactional replication does not enforce this at the Subscriber).<br /><br /> Standard transactional publications are created by default when using Transact-SQL or Replication Management Objects (RMO). When using the New Publication Wizard, they are created by selecting **Transactional publication** on the **Publication Type** page.<br /><br /> For more information about creating publications, see [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Transactional publication with updatable subscriptions|The characteristics of this publication type are:<br /><br /> - Each location has identical data, with one Publisher and one Subscriber. <br /> - It is possible to update rows at the Subscriber<br /> - This topology is best suited for server environments requiring high availability and read scalability.<br /><br />For more information, see [Updatable Subscriptions](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Peer-to-peer topology|The characteristics of this publication type are:<br /> - Each location has identical data and acts as both a Publisher and Subscriber.<br /> - The same row can be changed only at one location at a time.<br /> - Supports [conflict detection](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- This topology is best suited for server environments requiring high availability and read scalability.<br /><br />For more information, see [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Bidirectional transactional replication|The characteristics of this publication type are:<br />Bidirectional replication is similar to Peer-to-Peer replication, however, it does not provide conflict resolution. Additionally, bidirectional replication is limited to 2 servers. <br /><br /> For more information, see [Bidirectional Transactional Replication](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

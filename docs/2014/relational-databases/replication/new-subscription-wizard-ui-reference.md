@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "New Subscription Wizard"
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -44,6 +40,6 @@ manager: craigg
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
+
   
   

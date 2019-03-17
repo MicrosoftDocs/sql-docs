@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "interfaces [OLE DB]"
   - "SQL Server Native Client OLE DB provider, interfaces"
   - "OLE DB, interfaces"
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg

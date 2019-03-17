@@ -5,15 +5,12 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSCM.F1"
   - "sql14.dts.designer.afpadlscm.f1"
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
-caps.latest.revision: 7
 author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: "douglasl"
@@ -26,7 +23,7 @@ A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Sto
 
 The Azure Data Lake Store Connection Manager is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
->   [!NOTE]
+> [!NOTE]
 > To ensure that the Azure Data Lake Store Connection Manager and the components that use it - that is, the Data Lake Storage Gen1 source and the Data Lake Storage Gen1 destination - can connect to services, make sure you download the latest version of the Azure Feature Pack [here](https://www.microsoft.com/download/details.aspx?id=49492). 
  
 ## Configure the Azure Data Lake Store Connection Manager
@@ -42,7 +39,7 @@ The Azure Data Lake Store Connection Manager is a component of the [SQL Server I
     
         2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Data Lake Storage Gen1 data, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
-        >   [!NOTE] 
+        > [!NOTE] 
         > When you select the **Azure AD User Identity** authentication option, multi-factor authentication and Microsoft account authentication are not supported.
     
     2. If you select the **Azure AD Service Identity** authentication option, do the following things:

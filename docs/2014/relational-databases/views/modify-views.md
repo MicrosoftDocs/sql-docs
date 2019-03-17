@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "modifying views"
   - "renaming views"
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -63,11 +60,11 @@ manager: craigg
   
     1.  Select or clear the check boxes of any elements you wish to add or remove.  
   
-    2.  Right-click within the diagram pane, select **Add Table…**, and then select the additional columns you want to add to the view from the **Add Table** dialog box.  
+    2.  Right-click within the diagram pane, select **Add Table...**, and then select the additional columns you want to add to the view from the **Add Table** dialog box.  
   
     3.  Right-click the title bar of the table you wish to remove and select **Remove**.  
   
-4.  On the **File** menu, click **Save***view name*.  
+4.  On the **File** menu, click **Save**_view name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

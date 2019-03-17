@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.Column.ColumnIdentitySpec"
@@ -15,7 +13,6 @@ f1_keywords:
   - "vdt.designers.properties.Column.ColumnComputedColumnSpec"
   - "vdt.designers.properties.Column.ColumnFulltextSpec"
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -108,7 +105,7 @@ manager: craigg
  Expands to show the remaining properties.  
   
  **Collation**  
- Shows the collation setting for the selected column. To change this setting, click **Collation** and then click the ellipses **(…)** to the right of the value.  
+ Shows the collation setting for the selected column. To change this setting, click **Collation** and then click the ellipses **(...)** to the right of the value.  
   
  **Computed Column Specification Category**  
  Expands to show properties for **Formula** and **Is Persisted**. If the column is computed, the formula will also be displayed. To edit the formula, expand this category and edit it in the **Formula** property.  
@@ -123,7 +120,7 @@ manager: craigg
  Displays information about the field's data type, in the same format as the SQL CREATE TABLE statement. For example, a field containing a variable-length string with a maximum length of 20 characters would be represented as "varchar(20)." To change this property, type the value directly.  
   
  **Description**  
- Shows the description of the column. To see the full description or to edit it, click Description, and then click the ellipses **(…)** to the right of the property.  
+ Shows the description of the column. To see the full description or to edit it, click Description, and then click the ellipses **(...)** to the right of the property.  
   
  **Full-text Specification Category**  
  Expands to show properties specific to full-text columns.  

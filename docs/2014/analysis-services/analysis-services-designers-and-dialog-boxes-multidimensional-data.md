@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dialog boxes [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Analysis Services designers"
   - "designers [Analysis Services]"
 ms.assetid: 50d634d8-fe29-4d65-a00a-9939dd6870d2
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

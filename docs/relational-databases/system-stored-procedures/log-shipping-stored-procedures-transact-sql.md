@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "log shipping [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], log shipping"
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
-caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Time Series Prediction DMX Tutorial
   In this tutorial, you will learn how to create a time series mining structure, create three custom time series mining models, and then make predictions by using those models.  
@@ -62,7 +58,7 @@ manager: craigg
   
 -   The [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database  
   
- By default, the sample databases are not installed, to enhance security. To install the official sample databases for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], go to [http://www.CodePlex.com/MSFTDBProdSamples](http://go.microsoft.com/fwlink/?LinkId=88417) or on the Microsoft SQL Server Samples and Community Projects home page in the section Microsoft SQL Server Product Samples. Click **Databases**, then click the **Releases** tab and select the databases that you want.  
+ By default, the sample databases are not installed, to enhance security. To install the official sample databases for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], go to [http://www.CodePlex.com/MSFTDBProdSamples](https://go.microsoft.com/fwlink/?LinkId=88417) or on the Microsoft SQL Server Samples and Community Projects home page in the section Microsoft SQL Server Product Samples. Click **Databases**, then click the **Releases** tab and select the databases that you want.  
   
 > [!NOTE]  
 >  When you review tutorials, we recommend that you add **Next topic** and **Previous topic** buttons to the document viewer toolbar.  

@@ -6,14 +6,11 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog"
   - "sql.data.tools.SqlProjectImportSnapshotDialog.dialog"
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -28,11 +25,11 @@ In the event of a user error on a source database project, you can revert the so
   
 ### To create a snapshot  
   
-1.  Right-click the **TradeDev** project in **Solution Explorer**, and select **Data-tier Application (\*.dacpac)…**.  
+1.  Right-click the **TradeDev** project in **Solution Explorer**, and select **Data-tier Application (\*.dacpac)...**.  
   
-2.  SSDT will attempt to build the project first. If there is no build error, a **Snapshot** folder is created in **Solution Explorer**. Inside this folder, SSDT creates a .dacpac file using the name format of “<Project Name>_YYYYMMDD_HH-MM-SS.dacpac”.  
+2.  SSDT will attempt to build the project first. If there is no build error, a **Snapshot** folder is created in **Solution Explorer**. Inside this folder, SSDT creates a .dacpac file using the name format of "<Project Name>_YYYYMMDD_HH-MM-SS.dacpac".  
   
-3.  Right-click the .dacpac file and select **Rename**. Change the default file name to “TradeDev1.dacpac”.  
+3.  Right-click the .dacpac file and select **Rename**. Change the default file name to "TradeDev1.dacpac".  
   
 4.  Right-click the **GetProductsBySupplier** function in **Solution Explorer** and select **Delete** to remove it from the project.  
   
@@ -40,7 +37,7 @@ In the event of a user error on a source database project, you can revert the so
   
 ### To import a snapshot  
   
-1.  Right-click the **TradeDev** project in **Solution Explorer**, select **Import**, then **Data-tier Application (\*.dacpac)…** from the contextual menus.  
+1.  Right-click the **TradeDev** project in **Solution Explorer**, select **Import**, then **Data-tier Application (\*.dacpac)...** from the contextual menus.  
   
 2.  In the **Import Data-tier Application** dialog box, click **Browse** to select **TradeDev1.dacpac** to be used as the source of the import.  
   

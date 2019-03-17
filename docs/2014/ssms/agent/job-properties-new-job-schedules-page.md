@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.job.schedules.f1"
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_APPLICATION_ROLE_TSQL"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "ALTER APPLICATION ROLE statement"
   - "application roles [SQL Server], modifying"
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-caps.latest.revision: 46
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER APPLICATION ROLE (Transact-SQL)

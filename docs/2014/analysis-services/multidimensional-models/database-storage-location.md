@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [Analysis Services], storage location"
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -43,9 +40,9 @@ manager: craigg
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
- [DbStorageLocation Element](../xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [Create Element &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)   
- [Attach Element](../xmla/xml-elements-commands/attach-element.md)   
- [Synchronize Element &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Synchronize Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

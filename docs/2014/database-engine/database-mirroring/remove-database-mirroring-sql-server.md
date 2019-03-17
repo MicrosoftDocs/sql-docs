@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], removing"
   - "removing database mirroring [SQL Server]"
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -84,7 +81,7 @@ manager: craigg
     ```  
   
     > [!IMPORTANT]  
-    >  If you recover this database, two divergent databases with the same name are online. Therefore, you need to ensure that clients can access only one of them—typically the most recent principal database.  
+    >  If you recover this database, two divergent databases with the same name are online. Therefore, you need to ensure that clients can access only one of them-typically the most recent principal database.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

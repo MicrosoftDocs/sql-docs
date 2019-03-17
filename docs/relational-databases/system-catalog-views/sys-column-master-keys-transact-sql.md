@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server 2016 Preview"
 f1_keywords: 
   - "column_master_key_definitions_TSQL"
   - "column_master_key_definitions"
@@ -44,7 +38,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**column_master_key_id**|**int**|ID of the column master key.|  
 |**create_date**|**datetime**|Date the column master key was created.|  
 |**modify_date**|**datetime**|Date the column master key was last modified.|  
-|**key_store_provider_name**|**sysname**|Name of the provider for the column master key store that contains the CMK. Allowed values are:<br /><br /> MSSQL_CERTIFICATE_STORE – If the column master key store is a Certificate Store.<br /><br /> A user-defined value, if the column master key store is of a custom type.|  
+|**key_store_provider_name**|**sysname**|Name of the provider for the column master key store that contains the CMK. Allowed values are:<br /><br /> MSSQL_CERTIFICATE_STORE - If the column master key store is a Certificate Store.<br /><br /> A user-defined value, if the column master key store is of a custom type.|  
 |**key_path**|**nvarchar(4000)**|A column master key store-specific path of the key. The format of the path depends on the column master key store type. Example:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> For a custom column master key store, the developer is responsible for defining what a key path is for the custom column master key store.|  
 |**allow_enclave_computations**|**bit**|Indicates if the column master key is enclave-enabled, (if column encryption keys, encrypted with this master key, can be used for computations inside server-side secure enclaves). For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**signature**|**varbinary(max)**|A digital signature of **key_path** and **allow_enclave_computations**, produced using the column master key, referenced by **key_path**.|

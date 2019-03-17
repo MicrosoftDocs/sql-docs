@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "threads [SQL Server], multithreaded applications"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, multithreaded applications"
   - "multithreaded applications [SQL Server Native Client]"
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg

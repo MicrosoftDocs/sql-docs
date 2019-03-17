@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML RAW mode"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "RAW mode"
   - "XMLDATA option"
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_enum_sqlagent_subsystems"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_enum_sqlagent_subsystems"
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

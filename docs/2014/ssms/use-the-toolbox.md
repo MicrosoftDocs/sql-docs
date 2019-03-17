@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding controls"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "dragging and dropping text"
   - "designer controls [SQL Server Management Studio]"
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg

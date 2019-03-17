@@ -1,20 +1,18 @@
 ---
-title: Create extensions for Azure Data Studio | Microsoft Docs
-description: Add extensions to Azure Data Studio
-ms.custom: "tools|sos"
+title: Create extensions
+titleSuffix: Azure Data Studio
+description: Learn about creating and adding extensions to Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
-# Extend the functionality of [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Extend the functionality by creating Azure Data Studio extensions
 
 Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation.
 
@@ -31,11 +29,11 @@ If you're interested in extending Azure Data Studio, you can create your own ext
 
 To develop an extension you need Node.js installed and available in your $PATH. Node.js includes npm, the Node.js Package Manager, which will be used to install the extension generator.
 
-To start your new extension, you can use the Azure Data Studio Extension generator. The Yeoman [extension generator](https://www.npmjs.com/package/generator-sqlops) makes it very easy to create simple extension projects. To Launch the generator, type the following in a command prompt:
+To start your new extension, you can use the Azure Data Studio Extension generator. The Yeoman [extension generator](https://www.npmjs.com/package/generator-azuredatastudio) makes it very easy to create simple extension projects. To Launch the generator, type the following in a command prompt:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
-`yo sqlops`
+`yo azuredatastudio`
 
 
 **Extensibility References**

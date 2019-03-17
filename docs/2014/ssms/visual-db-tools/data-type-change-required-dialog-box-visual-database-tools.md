@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.datatypechangerequired"
   - "vdtsql.chm:65545"
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

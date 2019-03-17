@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10170"
   - "sql12.rtp.rptdesigner.datasetproperties.filters.f1"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Dataset Properties Dialog Box, Filters
   Select **Filters** on the **Dataset Properties** dialog box to create filters for the dataset.  

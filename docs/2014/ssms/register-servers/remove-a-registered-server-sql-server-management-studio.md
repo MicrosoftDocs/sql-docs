@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing registered servers"
   - "deleting registered servers"
   - "Registered Servers [SQL Server], removing servers"
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg

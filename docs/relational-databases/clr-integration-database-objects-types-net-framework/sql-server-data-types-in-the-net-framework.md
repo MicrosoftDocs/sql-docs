@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "System.Data library"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "building database objects [CLR integration], data types"
   - "mapping data types [CLR integration]"
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

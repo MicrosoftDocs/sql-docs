@@ -2,14 +2,11 @@
 title: "Using Connection String Keywords with OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Using connection string keywords with OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|applications"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.connecttoserver.options.registeredservers.f1"
@@ -80,11 +77,12 @@ manager: craigg
 |**APP**|SSPROP_INIT_APPNAME|The string identifying the application.|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about OLE DB Driver for SQL Server's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|The name of the primary file (include the full path name) of an attachable database. To use **AttachDBFileName**, you must also specify the database name with the provider string Database keyword. If the database was previously attached, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not reattach it (it uses the attached database as the default for the connection).|  
+|**Authentication**<a href="#table1_1"><sup id="table1_authmode">**1**</sup></a>|SSPROP_AUTH_MODE|Specifies the SQL or Active Directory authentication used. Valid values are:<br/><ul><li>`(not set)`: Authentication mode determined by other keywords.</li><li>`ActiveDirectoryPassword:` Active Directory authentication using login ID and password.</li><li>`ActiveDirectoryIntegrated:` Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><br/>**NOTE:** It's **recommended** that applications using `Integrated Security` (or `Trusted_Connection`) authentication keywords or their corresponding properties set the value of the `Authentication` keyword (or its corresponding property) to `ActiveDirectoryIntegrated` to enable new encryption and certificate validation behavior.<br/><br/><li>`SqlPassword:` Authentication using login ID and password.</li><br/>**NOTE:** It's **recommended** that applications using `SQL Server` authentication set the value of the `Authentication` keyword (or its corresponding property) to `SqlPassword` to enable new encryption and certificate validation behavior.</ul>|
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are "yes" and "no".|  
 |**Database**|DBPROP_INIT_CATALOG|The database name.|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|Specifies the mode of data type handling to use. Recognized values are "0" for provider data types and "80" for SQL Server 2000 data types.|  
-|**Encrypt**|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "yes" and "no". The default value is "no".|  
+|**Encrypt**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "yes" and "no". The default value is "no".|  
 |**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|The name of the failover server used for database mirroring.|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|The SPN for the failover partner. The default value is an empty string. An empty string causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
 |**Language**|SSPROPT_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language.|  
@@ -100,12 +98,14 @@ manager: craigg
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|The SPN for the server. The default value is an empty string. An empty string causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
 |**Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|When "yes", instructs the OLE DB Driver for SQL Server to use Windows Authentication Mode for login validation. Otherwise instructs the OLE DB Driver for SQL Server to use a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] username and password for login validation, and the UID and PWD keywords must be specified.|  
-|**TrustServerCertificate**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "yes" and "no" as values. The default value is "no", which means that the server certificate will be validated.|  
+|**TrustServerCertificate**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "yes" and "no" as values. The default value is "no", which means that the server certificate will be validated.|  
 |**UID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
 |**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|Controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and newer. Possible values are "yes" and "no". The default value is "no".<br /><br />By default, the OLE DB Driver for SQL Server uses [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) and [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) stored procedures to retrieve metadata. These stored procedures have some limitations (e.g. they will fail when operating on temporary tables). Setting **UseFMTONLY** to "yes" instructs the driver to use [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) for metadata retrieval instead.|  
 |**UseProcForPrepare**|SSPROP_INIT_USEPROCFORPREP|This keyword is deprecated, and its setting is ignored by the OLE DB Driver for SQL Server.|  
 |**WSID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
+<b id="table1_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [Encryption and certificate validation](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
+
  Connection strings used by OLE DB applications using **IDataInitialize::GetDataSource** have the following syntax:  
   
  `connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string`  
@@ -132,8 +132,10 @@ manager: craigg
   
 |Keyword|Initialization property|Description|  
 |-------------|-----------------------------|-----------------|  
+|**Access Token**<a href="#table2_1"><sup id="table2_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|The access token used to authenticate to Azure Active Directory. <br/><br/>**NOTE:** It's an error to specify this keyword and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their corresponding properties/keywords.|
 |**Application Name**|SSPROP_INIT_APPNAME|The string identifying the application.|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about OLE DB Driver for SQL Server's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
+|**Authentication**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_AUTH_MODE|Specifies the SQL or Active Directory authentication used. Valid values are:<br/><ul><li>`(not set)`: Authentication mode determined by other keywords.</li><li>`ActiveDirectoryPassword:` Active Directory authentication using login ID and password.</li><li>`ActiveDirectoryIntegrated:` Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><br/>**NOTE:** It's **recommended** that applications using `Integrated Security` (or `Trusted_Connection`) authentication keywords or their corresponding properties set the value of the `Authentication` keyword (or its corresponding property) to `ActiveDirectoryIntegrated` to enable new encryption and certificate validation behavior.<br/><br/><li>`SqlPassword:` Authentication using login ID and password.</li><br/>**NOTE:** It's **recommended** that applications using `SQL Server` authentication set the value of the `Authentication` keyword (or its corresponding property) to `SqlPassword` to enable new encryption and certificate validation behavior.</ul>|
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are "true" and "false".|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  
@@ -154,12 +156,14 @@ manager: craigg
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Accepts the strings "true" and "false" as values. When "false", the data source object is not allowed to persist sensitive authentication information|  
 |**Provider**||For OLE DB Driver for SQL Server, this should be "MSOLEDBSQL".|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|The SPN for the server. The default value is an empty string. An empty string causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
-|**Trust Server Certificate**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "true" and "false" as values. The default value is "false", which means that the server certificate will be validated.|  
-|**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "true" and "false". The default value is "false".|  
+|**Trust Server Certificate**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "true" and "false" as values. The default value is "false", which means that the server certificate will be validated.|  
+|**Use Encryption for Data**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "true" and "false". The default value is "false".|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|Controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and newer. Possible values are "true" and "false". The default value is "false".<br /><br />By default, the OLE DB Driver for SQL Server uses [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) and [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) stored procedures to retrieve metadata. These stored procedures have some limitations (e.g. they will fail when operating on temporary tables). Setting **Use FMTONLY** to "true" instructs the driver to use [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) for metadata retrieval instead.|  
 |**User ID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
 |**Workstation ID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
+<b id="table2_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [Encryption and certificate validation](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
+
  **Note** In the connection string, the "Old Password" property sets SSPROP_AUTH_OLD_PASSWORD, which is the current (possibly expired) password that is not available via a provider string property.  
   
 ## ActiveX Data Objects (ADO) Connection String Keywords  
@@ -185,8 +189,10 @@ manager: craigg
   
 |Keyword|Initialization property|Description|  
 |-------------|-----------------------------|-----------------|  
+|**Access Token**<a href="#table3_1"><sup id="table3_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|The access token used to authenticate to Azure Active Directory.<br/><br/>**NOTE:** It's an error to specify this keyword and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their corresponding properties/keywords.|
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about OLE DB Driver for SQL Server's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Application Name**|SSPROP_INIT_APPNAME|The string identifying the application.|  
+|**Authentication**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_AUTH_MODE|Specifies the SQL or Active Directory authentication used. Valid values are:<br/><ul><li>`(not set)`: Authentication mode determined by other keywords.</li><li>`ActiveDirectoryPassword:` Active Directory authentication using login ID and password.</li><li>`ActiveDirectoryIntegrated:` Integrated authentication to Active Directory using the currently logged-in user's Windows account credentials.</li><br/>**NOTE:** It's **recommended** that applications using `Integrated Security` (or `Trusted_Connection`) authentication keywords or their corresponding properties set the value of the `Authentication` keyword (or its corresponding property) to `ActiveDirectoryIntegrated` to enable new encryption and certificate validation behavior.<br/><br/><li>`SqlPassword:` Authentication using login ID and password.</li><br/>**NOTE:** It's **recommended** that applications using `SQL Server` authentication set the value of the `Authentication` keyword (or its corresponding property) to `SqlPassword` to enable new encryption and certificate validation behavior.</ul>|
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are "true" and "false".|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  
@@ -207,12 +213,14 @@ manager: craigg
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Accepts the strings "true" and "false" as values. When "false" the data source object is not allowed to persist sensitive authentication information.|  
 |**Provider**||For OLE DB Driver for SQL Server, this should be "MSOLEDBSQL".|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|The SPN for the server. The default value is an empty string. An empty string causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
-|**Trust Server Certificate**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "true" and "false" as values. The default value is "false", which means that the server certificate will be validated.|  
-|**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "true" and "false". The default value is "false".|  
+|**Trust Server Certificate**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "true" and "false" as values. The default value is "false", which means that the server certificate will be validated.|  
+|**Use Encryption for Data**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "true" and "false". The default value is "false".|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|Controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and newer. Possible values are "true" and "false". The default value is "false".<br /><br />By default, the OLE DB Driver for SQL Server uses [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) and [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) stored procedures to retrieve metadata. These stored procedures have some limitations (e.g. they will fail when operating on temporary tables). Setting **Use FMTONLY** to "true" instructs the driver to use [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) for metadata retrieval instead.|  
 |**User ID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
 |**Workstation ID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
+<b id="table3_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication/Access Token initialization properties or their corresponding connection string keywords. For details, see [Encryption and certificate validation](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
+
  **Note** In the connection string, the "Old Password" property sets SSPROP_AUTH_OLD_PASSWORD, which is the current (possibly expired) password that is not available via a provider string property.  
   
 ## See also  

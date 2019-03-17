@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "logins [SQL Server], revoking"
   - "REVOKE statement, logins"
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-caps.latest.revision: 30
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Server Principal Permissions (Transact-SQL)

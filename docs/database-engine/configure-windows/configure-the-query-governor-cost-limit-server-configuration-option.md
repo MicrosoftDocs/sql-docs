@@ -5,16 +5,13 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], time to execute"
   - "query governor cost limit option [SQL Server]"
   - "time [SQL Server], query run time"
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

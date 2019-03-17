@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.Restore.f1"
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg

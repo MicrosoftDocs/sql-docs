@@ -5,9 +5,7 @@ ms.date: "11/16/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.dtsserver.importpackage.f1"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "Integration Services service, package management"
   - "services [Integration Services], package management"
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -124,7 +121,7 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
     -   In the **Server type** box, select **Integration Services**.  
   
-    -   In the **Server name** box, provide a server name or click **\<Browse for more…>** and locate the server to use.  
+    -   In the **Server name** box, provide a server name or click **\<Browse for more...>** and locate the server to use.  
   
 3.  If Object Explorer is not open, on the **View** menu, click **Object Explorer**.  
   
@@ -136,19 +133,19 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
     -   To import from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select the **SQL Server** option, and then specify the server and select the authentication mode. If you select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a user name and a password.  
   
-         Click the browse button **(…)**, select the package to import, and then click **OK.**  
+         Click the browse button **(...)**, select the package to import, and then click **OK.**  
   
     -   To import from the file system, select the **File system** option.  
   
-         Click the browse button **(…)**, select the package to import, and then click **Open.**  
+         Click the browse button **(...)**, select the package to import, and then click **Open.**  
   
     -   To import from the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, select the **SSIS Package Store** option and specify the server.  
   
-         Click the browse button **(…)**, select the package to import, and then click **OK.**  
+         Click the browse button **(...)**, select the package to import, and then click **OK.**  
   
 7.  Optionally, update the package name.  
   
-8.  To update the protection level of the package, click the browse button **(…)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
+8.  To update the protection level of the package, click the browse button **(...)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
   
 9. Click **OK** to complete the import.  
   
@@ -160,7 +157,7 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
     -   In the **Server type** box, select **Integration Services**.  
   
-    -   In the **Server name** box, provide a server name or click **\<Browse for more…>** and locate the server to use.  
+    -   In the **Server name** box, provide a server name or click **\<Browse for more...>** and locate the server to use.  
   
 3.  If Object Explorer is not open, on the **View** menu, click **Object Explorer**.  
   
@@ -172,17 +169,17 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
     -   To export to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select the **SQL Server** option, and then specify the server and select the authentication mode. If you select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a user name and a password.  
   
-         Click the browse button **(…)**, and expand the **SSIS Packages** folder to locate the folder to which you want to save the package. Optionally, update the default name of the package, and then click **OK**.  
+         Click the browse button **(...)**, and expand the **SSIS Packages** folder to locate the folder to which you want to save the package. Optionally, update the default name of the package, and then click **OK**.  
   
     -   To export to the file system, select the **File System** option.  
   
-         Click the browse button **(…)** to locate the folder to which you want to export the package, type the name of the package file, and then click **Save.**  
+         Click the browse button **(...)** to locate the folder to which you want to export the package, type the name of the package file, and then click **Save.**  
   
     -   To export to the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package store, select the **SSIS Package Store** option, and specify the server.  
   
-         Click the browse button **(…)**, expand the **SSIS Packages** folder, and select the folder to which you want to save the package. Optionally, enter a new name for the package in the **Package Name** text box. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Click the browse button **(...)**, expand the **SSIS Packages** folder, and select the folder to which you want to save the package. Optionally, enter a new name for the package in the **Package Name** text box. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  To update the protection level of the package, click the browse button **(…)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
+7.  To update the protection level of the package, click the browse button **(...)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
   
 8.  Click **OK** to complete the export.  
 
@@ -218,13 +215,13 @@ Stop a running package from the **Running Packages** folder by right-clicking th
  If using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse button **(…)** and locate the package.  
+ Type the package path, or click the browse button **(...)** and locate the package.  
   
  **Package name**  
  Optionally, rename the package. The default name is the name of the package to import.  
   
  **Protection level**  
- Click the browse button **(…)** and, in the **Package Protection Level** dialog box, update the protection level. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Click the browse button **(...)** and, in the **Package Protection Level** dialog box, update the protection level. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## Export Package Dialog Box UI Reference
   Use the **Export Package** dialog box, available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], to export a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to a different location and optionally, modify the protection level of the package.  
@@ -258,10 +255,10 @@ Stop a running package from the **Running Packages** folder by right-clicking th
  If using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse button **(…)** and locate the folder in which to store the package.  
+ Type the package path, or click the browse button **(...)** and locate the folder in which to store the package.  
   
  **Protection level**  
- Click the browse button **(…)** and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Click the browse button **(...)** and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## Back up and restore packages
   

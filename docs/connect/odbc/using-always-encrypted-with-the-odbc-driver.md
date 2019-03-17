@@ -3,12 +3,9 @@ title: "Using Always Encrypted with the ODBC Driver for SQL Server | Microsoft D
 ms.custom: ""
 ms.date: 09/01/2018
 ms.prod: sql
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: "v-chojas"
 manager: craigg
 author: MightyPen
@@ -362,9 +359,11 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 
 The driver supports authenticating to Azure Key Vault using the following credential types:
 
-- Username/Password – with this method, the credentials are the name of an Azure Active Directory user and its password.
+- Username/Password - with this method, the credentials are the name of an Azure Active Directory user and its password.
 
-- Client ID/Secret – with this method, the credentials are an application client ID and an application secret.
+- Client ID/Secret - with this method, the credentials are an application client ID and an application secret.
+
+- Managed Service Identity - with this method, the credentials are system-assigned identity or user-assigned identity. For user-assigned identity, UID is set to the object ID of the user identity.
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
@@ -383,7 +382,7 @@ The following connection strings show how to authenticate to Azure Key Vault wit
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Username/Password**
+**Username/Password**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -414,6 +413,7 @@ Setting the `SQL_COPT_SS_CEKEYSTOREPROVIDER` connection attribute enables a clie
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -448,6 +448,7 @@ Getting this connection attribute enables a client application to determine the 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -463,7 +464,7 @@ To allow retrieving the entire list, every Get operation returns the current pro
 The `SQL_COPT_SS_CEKEYSTOREDATA` connection attribute enables a client application to communicate with loaded keystore providers for configuring additional parameters, keying material, etc. The communication between a client application and a provider follows a simple request-response protocol, based on Get and Set requests using this connection attribute. Communication is initiated only by the client application.
 
 > [!NOTE]
-> Due to the nature of the ODBC calls CEKeyStoreProvider’s respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
+> Due to the nature of the ODBC calls CEKeyStoreProvider's respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
 
 The application communicates with keystore providers through the driver via the CEKeystoreData structure:
 
@@ -474,6 +475,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | Argument | Description |
 |:---|:---|
 |`name`|[Input] Upon Set, the name of the provider to which the data is sent. Ignored upon Get. Null-terminated, wide-character string.|
@@ -486,6 +488,7 @@ A `SQLSetConnectAttr` call using the `SQL_COPT_SS_CEKEYSTOREDATA` attribute writ
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`| [Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -505,6 +508,7 @@ A call to `SQLGetConnectAttr` using the `SQL_COPT_SS_CEKEYSTOREDATA` attribute r
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argument | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
@@ -528,14 +532,14 @@ While the ODBC driver will allow the use of [asynchronous operations](../../rela
 Before ODBC Driver 17 for SQL Server, encrypted character and binary columns cannot be retrieved in parts with SQLGetData. Only one call to SQLGetData can be made, with a buffer of sufficient length to contain the entire column's data.
 
 ### Send data in parts with SQLPutData
-Data for insertion or comparison cannot be sent in parts with SQLPutData. Only one call to SQLPutData can be made, with a buffer containing the entire data. For inserting long data into encrypted columns, use the Bulk Copy API, described in the next section, with an input data file.
+Before ODBC Driver 17.3 for SQL Server, data for insertion or comparison cannot be sent in parts with SQLPutData. Only one call to SQLPutData can be made, with a buffer containing the entire data. For inserting long data into encrypted columns, use the Bulk Copy API, described in the next section, with an input data file.
 
 ### Encrypted money and smallmoney
 Encrypted **money** or **smallmoney** columns cannot be targeted by parameters, since there is no specific ODBC data type which maps to those types, resulting in Operand Type Clash errors.
 
 ## Bulk Copy of Encrypted Columns
 
-Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the **bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_*) APIs and the **bcp** utility.
+Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the **bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_&#42;) APIs and the **bcp** utility.
 
 - To retrieve ciphertext in varbinary(max) form (e.g. for bulk loading into a different database), connect without the `ColumnEncryption` option (or set it to `Disabled`) and perform a BCP OUT operation.
 
@@ -569,7 +573,8 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 |`ColumnEncryption`|Accepted values are `Enabled`/`Disabled`.<br>`Enabled` -- enables Always Encrypted functionality for the connection.<br>`Disabled` -- disable Always Encrypted functionality for the connection. <br><br>The default is `Disabled`.|  
 |`KeyStoreAuthentication` | Valid Values: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | When `KeyStoreAuthentication` = `KeyVaultPassword`, set this value to a valid Azure Active Directory User Principal Name. <br>When `KeyStoreAuthetication` = `KeyVaultClientSecret` set this value to a valid Azure Active Directory Application Client ID |
-|`KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for the corresponding user name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the Application Secret associated with a valid Azure Active Directory Application Client ID|
+|`KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for the corresponding user name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the Application Secret associated with a valid Azure Active Directory Application Client ID |
+
 
 ### Connection Attributes
 
@@ -602,5 +607,5 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 ## See Also
 
 - [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

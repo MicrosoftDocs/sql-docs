@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "getting started"
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -28,7 +25,7 @@ manager: craigg
   
 -   [Data Mining Client for Excel &#40;SQL Server Data Mining Add-ins&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     This add-in provides tools for just about every data mining task you might need – from cleaning and sampling your data, to performing building models, testing model accuracy, and performing cross-validation. You can also manage and document models and build DMX queries from templates.  
+     This add-in provides tools for just about every data mining task you might need - from cleaning and sampling your data, to performing building models, testing model accuracy, and performing cross-validation. You can also manage and document models and build DMX queries from templates.  
   
      Experienced data miners will enjoy access to all the tools available in SQL Server data mining, including model import and export, prediction queries, and content queries.  
   

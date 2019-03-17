@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_statistics_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_statistics"
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -45,24 +41,24 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## Arguments  
- [ **@table_name=** ] **'***table_name***'**  
+ [ **@table_name=** ] **'**_table_name_**'**  
  Specifies the table used to return catalog information. *table_name* is **sysname**, with no default. Wildcard pattern matching is not supported.  
   
- [ **@table_owner=** ] **'***owner***'**  
+ [ **@table_owner=** ] **'**_owner_**'**  
  Is the name of the table owner of the table used to return catalog information. *table_owner* is **sysname**, with a default of NULL. Wildcard pattern matching is not supported. If *owner* is not specified, the default table visibility rules of the underlying DBMS apply.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the current user owns a table with the specified name, the indexes of that table are returned. If *owner* is not specified and the current user does not own a table with the specified *name*, this procedure looks for a table with the specified *name* owned by the database owner. If one exists, the indexes of that table are returned.  
   
- [ **@table_qualifier=** ] **'***qualifier***'**  
- Is the name of the table qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables (*qualifier***.***owner***.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this parameter represents the database name. In some products, it represents the server name of the table's database environment.  
+ [ **@table_qualifier=** ] **'**_qualifier_**'**  
+ Is the name of the table qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this parameter represents the database name. In some products, it represents the server name of the table's database environment.  
   
- [ **@index_name=** ] **'***index_name***'**  
+ [ **@index_name=** ] **'**_index_name_**'**  
  Is the index name. *index_name* is **sysname**, with a default of %. Wildcard pattern matching is supported.  
   
- [ **@is_unique=** ] **'***is_unique***'**  
+ [ **@is_unique=** ] **'**_is_unique_**'**  
  Is whether only unique indexes (if **Y**) are to be returned. *is_unique* is **char(1)**, with a default of **N**.  
   
- [ **@accuracy=** ] **'***accuracy***'**  
+ [ **@accuracy=** ] **'**_accuracy_**'**  
  Is the level of cardinality and page accuracy for statistics. *accuracy* is **char(1)**, with a default of **Q**. Specify **E** to make sure that statistics are updated so that cardinality and pages are accurate.  
   
  The value **E** (SQL_ENSURE) asks the driver to unconditionally retrieve the statistics.  
@@ -97,7 +93,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  The index type Hashed accepts exact match or range searches, but pattern matching searches do not use the index.  
   
- **sp_statistics** is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, and **SEQ_IN_INDEX**. For more information, see the [ODBC API Reference](http://go.microsoft.com/fwlink/?LinkId=68323).  
+ **sp_statistics** is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, and **SEQ_IN_INDEX**. For more information, see the [ODBC API Reference](https://go.microsoft.com/fwlink/?LinkId=68323).  
   
 ## Permissions  
  Requires SELECT permission on the schema.  

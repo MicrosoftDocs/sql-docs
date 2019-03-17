@@ -5,9 +5,7 @@ ms.date: "07/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "HASHBYTES_TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "hash input"
   - "HASHBYTES"
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -57,43 +54,45 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## Return Value  
  **varbinary** (maximum 8000 bytes)  
-  
+
+## Remarks  
+Consider using `CHECKSUM` or `BINARY_CHECKSUM` as alternatives to compute a hash value.
+
+The MD2, MD4, MD5, SHA, and SHA1 algorithms are not available under compatibility level 130 and above. Use SHA2_256 or SHA2_512 instead.
+
 ## Examples  
-  
-### A: Return the hash of a variable  
+### Return the hash of a variable  
  The following example returns the `SHA1` hash of the **nvarchar** data stored in variable `@HashThis`.  
   
-```  
+```sql  
 DECLARE @HashThis nvarchar(4000);  
 SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA1', @HashThis);  
-  
 ```  
   
-### B: Return the hash of a table column  
+### Return the hash of a table column  
  The following example returns the SHA1 hash of the values in column `c1` in the table `Test1`.  
   
-```  
+```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 -------------------------------------------  
 0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
 0xF643A82F948DEFB922B12E50B950CEE130A934D6  
   
 (2 row(s) affected)  
-  
 ```  
   
 ## See Also  
- [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-  
+[Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
   

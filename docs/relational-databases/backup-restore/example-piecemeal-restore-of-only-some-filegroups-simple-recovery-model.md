@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "piecemeal restores [SQL Server], simple recovery model"
   - "restore sequences [SQL Server], piecemeal"
   - "simple recovery model [SQL Server], RESTORE examples"
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

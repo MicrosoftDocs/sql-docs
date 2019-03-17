@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], how-to topics"
   - "Visual Database Tools [SQL Server], database diagrams"
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Set CPU Idle Time and Duration (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CPU [SQL Server], idle conditions"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Agent, CPU idle conditions"
   - "idle time [SQL Server]"
 ms.assetid: 8647b465-d899-4cc7-9640-134a506d0a2e
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,12 +5,9 @@ ms.date: "01/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -179,12 +176,12 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
 ## <a name="rebuild"></a> Use ALTER INDEX REBUILD to defragment the columnstore index offline  
  For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, rebuilding the columnstore index is usually not needed since `REORGANIZE` performs the essentials of a rebuild in the background as an online operation.  
   
- Rebuilding a columnstore index removes fragmentation, and moves all rows into the columnstore. Use [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) to perform a full rebuild of an existing clustered columnstore index. Additionally, you can use ALTER INDEX … REBUILD to rebuild a specific partition.  
+ Rebuilding a columnstore index removes fragmentation, and moves all rows into the columnstore. Use [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) to perform a full rebuild of an existing clustered columnstore index. Additionally, you can use ALTER INDEX ... REBUILD to rebuild a specific partition.  
   
 ### Rebuild Process  
  To rebuild a columnstore index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is “offline” and unavailable during the rebuild, even when using `NOLOCK`, RCSI, or SI.  
+1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is "offline" and unavailable during the rebuild, even when using `NOLOCK`, RCSI, or SI.  
   
 2.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original columnstore index.  
   
@@ -203,7 +200,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
 
 ## Automatic index and statistics management
 
-Leverage solutions such as [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
+Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
 
 ## See Also        
 [Columnstore indexes - what's new](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)    
@@ -211,6 +208,6 @@ Leverage solutions such as [Adaptive Index Defrag](http://github.com/Microsoft/t
 [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
 [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)    
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)    
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)    
   
   

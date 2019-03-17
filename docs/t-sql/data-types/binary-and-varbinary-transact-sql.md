@@ -1,13 +1,11 @@
 ---
 title: "binary and varbinary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "8/16/2017"
+ms.date: "08/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "binary_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "varbinary data type"
   - "binary [SQL Server], about binary data type"
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -32,14 +29,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 Binary data types of either fixed length or variable length.
   
 ## Arguments  
-**binary** [ ( *n* ) ]
-Fixed-length binary data with a length of *n* bytes, where *n* is a value from 1 through 8,000. The storage size is *n* bytes.
+**binary** [ ( _n_ ) ]
+Fixed-length binary data with a length of _n_ bytes, where _n_ is a value from 1 through 8,000. The storage size is _n_ bytes.
   
-**varbinary** [ ( *n* | **max**) ]
-Variable-length binary data. *n* can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes. The storage size is the actual length of the data entered + 2 bytes. The data that is entered can be 0 bytes in length. The ANSI SQL synonym for **varbinary** is **binary varying**.
+**varbinary** [ ( _n_ | **max**) ]
+Variable-length binary data. _n_ can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes. The storage size is the actual length of the data entered + 2 bytes. The data that is entered can be 0 bytes in length. The ANSI SQL synonym for **varbinary** is **binary varying**.
   
 ## Remarks  
-When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified with the CAST function, the default length is 30.
+The default length is 1 when _n_ isn't specified in a data definition or variable declaration statement. When _n_ isn't specified with the CAST function, the default length is 30.
 
 | Data type | Use when ... |
 | --- | --- |
@@ -49,11 +46,23 @@ When *n* is not specified in a data definition or variable declaration statement
 
 
 ## Converting binary and varbinary data
-When data is converted from a string data type (**char**, **varchar**, **nchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext**, or **image**) to a **binary** or **varbinary** data type of unequal length, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pads or truncates the data on the right. When other data types are converted to **binary** or **varbinary**, the data is padded or truncated on the left. Padding is achieved by using hexadecimal zeros.
+When converting data from a string data type to a **binary** or **varbinary** data type of unequal length, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pads or truncates the data on the right. These string data types are:
+
+* **char** 
+* **varchar**
+* **nchar**
+* **nvarchar**
+* **binary**
+* **varbinary**
+* **text**
+* **ntext**
+* **image**
+
+When other data types are converted to **binary** or **varbinary**, the data is padded or truncated on the left. Padding is achieved by using hexadecimal zeros.
   
-Converting data to the **binary** and **varbinary** data types is useful if **binary** data is the easiest way to move around data. Converting any value of any type to a binary value of large enough size and then back to the type, always results in the same value if both conversions are taking place on the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The binary representation of a value might change from version to version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Converting data to the **binary** and **varbinary** data types is useful if **binary** data is the easiest way to move around data. At some point, you might convert a value type to a binary value of large enough size and then convert it back. This conversion always results in the same value if both conversions are taking place on the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The binary representation of a value might change from version to version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-You can convert **int**, **smallint**, and **tinyint** to **binary** or **varbinary**, but if you convert the **binary** value back to an integer value, this value will be different from the original integer value if truncation has occurred. For example, the following SELECT statement shows that the integer value `123456` is usually stored as a binary `0x0001e240`:
+You can convert **int**, **smallint**, and **tinyint** to **binary** or **varbinary**. If you convert the **binary** value back to an integer value, this value will be different from the original integer value if truncation has occurred. For example, the following SELECT statement shows that the integer value `123456` is stored as a binary `0x0001e240`:
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  

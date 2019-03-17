@@ -4,23 +4,20 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.components.f1"
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 10
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Parts in Report Designer (SSRS)
   In Report Designer, after you create tables, charts, and other report items in a project, you can publish them as *report parts* to a report server or SharePoint site integrated with a report server so that you and others can reuse them in other reports.  
   
- In general, report parts function the same way in Report Designer and in Report Builder. To read about basic functionality, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ In general, report parts function the same way in Report Designer and in Report Builder. To read about basic functionality, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
  There are fundamental differences in the way report parts work in Report Designer. A main difference is the work flow. Report Builder enables collaborative authoring: I create a report part and publish it. You can reuse, modify, and republish it. In Report Designer, publishing is one-way: I can publish a report part from Report Designer, and you can reuse it. But I cannot reuse an existing report part in a report in Report Designer. This topic elaborates on these differences, after a quick overview of report parts.  
   
@@ -64,7 +61,7 @@ manager: craigg
   
 -   Lists  
   
- If you are publishing a report part that displays data, such as a table, matrix, or chart, you can base it on a shared dataset; otherwise, when you publish the report part, the dataset that it depends on is saved as an embedded dataset. Embedded datasets can be based on embedded data sources, but credentials are not stored in embedded data sources. Thus, if your report part depends on an embedded dataset that uses an embedded data source, anyone who reuses this report part will need to provide the credentials for the embedded data source. To avoid this, base your embedded and shared datasets on shared data sources with stored credentials. For more information, see [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ If you are publishing a report part that displays data, such as a table, matrix, or chart, you can base it on a shared dataset; otherwise, when you publish the report part, the dataset that it depends on is saved as an embedded dataset. Embedded datasets can be based on embedded data sources, but credentials are not stored in embedded data sources. Thus, if your report part depends on an embedded dataset that uses an embedded data source, anyone who reuses this report part will need to provide the credentials for the embedded data source. To avoid this, base your embedded and shared datasets on shared data sources with stored credentials. For more information, see [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
  Publishing a report part in Report Designer is a two-step process:  
   

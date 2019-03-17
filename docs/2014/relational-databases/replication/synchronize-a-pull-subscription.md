@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pull subscriptions [SQL Server replication], synchronizing"
   - "synchronization [SQL Server replication], pull subscriptions"
   - "subscriptions [SQL Server replication], pull"
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -41,7 +37,7 @@ manager: craigg
 5.  Click **Close**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Pull subscriptions can be synchronized programmatically and on-demand by invoking the appropriate replication agent executable file from the command prompt. The replication agent executable file that is invoked will depend on the type of publication to which the pull subscription belongs. For more information, see [Replication Agents](agents/replication-agents.md).  
+ Pull subscriptions can be synchronized programmatically and on-demand by invoking the appropriate replication agent executable file from the command prompt. The replication agent executable file that is invoked will depend on the type of publication to which the pull subscription belongs. For more information, see [Replication Agents](agents/replication-agents-overview.md).  
   
 > [!NOTE]  
 >  Replication agents connect to the local server using the Windows Authentication credentials of the user who started the agent from the command prompt. These Windows credentials are also used when connecting to remote servers using Windows Integrated Authentication.  

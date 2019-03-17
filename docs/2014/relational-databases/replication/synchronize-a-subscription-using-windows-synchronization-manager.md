@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "synchronization [SQL Server replication], Windows Synchronization Manager"
   - "Windows Synchronization Manager"
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -95,7 +91,7 @@ manager: craigg
   
 ### To use the Interactive Resolver  
   
-1.  Enable the article and subscription to use interactive resolution. For more information, see [Specify Interactive Conflict Resolution for Merge Articles](publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Enable the article and subscription to use interactive resolution. For more information, see [Specify Interactive Conflict Resolution for Merge Articles](/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 2.  After the subscription begins synchronizing in Synchronization Manager, the Interactive Resolver launches automatically if interactive conflict resolution is enabled and there are conflicts for one or more articles. The Interactive Resolver displays conflicts one at a time, with a suggested resolution for each conflict (based on the resolver specified when the publication and subscription were created).  
   

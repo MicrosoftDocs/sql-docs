@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_get_distributor"
   - "sp_get_distributor_TSQL"
 helpviewer_keywords: 
   - "sp_get_distributor"
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg

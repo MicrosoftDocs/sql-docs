@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Master Data Services, system settings"
   - "system settings [Master Data Services]"
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -76,7 +72,7 @@ manager: craigg
   
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Number of members in the hierarchy by default**|**HierarchyChildNodeLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members that are displayed in each hierarchy node before **…more…** is displayed. You can click **…more…** to show the next group of members. The default value is **50**.|  
+|**Number of members in the hierarchy by default**|**HierarchyChildNodeLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members that are displayed in each hierarchy node before **...more...** is displayed. You can click **...more...** to show the next group of members. The default value is **50**.|  
 |**Show names in hierarchy by default**|**ShowNamesInHierarchy**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> The default value is **Yes** or **1**, which indicates that the name and code of each member are displayed. Change to **No** or **2** to display the code only.|  
 |**Number of domain-based attributes in list**|**DBAListRowLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. The default value is **50**. If more than 50 members exist, a searchable dialog is displayed instead.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. The default value is **0.3**. Set the value closer to **1** to return a match that is closer to the search criteria. Set to **1** for an exact match.|  
@@ -105,7 +101,7 @@ manager: craigg
 |**Notification email interval**|**NotificationInterval**|The frequency, in seconds, that email notifications are sent. The default value is **120** seconds (2 minutes).|  
 |**Number of notifications in a single email**|**NotificationsPerEmail**|The maximum number of validation issues that will be listed in a single notification email. Additional issues, if they exist, are not included in the email, but are available in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Default email format**|**EmailFormat**|The format for all email notifications. The default value is **HTML** or **1**. The database setting of **2** indicates **Text**.<br /><br /> Note: You can override this for an individual user in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], by changing and saving the **Email format** on the user's **General** tab.|  
-|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](http://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
+|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
 |**Database Mail account**|**EmailProfilePrincipalAccount**|Displays the Database Mail account to use when sending email notifications. The default profile is **mds_email_user**.|  
 |**Database Mail profile**|**DatabaseMailProfile**|The Database Mail profile to use when sending email notifications. The default value is blank.|  
 ||**ValidationIssueHTML**|In HTML format, the text of the email users get when a business rule fails validation.|  

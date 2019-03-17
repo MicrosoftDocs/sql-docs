@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10541"
   - "sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1"
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Map Color Rules Dialog Box, General
   Select **General** on the **Color Rules Properties** dialog box to define color options for map elements on this layer. Map elements include polygons, lines, and points. Color rules can be applied when you have created a relationship between map elements based on spatial data and analytical data from a dataset field or from a spatial data source field.  

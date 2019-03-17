@@ -2,7 +2,6 @@
 title: "Connection libraries for Microsoft SQL Databases | Microsoft Docs"
 description: "Provides download links for modules which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
 author: MightyPen
-ms.suite: "sql"
 ms.prod: sql
 ms.technology: 
 ms.custom: ""
@@ -12,9 +11,9 @@ ms.author: genemi
 ---
 # Connection modules for Microsoft SQL databases
 
-This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](http://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
+This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
 
-- Linux (Ubuntu)
+- Linux
 - MacOS
 - Windows
 
@@ -38,13 +37,13 @@ original page is no longer the latest because the newer page is being added.
 But this policy is not agreed on or observed,
 putting the links in the following table at risk for being outdated.
 
-PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
+PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
+although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
 | Language | Download the SQL driver |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core, for Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core, for Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js driver, install instructions](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
@@ -63,18 +62,18 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 
 | Language | ORM driver download |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x or later)](http://docs.microsoft.com/ef/) |
-| Java | [Hibernate ORM](http://hibernate.org/orm)|
-| PHP | [Eloquent ORM, included in Laravel install](http://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
-| Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x or later)](https://docs.microsoft.com/ef/) |
+| Java | [Hibernate ORM](https://hibernate.org/orm)|
+| PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
+| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Python | [Django](https://www.djangoproject.com/) |
+| Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## Build-an-app webpages
-[http://aka.ms/sqldev](http://aka.ms/sqldev) takes you to a set of *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
+[https://aka.ms/sqldev](https://aka.ms/sqldev) takes you to a set of *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
 
 - Details about how to get started from the very beginning, for each combination of language + operating system + driver.
     - Instructions for installing the latest SQL connection drivers.
@@ -92,7 +91,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 &nbsp;
 
 ## Related links
-- [Code examples for connecting to Azure SQL Database in the cloud, with Java and other languages](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Code examples for connecting to Azure SQL Database in the cloud, with Java and other languages](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!-- Image references -->
 

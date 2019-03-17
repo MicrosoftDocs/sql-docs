@@ -1,15 +1,9 @@
-﻿---
+---
 title: "Firewall Rules Stored Procedures (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2016"
-ms.prod: ""
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-stored-procedures"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

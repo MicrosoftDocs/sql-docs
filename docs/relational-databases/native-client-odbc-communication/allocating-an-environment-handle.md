@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, environment handles"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "handles [SQL Server Native Client]"
   - "environment handles [SQLNCLI]"
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

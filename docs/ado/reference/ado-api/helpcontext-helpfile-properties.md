@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "HelpContext property [ADO]"
   - "HelpFile property [ADO]"
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

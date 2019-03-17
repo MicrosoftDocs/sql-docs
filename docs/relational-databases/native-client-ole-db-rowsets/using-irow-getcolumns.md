@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fetching rows"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "GetColumns method"
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Mining Accuracy Chart [Analysis Services], mining structures"
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -67,7 +64,7 @@ manager: craigg
   
     -   Select the option, **Use mining structure test cases**, to use the full set of testing cases that were defined as part of the mining structures holdout data set.  
   
-    -   Select the option, **Specify a different data set**, if you want to use external data.  The data set must be available as a data source view.   Click the browse (**…**) button to choose the data tables to use for the accuracy chart. For more information, see [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Select the option, **Specify a different data set**, if you want to use external data.  The data set must be available as a data source view.   Click the browse (**...**) button to choose the data tables to use for the accuracy chart. For more information, see [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          If you are using an external data set, you can optionally filter the input data set. For more information, see [Apply Filters to Model Testing Data](apply-filters-to-model-testing-data.md).  
   

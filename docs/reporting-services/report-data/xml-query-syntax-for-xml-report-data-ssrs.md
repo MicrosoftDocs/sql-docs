@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-data
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -51,23 +50,23 @@ ms.author: maghan
   
 |XML data source|Query example|  
 |---------------------|-------------------|  
-|Web service XML data from <xref:ReportService2010.ReportingService2010.ListChildren%2A> method.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
-|Web service XML data from SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
-|XML Document or embedded XML data that uses namespaces.<br /><br /> Query element specifying namespaces for an element path.|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
+|Web service XML data from <xref:ReportService2010.ReportingService2010.ListChildren%2A> method.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Web service XML data from SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>https://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
+|XML Document or embedded XML data that uses namespaces.<br /><br /> Query element specifying namespaces for an element path.|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |Embedded XML document.|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |XML document that uses default.|*No query*.<br /><br /> The element path is derived from the XML document itself and is namespace-independent.|  
   
 > [!NOTE]  
->  The first Web service example lists the contents of the report server that uses the <xref:ReportService2006.ReportingService2006.ListChildren%2A> method. To run this query, you must create a new data source and set the connection string to `http://localhost/reportserver/reportservice2006.asmx`. The <xref:ReportService2006.ReportingService2006.ListChildren%2A> method takes two parameters: **Item** and **Recursive**. Set the default value for **Item** to **/** and **Recursive** to **1**.  
+>  The first Web service example lists the contents of the report server that uses the <xref:ReportService2006.ReportingService2006.ListChildren%2A> method. To run this query, you must create a new data source and set the connection string to `https://localhost/reportserver/reportservice2006.asmx`. The <xref:ReportService2006.ReportingService2006.ListChildren%2A> method takes two parameters: **Item** and **Recursive**. Set the default value for **Item** to **/** and **Recursive** to **1**.  
   
 ## Specifying Namespaces  
  Use the XML **Query** element to specify the namespaces that are used in the XML data from the data source. The following XML query uses the namespace **sales**. The XML **ElementPath** nodes for `sales:LineItems` and `sales:LineItem` use the namespace **sales**.  
   
 ```  
 <Query xmlns:sales=  
-"http://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
+"https://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
    <SoapAction>  
-      http://schemas.microsoft.com/SalesWebService/ListOrders   
+      https://schemas.microsoft.com/SalesWebService/ListOrders   
    </SoapAction>  
    <ElementPath>  
       Customers/Customer/Orders/Order/sales:LineItems/sales:LineItem  
@@ -82,14 +81,14 @@ ms.author: maghan
   
 |XML Query Element|Resulting fields in the dataset|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Value A: `http://schemas.microsoft.com/...`<br /><br /> Value B: `http://schemas.microsoft.com/...`<br /><br /> Value C: `http://schemas.microsoft.com/...`|  
-|`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<Query/>|Value A: `https://schemas.microsoft.com/...`<br /><br /> Value B: `https://schemas.microsoft.com/...`<br /><br /> Value C: `https://schemas.microsoft.com/...`|  
+|`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### XML document: DPNamespace.xml  
- You can copy this XML and save it to a URL available for Report Designer to use as an XML data source: for example, http://localhost/DPNamespace.xml.  
+ You can copy this XML and save it to a URL available for Report Designer to use as an XML data source: for example, https://localhost/DPNamespace.xml.  
   
 ```  
-<Root xmlns:ns="http://schemas.microsoft.com/...">  
+<Root xmlns:ns="https://schemas.microsoft.com/...">  
    <ns:Element1>  
       <Node>Value A</Node>  
       <Node>Value B</Node>  

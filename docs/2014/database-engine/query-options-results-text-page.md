@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.query.text.f1"
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg

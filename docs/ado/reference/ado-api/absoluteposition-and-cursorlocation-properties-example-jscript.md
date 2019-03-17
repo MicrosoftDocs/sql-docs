@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "JScript"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "AbsolutePosition property [ADO], JScript example"
   - "CursorLocation property [ADO], JScript example"
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

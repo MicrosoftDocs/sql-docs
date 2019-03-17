@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.httpconnection.server.f1"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "Web server connections [Integration Services]"
   - "connections [Integration Services], HTTP"
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

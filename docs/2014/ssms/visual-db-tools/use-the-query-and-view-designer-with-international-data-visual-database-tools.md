@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], international data"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "SQL pane [Visual Database Tools]"
   - "multiple language support [SQL Server], Query and View Designer"
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

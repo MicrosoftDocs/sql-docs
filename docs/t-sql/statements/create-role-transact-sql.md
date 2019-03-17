@@ -5,9 +5,7 @@ ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE ROLE"
@@ -26,9 +24,8 @@ helpviewer_keywords:
   - "roles [SQL Server], creating"
   - "CREATE ROLE statement"
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
-caps.latest.revision: 54
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

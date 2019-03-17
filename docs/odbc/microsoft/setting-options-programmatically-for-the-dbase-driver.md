@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], DBasedriver"
@@ -15,12 +13,12 @@ helpviewer_keywords:
   - "DBase driver [ODBC], setting options programmatically"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # Setting Options Programmatically for the dBASE Driver
+
 |Option|Description|Method|  
 |------------|-----------------|------------|  
 |Approximate Row Count|Determines whether table size statistics are approximated. This option applies to all data sources that use the ODBC driver.|To set this option dynamically, use the **STATISTICS** keyword in a call to [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  

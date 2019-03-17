@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: master-data-services
-ms.tgt_pltfrm: ""
+ms.technology: 
 ms.topic: "reference"
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: leolimsft

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.asvs.roledesignerdialog.rowfilters.imbi.f1"
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg

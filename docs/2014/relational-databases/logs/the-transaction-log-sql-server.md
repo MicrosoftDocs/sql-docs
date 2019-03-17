@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "01/04/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], about"
   - "databases [SQL Server], transaction logs"
   - "logs [SQL Server], transaction logs"
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -85,9 +82,9 @@ manager: craigg
 |7|DATABASE_SNAPSHOT_CREATION|A database snapshot is being created. (All recovery models)<br /><br /> This is a routine, and typically brief, cause of delayed log truncation.|  
 |8|LOG_SCAN|A log scan is occurring. (All recovery models)<br /><br /> This is a routine, and typically brief, cause of delayed log truncation.|  
 |9|AVAILABILITY_REPLICA|A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model)<br /><br /> For more information, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|For internal use only|  
-|11|—|For internal use only|  
-|12|—|For internal use only|  
+|10|-|For internal use only|  
+|11|-|For internal use only|  
+|12|-|For internal use only|  
 |13|OLDEST_PAGE|If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint LSN. In this case, the oldest page can delay log truncation. (All recovery models)<br /><br /> For information about indirect checkpoints, see [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|This value is currently not used.|  
 |16|XTP_CHECKPOINT|When a database has a memory-optimized filegroup, the transaction log may not truncate until automatic [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint is triggered (which happens at every 512 MB of log growth).<br /><br /> Note: To truncate transaction log before 512 MB size, fire the Checkpoint command manually against the database in question.|  

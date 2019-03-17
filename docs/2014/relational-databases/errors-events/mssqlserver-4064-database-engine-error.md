@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "4064 (Database Engine error)"
 ms.assetid: 32112b90-0a2f-4834-a027-756811732be7
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

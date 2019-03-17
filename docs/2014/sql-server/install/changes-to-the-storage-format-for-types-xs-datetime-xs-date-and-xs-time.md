@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xs:date"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "storage format"
   - "DateTime"
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -40,14 +37,14 @@ manager: craigg
   
  The following query will search for XML schema collections that reference the affected types and for each typed XML column. This will tell you whether or not there are instances with negative year values.  
   
-```  
+```sql
 CREATE PROCEDURE DateTimeInvestigation(@withdata bit)  
 -- @withdata = 0: only get the affected meta data information  
 -- @withdata = 1: get the affected meta data and instance information  
 AS  
 BEGIN  
 -- First get XML containing all schema collections containing affected element and attributes  
--- components (model groups????)   
+-- components (model groups?)   
 -- and columns that are affected by the schema collections.   
 CREATE table #_dt_collector(x xml);   
 ;with dttypes as  

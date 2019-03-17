@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.reportservicelogin.f1"
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Reporting Services Login Dialog Box (SSRS)
   Use the **Reporting Services Login** dialog box to provide credentials to publish reports to the report server.  

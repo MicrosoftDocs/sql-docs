@@ -1,13 +1,11 @@
 ---
 title: "CREATE VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "10/10/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE VIEW"
@@ -36,7 +34,6 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -220,7 +217,7 @@ UNION ALL
 SELECT *  
 FROM Server2.CompanyData.dbo.Customers_66  
 UNION ALL  
---Select from mmeber table on Server3.  
+--Select from member table on Server3.  
 SELECT *  
 FROM Server3.CompanyData.dbo.Customers_99;  
 ```  
@@ -439,11 +436,6 @@ supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 451 and 600),
 supplier CHAR(50)  
 );  
 GO  
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
-, ('231', 'FarEast'), ('280', 'NZ')  
-, ('321', 'EuroGroup'), ('442', 'UKArchip')  
-, ('475', 'India'), ('521', 'Afrique');  
-GO  
 --Create the view that combines all supplier tables.  
 CREATE VIEW dbo.all_supplier_view  
 WITH SCHEMABINDING  
@@ -459,6 +451,12 @@ SELECT supplyID, supplier
 UNION ALL  
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
+GO
+INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')    
+, ('231', 'FarEast'), ('280', 'NZ')  
+, ('321', 'EuroGroup'), ('442', 'UKArchip')  
+, ('475', 'India'), ('521', 'Afrique');  
+GO  
 ```  
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

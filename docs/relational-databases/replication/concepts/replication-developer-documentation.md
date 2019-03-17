@@ -4,21 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "developer's guide [SQL Server replication]"
   - "programming [SQL Server replication]"
   - "replication [SQL Server], development"
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
-caps.latest.revision: 40
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -59,7 +52,5 @@ manager: craigg
  [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
  Describes the use of Replication Agent Executable files.  
   
- [Developer's Guide: How-to Topics &#40;Replication&#41;](../../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)  
- Provides a list of how-to topics that are related to replication.  
   
   

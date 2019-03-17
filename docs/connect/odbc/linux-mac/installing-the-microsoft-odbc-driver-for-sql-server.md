@@ -1,18 +1,15 @@
 ---
 title: "Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "12/04/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver, installing"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 69
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
@@ -78,7 +75,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### SUSE Linux Enterprise Server 11SP4 and 12
+### SUSE Linux Enterprise Server 11SP4, 12, and 15
 
 ```
 sudo su
@@ -92,6 +89,10 @@ zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 #SUSE Linux Enterprise Server 12
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
+#SUSE Linux Enterprise Server 15
+zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+SUSEConnect -p sle-module-legacy/15/x86_64
+
 exit
 sudo ACCEPT_EULA=Y zypper install msodbcsql17
 # optional: for bcp and sqlcmd
@@ -103,7 +104,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### Ubuntu 14.04, 16.04, 17.10 and 18.04
+### Ubuntu 14.04, 16.04, 17.10, and 18.04
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -117,11 +118,11 @@ curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sou
 #Ubuntu 16.04
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 17.10
-curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 18.10
+curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -135,15 +136,16 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
-> Driver version 17.2 or higher is required for Ubuntu 18.04 support.
+> - Driver version 17.2 or higher is required for Ubuntu 18.04 support.
+> - Driver version 17.3 or higher is required for Ubuntu 18.10 support.   
 
-### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), and macOS 10.13 (High Sierra)
+### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), macOS 10.13 (High Sierra), and macOS 10.14 (Mojave)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql17 mssql-tools
+brew install msodbcsql17 mssql-tools
 ```
 
 ## Microsoft ODBC Driver 13.1 for SQL Server 
@@ -286,7 +288,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
+brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 ```
 
 ## Microsoft ODBC Driver 13 for SQL Server
@@ -366,12 +368,12 @@ If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)]
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
+Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
 #### Redhat Linux Enterprise Server 7
-  - Download the latest `msodbcsql` `.rpm` from here: http://packages.microsoft.com/rhel/7/prod/
+  - Download the latest `msodbcsql` `.rpm` from here: https://packages.microsoft.com/rhel/7/prod/
   - Install dependencies and the driver
   
 ```
@@ -380,7 +382,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### Ubuntu 16.04
-- Download the latest `msodbcsql` `.deb` from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Download the latest `msodbcsql` `.deb` from here: https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Install dependencies and the driver 
 
 ```
@@ -389,7 +391,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### SUSE Linux Enterprise Server 12
-- Download the latest `msodbcsql` `.rpm` from here: http://packages.microsoft.com/sles/12/prod/
+- Download the latest `msodbcsql` `.rpm` from here: https://packages.microsoft.com/sles/12/prod/
 - Install the dependencies and the driver
 
 ```
@@ -433,7 +435,7 @@ Installation puts the driver in `/opt/microsoft/msodbcsql/11.0.2270.0`. The driv
   
 To verify that the Microsoft ODBC driver on Linux was registered successfully, execute the following command: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
-[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) shows a code sample that connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the ODBC driver on Linux.  
+[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) shows a code sample that connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the ODBC driver on Linux.  
   
 **Uninstalling**  
   
@@ -485,15 +487,15 @@ There is more than one Driver Manager installed and your application is using th
   
 For more information about resolving connection failures, see:  
   
--   [Steps to troubleshoot SQL connectivity issues](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Steps to troubleshoot SQL connectivity issues](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
--   [SQL Server 2005 Connectivity Issue Troubleshoot - Part I](http://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
+-   [SQL Server 2005 Connectivity Issue Troubleshoot - Part I](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
   
--   [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](http://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
+-   [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
   
--   [SQL Server Authentication Troubleshooter](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
+-   [SQL Server Authentication Troubleshooter](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [Error details (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [Error details (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     The error number specified in the URL (11001) should be changed to match the error that you see.  
   

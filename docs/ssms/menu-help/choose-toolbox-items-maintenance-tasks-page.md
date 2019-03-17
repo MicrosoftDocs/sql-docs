@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.chooseitems.maintenance_tasks"
@@ -16,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Customize Toolbox dialog box"
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

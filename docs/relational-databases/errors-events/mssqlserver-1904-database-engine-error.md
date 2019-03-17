@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "1904 (Database Engine error)"
 ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

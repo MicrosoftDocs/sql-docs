@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_start_sp"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_start_sp"
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -47,7 +43,7 @@ sysmail_start_sp
  None  
   
 ## Remarks  
- Database Mail is not enabled or installed upon[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Use the Database Mail Configuration wizard to enable and install the Database Mail objects.  
+ Database Mail is not enabled or installed upon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Use the Database Mail Configuration wizard to enable and install the Database Mail objects.  
   
  This stored procedure is in the **msdb** database. This stored procedure starts the Database Mail queue that holds outgoing message requests and enables the [!INCLUDE[ssSB](../../includes/sssb-md.md)] activation for the external program.  
   

@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [ODBC], bookmarks"
   - "bookmarks [ODBC]"
   - "scrolling rows [ODBC]"
 ms.assetid: 4862f098-41a4-4bd2-894e-f71bb97f9bc0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

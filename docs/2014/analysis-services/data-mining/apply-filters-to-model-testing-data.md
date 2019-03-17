@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "input row filtering [SQL Server]"
   - "filtering input rows [Analysis Services]"
   - "Mining Accuracy Chart [Analysis Services], filtering input rows"
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -44,7 +41,7 @@ manager: craigg
   
  To determine whether a model contains a predefined filter that might affect results, you can look for the **Filter** property in the **Property** pane, or you can query the model by using the data mining schema rowsets. For example, the following query returns the filter text for the specified model:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  If you want to remove the filter from an existing mining model, or change the filter conditions, you must reprocess the mining model.  
@@ -59,7 +56,7 @@ manager: craigg
   
 3.  On the **Input Selection** tab, under **Select data set to be used for Accuracy Chart**, select the option **Specify a different data set**.  
   
-4.  Click the browse button **(…)** to open a dialog box and choose the external data set.  
+4.  Click the browse button **(...)** to open a dialog box and choose the external data set.  
   
 5.  Choose the case table, and add a nested table if necessary. Map columns in the model to columns in the external data set as necessary. Close the **Specify Column Mapping** dialog box to save the source table definition.  
   
@@ -79,7 +76,7 @@ manager: craigg
   
 9. Click the **And/Or** text box and select a logical operator to define how multiple conditions are combine.  
   
-10. Optionally, click the browse button **(…)** at the right of the **Value** text box to open the **Filter** dialog box and set conditions on the nested table or on the individual case table columns.  
+10. Optionally, click the browse button **(...)** at the right of the **Value** text box to open the **Filter** dialog box and set conditions on the nested table or on the individual case table columns.  
   
 11. Verify that the completed filter conditions are correct by viewing the text in the **Expression** pane.  
   

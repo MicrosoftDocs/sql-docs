@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], managing"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "Report Manager [Reporting Services]"
   - "components [Reporting Services], Report Manager"
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-caps.latest.revision: 69
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Manager  (SSRS Native Mode)
   Report Manager is a Web-based report access and management tool that you use to administer a single report server instance from a remote location over an HTTP connection. You can also use Report Manager for its report viewer and navigation features. In this topic:  

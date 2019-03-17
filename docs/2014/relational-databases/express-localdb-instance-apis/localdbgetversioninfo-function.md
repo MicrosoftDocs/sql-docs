@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "LocalDBGetVersionInfo"
@@ -17,7 +13,6 @@ api_location:
 topic_type: 
   - "apiref"
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -92,7 +87,7 @@ HRESULT LocalDBGetVersionInfo(
   
 ```  
 LocalDBVersionInfo vi;  
-LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));  
+LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));  
   
 ```  
   

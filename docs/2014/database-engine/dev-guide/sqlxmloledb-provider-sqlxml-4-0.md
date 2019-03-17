@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "providers [SQLXML], SQLXMLOLEDB Provider"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "OLE DB, SQLXML"
   - "data providers [SQLXML], SQLXMLOLEDB Provider"
 ms.assetid: fc489682-690a-4bb0-b5ac-237d376dc110
-caps.latest.revision: 26
 author: mashamsft
 ms.author: mathoma
 manager: craigg

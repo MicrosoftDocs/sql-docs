@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "MDAC [SQL Server]"
@@ -48,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports access to previous [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not contain XML integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports SELECT … FOR XML queries, but does not support any other XML functionality. However, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not contain XML integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports SELECT ... FOR XML queries, but does not support any other XML functionality. However, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports configuring client-side network libraries using only connection string attributes. If you need more complete network library configuration, you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
   

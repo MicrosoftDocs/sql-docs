@@ -4,7 +4,6 @@ ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 
 ms.topic: conceptual

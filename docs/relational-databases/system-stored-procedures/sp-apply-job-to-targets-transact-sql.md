@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_apply_job_to_targets"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_apply_job_to_targets"
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -44,19 +40,19 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id =**] *job_id*  
  The job identification number of the job to apply to the specified target servers or target server groups. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'**_job_name_**'**  
  The name of the job to apply to the specified the associated target servers or target server groups. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@target_server_groups =**]  **'***target_server_groups***'**  
+ [ **@target_server_groups =**]  **'**_target_server_groups_**'**  
  A comma-separated list of target server groups to which the specified job is to be applied. *target_server_groups* is **nvarchar(2048)**, with a default of NULL.  
   
- [ **@target_servers=** ] **'***target_servers***'**  
+ [ **@target_servers=** ] **'**_target_servers_**'**  
  A comma-separated list of target servers to which the specified job is to be applied. *target_servers*is **nvarchar(2048)**, with a default of NULL.  
   
- [ **@operation=** ]  **'***operation***'**  
+ [ **@operation=** ]  **'**_operation_**'**  
  Is whether the specified job should be applied to or removed from the specified target servers or target server groups. *operation*is **varchar(7)**, with a default of APPLY. Valid operations are **APPLY** and **REMOVE**.  
   
 ## Return Code Values  

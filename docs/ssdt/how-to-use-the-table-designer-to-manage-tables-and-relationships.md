@@ -6,15 +6,12 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.columnspecification.index.dialog"
   - "sql.data.tools.design.table.columnsgrid.view"
   - "sql.data.tools.design.table.scriptpanel"
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

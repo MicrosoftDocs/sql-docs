@@ -1,16 +1,11 @@
 ---
 title: "Query Spatial Data for Nearest Neighbor | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

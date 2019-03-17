@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [Analysis Services]"
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. On the **Mining Model** menu, select **Set Model Filter**.  
   

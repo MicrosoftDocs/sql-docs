@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "VARP_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "expressions [SQL Server], statistical variance"
   - "VARP function [Transact-SQL]"
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

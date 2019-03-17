@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -69,9 +63,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 ### Default Schema Mapping  
 This setting specifies how DB2 schemas are mapped to SQL Server schemas. Two options are available in this setting:  
   
-1.  **Schema to database:** In this mode DB2 schema ‘sch1’ will be mapped by default to ‘dbo’ SQL Server schema in SQL Server database ‘sch1’.  
+1.  **Schema to database:** In this mode DB2 schema 'sch1' will be mapped by default to 'dbo' SQL Server schema in SQL Server database 'sch1'.  
   
-2.  **Schema to schema:**In this mode DB2 schema ‘sch1’ will be mapped by default to ‘sch1’ SQL Server schema in default SQL Server database provided in the connection dialog.  
+2.  **Schema to schema:**In this mode DB2 schema 'sch1' will be mapped by default to 'sch1' SQL Server schema in default SQL Server database provided in the connection dialog.  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
@@ -343,7 +337,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Full Mode:** Yes  
   
 ### Generate unique index on ROWID column  
-Specifies whether SSMA generates unique index column on the ROWID generated column or not. If the option is set to “YES”, unique index is generated and if it is set to “NO”, unique index is not generated on the ROWID column.  
+Specifies whether SSMA generates unique index column on the ROWID generated column or not. If the option is set to "YES", unique index is generated and if it is set to "NO", unique index is not generated on the ROWID column.  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
@@ -399,7 +393,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
   
 -   If you select **Yes**, SSMA converts the TO_CHAR(date, format) into native convert function when possible.  
   
--   If you select **No**, SSMA converts the TO_CHAR(date, format) into TO_CHAR_DATE or TO_CHAR_DATE_LS (It is defined by “Convert TO_CHAR(date, format)” options).  
+-   If you select **No**, SSMA converts the TO_CHAR(date, format) into TO_CHAR_DATE or TO_CHAR_DATE_LS (It is defined by "Convert TO_CHAR(date, format)" options).  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   

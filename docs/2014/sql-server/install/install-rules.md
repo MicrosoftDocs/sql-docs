@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SCC"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SQL Server Installation Wizard, System Configuration Check page"
   - "SCC [SQL Server]"
 ms.assetid: 168c0445-5651-42fc-91f4-d9f27d9e2281
-caps.latest.revision: 49
 author: mashamsft
 ms.author: mathoma
 manager: craigg

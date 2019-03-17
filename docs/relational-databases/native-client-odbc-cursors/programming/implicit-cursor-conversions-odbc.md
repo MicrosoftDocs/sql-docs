@@ -5,16 +5,13 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC cursors, implicit cursor conversions"
   - "implicit cursor conversions"
   - "cursors [ODBC], implicit cursor conversions"
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

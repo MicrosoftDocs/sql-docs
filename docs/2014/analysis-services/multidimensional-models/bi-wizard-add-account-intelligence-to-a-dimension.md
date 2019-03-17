@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], Business Intelligence enhancements"
   - "Business Intelligence enhancements [Analysis Services], account intelligence"
   - "account intelligence [Analysis Services]"
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

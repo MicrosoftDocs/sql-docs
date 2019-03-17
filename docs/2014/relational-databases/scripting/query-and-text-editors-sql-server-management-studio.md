@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.TextEditor"
 helpviewer_keywords: 
   - "Query Editor [SQL Server Management Studio]"
   - "Code Editor [SQL Server Management Studio], about Query Editor"
@@ -27,7 +23,6 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
   - "queries [SQL Server], SQL Server Management Studio"
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -130,5 +125,3 @@ manager: craigg
   
 ## See Also  
  [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

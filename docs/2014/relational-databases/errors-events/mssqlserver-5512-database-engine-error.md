@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "5512 (Database Engine error)"
 ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -33,6 +30,6 @@ manager: craigg
  The truncate operation failed.  
   
 ## User Action  
- For the cause of the error, see the specific Windows status code. For more information about this status code, see the [Events and Errors Message Center](http://go.microsoft.com/fwlink/?linkid=47660).  
+ For the cause of the error, see the specific Windows status code. For more information about this status code, see the [Events and Errors Message Center](https://go.microsoft.com/fwlink/?linkid=47660).  
   
   

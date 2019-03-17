@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_cdc_get_max_lsn"
   - "fn_cdc_get_max_lsn"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_cdc_get_max_lsn"
   - "sys.fn_cdc_get_max_lsn"
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, alerts"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "reactivating alerts"
   - "removing alerts"
 ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

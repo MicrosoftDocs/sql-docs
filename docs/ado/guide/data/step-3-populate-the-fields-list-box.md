@@ -6,11 +6,8 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -20,26 +17,26 @@ To populate the Fields list box, insert the following code into the Click event 
   
 ```  
 Private Sub lstMain_Click()  
-    Dim rec As Record  
-    Dim rs As Recordset  
-    Set rec = New Record  
-    Set rs = New Recordset  
-    grs.MoveFirst  
-    grs.Move lstMain.ListIndex  
-    lstDetails.Clear  
-    rec.Open grs  
-    Select Case rec.RecordType  
-        Case adCollectionRecord:  
-            Set rs = rec.GetChildren  
-            While Not rs.EOF  
-                lstDetails.AddItem rs(0)  
-                rs.MoveNext  
-            Wend  
-        Case adSimpleRecord:  
-            recFields rec, lstDetails, txtDetails  
+    Dim rec As Record  
+    Dim rs As Recordset  
+    Set rec = New Record  
+    Set rs = New Recordset  
+    grs.MoveFirst  
+    grs.Move lstMain.ListIndex  
+    lstDetails.Clear  
+    rec.Open grs  
+    Select Case rec.RecordType  
+        Case adCollectionRecord:  
+            Set rs = rec.GetChildren  
+            While Not rs.EOF  
+                lstDetails.AddItem rs(0)  
+                rs.MoveNext  
+            Wend  
+        Case adSimpleRecord:  
+            recFields rec, lstDetails, txtDetails  
   
-        Case adStructDoc:  
-    End Select  
+        Case adStructDoc:  
+    End Select  
   
 End Sub  
 ```  

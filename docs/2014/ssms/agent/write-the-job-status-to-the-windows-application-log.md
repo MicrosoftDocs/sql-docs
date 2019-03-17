@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "status information [SQL Server], jobs"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], status"
   - "logs [SQL Server], jobs"
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

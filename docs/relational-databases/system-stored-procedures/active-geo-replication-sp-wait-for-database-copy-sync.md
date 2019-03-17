@@ -2,14 +2,8 @@
 title: "sp_wait_for_database_copy_sync (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: ""
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-stored-procedures"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_wait_for_database_copy_sync_TSQL"
@@ -19,7 +13,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_wait_for_database_copy_sync"
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

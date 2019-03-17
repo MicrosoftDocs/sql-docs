@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transfererrormessagestask.errormessages.F1"
 helpviewer_keywords: 
   - "Transfer Error Messages Task Editor"
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -43,13 +40,13 @@ manager: craigg
 |**False**|Copy only the specified user-defined messages.|  
   
  **ErrorMessagesList**  
- Click the browse button **(…)** to select the error messages to copy.  
+ Click the browse button **(...)** to select the error messages to copy.  
   
 > [!NOTE]  
 >  You must specify the **SourceConnection** before you can select error messages to copy.  
   
  **ErrorMessageLanguagesList**  
- Click the browse button **(…)** to select the languages for which to copy user-defined error messages to the destination server. A us_english (code page 1033) version of the message must exist on the destination server before you can transfer other language versions of the message to that server.  
+ Click the browse button **(...)** to select the languages for which to copy user-defined error messages to the destination server. A us_english (code page 1033) version of the message must exist on the destination server before you can transfer other language versions of the message to that server.  
   
 > [!NOTE]  
 >  You must specify the **SourceConnection** before you can select error messages to copy.  

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerCallableStatement.setTime (java.lang.String, java.lang.Time, java.lang.Calendar))"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_schedule"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_schedule"
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -44,7 +40,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'**_schedule_name_**'**  
  The name of the schedule to delete. *schedule_name* is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.acctintelligence.selectattributes.f1"
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "invalid requests [Reporting Services]"
   - "exceptions [Reporting Services], invalid requests"
   - "valid requests [Reporting Services]"
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Preventing Invalid Requests
   You can prevent some types of exceptions from being thrown by analyzing your application flow and ensuring that the requests being sent to the report server are valid. For example, in applications that enable users to add or update the name of a report, data source, or other report server item, you should validate the text that a user might enter. You should always check for reserved characters before sending the request to a report server. Use conditional **if** statements or other logical constructs in your code to alert the user that they have not met the conditions necessary to send requests to the report server.  

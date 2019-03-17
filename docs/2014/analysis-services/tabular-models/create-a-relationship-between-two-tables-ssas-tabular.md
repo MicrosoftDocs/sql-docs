@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.managereldb.f1"
   - "sql12.asvs.bidtoolset.createrelatdb.f1"
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg

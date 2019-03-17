@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML Bulk Load [SQLXML]"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "XDR schemas [SQLXML], XML Bulk Load"
   - "inserting data"
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

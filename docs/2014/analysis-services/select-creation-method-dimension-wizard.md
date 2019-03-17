@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.dimensiondefinition.f1"
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

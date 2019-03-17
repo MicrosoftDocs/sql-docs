@@ -4,19 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Sybase Console,Exporting or Importing Encrypted Passwords"
   - "Sybase Console,Managing Passwords"
   - "Sybase Console,Securing Password"
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -35,15 +29,15 @@ Use the following procedure to implement a secure connection:
   
 Specify a valid password using one of the following three methods:  
   
-1.  **Clear Text:** Type the database password in the value attribute of the ‘password’ node. It is found under the server definition node in the Server section of the script file or server connection file.  
+1.  **Clear Text:** Type the database password in the value attribute of the 'password' node. It is found under the server definition node in the Server section of the script file or server connection file.  
   
-    Passwords in clear text are not secure. Therefore, you will encounter the following warning message in the console output: *“Server &lt;server-id&gt; password is provided in non-secure clear text form, SSMA Console application provides an option to protect the password through encryption, please see –securepassword option in SSMA help file for more information.”*  
+    Passwords in clear text are not secure. Therefore, you will encounter the following warning message in the console output: *"Server &lt;server-id&gt; password is provided in non-secure clear text form, SSMA Console application provides an option to protect the password through encryption, please see -securepassword option in SSMA help file for more information."*  
   
     **Encrypted Passwords:** The specified password, in this case, is stored in an encrypted form on the local machine in ProtectedStorage.ssma.  
   
     -   **Securing Passwords**  
   
-        -   Execute the `SSMAforSybaseConsole.exe` with the `–securepassword` and add switch at command line passing the server connection or script file containing the password node in the server definition section.  
+        -   Execute the `SSMAforSybaseConsole.exe` with the `-securepassword` and add switch at command line passing the server connection or script file containing the password node in the server definition section.  
   
         -   At prompt, the user is asked to enter the database password and confirm it.  
   
@@ -53,7 +47,7 @@ Specify a valid password using one of the following three methods:
             
                 Specify password
                 
-                C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –add all –s "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml"
+                C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml"
                 
                 Enter password for server_id 'XXX_1': xxxxxxx
                 
@@ -61,7 +55,7 @@ Specify a valid password using one of the following three methods:
             
             Example 2:
             
-                C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –add "source_1,target_1" –c "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml" – v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml" -o
+                C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
                 Enter password for server_id 'source_1': xxxxxxx
                 
@@ -73,20 +67,20 @@ Specify a valid password using one of the following three methods:
     
     -   **Removing Encrypted Passwords**  
   
-        Execute the `SSMAforSybaseConsole.exe` with the`–securepassword` and `–remove` switch at command line passing the server ids, to remove the encrypted passwords from the protected storage file present on the local machine.  
+        Execute the `SSMAforSybaseConsole.exe` with the`-securepassword` and `-remove` switch at command line passing the server ids, to remove the encrypted passwords from the protected storage file present on the local machine.  
   
         Example:  
         
-            C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –remove all
-            C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –remove "source_1,target_1"  
+            C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove all
+            C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove "source_1,target_1"  
   
     -   **Listing Server Ids whose passwords are encrypted**  
   
-        Execute the `SSMAforSybaseConsole.exe` with the `–securepassword` and `–list` switch at command line to list all the server ids whose passwords have been encrypted.  
+        Execute the `SSMAforSybaseConsole.exe` with the `-securepassword` and `-list` switch at command line to list all the server ids whose passwords have been encrypted.  
   
         Example:  
         
-            C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –list  
+            C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -list  
   
     > [!NOTE]  
     > 1.  The password in clear text mentioned in script or server connection file takes precedence over the encrypted password in secured file.  
@@ -101,13 +95,13 @@ Example:
     
     Enter password for protecting the exported file
     
-    C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –export all "machine1passwords.file"
+    C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -export all "machine1passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforSybaseConsole.EXE –p –e "SybaseDB_1_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforSybaseConsole.EXE -p -e "SybaseDB_1_1,Sql_1" "machine2passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
@@ -119,18 +113,18 @@ Example:
     
     Enter password for protecting the imported file
     
-    C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –import all "machine1passwords.file"
+    C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -import all "machine1passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforSybaseConsole.EXE –p –i "SybaseDB_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforSybaseConsole.EXE -p -i "SybaseDB_1,Sql_1" "machine2passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx  
   
 ## See Also  
-[Executing the SSMA Console (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Executing the SSMA Console (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

@@ -1,19 +1,13 @@
-﻿---
+---
 title: "CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2016"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.reviewer: ""
 ms.service: sql-data-warehouse
-ms.suite: "sql"
-ms.component: t-sql
-ms.tgt_pltfrm: ""
+ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -662,7 +656,7 @@ WHERE NOT EXISTS
 ;
 
 RENAME OBJECT dbo.[DimProduct]          TO [DimProduct_old];
-RENAME OBJECT dbo.[DimpProduct_upsert]  TO [DimProduct];
+RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 ```
 
@@ -831,7 +825,7 @@ You can see therefore that type consistency and maintaining nullability properti
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
   
   
 

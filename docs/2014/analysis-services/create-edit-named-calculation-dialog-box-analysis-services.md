@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsveditor.createnamedcalculation.f1"
 helpviewer_keywords: 
   - "Named Calculation dialog box"
 ms.assetid: 66fb30ae-f5c5-4bfc-80ca-8c8a3a9bb30d
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

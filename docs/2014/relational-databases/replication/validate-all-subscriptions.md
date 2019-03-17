@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.validate.allsubscriptions.f1"
 helpviewer_keywords: 
   - "Validate All Subscriptions dialog box"
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -32,6 +28,6 @@ manager: craigg
  In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the binary checksum algorithm. If the row count fails, the checksum is not performed. This option is not valid for [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## See Also  
- [Validate Replicated Data](validate-replicated-data.md)  
+ [Validate Replicated Data](validate-data-at-the-subscriber.md)  
   
   

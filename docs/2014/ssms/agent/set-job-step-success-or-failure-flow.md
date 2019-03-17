@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, action flow logic"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "failed jobs [SQL Server]"
   - "jobs [SQL Server Agent], action flow logic"
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -94,6 +91,6 @@ manager: craigg
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To set job step success or failure flow**  
   
- Use the `JobStep` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use the `JobStep` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

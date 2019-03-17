@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: polybase
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
@@ -84,7 +82,7 @@ To query the data in your Hadoop data source, you must define an external table 
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))  
    ```
 
 1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
@@ -99,7 +97,7 @@ To query the data in your Hadoop data source, you must define an external table 
          [YearMeasured] int NOT NULL  
    )  
    WITH (LOCATION='/Demo/',
-         DATA_SOURCE = MyHadoopCluster,  
+         DATA_SOURCE = AzureStorage,  
          FILE_FORMAT = TextFileFormat  
    );  
    ```
@@ -157,7 +155,7 @@ The following query exports data from SQL Server to Azure Blob Storage. To do th
 
 ```sql
 -- Enable INSERT into external table  
-sp_configure ‘allow polybase export’, 1;  
+sp_configure 'allow polybase export', 1;  
 reconfigure  
   
 -- Create an external table.

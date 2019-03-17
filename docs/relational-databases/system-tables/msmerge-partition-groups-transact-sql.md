@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSmerge_partition_groups_TSQL"
   - "MSmerge_partition_groups"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_partition_groups system table"
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,16 +5,13 @@ ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [SQL Server], names"
   - "renaming columns"
   - "column names [SQL Server]"
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg

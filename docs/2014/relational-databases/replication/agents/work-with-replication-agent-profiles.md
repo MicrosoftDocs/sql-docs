@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], agents and profiles"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], profiles"
   - "profiles [SQL Server], replication agents"
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -89,7 +85,7 @@ manager: craigg
   
 1.  If the **Agent Profiles** dialog box displays profiles for more than one agent, select an agent.  
   
-2.  Click the properties button (**…**) next to a profile.  
+2.  Click the properties button (**...**) next to a profile.  
   
 3.  View the parameters and values in the **\<ProfileName> Profile Properties** dialog box.  
   

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-caps.latest.revision: 10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -36,9 +33,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - the sum of all the rows sent by the component  
   
--   **wall_clock_time_ms** – the total elapsed execution time, in milliseconds, for each component  
+-   **wall_clock_time_ms** - the total elapsed execution time, in milliseconds, for each component  
   
--   **num_rows_per_millisecond** – the number of rows per millisecond sent by each component  
+-   **num_rows_per_millisecond** - the number of rows per millisecond sent by each component  
   
  The `HAVING` clause is used to prevent a divide-by-zero error in the calculations.  
   

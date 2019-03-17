@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.choosehowtoimpdata.f1"
 ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLSetStmtAttr function"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "result sets [ODBC], default"
   - "ODBC applications, cursors"
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg

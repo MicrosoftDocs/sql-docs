@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.dimensionproperties.f1"
 helpviewer_keywords: 
   - "Dimension Properties dialog box"
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

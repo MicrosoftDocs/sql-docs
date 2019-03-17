@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data collection [SQL Server]"
   - "security [data collector]"
   - "data collector [SQL Server], security"
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

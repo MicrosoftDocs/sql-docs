@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "expressions [Integration Services], syntax"
   - "syntax [Integration Services]"
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -78,8 +74,8 @@ manager: craigg
   
 ## Related Content  
   
--   Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
+-   Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
   
--   Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+-   Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
   

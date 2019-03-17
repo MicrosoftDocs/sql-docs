@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.dtsserver.packageroles.f1"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "roles [Integration Services]"
   - "db_ssisltduser role"
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

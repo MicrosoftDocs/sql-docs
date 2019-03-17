@@ -1,5 +1,5 @@
 ---
-title: "Configure Table Behavior Properties for Power View Reports | Microsoft Docs"
+title: "Configure Analysis Services table properties for Power View reports | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -43,7 +43,7 @@ manager: kfile
 3.  In the **Table Behavior** dialog box, set the **Row Identifier**, and then specify other properties in this dialog box.  
   
 ## Setting the Row Identifier property  
- Within the table, the row identifier specifies a single column that contains only unique values and no blank values. The Row Identifier property is used to change grouping so a group is not based on a row’s field composition, but rather on a fixed column that is always used to uniquely identify a row, regardless of the fields used in a particular report layout.  
+ Within the table, the row identifier specifies a single column that contains only unique values and no blank values. The Row Identifier property is used to change grouping so a group is not based on a row's field composition, but rather on a fixed column that is always used to uniquely identify a row, regardless of the fields used in a particular report layout.  
   
  Setting this property changes the default grouping behavior from dynamic grouping based on the columns present on the canvas, to a fixed grouping behavior that summarizes based on the row identifier. Changing the default grouping behavior is relevant for report layouts, such as a matrix, that would otherwise group (or show subtotals) for each column in the row.  
   
@@ -55,7 +55,7 @@ manager: kfile
   
 -   Remove unwanted subtotals from a matrix report. Default grouping at the field level creates a subtotal for each field. If you only want a single subtotal that is calculated at the row level, setting the Row Identifier produces this result.  
   
- You cannot set a Row Identifier for tables marked as date tables. For date tables, the row identifier is specified when you mark the table. For more information, see [Mark as Date Table Dialog Box ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ You cannot set a Row Identifier for tables marked as date tables. For date tables, the row identifier is specified when you mark the table. For more information, see [Mark as Date Table Dialog Box](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## Setting the Keep Unique Rows property  
  This property allows you to specify which columns convey identity information (such as an employee name or a product code) in way that distinguishes one row from another. In cases where rows appear to be identical (such as two customers with the same name), the columns you specify for this property repeat in the report table.  

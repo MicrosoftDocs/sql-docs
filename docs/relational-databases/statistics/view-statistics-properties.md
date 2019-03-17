@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.statistics.details.f1"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "viewing statistics properties"
   - "statistics [SQL Server], viewing properties"
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -50,15 +48,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table in which you want to view the statistic’s properties.  
+3.  Click the plus sign to expand the table in which you want to view the statistic's properties.  
   
 4.  Click the plus sign to expand the **Statistics** folder.  
   
 5.  Right-click the Statistics object of which you want to view the properties and select **Properties**.  
   
-6.  In the **Statistics Properties -** *statistics_name* dialog box, in the **Select a page** pane, select **Details**.  
+6.  In the **Statistics Properties -** _statistics_name_ dialog box, in the **Select a page** pane, select **Details**.  
   
-     The following properties show on the **Details** page in the **Statistics Properties -** *statistics_name* dialog box.  
+     The following properties show on the **Details** page in the **Statistics Properties -** _statistics_name_ dialog box.  
   
      **Table Name**  
      Displays the name of the table described by the statistics.  

@@ -5,12 +5,9 @@ ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -23,11 +20,11 @@ There are several points to note when you execute the code examples in the [!INC
   
 -   Nearly all the examples assume that SQL Server 2008 or later and the AdventureWorks database are installed on the local computer.  
   
-    For information about how to download free editions and trial versions of SQL Server, see [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193).  
+    For information about how to download free editions and trial versions of SQL Server, see [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193).  
   
     For information about how to download and install the AdventureWorks database, see the [AdventureWorks page in the SQL Server Samples Github repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
--   Nearly all the code examples in this documentation are intended to be run from the command line, which enables automated testing of all the code examples. For information about how to run PHP from the command line, see [Using PHP from the command line](http://php.net/manual/en/features.commandline.php).  
+-   Nearly all the code examples in this documentation are intended to be run from the command line, which enables automated testing of all the code examples. For information about how to run PHP from the command line, see [Using PHP from the command line](https://php.net/manual/en/features.commandline.php).  
   
 -   Although examples are meant to be run from the command line, each example can be run by invoking it from a browser without making any changes to the script. To format output nicely, replace each "\n" with "\<\/br>" in each example before invoking it from a browser.  
   

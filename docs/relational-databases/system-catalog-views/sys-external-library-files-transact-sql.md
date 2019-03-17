@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "10/05/2017"
 ms.prod: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "external_library_files"

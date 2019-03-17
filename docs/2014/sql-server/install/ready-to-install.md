@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Installation"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Installation Wizard, Ready to Install page"
   - "Ready to Install page [SQL Server Installation Wizard]"
 ms.assetid: 4dd5d5b7-01b7-4b51-9589-764f69bdb7ae
-caps.latest.revision: 32
 author: mashamsft
 ms.author: mathoma
 manager: craigg

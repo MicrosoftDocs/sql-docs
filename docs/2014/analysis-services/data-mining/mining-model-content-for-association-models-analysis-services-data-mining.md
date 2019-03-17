@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "itemsets [Analysis Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "rules [Data Mining]"
   - "associations [Analysis Services]"
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg

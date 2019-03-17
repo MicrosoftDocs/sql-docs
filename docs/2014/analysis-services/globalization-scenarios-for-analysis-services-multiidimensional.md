@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple language support [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Analysis Services, international considerations"
   - "Analysis Services, international considerations"
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -74,7 +71,7 @@ manager: craigg
   
 ## See Also  
  [Internationalization for Windows Applications](/windows/desktop/Intl/international-support)   
- [Go Global Developer Center](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Go Global Developer Center](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [Writing Windows Store apps with locale-based adaptive design](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Developing Universal Windows Apps with C# and XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "log_shipping_primary_databases"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_primary_databases system table"
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

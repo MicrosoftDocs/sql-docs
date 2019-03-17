@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing alerts"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "displaying alerts"
   - "Snapshot Agent, alerts"
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

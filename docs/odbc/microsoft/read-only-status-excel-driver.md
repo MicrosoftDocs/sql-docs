@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "read-only status for Excel driver [ODBC]"
   - "Excel driver [ODBC], read-only status"
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

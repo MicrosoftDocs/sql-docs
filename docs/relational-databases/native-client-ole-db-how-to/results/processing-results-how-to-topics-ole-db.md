@@ -5,14 +5,11 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, processing results"
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

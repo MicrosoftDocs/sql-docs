@@ -4,16 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rules [SMO]"
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg

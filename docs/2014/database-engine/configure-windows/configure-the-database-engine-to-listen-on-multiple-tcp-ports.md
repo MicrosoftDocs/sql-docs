@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [SQL Server], multiple"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "tabular data stream"
   - "multiple ports"
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -72,9 +68,9 @@ manager: craigg
   
 #### To configure the SQL Server Database Engine to listen on an additional TCP port  
   
-1.  In SQL Server Configuration Manager, expand **SQL Server Network Configuration**, and then click **Protocols for***<instance_name>*.  
+1.  In SQL Server Configuration Manager, expand **SQL Server Network Configuration**, and then click **Protocols for**_<instance_name>_.  
   
-2.  Expand **Protocols for***<instance_name>*, and then click **TCP/IP**.  
+2.  Expand **Protocols for**_<instance_name>_, and then click **TCP/IP**.  
   
 3.  In the right pane, right-click each disabled IP address that you want to enable, and then click **Enable**.  
   
@@ -87,7 +83,7 @@ manager: craigg
   
 6.  In the left pane, click **SQL Server Services**.  
   
-7.  In the right pane, right-click **SQL Server***<instance_name>*, and then click **Restart**.  
+7.  In the right pane, right-click **SQL Server**_<instance_name>_, and then click **Restart**.  
   
      When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] restarts, the Error log will list the ports on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is listening.  
   

@@ -1,17 +1,13 @@
-﻿---
+---
 title: "Jobs Node (SQL Server Agent F1 Help) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 32c3bd1a-9f7c-4a01-a271-5868871b8bd5
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

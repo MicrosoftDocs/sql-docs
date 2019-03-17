@@ -1,5 +1,5 @@
 ---
-title: "Enable DirectQuery mode in SSMS | Microsoft Docs"
+title: "Enable in Analysis Services DirectQuery mode in SSMS | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -122,6 +122,6 @@ manager: kfile
  [Compatibility level](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Data sources supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Extended events](../../relational-databases/extended-events/extended-events.md)   
- [Monitor an Analysis Services instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+
   
   

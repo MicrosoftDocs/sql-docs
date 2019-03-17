@@ -3,11 +3,8 @@ title: "xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "xml_TSQL"
@@ -17,10 +14,9 @@ dev_langs:
 helpviewer_keywords: 
   - "xml data type [SQL Server], about xml data type"
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
-caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

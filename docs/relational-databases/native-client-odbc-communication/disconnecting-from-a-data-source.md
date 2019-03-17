@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC data sources, connections"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "ODBC functions"
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

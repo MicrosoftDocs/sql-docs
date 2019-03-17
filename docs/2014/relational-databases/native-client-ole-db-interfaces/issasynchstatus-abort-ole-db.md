@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ISSAsynchStatus::Abort (OLE DB)"
@@ -15,7 +13,6 @@ topic_type:
 helpviewer_keywords: 
   - "Abort method"
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -39,7 +36,7 @@ HRESULT Abort(
  *eOperation*[in]  
  The operation to abort. This should be the following value:  
   
- DBASYNCHOP_OPEN—The request to cancel applies to the asynchronous opening or population of a rowset or to the asynchronous initialization of a data source object.  
+ DBASYNCHOP_OPEN-The request to cancel applies to the asynchronous opening or population of a rowset or to the asynchronous initialization of a data source object.  
   
 ## Return Code Values  
  S_OK  

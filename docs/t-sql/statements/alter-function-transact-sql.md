@@ -5,9 +5,7 @@ ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_FUNCTION_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "modifying functions"
   - "functions [SQL Server], modifying"
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -209,7 +206,7 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Parentheses are required after the function name even if a parameter is not specified.  
   
- **@** *parameter_name*  
+ **@** _parameter_name_  
  Is a parameter in the user-defined function. One or more parameters can be declared.  
   
  A function can have a maximum of 2,100 parameters. The value of each declared parameter must be supplied by the user when the function is executed, unless a default for the parameter is defined.  
@@ -276,7 +273,7 @@ RETURNS return_data_type
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints.  
   
 \< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)**
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types.  
   

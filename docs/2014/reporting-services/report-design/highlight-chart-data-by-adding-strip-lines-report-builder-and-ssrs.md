@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-caps.latest.revision: 6
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Highlight Chart Data by Adding Strip Lines (Report Builder and SSRS)
   Strip lines, or strips, are horizontal or vertical ranges that shade the background of the chart in regular or custom intervals. You can use strip lines to:  
@@ -47,7 +44,7 @@ manager: craigg
   
      The axis properties are displayed in the Properties window.  
   
-2.  In the **Appearance** section of the Properties pane, for the StripLines property, click the Edit Collection (…) button to open the **ChartStripLine Collection Editor**.  
+2.  In the **Appearance** section of the Properties pane, for the StripLines property, click the Edit Collection (...) button to open the **ChartStripLine Collection Editor**.  
   
 3.  Click **Add** to add a new strip line to the collection.  
   

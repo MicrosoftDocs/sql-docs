@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "execution context [Analysis Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Context object"
   - "query context [Analysis Services]"
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

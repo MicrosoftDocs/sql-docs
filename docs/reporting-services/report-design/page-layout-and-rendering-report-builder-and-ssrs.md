@@ -4,16 +4,15 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Page Layout and Rendering (Report Builder and SSRS)
-Read about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendering extensions for paginated reports so you’re sure your report looks the way you want, including page layout, page breaks, and paper size. 
+Read about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendering extensions for paginated reports so you're sure your report looks the way you want, including page layout, page breaks, and paper size. 
 
  When you view reports in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server or the preview pane of Report Builder or Report Designer, the report is first rendered by the HTML renderer. You can then export the report to different formats such as Excel or comma-delimited (CSV) files. The exported report can then be used for further analysis in Excel or as a data source for applications that can import and use CSV files.  
   

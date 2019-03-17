@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [SQL Server], stored procedures"
   - "Unicode [SQL Server], extended stored procedures"
   - "extended stored procedures [SQL Server], metadata"
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg

@@ -1,13 +1,11 @@
-﻿---
+---
 title: "CREATE ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_ROUTE_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "activating routes"
   - "CREATE ROUTE statement"
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -82,7 +79,7 @@ WHERE database_id = DB_ID()
  Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the *route_lifetime* is NULL and the route never expires.  
   
  ADDRESS **='**_next\_hop\_address_**'**  
-For SQL Database Managed Instance, `ADDRESS` must be local. 
+For SQL Database managed instance, `ADDRESS` must be local. 
 
 Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   

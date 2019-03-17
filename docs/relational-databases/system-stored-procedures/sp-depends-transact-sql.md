@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_depends"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_depends"
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg

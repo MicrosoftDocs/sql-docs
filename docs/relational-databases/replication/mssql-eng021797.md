@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG021797 error"
 ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
-caps.latest.revision: 14
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

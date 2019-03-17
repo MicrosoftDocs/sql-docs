@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sqlcmd utility, Database Engine connections"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "VIA"
   - "client protocols [SQL Server]"
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg

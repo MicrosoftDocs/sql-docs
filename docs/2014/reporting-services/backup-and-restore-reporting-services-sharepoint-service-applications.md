@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Backup and Restore Reporting Services SharePoint Service Applications
   This topic describes how to backup and restore a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] services application using SharePoint Central Administration or PowerShell. The topic contains:  
@@ -49,7 +46,7 @@ manager: craigg
 3.  Verify if you service application uses an UEA or Windows authentication for database access. If it does, make a note of the credentials so you can use them to configure the service application after it is restored.  
   
 ### Backup the Encryption Keys using Central Administration  
- For information on backing up the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] encryption keys, see the “Encryption Keys” section of [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
+ For information on backing up the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] encryption keys, see the "Encryption Keys" section of [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ###  <a name="bkmk_centraladmin"></a> Backup the Service application Using SharePoint Central Administration  
  To back up the Service Application, complete the following steps:  
@@ -66,9 +63,9 @@ manager: craigg
   
  For more information, see the following topics in the SharePoint documentation:  
   
- [Back up a service application (SharePoint Foundation 2010) in the SharePoint documenttation](http://msdn.microsoft.com/library/ee748601.aspx).  
+ [Back up a service application (SharePoint Foundation 2010) in the SharePoint documenttation](https://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Back up a service application (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Back up a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### Verify Execution Account and Database Authentication  
  **Execution Account:** To verify if your service application is using an execution account:  
@@ -118,12 +115,12 @@ manager: craigg
   
  For more information, see the following topics in the SharePoint documentation:  
   
- [Restore a service application (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
+ [Restore a service application (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
  [Restore a service application (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
   
 ### Restore the Encryption Keys using Central Administration  
- For information on restoring the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] encryption keys, see the “Encryption Keys” section of [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
+ For information on restoring the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] encryption keys, see the "Encryption Keys" section of [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ### Configure the Execution Account and Database Authentication  
  **Execution Account:** If your service application was using an execution account complete the following steps to configure it:  

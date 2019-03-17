@@ -5,9 +5,7 @@ ms.date: "01/04/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WORKLOAD GROUP"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE WORKLOAD GROUP statement"
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -130,8 +127,8 @@ CREATE WORKLOAD GROUP group_name
 > [!NOTE]  
 >  Predefined workload groups and resource pools all use lower case names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.  
   
- EXTERNAL external_pool_name | “default“  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ EXTERNAL external_pool_name | "default"  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Workload group can specify an external resource pool. You can define a workload group and associate with 2 pools:  
   

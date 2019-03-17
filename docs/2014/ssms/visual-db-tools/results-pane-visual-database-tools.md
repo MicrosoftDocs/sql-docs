@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "View Designer, Results pane"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
   - "Results pane"
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

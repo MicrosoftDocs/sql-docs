@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "operators (users) [Database Engine]"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "alerts [SQL Server], operators"
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg

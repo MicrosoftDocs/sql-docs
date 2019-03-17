@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "precomputed partitions [SQL Server replication]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "merge replication precomputed partitions [SQL Server replication], SQL Server Management Studio"
   - "parameterized filters [SQL Server replication], optimizing"
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
-caps.latest.revision: 44
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

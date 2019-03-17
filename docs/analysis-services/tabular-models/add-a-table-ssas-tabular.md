@@ -1,5 +1,5 @@
 ---
-title: "Add a table | Microsoft Docs"
+title: "Add a table to an Analysis Services tabular model | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

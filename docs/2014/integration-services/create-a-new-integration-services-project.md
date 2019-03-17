@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [Integration Services], creating"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Integration Services projects, creating"
   - "SSIS projects, creating"
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-caps.latest.revision: 51
 author: douglaslms
 ms.author: douglasl
 manager: craigg

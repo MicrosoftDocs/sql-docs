@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VisualStudio.SourceControl.CheckInDialog"
 helpviewer_keywords: 
   - "checking in files"
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
   - "Availability Groups [SQL Server]"
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: 146
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -36,7 +33,7 @@ manager: craigg
   
 ||Dependent Feature|Hotfix|Link|  
 |------|-----------------------|------------|----------|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .Net 3.5 SP1 adds support to SQL Client for AlwaysOn features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for AlwaysOn features](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .Net 3.5 SP1 adds support to SQL Client for AlwaysOn features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for AlwaysOn features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="SystemReqsForAOAG"></a> Windows System Requirements and Recommendations  
   
@@ -58,16 +55,16 @@ manager: craigg
 ####  <a name="WinHotfixes"></a> Windows Hotfixes that Support AlwaysOn Availability Groups (Windows System)  
  Depending on your cluster topology, several additional Windows Server 2008 Service Pack 2 (SP2) or Windows Server 2008 R2 hotfixes might be applicable for supporting [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. The following table identifies these hotfixes. They hotfixes can be installed in any order.  
   
-||Applies to Windows 2008 SP2|Applies to Windows 2008 R2 SP1|Included in Windows 2012|To Support…|Hotfix|Link|  
+||Applies to Windows 2008 SP2|Applies to Windows 2008 R2 SP1|Included in Windows 2012|To Support...|Hotfix|Link|  
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|√|√|Yes|**Configuring optimal WSFC quorum**|On each WSFC node, ensure that the hotfix described in Knowledge Base article 2494036 is installed.<br /><br /> This hotfix supports configuring optimal quorum with non-automatic failover targets. This functionality improves multi-site clusters by enabling you to select which nodes vote.|KB 2494036:  [A hotfix is available to let you configure a cluster node that does not have quorum votes in Windows Server 2008 and in Windows Server 2008 R2](http://support.microsoft.com/kb/2494036)<br /><br /> For information about quorum voting, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|√|√|Yes|**More efficient use of network bandwidth**|On each WSFC node, ensure that the hotfix described in Knowledge Base article 2616514 is installed.<br /><br /> Without this hotfix, the Cluster service sends unnecessary registry notifications among cluster nodes. This behavior limits network bandwidth, which is a serious issue for [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)].|KB 2616514:  [Cluster service sends unnecessary registry key change notifications among cluster nodes in Windows Server 2008 or in Windows Server 2008 R2](http://support.microsoft.com/kb/2616514)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")||√|Not applicable|**VPD storage testing on disks that are not available to all WSFC nodes**|If a WSFC node is running Windows Server 2008 R2 Service Pack 1 (SP1) and the Validate SCSI Device Vital Product Data (VPD) storage test fails after incorrectly running on disks that are online and not available to all nodes in the WSFC cluster, install the hotfix described in Knowledge Base article 2531907.<br /><br /> This hotfix eliminates incorrect warnings or errors in the validation report when disks are online.|KB 2531907:  [Validate SCSI Device Vital Product Data (VPD) test fails after you install Windows Server 2008 R2 SP1](http://support.microsoft.com/kb/2531907)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")||√|Yes|**Faster failover to local replicas**|If a WSFC node is running Windows Server 2008 R2 Service Pack 1 (SP1), ensure that the hotfix described in Knowledge Base article 2687741 is installed.<br /><br /> This hotfix improves the performance of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover to local replicas.|KB 2687741:  [A hotfix that improves the performance of the "AlwaysOn Availability Group" feature in SQL Server 2012 is available for Windows Server 2008 R2](http://support.microsoft.com/KB/2687741)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|√|√|Yes|**Asymmetric storage—for Failover Cluster Instances (FCIs)**|If any Failover Cluster Instance (FCI) will be enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], install the Windows Server 2008 hotfix 976097.<br /><br /> This hotfix enables the Failover Cluster Management Microsoft Management Console (MMC) snap-in to support asymmetric storage—shared disks that are available on only some of the WSFC nodes.|KB 976097:  [Hotfix to add support for asymmetric storages to the Failover Cluster Management MMC snap-in for a failover cluster that is running Windows Server 2008 or Windows Server 2008 R2](http://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](http://technet.microsoft.com/library/jj215886.aspx)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|√|√|Not applicable|**Internet Protocol Security (IPsec)**|If your environment uses IPsec connections, you could experience a long time delay (about two or three minutes) when a client computer reestablishes the IPsec connection to a virtual network name (in this context, to connect to the availability group listener). If you use IPsec connections, we recommend that you review the specific scenarios detailed in Knowledge Base article (KB 980915).|KB 980915:  [A long time delay occurs when you reconnect an IPSec connection from a computer that is running Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2](http://support.microsoft.com/kb/980915)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|√|√|Yes|**IPv6**|If you use IPv6, we recommend that you review the specific scenarios detailed in Knowledge Base article 2578103 or 2578113, depending on your Windows Server operating system.<br /><br /> If your Windows Server topology uses IP version 6 (IPv6), the WSFC Cluster service requires about 30 seconds to fail over the IPv6 IP address. This causes clients to wait for about 30 seconds to reconnect to the IPv6 IP address.|KB 2578103 (Windows Server 2008):  [The Cluster service takes about 30 seconds to fail over IPv6 IP addresses in Windows Server 2008](http://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):  **Windows Server 2008 R2:** [The Cluster service takes about 30 seconds to fail over IPv6 IP addresses in Windows Server 2008 R2](http://support.microsoft.com/kb/2578113)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|√|√|Yes|**No Router Between cluster and application server**|If no router exists between the failover cluster and the application server, the Cluster service fails over network-related resources slowly. This delays client reconnections after an availability group fails over. In the absence of a router, we recommend that you review the specific scenarios detailed in Knowledge Base article 2582281 and install the hotfix, if applicable to your environment.|KB 2582281:  [Slow failover operation if no router exists between the cluster and an application server](http://support.microsoft.com/kb/2582281)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Yes|Yes|Yes|**Configuring optimal WSFC quorum**|On each WSFC node, ensure that the hotfix described in Knowledge Base article 2494036 is installed.<br /><br /> This hotfix supports configuring optimal quorum with non-automatic failover targets. This functionality improves multi-site clusters by enabling you to select which nodes vote.|KB 2494036:  [A hotfix is available to let you configure a cluster node that does not have quorum votes in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/kb/2494036)<br /><br /> For information about quorum voting, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Yes|Yes|Yes|**More efficient use of network bandwidth**|On each WSFC node, ensure that the hotfix described in Knowledge Base article 2616514 is installed.<br /><br /> Without this hotfix, the Cluster service sends unnecessary registry notifications among cluster nodes. This behavior limits network bandwidth, which is a serious issue for [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)].|KB 2616514:  [Cluster service sends unnecessary registry key change notifications among cluster nodes in Windows Server 2008 or in Windows Server 2008 R2](https://support.microsoft.com/kb/2616514)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")||Yes|Not applicable|**VPD storage testing on disks that are not available to all WSFC nodes**|If a WSFC node is running Windows Server 2008 R2 Service Pack 1 (SP1) and the Validate SCSI Device Vital Product Data (VPD) storage test fails after incorrectly running on disks that are online and not available to all nodes in the WSFC cluster, install the hotfix described in Knowledge Base article 2531907.<br /><br /> This hotfix eliminates incorrect warnings or errors in the validation report when disks are online.|KB 2531907:  [Validate SCSI Device Vital Product Data (VPD) test fails after you install Windows Server 2008 R2 SP1](https://support.microsoft.com/kb/2531907)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")||Yes|Yes|**Faster failover to local replicas**|If a WSFC node is running Windows Server 2008 R2 Service Pack 1 (SP1), ensure that the hotfix described in Knowledge Base article 2687741 is installed.<br /><br /> This hotfix improves the performance of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover to local replicas.|KB 2687741:  [A hotfix that improves the performance of the "AlwaysOn Availability Group" feature in SQL Server 2012 is available for Windows Server 2008 R2](https://support.microsoft.com/KB/2687741)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Yes|Yes|Yes|**Asymmetric storage-for Failover Cluster Instances (FCIs)**|If any Failover Cluster Instance (FCI) will be enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], install the Windows Server 2008 hotfix 976097.<br /><br /> This hotfix enables the Failover Cluster Management Microsoft Management Console (MMC) snap-in to support asymmetric storage-shared disks that are available on only some of the WSFC nodes.|KB 976097:  [Hotfix to add support for asymmetric storages to the Failover Cluster Management MMC snap-in for a failover cluster that is running Windows Server 2008 or Windows Server 2008 R2](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://technet.microsoft.com/library/jj215886.aspx)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Yes|Yes|Not applicable|**Internet Protocol Security (IPsec)**|If your environment uses IPsec connections, you could experience a long time delay (about two or three minutes) when a client computer reestablishes the IPsec connection to a virtual network name (in this context, to connect to the availability group listener). If you use IPsec connections, we recommend that you review the specific scenarios detailed in Knowledge Base article (KB 980915).|KB 980915:  [A long time delay occurs when you reconnect an IPSec connection from a computer that is running Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2](https://support.microsoft.com/kb/980915)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Yes|Yes|Yes|**IPv6**|If you use IPv6, we recommend that you review the specific scenarios detailed in Knowledge Base article 2578103 or 2578113, depending on your Windows Server operating system.<br /><br /> If your Windows Server topology uses IP version 6 (IPv6), the WSFC Cluster service requires about 30 seconds to fail over the IPv6 IP address. This causes clients to wait for about 30 seconds to reconnect to the IPv6 IP address.|KB 2578103 (Windows Server 2008):  [The Cluster service takes about 30 seconds to fail over IPv6 IP addresses in Windows Server 2008](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):  **Windows Server 2008 R2:** [The Cluster service takes about 30 seconds to fail over IPv6 IP addresses in Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Yes|Yes|Yes|**No Router Between cluster and application server**|If no router exists between the failover cluster and the application server, the Cluster service fails over network-related resources slowly. This delays client reconnections after an availability group fails over. In the absence of a router, we recommend that you review the specific scenarios detailed in Knowledge Base article 2582281 and install the hotfix, if applicable to your environment.|KB 2582281:  [Slow failover operation if no router exists between the cluster and an application server](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> Recommendations for Computers That Host Availability Replicas (Windows System)  
   
@@ -80,7 +77,7 @@ manager: craigg
 ###  <a name="PermissionsWindows"></a> Permissions (Windows System)  
  To administer a WSFC cluster, the user must be a system administrator on every cluster node.  
   
- For more information about the account for administering the cluster, see [Appendix A: Failover Cluster Requirements](http://technet.microsoft.com/library/dd197454\(WS.10\).aspx).  
+ For more information about the account for administering the cluster, see [Appendix A: Failover Cluster Requirements](https://technet.microsoft.com/library/dd197454\(WS.10\).aspx).  
   
 ###  <a name="RelatedTasksWindows"></a> Related Tasks (Windows System)  
   
@@ -96,7 +93,7 @@ manager: craigg
   
 3.  Use the `Get-ClusterResource` cmdlet to find the Network Name resource, then use `Set-ClusterParameter` cmdlet to set the `HostRecordTTL` value, as follows:  
   
-     Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named "`SQL Network Name (SQL35)`".  
   
@@ -112,19 +109,19 @@ manager: craigg
   
 ##### Related Content (PowerShell)  
   
--   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
   
--   [Getting Started with Windows PowerShell on a Failover Cluster](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Cluster resource commands and equivalent Windows PowerShell cmdlets](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Cluster resource commands and equivalent Windows PowerShell cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> Related Content (Windows System)  
   
--   [Configure DNS settings in a Multi-Site Failover Cluster](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [Configure DNS settings in a Multi-Site Failover Cluster](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [DNS Registration with Network Name Resource](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [DNS Registration with Network Name Resource](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
--   [Windows 2008 R2 Failover Multi-Site Clustering](http://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)  
+-   [Windows 2008 R2 Failover Multi-Site Clustering](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)  
   
 ##  <a name="ServerInstance"></a> SQL Server Instance Prerequisites and Restrictions  
  Each availability group requires a set of failover partners, known as *availability replicas*, which are hosted by instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A given server instance can be a *stand-alone instance* or a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*failover cluster instance* (FCI).  
@@ -156,7 +153,7 @@ manager: craigg
   
      Threads are shared on an on-demand basis, as follows:  
   
-    -   Typically, there are 3–10 shared threads, but this number can increase depending on the primary replica workload.  
+    -   Typically, there are 3-10 shared threads, but this number can increase depending on the primary replica workload.  
   
     -   If a given thread is idle for a while, it is released back into the general [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thread pool. Normally, an inactive thread is released after ~15 seconds of inactivity. However, depending on the last activity, an idle thread might be retained longer.  
   
@@ -168,7 +165,7 @@ manager: craigg
   
     -   A backup on a secondary replica holds a thread on the primary replica for the duration of the backup operation.  
   
- For more information, see [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
+ For more information, see [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
   
 ###  <a name="PermissionsSI"></a> Permissions (Server Instance)  
   
@@ -187,7 +184,7 @@ manager: craigg
   
 ###  <a name="RelatedContentSI"></a> Related Content (Server Instance)  
   
--   [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Network Connectivity Recommendations  
  We strongly recommend that you use the same network links for communications between WSFC cluster members and communications between availability replicas.  Using separate network links can cause unexpected behaviors if some of links fail (even intermittently).  
@@ -203,7 +200,7 @@ manager: craigg
 ###  <a name="RestrictionsFCI"></a> Restrictions (FCIs)  
   
 > [!NOTE]  
->  Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], AlwaysOn Failover Cluster Instances supports Clustered Shared Volumes (CSV) in both [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] and [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](http://technet.microsoft.com/library/dd759255.aspx).  
+>  Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], AlwaysOn Failover Cluster Instances supports Clustered Shared Volumes (CSV) in both [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] and [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/dd759255.aspx).  
   
 -   **The cluster nodes of an FCI can host only one replica for a given availability group:**  If you add an availability replica on an FCI, the WSFC cluster nodes that are possible FCI owners cannot host another replica for the same availability group.  
   
@@ -217,7 +214,7 @@ manager: craigg
   
 ||Prerequisite|Link|  
 |-|------------------|----------|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Before you use an FCI to host an availability replica, ensure that your system administrator has installed the Windows Server 2008 hotfix described in Knowledge Base article KB 976097. This hotfix enables the Failover Cluster Management Microsoft Management Console (MMC) snap-in to support asymmetric storage—shared disks that are available on only some of the WSFC nodes.|KB 976097:  [Hotfix to add support for asymmetric storages to the Failover Cluster Management MMC snap-in for a failover cluster that is running Windows Server 2008 or Windows Server 2008 R2](http://support.microsoft.com/kb/976097)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Before you use an FCI to host an availability replica, ensure that your system administrator has installed the Windows Server 2008 hotfix described in Knowledge Base article KB 976097. This hotfix enables the Failover Cluster Management Microsoft Management Console (MMC) snap-in to support asymmetric storage-shared disks that are available on only some of the WSFC nodes.|KB 976097:  [Hotfix to add support for asymmetric storages to the Failover Cluster Management MMC snap-in for a failover cluster that is running Windows Server 2008 or Windows Server 2008 R2](https://support.microsoft.com/kb/976097)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that each SQL Server failover cluster instance (FCI) possesses the required shared storage as per standard SQL Server failover cluster instance installation.||  
   
 ###  <a name="RelatedTasksFCIs"></a> Related Tasks (FCIs)  
@@ -232,7 +229,7 @@ manager: craigg
   
 -   [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [AlwaysOn Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Availability Group Prerequisites and Restrictions  
 
@@ -354,11 +351,11 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
--   [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

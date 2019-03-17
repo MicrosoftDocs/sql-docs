@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "results [SQL Server], cursors"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "requesting cursors"
   - "cursors [SQL Server], about cursors"
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg

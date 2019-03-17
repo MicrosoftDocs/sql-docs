@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -47,7 +44,7 @@ manager: craigg
 |Topic|Description|  
 |-----------|-----------------|  
 |[Create and Manage Partitions in the Workspace Database &#40;SSAS Tabular&#41;](workspace-database-ssas-tabular.md)|Describes how to create and manage partitions in the model workspace database by using Partition Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
-|[Process Partitions in the Workspace Databse &#40;SSAS Tabular&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|Describes how to process (refresh) partitions in the model workspace database.|  
+|[Process Partitions in the Workspace Database &#40;SSAS Tabular&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Describes how to process (refresh) partitions in the model workspace database.|  
   
 ## See Also  
  [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md)   

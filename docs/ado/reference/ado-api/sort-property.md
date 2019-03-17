@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "ASC [ADO]"
   - "Sort property [ADO]"
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

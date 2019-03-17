@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Analysis Services, data sources"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "connections [Analysis Services]"
   - "SSAS, data sources"
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
-caps.latest.revision: 59
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -44,9 +41,9 @@ manager: craigg
   
  <sup>1</sup> ODBC data sources are not supported for multidimensional solutions. Although Analysis Services itself will handle the connection, the designers in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] used for building solutions cannot connect to an ODBC data source, even when using the MSDASQL driver. If your business requirements include an ODBC data source, consider building a tabular solution instead.  
   
- <sup>2</sup> For more information, see [!INCLUDE[ssSDS](../../includes/sssds-md.md)], on [azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> For more information, see [!INCLUDE[ssSDS](../../includes/sssds-md.md)], on [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, see [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, see [SQL Server Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> In some cases, using the MSDAORA OLE DB provider can result in connection errors, particularly with newer versions of Oracle. If you encounter any errors, we recommend that you use one of the other providers listed for Oracle.  
   

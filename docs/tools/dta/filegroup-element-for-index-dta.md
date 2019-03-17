@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "dta"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "Filegroup element [DTA]"
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
-caps.latest.revision: 12
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

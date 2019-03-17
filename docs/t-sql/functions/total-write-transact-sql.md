@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@TOTAL_WRITE"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "write activity since last started [SQL Server]"
   - "number of disk writes"
   - "@@TOTAL_WRITE function"
-  - "disks [SQL Server], numbr of disk writes"
+  - "disks [SQL Server], number of disk writes"
   - "total write [SQL Server]"
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

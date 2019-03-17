@@ -1,23 +1,21 @@
 ---
-title: "Connect to Existing Secondary Replicas Page | Microsoft Docs"
-ms.custom: ""
+title: "'Connect to Existing Secondary Replicas' Page for availability groups"
+description: "A description of the various options found on the 'Connect to Existing Secondary Replicas' page within the 'Availability Group wizard' in SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.adddatabasewizard.connecttoreplicas.f1"
   - "sql13.swb.addreplicawizard.connecttoreplicas.f1"
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Connect to Existing Secondary Replicas Page
+# Connect to Existing Secondary Replicas Page - Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This help topic describes the options of the **Connect to Existing Secondary Replicas** page. This topic is used by the [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

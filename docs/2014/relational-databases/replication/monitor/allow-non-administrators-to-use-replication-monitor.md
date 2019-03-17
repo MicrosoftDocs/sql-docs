@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Replication Monitor, non-administrators access"
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

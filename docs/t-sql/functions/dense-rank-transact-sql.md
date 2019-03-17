@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DENSE_RANK_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "tied rows [SQL Server]"
   - "ranking rows"
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -96,7 +93,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### B. Ranking all rows in a result set  
-This example returns the top ten employees ranked by their salary. Because the `SELECT` statement did not specifiy a `PARTITION BY` clause, the `DENSE_RANK` function applied to all result set rows.  
+This example returns the top ten employees ranked by their salary. Because the `SELECT` statement did not specify a `PARTITION BY` clause, the `DENSE_RANK` function applied to all result set rows.  
   
 ```  
 USE AdventureWorks2012;  

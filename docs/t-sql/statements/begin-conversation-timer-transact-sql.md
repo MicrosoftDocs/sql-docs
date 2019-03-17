@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONVERSATION"
@@ -30,9 +28,8 @@ helpviewer_keywords:
   - "timer messages [Service Broker]"
   - "conversations [Service Broker], timers"
   - "starting timers [Service Broker]"
-  - "http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
+  - "https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -40,7 +37,7 @@ manager: craigg
 # BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Starts a timer. When the time-out expires, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts a message of type `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` on the local queue for the conversation.  
+  Starts a timer. When the time-out expires, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts a message of type `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` on the local queue for the conversation.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +51,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## Arguments  
- BEGIN CONVERSATION TIMER **(***conversation_handle***)**  
+ BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  Specifies the conversation to time. The *conversation_handle* must be of type **uniqueidentifier**.  
   
  TIMEOUT  

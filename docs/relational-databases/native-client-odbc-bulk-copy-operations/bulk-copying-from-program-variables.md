@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-bulk-copy-operations"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [ODBC], program variables"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "program variables [ODBC]"
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -31,13 +27,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   You can bulk copy directly from program variables. After allocating variables to hold the data for a row and calling [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) to start the bulk copy, call [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) for each column to specify the location and format of the program variable to be associated with the column. Fill each variable with data, then call [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) to send one row of data to the server. Repeat the process of filling the variables and calling **bcp_sendrow** until all the rows have been sent to the server, then call [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) to specify that the operation is complete.  
   
- The **bcp_bind***pData* parameter contains the address of the variable being bound to the column. The data for each column can be stored in one of two ways:  
+ The **bcp_bind**_pData_ parameter contains the address of the variable being bound to the column. The data for each column can be stored in one of two ways:  
   
 -   Allocate one variable to hold the data.  
   
 -   Allocate an indicator variable followed immediately by the data variable.  
   
- The indicator variable indicates the length of the data for variable-length columns, and also indicates NULL values if the column allows NULLs. If only a data variable is used, then the address of this variable is stored in the **bcp_bind***pData* parameter. If an indicator variable is used, the address of the indicator variable is stored in the **bcp_bind***pData* parameter. The bulk copy functions calculate the location of the data variable by adding the **bcp_bind***cbIndicator* and *pData* parameters.  
+ The indicator variable indicates the length of the data for variable-length columns, and also indicates NULL values if the column allows NULLs. If only a data variable is used, then the address of this variable is stored in the **bcp_bind**_pData_ parameter. If an indicator variable is used, the address of the indicator variable is stored in the **bcp_bind**_pData_ parameter. The bulk copy functions calculate the location of the data variable by adding the **bcp_bind**_cbIndicator_ and *pData* parameters.  
   
  **bcp_bind** supports three methods for dealing with variable-length data:  
   
@@ -45,11 +41,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Use indicator variables. As each new data value is moved into the data variable, store the length of the value in the indicator variable. If one of the other two methods is being used, specify 0 for *cbIndicator*.  
   
--   Use terminator pointers. Load the **bcp_bind***pTerm* parameter with the address of the bit pattern that terminates the data. If one of the other two methods is being used, specify NULL for *pTerm*.  
+-   Use terminator pointers. Load the **bcp_bind**_pTerm_ parameter with the address of the bit pattern that terminates the data. If one of the other two methods is being used, specify NULL for *pTerm*.  
   
  All three of these methods can be used on the same **bcp_bind** call, in which case the specification that results in the smallest amount of data being copied is used.  
   
- The **bcp_bind***type* parameter uses DB-Library data type identifiers, not ODBC data type identifiers. DB-Library data type identifiers are defined in sqlncli.h for use with the ODBC **bcp_bind** function.  
+ The **bcp_bind**_type_ parameter uses DB-Library data type identifiers, not ODBC data type identifiers. DB-Library data type identifiers are defined in sqlncli.h for use with the ODBC **bcp_bind** function.  
   
  Bulk copy functions do not support all ODBC C data types. For example, the bulk copy functions do not support the ODBC SQL_C_TYPE_TIMESTAMP structure, so use [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) or [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) to convert ODBC SQL_TYPE_TIMESTAMP data to a SQL_C_CHAR variable. If you then use **bcp_bind** with a *type* parameter of SQLCHARACTER to bind the variable to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** column, the bulk copy functions convert the timestamp escape clause in the character variable to the proper datetime format.  
   
@@ -109,7 +105,7 @@ GO
   
  The bulk copy functions can be used to quickly load data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that has been read from an ODBC data source. Use [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) to bind the columns of a result set to program variables, then use **bcp_bind** to bind the same program variables to a bulk copy operation. Calling [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) or **SQLFetch** then fetches a row of data from the ODBC data source into the program variables, and calling [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) bulk copies the data from the program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- An application can use the [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) function anytime it needs to change the address of the data variable originally specified in the **bcp_bind** *pData* parameter. An application can use the [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) function anytime it needs to change the data length originally specified in the **bcp_bind***cbData* parameter.  
+ An application can use the [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) function anytime it needs to change the address of the data variable originally specified in the **bcp_bind** _pData_ parameter. An application can use the [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) function anytime it needs to change the data length originally specified in the **bcp_bind**_cbData_ parameter.  
   
  You cannot read data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] into program variables using bulk copy; there is nothing like a "bcp_readrow" function. You can only send data from the application to the server.  
   

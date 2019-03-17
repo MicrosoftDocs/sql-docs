@@ -4,22 +4,19 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
-  This topic explains the user experience of workbooks created in previous PowerPivot environments and how to upgrade PowerPivot workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What’s New in PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+  This topic explains the user experience of workbooks created in previous PowerPivot environments and how to upgrade PowerPivot workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What's New in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
->  You cannot rollback upgrade for workbooks that are upgraded automatically on the server. Once a workbook is upgraded, it remains upgraded. To use a previous version, you can republish the previous workbook to SharePoint, restore a previous version, or recycle the workbook. For more information about restoring or recycling a document in SharePoint, see [Plan to protect content by using recycle bins and versioning](http://go.microsoft.com/fwlink/?LinkId=238669).  
+>  You cannot rollback upgrade for workbooks that are upgraded automatically on the server. Once a workbook is upgraded, it remains upgraded. To use a previous version, you can republish the previous workbook to SharePoint, restore a previous version, or recycle the workbook. For more information about restoring or recycling a document in SharePoint, see [Plan to protect content by using recycle bins and versioning](https://go.microsoft.com/fwlink/?LinkId=238669).  
   
  This topic contains the following sections:  
   
@@ -61,7 +58,7 @@ manager: craigg
   
  2008 R2 workbooks will open in PowerPivot for SharePoint 2013, however scheduled data refreshes will not work. If you review the refresh history you will see an error message similar to the following:  
   
- “The workbook contains an unsupported PowerPivot model. The PowerPivot model in the workbook is in the SQL Server 2008 R2 PowerPivot for Excel 2010 format. Supported PowerPivot models are the following:  
+ "The workbook contains an unsupported PowerPivot model. The PowerPivot model in the workbook is in the SQL Server 2008 R2 PowerPivot for Excel 2010 format. Supported PowerPivot models are the following:  
   
 -   SQL Server 2012 PowerPivot for Excel 2010.  
   
@@ -90,7 +87,7 @@ manager: craigg
   
  Upgrading a workbook resolves the following error that occurs when attempting scheduled data refresh on the previous workbook version workbook:  
   
- “Refresh operation for workbooks created with earlier version of PowerPivot is not available.”  
+ "Refresh operation for workbooks created with earlier version of PowerPivot is not available."  
   
  **How to upgrade a workbook**  
   
@@ -107,7 +104,7 @@ manager: craigg
   
  Upgrading a workbook resolves the following error that occurs when attempting scheduled data refresh on the previous workbook version workbook:  
   
- “Refresh operation for workbooks created with earlier version of PowerPivot is not available.”  
+ "Refresh operation for workbooks created with earlier version of PowerPivot is not available."  
   
  **How to upgrade a workbook**  
   
@@ -135,7 +132,7 @@ PS C:\Windows\system32> Get-PowerPivotSystemService
  To enable automatic workbook upgrade, run the following command:  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  After you upgrade the workbook, you can use scheduled data refresh and new features in the PowerPivot for Excel add-in.  

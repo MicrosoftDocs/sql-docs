@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.partprocessingtransformation.connection.f1"
 helpviewer_keywords: 
   - "Partition Processing Destination Editor"
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg

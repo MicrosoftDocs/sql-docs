@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RPC:Starting event class"
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
-caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

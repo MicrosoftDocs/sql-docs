@@ -1,14 +1,9 @@
 ---
 title: "Search Document Properties with Search Property Lists | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], search property lists"
@@ -19,9 +14,9 @@ helpviewer_keywords:
   - "search property lists [SQL Server], about"
   - "property searching [SQL Server]"
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: 49
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -47,11 +42,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ### Indexing of Registered Properties  
  After a full-text index is associated with a search property list, the index must be repopulated to index property-specific search terms. During full-text indexing, the contents of all properties are stored in the full-text index along with other content. However, when indexing a search term found in a registered property, the full-text indexer also stores the corresponding internal property ID with the term. In contrast, if a property is not registered, it is stored in the full-text index as if it were part of the document body, and it has a value of zero for the internal property ID.  
   
- The following illustration shows a logical view of how search terms appear in a full-text index that is associated with the search property list shown in the preceding illustration. A sample document, Document 1 contains three properties—Title, Author, and Keywords—as well as the document body. For the properties Title and Keywords, which are specified in the search property list, search terms are associated with their corresponding internal property IDs in the full-text index. In contrast, the content of the Author property is indexed as if it were part of the document body. This means registering a property increases the size of the full-text index somewhat, depending on the amount of content stored in the property.  
+ The following illustration shows a logical view of how search terms appear in a full-text index that is associated with the search property list shown in the preceding illustration. A sample document, Document 1 contains three properties-Title, Author, and Keywords-as well as the document body. For the properties Title and Keywords, which are specified in the search property list, search terms are associated with their corresponding internal property IDs in the full-text index. In contrast, the content of the Author property is indexed as if it were part of the document body. This means registering a property increases the size of the full-text index somewhat, depending on the amount of content stored in the property.  
   
  ![Full-text index that uses a search property list](../../relational-databases/search/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
   
- Search terms in the Title property—"Favorite," "Biking," and "Trails"—are associated with the internal property ID assigned to Title for this index, 1. Search terms in the Keywords property—"biking" and "mountain"—are associated with the internal property ID assigned to Tags for this index, 2. For search terms n the Author property—"Jane" and "Doe"—and search terms in the document body, the internal property ID is 0. The term "biking" occurs in the Title property, in the Keywords (Tags) property, and in the document body. A property search for "biking" in the Title or Keywords (Tags) property would return this document in the results. A generic full-text query for "biking" would also return this document, as if the index were not configured for property searching. A property search for "biking" in the Author property would not return this document.  
+ Search terms in the Title property-"Favorite," "Biking," and "Trails"-are associated with the internal property ID assigned to Title for this index, 1. Search terms in the Keywords property-"biking" and "mountain"-are associated with the internal property ID assigned to Tags for this index, 2. For search terms n the Author property-"Jane" and "Doe"-and search terms in the document body, the internal property ID is 0. The term "biking" occurs in the Title property, in the Keywords (Tags) property, and in the document body. A property search for "biking" in the Title or Keywords (Tags) property would return this document in the results. A generic full-text query for "biking" would also return this document, as if the index were not configured for property searching. A property search for "biking" in the Author property would not return this document.  
   
  A property-scoped full-text query uses the internal property IDs registered for the current search property list of the full-text index.  
   
@@ -87,7 +82,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     -   **Create from an existing search property list**  
   
-     For more information, see [New Search Property List](http://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a).  
+     For more information, see [New Search Property List](https://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -200,7 +195,7 @@ GO
   
     2.  To add a document property, click in the empty row at the bottom of the list, to the right of the **\***, and enter the values for the new property.  
   
-         For information about these values, see [Search Property List Editor](http://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
+         For information about these values, see [Search Property List Editor](https://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

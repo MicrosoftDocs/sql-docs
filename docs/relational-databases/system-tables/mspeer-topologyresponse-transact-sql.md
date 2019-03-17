@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSpeer_topologyresponse"
   - "MSpeer_topologyresponse_TSQL"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_topologyresponse"
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

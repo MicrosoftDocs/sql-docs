@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "REVERSE_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "REVERSE function"
   - "reverse character expressions"
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

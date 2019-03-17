@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_browsereplcmds_TSQL"
   - "sp_browsereplcmds"
@@ -45,19 +39,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## Arguments  
- [ **@xact_seqno_start =**] **'***xact_seqno_start***'**  
+ [ **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
  Specifies the lowest valued exact sequence number to return. *xact_seqno_start* is **nchar(22)**, with a default of 0x00000000000000000000.  
   
- [ **@xact_seqno_end =**] **'***xact_seqno_end***'**  
+ [ **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
  Specifies the highest exact sequence number to return. *xact_seqno_end* is **nchar(22)**, with a default of 0xFFFFFFFFFFFFFFFFFFFF.  
   
- [ **@originator_id =**] **'***originator_id***'**  
+ [ **@originator_id =**] **'**_originator_id_**'**  
  Specifies if commands with the specified *originator_id* are returned. *originator_id* is **int**, with a default of NULL.  
   
- [ **@publisher_database_id =**] **'***publisher_database_id***'**  
+ [ **@publisher_database_id =**] **'**_publisher_database_id_**'**  
  Specifies if commands with the specified *publisher_database_id* are returned. *publisher_database_id* is **int**, with a default of NULL.  
   
- [ **@article_id =**] **'***article_id***'**  
+ [ **@article_id =**] **'**_article_id_**'**  
  Specifies if commands with the specified *article_id* are returned. *article_id* is **int**, with a default of NULL.  
   
  [ **@command_id =**] *command_id*  

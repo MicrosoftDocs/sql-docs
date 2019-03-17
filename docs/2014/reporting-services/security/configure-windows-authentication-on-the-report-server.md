@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows authentication [Reporting Services]"
   - "Reporting Services, configuration"
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Configure Windows Authentication on the Report Server
   By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without additional configuration. If you want to use a different security provider for Windows integrated security (for example, if you want to use Kerberos directly), or if you modified the default values and want to restore the original settings, you can use the information in this topic to specify authentication settings on the report server.  
@@ -146,7 +143,7 @@ manager: craigg
   
 -   One option for converting the value Decimal value to hexadecimal form is to us the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Calculator. Windows Calculator supports several modes that show the 'Dec' option and 'Hex' options. Select the 'Dec' option, paste or type in the decimal value you found in the log file and then select the 'Hex' option.  
   
--   Then refer to the topic [User-Account-Control Attribute](http://go.microsoft.com/fwlink/?LinkId=183366) to derive the attribute for the service account.  
+-   Then refer to the topic [User-Account-Control Attribute](https://go.microsoft.com/fwlink/?LinkId=183366) to derive the attribute for the service account.  
   
 ##### SPNs Configured in Active Directory for the Reporting Services service account.  
  To log the SPNs in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service trace log file, you can enable the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Extended Protection feature temporarily.  
@@ -200,7 +197,7 @@ manager: craigg
   
 ## External resources  
   
--   For additional information regarding Kerberos and report servers, see [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos.](http://go.microsoft.com/fwlink/?LinkID=177751)  
+-   For additional information regarding Kerberos and report servers, see [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
 ## See Also  
  [Authentication with the Report Server](authentication-with-the-report-server.md)   

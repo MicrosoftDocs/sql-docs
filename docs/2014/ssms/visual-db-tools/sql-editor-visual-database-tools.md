@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.sqleditor"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], SQL Editor"
   - "View Designer, SQL Editor"
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

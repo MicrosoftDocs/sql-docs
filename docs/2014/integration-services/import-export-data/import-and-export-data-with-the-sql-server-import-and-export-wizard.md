@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "importing data, SSIS packages"
   - "sources [Integration Services], copying data"
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-caps.latest.revision: 87
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -86,8 +82,8 @@ manager: craigg
   
 ## External Resources  
   
--   Video, [Exporting SQL Server Data to Excel (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=200975), on technet.microsoft.com  
+-   Video, [Exporting SQL Server Data to Excel (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=200975), on technet.microsoft.com  
   
--   CodePlex sample, [Exporting from ODBC to a Flat File Using a Wizard Tutorial: Lesson Packages](http://go.microsoft.com/fwlink/?LinkId=217657), on msftisprodsamples.codeplex.com  
+-   CodePlex sample, [Exporting from ODBC to a Flat File Using a Wizard Tutorial: Lesson Packages](https://go.microsoft.com/fwlink/?LinkId=217657), on msftisprodsamples.codeplex.com  
   
   

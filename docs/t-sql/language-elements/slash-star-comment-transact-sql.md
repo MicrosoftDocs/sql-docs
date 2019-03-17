@@ -5,9 +5,7 @@ ms.date: "07/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "/*...*/_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "remarks [SQL Server]"
   - "comments [SQL Server]"
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

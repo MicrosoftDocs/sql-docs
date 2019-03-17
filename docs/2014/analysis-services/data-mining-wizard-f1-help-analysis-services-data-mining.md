@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.welcome.f1"
 helpviewer_keywords: 
   - "Mining Model Wizard"
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

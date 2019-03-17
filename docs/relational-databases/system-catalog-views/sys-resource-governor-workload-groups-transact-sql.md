@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.resource_governor_workload_groups"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor_workload_groups catalog view"
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,10 +5,8 @@ ms.date: "06/29/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.technology: "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -168,17 +166,17 @@ After you select or enter the Excel objects to import or export, you can also do
 
 The Excel driver recognizes only a limited set of data types. For example, all numeric columns are interpreted as doubles (DT_R8), and all string columns (other than memo columns) are interpreted as 255-character Unicode strings (DT_WSTR). SSIS maps the Excel data types as follows:
 
--   Numeric – double-precision float (DT_R8)
+-   Numeric - double-precision float (DT_R8)
 
--   Currency – currency (DT_CY)
+-   Currency - currency (DT_CY)
 
--   Boolean – Boolean (DT_BOOL)
+-   Boolean - Boolean (DT_BOOL)
 
--   Date/time – datetime (DT_DATE)
+-   Date/time - datetime (DT_DATE)
 
--   String – Unicode string, length 255 (DT_WSTR)
+-   String - Unicode string, length 255 (DT_WSTR)
 
--   Memo – Unicode text stream (DT_NTEXT)
+-   Memo - Unicode text stream (DT_NTEXT)
 
 ### Data type and length conversions
 

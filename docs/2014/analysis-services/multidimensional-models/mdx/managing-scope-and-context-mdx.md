@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [MDX], context"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SCOPE statement"
   - "scripts [MDX], scope"
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -18,7 +14,7 @@ manager: craigg
 # Publish Data from Excel to MDS (MDS Add-in for Excel)
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publish data to the MDS repository when you are finished working in Excel and want to save your changes so other users have access to them.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   When you publish changes, comments on MDS-managed cells are deleted.  
 > -   A formula is not supported in an MDS-managed cell. A formula in an MDS-managed cell is handled as a text value.  
   

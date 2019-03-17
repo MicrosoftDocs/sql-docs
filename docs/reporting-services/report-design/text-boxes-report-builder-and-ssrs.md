@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -14,8 +13,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.textproperties.general.f1"
   - "sql13.rtp.rptdesigner.textboxproperties.general.f1"
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Text Boxes (Report Builder and SSRS)
   When you think of a text box, you probably think of a stand-alone box containing text on a surface like in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, some text boxes are like that, and they can display static text for titles, descriptions, and labels, or dynamic text based on expressions. But every cell in a table or matrix (a tablix data region) also contains a text box, which you can format the same way you format stand-alone text boxes in your report.  

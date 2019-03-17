@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "period over period growth [Analysis Services]"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "time hierarchies [Analysis Services]"
   - "time intelligence [Analysis Services]"
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Access reports [Reporting Services]"
   - "importing reports"
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-caps.latest.revision: 39
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Import Reports from Microsoft Access (Reporting Services)
   In Report Designer, you can import reports from a [!INCLUDE[msCoName](../includes/msconame-md.md)] Access database or project. Access 2002 or a later version must be installed on the same computer on which Report Designer is installed.  

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "WMI Provider for Server Events, setting permissions"
   - "WMI permissions [SQL Server]"
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -37,7 +33,7 @@ This topic describes how to configure WMI to show the server status in SQL Serve
   
 6.  Add a group or user to the **Group or user names** box and select it.  
   
-7.  In the **Permissions for***<group or user>* box, select the **Allow** column, for the **Remote Enable** permission, for users whom you wish to remotely detect the service status.  
+7.  In the **Permissions for**_<group or user>_ box, select the **Allow** column, for the **Remote Enable** permission, for users whom you wish to remotely detect the service status.  
   
 ## See Also  
 [Start, Stop, or Pause the SQL Server Agent Service](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

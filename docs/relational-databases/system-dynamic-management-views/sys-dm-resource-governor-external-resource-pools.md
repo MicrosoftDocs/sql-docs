@@ -2,11 +2,9 @@
 title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/02/2018"
-ms.suite: "sql"
 ms.prod: sql
 ms.technology: machine-learning
 ms.reviewer: ""
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_resource_governor_external_resource_pools_TSQL"

@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FILEGROUP_ID_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "IDs [SQL Server], filegroups"
   - "names [SQL Server], filegroups"
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

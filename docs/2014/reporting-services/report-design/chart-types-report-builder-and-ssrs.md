@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-caps.latest.revision: 10
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Chart Types (Report Builder and SSRS)
   It is important to choose an appropriate chart type for the type of data that you are presenting. This will determine how well the data can be interpreted when put in chart form. For example, if your dataset contains a lot of data points relative to the size of the chart, it may be better presented using an area, line, or scatter chart. For discussion on how to prepare your data depending on the chart type selected, see [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
@@ -28,7 +25,7 @@ manager: craigg
   
  You can change the chart type after you have created it. For more information, see [Change a Chart Type &#40;Report Builder and SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Examples of many of these types of charts are available as sample reports. For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Examples of many of these types of charts are available as sample reports. For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Chart type|Display ratio data|Display stock data|Display linear data|Display multi-value data|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  

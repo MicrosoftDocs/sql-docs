@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.miningmodelproperties.f1"
 helpviewer_keywords: 
   - "Mining Model Properties dialog box"
 ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

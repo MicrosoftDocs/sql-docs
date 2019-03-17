@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -20,7 +17,7 @@ manager: craigg
   This section describes the attributes in the extensions to CSDL for tabular modeling that affect [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] query design.  
   
 ## Model Attributes  
- These attributes are defined on a sub-element of a CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) element.  
+ These attributes are defined on a sub-element of a CSDL [EntityContainer](https://msdn.microsoft.com/library/bb399169.aspx) element.  
   
 |Attribute name|Data type|Description|  
 |--------------------|---------------|-----------------|  
@@ -45,24 +42,24 @@ manager: craigg
 |`DefaultLocation`|MemberRef|A reference to a field whose value represents the default location associated with an entity instance. If omitted, the first location field in the entity is used, if any.|  
   
 ## Field Attributes  
- These attributes are defined on a sub-element of a CSDL Property or [NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx) element.  
+ These attributes are defined on a sub-element of a CSDL Property or [NavigationProperty](https://msdn.microsoft.com/library/bb387104.aspx) element.  
   
 |Attribute name|Data type|Description|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Text|The identifier used to reference this entity in a DAX query. If omitted, the field name is used.|  
-|`Caption`|Text|The display name for the entity. If omitted, the field’s `ReferenceName` is used.|  
+|`Caption`|Text|The display name for the entity. If omitted, the field's `ReferenceName` is used.|  
 |`Documentation`|Text|Descriptive text to help business users understand the meaning of the field.|  
 |`Hidden`|Boolean|Indicates whether the field should be displayed. The default is `false`, meaning the field is displayed.|  
 |`DisplayFolder`|Text|The name (full path) of the folder in which this field is displayed. If omitted, the field is displayed at the model root.|  
 |`ContextualNameRule`|Enum|A value indicating whether and how the property name should be modified based on the context in which it is used. Possible values are:  `None`,  `Role`,  `Merge`.|  
-|`Alignment`|Enum|A value indicating how the field values should be aligned in a tabular presentation. Possible values are `Default`, `Center`, `Left`, `Right`. If omitted, the default determines the alignment based on the field’s data type.|  
-|`FormatString`|Text|A .NET format string indicating how the field’s value should be formatted by default. If omitted, the following format is assumed:<br /><br /> -   Datetime fields: regional short date or “d”<br />-   Floating-point fields and integral fields with a default aggregate function: regional number or “n”<br />-   Integers with no default aggregate function: regional decimal number or “d”<br /><br /> For all other types of fields, no format string applies.|  
+|`Alignment`|Enum|A value indicating how the field values should be aligned in a tabular presentation. Possible values are `Default`, `Center`, `Left`, `Right`. If omitted, the default determines the alignment based on the field's data type.|  
+|`FormatString`|Text|A .NET format string indicating how the field's value should be formatted by default. If omitted, the following format is assumed:<br /><br /> -   Datetime fields: regional short date or "d"<br />-   Floating-point fields and integral fields with a default aggregate function: regional number or "n"<br />-   Integers with no default aggregate function: regional decimal number or "d"<br /><br /> For all other types of fields, no format string applies.|  
 |`Units`|Text|The symbol that is applied to field values to express units. If omitted, the units are assumed to be unknown.|  
-|`Width`|Integer|The preferred width in characters that should be reserved for displaying the field’s values in a tabular presentation. If omitted, a default width is based on the field’s data type.|  
-|`SortDirection`|Enum|A value indicating how the fields values are typically sorted. Possible values are `Default`, `Ascending`, `Descending`. If omitted, the default value assigns a sort direction is based on the field’s data type.|  
+|`Width`|Integer|The preferred width in characters that should be reserved for displaying the field's values in a tabular presentation. If omitted, a default width is based on the field's data type.|  
+|`SortDirection`|Enum|A value indicating how the fields values are typically sorted. Possible values are `Default`, `Ascending`, `Descending`. If omitted, the default value assigns a sort direction is based on the field's data type.|  
 |`IsRightToLeft`|Boolean|Indicates whether the field contains text that should be read right to left. If omitted, the model setting is assumed.|  
-|`OrderBy`|MemberRef|A reference to another field within the model that defines the sort order for this field’s values. The values for the two fields must have a 1:1 mapping, or the sort behavior is undefined. If omitted, the field is sorted based on its own value.|  
-|`Contents`|Enum|An enumeration describing the subtype or contents of the field. If omitted, no particular subtype is assumed, unless the field’s data type is Binary, in which case Image is assumed. For a full list of supported content types, see the AMO documentation.|  
+|`OrderBy`|MemberRef|A reference to another field within the model that defines the sort order for this field's values. The values for the two fields must have a 1:1 mapping, or the sort behavior is undefined. If omitted, the field is sorted based on its own value.|  
+|`Contents`|Enum|An enumeration describing the subtype or contents of the field. If omitted, no particular subtype is assumed, unless the field's data type is Binary, in which case Image is assumed. For a full list of supported content types, see the AMO documentation.|  
 |`DefaultAggregateFunction`|Enum|A value indicating the default function, if any, typically used to aggregate this field. Possible values are `None`, `Sum`, `Average`, `Count`, `Min`, `Max`. If omitted, `Sum` is assumed for numeric fields, `None` for all other fields.|  
 |`IsSimpleMeasure`|Boolean|Indicates whether a measure is merely a simple aggregate of a numeric field. Such aggregates can be easily defined in the query as needed and therefore should be omitted from the model definition to improve performance. If omitted, `false` is assumed.|  
 |`Kpi`<br /><br /> `KpiGoal`<br /><br /> `KpiStatus`|Subelement|Indicates that the measure element is to be used as a KPI. The KPI subelement uses the KpiGoal and KpiStauts elements to define the associated display image and target ranges.|  

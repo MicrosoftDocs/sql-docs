@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Login Change Property event class"
 ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

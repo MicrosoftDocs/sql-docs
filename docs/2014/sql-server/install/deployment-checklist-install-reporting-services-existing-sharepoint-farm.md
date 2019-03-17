@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -45,7 +42,7 @@ manager: craigg
 |**Installation and initial configuration**||  
 |Install the SharePoint add-in on all Web front-end (WFE) computers.|[Add an Additional Reporting Services Web Front-end to a Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Install SQL Server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services and the Database engine.|[Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|Create at least one SSRS service application and configure service app association.|See the ‘Service Application’ section in [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|Create at least one SSRS service application and configure service app association.|See the 'Service Application' section in [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |**Additional Configuration**||  
 |Add SSRS content types to your document library.|[Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |Provision SQL Server Agent|[Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  

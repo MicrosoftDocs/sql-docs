@@ -1,19 +1,14 @@
 ---
 title: "Point | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Point geometry subtype [SQL Server]"
   - "geometry data type [SQL Server], spatial data"
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

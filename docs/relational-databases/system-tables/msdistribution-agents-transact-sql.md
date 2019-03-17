@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSdistribution_agents_TSQL"
   - "MSdistribution_agents"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistribution_agents system table"
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg

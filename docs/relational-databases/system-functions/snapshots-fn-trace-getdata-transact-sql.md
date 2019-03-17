@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "snapshots.fn_trace_getdata"
@@ -17,7 +14,6 @@ dev_langs:
 helpviewer_keywords: 
   - "snapshots.fn_trace_getdata function"
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
-caps.latest.revision: 19
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

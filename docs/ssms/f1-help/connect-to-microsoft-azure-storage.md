@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-f1"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.windowsazurestorage.connect.f1"
   - "SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1"
 ms.assetid:
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -37,7 +33,7 @@ Specify the following information about your Windows Azure account, and then cli
 
 2.  **Account Key** - Specify the account key for the specified storage account.  
   
-3.  **Use secure endpoints (HTTPS)** – This option utilizes encrypted communication and secure identification of a network web server.  
+3.  **Use secure endpoints (HTTPS)** - This option utilizes encrypted communication and secure identification of a network web server.  
   
 4.  **Save account key** - This option saves your password in an encrypted file.  
   

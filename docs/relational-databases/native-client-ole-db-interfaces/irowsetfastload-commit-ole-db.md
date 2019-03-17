@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "IRowsetFastLoad::Commit (OLE DB)"
@@ -15,7 +13,6 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Commit method"
 ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-caps.latest.revision: 13
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Data Connections, Data Sources, and Connection Strings in Report Builder
   To include data in a report, you create data connections and datasets. A data connection includes information about how to access an external source of data. A dataset includes a query command that specifies which data to include by using the data connection.  

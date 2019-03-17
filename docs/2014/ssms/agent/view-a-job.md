@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], viewing"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, viewing"
   - "displaying jobs"
 ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -75,6 +72,6 @@ manager: craigg
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To view a job**  
   
- Use the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

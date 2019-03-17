@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transformations [Integration Services], listed"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "row transformations [Integration Services]"
   - "rowset transformations [Integration Services]"
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

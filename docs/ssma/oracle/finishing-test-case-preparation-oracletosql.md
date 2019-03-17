@@ -4,12 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
@@ -51,7 +48,7 @@ Defines the saving mode for auxiliary tables created during test execution. See 
   
 -   If you select **Ask User if Table Comparison Failed**, the user can select the necessary action if an error happens.  
   
-Click the **Finish** button to save the prepared Test Case into [Using Test Repositories (OracleToSQL)](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
+Click the **Finish** button to save the prepared Test Case into [Using Test Repositories (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
 ## See Also  
 [Using Test Repositories &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  

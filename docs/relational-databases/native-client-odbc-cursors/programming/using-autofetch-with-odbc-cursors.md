@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC cursors, autofetch"
   - "autofetch option"
   - "cursors [ODBC], autofetch"
 ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

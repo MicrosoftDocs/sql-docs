@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.sqlserverregisteredserver.dhelp"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "server management [SQL Server], registering servers"
   - "server registration [SQL Server]"
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
@@ -14,7 +12,7 @@ ms.author: jroth
 manager: craigg
 ---
 # Modify User-defined Functions
-  You can modify user-defined functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying user-defined functions as described below will not change the functions’ permissions, nor will it affect any dependent functions, stored procedures, or triggers.  
+  You can modify user-defined functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying user-defined functions as described below will not change the functions' permissions, nor will it affect any dependent functions, stored procedures, or triggers.  
   
  **In This Topic**  
   
@@ -66,7 +64,7 @@ manager: craigg
   
 5.  In the Query Window, make the necessary changes to the ALTER FUNCTION statement.  
   
-6.  On the **File** menu, click **Save***function_name*.  
+6.  On the **File** menu, click **Save**_function_name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

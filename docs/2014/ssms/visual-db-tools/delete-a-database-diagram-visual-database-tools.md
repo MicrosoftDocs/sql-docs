@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "diagrams [SQL Server], deleting"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], deleting"
   - "removing database diagrams"
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

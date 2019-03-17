@@ -1,9 +1,10 @@
 ---
-title: Command-prompt installation of SQL Server machine learning R and Python components | Microsoft Docs
+title: Command-prompt installation of R and Python components - SQL Server Machine Learning
+description: Run SQL Server command line setup to add R language and Python integration to a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/21/2018  
+ms.date: 03/13/2019  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -51,7 +52,7 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /IACCEPTPYTHONLICENSETERMS | Indicates you have accepted the license terms for using the Python components. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indicates you have accepted the license terms for using SQL Server.|
 | /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
-| /MPYCACHEDIRECTORY | For offline setup, sets the folder containing the Python component CAB files. |
+| /MPYCACHEDIRECTORY | Reserved for future use. Use %TEMP% to store Python component CAB files for installation on computers that do not have an internet connection. |
 
 
 ## <a name="indb"></a> In-database instance installations
@@ -67,7 +68,7 @@ To view progress information without the interactive on-screen prompts, use the 
 
 For a concurrent installation of the database engine instance, provide the instance name and an administrator (Windows) login. Include features for installing core and language components, as well as acceptance of all licensing terms.
 
-```  
+```cmd
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
@@ -75,7 +76,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,
 
 This the same command, but with a SQL Server login on a database engine using mixed authentication.
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<sql-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
@@ -83,7 +84,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 This example is Python only, showing that you can add one language by omitting a feature.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTPYTHONLICENSETERMS
@@ -93,7 +94,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 
 This command is identical to SQL Server 2017, but without the Python elements, which are not available in SQL Server 2016 setup.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS 
@@ -117,7 +118,7 @@ For SQL Server 2016, use this article instead [Install SQL Server 2016 R Service
 
 When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 database engine and Python, you could use this command to add R.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
@@ -126,13 +127,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> Silent install
 
-A silent installation suppresses the check for .cab file locations. For this reason, you must specify the location where .cab files are to be unpacked. You can the temp directory for this.
+A silent installation suppresses the check for .cab file locations. For this reason, you must specify the location where .cab files are to be unpacked. For Python, CAB files must be located in %TEMP*. For R, you can set the folder path using You can the temp directory for this.
  
-```  
+```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> Standalone server installations
@@ -141,14 +142,14 @@ A standalone server is a "shared feature" not bound to a database engine instanc
 
 SQL Server 2017 supports Python and R on a standalone server:
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 SQL Server 2016 is R-only:
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
 /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```

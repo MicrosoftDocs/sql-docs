@@ -6,8 +6,6 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.schemacompare.SchemaCompareOptionsDialog"
@@ -16,7 +14,6 @@ f1_keywords:
   - "sql.data.tools.schemacompare.connectiondialog.f1"
   - "sql.data.tools.schemacompare.connectiondialog.error.f1"
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

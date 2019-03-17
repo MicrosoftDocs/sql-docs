@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -275,9 +271,9 @@ DEALLOCATE adhoc_queries_cursor;
   
  The example above uses the `sp_query_store_remove_query` extended stored procedure for removing unnecessary data. You can also use two other procedures.  
   
--   `sp_query_store_reset_exec_stats` – clear runtime statistics for a given plan.  
+-   `sp_query_store_reset_exec_stats` - clear runtime statistics for a given plan.  
   
--   `sp_query_store_remove_plan` – removes a single plan.  
+-   `sp_query_store_remove_plan` - removes a single plan.  
   
 
   

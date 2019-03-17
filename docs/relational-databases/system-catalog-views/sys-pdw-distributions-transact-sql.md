@@ -1,18 +1,14 @@
-﻿---
+---
 title: "sys.pdw_distributions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: ""
-ms.service: sql-data-warehouse
-ms.component: system-objects
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], types"
   - "type permissions [SQL Server]"
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
-caps.latest.revision: 30
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Type Permissions (Transact-SQL)

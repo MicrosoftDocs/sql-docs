@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcdest.errorhandling.f1"
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -5,14 +5,11 @@ ms.date: "07/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 1
 author: "v-makouz"
 ms.author: v-makouz
 manager: "kenvh"
@@ -32,12 +29,12 @@ SQLGetDescField has the following syntax:
 
 ```  
 SQLRETURN SQLGetDescField(  
-     SQLHDESC        DescriptorHandle,  
-     SQLSMALLINT     RecNumber,  
-     SQLSMALLINT     FieldIdentifier,  
-     SQLPOINTER      ValuePtr,  
-     SQLINTEGER      BufferLength,  
-     SQLINTEGER *    StringLengthPtr);  
+     SQLHDESC        DescriptorHandle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     FieldIdentifier,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
  [Input] IRD(Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statement attribute

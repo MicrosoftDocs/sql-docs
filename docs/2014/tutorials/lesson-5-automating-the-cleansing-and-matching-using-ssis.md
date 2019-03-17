@@ -4,21 +4,15 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
-caps.latest.revision: 8
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Lesson 5: Automating the Cleansing and Matching using SSIS
-  In Lesson 1, you built the Suppliers knowledge base and used it to cleanse data in Lesson 2 and match data in Lesson 3 using the tool **DQS Client**. In a real world scenario, you may have to pull data from a source that DQS does not support or you want to automate the cleansing and matching process without having to use the **DQS Client** tool. SQL Server Integration Services (SSIS) has components that you can use to integrate data from various heterogeneous sources and a **[DQS Cleansing Transform](http://msdn.microsoft.com/library/ee677619.aspx)** component to invoke the cleansing functionality exposed by DQS. Currently, DQS does not expose matching functionality for SSIS to use, but you can use the **[Fuzzy Grouping Transform](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** to identify duplicates in the data.  
+  In Lesson 1, you built the Suppliers knowledge base and used it to cleanse data in Lesson 2 and match data in Lesson 3 using the tool **DQS Client**. In a real world scenario, you may have to pull data from a source that DQS does not support or you want to automate the cleansing and matching process without having to use the **DQS Client** tool. SQL Server Integration Services (SSIS) has components that you can use to integrate data from various heterogeneous sources and a **[DQS Cleansing Transform](https://msdn.microsoft.com/library/ee677619.aspx)** component to invoke the cleansing functionality exposed by DQS. Currently, DQS does not expose matching functionality for SSIS to use, but you can use the **[Fuzzy Grouping Transform](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** to identify duplicates in the data.  
   
  You can upload data to MDS by using the **Entity-based Staging feature**. When you create an entity in MDS, corresponding staging tables and stored procedures are automatically created. For example, when you created the Supplier entity, the **stg.supplier_Leaf** table and the **stg.udp_Supplier_Leaf** stored procedure were automatically created. You use the staging tables and procedures to create, update, and delete entity members. In this lesson, you create new entity members for the Supplier Entity. To load data into the MDS server, the SSIS package first loads the data into the staging table stg.supplier_Leaf and then triggers the associated stored procedure stg.udp_Supplier_Leaf. See [Importing Data](../master-data-services/overview-importing-data-from-tables-master-data-services.md) for more details.  
   

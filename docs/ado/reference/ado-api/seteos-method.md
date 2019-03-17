@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SetEOS method [ADO]"
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

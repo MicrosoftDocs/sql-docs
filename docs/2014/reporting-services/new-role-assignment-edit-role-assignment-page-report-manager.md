@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # New Role Assignment: Edit Role Assignment Page (Report Manager)
   Use the New Role Assignment or Edit Role Assignment page to grant permissions to report server items and operations. Each user who requires access to a report server must have a role assignment that defines the level of access. You can create role assignments at the root node, or on a specific report, model, folder, resource, or shared data source. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] security is enforced through role assignments that you apply to items. A role assignment matches a group or user to a role definition, where each role definition identifies the tasks that groups or users can perform with regards to a specific item.  

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetTypeInfo"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetTypeInfo function [ODBC]"
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -39,8 +36,8 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetTypeInfo(  
-     SQLHSTMT      StatementHandle,  
-     SQLSMALLINT   DataType);  
+     SQLHSTMT      StatementHandle,  
+     SQLSMALLINT   DataType);  
 ```  
   
 ## Arguments  
@@ -111,7 +108,7 @@ SQLRETURN SQLGetTypeInfo(
   
 |Column name|Column<br /><br /> number|Data type|Comments|  
 |-----------------|-----------------------|---------------|--------------|  
-|TYPE_NAME (ODBC 2.0)|1|Varchar not NULL|Data source–dependent data-type name; for example, "CHAR()", "VARCHAR()", "MONEY", "LONG VARBINARY", or "CHAR ( ) FOR BIT DATA". Applications must use this name in **CREATE TABLE** and **ALTER TABLE** statements.|  
+|TYPE_NAME (ODBC 2.0)|1|Varchar not NULL|Data source-dependent data-type name; for example, "CHAR()", "VARCHAR()", "MONEY", "LONG VARBINARY", or "CHAR ( ) FOR BIT DATA". Applications must use this name in **CREATE TABLE** and **ALTER TABLE** statements.|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint not NULL|SQL data type. This can be an ODBC SQL data type or a driver-specific SQL data type. For datetime or interval data types, this column returns the concise data type (such as SQL_TYPE_TIME or SQL_INTERVAL_YEAR_TO_MONTH). For a list of valid ODBC SQL data types, see [SQL Data Types](../../../odbc/reference/appendixes/sql-data-types.md) in Appendix D: Data Types. For information about driver-specific SQL data types, see the driver's documentation.|  
 |COLUMN_SIZE (ODBC 2.0)|3|Integer|The maximum column size that the server supports for this data type. For numeric data, this is the maximum precision. For string data, this is the length in characters. For datetime data types, this is the length in characters of the string representation (assuming the maximum allowed precision of the fractional seconds component). NULL is returned for data types where column size is not applicable. For interval data types, this is the number of characters in the character representation of the interval literal (as defined by the interval leading precision; see [Interval Data Type Length](../../../odbc/reference/appendixes/interval-data-type-length.md) in Appendix D: Data Types).<br /><br /> For more information on column size, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types.|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|Character or characters used to prefix a literal; for example, a single quotation mark (') for character data types or 0x for binary data types; NULL is returned for data types where a literal prefix is not applicable.|  
@@ -121,9 +118,9 @@ SQLRETURN SQLGetTypeInfo(
 |CASE_SENSITIVE (ODBC 2.0)|8|Smallint not NULL|Whether a character data type is case-sensitive in collations and comparisons:<br /><br /> SQL_TRUE if the data type is a character data type and is case-sensitive.<br /><br /> SQL_FALSE if the data type is not a character data type or is not case-sensitive.|  
 |SEARCHABLE (ODBC 2.0)|9|Smallint not NULL|How the data type is used in a **WHERE** clause:<br /><br /> SQL_PRED_NONE if the column cannot be used in a **WHERE** clause. (This is the same as the SQL_UNSEARCHABLE value in ODBC 2.*x*.)<br /><br /> SQL_PRED_CHAR if the column can be used in a **WHERE** clause, but only with the **LIKE** predicate. (This is the same as the SQL_LIKE_ONLY value in ODBC 2.*x*.)<br /><br /> SQL_PRED_BASIC if the column can be used in a **WHERE** clause with all the comparison operators except **LIKE** (comparison, quantified comparison, **BETWEEN**, **DISTINCT**, **IN**, **MATCH**, and **UNIQUE**). (This is the same as the SQL_ALL_EXCEPT_LIKE value in ODBC 2.*x*.)<br /><br /> SQL_SEARCHABLE if the column can be used in a **WHERE** clause with any comparison operator.|  
 |UNSIGNED_ATTRIBUTE (ODBC 2.0)|10|Smallint|Whether the data type is unsigned:<br /><br /> SQL_TRUE if the data type is unsigned.<br /><br /> SQL_FALSE if the data type is signed.<br /><br /> NULL is returned if the attribute is not applicable to the data type or the data type is not numeric.|  
-|FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint not NULL|Whether the data type has predefined fixed precision and scale (which are data source–specific), such as a money data type:<br /><br /> SQL_TRUE if it has predefined fixed precision and scale.<br /><br /> SQL_FALSE if it does not have predefined fixed precision and scale.|  
-|AUTO_UNIQUE_VALUE (ODBC 2.0)|12|Smallint|Whether the data type is autoincrementing:<br /><br /> SQL_TRUE if the data type is autoincrementing.<br /><br /> SQL_FALSE if the data type is not autoincrementing.<br /><br /> NULL is returned if the attribute is not applicable to the data type or the data type is not numeric.<br /><br /> An application can insert values into a column having this attribute, but typically cannot update the values in the column.<br /><br /> When an insert is made into an auto-increment column, a unique value is inserted into the column at insert time. The increment is not defined, but is data source–specific. An application should not assume that an auto-increment column starts at any particular point or increments by any particular value.|  
-|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|Localized version of the data source–dependent name of the data type. NULL is returned if a localized name is not supported by the data source. This name is intended for display only, such as in dialog boxes.|  
+|FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint not NULL|Whether the data type has predefined fixed precision and scale (which are data source-specific), such as a money data type:<br /><br /> SQL_TRUE if it has predefined fixed precision and scale.<br /><br /> SQL_FALSE if it does not have predefined fixed precision and scale.|  
+|AUTO_UNIQUE_VALUE (ODBC 2.0)|12|Smallint|Whether the data type is autoincrementing:<br /><br /> SQL_TRUE if the data type is autoincrementing.<br /><br /> SQL_FALSE if the data type is not autoincrementing.<br /><br /> NULL is returned if the attribute is not applicable to the data type or the data type is not numeric.<br /><br /> An application can insert values into a column having this attribute, but typically cannot update the values in the column.<br /><br /> When an insert is made into an auto-increment column, a unique value is inserted into the column at insert time. The increment is not defined, but is data source-specific. An application should not assume that an auto-increment column starts at any particular point or increments by any particular value.|  
+|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|Localized version of the data source-dependent name of the data type. NULL is returned if a localized name is not supported by the data source. This name is intended for display only, such as in dialog boxes.|  
 |MINIMUM_SCALE (ODBC 2.0)|14|Smallint|The minimum scale of the data type on the data source. If a data type has a fixed scale, the MINIMUM_SCALE and MAXIMUM_SCALE columns both contain this value. For example, an SQL_TYPE_TIMESTAMP column might have a fixed scale for fractional seconds. NULL is returned where scale is not applicable. For more information, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types.|  
 |MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|The maximum scale of the data type on the data source. NULL is returned where scale is not applicable. If the maximum scale is not defined separately on the data source, but is instead defined to be the same as the maximum precision, this column contains the same value as the COLUMN_SIZE column. For more information, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types.|  
 |SQL_DATA_TYPE (ODBC 3.0)|16|Smallint NOT NULL|The value of the SQL data type as it appears in the SQL_DESC_TYPE field of the descriptor. This column is the same as the DATA_TYPE column, except for interval and datetime data types.<br /><br /> For interval and datetime data types, the SQL_DATA_TYPE field in the result set will return SQL_INTERVAL or SQL_DATETIME, and the SQL_DATETIME_SUB field will return the subcode for the specific interval or datetime data type. (See [Appendix D: Data Types](../../../odbc/reference/appendixes/appendix-d-data-types.md).)|  

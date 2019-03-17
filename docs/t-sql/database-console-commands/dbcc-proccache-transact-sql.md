@@ -5,9 +5,7 @@ ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC PROCCACHE"
@@ -21,8 +19,7 @@ helpviewer_keywords:
   - "displaying procedure cache information"
   - "DBCC PROCCACHE statement"
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: 31
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

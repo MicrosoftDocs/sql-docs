@@ -1,15 +1,11 @@
-﻿---
+---
 title: "SQL Command Prompt Utilities (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "misc"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "command prompt utilities [SQL Server]"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "utilities [SQL Server], command prompt"
   - "command prompt [SQL Server], utilities"
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
-caps.latest.revision: 90
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

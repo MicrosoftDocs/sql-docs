@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -31,7 +28,7 @@ Beginning with Windows Server 2003, Microsoft operating systems have supported t
 ## Function Declaration Changes  
  The following function signatures have changed for 64-bit programming. The items in bold text are the specific parameters that are different.  
   
-```  
+```c
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -112,7 +109,7 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
 ## Changes in SQL Data Types  
  The following four SQL types are still supported on 32-bit only; they are not defined for 64-bit compilers. These types are no longer used for any parameters in MDAC 2.7; use of these types will cause compiler failures on 64-bit platforms.  
   
-```  
+```cpp
 #ifdef WIN32   
 typedef SQLULEN SQLROWCOUNT;   
 typedef SQLULEN SQLROWSETSIZE;   
@@ -123,7 +120,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  The definition of SQLSETPOSIROW has changed for both 32-bit and 64-bit compilers:  
   
-```  
+```c
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -133,7 +130,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  The definitions of SQLLEN and SQLULEN have changed for 64-bit compilers:  
   
-```  
+```c
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -145,7 +142,7 @@ typedef UINT64 SQLULEN;
   
  Although SQL_C_BOOKMARK is deprecated in ODBC 3.0, for 64-bit compilers on 2.0 clients, this value has changed:  
   
-```  
+```c
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -155,7 +152,7 @@ typedef UINT64 SQLULEN;
   
  The BOOKMARK type is defined differently in the newer headers:  
   
-```  
+```c
 typedef SQLULEN BOOKMARK;  
 ```  
   
@@ -286,7 +283,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DRIVER_HLIB  
   
- When *InfoType* has either of the following 2 values **InfoValuePtr* is 64-bits on both input and ouput:  
+ When *InfoType* has either of the following 2 values **InfoValuePtr* is 64-bits on both input and output:  
   
  SQL_DRIVER_HDESC  
   

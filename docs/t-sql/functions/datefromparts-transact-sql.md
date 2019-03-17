@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEFROMPARTS_TSQL"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "DATEFROMPARTS function"
 ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

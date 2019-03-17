@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "External Scripts object"
   - "SQLServer:External Scripts"
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
-caps.latest.revision: 7
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, External Scripts Object

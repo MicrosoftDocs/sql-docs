@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "header records [ODBC]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "fields [ODBC]"
   - "status information [ODBC]"
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -33,7 +30,7 @@ manager: craigg
   
  Fields in the status records contain information about specific errors or warnings returned by the ODBC Driver Manager, driver, or data source, including the SQLSTATE, native error number, diagnostic message, column number, and row number. Status records are created only if the function returns SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA, or SQL_STILL_EXECUTING. For a complete list of fields in the status records, see **SQLGetDiagField**.  
   
- **SQLGetDiagRec** retrieves a single diagnostic record along with its ODBC SQLSTATE, native error number, and diagnostic-message fields. This functionality is similar to the ODBC 2.*x***SQLError** function. The simplest error-handling function in ODBC 3.*x* is to repeatedly call **SQLGetDiagRec** starting with the *RecNumber* parameter set to 1 and incrementing *RecNumber* by 1 until **SQLGetDiagRec** returns SQL_NO_DATA. This is equivalent to an ODBC 2.*x* application calling **SQLError** until it returns SQL_NO_DATA_FOUND.  
+ **SQLGetDiagRec** retrieves a single diagnostic record along with its ODBC SQLSTATE, native error number, and diagnostic-message fields. This functionality is similar to the ODBC 2._x_**SQLError** function. The simplest error-handling function in ODBC 3.*x* is to repeatedly call **SQLGetDiagRec** starting with the *RecNumber* parameter set to 1 and incrementing *RecNumber* by 1 until **SQLGetDiagRec** returns SQL_NO_DATA. This is equivalent to an ODBC 2.*x* application calling **SQLError** until it returns SQL_NO_DATA_FOUND.  
   
  ODBC 3.*x* supports much more diagnostic information than ODBC 2.*x*. This information is stored in additional fields in diagnostic records retrieved by using **SQLGetDiagField**.  
   

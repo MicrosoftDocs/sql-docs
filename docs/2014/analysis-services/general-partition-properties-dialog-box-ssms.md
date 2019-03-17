@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.partitionproperties.general.f1"
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

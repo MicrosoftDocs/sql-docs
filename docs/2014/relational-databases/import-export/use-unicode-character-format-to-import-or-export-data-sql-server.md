@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data formats [SQL Server], Unicode character"
   - "Unicode [SQL Server], bulk importing and exporting"
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

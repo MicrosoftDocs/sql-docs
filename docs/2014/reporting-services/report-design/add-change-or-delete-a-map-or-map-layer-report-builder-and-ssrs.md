@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10526"
@@ -27,10 +25,9 @@ f1_keywords:
   - "10527"
   - "sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1"
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-caps.latest.revision: 12
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS)
   A map is a collection of layers. When you add a map to a report, you define the first layer. You can create additional layers by using the map layer wizard.  
@@ -158,7 +155,7 @@ manager: craigg
 4.  In **File name**, type the location of an ESRI Shapefile, or click **Browse** to select an ESRI Shapefile.  
   
     > [!NOTE]  
-    >  If the Shapefile is on your local computer, the spatial data is embedded in the report definition. To retrieve the data dynamically when the report is processed, you must upload the ESRI .shp file and its .dbf support file to the report server. For more information, see " How to: Upload a File or Report (Report Manager)" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+    >  If the Shapefile is on your local computer, the spatial data is embedded in the report definition. To retrieve the data dynamically when the report is processed, you must upload the ESRI .shp file and its .dbf support file to the report server. For more information, see " How to: Upload a File or Report (Report Manager)" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -187,7 +184,7 @@ manager: craigg
 2.  On the toolbar, click the **Add Layer** button, and from the drop-down list, click **Tile Layer**.  
   
     > [!NOTE]  
-    >  For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371) and [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=151372).  
+    >  For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371) and [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 3.  Right-click the tile layer in the Map pane, and then click **Tile Properties**.  
   

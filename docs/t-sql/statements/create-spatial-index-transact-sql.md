@@ -5,9 +5,7 @@ ms.date: "04/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SPATIAL INDEX"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "CREATE SPATIAL INDEX statement"
   - "CREATE INDEX statement"
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -61,8 +58,8 @@ CREATE SPATIAL INDEX index_name
     [ USING GEOMETRY_AUTO_GRID ]  
           WITH  (  
         <bounding_box>  
-            [ [,] <tessellation_cells_per_object> [ ,…n] ]  
-            [ [,] <spatial_index_option> [ ,…n] ]  
+            [ [,] <tessellation_cells_per_object> [ ,...n] ]  
+            [ [,] <spatial_index_option> [ ,...n] ]  
                  )  
 }  
   
@@ -71,9 +68,9 @@ CREATE SPATIAL INDEX index_name
        [ USING GEOMETRY_GRID ]  
          WITH (  
                     <bounding_box>  
-                        [ [,]<tessellation_grid> [ ,…n] ]  
-                        [ [,]<tessellation_cells_per_object> [ ,…n] ]  
-                        [ [,]<spatial_index_option> [ ,…n] ]  
+                        [ [,]<tessellation_grid> [ ,...n] ]  
+                        [ [,]<tessellation_cells_per_object> [ ,...n] ]  
+                        [ [,]<spatial_index_option> [ ,...n] ]  
    )  
 }   
   
@@ -86,7 +83,7 @@ CREATE SPATIAL INDEX index_name
 {  
     [ USING GEOGRAPHY_AUTO_GRID ]  
     [ WITH (  
-        [ [,] <tessellation_cells_per_object> [ ,…n] ]  
+        [ [,] <tessellation_cells_per_object> [ ,...n] ]  
         [ [,] <spatial_index_option> ]  
      ) ]  
 }  
@@ -95,9 +92,9 @@ CREATE SPATIAL INDEX index_name
 {  
     [ USING GEOGRAPHY_GRID ]  
     [ WITH (  
-                [ <tessellation_grid> [ ,…n] ]  
-                [ [,] <tessellation_cells_per_object> [ ,…n] ]  
-                [ [,] <spatial_index_option> [ ,…n] ]  
+                [ <tessellation_grid> [ ,...n] ]  
+                [ [,] <tessellation_cells_per_object> [ ,...n] ]  
+                [ [,] <spatial_index_option> [ ,...n] ]  
                 ) ]  
 }  
   
@@ -111,12 +108,12 @@ CREATE SPATIAL INDEX index_name
   
 <named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
   
-<tesselation_grid> ::=  
+<tessellation_grid> ::=  
 {   
     GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }   
         )  
 }  
-<tesseallation_cells_per_object> ::=  
+<tessellation_cells_per_object> ::=  
 {   
    CELLS_PER_OBJECT = n   
 }  
@@ -493,7 +490,7 @@ MAXDOP =*max_degree_of_parallelism*
   
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 > Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}  

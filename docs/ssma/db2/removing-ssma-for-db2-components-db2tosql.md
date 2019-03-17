@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -32,7 +26,7 @@ You can uninstall SSMA by using **Add or Remove Programs**.
 3.  To confirm that you want to uninstall SSMA, click **Yes**.  
   
 ## Uninstalling the Extension Pack  
-If you are sure your migrated databases do not use objects in the **sysdb.ssma_DB2** schema, you can remove the extension pack by deleting it from the schema – there are is no Windows uninstall  
+If you are sure your migrated databases do not use objects in the **sysdb.ssma_DB2** schema, you can remove the extension pack by deleting it from the schema - there are is no Windows uninstall  
   
 ## See Also  
 [Installing SSMA for DB2 Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  

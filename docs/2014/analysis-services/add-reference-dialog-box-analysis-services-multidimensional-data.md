@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.addreference.f1"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Add Reference dialog box"
 ms.assetid: 457958c4-6baa-474d-99a0-34c195ceba09
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

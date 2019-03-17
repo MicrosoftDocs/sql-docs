@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CHECK constraints, disabling"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "disabling constraints"
   - "constraints [SQL Server], check"
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg

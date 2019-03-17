@@ -5,9 +5,7 @@ ms.date: "12/02/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GETUTCDATE"
@@ -34,7 +32,6 @@ helpviewer_keywords:
   - "dates [SQL Server], system date and time"
   - "time [SQL Server], system"
 ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

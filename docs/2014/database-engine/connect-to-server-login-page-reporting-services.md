@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttors.login.f1"
 helpviewer_keywords: 
   - "Connect to Server dialog box, Reporting Services"
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg

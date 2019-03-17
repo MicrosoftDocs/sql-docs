@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sample applications [SMO]"
   - "SMO [SQL Server], samples"
   - "SQL Server Management Objects, samples"
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
-caps.latest.revision: 41
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg

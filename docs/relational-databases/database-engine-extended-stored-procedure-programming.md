@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "extended stored procedures [SQL Server], programming"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "macros [SQL Server]"
   - "Extended Stored Procedure API [SQL Server]"
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg

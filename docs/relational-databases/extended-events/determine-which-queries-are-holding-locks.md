@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], extended events"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], locks"
   - "extended events [SQL Server], holding locks"
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

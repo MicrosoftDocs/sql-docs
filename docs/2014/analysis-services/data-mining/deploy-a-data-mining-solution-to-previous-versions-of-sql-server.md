@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "synchronization [Analysis Services]"
   - "deployment [Analysis Services]"
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg

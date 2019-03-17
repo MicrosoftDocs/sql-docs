@@ -5,9 +5,7 @@ ms.date: "07/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbcc_dllname_(FREE)_TSQL"
@@ -26,8 +24,7 @@ helpviewer_keywords:
   - "freeing DLLs"
   - "unloading DLLs"
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
-caps.latest.revision: 27
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

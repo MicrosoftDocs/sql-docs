@@ -5,9 +5,7 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index size [SQL Server]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "designing indexes [SQL Server], included columns"
   - "nonkey columns"
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -58,7 +55,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Computed columns derived from **image**, **ntext**, and **text** data types can be nonkey columns as long as the computed column data type is allowed as a nonkey index column.  
   
--   Nonkey columns cannot be dropped from a table unless that table’s index is dropped first.  
+-   Nonkey columns cannot be dropped from a table unless that table's index is dropped first.  
   
 -   Nonkey columns cannot be changed, except to do the following:  
   
@@ -81,17 +78,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  Click the plus sign to expand the table on which you want to create an index with nonkey columns.  
   
-4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index…**.  
+4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index...**.  
   
 5.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-6.  Under the **Index key columns** tab, click **Add…**.  
+6.  Under the **Index key columns** tab, click **Add...**.  
   
 7.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.  
   
 8.  Click **OK**.  
   
-9. Under the **Included columns** tab, click **Add…**.  
+9. Under the **Included columns** tab, click **Add...**.  
   
 10. In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index as nonkey columns.  
   

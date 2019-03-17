@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [Analysis Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "external routines [Analysis Services]"
   - "stored procedures [Analysis Services], about stored procedures"
 ms.assetid: f9c57d91-f60f-4f0e-8f7f-d87f4ba97b7c
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "12329 (Database Engine error)"
 ms.assetid: 43f90287-36d5-46c2-ac91-a37202dcf6d3
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -1,13 +1,11 @@
 ---
 title: "money and smallmoney (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "money_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "values [SQL Server], monetary"
   - "currency [SQL Server]"
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

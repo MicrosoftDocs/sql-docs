@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ANY"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "TRUE"
   - "single-column set of values [SQL Server]"
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
-caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

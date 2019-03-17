@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATALENGTH_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "expressions [SQL Server], length"
   - "lengths [SQL Server], data"
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -55,9 +52,6 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of an
 - **nvarchar**
 - **text**
 - **varbinary**
-
-and
-
 - **varchar**
 
 data types, because these data types can store variable-length data.

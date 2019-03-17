@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Management Objects, transactions"
   - "transactions [SMO]"
   - "SMO [SQL Server], transactions"
 ms.assetid: 399aded8-bee3-4cfb-a671-1877c7d0de9f
-caps.latest.revision: 37
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_trace_getfilterinfo"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "filters [SQL Server], traces"
   - "fn_trace_getfilterinfo function"
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
-caps.latest.revision: 36
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

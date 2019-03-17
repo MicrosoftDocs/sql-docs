@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "column names [SQL Server]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
   - "names [SQL Server], columns"
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -26,7 +26,7 @@ Before installing the certificate, do the following:
 ## For Security Reasons, Obtain a Trusted Certificate  
 SQL Server PDW supports using a certificate to encrypt connections to the Control node; including connections to the **Admin Console**.  
   
-By default, the **Admin Console** includes a self-signed certificate that provides privacy, but not server authentication. This can leave communications vulnerable to a man-in-the-middle attack. When a user connects to the Admin Console by using the self-signed certificate, Internet Explorer returns the error: “There is a problem with this website's security certificate”.  
+By default, the **Admin Console** includes a self-signed certificate that provides privacy, but not server authentication. This can leave communications vulnerable to a man-in-the-middle attack. When a user connects to the Admin Console by using the self-signed certificate, Internet Explorer returns the error: "There is a problem with this website's security certificate".  
   
 Although the connection through the self-signed certificate encrypts in-flight data between the client and the server, the connection is still at risk from attackers.  
   

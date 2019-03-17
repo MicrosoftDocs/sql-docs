@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "sample applications [DTA]"
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

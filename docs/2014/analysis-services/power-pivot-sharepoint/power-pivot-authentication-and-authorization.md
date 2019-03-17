@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -85,7 +82,7 @@ manager: craigg
 |Farm or service administrator|Install, enable, and configure services and applications.<br /><br /> Use PowerPivot Management Dashboard and view administrative reports.|  
 |Full control|Activate PowerPivot feature integration at the site collection level.<br /><br /> Create a PowerPivot Gallery library.<br /><br /> Create a data feed library.|  
 |Contribute|Add, edit, delete, and download PowerPivot workbooks.<br /><br /> Configure data refresh.<br /><br /> Create new workbooks and reports based on PowerPivot workbooks on a SharePoint site.<br /><br /> Create data service documents in a data feed library|  
-|Read|Access PowerPivot workbooks as an external data source, where the workbook URL is explicitly entered in a connection dialog box (for example, in Excel’s Data Connection Wizard).|  
+|Read|Access PowerPivot workbooks as an external data source, where the workbook URL is explicitly entered in a connection dialog box (for example, in Excel's Data Connection Wizard).|  
 |View Only|View PowerPivot workbooks.<br /><br /> View data refresh history.<br /><br /> Connect a local workbook to a PowerPivot workbook on a SharePoint site, to repurpose its data in other ways.<br /><br /> Download a snapshot of the workbook. The snapshot is a static copy of the data, without slicers, filters, formulas, or data connections. The contents of the snapshot are similar to copying cell values from the browser window.|  
   
 ##  <a name="excel"></a> Excel Services security considerations for PowerPivot workbooks  
@@ -112,6 +109,6 @@ manager: craigg
  [Configure PowerPivot Service Accounts](configure-power-pivot-service-accounts.md)   
  [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot Securtiy Architecture](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot Securtiy Architecture](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

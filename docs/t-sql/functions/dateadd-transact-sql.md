@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEADD"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEADD"
   - "DATEADD function [SQL Server]"
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

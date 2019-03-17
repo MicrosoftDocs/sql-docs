@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "10771 (Database Engine error)"
 ms.assetid: e8136193-2d0f-4e5b-b893-c14f5658be68
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

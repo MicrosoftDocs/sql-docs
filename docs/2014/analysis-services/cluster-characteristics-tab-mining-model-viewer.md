@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.clustering.characteristics.f1"
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

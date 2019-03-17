@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SP_QUERY_STORE_UNFORCE_PLAN_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.sp_query_store_unforce_plan"
   - "sp_query_store_unforce_plan"
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

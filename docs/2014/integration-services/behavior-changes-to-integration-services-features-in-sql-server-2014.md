@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "behavior changes [Integration Services]"
   - "Integration Services, backward compatibility"
 ms.assetid: 611d22fa-5ac7-485e-9a40-7131e852f794
-caps.latest.revision: 19
 author: douglaslms
 ms.author: douglasl
 manager: craigg

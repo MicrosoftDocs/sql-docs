@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client OLE DB provider, MARS"
@@ -103,7 +101,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  Changes made by statements and atomic blocks that are interleaved are isolated from each other. For example, if one statement or atomic block makes some changes, and then yields execution to another statement, the new statement will not see changes made by the first statement. In addition, when first statement resumes execution, it will not see any changes made by any other statements. Statements will only see changes that are finished and committed before the statement starts.  
   
- A new user transaction can be started within the current user transaction using the BEGIN TRANSACTION statement – this is supported only in interop mode so the BEGIN TRANSACTION can only be called from a T-SQL statement, and not from within a natively compiled stored procedure.You can create a save point in a transaction using SAVE TRANSACTION or an API call to transaction.Save(save_point_name) to rollback to the savepoint. This feature is also enabled only from T-SQL statements, and not from within natively compiled stored procedures.  
+ A new user transaction can be started within the current user transaction using the BEGIN TRANSACTION statement - this is supported only in interop mode so the BEGIN TRANSACTION can only be called from a T-SQL statement, and not from within a natively compiled stored procedure.You can create a save point in a transaction using SAVE TRANSACTION or an API call to transaction.Save(save_point_name) to rollback to the savepoint. This feature is also enabled only from T-SQL statements, and not from within natively compiled stored procedures.  
   
  **MARS and columnstore indexes**  
   
@@ -222,8 +220,8 @@ SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt2);
   
 // The 2nd execute would have failed with connection busy error if  
 // MARS were not enabled.  
-SQLExecDirect(hstmt1, L”SELECT * FROM Authors”, SQL_NTS);  
-SQLExecDirect(hstmt2, L”SELECT * FROM Titles”, SQL_NTS);  
+SQLExecDirect(hstmt1, L"SELECT * FROM Authors", SQL_NTS);  
+SQLExecDirect(hstmt2, L"SELECT * FROM Titles", SQL_NTS);  
   
 // Result set processing can interleave.  
 SQLFetch(hstmt1);  

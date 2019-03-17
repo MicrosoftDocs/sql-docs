@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], importing"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "importing packages"
   - "exporting packages"
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
-caps.latest.revision: 50
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -68,7 +65,7 @@ manager: craigg
   
     -   In the **Server type** box, select **Integration Services**.  
   
-    -   In the **Server name** box, provide a server name or click **\<Browse for more…>** and locate the server to use.  
+    -   In the **Server name** box, provide a server name or click **\<Browse for more...>** and locate the server to use.  
   
 3.  If Object Explorer is not open, on the **View** menu, click **Object Explorer**.  
   
@@ -80,19 +77,19 @@ manager: craigg
   
     -   To import from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], select the **SQL Server** option, and then specify the server and select the authentication mode. If you select [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a user name and a password.  
   
-         Click the browse button **(…)**, select the package to import, and then click **OK.**  
+         Click the browse button **(...)**, select the package to import, and then click **OK.**  
   
     -   To import from the file system, select the **File system** option.  
   
-         Click the browse button **(…)**, select the package to import, and then click **Open.**  
+         Click the browse button **(...)**, select the package to import, and then click **Open.**  
   
     -   To import from the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, select the **SSIS Package Store** option and specify the server.  
   
-         Click the browse button **(…)**, select the package to import, and then click **OK.**  
+         Click the browse button **(...)**, select the package to import, and then click **OK.**  
   
 7.  Optionally, update the package name.  
   
-8.  To update the protection level of the package, click the browse button **(…)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
+8.  To update the protection level of the package, click the browse button **(...)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
   
 9. Click **OK** to complete the import.  
   
@@ -104,7 +101,7 @@ manager: craigg
   
     -   In the **Server type** box, select **Integration Services**.  
   
-    -   In the **Server name** box, provide a server name or click **\<Browse for more…>** and locate the server to use.  
+    -   In the **Server name** box, provide a server name or click **\<Browse for more...>** and locate the server to use.  
   
 3.  If Object Explorer is not open, on the **View** menu, click **Object Explorer**.  
   
@@ -116,17 +113,17 @@ manager: craigg
   
     -   To export to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], select the **SQL Server** option, and then specify the server and select the authentication mode. If you select [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a user name and a password.  
   
-         Click the browse button **(…)**, and expand the **SSIS Packages** folder to locate the folder to which you want to save the package. Optionally, update the default name of the package, and then click **OK**.  
+         Click the browse button **(...)**, and expand the **SSIS Packages** folder to locate the folder to which you want to save the package. Optionally, update the default name of the package, and then click **OK**.  
   
     -   To export to the file system, select the **File System** option.  
   
-         Click the browse button **(…)** to locate the folder to which you want to export the package, type the name of the package file, and then click **Save.**  
+         Click the browse button **(...)** to locate the folder to which you want to export the package, type the name of the package file, and then click **Save.**  
   
     -   To export to the [!INCLUDE[ssIS](../includes/ssis-md.md)] package store, select the **SSIS Package Store** option, and specify the server.  
   
-         Click the browse button **(…)**, expand the **SSIS Packages** folder, and select the folder to which you want to save the package. Optionally, enter a new name for the package in the **Package Name** text box. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Click the browse button **(...)**, expand the **SSIS Packages** folder, and select the folder to which you want to save the package. Optionally, enter a new name for the package in the **Package Name** text box. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  To update the protection level of the package, click the browse button **(…)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
+7.  To update the protection level of the package, click the browse button **(...)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
   
 8.  Click **OK** to complete the export.  
   

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logical regression algorithms [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "neural network algorithms [Analysis Services]"
   - "regression algorithms [Analysis Services]"
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

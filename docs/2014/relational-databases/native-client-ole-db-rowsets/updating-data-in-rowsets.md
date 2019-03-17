@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "updating data [SQL Server]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, data updates"
   - "data updates [SQL Server], OLE DB"
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

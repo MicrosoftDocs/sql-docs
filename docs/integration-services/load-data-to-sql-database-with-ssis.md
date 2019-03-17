@@ -4,11 +4,8 @@ description: Shows you how to create a SQL Server Integration Services (SSIS) pa
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
-ms.technology: "integration-services"
-ms.devlang: NA
+ms.technology: integration-services
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: douglasl
@@ -121,7 +118,7 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
    
     ![][10]
    
-    In a typical SSIS package, you use a number of other components from the SSIS Toolbox in between the source and the destination to restructure, transform, and cleanse your data as it passes through the SSIS data flow. To keep this example as simple as possible, we’re connecting the source directly to the destination.
+    In a typical SSIS package, you use a number of other components from the SSIS Toolbox in between the source and the destination to restructure, transform, and cleanse your data as it passes through the SSIS data flow. To keep this example as simple as possible, we're connecting the source directly to the destination.
 
 ## Configure the destination adapter
 1. Double-click the destination adapter to open the **ADO.NET Destination Editor**.
@@ -166,7 +163,7 @@ When the package has finished running, you see green check marks to indicate suc
 
 ![][15]
 
-Congratulations! You’ve successfully used SQL Server Integration Services to load data into SQL Server or Azure SQL Database.
+Congratulations! You've successfully used SQL Server Integration Services to load data into SQL Server or Azure SQL Database.
 
 ## Next steps
 

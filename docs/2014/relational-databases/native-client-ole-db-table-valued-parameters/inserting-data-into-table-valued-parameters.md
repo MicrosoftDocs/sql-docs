@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, inserting data into"
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

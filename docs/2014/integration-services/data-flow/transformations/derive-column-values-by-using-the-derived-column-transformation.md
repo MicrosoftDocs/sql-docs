@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [Integration Services]"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "columns [Integration Services], values"
   - "Derived Column transformation"
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -23,7 +19,7 @@ manager: craigg
 # Derive Column Values by Using the Derived Column Transformation
   To add and configure a Derived Column transformation, the package must already include at least one Data Flow task and one source.  
   
- The Derived Column transformation uses expressions to update the values of existing or to add values to new columns. When you choose to add values to new columns, the **Derived Column Transformation Editor** dialog box evaluates the expression and defines the metadata of the columns accordingly. For example, if an expression concatenates two columns—each with the DT_WSTR data type and a length of 50—with a space between the two column values, the new column has the DT_WSTR data type and a length of 101. You can update the data type of new columns. The only requirement is that data type be compatible with the inserted data. For example, the **Derived Column Transformation Editor** dialog box generates a validation error when you assign a date value to a column with an integer data type. Depending on the data type that you selected, you can specify the length, precision, scale, and code page of the column.  
+ The Derived Column transformation uses expressions to update the values of existing or to add values to new columns. When you choose to add values to new columns, the **Derived Column Transformation Editor** dialog box evaluates the expression and defines the metadata of the columns accordingly. For example, if an expression concatenates two columns-each with the DT_WSTR data type and a length of 50-with a space between the two column values, the new column has the DT_WSTR data type and a length of 101. You can update the data type of new columns. The only requirement is that data type be compatible with the inserted data. For example, the **Derived Column Transformation Editor** dialog box generates a validation error when you assign a date value to a column with an integer data type. Depending on the data type that you selected, you can specify the length, precision, scale, and code page of the column.  
   
 ### To derive column values  
   
@@ -61,7 +57,7 @@ manager: craigg
  [Integration Services Data Types](../integration-services-data-types.md)   
  [Integration Services Transformations](integration-services-transformations.md)   
  [Integration Services Paths](../integration-services-paths.md)   
- [Data Flow Task]((../../control-flow/data-flow-task.md)   
+ [Data Flow Task](../../control-flow/data-flow-task.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../../expressions/integration-services-ssis-expressions.md)  
   
   

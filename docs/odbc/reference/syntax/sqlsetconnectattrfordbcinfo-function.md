@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetConnectAttrForDbcInfo function [ODBC]"
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg

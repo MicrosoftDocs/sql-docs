@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "dta"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "Name element"
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
-caps.latest.revision: 12
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

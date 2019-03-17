@@ -5,9 +5,7 @@ ms.date: "04/20/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_CRYPTOGRAPHIC_PROVIDER_TSQL"
@@ -19,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER CRYPTOGRAPHIC PROVIDER"
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
-caps.latest.revision: 20
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)

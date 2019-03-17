@@ -5,9 +5,7 @@ ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STBuffer (geometry Data Type)"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STBuffer (geometry Data Type)"
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -64,7 +61,7 @@ Returns a geometric object that represents the union of all points whose distanc
   
  A negative buffer removes all points enclosed in given distance of the boundary of the geometry.  
   
- The error between the theorectical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geometry Data Type Method Reference](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ The error between the theoretical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geometry Data Type Method Reference](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## Examples  
   

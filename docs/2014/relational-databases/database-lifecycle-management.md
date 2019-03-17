@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data sync"
@@ -29,7 +27,6 @@ helpviewer_keywords:
   - "Database migration"
   - "Database connectivity"
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -39,7 +36,7 @@ manager: craigg
   
  DLM begins with discussion of project design and intent, continues with database develop, test, build, deploy, maintain, monitor, and backup activities, and ends with data archive. This topic provides an overview of the stages of DLM that begin with database development and progress through build, deploy, and monitor actions (Figure 1). Also included are data management activities, and data portability operations like import/export, backup, migrate, and sync.  
   
- To read the complete topic, see [Database Lifecycle Management (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949).  
+ To read the complete topic, see [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## See Also  
  [Windows Azure Home Page](http://www.windowsazure.com/)   

@@ -5,9 +5,7 @@ ms.date: "07/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "RTRIM_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "blank characters [SQL Server]"
   - "trailing blanks"
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "33028 (Database Engine error)"
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

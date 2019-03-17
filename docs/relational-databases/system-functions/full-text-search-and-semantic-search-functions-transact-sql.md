@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "semantic search [SQL Server], system functions"
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
-caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

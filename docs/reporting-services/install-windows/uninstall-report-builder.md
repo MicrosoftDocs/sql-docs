@@ -3,13 +3,12 @@ title: "Uninstall Report Builder | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Uninstall Report Builder
@@ -26,7 +25,7 @@ If folders used by Report Builder include custom files, the folders and the file
   
 2.  In the Control Panel, click **Programs and Features**.  
   
-3.  Locate [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 Report Builder in the **Name** list and click it.  
+3.  Locate [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Report Builder in the **Name** list and click it.  
   
 4.  Click **Uninstall**.  
   
@@ -54,4 +53,4 @@ If folders used by Report Builder include custom files, the folders and the file
 
 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

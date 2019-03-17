@@ -4,22 +4,19 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10500"
   - "sql12.rtp.rptdesigner.reportproperties.pagesetup.f1"
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
-caps.latest.revision: 38
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Properties Dialog Box, Page Setup
-  Select **Page Setup** on the the **Report Properties**, dialog box to set page options for the entire report.  
+  Select **Page Setup** on the **Report Properties**, dialog box to set page options for the entire report.  
   
 ## Options  
  **Inches**  

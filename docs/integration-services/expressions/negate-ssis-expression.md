@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "- (negative)"
   - "negative operator (-)"
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

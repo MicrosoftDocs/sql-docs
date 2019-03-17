@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DBPROPSET_DATASOURCEINFO property set"
@@ -20,13 +18,12 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], user-defined types"
   - "ISSCommandWithParameters interface"
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # Using User-Defined Types
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced user-defined types (UDTs). UDTs extend the SQL type system by allowing you to store objects and custom data structures in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. UDTs can contain multiple data types and can have behaviors, differentiating them from the traditional alias data types that consist of a single [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system data type. UDTs are defined using any of the languages supported by the .NET common language runtime (CLR) that produce verifiable code. This includes Microsoft Visual C#<sup>®</sup> and Visual Basic<sup>®</sup> .NET. The data is exposed as fields and properties of a .NET class or structure, and behaviors are defined by methods of the class or structure.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced user-defined types (UDTs). UDTs extend the SQL type system by allowing you to store objects and custom data structures in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. UDTs can contain multiple data types and can have behaviors, differentiating them from the traditional alias data types that consist of a single [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system data type. UDTs are defined using any of the languages supported by the .NET common language runtime (CLR) that produce verifiable code. This includes Microsoft Visual C#<sup>??</sup> and Visual Basic<sup>??</sup> .NET. The data is exposed as fields and properties of a .NET class or structure, and behaviors are defined by methods of the class or structure.  
   
  A UDT can be used as the column definition of a table, as a variable in a [!INCLUDE[tsql](../../../includes/tsql-md.md)] batch, or as an argument of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] function or stored procedure.  
   
@@ -50,7 +47,7 @@ manager: craigg
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supported<sup>6</sup>|N/A<sup>2</sup>|Supported<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Supported<sup>3,6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
   
- <sup>1</sup>If a server type other than DBTYPE_UDT is specified with **ICommandWithParameters::SetParameterInfo** and the accessor type is DBTYPE_UDT, an error occurs when the statement is executed (DB_E_ERRORSOCCURRED; the parameter status is DBSTATUS_E_BADACCESSOR). Otherwise the data is sent to the server, but the server returns an error indicating that there is no implicit conversion from UDT to the parameter’s data type.  
+ <sup>1</sup>If a server type other than DBTYPE_UDT is specified with **ICommandWithParameters::SetParameterInfo** and the accessor type is DBTYPE_UDT, an error occurs when the statement is executed (DB_E_ERRORSOCCURRED; the parameter status is DBSTATUS_E_BADACCESSOR). Otherwise the data is sent to the server, but the server returns an error indicating that there is no implicit conversion from UDT to the parameter's data type.  
   
  <sup>2</sup>Beyond the scope of this topic.  
   

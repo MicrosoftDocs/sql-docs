@@ -1,19 +1,15 @@
-﻿---
+---
 title: "Alert Properties - New Alert (Options Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.alert.options.f1"
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

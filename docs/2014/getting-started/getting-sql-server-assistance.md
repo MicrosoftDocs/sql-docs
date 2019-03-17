@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "offline resources [SQL Server]"
@@ -41,7 +39,6 @@ helpviewer_keywords:
   - "SQL Server assistance"
   - "SQL Server Solution Center"
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
@@ -77,19 +74,19 @@ manager: craigg
   
 |Resource|Audience|  
 |--------------|--------------|  
-|[SQL Server Developer Center](http://msdn.microsoft.com/sqlserver/)|Developers who are building [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases, reporting systems, and business intelligence solutions, and enabling their applications and Web sites to use these systems.|  
-|[XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)|Web site creators and application developers whose sites and applications utilize XML for data storage and manipulation.|  
-|[SQL Server TechNet Site](http://technet.microsoft.com/sqlserver/dn135309)|Administrators and operators who plan, deploy, administer, and support systems that use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|[SQL Server Developer Center](https://msdn.microsoft.com/sqlserver/)|Developers who are building [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases, reporting systems, and business intelligence solutions, and enabling their applications and Web sites to use these systems.|  
+|[XML Developer Center](https://go.microsoft.com/fwlink/?LinkId=42458)|Web site creators and application developers whose sites and applications utilize XML for data storage and manipulation.|  
+|[SQL Server TechNet Site](https://technet.microsoft.com/sqlserver/dn135309)|Administrators and operators who plan, deploy, administer, and support systems that use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## Additional Online Information  
  Additional [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] information is available from these [!INCLUDE[msCoName](../includes/msconame-md.md)] Web sites.  
   
 |Resource|Description|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|Provides pre-sales information about evaluating [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a data storage and business intelligence tool.|  
-|[Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=42461)|Provides a searchable repository of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] articles written by [!INCLUDE[msCoName](../includes/msconame-md.md)] support.|    
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Provides pre-sales information about evaluating [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a data storage and business intelligence tool.|  
+|[Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Provides a searchable repository of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] articles written by [!INCLUDE[msCoName](../includes/msconame-md.md)] support.|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] products have a support lifecycle that defines how long support is available for each release. [!INCLUDE[msCoName](../includes/msconame-md.md)] support maintains a page that defines the [!INCLUDE[msCoName](../includes/msconame-md.md)] support lifecycle. The page contains links to other pages that specify the availability of support for [!INCLUDE[msCoName](../includes/msconame-md.md)] products. For more information, see [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/?LinkId=98306).  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] products have a support lifecycle that defines how long support is available for each release. [!INCLUDE[msCoName](../includes/msconame-md.md)] support maintains a page that defines the [!INCLUDE[msCoName](../includes/msconame-md.md)] support lifecycle. The page contains links to other pages that specify the availability of support for [!INCLUDE[msCoName](../includes/msconame-md.md)] products. For more information, see [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## See Also  
  [Use Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  

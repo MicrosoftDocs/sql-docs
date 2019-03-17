@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "BACKUP MASTER KEY"
@@ -24,9 +22,8 @@ helpviewer_keywords:
   - "backing up master keys [SQL Server]"
   - "database master key [SQL Server], exporting"
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
-caps.latest.revision: 37
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # BACKUP MASTER KEY (Transact-SQL)

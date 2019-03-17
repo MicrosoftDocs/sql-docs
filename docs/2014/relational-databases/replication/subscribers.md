@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newsubwizard.subscribers.f1"
 helpviewer_keywords: 
   - "Subscribers [SQL Server replication]"
 ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

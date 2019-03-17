@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/03/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sql13.tsqlref.f1"
@@ -68,7 +66,7 @@ In some cases, the topic is used by a product or service, but all of the argumen
  
 ## Get help from the MSDN forum  
   
-For online help, see the [MSDN Transact-SQL Forum](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql).  
+For online help, see the [MSDN Transact-SQL Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql).  
  
 ## See other language references
 

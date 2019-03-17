@@ -6,11 +6,8 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
-caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -39,7 +36,7 @@ By default, all text is displayed in the Transact\-SQL Editor, but you can choos
   
 ### To outline code  
   
-1.  Notice the **–** sign next to the CREATE TABLE statement. Click the **-** sign next to a section in the script to hide it.  
+1.  Notice the **-** sign next to the CREATE TABLE statement. Click the **-** sign next to a section in the script to hide it.  
   
 2.  Right-click the Transact\-SQL Editor and select **Outlining**, then **Stop Outlining** to remove the outline information without affecting your underlying code in the editor.  
   

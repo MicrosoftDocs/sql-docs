@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases, linking to SQL Azure"
   - "Access databases, linking to SQL Server"
@@ -25,7 +20,6 @@ helpviewer_keywords:
   - "slow performance"
   - "unlinking tables"
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
@@ -56,7 +50,7 @@ When you open a table in Access, the data is retrieved using a keyset cursor. As
   
 > [!IMPORTANT]  
 > To link access tables with an Azure database, you need SQL Server Native Client(SNAC) version 10.5 or above.   
-> You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
+> You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
   
 ## Unlinking Access tables  
 When you unlink an Access table from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure table, SSMA restores the original Access table and its data.  

@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_index_operational_stats"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_index_operational_stats dynamic management function"
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -82,9 +79,9 @@ sys.dm_db_index_operational_stats (
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|Database ID.|    
 |**object_id**|**int**|ID of the table or view.|    
-|**index_id**|**int**|ID of the index or heap.<br /><br /> 0 = Heap|    
-|**hobt_id**|**bigint**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL – this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**int**|1-based partition number within the index or heap.|    
+|**index_id**|**int**|ID of the index or heap.<br /><br /> 0 = Heap| 
+|**partition_number**|**int**|1-based partition number within the index or heap.| 
+|**hobt_id**|**bigint**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL - this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Cumulative count of leaf-level inserts.|    
 |**leaf_delete_count**|**bigint**|Cumulative count of leaf-level deletes. leaf_delete_count is only incremented for deleted records that are not marked as ghost first. For deleted records that are ghosted first, **leaf_ghost_count** is incremented instead.|    
 |**leaf_update_count**|**bigint**|Cumulative count of leaf-level updates.|    

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Integration Services], tasks"
@@ -26,7 +23,6 @@ helpviewer_keywords:
   - "data preparation tasks [Integration Services]"
   - "directory operations [Integration Services]"
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -72,7 +68,7 @@ manager: craigg
   
  For more information about adding a task to a package programmatically, see [Adding Tasks Programmatically](../building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Each task can be configured individually using the custom dialog boxes for each task that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides, or the Properties window included in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A package can include multiple tasks of the same type—for example, six Execute SQL tasks—and each task can be configured differently. For more information, see [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md).  
+ Each task can be configured individually using the custom dialog boxes for each task that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides, or the Properties window included in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A package can include multiple tasks of the same type-for example, six Execute SQL tasks-and each task can be configured differently. For more information, see [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md).  
   
 ## Tasks Connections and Groups  
  If the task contains more than one task, they are connected and sequenced in the control flow by precedence constraints. For more information, see [Precedence Constraints](precedence-constraints.md).  

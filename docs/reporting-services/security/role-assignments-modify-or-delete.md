@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: security
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -31,7 +30,7 @@ ms.author: maghan
   
 ### To modify or delete a system role assignment  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Click **Site Settings**.  
   
@@ -60,7 +59,7 @@ ms.author: maghan
 ## See Also  
  [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Role Assignments](../../reporting-services/security/role-assignments.md)   
- [Site Settings Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [New System Role Assignments: Edit System Role Assignments Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Site Settings Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [New System Role Assignments: Edit System Role Assignments Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

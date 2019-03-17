@@ -5,12 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -35,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## Example  
- The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates the database used by the sample.  
+ The first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates the database used by the sample.  
   
  Put the second code listing into a file called stdafx.h.  
   
@@ -43,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Compile with ole32.lib oleaut32.lib and execute the fourth (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
- The fifth ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates the database used by the sample.  
+ The fifth ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates the database used by the sample.  
   
 ```  
 create database testdb  

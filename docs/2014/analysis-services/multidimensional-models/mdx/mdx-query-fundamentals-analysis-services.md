@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [MDX]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "MDX [Analysis Services], queries"
   - "queries [MDX]"
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
  The following topics describe MDX queries and the cellsets they produce, and provide more detailed information about basic MDX syntax.  
   
 > [!NOTE]  
->  For more information about performance issues related to MDX queries and calculations, see the section “Writing Efficient MDX” in the [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
+>  For more information about performance issues related to MDX queries and calculations, see the section "Writing Efficient MDX" in the [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## In This Section  
   

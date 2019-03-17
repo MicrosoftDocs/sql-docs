@@ -1,14 +1,12 @@
 ---
-title: Azure Data Studio FAQ | Microsoft Docs
-description: Frequently asked questions (FAQ) for Azure Data Studio.
-ms.custom: "tools|sos"
+title: FAQ
+titleSuffix: Azure Data Studio
+description: Frequently asked questions (FAQ) about Azure Data Studio.
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
@@ -37,7 +35,7 @@ Azure Data Studio is built on top of Visual Studio Code and offers a lightweight
 
 Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, psql, and ssh) in the Integrated Terminal window right within the Azure Data Studio user interface. Easily generate and execute CREATE and INSERT scripts for your database objects to create copies of your database for development or testing purposes. Boost your productivity with smart code snippets and rich graphical experiences that create new databases and database objects (such as tables, views, stored procedures, users, logins, roles, etc.) or update existing database objects. Use rich customizable dashboards to monitor and quickly troubleshoot performance bottlenecks in your databases on-premises, in Azure or any cloud.
 
-Azure Data Studio offers a consistent experience to back up and restore your databases. With planned support for SQL Server Always-On Availability Groups, you can easily configure, monitor, and troubleshoot AGs for your mission-critical SQL Server databases and quickly failover to a secondary database during a disaster. Azure Data Studio has been designed to make you more productive in the DevOps lifecycle of your databases of choice on the operating systems of your choice. As a result, you are always in control, and you can reduce risks, solve problems faster, and continuously deliver value that exceeds customers’ expectations.
+Azure Data Studio offers a consistent experience to back up and restore your databases. With planned support for SQL Server Always-On Availability Groups, you can easily configure, monitor, and troubleshoot AGs for your mission-critical SQL Server databases and quickly failover to a secondary database during a disaster. Azure Data Studio has been designed to make you more productive in the DevOps lifecycle of your databases of choice on the operating systems of your choice. As a result, you are always in control, and you can reduce risks, solve problems faster, and continuously deliver value that exceeds customers' expectations.
 
 ## Is Azure Data Studio Open Source?
 
@@ -45,7 +43,7 @@ The source code for Azure Data Studio and its data providers is available on Git
 
 ## Do we plan to open source SSMS?
 
-No. However, next generation multi-OS CLI and GUI tools are open source. For example, the mssql extension for VS Code, mssql-scripter, and msql-CLI are all open source on GitHub. The source code for Azure Data Studo is available on GitHub.  
+No. However, next generation multi-OS CLI and GUI tools are open source. For example, the mssql extension for VS Code, mssql-scripter, and msql-CLI are all open source on GitHub. The source code for Azure Data Studio is available on GitHub.  
 
 ## Now that there is Azure Data Studio, does Microsoft plan to deprecate SSMS and SSDT? 
 

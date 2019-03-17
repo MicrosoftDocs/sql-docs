@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "system tables [SQL Server], restore tables"
   - "restore system tables [SQL Server]"
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

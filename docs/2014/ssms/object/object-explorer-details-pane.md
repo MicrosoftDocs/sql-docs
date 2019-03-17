@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.summary.report.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "object search [SQL Server]"
   - "searching objects [SQL Server]"
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

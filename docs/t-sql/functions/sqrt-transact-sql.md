@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SQRT"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQRT function"
   - "square root values"
 ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

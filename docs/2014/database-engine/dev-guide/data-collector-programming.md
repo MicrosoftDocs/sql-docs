@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data collector [SQL Server], programming"
 ms.assetid: 53b4752b-055d-4716-b2bc-75b4cce84101
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg

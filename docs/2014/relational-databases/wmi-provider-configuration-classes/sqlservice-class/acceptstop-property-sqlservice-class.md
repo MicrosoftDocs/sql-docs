@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "AcceptStop Property (SqlService Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "AcceptStop property"
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -45,6 +40,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

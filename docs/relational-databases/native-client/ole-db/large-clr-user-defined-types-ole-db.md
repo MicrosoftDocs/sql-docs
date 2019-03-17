@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large CLR user-defined types [OLE DB]"
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -138,7 +134,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |3|Data is converted from binary data to hex string.|  
 |4|Validation can happen when using **CreateAccessor** or **GetNextRows**. The error is DB_E_ERRORSOCCURRED. Binding status is set to DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|BY_REF may be used.|  
-|6|UDT parameters can be bound as DBTYPE_IUNKNOWN in the DBBINDING. Binding to DBTYPE_IUNKNOWN indicates that the application wants to process the data as a stream using the ISequentialStream interface. When a consumer specifies *wType* in a binding as type DBTYPE_IUNKNOWN, and the corresponding column or output parameter of the stored procedure is a UDT, SQL Server Native Client will return ISequentialStream. For an input parameter, SQL Server Native Client will query for the for the ISequentialStream interface.<br /><br /> You can choose to not bind the length of UDT data while using DBTYPE_IUNKNOWN binding, in the case of large UDTs. However, the length must be bound for small UDTs. A DBTYPE_UDT parameter can be specified as a large UDT if one or more of the following is true:<br />*ulParamParamSize* is ~0.<br />DBPARAMFLAGS_ISLONG is set in the DBPARAMBINDINFO struct.<br /><br /> For row data, DBTYPE_IUNKNOWN binding is only allowed for large UDTs. You can find out whether a column is a large UDT type by using the IColumnsInfo::GetColumnInfo method on a Rowset or Command object’s IColumnsInfo interface. A DBTYPE_UDT column is a large UDT column if one or more of the following is true:<br />DBCOLUMNFLAGS_ISLONG flag is set on *dwFlags* member of DBCOLUMNINFO structure. <br />*ulColumnSize* member of DBCOLUMNINFO is ~0.|  
+|6|UDT parameters can be bound as DBTYPE_IUNKNOWN in the DBBINDING. Binding to DBTYPE_IUNKNOWN indicates that the application wants to process the data as a stream using the ISequentialStream interface. When a consumer specifies *wType* in a binding as type DBTYPE_IUNKNOWN, and the corresponding column or output parameter of the stored procedure is a UDT, SQL Server Native Client will return ISequentialStream. For an input parameter, SQL Server Native Client will query for the for the ISequentialStream interface.<br /><br /> You can choose to not bind the length of UDT data while using DBTYPE_IUNKNOWN binding, in the case of large UDTs. However, the length must be bound for small UDTs. A DBTYPE_UDT parameter can be specified as a large UDT if one or more of the following is true:<br />*ulParamParamSize* is ~0.<br />DBPARAMFLAGS_ISLONG is set in the DBPARAMBINDINFO struct.<br /><br /> For row data, DBTYPE_IUNKNOWN binding is only allowed for large UDTs. You can find out whether a column is a large UDT type by using the IColumnsInfo::GetColumnInfo method on a Rowset or Command object's IColumnsInfo interface. A DBTYPE_UDT column is a large UDT column if one or more of the following is true:<br />DBCOLUMNFLAGS_ISLONG flag is set on *dwFlags* member of DBCOLUMNINFO structure. <br />*ulColumnSize* member of DBCOLUMNINFO is ~0.|  
   
  DBTYPE_NULL and DBTYPE_EMPTY can be bound for input parameters, but not for output parameters or results. When bound for input parameters, the status must be set to DBSTATUS_S_ISNULL for DBTYPE_NULL or DBSTATUS_S_DEFAULT for DBTYPE_EMPTY. DBTYPE_BYREF cannot be used with DBTYPE_NULL or DBTYPE_EMPTY.  
   

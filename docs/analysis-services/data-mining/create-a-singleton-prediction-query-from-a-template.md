@@ -12,7 +12,7 @@ manager: kfile
 ---
 # Create a Singleton Prediction Query from a Template
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  A singleton query is useful when you have a model that you want to use for prediction, but don’t want to map it to an external input data set or make bulk predictions. With a singleton query, you can provide a value or values to the model and instantly see the predicted value.  
+  A singleton query is useful when you have a model that you want to use for prediction, but don't want to map it to an external input data set or make bulk predictions. With a singleton query, you can provide a value or values to the model and instantly see the predicted value.  
   
  For example, the following DMX query represents a singleton query against the targeted mailing model, TM_Decision_Tree.  
   

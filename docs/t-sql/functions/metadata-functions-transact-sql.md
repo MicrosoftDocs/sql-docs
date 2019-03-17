@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "metadata [SQL Server], functions"
   - "functions [SQL Server], metadata"
 ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

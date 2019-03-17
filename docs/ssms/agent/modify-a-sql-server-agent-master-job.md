@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Modify a SQL Server Agent Master Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], modifying"
   - "jobs [SQL Server Agent], master jobs"
   - "master SQL Server Agent job [SQL Server]"
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

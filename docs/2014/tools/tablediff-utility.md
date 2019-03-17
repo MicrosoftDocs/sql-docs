@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "comparing data"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server replication], non-convergence"
   - "non-convergence [SQL Server]"
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -74,8 +70,8 @@ manager: craigg
  [ **-?** ]  
  Returns the list of supported parameters.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Is the name of the source server. Specify *source_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify *source_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ Is the name of the source server. Specify _source\_server\_name_ for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify _source\_server\_name_**\\**_instance\_name_ for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Is the name of the source database.  
@@ -98,8 +94,8 @@ manager: craigg
  **-sourcelocked**  
  The source table is locked during the comparison using the TABLOCK and HOLDLOCK table hints.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Is the name of the destination server. Specify *destination_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify *destination_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[**\\**_instance\_name_]  
+ Is the name of the destination server. Specify *destination_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify _destination\_server\_name_**\\**_instance\_name_ for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Is the name of the destination database.  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "synchronization [OLE DB]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "resynchronizing rows"
   - "data updates [SQL Server], OLE DB"
 ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

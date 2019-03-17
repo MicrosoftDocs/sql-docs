@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -203,7 +201,7 @@ The following example creates the manifests for an availability group under name
 python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --verbose
 ```
 
-After the script completes, the Kubernetes operator  creates the storage, the SQL Server instances, the load balancer services. You can monitor the deployment with [Kubernetes dashboard](http://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+After the script completes, the Kubernetes operator  creates the storage, the SQL Server instances, the load balancer services. You can monitor the deployment with [Kubernetes dashboard](https://docs.microsoft.com/azure/aks/kubernetes-dashboard).
 
 After Kubernetes creates the SQL Server containers:
 

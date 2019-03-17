@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1"
 ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -32,7 +29,7 @@ manager: craigg
  **Network File Share**  
  Network shared folder on the source server from where the database files will be transferred. Use **Network File Share** when you transfer a database in offline mode by specifying **DatabaseOffline** for **Method** in the **Databases** page of the **Transfer Database Task Editor** dialog box.  
   
- Enter the network file share location, or click the browse button **(…)** to locate the network file share location.  
+ Enter the network file share location, or click the browse button **(...)** to locate the network file share location.  
   
  When you transfer a database in offline mode, the database files are copied to the **Network file share** location on the source server before they are transferred to the destination server.  
   

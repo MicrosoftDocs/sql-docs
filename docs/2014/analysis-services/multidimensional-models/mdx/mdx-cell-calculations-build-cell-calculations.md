@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "calculated cells [MDX]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "calculated values [MDX]"
   - "Multidimensional Expressions [Analysis Services], cell calculations"
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

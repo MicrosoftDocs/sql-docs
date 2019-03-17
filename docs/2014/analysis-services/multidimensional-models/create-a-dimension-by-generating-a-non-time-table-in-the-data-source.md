@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Analysis Services], dimensions without data source"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "dimensions [Analysis Services], creating without data source"
   - "standard dimensions [Analysis Services]"
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

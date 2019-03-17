@@ -1,13 +1,11 @@
-﻿---
+---
 title: "SUSER_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SUSER_ID_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], logins"
   - "user IDs [SQL Server]"
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

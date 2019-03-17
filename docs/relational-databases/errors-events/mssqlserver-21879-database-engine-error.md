@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "21879 (Database Engine error)"
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

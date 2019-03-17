@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Broker:Message Classify event class"
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

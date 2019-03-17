@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.edge_constraints"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.edge_constraints catalog view"
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
-caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg

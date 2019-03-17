@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.ftpconnectionmanager.f1"
 helpviewer_keywords: 
   - "FTP Connection Manager Editor"
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "assemblies [CLR integration], implementing"
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: 33
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

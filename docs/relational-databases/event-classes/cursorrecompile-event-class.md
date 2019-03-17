@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CursorRecompile event class"
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

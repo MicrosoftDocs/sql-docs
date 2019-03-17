@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.jobproperties.f1"
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Job Properties (Management Studio)
   Use the **Job Properties** page to view information about an in-progress report or subscription before you cancel it.  

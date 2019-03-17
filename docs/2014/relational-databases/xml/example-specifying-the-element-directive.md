@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENT directive"
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -60,7 +57,7 @@ FOR XML EXPLICIT;
   
  `<FName>Ken</FName>`  
   
- `<LName>Sánchez</LName>`  
+ `<LName>S??nchez</LName>`  
   
  `</Name>`  
   

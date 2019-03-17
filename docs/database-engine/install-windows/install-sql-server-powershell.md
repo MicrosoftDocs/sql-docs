@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
@@ -32,7 +29,7 @@ You install the software that provides [!INCLUDE[ssNoVersion](../../includes/ssn
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports starting Windows PowerShell sessions from the Object Explorer tree. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supports Windows PowerShell job steps.  
   
-Windows Server 2012 and later and Windows 8 and later come with PowerShell installed and configured. For information about installing Windows PowerShell see [Installing Windows PowerShell](http://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell).  
+Windows Server 2012 and later and Windows 8 and later come with PowerShell installed and configured. For information about installing Windows PowerShell see [Installing Windows PowerShell](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell).  
 
 For more information, see:   
 

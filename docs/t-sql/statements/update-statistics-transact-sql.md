@@ -5,9 +5,7 @@ ms.date: "01/04/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "UPDATE STATISTICS"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "UPDATE STATISTICS statement"
   - "statistical information [SQL Server], updating"
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-caps.latest.revision: 74
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -29,11 +26,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Updates query optimization statistics on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using UPDATE STATISTICS or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.  
+Updates query optimization statistics on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.  
   
- Updating statistics ensures that queries compile with up-to-date statistics. However, updating statistics causes queries to recompile. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. UPDATE STATISTICS can use tempdb to sort the sample of rows for building statistics.  
+Updating statistics ensures that queries compile with up-to-date statistics. However, updating statistics causes queries to recompile. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. `UPDATE STATISTICS` can use tempdb to sort the sample of rows for building statistics.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,7 +51,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -72,7 +69,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-UPDATE STATISTICS schema_name . ] table_name   
+UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
     [ WITH   
        {  
@@ -109,7 +106,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sampling of dat
   
  For most workloads, a full scan is not required, and default sampling is adequate.  
 However, certain workloads that are sensitive to widely varying data distributions may require an increased sample size, or even a full scan.  
-For more information, see  the [CSS SQL Escalation Services blog](http://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx).  
+For more information, see  the [CSS SQL Escalation Services blog](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx).  
   
  RESAMPLE  
  Update each statistic using its most recent sample rate.  
@@ -128,7 +125,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] 
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -182,25 +179,28 @@ MAXDOP = *max_degree_of_parallelism*
 
 ## Remarks  
   
-## When to Use UPDATE STATISTICS  
- For more information about when to use UPDATE STATISTICS, see [Statistics](../../relational-databases/statistics/statistics.md).  
+### When to Use UPDATE STATISTICS  
+ For more information about when to use `UPDATE STATISTICS`, see [Statistics](../../relational-databases/statistics/statistics.md).  
 
-## Limitations and Restrictions  
+### Limitations and Restrictions  
 * Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
-* The MAXDOP option is not compatible with STATS_STREAM, ROWCOUNT and PAGECOUNT options.
-* The MAXDOP option is limited by the Resource Governor workload group MAX_DOP setting, if used.
+* The `MAXDOP` option is not compatible with `STATS_STREAM`, `ROWCOUNT` and `PAGECOUNT` options.
+* The `MAXDOP` option is limited by the Resource Governor workload group `MAX_DOP` setting, if used.
 
-## Updating All Statistics with sp_updatestats  
- For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). For example, the following command calls sp_updatestats to update all statistics for the database.  
+### Updating All Statistics with sp_updatestats  
+For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). For example, the following command calls sp_updatestats to update all statistics for the database.  
   
 ```sql  
 EXEC sp_updatestats;  
 ```  
+
+### Automatic index and statistics management
+Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
   
-## Determining the Last Statistics Update  
+### Determining the Last Statistics Update  
  To determine when statistics were last updated, use the [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function.  
   
-## PDW / SQL Data Warehouse  
+### PDW / SQL Data Warehouse  
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
 ```sql  
@@ -224,7 +224,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## Permissions  
- Requires ALTER permission on the table or view.  
+ Requires `ALTER` permission on the table or view.  
   
 ## Examples  
   
@@ -305,9 +305,5 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
-  
-
-
-
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

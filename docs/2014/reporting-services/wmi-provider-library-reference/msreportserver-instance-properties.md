@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "MSReportServer_Instance Properties"
@@ -18,10 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "MSReportServer_Instance class"
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # MSReportServer_Instance Properties
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

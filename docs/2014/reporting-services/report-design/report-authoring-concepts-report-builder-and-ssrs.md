@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "concepts"
   - "terminology"
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 13
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Authoring Concepts (Report Builder and SSRS)
   This section briefly defines key concepts used in the Report Builder and Report Designer documentation. For definitions of specific words or terms, see the [Glossary &#40;Report Builder&#41;](../report-builder/glossary-report-builder.md).  

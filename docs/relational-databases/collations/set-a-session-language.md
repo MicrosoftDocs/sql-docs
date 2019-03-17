@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server], international considerations"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "messages [SQL Server], international considerations"
   - "server-side session language"
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
-caps.latest.revision: 39
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

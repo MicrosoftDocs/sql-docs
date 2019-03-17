@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visio shapes, cluster"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "shapes, cluster"
   - "data mining layout toolbar"
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -70,9 +67,9 @@ manager: craigg
   
 7.  Leave the option, **Number of rows in the chart**, as 5.  
   
-     This option doesn’t change the number of clusters in the model; it simply limits the number of attributes that can be displayed as features of each cluster.  
+     This option doesn't change the number of clusters in the model; it simply limits the number of attributes that can be displayed as features of each cluster.  
   
-     However, the option acts as a filter on the chart data, so you can’t increase the number of items later.  
+     However, the option acts as a filter on the chart data, so you can't increase the number of items later.  
   
 8.  Click **Advanced**.  
   

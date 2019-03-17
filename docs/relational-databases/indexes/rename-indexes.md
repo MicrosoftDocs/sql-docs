@@ -5,16 +5,13 @@ ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "renaming indexes"
   - "index names [SQL Server]"
   - "indexes [SQL Server], renaming"
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -67,7 +64,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, click **Save***table_name*.  
+8.  On the **File** menu, click **Save**_table_name_.  
   
 #### To rename an index by using Object Explorer  
   
@@ -81,7 +78,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 5.  Right-click the index you want to rename and select **Rename**.  
   
-6.  Type the index’s new name and press Enter.  
+6.  Type the index's new name and press Enter.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

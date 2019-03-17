@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IOpenRowset interface"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, rowsets"
   - "OLE DB rowsets, creating"
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

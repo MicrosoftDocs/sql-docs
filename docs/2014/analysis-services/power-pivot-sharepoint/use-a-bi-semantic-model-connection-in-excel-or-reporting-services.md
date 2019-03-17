@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -43,7 +40,7 @@ manager: craigg
   
 5.  On the last page, you can provide a friendly name and description. Click **Finish**, and then click **OK** on the Import Data dialog box to import the data.  
   
- For connections to succeed you must have Excel 2010 and the MSOLAP.5.dll installed on the client computer. You can get the provider by installing the version of PowerPivot for Excel that is current for this release or you can download just the Analysis Services OLE DB provider from the [Feature Pack download page](http://go.microsoft.com/fwlink/?linkid=214066).  
+ For connections to succeed you must have Excel 2010 and the MSOLAP.5.dll installed on the client computer. You can get the provider by installing the version of PowerPivot for Excel that is current for this release or you can download just the Analysis Services OLE DB provider from the [Feature Pack download page](https://go.microsoft.com/fwlink/?linkid=214066).  
   
  To confirm that MSOLAP.5.dll is the current version, check `HKEY_CLASSES_ROOT\MSOLAP` in the registry. `CurVer` should be set to MSOLAP.5.  
   

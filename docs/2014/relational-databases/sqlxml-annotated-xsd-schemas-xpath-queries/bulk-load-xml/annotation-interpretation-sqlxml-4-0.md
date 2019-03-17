@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "annotated XSD schemas, XML Bulk Load"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "bulk load [SQLXML], annotation interpretations"
   - "annotated XDR schemas, XML Bulk Load"
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

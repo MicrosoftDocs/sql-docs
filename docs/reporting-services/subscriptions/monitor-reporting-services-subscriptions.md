@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: subscriptions
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "status information [Reporting Services]"
   - "inactive subscriptions [Reporting Services]"
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Monitor Reporting Services Subscriptions
   You can monitor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions from the user interface, Windows PowerShell, or log files. The options available to you for monitoring depend on what mode of report server you are running.  
@@ -82,9 +81,9 @@ ms.author: maggies
   
 1.  browse to the document library that contains the report  
   
-2.  Open the context menu of the report (**…**).  
+2.  Open the context menu of the report (**...**).  
   
-3.  Select the expanded menu option (**…**).  
+3.  Select the expanded menu option (**...**).  
   
 4.  Select **Manage Subscriptions**  
   
@@ -115,7 +114,7 @@ ms.author: maggies
  When conditions cause the subscription to become inactive, the subscription reflects this fact when the report server runs the subscription. If a subscription is scheduled to deliver a report every Friday at 2:00 A.M., and the delivery extension it uses was uninstalled on Monday at 9:00 A.M., the subscription will not reflect its inactive state until Friday at 2:00 A.M.  
   
 ## See Also  
- [old_Create and Manage Subscriptions for Native Mode Report Servers](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [old_Create and Manage Subscriptions for Native Mode Report Servers](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
   - "getting started"
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -31,7 +28,7 @@ manager: craigg
  The **Analyze Key Influencers** tool uses the Microsoft Naïve Bayes algorithm.  
   
  [Detect Categories &#40;Table Analysis Tools for Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- This tool lets you add any data set and apply clustering to find groupings of data. It’s useful for finding similarities and for creating groups to further analyze.  
+ This tool lets you add any data set and apply clustering to find groupings of data. It's useful for finding similarities and for creating groups to further analyze.  
   
  The **Detect Categories** tool uses the Microsoft Clustering algorithm.  
   
@@ -46,7 +43,7 @@ manager: craigg
  The **Forecast** tool uses the Microsoft Time Series algorithm.  
   
  [Highlight Exceptions &#40;Table Analysis Tools for Excel&#41;](highlight-exceptions-table-analysis-tools-for-excel.md)  
- This tool analyzes patterns in a table of data and finds rows and values that don’t fit the pattern. You can then review and correct them and rerun the model, or flag values for later action.  
+ This tool analyzes patterns in a table of data and finds rows and values that don't fit the pattern. You can then review and correct them and rerun the model, or flag values for later action.  
   
  The **Highlight Exceptions** tool uses the Microsoft Clustering algorithm.  
   

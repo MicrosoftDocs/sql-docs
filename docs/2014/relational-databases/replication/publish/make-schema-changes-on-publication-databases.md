@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], schema changes"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "schemas [SQL Server replication], replicating changes"
   - "publishing [SQL Server replication], schema changes"
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

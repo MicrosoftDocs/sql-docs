@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], files"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - ".sqlsuo files"
   - "files [SQL Server Management Studio], projects"
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -55,5 +51,5 @@ If you have a directory structure similar to the logical structure shown in Solu
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Projects &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Solution Explorer Source Control](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Solution Explorer Source Control](https://msdn.microsoft.com/library/ms173879.aspx)  
   

@@ -1,14 +1,12 @@
 ---
-title: "Quickstart: Connect and query SQL Server using Azure Data Studio | Microsoft Docs"
+title: "Quickstart: Connect and query SQL Server"
+titleSuffix: Azure Data Studio
 description: This quickstart shows how to use Azure Data Studio to connect to SQL Server and run a query
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
@@ -25,7 +23,7 @@ To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-s
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
 If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
-- [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS - Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 - [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) - You only need to follow the steps up to *Create and Query Data*.
 
@@ -66,10 +64,10 @@ The following steps create a database named **TutorialDB**:
       FROM sys.databases
       WHERE name = N'TutorialDB'
    )
-   CREATE DATABASE [TutorialDB]
+      CREATE DATABASE [TutorialDB];
    GO
-
-   ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+   IF SERVERPROPERTY('ProductVersion') > '12'
+       ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
    GO
    ```
 1. To execute the query, click **Run** .
@@ -96,15 +94,15 @@ The query editor is still connected to the *master* database, but we want to cre
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-   DROP TABLE dbo.Customers
+      DROP TABLE dbo.Customers;
    GO
    -- Create the table in the specified schema
    CREATE TABLE dbo.Customers
    (
-      CustomerId        INT    NOT NULL   PRIMARY KEY, -- primary key column
-      Name      [NVARCHAR](50)  NOT NULL,
-      Location  [NVARCHAR](50)  NOT NULL,
-      Email     [NVARCHAR](50)  NOT NULL
+       CustomerId  int NOT NULL PRIMARY KEY, -- primary key column
+       Name        nvarchar(50) NOT NULL,
+       Location    nvarchar(50) NOT NULL,
+       Email       nvarchar(50) NOT NULL
    );
    GO
    ```
@@ -118,7 +116,7 @@ After the query completes, the new **Customers** table appears in the list of ta
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
-      ([CustomerId],[Name],[Location],[Email])
+      ([CustomerId], [Name], [Location], [Email])
    VALUES
       ( 1, N'Orlando', N'Australia', N''),
       ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),

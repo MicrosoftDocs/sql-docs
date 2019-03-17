@@ -1,26 +1,22 @@
 ---
-title: "Publisher Settings | Microsoft Docs"
+title: "SQL Server Replication 'Publisher Settings' dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.publishersettings.f1"
 helpviewer_keywords: 
   - "Publisher Settings dialog box"
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
-caps.latest.revision: 19
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
-# Publisher Settings
+# SQL Server Replication 'Publisher Settings' dialog box
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Publisher Settings** dialog box allows you to change settings for Publishers that have been added to the left pane in Replication Monitor.  
   
@@ -48,6 +44,6 @@ manager: craigg
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

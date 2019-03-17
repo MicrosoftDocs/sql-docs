@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "accuracy chart"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "mining models, charting"
   - "mining models, testing"
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -61,7 +58,7 @@ manager: craigg
   
 5.  Enter the cost information required by the wizard: the fixed cost, individual cost, the population, and the revenue expected.  
   
-6.  Optionally, you can enter a graduated series of costs (click the browse **(…)** button). For example, a mailing might become cheaper as you increase the number of items that are sent, so you can enter a different cost depending on the number of items, and the wizard will automatically adjust the costs for each sample size.  
+6.  Optionally, you can enter a graduated series of costs (click the browse **(...)** button). For example, a mailing might become cheaper as you increase the number of items that are sent, so you can enter a different cost depending on the number of items, and the wizard will automatically adjust the costs for each sample size.  
   
 7.  The wizard creates a chart that includes the cost-benefit analysis for the model.  
   

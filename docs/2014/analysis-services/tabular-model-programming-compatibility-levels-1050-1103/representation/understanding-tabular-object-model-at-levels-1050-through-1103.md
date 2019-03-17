@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
 ---
 # Understanding the Tabular Object Model
-  A tabular model is a logical representation of tables, relationships, hierarchies, perspectives, measures, and Key Performance. This section introduces the internal implementation using AMO. See [Developing with Analysis Management Objects &#40;AMO&#41;](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) if you haven't used AMO before.  
+  A tabular model is a logical representation of tables, relationships, hierarchies, perspectives, measures, and Key Performance. This section introduces the internal implementation using AMO. See [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) if you haven't used AMO before.  
   
  The approach here is top-down, all relevant objects in the tabular model are logically mapped to AMO objects, and the required interaction or workflow explained. A source code sample to create a tabular model using AMO,  AMO to Tabular, is available from Codeplex. An important note about the code in the sample: it is provided only to support to the logical concepts explained here and should not be used in a production environment. The sample is provided without support or warranty.  
   
@@ -54,7 +51,7 @@ manager: craigg
   
  See [Hierarchy Representation &#40;Tabular&#41;](tables-hierarchy-representation.md) for a detailed explanation on how to create and manipulate the hierarchy representation.  
   
-### Key Performance Indicator –KPI- Representation  
+### Key Performance Indicator -KPI- Representation  
  A KPI is used to gauge performance of a value, defined by a Base measure, against a Target value. In terms of AMO objects, a KPI representation has a one-to-many mapping relationship. A KPI is represented by the usage of the following AMO objects: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A>and <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> are the main required objects.  It is important to note that this doesn't mean that all contained objects in the previously mentioned AMO objects can be used when modeling.  
   
 > [!NOTE]  

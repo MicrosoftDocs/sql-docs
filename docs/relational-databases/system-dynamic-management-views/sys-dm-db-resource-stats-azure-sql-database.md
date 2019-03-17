@@ -2,13 +2,8 @@
 title: "sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2018"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_resource_stats"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_db_resource_stats"
   - "dm_db_resource_stats"
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -40,8 +34,8 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |avg_log_write_percent|**decimal (5,2)**|Average write I/O throughput utilization as percentage of the limit of the service tier.|  
 |avg_memory_usage_percent|**decimal (5,2)**|Average memory utilization in percentage of the limit of the service tier.<br /><br /> This includes memory used for storage of In-Memory OLTP objects.|  
 |xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations.<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|  
-|max_worker_percent|**decimal (5,2)**|Maximum concurrent workers (requests) in percentage of the limit of the database’s service tier.|  
-|max_session_percent|**decimal (5,2)**|Maximum concurrent sessions in percentage of the limit of the database’s service tier.|  
+|max_worker_percent|**decimal (5,2)**|Maximum concurrent workers (requests) in percentage of the limit of the database's service tier.|  
+|max_session_percent|**decimal (5,2)**|Maximum concurrent sessions in percentage of the limit of the database's service tier.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. For databases using the vCore-based model, this column is NULL.|
 |cpu_limit|**decimal (5,2)**|Number of vCores for this database during this interval. For databases using the DTU-based model, this column is NULL.|
 |||

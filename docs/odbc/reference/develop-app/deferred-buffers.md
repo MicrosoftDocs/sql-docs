@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "buffers [ODBC], deferred"
   - "deferred buffers [ODBC]"
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

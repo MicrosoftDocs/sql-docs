@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.key_encryptions"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.key_encryptions catalog view"
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

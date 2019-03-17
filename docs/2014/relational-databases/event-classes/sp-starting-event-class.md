@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SP:Starting event class"
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg

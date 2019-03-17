@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.process.batchsettingsdialog.f1"
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

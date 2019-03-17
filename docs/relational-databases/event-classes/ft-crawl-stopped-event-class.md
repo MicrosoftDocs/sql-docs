@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Crawl Stopped event class"
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

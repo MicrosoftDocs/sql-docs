@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DecryptByKey_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "decryption [SQL Server], symmetric keys"
   - "DECRYPTBYKEY function"
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

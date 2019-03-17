@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models [Analysis Services], deploying"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "solutions [Analysis Services], deploying"
   - "models [Analysis Services], data mining"
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL:FullTextQuery event class"
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

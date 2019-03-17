@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.checkforupdates.dialog"
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

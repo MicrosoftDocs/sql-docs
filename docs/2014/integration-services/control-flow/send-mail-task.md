@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sendmailtask.f1"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "messages [Integration Services]"
   - "sending messages"
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -82,7 +78,7 @@ manager: craigg
   
 ## Related Content  
   
--   Technical article, [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
+-   Technical article, [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
   
 ## See Also  
  [Integration Services Tasks](integration-services-tasks.md)   

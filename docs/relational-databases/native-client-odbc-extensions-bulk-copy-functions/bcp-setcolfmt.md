@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "bcp_setcolfmt"
@@ -17,7 +15,6 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "bcp_setcolfmt function"
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg

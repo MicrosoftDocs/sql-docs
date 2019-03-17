@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_articlefilter_TSQL"
   - "sp_articlefilter"
@@ -44,16 +38,16 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@filter_name=**] **'***filter_name***'**  
+ [ **@filter_name=**] **'**_filter_name_**'**  
  Is the name of the filter stored procedure to be created from the *filter_name*. *filter_name* is **nvarchar(386)**, with a default of NULL. You must specify a unique name for the article filter.  
   
- [ **@filter_clause=**] **'***filter_clause***'**  
+ [ **@filter_clause=**] **'**_filter_clause_**'**  
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the keyword WHERE. *filter_clause* is **ntext**, with a default of NULL.  
   
  [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
@@ -70,8 +64,8 @@ sp_articlefilter [ @publication = ] 'publication'
   
  **1** specifies that changes to the article causes existing subscriptions to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@publisher=** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ [ **@publisher=** ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

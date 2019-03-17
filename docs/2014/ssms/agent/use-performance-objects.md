@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, monitoring"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "performance counters [SQL Server], SQL Server Agent"
   - "counters [SQL Server], SQL Server Agent"
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg

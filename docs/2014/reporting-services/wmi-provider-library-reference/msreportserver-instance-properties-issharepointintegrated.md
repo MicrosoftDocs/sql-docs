@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IsSharePointIntegrated property"
 ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # IsSharePointIntegrated Property (WMI MSReportServer_Instance)
   Specifies whether the report server is in SharePoint integrated mode. Beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], this property always returns `False` because in SharePoint mode, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instances are SharePoint shared services and are not controlled by WMI providers.  

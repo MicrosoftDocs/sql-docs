@@ -3,11 +3,8 @@ title: "MSSQLSERVER_50000 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.component: "native-client"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "50000 [SQL Server Native Client setup error]"

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-caps.latest.revision: 8
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Prerequisites for Tutorials (Report Builder)
   The Report Builder tutorials expect that you can view and save reports on a report server or SharePoint site that is integrated with a report server. For data, all tutorials use literal queries that must be processed by an instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -33,9 +30,9 @@ manager: craigg
   
 -   The name of a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instance and credentials sufficient for read-only access to any database. The dataset queries in the tutorials use literal data, but each query must be processed by a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instance to return the metadata that is required for a report dataset. For example, the following connection string specifies only a server: `data source=<servername>`. You must have read access to the default database that is assigned to you by the system administrator who grants you permission to access the server. You can also specify a database, as shown in the following connection string: `data source=<servername>;initial catalog=<database>`.  
   
--   For the tutorial that includes a map, the report server must be configured to support the Bing maps as a background. For more information, see [Plan for Map Report Support](plan-for-map-report-support.md) in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+-   For the tutorial that includes a map, the report server must be configured to support the Bing maps as a background. For more information, see [Plan for Map Report Support](plan-for-map-report-support.md) in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
--   The tutorial, [Tutorial: Creating Drillthrough and Main Reports &#40;Report Builder&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), uses the Contoso business intelligence demo dataset. This dataset is comprised of the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=191575). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
+-   The tutorial, [Tutorial: Creating Drillthrough and Main Reports &#40;Report Builder&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), uses the Contoso business intelligence demo dataset. This dataset is comprised of the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=191575). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
   
      The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which is not used in this tutorial.  
   

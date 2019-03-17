@@ -5,12 +5,9 @@ ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
@@ -19,6 +16,17 @@ manager: kenvh
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Release Notes for Microsoft ODBC Driver for SQL Server on Windows.  
+
+
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows
+
+**Features Added**:
+
+- Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode, for more information see [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md)
+- Ability to stream input parameters against Always Encrypted columns, for more information see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA distributed transactions, for more information see [Using XA Transactions](../use-xa-with-dtc.md)
+
+[Bug fixes](../bug-fixes.md)
 
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows
 

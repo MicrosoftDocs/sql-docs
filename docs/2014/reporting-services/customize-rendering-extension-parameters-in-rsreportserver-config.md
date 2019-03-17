@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "configuration options [Reporting Services]"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "overriding report rendering behavior"
   - "extensions [Reporting Services], rendering"
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Customize Rendering Extension Parameters in RSReportServer.Config
   You can specify rendering extension parameters in the RSReportServer configuration file to override default report rendering behavior for reports that run on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. You can modify rendering extension parameters to achieve the following objectives:  

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database cannot be upgraded"
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg

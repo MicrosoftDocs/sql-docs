@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: "sql-linux"
@@ -60,7 +58,7 @@ A columnstore index is a technology for storing and querying large stores of dat
 SQL Server provides In-Memory OLTP features that can greatly improve the performance of application systems.  This section of the Evaluation Guide will walk you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table without needing to be compiled or interpreted.
 
 ### Configure Database for In-Memory OLTP
-1. It’s recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP.  Use the following query to check the current compatibility level of AdventureWorks:  
+1. It's recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP.  Use the following query to check the current compatibility level of AdventureWorks:  
 
    ```sql
    USE AdventureWorks
@@ -79,7 +77,7 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
    GO
    ```
 
-2. When a transaction involves both a disk-based table and a memory-optimized table, it’s essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  To reliably enforce this level for memory-optimized tables in a cross-container transaction, execute the following:
+2. When a transaction involves both a disk-based table and a memory-optimized table, it's essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  To reliably enforce this level for memory-optimized tables in a cross-container transaction, execute the following:
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON

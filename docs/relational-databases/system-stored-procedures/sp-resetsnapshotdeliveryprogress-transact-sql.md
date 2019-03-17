@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_resetsnapshotdeliveryprogress"
   - "sp_resetsnapshotdeliveryprogress_TSQL"
 helpviewer_keywords: 
   - "sp_resetsnapshotdeliveryprogress"
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

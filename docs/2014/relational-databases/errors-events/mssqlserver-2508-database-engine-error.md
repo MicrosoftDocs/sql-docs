@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "2508 (Database Engine error)"
 ms.assetid: c37d40e5-c665-4d66-a727-5cb845634fcc
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

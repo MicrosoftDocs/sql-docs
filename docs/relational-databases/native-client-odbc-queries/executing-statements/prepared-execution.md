@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "deferred statement preparation"
@@ -26,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  The ODBC API defines prepared execution as a way to reduce the parsing and compiling overhead associated with repeatedly executing a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. The application builds a character string containing an SQL statement and then executes it in two stages. It calls [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) once to have the statement parsed and compiled into an execution plan by the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. It then calls **SQLExecute** for each execution of the prepared execution plan. This saves the parsing and compiling overhead on each execution. Prepared execution is commonly used by applications to repeatedly execute the same, parameterized SQL statement.  
+  The ODBC API defines prepared execution as a way to reduce the parsing and compiling overhead associated with repeatedly executing a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. The application builds a character string containing an SQL statement and then executes it in two stages. It calls [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) once to have the statement parsed and compiled into an execution plan by the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. It then calls **SQLExecute** for each execution of the prepared execution plan. This saves the parsing and compiling overhead on each execution. Prepared execution is commonly used by applications to repeatedly execute the same, parameterized SQL statement.  
   
  For most databases, prepared execution is faster than direct execution for statements executed more than three or four times primarily because the statement is compiled only once, while statements executed directly are compiled each time they are executed. Prepared execution can also provide a reduction in network traffic because the driver can send an execution plan identifier and the parameter values, rather than an entire SQL statement, to the data source each time the statement is executed.  
   

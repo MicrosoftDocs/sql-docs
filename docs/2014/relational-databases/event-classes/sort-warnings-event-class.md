@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Sort Warnings event class"
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg

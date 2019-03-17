@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "business logic handlers [SQL Server replication]"
   - "BusinessLogicModule class"
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -31,7 +27,7 @@ manager: craigg
   
 ### To debug a business logic handler on a local computer  
   
-1.  Configure publishing and distribution, create a publication, and create a subscription to the publication. For more information, see [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md) and [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configure publishing and distribution, create a publication, and create a subscription to the publication. For more information, see [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md) and [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Create and register a business logic handler. For more information, see [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   

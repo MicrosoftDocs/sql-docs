@@ -1,19 +1,15 @@
-﻿---
+---
 title: "Alert Properties (History Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.alert.history.f1"
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

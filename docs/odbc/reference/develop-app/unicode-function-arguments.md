@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Unicode [ODBC], functions"
   - "functions [ODBC], Unicode functions"
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -62,7 +59,7 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
 |**SQLGetTranslator**|**SQLWriteDSNToINI**|  
 |**SQLInstallDriver**||  
   
-> [!NOTE]  
+> [!NOTE]
 >  Deprecated functions have Unicode-to-ANSI mapping support because the ODBC 3*.x* Driver Manager supports recompiling ODBC 2.*x* applications with the UNICODE **#define**.  
   
  This section contains the following topics.  

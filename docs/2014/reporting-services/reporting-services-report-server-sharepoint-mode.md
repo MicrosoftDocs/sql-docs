@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Reporting Services Report Server (SharePoint Mode)
   A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server configured for **SharePoint Mode** can run within a deployment of a SharePoint product. A report server in SharePoint mode can use the collaboration and management features of SharePoint for reports and other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content types. SharePoint mode requires installing the appropriate version of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products on your SharePoint Web Front Ends.  
@@ -26,7 +23,7 @@ manager: craigg
   
 -   [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- For information on what’s new in this release, see the ‘SharePoint’ section in [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
+ For information on what's new in this release, see the 'SharePoint' section in [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
  **In this topic:**  
   
@@ -89,11 +86,11 @@ manager: craigg
   
 -   SharePoint personalization is also not supported on the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pages. Report Server integration is not supported if the SharePoint Web application is enabled for Anonymous access.  
   
--   SQL Server Reporting Services does **not** support SharePoint document library version control. If you save report items in a document library that is configured with “Document Version History” enabled, Reporting Services features will not function correctly and generate errors in the ULS log. The following is an example of an error in the ULS log:  
+-   SQL Server Reporting Services does **not** support SharePoint document library version control. If you save report items in a document library that is configured with "Document Version History" enabled, Reporting Services features will not function correctly and generate errors in the ULS log. The following is an example of an error in the ULS log:  
   
-    -   “…a data source associated with the report has been disabled”.  
+    -   "...a data source associated with the report has been disabled".  
   
-     Document library version history is configured on the ”Versioning Settings” page of “Library Settings”.  
+     Document library version history is configured on the "Versioning Settings" page of "Library Settings".  
   
 ##  <a name="bkmk_supportedcombinations"></a> Supported combinations of the SharePoint add-in and Report Server  
  Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
@@ -122,7 +119,7 @@ manager: craigg
   
 -   All application pages, tools, errors, warnings, and messages that originate from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] will appear in the language used by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instance in one of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] languages.  
   
--   Application pages that you open on a SharePoint site, the Report Viewer Web Part, and Report Builder will appear in one of the supported languages for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in. To view the list of supported languages, go to [SQL Server Downloads](http://msdn.microsoft.com/sql/downloads/) and find the download page for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in.  
+-   Application pages that you open on a SharePoint site, the Report Viewer Web Part, and Report Builder will appear in one of the supported languages for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in. To view the list of supported languages, go to [SQL Server Downloads](https://msdn.microsoft.com/sql/downloads/) and find the download page for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in.  
   
 -   SharePoint sites, SharePoint Central Administration, online help, and messages are available in the languages supported by Office Server products.  
   
@@ -137,12 +134,12 @@ manager: craigg
 |Scale-out your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint deployment by adding additional report servers.|[Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment Topologies for SQL Server BI Features in SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)  .|  
 |Add additional SharePoint web front-ends that have the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components installed for viewing and report items.|[Add an Additional Reporting Services Web Front-end to a Farm](install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configure e-mail for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerting and subscription features.|[Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
-|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services Tips, Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkId=221297).|  
   
 ## See Also  
  [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
  [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Quiz: Configuring SSRS 2012 for SharePoint Integration](http://go.microsoft.com/fwlink/?LinkId=306443)  
+ [Quiz: Configuring SSRS 2012 for SharePoint Integration](https://go.microsoft.com/fwlink/?LinkId=306443)  
   
   

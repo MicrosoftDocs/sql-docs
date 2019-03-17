@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [MDX], SELECT statement"
@@ -16,13 +14,12 @@ helpviewer_keywords:
   - "SELECT statement [MDX]"
   - "cubes [Analysis Services], SELECT statement"
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
 ---
 # The Basic MDX Query (MDX)
-  The basic Multidimensional Expressions (MDX) query is the SELECT statement—the most frequently used query in MDX. By understanding how an MDX SELECT statement must specify a result set, what the syntax of the SELECT statement is, and how to create a simple query using the SELECT statement, you will have a solid understanding of how to use MDX to query multidimensional data.  
+  The basic Multidimensional Expressions (MDX) query is the SELECT statement-the most frequently used query in MDX. By understanding how an MDX SELECT statement must specify a result set, what the syntax of the SELECT statement is, and how to create a simple query using the SELECT statement, you will have a solid understanding of how to use MDX to query multidimensional data.  
   
 ## Specifying a Result Set  
  In MDX, the SELECT statement specifies a result set that contains a subset of multidimensional data that has been returned from a cube. To specify a result set, an MDX query must contain the following information:  

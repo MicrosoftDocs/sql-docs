@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "RelatedTable property [ADOX]"
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

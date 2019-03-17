@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.forloopcontainer.f1"
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg

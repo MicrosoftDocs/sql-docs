@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "ProtocolName Property (ServerNetworkProtocolIPAddress Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "ProtocolName property"
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -45,6 +40,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLDriverConnect"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDriverConnect function [ODBC]"
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
-caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -48,14 +45,14 @@ manager: craigg
 ```  
   
 SQLRETURN SQLDriverConnect(  
-     SQLHDBC         ConnectionHandle,  
-     SQLHWND         WindowHandle,  
-     SQLCHAR *       InConnectionString,  
-     SQLSMALLINT     StringLength1,  
-     SQLCHAR *       OutConnectionString,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLength2Ptr,  
-     SQLUSMALLINT    DriverCompletion);  
+     SQLHDBC         ConnectionHandle,  
+     SQLHWND         WindowHandle,  
+     SQLCHAR *       InConnectionString,  
+     SQLSMALLINT     StringLength1,  
+     SQLCHAR *       OutConnectionString,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLength2Ptr,  
+     SQLUSMALLINT    DriverCompletion);  
 ```  
   
 ## Arguments  

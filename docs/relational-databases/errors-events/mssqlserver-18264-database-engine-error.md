@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "18264 (Database Engine error)"
 ms.assetid: 3050fc56-2be5-43cf-916b-50a3ac5f89aa
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

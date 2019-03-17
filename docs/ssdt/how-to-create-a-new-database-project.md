@@ -6,8 +6,6 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.dbprojectwizard.importschema"
@@ -17,7 +15,6 @@ f1_keywords:
   - "sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog"
   - "sql.data.tools.importscriptwizard.fileselection"
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

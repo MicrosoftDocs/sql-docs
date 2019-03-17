@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "catalog functions [ODBC], result sets"
   - "functions [ODBC], catalog functions"
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -23,7 +20,7 @@ Each catalog function returns data as a result set. This result set is no differ
   
  The result set for each catalog function is described in the reference entry for that function. In addition to the listed columns, the result set can contain driver-specific columns after the last predefined column. These columns (if any) are described in the driver documentation.  
   
- Applications should bind driver-specific columns relative to the end of the result set. That is, they should calculate the number of a driver-specific column as the number of the last column — retrieved with **SQLNumResultCols** — less the number of columns that occur after the required column. This saves having to change the application when new columns are added to the result set in future versions of ODBC or the driver. For this scheme to work, drivers must add new driver-specific columns before old driver-specific columns so that column numbers do not change relative to the end of the result set.  
+ Applications should bind driver-specific columns relative to the end of the result set. That is, they should calculate the number of a driver-specific column as the number of the last column - retrieved with **SQLNumResultCols** - less the number of columns that occur after the required column. This saves having to change the application when new columns are added to the result set in future versions of ODBC or the driver. For this scheme to work, drivers must add new driver-specific columns before old driver-specific columns so that column numbers do not change relative to the end of the result set.  
   
  Identifiers that are returned in the result set are not quoted, even if they contain special characters. For example, suppose the identifier quote character (which is driver-specific and returned through **SQLGetInfo**) is a double quotation mark (") and the Accounts Payable table contains a column named Customer Name. In the row returned by **SQLColumns** for this column, the value of the TABLE_NAME column is Accounts Payable, not "Accounts Payable", and the value of the COLUMN_NAME column is Customer Name, not "Customer Name". To retrieve the names of customers in the Accounts Payable table, the application would quote these names:  
   

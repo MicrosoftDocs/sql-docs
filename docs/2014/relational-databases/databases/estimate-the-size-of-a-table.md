@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pages [SQL Server], space"
@@ -25,7 +22,6 @@ helpviewer_keywords:
   - "reserved free rows per page [SQL Server]"
   - "calculating table size"
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

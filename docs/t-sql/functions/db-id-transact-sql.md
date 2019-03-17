@@ -5,9 +5,7 @@ ms.date: "07/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DB_ID_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "displaying database ID numbers"
   - "DB_ID function"
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

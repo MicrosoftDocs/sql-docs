@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "modifying SQL Server Service properties"
   - "WMI Provider for Configuration Management, VBScript"
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

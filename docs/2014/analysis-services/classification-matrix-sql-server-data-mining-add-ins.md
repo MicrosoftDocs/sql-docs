@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, validating"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "confusion table"
   - "mining models, testing"
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -28,7 +25,7 @@ manager: craigg
  In these add-ins, use the **Classification Matrix** wizard to select a model, specify the testing data, and then generate a results matrix.  
   
 ## How to Read a Classification Matrix  
- Let’s assume your objective is to design a customer loyalty program and then assign customers to appropriate categories, so that you can provide them with the appropriate level of incentives. You have implemented three levels for the reward program -- bronze, silver, and gold – and given these out to customers in a trial phase. You have also designed a model that analyzes customers and predicts the correct categories. Now you will use the classification matrix on the trial data to determine how good the model was at predicting the correct offer for all customers.  
+ Let's assume your objective is to design a customer loyalty program and then assign customers to appropriate categories, so that you can provide them with the appropriate level of incentives. You have implemented three levels for the reward program -- bronze, silver, and gold - and given these out to customers in a trial phase. You have also designed a model that analyzes customers and predicts the correct categories. Now you will use the classification matrix on the trial data to determine how good the model was at predicting the correct offer for all customers.  
   
  The table from the classification matrix tells you how many customers would be assigned to each category based on the model, and compares that result to the number of customers who actually signed up for each reward level.  
   
@@ -78,7 +75,7 @@ manager: craigg
   
 -   The model that you are measuring needs to predict a value that is either discrete or that has already been discretized.  
   
--   If you didn’t use the option to save a testing set along with your structure or model, you need to obtain an input data set that has essentially the same number of columns, with matching data types, as those used in the model.  
+-   If you didn't use the option to save a testing set along with your structure or model, you need to obtain an input data set that has essentially the same number of columns, with matching data types, as those used in the model.  
   
 -   Both the data mining model and the new data that you are using for testing must contain at least one column that can be predicted, and the columns must contain the same kind of data.  
   

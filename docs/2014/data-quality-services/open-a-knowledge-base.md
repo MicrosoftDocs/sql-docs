@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.kb.openkb.f1"
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-caps.latest.revision: 18
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Open a Knowledge Base
@@ -75,9 +71,9 @@ manager: craigg
 ##  <a name="State"></a> State of a Knowledge Base  
  The State field indicates which stage of an activity the knowledge base is at. If you open the knowledge base, it will open to that stage.  
   
--   **\<Empty>**: The State field is empty for a knowledge base if the knowledge base has been published by clicking **Publish** in the Domain Management activity, and clicking **Yes – Publish the knowledge base and exit**.  
+-   **\<Empty>**: The State field is empty for a knowledge base if the knowledge base has been published by clicking **Publish** in the Domain Management activity, and clicking **Yes - Publish the knowledge base and exit**.  
   
--   **In Work**: Work on the knowledge base has been saved by clicking **Publish** in the Domain Management activity, and clicking **No – Save the work on the knowledge base and exit**.  
+-   **In Work**: Work on the knowledge base has been saved by clicking **Publish** in the Domain Management activity, and clicking **No - Save the work on the knowledge base and exit**.  
   
 -   **Domain Management**: Data has been entered for a domain in the knowledge base, but the knowledge base has not been published and the work remains in the Domain Management activity. The Knowledge Discovery activity is not available. This occurs when you click **Close** in the **Domain Management** screen.  
   
@@ -85,10 +81,10 @@ manager: craigg
   
 -   **Discovery - Discover**: The knowledge base was closed on the **Knowledge Base Management: Analyze** page. The knowledge base is locked, and The Domain Management activity is not available.  
   
--   **Discovery – Value Management**: The knowledge base was closed on the **Knowledge Base Management: Manage Domain Terms** page. The knowledge base is locked, and the Domain Management activity is not available.  
+-   **Discovery - Value Management**: The knowledge base was closed on the **Knowledge Base Management: Manage Domain Terms** page. The knowledge base is locked, and the Domain Management activity is not available.  
   
--   **Matching Policy – Matching Policy**: The knowledge base was closed on the **Matching Policy – Matching Policy** page. The knowledge base is locked, and the Knowledge Discovery and Domain Management activities are not available.  
+-   **Matching Policy - Matching Policy**: The knowledge base was closed on the **Matching Policy - Matching Policy** page. The knowledge base is locked, and the Knowledge Discovery and Domain Management activities are not available.  
   
--   **Matching Policy – Matching Results**: The knowledge base was closed on the **Matching Policy – Matching Results** page. The knowledge base is locked, and the Knowledge Discovery and Domain Management activities are not available.  
+-   **Matching Policy - Matching Results**: The knowledge base was closed on the **Matching Policy - Matching Results** page. The knowledge base is locked, and the Knowledge Discovery and Domain Management activities are not available.  
   
   

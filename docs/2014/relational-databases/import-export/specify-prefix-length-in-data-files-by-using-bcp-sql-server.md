@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp utility [SQL Server], prefix length"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "lengths [SQL Server], prefix characters"
   - "data formats [SQL Server], prefix length"
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

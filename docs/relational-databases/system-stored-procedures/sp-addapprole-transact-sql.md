@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addapprole_TSQL"
@@ -40,12 +37,12 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+ [ **@rolename =** ] **'**_role_**'**  
  Is the name of the new application role. *role* is **sysname**, with no default. *role* must be a valid identifier and cannot already exist in the current database.  
   
  Application role names can contain from 1 up to 128 characters, including letters, symbols, and numbers. Role names cannot contain a backslash (\\) nor be NULL or an empty string ('').  
   
- [ **@password =** ] **'***password***'**  
+ [ **@password =** ] **'**_password_**'**  
  Is the password required to activate the application role. *password* is **sysname**, with no default. *password* cannot be NULL.  
   
 ## Return Code Values  

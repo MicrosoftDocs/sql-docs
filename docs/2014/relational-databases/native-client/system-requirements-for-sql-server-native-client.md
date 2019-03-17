@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: native-client
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: "reference"
 helpviewer_keywords: 
   - "system requirements [SQL Server Native Client]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, system requirements"
   - "SQLNCLI, system requirements"
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
   
 -   An instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on your server.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requires Windows Installer 3.0. Windows Installer 3.0 is already installed on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating systems. For all other platforms you need to explicitly install it. For more information, see [Windows Installer 3.0 Redistributable](http://go.microsoft.com/fwlink/?LinkId=46459).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requires Windows Installer 3.0. Windows Installer 3.0 is already installed on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating systems. For all other platforms you need to explicitly install it. For more information, see [Windows Installer 3.0 Redistributable](https://go.microsoft.com/fwlink/?LinkId=46459).  
   
 > [!NOTE]  
 >  Make sure you log on with administrator privileges before installing this software.  

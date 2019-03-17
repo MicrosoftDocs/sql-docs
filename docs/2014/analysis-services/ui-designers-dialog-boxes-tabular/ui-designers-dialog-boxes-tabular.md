@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "05/17/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend

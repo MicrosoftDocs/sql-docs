@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rowset binding [ODBC]"
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -40,7 +37,7 @@ manager: craigg
   
 3.  Execute the statement.  
   
-4.  Each call to [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
+4.  Each call to [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
   
 ### To use row-wise binding  
   
@@ -64,7 +61,7 @@ manager: craigg
   
 4.  Execute the statement.  
   
-5.  Each call to [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
+5.  Each call to [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
   
 ## See Also  
  [Using Cursors How-to Topics &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   

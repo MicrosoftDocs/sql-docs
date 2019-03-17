@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL_NO_DATA [ODBC]"
   - "backward compatibility [ODBC], SQL_NO_DATA"
   - "compatibility [ODBC], SQL_NO_DATA"
 ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

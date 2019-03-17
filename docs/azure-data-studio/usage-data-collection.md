@@ -1,14 +1,12 @@
 ---
-title: Enable or disable usage data collection, and crash reporting for Azure Data Studio | Microsoft Docs
+title: Enable or disable usage data collection, and crash reporting
+titleSuffix: Azure Data Studio
 description: This article explains how to control if usage and crash reporting data is collected and sent to Microsoft.
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
@@ -20,7 +18,7 @@ manager: craigg
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] collects usage data and sends it to Microsoft to help improve our products and services. To learn more, read the [privacy statement](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409).
 
-If you don’t wish to send usage data to Microsoft, you can set the *telemetry.enableTelemetry* setting to *false*.
+If you don't wish to send usage data to Microsoft, you can set the *telemetry.enableTelemetry* setting to *false*.
 
 To silence all telemetry events from [!INCLUDE[name-sos](../includes/name-sos-short.md)], from **File** > **Preferences** > **Settings**, add the following option:
 

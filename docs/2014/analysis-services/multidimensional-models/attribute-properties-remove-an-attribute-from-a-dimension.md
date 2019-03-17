@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing attributes"
   - "deleting attributes"
   - "attributes [Analysis Services], removing"
 ms.assetid: b41387c1-6c7d-42dc-bc14-d40586acb769
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

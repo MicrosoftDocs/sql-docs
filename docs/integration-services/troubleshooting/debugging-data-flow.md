@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "progress reporting [Integration Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "debugging [Integration Services], data flow"
   - "counting rows"
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -37,7 +34,7 @@ manager: craigg
   
  A data viewer can display data in a grid. Using a grid, you select the columns to display. The values for the selected columns display in a tabular format.  
   
- You can also include multiple data viewers on a path. You can display the same data in different formats—for example, create a chart view and a grid view of the data—or create different data viewers for different columns of data.  
+ You can also include multiple data viewers on a path. You can display the same data in different formats-for example, create a chart view and a grid view of the data-or create different data viewers for different columns of data.  
   
  When you add a data viewer to a path, [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer adds a data viewer icon to the design surface of the **Data Flow** tab, next to the path. Transformations that can have multiple outputs, such as the Conditional Split transformation, can include a data viewer on each path.  
   
@@ -86,9 +83,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - the sum of all the rows sent by the component  
   
--   **wall_clock_time_ms** – the total elapsed execution time, in milliseconds, for each component  
+-   **wall_clock_time_ms** - the total elapsed execution time, in milliseconds, for each component  
   
--   **num_rows_per_millisecond** – the number of rows per millisecond sent by each component  
+-   **num_rows_per_millisecond** - the number of rows per millisecond sent by each component  
   
  The **HAVING** clause is used to prevent a divide-by-zero error in the calculations.  
   
@@ -207,7 +204,7 @@ order by source_component_name desc
 9. In the Columns to display area, select the columns you want to display in the data viewer. By default, all the available columns are selected and listed in the **Displayed Columns** list. Move columns that you do not want to use to the **Unused Column** list by selecting them and then clicking the left arrow.  
   
     > [!NOTE]  
-    >  In the grid, values that represent the DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types appear as ISO 8601 formatted strings and a space separator replaces the **T** separator. Values that represent the DT_DATE and DT_FILETIME data types include seven digits for fractional seconds. Because the DT_FILETIME data type stores only three digits of fractional seconds, the grid displays zeros for the remaining four digits. Values that represent the DT_DBTIMESTAMP data type include three digits for fractional seconds. For values that represent the DT_DBTIME2, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types, the number of digits for fractional seconds corresponds to the scale specified for the column's data type. For more information about ISO 8601 formats, see [Date and Time Formats](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). For more information about data types, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  In the grid, values that represent the DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types appear as ISO 8601 formatted strings and a space separator replaces the **T** separator. Values that represent the DT_DATE and DT_FILETIME data types include seven digits for fractional seconds. Because the DT_FILETIME data type stores only three digits of fractional seconds, the grid displays zeros for the remaining four digits. Values that represent the DT_DBTIMESTAMP data type include three digits for fractional seconds. For values that represent the DT_DBTIME2, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types, the number of digits for fractional seconds corresponds to the scale specified for the column's data type. For more information about ISO 8601 formats, see [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). For more information about data types, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 10. Click **OK**.  
 
@@ -267,7 +264,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Enabling verbose logging level and adding data taps increase the I/O operations performed by your data integration solution. Hence, we recommend that you add data taps only for troubleshooting purposes  
   
 ### Video  
- This [video on TechNet](http://technet.microsoft.com/sqlserver/dn600163) demonstrates how to add/use data taps in SQL Server 2012 SSISDB catalog that help with debugging packages programmatically and capturing the partial results at the runtime. It also discusses how to list/ remove these data taps and best practices for using data taps in SSIS packages.  
+ This [video on TechNet](https://technet.microsoft.com/sqlserver/dn600163) demonstrates how to add/use data taps in SQL Server 2012 SSISDB catalog that help with debugging packages programmatically and capturing the partial results at the runtime. It also discusses how to list/ remove these data taps and best practices for using data taps in SSIS packages.  
  
 ## See Also  
  [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)  

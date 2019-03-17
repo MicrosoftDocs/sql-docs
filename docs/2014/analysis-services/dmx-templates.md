@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -72,7 +69,7 @@ manager: craigg
   
  **Create**  
   
- Use these templates to build custom models or data structures. You are not limited to the models supported by the wizards – you can use any data mining algorithm supported by the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you are connected to, including plug-in algorithms.  
+ Use these templates to build custom models or data structures. You are not limited to the models supported by the wizards - you can use any data mining algorithm supported by the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you are connected to, including plug-in algorithms.  
   
 -   Mining model  
   

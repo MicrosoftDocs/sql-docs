@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SUSER_SID"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], logins"
   - "SUSER_SID function"
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -69,7 +66,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## Examples  
   
 ### A. Using SUSER_SID  
- The followng example returns the security identification number (SID) for the current security context.  
+ The following example returns the security identification number (SID) for the current security context.  
   
 ```  
 SELECT SUSER_SID();  

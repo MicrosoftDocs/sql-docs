@@ -12,12 +12,9 @@ ms.date: "08/20/2018"
 >>>>>>> 469f4d6d039bfa0866c573339f78a9ac260e5a47
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_rxPredict"

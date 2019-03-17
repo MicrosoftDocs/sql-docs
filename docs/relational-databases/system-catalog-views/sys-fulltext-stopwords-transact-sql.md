@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fulltext_stopwords_TSQL"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "sys.fulltext_stopwords catalog view"
   - "stopwords [full-text search]"
 ms.assetid: 79787bb7-d729-448e-b56a-0a467bbb304f
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MAXIMUM_STATES"
@@ -47,7 +45,6 @@ helpviewer_keywords:
   - "CLUSTER_COUNT"
   - "COMPLEXITY_PENALTY"
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -89,7 +86,7 @@ manager: craigg
 |MAXIMUM_OUTPUT_ATTRIBUTES|Microsoft Decision Trees Algorithm<br /><br /> Microsoft Linear Regression Algorithm<br /><br /> Microsoft Logistic Regression Algorithm<br /><br /> Microsoft Naïve Bayes Algorithm<br /><br /> Microsoft Neural Network Algorithm|Defines the number of output attributes that the algorithm can handle before it invokes feature selection. Set this value to 0 to turn off feature selection.<br /><br /> The default is 255.|  
 |MAXIMUM_SEQUENCE_STATES|Microsoft Sequence Clustering Algorithm|Specifies the maximum number of states that a sequence can have. Setting this value to a number greater than 100 may cause the algorithm to create a model that does not provide meaningful information.<br /><br /> The default is 64.|  
 |MAXIMUM_SERIES_VALUE|Microsoft Time Series Algorithm|Specifies the maximum value to use for predictions. This parameter is used, together with MINIMUM_SERIES_VALUE, to constrain the predictions to some expected range. For example, you can specify that the predicted sales quantity for any day should never exceed the number of products in inventory.|  
-|MAXIMUM_STATES|Microsoft Clustering Algorithm<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft Sequence Clustering Algorithm|Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is larger than the maximum number of states, the algorithm uses the attribute’s most popular states and ignores the remaining states.<br /><br /> The default is 100.|  
+|MAXIMUM_STATES|Microsoft Clustering Algorithm<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft Sequence Clustering Algorithm|Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is larger than the maximum number of states, the algorithm uses the attribute's most popular states and ignores the remaining states.<br /><br /> The default is 100.|  
 |MAXIMUM_SUPPORT|Microsoft Association Algorithm|Specifies the maximum number of cases in which an itemset can have support. If this value is less than 1, the value represents a percentage of the total cases. If this value is greater than 1, the value represents the absolute number of cases that can contain the itemset.<br /><br /> The default is 1.|  
 |MINIMUM_IMPORTANCE|Microsoft Association Algorithm|Specifies the importance threshold for association rules. Rules with importance less than this value are filtered out.|  
 |MINIMUM_ITEMSET_SIZE|Microsoft Association Algorithm|Specifies the minimum number of items that are allowed in an itemset.<br /><br /> The default is 1.|  

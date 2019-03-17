@@ -4,13 +4,12 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Pagination in Reporting Services (Report Builder  and SSRS)
   Pagination refers to the number of pages within a report and how report items are arranged on these pages. Pagination in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varies depending on the rendering extension you use to view and deliver the report. When you run a report on the report server, the report uses the HTML renderer. HTML follows a specific set of pagination rules. If you export the same report to PDF, for example, the PDF renderer is used and a different set of rules are applied; therefore, the report paginates differently. To successfully design an easy-to-read report for your users that is optimized for the renderer that you plan to use to deliver your report, you need to understand the rules used to control pagination in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.author: maggies
   
  By default, the page size is 8.5 x 11 inches but you can change this size by using the **Report Properties** pane, **Page Setup** dialog box or by changing the PageHeight and PageWidth properties in the **Properties** pane. The page size does not grow or shrink to accommodate the contents of the report body. If you want the report to appear on a single page, all the content within the report body must fit on the physical page. If it does not fit and you use the hard page break format, then the report will require additional pages. If the report body grows past the right edge of the physical page, then a page break is inserted horizontally. If the report body grows past the bottom edge of the physical page, then a page break is inserted vertically.  
   
- If you want to override the physical page size that is defined in the report, you can specify the physical page size using the Device Information settings for the specific renderer that you are using to export the report. For more information, see [Reporting Services Device Information Settings](http://go.microsoft.com/fwlink/?LinkId=102515).  
+ If you want to override the physical page size that is defined in the report, you can specify the physical page size using the Device Information settings for the specific renderer that you are using to export the report. For more information, see [Reporting Services Device Information Settings](https://go.microsoft.com/fwlink/?LinkId=102515).  
   
 ### Margins  
  Margins are drawn from the edge of the physical page dimensions inward to the specified margin setting. If a report item extends into the margin area, it is clipped so that the overlapping area is not rendered. If you specify margin sizes that cause the horizontal or vertical width of the page to equal zero, the margin settings default to zero. Margins are specified using the **Report Properties** pane, **Page Setup** dialog box or by changing the TopMargin, BottomMargin, LeftMargin and RightMargin properties in the **Properties** pane. If you want to override the margin size that is defined in the report, you can specify the margin size using the Device Information settings for the specific renderer that you are using to export the report.  

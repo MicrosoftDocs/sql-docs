@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB error handling, return codes"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "FAILED macro"
   - "errors [OLE DB], return codes"
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
 # Return Codes
   At the most basic level, a member function either succeeds or fails. At a somewhat more precise level, a function can succeed, but its success may not be what the application developer intended.  
   
- For more information about OLE DB return codes, see [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
+ For more information about OLE DB return codes, see [Return Codes (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
  When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider member function returns S_OK, the function succeeded.  
   

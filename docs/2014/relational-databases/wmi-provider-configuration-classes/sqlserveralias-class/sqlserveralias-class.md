@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "SqlServerAlias Class"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "SqlServerAlias class"
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -36,6 +31,6 @@ manager: craigg
  **Note:** The [SqlServerAlias Class](sqlserveralias-class.md) inherits the `Put` method from the Provider class. However, it does not return any results as indicated by the `Provider::Put` method. For more information, see the WMI documentation.  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

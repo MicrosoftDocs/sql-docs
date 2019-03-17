@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [data mining]"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "MODEL_EXISTENCE_ONLY column"
   - "coding [Data Mining]"
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -67,7 +64,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  You can add or change the modeling flags used in a model by using the Data Mining Designer and editing the properties of the associated columns. Such changes require that the structure or model be reprocessed.  
   
- You can specify modeling flags in a new mining structure or mining model by using DMX, or by using AMO or XMLA scripts. However, you cannot change the modeling flags used in an existing mining model and structure by using DMX. You must create a new mining model by using the syntax, `ALTER MINING STRUCTURE….ADD MINING MODEL`.  
+ You can specify modeling flags in a new mining structure or mining model by using DMX, or by using AMO or XMLA scripts. However, you cannot change the modeling flags used in an existing mining model and structure by using DMX. You must create a new mining model by using the syntax, `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
 ##  <a name="bkmk_UseRegressors"></a> Uses of the REGRESSOR Modeling Flag  
  When you set the REGRESSOR modeling flag on a column, you are indicating to the algorithm that the column contains potential regressors. The actual regressors that are used in the model are determined by the algorithm. A potential regressor can be discarded if it does not model the predictable attribute.  

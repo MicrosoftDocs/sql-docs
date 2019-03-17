@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "code access security [CLR integration]"
   - "EXTERNAL_ACCESS assemblies"
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 28
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

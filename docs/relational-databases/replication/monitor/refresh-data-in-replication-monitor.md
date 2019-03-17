@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "refreshing data"
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
-caps.latest.revision: 17
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -45,6 +41,6 @@ manager: craigg
 2.  In the **Subscription \<SubscriptionName>** detail window, click **Action**, and then click **Auto Refresh**. The refresh rate is determined by the **Refresh rate** setting in the **Publisher Settings** dialog box.  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

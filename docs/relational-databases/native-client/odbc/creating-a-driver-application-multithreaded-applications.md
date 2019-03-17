@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|ODBC"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "threads [SQL Server], multithreaded applications"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, multithreaded applications"
   - "multithreaded applications [SQL Server Native Client]"
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

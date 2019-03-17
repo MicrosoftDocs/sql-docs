@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COL_LENGTH"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "column properties [SQL Server]"
   - "column length [SQL Server]"
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -54,7 +51,7 @@ Returns NULL on error, or if a caller does not have the correct permission to vi
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns, or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as COL_LENGTH might return NULL, if the user does not have correct permission on the object. See [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) for more information.
   
 ## Remarks  
-For **varchar** columns declared with the **max** specifier (**varchar(max)**), COL_LENGTH returns the value –1.
+For **varchar** columns declared with the **max** specifier (**varchar(max)**), COL_LENGTH returns the value -1.
   
 ## Examples  
 This example shows the return values for a column of type `varchar(40)` and a column of type `nvarchar(40)`:

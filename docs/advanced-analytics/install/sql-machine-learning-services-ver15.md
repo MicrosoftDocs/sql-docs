@@ -1,5 +1,6 @@
 ---
-title: Differences in SQL Server 2019 Machine Learning Services installation | Microsoft Docs
+title: Differences in SQL Server 2019 - SQL Server Machine Learning Services
+description: Learn what's new for R and Python SQL Server machine learning extensions in the SQL Server 2019 preview release.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/08/2018  
@@ -46,12 +47,12 @@ As with previous releases, the **SQLRUserGroup** continues to provide read and e
 
 ## Implied authentication
 
-As before, additional configuration is still required for *implied authentication* in cases where script or code has to connect back to SQL Server using trusted authentication to retrieve data or resources. The additional configuration involves creating a database login for **SQLRUserGroup**, whose sole member is now the single SQL Server Launchpad service account instead of multiple worker accounts. For more information about this task, see [Add SQLRUserGroup as a database user](../r/add-sqlrusergroup-to-database.md).
+As before, additional configuration is still required for *implied authentication* in cases where script or code has to connect back to SQL Server using trusted authentication to retrieve data or resources. The additional configuration involves creating a database login for **SQLRUserGroup**, whose sole member is now the single SQL Server Launchpad service account instead of multiple worker accounts. For more information about this task, see [Add SQLRUserGroup as a database user](../security/add-sqlrusergroup-to-database.md).
 
 
 ## Symbolic link created by Setup
 
-A symbolic link is created to the current default **R_SERVICES**  and **PYTHON_SERIVCES** as part of SQL Server Setup. If you don't want to create this link, an alternative is to grant 'all application packages' read permission to the hierarchy leading up to the folder.
+A symbolic link is created to the current default **R_SERVICES**  and **PYTHON_SERVICES** as part of SQL Server Setup. If you don't want to create this link, an alternative is to grant 'all application packages' read permission to the hierarchy leading up to the folder.
 
 
 ## See also

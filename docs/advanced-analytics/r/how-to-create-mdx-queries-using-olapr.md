@@ -1,5 +1,6 @@
 ---
-title: How to create MDX queries in R using olapR in SQL Server Machine Learning | Microsoft Docs
+title: How to create MDX queries in R using olapR - SQL Server Machine Learning Services
+description: Use the olapR package library in SQL Server to write MDX queries in R language script.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -71,7 +72,7 @@ The following examples are based on the AdventureWorks data mart and cube projec
 + Create the cube that is used in these examples by following the Analysis Services tutorial up to Lesson 4:
 [Creating an OLAP cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ Download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, this site provides a fully processed cube in zipped format: [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Extract the file, and then restore it to your SSAS instance. For more information, see [Backup and restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), or [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
++ Download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, this site provides a fully processed cube in zipped format: [Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extract the file, and then restore it to your SSAS instance. For more information, see [Backup and restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), or [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
 ### 1. Basic MDX with slicer
 

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VisualStudio.SourceControl.GetVersionDialog"
 helpviewer_keywords: 
   - "Get dialog box"
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/20/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sql_logins_TSQL"

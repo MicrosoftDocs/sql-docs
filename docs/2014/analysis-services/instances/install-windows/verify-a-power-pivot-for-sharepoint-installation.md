@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -38,7 +35,7 @@ manager: craigg
     5.  Click **Close**, and then click **OK**.  
   
         > [!NOTE]  
-        >  SharePoint installation documentation includes additional instructions for working around proxy server errors and for disabling Internet Explorer Enhanced Security Configuration so that you can download and install updates. For more information, see the **Perform additional tasks** section in [Deploy a single server with SQL Server](http://go.microsoft.com/fwlink/?LinkId=177754) on the Microsoft web site.  
+        >  SharePoint installation documentation includes additional instructions for working around proxy server errors and for disabling Internet Explorer Enhanced Security Configuration so that you can download and install updates. For more information, see the **Perform additional tasks** section in [Deploy a single server with SQL Server](https://go.microsoft.com/fwlink/?LinkId=177754) on the Microsoft web site.  
   
 3.  In Central Administration, in System Settings, click **Manage farm features**.  
   
@@ -68,7 +65,7 @@ manager: craigg
 ## Verify Data Access on the Server  
  To verify PowerPivot data access on the server, do the following:  
   
-1.  [Download](http://go.microsoft.com/fwlink/?LinkID=219108) the Picnic data sample that accompanies a Reporting Services tutorial. You will use the sample workbook in this download to verify PowerPivot data access. Extract the files.  
+1.  [Download](https://go.microsoft.com/fwlink/?LinkID=219108) the Picnic data sample that accompanies a Reporting Services tutorial. You will use the sample workbook in this download to verify PowerPivot data access. Extract the files.  
   
 2.  Upload the Excel workbook (.xlsx) to Shared Documents. The workbook contains embedded PowerPivot data.  
   

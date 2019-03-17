@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -52,5 +46,5 @@ If you want to securely connect to SQL Server, make use of Encrypt connection by
 If you want to use this option, select the **Trust Server Certificate** checkbox.  
   
 > [!NOTE]  
-> To enable **Trust Server Certificate**, “Encrypt” must be set to **True**.  
+> To enable **Trust Server Certificate**, "Encrypt" must be set to **True**.  
   

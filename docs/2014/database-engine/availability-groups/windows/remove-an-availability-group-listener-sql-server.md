@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.availabilitygroup.removeaglistener.default.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -78,14 +75,14 @@ manager: craigg
   
 2.  Use the [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) statement, as follows:  
   
-     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **‘*`dns_name`*’**  
+     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **'*`dns_name`*'**  
   
      where *group_name* is the name of the availability group and *dns_name* is the DNS name of the availability group listener.  
   
      The following example deletes the listener of the `AccountsAG` availability group. The DNS name is AccountsAG_Listener.  
   
     ```  
-    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER ‘AccountsAG_Listener’;  
+    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  

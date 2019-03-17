@@ -5,9 +5,7 @@ ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_FUNCTION_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "dropping user-defined functions"
   - "deleting user-defined functions"
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

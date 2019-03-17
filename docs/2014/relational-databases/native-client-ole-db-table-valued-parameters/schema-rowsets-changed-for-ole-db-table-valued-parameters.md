@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "schema rowsets [OLE DB]"
   - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

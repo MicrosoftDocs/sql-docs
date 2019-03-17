@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "error messages [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], error messages"
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

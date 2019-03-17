@@ -5,9 +5,7 @@ ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], backup compression"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "backing up [SQL Server], backup compression"
   - "backup compression [SQL Server]"
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

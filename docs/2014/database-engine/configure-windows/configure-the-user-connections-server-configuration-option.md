@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "12/02/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "simultaneous connections [SQL Server]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "maximum number of simultaneous user connections"
   - "connections [SQL Server], simultaneous"
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

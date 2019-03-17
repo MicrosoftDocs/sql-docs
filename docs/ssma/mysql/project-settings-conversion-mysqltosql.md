@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -105,7 +99,7 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
 |**Term**|**Definition**|  
 |**Character to Numeric conversion**|Specifes how to handle implicit and explicit conversion from Character data type to numeric data types.<br /><br />**Default Mode**:   Optimistic<br /><br />**Optimistic Mode**:  Optimistic<br /><br />**Full Mode**:   Precise|  
 |**Control UNSIGNED numeric values**|Control assigning values to UNSIGNED numeric variables and parameters.<br /><br />**Default Mode**:   No<br /><br />**Optimistic Mode**:  No<br /><br />**Full Mode**:   Yes|  
-|**Control UNSIGNED Subtraction**|Modify negative values inserted into table columns of UNSIGNED datatype.<br /><br />**Default Mode**:   Convert ‘as-is’<br /><br />**Optimistic Mode**:  Convert ‘as-is’<br /><br />**Full Mode**:   Mark With a Warning|  
+|**Control UNSIGNED Subtraction**|Modify negative values inserted into table columns of UNSIGNED datatype.<br /><br />**Default Mode**:   Convert 'as-is'<br /><br />**Optimistic Mode**:  Convert 'as-is'<br /><br />**Full Mode**:   Mark With a Warning|  
 |**Conversion to and from Binary data type**|Specifes how to handle implicit and explicit conversion from Binary data type.<br /><br />**Default Mode**:   Optimistic<br /><br />**Optimistic Mode**:  Optimistic<br /><br />**Full Mode**:   Precise|  
 |**Conversion to Date/Time data type**|Specifes how to handle implicit and explicit conversion to Date/Time data type.<br /><br />**Default Mode**:   Emulate MySQL format<br /><br />**Optimistic Mode**:  Use SQL Server format<br /><br />**Full Mode**:   Emulate MySQL format|  
 |**Numeric Literals With Precision Exceeding 38**|Specifies how to convert numeric literals with precision exceeding 38.<br /><br />**Default Mode**:   Round if Possible<br /><br />**Optimistic Mode**:  Round if Possible<br /><br />**Full Mode**:   Round if Possible|  

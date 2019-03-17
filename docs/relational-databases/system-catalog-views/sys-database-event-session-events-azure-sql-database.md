@@ -5,15 +5,9 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.component: "system-catalog-views"
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

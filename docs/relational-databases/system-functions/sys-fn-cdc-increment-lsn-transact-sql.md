@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "fn_cdc_increment_lsn_TSQL"
   - "sys.fn_cdc_increment_lsn_TSQL"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_cdc_increment_lsn"
   - "sys.fn_cdc_increment_lsn"
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
-caps.latest.revision: 18
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

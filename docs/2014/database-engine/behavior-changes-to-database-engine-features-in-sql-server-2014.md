@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "behavior changes [SQL Server]"
   - "Database Engine [SQL Server], what's new"
   - "Transact-SQL behavior changes"
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
-caps.latest.revision: 134
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -96,7 +93,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### sqlcmd.exe Behavior Change in XML Mode  
- There are behavior changes if you use sqlcmd.exe with XML mode (:XML ON command) when executing a SELECT * from T FOR XML ….  
+ There are behavior changes if you use sqlcmd.exe with XML mode (:XML ON command) when executing a SELECT * from T FOR XML ....  
   
 ### DBCC CHECKIDENT Revised Message  
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the message returned by the DBCC CHECKIDENT command has changed only when it is used with RESEED *new_reseed_value*  to change current identity value. The new message is "Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator."  

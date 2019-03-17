@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Services, architecture"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "XML/A listener"
   - "server architecture [Analysis Services]"
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg

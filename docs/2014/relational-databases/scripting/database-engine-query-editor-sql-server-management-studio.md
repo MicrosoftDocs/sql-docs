@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.tsqlquery.f1"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "Query Editor [Database Engine], Features"
   - "SQL Server Management Studio [SQL Server], Database Engine Query Editor"
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg

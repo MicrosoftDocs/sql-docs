@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP RESOURCE POOL"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP RESOURCE POOL"
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

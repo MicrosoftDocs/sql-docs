@@ -5,9 +5,7 @@ ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "DENY DATABASE SCOPED CREDENTIAL"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "DENY statement, database scoped credentials"
   - "denying permissions [SQL Server], database scoped credential"
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-caps.latest.revision: 2
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -47,7 +44,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be denied on a database scoped credential. Listed below.  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
  Specifies the database scoped credential on which the permission is being denied. The scope qualifier "::" is required.  
   
  *database_principal*  

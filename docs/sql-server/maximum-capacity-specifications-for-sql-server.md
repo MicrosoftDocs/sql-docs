@@ -1,12 +1,10 @@
 ---
 title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
-ms.date: "11/6/2017"
+ms.date: 11/06/2017
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server]"
@@ -20,14 +18,12 @@ helpviewer_keywords:
   - "objects [SQL Server], capacity specifications"
   - "Database Engine [SQL Server], capacity specifications"
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
 ---
 # Maximum Capacity Specifications for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > For content related to previous versions of SQL Server, see [Maximum Capacity Specifications for SQL Server](maximum-capacity-specifications-for-sql-server.md).
 
   The following tables specify maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
   
@@ -51,7 +47,7 @@ manager: craigg
 |Bytes per index key for memory-optimized tables||2500 bytes for a nonclustered index. No limit for a hash index, as long as all index keys fit in-row.|On a memory-optimized table, a nonclustered index cannot have key columns whose maximum declared sizes exceed 2500 bytes. It is irrelevant whether the actual data in the key columns would be shorter than the maximum declared sizes.<br /><br /> For a hash index key there is no hard limit on size.<br /><br /> For indexes on memory-optimized tables, there is no concept of included columns, since all indexes inherently cover of all columns.<br /><br /> For a memory-optimized table, even though the row size is 8060 bytes, some variable-length columns can be physically stored outside those 8060 bytes. However, the maximum declared sizes of all key columns for all indexes on a table, plus any additional fixed-length columns in the table, must fit in the 8060 bytes.|  
 |Bytes per foreign key||900||  
 |Bytes per primary key||900||  
-|Bytes per row||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports row-overflow storage which enables variable length columns to be pushed off-row. Only a 24-byte root is stored in the main record for variable length columns pushed out of row; because of this, the effective row limit is higher than in previous releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see the "Row-Overflow Data Exceeding 8 KB" topic in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.|  
+|Bytes per row||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports row-overflow storage which enables variable length columns to be pushed off-row. Only a 24-byte root is stored in the main record for variable length columns pushed out of row; because of this, the effective row limit is higher than in previous releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Large Row Support](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Bytes per row in memory-optimized tables||8,060|Starting [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] memory-optimized tables support off-row storage. Variable length columns are pushed off-row if the maximum sizes for all the columns in the table exceeds 8060 bytes; this is a compile-time decision. Only an 8-byte reference is stored in-row for columns stored off-row. For more information, see [Table and Row Size in Memory-Optimized Tables](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Bytes in source text of a stored procedure||Lesser of batch size or 250 MB||  
 |Bytes per **varchar(max)**, **varbinary(max)**, **xml**, **text**, or **image** column||2^31-1||  

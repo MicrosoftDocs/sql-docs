@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.columnproperties.general.f1"
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

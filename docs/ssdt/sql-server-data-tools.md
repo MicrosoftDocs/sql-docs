@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.errortask.generichelp"
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -20,7 +17,7 @@ manager: "craigg"
 # SQL Server Data Tools
 SQL Server Data Tools (SSDT) transforms database development by introducing a ubiquitous, declarative model that spans all the phases of database development inside Visual Studio. You can use SSDT Transact\-SQL design capabilities to build, debug, maintain, and refactor databases. You can work with a database project, or directly with a connected database instance on or off-premise.  
   
-Developers can use familiar Visual Studio tools for database development. Tools such as: code navigation, IntelliSense, language support that parallels what is available for C# and Visual Basic, platform-specific validation, debugging, and declarative editing in the Transact\-SQL editor. SSDT also provides a visual Table Designer for creating and editing tables in either database projects or connected database instances. While you are working on your database projects in a team-based environment, you can use version control for all the files. When it’s time to publish your project, you can publish to all supported SQL platforms; including SQL Database and SQL Server. SSDT platform validation capability ensures that your scripts work on the target you specify.  
+Developers can use familiar Visual Studio tools for database development. Tools such as: code navigation, IntelliSense, language support that parallels what is available for C# and Visual Basic, platform-specific validation, debugging, and declarative editing in the Transact\-SQL editor. SSDT also provides a visual Table Designer for creating and editing tables in either database projects or connected database instances. While you are working on your database projects in a team-based environment, you can use version control for all the files. When it's time to publish your project, you can publish to all supported SQL platforms; including SQL Database and SQL Server. SSDT platform validation capability ensures that your scripts work on the target you specify.  
   
 The SQL Server Object Explorer in Visual Studio offers a view of your database objects similar to SQL Server Management Studio. SQL Server Object Explorer allows you to do light-duty database administration and design work. You can easily create, edit, rename and delete tables, stored procedures, types, and functions. You can also edit table data, compare schemas, or execute queries by using contextual menus right from the SQL Server Object Explorer.  
   

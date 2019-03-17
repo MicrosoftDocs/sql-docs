@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXMLOLEDB Provider, executing template files"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "Mapping Schema property"
   - "XML templates [SQLXML]"
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

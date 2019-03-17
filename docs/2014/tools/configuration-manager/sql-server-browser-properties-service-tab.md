@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "configmgr-client"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -52,7 +48,7 @@ manager: craigg
 -   Disabled: This service cannot be started.  
   
  **State**  
- Indicates whether this service is running, stopped, or disabled. "**…**" indicates a state change is pending.  
+ Indicates whether this service is running, stopped, or disabled. "**...**" indicates a state change is pending.  
   
 ## See Also  
  [SQL Server Browser Service](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

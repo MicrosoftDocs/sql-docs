@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Broker:Conversation Group event class"
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

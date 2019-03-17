@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replmonitorsubscriptionpendingcmds_TSQL"
   - "sp_replmonitorsubscriptionpendingcmds"
 helpviewer_keywords: 
   - "sp_replmonitorsubscriptionpendingcmds"
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg

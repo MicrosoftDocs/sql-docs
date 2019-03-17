@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server 2016 Preview"
 f1_keywords: 
   - "sys.column_encryption_keys"
   - "column_encryption_keys_TSQL"

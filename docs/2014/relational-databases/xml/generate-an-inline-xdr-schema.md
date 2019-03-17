@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XDR schemas [SQL Server]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "XMLDATA option"
   - "FOR XML clause, inline XDR schema generation"
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

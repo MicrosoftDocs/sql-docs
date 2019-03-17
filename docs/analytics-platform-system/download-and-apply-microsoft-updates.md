@@ -70,7 +70,7 @@ Before performing these steps, you need to:
   
 3.  Select all updates, and then click the **Approve** link in the right pane.  
   
-    You can also right-click the selected updates, and then click **Approve**. You may be prompted to accept the “Microsoft Software License Terms”. If so, click **I Accept** in the window to continue.  
+    You can also right-click the selected updates, and then click **Approve**. You may be prompted to accept the "Microsoft Software License Terms". If so, click **I Accept** in the window to continue.  
   
     ![Select all updates that apply and click Approve.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
@@ -102,7 +102,7 @@ Before performing these steps, you need to:
   
 1.  Before you start, open the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), click the **Appliance State** tab, and verify that the **Cluster** and **Network** columns show green (or NA) for all nodes. If any alerts exist in either of these columns, the appliance might not be able to install updates properly. Address all existing alerts in the **Cluster** and **Network** columns before proceeding.  
   
-2.  Log on to the *<domain_name>***-HST01** node as the Fabric Domain Administrator.  
+2.  Log on to the _<domain_name>_**-HST01** node as the Fabric Domain Administrator.  
   
 3.  To apply all updates approved for WSUS, run the Update program. See [Run the Update Program](#RunUpdateWizard) below for instructions.  
   

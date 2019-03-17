@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index command [ODBC]"
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -25,11 +22,11 @@ Creates an index file to display and access table records in a logical order.
 ```  
   
 INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]  
-   [FOR lExpression]  
-   [COMPACT]  
-   [ASCENDING | DESCENDING]  
-   [UNIQUE | CANDIDATE]  
-   [ADDITIVE]  
+   [FOR lExpression]  
+   [COMPACT]  
+   [ASCENDING | DESCENDING]  
+   [UNIQUE | CANDIDATE]  
+   [ADDITIVE]  
 ```  
   
 ## Arguments  

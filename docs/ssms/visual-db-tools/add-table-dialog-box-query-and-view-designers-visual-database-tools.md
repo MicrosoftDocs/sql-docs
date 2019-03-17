@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.query.addtable"
   - "vdtsql.chm:65565"
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

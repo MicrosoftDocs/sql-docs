@@ -36,7 +36,7 @@ IsTestCase()
  To return cases that are part of the training data set, use the function [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## Examples  
- The following example uses the `Targeted Mailing` mining structure that is created in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns all the cases in the structure that are used for testing.  
+ The following example uses the `Targeted Mailing` mining structure that is created in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns all the cases in the structure that are used for testing.  
   
 ```  
 SELECT *  

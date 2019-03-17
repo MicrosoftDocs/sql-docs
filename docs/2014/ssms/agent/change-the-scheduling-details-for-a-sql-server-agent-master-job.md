@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -53,7 +50,7 @@ manager: craigg
   
 4.  Right-click the job whose schedule you want to edit and select **Properties**.  
   
-5.  In the **Job Properties –***job_name* dialog box, under **Select a page**, select **Schedules**. For more information on the available options on this page, see [Job Properties: New Job &#40;Schedules Page&#41;](job-properties-new-job-schedules-page.md).  
+5.  In the **Job Properties -**_job_name_ dialog box, under **Select a page**, select **Schedules**. For more information on the available options on this page, see [Job Properties: New Job &#40;Schedules Page&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  When finished, click **OK**.  
   

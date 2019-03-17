@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.dtsserver.importpackage.f1"
 helpviewer_keywords: 
   - "Import Package dialog box"
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -51,13 +48,13 @@ manager: craigg
  If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse button **(…)** and locate the package.  
+ Type the package path, or click the browse button **(...)** and locate the package.  
   
  **Package name**  
  Optionally, rename the package. The default name is the name of the package to import.  
   
  **Protection level**  
- Click the browse button **(…)** and, in the **Package Protection Level** dialog box, update the protection level. For more information, see [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Click the browse button **(...)** and, in the **Package Protection Level** dialog box, update the protection level. For more information, see [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## See Also  
  [Save Copy of Package](../../2014/integration-services/save-copy-of-package.md)   

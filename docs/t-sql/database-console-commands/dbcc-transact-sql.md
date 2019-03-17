@@ -5,9 +5,7 @@ ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC"
@@ -36,8 +34,7 @@ helpviewer_keywords:
   - "progress reporting [DBCC statements]"
   - "informational statements [SQL Server]"
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-caps.latest.revision: 50
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

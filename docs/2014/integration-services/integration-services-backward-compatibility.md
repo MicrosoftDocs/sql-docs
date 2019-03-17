@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [Integration Services]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "Integration Services, backward compatibility"
   - "backward compatibility [Integration Services]"
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

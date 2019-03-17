@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visio shapes, dependency network"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "data mining layout toolbar"
   - "dependency network"
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,7 +4,6 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-builder
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Start Report Builder
@@ -26,7 +25,7 @@ ms.author: maggies
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
- You or an administrator can also [install Report Builder on your computer from the Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=219138). See "Install Report Builder with Systems Manager Server" in [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) for more details.
+ You or an administrator can also [install Report Builder on your computer from the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=219138). See "Install Report Builder with Systems Manager Server" in [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) for more details.
  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] isn't installed when you install SQL Server Reporting Services; you need to download and install it separately.  
   
@@ -34,7 +33,7 @@ ms.author: maggies
   
 ## To start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal  
   
-1.  In your Web browser, type the URL for your report server in the address bar. By default, the URL is http://\<*servername*>/reports.  
+1.  In your Web browser, type the URL for your report server in the address bar. By default, the URL is https://\<*servername*>/reports.  
   
 2.  In the top bar of the web portal, select **New** > **Paginated Report**.  
   
@@ -62,7 +61,7 @@ ms.author: maggies
 
 ## Next steps
 
-[Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+[Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

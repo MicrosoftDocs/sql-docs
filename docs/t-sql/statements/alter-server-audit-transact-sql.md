@@ -1,13 +1,11 @@
-﻿---
+---
 title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SERVER_AUDIT_TSQL"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "audits [SQL Server], specification"
   - "ALTER SERVER AUDIT statement"
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
@@ -77,7 +74,7 @@ ALTER SERVER AUDIT audit_name
  Determines the location of the audit target. The options are a binary file, the Windows application log, or the Windows security log.  
 
 > [!IMPORTANT]
-> In Azure SQL Database Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
+> In Azure SQL Database managed instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
   
  FILEPATH **= '**_os\_file\_path_**'**  
  The path of the audit trail. The file name is generated based on the audit name and audit GUID.  
@@ -140,7 +137,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  You can add, alter, and remove audit specifications without stopping an audit.  
   
- You cannot change an audit’s GUID after the audit has been created.  
+ You cannot change an audit's GUID after the audit has been created.  
   
 ## Permissions  
  To create, alter, or drop a server audit principal, you must have ALTER ANY SERVER AUDIT or the CONTROL SERVER permission.  
@@ -148,7 +145,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## Examples  
   
 ### A. Changing a server audit name  
- The following example changes the name of the server audit `HIPPA_Audit` to `HIPAA_Audit_Old`.  
+ The following example changes the name of the server audit `HIPAA_Audit` to `HIPAA_Audit_Old`.  
   
 ```  
 USE master  
@@ -165,7 +162,7 @@ GO
 ```  
   
 ### B. Changing a server audit target  
- The following example changes the server audit called `HIPPA_Audit` to a file target.  
+ The following example changes the server audit called `HIPAA_Audit` to a file target.  
   
 ```  
 USE master  

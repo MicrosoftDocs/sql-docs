@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services, backward compatibility"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "discontinued functionality [Analysis Services]"
   - "unsupported features [Analysis Services]"
 ms.assetid: 39406be1-9819-4629-9c29-b32fb20bab2e
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

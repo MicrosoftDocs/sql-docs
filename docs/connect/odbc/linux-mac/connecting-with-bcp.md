@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp"
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -20,7 +17,7 @@ manager: craigg
 # Connecting with bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
+The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
   
 - The field terminator is a tab ("\t").  
   
@@ -77,7 +74,7 @@ Specifies the number of the first row to export from a table or import from a da
 Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted.  
   
 - -l  
-Specifies a login timeout. The –l option specifies the number of seconds before a login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp` generates an error message. A value of 0 specifies an infinite timeout.
+Specifies a login timeout. The -l option specifies the number of seconds before a login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp` generates an error message. A value of 0 specifies an infinite timeout.
   
 - -L *last_row*  
 Specifies the number of the last row to export from a table or import from a data file.  

@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "NEWID"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "uniqueidentifier data type"
   - "NEWID function"
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

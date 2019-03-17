@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_cdc_has_column_changed_TSQL"
   - "sys.fn_cdc_has_column_changed"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "sys.fn_cdc_has_column_changed"
   - "fn_cdc_has_column_changed"
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

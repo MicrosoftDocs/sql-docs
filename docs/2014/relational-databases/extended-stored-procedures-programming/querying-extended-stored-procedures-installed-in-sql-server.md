@@ -4,16 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "extended stored procedures [SQL Server], querying"
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg

@@ -4,14 +4,11 @@ ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Add a Bar Chart to Your Report (Report Builder)
 In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 
@@ -296,6 +293,6 @@ You have successfully completed the Adding a Bar Chart to Your Report tutorial. 
   
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

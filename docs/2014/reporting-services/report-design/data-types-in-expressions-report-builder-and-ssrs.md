@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Data Types in Expressions (Report Builder and SSRS)
   Data types represent different kinds of data so that it can be stored and processed efficiently. Typical data types include text (also known as strings), numbers with and without decimal places, dates and times, and images. Values in a report must be an Report Definition Language (RDL) data type. You can format a value according to your preference when you display it in a report. For example, a field that represents currency is stored in the report definition as a floating point number, but can be displayed in a variety of formats depending on the format property you choose.  
@@ -87,7 +84,7 @@ manager: craigg
 |Just the DateTime part of a DateTimeOffset value|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Just the Offset part of a DateTimeOffset value|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- You can also use the Format function to control the display format for value. For more information, see [Functions (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483).  
+ You can also use the Format function to control the display format for value. For more information, see [Functions (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483).  
   
 ## Advanced Examples  
  When you connect to a data source with a data provider that does not provide conversion support for all the data types on the data source, the default data type for unsupported data source types is String. The following examples provide solutions to specific data types that are returned as a string.  
@@ -116,7 +113,7 @@ manager: craigg
   
          If the `MyDateTime.Value` string has a UTC offset, the `DateTime.Parse` function first adjusts for the UTC offset (7 A.M. - [`+08:00`] to the UTC time of 11 P.M. the night before). The `DateTime.Parse` function then applies the local report server UTC offset and, if necessary, adjusts the time again for Daylight Saving Time. For example, in Redmond, Washington, the local time offset adjusted for Daylight Saving Time is `[-07:00]`, or 7 hours earlier than 11 PM. The result is the following `DateTime` value: `2007-07-06 04:07:07 PM` (July 6, 2007 at 4:07 P.M).  
   
- For more information about converting strings to `DateTime` data types, see [Parsing Date and Time Strings](http://go.microsoft.com/fwlink/?LinkId=89703), [Formatting Date and Time for a Specific Culture](http://go.microsoft.com/fwlink/?LinkId=89704), and [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) on MSDN.  
+ For more information about converting strings to `DateTime` data types, see [Parsing Date and Time Strings](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatting Date and Time for a Specific Culture](https://go.microsoft.com/fwlink/?LinkId=89704), and [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) on MSDN.  
   
 -   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -136,9 +133,9 @@ manager: craigg
   
      `2008-07-01 06:05:07             2008                   480`  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## See Also  
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

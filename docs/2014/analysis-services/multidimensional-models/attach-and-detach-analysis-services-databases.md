@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssms.detachdatabase.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "databases [Analysis Services], attach"
   - "databases [Analysis Services], detach"
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -60,7 +57,7 @@ manager: craigg
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
  [Database ReadWriteModes](database-readwritemodes.md)   
  [Switch an Analysis Services database between ReadOnly and ReadWrite modes](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Detach Element](../xmla/xml-elements-commands/detach-element.md)   
- [Attach Element](../xmla/xml-elements-commands/attach-element.md)  
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

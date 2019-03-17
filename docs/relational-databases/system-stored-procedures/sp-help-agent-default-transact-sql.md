@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_help_agent_default"
   - "sp_help_agent_default_TSQL"
 helpviewer_keywords: 
   - "sp_help_agent_default"
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -40,10 +33,10 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## Arguments  
- [ **@profile_id=**] *profile_id***OUTPUT**  
+ [ **@profile_id=**] _profile_id_**OUTPUT**  
  Is the ID of the default configuration for the type of agent. *profile_id* is **int**, with no default.*profile_id* is also an OUTPUT parameter and returns the ID of the default configuration for the type of agent.  
   
- [ **@agent_type=**] **'***agent_type***'**  
+ [ **@agent_type=**] **'**_agent_type_**'**  
  Is the type of agent. *agent_type* is **int**, with no default, and can be one of these values.  
   
 |Value|Description|  

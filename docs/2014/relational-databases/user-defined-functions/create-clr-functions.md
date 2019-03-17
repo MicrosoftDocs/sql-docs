@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CLR functions [SQL Server]"
@@ -49,7 +47,7 @@ manager: craigg
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
 ## Accessing Native Code  
- CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](http://go.microsoft.com/fwlink/?LinkID=181929) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
+ CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](https://go.microsoft.com/fwlink/?LinkID=181929) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
   
 ## See Also  
  [Create User-defined Functions &#40;Database Engine&#41;](create-user-defined-functions-database-engine.md)   

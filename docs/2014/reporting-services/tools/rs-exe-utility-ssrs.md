@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic report server tasks"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "scripts [Reporting Services], command prompt"
   - "deploying reports [Reporting Services]"
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  
@@ -94,7 +91,7 @@ manager: craigg
  (Optional) Specifies that the commands in the script file run in a batch. If any commands fail, the batch is rolled back. Some commands cannot be batched, and those run as usual. Only exceptions that are thrown and are not handled within the script result in a rollback. If the script handles an exception and returns normally from `Main`, the batch is committed. If you omit this parameter, the commands run without creating a batch. For more information, see [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v` *globalvar*  
- (Optional) Specifies global variables that are used in the script. If the script uses global variables, you must specify this argument. The value that you specify must be valid for global variable defined in the .rss file. You must specify one global variable for each **–v** argument.  
+ (Optional) Specifies global variables that are used in the script. If the script uses global variables, you must specify this argument. The value that you specify must be valid for global variable defined in the .rss file. You must specify one global variable for each **-v** argument.  
   
  The `-v` argument is specified on the command line and is used to set the value for a global variable that is defined in your script at run time. For example, if your script contains a variable named *parentFolder*, you can specify a name for that folder on the command line:  
   
@@ -114,7 +111,7 @@ manager: craigg
  The following example illustrates how to specify the script file that contains [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET script and Web service methods that you want to execute.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
  For a detailed example, see [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

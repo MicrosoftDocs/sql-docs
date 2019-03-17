@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLForeignKeys function"
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -28,7 +25,7 @@ manager: craigg
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *FKCatalogName* and *PKCatalogName* parameters: *Linked_Server_Name.Catalog_Name*.  
   
 ## See Also  
- [SQLForeignKeys Function](http://go.microsoft.com/fwlink/?LinkId=59344)   
+ [SQLForeignKeys Function](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

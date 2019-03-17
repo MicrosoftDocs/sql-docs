@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "notifications [SQL Server], alert"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "monitoring [SQL Server], events"
   - "responding to events automatically"
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg

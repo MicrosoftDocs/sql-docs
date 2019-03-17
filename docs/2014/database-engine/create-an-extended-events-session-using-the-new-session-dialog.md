@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SSMS.XEDISPLAY.GROUPING.F1"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Extended Events Dialog Box"
 ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -56,7 +53,7 @@ manager: craigg
   
 6.  In the **Causality tracking** section, select the **Track how events are related to one another** check box to track work across multiple tasks.  
   
-     For more information about causality tracking, see “Session Content and Characteristics” in the [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md) topic.  
+     For more information about causality tracking, see "Session Content and Characteristics" in the [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md) topic.  
   
      To add events to your session, in the **Select a page** section, click **Events**.  
   

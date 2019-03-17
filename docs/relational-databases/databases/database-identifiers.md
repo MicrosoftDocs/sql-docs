@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -22,7 +18,6 @@ helpviewer_keywords:
   - "Transact-SQL identifiers"
   - "database objects [SQL Server], names"
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

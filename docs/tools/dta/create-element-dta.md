@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "dta"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "Create element (DTA)"
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
-caps.latest.revision: 12
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -49,10 +44,10 @@ manager: craigg
 |Relationship|Elements|  
 |------------------|--------------|  
 |**Parent element**|[Recommendation Element &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
-|**Child elements**|[Index Element &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** Element (see [Database Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) for information)<br /><br /> **Heap** Element (see [Database Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) for information)|  
+|**Child elements**|[Index Element &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** Element (see [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) for information)<br /><br /> **Heap** Element (see [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) for information)|  
   
 ## Remarks  
- This element is of the **CreateTypecomplexType** name in the Database Engine Tuning Advisor XML schema. It is used to create indexes, statistics, and heap structures for a user-specified configuration. Do not confuse this **Create** element with the other types that can be used to create views (**CreateViewType**) or partitioning (**CreatePType**). Refer to the [Database Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) for information about these other **Create** element types.  
+ This element is of the **CreateTypecomplexType** name in the Database Engine Tuning Advisor XML schema. It is used to create indexes, statistics, and heap structures for a user-specified configuration. Do not confuse this **Create** element with the other types that can be used to create views (**CreateViewType**) or partitioning (**CreatePType**). Refer to the [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) for information about these other **Create** element types.  
   
 ## Example  
  For a usage example of this element, see the [XML Input File Sample with User-specified Configuration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  

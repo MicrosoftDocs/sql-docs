@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.viewers.f1"
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

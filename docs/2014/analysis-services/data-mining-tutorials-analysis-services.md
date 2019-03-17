@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], designing"
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -60,7 +57,7 @@ manager: craigg
   
 ## See Also  
  [Data Mining Solutions](data-mining/data-mining-solutions.md)   
- [Microsoft SQL Server Data Mining resources](http://go.microsoft.com/fwlink/?LinkId=97965)   
+ [Microsoft SQL Server Data Mining resources](https://go.microsoft.com/fwlink/?LinkId=97965)   
  [Creating and Querying Data Mining Models with DMX: Tutorials &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

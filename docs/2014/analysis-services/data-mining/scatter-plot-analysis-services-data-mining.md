@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "charts [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "scatter charts"
   - "regression algorithms [Analysis Services]"
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

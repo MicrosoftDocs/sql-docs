@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLCopyDesc"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLCopyDesc function [ODBC]"
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,8 +33,8 @@ manager: craigg
 ```  
   
 SQLRETURN SQLCopyDesc(  
-     SQLHDESC     SourceDescHandle,  
-     SQLHDESC     TargetDescHandle);  
+     SQLHDESC     SourceDescHandle,  
+     SQLHDESC     TargetDescHandle);  
 ```  
   
 ## Arguments  
@@ -101,7 +98,7 @@ SQLRETURN SQLCopyDesc(
  An application may copy data from one table to another without copying the data at the application level. To do this, the application binds the same data buffers and descriptor information to a statement that fetches the data and the statement that inserts the data into a copy. This can be accomplished either by sharing an application descriptor (binding an explicitly allocated descriptor as both the ARD to one statement and the APD in another) or by using **SQLCopyDesc** to copy the bindings between the ARD and the APD of the two statements. If the statements are on different connections, **SQLCopyDesc** must be used. In addition, **SQLCopyDesc** has to be called to copy the bindings between the IRD and the IPD of the two statements. When copying across statements on the same connection, the SQL_ACTIVE_STATEMENTS information type returned by the driver for a call to **SQLGetInfo** must be greater than 1 for this operation to succeed. (This is not the case when copying across connections.)  
   
 ### Code Example  
- In the following example, descriptor operations are used to copy the fields of the PartsSource table into the PartsCopy table. The contents of the PartsSource table are fetched into rowset buffers in *hstmt0*. These values are used as parameters of an INSERT statement on *hstmt1* to populate the columns of the PartsCopy table. To do so, the fields of the IRD of *hstmt0* are copied to the fields of the IPD of *hstmt1*, and the fields of the ARD of *hstmt0* are copied to the fields of the APD of *hstmt1*. Use **SQLSetDescField** to set the IPD’s SQL_DESC_PARAMETER_TYPE attribute to SQL_PARAM_INPUT when you copy IRD fields from a statement with output parameters to IPD fields that need to be input parameters.  
+ In the following example, descriptor operations are used to copy the fields of the PartsSource table into the PartsCopy table. The contents of the PartsSource table are fetched into rowset buffers in *hstmt0*. These values are used as parameters of an INSERT statement on *hstmt1* to populate the columns of the PartsCopy table. To do so, the fields of the IRD of *hstmt0* are copied to the fields of the IPD of *hstmt1*, and the fields of the ARD of *hstmt0* are copied to the fields of the APD of *hstmt1*. Use **SQLSetDescField** to set the IPD's SQL_DESC_PARAMETER_TYPE attribute to SQL_PARAM_INPUT when you copy IRD fields from a statement with output parameters to IPD fields that need to be input parameters.  
   
 ```  
 #define ROWS 100  

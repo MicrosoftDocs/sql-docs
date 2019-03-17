@@ -4,14 +4,11 @@ ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Add a Pie Chart to Your Report (Report Builder)
 In this tutorial, you create pie chart in a Reporting Services paginated report. You add percentages and combine small slices into a single slice.
@@ -214,6 +211,6 @@ You have successfully completed the Adding a Pie Chart to Your Report tutorial. 
   
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

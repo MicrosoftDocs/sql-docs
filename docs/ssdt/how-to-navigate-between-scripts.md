@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.editor.howto.navigate"
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

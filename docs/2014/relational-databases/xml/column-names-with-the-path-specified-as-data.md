@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

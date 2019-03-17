@@ -5,9 +5,7 @@ ms.date: "03/13/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_ROLE_TSQL"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "database roles [SQL Server], modifying"
   - "names [SQL Server], database roles"
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-caps.latest.revision: 64
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -118,7 +115,7 @@ Additionally, to change the membership in a fixed database role you need:
 ### A. Change the name of a database role  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- The following example changes the name of role `buyers` to `purchasing`.   This example can be executed in the [AdventureWorks](http://msftdbprodsamples.codeplex.com/) sample database.
+ The following example changes the name of role `buyers` to `purchasing`.   This example can be executed in the [AdventureWorks](https://msftdbprodsamples.codeplex.com/) sample database.
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -127,7 +124,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### B. Add or remove role members  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry.   This example can be executed in the [AdventureWorks](http://msftdbprodsamples.codeplex.com/) sample database.
+ This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry.   This example can be executed in the [AdventureWorks](https://msftdbprodsamples.codeplex.com/) sample database.
   
 ```sql  
 CREATE ROLE Sales;  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "Keys Append method [ADOX], VC++ example"
   - "RelatedColumn property [ADOX], VC++ example"
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

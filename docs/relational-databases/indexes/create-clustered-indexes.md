@@ -5,9 +5,7 @@ ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index creation [SQL Server], clustered indexes"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "clustered indexes, UNIQUE constraint"
   - "indexes [SQL Server], clustered"
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -81,11 +78,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  In Object Explorer, expand the table on which you want to create a clustered index.  
   
-2.  Right-click the **Indexes** folder, point to **New Index**, and select **Clustered Index…**.  
+2.  Right-click the **Indexes** folder, point to **New Index**, and select **Clustered Index...**.  
   
 3.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-4.  Under **Index key columns**, click **Add…**.  
+4.  Under **Index key columns**, click **Add...**.  
   
 5.  In the **Select Columns from**_table\_name_ dialog box, select the check box of the table column to be added to the clustered index.  
   
@@ -97,7 +94,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  In Object Explorer, expand the database on which you want to create a table with a clustered index.  
   
-2.  Right-click the **Tables** folder and click **New Table…**.  
+2.  Right-click the **Tables** folder and click **New Table...**.  
   
 3.  Create a new table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   

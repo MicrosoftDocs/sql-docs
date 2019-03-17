@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database [Master Data Services], attributes staging table"
   - "attributes staging table [Master Data Services]"
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
-caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -27,7 +23,7 @@ manager: craigg
 |Column Name|Description|  
 |-----------------|-----------------|  
 |**ID**|An automatically assigned identifier. Do not enter a value in this field. If the batch has not been processed, this field is blank.|  
-|**ImportType**<br /><br /> Required|Determines what to do when staged data matches data that already exists in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.<br /><br /> **0**: Create new members. Replace existing MDS data with staged data, but only if the staged data isn’t NULL. NULL values are ignored. To change an attribute value to NULL, use **~NULL~**.<br /><br /> **1**: Create new members only. Any updates to existing MDS data fail.<br /><br /> **2**: Create new members. Replace existing MDS data with staged data. If you import NULL values, they will overwrite existing MDS values.<br /><br /> **3**: Deactivate the member, based on the Code value. All attributes, hierarchy and collection memberships, and transactions are maintained but no longer available in the UI. If the member is used as a domain-based attribute value of another member, the deactivation will fail.<br /><br /> **4**: Permanently delete the member, based on the Code value. All attributes, hierarchy and collection memberships, and transactions are permanently deleted. If the member is used as a domain-based attribute value of another member, the deletion will fail.|  
+|**ImportType**<br /><br /> Required|Determines what to do when staged data matches data that already exists in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.<br /><br /> **0**: Create new members. Replace existing MDS data with staged data, but only if the staged data isn't NULL. NULL values are ignored. To change an attribute value to NULL, use **~NULL~**.<br /><br /> **1**: Create new members only. Any updates to existing MDS data fail.<br /><br /> **2**: Create new members. Replace existing MDS data with staged data. If you import NULL values, they will overwrite existing MDS values.<br /><br /> **3**: Deactivate the member, based on the Code value. All attributes, hierarchy and collection memberships, and transactions are maintained but no longer available in the UI. If the member is used as a domain-based attribute value of another member, the deactivation will fail.<br /><br /> **4**: Permanently delete the member, based on the Code value. All attributes, hierarchy and collection memberships, and transactions are permanently deleted. If the member is used as a domain-based attribute value of another member, the deletion will fail.|  
 |**ImportStatus_ID**<br /><br /> Required|The status of the import process. Possible values are:<br /><br /> **0**, which you specify to indicate that the record is ready for staging.<br /><br /> **1**, which is automatically assigned and indicates that the staging process for the record has succeeded.<br /><br /> **2**, which is automatically assigned and indicates that the staging process for the record has failed.|  
 |**Batch_ID**<br /><br /> Required by web service only|An automatically assigned identifier that groups records for staging. All members in the batch are assigned this identifier, which is displayed in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface in the **ID** column.<br /><br /> If the batch has not been processed, this field is blank.|  
 |**BatchTag**<br /><br /> Required, except by web service|A unique name for the batch, up to 50 characters.|  

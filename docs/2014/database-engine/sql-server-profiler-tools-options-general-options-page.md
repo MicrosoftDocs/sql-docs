@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.replay.tools.generaloptions.f1"
 helpviewer_keywords: 
   - "General Options dialog box"
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
-caps.latest.revision: 26
 author: mashamsft
 ms.author: mathoma
 manager: craigg

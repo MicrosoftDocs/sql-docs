@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], other computers"
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -58,11 +55,11 @@ manager: craigg
   
 8.  In the **Add/Remove Snap-in** window, click **OK**.  
   
-9. Expand **Computer Management (***\<computer name>***)**, and **Services and Applications**.  
+9. Expand **Computer Management (**_\<computer name>_**)**, and **Services and Applications**.  
   
 10. Right-click **SQL Server Configuration Manager**, and then click **New Window from here**.  
   
-11. On the **Window** menu, click **Console Root**, to switch back to the first widow, and delete the window.  
+11. On the **Window** menu, click **Console Root**, to switch back to the first window, and delete the window.  
   
 12. On the **File** menu, click **Save As**, and save the file in the desired folder, with an appropriate name with the **.msc** file extension. Close the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   

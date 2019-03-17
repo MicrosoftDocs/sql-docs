@@ -1,24 +1,22 @@
 ---
-title: "Availability database is suspended | Microsoft Docs"
-ms.custom: ""
+title: "Availability database is suspended for an availability group"
+description: "Identify possible causes for why a database in an Always On availability group might be suspended."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.agdashboard.drp1notsuspended.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability database is suspended
+# Availability database is suspended for an availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  
@@ -34,7 +32,7 @@ manager: craigg
  This policy checks the state of data movement of the secondary database (also known as a "secondary database replica"). The policy is in an unhealthy state when the data movement is suspended. The policy is otherwise in a healthy state.  
   
 > [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability database is suspended](http://go.microsoft.com/fwlink/p/?LinkId=220860) on the TechNet Wiki.  
+>  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability database is suspended](https://go.microsoft.com/fwlink/p/?LinkId=220860) on the TechNet Wiki.  
   
 ## Possible Causes  
  Data synchronization on this availability database might have been suspended because of the following:  

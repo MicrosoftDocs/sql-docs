@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "content types [data mining]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "EQUAL_AREAS method"
   - "coding [Data Mining]"
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -48,7 +45,7 @@ manager: craigg
   
         2.  On the Standard tool bar, click **New Query**.  
   
-        3.  Copy and paste the following example into the query window, modify as needed. The following statement creates a SQL Server Credential to store your storage container’s Shared Access Certificate.  
+        3.  Copy and paste the following example into the query window, modify as needed. The following statement creates a SQL Server Credential to store your storage container's Shared Access Certificate.  
   
             ```tsql  
   

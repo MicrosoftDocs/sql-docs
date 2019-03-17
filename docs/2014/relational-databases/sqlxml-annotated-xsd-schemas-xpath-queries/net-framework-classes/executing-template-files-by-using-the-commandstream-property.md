@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Managed Classes [SQLXML], executing template files"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "templates [SQLXML], SQLXML Managed Classes"
   - "CommandStream property"
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

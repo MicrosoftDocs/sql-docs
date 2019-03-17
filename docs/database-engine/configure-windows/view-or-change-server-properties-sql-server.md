@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.connectionproperties.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "servers [SQL Server], viewing"
   - "Connection Properties dialog box"
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -152,9 +149,9 @@ GO
   
 2.  In **SQL Server Configuration Manager**, click **SQL Server Services**.  
   
-3.  In the details pane, right-click **SQL Server (\<***instancename***>)**, and then click **Properties**.  
+3.  In the details pane, right-click **SQL Server (\<**_instancename_**>)**, and then click **Properties**.  
   
-4.  In the **SQL Server (\<***instancename***>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
+4.  In the **SQL Server (\<**_instancename_**>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
   
 ##  <a name="FollowUp"></a> Follow Up: After you change server properties  
  For some properties, the server might have to be restarted before the change can take effect.  

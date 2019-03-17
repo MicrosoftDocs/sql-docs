@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "markup characters [SQLXML]"
@@ -20,7 +16,6 @@ helpviewer_keywords:
   - "annotated XSD schemas, CDATA sections"
   - "sql:use-cdata"
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

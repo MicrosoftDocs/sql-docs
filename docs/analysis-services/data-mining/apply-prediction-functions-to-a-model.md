@@ -114,7 +114,7 @@ manager: kfile
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- If you want to add other clauses elsewhere in the statement—for example, if you want to add a WHERE clause—you cannot add it by using the grid; you must switch to DMX view first.  
+ If you want to add other clauses elsewhere in the statement-for example, if you want to add a WHERE clause-you cannot add it by using the grid; you must switch to DMX view first.  
   
 ## See Also  
  [Data Mining Queries](../../analysis-services/data-mining/data-mining-queries.md)  

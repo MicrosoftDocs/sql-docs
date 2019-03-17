@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up databases [Analysis Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "mining structures [DMX], exporting"
   - "mining models [Analysis Services], migration"
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

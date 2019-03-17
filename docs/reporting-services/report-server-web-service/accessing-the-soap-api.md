@@ -4,12 +4,9 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "XML Web service [Reporting Services], WSDL"
   - "Web service [Reporting Services], SOAP"
@@ -43,7 +40,7 @@ ms.author: maghan
  The following example shows the format of the URL to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] management WSDL file:  
   
 ```  
-http://server/reportserver/ReportService2010.asmx?wsdl  
+https://server/reportserver/ReportService2010.asmx?wsdl  
 ```  
   
  The following table describes each element in the URL.  

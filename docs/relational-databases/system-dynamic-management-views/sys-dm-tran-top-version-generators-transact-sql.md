@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_tran_top_version_generators"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_top_version_generators dynamic management view"
 ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg

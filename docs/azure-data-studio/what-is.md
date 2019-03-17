@@ -1,21 +1,19 @@
 ---
-title: What is Azure Data Studio? | Microsoft Docs
-description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running. 
-ms.custom: "tools|sos"
+title: Overview
+titleSuffix: Azure Data Studio
+description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. 
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: "overview"
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
 
-# What is [!INCLUDE[name-sos](../includes/name-sos.md)]?
+# What is Azure Data Studio?
 
 Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, MacOS, and Linux.
 
@@ -45,7 +43,7 @@ Server groups provide a way to organize connection information for the servers a
 
 ## Integrated Terminal
 
-Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, and ssh) in the Integrated Terminal window right within the [!INCLUDE[name-sos](../includes/name-sos-short.md)] user interface. To learn about the integrated terminal, see [Integrated terminal] (integrated-terminal.md).
+Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, and ssh) in the Integrated Terminal window right within the [!INCLUDE[name-sos](../includes/name-sos-short.md)] user interface. To learn about the integrated terminal, see [Integrated terminal](integrated-terminal.md).
 
 ## Extensibility and extension authoring
 

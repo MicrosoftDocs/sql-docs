@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -62,7 +59,7 @@ manager: craigg
   
 3.  If the Properties window is not open, open the Properties window, and then click the **Auto Hide** button on the title bar so that it stays open.  
   
-4.  Click the **NameColumn** property field near the bottom of the window, and then click the ellipsis browse (**…**) button to open the **Name Column** dialog box.  
+4.  Click the **NameColumn** property field near the bottom of the window, and then click the ellipsis browse (**...**) button to open the **Name Column** dialog box.  
   
 5.  Select `SimpleDate` at the bottom of the **Source column** list, and then click **OK**.  
   
@@ -83,7 +80,7 @@ manager: craigg
   
 5.  Drag the **Date Key** attribute from the **Attributes** pane into the **\<new level>** cell in the **Hierarchies** pane, underneath the **English Month Name** level.  
   
-6.  In the **Hierarchies** pane, right-click the title bar of the **Hierarchy** hierarchy, cick **Rename**, and then type `Calendar Date`.  
+6.  In the **Hierarchies** pane, right-click the title bar of the **Hierarchy** hierarchy, click **Rename**, and then type `Calendar Date`.  
   
 7.  By using the right-click context menu, in the `Calendar Date` hierarchy, rename the **English Month Name** level to `Calendar Month`, and then rename the **Date Key** level to `Date`.  
   

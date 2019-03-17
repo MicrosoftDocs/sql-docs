@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -23,7 +22,7 @@ ms.author: maghan
 ##  <a name="bkmk_top"></a> Viewing Log Information  
  The report server execution logs data about report execution into an internal database table. The information from the table is available from SQL Server views.  
   
- The report execution log is stored in the report server database that by default is named **ReportServer**. The SQL views provide the execution log information. The “2” and “3” views were added in more recent releases and contain new fields or they contain fields with friendlier names than the previous releases. The older views remain in the product so custom applications that depend on them are not impacted. If you do not have a dependence on an older view, for example ExecutionLog, it is recommended you use the most recent view, ExecutionLog**3**.  
+ The report execution log is stored in the report server database that by default is named **ReportServer**. The SQL views provide the execution log information. The "2" and "3" views were added in more recent releases and contain new fields or they contain fields with friendlier names than the previous releases. The older views remain in the product so custom applications that depend on them are not impacted. If you do not have a dependence on an older view, for example ExecutionLog, it is recommended you use the most recent view, ExecutionLog**3**.  
   
  In this topic:  
   
@@ -75,7 +74,7 @@ ms.author: maghan
   
  **To enable execution logging:**  
   
-1.  Start SQL Server Management Studio with administrative privileges. For example right-click the Management Studio icon and click ‘Run as administrator’.  
+1.  Start SQL Server Management Studio with administrative privileges. For example right-click the Management Studio icon and click 'Run as administrator'.  
   
 2.  Connect to the desired report server.  
   
@@ -321,7 +320,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Column|Description|  
 |------------|-----------------|  
 |InstanceName|Name of the report server instance that handled the request.|  
-|ReportPath|The path structure to the report.  For example a report named ”test” which is the in root folder in Report Manager, would have a ReportPath of “/test”.<br /><br /> A report named “test” that is saved in the folder “samples” on Report Manager , will have a ReportPath of “/Samples/test/”|  
+|ReportPath|The path structure to the report.  For example a report named "test" which is the in root folder in Report Manager, would have a ReportPath of "/test".<br /><br /> A report named "test" that is saved in the folder "samples" on Report Manager , will have a ReportPath of "/Samples/test/"|  
 |UserName|User identifier.|  
 |ExecutionID||  
 |RequestType|Request type (either user or system).|  

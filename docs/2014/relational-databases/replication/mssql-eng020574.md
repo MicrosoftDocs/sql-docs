@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG02574 error"
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -31,7 +27,7 @@ manager: craigg
 |Message Text|Subscriber '%s' subscription to article '%s' in publication '%s' failed data validation.|  
   
 ## Explanation  
- The data at the Subscriber was validated against the data at the Publisher, and the data did not match; therefore validation failed. For more information about validation, see [Validate Replicated Data](validate-replicated-data.md).  
+ The data at the Subscriber was validated against the data at the Publisher, and the data did not match; therefore validation failed. For more information about validation, see [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 ## User Action  
  We recommend that you do the following:  

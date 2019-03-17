@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_getsubscriptiondtspackagename"
   - "sp_getsubscriptiondtspackagename_TSQL"
 helpviewer_keywords: 
   - "sp_getsubscriptiondtspackagename"
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Server Principal Management event class"
 ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

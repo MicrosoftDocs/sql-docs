@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datatoolsoperations"
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

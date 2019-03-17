@@ -5,9 +5,7 @@ ms.date: "09/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "alter edge constraints"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "graph edge constraints"
   - "SQL Graph" 
 ms.assetid: 
-caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg

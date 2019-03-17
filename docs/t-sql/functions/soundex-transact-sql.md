@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SOUNDEX"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "strings [SQL Server], comparing"
   - "SOUNDEX values"
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

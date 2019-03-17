@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "error list pane"
   - "getting started"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "user interface"
   - "user interface overview"
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"

@@ -5,9 +5,7 @@ ms.date: "09/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "LOCK_TIMEOUT_TSQL"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "locking [SQL Server], time-outs"
   - "wait time for lock releases [SQL Server]"
 ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
-caps.latest.revision: 26
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

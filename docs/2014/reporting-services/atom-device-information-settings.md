@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # ATOM Device Information Settings
   The device information settings for the Atom rendering extension support submittal of the name of an Atom feed and character encoding to use.  

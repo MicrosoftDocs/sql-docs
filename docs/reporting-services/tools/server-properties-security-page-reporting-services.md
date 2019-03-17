@@ -3,7 +3,6 @@ title: "Server Properties (Security Page) - Reporting Services | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: tools
-ms.suite: "reporting-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.serverproperties.security.f1"

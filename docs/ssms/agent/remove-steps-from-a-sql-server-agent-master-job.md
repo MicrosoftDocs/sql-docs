@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -61,8 +57,8 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 4.  Right-click the job where you want to delete steps and select **Properties**.  
   
-5.  In the **Job Properties –***job_name* dialog box, under **Select a page**, select **Steps**.  
-  
+5.  In the **Job Properties -**_job_name_ dialog box, under **Select a page**, select **Steps**.  
+
 6.  Under **Job step list**, select the job step you want to delete and click **Delete**.  
   
 7.  When finished, click **OK**.  
@@ -88,5 +84,5 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
     GO  
     ```  
   
-For more information, see [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3).  
+For more information, see [sp_delete_jobstep (Transact-SQL)](https://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3).  
   

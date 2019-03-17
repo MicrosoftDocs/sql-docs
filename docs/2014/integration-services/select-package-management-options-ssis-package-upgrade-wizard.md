@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.selectpackagemgtoptions.f1"
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-caps.latest.revision: 34
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sysservers"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sysservers system table"
   - "sys.sysservers compatibility view"
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

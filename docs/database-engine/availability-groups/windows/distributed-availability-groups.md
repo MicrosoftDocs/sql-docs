@@ -1,17 +1,15 @@
 ---
-title: "Distributed availability groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "What is a distributed availability groups"
+description: "A distributed availability group is a special type of availability group that spans two separate availability groups. The availability groups that participate in a distributed availability group do not need to be in the same location."
+ms.custom: "seodec18"
 ms.date: "07/31/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], distributed"
 ms.assetid: 
-caps.latest.revision: 
 author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg
@@ -27,7 +25,7 @@ To configure a distributed availability group, see [Configure distributed availa
 
 ## Understand distributed availability groups
 
-A distributed availability group is a special type of availability group that spans two separate availability groups. The availability groups that participate in a distributed availability group do not need to be in the same location. They can be physical, virtual, on-premises, in the public cloud, or anywhere that supports an availability group deployment. This includes cross-domain and even cross-platform – such as between an availability group hosted on Linux and one hosted on Windows. As long as two availability groups can communicate, you can configure a distributed availability group with them.
+A distributed availability group is a special type of availability group that spans two separate availability groups. The availability groups that participate in a distributed availability group do not need to be in the same location. They can be physical, virtual, on-premises, in the public cloud, or anywhere that supports an availability group deployment. This includes cross-domain and even cross-platform - such as between an availability group hosted on Linux and one hosted on Windows. As long as two availability groups can communicate, you can configure a distributed availability group with them.
 
 A traditional availability group has resources configured in a WSFC cluster. A distributed availability group does not configure anything in the WSFC cluster. Everything about it is maintained within SQL Server. To learn how to view information for a distributed availability group, see [Viewing distributed availability group information](#viewing-distributed-availability-group-information). 
 
@@ -52,7 +50,9 @@ The only way to make AG 2's primary replica accept inserts, updates, and deletio
 
 ## SQL Server version and edition requirements for distributed availability groups
 
-Distributed availability groups currently work only with availability groups that are created with the same major SQL Server version. For example, all availability groups that participate in a distributed availability group must currently be created with SQL Server 2016. Because the distributed availability groups feature did not exist in SQL Server 2012 or 2014, availability groups that were created with these versions cannot participate in distributed availability groups. 
+Distributed availability groups in SQL Server 2017 or later can mix major versions of SQL Server in the same distributed availablity group. The AG containing read/write primary can be the same version or lower than the other AGs participating in the distributed AG. The other AGs can be the same version or higher. This scenario is targeted to upgrade and migration scenarios. For example, if the AG containing the read/write primary replica is SQL Server 2016, but you want to upgrade/migrate to SQL Server 2017 or later, the other AG participating in the distributed AG can be configured with SQL Server 2017.
+
+Because the distributed availability groups feature did not exist in SQL Server 2012 or 2014, availability groups that were created with these versions cannot participate in distributed availability groups. 
 
 > [!NOTE]
 > Distributed availability groups can not be configured with Standard edition or mix of Standard and Enterprise edition.
@@ -82,7 +82,7 @@ The individual WSFC clusters and their corresponding availability groups follow 
 * One WSFC cluster is joined to a domain, and one WSFC cluster is not joined to a domain.
 * Neither WSFC cluster is joined to a domain.
 
-When both WSFC clusters are joined to the same domain (not trusted domains), you don't need to do anything special when you create the distributed availability group. For availability groups and WSFC clusters that are not joined to the same domain, use certificates to make the distributed availability group work, much in the way that you might create an availability group for a domain-independent availability group. To see how to configure certificates for a distributed availability group, follow steps 3-13 under [Create a domain-independent availability group](domain-independent-availability-groups.md#create-a-domain-independent-availability-group).
+When both WSFC clusters are joined to the same domain (not trusted domains), you don't need to do anything special when you create the distributed availability group. For availability groups and WSFC clusters that are not joined to the same domain, use certificates to make the distributed availability group work, much in the way that you might create an availability group for a domain-independent availability group. To see how to configure certificates for a distributed availability group, follow steps 3-13 under [Create a domain-independent availability group](domain-independent-availability-groups.md).
 
 With a distributed availability group, the primary replicas in each underlying availability group must have each other's certificates. If you already have endpoints that are not using certificates, reconfigure those endpoints by using [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) to reflect the use of certificates.
 

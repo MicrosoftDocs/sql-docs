@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [SQL Server], multi-homed computer"
   - "multi-homed computer [SQL Server] configuring ports"
   - "firewall systems [Database Engine], multi-homed computer"
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

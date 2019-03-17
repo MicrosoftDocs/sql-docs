@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssas.instancerename.f1"
 ms.assetid: 3708d992-8dd9-461c-8aa0-5da6df96ed70
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

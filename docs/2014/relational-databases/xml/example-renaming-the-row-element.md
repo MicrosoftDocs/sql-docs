@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, renaming <row> example"
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

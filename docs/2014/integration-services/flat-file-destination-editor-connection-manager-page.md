@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.flatfiledestadapter.connection.f1"
 helpviewer_keywords: 
   - "Flat File Destination Editor"
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg

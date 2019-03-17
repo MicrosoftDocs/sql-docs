@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "notifications [SQL Server], job status"
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -154,5 +150,5 @@ Only members of the **sysadmin** fixed server role can create operators.
     GO  
     ```  
   
-For more information, see [sp_add_operator (Transact-SQL)](http://msdn.microsoft.com/817cd98a-4dff-4ed8-a546-f336c144d1e0).  
+For more information, see [sp_add_operator (Transact-SQL)](https://msdn.microsoft.com/817cd98a-4dff-4ed8-a546-f336c144d1e0).  
   

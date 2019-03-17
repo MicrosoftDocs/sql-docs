@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
-caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Troubleshoot Report Parts (Report Builder and SSRS)
   These tips can help when working with report parts.  
@@ -24,7 +21,7 @@ manager: craigg
  To see what permissions you and your co-worker have, ask your report server administrator.  
   
 ## When I search for report parts that I uploaded to a SharePoint server, I do not see them. Why not?  
- Report Parts that you have manually uploaded to a SharePoint document library, instead of published by using Report Builder, might not appear in the Report Part Gallery. The report server used for the gallery search might need to be synchronized with the contents of the SharePoint document library. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+ Report Parts that you have manually uploaded to a SharePoint document library, instead of published by using Report Builder, might not appear in the Report Part Gallery. The report server used for the gallery search might need to be synchronized with the contents of the SharePoint document library. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ## Why can't others see the image in their reports?  
  If you publish a report part that is a link to an image file, the report part is really just a link. If others cannot see the image when they add the image report part to their reports, they might not have permissions for the image that you are linking to.  

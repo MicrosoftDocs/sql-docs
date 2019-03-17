@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server], extended events"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], locks"
   - "objects [SQL Server], locks"
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

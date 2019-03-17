@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "12/31/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -66,6 +62,6 @@ Memory-optimized tables can generally be loaded into memory at the speed of I/O,
 -   Large memory-optimized tables with one or more nonclustered indexes can cause high CPU utilization. Unlike a hash index whose bucket count is sized at create time, nonclustered indexes grow dynamically.  
   
 ## See also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

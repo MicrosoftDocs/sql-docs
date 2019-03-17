@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "authentication"
   - "instance of SQL Server"
@@ -24,7 +19,6 @@ helpviewer_keywords:
   - "SQL Server, connecting to"
   - "SQL Server, reconnecting"
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

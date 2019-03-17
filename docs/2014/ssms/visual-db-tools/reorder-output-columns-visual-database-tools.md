@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reordering output columns [SQL Server]"
   - "output columns [SQL Server]"
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

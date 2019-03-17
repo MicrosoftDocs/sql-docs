@@ -1,13 +1,11 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2/20/2018"
+ms.date: 02/20/2018
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL FILE FORMAT"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "External, file format"
   - "PolyBase, external file format"
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -101,7 +98,7 @@ WITH (
  *file_format_name*  
  Specifies a name for the external file format.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET]
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT]
  Specifies the format of the external data.
   
    -   PARQUET
@@ -191,7 +188,7 @@ Notes about the table:
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes.|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, no seconds, and AM, am, PM, or pm.|  
 |Date|DATE_FORMAT =  'yyyy-MM-dd'|Year, month, and day. No time element is included.|  
-|Date|DATE_FORMAT = 'yyyy-MMM-dd'|Year, month, and day. When month is specified with 3 M’s, the input value is one or the strings Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, or Dec.|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|Year, month, and day. When month is specified with 3 M's, the input value is one or the strings Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, or Dec.|  
 |DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes, 00-59 seconds, and 7 digits for milliseconds.|  
 |DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, 00-59 seconds, 7 digits for milliseconds, and AM, am, PM, or pm.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes, 00-59 seconds, and 7 digits for milliseconds, and the timezone offset which you put in the input file as `{+&#124;-}HH:ss`. For example, since Los Angeles time without daylight savings is 8 hours behind UTC, a value of -08:00 in the input file specifies the timezone for Los Angeles.|  
@@ -217,7 +214,7 @@ Notes about the table:
   
  Details:  
   
--   To separate month, day and year values, you can use '–', '/', or '.'. For simplicity, the table uses only the ' – ' separator.
+-   To separate month, day and year values, you can use '-', '/', or '.'. For simplicity, the table uses only the ' - ' separator.
   
 -   To specify the month as text, use three or more characters. Months with one or two characters are interpreted as a number.
   
@@ -235,7 +232,7 @@ Notes about the table:
  TRUE  
  When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:  
   
--   0 if the column is defined as a numeric column.
+-   0 if the column is defined as a numeric column. Decimal columns are not supported and will error.
   
 -   Empty string "" if the column is a string column.
   
@@ -285,7 +282,7 @@ Notes about the table:
   
 ## Limitations and Restrictions
   
- The row delimiter in delimited-text files must be supported by Hadoop’s LineRecordReader. That is, it must be either '\r', '\n', or '\r\n'. These delimiters are not user-configurable.
+ The row delimiter in delimited-text files must be supported by Hadoop's LineRecordReader. That is, it must be either '\r', '\n', or '\r\n'. These delimiters are not user-configurable.
   
  The combinations of supported SerDe methods with RCFiles, and the supported data compression methods are listed previously in this article. Not all combinations are supported.
   

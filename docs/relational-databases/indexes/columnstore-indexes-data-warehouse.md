@@ -5,12 +5,9 @@ ms.date: "12/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -21,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Columnstore indexes, in conjunction with partitioning, are essential for building a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse.  
   
-## What’s new  
+## What's new  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introduces these features for columnstore performance enhancements:  
   
 -   Always On supports querying a columnstore index on a readable secondary replica.  
@@ -39,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
   
 ### Example: Improve efficiency of table seeks with a nonclustered index  
- To improve efficiency of table seeks in a data warehouse, you can create a nonclustered index designed to run queries that perform best with table seeks. For example, queries that look for matching values or return a small range of values will perform better against a B-tree index rather than a columnstore index. They don’t require a full table scan through the columnstore index and will return the correct result faster by doing a binary search through a B-tree index.  
+ To improve efficiency of table seeks in a data warehouse, you can create a nonclustered index designed to run queries that perform best with table seeks. For example, queries that look for matching values or return a small range of values will perform better against a B-tree index rather than a columnstore index. They don't require a full table scan through the columnstore index and will return the correct result faster by doing a binary search through a B-tree index.  
   
 ```sql  
 --BASIC EXAMPLE: Create a nonclustered index on a columnstore table.  
@@ -122,7 +119,7 @@ END TRAN
 ```  
   
 ### Snapshot isolation and read-committed snapshot isolations  
- Use snapshot isolation (SI) to guarantee transactional consistency, and read-committed snapshot isolations (RCSI) to guarantee statement level consistency for queries on columnstore indexes. This allows the queries to run without blocking data writers. This non-blocking behavior also significantly reduces the likelihood of deadlocks for complex transactions. For more information, see [Snapshot Isolation in SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) on MSDN.  
+ Use snapshot isolation (SI) to guarantee transactional consistency, and read-committed snapshot isolations (RCSI) to guarantee statement level consistency for queries on columnstore indexes. This allows the queries to run without blocking data writers. This non-blocking behavior also significantly reduces the likelihood of deadlocks for complex transactions. For more information, see [Snapshot Isolation in SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) on MSDN.  
   
 ## See Also  
  [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

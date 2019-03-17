@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "MSReportServer_ConfigurationSetting Members"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
   - "MSReportServer_ConfigurationSetting class"
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # MSReportServer_ConfigurationSetting Members
   The MSReportServer_ConfigurationSetting class contains the following properties and methods.  

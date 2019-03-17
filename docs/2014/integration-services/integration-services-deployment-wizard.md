@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.deploymentwizard.f1"
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-caps.latest.revision: 10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -24,13 +21,13 @@ manager: craigg
   
  The wizard proceeds through the following four steps. Click **Next** to move to the next step, or **Previous** to return to the previous step.  
   
-1.  **Select Source** – Select the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that you want to deploy.  
+1.  **Select Source** - Select the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that you want to deploy.  
   
-2.  **Select Destination** – Select the project destination.  
+2.  **Select Destination** - Select the project destination.  
   
-3.  **Review** – Displays your selections.  
+3.  **Review** - Displays your selections.  
   
-4.  **Deploy/Results** – Deploys the project and displays the results.  
+4.  **Deploy/Results** - Deploys the project and displays the results.  
   
 ## Select Source  
  To deploy a project deployment file that you created, select **Project deployment file** and enter the path to the .ispac file or click **Browse** to find it in the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] project folder. To deploy a project that resides in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog.  

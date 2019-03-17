@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Status property [ADO Field], Visual Basic example"
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -35,7 +32,7 @@ Sub Main()
    Dim strCnxn As String  
   
    Set Cnxn = New ADODB.Connection  
-   strCnxn = "url=http://MyServer/"  
+   strCnxn = "url=https://MyServer/"  
    Cnxn.Open strCnxn  
   
    Set File = New ADODB.Record  

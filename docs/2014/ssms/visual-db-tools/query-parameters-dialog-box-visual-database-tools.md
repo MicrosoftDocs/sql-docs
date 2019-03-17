@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:69645"
   - "vdt.dlgbox.definequeryparameters"
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

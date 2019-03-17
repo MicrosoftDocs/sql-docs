@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.dependencynetwork.f1"
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

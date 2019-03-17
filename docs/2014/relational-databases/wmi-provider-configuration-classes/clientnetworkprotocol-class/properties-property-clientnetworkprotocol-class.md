@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "Properties Property (ClientNetworkProtocol Class)"
@@ -19,13 +15,12 @@ topic_type:
 helpviewer_keywords: 
   - "Properties property"
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ---
 # Properties Property (ClientNetworkProtocol Class)
-  Gets the properties associated with the current client network protocol specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
+  Gets the properties associated with the current client network protocol specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## Syntax  
   
@@ -45,6 +40,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

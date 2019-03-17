@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "AddNew method [ADO]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "editing data [ADO], adding multiple fields"
   - "editing data [ADO], AddNew method"
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

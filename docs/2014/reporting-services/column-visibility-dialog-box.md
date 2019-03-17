@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.columnvisibility.f1"
   - "10127"
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Column Visibility Dialog Box
   Use the **Column Visibility** dialog box to show or hide the selected column when the report is first run or to use another report item to toggle the visibility of the column.  

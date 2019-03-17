@@ -5,15 +5,11 @@ ms.date: "01/01/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Data Quality Services Concepts
@@ -27,7 +23,7 @@ manager: craigg
   
  **Knowledge Discovery**  
   
- Knowledge discovery is a computer-assisted process that analyzes samples of your organization’s data to build knowledge about the data. Once you have the results of the analysis, you can validate and enhance the knowledge, and then apply it to perform data cleansing, matching, and profiling. For more information, see [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Knowledge discovery is a computer-assisted process that analyzes samples of your organization's data to build knowledge about the data. Once you have the results of the analysis, you can validate and enhance the knowledge, and then apply it to perform data cleansing, matching, and profiling. For more information, see [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Domain Management**  
   

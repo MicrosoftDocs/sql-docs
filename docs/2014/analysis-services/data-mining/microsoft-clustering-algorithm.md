@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "segmentation algorithms [Analysis Services]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "datasets [Analysis Services]"
   - "clustering algorithms [Analysis Services]"
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 61
 author: minewiskan
 ms.author: owend
 manager: craigg

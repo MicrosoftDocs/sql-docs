@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], FOR BROWSE clause"
   - "FOR BROWSE clause"
 ms.assetid: 8f49b1c1-d877-4c46-b988-f8cdd8ac0925
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg

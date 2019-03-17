@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.newdatabase.f1"
 ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

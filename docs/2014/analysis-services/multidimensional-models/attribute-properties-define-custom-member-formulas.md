@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "members [Analysis Services], custom"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "MDX [Analysis Services], custom rollup formulas"
   - "custom member formulas [Analysis Services]"
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

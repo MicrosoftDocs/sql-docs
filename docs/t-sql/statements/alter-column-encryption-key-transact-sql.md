@@ -5,9 +5,7 @@ ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER COLUMN ENCRYPTION"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "column encryption key, alter"
   - "ALTER COLUMN ENCRYPTION KEY statement"
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: 15
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)

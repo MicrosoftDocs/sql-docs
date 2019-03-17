@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying [Analysis Services], command prompt"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Microsoft.AnalysisServices.Deployment utility"
   - "Analysis Services deployments, command prompt"
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

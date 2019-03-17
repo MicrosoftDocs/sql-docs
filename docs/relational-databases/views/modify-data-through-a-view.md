@@ -5,16 +5,13 @@ ms.date: "10/05/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data modifications [SQL Server], views"
   - "views [SQL Server], modifying data through"
   - "modifying data [SQL Server], views"
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg

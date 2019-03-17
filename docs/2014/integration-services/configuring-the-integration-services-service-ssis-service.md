@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services service, configuring"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "service [Integration Services], configuring"
   - "default configuration files"
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
-caps.latest.revision: 70
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -120,7 +117,7 @@ The Registry key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\12
   
   
 > [!CAUTION]  
->  Incorrectly editing the Registry can cause serious problems that may require you to reinstall your operating system. [!INCLUDE[msCoName](../includes/msconame-md.md)] cannot guarantee that problems resulting from editing the Registry incorrectly can be resolved. Before editing the Registry, back up any valuable data. For information about how to back up, restore, and edit the Registry, see the [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base article, [Description of the Microsoft Windows registry](http://support.microsoft.com/kb/256986).  
+>  Incorrectly editing the Registry can cause serious problems that may require you to reinstall your operating system. [!INCLUDE[msCoName](../includes/msconame-md.md)] cannot guarantee that problems resulting from editing the Registry incorrectly can be resolved. Before editing the Registry, back up any valuable data. For information about how to back up, restore, and edit the Registry, see the [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base article, [Description of the Microsoft Windows registry](https://support.microsoft.com/kb/256986).  
   
  The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service loads the configuration file when the service is started. Any changes to the Registry entry require that the service be restarted.  
   

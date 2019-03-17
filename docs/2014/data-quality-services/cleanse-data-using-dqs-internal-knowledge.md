@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.dqproject.map.f1"
@@ -15,9 +12,8 @@ f1_keywords:
   - "sql12.dqs.dqproject.correction.f1"
   - "sql12.dqs.dqproject.interactivecleansing.f1"
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: 24
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Cleanse Data Using DQS (Internal) Knowledge
@@ -31,7 +27,7 @@ manager: craigg
   
 -   You must have specified appropriate threshold values for the cleansing activity. For information about doing so, see [Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   A DQS knowledge base must be available on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] against which you want to compare, and cleanse your source data. Additionally, the knowledge base must contain knowledge about the type of data that you want to cleanse. For example, if you want to cleanse your source data that contains US addresses, you must have a knowledge base that was created against a “high-quality” sample data for US addresses.  
+-   A DQS knowledge base must be available on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] against which you want to compare, and cleanse your source data. Additionally, the knowledge base must contain knowledge about the type of data that you want to cleanse. For example, if you want to cleanse your source data that contains US addresses, you must have a knowledge base that was created against a "high-quality" sample data for US addresses.  
   
 -   Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] computer if the source data to be cleansed is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
   
@@ -122,7 +118,7 @@ manager: craigg
   
     -   The lower pane displays individual occurrences of the domain value selected in the right-upper pane. The following information is displayed: a box to specify another (correct) value, the confidence level (not available for the values under the **Correct** tab), the reason for the DQS action on the value, option to approve and reject the corrections and suggestions for the value, and the original value.  
   
-3.  If you enabled the **Speller** feature for a domain while creating it, wavy red underscores are displayed against such domain values that are identified as potential error. The underscore is displayed for the entire value. For example, if “New York” is incorrectly spelled as “Neu York”, the speller will display red underscore under “Neu York”, and not just “Neu”. If you right-click the value, you will see suggested corrections. If there are more than 5 suggestions, you can click **More suggestions** in the context menu to view the rest of them. As with the error display, the suggestions are replacements for the whole value. For example, “New York” will be displayed as a suggestion in the previous example, and not just “New”. You can pick one of the suggestions or add a value to the dictionary to be displayed for that value. Values are stored in dictionary at a user account level. When you select a suggestion from the speller context menu, the selected suggestion will be added to the **Correct To** column. However, if you select a suggestion in the **Correct To** column, the value in the column is replaced by the selected suggestion.  
+3.  If you enabled the **Speller** feature for a domain while creating it, wavy red underscores are displayed against such domain values that are identified as potential error. The underscore is displayed for the entire value. For example, if "New York" is incorrectly spelled as "Neu York", the speller will display red underscore under "Neu York", and not just "Neu". If you right-click the value, you will see suggested corrections. If there are more than 5 suggestions, you can click **More suggestions** in the context menu to view the rest of them. As with the error display, the suggestions are replacements for the whole value. For example, "New York" will be displayed as a suggestion in the previous example, and not just "New". You can pick one of the suggestions or add a value to the dictionary to be displayed for that value. Values are stored in dictionary at a user account level. When you select a suggestion from the speller context menu, the selected suggestion will be added to the **Correct To** column. However, if you select a suggestion in the **Correct To** column, the value in the column is replaced by the selected suggestion.  
   
      The speller feature is enabled by default in the interactive cleansing stage. You can disable speller in the interactive cleansing stage by clicking the **Enable/Disable Speller** icon, or right-clicking in the domain values area, and then clicking **Speller** in the shortcut menu. To enable it back again, do the same.  
   
@@ -143,9 +139,9 @@ manager: craigg
   
     1.  **SQL Server**: Select **DQS_STAGING_DATA** as the destination database if you want to export your data here, and then specify a table name that will be created to store your exported data. Otherwise, select another database if you want to export data to a different database, and then specify a table name that will be created to store your exported data. Your destination database must be present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] to be available in the **Database** drop-down list.  
   
-    2.  **CSV File**: Click **Browse**, and specify the name and location of the .csv file where you want to export the cleansed data. You can also type the file name for the .csv file along with the full path where you want to export the cleansed data. For example, “c:\ExportedData.csv”. The file is saved on the computer where [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is installed.  
+    2.  **CSV File**: Click **Browse**, and specify the name and location of the .csv file where you want to export the cleansed data. You can also type the file name for the .csv file along with the full path where you want to export the cleansed data. For example, "c:\ExportedData.csv". The file is saved on the computer where [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is installed.  
   
-    3.  **Excel File**: Click **Browse**, and specify the name and location of the Excel file where you want to export the cleansed data. You can also type the file name for the Excel file along with the full path where you want to export the cleansed data. For example, “c:\ExportedData.xlsx”. The file is saved on the computer where [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is installed.  
+    3.  **Excel File**: Click **Browse**, and specify the name and location of the Excel file where you want to export the cleansed data. You can also type the file name for the Excel file along with the full path where you want to export the cleansed data. For example, "c:\ExportedData.xlsx". The file is saved on the computer where [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is installed.  
   
 2.  Select the **Standardize Output** check box to standardize the output based on the output format selected for the domain. For example, change the string value to upper case or capitalize the first letter of the word. For information about specifying the output format of a domain, see the **Format Output to** list in [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
@@ -165,7 +161,7 @@ manager: craigg
   
         -   **\<Domain>_Status**: The status of the domain value after data cleansing. For example, **Suggested**, **New**, **Invalid**, **Corrected**, or **Correct**.  
   
-        -   **Record Status**: Apart from having a status field for each mapped domain **(\<DomainName>_Status**), the **Record Status** field displays the status for a record. If any of the domain’s status in the record is *New* or *Correct*, the **Record Status** is set to *Correct*. If any of the domain’s status in the record is *Suggested*, *Invalid*, or *Corrected*, the **Record Status** is set to the respective value. For example, if any of the domain’s status in the record is *Suggested*, the **Record Status** is set to *Suggested*.  
+        -   **Record Status**: Apart from having a status field for each mapped domain **(\<DomainName>_Status**), the **Record Status** field displays the status for a record. If any of the domain's status in the record is *New* or *Correct*, the **Record Status** is set to *Correct*. If any of the domain's status in the record is *Suggested*, *Invalid*, or *Corrected*, the **Record Status** is set to the respective value. For example, if any of the domain's status in the record is *Suggested*, the **Record Status** is set to *Suggested*.  
   
             > [!NOTE]  
             >  If you use reference data service for the cleansing operation, some additional data about the domain value is also available for exporting. For more information, see [Cleanse Data Using Reference Data &#40;External&#41; Knowledge](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

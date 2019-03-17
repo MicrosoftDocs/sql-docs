@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0ece7297-6e2f-47fb-835d-b9e9cce53fe2
-caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Set a Snapping Interval on a Gauge (Report Builder and SSRS)
   A snapping interval defines the multiple to which values are rounded. By default, the gauge will point to the exact value of the field you have specified in the data pane. However, you may want to round the exact value up or down so that the pointer will snap to a preset interval. For example, if the value on your gauge is 34.2 and you specify a snapping interval of 5, the gauge pointer will point to 35. If the value on your gauge is 31.2 and you specify a snapping interval of 5, the gauge pointer will point to 30.  
@@ -30,7 +27,7 @@ manager: craigg
     > [!NOTE]  
     >  If you do not see the Properties pane, click the **View** tab and then select the **Properties** checkbox.  
   
-3.  In the **Pointers** property, click the (…) button. The Pointer Collection Editor opens.  
+3.  In the **Pointers** property, click the (...) button. The Pointer Collection Editor opens.  
   
 4.  Set the **SnappingEnabled** property to `True`.  
   

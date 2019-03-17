@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sort attributes [Integration Services]"
   - "output columns [Integration Services]"
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -36,7 +32,7 @@ manager: craigg
   
      The Sort transformation uses Windows collation to sort string values.  
   
-     —or—  
+     -or-  
   
 -   Use the Transact-SQL CAST operator to first cast `varchar` values to `nvarchar` values, and then use the Transact-SQL ORDER BY clause to sort the data.  
   
@@ -109,6 +105,6 @@ manager: craigg
  [Merge Join Transformation](merge-join-transformation.md)   
  [Integration Services Transformations](integration-services-transformations.md)   
  [Integration Services Paths](../integration-services-paths.md)   
- [Data Flow Task]((../../control-flow/data-flow-task.md)  
+ [Data Flow Task](../../control-flow/data-flow-task.md)  
   
   

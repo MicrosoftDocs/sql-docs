@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
@@ -34,7 +31,7 @@ manager: craigg
     |----------|-----------------|  
     |**General**|Displays basic properties of the full-text index. These include several modifiable properties and a number of unchangeable properties such as database name, table name, and the name of full-text key column. The modifiable properties are:<br /><br /> **Full-Text Index Stoplist**<br /><br /> **Full-Text Indexing Enabled**<br /><br /> **Change Tracking**<br /><br /> **Search Property List**<br /><br /> <br /><br /> For more information, see [Full-Text Index Properties &#40;General Page&#41;](full-text-index-properties-general-page.md).|  
     |**Columns**|Displays the table columns that are available for full-text indexing. The selected column or columns are full-text indexed. You can select as many of the available columns as you want to include in the full-text index. For more information, see [Full-Text Index Properties &#40;Columns Page&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Schedules**|Use this page to create or manage schedules for a SQL Server Agent job that starts an incremental table population for the full-text index populations. For more information, see [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Important \*\*** After you exit the **Full-Text Index Properties** dialog box, any newly created schedule is associated with a SQL Server Agent job (Start Incremental Table Population on *database_name*.*table_name*).|  
+    |**Schedules**|Use this page to create or manage schedules for a SQL Server Agent job that starts an incremental table population for the full-text index populations. For more information, see [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md).<br /><br /> <strong>\*\* Important \*\*</strong> After you exit the **Full-Text Index Properties** dialog box, any newly created schedule is associated with a SQL Server Agent job (Start Incremental Table Population on *database_name*.*table_name*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] to save any changes and exit the **Full-text index Properties** dialog box.  
   

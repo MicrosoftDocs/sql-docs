@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "property pages [SQL Server Management Studio]"
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg

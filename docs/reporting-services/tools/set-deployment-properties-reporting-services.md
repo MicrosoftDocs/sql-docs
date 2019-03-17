@@ -3,7 +3,6 @@ title: "Set Deployment Properties (Reporting Services) | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: tools
-ms.suite: "reporting-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], deploying"
@@ -18,7 +17,7 @@ ms.date: 03/07/2017
 
 # Set Deployment Properties (Reporting Services)
 
-  In[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you must specify the report server and optionally the folders for reports and shared data sources so that you can publish the items in a Report Server project to a report server. The properties and values that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] needs to build, preview an deploy reports are stored in project configurations of the Report Server project. You can create multiple named sets for these project properties, so that you can conveniently switch between property sets. Each set of properties is a configuration. For example, you can have a configuration for publishing reports to a test server and a different configuration for publishing reports to a production server.  
+  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you must specify the report server and optionally the folders for reports and shared data sources so that you can publish the items in a Report Server project to a report server. The properties and values that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] needs to build, preview an deploy reports are stored in project configurations of the Report Server project. You can create multiple named sets for these project properties, so that you can conveniently switch between property sets. Each set of properties is a configuration. For example, you can have a configuration for publishing reports to a test server and a different configuration for publishing reports to a production server.  
   
  Use Configuration Manager to create and manage sets of project properties in project configurations. Configuration Manager is a feature supported by [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], on which [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is based.  
   
@@ -60,7 +59,7 @@ ms.date: 03/07/2017
   
 10. In the **TargetServerURL** text box, type the URL of the target report server. Before you publish a report, you must set this property to a valid report server URL. When publishing to a report server running in native mode, use the URL of the virtual directory of the report server (for example, http:*//server/reportserver* or https:*//server/reportserver)*. This is the virtual directory of the report server, not Report Manager.  
   
-     When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used (for example, http://*servername*, http://*servername*/*site* or http://*servername*/*site*/*subsite*).  
+     When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used (for example, https://*servername*, https://*servername*/*site* or https://*servername*/*site*/*subsite*).  
   
 ### To set Configuration Manager properties  
   

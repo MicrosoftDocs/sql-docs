@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.fulltextindex"
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -39,7 +36,7 @@ manager: craigg
  When expanded, shows **Columns** and **Full-text Catalog Name**.  
   
  **Columns**  
- Displays a comma-separated list of the names of full-text-searchable columns. To see the complete list, click the ellipsis button (**…**) to the left of the property field.  
+ Displays a comma-separated list of the names of full-text-searchable columns. To see the complete list, click the ellipsis button (**...**) to the left of the property field.  
   
  **Full-Text Catalog Name**  
  Displays the name of the full-text catalog on which this full-text index is stored. To store the index on a different catalog, click the catalog name and choose another from the drop-down list.  

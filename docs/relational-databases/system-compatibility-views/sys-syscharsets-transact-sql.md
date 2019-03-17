@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.syscharsets"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "syscharsets system table"
   - "sys.syscharsets compatibility view"
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
-caps.latest.revision: 42
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

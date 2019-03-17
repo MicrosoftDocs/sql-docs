@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 ms.topic: quickstart
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "context switching [SQL Server], tutorials"
   - "ownership chains [SQL Server]"
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
-caps.latest.revision: 16
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

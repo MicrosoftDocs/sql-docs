@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,7 +33,7 @@ The topics in this section describe how to use the basic and advanced data types
 | [Understanding Data Type Conversions](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | Describes how data type conversion is handled when using getter and setter methods.                                                                                                                                                                                  |
 | [National Character Set Support](../../connect/jdbc/national-character-set-support.md)                                                           | Describes the support for the national character set types.                                                                                                                                                                                                          |
 | [Supporting XML Data](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Describes the SQLXML interface. Also describes how to read and write an XML data from and to the relational database with the **SQLXML** Java data type.                                                                                                             |
-| [Wrappers and Interfaces](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Discusses the interfaces that have the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] specific methods and constants that allow an application server to create a proxy of the class, Also discusses supports for the the `java.sql.Wrapper` interface. |
+| [Wrappers and Interfaces](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Discusses the interfaces that have the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] specific methods and constants that allow an application server to create a proxy of the class, Also discusses supports for the `java.sql.Wrapper` interface. |
   
 ## See Also
 

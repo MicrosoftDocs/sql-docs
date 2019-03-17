@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, alerts"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "displaying alerts"
   - "status information [SQL Server], alerts"
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -94,5 +90,5 @@ By default, members of the **sysadmin** fixed server role can view information a
     GO  
     ```  
   
-For more information, see [sp_help_alert (Transact-SQL)](http://msdn.microsoft.com/850cef4e-6348-4439-8e79-fd1bca712091).  
+For more information, see [sp_help_alert (Transact-SQL)](https://msdn.microsoft.com/850cef4e-6348-4439-8e79-fd1bca712091).  
   

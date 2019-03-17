@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), diagnostic records"
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

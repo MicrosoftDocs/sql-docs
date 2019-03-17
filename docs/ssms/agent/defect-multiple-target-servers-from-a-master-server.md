@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Defect Multiple Target Servers from a Master Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, target servers"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "defecting target servers"
   - "multiple target server defections"
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

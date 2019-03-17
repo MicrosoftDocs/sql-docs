@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLGetDescRec function"
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -56,7 +53,7 @@ manager: craigg
  `SQLGetDescRec` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLGetDescRec](http://go.microsoft.com/fwlink/?LinkId=80707)   
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

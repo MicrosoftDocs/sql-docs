@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetData"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetData function [ODBC]"
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -150,11 +147,11 @@ SQLRETURN SQLGetData(
   
  If the *TargetType* argument is an interval data type, the default interval leading precision (2) and the default interval seconds precision (6), as set in the SQL_DESC_DATETIME_INTERVAL_PRECISION and SQL_DESC_PRECISION fields of the ARD, respectively, are used for the data. If the *TargetType* argument is an SQL_C_NUMERIC data type, the default precision (driver-defined) and default scale (0), as set in the SQL_DESC_PRECISION and SQL_DESC_SCALE fields of the ARD, are used for the data. If any default precision or scale is not appropriate, the application should explicitly set the appropriate descriptor field by a call to **SQLSetDescField** or **SQLSetDescRec**. It can set the SQL_DESC_CONCISE_TYPE field to SQL_C_NUMERIC and call **SQLGetData** with a *TargetType* argument of SQL_ARD_TYPE, which will cause the precision and scale values in the descriptor fields to be used.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 2*.x*, applications set *TargetType* to SQL_C_DATE, SQL_C_TIME, or SQL_C_TIMESTAMP to indicate that \**TargetValuePtr* is a date, time, or timestamp structure. In ODBC 3*.x*, applications set *TargetType* to SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, or SQL_C_TYPE_TIMESTAMP. The Driver Manager makes appropriate mappings if necessary, based on the application and driver version.  
   
 ## Retrieving Variable-Length Data in Parts  
- **SQLGetData** can be used to retrieve data from a column that contains variable-length data in parts — that is, when the identifier of the SQL data type of the column is SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, or a driver-specific identifier for a variable-length type.  
+ **SQLGetData** can be used to retrieve data from a column that contains variable-length data in parts - that is, when the identifier of the SQL data type of the column is SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, or a driver-specific identifier for a variable-length type.  
   
  To retrieve data from a column in parts, the application calls **SQLGetData** multiple times in succession for the same column. On each call, **SQLGetData** returns the next part of the data. It is up to the application to reassemble the parts, taking care to remove the null-termination character from intermediate parts of character data. If there is more data to return or not enough buffer was allocated for the terminating character, **SQLGetData** returns SQL_SUCCESS_WITH_INFO and SQLSTATE 01004 (Data truncated). When it returns the last part of the data, **SQLGetData** returns SQL_SUCCESS. Neither SQL_NO_TOTAL nor zero can be returned on the last valid call to retrieve data from a column, because the application would then have no way of knowing how much of the data in the application buffer is valid. If **SQLGetData** is called after this, it returns SQL_NO_DATA. For more information, see the next section, "Retrieving Data with SQLGetData."  
   
@@ -191,7 +188,7 @@ SQLRETURN SQLGetData(
   
 7.  Places the length of the data in \**StrLen_or_IndPtr*. If *StrLen_or_IndPtr* was a null pointer, **SQLGetData** does not return the length.  
   
-    -   For character or binary data, this is the length of the data after conversion and before truncation due to *BufferLength*. If the driver cannot determine the length of the data after conversion, as is sometimes the case with long data, it returns SQL_SUCCESS_WITH_INFO and sets the length to SQL_NO_TOTAL. (The last call to **SQLGetData** must always return the length of the data, not zero or SQL_NO_TOTAL.) If data was truncated due to the SQL_ATTR_MAX_LENGTH statement attribute, the value of this attribute — as opposed to the actual length — is placed in \**StrLen_or_IndPtr*. This is because this attribute is designed to truncate data on the server before conversion, so the driver has no way of figuring out what the actual length is. When **SQLGetData** is called multiple times in succession for the same column, this is the length of the data available at the start of the current call; that is, the length decreases with each subsequent call.  
+    -   For character or binary data, this is the length of the data after conversion and before truncation due to *BufferLength*. If the driver cannot determine the length of the data after conversion, as is sometimes the case with long data, it returns SQL_SUCCESS_WITH_INFO and sets the length to SQL_NO_TOTAL. (The last call to **SQLGetData** must always return the length of the data, not zero or SQL_NO_TOTAL.) If data was truncated due to the SQL_ATTR_MAX_LENGTH statement attribute, the value of this attribute - as opposed to the actual length - is placed in \**StrLen_or_IndPtr*. This is because this attribute is designed to truncate data on the server before conversion, so the driver has no way of figuring out what the actual length is. When **SQLGetData** is called multiple times in succession for the same column, this is the length of the data available at the start of the current call; that is, the length decreases with each subsequent call.  
   
     -   For all other data types, this is the length of the data after conversion; that is, it is the size of the type to which the data was converted.  
   

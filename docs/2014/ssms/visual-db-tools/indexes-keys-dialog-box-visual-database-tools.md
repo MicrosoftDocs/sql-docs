@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65539"
   - "vdt.ppg.indexeskeys"
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -37,7 +34,7 @@ manager: craigg
  When expanded, shows the properties **Columns**, **Is Unique**, and **Type**.  
   
  **Columns**  
- Lists chosen sort orders for the columns in the key or index, and provides access to a dialog box where the sort orders can be defined. To display the dialog box, click **Columns** and then click the ellipsis button (…) that appears to the right of the property field.  
+ Lists chosen sort orders for the columns in the key or index, and provides access to a dialog box where the sort orders can be defined. To display the dialog box, click **Columns** and then click the ellipsis button (...) that appears to the right of the property field.  
   
  **Is Unique**  
  Indicates whether data entered into this index or key must be unique. This is unavailable for XML Indexes.  
@@ -52,7 +49,7 @@ manager: craigg
  Shows the name of the key or index. When a new one is created, it is given a default name based on the table in the active window in Table Designer. You can change the name at any time.  
   
  **Description**  
- Provides a place to describe the key or index. To write a more detailed description, click **Description** and then click the ellipsis button (**…**) that appears to the right of the property field. This provides a larger area in which to write text.  
+ Provides a place to describe the key or index. To write a more detailed description, click **Description** and then click the ellipsis button (**...**) that appears to the right of the property field. This provides a larger area in which to write text.  
   
  **Table Designer Category**  
  When expanded, shows information for **Create as Clustered**.  

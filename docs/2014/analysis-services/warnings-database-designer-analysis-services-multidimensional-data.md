@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.databasedesigner.warnings.f1"
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

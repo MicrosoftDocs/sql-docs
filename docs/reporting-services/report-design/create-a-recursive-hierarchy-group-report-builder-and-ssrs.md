@@ -4,13 +4,12 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Create a Recursive Hierarchy Group (Report Builder and SSRS)
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, a recursive hierarchy group organizes data from a single report dataset that includes multiple hierarchical levels, such as the report-to structure for manager-employee relationships in an organizational hierarchy.  
@@ -45,7 +44,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated repor
     > [!NOTE]  
     >  If you do not see the Properties pane, click **Properties** on the **View** tab.  
   
-2.  In the Properties pane, expand the **Padding** node, click **Left**, and from the drop-down list, select **\<Expression…>**.  
+2.  In the Properties pane, expand the **Padding** node, click **Left**, and from the drop-down list, select **\<Expression...>**.  
   
 3.  In the Expression pane, type the following expression:  
   

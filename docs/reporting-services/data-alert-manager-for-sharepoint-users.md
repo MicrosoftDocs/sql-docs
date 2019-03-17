@@ -4,7 +4,6 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -34,7 +33,7 @@ When a SharePoint site is enabled for data alerts, two SharePoint pages, MyDataA
 
  You can also open Data Alert Manager directly by using a URL. The following shows the syntax of the URL:  
   
- `http://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
+ `https://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
   
 > [!NOTE]  
 >  Before you can use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alerting features, an administrator must grant you permissions. For information about the required permissions, see [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md).  
@@ -86,4 +85,4 @@ When a SharePoint site is enabled for data alerts, two SharePoint pages, MyDataA
 [Create a Data Alert in Data Alert Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ODBC], statement attributes"
   - "statement attributes [ODBC]"
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

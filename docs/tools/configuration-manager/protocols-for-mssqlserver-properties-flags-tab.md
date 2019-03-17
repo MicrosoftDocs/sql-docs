@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQLSERVER property protocols"
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
-caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
@@ -29,7 +26,7 @@ manager: craigg
   
  For more in formation on encryption, see "Encrypting Connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
- The login process is always encrypted. When **ForceEncryption** is set to **Yes**, all client/server communication is encrypted, and clients connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be configured to trust the root authority of the server certificate. For more information, see "How to: Enable Encrypted Connections to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ The login process is always encrypted. When **ForceEncryption** is set to **Yes**, all client/server communication is encrypted, and clients connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be configured to trust the root authority of the server certificate. For more information, see "How to: Enable Encrypted Connections to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Cluster Servers  
  If you want to use encryption with a failover cluster, you must install the server certificate with the fully qualified DNS name of the virtual server on all nodes in the failover cluster. For example, if you have a two-node cluster, with nodes named "test1.*\<your company>*.com" and "test2.*\<your company>*.com" and a virtual server named "virtsql", you need to install a certificate for "virtsql.*\<your company>*.com" on both nodes. You can then check the **ForceEncryption** check box on the **SQL Server Configuration Manager** to configure your failover cluster for encryption.  

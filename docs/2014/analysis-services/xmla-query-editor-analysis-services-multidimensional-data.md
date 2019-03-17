@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.editor.xmla.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "XMLA Query Editor"
   - "Query Editor [XMLA]"
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

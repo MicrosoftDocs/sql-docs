@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Profiler, replaying traces"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "events [SQL Server], replaying traces"
   - "Profiler [SQL Server Profiler], replaying traces"
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

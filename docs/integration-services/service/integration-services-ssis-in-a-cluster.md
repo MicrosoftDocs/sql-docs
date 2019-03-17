@@ -5,12 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -96,7 +93,7 @@ For those customers who conclude that the advantages of configuring the [!INCLUD
   
 4.  On the **File** menu, point to **New**, and then click **Resource**.  
   
-5.  On the **New Resource** page of the Resource Wizard, type a name and select **“Generic Service”** as the **Service Type**. Do not change the value of **Group**. Click **Next**.  
+5.  On the **New Resource** page of the Resource Wizard, type a name and select **"Generic Service"** as the **Service Type**. Do not change the value of **Group**. Click **Next**.  
   
 6.  On the **Possible Owners** page, add or remove the nodes of the cluster as the possible owners of the resource. Click **Next**.  
   

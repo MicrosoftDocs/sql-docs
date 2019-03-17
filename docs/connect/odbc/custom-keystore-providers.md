@@ -5,12 +5,9 @@ ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: 1
 ms.author: "v-chojas"
 manager: craigg
 author: MightyPen
@@ -220,6 +217,7 @@ void *dbcCtx;
 void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
+
 |Field|Description|
 |:--|:--|
 |`envCtx`|Environment context.|

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -45,11 +42,11 @@ manager: craigg
   
 -   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection)  
   
-##  <a name="cat"></a> System Views – Catalog Views  
+##  <a name="cat"></a> System Views - Catalog Views  
   
 -   [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)  
   
-##  <a name="dmv"></a> System Views – Dynamic Management Views  
+##  <a name="dmv"></a> System Views - Dynamic Management Views  
   
 -   [sys.dm_filestream_file_io_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql)  
   
@@ -59,6 +56,6 @@ manager: craigg
   
 -   [Access FILESTREAM Data with OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   
--   [Managed API - SqlFileStream Class](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [Managed API - SqlFileStream Class](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

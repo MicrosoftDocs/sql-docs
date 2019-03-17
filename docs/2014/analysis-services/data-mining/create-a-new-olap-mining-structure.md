@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], OLAP"
   - "mining structures [Analysis Services], creating"
   - "OLAP [Analysis Services], mining models"
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -78,7 +75,7 @@ manager: craigg
   
         -   If you want to include the column as one of the predictable attributes for the model, select **Predict**.  
   
-        -   Any item that you include in the structure but do not specify as an input or predictable attribute is added to the structure with the flag `Ignore`; this means that the data is processed when you build the model but is not used in analysis, and is available only for drillthrough. This can be handy if you want to include details such as customer names but don’t want to use them in analysis.  
+        -   Any item that you include in the structure but do not specify as an input or predictable attribute is added to the structure with the flag `Ignore`; this means that the data is processed when you build the model but is not used in analysis, and is available only for drillthrough. This can be handy if you want to include details such as customer names but don't want to use them in analysis.  
   
      Click **Finish** to close the part of the wizard that works with nested tables. You can repeat the process to add multiple nested columns.  
   

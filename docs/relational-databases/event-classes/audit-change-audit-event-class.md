@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Change Audit event class"
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

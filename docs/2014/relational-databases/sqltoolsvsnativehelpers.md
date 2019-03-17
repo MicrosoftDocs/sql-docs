@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
-caps.latest.revision: 5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

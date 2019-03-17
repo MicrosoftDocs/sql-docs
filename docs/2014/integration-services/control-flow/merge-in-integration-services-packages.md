@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MERGE statement [SQL Server]"
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -33,7 +29,7 @@ manager: craigg
   
  The remainder of this topic discusses some additional uses for the MERGE statement.  
   
- For a sample destination component that supports the use of the MERGE statement, see the CodePlex community sample, [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215).  
+ For a sample destination component that supports the use of the MERGE statement, see the CodePlex community sample, [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## Using MERGE  
  Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  
@@ -55,7 +51,7 @@ manager: craigg
  Every week, the database generates a WeeklyChanges table that contains price changes for the week and new books that were added during the week. By using a single MERGE statement, you can apply the changes in the WeeklyChanges table to the DimBook table. The MERGE statement inserts new rows for newly-added books, and updates the IsCurrent column to 0 for rows of existing books whose prices have changed. The MERGE statement also inserts new rows for books whose prices have changed, and for these new rows, sets the value of the IsCurrent column to 1.  
   
 ### Merge a Table with New Data Against the Old Table  
- The database models the properties of an object by using an “open schema,” that is, a table contains name-value pairs for each property. The Properties table has three columns: EntityID, PropertyID, and Value. A NewProperties table that is a newer version of the table has to be synchronized with the Properties table. To synchronize these two tables, you can use a single MERGE statement to perform the following operations:  
+ The database models the properties of an object by using an "open schema," that is, a table contains name-value pairs for each property. The Properties table has three columns: EntityID, PropertyID, and Value. A NewProperties table that is a newer version of the table has to be synchronized with the Properties table. To synchronize these two tables, you can use a single MERGE statement to perform the following operations:  
   
 -   Delete properties from the Properties table if they are absent from the NewProperties table.  
   

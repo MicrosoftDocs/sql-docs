@@ -430,7 +430,7 @@ Public Class SampleServerSyncProvider
                 Select Case conflictResolution
                     Case "SE"
 
-                        'Again, this this is the default for the commands we are using:
+                        'Again, this is the default for the commands we are using:
                         'the server change is persisted and then downloaded to the client.
                         e.Action = ApplyAction.Continue
                         Console.WriteLine(String.Empty)

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC applications, passwords"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "modifying passwords"
   - "SQLAllocHandle function"
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

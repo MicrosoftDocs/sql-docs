@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "discarding database diagram changes"
   - "database diagrams [SQL Server], discarding changes"
   - "diagrams [SQL Server], discarding changes"
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

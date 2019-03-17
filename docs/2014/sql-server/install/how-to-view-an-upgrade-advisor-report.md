@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying reports"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Upgrade Advisor, reports"
   - "reports [Upgrade Advisor], viewing"
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
-caps.latest.revision: 32
 author: mashamsft
 ms.author: mathoma
 manager: craigg

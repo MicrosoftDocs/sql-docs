@@ -5,17 +5,13 @@ ms.date: "03/05/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Domains"
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Introduction to Data Quality Services
@@ -29,7 +25,7 @@ manager: craigg
   
  High-quality data is critical to the efficiency of businesses and institutions. An organization of any size can use DQS to improve the information value of its data, making the data more suitable for its intended use. A data quality solution can make data more reliable, accessible, and reusable. It can improve the completeness, accuracy, conformity, and consistency of your data, resolving problems caused by bad data in business intelligence or data warehouse workloads, as well as in operational OLTP systems.  
   
- DQS enables a business user, information worker, or IT professional who is neither a database expert nor a programmer to create, maintain, and execute their organization’s data quality operations with minimal setup or preparation time.  
+ DQS enables a business user, information worker, or IT professional who is neither a database expert nor a programmer to create, maintain, and execute their organization's data quality operations with minimal setup or preparation time.  
   
 ##  <a name="Answer"></a> Answering that Need with DQS  
  Data quality is not defined in absolute terms. It depends upon whether data is appropriate for the purpose for which it is intended. DQS identifies potentially incorrect data, and provides you with an assessment of the likelihood that the data is in fact incorrect. DQS provides you with a semantic understanding of the data so you can decide its appropriateness. DQS enables you to resolve issues involving incompleteness, lack of conformity, inconsistency, inaccuracy, invalidity, and data duplication.  
@@ -40,7 +36,7 @@ manager: craigg
   
 -   **Matching:** the identification of semantic duplicates in a rules-based process that enables you to determine what constitutes a match and perform de-duplication. For more information, see [Data Matching](../data-quality-services/data-matching.md).  
   
--   **Reference Data Services:** verification of the quality of your data using the services of a reference data provider. You can use reference data services from [Microsoft Azure Marketplace](http://azure.microsoft.com/marketplace/) to cleanse, validate, match, and enrich data. For more information, see [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
+-   **Reference Data Services:** verification of the quality of your data using the services of a reference data provider. You can use reference data services from [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/) to cleanse, validate, match, and enrich data. For more information, see [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Profiling:** the analysis of a data source to provide insight into the quality of the data at every stage in the knowledge discovery, domain management, matching, and data cleansing processes. Profiling is a powerful tool in a DQS data quality solution. You can create a data quality solution in which profiling is just as important as knowledge management, matching, or data cleansing. For more information, see [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

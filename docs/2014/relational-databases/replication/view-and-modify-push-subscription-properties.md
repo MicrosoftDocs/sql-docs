@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing replication properties"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "modifying replication properties, push subscriptions"
   - "modifying subscriptions, SQL Server Management Studio"
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -138,7 +134,7 @@ manager: craigg
 7.  (Optional) To view the new settings, call the <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> method to reload the properties for the subscription.  
   
 ## See Also  
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
+ [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   

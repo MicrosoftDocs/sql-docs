@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server], ADD TARGET argument"
   - "xe"
 ms.assetid: 08454543-c5c8-4ca3-9af9-f1d82264471c
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg

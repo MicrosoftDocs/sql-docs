@@ -5,16 +5,11 @@ ms.date: "08/22/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "HierarchyID"
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

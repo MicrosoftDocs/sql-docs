@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, updategrams"
@@ -25,7 +21,6 @@ helpviewer_keywords:
   - "deleting data"
   - "inserting data"
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

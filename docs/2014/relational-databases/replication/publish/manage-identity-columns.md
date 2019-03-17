@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "identity values [SQL Server replication]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "transactional replication, identity range management"
   - "identity columns [SQL Server], replication"
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

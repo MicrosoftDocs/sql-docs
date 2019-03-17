@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [Analysis Services], naming"
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
   
  The following rules apply to `Name` and `ID` properties.  
   
--   Names are case insensitive. You cannot have a cube named “sales” and another named “Sales” in the same database.  
+-   Names are case insensitive. You cannot have a cube named "sales" and another named "Sales" in the same database.  
   
 -   No leading or trailing spaces allowed in an object name, although you can embed spaces within a name. Leading and trailing spaces are implicitly trimmed. This applies to both the `Name` and `ID` of an object.  
   
@@ -68,10 +65,10 @@ manager: craigg
 |Object|Invalid characters|  
 |------------|------------------------|  
 |`Server`|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions) for details.|  
-|`DataSource`|: / \ * &#124; ? " () [] {} <>|  
-|`Level` or `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` or `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|All other objects|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`DataSource`|`: / \ * | ? " () [] {} <>`|  
+|`Level` or `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
+|`Dimension` or `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
+|All other objects|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
   
  **Exceptions: When Reserved Characters are Allowed**  
   
@@ -82,13 +79,13 @@ manager: craigg
 |MOLAP (all versions)|No|  
 |Tabular - 1050|No|  
 |Tabular - 1100|No|  
-|Tabular – 1130 and higher|Yes|  
+|Tabular - 1130 and higher|Yes|  
   
  Databases can have a ModelType of default. Default is equivalent to multidimensional, and thus does not support the use of reserved characters in column names.  
   
 ## See Also  
  [MDX Reserved Words](/sql/mdx/mdx-reserved-words)   
  [Translations &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis Compliance &#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

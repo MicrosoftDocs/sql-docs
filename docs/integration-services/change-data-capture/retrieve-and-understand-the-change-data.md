@@ -5,14 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],retrieving data"
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

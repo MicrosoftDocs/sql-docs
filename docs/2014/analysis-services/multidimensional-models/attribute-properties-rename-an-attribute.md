@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "names [Analysis Services], attributes"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "attributes [Analysis Services], renaming"
   - "Name property"
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

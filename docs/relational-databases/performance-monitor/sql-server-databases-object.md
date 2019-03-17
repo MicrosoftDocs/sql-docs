@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "SQLServer:Databases"
   - "Availability Groups [SQL Server], performance counters"
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 40
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Databases Object
@@ -37,7 +32,7 @@ manager: craigg
 |**Backup/Restore Throughput/sec**|Read/write throughput for backup and restore operations of a database per second. For example, you can measure how the performance of the database backup operation changes when more backup devices are used in parallel or when faster devices are used. Throughput of a database backup or restore operation allows you to determine the progress and performance of your backup and restore operations.|  
 |**Bulk Copy Rows/sec**|Number of rows bulk copied per second.|  
 |**Bulk Copy Throughput/sec**|Amount of data bulk copied (in kilobytes) per second.|  
-|**Commit table entries**|The size of the in-memory portion of the commit table for the database. For more information, see [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
+|**Commit table entries**|The size (row count) of the in-memory portion of the commit table for the database. For more information, see [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Data File(s) Size (KB)**|Cumulative size (in kilobytes) of all the data files in the database including any automatic growth. Monitoring this counter is useful, for example, for determining the correct size of **tempdb**.|  
 |**DBCC Logical Scan Bytes/sec**|Number of logical read scan bytes per second for database console commands (DBCC).|  
 |**Group Commit Time/sec**|Group stall time (microseconds) per second.|
@@ -69,7 +64,7 @@ manager: craigg
 |**Log Pool Total Active Log Size**|Current total active log stored in the shared cache buffer manager in bytes.|
 |**Log Pool Total Shared Pool Size**|Current total memory usage of the shared cache buffer manager in bytes.|
 |**Log Shrinks**|Total number of log shrinks for this database.|  
-|**Log Truncations**|The number of times the transaction log has been shrunk.|  
+|**Log Truncations**|The number of times the transaction log has been truncated (in Simple Recovery Model).|  
 |**Percent Log Used**|Percentage of space in the log that is in use.|  
 |**Repl. Pending Xacts**|Number of transactions in the transaction log of the publication database marked for replication, but not yet delivered to the distribution database.|  
 |**Repl. Trans. Rate**|Number of transactions per second read out of the transaction log of the publication database and delivered to the distribution database.|  

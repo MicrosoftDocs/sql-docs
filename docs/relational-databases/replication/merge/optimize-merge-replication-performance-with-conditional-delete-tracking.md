@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "conditional delete tracking [SQL Server replication]"
   - "merge replication [SQL Server replication], conditional delete tracking"
   - "articles [SQL Server replication], conditional delete tracking"
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
-caps.latest.revision: 23
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -46,7 +42,7 @@ manager: craigg
   
  **To specify that deletes should not be tracked**  
   
--   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [Specify Merge Replication properties](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)  
   
 ## See Also  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -65,7 +62,7 @@ manager: craigg
 |[Delete a Table &#40;SSAS Tabular&#41;](delete-a-table-ssas-tabular.md)|Describes how to delete tables in your model workspace database that you no longer need.|  
 |[Rename a Table or Column &#40;SSAS Tabular&#41;](rename-a-table-or-column-ssas-tabular.md)|Describes how to rename a table or column to make it more identifiable in your model.|  
 |[Set the Data Type of a Column &#40;SSAS Tabular&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|Describes how to change the data type of a column. The data type defines how data in the column is stored and presented.|  
-|[Hide or Freeze Columns &#40;SSAS Tabular&#41;](hide-or-freeze-columns-ssas-tabular.md)|Describes how to hide columns that you don’t want to display and how to keep an area of a model visible while you scroll to another area of the model by freezing (locking) specific columns in one area.|  
+|[Hide or Freeze Columns &#40;SSAS Tabular&#41;](hide-or-freeze-columns-ssas-tabular.md)|Describes how to hide columns that you don't want to display and how to keep an area of a model visible while you scroll to another area of the model by freezing (locking) specific columns in one area.|  
 |[Calculated Columns &#40;SSAS Tabular&#41;](ssas-calculated-columns.md)|Topics in this section describe how you can use calculated columns to add aggregated data to your model.|  
 |[Filter and Sort Data &#40;SSAS Tabular&#41;](../filter-and-sort-data-ssas-tabular.md)|Topics in this section describe how you can filter or sort data by using controls in the model designer.|  
   

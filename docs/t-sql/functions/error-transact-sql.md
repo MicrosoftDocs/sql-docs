@@ -5,9 +5,7 @@ ms.date: "08/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@ERROR"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "errors [SQL Server], Transact-SQL"
   - "error numbers [SQL Server]"
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -55,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A. Using @@ERROR to detect a specific error  
  The following example uses `@@ERROR` to check for a check constraint violation (error #547) in an `UPDATE` statement.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.EmployeePayHistory  
@@ -69,7 +66,7 @@ GO
 ### B. Using @@ERROR to conditionally exit a procedure  
  The following example uses `IF...ELSE` statements to test `@@ERROR` after an `DELETE` statement in a stored procedure. The value of the `@@ERROR` variable determines the return code sent to the calling program, indicating success or failure of the procedure.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Drop the procedure if it already exists.  
@@ -104,7 +101,7 @@ GO
 ### C. Using @@ERROR with @@ROWCOUNT  
  The following example uses `@@ERROR` with `@@ROWCOUNT` to validate the operation of an `UPDATE` statement. The value of `@@ERROR` is checked for any indication of an error, and `@@ROWCOUNT` is used to ensure that the update was successfully applied to a row in the table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Purchasing.usp_ChangePurchaseOrderHeader',N'P')IS NOT NULL  
@@ -173,7 +170,7 @@ GO
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
-  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)     
+ [Errors and Events Reference &#40;Database Engine&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
 

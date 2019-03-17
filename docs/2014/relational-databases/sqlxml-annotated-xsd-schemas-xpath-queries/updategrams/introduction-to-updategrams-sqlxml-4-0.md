@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "explicit schema mapping [SQLXML]"
@@ -23,7 +19,6 @@ helpviewer_keywords:
   - "executing updategrams [SQLXML]"
   - "implicit schema mapping"
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

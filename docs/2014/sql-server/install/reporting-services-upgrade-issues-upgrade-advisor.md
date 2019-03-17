@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Manager [Reporting Services], upgrade issues"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "upgrading Reporting Services"
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg

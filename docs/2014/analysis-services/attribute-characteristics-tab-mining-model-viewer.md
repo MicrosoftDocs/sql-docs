@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.naivebayse.characteristics.f1"
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

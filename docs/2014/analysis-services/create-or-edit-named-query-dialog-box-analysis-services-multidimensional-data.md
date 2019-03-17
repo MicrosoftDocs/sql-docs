@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.createnamedquery.f1"
 helpviewer_keywords: 
   - "Create Named Query dialog box"
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

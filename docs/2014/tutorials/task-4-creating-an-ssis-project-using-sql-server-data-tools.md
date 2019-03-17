@@ -4,17 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
-caps.latest.revision: 7
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 4: Creating an SSIS Project using SQL Server Data Tools
@@ -32,7 +26,7 @@ manager: craigg
   
 5.  Type **CleanseAndCurateSuppliers** for **Name** and click **OK**.  
   
-6.  In **Solution Explorer** window, right-click **Package.dtsx** and select **Rename**. If you don’t see **Solution Explorer** window, click **View** on the menu bar and click **Solution Explorer**.  
+6.  In **Solution Explorer** window, right-click **Package.dtsx** and select **Rename**. If you don't see **Solution Explorer** window, click **View** on the menu bar and click **Solution Explorer**.  
   
      ![Package.dtsx - Rename Menu](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx - Rename Menu")  
   

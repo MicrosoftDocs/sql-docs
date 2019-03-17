@@ -3,7 +3,6 @@ title: "Configure the Unattended Execution Account (SSRS Configuration Manager) 
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -97,6 +96,6 @@ ms.author: maghan
  The account information is removed from the RSReportServer.config file.  
   
 ## See Also  
- [Reporting Services Configuration Manager (SSRS Native Mode)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services Configuration Manager (SSRS Native Mode)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

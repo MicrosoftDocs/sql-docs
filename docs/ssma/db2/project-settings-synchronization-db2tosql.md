@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -57,7 +51,7 @@ Specifies the default setting in the Synchronization dialog box when the objects
 **Action when local object metadata is missing**  
 Specifies the default setting in the Synchronization dialog box when local metadata is missing. Default value set is **Refresh from database**.  
   
--   If you select **Refresh from Database**, SSMA SSMA will load database definitions into the metadata when the condition is met.  
+-   If you select **Refresh from Database**, SSMA will load database definitions into the metadata when the condition is met.  
   
 -   If you select **Skip**, SSMA will not perform any refresh actions.  
   

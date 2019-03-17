@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.addtable.f1"
 helpviewer_keywords: 
   - "Add Table dialog box"
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

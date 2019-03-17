@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "code groups [Reporting Services]"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "code access security [Reporting Services], about code access security"
   - "named permission sets [Reporting Services]"
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Code Access Security in Reporting Services
   Code access security centers on these core concepts: evidence, code groups, and named permission sets. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], the Report Manager, Report Designer, and Report Server components each have a policy file that configures code access security for custom assemblies as well as data, delivery, rendering, and security extensions. The following sections provide an overview of code access security. For more detailed information about the topics covered in this section, see "Security Policy Model" in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK documentation.  

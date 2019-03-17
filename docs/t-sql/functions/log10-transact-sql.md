@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "LOG10"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "base-10 logarithms"
   - "logarithm of expression"
 ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

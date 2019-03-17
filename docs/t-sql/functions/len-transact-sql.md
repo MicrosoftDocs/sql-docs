@@ -5,9 +5,7 @@ ms.date: "09/03/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "LEN"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "characters [SQL Server], number of"
   - "number of characters"
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

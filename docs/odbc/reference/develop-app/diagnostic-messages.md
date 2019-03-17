@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "diagnostic information [ODBC], diagnostic messages messages"
   - "error messages [ODBC], diagnostic messages"
   - "diagnostic messages [ODBC]"
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

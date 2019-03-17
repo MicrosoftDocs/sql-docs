@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data processing extensions [Reporting Services], commands"
   - "Command class"
   - "commands [Reporting Services]"
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Implementing a Command Class for a Data Processing Extension
   The **Command** object formulates a request and passes it on to the data source. The command text can take many different syntactical forms, including text and XML. If results are returned, the **Command** object returns results as a **DataReader** object.  
@@ -30,7 +27,7 @@ manager: craigg
 > [!NOTE]  
 >  You should not implement <xref:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis> if your custom data processing extension does not support parameters.  
   
- For a sample **Command** class implementation, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For a sample **Command** class implementation, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Reporting Services Extensions](../reporting-services-extensions.md)   

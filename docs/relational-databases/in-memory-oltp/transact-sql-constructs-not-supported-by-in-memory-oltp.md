@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "11/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -67,7 +63,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Operation|CREATE INDEX|Indexes on memory-optimized tables must be specified inline with the **CREATE TABLE** statement, or with the **ALTER TABLE** statement.|  
 |Operation|CREATE FULLTEXT INDEX|Fulltext indexes are not supported for memory-optimized tables.|  
 |Operation|schema change|Memory-optimized tables and natively compiled stored procedures do not support certain schema changes:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] and SQL Server starting [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: ALTER TABLE, ALTER PROCEDURE, and sp_rename operations are supported. Other schema changes, for example adding extended properties, are not supported.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE and ALTER PROCEDURE operations are supported. Other schema changes, including sp_rename, are not supported.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: schema changes are not supported. To change the definition of a memory-optimized table or natively compiled stored procedure, first drop the object and then recreate it with the desired definittion.| 
-|Operation|TRUNCATE TABLE|The TRUNCATE operation is not supported for memory-optimized tables. To remove all rows from a table, delete all rows using **DELETE FROM***table* or drop and recreate the table.|  
+|Operation|TRUNCATE TABLE|The TRUNCATE operation is not supported for memory-optimized tables. To remove all rows from a table, delete all rows using **DELETE FROM**_table_ or drop and recreate the table.|  
 |Operation|ALTER AUTHORIZATION|Changing the owner of an existing memory-optimized table or natively compiled stored procedure is not supported. Drop and recreate the table or procedure to change ownership.|  
 |Operation|ALTER SCHEMA|Transferring an existing table or natively compiled stored procedure to another schema is not supported. Drop and recreate the object to transfer between schemas.|  
 |Operation|DBCC CHECKTABLE|DBCC CHECKTABLE are not supported with memory-optimized tables. To verify the integrity of the on-disk checkpoint files, perform a backup of the MEMORY_OPTIMIZED_DATA filegroup.|  
@@ -84,7 +80,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Feature|Filtered index|Filtered indexes are not supported with memory-optimized tables. Omit the **WHERE** clause from the index specification.|  
 |Feature|Included columns|Specifying included columns is not necessary for memory-optimized tables. All columns of the memory-optimized table are implicitly included in every memory-optimized index.|  
 |Operation|DROP INDEX|Dropping indexes on memory-optimized tables is not supported. You can delete indexes using ALTER TABLE.<br /><br /> For more information, see [Altering Memory-Optimized Tables](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).|  
-|Index option|*Index option*|Only one index option is supported – BUCKET_COUNT for HASH indexes.|  
+|Index option|*Index option*|Only one index option is supported - BUCKET_COUNT for HASH indexes.|  
   
 ## Nonclustered Hash Indexes  
  The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving a nonclustered hash index, as well as the corrective action to resolve the error.  
@@ -102,11 +98,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Feature|Cursors|Cursors are not supported on or in natively compiled stored procedures.<br /><br /> When executing the procedure from the client, use RPC rather than the cursor API. With ODBC, avoid the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement **EXECUTE**, instead specify the name of the procedure directly.<br /><br /> When executing the procedure from a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or another stored procedure, avoid using a cursor with the natively compiled stored procedure.<br /><br /> When creating a natively compiled stored procedure, rather than using a cursor, use set-based logic or a **WHILE** loop.|  
 |Feature|Non-constant parameter defaults|When using default values with parameters on natively compiled stored procedures, the values must be constants. Remove any wildcards from the parameter declarations.|  
 |Feature|EXTERNAL|CLR stored procedures cannot be natively compiled. Either remove the AS EXTERNAL clause or the NATIVE_COMPILATION option from the CREATE PROCEDURE statement.|  
-|Feature|Numbered stored procedures|Natively compiled stored procedures cannot be numbered. Remove the **;***number* from the **CREATE PROCEDURE** statement.|  
-|Feature|multi-row INSERT … VALUES statements|Cannot insert multiple rows using the same **INSERT** statement in a natively compiled stored procedure. Create **INSERT** statements for each row.|  
+|Feature|Numbered stored procedures|Natively compiled stored procedures cannot be numbered. Remove the **;**_number_ from the **CREATE PROCEDURE** statement.|  
+|Feature|multi-row INSERT ... VALUES statements|Cannot insert multiple rows using the same **INSERT** statement in a natively compiled stored procedure. Create **INSERT** statements for each row.|  
 |Feature|Common Table Expressions (CTEs)|Common table expressions (CTE) are not supported in natively compiled stored procedures. Rewrite the query.|  
 |Feature|COMPUTE|The **COMPUTE** clause is not supported. Remove it from the query.|  
-|Feature|SELECT INTO|The **INTO** clause is not supported with the **SELECT** statement. Rewrite the query as **INSERT INTO** *Table* **SELECT**.|  
+|Feature|SELECT INTO|The **INTO** clause is not supported with the **SELECT** statement. Rewrite the query as **INSERT INTO** _Table_ **SELECT**.|  
 |Feature|incomplete insert column list|In general, in INSERT statements values must be specified for all columns in the table.<br /><br /> However, we do support DEFAULT constraints and IDENTITY(1,1) columns on memory optimized tables. These columns can be, and in the case of IDENTITY columns must be, omitted from the INSERT column list.|  
 |Feature|*Function*|Some built-in functions are not supported in natively compiled stored procedures. Remove the rejected function from the stored procedure. For more information about supported built-in functions, see<br />[Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md), or<br />[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Feature|CASE|**Applies to:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] and SQL Server starting [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**CASE** expressions are not supported in queries inside natively compiled stored procedures. Create queries for each case. For more information, see [Implementing a CASE Expression in a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] and SQL Server starting [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] do support CASE expressions.|  

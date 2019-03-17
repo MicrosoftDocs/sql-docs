@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC]"
   - "SQL statements [ODBC], escape sequences"
   - "escape sequences [ODBC], about escape sequences"
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -44,9 +41,9 @@ A number of language features, such as outer joins and scalar function calls, ar
  The escape sequence is recognized and parsed by drivers, which replace the escape sequences with DBMS-specific grammar. For more information about escape sequence syntax, see [ODBC Escape Sequences](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Appendix C: SQL Grammar.  
   
 > [!NOTE]  
->  In ODBC 2.*x*, this was the standard syntax of the escape sequence:            **--(\*vendor(***vendor-name***), product(***product-name***)***extension* **\*)--**  
+>  In ODBC 2.*x*, this was the standard syntax of the escape sequence:            **--(\*vendor(**_vendor-name_**), product(**_product-name_**)**_extension_ **\*)--**  
 >   
->  In addition to this syntax, a shorthand syntax was defined of the form:            **{***extension***}**  
+>  In addition to this syntax, a shorthand syntax was defined of the form:            **{**_extension_**}**  
 >   
 >  In ODBC 3.*x*, the long form of the escape sequence has been deprecated, and the shorthand form is used exclusively.  
   

@@ -5,11 +5,8 @@ ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|oledb-driver-for-sql-server"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, properties"
@@ -49,6 +46,6 @@ manager: craigg
   
 ## See Also  
  [Creating an OLE DB Driver for SQL Server Application](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [Properties (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [Properties (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

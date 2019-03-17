@@ -5,9 +5,7 @@ ms.date: "09/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@TOTAL_READ_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "total read [SQL Server]"
   - "read activity since last started"
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

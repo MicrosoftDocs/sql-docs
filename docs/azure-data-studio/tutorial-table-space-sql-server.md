@@ -1,14 +1,12 @@
 ---
-title: "Tutorial: Enable the table space usage sample insight widget in Azure Data Studio | Microsoft Docs"
+title: "Tutorial: Enable the table space usage sample insight widget"
+titleSuffix: Azure Data Studio
 description: This tutorial demonstrates how to enable the table space usage sample insight widget on the Azure Data Studio database dashboard.
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 author: "stevestein"
 ms.author: "sstein"

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-bulk-copy-operations"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, bulk copy"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "batches [ODBC]"
   - "bulk copy [ODBC], batch sizes"
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

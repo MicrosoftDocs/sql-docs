@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 9
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Expression Scope for Totals, Aggregates, and Built-in Collections (Report Builder and SSRS)
   When you write expressions, you will find that  the term *scope* is used in multiple contexts. Scope can specify the data to use for evaluating an expression, the set of text boxes on a rendered page, the set of report items that can be shown or hidden based on a toggle. You will see the term *scope* in topics that relate to expression evaluation, aggregate function syntax, conditional visibility, and also in error messages related to these areas. Use the following descriptions to help differentiate which meaning of *scope* applies:  
@@ -68,7 +65,7 @@ manager: craigg
      The following expression generates the interval years between SellStartDate and LastReceiptDate. These fields are in two different datasets, DataSet1 and DataSet2. The [First Function &#40;Report Builder and SSRS&#41;](report-builder-functions-first-function.md), which is an aggregate function, returns the first value of SellStartDate in DataSet1 and the first value of LastReceiptDate in DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Domain scope** Also called synchronization scope. A type of data scope that applies to expression evaluation for nested data regions. Domain scope is used to specify aggregates across all instances of a group so that nested instances can be aligned and easily compared. For example, you can align the range and height for sparklines embedded in a table so that the values line up.  

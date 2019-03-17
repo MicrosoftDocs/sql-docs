@@ -4,16 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.externaltools"
 helpviewer_keywords: 
   - "External Tools dialog box"
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -75,5 +70,3 @@ manager: craigg
   
 > [!NOTE]  
 >  View the properties of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] shortcut on the **Start** menu to confirm the location of the files on your computer.  
-  
-  

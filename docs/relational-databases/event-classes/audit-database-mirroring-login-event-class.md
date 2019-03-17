@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], database mirroring"
   - "Audit Database Mirroring Login event class"
   - "database mirroring [SQL Server], event notifications"
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
-caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

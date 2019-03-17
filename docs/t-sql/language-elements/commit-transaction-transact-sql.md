@@ -5,9 +5,7 @@ ms.date: "09/09/2016"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COMMIT"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "COMMIT TRANSACTION statement"
   - "rolling back transactions, COMMIT TRANSACTION"
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -37,9 +34,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Marks the end of a successful implicit or explicit transaction. If @@TRANCOUNT is 1, COMMIT TRANSACTION makes all data modifications performed since the start of the transaction a permanent part of the database, frees the resources held by the transaction, and decrements @@TRANCOUNT to 0. If @@TRANCOUNT is greater than 1, COMMIT TRANSACTION decrements @@TRANCOUNT only by 1 and the transaction stays active.  
+  Marks the end of a successful implicit or explicit transaction. If @@TRANCOUNT is 1, COMMIT TRANSACTION makes all data modifications since the start of the transaction a permanent part of the database, frees the transaction's resources, and decrements @@TRANCOUNT to 0. When @@TRANCOUNT is greater than 1, COMMIT TRANSACTION decrements @@TRANCOUNT only by 1 and the transaction stays active.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,7 +59,7 @@ COMMIT [ TRAN | TRANSACTION ]
  *transaction_name*  
  **APPLIES TO:** SQL Server and Azure SQL Database
  
- Is ignored by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* specifies a transaction name assigned by a previous BEGIN TRANSACTION. *transaction_name*must conform to the rules for identifiers, but cannot exceed 32 characters. *transaction_name* can be used as a readability aid by indicating to programmers which nested BEGIN TRANSACTION the COMMIT TRANSACTION is associated with.  
+ Is ignored by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* specifies a transaction name assigned by a previous BEGIN TRANSACTION. *transaction_name*must conform to the rules for identifiers, but can't exceed 32 characters. *transaction_name* indicates to programmers which nested BEGIN TRANSACTION the COMMIT TRANSACTION is associated with.  
   
  *@tran_name_variable*  
  **APPLIES TO:** SQL Server and Azure SQL Database  
@@ -72,18 +69,18 @@ Is the name of a user-defined variable containing a valid transaction name. The 
  DELAYED_DURABILITY  
  **APPLIES TO:** SQL Server and Azure SQL Database   
 
- Option that requests this transaction be committed with delayed durability. The request is ignored if the database has been altered with `DELAYED_DURABILITY = DISABLED` or `DELAYED_DURABILITY = FORCED`. See the topic [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md) for more information.  
+ Option that requests this transaction should be committed with delayed durability. The request is ignored if the database has been altered with `DELAYED_DURABILITY = DISABLED` or `DELAYED_DURABILITY = FORCED`. For more information, see [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).  
   
 ## Remarks  
- It is the responsibility of the [!INCLUDE[tsql](../../includes/tsql-md.md)] programmer to issue COMMIT TRANSACTION only at a point when all data referenced by the transaction is logically correct.  
+ It's the responsibility of the [!INCLUDE[tsql](../../includes/tsql-md.md)] programmer to issue COMMIT TRANSACTION only at a point when all data referenced by the transaction is logically correct.  
   
- If the transaction committed was a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction, COMMIT TRANSACTION triggers MS DTC to use a two-phase commit protocol to commit all of the servers involved in the transaction. If a local transaction spans two or more databases on the same instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], the instance uses an internal two-phase commit to commit all of the databases involved in the transaction.  
+ If the transaction committed was a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction, COMMIT TRANSACTION triggers MS DTC to use a two-phase commit protocol to commit all of the servers involved in the transaction. When a local transaction spans two or more databases on the same instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], the instance uses an internal two-phase commit to commit all of the databases involved in the transaction.  
   
- When used in nested transactions, commits of the inner transactions do not free resources or make their modifications permanent. The data modifications are made permanent and resources freed only when the outer transaction is committed. Each COMMIT TRANSACTION issued when @@TRANCOUNT is greater than 1 simply decrements @@TRANCOUNT by 1. When @@TRANCOUNT is finally decremented to 0, the entire outer transaction is committed. Because *transaction_name* is ignored by the [!INCLUDE[ssDE](../../includes/ssde-md.md)], issuing a COMMIT TRANSACTION referencing the name of an outer transaction when there are outstanding inner transactions only decrements @@TRANCOUNT by 1.  
+ When used in nested transactions, commits of the inner transactions don't free resources or make their modifications permanent. The data modifications are made permanent and resources freed only when the outer transaction is committed. Each COMMIT TRANSACTION issued when @@TRANCOUNT is greater than one simply decrements @@TRANCOUNT by 1. When @@TRANCOUNT is finally decremented to 0, the entire outer transaction is committed. Because *transaction_name* is ignored by the [!INCLUDE[ssDE](../../includes/ssde-md.md)], issuing a COMMIT TRANSACTION referencing the name of an outer transaction when there are outstanding inner transactions only decrements @@TRANCOUNT by 1.  
   
- Issuing a COMMIT TRANSACTION when @@TRANCOUNT is 0 results in an error; there is no corresponding BEGIN TRANSACTION.  
+ Issuing a COMMIT TRANSACTION when @@TRANCOUNT is zero results in an error; there's no corresponding BEGIN TRANSACTION.  
   
- You cannot roll back a transaction after a COMMIT TRANSACTION statement is issued because the data modifications have been made a permanent part of the database.  
+ You can't roll back a transaction after a COMMIT TRANSACTION statement is issued because the data modifications have been made a permanent part of the database.  
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] increments the transaction count within a statement only when the transaction count is 0 at the start of the statement.  
   
@@ -107,7 +104,7 @@ COMMIT TRANSACTION;
 ### B. Committing a nested transaction  
 **APPLIES TO:** SQL Server and Azure SQL Database    
 
-The following example creates a table, generates three levels of nested transactions, and then commits the nested transaction. Although each `COMMIT TRANSACTION` statement has a *transaction_name* parameter, there is no relationship between the `COMMIT TRANSACTION` and `BEGIN TRANSACTION` statements. The *transaction_name* parameters are simply readability aids to help the programmer ensure that the proper number of commits are coded to decrement `@@TRANCOUNT` to 0 and thereby commit the outer transaction. 
+The following example creates a table, generates three levels of nested transactions, and then commits the nested transaction. Although each `COMMIT TRANSACTION` statement has a *transaction_name* parameter, there's no relationship between the `COMMIT TRANSACTION` and `BEGIN TRANSACTION` statements. The *transaction_name* parameters help the programmer ensure that the correct number of commits are coded to decrement `@@TRANCOUNT` to 0 and so to commit the outer transaction. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
@@ -169,5 +166,4 @@ PRINT N'Transaction count after COMMIT OuterTran = '
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "PropertyType Property (ServerNetworkProtocolProperty Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "PropertyType property"
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -45,6 +40,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

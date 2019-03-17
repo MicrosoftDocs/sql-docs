@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Extended Field Properties for an Analysis Services Database (SSRS)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension supports extended field properties. Extended field properties are properties in addition to the field properties `Value` and `IsMissing` that are available on the data source and supported by the data processing extension. Extended properties do not appear in the Report Data pane as part of the field collection for a report dataset. You can include extended field property values in your report by writing expressions that specify them by name using the built-in `Fields` collection.  

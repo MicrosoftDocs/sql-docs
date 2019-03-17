@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG"
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -54,13 +51,13 @@ This example shows how to create and debug a Transact\-SQL stored procedure by s
   
 7.  Press the drop-down arrow on the green arrow button in the Transact\-SQL editor toolbar and select **Execute with Debugger** to execute the query with debugging on.  
   
-8.  Alternately, you can start debugging from SQL Server Object Explorer. Right-click the **AddProduct** stored procedure (located under **Local** -> **TradeDev** database -> **Programmability** -> **Stored Procedures**). Select **Debug Procedure…**. If the object requires parameters, the **Debug Procedure** dialog box appears, with a table containing a row for each parameter. Each row in the table contains a column for the name of the parameter, and one for the value of that parameter. Enter values for each parameter, and click OK.  
+8.  Alternately, you can start debugging from SQL Server Object Explorer. Right-click the **AddProduct** stored procedure (located under **Local** -> **TradeDev** database -> **Programmability** -> **Stored Procedures**). Select **Debug Procedure...**. If the object requires parameters, the **Debug Procedure** dialog box appears, with a table containing a row for each parameter. Each row in the table contains a column for the name of the parameter, and one for the value of that parameter. Enter values for each parameter, and click OK.  
   
 9. Make sure that the **Locals** window is opened. If not, click the **Debug** menu, select **Windows** and **Local**.  
   
 10. Press F11 to step into the query. Notice that the parameters of the store procedure and their respective values show up in the **Locals** window. Alternatively, hover your mouse over the `@name` parameter in the `INSERT` clause, and you will see the **Contoso** value being assigned to it.  
   
-11. Click **Contoso** in the textbox. Type **Fabrikam** and press ENTER to change the `name` variable’s value while debugging. You can also change its value in the **Locals** window. Notice that the value of the parameter is now displayed in red, indicating that it has changed.  
+11. Click **Contoso** in the textbox. Type **Fabrikam** and press ENTER to change the `name` variable's value while debugging. You can also change its value in the **Locals** window. Notice that the value of the parameter is now displayed in red, indicating that it has changed.  
   
 12. Press F10 to step over the remaining code.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_xe_file_target_read_file_TSQL"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "fn_xe_file_target_read_file function"
   - "sys.fn_xe_file_target_read_file function"
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 20
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

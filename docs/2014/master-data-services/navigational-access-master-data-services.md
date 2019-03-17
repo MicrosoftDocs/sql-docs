@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "navigational access [Master Data Services]"
   - "security [Master Data Services], navigational access"
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -21,7 +17,7 @@ manager: craigg
 # Navigational Access (Master Data Services)
   Navigational access applies to model object security, which is assigned on the **Models** tab.  
   
- Navigational access is the access you get to levels higher than where you’ve assigned security.  
+ Navigational access is the access you get to levels higher than where you've assigned security.  
   
  In this example, permissions are assigned to an entity, and so navigational access is granted at the model level.  
   

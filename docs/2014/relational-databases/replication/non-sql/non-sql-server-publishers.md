@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "heterogeneous database replication, non-SQL Server Publishers"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "heterogeneous data sources, non-SQL Server Publishers"
   - "Publishers [SQL Server replication], Oracle"
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "AddNew method [ADO], VC++ example"
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

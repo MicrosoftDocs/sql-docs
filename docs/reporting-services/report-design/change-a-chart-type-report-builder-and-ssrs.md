@@ -4,13 +4,12 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Change a Chart Type (Report Builder and SSRS)
 When you first insert a chart into a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, the **Select Chart Type** dialog appears. If you cancel this dialog, a Column chart type is added by default.  

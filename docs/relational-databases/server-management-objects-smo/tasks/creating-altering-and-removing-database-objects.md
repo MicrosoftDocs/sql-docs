@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "database objects [SMO]"
   - "objects [SMO]"
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STPointOnSurface (geometry Data Type)"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointOnSurface (geometry Data Type)"
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
-caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

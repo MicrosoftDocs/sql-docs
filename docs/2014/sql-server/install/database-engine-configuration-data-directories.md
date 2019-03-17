@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9b1fa0fc-623b-479a-afc3-4f13bd850487
-caps.latest.revision: 31
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -77,6 +74,6 @@ manager: craigg
   
 ## See Also  
  [File Locations for Default and Named Instances of SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [Share and NTFS Permissions on a File Server](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkID=206571)  
   
   

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "10/13/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic checkpoints"
@@ -26,7 +23,6 @@ helpviewer_keywords:
   - "flushing pages"
   - "active logs"
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -36,14 +32,14 @@ manager: craigg
   
   
 ##  <a name="Overview"></a> Overview of Checkpoints  
- For performance reasons, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] performs modifications to database pages in memory—in the buffer cache—and does not write these pages to disk after every change. Rather, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] periodically issues a checkpoint on each database. A *checkpoint* writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk and, also, records information about the transaction log.  
+ For performance reasons, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] performs modifications to database pages in memory-in the buffer cache-and does not write these pages to disk after every change. Rather, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] periodically issues a checkpoint on each database. A *checkpoint* writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk and, also, records information about the transaction log.  
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] supports several types of checkpoints: automatic, indirect, manual, and internal. The following table summarizes the types of checkpoints.  
   
 |Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Description|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|Issued automatically in the background to meet the upper time limit suggested by the `recovery interval` server configuration option. Automatic checkpoints run to completion.  Automatic checkpoints are throttled based on the number of outstanding writes and whether the [!INCLUDE[ssDE](../../includes/ssde-md.md)] detects an increase in write latency above 20 milliseconds.<br /><br /> For more information, see [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirect|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Issued in the background to meet a user-specified target recovery time for a given database. The default target recovery time is 0, which causes automatic checkpoint heuristics to be used on the database. If you have used ALTER DATABASE to set TARGET_RECOVERY_TIME to >0, this value is used, rather than the recovery interval specified for the server instance.<br /><br /> For more information, see [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indirect|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS &#124; MINUTES }|Issued in the background to meet a user-specified target recovery time for a given database. The default target recovery time is 0, which causes automatic checkpoint heuristics to be used on the database. If you have used ALTER DATABASE to set TARGET_RECOVERY_TIME to >0, this value is used, rather than the recovery interval specified for the server instance.<br /><br /> For more information, see [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Issued when you execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT command. The manual checkpoint occurs in the current database for your connection. By default, manual checkpoints run to completion. Throttling works the same way as for automatic checkpoints.  Optionally, the *checkpoint_duration* parameter specifies a requested amount of time, in seconds, for the checkpoint to complete.<br /><br /> For more information, see [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Internal|None.|Issued by various server operations such as backup and database-snapshot creation to guarantee that disk images match the current state of the log.|  
   
@@ -58,7 +54,7 @@ manager: craigg
   
   
 ###  <a name="InteractionBwnSettings"></a> Interaction of the TARGET_RECOVERY_TIME and 'recovery interval' Options  
- The following table summarizes the interaction between the server-wide **sp_configure'`recovery interval`'** setting and the database-specific ALTER DATABASE … TARGET_RECOVERY_TIME setting.  
+ The following table summarizes the interaction between the server-wide **sp_configure'`recovery interval`'** setting and the database-specific ALTER DATABASE ... TARGET_RECOVERY_TIME setting.  
   
 |TARGET_RECOVERY_TIME|'recovery interval'|Type of Checkpoint Used|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -132,7 +128,7 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Transaction Log Physical Architecture](http://technet.microsoft.com/library/ms179355.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Oline)  
+-   [Transaction Log Physical Architecture](https://technet.microsoft.com/library/ms179355.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Oline)  
   
   
 ## See Also  

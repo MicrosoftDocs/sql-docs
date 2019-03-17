@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "17142 (Database Engine error)"
 ms.assetid: 83a53507-ac76-4cb9-b116-daf6f42aea1f
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

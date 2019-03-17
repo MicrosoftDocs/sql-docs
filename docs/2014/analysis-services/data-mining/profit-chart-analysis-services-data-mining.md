@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "accuracy, charting"
@@ -16,13 +14,12 @@ helpviewer_keywords:
   - "charts [Analysis Services]"
   - "profit charts [Analysis Services]"
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
 ---
 # Profit Chart (Analysis Services - Data Mining)
-  A profit chart displays the estimated profitability associated with using a mining model. For example, let’s assume your model predicts which customers a company should contact in a business scenario. In that case, you would add to the profit chart information about the cost of conducting the targeted mailing campaign. Then, in the completed chart, you can see the estimated profit if customers are correctly targeted, as compared to randomly contacting customers.  
+  A profit chart displays the estimated profitability associated with using a mining model. For example, let's assume your model predicts which customers a company should contact in a business scenario. In that case, you would add to the profit chart information about the cost of conducting the targeted mailing campaign. Then, in the completed chart, you can see the estimated profit if customers are correctly targeted, as compared to randomly contacting customers.  
   
 ## Build a Profit Chart  
  A profit chart is similar to a lift chart. You start by creating a lift chart, and then add in the cost and profit information.  
@@ -31,7 +28,7 @@ manager: craigg
   
  For this example, we used the Targeted Mailing decision tree model. The model identifies customers who are likely to buy a bike. You can apply the **Profit Chart** to determine how many of your customers to target to maximize your profit.  
   
- If you don’t have the sample model, you can create it using the [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
+ If you don't have the sample model, you can create it using the [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
   
 1.  Open the mining accuracy chart builder.  
   
@@ -62,7 +59,7 @@ manager: craigg
     |**Population**|20,000|Set the value for the total target population<br /><br /> Your database might contain many customers, but to save on mailing expenses you might choose to target only the 20,000 customers who are most likely to respond. You can get this list by running a prediction query and sorting by the probability output by the predictive model.|  
     |**Fixed cost**|500|Enter the one-time cost of setting up a targeted mailing campaign for 20,000 people. This might include printing, or the cost of setting up an e-mail campaign.|  
     |**Individual cost**|3|Enter the per-unit cost for the targeted mailing campaign.<br /><br /> This amount will be multiplied by a number equal to or less than 20000, depending on how many customers the model predicts are good prospects.|  
-    |**Revenue per individual**|400|Enter a value that represents the amount of profit or income that can be expected from a successful result. In this case, we’ll assume that mailing a catalog results in purchase of accessories or bikes averaging $400.<br /><br /> This amount will be used to project the total profit associated with high probability cases.|  
+    |**Revenue per individual**|400|Enter a value that represents the amount of profit or income that can be expected from a successful result. In this case, we'll assume that mailing a catalog results in purchase of accessories or bikes averaging $400.<br /><br /> This amount will be used to project the total profit associated with high probability cases.|  
   
 7.  After you have set the required parameters, click **OK**.  
   

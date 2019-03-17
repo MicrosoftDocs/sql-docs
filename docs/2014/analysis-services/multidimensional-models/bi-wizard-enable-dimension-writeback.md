@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying dimensions"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "dimensions [Analysis Services], modifying"
   - "manual dimension structure modifications"
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

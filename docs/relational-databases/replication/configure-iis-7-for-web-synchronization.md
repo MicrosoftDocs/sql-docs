@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "09/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IIS 7 server configuration [SQL Server replication]"
   - "Web synchronization, IIS 7 servers"
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
-caps.latest.revision: 11
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

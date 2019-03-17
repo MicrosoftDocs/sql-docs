@@ -5,12 +5,9 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -80,25 +77,25 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |4|Runtime lineage<br /><br /> Collects the data required to track lineage in the data flow.|  
 |100|Custom logging level<br /><br /> Specify the settings in the CUSTOMIZED_LOGGING_LEVEL parameter. For more info about the values that you can specify, see [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> For more info about customized logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
- To specify that the Integration Services server generates dump files when any error occurs during a package execution, set the following parameter values for an execution instance that hasn’t run.  
+ To specify that the Integration Services server generates dump files when any error occurs during a package execution, set the following parameter values for an execution instance that hasn't run.  
   
 |Parameter|Value|  
 |---------------|-----------|  
 |*execution_id*|The unique identifier for the instance of execution|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
- To specify that the Integration Services server generates dump files when events occur during a package execution, set the following parameter values for an execution instance that hasn’t run.  
+ To specify that the Integration Services server generates dump files when events occur during a package execution, set the following parameter values for an execution instance that hasn't run.  
   
 |Parameter|Value|  
 |---------------|-----------|  
 |*execution_id*|The unique identifier for the instance of execution|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
- To specify the events during package execution that cause the Integration Services server to generate dump files, set the following parameter values for an execution instance that hasn’t run. Separate multiple event codes using a semi-colon.  
+ To specify the events during package execution that cause the Integration Services server to generate dump files, set the following parameter values for an execution instance that hasn't run. Separate multiple event codes using a semi-colon.  
   
 |Parameter|Value|  
 |---------------|-----------|  

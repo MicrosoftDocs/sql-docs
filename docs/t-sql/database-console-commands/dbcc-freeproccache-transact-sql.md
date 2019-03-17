@@ -5,9 +5,7 @@ ms.date: "10/13/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FREEPROCCACHE_TSQL"
@@ -24,8 +22,7 @@ helpviewer_keywords:
   - "procedure cache [SQL Server]"
   - "clearing procedure cache"
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: 61
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -89,7 +86,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## Remarks  
 Use DBCC FREEPROCCACHE to clear the plan cache carefully. Clearing the procedure (plan) cache causes all plans to be evicted, and incoming query executions will compile a new plan, instead of reusing any previously cached plan. 
 
-This can cause a sudden, temporary decrease in query performance as the number of new compilations increases. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log will contain the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations." This message is logged every five minutes as long as the cache is flushed within that time interval.
+This can cause a sudden, temporary decrease in query performance as the number of new compilations increases. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log will contain the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations." This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 The following reconfigure operations also clear the procedure cache:
 -   access check cache bucket count  
@@ -129,7 +126,7 @@ DBCC FREEPROCCACHE can be cancelled during execution.
   
 ## Limitations and Restrictions for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE can not run within a transaction.
-DBCC FREEPROCCAHCE is not supported in an EXPLAIN statement.
+DBCC FREEPROCCACHE is not supported in an EXPLAIN statement.
   
 ## Metadata for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 A new row is added to the sys.pdw_exec_requests system view when DBCC FREEPROCCACHE is run.
@@ -189,7 +186,7 @@ GO
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D. DBCC FREEPROCCACHE Basic Syntax Examples  
-The following example removes all existing query plan caches from the Compute nodes. Although the context is set to UserDbSales, the Compute node query plan caches for all databases will will be removed. The WITH NO_INFOMSGS clause prevents informational messages from appearing in the results.  
+The following example removes all existing query plan caches from the Compute nodes. Although the context is set to UserDbSales, the Compute node query plan caches for all databases will be removed. The WITH NO_INFOMSGS clause prevents informational messages from appearing in the results.  
   
 ```sql
 USE UserDbSales;  

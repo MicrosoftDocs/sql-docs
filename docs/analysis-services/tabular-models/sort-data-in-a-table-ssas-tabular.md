@@ -1,5 +1,5 @@
 ---
-title: "Sort Data in a Table | Microsoft Docs"
+title: "Sort data in an Analysis Services tabular model table | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

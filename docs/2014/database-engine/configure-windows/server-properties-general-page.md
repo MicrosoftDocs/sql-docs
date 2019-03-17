@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.serverproperties.prodinfo.f1"
   - "sql12.swb.serverproperties.setsapassword.f1"
   - "sql12.swb.serverproperties.activedirectory.f1"
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

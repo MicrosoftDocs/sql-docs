@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfilee
 ---
 # Creating Predictions on a Sequence Clustering Model (Intermediate Data Mining Tutorial)
   After you understand the sequence clustering model better by browsing it in the viewer, you can create prediction queries by using Prediction Query Builder on the **Mining Model Prediction** tab in Data Mining Designer. To create a prediction, you first select the sequence clustering model, and then select the input data. For inputs, you can use either an external data source, or you can build a singleton query and provide values in a dialog box.  
@@ -145,7 +141,7 @@ NATURAL PREDICTION JOIN
   
 2.  In the **Singleton Query Input** dialog box, click the **Value** box for `Region`, and select the empty row to clear the input for this field.  
   
-3.  In the **Singleton Query Input** dialog box, click the **Value** box for `vAssocSeqLineItems`, and then click the (…) button.  
+3.  In the **Singleton Query Input** dialog box, click the **Value** box for `vAssocSeqLineItems`, and then click the (...) button.  
   
 4.  In the **Nested Table Input** dialog box, click **Add**.  
   
@@ -195,7 +191,7 @@ NATURAL PREDICTION JOIN
 ## Next Steps  
  If you have finished all the sections in the [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), the next step might be to learn to use Data Mining Extensions (DMX) statements to build models and generate predictions. For more information, see [Creating and Querying Data Mining Models with DMX: Tutorials &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
- If you are familiar with programming concepts, you can also use Analysis Management Objects (AMO) to programmatically work with data mining objects. For more information, see [AMO Data Mining Classes](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ If you are familiar with programming concepts, you can also use Analysis Management Objects (AMO) to programmatically work with data mining objects. For more information, see [AMO Data Mining Classes](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
 ## See Also  
  [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   

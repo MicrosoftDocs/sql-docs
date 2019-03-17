@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - ".SPID"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "Properties window [SQL Server Management Studio]"
   - "SQL Server Management Studio Help [SQL Server], properties window"
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg

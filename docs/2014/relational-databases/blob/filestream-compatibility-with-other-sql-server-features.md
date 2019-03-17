@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], other SQL Server features and"
   - "FILESTREAM [SQL Server], limitations"
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -66,7 +63,7 @@ manager: craigg
  A `varbinary(max)` column that has the FILESTREAM attribute enabled at the Publisher can be replicated to a Subscriber with or without the FILESTREAM attribute. To specify the way in which the column is replicated, use the **Article Properties - \<Article>** dialog box or the @schema_option parameter of [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) or [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Data that is replicated to a `varbinary(max)` column that does not have the FILESTREAM attribute must not exceed the 2-GB limit for that data type; otherwise, a run-time error is generated. We recommend that you replicate the FILESTREAM attribute, unless you are replicating data to [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] Subscribers is not supported, regardless of the schema option that is specified.  
   
 > [!NOTE]  
->  Replicating large data values from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Subscribers is limited to a maximum of 256 MB data values. For more information, see [Maximum Capacity Specifications](http://go.microsoft.com/fwlink/?LinkId=103810).  
+>  Replicating large data values from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Subscribers is limited to a maximum of 256 MB data values. For more information, see [Maximum Capacity Specifications](https://go.microsoft.com/fwlink/?LinkId=103810).  
   
 ### Considerations for Transactional Replication  
  If you use FILESTREAM columns in tables that are published for transactional replication, note the following considerations:  

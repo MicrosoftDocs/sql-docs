@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -33,7 +29,7 @@ manager: craigg
 |Option|Description|Notes|  
 |------------|-----------------|-----------|  
 |New|Create a new model with a unique name. New identifiers are created for all model objects.|If you create a new model with new identifiers, you cannot use model deployment tools to apply updates to the model later. When using the wizard in the web application to deploy a model package, you have the option to create a new model only if a model with the same name or ID already exists.|  
-|Clone|Create a new model that is an exact clone of the model in the package. This works only if the model does not exist (by name or identifier) in the target environment. Use “clone” when you want to have the same model in multiple environments and update the cloned model over time.|This is the default behavior of the wizard in the web application. If a model with the same name or ID already exists, you are prompted to create a new model instead.|  
+|Clone|Create a new model that is an exact clone of the model in the package. This works only if the model does not exist (by name or identifier) in the target environment. Use "clone" when you want to have the same model in multiple environments and update the cloned model over time.|This is the default behavior of the wizard in the web application. If a model with the same name or ID already exists, you are prompted to create a new model instead.|  
 |Update|Update an existing model with the model in the package. The identifiers must be the same in both models. This is used to update a model that you previously cloned.|You can only update models that were previously cloned. (The names and IDs must match.)|  
   
 ## See Also  

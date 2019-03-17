@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "process data option [Analysis Services]"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "process clear structure option [Analysis Services]"
   - "process default option [Analysis Services]"
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg

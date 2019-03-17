@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcsource.connection.f1"
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg

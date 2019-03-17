@@ -1,18 +1,14 @@
-﻿---
+---
 title: "sys.dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg

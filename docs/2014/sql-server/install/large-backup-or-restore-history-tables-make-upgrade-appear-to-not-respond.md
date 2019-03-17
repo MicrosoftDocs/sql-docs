@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backup history tables"
   - "history tables"
 ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg

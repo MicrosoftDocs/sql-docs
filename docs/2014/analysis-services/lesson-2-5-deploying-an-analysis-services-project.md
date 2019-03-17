@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -42,11 +39,11 @@ manager: craigg
     > [!NOTE]  
     >  If you get errors during deployment, use SQL Server Management Studio to check the database permissions. The account you specified for the data source connection must have a login on the SQL Server instance. Double-click the login to view User Mapping properties. The account must have db_datareader permissions on the **AdventureWorksDW2012** database.  
   
-     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] builds and then deploys the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project to the specified instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] by using a deployment script. The progress of the deployment is displayed in two windows: the **Output** window and the **Deployment Progress – Analysis Services Tutorial** window.  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] builds and then deploys the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project to the specified instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] by using a deployment script. The progress of the deployment is displayed in two windows: the **Output** window and the **Deployment Progress - Analysis Services Tutorial** window.  
   
-     Open the Output window, if necessary, by clicking **Output** on the **View** menu. The **Output** window displays the overall progress of the deployment. The **Deployment Progress – Analysis Services Tutorial** window displays the detail about each step taken during deployment. For more information, see [Build Analysis Services Projects &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) and [Deploy Analysis Services Projects &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
+     Open the Output window, if necessary, by clicking **Output** on the **View** menu. The **Output** window displays the overall progress of the deployment. The **Deployment Progress - Analysis Services Tutorial** window displays the detail about each step taken during deployment. For more information, see [Build Analysis Services Projects &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) and [Deploy Analysis Services Projects &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-5.  Review the contents of the **Output** window and the **Deployment Progress – Analysis Services Tutorial** window to verify that the cube was built, deployed, and processed without errors.  
+5.  Review the contents of the **Output** window and the **Deployment Progress - Analysis Services Tutorial** window to verify that the cube was built, deployed, and processed without errors.  
   
 6.  To hide the **Deployment Progress - Analysis Services Tutorial** window, click the **Auto Hide** icon (it looks like a pushpin) on the toolbar of the window.  
   

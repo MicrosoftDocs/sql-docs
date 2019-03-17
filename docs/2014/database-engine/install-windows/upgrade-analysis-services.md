@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading databases"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "installing Analysis Services, upgrading"
   - "SSAS, upgrading"
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 63
 author: Minewiskan
 ms.author: owend
 manager: craigg
@@ -31,7 +27,7 @@ manager: craigg
 ## Known Upgrade Issues  
  Before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], review the following:  
   
--   [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
+-   [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   To learn which [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features and functionality have been discontinued, deprecated, or changed see [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md).  
   

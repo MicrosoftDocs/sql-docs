@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.semiadditivememberdetection.f1"
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

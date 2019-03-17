@@ -1,12 +1,11 @@
 ---
-title: "Configure availability group for distributed transactions | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/22/2018"
+title: "Configure distributed transactions for an availability group"
+description: "Describes how to configure distributed transactions for databases within an Always On availability group. "
+ms.custom: "seodec18"
+ms.date: "02/06/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
@@ -15,12 +14,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure availability group for distributed transactions
+# Configure distributed transactions for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group. This article explains how to configure an availability group for distributed transactions  
@@ -28,7 +26,7 @@ manager: craigg
 In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers.  
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. In [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
 >
 >In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] the configuration steps are the same as in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -42,7 +40,7 @@ Before you configure an availability group to support distributed transactions, 
 
 * All instances of [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] that participate in the distributed transaction must be  [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] or later.
 
-* Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+* Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
 
 ## Create an availability group for distributed transactions
 
@@ -84,7 +82,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->On [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] you cannot alter an availability group for distributed transactions. To change the setting drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
+>Starting with [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] versions before Service Pack 2, you need to drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
 
 ## <a name="distTran"/>Distributed transactions - technical concepts
 
@@ -177,16 +175,16 @@ After you commit or roll back the transaction, you can use `ALTER DATABASE` to s
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-For more information about resolving in-doubt transactions, see [Resolve Transactions Manually](http://technet.microsoft.com/library/cc754134.aspx).
+For more information about resolving in-doubt transactions, see [Resolve Transactions Manually](https://technet.microsoft.com/library/cc754134.aspx).
 
 ## Next Steps  
 
-[Distributed Transactions](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[Distributed Transactions](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Transactions - Always On availability groups and Database Mirroring](transactions-always-on-availability-and-database-mirroring.md)  
 
-[Supporting XA Transactions](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[How It Works: Session/SPID (–2) for DTC Transactions](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[How It Works: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

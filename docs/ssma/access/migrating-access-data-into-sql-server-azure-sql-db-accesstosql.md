@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "bulk loading data"
   - "data, loading into SQL Azure"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "SQL Azure, migrating data into"
   - "SQL Server, migrating data into"
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
-caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -30,7 +24,7 @@ manager: craigg
 After you have successfully created the database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can migrate data from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
 ## Setting Migration Options  
-Before you migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, review the project migration options in the **Project Settings** dialog box. In this dialog box, you can set the migration batch size, table locking, constraint checking, insertion trigger firing, identity and null value handling, and how to handle dates that are out of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] range. For more information, see [Project Settings (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Before you migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, review the project migration options in the **Project Settings** dialog box. In this dialog box, you can set the migration batch size, table locking, constraint checking, insertion trigger firing, identity and null value handling, and how to handle dates that are out of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] range. For more information, see [Project Settings (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
 ## Migrating Data  
 Migrating data is a bulk-load operation that moves rows of data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure in transactions. The number of rows to be loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure in each transaction is configured in the project settings.  

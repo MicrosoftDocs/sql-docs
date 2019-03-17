@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -19,7 +16,7 @@ manager: craigg
 # Add a Custom Report to Management Studio
   This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that is saved as an .rdl file, and then add that rdl file to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as a custom report. [!INCLUDE[ssRS](../../includes/ssrs.md)] can create a wide variety of sophisticated reports. To create a report by using this topic, you must have [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] installed on the computer. You do not have to install [!INCLUDE[ssRS](../../includes/ssrs.md)] on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run a custom report using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- [Report Samples](http://go.microsoft.com/fwlink/?LinkId=81792), including the standard reports created by [!INCLUDE[msCoName](../../includes/msconame-md.md)], are available for download. These samples may be modified by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Report Samples](https://go.microsoft.com/fwlink/?LinkId=81792), including the standard reports created by [!INCLUDE[msCoName](../../includes/msconame-md.md)], are available for download. These samples may be modified by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### To create a simple report saved as an .rdl file  
   

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetEnvAttr"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetEnvAttr function [ODBC]"
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,11 +33,11 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetEnvAttr(  
-     SQLHENV        EnvironmentHandle,  
-     SQLINTEGER     Attribute,  
-     SQLPOINTER     ValuePtr,  
-     SQLINTEGER     BufferLength,  
-     SQLINTEGER *   StringLengthPtr);  
+     SQLHENV        EnvironmentHandle,  
+     SQLINTEGER     Attribute,  
+     SQLPOINTER     ValuePtr,  
+     SQLINTEGER     BufferLength,  
+     SQLINTEGER *   StringLengthPtr);  
 ```  
   
 ## Arguments  
@@ -85,7 +82,7 @@ SQLRETURN SQLGetEnvAttr(
   
  **SQLGetEnvAttr** can be called at any time between the allocation and the freeing of an environment handle. All environment attributes successfully set by the application for the environment persist until **SQLFreeHandle** is called on the *EnvironmentHandle* with a *HandleType* of SQL_HANDLE_ENV. More than one environment handle can be allocated simultaneously in ODBC 3*.x*. An environment attribute on one environment is not affected when another environment has been allocated.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The SQL_ATTR_OUTPUT_NTS environment attribute is supported by standards-compliant applications. When **SQLGetEnvAttr** is called, the ODBC 3*.x* Driver Manager always returns SQL_TRUE for this attribute. SQL_ATTR_OUTPUT_NTS can be set to SQL_TRUE only by a call to **SQLSetEnvAttr**.  
   
 ## Related Functions  

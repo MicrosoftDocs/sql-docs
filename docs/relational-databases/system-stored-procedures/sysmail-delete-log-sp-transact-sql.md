@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_delete_log_sp_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_log_sp"
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -40,10 +36,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## Arguments  
- [ **@logged_before** = ] **'***logged_before***'**  
+ [ **@logged_before** = ] **'**_logged_before_**'**  
  Deletes entries up to the date and time specified by the *logged_before* argument. *logged_before* is **datetime** with NULL as default. NULL indicates all dates.  
   
- [ **@event_type** = ] **'***event_type***'**  
+ [ **@event_type** = ] **'**_event_type_**'**  
  Deletes log entries of the type specified as the *event_type*. *event_type* is **varchar(15)** with no default. Valid entries are **success**, **warning**, **error**, and **informational**. NULL indicates all event types.  
   
 ## Return Code Values  

@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "MSreplication_subscriptions"
@@ -19,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_subscriptions system table"
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

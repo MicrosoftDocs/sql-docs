@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Registered Servers [SQL Server], connections"
   - "connections [SQL Server], registered servers"
 ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg

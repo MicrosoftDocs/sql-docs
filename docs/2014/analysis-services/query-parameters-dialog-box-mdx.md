@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.queryparameters.mdx.f1"
 ms.assetid: e69b9542-7b54-42bf-b2de-c091e81af7ee
-caps.latest.revision: 3
 author: minewiskan
 ms.author: owend
 manager: craigg

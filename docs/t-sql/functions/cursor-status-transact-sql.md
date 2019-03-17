@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CURSOR_STATUS"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "CURSOR_STATUS function"
   - "cursors [SQL Server], status information"
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

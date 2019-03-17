@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Web service [Reporting Services], authentication"
   - "XML Web service [Reporting Services], authentication"
   - "Report Server Web service, authentication"
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Web Service Authentication
   You can use either Windows Authentication or Basic authentication to authenticate the calls made to the Report Server Web service. Any client that makes SOAP requests to the report server must implement the client portion of one of the supported authentication protocols. If you are using the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], you can use the managed code HTTP classes to implement authentication. Using these APIs makes it easy to send authentication information along with the SOAP requests.  

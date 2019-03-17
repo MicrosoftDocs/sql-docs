@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS Script task, converting scripts"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], converting scripts"
   - "SSIS Script component, converting scripts"
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
-caps.latest.revision: 44
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Migrate Scripts to VSTA

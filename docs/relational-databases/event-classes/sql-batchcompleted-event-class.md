@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL:BatchCompleted event class"
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

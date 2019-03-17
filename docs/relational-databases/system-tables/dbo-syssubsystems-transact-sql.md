@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.syssubsystems"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "syssubsystems system table"
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

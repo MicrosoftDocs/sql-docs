@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "security [Reporting Services], reports"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "tasks [Reporting Services]"
   - "roles [Reporting Services], methods"
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Authorization Methods
   You can use these methods to manage tasks, roles, and policies on the report server.  

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "text file driver [ODBC], data types"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "text file data types [ODBC]"
   - "Jet-based ODBC drivers [ODBC], text file driver"
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

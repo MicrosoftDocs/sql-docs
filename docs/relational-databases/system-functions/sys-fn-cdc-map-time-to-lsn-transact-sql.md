@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_cdc_map_time_to_lsn"
   - "fn_cdc_map_time_to_lsn_TSQL"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_cdc_map_time_to_lsn"
   - "sys.fn_cdc_map_time_to_lsn"
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
-caps.latest.revision: 23
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -76,7 +70,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- The relational operator '`smallest greater than`' is used to restrict changes to those that occurred after midnight on the previous day. If multiple entries with different LSN values share the **tran_end_time** value identified as the lower bound in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table, the function will return the smallest LSN ensuring that all entries are included. For the upper bound, the relational operator ‘`largest less than or equal to`’ is used to ensure that the range includes all entries for the day including those than have midnight as their **tran_end_time** value. If multiple entries with different LSN values share the **tran_end_time** value identified as the upper bound, the function will return the largest LSN ensuring that all entries are included.  
+ The relational operator '`smallest greater than`' is used to restrict changes to those that occurred after midnight on the previous day. If multiple entries with different LSN values share the **tran_end_time** value identified as the lower bound in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table, the function will return the smallest LSN ensuring that all entries are included. For the upper bound, the relational operator '`largest less than or equal to`' is used to ensure that the range includes all entries for the day including those than have midnight as their **tran_end_time** value. If multiple entries with different LSN values share the **tran_end_time** value identified as the upper bound, the function will return the largest LSN ensuring that all entries are included.  
   
 ## Permissions  
  Requires membership in the **public** role.  

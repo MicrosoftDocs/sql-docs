@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], FTP snapshots"
   - "FTP snapshots [SQL Server replication]"
   - "snapshot replication [SQL Server], FTP"
 ms.assetid: 55c30791-cd2a-420b-8ba7-5700e005cb45
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -1,13 +1,11 @@
 ---
 title: "uniqueidentifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/1/2017"
+ms.date: "12/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "uniqueidentifier"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "globally unique identifiers [SQL Server]"
   - "GUIDs [SQL Server]"
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

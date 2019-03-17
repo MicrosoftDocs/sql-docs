@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "server_event_session_events"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.server_event_session_events catalog view"
   - "xe"
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Deadlock Graph event class"
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

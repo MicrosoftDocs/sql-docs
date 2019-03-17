@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dm.savedataminingqueryresult.f1"
 helpviewer_keywords: 
   - "Save Data Mining Query Result dialog box"
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -50,7 +47,7 @@ manager: craigg
  **Add to DSV**  
  (Optional) Select a data source view contained in the project if you want to add the table to an existing data source.  
   
- This option is useful if you want to keep all related tables for a model—such as training data, prediction source data, and query results—in the same data source.  
+ This option is useful if you want to keep all related tables for a model-such as training data, prediction source data, and query results-in the same data source.  
   
 ## See Also  
  [Prediction Query Builder &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   

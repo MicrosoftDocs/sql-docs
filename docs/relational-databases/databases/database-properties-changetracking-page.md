@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "01/07/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.changetracking.f1"
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
-caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,8 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: markingmyname
 ms.author: maghan

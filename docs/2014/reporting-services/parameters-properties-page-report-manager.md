@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
-caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Parameters Properties Page (Report Manager)
   Use the Parameters properties page to view or modify parameter settings for a parameterized report.  

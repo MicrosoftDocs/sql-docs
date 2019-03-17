@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "moving registered server or server group"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], moving server or server group"
   - "groups [SQL Server], server"
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg

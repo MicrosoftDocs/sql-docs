@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deactivated My Reports folder"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "My Reports folder [Reporting Services]"
   - "disabling My Reports folder"
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Enable and Disable My Reports
   The My Reports feature allocates personal storage in the report server database so that users can save reports that they own in a private folder. As a report server administrator, you can enable or disable this feature or change how the feature works by modifying the security settings that control what users can do with this workspace.  

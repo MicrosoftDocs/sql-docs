@@ -1,17 +1,14 @@
 ---
 title: "Relationship Representation (Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 01/19/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -29,8 +26,7 @@ manager: craigg
   
  The following code snippets show how to create a relationship in Tabular models, how to activate a relationship and how to define a primary key in a table (other than "RowNumber"). To create an active relationship a primary key need to be defined in the primary key table - PKTableName - of the relationship (the one side of the relationship), the sample shown here creates the primary key on the PKColumnName if no primary key is defined in this column. Inactive relationships can be created without the need of having a primary key on the primary key column.  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

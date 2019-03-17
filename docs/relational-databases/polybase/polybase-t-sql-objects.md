@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: polybase
-ms.tgt_pltfrm: ""
 ms.topic: reference
 helpviewer_keywords: 
   - "PolyBase, fundamentals"

@@ -1,15 +1,12 @@
 ---
-title: "Using the OLE DB Driver for SQL Server Header and Library Files | Microsoft Docs"
+title: "Using the OLE DB Driver for SQL Server header and library files | Microsoft Docs"
 description: "Using the OLE DB Driver for SQL Server header and library files"
 ms.custom: ""
-ms.date: "06/12/2018"
+ms.date: "02/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|applications"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "header files [OLE DB Driver for SQL Server]"
@@ -25,7 +22,7 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ---
-# Using the OLE DB Driver for SQL Server Header and Library Files
+# Using the OLE DB Driver for SQL Server header and library files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -34,18 +31,18 @@ manager: craigg
   
  The OLE DB Driver for SQL Server header and library files are installed in the following location:  
   
- *%PROGRAM FILES%*\Microsoft SQL Server\Client SDK\OLEDB\181\SDK  
+ *%PROGRAM FILES%*\Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
  The OLE DB Driver for SQL Server header file (msoledbsql.h) can be used to add OLE DB Driver for SQL Server data access functionality to your custom applications. The OLE DB Driver for SQL Server header file contains all of the definitions, attributes, properties, and interfaces needed to take advantage of the new features introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- In addition to the OLE DB Driver for SQL Server header file, there is also a msoledbsql.lib library file which is the export library for [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) functionality.  
+ In addition to the OLE DB Driver for SQL Server header file, there is also a msoledbsql.lib library file, which is the export library for [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) functionality.  
   
  The OLE DB Driver for SQL Server header file is backwards compatible with the sqloledb.h header file used with Microsoft Data Access Components (MDAC), but does not contain CLSIDs for SQLOLEDB (the OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] included with MDAC) or symbols for XML functionality (which is not supported by OLE DB Driver for SQL Server).    
   
- OLE DB applications which use the OLE DB Driver for SQL Server only need to reference msoledbsql.h. If an application uses both MDAC (SQLOLEDB) and the OLE DB Driver for SQL Server, it can reference both sqloledb.h and msoledbsql.h, but the reference to sqloledb.h must come first.  
+ OLE DB applications that use the OLE DB Driver for SQL Server only need to reference msoledbsql.h. If an application uses both MDAC (SQLOLEDB) and the OLE DB Driver for SQL Server, it can reference both sqloledb.h and msoledbsql.h, but the reference to sqloledb.h must come first.  
   
-## Using the OLE DB Driver for SQL Server Header File  
- To use the OLE DB Driver for SQL Server header file, you must use an **include** statement within your C/C++ programming code. The following sections describe how to do this OLE DB applications.  
+## Using the OLE DB Driver for SQL Server header file  
+ To use the OLE DB Driver for SQL Server header file, you must use an **include** statement within your C/C++ programming code. The following sections describe how to do it in OLE DB applications.  
   
 > [!NOTE]  
 >  The OLE DB Driver for SQL Server header and library files can only be compiled using Visual Studio C++ 2012 or later.  
@@ -63,7 +60,7 @@ include "msoledbsql.h";
  When creating a connection to a data source through OLE DB Driver for SQL Server, use "MSOLEDBSQL" as the provider name string.  
 
   
-## Component Names and Properties by Version  
+## Component names and properties by version  
 
 |Property|OLE DB Driver for SQL Server|MDAC|  
 |--------|----------------------------|----|   

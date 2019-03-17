@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Scan:Stopped event class"
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

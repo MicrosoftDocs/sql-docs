@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fetching BLOB data"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "GetColumns method"
   - "BLOBs, fetching"
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -87,6 +84,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 ```  
   
 ## See Also  
- [Fetching BLOB Data Using IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [Fetching BLOB Data Using IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

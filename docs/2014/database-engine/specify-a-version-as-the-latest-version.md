@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "version control services [SQL Server], latest version"
   - "latest file version specified"
   - "file versions [SQL Server]"
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-caps.latest.revision: 12
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Print Reports from a Browser with the Print Control (Report Builder and SSRS)
   Although a browser is the most common client application used to view a report, browser print functionality is not ideal for printing reports. Print functionality in a browser is designed for printing Web pages. Typically, pages that you print from a browser include all of the visual elements that are on a Web page, plus header and footer information that identifies the page or Web site. Printing from a browser prints the contents of the current window. For a multipage report, the browser prints the first page at most, and possibly less if the report page extends beyond the dimensions of a printed page.  

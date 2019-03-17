@@ -5,9 +5,7 @@ ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DENY"
@@ -26,9 +24,8 @@ helpviewer_keywords:
   - "database-level securables [SQL Server]"
   - "denying permissions [SQL Server]"
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
-caps.latest.revision: 48
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "version control services [SQL Server], reports"
   - "Visual SourceSafe, reports"
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg

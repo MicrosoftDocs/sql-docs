@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [MDX], RollupChildren function"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "custom member properties [MDX]"
   - "IIf function"
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg

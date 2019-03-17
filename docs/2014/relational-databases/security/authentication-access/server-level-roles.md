@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.Security.BUILTIN.administrators"
@@ -50,7 +48,7 @@ manager: craigg
 |public|Every [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login belongs to the public server role. When a server principal has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to public on that object. Only assign public permissions on any object when you want the object to be available to all users. You cannot change membership in public.<br /><br /> Note: public is implemented differently than other roles. However, permissions can be granted, denied, or revoked from public.|  
   
 ## Permissions of Fixed Server Roles  
- Each fixed server role has certain permissions assigned to it. For a chart of the permissions assigned to the server roles, see [Database Engine Fixed Server and Fixed Database Roles](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
+ Each fixed server role has certain permissions assigned to it. For a chart of the permissions assigned to the server roles, see [Database Engine Fixed Server and Fixed Database Roles](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
 >  The `CONTROL SERVER` permission is similar but not identical to the `sysadmin` fixed server role. Permissions do not imply role memberships and role memberships do not grant permissions. (E.g. `CONTROL SERVER` does not imply membership in the `sysadmin` fixed server role.) However, it is sometimes possible to impersonate between roles and equivalent permissions. Most `DBCC` commands and many system procedures require membership in the `sysadmin` fixed server role. For a list of 171 system stored procedures that require `sysadmin` membership, see the following blog post by Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  

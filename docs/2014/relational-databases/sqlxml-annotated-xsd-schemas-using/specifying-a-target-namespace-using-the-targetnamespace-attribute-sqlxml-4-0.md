@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "namespaces [SQLXML], annotated XSD schemas"
@@ -20,7 +16,6 @@ helpviewer_keywords:
   - "elementFormDefault attribute"
   - "target namespaces [SQLXML]"
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

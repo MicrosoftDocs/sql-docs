@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_operator"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_operator"
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET ARITHIGNORE"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "ARITHIGNORE option"
   - "divide-by-zero errors"
 ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

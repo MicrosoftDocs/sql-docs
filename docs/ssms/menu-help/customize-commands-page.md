@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.vs.customizecom.f1"
-  - "vs.customize.commands"
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,4 +36,3 @@ Displays the **Keyboard** page of the **Options** dialog box so you can specify 
   
 ## See Also  
 [Customize Menus and Shortcut Keys](../../ssms/customize-menus-and-shortcut-keys.md)  
-  

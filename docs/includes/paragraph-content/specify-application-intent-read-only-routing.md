@@ -48,5 +48,5 @@ Read-only routing is a feature that can ensure the availability of a read-only r
 
 Multiple connections each using read-only routing might not all connect to the same read-only replica. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. You can ensure that all read-only requests connect to the same read-only replica. Ensure this sameness by *not* passing an availability group listener to the **Server** connection string keyword. Instead, specify the name of the read-only instance.
 
-Read-only routing may take longer than connecting to the primary. The longer wait is because read-only routing first connects to the primary, and then looks for the best available readable secondary. Due to these multiple staps, you should increase your login timeout to to at least 30 seconds.
+Read-only routing may take longer than connecting to the primary. The longer wait is because read-only routing first connects to the primary, and then looks for the best available readable secondary. Due to these multiple staps, you should increase your login timeout to at least 30 seconds.
 

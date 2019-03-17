@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.loaddimwizard.welcome.f1"
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

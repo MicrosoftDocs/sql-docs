@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "granting permissions [SMO]"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "permissions [SMO]"
   - "revoking permissions [SMO]"
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

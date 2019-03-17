@@ -5,9 +5,7 @@ ms.date: "10/18/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.roleproperties.selectobject.f1"
@@ -83,7 +81,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   XML schema collection  
   
--   Object – The object class has the following members:  
+-   Object - The object class has the following members:  
   
     -   Aggregate  
   

@@ -1,13 +1,11 @@
-﻿---
+---
 title: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER DATABASE SCOPED CREDENTIAL"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "ALTER DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-caps.latest.revision: 11
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -47,7 +44,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  SECRET **='***secret***'**  
  Specifies the secret required for outgoing authentication. *secret* is required to import a file from Azure Blob storage. *secret* may be optional for other purposes.   
->  [!WARNING]
+> [!WARNING]
 >  The SAS key value might begin with a '?' (question mark). When you use the SAS key, you must remove the leading '?'. Otherwise your efforts might be blocked.    
   
 ## Remarks  

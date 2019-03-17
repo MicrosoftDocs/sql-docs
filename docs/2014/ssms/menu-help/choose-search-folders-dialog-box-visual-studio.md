@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.lookin"
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -53,5 +48,3 @@ manager: craigg
   
  **Apply**  
  Save the set of search folders listed in **Selected folders** list as a named folder set. This folder set then can be chosen in the **Look in** field on all tabs of the **Find and Replace** window. Closes the Choose Search Folders dialog box.  
-  
-  

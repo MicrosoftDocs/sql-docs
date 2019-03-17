@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -55,7 +54,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Remarks  
- If an entry already exists for the report server in the report server database, it is deleted. The new entry is then created using the specified encryption key and the report server’s public key.  
+ If an entry already exists for the report server in the report server database, it is deleted. The new entry is then created using the specified encryption key and the report server's public key.  
   
  The method is most effective when called after the [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) method, which clears the list of encryption keys.  
   

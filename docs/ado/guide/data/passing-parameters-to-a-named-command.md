@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "named commands [ADO]"
   - "commands [ADO], passing parameters to a named command"
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -74,21 +71,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Notice that all the input parameters must precede any output variable and the data types of parameters must match or can be converted to those of the corresponding fields. The following statement—  
+ Notice that all the input parameters must precede any output variable and the data types of parameters must match or can be converted to those of the corresponding fields. The following statement-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- —will result in an error of mismatched data types, because the required input parameter is of a **String** type, not of an **Integer** type.  
+ -will result in an error of mismatched data types, because the required input parameter is of a **String** type, not of an **Integer** type.  
   
- The following call—  
+ The following call-  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- —is valid, but will yield an empty result set because no such records exist in the database.  
+ -is valid, but will yield an empty result set because no such records exist in the database.  
   
 ## See Also  
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

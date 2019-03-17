@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], properties"
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -99,7 +95,7 @@ manager: craigg
 ## See Also  
  [Alternate Snapshot Folder Locations](../alternate-snapshot-folder-locations.md)   
  [Compressed Snapshots](../compressed-snapshots.md)   
- [Execute Scripts Before and After the Snapshot Is Applied](../execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [Execute Scripts Before and After the Snapshot Is Applied](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Transfer Snapshots Through FTP](../transfer-snapshots-through-ftp.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)  

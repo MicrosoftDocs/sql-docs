@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "fast parse [Integration Services]"
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Cache Refresh Options (Report Manager)
   Use the Cache Refresh options page to create schedules for preloading the cache with temporary copies of data for a report or for a shared dataset. A refresh plan includes a schedule and the option to specify or override values for parameters. For a shared dataset, you cannot override values for parameters that are marked read-only. You can create and use more than one refresh plan as part of the refresh options page.  

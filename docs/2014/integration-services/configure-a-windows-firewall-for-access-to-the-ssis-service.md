@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Integration Services], firewalls"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Integration Services, firewalls"
   - "SSIS, firewalls"
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -33,7 +30,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service uses the DCOM protocol. For more information about how the DCOM protocol works through firewalls, see the article, "[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)," in the MSDN Library.  
+ The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service uses the DCOM protocol. For more information about how the DCOM protocol works through firewalls, see the article, "[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)," in the MSDN Library.  
   
  There are many firewall systems available. If you are running a firewall other than windowsfirewall, see your firewall documentation for information that is specific to the system you are using.  
   

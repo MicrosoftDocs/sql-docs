@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "DatabaseName Property"
@@ -18,10 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseName property"
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # DatabaseName Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the report server database. Read only.  

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -38,7 +35,7 @@ manager: craigg
   
 ## Handling Large Files  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. [Windows Azure storage SLA’s](http://go.microsoft.com/fwlink/?LinkId=271619) have maximum processing times for blobs that you can take into consideration.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. [Windows Azure storage SLA's](https://go.microsoft.com/fwlink/?LinkId=271619) have maximum processing times for blobs that you can take into consideration.  
   
 -   Using the `WITH COMPRESSION` option as recommended in the **Managing Backup** section, it is very important when backing up large files.  
   
@@ -86,7 +83,7 @@ manager: craigg
   
         -   `VERIFYONLY`  
   
-    -   You can also find information by reviewing the Windows Event Log - Under Application logs with the name ‘SQLBackupToUrl’.  
+    -   You can also find information by reviewing the Windows Event Log - Under Application logs with the name 'SQLBackupToUrl'.  
   
 -   When restoring from a compressed backup, you might see the following error:  
   

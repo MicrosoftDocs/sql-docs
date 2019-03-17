@@ -5,9 +5,7 @@ ms.date: "11/16/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_session_space_usage_TSQL"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_session_space_usage dynamic management view"
 ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up encryption keys [Reporting Services]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "symmetric keys [Reporting Services]"
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Back Up and Restore Reporting Services Encryption Keys
   An important part of report server configuration is creating a backup copy of the symmetric key used for encrypting sensitive information. A backup copy of the key is required for many routine operations, and enables you to reuse an existing report server database in a new installation.  
@@ -49,7 +46,7 @@ manager: craigg
  **SharePoint mode:** SharePoint Central Administration pages or PowerShell.  
   
 ####  <a name="bkmk_backup_sharepoint"></a> Backup SharePoint Mode Report Servers  
- For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../manage-a-reporting-services-sharepoint-service-application.md)  
+ For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the "Key Management" section of [Manage a Reporting Services SharePoint Service Application](../manage-a-reporting-services-sharepoint-service-application.md)  
   
 ####  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Reporting Services Configuration Manager (Native Mode)  
   
@@ -63,7 +60,7 @@ manager: craigg
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys –rskeymgmt (Native Mode)  
+####  <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys -rskeymgmt (Native Mode)  
   
 1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. You must use the `-e` extract argument to copy the key, provide a file name, and specify a password. The following example illustrates the arguments you must specify:  
   
@@ -96,7 +93,7 @@ manager: craigg
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys – rskeymgmt (Native Mode)  
+####  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys - rskeymgmt (Native Mode)  
   
 1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the `-a` argument to restore the keys. You must provide a fully-qualified file name and specify a password. The following example illustrates the arguments you must specify:  
   

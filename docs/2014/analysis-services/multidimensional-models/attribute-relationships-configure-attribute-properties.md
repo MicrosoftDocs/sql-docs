@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "flexible relationships (Analysis Services)"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "properties [Analysis Services], attribute relationships"
   - "rigid relationships (Analysis Services)"
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

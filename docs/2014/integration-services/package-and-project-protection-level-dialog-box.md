@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.packageprotectionlevel.f1"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Package Protection Level dialog box"
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg

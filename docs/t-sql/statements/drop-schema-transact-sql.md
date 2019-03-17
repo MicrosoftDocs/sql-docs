@@ -5,9 +5,7 @@ ms.date: "05/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP SCHEMA"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "dropping schemas"
   - "removing schemas"
 ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -50,7 +47,7 @@ DROP SCHEMA schema_name
   
 ## Arguments  
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the schema only if it already exists.  
   
@@ -74,7 +71,7 @@ DROP SCHEMA schema_name
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
     CREATE TABLE NineProngs (source int, cost int, partnumber int)  
     GRANT SELECT TO Anibal   
-    DENY SELECT TO Hung-Fu;  
+    DENY SELECT TO [Hung-Fu];  
 GO  
 ```  
   

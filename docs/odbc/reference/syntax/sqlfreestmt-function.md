@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLFreeStmt"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeStmt function [ODBC]"
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,8 +33,8 @@ manager: craigg
 ```  
   
 SQLRETURN SQLFreeStmt(  
-     SQLHSTMT       StatementHandle,  
-     SQLUSMALLINT   Option);  
+     SQLHSTMT       StatementHandle,  
+     SQLUSMALLINT   Option);  
 ```  
   
 ## Arguments  

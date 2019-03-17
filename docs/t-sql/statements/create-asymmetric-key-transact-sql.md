@@ -5,9 +5,7 @@ ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ASYMMETRIC_KEY_TSQL"
@@ -23,9 +21,8 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server]"
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
-caps.latest.revision: 51
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)

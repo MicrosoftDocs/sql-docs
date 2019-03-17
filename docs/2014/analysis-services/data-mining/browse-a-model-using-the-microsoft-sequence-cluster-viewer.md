@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Sequence Cluster Viewer"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "sequence [Analysis Services]"
   - "transitions [Analysis Services]"
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -50,7 +47,7 @@ manager: craigg
 ###  <a name="BKMK_Diagram"></a> Cluster Diagram  
  The **Cluster Diagram** tab of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Cluster Viewer displays all the clusters that are in a mining model. The shading of the line that connects one cluster to another represents the strength of the similarity of the clusters. If the shading is light or nonexistent, the clusters are not very similar. As the line becomes darker, the similarity of the links becomes stronger. You can adjust how many lines the viewer shows by adjusting the slider to the right of the clusters. Lowering the slider shows only the strongest links.  
   
- By default, the shade represents the population of the cluster. By using the **Shading****Variable** and **State** options, you can select which attribute and state pair the shading represents. The darker the shading, the greater the attribute distribution is for a specific state. The distribution decreases as the shading gets lighter.  
+ By default, the shade represents the population of the cluster. By using the **ShadingVariable** and **State** options, you can select which attribute and state pair the shading represents. The darker the shading, the greater the attribute distribution is for a specific state. The distribution decreases as the shading gets lighter.  
   
  To rename a cluster, right-click its node and select **Rename Cluster**. The new name is persisted to the server.  
   

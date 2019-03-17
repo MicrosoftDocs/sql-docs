@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring database mirroring [SQL Server]"
   - "Database Mirroring Monitor [SQL Server], starting"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

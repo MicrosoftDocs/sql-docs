@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.defrag.f1"
 helpviewer_keywords: 
   - "Reorganize Index Task dialog box"
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

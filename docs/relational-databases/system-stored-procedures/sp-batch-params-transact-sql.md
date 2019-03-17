@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_batch_params"
@@ -37,7 +34,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## Arguments  
- [ **@tsqlbatch =**] **'***tsqlbatch***'**  
+ [ **@tsqlbatch =**] **'**_tsqlbatch_**'**  
  Is a Unicode string that contains a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch for which parameter information is that you want. *tsqlbatch* is **nvarchar(max)** or implicitly convertible to **nvarchar(max)**.  
   
 ## Return Code Values  
@@ -78,7 +75,7 @@ EXECUTE sp_batch_params @SQLString;
   
 ## See Also  
  [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [Running Stored Procedures &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
   

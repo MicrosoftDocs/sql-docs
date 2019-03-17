@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Broker:Message Undeliverable event class"
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

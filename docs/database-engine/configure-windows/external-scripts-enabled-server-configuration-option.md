@@ -4,7 +4,6 @@ ms.date: "11/13/2017"
 ms.prod: sql
 ms.technology: configuration
 ms.reviewer: ""
-ms.suite: "sql"
 ms.topic: language-reference
 f1_keywords: 
   - "external scripts enabled"

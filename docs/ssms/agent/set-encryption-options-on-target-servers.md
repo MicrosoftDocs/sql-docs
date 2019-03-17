@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Set Encryption Options on Target Servers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, encryption"
   - "target servers [SQL Server], encryption"
   - "multiserver environments [SQL Server], setting encryption options on target servers"
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -43,5 +39,5 @@ If **1** or **2** is specified, you must have SSL enabled on both the master and
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## See Also  
-[How to: Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006)  
+[How to: Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
   

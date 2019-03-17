@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -53,7 +50,7 @@ manager: craigg
  Importing an .mdx query from a file is not supported.  
   
 > [!NOTE]  
->  For more information about MDX and general information about the MDX query designer, see "MDX Query Editor (Analysis Services - Multidimensional Data)" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
+>  For more information about MDX and general information about the MDX query designer, see "MDX Query Editor (Analysis Services - Multidimensional Data)" in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 ### Graphical MDX Query Designer Toolbar in Design Mode  
  The query designer toolbar provides buttons to help you design MDX queries using the graphical interface. The following table lists the buttons and their functions.  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening tables"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "tables [SQL Server], opening"
   - "Table Designer, opening"
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -31,7 +28,7 @@ manager: craigg
      The **Table Designer** menu is added to the main menu and the designer panes open.  
   
 > [!NOTE]  
->  If you are connected to a SQL Azure database, the new table option will launch a create table template script. Edit the parameters, then run the script to create a new table. For more information, see [SQL Azure Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
+>  If you are connected to a SQL Azure database, the new table option will launch a create table template script. Edit the parameters, then run the script to create a new table. For more information, see [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
 ### Open an existing table  
   

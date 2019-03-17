@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "full-text queries [SQL Server], proximity"
   - "queries [full-text search], proximity"
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -48,11 +45,11 @@ manager: craigg
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [ ,…*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -104,7 +101,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- You cannot combine a custom proximity term with a generic proximity term (*term1* NEAR *term2*), a generation term (ISABOUT …), or a weighted term (FORMSOF …).  
+ You cannot combine a custom proximity term with a generic proximity term (*term1* NEAR *term2*), a generation term (ISABOUT ...), or a weighted term (FORMSOF ...).  
   
 ### Example: Using the Custom Proximity Term  
  The following example searches the `Production.Document` table of the `AdventureWorks2012` sample database for all document summaries that contain the word "reflector" in the same document as the word "bracket".  
@@ -157,7 +154,7 @@ GO
   
  A generic proximity term indicates that the specified search terms must all occur in a document for a match to be returned, regardless of the number of non-search terms (the *distance*) between the search terms. The basic syntax is:  
   
- { *search_term* { NEAR | ~ } *search_term* } [ ,…*n* ]  
+ { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
   
  For example, in the following examples, the words 'fox' and 'chicken' must both appear, in either order, to produce a match:  
   
@@ -181,7 +178,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- You cannot combine a generic proximity term with a custom proximity term, such as `NEAR((term1,term2),5)`, a weighted term (ISABOUT …), or a generational term (FORMSOF …).  
+ You cannot combine a generic proximity term with a custom proximity term, such as `NEAR((term1,term2),5)`, a weighted term (ISABOUT ...), or a generational term (FORMSOF ...).  
   
 ### Example: Using the Generic Proximity Term  
  The following example uses the generic proximity term to search for the word "reflector" in the same document as the word "bracket".  

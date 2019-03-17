@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttodtsserver.login.f1"
   - "sql12.swb.connecttodts.login.f1"
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg

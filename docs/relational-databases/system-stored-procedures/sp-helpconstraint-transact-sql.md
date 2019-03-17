@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpconstraint"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpconstraint"
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -40,10 +36,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## Arguments  
- [ **@objname=** ] **'***table***'**  
+ [ **@objname=** ] **'**_table_**'**  
  Is the table about which constraint information is returned. The table specified must be local to the current database. *table* is **nvarchar(776)**, with no default.  
   
- [ **@nomsg=**] **'***no_message***'**  
+ [ **@nomsg=**] **'**_no_message_**'**  
  Is an optional parameter that prints the table name. *no_message* is **varchar(5)**, with a default of **msg**. **nomsg** suppresses the printing.  
   
 ## Return Code Values  
@@ -53,7 +49,7 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint** displays a descending indexed column if it participated in primary keys. The descending indexed column will be listed in the result set with a minus sign (-) following its name. The default, an ascending indexed column, will be listed by its name alone.  
   
 ## Remarks  
- Executing **sp_help***table* reports all information about the specified table. To see only the constraint information, use **sp_helpconstraint**.  
+ Executing **sp_help**_table_ reports all information about the specified table. To see only the constraint information, use **sp_helpconstraint**.  
   
 ## Permissions  
  Requires membership in the **public** role.  

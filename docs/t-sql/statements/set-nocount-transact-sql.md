@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "NOCOUNT"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "counting rows"
   - "SET NOCOUNT statement"
 ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

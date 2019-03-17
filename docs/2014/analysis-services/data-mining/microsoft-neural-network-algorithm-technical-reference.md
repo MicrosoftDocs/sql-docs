@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "HIDDEN_NODE_RATIO parameter"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "coding [Data Mining]"
   - "HOLDOUT_SEED parameter"
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -100,7 +97,7 @@ manager: craigg
   
  **Discrete values**  
   
- μ = p – the prior probability of a state  
+ μ = p - the prior probability of a state  
   
  StdDev  = sqrt(p(1-p))  
   

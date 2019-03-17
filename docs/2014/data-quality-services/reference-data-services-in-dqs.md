@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: 21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Reference Data Services in DQS
@@ -29,11 +25,11 @@ manager: craigg
 -   Supports using reference data from Windows Azure Marketplace as well as directly from third party reference data providers.  
   
 ##  <a name="Marketplace"></a> Using Reference Data from Windows Azure Marketplace  
- DQS supports using reference data from Windows Azure Marketplace to enable content providers to provide reference data services through Marketplace. Marketplace is a service from Microsoft that provides a single marketplace and delivery channel for high-quality data and applications as cloud services. For more information about Marketplace, see [Learn About Windows Azure Marketplace](http://go.microsoft.com/fwlink/?LinkId=211291) (http://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS supports using reference data from Windows Azure Marketplace to enable content providers to provide reference data services through Marketplace. Marketplace is a service from Microsoft that provides a single marketplace and delivery channel for high-quality data and applications as cloud services. For more information about Marketplace, see [Learn About Windows Azure Marketplace](https://go.microsoft.com/fwlink/?LinkId=211291) (https://go.microsoft.com/fwlink/?LinkId=211291).  
   
  The seamless integration between Marketplace and DQS simplifies the steps associated with discovering, exploring, and acquiring information for data quality projects from within DQS. The data is consumed from DQS, and helps DQS users achieve high data quality by bringing together DQS, Marketplace, and reference data service providers in an innovative way.  
   
- To use reference data from Marketplace in DQS for the cleansing activity, you must have a Marketplace account key. Creating a Marketplace account key is free, and you pay only if you subscribe to paid datasets. There is no charge for subscribing to, and using free datasets. For detailed information about creating a Marketplace account key, see [Create Your Account](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936).  
+ To use reference data from Marketplace in DQS for the cleansing activity, you must have a Marketplace account key. Creating a Marketplace account key is free, and you pay only if you subscribe to paid datasets. There is no charge for subscribing to, and using free datasets. For detailed information about creating a Marketplace account key, see [Create Your Account](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936).  
   
  Additionally, you can perform the following Marketplace activities from within DQS:  
   
@@ -46,14 +42,14 @@ manager: craigg
  You can perform these activities in the **Reference Data** tab of the **Configuration** screen in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ##  <a name="Direct"></a> Using Reference Data Directly from the Third Party Reference Data Providers  
- If you are not connected to the Internet and therefore cannot use Marketplace, DQS also supports direct connection to data providers that are available within your organization’s network. To use reference data from direct online third-party reference data providers, you have to create a record for the data provider in DQS.  
+ If you are not connected to the Internet and therefore cannot use Marketplace, DQS also supports direct connection to data providers that are available within your organization's network. To use reference data from direct online third-party reference data providers, you have to create a record for the data provider in DQS.  
   
 ##  <a name="HowToCleanse"></a> How to Cleanse Data by Using the Reference Data  
  Cleansing your data in DQS using reference data includes the following three steps:  
   
 1.  **Configuring the reference data provider details in DQS**: Before you can use reference data in DQS, you must configure reference data service details in DQS.  
   
-    1.  If you are using Marketplace, provide a valid Marketplace account key, browse to the [Data Quality Services](http://go.microsoft.com/fwlink/?LinkId=227587) data category in Marketplace, and subscribe to the required providers.  
+    1.  If you are using Marketplace, provide a valid Marketplace account key, browse to the [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) data category in Marketplace, and subscribe to the required providers.  
   
     2.  If you are using a direct online reference data provider, you must add direct reference data provider details in DQS before you can use it.  
   

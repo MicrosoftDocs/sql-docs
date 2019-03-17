@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Url property"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "Web service [Reporting Services], proxies"
   - "Web references [Reporting Services]"
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Setting the Url Property of the Web Service
   At any time in your [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] applications, you can modify the base URL of the Report Server Web service to which your application is currently directed. To do this, simply set the **Url** property of the service object. For example:  

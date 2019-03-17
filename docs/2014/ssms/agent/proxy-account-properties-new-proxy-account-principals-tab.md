@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.proxy.permissions.f1"
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

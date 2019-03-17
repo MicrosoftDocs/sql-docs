@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring database mirroring [SQL Server]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
   - "warnings [database mirroring]"
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -70,7 +67,7 @@ manager: craigg
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Drops the warning for a specified performance metric.|  
   
 ## Performance-Threshold Events Sent to the Windows Event Log  
- If warning thresholdis defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event—a *performance-threshold event*— for the metric and writes the event to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
+ If warning thresholdis defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event-a *performance-threshold event*- for the metric and writes the event to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
   
 |Performance metric|Event ID|  
 |------------------------|--------------|  
@@ -102,7 +99,7 @@ manager: craigg
   
  When you define alerts on database mirroring events, we recommend that you define warning thresholds and alerts at both partner server instances. Individual events are generated at either the principal server or the mirror server, but each partner can perform either role at any time. To make sure that an alert continues to operate after a failover, the alert must be defined at both partners.  
   
- For more information, see the white paper about alerting on database mirroring events at this [SQL Server Web site](http://go.microsoft.com/fwlink/?linkid=62373). This white paper contains information about how to configure alerts using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, the database mirroring WMI events, and sample scripts.  
+ For more information, see the white paper about alerting on database mirroring events at this [SQL Server Web site](https://go.microsoft.com/fwlink/?linkid=62373). This white paper contains information about how to configure alerts using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, the database mirroring WMI events, and sample scripts.  
   
 > [!IMPORTANT]  
 >  For all mirroring sessions, we strongly recommend that you configure the database to send an alert on any state-change events. Unless a state change is expected as the result of a manual configuration change, something has occurred that could compromise your data. To help protect your data, identify and fix the cause of an unexpected state change.  

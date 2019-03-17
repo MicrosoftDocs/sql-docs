@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "version flags [Master Data Services], about version flags"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "version flags [Master Data Services]"
   - "versions [Master Data Services], version flags"
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg

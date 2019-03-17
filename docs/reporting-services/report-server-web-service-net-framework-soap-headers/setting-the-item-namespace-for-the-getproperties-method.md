@@ -4,12 +4,9 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service-net-framework-soap-headers
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "item properties [Reporting Services]"
   - "ItemNamespaceHeader SOAP header"
@@ -36,7 +33,7 @@ Class Sample
    Sub Main()  
       Dim rs As New ReportingService2010()  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
   
       Dim items() As CatalogItem  
   
@@ -79,7 +76,7 @@ class Sample
    {  
    ReportingService2010 rs = new ReportingService2010();  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
   
       CatalogItem[] items;  
   

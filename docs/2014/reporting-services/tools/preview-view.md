@@ -4,26 +4,23 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.previewview.f1"
 helpviewer_keywords: 
   - "Preview view [Reporting Services]"
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Preview View
   Use **Preview** view to display the rendered report. When a report is previewed, Report Designer runs the report locally and displays it in the Preview view. In preview mode, the report is processed in full. If the report has a complex query or has a large amount of data, preview might take several minutes to complete the first time you view it. For subsequent changes that affect only the format of the report, preview uses cached data.  
   
 > [!IMPORTANT]  
->  When [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] is run as a RemoteApp, reports cannot be displayed in **Preview** view in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. RemoteApp programs are programs that are accessed remotely through Remote Desktop Services. For more information, see [TS RemoteApp Step-by-Step Guide](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
+>  When [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] is run as a RemoteApp, reports cannot be displayed in **Preview** view in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. RemoteApp programs are programs that are accessed remotely through Remote Desktop Services. For more information, see [TS RemoteApp Step-by-Step Guide](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
   
 ## Options  
  Use the toolbar to manage preview functions.  

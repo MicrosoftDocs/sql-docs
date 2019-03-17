@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "3456 (Database Engine error)"
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "7904 (Database Engine error)"
 ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

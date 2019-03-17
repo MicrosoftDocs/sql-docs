@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "notifications [SQL Server], job status"
   - "displaying operators"
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -71,7 +67,7 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
   
 4.  Right-click the operator that you want to view and select **Properties**.  
   
-    For more information on the available options contained in the *operator_name***Properties** dialog box, see:  
+    For more information on the available options contained in the _operator_name_**Properties** dialog box, see:  
   
     -   [Operator Properties - New Operator &#40;General Page&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
@@ -102,5 +98,5 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
     GO  
     ```  
   
-For more information, see [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8).  
+For more information, see [sp_help_operator (Transact-SQL)](https://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8).  
   

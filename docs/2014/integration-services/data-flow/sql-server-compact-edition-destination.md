@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlservercompactdest.f1"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Compact, destination"
   - "inserting data"
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

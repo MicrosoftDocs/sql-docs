@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
   - "searching while trace running"
   - "traces [SQL Server], running"
   - "traces [SQL Server], searching while trace running"
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: MightyPen
@@ -26,11 +24,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Example  
  Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a database used by this sample. Your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must have write access to run this script (for example, log on as a local system account).  
+ The first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a database used by this sample. Your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must have write access to run this script (for example, log on as a local system account).  
   
  The second code listing is the C++ code. You must specify a server; in the C++ code listing, change "MyServer" to a valid server name. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h. Compile the C++ code listing with odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib, and /EHsc.  
   
- The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the database used by this sample.  
+ The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the database used by this sample.  
   
 ```  
 USE master  

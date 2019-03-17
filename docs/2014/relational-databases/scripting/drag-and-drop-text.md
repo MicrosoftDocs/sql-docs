@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dragging and dropping text"
   - "Query Editor [SQL Server Management Studio], dragging and dropping text"
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

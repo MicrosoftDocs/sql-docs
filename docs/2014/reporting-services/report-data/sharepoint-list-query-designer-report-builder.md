@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # SharePoint List Query Designer (Report Builder)
   Report Builder provides both a graphical query designer and a text-based query designer to help you create a query that specifies the data to retrieve from a SharePoint site for a report dataset. Use the graphical query designer to explore the SharePoint list metadata, interactively build a query, and view the results of your query. Use the text-based query designer to view the query that was built by the graphical query designer, modify a query, or type the query commands. You can also import an existing query from a file or report.  

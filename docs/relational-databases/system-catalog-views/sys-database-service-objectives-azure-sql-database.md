@@ -2,14 +2,9 @@
 title: "sys.database_service_objectives (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2016"
-ms.prod: ""
+ms.service: sql-database
 ms.prod_service: "sql-database, sql-data-warehouse"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "elastic pool"
@@ -17,7 +12,6 @@ keywords:
 f1_keywords: 
   - "DATABASE_SERVICE_OBJECTIVES_TSQL"
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

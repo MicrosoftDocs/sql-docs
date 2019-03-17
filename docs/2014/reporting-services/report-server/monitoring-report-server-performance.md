@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Reporting Services]"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "performance [Reporting Services]"
   - "Reporting Services, performance"
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Monitoring Report Server Performance
   Use performance monitoring tools to monitor report server performance to evaluate server activity, watch trends, diagnose system bottlenecks, and gather data that can help you determine whether the current system configuration is sufficient. To tune server performance, you can specify how often to recycle the report server application domain. For more information, see [Configure Available Memory for Report Server Applications](../report-server/configure-available-memory-for-report-server-applications.md).  

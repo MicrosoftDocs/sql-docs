@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.movetabledb.f1"
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -1,19 +1,15 @@
-﻿---
+---
 title: "Recycle SQL Server Agent Error Logs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.errorlog.recyclesqlagenterrorlogs.f1"
 ms.assetid: 10bc2dd1-0505-4527-8ec7-d3b4e5d6352b
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

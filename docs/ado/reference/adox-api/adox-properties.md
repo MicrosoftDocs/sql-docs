@@ -6,19 +6,17 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "properties [ADOX]"
   - "ADOX, properties"
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # ADOX Properties
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indicates the ADO **Connection** object to which the catalog belongs.|  

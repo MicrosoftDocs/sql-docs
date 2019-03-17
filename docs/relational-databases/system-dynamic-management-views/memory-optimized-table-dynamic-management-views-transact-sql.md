@@ -5,14 +5,11 @@ ms.date: "02/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

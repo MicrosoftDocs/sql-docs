@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS packages, security"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "files [Integration Services], security"
   - "SQL Server Integration Services packages, security"
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg

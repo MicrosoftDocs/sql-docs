@@ -4,17 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Find Databases Wizard"
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -60,5 +54,5 @@ Enter the full Windows user name of the owner. This might be formatted as *domai
   
 ## See Also  
 [Adding and Removing Access Database Files](adding-and-removing-access-database-files-accesstosql.md)  
-[User Interface Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

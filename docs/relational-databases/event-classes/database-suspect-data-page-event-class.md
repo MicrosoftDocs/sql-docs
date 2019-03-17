@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], database mirroring"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], event notifications"
   - "Database Suspect Data Page event class"
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

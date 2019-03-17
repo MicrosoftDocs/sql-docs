@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "partitions [SMO]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], SMO"
   - "partitioned indexes [SQL Server], SMO"
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
-caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

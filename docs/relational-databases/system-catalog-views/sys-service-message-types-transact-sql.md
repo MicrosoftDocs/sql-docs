@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.service_message_types"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_message_types catalog view"
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

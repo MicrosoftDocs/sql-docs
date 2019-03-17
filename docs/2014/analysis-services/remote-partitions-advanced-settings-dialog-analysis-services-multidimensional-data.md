@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.advancedrestoresettings.f1"
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

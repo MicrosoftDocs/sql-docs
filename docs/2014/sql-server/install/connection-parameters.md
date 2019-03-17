@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], connections"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "default server instances"
   - "analyzing system [Upgrade Advisor], connections"
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
-caps.latest.revision: 30
 author: mashamsft
 ms.author: mathoma
 manager: craigg

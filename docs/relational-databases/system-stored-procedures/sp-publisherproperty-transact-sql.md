@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_publisherproperty"
   - "sp_publisherproperty_TSQL"
 helpviewer_keywords: 
   - "sp_publisherproperty"
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -27,7 +20,7 @@ manager: craigg
 # sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Displays or changes publisher properties for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. This stored procedure is executed at the Distributor.  
+  Displays or changes publisher properties for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. This stored procedure is executed at the Distributor.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +62,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- **sp_publisherproperty** is used in transactional replication for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+ **sp_publisherproperty** is used in transactional replication for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
  When only *publisher* is specified, the result set includes the current settings for all properties that can be set.  
   

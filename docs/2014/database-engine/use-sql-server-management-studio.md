@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Management Studio [SQL Server]"
   - "Enterprise Manager (See SQL Server Management Studio [Analysis Services])"
   - "SQL Server Management Studio [SQL Server], about SQL Server Management Studio"
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
-caps.latest.revision: 50
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -23,7 +20,7 @@ manager: craigg
   
  SSMS combines the features of Enterprise Manager, Query Analyzer, and Analysis Manager, included in previous releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], into a single environment. In addition, SSMS works with all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] such as [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Developers get a familiar experience, and database administrators get a single comprehensive utility that combines easy-to-use graphical tools with rich scripting capabilities.  
   
- Download and install SSMS from the [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
+ Download and install SSMS from the [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## In This Section  
  [Features in SQL Server Management Studio](features-in-sql-server-management-studio.md)  

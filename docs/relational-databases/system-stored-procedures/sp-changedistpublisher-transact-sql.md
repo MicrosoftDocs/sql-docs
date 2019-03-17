@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changedistpublisher_TSQL"
   - "sp_changedistpublisher"
 helpviewer_keywords: 
   - "sp_changedistpublisher"
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -42,16 +35,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'**_publisher_**'**  
  Is the Publisher name. *publisher* is **sysname**, with no default.  
   
- [ **@property=** ] **'***property***'**  
+ [ **@property=** ] **'**_property_**'**  
  Is a property to change for the given Publisher. *property* is **sysname** and can be one of these values.  
   
- [ **@value=** ] **'***value***'**  
+ [ **@value=** ] **'**_value_**'**  
  Is the value for the given property. *value* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [ **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  Is required for SQL Database managed instance, should match the access key for the Azure SQL Database storage volume. 
 
 

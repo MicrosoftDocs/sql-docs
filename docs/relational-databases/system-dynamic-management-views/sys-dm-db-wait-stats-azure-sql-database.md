@@ -1,14 +1,9 @@
-﻿---
+---
 title: "sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_wait_stats_TSQL"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_db_wait_stats dynamic management view"
   - "dm_db_wait_stats"
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg

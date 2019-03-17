@@ -5,9 +5,7 @@ ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CLOSE SYMMETRIC KEY"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "CLOSE SYMMETRIC KEY statement"
   - "cryptography [SQL Server], symmetric keys"
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
-caps.latest.revision: 29
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CLOSE SYMMETRIC KEY (Transact-SQL)

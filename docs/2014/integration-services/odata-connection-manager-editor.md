@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Sql12.dts.designer.odatasource.connectionmanager.f1"
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg

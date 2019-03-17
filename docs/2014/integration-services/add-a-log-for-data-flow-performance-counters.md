@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Integration Services]"
   - "counters [Integration Services]"
   - "logs [Integration Services], data flow counters"
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg

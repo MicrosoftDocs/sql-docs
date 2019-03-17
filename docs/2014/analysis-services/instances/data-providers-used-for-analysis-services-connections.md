@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -41,7 +38,7 @@ manager: craigg
   
  The major build number of the initial release of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is 12.0.2000.9.  
   
- For more information about getting version and build information, see [How to determine the version and edition of SQL Server and its components](http://support.microsoft.com/kb/321185).  
+ For more information about getting version and build information, see [How to determine the version and edition of SQL Server and its components](https://support.microsoft.com/kb/321185).  
   
 ##  <a name="bkmk_LibUpdate"></a> How to determine the version of the Analysis Services data providers  
  Data providers are installed with Analysis Services, as well as by client applications that routinely connect to Analysis Services databases, such as Excel.  
@@ -71,7 +68,7 @@ manager: craigg
   
 #### Find the data providers on the download site  
   
-1.  Go to the [Microsoft download center](http://go.microsoft.com/fwlink/p/?LinkID=296473).  
+1.  Go to the [Microsoft download center](https://go.microsoft.com/fwlink/p/?LinkID=296473).  
   
 2.  Expand **Install Instructions**.  
   
@@ -97,16 +94,16 @@ manager: craigg
   
  When connecting to a database, the connection string properties for all three libraries are largely the same. Almost any connection string you define for ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>) will also work for AMO and the Analysis Services OLE DB provider. See [Connection String Properties &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md) for more information.  
   
- For more information about connecting programmatically, see [Establishing Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net.md).  
+ For more information about connecting programmatically, see [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net).  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  AMO is a managed data provider used for server administration and data definition. For example, SQL Server Management Studio uses AMO to connect to Analysis Services.  
   
  AMO is installed by SQL Server Setup and used by SQL Server client applications to connect to Analysis Services. You can also download and install it manually when using AMO in custom code (see [How to determine the version of the Analysis Services data providers](#bkmk_LibUpdate) in this topic). AMO can be found in the global assembly cache, as `Microsoft.AnalysisServices`.  
   
- A connection using AMO is typically minimal, consisting of “data source=\<servername>”. After a connection is established, you use the API to work with database collections and major objects. Both SSDT and SSMS use AMO to connect to an Analysis Services instance.  
+ A connection using AMO is typically minimal, consisting of "data source=\<servername>". After a connection is established, you use the API to work with database collections and major objects. Both SSDT and SSMS use AMO to connect to an Analysis Services instance.  
   
- For more information about connecting programmatically, see [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
+ For more information about connecting programmatically, see [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   
 ## See Also  
  [Connect to Analysis Services](connect-to-analysis-services.md)  

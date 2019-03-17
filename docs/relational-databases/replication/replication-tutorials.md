@@ -4,20 +4,14 @@ ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "tutorials [SQL Server replication]"
   - "walkthroughs [SQL Server replication]"
   - "replication [SQL Server], tutorials"
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
-caps.latest.revision: 13
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -48,7 +42,7 @@ Learn how to configure transactional replication to replicate data between fully
 Learn how to configure merge replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
 ## See also  
-[Security and protection for replication](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [Transactional replication overview](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

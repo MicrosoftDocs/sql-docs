@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_configure_peerconflictdetection_TSQL"
   - "sp_configure_peerconflictdetection"
 helpviewer_keywords: 
   - "sp_configure_peerconflictdetection"
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg

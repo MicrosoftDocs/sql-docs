@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], setting up"
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -158,7 +155,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     The TYPE COLUMN defined in this example specifies the type column in the table that contains the type of the document in each row of the column 'Document' (which is of binary type). The type column stores the user-supplied file extension—".doc", ".xls", and so on—of the document in a given row. The Full-Text Engine uses the file extension in a given row to invoke the correct filter to use for parsing the data in that row. After the filter has parsed the binary data of the row, the specified word breaker will parse the content (in this example, the word breaker for British English is used). Note that the filtering process happens only at indexing time or if a user inserts or updates a column in the base table while automatic change tracking is enabled for the full-text index. For more information, see [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md).  
+     The TYPE COLUMN defined in this example specifies the type column in the table that contains the type of the document in each row of the column 'Document' (which is of binary type). The type column stores the user-supplied file extension-".doc", ".xls", and so on-of the document in a given row. The Full-Text Engine uses the file extension in a given row to invoke the correct filter to use for parsing the data in that row. After the filter has parsed the binary data of the row, the specified word breaker will parse the content (in this example, the word breaker for British English is used). Note that the filtering process happens only at indexing time or if a user inserts or updates a column in the base table while automatic change tracking is enabled for the full-text index. For more information, see [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md).  
   
   
 ##  <a name="tasks"></a> Common Tasks  

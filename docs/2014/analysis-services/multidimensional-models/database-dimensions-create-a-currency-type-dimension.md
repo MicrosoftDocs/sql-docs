@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], currency"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "converting currency"
   - "currency dimensions [Analysis Services]"
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

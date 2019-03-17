@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], authentication"
   - "authentication [ODBC]"
 ms.assetid: 613daef7-3171-42d0-b7e3-3879280f864d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

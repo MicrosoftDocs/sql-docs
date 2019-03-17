@@ -4,25 +4,22 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-caps.latest.revision: 13
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Add a Sparkline to Your Report (Report Builder)
   In this tutorial, you create a basic table report based on sample sales data, and then add a sparkline chart to a cell in the table.  
   
- An enhanced version of the report you create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](http://go.microsoft.com/fwlink/?LinkId=184851). The following illustration shows the sample report similar to the one that you will create.  
+ An enhanced version of the report you create in this tutorial is available as a sample [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Report Builder report. For more information about downloading this sample report and others, see [Report Builder sample reports](https://go.microsoft.com/fwlink/?LinkId=184851). The following illustration shows the sample report similar to the one that you will create.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- The video [How to: Create a Sparkline in a Table (Report Builder Video)](http://technet.microsoft.com/bi/ff871942.aspx) illustrates how to create a similar report with sparklines.  
+ The video [How to: Create a Sparkline in a Table (Report Builder Video)](https://technet.microsoft.com/bi/ff871942.aspx) illustrates how to create a similar report with sparklines.  
   
 ##  <a name="BackToTop"></a> What You Will Learn  
  In this tutorial, you will learn how to do the following:  
@@ -210,12 +207,12 @@ manager: craigg
   
      Note that there are sparkline charts in each row of the table, but they're not correct. The bars in the charts don't line up with each other. There are only four bars in the second row of data, so the bars are wider than the bars in the first row, which has six. You can't compare values for each product per day. They need to line up with each other.  
   
-     Also note that for each row, the tallest bar for that row is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but the largest value for Slim Digital is $26,576—more than twice as large. And yet the largest bars in those two rows are about the same height. That also needs to be made to scale with the other sparklines.  
+     Also note that for each row, the tallest bar for that row is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but the largest value for Slim Digital is $26,576-more than twice as large. And yet the largest bars in those two rows are about the same height. That also needs to be made to scale with the other sparklines.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. Align the Sparklines Vertically and Horizontally  
- The sparklines are hard to read when they don’t all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
+ The sparklines are hard to read when they don't all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
   
 #### To set alignment for the sparklines in the table  
   

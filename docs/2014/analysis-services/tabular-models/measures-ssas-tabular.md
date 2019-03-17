@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -60,7 +57,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Grand Total**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining Measures by Using the Measure Grid  
- Measures are created at design time by using the measure grid in the model designer. Each table has a measure grid. By default, the measure Grid is displayed below each table in the model designer. You can also choose not to view the measure grid for a particular table. To toggle the display of a table’s measure grid, click the **Table** menu, and then click **Show Measure Grid**.  
+ Measures are created at design time by using the measure grid in the model designer. Each table has a measure grid. By default, the measure Grid is displayed below each table in the model designer. You can also choose not to view the measure grid for a particular table. To toggle the display of a table's measure grid, click the **Table** menu, and then click **Show Measure Grid**.  
   
  In the measure grid, you can create measures in the following ways:  
   

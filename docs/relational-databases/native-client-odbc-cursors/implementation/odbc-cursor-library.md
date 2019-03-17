@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "cursors [ODBC], library"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function"
   - "SQL_CUR_USE_ODBC option"
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

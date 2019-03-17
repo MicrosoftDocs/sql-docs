@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "diagnostic information [ODBC], SqlGetDiagField"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "diagnostic information [ODBC], SqlGetDiagRec"
   - "retrieving diagnostic information [ODBC]"
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -44,8 +41,8 @@ GetSQLStmt(SQLStmt);
 rc1 = SQLExecDirect(hstmt, SQLStmt, SQL_NTS);  
 if ((rc1 == SQL_SUCCESS_WITH_INFO) || (rc1 == SQL_ERROR)) {
    SQLLEN numRecs = 0;
-   SQLGetDiagField(SQL_HANDLE_STMT, hstmt, 0, SQL_DIAG_NUMBER, &numRecs, 0, 0);
-   // Get the status records.
+   SQLGetDiagField(SQL_HANDLE_STMT, hstmt, 0, SQL_DIAG_NUMBER, &numRecs, 0, 0);
+   // Get the status records.
    i = 1;  
    while (i <= numRecs && (rc2 = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, i, SqlState, &NativeError,  
             Msg, sizeof(Msg), &MsgLen)) != SQL_NO_DATA) {  

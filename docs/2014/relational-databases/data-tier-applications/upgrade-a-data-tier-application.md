@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.upgradedacwizard.reviewpolicy.f1"
@@ -39,13 +38,13 @@ manager: craigg
 ###  <a name="ChoseDACUpgOptions"></a> Choosing DAC Upgrade Options  
  There are four upgrade options for an in-place upgrade:  
   
--   **Ignore Data Loss** – If `True`, the upgrade will proceed even if some of the operations result in the loss of data. If `False`, these operations will terminate the upgrade. For example, if a table in the current database is not present in the schema of the new DAC, the table will be dropped if `True` is specified. The default setting is `True`.  
+-   **Ignore Data Loss** - If `True`, the upgrade will proceed even if some of the operations result in the loss of data. If `False`, these operations will terminate the upgrade. For example, if a table in the current database is not present in the schema of the new DAC, the table will be dropped if `True` is specified. The default setting is `True`.  
   
--   **Block on Changes** – If `True`, the upgrade is terminated if the database schema is different than that defined in the previous DAC. If `False`, the upgrade continues even if changes are detected. The default setting is `False`.  
+-   **Block on Changes** - If `True`, the upgrade is terminated if the database schema is different than that defined in the previous DAC. If `False`, the upgrade continues even if changes are detected. The default setting is `False`.  
   
--   **Rollback on Failure** – If `True`, the upgrade is enclosed in a transaction, and if errors are encountered a rollback will be attempted. If `False`, all changes are committed as they are made and if errors occur you may have to restore a previous backup of the database. The default setting is `False`.  
+-   **Rollback on Failure** - If `True`, the upgrade is enclosed in a transaction, and if errors are encountered a rollback will be attempted. If `False`, all changes are committed as they are made and if errors occur you may have to restore a previous backup of the database. The default setting is `False`.  
   
--   **Skip Policy Validation** – If `True`, the DAC server selection policy is not evaluated. If `False`, the policy is evaluated and the upgrade terminates if there is a validation error. The default setting is `False`.  
+-   **Skip Policy Validation** - If `True`, the DAC server selection policy is not evaluated. If `False`, the policy is evaluated and the upgrade terminates if there is a validation error. The default setting is `False`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  DAC uprades can only be performed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  
@@ -78,7 +77,7 @@ manager: craigg
   
 2.  Expand the **Management** node, and then expand the **Data-tier Applications** node.  
   
-3.  Right-click the node for the DAC to be upgraded, and then select **Upgrade Data-tier Application…**  
+3.  Right-click the node for the DAC to be upgraded, and then select **Upgrade Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   
@@ -173,7 +172,7 @@ manager: craigg
 ## Options Page  
  Use this page to select the rollback on failure option for the upgrade.  
   
- **Rollback on failure** – Select this option to enclose the upgrade in a transaction which the wizard can attempt to roll back if errors occur. For more information about the option, see [Choosing DAC Upgrade Options](#ChoseDACUpgOptions).  
+ **Rollback on failure** - Select this option to enclose the upgrade in a transaction which the wizard can attempt to roll back if errors occur. For more information about the option, see [Choosing DAC Upgrade Options](#ChoseDACUpgOptions).  
   
  **Restore Defaults** - Returns the option to its default setting of false.  
   
@@ -188,13 +187,13 @@ manager: craigg
   
  **The following actions will be used to upgrade the DAC.** - Review the information displayed to ensure the actions taken will be correct. The **Action** column displays the actions, such as Transact-SQL statements, that will be run to perform the upgrade. The **Data Loss** column will contain a warning if the associated action could delete data.  
   
- **Refresh** – refreshes the action list.  
+ **Refresh** - refreshes the action list.  
   
- **Save Action Report** – saves the contents of the action window to an HTML file.  
+ **Save Action Report** - saves the contents of the action window to an HTML file.  
   
  **Proceed despite possible loss of changes** - Specifies that you understand some of the objects or data in the current database will not be present in the new database, and that you are willing to proceed with the upgrade. You should select this button only if you have analyzed the change report and understand the steps you must perform to manually transfer any objects or data required in the new database. If you are not sure, click the **Save Action Report** button to save the change report and the **Save Scripts** button to save the Transact-SQL script, then click **Cancel**. Analyze the report and script, and then plan how to transfer any required objects and data after the upgrade completes, then restart the wizard.  
   
- **Save Scripts** – saves the Transact-SQL statements that will be used to perform the upgrade to a text file.  
+ **Save Scripts** - saves the Transact-SQL statements that will be used to perform the upgrade to a text file.  
   
  **Restore Defaults** - Returns the option to its default setting of false.  
   

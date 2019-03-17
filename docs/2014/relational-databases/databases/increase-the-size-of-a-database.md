@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], size"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "database size [SQL Server], increasing"
   - "size [SQL Server], databases"
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

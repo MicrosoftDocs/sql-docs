@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ColPattern [XML in SQL Server]"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "element-centric mapping [SQL Server]"
   - "edge tables"
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "configmgr-client"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.computermgr.cert.general.f1"
 helpviewer_keywords: 
   - "MSSQLSERVER property protocols"
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

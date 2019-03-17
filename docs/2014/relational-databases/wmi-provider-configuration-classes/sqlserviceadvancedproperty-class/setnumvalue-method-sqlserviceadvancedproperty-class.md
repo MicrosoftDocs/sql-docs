@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "SetNumValue Method (SqlServiceAdvancedProperty Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "SetNumValue method"
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -55,6 +50,6 @@ NumValue
  The property value type must be numeric to be able to set the property to a numeric value.  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_syscollector_get_execution_details_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_syscollector_get_execution_details function"
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

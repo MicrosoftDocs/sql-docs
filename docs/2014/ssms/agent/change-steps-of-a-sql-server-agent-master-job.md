@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -53,13 +50,13 @@ manager: craigg
   
 4.  Right-click the job where you want to modify steps and select **Properties**.  
   
-5.  In the **Job Properties –***job_name* dialog box, under **Select a page**, select **Steps**.  
+5.  In the **Job Properties -**_job_name_ dialog box, under **Select a page**, select **Steps**.  
   
-6.  Click **Edit** to open the **Job Step Properties –***job_step_name* dialog box. For more information on the available options in this dialog box, see [Job Step Properties: New Job Step &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md) and [Job Step Properties: New Job Step &#40;Advanced Page&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Click **Edit** to open the **Job Step Properties -**_job_step_name_ dialog box. For more information on the available options in this dialog box, see [Job Step Properties: New Job Step &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md) and [Job Step Properties: New Job Step &#40;Advanced Page&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  When finished, click **OK**.  
   
-8.  In the **Job Properties –***job_name* dialog box, click **OK**.  
+8.  In the **Job Properties -**_job_name_ dialog box, click **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

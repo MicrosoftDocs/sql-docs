@@ -4,7 +4,6 @@ ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: subscriptions
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -31,7 +30,7 @@ ms.author: maghan
   
 -   **Web portal:** On the Site Settings page Shared Schedules page, review the values in the Last Run date, Next Run date, and Status fields. If a schedule no longer runs because it has expired, the expiration date appears in the Status field. For more information, see [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
   
--   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Viewing the Reports page of a given Shared Schedule. This page lists all reports and shared datasets that use the shared schedule. For more informaiton, see [Reporting Services in SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Viewing the Reports page of a given Shared Schedule. This page lists all reports and shared datasets that use the shared schedule. For more informaiton, see [Reporting Services in SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
   
 -  **Logs:** Viewing the report execution log files or trace logs to determine whether reports have been run at the times specified by the schedule. For more information, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   

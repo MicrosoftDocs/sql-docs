@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_query_store_flush_db_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.sp_query_store_flush_db"
   - "sp_query_store_flush_db"
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg

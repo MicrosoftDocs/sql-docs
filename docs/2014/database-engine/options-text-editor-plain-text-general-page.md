@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Text_Editor.Plain_Text.General"
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
 manager: craigg

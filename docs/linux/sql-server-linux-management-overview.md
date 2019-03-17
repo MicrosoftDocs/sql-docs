@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: "sql-linux"
@@ -27,9 +25,9 @@ The **mssql-conf** tool configures SQL Server on Linux. For more information, se
 
 Almost everything you can do in a client tool can also be accomplished with Transact-SQL statements. SQL Server provides [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) that query the status and configuration of SQL Server. There are also [Transact-SQL commands](../t-sql/language-reference.md) for database management tasks. You can run these commands in any client tool that supports connecting to SQL Server and running Transact-SQL queries, for example [sqlcmd](sql-server-linux-setup-tools.md) or [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## Azure Data Studio (preview)
+## Azure Data Studio
 
-The new Azure Data Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [Azure Data Studio (preview)](../azure-data-studio/what-is.md).
+The new Azure Data Studio is a cross-platform tool for managing SQL Server. For more information, see [Azure Data Studio](../azure-data-studio/what-is.md).
 
 ## SQL Server Management Studio on Windows
 

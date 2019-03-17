@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
   - "scenario analysis"
   - "goal seek scenario"
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -24,7 +21,7 @@ manager: craigg
   
  The **Goal Seek** scenario tool is complementary to the [What If](what-if-scenario-table-analysis-tools-for-excel.md) scenario tool. The **What-If** tool tells you the impact of making a change, whereas the **Goal Seek** tool tells you the underlying factors that must change to achieve a desired result.  
   
- For example, let’s say your goal is to increase customer satisfaction. You can use **Goal Seek** analysis to determine which factors would be most likely to increase customer satisfaction, and decide whether those changes are cost-effective.  
+ For example, let's say your goal is to increase customer satisfaction. You can use **Goal Seek** analysis to determine which factors would be most likely to increase customer satisfaction, and decide whether those changes are cost-effective.  
   
  When the tool finishes its analysis, it creates two new columns in the source data table. These columns show the *likelihood* that the targeted outcome can be achieved, and the recommended change, if any.  
   

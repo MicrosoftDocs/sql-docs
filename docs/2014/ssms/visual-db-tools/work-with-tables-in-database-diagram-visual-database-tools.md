@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], tables"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "tables [SQL Server], database diagrams"
   - "database diagrams [SQL Server], Table Designer"
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dmmtrainingtransformation.columns.f1"
 helpviewer_keywords: 
   - "Data Mining Model Training Editor"
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
-caps.latest.revision: 21
 author: douglaslms
 ms.author: douglasl
 manager: craigg

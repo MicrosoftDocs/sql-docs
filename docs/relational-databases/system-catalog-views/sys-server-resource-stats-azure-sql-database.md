@@ -2,13 +2,8 @@
 title: "sys.server_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2018"
-ms.prod: ""
-ms.prod_service: "sql-database"
-ms.component: 
+ms.service: sql-database
 ms.reviewer: carlrab, edmaca
-ms.suite: "sql"
-ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "resource_stats"
@@ -46,7 +41,7 @@ The **sys.server_resource_stats** view has different definitions depending on th
 |virtual_core_count|int|Represents number of virtual cores per instance (8, 16 or 24 in Public Preview)|
 |avg_cpu_percent|decimal(5,2)|Average compute utilization in percentage of the limit of the Managed Instance service tier utilized by the instance. It is calculated as sum of CPU time of all resource pools for all databases in the instance and divided by available CPU time for that tier in the given interval.|
 |reserved_storage_mb|bigint|Reserved storage per instance (amount of storage space that customer purchased for the managed instance)|
-|storage_space_used_mb|decimal(18,2)|Storage used by all managed instance databases’ files (including both user and system databases)|
+|storage_space_used_mb|decimal(18,2)|Storage used by all managed instance databases' files (including both user and system databases)|
 |io_request|bigint|Total number of i/o physical operations within the interval|
 |io_bytes_read|bigint|Number of physical bytes read within the interval|
 |io_bytes_written|bigint|Number of physical bytes written within the interval|

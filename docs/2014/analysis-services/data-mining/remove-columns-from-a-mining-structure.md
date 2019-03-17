@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], columns"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "deleting columns"
   - "columns [data mining], mining structure columns"
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

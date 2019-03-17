@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executesqlserveragentjobtask.f1"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "jobs [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

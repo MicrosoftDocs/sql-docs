@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unattended data refresh [Analysis Services with SharePoint]"
   - "scheduled data refresh [Analysis Services with SharePoint]"
   - "data refresh [Analysis Services with SharePoint]"
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -93,7 +90,7 @@ manager: craigg
   
 15. Click **OK**.  
   
- Audit logging of Store Service operations, which is useful for troubleshooting purposes, must be enabled before it is available. For more information about how to enable logging, see [Configure Secure Store Service (SharePoint 2010)](http://go.microsoft.com/fwlink/p/?LinkID=223294).  
+ Audit logging of Store Service operations, which is useful for troubleshooting purposes, must be enabled before it is available. For more information about how to enable logging, see [Configure Secure Store Service (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294).  
   
 ##  <a name="bkmk_creds"></a> Step 2: Turn off credential options that you do not want to support  
  PowerPivot data refresh provides three credential options in a data refresh schedule. When a workbook owner schedules data refresh, he or she chooses one of these options, thereby determining the account under which the data refresh job runs. As an administrator, you can determine which credential options are available to schedule owners.  
@@ -108,7 +105,7 @@ manager: craigg
   
  Option 3, **Connect using the credentials saved in Secure Store Service**, always appears on the page, but only works when a schedule owner provides a valid target application. An administrator must create these target applications in advance and then provide the application name to those who create the data refresh schedules. For more information on how to create a target application for data refresh operations, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
- **Configuring credential option 2, “Connect using the following Windows user credentials”**  
+ **Configuring credential option 2, "Connect using the following Windows user credentials"**  
   
  PowerPivot service application includes a credential option that allows schedule owners to enter an arbitrary Windows user name and password for running a data refresh job. This is the second credential option in the schedule definition page:  
   
@@ -116,11 +113,11 @@ manager: craigg
   
  This credential option is enabled by default. When this credential option is enabled, PowerPivot System Service will generate a target application in Secure Store Service to store the user name and password entered by the schedule owner. A generated target application is created using this naming convention: PowerPivotDataRefresh_\<guid>. One target application is created for each set of Windows credentials. If a target application already exists that is owned by the PowerPivot System Service and stores the username and password entered by the person defining the schedule, PowerPivot System Service will use that target application rather than create a new one.  
   
- The primary advantage of using this credential option is ease of use and simplicity. Advance work is minimal because target applications are created for you. Also, running data refresh under the credentials of the schedule owner (who is most likely the person who created the workbook) simplifies permission requirements downstream. Most likely, this user already has permissions on the target database. When data refresh runs under this person’s Windows user identity, any data connections that specify ‘current user’ will work automatically.  
+ The primary advantage of using this credential option is ease of use and simplicity. Advance work is minimal because target applications are created for you. Also, running data refresh under the credentials of the schedule owner (who is most likely the person who created the workbook) simplifies permission requirements downstream. Most likely, this user already has permissions on the target database. When data refresh runs under this person's Windows user identity, any data connections that specify 'current user' will work automatically.  
   
  The disadvantage is limited management capability. Although target applications are created automatically, they are not deleted automatically or updated as account information changes. Password expiration policies might cause these target applications to become out of date. Data refresh jobs that use expired credentials will start to fail. When this occurs, schedule owners will need to update their credentials by providing current user name and password values in a data refresh schedule. A new target application will be created at that point. Over time, as users add and revise credential information in their data refresh schedules, you might find that you have a large number of auto-generated target applications on your system.  
   
- Currently, there is no way to determine which of these target applications are active or inactive, nor is there a way to trace a specific target application back to the data refresh schedules that use it. In general, you should leave the target applications alone, as deleting them might break existing data refresh schedules. Deleting a target application that is still in use will cause data refresh to fail with the message, “Target application not found”, appearing in the data refresh history page of the workbook.  
+ Currently, there is no way to determine which of these target applications are active or inactive, nor is there a way to trace a specific target application back to the data refresh schedules that use it. In general, you should leave the target applications alone, as deleting them might break existing data refresh schedules. Deleting a target application that is still in use will cause data refresh to fail with the message, "Target application not found", appearing in the data refresh history page of the workbook.  
   
  Should you choose to disable this credential option, you can safely delete all of the target applications that were generated for PowerPivot data refresh.  
   
@@ -160,7 +157,7 @@ manager: craigg
  Remember that SharePoint servers are 64-bit applications. Be sure to install the 64-bit version of the data providers you are using to support data refresh operations.  
   
 ##  <a name="bkmk_accounts"></a> Step 6: Grant permissions to create schedules and access external data sources  
- Workbook owners or authors must have **Contribute** permission to schedule data refresh on a workbook. Given this permission level, he or she can open and edit the workbook’s data refresh configuration page to specify the credentials and schedule information used to refresh the data.  
+ Workbook owners or authors must have **Contribute** permission to schedule data refresh on a workbook. Given this permission level, he or she can open and edit the workbook's data refresh configuration page to specify the credentials and schedule information used to refresh the data.  
   
  In addition to SharePoint permissions, database permissions on external data sources must also be reviewed to ensure that accounts used during data refresh have sufficient access rights to the data. Determining permission requirements will require careful evaluation on your part because the permissions that you need to grant will vary depending on the connection string in the workbook and the user identity under which the data refresh job is running.  
   
@@ -168,11 +165,11 @@ manager: craigg
   
  When data refresh runs, the server sends a connection request to the external data source using the connection string that was created when the data was originally imported. The server location, database name, and authentication parameters specified in that connection string are now reused during data refresh to access the same data sources. The connection string and its overall construction cannot be modified for data refresh purposes. It is simply reused as-is during data refresh. In some cases, if you are using non-Windows authentication to connect to a data source, you can override the user name and password in the connection string. More detail about this is provided further on in this topic.  
   
- For most workbooks, the default authentication option on the connection is to use trusted connections or Windows integrated security, resulting in connection strings that include `SSPI=IntegratedSecurity` or `SSPI=TrustedConnection`. When this connection string is used during data refresh, the account used to run the data refresh job becomes the ‘current user’. As such, this account needs read permissions on any external data source that is accessed via a trusted connection.  
+ For most workbooks, the default authentication option on the connection is to use trusted connections or Windows integrated security, resulting in connection strings that include `SSPI=IntegratedSecurity` or `SSPI=TrustedConnection`. When this connection string is used during data refresh, the account used to run the data refresh job becomes the 'current user'. As such, this account needs read permissions on any external data source that is accessed via a trusted connection.  
   
  **Did you enable the PowerPivot unattended data refresh account?**  
   
- If yes, then you should grant that account read permissions on data sources that are accessed during data refresh. The reason why this account needs read permissions is because in a workbook that uses the default authentication options, the unattended account will be the ‘current user’ during data refresh. Unless the schedule owner overrides the credentials in the connection string, this account will need read permissions on any number of data sources that are actively used in your organization.  
+ If yes, then you should grant that account read permissions on data sources that are accessed during data refresh. The reason why this account needs read permissions is because in a workbook that uses the default authentication options, the unattended account will be the 'current user' during data refresh. Unless the schedule owner overrides the credentials in the connection string, this account will need read permissions on any number of data sources that are actively used in your organization.  
   
  **Are you using credential option 2: allowing the schedule owner to enter a Windows user name and password?**  
   
@@ -232,7 +229,7 @@ manager: craigg
   
  Be sure to try all of the credential options you plan to support. For example, if you configured the PowerPivot unattended data refresh account, verify that data refresh succeeds using that option. For more information about scheduling and viewing status information, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md) and [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
- If data refresh fails, refer to the [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkID=223279) page on the TechNet wiki for possible solutions.  
+ If data refresh fails, refer to the [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/?LinkID=223279) page on the TechNet wiki for possible solutions.  
   
 ##  <a name="bkmk_config"></a> Modify Configuration Settings for Data Refresh  
  Each PowerPivot service application has configuration settings that affect data refresh operations. This section explains how to modify those settings.  

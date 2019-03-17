@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -44,9 +41,9 @@ SELECT * FROM $System.<schemaRowset>
  DMV queries are an alternative to running XML/A Discover commands. For most administrators, writing a DMV query is simpler because the query syntax is based on SQL. In addition, the result set is returned in a tabular format that is easier to read and copy from.  
   
 ##  <a name="bkmk_ex"></a> Examples and Scenarios  
- A DMV query can help you answer questions about active sessions and connections, and which objects are consuming the most CPU or memory at a specific point in time. This section provides examples for scenarios where DMV queries are most commonly used. You can also review the [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) for additional insights into using DMV queries to monitor a server instance.  
+ A DMV query can help you answer questions about active sessions and connections, and which objects are consuming the most CPU or memory at a specific point in time. This section provides examples for scenarios where DMV queries are most commonly used. You can also review the [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) for additional insights into using DMV queries to monitor a server instance.  
   
- `Select * from $System.discover_object_activity` /** This query reports on object activity since the service last started. For example queries based on this DMV, see [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
+ `Select * from $System.discover_object_activity` /** This query reports on object activity since the service last started. For example queries based on this DMV, see [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
   
  `Select * from $System.discover_object_memory_usage` /** This query reports on memory consumption by object.  
   
@@ -96,73 +93,73 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  If a DMV is not available for a given rowset, the server returns the following error: “The \<schemarowset> request type was not recognized by the server". All other errors point to problems with the syntax.  
+>  If a DMV is not available for a given rowset, the server returns the following error: "The \<schemarowset> request type was not recognized by the server". All other errors point to problems with the syntax.  
   
 |Rowset|Description|  
 |------------|-----------------|  
-|[DBSCHEMA_CATALOGS Rowset](../schema-rowsets/ole-db/dbschema-catalogs-rowset.md)|Returns a list of the Analysis Services databases on the current connection.|  
-|[DBSCHEMA_COLUMNS Rowset](../schema-rowsets/ole-db/dbschema-columns-rowset.md)|Returns a list of all the columns in the current database. You can use this list to construct a DMV query.|  
-|[DBSCHEMA_PROVIDER_TYPES Rowset](../schema-rowsets/ole-db/dbschema-provider-types-rowset.md)|Returns properties about the base data types supported by the OLE DB data provider.|  
-|[DBSCHEMA_TABLES Rowset](../schema-rowsets/ole-db/dbschema-tables-rowset.md)|Returns a list of all the tables in the current database. You can use this list to construct a DMV query.|  
-|[DISCOVER_CALC_DEPENDENCY Rowset](../schema-rowsets/xml/discover-calc-dependency-rowset.md)|Returns a list of the columns and tables used in a model that have dependencies on other columns and tables.|  
-|[DISCOVER_COMMAND_OBJECTS Rowset](../schema-rowsets/xml/discover-command-objects-rowset.md)|Provides resource usage and activity information about objects in use by the referenced command.|  
-|[DISCOVER_COMMANDS Rowset](../schema-rowsets/xml/discover-commands-rowset.md)|Provides resource usage and activity information about currently executing command.|  
-|[DISCOVER_CONNECTIONS Rowset](../schema-rowsets/xml/discover-connections-rowset.md)|Provides resource usage and activity information about open connections to Analysis Services.|  
-|[DISCOVER_CSDL_METADATA Rowset](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)|Returns information about a tabular model.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
-|[DISCOVER_DB_CONNECTIONS Rowset](../schema-rowsets/xml/discover-db-connections-rowset.md)|Provides resource usage and activity information about open connections from Analysis Services to external data sources, for example during processing or importing.|  
-|[DISCOVER_DIMENSION_STAT Rowset](../schema-rowsets/xml/discover-dimension-stat-rowset.md)|Returns the attributes in a dimension or columns in a table, depending on the model type.|  
-|[DISCOVER_ENUMERATORS Rowset](../schema-rowsets/xml/discover-enumerators-rowset.md)|Returns metadata about the enumerators supported for a specific data source.|  
-|[DISCOVER_INSTANCES Rowset](../schema-rowsets/ole-db-olap/discover-instances-rowset.md)|Returns information about the specified instance.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
-|[DISCOVER_JOBS Rowset](../schema-rowsets/xml/discover-jobs-rowset.md)|Returns information about current jobs.|  
-|[DISCOVER_KEYWORDS Rowset &#40;XMLA&#41;](../schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Returns the list of reserved keywords.|  
-|[DISCOVER_LITERALS Rowset](../schema-rowsets/xml/discover-literals-rowset.md)|Returns the list of literals, including data types and values, supported by XMLA.|  
-|[DISCOVER_LOCKS Rowset](../schema-rowsets/xml/discover-locks-rowset.md)|Returns a snapshot of the locks used at a specific point in time.|  
-|[DISCOVER_MEMORYGRANT Rowset](../schema-rowsets/xml/discover-memorygrant-rowset.md)|Returns information about memory allocated by Analysis Services at start up.|  
-|[DISCOVER_MEMORYUSAGE Rowset](../schema-rowsets/xml/discover-memoryusage-rowset.md)|Shows memory usage by specific objects.|  
-|[DISCOVER_OBJECT_ACTIVITY Rowset](../schema-rowsets/xml/discover-object-activity-rowset.md)|Reports on object activity since the service last started.|  
-|[DISCOVER_OBJECT_MEMORY_USAGE Rowset](../schema-rowsets/xml/discover-object-memory-usage-rowset.md)|Reports on memory consumption by object.|  
-|[DISCOVER_PARTITION_DIMENSION_STAT Rowset](../schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Provides information about the attributes in a dimension.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
-|[DISCOVER_PARTITION_STAT Rowset](../schema-rowsets/xml/discover-partition-stat-rowset.md)|Provides information about the partitions in a dimension, table, or measure group.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
-|[DISCOVER_PERFORMANCE_COUNTERS Rowset](../schema-rowsets/xml/discover-performance-counters-rowset.md)|Lists the columns used in a performance counter.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
-|[DISCOVER_PROPERTIES Rowset](../schema-rowsets/xml/discover-properties-rowset.md)|Returns information about properties supported by XMLA for the specified data source.|  
-|[DISCOVER_SCHEMA_ROWSETS Rowset](../schema-rowsets/xml/discover-schema-rowsets-rowset.md)|Returns names, restrictions, description and other information for all enumeration values supported by XMLA.|  
-|[DISCOVER_SESSIONS Rowset](../schema-rowsets/xml/discover-sessions-rowset.md)|Reports on active sessions, including session user and duration.|  
-|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS Rowset](../schema-rowsets/xml/discover-storage-table-column-segments-rowset.md)|Provides information at the column and segment level about storage tables used by an Analysis Services database running in Tabular or SharePoint mode.|  
-|[DISCOVER_STORAGE_TABLE_COLUMNS Rowset](../schema-rowsets/xml/discover-storage-table-columns-rowset.md)|Allows the client to determine the assignment of columns to storage tables used by an Analysis Services database running in Tabular or SharePoint mode.|  
-|[DISCOVER_STORAGE_TABLES Rowset](../schema-rowsets/xml/discover-storage-tables-rowset.md)|Returns information about the tables used for storage of models in a Tabular model database.|  
-|[DISCOVER_TRACE_COLUMNS Rowset](../schema-rowsets/xml/discover-trace-columns-rowset.md)|Returns an XML description of the columns available in a trace.|  
-|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO Rowset](../schema-rowsets/xml/discover-trace-definition-providerinfo-rowset.md)|Returns name and version information of the provider.|  
-|[DISCOVER_TRACE_EVENT_CATEGORIES Rowset](../schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Returns a list of available categories.|  
-|[DISCOVER_TRACES Rowset](../schema-rowsets/xml/discover-traces-rowset.md)|Returns a list of traces actively running on the current connection.|  
-|[DISCOVER_TRANSACTIONS Rowset](../schema-rowsets/xml/discover-transactions-rowset.md)|Returns a list of transactions actively running on the current connection.|  
+|[DBSCHEMA_CATALOGS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Returns a list of the Analysis Services databases on the current connection.|  
+|[DBSCHEMA_COLUMNS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Returns a list of all the columns in the current database. You can use this list to construct a DMV query.|  
+|[DBSCHEMA_PROVIDER_TYPES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-provider-types-rowset)|Returns properties about the base data types supported by the OLE DB data provider.|  
+|[DBSCHEMA_TABLES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Returns a list of all the tables in the current database. You can use this list to construct a DMV query.|  
+|[DISCOVER_CALC_DEPENDENCY Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Returns a list of the columns and tables used in a model that have dependencies on other columns and tables.|  
+|[DISCOVER_COMMAND_OBJECTS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Provides resource usage and activity information about objects in use by the referenced command.|  
+|[DISCOVER_COMMANDS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Provides resource usage and activity information about currently executing command.|  
+|[DISCOVER_CONNECTIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Provides resource usage and activity information about open connections to Analysis Services.|  
+|[DISCOVER_CSDL_METADATA Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Returns information about a tabular model.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
+|[DISCOVER_DB_CONNECTIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Provides resource usage and activity information about open connections from Analysis Services to external data sources, for example during processing or importing.|  
+|[DISCOVER_DIMENSION_STAT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-dimension-stat-rowset)|Returns the attributes in a dimension or columns in a table, depending on the model type.|  
+|[DISCOVER_ENUMERATORS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|Returns metadata about the enumerators supported for a specific data source.|  
+|[DISCOVER_INSTANCES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|Returns information about the specified instance.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
+|[DISCOVER_JOBS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|Returns information about current jobs.|  
+|[DISCOVER_KEYWORDS Rowset &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|Returns the list of reserved keywords.|  
+|[DISCOVER_LITERALS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|Returns the list of literals, including data types and values, supported by XMLA.|  
+|[DISCOVER_LOCKS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|Returns a snapshot of the locks used at a specific point in time.|  
+|[DISCOVER_MEMORYGRANT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|Returns information about memory allocated by Analysis Services at start up.|  
+|[DISCOVER_MEMORYUSAGE Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memoryusage-rowset)|Shows memory usage by specific objects.|  
+|[DISCOVER_OBJECT_ACTIVITY Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-activity-rowset)|Reports on object activity since the service last started.|  
+|[DISCOVER_OBJECT_MEMORY_USAGE Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-memory-usage-rowset)|Reports on memory consumption by object.|  
+|[DISCOVER_PARTITION_DIMENSION_STAT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-dimension-stat-rowset)|Provides information about the attributes in a dimension.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
+|[DISCOVER_PARTITION_STAT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-stat-rowset)|Provides information about the partitions in a dimension, table, or measure group.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
+|[DISCOVER_PERFORMANCE_COUNTERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-performance-counters-rowset)|Lists the columns used in a performance counter.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
+|[DISCOVER_PROPERTIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-properties-rowset)|Returns information about properties supported by XMLA for the specified data source.|  
+|[DISCOVER_SCHEMA_ROWSETS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-schema-rowsets-rowset)|Returns names, restrictions, description and other information for all enumeration values supported by XMLA.|  
+|[DISCOVER_SESSIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-sessions-rowset)|Reports on active sessions, including session user and duration.|  
+|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-column-segments-rowset)|Provides information at the column and segment level about storage tables used by an Analysis Services database running in Tabular or SharePoint mode.|  
+|[DISCOVER_STORAGE_TABLE_COLUMNS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-columns-rowset)|Allows the client to determine the assignment of columns to storage tables used by an Analysis Services database running in Tabular or SharePoint mode.|  
+|[DISCOVER_STORAGE_TABLES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-tables-rowset)|Returns information about the tables used for storage of models in a Tabular model database.|  
+|[DISCOVER_TRACE_COLUMNS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-columns-rowset)|Returns an XML description of the columns available in a trace.|  
+|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-definition-providerinfo-rowset)|Returns name and version information of the provider.|  
+|[DISCOVER_TRACE_EVENT_CATEGORIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-event-categories-rowset)|Returns a list of available categories.|  
+|[DISCOVER_TRACES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)|Returns a list of traces actively running on the current connection.|  
+|[DISCOVER_TRANSACTIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-transactions-rowset)|Returns a list of transactions actively running on the current connection.|  
 |[DISCOVER_XEVENT_TRACE_DEFINITION Rowset](../dev-guide/discover-xevent-trace-definition-rowset.md)|Returns a list of xevent traces actively running on the current connection.|  
-|[DMSCHEMA_MINING_COLUMNS Rowset](../schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Lists the individual columns of all mining models available on the current connection.|  
-|[DMSCHEMA_MINING_FUNCTIONS Rowset](../schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Returns a list of functions supported by the data mining algorithms on the server.|  
-|[DMSCHEMA_MINING_MODEL_CONTENT Rowset](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Returns a rowset consisting of columns that describe the current model.|  
-|[DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](../schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|Returns a rowset consisting of columns that describe the current model in PMML format.|  
-|[DMSCHEMA_MINING_MODEL_XML Rowset](../schema-rowsets/data-mining/dmschema-mining-model-xml-rowset.md)|Returns a rowset consisting of columns that describe the current model in PMML format.|  
-|[DMSCHEMA_MINING_MODELS Rowset](../schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|Returns a list of the mining models in the current database.|  
-|[DMSCHEMA_MINING_SERVICE_PARAMETERS Rowset](../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)|Returns a list of the parameters for the algorithms on the server.|  
-|[DMSCHEMA_MINING_SERVICES Rowset](../schema-rowsets/data-mining/dmschema-mining-services-rowset.md)|Provides a list of the data mining algorithms available on the server.|  
-|[DMSCHEMA_MINING_STRUCTURE_COLUMNS Rowset](../schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|Returns a list of all of the columns from all of the mining models available in the current connection.|  
-|[DMSCHEMA_MINING_STRUCTURES Rowset](../schema-rowsets/data-mining/dmschema-mining-structures-rowset.md)|Lists the mining structures available in the current connection.|  
-|[MDSCHEMA_CUBES Rowset](../schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|Returns information about the cubes that are defined in the current database.|  
-|[MDSCHEMA_DIMENSIONS Rowset](../schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|Returns information about the dimensions that are defined in the current database.|  
-|[MDSCHEMA_FUNCTIONS Rowset](../schema-rowsets/ole-db-olap/mdschema-functions-rowset.md)|Returns a list of functions available to client applications connected to the database.|  
-|[MDSCHEMA_HIERARCHIES Rowset](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)|Returns information about the hierarchies that are defined in the current database.|  
-|[MDSCHEMA_INPUT_DATASOURCES Rowset](../schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)|Returns information about the data source objects that are defined in the current database.|  
-|[MDSCHEMA_KPIS Rowset](../schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|Returns information about the KPIs that are defined in the current database.|  
-|[MDSCHEMA_LEVELS Rowset](../schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|Returns information about the levels within the hierarchies that are defined in the current database.|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset](../schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Lists the dimension of measure groups.|  
-|[MDSCHEMA_MEASUREGROUPS Rowset](../schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Returns a list of measure groups in the current connection.|  
-|[MDSCHEMA_MEASURES Rowset](../schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Returns a list of measures in the current connection.|  
-|[MDSCHEMA_MEMBERS Rowset](../schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Returns a list of all members in the current connection, listed by database, cube, and dimension.|  
-|[MDSCHEMA_PROPERTIES Rowset](../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Returns a fully qualified name of each property, along with property type, data type, and other metadata.|  
-|[MDSCHEMA_SETS Rowset](../schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Returns a list of set that are defined in the current connection.|  
+|[DMSCHEMA_MINING_COLUMNS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-columns-rowset)|Lists the individual columns of all mining models available on the current connection.|  
+|[DMSCHEMA_MINING_FUNCTIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-functions-rowset)|Returns a list of functions supported by the data mining algorithms on the server.|  
+|[DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)|Returns a rowset consisting of columns that describe the current model.|  
+|[DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|Returns a rowset consisting of columns that describe the current model in PMML format.|  
+|[DMSCHEMA_MINING_MODEL_XML Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-xml-rowset)|Returns a rowset consisting of columns that describe the current model in PMML format.|  
+|[DMSCHEMA_MINING_MODELS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-models-rowset)|Returns a list of the mining models in the current database.|  
+|[DMSCHEMA_MINING_SERVICE_PARAMETERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset)|Returns a list of the parameters for the algorithms on the server.|  
+|[DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)|Provides a list of the data mining algorithms available on the server.|  
+|[DMSCHEMA_MINING_STRUCTURE_COLUMNS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset)|Returns a list of all of the columns from all of the mining models available in the current connection.|  
+|[DMSCHEMA_MINING_STRUCTURES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structures-rowset)|Lists the mining structures available in the current connection.|  
+|[MDSCHEMA_CUBES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-cubes-rowset)|Returns information about the cubes that are defined in the current database.|  
+|[MDSCHEMA_DIMENSIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset)|Returns information about the dimensions that are defined in the current database.|  
+|[MDSCHEMA_FUNCTIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-functions-rowset)|Returns a list of functions available to client applications connected to the database.|  
+|[MDSCHEMA_HIERARCHIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)|Returns information about the hierarchies that are defined in the current database.|  
+|[MDSCHEMA_INPUT_DATASOURCES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Returns information about the data source objects that are defined in the current database.|  
+|[MDSCHEMA_KPIS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Returns information about the KPIs that are defined in the current database.|  
+|[MDSCHEMA_LEVELS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Returns information about the levels within the hierarchies that are defined in the current database.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Lists the dimension of measure groups.|  
+|[MDSCHEMA_MEASUREGROUPS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Returns a list of measure groups in the current connection.|  
+|[MDSCHEMA_MEASURES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Returns a list of measures in the current connection.|  
+|[MDSCHEMA_MEMBERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Returns a list of all members in the current connection, listed by database, cube, and dimension.|  
+|[MDSCHEMA_PROPERTIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Returns a fully qualified name of each property, along with property type, data type, and other metadata.|  
+|[MDSCHEMA_SETS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Returns a list of set that are defined in the current connection.|  
   
 ## See Also  
- [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [New SYSTEMRESTRICTEDSCHEMA Function for Restricted Rowsets and DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [New SYSTEMRESTRICTEDSCHEMA Function for Restricted Rowsets and DMVs](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

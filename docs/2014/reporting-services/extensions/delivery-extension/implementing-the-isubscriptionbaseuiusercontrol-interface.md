@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "user controls [Reporting Services]"
   - "ISubscriptionBaseUIUserControl interface"
   - "delivery extensions [Reporting Services], user controls"
 ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Implementing the ISubscriptionBaseUIUserControl Interface for a Delivery Extension
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extensions can contain an implementation of a subscription user interface (UI) for gathering extension-specific information in Report Manager. The UI is invoked when a user creates a new subscription or modifies an existing one. When a new subscription is being created, the UI displays suitable default values and enables users to interact with the delivery provider. When a subscription is being modified, the UI is pre-populated with the information in the current subscription.  
@@ -32,7 +29,7 @@ manager: craigg
   
  The <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> interface extends <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Your user control that implements <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> must also inherit from **System.Web.UI.WebControls.WebControl**. For more information about the **WebControl** class, see your [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Developer's Guide.  
   
- For an example of how to use the <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> interface, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For an example of how to use the <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> interface, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Implementing a Delivery Extension](implementing-a-delivery-extension.md)   

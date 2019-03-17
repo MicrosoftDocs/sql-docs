@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "FormattedValue property [ADO MD]"
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

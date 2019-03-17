@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "09/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "import-export"
 ms.reviewer: "douglasl"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: data-movement
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.importflatfile.f1"

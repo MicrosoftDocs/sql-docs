@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hash indexes"
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg

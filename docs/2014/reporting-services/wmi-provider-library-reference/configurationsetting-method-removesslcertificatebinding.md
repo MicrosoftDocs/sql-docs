@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RemoveSSLCertificateBindings method"
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)
   Removes an SSL Certificate binding.  

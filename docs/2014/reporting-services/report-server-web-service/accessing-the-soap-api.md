@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML Web service [Reporting Services], WSDL"
@@ -22,10 +20,9 @@ helpviewer_keywords:
   - "Report Server Web service, WSDL"
   - "referencing WSDL"
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Accessing the SOAP API
   The Report Server Web service uses Simple Object Access Protocol (SOAP) over HTTP and acts as a communications interface between client programs and the report server. The Web service provides two endpoints - one for report execution and one for report management - and consists of methods and a set of complex type objects that you can use to access the complete functionality of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To call the service, you must reference the Reporting Services Web Services Description Language (WSDL).  

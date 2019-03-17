@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC escape sequences [ODBC], LIKE"
   - "LIKE escape sequence [ODBC]"
   - "escape sequences [ODBC], LIKE"
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

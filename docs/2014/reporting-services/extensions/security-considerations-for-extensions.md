@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "security [Reporting Services], extensions"
   - "extensions [Reporting Services], security"
   - "permissions [Reporting Services], extensions"
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Security Considerations for Extensions
   Every application that targets the common language runtime (CLR) must interact with the CLR security system. When such an application runs, it is automatically evaluated and given a set of permissions by the CLR. Depending on the permissions that the application receives, it either continues running or generates a security exception. The local security settings and policies in the security policy configuration files for a particular report server define the code permissions that an assembly receives.  

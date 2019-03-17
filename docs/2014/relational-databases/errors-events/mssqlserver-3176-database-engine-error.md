@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "3176 (Database Engine error)"
 ms.assetid: 4be24c64-2d52-4cb4-b4d7-36efbe4555b6
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

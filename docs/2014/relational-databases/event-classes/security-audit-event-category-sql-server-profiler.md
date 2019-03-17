@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "event classes [SQL Server], Security Audit event category"
   - "SQL Server event classes, Security Audit event category"
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg

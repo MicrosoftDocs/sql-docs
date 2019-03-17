@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.SQLEDITOR"
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
-caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

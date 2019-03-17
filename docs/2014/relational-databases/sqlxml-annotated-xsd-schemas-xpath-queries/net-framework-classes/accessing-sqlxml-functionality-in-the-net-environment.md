@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Managed Classes [SQLXML], accessing SQLXML functionality"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "DiffGrams [SQLXML], accessing SQLXML functionality"
   - ".NET Framework [SQLXML], accessing SQLXML functionality"
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

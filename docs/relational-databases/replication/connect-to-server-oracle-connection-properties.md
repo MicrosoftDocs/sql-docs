@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.oracleconnection.connectionprops.f1"
 helpviewer_keywords: 
   - "Connect to Server dialog box, replication"
 ms.assetid: 1bb7396f-cbb2-4f88-b82b-543287ed4172
-caps.latest.revision: 16
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -12,8 +11,8 @@ helpviewer_keywords:
   - "concepts"
   - "terminology"
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Report Authoring Concepts (Report Builder and SSRS)
   This section briefly defines some key concepts used to describe paginated reports  in the Report Builder and Report Designer documentation. For definitions of specific words or terms, see the [Glossary &#40;Report Builder&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -35,6 +34,6 @@ ms.author: maggies
  Describes the ways to define and use report parameters, and how they are independently managed from the report definition on the report server.  
   
 ## See Also  
- [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

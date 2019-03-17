@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.alert.response.f1"
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -48,7 +45,7 @@ manager: craigg
  Displays the **New Operator** dialog box, which you can use to create a new operator.  
   
  **View operator**  
- Displays the **Properties** dialog box for the currently selected operator. You can view and modified operator properties on the the **Operator Properties** dialog box.  
+ Displays the **Properties** dialog box for the currently selected operator. You can view and modified operator properties on the **Operator Properties** dialog box.  
   
 ## See Also  
  [Alerts](alerts.md)   

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.importregisteredservers.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], importing"
   - "importing registered server information"
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

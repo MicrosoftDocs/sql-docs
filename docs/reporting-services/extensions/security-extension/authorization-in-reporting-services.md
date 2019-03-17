@@ -4,12 +4,9 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: extensions
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "authorization [Reporting Services]"
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530

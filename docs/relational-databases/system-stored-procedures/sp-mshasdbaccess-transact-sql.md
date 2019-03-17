@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_MShasdbaccess"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_MShasdbaccess"
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg

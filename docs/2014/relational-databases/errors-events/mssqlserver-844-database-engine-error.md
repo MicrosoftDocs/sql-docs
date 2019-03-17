@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "844 (Database Engine error)"
 ms.assetid: 2060c886-1226-4066-bc0c-de90a1cfb82b
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

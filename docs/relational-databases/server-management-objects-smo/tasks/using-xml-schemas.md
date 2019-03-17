@@ -1,26 +1,23 @@
 ---
 title: "Using XML Schemas | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2017"
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML [SMO]"
 ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
-caps.latest.revision: 41
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XML Schemas
+
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   XML programming in SMO is limited to providing XML data types, XML namespaces, and simple indexing on XML data type columns.  

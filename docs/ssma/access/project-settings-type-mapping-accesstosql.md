@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access data types"
   - "data types, default mappings"
@@ -19,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server data types"
   - "Type Mapping settings"
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -75,5 +69,5 @@ Click to reset all data type mappings to the SSMA defaults.
   
 ## See Also  
 [Mapping Source and Target Data Types](mapping-source-and-target-data-types-accesstosql.md)  
-[User Interface Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

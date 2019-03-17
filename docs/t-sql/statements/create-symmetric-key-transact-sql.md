@@ -5,9 +5,7 @@ ms.date: "09/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE SYMMETRIC KEY"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], creating"
   - "symmetric keys [SQL Server]"
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 72
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)

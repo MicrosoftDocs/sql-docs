@@ -35,11 +35,11 @@ ClusterDistance([<ClusterID expression>])
   
  In the case of the default EM clustering method, all the points inside the cluster are considered equally likely; therefore, by design there is no centroid for the cluster. The value of **ClusterDistance** between a particular case and a particular cluster *N* is calculated as follows:  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
  Or:  
   
- ClusterDistance(N) =1–ClusterProbability (N))  
+ ClusterDistance(N) =1-ClusterProbability (N))  
   
 ## Related Prediction Functions  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the following additional functions for querying clustering models:  
@@ -48,7 +48,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   Use the [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md) function to get the probability that a case belongs to a particular cluster. This value serves as the inverse of the cluster distance.  
   
--   Use the [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) function to return a histogram of the likelihood of the input case existing in each of the model’s clusters.  
+-   Use the [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) function to return a histogram of the likelihood of the input case existing in each of the model's clusters.  
   
 -   Use the [PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md) function to return a measure from 0 to 1 that indicates how likely an input case is to exist considering the model learned by the algorithm.  
   

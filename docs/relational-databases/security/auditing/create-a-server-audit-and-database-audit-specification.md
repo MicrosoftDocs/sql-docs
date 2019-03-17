@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlaudit.dbaudit.general.f1"
@@ -62,7 +60,7 @@ manager: craigg
   
 1.  In Object Explorer, expand the **Security** folder.  
   
-2.  Right-click the **Audits** folder and select **New Audit…**. For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Right-click the **Audits** folder and select **New Audit...**. For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  When you are finished selecting options, click **OK**.  
   
@@ -72,7 +70,7 @@ manager: craigg
   
 2.  Expand the **Security** folder.  
   
-3.  Right-click the **Database Audit Specifications** folder and select **New Database Audit Specification…**.  
+3.  Right-click the **Database Audit Specifications** folder and select **New Database Audit Specification...**.  
   
      The following options are available on the **Create Database Audit Specification** dialog box.  
   
@@ -91,13 +89,13 @@ manager: craigg
      **Object Name**  
      The name of the object to audit. This is only available for audit actions; it does not apply to audit groups.  
   
-     **Ellipsis (…)**  
+     **Ellipsis (...)**  
      Opens the **Select Objects** dialog to browse for and select an available object, based on the specified **Audit Action Type**.  
   
      **Principal Name**  
      The account to filter the audit by for the object being audited.  
   
-     **Ellipsis (…)**  
+     **Ellipsis (...)**  
      Opens the **Select Objects** dialog to browse for and select an available object, based on the specified **Object Name**.  
   
 4.  When you are finished selecting option, click **OK**.  

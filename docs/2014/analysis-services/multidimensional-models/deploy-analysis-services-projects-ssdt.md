@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deploy [Analysis Services]"
   - "projects [Analysis Services], deploying"
   - "Business Intelligence Development Studio, deploying projects [Analysis Services]"
 ms.assetid: 29490a5b-1573-4a35-9277-10c6a6e4ef0e
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

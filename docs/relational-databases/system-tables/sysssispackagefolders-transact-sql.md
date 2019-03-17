@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysdtspackagefolders90"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackagefolders system table"
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-caps.latest.revision: 22
-author: "douglasl"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # sysssispackagefolders (Transact-SQL)

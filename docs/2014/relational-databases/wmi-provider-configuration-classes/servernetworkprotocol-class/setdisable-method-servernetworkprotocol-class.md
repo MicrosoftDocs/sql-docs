@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "SetDisable Method (ServerNetworkProtocol Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "SetDisable method"
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -46,6 +41,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

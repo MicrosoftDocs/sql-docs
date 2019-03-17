@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_approlepassword"
@@ -40,10 +37,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+ [ **@rolename =** ] **'**_role_**'**  
  Is the name of the application role. *Role* is **sysname**, with no default. *role* must exist in the current database.  
   
- [ **@newpwd =** ] **'***password***'**  
+ [ **@newpwd =** ] **'**_password_**'**  
  Is the new password for the application role. *password* is **sysname**, with no default. *password* cannot be NULL.  
   
 > [!IMPORTANT]  

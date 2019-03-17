@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up databases [Analysis Services]"
   - "databases [Analysis Services], backing up"
 ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
 ## See Also  
  [Backup Database Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)   
- [Backup Element &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Backup Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
  [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

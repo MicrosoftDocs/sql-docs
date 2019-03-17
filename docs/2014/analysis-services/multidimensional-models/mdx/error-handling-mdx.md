@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [MDX], exceptions"
   - "exceptions [MDX]"
 ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

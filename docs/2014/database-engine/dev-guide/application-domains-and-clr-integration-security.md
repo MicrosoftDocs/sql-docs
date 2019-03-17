@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "security [CLR integration]"
   - "application domains [CLR integration]"
 ms.assetid: 54ee904e-e21a-4ee7-b4ad-a6f6f71bd473
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg

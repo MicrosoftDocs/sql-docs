@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "creating file attributes [Master Data Services]"
   - "attributes [Master Data Services], creating file attributes"
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg

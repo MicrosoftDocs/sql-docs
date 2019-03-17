@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "reference"
 helpviewer_keywords: 
   - "programming interfaces [SQL Server replication]"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], executables"
   - "command prompt [SQL Server replication]"
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -46,7 +41,7 @@ manager: craigg
  When invoking replication agents, you can use performance profiles to automatically pass a defined set of parameters to the agent executable. For more information, see [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## Examples  
- The following examples show how to invoke replication agents from the command prompt. Replication agents can also be invoked using Replication Management Objects (RMO). For more information, see [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-subscriptions-replication.md).  
+ The following examples show how to invoke replication agents from the command prompt. Replication agents can also be invoked using Replication Management Objects (RMO). For more information, see [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-data.md).  
   
 > [!NOTE]  
 >  Line breaks in these examples were added to improve readability. In a batch file, commands must be made in a single line.  

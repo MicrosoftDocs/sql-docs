@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_delete_collection_set_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_delete_collecton_set"
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

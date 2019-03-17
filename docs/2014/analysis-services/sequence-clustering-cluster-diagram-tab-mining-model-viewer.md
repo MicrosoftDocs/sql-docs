@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1"
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

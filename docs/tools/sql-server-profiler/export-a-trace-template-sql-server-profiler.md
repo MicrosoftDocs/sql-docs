@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [SQL Server], traces"
   - "trace templates [SQL Server]"
   - "exporting trace templates"
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

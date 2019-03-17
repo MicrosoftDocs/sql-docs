@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server replication], replication objects"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "scripts [SQL Server replication]"
   - "transactional replication, scripting"
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

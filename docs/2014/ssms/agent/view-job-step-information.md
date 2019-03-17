@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying job step information"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, viewing"
   - "viewing job step information"
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

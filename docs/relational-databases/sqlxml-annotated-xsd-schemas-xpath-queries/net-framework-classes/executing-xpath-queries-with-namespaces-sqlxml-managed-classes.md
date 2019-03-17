@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "namespaces property"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, executing XPath queries"
   - "namespaces [SQLXML], XPath queries"
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -48,14 +45,14 @@ manager: craigg
   
 5.  In **Connection String**, specify the Analysis Services server name, database name, cube name, and any optional settings.  
   
-     Connection String: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     Connection String: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  If there is more than one cube, you must specify a cube name.  
   
-     (Optional) Cubes can have perspectives that provide users a select view where only certain dimensions and/or measure groups are visible in the client. To specify a perspective, enter the perspective name as a value to the Cube property: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (Optional) Cubes can have perspectives that provide users a select view where only certain dimensions and/or measure groups are visible in the client. To specify a perspective, enter the perspective name as a value to the Cube property: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Optional) Cubes can have metadata and data translations specified for various languages within the model. In order to see the translations (data and metadata) you need to add the “Locale Identifier” property to the connection string: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (Optional) Cubes can have metadata and data translations specified for various languages within the model. In order to see the translations (data and metadata) you need to add the "Locale Identifier" property to the connection string: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  In **Credentials**, specify how the report server obtains credentials to access the external data source.  
   

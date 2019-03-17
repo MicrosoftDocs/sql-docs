@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
-caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -22,8 +19,8 @@ manager: craigg
 ## Best Practices Recommendations  
  Review the following Microsoft Knowledge Base articles for more information about how to troubleshoote this error:  
   
--   [Microsoft Knowledge Base article 259237](http://go.microsoft.com/fwlink/?linkid=117746)  
+-   [Microsoft Knowledge Base article 259237](https://go.microsoft.com/fwlink/?linkid=117746)  
   
--   [Microsoft Knowledge Base article 154690](http://go.microsoft.com/fwlink/?linkid=117747)  
+-   [Microsoft Knowledge Base article 154690](https://go.microsoft.com/fwlink/?linkid=117747)  
   
   

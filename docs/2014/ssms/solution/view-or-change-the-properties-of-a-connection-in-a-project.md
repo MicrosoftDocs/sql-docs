@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing connection properties"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "connections [SQL Server Management Studio], viewing"
   - "modifying connection properties"
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

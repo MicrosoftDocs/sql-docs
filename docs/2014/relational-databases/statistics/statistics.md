@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statistical information [SQL Server], query optimization"
@@ -36,7 +34,7 @@ manager: craigg
  Each statistics object is created on a list of one or more table columns and includes a histogram displaying the distribution of values in the first column. Statistics objects on multiple columns also store statistical information about the correlation of values among the columns. These correlation statistics, or *densities*, are derived from the number of distinct rows of column values. For more information about statistics objects, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
   
  Filtered Statistics  
- Filtered statistics can improve query performance for queries that select from well-defined subsets of data. Filtered statistics use a filter predicate to select the subset of data that is included in the statistics. Well-designed filtered statistics can improve the query execution plan compared with full-table statistics. For more information about the filter predicate, see [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql). For more information about when to create filtered statistics, see the [When to Create Statistics](#UpdateStatistics) section in this topic. For a case study, see the blog entry, [Using Filtered Statistics with Partitioned Tables](http://go.microsoft.com/fwlink/?LinkId=178505), on the SQLCAT Web site.  
+ Filtered statistics can improve query performance for queries that select from well-defined subsets of data. Filtered statistics use a filter predicate to select the subset of data that is included in the statistics. Well-designed filtered statistics can improve the query execution plan compared with full-table statistics. For more information about the filter predicate, see [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql). For more information about when to create filtered statistics, see the [When to Create Statistics](#UpdateStatistics) section in this topic. For a case study, see the blog entry, [Using Filtered Statistics with Partitioned Tables](https://go.microsoft.com/fwlink/?LinkId=178505), on the SQLCAT Web site.  
   
  Statistics Options  
  There are three options that you can set that affect when and how statistics are created and updated. These options are set at the database level only.  

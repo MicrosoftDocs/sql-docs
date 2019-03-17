@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships [SQL Server], many-to-many"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "mapping many-to-many relationships [SQL Server]"
   - "database diagrams [SQL Server], relationships"
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

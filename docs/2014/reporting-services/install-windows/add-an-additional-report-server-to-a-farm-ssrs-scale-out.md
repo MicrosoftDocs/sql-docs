@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Add an Additional Report Server to a Farm (SSRS Scale-out)
   Adding a second or more SharePoint mode report servers to your SharePoint farm can improve the performance and response time of the report server processing. If you find performance slowing down as you added more users, reports, and other applications to the report server, then adding additions report servers can improve performance. It is also recommended to add a second report server to increase the availability of report servers when there are issues with hardware or you are conducting general maintenance on individual servers in your environment. Starting with the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release, the steps to scale-out a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] environment in SharePoint mode follows standard SharePoint farm deployment and leverages the SharePoint load balancing features.  
@@ -72,7 +69,7 @@ manager: craigg
 |----------|--------------------------|  
 |Run the SharePoint 2010 Products Preparation Tool|You must have the SharePoint 2010 installation media. The preparation tool is **PrerequisiteInstaller.exe** on the installation media.|  
 |Install a SharePoint 2010 product.|1) Select the **Server Farm** installation type.<br /><br /> 2) Select **Complete** for the server type.<br /><br /> 3) When the installation is complete, do not run the SharePoint Products Configuration wizard if your existing SharePoint farm has SharePoint 2010 SP1 installed. You should install SharePoint SP1 before running the SharePoint products configuration wizard.|  
-|Install SharePoint Server 2010 SP1.|If your existing SharePoint farm has SharePoint 2010 SP1 installed download and install SharePoint 2010 SP1 from:[http://support.microsoft.com/kb/2460045](http://go.microsoft.com/fwlink/p/?linkID=219697).<br /><br /> For more information on SharePoint 2010 SP1, see [Known issues when you install Office 2010 SP1 and SharePoint 2010 SP1](http://support.microsoft.com/kb/2532126):|  
+|Install SharePoint Server 2010 SP1.|If your existing SharePoint farm has SharePoint 2010 SP1 installed download and install SharePoint 2010 SP1 from:[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697).<br /><br /> For more information on SharePoint 2010 SP1, see [Known issues when you install Office 2010 SP1 and SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126):|  
 |Run the SharePoint Products Configuration wizard to add the server to the farm.|1) In the **Microsoft SharePoint 2010 Products** program group, click **Microsoft SharePoint 2010 Products Configuration Wizard**.<br /><br /> 2) On the **Connect to a Server Farm** page select **Connect to an existing Farm** and click **Next**.<br /><br /> 3) On the **Specify Configuration Database Settings** page, type the name of the database server used for the existing farm and the name of the configuration database. Click **Next**.<br />**\*\* Important \*\*** If you see an error message similar to the following and you have verified you have permissions, then verify what protocols are enabled for the SQL Server Network Configuration in **Sql Server Configuration Manager**:"Failed to connect to the database server. Ensure the database exists , is a Sql Server, and that you have the appropriate permissions to access the server."<br />**\*\* Important \*\*** If you see the page **Server Farm Product and Patch Status**, you will need to review the information on the page and update the server with the needed files before you can proceed with joining the server to the farm.<br /><br /> 4) On the **Specify Farm Security Settings** page type your farm passphrase and click **Next**. Click **Next** on the confirmation page to run the wizard.<br /><br /> 5) Click **Next** to run the **Farm Configuration Wizard**.|  
 |Verify the server was added to the SharePoint farm.|1) In SharePoint Central Administration, click **Manage servers in this farm** in the **System Settings** group.<br /><br /> 2) Verify the new server is added and the status is correct.<br /><br /> 3) Note you do not see the service **SQL Server Reporting Services Service** running. The service will be installed in the next step.<br /><br /> 4) To remove this server from the WFE role, click **Manage services on server** and stop the service **Microsoft SharePoint Foundation Web Application**.|  
 |Install and configure Reporting Services SharePoint mode.|Run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation. For more information on the installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, see [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) If the server will only be used as an application server and the server will not be used as a WFE, you do not need to select **Reporting Services add-in for SharePoint products** on:<br /><br /> the **Setup Role** page, select **SQL Server Feature Installation**<br /><br /> the **Feature Selection** page, select **Reporting Services - SharePoint**<br /><br /> -OR-<br /><br /> the **Reporting Services Configuration**  page verify the **Install Only** option is selected for **Reporting Services SharePoint Mode**.|  
@@ -90,7 +87,7 @@ manager: craigg
  The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have \<IsWebServiceEnable> set to true. For more information, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
 ## See Also  
- [Add web or application servers to farms in SharePoint 2013](http://technet.microsoft.com/library/cc261752.aspx)   
- [Configure services (SharePoint Server 2010)](http://technet.microsoft.com/library/ee794878.aspx)  
+ [Add web or application servers to farms in SharePoint 2013](https://technet.microsoft.com/library/cc261752.aspx)   
+ [Configure services (SharePoint Server 2010)](https://technet.microsoft.com/library/ee794878.aspx)  
   
   

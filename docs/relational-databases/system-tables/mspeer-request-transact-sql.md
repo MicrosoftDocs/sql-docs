@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSpeer_request"
   - "MSpeer_request_TSQL"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_request system table"
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

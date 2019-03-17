@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up databases [SQL Server], full backups"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "database backups [SQL Server], SQL Server Management Studio"
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -359,7 +356,7 @@ $FileName = 'Sales.bak';
 $database = 'Sales';
 $BackupFile = $container + '/' + $FileName ;
   
-Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile $BackupFile;
+Backup-SqlDatabase -ServerInstance "MyServer" -Database $database -BackupFile $BackupFile;
 ```
  
  **To set up and use the SQL Server PowerShell provider**  
@@ -383,7 +380,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
 -   [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## See also  
-**[Troubleshooting SQL Server backup and restore operations](https://support.microsoft.com/en-us/kb/224071)**          
+**[Troubleshooting SQL Server backup and restore operations](https://support.microsoft.com/kb/224071)**          
 [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

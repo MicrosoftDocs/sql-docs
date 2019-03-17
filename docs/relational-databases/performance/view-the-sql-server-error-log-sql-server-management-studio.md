@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "09/29/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing logs"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "logs [SQL Server], SQL Server error logs"
   - "logs [SQL Server], viewing"
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
-caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # View the SQL Server error log (SQL Server Management Studio)

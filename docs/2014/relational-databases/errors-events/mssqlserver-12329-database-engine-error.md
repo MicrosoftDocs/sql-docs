@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "12329 (Database Engine error)"
 ms.assetid: 43f90287-36d5-46c2-ac91-a37202dcf6d3
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

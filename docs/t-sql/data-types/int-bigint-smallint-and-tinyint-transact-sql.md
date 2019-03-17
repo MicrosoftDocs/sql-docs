@@ -1,13 +1,11 @@
 ---
 title: "int, bigint, smallint, and tinyint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "9/8/2017"
+ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "bigint_TSQL"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "int data type"
   - "smallint data type"
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

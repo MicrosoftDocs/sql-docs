@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "4104 (Database Engine error)"
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

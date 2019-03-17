@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [SQL Server], Query Notifications event category"
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
-caps.latest.revision: 12
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

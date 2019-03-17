@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing job activity"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, viewing"
   - "displaying job activity"
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

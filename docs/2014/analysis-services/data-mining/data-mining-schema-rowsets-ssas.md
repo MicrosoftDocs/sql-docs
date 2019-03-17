@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "schema rowsets [Analysis Services], data mining"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "schema rowsets [Analysis Services], retrieving"
   - "data mining [Analysis Services], troubleshooting"
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

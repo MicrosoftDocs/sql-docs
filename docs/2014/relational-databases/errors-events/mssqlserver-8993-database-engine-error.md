@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "8993 (Database Engine error)"
 ms.assetid: 06aac110-a41c-4853-bc8e-a83e8535b8be
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cleanup_log_shipping_history_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cleanup_log_shipping_history"
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_marksubscriptionvalidation"
   - "sp_marksubscriptionvalidation_TSQL"
 helpviewer_keywords: 
   - "sp_marksubscriptionvalidation"
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -52,7 +45,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
  Is the name of the destination database. *destination_db* is **sysname**, with no default.  
   
  [ **@publisher=** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used for a publication that belongs to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -63,9 +56,9 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## Remarks  
  **sp_marksubscriptionvalidation** is used in transactional replication.  
   
- **sp_marksubscriptionvalidation** does not support non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ **sp_marksubscriptionvalidation** does not support non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
- For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, you cannot execute **sp_marksubscriptionvalidation** from within an explicit transaction. This is because explicit transactions are not supported over the linked server connection used to access the Publisher.  
+ For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, you cannot execute **sp_marksubscriptionvalidation** from within an explicit transaction. This is because explicit transactions are not supported over the linked server connection used to access the Publisher.  
   
  **sp_marksubscriptionvalidation** must be used together with [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), specifying a value of **1** for *subscription_level*, and can be used with other calls to **sp_marksubscriptionvalidation** to mark the current open transaction for other subscribers.  
   
@@ -107,6 +100,6 @@ commit tran
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

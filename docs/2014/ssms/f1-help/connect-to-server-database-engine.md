@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connectoserverunknownservertype.f1"
@@ -16,7 +14,6 @@ f1_keywords:
   - "sql12.swb.connecttoce.f1"
   - "sql12.swb.connecttoce.connectionproperties.f1"
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sp_helptrigger"
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg

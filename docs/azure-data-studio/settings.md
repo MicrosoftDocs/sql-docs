@@ -1,20 +1,18 @@
 ---
-title: Azure Data Studio User and Workspace Settings | Microsoft Docs
-description: How to modify Azure Data Studio User and Workspace Settings.
-ms.custom: "tools|sos"
+title: User and Workspace Settings
+titleSuffix: Azure Data Studio
+description: How to customize Azure Data Studio by modifying User and Workspace Settings.
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
 ---
-# User and Workspace Settings
+# Modify User and Workspace Settings
 
 It is easy to configure [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your liking through settings. Nearly every part of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s editor, user interface, and functional behavior has options you can modify.
 
@@ -41,9 +39,9 @@ Changes to settings are reloaded by [!INCLUDE[name-sos](../includes/name-sos-sho
 
 Depending on your platform, the user settings file is located here:
 
-* **Windows** `%APPDATA%\sqlops\User\settings.json`
-* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux** `$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
+* **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
 The workspace setting file is located under the `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` folder in your project.
 

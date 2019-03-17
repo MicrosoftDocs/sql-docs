@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report models [Reporting Services], creating"
   - "Report Manager [Reporting Services], model creation"
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create a Model Using Report Manager
   You can generate models from an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, or an Oracle database using Report Manager. Report models are generated from shared data sources that are published on the report server. If you do not already have a shared data source, you must create one.  

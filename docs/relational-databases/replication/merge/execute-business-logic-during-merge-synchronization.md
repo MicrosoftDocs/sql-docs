@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "custom error resolution [SQL Server replication]"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "conflict resolution [SQL Server replication], merge replication"
   - "business logic handlers [SQL Server replication]"
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
-caps.latest.revision: 31
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

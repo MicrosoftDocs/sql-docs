@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "integrated authentication"
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -48,13 +45,13 @@ Ensure that you use `kinit` or PAM (Pluggable Authentication Module) to obtain a
   
 -   Run `kinit`, passing in a principal name and password.  
   
--   Run `kinit`, passing in a principal name and a location of a keytab file that contains the principal’s key created by `ktutil`.  
+-   Run `kinit`, passing in a principal name and a location of a keytab file that contains the principal's key created by `ktutil`.  
   
 -   Ensure that the login to the system was done using the Kerberos PAM (Pluggable Authentication Module).
 
 When an application runs as a service, because Kerberos credentials expire by design, renew the credentials to ensure continued service availability. The ODBC driver does not renew credentials itself; ensure that there is a `cron` job or script that periodically runs to renew the credentials before their expiration. To avoid requiring the password for each renewal, you can use a keytab file.  
   
-[Kerberos Configuration and Use](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) provides details on ways to Kerberize services on Linux.
+[Kerberos Configuration and Use](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) provides details on ways to Kerberize services on Linux.
   
 ## Tracking Access to a Database
 
@@ -64,7 +61,7 @@ Logging in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses 
   
 To audit activities in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on behalf of users other than the system account, the application must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-To improve application performance, an application can use connection pooling with Integrated Authentication and auditing. However, combining connection pooling, Integrated Authentication, and auditing creates a security risk because the unixODBC driver manager permits different users to reuse pooled connections. For more information, see [ODBC Connection Pooling](http://www.unixodbc.org/doc/conn_pool.html).  
+To improve application performance, an application can use connection pooling with Integrated Authentication and auditing. However, combining connection pooling, Integrated Authentication, and auditing creates a security risk because the unixODBC driver manager permits different users to reuse pooled connections. For more information, see [ODBC Connection Pooling](https://www.unixodbc.org/doc/conn_pool.html).  
 
 Before reuse, an application must reset pooled connections by executing `sp_reset_connection`.  
 
@@ -123,7 +120,7 @@ The time on the Linux or macOS computer and the time on the Kerberos Key Distrib
 
 If Kerberos authentication fails, the ODBC driver on Linux or macOS does not use NTLM authentication.  
 
-For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) and [Best Practices for Integrating OS X with Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) and [Best Practices for Integrating OS X with Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## See Also  
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp utility [SQL Server], terminators"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "row terminators [SQL Server]"
   - "terminators [SQL Server]"
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -27,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   For character data fields, optional terminating characters allow you to mark the end of each field in a data file with a *field terminator* and the end of each row with a *row terminator*. Terminating characters are one way to indicate to programs that read the data file where one field or row ends and another field or row begins.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal binary data format.  
   
 ## Characters Supported As Terminators  
@@ -41,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Backslash*|\\\|  
 |Null terminator (nonvisible terminator)**|\0|  
 |Any printable character (control characters are not printable, except null, tab, newline, and carriage return)|(*, A, t, l, and so on)|  
-|String of up to 10 printable characters, including some or all of the terminators listed earlier|(**\t\*\*, end, !!!!!!!!!!, \t—\n, and so on)|  
+|String of up to 10 printable characters, including some or all of the terminators listed earlier|(**\t\*\*, end, !!!!!!!!!!, \t-\n, and so on)|  
   
  *Only the t, n, r, 0 and '\0' characters work with the backslash escape character to produce a control character.  
   

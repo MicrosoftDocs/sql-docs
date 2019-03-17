@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening trace files"
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg

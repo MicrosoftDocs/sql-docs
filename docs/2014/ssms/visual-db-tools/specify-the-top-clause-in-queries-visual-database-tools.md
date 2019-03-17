@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TOP clause, queries"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "limiting rows returned"
   - "search criteria [SQL Server], TOP clause"
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "LocalDBStopInstance"
@@ -17,7 +13,6 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
-caps.latest.revision: 17
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

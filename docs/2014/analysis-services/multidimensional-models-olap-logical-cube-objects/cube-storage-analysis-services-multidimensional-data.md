@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "measure groups [Analysis Services], cubes"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "partitions [Analysis Services], cubes"
   - "storage [Analysis Services], cubes"
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

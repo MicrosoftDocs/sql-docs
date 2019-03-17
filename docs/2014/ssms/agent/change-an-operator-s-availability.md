@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "disabling operators"
   - "operators (users) [Database Engine], changing availability with Management Studio"
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -60,7 +57,7 @@ manager: craigg
   
 4.  Right-click the operator that you want to enable or disable and select **Properties**, then click the **General** tab.  
   
-5.  In the *operator_name***Properties** dialog box, select or clear the **Enabled** check box.  
+5.  In the _operator_name_**Properties** dialog box, select or clear the **Enabled** check box.  
   
 6.  Click **OK**.  
   
@@ -75,12 +72,12 @@ manager: craigg
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- disables the 'François Ajenstat' operator  
+    -- disables the 'Fran??ois Ajenstat' operator  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_update_operator   
-        @name = N'François Ajenstat',  
+        @name = N'Fran??ois Ajenstat',  
         @enabled = 0;  
     GO  
     ```  

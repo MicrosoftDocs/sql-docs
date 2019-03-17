@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "what's new [Reporting Services]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, what's new"
   - "SSRS, what's new"
 ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-caps.latest.revision: 143
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # What&#39;s New (Reporting Services)
   

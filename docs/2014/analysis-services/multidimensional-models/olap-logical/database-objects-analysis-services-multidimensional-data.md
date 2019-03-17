@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [Analysis Services], about objects"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Analysis Services objects"
   - "objects [Analysis Services]"
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

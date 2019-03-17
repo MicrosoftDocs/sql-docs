@@ -1,12 +1,10 @@
 ---
 title: "Back Up the Service Master Key | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/02/2019"
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "service master key [SQL Server], exporting"
@@ -18,49 +16,39 @@ manager: craigg
 # Back Up the Service Master Key
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This article describes how to back up the Service Master key in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
+
+## Before You Begin  
   
- **In This Article**  
+### Limitations and Restrictions  
+
+- The master key must be open and, therefore, decrypted before it is backed up. If it is encrypted with the service master key, the master key does not have to be explicitly opened; however, if the master key is encrypted only with a password, it must be explicitly opened.  
   
--   **Before you begin:**  
+- We recommend that you back up the master key as soon as it is created, and store the backup in a secure, off-site location.  
   
-     [Limitations and Restrictions](#Restrictions)  
+## Security  
   
-     [Security](#Security)  
+### Permissions
+Requires CONTROL permission on the database.  
   
--   [To back-up the Service Master key](#Procedure)  
+## Using Transact-SQL  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+### To back up the Service Master key
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+1. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance containing the service master key you wish to back up.  
   
--   The master key must be open and, therefore, decrypted before it is backed up. If it is encrypted with the service master key, the master key does not have to be explicitly opened; however, if the master key is encrypted only with a password, it must be explicitly opened.  
+2. Choose a password that will be used to encrypt the service master key on the backup medium. This password is subject to complexity checks. For more information, see [Password Policy](../../../relational-databases/security/password-policy.md).  
   
--   We recommend that you back up the master key as soon as it is created, and store the backup in a secure, off-site location.  
+3. Obtain a removable backup medium for storing a copy of the backed-up key.  
   
-###  <a name="Security"></a> Security  
+4. Identify an NTFS directory in which to create the backup of the key. This directory is where you will create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
   
-####  <a name="Permissions"></a> Permissions  
- Requires CONTROL permission on the database.  
+5. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-##  <a name="Procedure"></a> Using Transact-SQL  
+6. On the Standard bar, click **New Query**.  
   
-#### To back up the Service Master key  
+7. Copy and paste the following example into the query window and click **Execute**.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance containing the service master key you wish to back up.  
-  
-2.  Choose a password that will be used to encrypt the service master key on the backup medium. This password is subject to complexity checks. For more information, see [Password Policy](../../../relational-databases/security/password-policy.md).  
-  
-3.  Obtain a removable backup medium for storing a copy of the backed-up key.  
-  
-4.  Identify an NTFS directory in which to create the backup of the key. This directory is where you will create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
-  
-5.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
-  
-6.  On the Standard bar, click **New Query**.  
-  
-7.  Copy and paste the following example into the query window and click **Execute**.  
-  
-    ```  
+    ```sql
     -- Creates a backup of the service master key.
     USE master;
     GO
@@ -70,12 +58,10 @@ manager: craigg
     ```  
   
     > [!NOTE]  
-    >  The file path to the key and the key's password (if it exists) will be different than what is indicated above. Make sure that both are specific to your server and key set-up.  
+    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Make sure that both are specific to your server and key set-up.
   
-8.  Copy the file to the backup medium and verify the copy.  
+8. Copy the file to the backup medium and verify the copy.  
   
 9. Store the backup in a secure, off-site location.  
   
  For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) and [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  
-  
-  

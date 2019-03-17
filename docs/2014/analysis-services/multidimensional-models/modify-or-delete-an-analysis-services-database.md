@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [Analysis Services], modifying"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "databases [Analysis Services], deleting"
   - "modifying databases"
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

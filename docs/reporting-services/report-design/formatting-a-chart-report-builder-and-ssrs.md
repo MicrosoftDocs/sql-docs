@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -50,8 +49,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.chartproperties.border.f1"
   - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Formatting a Chart (Report Builder and SSRS)
   After you have defined the data for your chart and it is appearing the way you want, you can add formatting to improve the overall appearance and highlight key data points. The most common formatting options can be modified from the Properties dialog box that are found when you right-click a chart element to display its shortcut menu. Each chart element has its own dialog box. For more information about chart elements, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

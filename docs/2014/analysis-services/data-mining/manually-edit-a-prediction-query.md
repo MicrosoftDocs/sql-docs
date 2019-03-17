@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying prediction queries"
   - "Mining Model Prediction [Analysis Services], modifying prediction queries"
   - "manual prediction query modification [Analysis Services]"
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

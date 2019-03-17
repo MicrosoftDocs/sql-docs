@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 helpviewer_keywords: 
   - "server events [WMI]"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "monitoring events [WMI]"
   - "events [WMI]"
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: 18
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ErrorLog event class"
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

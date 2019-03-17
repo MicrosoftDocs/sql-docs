@@ -1,20 +1,16 @@
-﻿---
+---
 title: "Create Jobs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], creating"
   - "SQL Server Agent jobs, creating"
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

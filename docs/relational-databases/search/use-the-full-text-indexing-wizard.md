@@ -1,14 +1,9 @@
 ---
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.fulltextindexingwizard.welcome.f1"
@@ -24,9 +19,9 @@ helpviewer_keywords:
   - "Full-Text Indexing Wizard"
   - "full-text search [SQL Server], Full-Text Indexing Wizard"
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: 24
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

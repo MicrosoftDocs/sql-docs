@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.datasourcebrowse.f1"
 helpviewer_keywords: 
   - "Browse Data Source dialog box"
 ms.assetid: 134355cb-69a7-4b16-8076-82ede43ce940
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

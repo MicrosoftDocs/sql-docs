@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "10538 (Database Engine error)"
 ms.assetid: 284d19b4-4979-4cbe-a9be-ac1104433c69
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

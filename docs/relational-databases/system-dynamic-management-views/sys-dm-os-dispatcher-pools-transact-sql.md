@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_os_dispatcher_pools_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
   - "sys.dm_os_dispatcher_pools DMV"
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg

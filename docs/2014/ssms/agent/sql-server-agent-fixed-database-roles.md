@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "roles [SQL Server], SQL Server Agent"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "fixed database roles [SQL Server]"
   - "SQLAgentOperatorRole database role"
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,12 +5,9 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -154,7 +151,7 @@ Go
 ```  
 Use msdb;  
 Go  
-EXEC managed_backup. sp_backup_master_switch @new_state=1;  
+EXEC managed_backup.sp_backup_master_switch @new_state=1;  
 GO  
   
 ```  

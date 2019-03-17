@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "RAND"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "values [SQL Server], random float"
   - "random float value"
 ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

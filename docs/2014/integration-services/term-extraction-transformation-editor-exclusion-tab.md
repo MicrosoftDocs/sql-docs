@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.termextraction.inclusionexclusion.f1"
 helpviewer_keywords: 
   - "Term Extraction Transformation Editor"
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg

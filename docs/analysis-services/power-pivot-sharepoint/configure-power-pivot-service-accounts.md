@@ -104,7 +104,7 @@ manager: kfile
   
 |Requirement|Description|  
 |-----------------|-----------------|  
-|Provisioning requirement|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service is a shared resource on the farm that becomes available when you create a service application. The service application pool must be specified when the service application is created. It can be specified two ways: using the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool, or through PowerShell commands.<br /><br /> You might have configured the application pool identity to run under a unique account. But if you didn’t, consider changing it now to run under a different account.|  
+|Provisioning requirement|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service is a shared resource on the farm that becomes available when you create a service application. The service application pool must be specified when the service application is created. It can be specified two ways: using the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool, or through PowerShell commands.<br /><br /> You might have configured the application pool identity to run under a unique account. But if you didn't, consider changing it now to run under a different account.|  
 |Domain user account requirement|The application pool identity must be a Windows domain user account. Built-in machine accounts (such as Network Service or Local Service) are prohibited.|  
 |Permission requirements|This account does not need local system Administrator permissions on the computer. However, this account must have Analysis Services system administrator permissions on the local [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] that is installed on the same computer. These permissions are granted automatically by SQL Server Setup or when you set or change the application pool identity in Central Administration.<br /><br /> Administrative permissions are required for forwarding queries to the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. They are also required for monitoring health, closing inactive sessions, and listening for trace events.<br /><br /> The account must have connect, read, and write permissions to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application database. These permissions are granted automatically when the application is created, and updated automatically when you change accounts or passwords in Central Administration.<br /><br /> The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application will check that a SharePoint user is authorized to view data before retrieving the file, but it does not impersonate the user. There are no permission requirements for impersonation.|  
 |Scale-out requirements|None.|  
@@ -153,7 +153,7 @@ manager: kfile
   
     1.  Right-click the application pool name and select **Advanced Settings**.  
   
-    2.  Select **Identity** and click the … button to open the Application Pool Identity dialog box.  
+    2.  Select **Identity** and click the ... button to open the Application Pool Identity dialog box.  
   
     3.  Click **Set**.  
   

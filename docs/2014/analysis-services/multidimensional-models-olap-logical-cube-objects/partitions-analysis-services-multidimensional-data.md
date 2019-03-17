@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "storage [Analysis Services], partitions"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "remote partitions [Analysis Services]"
   - "measure groups [Analysis Services], partitions"
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg

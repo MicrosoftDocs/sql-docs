@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cursor library [ODBC], error codes"
   - "error codes [ODBC], cursor library"
   - "ODBC cursor library [ODBC], error codes"
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

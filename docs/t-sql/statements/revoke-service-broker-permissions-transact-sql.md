@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "services [Service Broker], permissions"
   - "REVOKE statement, Service Broker"
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-caps.latest.revision: 25
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Service Broker Permissions (Transact-SQL)
@@ -60,19 +57,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Specifies a permission that can be revoked on a [!INCLUDE[ssSB](../../includes/sssb-md.md)] securable. For a list of these permissions, see the Remarks section later in this topic.  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  Specifies the contract on which the permission is being revoked. The scope qualifier **::** is required.  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  Specifies the message type on which the permission is being revoked. The scope qualifier **::** is required.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Specifies the remote service binding on which the permission is being revoked. The scope qualifier **::** is required.  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  Specifies the route on which the permission is being revoked. The scope qualifier **::** is required.  
   
- SERVICE **::***message_type_name*  
+ SERVICE **::**_message_type_name_  
  Specifies the service on which the permission is being revoked. The scope qualifier **::** is required.  
   
  *database_principal*  

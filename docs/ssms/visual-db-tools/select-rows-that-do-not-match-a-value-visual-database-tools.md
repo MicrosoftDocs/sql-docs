@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "search conditions [SQL Server], rows not matching value"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "NOT operator [Visual Database Tools]"
   - "search criteria [SQL Server], rows not matching value"
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

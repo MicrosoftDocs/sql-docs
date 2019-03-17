@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.roledesignerdialog.dimensiondata.f1"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "VisualTotals property"
   - "ApplyDenied property"
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

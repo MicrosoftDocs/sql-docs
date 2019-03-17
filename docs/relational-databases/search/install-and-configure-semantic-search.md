@@ -1,22 +1,17 @@
 ---
 title: "Install and Configure Semantic Search | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], installing"
   - "semantic search [SQL Server], configuring"
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-caps.latest.revision: 31
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # Install and Configure Semantic Search
@@ -62,7 +57,7 @@ GO
   
         1.  Locate the Windows installer package named **SemanticLanguageDatabase.msi** on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media.  
   
-        2.  Download the installer package from the [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/en-us/download/details.aspx?id=52681) page on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center.  
+        2.  Download the installer package from the [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=52681) page on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center.  
   
 2.  Run the **SemanticLanguageDatabase.msi** Windows installer package to extract the database and log file.  
   
@@ -144,6 +139,6 @@ GO
 ## Install optional support for newer document types  
   
 ###  <a name="office"></a> Install the latest filters for Microsoft Office and other Microsoft document types  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs the latest [!INCLUDE[msCoName](../../includes/msconame-md.md)] word breakers and stemmers, but does not install the latest filters for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office documents and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] document types. These filters are required for indexing documents created with recent versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] applications. To download the latest filters, see [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293). (There does not appear to be a Filter Pack release for Office 2013 or Office 2016.)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs the latest [!INCLUDE[msCoName](../../includes/msconame-md.md)] word breakers and stemmers, but does not install the latest filters for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office documents and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] document types. These filters are required for indexing documents created with recent versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] applications. To download the latest filters, see [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293). (There does not appear to be a Filter Pack release for Office 2013 or Office 2016.)
   
   

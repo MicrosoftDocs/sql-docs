@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.generatenamedquerydialog.f1"
 helpviewer_keywords: 
   - "Generate Named Query dialog box"
 ms.assetid: 0f385577-a2e5-4527-ab88-b27e73112591
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

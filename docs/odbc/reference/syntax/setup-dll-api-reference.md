@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], driver setup DLL"
   - "driver setup DLL [ODBC]"
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

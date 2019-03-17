@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENROWSET function, ad hoc distributed queries option"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "OPENDATASOURCE function, ad hoc distributed queries option"
   - "ad hoc access"
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

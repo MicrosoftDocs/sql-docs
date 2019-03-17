@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Mining Model Prediction [Analysis Services], selecting mining models"
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -20,7 +17,7 @@ manager: craigg
 # Apply Prediction Functions to a Model
   To create a prediction query, you must first select the mining model on which the query will be based. You can select any mining model that exists in the current project.  
   
- After you have selected a model, add a *prediction function* to the query. It is import to understand that prediction functions are used for many purposes—yes, you can predict values, but you can also get related statistics, as well as information that was used in generating the prediction. Prediction functions can return the following types of values:  
+ After you have selected a model, add a *prediction function* to the query. It is import to understand that prediction functions are used for many purposes-yes, you can predict values, but you can also get related statistics, as well as information that was used in generating the prediction. Prediction functions can return the following types of values:  
   
 -   The name of the predictable attribute, and the value that is predicted.  
   
@@ -120,7 +117,7 @@ manager: craigg
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- If you want to add other clauses elsewhere in the statement—for example, if you want to add a WHERE clause—you cannot add it by using the grid; you must switch to DMX view first.  
+ If you want to add other clauses elsewhere in the statement-for example, if you want to add a WHERE clause-you cannot add it by using the grid; you must switch to DMX view first.  
   
 ## See Also  
  [Data Mining Queries](data-mining-queries.md)  

@@ -4,26 +4,23 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Creating Drillthrough and Main Reports (Report Builder)
 This tutorial teaches you how to create two kinds of [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. 
 
-The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report’s title. The data in the drillthrough report pertains to the Games and Toys product category.  
+The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report's title. The data in the drillthrough report pertains to the Games and Toys product category.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
 Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
-This tutorial requires access to the Contoso Sales cube for both the drillthrough and the main reports. This dataset comprises the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=191575). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
+This tutorial requires access to the Contoso Sales cube for both the drillthrough and the main reports. This dataset comprises the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=191575). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
   
 The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which is not used in this tutorial.  
   
@@ -99,7 +96,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 #### To create query filters  
   
-1.  On the **Design a query** page, in the Metadata pane, click the button **(…)**.  
+1.  On the **Design a query** page, in the Metadata pane, click the button **(...)**.  
   
 2.  In the **Cube Selection** dialog box, click Sales, and then click **OK**.  
   
@@ -390,7 +387,7 @@ Next, create an embedded dataset. To do so, you will use the query designer to c
   
 #### To create query filters  
   
-1.  On the **Design a query** page, in the Metadata pane, in the cube section, click the ellipsis **(…)**.  
+1.  On the **Design a query** page, in the Metadata pane, in the cube section, click the ellipsis **(...)**.  
   
 2.  In the **Cube Selection** dialog box, click Sales, and then click **OK**.  
   

@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "MIN"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "minimum values [SQL Server]"
   - "values [SQL Server], minimum"
 ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
-caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -34,21 +31,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-MIN ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```sql  
   
 -- Aggregation Function Syntax  
 MIN ( [ ALL | DISTINCT ] expression )  
   
--- Aggregation Function Syntax   
-MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
+-- Analytic Function Syntax   
+MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
 ```  
   
 ## Arguments  

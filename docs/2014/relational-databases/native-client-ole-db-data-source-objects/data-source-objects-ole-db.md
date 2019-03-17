@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], data source objects"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "data source objects [OLE DB]"
   - "CLSID"
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

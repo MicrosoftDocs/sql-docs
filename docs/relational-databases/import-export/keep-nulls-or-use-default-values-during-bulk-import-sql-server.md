@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], null values"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "OPENROWSET function, bulk importing"
   - "data formats [SQL Server], default values"
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -44,10 +40,10 @@ The following qualifiers specify that an empty field in the data file retains it
 |Command|Qualifier|Qualifier type|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Switch|  
-|BULK INSERT|KEEPNULLS**\***|Argument|  
+|BULK INSERT|KEEPNULLS\*|Argument|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|N/A|N/A|  
   
-**\*** For [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), if default values are not available, the table column must be defined to allow null values. 
+\* For [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), if default values are not available, the table column must be defined to allow null values. 
   
 > [!NOTE]
 > These qualifiers disable checking of DEFAULT definitions on a table by these bulk-import commands.  However, for any concurrent INSERT statements, DEFAULT definitions are expected.

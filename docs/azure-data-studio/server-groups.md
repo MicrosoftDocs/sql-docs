@@ -1,14 +1,12 @@
 ---
-title: Server groups in Azure Data Studio | Microsoft Docs
-description: Learn about server groups in Azure Data Studio.
-ms.custom: "tools|sos"
+title: Server groups
+titleSuffix: Azure Data Studio
+description: Learn about server groups in Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"

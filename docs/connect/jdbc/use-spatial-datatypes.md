@@ -1,16 +1,13 @@
 ---
 title: "Using Spatial Datatypes | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2018"
+ms.date: "01/21/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -19,7 +16,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Spatial datatypes (Geometry and Geography) are supported starting JDBC Driver preview release 6.5.0. Spatial datatypes are currently not supported with stored procedures, Table Valued Parameters (TVP), BulkCopy, and Always Encrypted. This page shows various use cases of Geometry and Geography data types with the JDBC Driver. For an overview on spatial datatypes, check [Spatial Data Types Overview](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-types-overview) page.
+Spatial datatypes (Geometry and Geography) are supported starting JDBC Driver preview release 6.5.0. Spatial datatypes are currently not supported with stored procedures, Table Valued Parameters (TVP), BulkCopy, and Always Encrypted. This page shows various use cases of Geometry and Geography data types with the JDBC Driver. For an overview on spatial datatypes, check [Spatial Data Types Overview](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) page.
 
 ## Creating a Geometry / Geography object
 
@@ -132,7 +129,7 @@ These are the new public APIs that have been introduced with this addition, in t
 |Geography STGeomFromWKB(byte[] wkb)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
 |Geography deserialize(byte[] wkb)| Constructor for a Geography instance from an internal SQL Server format for spatial data.
 |Geography parse(String wkt)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
-|Geography point(double lat, double lon, int SRID)| Constructor for a Geography instance that represents a Point instance from its latitude and longitude values and a Spatial Reference Identifier.
+|Geography point(double lon, double lat, int SRID)| Constructor for a Geography instance that represents a Point instance from its longitude and latitude and a Spatial Reference Identifier.
 |String STAsText()| Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a Geography instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.
 |byte[] STAsBinary())| Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a Geography instance. This value will not contain any Z or M values carried by the instance.
 |byte[] serialize()| Returns the bytes that represent an internal SQL Server format of Geography type.

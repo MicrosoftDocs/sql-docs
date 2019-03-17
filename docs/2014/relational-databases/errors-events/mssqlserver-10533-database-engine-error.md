@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "10533 (Database Engine error)"
 ms.assetid: cc2fbdab-7b90-415f-a1f9-066824344283
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

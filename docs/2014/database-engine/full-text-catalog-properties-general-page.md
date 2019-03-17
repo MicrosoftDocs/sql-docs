@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalogproperties.general.f1"
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-caps.latest.revision: 34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
@@ -47,7 +44,7 @@ manager: craigg
   
 -   **Building index**  
   
--   **Disk is full—Paused**  
+-   **Disk is full-Paused**  
   
 -   **Change tracking**  
   
@@ -67,7 +64,7 @@ manager: craigg
   
 -   **Yes**  
   
--   For information about diacritical marks, see [Diacritical Mark](http://go.microsoft.com/fwlink/?LinkId=154091) in the MSN Encarta Encyclopedia.  
+-   For information about diacritical marks, see [Diacritical Mark](https://go.microsoft.com/fwlink/?LinkId=154091) in the MSN Encarta Encyclopedia.  
   
  **Last Population Date**  
  Displays the date the catalog was last populated.  

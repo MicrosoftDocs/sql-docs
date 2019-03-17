@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 
@@ -26,7 +24,7 @@ You can use several different environment variables to configure SQL Server 2017
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-You can use several different environment variables to configure SQL Server 2019 CTP 2.0 on Linux. These variables are used in two scenarios:
+You can use several different environment variables to configure SQL Server 2019 preview on Linux. These variables are used in two scenarios:
 
 ::: moniker-end
 
@@ -57,8 +55,8 @@ You can use several different environment variables to configure SQL Server 2019
 | **MSSQL_DUMP_DIR** | Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default. |
 | **MSSQL_ENABLE_HADR** | Enable Availability Group. For example, '1' is enabled, and '0' is disabled |
 | **MSSQL_AGENT_ENABLED** | Enable SQL Server Agent. For example, 'true' is enabled and 'false' is disabled. By default, agent is disabled.  |
-| **MSSQL_MASTER_DATA_FILE** | Sets the location of the master database data file. |
-| **MSSQL_MASTER_LOG_FILE** | Sets the location of the master database log file. |
+| **MSSQL_MASTER_DATA_FILE** | Sets the location of the master database data file. Must be named **master.mdf** until first run of SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Sets the location of the master database log file. Must be named **mastlog.ldf** until first run of SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Sets the location of the errorlog files. |
 
 ::: moniker-end
@@ -81,13 +79,13 @@ You can use several different environment variables to configure SQL Server 2019
 | **MSSQL_DUMP_DIR** | Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default. |
 | **MSSQL_ENABLE_HADR** | Enable Availability Group. For example, '1' is enabled, and '0' is disabled |
 | **MSSQL_AGENT_ENABLED** | Enable SQL Server Agent. For example, 'true' is enabled and 'false' is disabled. By default, agent is disabled.  |
-| **MSSQL_MASTER_DATA_FILE** | Sets the location of the master database data file. |
-| **MSSQL_MASTER_LOG_FILE** | Sets the location of the master database log file. |
+| **MSSQL_MASTER_DATA_FILE** | Sets the location of the master database data file. Must be named **master.mdf** until first run of SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Sets the location of the master database log file. Must be named **mastlog.ldf** until first run of SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Sets the location of the errorlog files. |
 
 ::: moniker-end
 
-## Example: initial setup
+## Use with initial setup
 
 This example runs `mssql-conf setup` with configured environment variables. The following environment variables are specified:
 
@@ -100,7 +98,7 @@ This example runs `mssql-conf setup` with configured environment variables. The 
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## Example: Docker
+## Use with Docker
 
 This example docker command uses the following environment variables to create a new SQL Server container:
 
@@ -134,13 +132,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 If you are running Docker on Linux/macOS, use the following syntax with single quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 If you are running Docker on Windows, use the following syntax with double quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ::: moniker-end

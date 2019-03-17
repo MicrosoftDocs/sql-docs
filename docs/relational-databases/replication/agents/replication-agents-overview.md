@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Distribution Agent"
@@ -25,7 +22,6 @@ helpviewer_keywords:
   - "Snapshot Agent, about Snapshot Agent"
   - "Snapshot Agent"
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
-caps.latest.revision: 42
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -38,7 +34,7 @@ manager: craigg
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent hosts and schedules the agents used in replication and provides an easy way to run replication agents. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent also controls and monitors operations outside of replication. For more information, see [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
 > [!IMPORTANT]  
->  By default, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent service is disabled when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed unless you explicitly choose to autostart the service during installation. For more information about starting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent service, see [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
+>  By default, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent service is disabled when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed unless you explicitly choose to autostart the service during installation. For more information about starting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent service, see [Start, Stop, or Pause the SQL Server Agent Service](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
   
 ## Snapshot Agent  
  The Snapshot Agent is typically used with all types of replication. It prepares schema and initial data files of published tables and other objects, stores the snapshot files, and records information about synchronization in the distribution database. The Snapshot Agent runs at the Distributor. For more information, see [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  

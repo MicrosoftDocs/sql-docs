@@ -88,68 +88,68 @@
   href: instances/monitor-an-analysis-services-instance.md
   items:
   - name: Analysis Services Trace Events
-    href: trace-events/analysis-services-trace-events.md
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
     items:
     - name: Command Events Event Category
-      href: trace-events/command-events-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/command-events-event-category
       items:
       - name: Command Events Data Columns
-        href: trace-events/command-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/command-events-data-columns
     - name: Discover Events Event Category
-      href: trace-events/discover-events-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/discover-events-event-category
       items:
       - name: Discover Events Data Columns
-        href: trace-events/discover-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns
     - name: Discover Server State Event Category
-      href: trace-events/discover-server-state-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/discover-server-state-event-category
       items:
       - name: Discover Server State Events Data Columns
-        href: trace-events/discover-server-state-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/discover-server-state-events-data-columns
     - name: Errors and Warnings Event Category
-      href: trace-events/errors-and-warnings-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/errors-and-warnings-event-category
       items:
       - name: Errors and Warnings Events Data Columns
-        href: trace-events/errors-and-warnings-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/errors-and-warnings-events-data-columns
     - name: File Load and Save Event Category
-      href: trace-events/file-load-and-save-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/file-load-and-save-event-category
       items:
       - name: File Load and Save Data Columns
-        href: trace-events/file-load-and-save-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/file-load-and-save-data-columns
     - name: Lock Events Category
-      href: trace-events/lock-events-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/lock-events-category
       items:
       - name: Lock Events Data Columns
-        href: trace-events/lock-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/lock-events-data-columns
     - name: Notification Events Event Category
-      href: trace-events/notification-events-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/notification-events-event-category
       items:
       - name: Notification Events Data Columns
-        href: trace-events/notification-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/notification-events-data-columns
     - name: Progress Reports Event Category
-      href: trace-events/progress-reports-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/progress-reports-event-category
       items:
       - name: Progress Reports Data Columns
-        href: trace-events/progress-reports-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/progress-reports-data-columns
     - name: Queries Events Category
-      href: trace-events/queries-events-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/queries-events-category
       items:
       - name: Queries Events Data Columns
-        href: trace-events/queries-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/queries-events-data-columns
     - name: Query Processing Events Category
-      href: trace-events/query-processing-events-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/query-processing-events-category
       items:
       - name: Query Processing Events Data Columns
-        href: trace-events/query-processing-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/query-processing-events-data-columns
     - name: Security Audit Event Category
-      href: trace-events/security-audit-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category
       items:
       - name: Security Audit Data Columns
-        href: trace-events/security-audit-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/security-audit-data-columns
     - name: Session Events Event Category
-      href: trace-events/session-events-event-category.md
+      href: https://docs.microsoft.com/bi-reference/trace-events/session-events-event-category
       items:
       - name: Session Events Data Columns
-        href: trace-events/session-events-data-columns.md
+        href: https://docs.microsoft.com/bi-reference/trace-events/session-events-data-columns
   - name: Use SQL Server Profiler to Monitor Analysis Services
     href: instances/use-sql-server-profiler-to-monitor-analysis-services.md
     items:

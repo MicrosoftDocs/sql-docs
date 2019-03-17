@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -53,7 +52,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## Remarks  
  When the *UseBuiltInAccount* parameter is set to **true** and the report server is running on Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] or Windows XP, the value of the *Name*, *Domain*, and *Password* parameters are ignored and the Local system account is used.  
   
- When the *UseBuiltInAccount* parameter is set to **true** and the report server is running on Windows Server 2003, the *Domain* and *Password* properties are ignored, and the name field must contain either “Builtin\NetworkService” or “Builtin\System” or “Builtin\LocalService”.  
+ When the *UseBuiltInAccount* parameter is set to **true** and the report server is running on Windows Server 2003, the *Domain* and *Password* properties are ignored, and the name field must contain either "Builtin\NetworkService" or "Builtin\System" or "Builtin\LocalService".  
   
  The SetWindowsServiceIdentity method sets file permissions on files and folders in the report server installation directory.  
   

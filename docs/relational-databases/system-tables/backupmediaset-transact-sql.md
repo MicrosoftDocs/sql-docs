@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "backupmediaset"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupmediaset system table"
   - "backupmediaset system table"
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-caps.latest.revision: 39
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

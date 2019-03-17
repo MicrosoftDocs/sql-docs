@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "WindowsServiceIdentityActual"
@@ -18,10 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "WindowsServiceIdentityActual property"
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # WindowsServiceIdentityActual Property (WMI MSReportServer_ConfigurationSetting)
   The identity that the Report Server Windows service is running under. Read-only.  

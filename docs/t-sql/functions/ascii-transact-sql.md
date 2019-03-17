@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ASCII_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "code [SQL Server], ASCII"
   - "leftmost character of expression"
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "instructions, migration"
   - "migrating databases, overview"
@@ -18,7 +13,6 @@ helpviewer_keywords:
   - "procedure, migration"
   - "recommended migration process"
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-caps.latest.revision: 23
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"

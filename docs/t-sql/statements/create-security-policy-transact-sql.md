@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SECURITY_POLICY_TSQL"
@@ -25,9 +23,8 @@ helpviewer_keywords:
   - "CREATE SECURITY POLICY statement"
   - "Row-Level Security"
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
-caps.latest.revision: 18
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
@@ -42,8 +39,8 @@ manager: craigg
 ```     
 CREATE SECURITY POLICY [schema_name. ] security_policy_name    
     { ADD [ FILTER | BLOCK ] } PREDICATE tvf_schema_name.security_predicate_function_name   
-      ( { column_name | expression } [ , …n] ) ON table_schema_name. table_name    
-      [ <block_dml_operation> ] , [ , …n] 
+      ( { column_name | expression } [ , ...n] ) ON table_schema_name. table_name    
+      [ <block_dml_operation> ] , [ , ...n] 
     [ WITH ( STATE = { ON | OFF }  [,] [ SCHEMABINDING = { ON | OFF } ] ) ]  
     [ NOT FOR REPLICATION ] 
 [;]  

@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_mergearticlecolumn"
   - "sp_mergearticlecolumn_TSQL"
 helpviewer_keywords: 
   - "sp_mergearticlecolumn"
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -45,19 +38,19 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =**] **'***publication***'**  
+ [ **@publication =**] **'**_publication_**'**  
  Is the name of the publication. *Publication* is **sysname**, with no default.  
   
- [ **@article =**] **'***article***'**  
+ [ **@article =**] **'**_article_**'**  
  Is the name of the article in the publication. *article* is **sysname**, with no default.  
   
- [ **@column =**] **'***column***'**  
+ [ **@column =**] **'**_column_**'**  
  Identifies the columns on which to create the vertical partition. *column* is **sysname**, with a default of NULL. If NULL and `@operation = N'add'`, all columns in the source table are added to the article by default. *column* cannot be NULL when *operation* is set to **drop**. To exclude columns from an article, execute **sp_mergearticlecolumn** and specify *column* and `@operation = N'drop'` for each column to be removed from the specified *article*.  
   
- [ **@operation =**] **'***operation***'**  
+ [ **@operation =**] **'**_operation_**'**  
  Is the replication status. *operation* is **nvarchar(4)**, with a default of ADD. **add** marks the column for replication. **drop** clears the column.  
   
- [ **@schema_replication=**] **'***schema_replication***'**  
+ [ **@schema_replication=**] **'**_schema_replication_**'**  
  Specifies that a schema change will be propagated when the Merge Agent runs. *schema_replication* is **nvarchar(5)**, with a default of FALSE.  
   
 > [!NOTE]  
@@ -70,7 +63,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **1** specifies that changes to the merge article may cause the snapshot to be invalid, and if that is the case, a value of **1** gives permission for the new snapshot to occur.  
   
- [ **@force_reinit_subscription = ]***force_reinit_subscription*  
+ [ **@force_reinit_subscription = ]**_force_reinit_subscription_  
  Enables or disables the ability to have the subscription reinitializated. *force_reinit_subscription* is a bit with a default of **0**.  
   
  **0** specifies that changes to the merge article will not cause the subscription to be reinitialized.  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CopyRecordOptionsEnum enumeration [ADO]"
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

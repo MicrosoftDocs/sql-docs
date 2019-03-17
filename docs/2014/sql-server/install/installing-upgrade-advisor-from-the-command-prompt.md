@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing Upgrade Advisor"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Setup [Upgrade Advisor]"
   - "Upgrade Advisor [SQL Server], installing"
 ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -33,7 +30,7 @@ manager: craigg
 |Argument|Description|  
 |--------------|-----------------|  
 |/q[n&#124;b&#124;r&#124;f]|Sets user interface (UI) level:<br /><br /> n = no UI<br /><br /> b = basic UI (progress only, no prompts)<br /><br /> r = reduced UI (dialog box at the end of installation)<br /><br /> f = full UI|  
-|/L|Specifies log file options. To log all messages to *log_file_name*, use **-L\*v***log_file_name*. To log error messages only, use `-Le`*log_file_name*.|  
+|/L|Specifies log file options. To log all messages to *log_file_name*, use **-L\*v**_log_file_name_. To log error messages only, use `-Le`*log_file_name*.|  
 |ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Specifies to install (ADDLOCAL), remove (REMOVE), or reinstall (REINSTALL) Upgrade Advisor.|  
 |UAINSTALLDIR=path|Installs Upgrade Advisor to the location specified by path.|  
   

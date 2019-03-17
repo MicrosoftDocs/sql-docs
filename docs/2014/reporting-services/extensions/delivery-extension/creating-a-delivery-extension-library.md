@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "delivery extensions [Reporting Services], namespace assignments"
   - "library [Reporting Services]"
   - "assigning namespaces to extensions"
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Creating a Delivery Extension Library
   Each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension you create should be assigned to a unique namespace and built into a library or assembly file. The exact name of the namespace is not important, but it must be unique and not shared with any other extension. You should create your own unique namespaces for your company's delivery extensions.  

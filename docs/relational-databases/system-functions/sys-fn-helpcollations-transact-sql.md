@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_helpcollations"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "collations [SQL Server], supported"
   - "fn_helpcollations function"
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -54,7 +50,7 @@ fn_helpcollations ()
 ## Examples  
  The following example returns all collation names starting with the letter `L` and that are binary sort collations.  
   
-```  
+```sql  
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name like 'L%' AND Description LIKE '% binary sort';  
 ```  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.partition_range_values"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.partition_range_values catalog view"
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

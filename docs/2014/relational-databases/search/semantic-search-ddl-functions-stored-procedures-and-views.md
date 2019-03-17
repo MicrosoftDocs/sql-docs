@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], database objects"
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -54,7 +51,7 @@ manager: craigg
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Install and Configure Semantic Search](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Install and Configure Semantic Search](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> System Views – Catalog Views  
+##  <a name="cv"></a> System Views - Catalog Views  
   
 |Object|More Information|  
 |------------|----------------------|  
@@ -62,7 +59,7 @@ manager: craigg
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[Install and Configure Semantic Search](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[Install and Configure Semantic Search](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> System Views – Dynamic Management Views  
+##  <a name="dmv"></a> System Views - Dynamic Management Views  
   
 |Object|More Information|  
 |------------|----------------------|  

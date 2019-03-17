@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "system stored procedures [SQL Server], XML"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "sp_xml_preparedocument"
   - "XML [SQL Server], system stored procedures"
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

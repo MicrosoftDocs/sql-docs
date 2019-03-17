@@ -3,7 +3,6 @@ title: "Delete and Re-create Encryption Keys  (SSRS Configuration Manager) | Mic
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 

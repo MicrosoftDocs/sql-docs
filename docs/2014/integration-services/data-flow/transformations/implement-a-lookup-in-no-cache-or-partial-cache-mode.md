@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -58,11 +54,11 @@ manager: craigg
   
     -   Click **Use results of an SQL query**, and then build a query in the **SQL Command** window.  
   
-         —or—  
+         -or-  
   
          Click **Build Query** to build a query by using the graphical tools that the **Query Builder** provides.  
   
-         —or—  
+         -or-  
   
          Click **Browse** to import an SQL statement from a file.  
   

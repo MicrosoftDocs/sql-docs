@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_columns_ex"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_columns_ex"
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -43,22 +39,22 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'***table_server***'**  
+ [ **@table_server =** ] **'**_table_server_**'**  
  Is the name of the linked server for which to return column information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'***table_name***'**  
+ [ **@table_name =** ] **'**_table_name_**'**  
  Is the name of the table for which to return column information. *table_name* is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'***table_schema***'**  
+ [ **@table_schema =** ] **'**_table_schema_**'**  
  Is the schema name of the table for which to return column information. *table_schema* is **sysname**, with a default of NULL.  
   
- [ **@table_catalog =** ] **'***table_catalog***'**  
+ [ **@table_catalog =** ] **'**_table_catalog_**'**  
  Is the catalog name of the table for which to return column information. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@column_name =** ] **'***column***'**  
+ [ **@column_name =** ] **'**_column_**'**  
  Is the name of the database column for which to provide information. *column* is **sysname**, with a default of NULL.  
   
- [ **@ODBCVer =** ] **'***ODBCVer***'**  
+ [ **@ODBCVer =** ] **'**_ODBCVer_**'**  
  Is the version of ODBC that is being used. *ODBCVer* is **int**, with a default of 2. This indicates ODBC Version 2. Valid values are 2 or 3. For information about the behavior differences between versions 2 and 3, see the ODBC SQLColumns specification.  
   
 ## Return Code Values  
@@ -68,7 +64,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Table or view qualifier name. Various DBMS products support three-part naming for tables (*qualifier***.***owner***.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] this column represents the database name. In some products, it represents the server name of the table's database environment. This field can be NULL.|  
+|**TABLE_CAT**|**sysname**|Table or view qualifier name. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] this column represents the database name. In some products, it represents the server name of the table's database environment. This field can be NULL.|  
 |**TABLE_SCHEM**|**sysname**|Table or view owner name. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the name of the database user that created the table. This field always returns a value.|  
 |**TABLE_NAME**|**sysname**|Table or view name. This field always returns a value.|  
 |**COLUMN_NAME**|**sysname**|Column name, for each column of the **TABLE_NAME** returned. This field always returns a value.|  

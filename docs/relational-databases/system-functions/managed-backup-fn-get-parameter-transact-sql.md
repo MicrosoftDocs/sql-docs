@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "10/03/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "smart_admin.fn_get_parameter_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "fn_get_parameter"
   - "smart_admin.fn_get_parameter"
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

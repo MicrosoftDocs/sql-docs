@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.wmieventwatchertask.f1"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Event Watcher task [Integration Services]"
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -36,7 +32,7 @@ manager: craigg
 -   [WMI Data Reader Task](wmi-data-reader-task.md)  
   
 ## WQL Queries  
- WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
 >  WMI classes vary between versions of Windows.  

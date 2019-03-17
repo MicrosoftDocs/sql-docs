@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1"
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "initialization [SQL Server Native Client]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQLNCLI, asynchronous operations"
   - "SQL Server Native Client, asynchronous operations"
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg

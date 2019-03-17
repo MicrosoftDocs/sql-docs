@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Analysis Wizard"
 ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
-caps.latest.revision: 36
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -20,7 +17,7 @@ manager: craigg
 # How to: Run the Upgrade Advisor Analysis Wizard
   You start the Upgrade Advisor Analysis Wizard from the Upgrade Advisor start page. This topic describes how to run the Upgrade Advisor Analysis Wizard.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  When you run the Upgrade Advisor Analysis Wizard, Upgrade Advisor saves the reports in the default report folder. However, the report viewer displays only the five latest saved reports. The default location for the reports is My Documents\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports.  
   
 ### To run the Upgrade Advisor Analysis Wizard  

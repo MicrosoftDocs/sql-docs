@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], column size"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL data types [ODBC], column characteristics"
   - "column size of data types [ODBC]"
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

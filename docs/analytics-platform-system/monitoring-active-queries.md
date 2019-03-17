@@ -15,7 +15,7 @@ ms.reviewer: martinle
 This article shows how to use the Admin Console and the SQL Server PDW system views to monitor active queries. See [Monitor the Appliance by Using the Admin Console](monitor-the-appliance-by-using-the-admin-console.md) and [System Views](tsql-system-views.md) for information on these tools.  
   
 ## Prerequisites  
-Regardless of the method used to monitor active queries, the login must have the permissions described in “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
+Regardless of the method used to monitor active queries, the login must have the permissions described in "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
 ## <a name="PermsAdminConsole"></a>Monitor Active Queries  
 Both the Admin Console and the SQL Server PDW system views can be used to monitor active queries. Follow the instructions below.  
@@ -39,7 +39,7 @@ For example, the following query finds the `request_id` and the current `status`
 SELECT request_id, command, status   
 FROM sys.dm_pdw_exec_requests   
 WHERE command   
-LIKE ‘%SELECT * FROM db1..memberAddresses%’;  
+LIKE '%SELECT * FROM db1..memberAddresses%';  
 ```  
   
 After the `request_id` has been identified for a query, use the other information in the `dm_pdw_exec_requests` table to find out about the processing of the query, or use [sys.dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) to view the status of the individual query steps for the query execution.  

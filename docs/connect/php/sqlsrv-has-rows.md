@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "API Reference, sqlsrv_has_rows"
   - "sqlsrv_has_rows"
 ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

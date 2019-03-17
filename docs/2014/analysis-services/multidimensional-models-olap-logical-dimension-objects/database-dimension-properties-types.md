@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "time dimensions [Analysis Services]"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "customers dimensions [Analysis Services]"
   - "Type property"
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

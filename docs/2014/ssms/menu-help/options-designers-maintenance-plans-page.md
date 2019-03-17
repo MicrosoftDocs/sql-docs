@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.MaintenancePlans"
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

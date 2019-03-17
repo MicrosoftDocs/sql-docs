@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TM: Commit Tran Starting event class"
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

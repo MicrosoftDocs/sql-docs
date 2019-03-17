@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "manage"
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

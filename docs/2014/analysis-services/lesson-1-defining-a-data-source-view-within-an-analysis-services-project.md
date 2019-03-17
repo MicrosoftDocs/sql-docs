@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -32,7 +29,7 @@ manager: craigg
  [Modifying Default Table Names](lesson-1-4-modifying-default-table-names.md)  
  In this task, you modify table names in the data source view, so that the names of subsequent [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects that you define will be more user-friendly.  
   
- Compare your results against a sample project file that was built for this lesson. For more information about downloading the sample projects that go with this tutorial, see [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
+ Compare your results against a sample project file that was built for this lesson. For more information about downloading the sample projects that go with this tutorial, see [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
   
 ## Next Lesson  
  [Lesson 2: Defining and Deploying a Cube](lesson-2-defining-and-deploying-a-cube.md)  

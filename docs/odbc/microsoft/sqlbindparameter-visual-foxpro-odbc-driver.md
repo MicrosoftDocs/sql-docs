@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

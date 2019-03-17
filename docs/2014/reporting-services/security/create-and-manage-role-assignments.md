@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing role assignments"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "modifying role assignments"
   - "deleting role assignments"
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create and Manage Role Assignments
   A *role assignment* is a security policy that determines whether a user or group can access a specific report server item or perform an operation. A role assignment consists of a single user or group account name and one or more role definitions.  

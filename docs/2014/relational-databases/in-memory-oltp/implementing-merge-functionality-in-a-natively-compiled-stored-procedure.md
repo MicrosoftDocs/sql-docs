@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -29,7 +26,7 @@ IF @@ROWCOUNT = 0
   
 ```tsql  
 IF EXISTS (SELECT 1 FROM mytable WHERE myPK = @parm)  
-    UPDATE….  
+    UPDATE....  
 ELSE  
     INSERT  
 ```  
@@ -40,7 +37,7 @@ ELSE
 DECLARE @i  int  = 0  -- or whatever your PK data type is  
 UPDATE mytable SET @i=myPK, othercolums = other values WHERE myPK = @parm  
 IF @i = 0  
-   INSERT….  
+   INSERT....  
 ```  
   
 ## See Also  

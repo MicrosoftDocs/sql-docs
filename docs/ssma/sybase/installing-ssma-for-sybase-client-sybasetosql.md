@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
-caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -31,7 +25,7 @@ Before you install SSMA, make sure that the computer meets the following require
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.  
   
--   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.0 or a later version. The .NET Framework version 4.0 is available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product media. You can also obtain it from the [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.0 or a later version. The .NET Framework version 4.0 is available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product media. You can also obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   The Sybase OLEDB/ADO.Net/ODBC provider and connectivity to the Sybase ASE database server that contains the databases you want to migrate. You can install providers from the Sybase ASE product media. For information about connectivity, see [Connecting to Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
@@ -40,7 +34,7 @@ Before you install SSMA, make sure that the computer meets the following require
 -   4 GB RAM recommended.  
   
 ## Installing the SSMA for Sybase Client  
-SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](http://aka.ms/ssmaforsybase).  
+SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmaforsybase).  
   
 After you download the latest version, you must extract the installation files from before you can install SSMA.  
   

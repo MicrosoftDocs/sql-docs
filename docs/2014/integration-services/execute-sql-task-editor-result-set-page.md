@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executesqltask.resultset.f1"
 helpviewer_keywords: 
   - "Execute SQL Task Editor"
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
-caps.latest.revision: 33
 author: douglaslms
 ms.author: douglasl
 manager: craigg

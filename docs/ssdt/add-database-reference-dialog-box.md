@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.adddatabasereference.dialog"
 ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -39,7 +36,7 @@ Select **System database** if you intend to select one of the system databases a
   
 Select **Data-tier Application (.dacpac)** to reference a database in a DACPAC, and browse to the directory with the DACPAC file.  
   
-## Selecting the Database’s Relative Location  
+## Selecting the Database's Relative Location  
 After you select the database you want to reference, you can specify the expected location of a database object, relative to the referencing project.  
   
 References can be resolved for objects in one of the following locations:  
@@ -50,7 +47,7 @@ References can be resolved for objects in one of the following locations:
   
 - In a database other than the referencing database, on a different server.  
   
-Specify a database name. If you chose **System database**, you shouldn’t modify the system database literal. If you chose **Database projects in the current solution**, the default name of the database is based on the name of the database in the project.  
+Specify a database name. If you chose **System database**, you shouldn't modify the system database literal. If you chose **Database projects in the current solution**, the default name of the database is based on the name of the database in the project.  
   
 If you selected **Different database, different server**, specify a server name.  
   

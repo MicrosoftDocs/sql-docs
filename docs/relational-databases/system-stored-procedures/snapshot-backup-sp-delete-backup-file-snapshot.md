@@ -3,12 +3,9 @@ title: "sp_delete_backup_file_snapshot (Transact-SQL) | Microsoft Docs"
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -30,8 +27,8 @@ manager: craigg
 ```  
   
 sys.sp_delete_backup_file_snapshot  
-    [ @db_name = ] N’<database_name>  
-    , [ @snapshot_url = ] N’<snapshot_url>  
+    [ @db_name = ] N'<database_name>  
+    , [ @snapshot_url = ] N'<snapshot_url>  
 ```  
   
 ## Arguments  

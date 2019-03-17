@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "format files [SQL Server], creating"
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -31,7 +28,7 @@ manager: craigg
 ## Creating a Non-XML Format File  
  To use a **bcp** command to create a format file, specify the **format** argument and use **nul** instead of a data-file path. The **format** option also requires the **-f** option, such as:  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
   
 > [!NOTE]  
 >  To distinguish a non-XML format file, we recommend that you use .fmt as the file name extension, for example, MyTable.fmt.  
@@ -58,7 +55,7 @@ manager: craigg
   
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Specifies the non-XML format file.|  
+|**formatnul-f** _format_file_|Specifies the non-XML format file.|  
 |**-n**|Specifies native data types.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|  
   
@@ -88,7 +85,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Specifies a non-XML format file.|  
+|**formatnul-f** _format_file_|Specifies a non-XML format file.|  
 |**-c**|Specifies character data.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|  
   
@@ -132,7 +129,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## Creating an XML Format File  
  To use a **bcp** command to create a format file, specify the **format** argument and use **nul** instead of a data-file path. The **format** option always requires the **-f** option, and to create an XML format file, you must also specify the **-x** option, such as:  
   
- **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
+ **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
 >  To distinguish an XML format file, we recommend that you use .xml as the file name extension, for example, MyTable.xml.  
@@ -158,7 +155,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Specifies the XML format file.|  
+|**formatnul-f** _format_file_ **-x**|Specifies the XML format file.|  
 |**-c**|Specifies character data.|  
 |**-t** `,`|Specifies a comma (**,**) as the field terminator.<br /><br /> Note: If the data file uses the default field terminator (`\t`), the **-t** switch is unnecessary.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|  
@@ -166,14 +163,14 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  At the Windows command prompt, enter the following `bcp` command:  
   
 ```  
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  The generated format file, `Department-c.xml`, contains the following XML elements:  
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -198,7 +195,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Specifies the XML format file.|  
+|**formatnul-f** _format_file_ **-x**|Specifies the XML format file.|  
 |**-n**|Specifies native data types.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|  
   
@@ -212,7 +209,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

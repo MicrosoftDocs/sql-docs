@@ -5,9 +5,7 @@ ms.date: "06/18/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_CERTIFICATE_TSQL"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "ALTER CERTIFICATE statement"
   - "certificates [SQL Server], modifying"
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-caps.latest.revision: 46
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

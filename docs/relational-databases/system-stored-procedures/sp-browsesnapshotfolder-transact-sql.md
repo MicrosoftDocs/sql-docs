@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_browsesnapshotfolder"
   - "sp_browsesnapshotfolder_TSQL"
@@ -40,13 +34,13 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@subscriber=**] **'***subscriber***'**  
+ [ **@subscriber=**] **'**_subscriber_**'**  
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
   
- [ **@subscriber_db=**] **'***subscriber_db***'**  
+ [ **@subscriber_db=**] **'**_subscriber_db_**'**  
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

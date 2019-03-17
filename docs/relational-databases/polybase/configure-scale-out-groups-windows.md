@@ -3,10 +3,8 @@ title: "Improve PolyBase scale-out groups on Windows | Microsoft Docs"
 ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: polybase
-ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 author: rothja
 ms.author: jroth
@@ -48,15 +46,15 @@ This walks through the steps of configuring a PolyBase Group using:
   
    - PQTH4A-CMP02  
   
-2. Domain account: *PQTH4A\PolybaseUse*r  
+2. Domain account: *PQTH4A\PolyBaseUse*r  
 
 ## Install SQL Server with PolyBase on all machines
 
 1. Run setup.exe.
   
-2. On the the Feature Selection page, select **PolyBase Query Service for External Data**.
+2. On the Feature Selection page, select **PolyBase Query Service for External Data**.
   
-3. On the the Server Configuration page, use the **domain account** PQTH4A\PolybaseUser for SQL Server PolyBase Engine and SQL Server PolyBase Data Movement Service.
+3. On the Server Configuration page, use the **domain account** PQTH4A\PolyBaseUser for SQL Server PolyBase Engine and SQL Server PolyBase Data Movement Service.
   
 4. On the PolyBase Configuration page, select the option **Use the SQL Server instance as part of a PolyBase scale-out group**. This opens  the firewall  to allow incoming connections to the PolyBase services.
   
@@ -66,7 +64,7 @@ This walks through the steps of configuring a PolyBase Group using:
   
 ## Select one SQL Server as head node  
   
-After setup is complete, both machines can function as PolyBase Group head nodes. In this example, we will choose “MSSQLSERVER” on PQTH4A-CMP01 as the head node.
+After setup is complete, both machines can function as PolyBase Group head nodes. In this example, we will choose "MSSQLSERVER" on PQTH4A-CMP01 as the head node.
   
 ## Add other SQL Server instances as compute nodes  
   
@@ -102,6 +100,6 @@ After setup is complete, both machines can function as PolyBase Group head nodes
   
 ## Next steps  
 
-For troubleshooting, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+For troubleshooting, see [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
   
 For more information about PolyBase, see the [PolyBase overview](../../relational-databases/polybase/polybase-guide.md).

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "calling stored procedures"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "MDX queries [Analysis Services]"
   - "CALL statement"
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sysobjects_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.sysobjects compatibility view"
   - "sysobjects system table"
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
-caps.latest.revision: 41
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

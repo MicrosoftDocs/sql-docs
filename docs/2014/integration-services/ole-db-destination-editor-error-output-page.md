@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbdestadapter.errorhandling.f1"
 helpviewer_keywords: 
   - "OLE DB Destination Editor"
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbsourceadapter.columns.f1"
 helpviewer_keywords: 
   - "OLE DB Source Editor"
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg

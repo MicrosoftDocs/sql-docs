@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shape commands [ADO]"
   - "COMPUTE clause [ADO]"
   - "data shaping [ADO], COMPUTE clause"
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

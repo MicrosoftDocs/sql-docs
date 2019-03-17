@@ -4,17 +4,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/20/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "streams [ADO], retrieving query results"
   - "query results into stream [ADO]"
   - "retrieving results into stream [ADO]"
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -27,7 +24,7 @@ Instead of receiving results in the traditional **Recordset** object, ADO can in
 ## FOR XML Query Example  
  The following example is written in VBScript to the Northwind database:  
   
-```  
+```html
 <!-- BeginRecordAndStreamVBS -->  
 <%@ LANGUAGE = VBScript %>  
 <%  Option Explicit      %>  
@@ -142,7 +139,7 @@ Instead of receiving results in the traditional **Recordset** object, ADO can in
   
 ### FOR XML Syntax  
   
-```  
+```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
@@ -150,7 +147,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
   
  An example SQL SELECT FOR XML statement follows:  
   
-```  
+```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
@@ -158,19 +155,19 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
   
  As an XML template query, the FOR XML query appears as follows:  
   
-```  
+```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
  This example specifies the ASP **Response** object for the **Output Stream** property:  
   
-```  
+```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
  Next, specify **adExecuteStream** parameter of **Execute**. This example wraps the stream in XML tags to create an XML data island:  
   
-```  
+```vb
 Response.write "<XML ID=MyDataIsle>"  
 adoCmd.Execute , , adExecuteStream  
 Response.write "</XML>"  

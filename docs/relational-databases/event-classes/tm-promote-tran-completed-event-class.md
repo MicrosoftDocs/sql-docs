@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TM: Promote Tran Completed event class"
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

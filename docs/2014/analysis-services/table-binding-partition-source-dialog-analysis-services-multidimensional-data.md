@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.partitions.partitiontableselection.f1"
 ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

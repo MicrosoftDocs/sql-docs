@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Force a Target Server to Poll the Master Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "forcing master server polling"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "master servers [SQL Server], polling"
   - "target servers [SQL Server], polling the master server"
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

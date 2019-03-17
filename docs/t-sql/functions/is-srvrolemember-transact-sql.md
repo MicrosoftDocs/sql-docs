@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "IS_SRVROLEMEMBER_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "IS_SRVROLEMEMBER function"
   - "members [SQL Server], verifying"
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

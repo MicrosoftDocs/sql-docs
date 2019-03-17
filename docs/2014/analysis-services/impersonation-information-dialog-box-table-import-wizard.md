@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.impersonationinfo.f1"
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

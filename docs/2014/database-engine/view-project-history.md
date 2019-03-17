@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing project history"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], historical information"
   - "historical information [SQL Server], projects"
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg

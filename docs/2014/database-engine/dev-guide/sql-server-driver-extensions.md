@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, extensions"
   - "driver extensions [ODBC]"
   - "ODBC, driver extensions"
 ms.assetid: 1043bc93-965d-4939-bd1c-21e9d8d3e9ac
-caps.latest.revision: 31
 author: mashamsft
 ms.author: mathoma
 manager: craigg

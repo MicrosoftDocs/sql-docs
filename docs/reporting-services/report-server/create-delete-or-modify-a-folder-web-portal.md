@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
@@ -16,7 +15,7 @@ ms.author: maghan
   
 #### To create a folder  
   
-1.  Start the [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start the [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In the web portal, select **Folder** under the **New** menu drop down. Or, to create a folder under an existing folder, navigate to that folder and select **Folder** under the **New** menu drop down.  
   

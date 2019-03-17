@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helppublication_TSQL"
   - "sp_helppublication"
 helpviewer_keywords: 
   - "sp_helppublication"
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -48,7 +41,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  Is a flag to indicate returning rows. *found*is **int** and an OUTPUT parameter, with a default of **23456**. **1** indicates the publication is found. **0** indicates the publication is not found.  
   
  [ **@publisher** = ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is sysname, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is sysname, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified when requesting publication information from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -94,7 +87,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_policy|**int**|Specifies the conflict resolution policy followed when the queued updating subscriber option is used. Can be one of these values:<br /><br /> **1** = Publisher wins the conflict.<br /><br /> **2** = Subscriber wins the conflict.<br /><br /> **3** = Subscription is reinitialized.|  
 |queue_type||Specifies which type of queue is used. Can be one of these values:<br /><br /> **msmq** = Use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing to store transactions.<br /><br /> **sql** = Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store transactions.<br /><br /> Note: Support for Message Queuing has been discontinued.|  
 |backward_comp_level||Database compatibility level, and can be one of the following:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|publish_to_AD|**bit**|Specifies whether the publication is published in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory™. A value of **1** indicates that it is published, and a value of **0** indicates that it is not published.|  
+|publish_to_AD|**bit**|Specifies whether the publication is published in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory???. A value of **1** indicates that it is published, and a value of **0** indicates that it is not published.|  
 |allow_initialize_from_backup|**bit**|Indicates if Subscribers can initialize a subscription to this publication from a backup rather than an initial snapshot. **1** means that subscriptions can be initialized from a backup, and **0** means that they cannot. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) a transactional Subscriber without a snapshot.|  
 |replicate_ddl|**int**|Indicates if schema replication is supported for the publication. **1** indicates that data definition language (DDL) statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
 |enabled_for_p2p|**int**|If the publication can be used in a peer-to-peer replication topology. **1** indicates that the publication supports peer-to-peer replication. For more information, see [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
@@ -103,8 +96,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_p2p_conflictdetection|**int**|Specifies whether the Distribution Agent detects conflicts for a publication that is enabled for peer-to-peer replication. A value of **1** means that conflicts are detected. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Specifies an ID for a node in a peer-to-peer topology. This ID is used for conflict detection if **enabled_for_p2p_conflictdetection** is set to **1**. For a list of IDs that have already been used, query the [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) system table.|  
 |p2p_continue_onconflict|**int**|Specifies whether The Distribution Agent continues to process changes when a conflict is detected. A value of **1** means that the agent continues to process changes.<br /><br /> **\*\* Caution \*\*** We recommend that you use the default value of **0**. When this option is set to **1**, the Distribution Agent tries to converge data in the topology by applying the conflicting row from the node that has the highest originator ID. This method does not guarantee convergence. You should make sure that the topology is consistent after a conflict is detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
-|allow_partition_switch|**int**|Specifies whether ALTER TABLE…SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-|replicate_partition_switch|**int**|Specifies whether ALTER TABLE…SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to **1**.|  
+|allow_partition_switch|**int**|Specifies whether ALTER TABLE...SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+|replicate_partition_switch|**int**|Specifies whether ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to **1**.|  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  
@@ -120,7 +113,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## Permissions  
  Only members of the sysadmin fixed server role at the Publisher or members of the db_owner fixed database role on the publication database or users in the publication access list (PAL) can execute sp_helppublication.  
   
- For a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, only members of the sysadmin fixed server role at the Distributor or members of the db_owner fixed database role on the distribution database or users in the PAL can execute sp_helppublication.  
+ For a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, only members of the sysadmin fixed server role at the Distributor or members of the db_owner fixed database role on the distribution database or users in the PAL can execute sp_helppublication.  
   
 ## See Also  
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

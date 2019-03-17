@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "certificates"
@@ -47,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**start_date**|**datetime**|When certificate becomes valid.|  
 |**thumbprint**|**varbinary(32)**|SHA-1 hash of the certificate. The SHA-1 hash is globally unique.|  
 |**attested_by**|**nvarchar(260)**|System use only.|  
-|pvt_key_last_backup_date|**datetime**|The date and time the certificate’s private key was last exported.|  
+|pvt_key_last_backup_date|**datetime**|The date and time the certificate's private key was last exported.|  
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server event classes, User-Configurable event category"
   - "event classes [SQL Server], User-Configurable event category"
   - "User-Configurable event category [SQL Server]"
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
-caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

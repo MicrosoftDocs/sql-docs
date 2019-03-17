@@ -4,12 +4,9 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: extensions
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom data processing extensions [Reporting Services]"
   - "data sources [Reporting Services], data processing extensions"
@@ -50,7 +47,7 @@ ms.author: maghan
  [Debugging Data Processing Extension Code](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  Describes how to debug code in your data processing extensions.  
   
- For a sample of a fully implemented data processing extension, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For a sample of a fully implemented data processing extension, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   

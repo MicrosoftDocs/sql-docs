@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], characteristics"
   - "properties [Analysis Services], dimensions"
 ms.assetid: 9314e749-0918-4862-abaf-a21692188122
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg

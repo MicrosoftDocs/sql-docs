@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [Reporting Services]"
   - "report snapshots [Reporting Services]"
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create, Modify, and Delete Snapshots in Report History
   Report history is a collection of report snapshots. You can maintain report history by adding and deleting snapshots, or by modifying properties that affect report history storage. You can create report history manually or on a schedule.  

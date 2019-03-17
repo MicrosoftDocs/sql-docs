@@ -5,9 +5,7 @@ ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filtered indexes [SQL Server], about filtered indexes"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], filtered"
   - "indexes [SQL Server], filtered"
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -110,17 +107,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  Click the plus sign to expand the table on which you want to create a filtered index.  
   
-4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index…**.  
+4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index...**.  
   
 5.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-6.  Under **Index key columns**, click **Add…**.  
+6.  Under **Index key columns**, click **Add...**.  
   
 7.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   
 8.  Click **OK**.  
   
-9. On the **Filter** page, under **Filter Expression**, enter SQL expression that you’ll use to create the filtered index.  
+9. On the **Filter** page, under **Filter Expression**, enter SQL expression that you'll use to create the filtered index.  
   
 10. Click **OK**.  
   

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlserverdestadapter.advanced.f1"
 helpviewer_keywords: 
   - "SQL Server Destination Editor"
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -53,7 +50,7 @@ manager: craigg
 >  Clear the text box in the **SQL Destination Editor** to indicate that you do not want to assign a value for this property. Use -1 in the **Properties** window, the **Advanced Editor**, and the object model.  
   
  **Maximum number of errors**  
- Specify the number of errors that can occur before the bulk insert stops. The default value of this property is **–1**, indicating that no value has been assigned.  
+ Specify the number of errors that can occur before the bulk insert stops. The default value of this property is **-1**, indicating that no value has been assigned.  
   
 > [!NOTE]  
 >  Clear the text box in the **SQL Destination Editor** to indicate that you do not want to assign a value for this property. Use -1 in the **Properties** window, the **Advanced Editor**, and the object model.  

@@ -4,7 +4,6 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-builder
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -13,15 +12,15 @@ helpviewer_keywords:
   - "tutorials, getting started"
   - "creating reports"
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
 
   In this tutorial, you use a wizard to create a pie chart in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Then you add percentages and modify the pie chart a little. 
   
-You can do this tutorial two different ways. Both methods have the same outcome—a pie chart like the one in this illustration:  
+You can do this tutorial two different ways. Both methods have the same outcome-a pie chart like the one in this illustration:  
   
  ![Report Builder quick pie chart](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Report Builder quick pie chart")  
   
@@ -229,6 +228,6 @@ Notice the design surface gets larger as you drag.
 ## Next steps
 
 [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)   
-[Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.workingwithsql2000diagrams"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "database diagrams [SQL Server]"
   - "diagrams [SQL Server]"
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "restoring files [SQL Server], how-to topics"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "overwriting filegroups"
   - "overwriting files"
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

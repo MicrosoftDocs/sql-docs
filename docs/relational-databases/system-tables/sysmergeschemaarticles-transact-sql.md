@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sysmergeschemaarticles_TSQL"
   - "sysmergeschemaarticles"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergeschemaarticles system table"
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

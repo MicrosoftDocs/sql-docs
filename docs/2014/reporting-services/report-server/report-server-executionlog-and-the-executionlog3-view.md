@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Reporting Services], execution"
   - "execution logs [Reporting Services]"
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Report Server Execution Log and the ExecutionLog3 View
   The report server execution log contains information about the reports that execute on the server or on multiple servers in a native mode scale-out deployment or a SharePoint farm. You can use the report execution log to find out how often a report is requested, what output formats are used the most, and how many milliseconds of processing time is spent on each processing phase. The log contains information on the length of time spent executing a report's dataset query and the time spent processing the data. If you are a report server administrator, you can review the log information and identify long running tasks and make suggestions to the report authors on the areas of the report (dataset or processing) they may be able to improve.  
@@ -26,7 +23,7 @@ manager: craigg
 ##  <a name="bkmk_top"></a> Viewing Log Information  
  The report server execution logs data about report execution into an internal database table. The information from the table is available from SQL Server views.  
   
- The report execution log is stored in the report server database that by default is named **ReportServer**. The SQL views provide the execution log information. The “2” and “3” views were added in more recent releases and contain new fields or they contain fields with friendlier names than the previous releases. The older views remain in the product so custom applications that depend on them are not impacted. If you do not have a dependence on an older view, for example ExecutionLog, it is recommended you use the most recent view, ExecutionLog**3**.  
+ The report execution log is stored in the report server database that by default is named **ReportServer**. The SQL views provide the execution log information. The "2" and "3" views were added in more recent releases and contain new fields or they contain fields with friendlier names than the previous releases. The older views remain in the product so custom applications that depend on them are not impacted. If you do not have a dependence on an older view, for example ExecutionLog, it is recommended you use the most recent view, ExecutionLog**3**.  
   
  In this topic:  
   
@@ -78,7 +75,7 @@ manager: craigg
   
  **To enable execution logging:**  
   
-1.  Start SQL Server Management Studio with administrative privileges. For example right-click the Management Studio icon and click ‘Run as administrator’.  
+1.  Start SQL Server Management Studio with administrative privileges. For example right-click the Management Studio icon and click 'Run as administrator'.  
   
 2.  Connect to the desired report server.  
   
@@ -308,7 +305,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Column|Description|  
 |------------|-----------------|  
 |InstanceName|Name of the report server instance that handled the request.|  
-|ReportPath|The path structure to the report.  For example a report named ”test” which is the in root folder in Report Manager, would have a ReportPath of “/test”.<br /><br /> A report named “test” that is saved in the folder “samples” on Report Manager , will have a ReportPath of “/Samples/test/”|  
+|ReportPath|The path structure to the report.  For example a report named "test" which is the in root folder in Report Manager, would have a ReportPath of "/test".<br /><br /> A report named "test" that is saved in the folder "samples" on Report Manager , will have a ReportPath of "/Samples/test/"|  
 |UserName|User identifier.|  
 |ExecutionID||  
 |RequestType|Request type (either user or system).|  

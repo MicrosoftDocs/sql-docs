@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], mining models"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "removing mining models"
   - "mining models [Analysis Services], deleting"
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

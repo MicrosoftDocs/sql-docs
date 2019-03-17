@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "package requirements"
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -46,7 +43,7 @@ manager: craigg
   
 ## Related Content  
   
-1.  Video, [Creating a Basic Package (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131023), on MSDN.Microsoft.com  
+1.  Video, [Creating a Basic Package (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131023), on MSDN.Microsoft.com  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   

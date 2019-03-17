@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], Business Intelligence enhancements"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "unary operators"
   - "custom aggregations [Analysis Services]"
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

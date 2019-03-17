@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "TERTIARY_WEIGHTS_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "SQL tertiary collations"
   - "TERTIARY_WEIGHTS function"
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

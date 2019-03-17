@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: polybase
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "PolyBase"
@@ -108,7 +106,7 @@ WITH (
 );  
   
 -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
-INSERT INTO dbo.FastCustomer2009  
+INSERT INTO dbo.FastCustomers2009  
 SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2  
 ON (T1.CustomerKey = T2.CustomerKey)  
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, browsing"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "decision tree [data mining]"
   - "dependency network"
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -105,7 +102,7 @@ manager: craigg
   
 -   If your data can be divided into multiple series, a different model is built for each set of data that you want to model.  
   
--   In the sample data model, there is only one predictable outcome – Bike Buyer – but suppose you had information about whether the customer purchased a service plan and wanted to predict that as well. In that case you would have that data in a separate column, and include two predictable attributes in the model.  
+-   In the sample data model, there is only one predictable outcome - Bike Buyer - but suppose you had information about whether the customer purchased a service plan and wanted to predict that as well. In that case you would have that data in a separate column, and include two predictable attributes in the model.  
   
      Click the **Histogram** option, in the upper left corner of the Decision Tree pane, to change the maximum number of states that can appear in the histograms in the tree. This is useful if the predictable attribute has many states. The states appear in a histogram in order of popularity from left to right.  
   
@@ -145,7 +142,7 @@ manager: craigg
   
     -   **Drill Through Model**. This option gets the cases that belong to the selected node, and saves them to a table in Excel. You get back only the columns of data that were actually used in building the model.  
   
-    -   **Drill Through Structure Columns**. This option gets the cases that belong to the selected node, and saves them to a table in Excel. You get all information that was available in the underlying data when you built it, even of a column wasn’t used in the model. For example, you might have excluded the customer address and zip code because those fields are not useful with analysis, but left them in the structure.  
+    -   **Drill Through Structure Columns**. This option gets the cases that belong to the selected node, and saves them to a table in Excel. You get all information that was available in the underlying data when you built it, even of a column wasn't used in the model. For example, you might have excluded the customer address and zip code because those fields are not useful with analysis, but left them in the structure.  
   
      Return to Excel to view your data. The Browse viewer runs a query, saves the data to a table in a new worksheet, and labels the results.  
   

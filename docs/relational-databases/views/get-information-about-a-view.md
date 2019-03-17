@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.viewproperties.general.f1"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "status information [SQL Server], views"
   - "view dependencies"
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -29,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Get Information About a View
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  You can gain information about a view’s definition or properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You may need to see the definition of the view to understand how its data is derived from the source tables or to see the data defined by the view.  
+  You can gain information about a view's definition or properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You may need to see the definition of the view to understand how its data is derived from the source tables or to see the data defined by the view.  
   
 > [!IMPORTANT]  
 >  If you change the name of an object referenced by a view, you must modify the view so that its text reflects the new name. Therefore, before renaming an object, display the dependencies of the object first to determine if any views are affected by the proposed change.  
@@ -137,7 +134,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      Shows whether all columns are returned by the selected view. This is set at the time the view is created.  
   
      **SQL Comment**  
-     Shows a description of the SQL statements. To see the entire description, or to edit it, click the description and then click the ellipses **(…)** to the right of the property. Your comments might include information such as who uses the view and when they use it.  
+     Shows a description of the SQL statements. To see the entire description, or to edit it, click the description and then click the ellipses **(...)** to the right of the property. Your comments might include information such as who uses the view and when they use it.  
   
      **Top Specification**  
      Expands to show properties for the **Top**, **Expression**, **Percent**, and **With Ties** properties.  

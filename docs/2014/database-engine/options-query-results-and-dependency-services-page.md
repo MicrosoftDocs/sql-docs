@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral"
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-caps.latest.revision: 6
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Options (Query Results and Dependency Services Page)
@@ -50,6 +46,4 @@ manager: craigg
  If using SQL Server Authentication, provide a password.  
   
  **Test**  
- Click to test the connection.  
-  
-  
+ Click to test the connection.

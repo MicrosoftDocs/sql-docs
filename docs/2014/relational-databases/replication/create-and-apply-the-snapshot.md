@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], applying"
   - "snapshots [SQL Server replication], creating"
 ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -41,8 +37,7 @@ manager: craigg
   
  To view or modify the default snapshot folder location, see  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
-  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location](snapshot-options.md#snapshot-folder-locations)
 -   Replication Programming and RMO programming: [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
   
 ## See Also  

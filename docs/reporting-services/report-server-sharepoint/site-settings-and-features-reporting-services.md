@@ -4,7 +4,6 @@ ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -31,7 +30,7 @@ Reporting Services SharePoint mode has several site level custom features and si
   
 ## Open the Reporting Services site settings page
   
-1.  From the SharePoint site’s **Site Actions** menu, select **Site Settings**.  
+1.  From the SharePoint site's **Site Actions** menu, select **Site Settings**.  
   
 2.  In the **Reporting Services** section, select **Reporting Services Site Settings**.  
   

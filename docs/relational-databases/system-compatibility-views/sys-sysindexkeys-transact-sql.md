@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysindexkeys"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sysindexkeys system table"
   - "sys.sysindexkeys compatibility view"
 ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], shared data sources"
   - "shared data sources [Reporting Services]"
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-caps.latest.revision: 12
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Create and Manage Shared Data Sources (Reporting Services in SharePoint Integrated Mode)
   When you run a report from a SharePoint library, connection information can be defined inside the report or in an external file that is linked to the report. If the connection information is embedded within the report, it is called a custom data source. If the connection information is defined in an external file, it is called a shared data source. The external file can be a report server data source (.rsds) file or an Office Data Connection (.odc) file.  

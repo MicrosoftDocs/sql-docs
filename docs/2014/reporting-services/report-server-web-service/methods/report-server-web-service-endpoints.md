@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "management endpoints [Reporting Services]"
@@ -17,16 +15,15 @@ helpviewer_keywords:
   - "execution endpoints [Reporting Services]"
   - "Report Server Web service, endpoints"
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Report Server Web Service Endpoints
   The Report Server Web service provides several endpoints for managing a report server as well as executing and navigating reports.  
   
 ## The Management Endpoints  
- There are three endpoints available for managing objects on a report server, <xref:ReportService2005>, <xref:ReportService2006>, and <xref:ReportService2010>. The <xref:ReportService2005> endpoint is used for managing objects on a report server that is configured for native mode. The <xref:ReportService2006> endpoint is used for managing objects on a report server that is configured for SharePoint integrated mode. The <xref:ReportService2010> endpoint merges the functionalities of <xref:ReportService2005> and <xref:ReportService2006> and can manage objects on a report server that that are configured for either native or SharePoint integrated mode.  
+ There are three endpoints available for managing objects on a report server, <xref:ReportService2005>, <xref:ReportService2006>, and <xref:ReportService2010>. The <xref:ReportService2005> endpoint is used for managing objects on a report server that is configured for native mode. The <xref:ReportService2006> endpoint is used for managing objects on a report server that is configured for SharePoint integrated mode. The <xref:ReportService2010> endpoint merges the functionalities of <xref:ReportService2005> and <xref:ReportService2006> and can manage objects on a report server that are configured for either native or SharePoint integrated mode.  
   
 > [!IMPORTANT]  
 >  When a report server is configured for SharePoint integrated mode, the <xref:ReportService2005> APIs will return an `rsOperationNotSupportedSharePointMode` error. If the report server is configured for native mode, the <xref:ReportService2006> APIs will return an `rsOperationNotSupportedNativeMode` error. Similarly, when mode-specific APIs in <xref:ReportService2010> are used on unintended modes, the APIs will return the respective errors.  

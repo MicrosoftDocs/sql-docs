@@ -5,18 +5,15 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index online operations [SQL Server]"
   - "online index operations"
   - "ONLINE option"
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.suite: "sql"
 ms.prod_service: "table-view-index, sql-database"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

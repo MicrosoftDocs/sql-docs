@@ -5,9 +5,7 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_CONTEXT_INFO_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "CONTEXT_INFO option"
   - "SET CONTEXT_INFO statement"
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

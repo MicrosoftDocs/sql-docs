@@ -1,10 +1,11 @@
 ---
-title: Tutorial on creating, training and scoring partition-based models in R (SQL Server Machine Learning Services) | Microsoft Docs
+title: Tutorial on creating, training and scoring partition-based models in R - SQL Server Machine Learning Services
+description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
@@ -25,7 +26,7 @@ Partition-based modeling is enabled through two new parameters on [sp_execute_ex
 In this tutorial, learn partition-based modeling using the classic NYC taxi sample data and R script. The partition column is the payment method.
 
 > [!div class="checklist"]
-> * Partition based on a payment_type column. Values in this column segment data, one partition for each payment types.
+> * Partitions are based on payment types (5).
 > * Create and train models on each partition and store the objects in the database.
 > * Predict the probability of tip outcomes over each partition model, using sample data reserved for that purpose.
 
@@ -33,21 +34,17 @@ In this tutorial, learn partition-based modeling using the classic NYC taxi samp
  
 To complete this tutorial, you must have the following:
 
-+ SQL Server 2019 database engine instance, with Machine Learning Services and the R feature
-+ Sample data
-+ A tool for T-SQL query execution, such as SQL Server Management Studio
++ Sufficient system resources. The data set is large and training operations are resource-intensive. If possible, use a system having at least 8 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
 
-### System resources
++ A tool for T-SQL query execution, such as [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-The data set is large and training operations are resource-intensive. If possible, use a system having at least 8 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which you can [download and restore](demo-data-nyctaxi-in-sql.md) to your local database engine instance. File size is approximately 90 MB.
 
-### SQL Server database engine with Machine Learning Services
++ SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration.
 
-SQL Server 2019 CTP 2.0 or later, with Machine Learning Services installed and configured, is required. You can check server version in Management Studio by executing `SELECT @@Version` as a T-SQL query. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
+Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.3) - 15.0.x".
 
-### R packages
-
-This tutorial uses R installed with Machine Learning Services. You can verify R installation by returning a well-formatted list of all R packages currently installed with your database engine instance:
+Check availability of R packages by returning a well-formatted list of all R packages currently installed with your database engine instance:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -61,21 +58,9 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-### Tools for query execution
-
-You can [download and install SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
-
-### Sample data
-
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
-
-+ Download the [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) database backup file and restore it on the database engine instance.
-
-The database file name must be **NYCTaxi_sample** if you want to run the following scripts with no modification.
-
 ## Connect to the database
 
-Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYCTaxi_Sample database](sqldev-download-the-sample-data.md) exists. 
+Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYCTaxi_Sample database](demo-data-nyctaxi-in-sql.md) exists. 
 
 ## Create CalculateDistance
 

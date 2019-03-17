@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining model content, viewing"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Neural Network Viewer [Analysis Services]"
   - "neural network model [Analysis Services]"
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg

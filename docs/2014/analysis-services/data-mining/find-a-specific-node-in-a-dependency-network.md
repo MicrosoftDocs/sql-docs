@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "nodes [Analysis Services]"
   - "dependency network nodes [Analysis Services]"
   - "Mining Model Viewer [Analysis Services], dependency network nodes"
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time series algorithms [Analysis Services]"
   - "time series [Analysis Services]"
   - "mining model content, time series models"
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -61,7 +58,7 @@ manager: craigg
 >  If you want to view the formulas, you can find the complete regression formula at the leaf node level, but not in an intermediate or root node.  
   
 ### Structure of an ARIMA Model  
- The ARIMA algorithm creates a single piece of information for each combination of a data series (such as **[Region]**) and a predictable attribute (such as **[Sales Amount]**)—the equation that describes the change of the predictable attribute over time.  
+ The ARIMA algorithm creates a single piece of information for each combination of a data series (such as **[Region]**) and a predictable attribute (such as **[Sales Amount]**)-the equation that describes the change of the predictable attribute over time.  
   
  The equation for each series is derived from multiple components, one for each periodic structure that was found in the data. For example, if you have sales data that is collected on a monthly basis, the algorithm might detect monthly, quarterly, or yearly periodic structures.  
   
@@ -414,7 +411,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |27 (ARIMA Root)|Intercept<br /><br /> Periodicity|11|  
 |28 (ARIMA Periodic Structure)|Periodicity<br /><br /> Auto Regressive order<br /><br /> Difference order<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA Autoregressive)|Coefficient<br /><br /> (complement of coefficient)|7|  
-|30 (ARIMA Moving Average)|Value at t<br /><br /> Value at t-1<br /><br /> …<br /><br /> Value at t-n|7|  
+|30 (ARIMA Moving Average)|Value at t<br /><br /> Value at t-1<br /><br /> ...<br /><br /> Value at t-n|7|  
   
  The value for the *moving average order* indicates the number of moving averages in a series. Generally the moving average is calculated n-1 times if there are n terms in a series, but the number can be reduced for easier computation.  
   

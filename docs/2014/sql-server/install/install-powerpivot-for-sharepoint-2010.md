@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -40,7 +37,7 @@ manager: craigg
   
 6.  The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instance name must be available. You cannot have an existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance on the computer on which you are installing PowerPivot for SharePoint.  
   
-7.  The [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance cannot be part of a SQL Server Failover Cluster. Use high availability features of the SharePoint Product. For example, Excel Services manages load balancing of PowerPivot for SharePoint servers. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
+7.  The [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance cannot be part of a SQL Server Failover Cluster. Use high availability features of the SharePoint Product. For example, Excel Services manages load balancing of PowerPivot for SharePoint servers. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
   
 8.  If you are installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on an existing farm, you must have one or more SharePoint web applications that are configured for classic mode authentication. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access will only work if the web application supports classic mode authentication. For more information about classic mode requirements, see [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
   
@@ -74,7 +71,7 @@ manager: craigg
   
 8.  On the **Setup Role** page, select **SQL Server PowerPivot for SharePoint**.  
   
-9. Optionally, you can add an instance of the Database Engine to your installation. You might do this if you are setting up a new farm and need a database server to run the farm’s configuration and content databases. If you add the Database Engine, it will be installed as a PowerPivot named instance. Whenever you need to specify a connection to this instance (for example, in the farm configuration wizard if you are using that wizard to configure the farm), enter the database name in this format: <`servername`>\PowerPivot.  
+9. Optionally, you can add an instance of the Database Engine to your installation. You might do this if you are setting up a new farm and need a database server to run the farm's configuration and content databases. If you add the Database Engine, it will be installed as a PowerPivot named instance. Whenever you need to specify a connection to this instance (for example, in the farm configuration wizard if you are using that wizard to configure the farm), enter the database name in this format: <`servername`>\PowerPivot.  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
@@ -126,7 +123,7 @@ manager: craigg
   
 -   [PowerPivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
- **Connecting to the Database Engine Instance.** When you installed [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], SQL Server Setup gave you the option of adding an instance of the Database Engine to your installation. You might have added a Database Engine instance to your installation if you are setting up a new farm and need a database server to run the farm’s configuration and content databases. If you added the Database Engine, it was installed as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance. Whenever you need to specify a connection to this instance (for example, in the farm configuration wizard if you are using that wizard to configure the farm), remember to enter the database name in this format: <`servername`>\PowerPivot.  
+ **Connecting to the Database Engine Instance.** When you installed [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], SQL Server Setup gave you the option of adding an instance of the Database Engine to your installation. You might have added a Database Engine instance to your installation if you are setting up a new farm and need a database server to run the farm's configuration and content databases. If you added the Database Engine, it was installed as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance. Whenever you need to specify a connection to this instance (for example, in the farm configuration wizard if you are using that wizard to configure the farm), remember to enter the database name in this format: <`servername`>\PowerPivot.  
   
 ##  <a name="bkmk_redist"></a> Step 3: Install Analysis Services OLE DB providers on Excel Services Application Servers  
  Additional installation steps are required if you run Excel Calculation Services and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] on separate application servers. On the application servers running Excel Calculation Services, install the appropriate version of the Analysis Services OLE DB (MSOLAP) provider.  
@@ -134,7 +131,7 @@ manager: craigg
 -   The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of MSOLAP is included in SQL Server Setup, therefore explicitly installing the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of MSOLAP is only required if your application server is not a PowerPivot application server.  
   
     > [!NOTE]  
-    >  The Excel Calculation Services application server also needs an instance of the file **Microsoft.AnalysisServices.Xmla.dll** in the global assembly. To install the .dll on the application server, install [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Select the “Management Tools – Complete” on the **Feature Selection** page of the SQL Server Setup wizard.  
+    >  The Excel Calculation Services application server also needs an instance of the file **Microsoft.AnalysisServices.Xmla.dll** in the global assembly. To install the .dll on the application server, install [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Select the "Management Tools - Complete" on the **Feature Selection** page of the SQL Server Setup wizard.  
   
 -   If you want the application server to support older [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks, you need to install the SQL Server 2008 R2 version of MSOLAP.  
   

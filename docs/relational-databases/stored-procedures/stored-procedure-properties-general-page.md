@@ -5,8 +5,6 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.spassistededitor.storedprocedure.f1"

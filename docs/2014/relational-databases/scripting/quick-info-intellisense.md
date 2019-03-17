@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Quick Info option [IntelliSense]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], Quick Info"
   - "identifier declarations [IntelliSense]"
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

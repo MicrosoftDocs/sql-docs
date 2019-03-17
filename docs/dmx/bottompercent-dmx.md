@@ -39,7 +39,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  The **BottomPercent** function returns the bottom-most rows in increasing order of rank. The rank is based on the evaluated value of the \<rank expression> argument for each row, such that the sum of the \<rank expression> values is at least the given percentage that is specified by the \<percent> argument. **BottomPercent** returns the smallest number of elements possible while still meeting the specified percent value.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you built in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ The following example creates a prediction query against the Association model that you built in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  To understand how BottomPercent works, it may be helpful to first execute a prediction query that returns only the nested table.  
   

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data modeling [data mining]"
   - "classification [data mining]"
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
   
 3.  On the **Classification** page, choose the column that you want to classify.  
   
-     Review the columns in the list, **Input columns**, and deselect any columns that have unique values and thus aren’t useful for creating patterns, such as ID numbers, customer names, and so on. You should also remove columns that essentially duplicate the classifiable column.  
+     Review the columns in the list, **Input columns**, and deselect any columns that have unique values and thus aren't useful for creating patterns, such as ID numbers, customer names, and so on. You should also remove columns that essentially duplicate the classifiable column.  
   
      For example, if you are classifying predicting the category of a product, you should exclude the subcategory field if there is a known business rule, or else the strength of that rule might prevent you from discovering other correlations.  
   

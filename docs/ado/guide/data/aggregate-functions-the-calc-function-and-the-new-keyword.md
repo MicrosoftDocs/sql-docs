@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data shaping [ADO], functions"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "NEW keyword [ADO]"
   - "aggregate functions [ADO]"
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

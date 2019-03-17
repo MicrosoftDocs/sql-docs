@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_jobschedule"
@@ -52,13 +49,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  Job identification number of the job to which the schedule is added. *job_id* is **uniqueidentifier**, with no default.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'**_job_name_**'**  
  Name of the job to which the schedule is added. *job_name* is **nvarchar(128)**, with no default.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@name=** ] **'***name***'**  
+ [ **@name=** ] **'**_name_**'**  
  Name of the schedule. *name* is **nvarchar(128)**, with no default.  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -131,13 +128,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  Time on any day between *active_start_date* and *active_end_date* to begin job execution. *active_start_time* is **int**, with no default. The time is formatted as HHMMSS on a 24-hour clock.  
   
- [ **@active_end_time=***active_end_time*  
+ [ **@active_end_time=**_active_end_time_  
  Time on any day between *active_start_date* and *active_end_date* to end job execution. *active_end_time* is **int**, with no default. The time is formatted as HHMMSS on a 24-hour clock.  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+ [ **@schedule_id=**_schedule_id_**OUTPUT**  
  Schedule identification number assigned to the schedule if it is created successfully. *schedule_id* is an output variable of type **int**, with no default.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**= ] _schedule_uid_**OUTPUT**  
  A unique identifier for the schedule. *schedule_uid* is a variable of type **uniqueidentifier**.  
   
 ## Return Code Values  

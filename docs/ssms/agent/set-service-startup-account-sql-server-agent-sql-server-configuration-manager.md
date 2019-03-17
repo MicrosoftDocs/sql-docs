@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, service accounts"
   - "startup accounts [SQL Server]"
   - "service startup accounts [SQL Server Agent]"
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -70,7 +66,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 2.  Click the plus sign to expand the **Local Server Groups** folder.  
   
-3.  Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager…**.  
+3.  Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager...**.  
   
 4.  In the **User Account Control** dialog box, click **Yes**.  
   
@@ -80,7 +76,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 7.  In the **SQL Server Agent**_(server\_name)_ **Properties** dialog box, in the **Log On** tab, select one of the following options under **Log on as**:  
   
-    -   **Built-in account**: select this option if your jobs require resources from the local server only. For information about how to choose a Windows built-in account type, see [Selecting an Account for SQL Server Agent Service.](http://msdn.microsoft.com/library/ms191543.aspx)  
+    -   **Built-in account**: select this option if your jobs require resources from the local server only. For information about how to choose a Windows built-in account type, see [Selecting an Account for SQL Server Agent Service.](https://msdn.microsoft.com/library/ms191543.aspx)  
   
         > [!IMPORTANT]  
         > The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service does not support the **Local Service** account in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

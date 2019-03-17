@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "dimensions [Analysis Services], proactive caching"
   - "proactive caching [Analysis Services]"
 ms.assetid: 7d57fe93-6e5f-4a50-844f-dd2bbdbb94a5
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg

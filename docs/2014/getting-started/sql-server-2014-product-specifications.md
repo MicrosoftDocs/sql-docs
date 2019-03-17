@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "data-quality-services"
@@ -14,7 +13,6 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
   - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server, product specifications"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "product specifications [SQL Server]"
   - "configuration options [SQL Server], product specifications"
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
-caps.latest.revision: 28
 author: mightypen
 ms.author: genemi
 manager: craigg

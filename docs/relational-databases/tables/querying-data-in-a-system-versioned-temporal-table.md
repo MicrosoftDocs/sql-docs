@@ -5,12 +5,9 @@ ms.date: "03/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-caps.latest.revision: 7
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -19,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Querying Data in a System-Versioned Temporal Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  When you want to get latest (actual) state of data in a temporal table, you can query completely the same way as you query non-temporal table. If the PERIOD columns are not hidden, their values will appear in a SELECT \* query. If you specified **PERIOD** columns as hidden, their values won’t appear in a SELECT \* query. When the **PERIOD** columns are hidden, reference the **PERIOD** columns specifically in the SELECT clause to return the values for these columns.  
+  When you want to get latest (actual) state of data in a temporal table, you can query completely the same way as you query non-temporal table. If the PERIOD columns are not hidden, their values will appear in a SELECT \* query. If you specified **PERIOD** columns as hidden, their values won't appear in a SELECT \* query. When the **PERIOD** columns are hidden, reference the **PERIOD** columns specifically in the SELECT clause to return the values for these columns.  
   
  To perform any type of time-based analysis, use the new **FOR SYSTEM_TIME** clause with four temporal-specific sub-clauses to query data across the current and history tables. For more information on these clauses, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
@@ -37,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Query for a specific time using the AS OF sub-clause  
  Use the **AS OF** sub-clause when you need to reconstruct state of data as it was at any specific time in the past. You can reconstruct the data with the precision of datetime2 type that was specified in **PERIOD** column definitions.    
-The **AS OF** sub-clause clause can be used with constant literals or with variables, which allows you to dynamically specify time condition. The values provided values are interpreted as UTC time.  
+The **AS OF** sub-clause clause can be used with constant literals or with variables, which allows you to dynamically specify time condition. The values provided are interpreted as UTC time.  
   
  This first example returns the state of the dbo.Department table AS OF a specific date in the past.  
   
@@ -97,7 +94,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 The first two sub-clauses return row versions that overlap with a specified period (i.e. those that started before given period and ended after it), while CONTAINED IN returns only those that existed within specified period boundaries.  
   
 > [!IMPORTANT]  
->  If you search for non-current row versions only, we recommend you to use **CONTAINED IN** as it works only with the history table and will yield the best query performance. Use **ALL** when you need to query current and historical data without any restrictions.  
+>  If you search for non-current row versions only, we recommend you query the history table directly as this will yield the best query performance. Use **ALL** when you need to query current and historical data without any restrictions.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

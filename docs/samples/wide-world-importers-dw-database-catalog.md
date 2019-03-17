@@ -6,8 +6,6 @@ ms.technology: samples
 ms.custom: ""
 ms.date: "08/04/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
@@ -79,7 +77,7 @@ These procedures are used to configure the sample. They are used to apply enterp
 |Configuration_ApplyPartitionedColumnstoreIndexing|Applies both partitioning and columnstore indexes for fact tables.|
 |Configuration_ConfigureForEnterpriseEdition|Applies partitioning, columnstore indexing and in-memory.|
 |Configuration_EnableInMemory|Replaces the integration staging tables with SCHEMA_ONLY memory-optimized tables to improve ETL performance.|
-|Configuration_ApplyPolybase|Configures an external data source, file format, and table.|
+|Configuration_ApplyPolyBase|Configures an external data source, file format, and table.|
 |Configuration_PopulateLargeSaleTable|Applies enterprise edition changes, then populates a larger amount of data for the 2012 calendar year as additional history.|
 |Configuration_ReseedETL|Removes existing data and restarts the ETL seeds. This allows for repopulating the OLAP database to match updated rows in the OLTP database.|
 

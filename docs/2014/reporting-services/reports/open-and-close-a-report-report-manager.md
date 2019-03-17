@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening reports"
   - "closing reports"
   - "reports [Reporting Services], opening"
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Open and Close a Report (Report Manager)
   You can use Report Manager to view reports that have been published to a report server. By default, all reports open in HTML. After a report is open, you can export it to view it in other application formats. If the report contains interactive features or if it is a Report Builder report that contains interactive data, you can click the links to view additional reports or data.  

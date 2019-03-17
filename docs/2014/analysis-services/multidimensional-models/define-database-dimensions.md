@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], defining"
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -40,7 +37,7 @@ manager: craigg
   
 |Tab|Description|  
 |---------|-----------------|  
-|**Dimension Structure**|Use this tab to work with the structure of a dimension—to examine or create the data source view schema for a dimension, to work with attributes, and to organize attributes in user-defined hierarchies.|  
+|**Dimension Structure**|Use this tab to work with the structure of a dimension-to examine or create the data source view schema for a dimension, to work with attributes, and to organize attributes in user-defined hierarchies.|  
 |**Attribute Relationships**|Use this tab to create, modify, or delete the attribute relationships of a dimension.|  
 |**Translations**|Use this tab to add and edit translations of dimension metadata in different languages.|  
 |**Browser**|Use this tab to examine the members of a processed dimension and to review translations of dimension metadata.|  

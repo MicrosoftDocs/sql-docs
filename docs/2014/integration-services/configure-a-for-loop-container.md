@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], For Loop"
   - "For Loop containers"
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -21,7 +18,7 @@ manager: craigg
 # Configure a For Loop Container
   This procedure describes how to configure a For Loop container by using the **For Loop Editor** dialog box.  
   
- For an example of the For Loop container, see [SSIS Loops that do not fail](http://go.microsoft.com/fwlink/?LinkId=240295) on bimonkey.com.  
+ For an example of the For Loop container, see [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295) on bimonkey.com.  
   
 ### To configure the For Loop container  
   

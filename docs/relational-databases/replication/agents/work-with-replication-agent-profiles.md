@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], agents and profiles"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], profiles"
   - "profiles [SQL Server], replication agents"
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: 49
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

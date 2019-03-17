@@ -1,18 +1,11 @@
-﻿---
+---
 title: "sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/13/2018"
-ms.prod: ""
+ms.date: "01/28/2019"
+ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "Azure SQL Database"
 f1_keywords: 
   - "sys.elastic_pool_resource_stats catalog view"
 helpviewer_keywords: 
@@ -21,7 +14,6 @@ helpviewer_keywords:
   - "elastic_pool_resource_stats_TSQL"
   - "elastic_pool_resource_stats"
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -30,7 +22,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 # sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Returns resource usage statistics for all the elastic database pools in a logical server. For each elastic database pool, there is one row for each 15 second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by all databases in the pool. This data is retained for 14 days. 
+  Returns resource usage statistics for all the elastic pools in a SQL Database server. For each elastic pool, there is one row for each 15 second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by all databases in the pool. This data is retained for 14 days. 
   
 ||  
 |-|  
@@ -51,32 +43,36 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |**elastic_pool_storage_limit_mb**|**bigint**|Current max elastic pool storage limit setting for this elastic pool in megabytes during this interval.|
 |**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information see: [File space management in SQL DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
-## Remarks  
- This view exists in the master database of the logical server. You must be connected to the master database to query **sys.elastic_pool_resource_stats**.  
+## Remarks
+
+ This view exists in the master database of the SQL Database server. You must be connected to the master database to query **sys.elastic_pool_resource_stats**.  
   
-## Permissions  
+## Permissions
+
  Requires membership in the **dbmanager** role.  
   
-## Examples  
- The following example returns resource utilization data ordered by the most recent time for all the elastic database pools in the current logical server.  
+## Examples
+
+ The following example returns resource utilization data ordered by the most recent time for all the elastic database pools in the current SQL Database server.  
   
-```  
-SELECT * FROM sys.elastic_pool_resource_stats   
+```sql
+SELECT * FROM sys.elastic_pool_resource_stats
 ORDER BY end_time DESC;  
-```  
-  
+```
+
  The following example calculates the average DTU percentage consumption for a given pool.  
-  
-```  
-SELECT start_time, end_time,      
-  (SELECT Max(v)      
-FROM (VALUES (avg_cpu_percent), (avg_data_io_percent), (avg_log_write_percent)) AS value(v)) AS [avg_DTU_percent]    
-FROM sys.elastic_pool_resource_stats   
-WHERE elastic_pool_name = '<your pool name>'   
+
+```sql
+SELECT start_time, end_time,
+  (SELECT Max(v)
+FROM (VALUES (avg_cpu_percent), (avg_data_io_percent), (avg_log_write_percent)) AS value(v)) AS [avg_DTU_percent]
+FROM sys.elastic_pool_resource_stats
+WHERE elastic_pool_name = '<your pool name>'
 ORDER BY end_time DESC;  
-```  
-  
-## See Also  
+```
+
+## See Also
+
  [Tame explosive growth with elastic databases](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   

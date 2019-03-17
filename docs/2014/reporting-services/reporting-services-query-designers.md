@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query designers [Reporting Services]"
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-caps.latest.revision: 16
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Reporting Services Query Designers
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides graphical and text-based query designers to help you build queries for each data source type in your report.  

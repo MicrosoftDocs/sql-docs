@@ -5,12 +5,9 @@ ms.date: "01/19/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -24,7 +21,7 @@ manager: craigg
 
 |Name|Description|  
 |----------|-----------------|  
-|[SQLServerException ](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initializes a new instance of the SQLServerException class.|  
+|[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initializes a new instance of the SQLServerException class.|  
   
 ## Fields  
  None.  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data source views [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "multiple data source views"
   - "SSAS, data source views"
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

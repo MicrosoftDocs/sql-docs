@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.default_constraints"
@@ -49,7 +46,8 @@ GO
 SELECT d.definition   
 FROM sys.default_constraints AS d  
 INNER JOIN sys.columns AS c  
-ON d.parent_column_id = c.column_id  
+ON d.parent_object_id = c.object_id
+AND d.parent_column_id = c.column_id  
 WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')  
 AND c.name = 'VacationHours';  
 ```  

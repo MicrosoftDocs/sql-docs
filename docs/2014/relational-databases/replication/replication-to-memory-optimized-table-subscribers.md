@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -239,7 +235,7 @@ manager: craigg
     GO  
     ```  
   
-6.  Apply the schema to a subscriber’s database and save the schema for future use.  
+6.  Apply the schema to a subscriber's database and save the schema for future use.  
   
 7.  Load the publisher (source) data to the subscriber. Data should not change at the publisher until you add a subscription.  You can use BCP as shown below:  
   
@@ -315,6 +311,6 @@ GO
  The primary key of a memory-optimized table cannot be updated. To replicate a primary key update on a subscriber, modify the update stored procedure to deliver the update as a delete and insert pair.  
   
 ## See Also  
- [Replication Features and Tasks](replication-features-and-tasks.md)  
+ [SQL Server Replication](sql-server-replication.md)  
   
   

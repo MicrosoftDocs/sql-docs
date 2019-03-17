@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deadlocks [SQL Server], printing files"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "opening deadlock files"
   - "printing deadlock files"
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
-caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

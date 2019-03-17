@@ -5,9 +5,7 @@ ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], endpoints"
   - "permissions [SQL Server], endpoints"
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
-caps.latest.revision: 28
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Endpoint Permissions (Transact-SQL)
@@ -49,7 +46,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Specifies a permission that can be denied on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Specifies the endpoint on which the permission is being denied. The scope qualifier (**::**) is required.  
   
  TO \<server_principal>  

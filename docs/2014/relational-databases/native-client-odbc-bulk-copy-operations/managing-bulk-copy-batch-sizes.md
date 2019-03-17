@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, bulk copy"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "batches [ODBC]"
   - "bulk copy [ODBC], batch sizes"
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

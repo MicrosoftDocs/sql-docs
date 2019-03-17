@@ -5,9 +5,7 @@ ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CERTIFICATE"
@@ -26,9 +24,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
   - "CREATE CERTIFICATE statement"
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
-caps.latest.revision: 74
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing reports [Reporting Services], uploading files"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "uploading files [Reporting Services]"
   - "files [Reporting Services], uploading"
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Upload a File or Report (Report Manager)
   Report Manager provides an upload feature so that you can add reports, models, and other files to a report server without having to publish those items from a client application. Files that you upload from the file system are stored as items on the report server. The type of file you upload determines how it is stored:  

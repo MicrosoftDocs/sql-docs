@@ -1,16 +1,13 @@
-﻿---
+---
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg

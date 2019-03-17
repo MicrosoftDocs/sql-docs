@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "totals [SQL Server], row counts"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "number of values"
   - "counting rows"
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

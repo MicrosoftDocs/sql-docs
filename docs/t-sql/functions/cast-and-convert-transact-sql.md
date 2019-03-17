@@ -1,13 +1,11 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/13/2018"
+ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CAST_TSQL"
@@ -34,7 +32,6 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "roundtrip conversions"
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 136
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -60,6 +57,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
 |Original	|int	|decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
@@ -97,7 +95,7 @@ Returns *expression*, translated to *data_type*.
 ## Date and Time Styles  
 For a date or time data type *expression*,  *style* can have one of the values shown in the following table. Other values are processed as 0. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the only styles supported, when converting from date and time types to **datetimeoffset**, are 0 or 1. All other conversion styles return error 9809.
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the date format, in Arabic style, with the Kuwaiti algorithm.
   
 |Without century (yy) (<sup>1</sup>)|With century (yyyy)|Standard|Input/Output (<sup>3</sup>)|  
@@ -188,7 +186,7 @@ For a **binary(n)**, **char(n)**, **varbinary(n)**, or **varchar(n)** *expressio
 Implicit conversions do not require specification of either the CAST function or the CONVERT function. Explicit conversions require specification of the CAST function or the CONVERT function. The following illustration shows all explicit and implicit data type conversions allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **bigint**, and **sql_variant**, and **xml**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.
   
 > [!TIP]  
->  The [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35834) has this chart available for download as a PDF file.  
+>  The [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) has this chart available for download as a PDF file.  
   
 ![Data type conversion table](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
   
@@ -319,7 +317,9 @@ The following table lists the styles for which the string-to-datetime conversion
 |113|130|  
   
 <sup>1</sup> With the exception of styles 20 and 21
-  
+
+For more information, see [Nondeterministic conversion of literal date strings into DATE values](../data-types/nondeterministic-convert-date-literals.md).
+
 ## Supplementary characters (surrogate pairs)
 Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using supplementary character (SC) collations, a CAST operation from **nchar** or **nvarchar** to an **nchar** or **nvarchar** type of smaller length will not truncate inside a surrogate pair. Instead, the operation truncates before the supplementary character. For example, the following code fragment leaves `@x` holding just `'ab'`. There is not enough space to hold the supplementary character.
   

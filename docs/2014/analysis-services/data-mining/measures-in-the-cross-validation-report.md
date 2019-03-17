@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "root mean square error [data mining]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "log score [data mining]"
   - "likelihood [data mining]"
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg

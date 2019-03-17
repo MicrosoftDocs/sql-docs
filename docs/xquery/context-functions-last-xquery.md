@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "last function [XQuery]"
   - "fn:last function"
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
-caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -47,7 +40,7 @@ fn:last() as xs:integer
   
 ```  
 SELECT ProductModelID, Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   <LastTwoManuSteps>  
    <Last-1Step>   
      { (/AWMI:root/AWMI:Location)[1]/AWMI:step[(last()-1)]/text() }  

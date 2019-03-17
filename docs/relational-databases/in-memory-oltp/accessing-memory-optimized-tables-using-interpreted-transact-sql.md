@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "05/31/2016"
 ms.prod: sql  
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -64,7 +61,7 @@ When accessing a memory-optimized table from an explicit or implicit transaction
   
 - Set the database option [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) to ON.  
   
-An isolation level table hint is not required for memory-optimized tables accessed by queries running in [auto-commit mode](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
+An isolation level table hint is not required for memory-optimized tables accessed by queries running in [auto-commit mode](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
   
 ## See Also
 

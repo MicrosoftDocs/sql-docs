@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Me.Value references"
   - "Reporting Services, backward compatibility"
   - "breaking changes [Reporting Services]"
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-caps.latest.revision: 111
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Breaking Changes in SQL Server Reporting Services in SQL Server 2014
   This topic describes breaking changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade, or in custom scripts or reports. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -40,14 +37,14 @@ manager: craigg
   
  `http://<Server name>/ReportServer`  
   
- It is now required that you include the SharePoint site in the URL path. For example, if your site name is ‘`videos`’ and used the ‘`sites`’ prefix, the URL would look similar to the following:  
+ It is now required that you include the SharePoint site in the URL path. For example, if your site name is '`videos`' and used the '`sites`' prefix, the URL would look similar to the following:  
   
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### Changes to SharePoint Mode Command-Line Installation  
- The input setting **/RSINSTALLMODE** only works with Native mode installations and it does not work for SharePoint mode installations. For example, the following is not supported in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE="DefaultSharePointMode”**. In place of that input setting, use **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
+ The input setting **/RSINSTALLMODE** only works with Native mode installations and it does not work for SharePoint mode installations. For example, the following is not supported in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE="DefaultSharePointMode"**. In place of that input setting, use **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
   
- The following statement is an example of a complete installation command and parameter set: **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 …. /RSSHPINSTALLMODE="DefaultSharePointMode"**  
+ The following statement is an example of a complete installation command and parameter set: **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 .... /RSSHPINSTALLMODE="DefaultSharePointMode"**  
   
  For more information on command-line installations, see [Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode](install-windows/install-reporting-services-at-the-command-prompt.md).  
   

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rsconfigtool.reportmanagervirtualdirectory.f1"
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg

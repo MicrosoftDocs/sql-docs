@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpextendedproc"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpextendedproc"
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg

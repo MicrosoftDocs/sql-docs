@@ -1,15 +1,12 @@
 ---
 title: "Configure compatible SQL Server features with Stretch Database | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Configure compatible SQL Server features with Stretch Database

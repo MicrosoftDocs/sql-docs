@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.timeperioddefinition.f1"
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -25,7 +22,7 @@ manager: craigg
   
 ## Options  
  **Time Property Name**  
- Displays the attribute types used to indicate time periods within time dimensions. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md).  
+ Displays the attribute types used to indicate time periods within time dimensions. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
 > [!NOTE]  
 >  The `Date` attribute type should be used only for columns with a DateTime data type.  

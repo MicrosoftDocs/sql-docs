@@ -1,16 +1,13 @@
 ---
 title: "Using Advanced Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -29,10 +26,13 @@ The following table lists the default mappings between the advanced [!INCLUDE[ss
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(default), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (default), Clob, InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (default), InputStream, Clob, byte[], Blob, SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (default), byte[], InputStream|  
-  
+|sqlvariant|SQLVARIANT|Object|  
+|geometry<br /><br /> geography|VARBINARY|byte[]|  
+
+
 <sup>1</sup> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports sending and retrieving CLR UDTs as binary data but doesn't support manipulation of the CLR metadata.  
   
 The following sections provide examples of how you can use the JDBC driver and the advanced data types.  
@@ -52,7 +52,7 @@ The primary scenarios for working with large-value types involve retrieving them
 
 ### Retrieving Large-Value Types from a Database
 
-When you retrieve a non-binary large-value data type—such as the **varchar(max)** data type—from a database, one approach is to read that data as a character stream. In the following example, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method of the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class is used to retrieve data from the database and return it as a result set. Then the [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class is used to read the large-value data from the result set.  
+When you retrieve a non-binary large-value data type-such as the **varchar(max)** data type-from a database, one approach is to read that data as a character stream. In the following example, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method of the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class is used to retrieve data from the database and return it as a result set. Then the [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class is used to read the large-value data from the result set.  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -63,7 +63,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > This same approach can also be used for the **text**, **ntext**, and **nvarchar(max)** data types.  
 
-When you retrieve a binary large-value data type—such as the **varbinary(max)** data type—from a database, there are several approaches that you can take. The most efficient approach is to read the data as a binary stream, as in the following:  
+When you retrieve a binary large-value data type-such as the **varbinary(max)** data type-from a database, there are several approaches that you can take. The most efficient approach is to read the data as a binary stream, as in the following:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -165,6 +165,14 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a UDT can be used 
   
 For more information about user-defined data types, see "Using and Modifying Instances of User-defined Types" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
+## Sql_variant Data Type
+
+For information about sql_variant data type, see [Using Sql_variant Data Type](../../connect/jdbc/using-sql-variant-datatype.md).  
+
+## Spatial Data Types
+
+For information about spatial data types, see [Using Spatial Datatypes](../../connect/jdbc/use-spatial-datatypes.md).  
+
 ## See Also
 
 [Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

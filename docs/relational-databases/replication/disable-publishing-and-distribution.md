@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "disabling publishing"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "disabling replication"
   - "disabling distribution"
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
-caps.latest.revision: 41
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS packages, backup and restore"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "restoring packages [Integration Services]"
   - "Integration Services packages, backup and restore"
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
-caps.latest.revision: 43
 author: douglaslms
 ms.author: douglasl
 manager: craigg

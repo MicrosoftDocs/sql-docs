@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.ffileconnection.columns.f1"
 helpviewer_keywords: 
   - "Flat File Connection Manager Editor"
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg

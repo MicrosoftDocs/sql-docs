@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
   
  The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -42,7 +39,7 @@ CREATE TABLE DateTimeTypes (datecol date, time2col time(7), datetime2col datetim
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -60,7 +57,7 @@ class direxec {
    HSTMT hstmt;   // Statement Handle  
    SQLHDESC hdesc;   // Descriptor handle  
    unsigned char szData[MAX_DATA];   // Returned Data Storage  
-   SDWORD cbData;   // Output Lenght of data  
+   SDWORD cbData;   // Output Length of data  
    unsigned char char_ds_name[SQL_MAX_DSN_LENGTH];   // Data Source Name  
   
    SQL_DATE_STRUCT date;   // date structure  
@@ -130,7 +127,7 @@ direxec::direxec() {
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-   // Allocate the enviroment handle  
+   // Allocate the environment handle  
    rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
    check_rc(rc);  
   
@@ -229,7 +226,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 USE tempdb  
 GO  
   

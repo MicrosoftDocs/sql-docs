@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Analysis Services], relationships"
   - "relationships [Analysis Services], attributes"
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -32,12 +29,12 @@ manager: craigg
 -   Results in the selection of more effective aggregates by the aggregation design algorithms, provided that user-defined hierarchies have been defined along the relationship paths.  
   
     > [!NOTE]  
-    >  For more information about the importance and implications of defining and configuring attribute relationships, see the section, “Enhancing query performance,” in the [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
+    >  For more information about the importance and implications of defining and configuring attribute relationships, see the section, "Enhancing query performance," in the [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## Attribute Relationship Considerations  
  When the underlying data supports it, you should also define unique attribute relationships between attributes. To define unique attribute relationships, use the **Attribute Relationships** tab of Dimension Designer.  
   
- Any attribute that has an outgoing relationship must have a unique key relative to its related attribute. In other words, a member in a source attribute must identify one and only one member in a related attribute. For example, consider the relationship, City -> State. In this relationship, the source attribute is City and the related attribute is State. The source attribute is the “many” side and the related side is the “one” side of the many-to-one relationship. The key for the source attribute would be City + State. For more information, see [Create, Modify, or Delete an Attribute Relationship](attribute-relationships-create-modify-or-delete-relationship.md).  
+ Any attribute that has an outgoing relationship must have a unique key relative to its related attribute. In other words, a member in a source attribute must identify one and only one member in a related attribute. For example, consider the relationship, City -> State. In this relationship, the source attribute is City and the related attribute is State. The source attribute is the "many" side and the related side is the "one" side of the many-to-one relationship. The key for the source attribute would be City + State. For more information, see [Create, Modify, or Delete an Attribute Relationship](attribute-relationships-create-modify-or-delete-relationship.md).  
   
  For more information about properties of an attribute relationship, see [Configure Attribute Relationship Properties](attribute-relationships-configure-attribute-properties.md).  
   

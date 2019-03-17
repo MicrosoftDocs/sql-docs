@@ -4,25 +4,21 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.configuresnapshotagent.f1"
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
-caps.latest.revision: 29
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
 # Snapshot Agent (New Publication Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The Snapshot Agent creates files containing the publication schema and data that are used to initialize new subscriptions. By default, the Snapshot Agent runs immediately after the publication is created in the New Publication Wizard. Subsequently, the agent runs according to a schedule you specify. Whether the agent creates new snapshot files each time it runs depends on the type of replication and options chosen. For more information, see [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
+  The Snapshot Agent creates files containing the publication schema and data that are used to initialize new subscriptions. By default, the Snapshot Agent runs immediately after the publication is created in the New Publication Wizard. Subsequently, the agent runs according to a schedule you specify. Whether the agent creates new snapshot files each time it runs depends on the type of replication and options chosen. For more information, see [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
- For merge publications that use parameterized filters, you must create a snapshot for each partition of data after the publication snapshot has completed. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ For merge publications that use parameterized filters, you must create a snapshot for each partition of data after the publication snapshot has completed. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## Options  
  **Create a snapshot immediately** (merge replication) or **Create a snapshot immediately and keep the snapshot available to initialize subscriptions** (transactional replication)  

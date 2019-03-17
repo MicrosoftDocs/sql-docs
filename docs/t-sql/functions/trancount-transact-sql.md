@@ -5,9 +5,7 @@ ms.date: "08/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@TRANCOUNT_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "connections [SQL Server], active transactions"
   - "active transactions"
 ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases"
   - "Access databases, exporting metadata"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "inventories of Access databases"
   - "querying exported metadata"
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

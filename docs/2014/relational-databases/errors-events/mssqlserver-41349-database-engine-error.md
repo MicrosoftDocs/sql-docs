@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "41349 (Database Engine error)"
 ms.assetid: dd365112-a36a-4ba1-888a-b3bc149775e6
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: 7039bebb-1f25-4cf3-81f1-393dfb78da12
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg

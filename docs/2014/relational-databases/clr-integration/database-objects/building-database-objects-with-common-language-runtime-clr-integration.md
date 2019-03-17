@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "routines [CLR integration]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "building database objects [CLR integration]"
   - ".NET Framework routines [SQL Server]"
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: 47
 author: rothja
 ms.author: jroth
 manager: craigg

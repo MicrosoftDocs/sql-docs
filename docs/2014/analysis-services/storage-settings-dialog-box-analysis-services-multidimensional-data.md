@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1"
   - "sql12.asvs.cubeeditor.cubebuilder.measuregroupstoragesettings.f1"
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

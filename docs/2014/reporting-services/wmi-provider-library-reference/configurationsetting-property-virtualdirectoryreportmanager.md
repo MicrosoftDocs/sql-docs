@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "VirtualDirectoryReportManager property"
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # VirtualDirectoryReportManager Property (WMI MSReportServer_ConfigurationSetting)
   Returns the virtual directory for the report manager application. Read-only.  

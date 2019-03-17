@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tools [SQL Server], external"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "adding external tools"
   - "Tools menu"
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg

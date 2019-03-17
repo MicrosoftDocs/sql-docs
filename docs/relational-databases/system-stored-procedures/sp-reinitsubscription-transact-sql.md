@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_reinitsubscription"
   - "sp_reinitsubscription_TSQL"
 helpviewer_keywords: 
   - "sp_reinitsubscription"
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -62,7 +55,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Indicates whether reinitialization occurs as a result of a schema change at the publication database. *for_schema_change* is **bit**, with a default of 0. If **0**, active subscriptions for publications that allow immediate updating are reactivated as long as the whole publication, and not just some of its articles, are reinitialized. This means that the reinitialization is being initiated as a result of schema changes. If **1**, active subscriptions are not reactivated until the Snapshot Agent runs.  
   
  [ **@publisher=** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  

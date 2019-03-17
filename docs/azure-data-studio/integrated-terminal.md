@@ -1,14 +1,12 @@
 ---
-title: Integrated terminal in Azure Data Studio | Microsoft Docs
+title: Integrated terminal
+titleSuffix: Azure Data Studio
 description: Learn about the Integrated terminal in Azure Data Studio.
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"

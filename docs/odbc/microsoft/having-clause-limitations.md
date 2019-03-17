@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "HAVING clause limitations [ODBC]"
   - "ODBC SQL grammar, HAVING clause limitations"
 ms.assetid: 80f3a839-50bb-42cc-b2a4-06a533145edb
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_virtualfilestats_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.fn_virtualfilestats function"
   - "statistical information [SQL Server], I/O"
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: 29
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

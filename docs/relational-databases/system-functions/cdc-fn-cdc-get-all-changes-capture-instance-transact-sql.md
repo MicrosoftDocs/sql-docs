@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -19,7 +14,6 @@ helpviewer_keywords:
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_all_changes_<capture_instance>"
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -29,7 +23,7 @@ manager: craigg
 
   Returns one row for each change applied to the source table within the specified log sequence number (LSN) range. If a source row had multiple changes during the interval, each change is represented in the returned result set. In addition to returning the change data, four metadata columns provide the information you need to apply the changes to another data source. Row filtering options govern the content of the metadata columns as well as the rows returned in the result set. When the 'all' row filter option is specified, each change has exactly one row to identify the change. When the 'all update old' option is specified, update operations are represented as two rows: one containing the values of the captured columns before the update and another containing the values of the captured columns after the update.  
   
- This enumeration function is created at the time that a source table is enabled for change data capture. The function name is derived and uses the format **cdc.fn_cdc_get_all_changes_***capture_instance* where *capture_instance* is the value specified for the capture instance when the source table is enabled for change data capture.  
+ This enumeration function is created at the time that a source table is enabled for change data capture. The function name is derived and uses the format **cdc.fn_cdc_get_all_changes_**_capture_instance_ where *capture_instance* is the value specified for the capture instance when the source table is enabled for change data capture.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

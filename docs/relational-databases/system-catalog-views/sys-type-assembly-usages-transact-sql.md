@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.type_assembly_usages"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.type_assembly_usages catalog view"
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
-caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

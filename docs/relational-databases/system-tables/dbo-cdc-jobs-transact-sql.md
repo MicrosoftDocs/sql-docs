@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "cdc_jobs"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "dbo.cdc_jobs"
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg

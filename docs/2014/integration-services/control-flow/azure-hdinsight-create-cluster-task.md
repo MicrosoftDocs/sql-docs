@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "02/28/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.afpcreatecltask.f1"
   - "sql11.dts.designer.afpcreatecltask.f1"
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

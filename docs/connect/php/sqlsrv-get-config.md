@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_get_config"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_get_config"
   - "sqlsrv_get_config"
 ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

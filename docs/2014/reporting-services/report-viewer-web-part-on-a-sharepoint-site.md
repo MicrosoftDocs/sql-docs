@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], viewing reports"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], Web Parts"
   - "Report Viewer Web Part [Reporting Services]"
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Report Viewer Web Part on a SharePoint Site
   The Report Viewer Web Part is a custom Web Part that is installed by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products. You can use the Web Part to view, navigate, print, and export reports on a report server that is configured to run in SharePoint integrated mode. The Report Viewer Web Part is associated with report definition (.rdl) files that are processed by a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. You cannot use it with other report documents that you create in other software products.  
@@ -47,7 +44,7 @@ manager: craigg
  **Export** on the **Actions** menu shows application formats that are associated with rendering extensions deployed on a report server. To determine the availability of a specific format, you can add or remove a rendering extension on the report server, or you can modify configuration settings to remove a particular export format from the list. You can also specify configuration settings on the report server to control which formats are available. You can modify the default behavior of a specific format by adding and modifying configuration settings for that rendering extension.  
   
 ### Print Action on the Report Toolbar  
- **Print** on the **Actions** menu is custom print functionality that is provided through [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. When you click **Print**, an ActiveX client-side print control is downloaded to the client computer. In most cases, the user who clicks **Print** must have Administrator permissions on the local computer. It is common practice to restrict ActiveX control downloads to only those users who have Administrator permissions. You can use SharePoint Central Administration to enable or disable the the download of the client-side print control.  
+ **Print** on the **Actions** menu is custom print functionality that is provided through [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. When you click **Print**, an ActiveX client-side print control is downloaded to the client computer. In most cases, the user who clicks **Print** must have Administrator permissions on the local computer. It is common practice to restrict ActiveX control downloads to only those users who have Administrator permissions. You can use SharePoint Central Administration to enable or disable the download of the client-side print control.  
   
 ### Find Action on the Report Toolbar  
  **Find** on the **Actions** menu provides a way to move to a target location in the report. You can search for content in a report by typing a word or phrase that you want to find. The maximum value of a search term is 256 characters. When your search finds a matching value in the report, focus is moved to the part of the report that contains that value.  

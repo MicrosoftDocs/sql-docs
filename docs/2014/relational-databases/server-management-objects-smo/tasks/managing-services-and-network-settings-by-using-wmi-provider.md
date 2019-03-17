@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "WMI provider [SMO]"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "network settings [SMO]"
   - "monitoring [SMO]"
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg

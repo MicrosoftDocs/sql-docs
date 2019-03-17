@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL"
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard"
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

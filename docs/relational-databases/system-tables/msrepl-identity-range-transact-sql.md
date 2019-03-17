@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSrepl_identity_range_TSQL"
   - "MSrepl_identity_range"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_identity_range system table"
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

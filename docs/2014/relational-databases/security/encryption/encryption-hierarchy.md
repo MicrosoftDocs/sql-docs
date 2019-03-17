@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], hierarchies"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "security [SQL Server], encryption"
   - "hierarchies [SQL Server], encryption"
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 40
 author: aliceku
 ms.author: aliceku
 manager: craigg

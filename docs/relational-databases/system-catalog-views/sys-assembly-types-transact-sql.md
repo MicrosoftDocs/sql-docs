@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "assembly_types"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.assembly_types catalog view"
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

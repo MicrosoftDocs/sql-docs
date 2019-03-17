@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sending SQL statements to DBMS [ODBC]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SQL statements [ODBC]"
   - "ODBC [ODBC], SQL"
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

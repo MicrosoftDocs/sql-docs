@@ -6,14 +6,11 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.QUERYRESULTS.F1"
   - "sql.data.tools.queryresults.executequerydeletingrow"
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
-caps.latest.revision: 8
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

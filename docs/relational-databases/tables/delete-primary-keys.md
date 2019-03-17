@@ -5,16 +5,13 @@ ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing primary keys"
   - "deleting primary keys"
   - "primary keys [SQL Server], deleting"
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "05/01/2018"
 ms.prod: "sql"
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CLONEDATABASE"
@@ -37,8 +34,7 @@ helpviewer_keywords:
   - "database cloning [SQL Server]"
   - "DBCC CLONEDATABASE statement"
 ms.assetid: 
-caps.latest.revision: 
-author: "pamela" 
+author: "bluefooted" 
 ms.author: "pamela"
 manager: "amitban"
 ---
@@ -56,8 +52,8 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
-)  
+)
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]     
 ```  
   
 ## Arguments  
@@ -70,17 +66,21 @@ The name of the database the source database will be copied to. This database wi
 NO_STATISTICS  
 Specifies if table/index statistics need to be excluded from the clone. If this option is not specified, table/index statistics are automatically included. This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
-NO_QUERYSTORE
+NO_QUERYSTORE<br>
 Specifies if query store data needs to be excluded from the clone. If this option is not specified, query store data will be copied to the clone if the query store is enabled in the source database. This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 VERIFY_CLONEDB  
-Verifies the consistency of the new database.  This option is required if the cloned database is intended for production use.  Enabling VERIFY_CLONEDB also disables statistics and query store collection, thus it is equivalent to running WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+Verifies the consistency of the new database.  This option is required if the cloned database is intended for production use.  Enabling VERIFY_CLONEDB also disables statistics and query store collection, thus it is equivalent to running WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
 
 > [!NOTE]  
 > The following command can be used to confirm that the cloned database is production-ready: <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+Specifies if service broker related system catalogs should be included in the clone.  The SERVICEBROKER option cannot be used in combination with VERIFY_CLONEDB.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
+
 BACKUP_CLONEDB  
-Creates and verifies a backup of the clone database.  If used in combination with VERIFY_CLONEDB, the clone database is verified before the backup is taken.  This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+Creates and verifies a backup of the clone database.  If used in combination with VERIFY_CLONEDB, the clone database is verified before the backup is taken.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
 ## Remarks
 The following validations are performed by DBCC CLONEDATABASE. The command fails if any of the validations fail.
@@ -200,7 +200,7 @@ The following messages are an example of the messages logged in the error log du
 ## Examples  
   
 ### A. Creating a clone of a database that includes schema, statistics and query store 
-The following example creates a clone of the AdventureWorks database that includes schema, statistics and query store data ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
+The following example creates a clone of the AdventureWorks database that includes schema, statistics and query store data ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
@@ -208,7 +208,7 @@ GO
 ```  
   
 ### B. Creating a schema-only clone of a database without statistics 
-The following example creates a clone of the AdventureWorks database that does not include statistics ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and later versions)
+The following example creates a clone of the AdventureWorks database that does not include statistics ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and later versions)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS;    
@@ -216,7 +216,7 @@ GO
 ```  
 
 ### C. Creating a schema-only clone of a database without statistics and query store 
-The following example creates a clone of the AdventureWorks database that does not include statistics and query store data ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
+The following example creates a clone of the AdventureWorks database that does not include statistics and query store data ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
@@ -224,7 +224,7 @@ GO
 ```  
 
 ### D. Creating a clone of a database that is verified for production use
-The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
+The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### E. Creating a clone of a database that is verified for production use that includes a backup of the cloned database
-The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database.  A verified backup of the cloned database will also be created ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
+The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database.  A verified backup of the cloned database will also be created ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    
@@ -241,5 +241,5 @@ GO
 
 ## See Also
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
-[How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](http://support.microsoft.com/help/914288)   
+[How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](https://support.microsoft.com/help/914288)   
 

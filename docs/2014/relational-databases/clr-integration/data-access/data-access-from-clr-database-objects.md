@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], data access"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "SqlClient provider"
   - "in-process data access providers [CLR integration]"
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg

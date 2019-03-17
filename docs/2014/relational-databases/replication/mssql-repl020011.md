@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_REPL020011 error"
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

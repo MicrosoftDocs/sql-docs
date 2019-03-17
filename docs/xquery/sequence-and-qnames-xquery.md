@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -21,7 +15,6 @@ helpviewer_keywords:
   - "QName [XQuery]"
   - "predefined namespaces [XML in SQL Server]"
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-caps.latest.revision: 22
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -117,7 +110,7 @@ SELECT @x.query('/Root/a');
   
 ```  
 SELECT Instructions.query('  
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in /AWMI:root/AWMI:Location[1]/AWMI:step  
       return  
            string($Step)   
@@ -141,9 +134,9 @@ WHERE ProductModelID=7;
 |xdt|http://www.w3.org/2004/07/xpath-datatypes|  
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(no prefix)|`urn:schemas-microsoft-com:xml-sql`|  
-|sqltypes|http://schemas.microsoft.com/sqlserver/2004/sqltypes|  
+|sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
 |xml|`http://www.w3.org/XML/1998/namespace`|  
-|(no prefix)|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
+|(no prefix)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  Every database you create has the **sys** XML schema collection. It reserves these schemas so they can be accessed from any user-created XML schema collection.  
   

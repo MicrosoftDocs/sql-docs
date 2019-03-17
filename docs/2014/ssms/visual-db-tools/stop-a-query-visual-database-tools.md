@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ending queries [SQL Server]"
   - "stopping queries"
   - "queries [SQL Server], stopping"
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

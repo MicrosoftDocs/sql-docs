@@ -1,25 +1,23 @@
-﻿---
-title: "FILESTREAM and FileTable with Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+---
+title: "Use FILESTREAM and FileTable with availability groups"
+description: "Steps to use either FILESTREAM or FileTable with databases participating in an Always On Availability Group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], Availability Groups"
   - "FILESTREAM [SQL Server], Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# FILESTREAM and FileTable with Always On Availability Groups (SQL Server)
+# Use FILESTREAM and FileTable with Always On availability groups
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

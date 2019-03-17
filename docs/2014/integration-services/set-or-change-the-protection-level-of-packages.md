@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "passwords [Integration Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "security [Integration Services],protection levels"
   - "protection level for packages [Integration Services]"
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-caps.latest.revision: 10
 author: douglaslms
 ms.author: douglasl
 manager: craigg

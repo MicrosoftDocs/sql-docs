@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.customfilterdb.f1"
   - "sql12.asvs.bidtoolset.autofiltermenu.f1"
   - "sql12.asvs.bidtoolset.notallitemsshowing.f1"
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

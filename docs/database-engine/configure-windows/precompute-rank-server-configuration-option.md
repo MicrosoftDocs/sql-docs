@@ -5,15 +5,12 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "precompute rank option"
   - "FREETEXTTABLE function (Transact-SQL)"
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

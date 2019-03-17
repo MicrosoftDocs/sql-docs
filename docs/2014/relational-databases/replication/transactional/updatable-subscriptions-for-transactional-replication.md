@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/31/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, updatable subscriptions"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], updatable"
   - "updatable subscriptions"
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -41,7 +37,7 @@ manager: craigg
   
  To enable updatable subscriptions for transactional publications, [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
- To create updatable subscriptions for transactional publications, see [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ To create updatable subscriptions for transactional publications, see [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 ## Switching Between Update Modes  
  When using updatable subscriptions you can specify that a subscription should use one update mode and then switch to the other if the application requires it. For example, you can specify that a subscription should use immediate updating, but switch to queued updating if a system failure results in the loss of network connectivity.  
@@ -122,7 +118,7 @@ manager: craigg
   
 ## See Also  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)   
+ [Transactional Replication](transactional-replication.md)   
  [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)  
   

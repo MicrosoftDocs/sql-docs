@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rules [SMO]"
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
-caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

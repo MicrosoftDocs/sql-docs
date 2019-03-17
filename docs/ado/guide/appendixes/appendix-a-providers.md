@@ -4,10 +4,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "data providers [ADO]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "service providers [ADO]"
   - "service components [ADO]"
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -51,7 +48,7 @@ This section addresses three kinds of providers: data providers, service provide
 ## Provider-Specific Dynamic Properties
  The [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collections of the [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Command](../../../ado/reference/ado-api/command-object-ado.md), and [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects include dynamic properties specific to the provider. These properties provide information about functionality specific to the provider beyond the built-in properties that ADO supports.
 
- After establishing the connection and creating these objects, use the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method on the **Properties** collection of the object to obtain the provider-specific properties. Refer to the provider documentation and the [OLE DB Programmer's Guide](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) for detailed information about these dynamic properties.
+ After establishing the connection and creating these objects, use the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method on the **Properties** collection of the object to obtain the provider-specific properties. Refer to the provider documentation and the [OLE DB Programmer's Guide](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) for detailed information about these dynamic properties.
 
 ## Service Providers
  To use a service provider, you must supply a keyword. You should also be aware of the provider-specific dynamic properties associated with each service provider. Provider-specific details are listed for each service provider that is currently available from Microsoft:

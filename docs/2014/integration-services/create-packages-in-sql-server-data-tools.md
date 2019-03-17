@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS packages, creating"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "packages [Integration Services], creating"
   - "SQL Server Integration Services packages, creating"
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -45,7 +41,7 @@ manager: craigg
   
  The following procedures describe how to create or delete a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- For a video that demonstrates how to create a basic package using the default package template, see [Creating a Basic Package (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131023).  
+ For a video that demonstrates how to create a basic package using the default package template, see [Creating a Basic Package (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131023).  
   
 ### To create a package in SQL Server Data Tools using the Package Template  
   

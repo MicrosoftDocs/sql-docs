@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSRS, upgrading"
@@ -15,15 +13,14 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, upgrading"
   - "upgrading Reporting Services"
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: 97
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Upgrade and Migrate Reporting Services
   This topic is an overview of the upgrade and migration options for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. There are two general approaches to upgrading a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment:  
   
--   **Upgrade:** You upgrade the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components on the servers and instances where they are currently installed. This is commonly called an “in place” upgrade. In-place upgrade is not supported from one mode of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to another. For example, you cannot upgrade a Native Mode report server to a SharePoint mode report server. You can migrate your report items from one mode to another. For more information, see the ‘Native to SharePoint Migration’ section later in this document and the related topic [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   **Upgrade:** You upgrade the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components on the servers and instances where they are currently installed. This is commonly called an "in place" upgrade. In-place upgrade is not supported from one mode of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to another. For example, you cannot upgrade a Native Mode report server to a SharePoint mode report server. You can migrate your report items from one mode to another. For more information, see the 'Native to SharePoint Migration' section later in this document and the related topic [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 -   **Migrate**: You install and configure a new SharePoint environment, copy your report items and resources to the new environment, and configure the new environment to use existing content. A lower level form of migration is to copy the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] databases, configuration files, and if you are using SharePoint mode, the SharePoint content databases.  
   
@@ -54,11 +51,11 @@ manager: craigg
 ##  <a name="bkmk_known_issues"></a> Known Upgrade Issues and Best Practices  
  For a detailed list of the supported editions and versions you can upgrade, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
-> [!TIP]  
+> [!TIP]
 >  For the latest information regarding issues with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see the following:  
->   
->  -   [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
-> -   [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkID=391254).  
+> 
+>  -   [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
+> -   [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkID=391254).  
 > -   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor. For more information, see [Reporting Services Upgrade Issues &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) and [How to: Install Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  
   
  ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic:](#bkmk_top)  
@@ -152,7 +149,7 @@ manager: craigg
   
     3.  Other client tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Books Online are not upgraded. To obtain new versions of the tools, you can add them when you run Setup. Earlier versions will co-exist alongside [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versions. If you installed samples, the earlier version will remain. Setup does not support upgrade for the SQL Server samples.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkID=325512).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512).  
   
 6.  Setup reuses the service entry in Service Control Manager for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Server service. This service entry includes the Report Server Windows service account.  
   
@@ -167,7 +164,7 @@ manager: craigg
  ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scaleout"></a> Upgrade a Reporting Services Native Mode Scale-out Deployment  
- The following is a summary of how to upgrade a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode deployment that is scaled–out to more than one report server. This process requires downtime of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment:  
+ The following is a summary of how to upgrade a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode deployment that is scaled-out to more than one report server. This process requires downtime of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment:  
   
 1.  Backup the report server databases and encryption keys. For more information, see [Backup and Restore Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) and [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
@@ -218,7 +215,7 @@ manager: craigg
   
 -   Install the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint on each web front-end in the farm. You can install the add-in by using the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation wizard or by downloading the add-in.  
   
--   Run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation to upgrade SharePoint mode for each ‘report server’.The SQL Server installation wizard will install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service and create a new Service application.  
+-   Run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation to upgrade SharePoint mode for each 'report server'.The SQL Server installation wizard will install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service and create a new Service application.  
   
      If you also want the ending environment to run SharePoint 2013, you need to complete a database-attach upgrade of the SharePoint 2010 to SharePoint 2013.  
   
@@ -278,7 +275,7 @@ manager: craigg
   
  To re-establish reversible encryption on the new report server computer, you must restore the key that you previously backed up. The complete key set that is stored in the report server database consists of a symmetric key value, plus service identity information used to restrict access to the key so that it can be used only by the report server instance that stored it. During key restoration, the report server replaces existing copies of the key with new versions. The new version includes machine and service identity values as defined on the current computer. For more information, see the following topics:  
   
--   SharePoint mode: See the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+-   SharePoint mode: See the "Key Management" section of [Manage a Reporting Services SharePoint Service Application](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 -   Native Mode: See [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
@@ -302,11 +299,11 @@ manager: craigg
 > [!NOTE]  
 >  For more information on SharePoint database-attach upgrade, see the following:  
   
--   [Overview of the upgrade process to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Overview of the upgrade process to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Clean up preparations before an upgrade to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Clean up preparations before an upgrade to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Upgrade databases from SharePoint 2010 to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Upgrade databases from SharePoint 2010 to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
  ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic:](#bkmk_top)  
   

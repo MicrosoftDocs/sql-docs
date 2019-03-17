@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], properties"
   - "properties [Reporting Services], general"
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
-caps.latest.revision: 43
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Configure General Properties for a Report (Report Manager)
     

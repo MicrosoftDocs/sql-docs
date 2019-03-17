@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "system objects [SQL Server]"
   - "cryptography [SQL Server], system objects"
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
-caps.latest.revision: 21
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY System Object Permissions (Transact-SQL)

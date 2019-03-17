@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.job.stepadvanced.f1"
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg

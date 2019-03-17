@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "performance [SQL Server replication], merge replication"
   - "agents [SQL Server replication], performance"
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: 47
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -134,7 +130,7 @@ manager: craigg
   
 -   Pre-generate snapshots and/or allow Subscribers to request snapshot generation and application the first time they synchronize.  
   
-     Use one or both of these options to provide snapshots for publications that use parameterized filters. If you do not specify one of these options, subscriptions are initialized using a series of SELECT and INSERT statements, rather than using the **bcp** utility; this process is much slower. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Use one or both of these options to provide snapshots for publications that use parameterized filters. If you do not specify one of these options, subscriptions are initialized using a series of SELECT and INSERT statements, rather than using the **bcp** utility; this process is much slower. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## Maintenance and Monitoring Considerations  
   
@@ -144,6 +140,6 @@ manager: craigg
   
 -   Monitor synchronization performance using the **Synchronization History** tab in Replication Monitor.  
   
-     For merge replication, Replication Monitor displays detailed statistics in the **Synchronization History** tab for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For merge replication, Replication Monitor displays detailed statistics in the **Synchronization History** tab for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

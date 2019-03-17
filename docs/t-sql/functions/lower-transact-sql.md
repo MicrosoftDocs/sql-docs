@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "LOWER"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "lowercase characters"
   - "converting uppercase to lowercase characters"
 ms.assetid: 1783352b-6852-4658-9d94-51963c59b9bf
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -68,7 +65,7 @@ WHERE ListPrice between 11.00 and 20.00;
 Lower                 Upper                  LowerUpper  
 --------------------  ---------------------  --------------------  
 minipump              MINIPUMP               minipump  
-taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
+taillights - battery  TAILLIGHTS - BATTERY   taillights - battery
 ```  
   
 ## See Also  

@@ -4,7 +4,6 @@ ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -89,7 +88,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 |Setting|Comments|  
 |-------------|--------------|  
 |Enable Report Builder Download|Default is TRUE.<br /><br /> Specifies whether clients are able to see the button for downloading the report builder application.|  
-|Report Builder Launch URL|Specify a custom URL when the report server does not use the default Report Builder URL. This setting is optional. If you do not specify a value, the default URL will be used, which launches Report Builder. To launch Report Builder 3.0 as a Click-Once application, enter the following value: http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|Report Builder Launch URL|Specify a custom URL when the report server does not use the default Report Builder URL. This setting is optional. If you do not specify a value, the default URL will be used, which launches Report Builder. To launch Report Builder 3.0 as a Click-Once application, enter the following value: https://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Enable Client Printing|The Default is TRUE.<br /><br /> Specifies whether users can download the client side control, which provides printing options.|  
 |Edit Session Timeout|Default is 7200 seconds.|  
 |Edit Session Cache Limit|Default is 5.|  
@@ -184,4 +183,4 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 5.  Check the box for your proxy and click **Ok**.  
   
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], moving a FILESTREAM-enabled database"
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

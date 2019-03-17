@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing subscriptions"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "pull subscriptions [SQL Server replication], deleting"
   - "subscriptions [SQL Server replication], pull"
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

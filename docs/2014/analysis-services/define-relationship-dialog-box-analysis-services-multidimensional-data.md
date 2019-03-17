@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1"
 helpviewer_keywords: 
   - "Define Relationship dialog box"
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

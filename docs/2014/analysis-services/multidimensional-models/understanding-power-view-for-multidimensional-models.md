@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -44,7 +41,7 @@ manager: craigg
   
  **Native support for DAX queries**  
   
- With this release, multidimensional models support DAX queries and functions in addition to more traditional MDX queries. Some DAX functions, such as PATH, are not applicable in multidimensional modeling. For a better understanding of DAX and how it compares to MDX, see [Data Analysis Expressions and MDX](http://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx).  
+ With this release, multidimensional models support DAX queries and functions in addition to more traditional MDX queries. Some DAX functions, such as PATH, are not applicable in multidimensional modeling. For a better understanding of DAX and how it compares to MDX, see [Data Analysis Expressions and MDX](https://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx).  
   
 ## Multidimensional to tabular object mapping  
  Analysis Services provides a tabular model metadata representation of a multidimensional model. Objects in a multidimensional model are represented as tabular objects in Power View and in CSDL out with BI annotations.  
@@ -85,7 +82,7 @@ manager: craigg
  ![Measure group in Power View Field List](../media/daxmd-fieldlist-group.gif "Measure group in Power View Field List")  
   
 ### Measures as variants  
- Measures in multidimensional models are variants. This means the measures are not strongly typed and can have different data types. For example, in the image below, the Amount measure in the Financial Reporting table by default is Currency data type, but also has a string value “NA” for the sub-total of “Statistical Accounts”, which is String data type. Power View recognizes certain measures as variants and shows the correct values and formatting in the different visualizations.  
+ Measures in multidimensional models are variants. This means the measures are not strongly typed and can have different data types. For example, in the image below, the Amount measure in the Financial Reporting table by default is Currency data type, but also has a string value "NA" for the sub-total of "Statistical Accounts", which is String data type. Power View recognizes certain measures as variants and shows the correct values and formatting in the different visualizations.  
   
  **Measure as variant**  
   
@@ -119,7 +116,7 @@ manager: craigg
   
  Calculated members of user hierarchies are not exposed in Power View; however, end-users will still be able to connect to a cube containing calculated members on user hierarchies.  
   
- The image below shows a Power View report for a cube that contains time-intelligence calculated members on dimension attribute “Fiscal Date Calculations” in the Date dimension.  
+ The image below shows a Power View report for a cube that contains time-intelligence calculated members on dimension attribute "Fiscal Date Calculations" in the Date dimension.  
   
  **Power View report with calculated members**  
   
@@ -155,11 +152,11 @@ manager: craigg
  ![Parent-child hierarchies](../media/daxmd-ssdt-hierarchies.gif "Parent-child hierarchies")  
   
 ## Perspectives and translations  
- Perspectives are views of cubes where only certain dimensions or measure groups are visible in client tools. You can specify a perspective name as a value to the Cube connection string property. For example, in the following connection string, ‘Direct Sales’ is a perspective in the multidimensional model:  
+ Perspectives are views of cubes where only certain dimensions or measure groups are visible in client tools. You can specify a perspective name as a value to the Cube connection string property. For example, in the following connection string, 'Direct Sales' is a perspective in the multidimensional model:  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- Cubes can have metadata and data translations specified for various Languages within the model. In order to see the translations (data and metadata) you need to add the optional “Locale Identifier” property to the connection string in the RSDS file as shown below.  
+ Cubes can have metadata and data translations specified for various Languages within the model. In order to see the translations (data and metadata) you need to add the optional "Locale Identifier" property to the connection string in the RSDS file as shown below.  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -175,7 +172,7 @@ manager: craigg
  ![Pinned Filter](../media/daxmd-pinnedfilterinpowerview.gif "Pinned Filter")  
   
 ## Unsupported features  
- **Power View in Excel 2013** – does not support connecting to and creating reports for multidimensional models. Power View for multidimensional models supports browser based Power View clients only.  
+ **Power View in Excel 2013** - does not support connecting to and creating reports for multidimensional models. Power View for multidimensional models supports browser based Power View clients only.  
   
  **Actions** - are not supported in Power View reports or in DAX queries against a multidimensional model.  
   
@@ -184,7 +181,7 @@ manager: craigg
 > [!NOTE]  
 >  Unsupported Actions and Named sets do not prevent users from connecting to and exploring multidimensional models using Power View.  
   
- **Cell level security** – is not supported in Power View reports.  
+ **Cell level security** - is not supported in Power View reports.  
   
 ## CSDLBI Annotations  
  Multidimensional cube metadata is exposed as an Entity Data Model (EDM) based conceptual model by Conceptual Schema Definition Language with Business Intelligence annotations (CSDLBI).  
@@ -194,13 +191,13 @@ manager: craigg
  **Sample DISCOVER_CSDL_METADATA request**  
   
 ```  
-<Envelopexmlns=”http://schemas.xmlsoap.org/soap/envelope/”>  
+<Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
    <Body>  
-      <Discoverxmlns=”urn:schemas-microsoft-com:xml-analysis”>  
+      <Discoverxmlns="urn:schemas-microsoft-com:xml-analysis">  
          <RequestType>DISCOVER_CSDL_METADATA</RequestType>  
          <Restrictions>  
             <RestrictionList>  
-              <CATALOG_NAME>”catalogname”<CATALOG_NAME>  
+              <CATALOG_NAME>"catalogname"<CATALOG_NAME>  
             </RestrictionList>  
          </Restrictions>  
          <Properties>  
@@ -223,7 +220,7 @@ manager: craigg
   
  The return CSDL out document represents the model as a namespace, containing entities, associations, and properties.  
   
- For more detailed information about CSDLBI annotations for tabular models, see [Technical Reference for BI Annotations to CSDL](../tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) on MSDN, and [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ For more detailed information about CSDLBI annotations for tabular models, see [Technical Reference for BI Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) on MSDN, and [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## Client Help on Office.com  
  The following articles are provided on Office.com to help users learn about how Multidimensional Model objects appear in Power View and how to create a sample report:  

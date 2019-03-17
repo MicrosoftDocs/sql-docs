@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dropping queues"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "removing queries"
   - "queries [SQL Server], deleting"
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

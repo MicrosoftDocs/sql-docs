@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10026"
 ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
-caps.latest.revision: 9
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Define Query Parameters Dialog Box (Report Builder)
   Use the **Define Query Parameters** dialog box to specify parameter values when you run a query in a query designer at design time to see sample data. Query parameters filter data on the data source and help to limit the amount of data that a report processes. These values are not saved in the report definition.  

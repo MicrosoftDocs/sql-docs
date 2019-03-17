@@ -5,8 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
-ms.suite: "sql"
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -78,12 +77,19 @@ You can comment and uncomment portions of your text by using the **Comment** but
 7. Highlight everything except for the **Alter Database** command, and then select the **Comment** button:
 
     ![Comment everything](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > The keyboard shortcut to comment text is **CTRL + K, CTRL + C**. 
 
 8. Highlight the **Alter Database** portion of the text, and then select the **Uncomment** button to uncomment it:
 
     ![Uncomment text](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > The keyboard shortcut to uncomment text is **CTRL + K, CTRL + U**. 
+    
 9. Select **Execute** to run the uncommented portion of the text. 
+
 
 ## Indent your text
 You can use the indentation buttons on the toolbar to increase or decrease the indent of your text. 
@@ -122,7 +128,7 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 
 
 ## Filter objects in Object Explorer
-You can filter objects to make finding a specific object easier in databases that have many objects. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
+In databases that have many objects, you can use filtering to search for specific tables, views, etc. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
 
 1. Connect to your SQL server.
 2. Expand **Databases** > **AdventureWorks** > **Tables**. All the tables in the database appear.

@@ -4,12 +4,9 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "device information settings [Reporting Services]"
   - "Render method"
@@ -45,7 +42,7 @@ ms.author: maghan
  You can also pass device information settings through URL access. Device information settings are passed as URL parameters. The following URL access string can be passed to the report server to generate a rendered report without the HTML viewer toolbar.  
   
 ```  
-http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
+https://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
 ```  
   
  For more information, see [Specify Device Information Settings in a URL](../../../reporting-services/specify-device-information-settings-in-a-url.md).  

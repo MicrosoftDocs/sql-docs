@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_uncontained_entities"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_uncontained_entities dynamic management view"
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
 |**Column name**|**Type**|**Description**|  
 |*class*|**int**|1 = Object or column (includes modules, XPs, views, synonyms, and tables).<br /><br /> 4 = Database Principal<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (Full-text Index)<br /><br /> 12 = Database DDL Trigger<br /><br /> 19 = Route<br /><br /> 30 = Audit Specification|  
 |*class_desc*|**nvarchar(120)**|Description of class of the entity. One of the following to match the class:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|ID of the entity.<br /><br /> If *class* = 1, then object_id<br /><br /> If *class* = 4, then sys.database_principals.principal_id.<br /><br /> If *class* = 5, then sys.assemblies.assembly_id.<br /><br /> If *class* = 6, then sys.types.user_type_id.<br /><br /> If *class* = 7, then sys.indexes.index_id.<br /><br /> If *class* = 12, then sys.triggers.object_id.<br /><br /> If *class* = 19, then sys.routes.route_id.<br /><br /> If *class* = 30, then sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**int**|ID of the entity.<br /><br /> If *class* = 1, then object_id<br /><br /> If *class* = 4, then sys.database_principals.principal_id.<br /><br /> If *class* = 5, then sys.assemblies.assembly_id.<br /><br /> If *class* = 6, then sys.types.user_type_id.<br /><br /> If *class* = 7, then sys.indexes.index_id.<br /><br /> If *class* = 12, then sys.triggers.object_id.<br /><br /> If *class* = 19, then sys.routes.route_id.<br /><br /> If *class* = 30, then sys. database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**int**|If the class is a module, returns the line number on which the uncontained use is located.  Otherwise the value is null.|  
 |*statement_ offset_begin*|**int**|If the class is a module, indicates, in bytes, beginning with 0, the starting position where uncontained use begins. Otherwise the return value is null.|  
 |*statement_ offset_end*|**int**|If the class is a module, indicates, in bytes, starting with 0, the ending position of the uncontained use. A value of -1 indicates the end of the module. Otherwise the return value is null.|  

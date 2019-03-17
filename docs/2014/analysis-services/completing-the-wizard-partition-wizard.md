@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitionwizard.finish.f1"
 ms.assetid: 68a4dd5d-94d9-4a02-be31-949a6da0ef51
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

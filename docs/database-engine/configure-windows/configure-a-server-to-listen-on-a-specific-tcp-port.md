@@ -5,9 +5,7 @@ ms.date: "04/25/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "fixed port"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "dynamic ports [SQL Server]"
   - "TCP/IP [SQL Server], port numbers"
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -32,7 +29,7 @@ Because port 1433 is the known standard for [!INCLUDE[ssNoVersion](../../include
  For more information about the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!TIP]  
->  When selecting a port number, consult [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) for a list of port numbers that are assigned to specific applications. Select an unassigned port number. For more information, see [The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008](http://support.microsoft.com/kb/929851).  
+>  When selecting a port number, consult [https://www.iana.org/assignments/port-numbers](https://www.iana.org/assignments/port-numbers) for a list of port numbers that are assigned to specific applications. Select an unassigned port number. For more information, see [The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008](https://support.microsoft.com/kb/929851).  
   
 > [!WARNING]  
 >  The Database Engine begins listening on a new port when restarted. However the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service monitors the registry and reports the new port number as soon as the configuration is changed, even though the Database Engine might not be using it. Restart the Database Engine to ensure consistency and avoid connection failures.  
@@ -53,11 +50,11 @@ Because port 1433 is the known standard for [!INCLUDE[ssNoVersion](../../include
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  In the **IP***n* **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**. Multiple ports may be specified by separating them with a comma.
+4.  In the **IP**_n_ **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**. Multiple ports may be specified by separating them with a comma.
 
     > [!NOTE] 
-    > If the **Listen All** setting on the **Protocol** tab is set to "Yes", then only **TCP Port** and **TCP Dynamic Port** values under the **IPAll** section will be used and individual **IP***n* sections will be ignored in their entirety. If the **Listen All** setting is set to "No", then the **TCP Port** and **TCP Dynamic Port** settings under the **IPAll** section will be ignored and the **TCP Port**, **TCP Dynamic Port**, and **Enabled** settings on the individual **IP***n* sections will be used instead.
-    > Each **IP***n* section has an **Enabled** setting with a default value of "No" which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to ignore this IP address even if it has a port defined.  
+    > If the **Listen All** setting on the **Protocol** tab is set to "Yes", then only **TCP Port** and **TCP Dynamic Port** values under the **IPAll** section will be used and individual **IP**_n_ sections will be ignored in their entirety. If the **Listen All** setting is set to "No", then the **TCP Port** and **TCP Dynamic Port** settings under the **IPAll** section will be ignored and the **TCP Port**, **TCP Dynamic Port**, and **Enabled** settings on the individual **IP**_n_ sections will be used instead.
+    > Each **IP**_n_ section has an **Enabled** setting with a default value of "No" which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to ignore this IP address even if it has a port defined.  
   
 5.  In the console pane, click **SQL Server Services**.  
   

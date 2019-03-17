@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "EVENTDATA"
@@ -19,12 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "server instance event data [SQL Server]"
   - "event notifications [SQL Server], event status"
-  - "events [SQL Server], status infromation"
+  - "events [SQL Server], status information"
   - "EVENTDATA function"
   - "status information [SQL Server], events"
   - "DDL triggers, returning event data"
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -73,7 +70,7 @@ Passwords do not display when `CREATE LOGIN` or `ALTER LOGIN` statements execute
 ## Schemas Returned  
 EVENTDATA returns a value of data type **xml**. By default, the schema definition for all events installs in this directory: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
-The [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) web page also has the event schema.  
+The [Microsoft SQL Server XML Schemas](https://go.microsoft.com/fwlink/?LinkID=31850) web page also has the event schema.  
   
 To extract the schema for any particular event, search the schema for the Complex Type `EVENT_INSTANCE_<event_type>`. For example, to extract the schema for the `DROP_TABLE` event, search the schema for `EVENT_INSTANCE_DROP_TABLE`.  
   

@@ -1,16 +1,13 @@
 ---
 title: "Understanding Java EE Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "02/06/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -32,6 +29,8 @@ For JDBC Driver 6.2, the driver is contained in **mssql-jdbc-6.2.2.jre7.jar** or
 For JDBC Driver 6.4, the driver is contained in **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, or **mssql-jdbc-6.4.0.jre9.jar**.
 
 For JDBC Driver 7.0, the driver is contained in **mssql-jdbc-7.0.0.jre8.jar**, or **mssql-jdbc-7.0.0.jre10.jar**.
+
+For JDBC Driver 7.2, the driver is contained in **mssql-jdbc-7.2.1.jre8.jar**, or **mssql-jdbc-7.2.1.jre11.jar**.
   
 The class name is used whenever you load the driver with the JDBC DriverManager class. It's also used whenever you must specify the class name of the driver in any driver configuration. For example, configuring a data source within a Java EE application server might require you enter the driver class name.  
   

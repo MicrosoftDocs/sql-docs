@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagedesignwizard.calculatingobjectcounts.f1"
 ms.assetid: 305d9d79-d1ab-4704-a7b5-3283842b3996
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

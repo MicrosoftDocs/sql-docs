@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.sysproxylogin_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxylogin system table"
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,9 @@ description: This article describes how to use the mssql-conf tool to  configure
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
@@ -30,7 +28,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux. |
 | [Default data directory](#datadir) | Change the default directory for new SQL Server database data files (.mdf). |
 | [Default log directory](#datadir) | Changes the default directory for new SQL Server database log (.ldf) files. |
-| [Default master database file directory](#masterdatabasedir) | Changes the default directory for the master database files on existing SQL installation.|
+| [Default master database directory](#masterdatabasedir) | Changes the default directory for the master database and log files.|
 | [Default master database file name](#masterdatabasename) | Changes the name of master database files. |
 | [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
 | [Default error log directory](#errorlogdir) | Changes the default directory for new SQL Server ErrorLog, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
@@ -70,6 +68,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages. Applies to SQL Server 2019 only.|
+| [outboundnetworkaccess](#mlservices-outbound-access) |Enable outbound network access for [mlservices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
@@ -144,7 +143,7 @@ The **telemetry.customerfeedback** setting changes whether SQL Server sends feed
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md) and the [SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444).
+For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md) and the [SQL Server Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Change the default data or log directory location
 
@@ -186,7 +185,7 @@ The **filelocation.defaultdatadir** and **filelocation.defaultlogdir** settings 
 
 ## <a id="masterdatabasedir"></a> Change the default master database file directory location
 
-The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting changes the location where the SQL Server engine looks for the master database files. By default, this location is /var/opt/mssql/data. 
+The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting changes the location where the SQL Server engine looks for the master database files. By default, this location is /var/opt/mssql/data.
 
 To change these settings, use the following steps:
 
@@ -210,13 +209,16 @@ To change these settings, use the following steps:
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > In addition to moving the master data and log files, this also moves the default location for all other system databases.
+
 1. Stop the SQL Server service:
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Move the master.mdf and masterlog.ldf: 
+1. Move the master.mdf and masterlog.ldf:
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -228,14 +230,15 @@ To change these settings, use the following steps:
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> If SQL Server cannot find master.mdf and mastlog.ldf files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and SQL Server will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new master database. You will have to stop SQL Server and move your old master.mdf and mastlog.ldf to the new specified location and start SQL Server to continue using the existing metadata. 
 
+   > [!NOTE]
+   > If SQL Server cannot find master.mdf and mastlog.ldf files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and SQL Server will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new master database. You will have to stop SQL Server and move your old master.mdf and mastlog.ldf to the new specified location and start SQL Server to continue using the existing metadata.
+ 
+## <a id="masterdatabasename"></a> Change the name of master database files
 
-## <a id="masterdatabasename"></a> Change the name of master database files.
+The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting changes the location where the SQL Server engine looks for the master database files. You can also use this to change the name of the master database and log files. 
 
-The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting changes the location where the SQL Server engine looks for the master database files. By default, this location is /var/opt/mssql/data. To change these settings, use the following steps:
+To change these settings, use the following steps:
 
 1. Stop the SQL Server service:
 
@@ -247,8 +250,11 @@ The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting c
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > You can only change the name of the master database and log files after SQL Server has started successfully. Before the initial run, SQL Server expects the files to be named master.mdf and mastlog.ldf.
 
 1. Change the name of the master database data and log files 
 
@@ -262,8 +268,6 @@ The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting c
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> Change the default dump directory location
 
@@ -388,7 +392,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     | Type | Description |
     |-----|-----|
     | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the host environment thread stacks and modules. It does not contain indirect memory references or globals. |
-    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Module Information</br> - VMM and VAD tree |
+    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb's and Peb's</br> - Module Information</br> - VMM and VAD tree |
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **coredump.captureminiandfull** setting. |
 
@@ -497,7 +501,7 @@ The **network.rpcport** and **distributedtransaction.servertcpport** settings ar
 
 In addition to setting these values, you must also configure routing and update the firewall for port 135. For more information on how to do this, see [How to configure MSDTC on Linux](sql-server-linux-configure-msdtc.md).
 
-There are several other settings for mssql-conf that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [How to enable diagnostic tracing for MS DTC](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
+There are several other settings for mssql-conf that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [How to enable diagnostic tracing for MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
 | mssql-conf setting | Description |
 |---|---|
@@ -535,10 +539,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -549,7 +553,34 @@ You can also add EULA acceptance directly to the [mssql.conf file](#mssql-conf-f
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> Enable outbound network access
+
+Outbound network access for R, Python, and Java extensions in the [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) feature is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using mssql-conf.
+
+After setting the property, restart SQL Server Launchpad service to read the updated values from the INI file. A restart message reminds you whenever an extensibility-related setting is modified.
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+You can also add "outboundnetworkaccess" directly to the [mssql.conf file](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> Change the TCP port

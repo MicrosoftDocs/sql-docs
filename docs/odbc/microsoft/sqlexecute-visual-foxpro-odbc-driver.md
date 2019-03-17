@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLExecute function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

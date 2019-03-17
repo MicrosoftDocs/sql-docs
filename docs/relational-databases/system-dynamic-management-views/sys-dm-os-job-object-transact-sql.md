@@ -2,13 +2,8 @@
 title: "sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_resource_stats"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_db_resource_stats"
   - "dm_db_resource_stats"
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

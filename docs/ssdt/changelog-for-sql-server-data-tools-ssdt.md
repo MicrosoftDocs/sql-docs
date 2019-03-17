@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "09/27/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssdt
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -24,6 +20,46 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
 
+## SSDT for Visual Studio 2017 (15.9.0)
+Build Number: 14.0.16186.0  
+Release date: January 28, 2019
+
+### What's New?
+**SSIS:**
+1. Add Power Query Source (Preview) for SSIS in ADF 2017.
+2. Add support for SQL Server 2012 back.
+3. Add Oracle source and destination for SQL Server 2019.
+4. Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions.
+5. Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1.
+6. Fix an issue that, in some cases, saving the package causes Visual Studio to crash. 
+7. Fix an issue that, in some cases, the package cannot be executed when protection level is EncryptSensitiveWithPassword and target server version is earlier than SQL Server 2017.
+8. Fix an issue that annotations with default font are not displayed in SSDT.
+9. ISDeploymentWizard supports SQL auth, Azure Active Directory integrated auth, and Azure Active Directory password auth in command-line mode.
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
+- Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance.
+- Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance.
+- Power Query Source is not localized.
+
+
+## SSDT for Visual Studio 2017 (15.8.2)
+Build Number: 14.0.16182.0  
+Release date: November 5, 2018  
+
+### What's New?
+**SSIS:**
+
+Fixed an issue that deploying SSIS project which contains packages containing Script Task/Flat file destination to Azure-SSIS will result in the packages failing to execute in Azure-SSIS. 
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- SSDT for Visual Studio 2017 (15.8.2) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
+
+
 ## SSDT for Visual Studio 2017 (15.8.1)
 Build Number: 14.0.16179.0  
 Release date: September 27, 2018  
@@ -32,13 +68,14 @@ Release date: September 27, 2018
 
 **SSIS:**
 
-1. Add support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+1. Add support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 2. Remove support for SQL Server 2012.
 
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- SSDT 15.8.1 does not currently support Windows 7 SP1, so remain on 15.8.0 if you are using Windows 7 SP1
+- Deploying SSIS projects that have packages that contain Script Task/Flat file destination to Azure-SSIS will result in the packages failing to execute in Azure-SSIS.
+- SSDT for Visual Studio 2017 (15.8.1) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
 
 ## SSDT for Visual Studio 2017 (15.8)
@@ -50,7 +87,7 @@ Release date: September 05, 2018
 **SSIS:**
 
 1. Fix regression in VS 15.8 that saving Script Task/Component will hit compile error.
-1. Fix regression in VS 15.8 that deployment wizard doesn’t work.
+1. Fix regression in VS 15.8 that deployment wizard doesn't work.
 1. Fix an issue that ADO.NET connection manager doesn't support 3rd party ADO.NET provider.
 
 **Installer:**
@@ -74,7 +111,7 @@ Release date: July 02, 2018
 **SSIS:**
 
 - Add support for new Azure Government AAD authority (login.microsoftonline.us) for use with AS Tasks.
-- Fix an issue that AS processing task UI will show “Method not found” when target server version is SQLServer2016.
+- Fix an issue that AS processing task UI will show "Method not found" when target server version is SQLServer2016.
 - Fix an issue that some pipeline components cannot be executed when target server version is SQLServer2012.
 
 **Installer:**
@@ -84,7 +121,7 @@ Release date: July 02, 2018
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- When installing SSDT on Windows 10 and choosing “Install new SQL Server Data Tools for Visual Studio 2017 instance”, the installation will fail on “The requested metafile operation is not supported”. Please reboot the machine and launch SSDT installer again to continue the installation.
+- When installing SSDT on Windows 10 and choosing "Install new SQL Server Data Tools for Visual Studio 2017 instance", the installation will fail on "The requested metafile operation is not supported". Please reboot the machine and launch SSDT installer again to continue the installation.
 
 
 
@@ -99,8 +136,8 @@ Release date: June 4, 2018
 - Fix an issue that *Integration Services Designers* page in Options dialog cannot be shown properly.  
 - Fix an issue that luminosity ratio issue for text appearing in *Sort Transformation Editor* editor.  
 - Fix an issue that *Resolve References* dialog disappears when attempting to edit a combobox.  
-- Fix an issue that F1 help link of *Hadoop Connection Manager* doesn’t work.  
-- Fix an issue that script task code will be lost if it’s in a container when targeting SQL Server 2016.  
+- Fix an issue that F1 help link of *Hadoop Connection Manager* doesn't work.  
+- Fix an issue that script task code will be lost if it's in a container when targeting SQL Server 2016.  
 
 
 **Installer:**
@@ -120,7 +157,7 @@ Release date: April 10, 2018
 
 **SSIS:**
 
-- Fix an issue that AS processing task doesn’t log any processing steps when targeting to SQLServer2016 and SQLServer2017
+- Fix an issue that AS processing task doesn't log any processing steps when targeting to SQLServer2016 and SQLServer2017
 - Fix an issue that access violation will happen when opening dtsx with very long non-English task names in SSDT
 - Fix an issue that sometimes variable list of ScriptTask will disappear in task UI
 - Fix an issue that adding copy of existing package will fail when the package location is SQL Server
@@ -133,8 +170,8 @@ Release date: April 10, 2018
 
 **Installer:**
 
-- Add the link of “Customer Experience Improvement Program for SQL Server Data Tools” in privacy disclaimer.
-- Fix an issue that VS installer window will popup when selecting “Install new SQL Server Data Tools for Visual Studio 2017 instance”
+- Add the link of "Customer Experience Improvement Program for SQL Server Data Tools" in privacy disclaimer.
+- Fix an issue that VS installer window will popup when selecting "Install new SQL Server Data Tools for Visual Studio 2017 instance"
 
 ### Known issues:
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
@@ -189,7 +226,7 @@ SSDT for Visual Studio 2017 (15.5.0) moves from preview to general availability 
 1. Replace the icon with a higher quality version.
 
 **Integration Services (IS)**
-1. Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 1. SSIS extension is localized.
 
 ### Bug fixes
@@ -217,7 +254,7 @@ Build number: 14.0.61712.050
   - Run background analysis - when enabled the Query Editor for modern data sources will run queries against the data source as the queries are loaded in order to analyze the query's output schema.
 
 **Integration Services (IS)**
-- Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+- Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 
 
 ### Bug fixes
@@ -265,7 +302,7 @@ This release provides a standalone web installer for SQL Server Database, Analys
 - Allow user to set nickname when installing a new SSDT for VS2017 instance.
 - Hide feature selection checkboxes of installer if no VS instance is selected.
 - Refine some messages of installer based on customer feedback.
-- Fix an issue that installer doesn’t support upgrade.
+- Fix an issue that installer doesn't support upgrade.
 
 
 ### SSIS
@@ -273,9 +310,9 @@ This release provides a standalone web installer for SQL Server Database, Analys
 - Fix an issue that Import/Export Wizard cannot list data source when Azure feature pack is installed.
 - Fix an issue that editing an SSIS Analysis Services Process Task throws an exception while switching connection.
 - Fix an issue that CDC components breaks after applying SQL fix that adds __$command_id column.
-- Fix an issue that 3rd party package can’t be edited and executed when targeting old SQL Server.
-- Fix an issue that Flat File Source configure dialog doesn’t show correctly when double click DTSWizard.exe and select Flat File Source.
-- Fix an issue that a package containing Azure Feature Pack task/component can’t execute when targeting SQL Server 2017.
+- Fix an issue that 3rd party package can't be edited and executed when targeting old SQL Server.
+- Fix an issue that Flat File Source configure dialog doesn't show correctly when double click DTSWizard.exe and select Flat File Source.
+- Fix an issue that a package containing Azure Feature Pack task/component can't execute when targeting SQL Server 2017.
 
 
 **Known Issues**
@@ -356,7 +393,7 @@ Build number: 14.0.61709.290
    - Folder data source not prompting for credentials 
    - Object reference not set exception that may occur trying to get updated credentials on structured data source
    - Opening partition manager with M-expression was very slow
-   - Selecting Properties on table in PQ editor didn’t show the properties
+   - Selecting Properties on table in PQ editor didn't show the properties
 - Improved robustness in Power Query UI integration to catch top-level exceptions and show in Output window
 - Fixed an issue with ChangeSource on structure datasource not persisting changes when context expression
 - Fixed an issue where M expression errors may cause failures to update the model without error message shown
@@ -365,7 +402,7 @@ Build number: 14.0.61709.290
 - Detail rows property will now only be serialized to JSON when it is not empty (changed from default)
 - Oracle OLEDB driver now available in the list for tabular Direct Query mode
 - Adding M-Expressions in 1400-compat tabular models now appear\refresh in the Tabular Model Explorer (TME)
-- Fixed an issue that caused MSOLAP provider to not show up in VS2017 when trying to import using “Other” datasource in pre-1400 compat level models
+- Fixed an issue that caused MSOLAP provider to not show up in VS2017 when trying to import using "Other" datasource in pre-1400 compat level models
 - Fixed an issue where adding a translation through TME may cause issues 
 - Fixed an issue in the Object Level Security interface that caused the tab to appear\hide incorrectly in certain cases
 - Fixed an issue where failure could occur attempting to open previously loaded multi-dimensional model using Connect to Database dialog
@@ -491,8 +528,8 @@ Build number: 14.0.61704.140
     - Add columns by example in PowerQuery
     - Data access options in 1400 models (model-level properties used by M engine)
         - Enable fast combine (default is false - when set to true, the mashup engine ignores data source privacy levels when combining data)
-        - Enable Legacy Redirects (default is false – when set to true, the mashup engine follows HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
-        - Return Error Values as Null (default is false – when set to true, cell level errors are returned as null. When false, an exception is raised is a cell contains an error)  
+        - Enable Legacy Redirects (default is false - when set to true, the mashup engine follows HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
+        - Return Error Values as Null (default is false - when set to true, cell level errors are returned as null. When false, an exception is raised is a cell contains an error)  
     - Additional data sources (file data sources) using PowerQuery
         - Excel 
 		- Text/CSV 
@@ -512,29 +549,29 @@ Build number: 14.0.61704.140
 
 ### Bug fixes
 **AS projects:**
-- Fixed the template priority for BI Projects so they don’t show up at the top of the New Projects categories in VS
+- Fixed the template priority for BI Projects so they don't show up at the top of the New Projects categories in VS
 - Fixed a VS crash that may occur in rare circumstances when SSIS, SSAS or SSRS solution opened
 - Tabular: A variety of enhancements and performance fixes for DAX parsing and the formula bar.
 - Tabular: Tabular Model Explorer will no longer be visible if no SSAS Tabular projects are open.
 - Multi-dimensional: Fixed an issue where the processing dialog was unusable on High-DPI machines.
-- Tabular: Fixed an issue where SSDT faults when opening any BI project when SSMS is already open. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- Tabular: Fixed an issue where hierarchies were not being properly saved to the bim file in an 1103 model.[Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Tabular: Fixed an issue where SSDT faults when opening any BI project when SSMS is already open. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: Fixed an issue where hierarchies were not being properly saved to the bim file in an 1103 model.[Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabular: Fixed an issue where Integrated Workspace mode was allowed on 32-bit machines even though it is not supported.
 - Tabular: Fixed an issue where clicking on anything while in semi-select mode (typing a DAX expression but clicking a measure, for example) could cause crashes.
-- Tabular: Fixed an issue where Deployment Wizard would reset the model's .Name property back to "Model". [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabular: Fixed an issue where Deployment Wizard would reset the model's .Name property back to "Model". [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - Tabular: Fixed an issue where selecting a hierarchy in TME should display properties even if Diagram View is not selected.
 - Tabular: Fixed an issue where pasting into the DAX Formula bar would paste images or other content instead of text when pasting from certain applications.
 - Tabular: Fixed an issue where some old models in the 1103 couldn't be opened due to presence of measures with a specific definition.
 - Tabular: Fixed an issue where XEvent Sessions could not be deleted.
-- Fixed an issue with attempting to build AS “smproj” files with devenv.com would fail
+- Fixed an issue with attempting to build AS "smproj" files with devenv.com would fail
 - Fixed an issue that was finalizing text changes too frequently when using the Korean IME in AS tabular model sheet tab titles
 - Fixed an issue where the intellisense for DAX Related() function was not working correctly to show columns from other tables
 - Improved AS Tabular project import from database dialog by sorting the list of AS databases
-- Fixed an issue when creating calculated tables in AS tabular model where Tables weren’t listed as suggested objects in the expression
+- Fixed an issue when creating calculated tables in AS tabular model where Tables weren't listed as suggested objects in the expression
 - Fixed an issue in preview 1400 AS models trying to open using Integrated Workspace server after viewing code
 - Fixed an issue that was preventing some data sources (with no support for initial catalog) from working correctly in certain circumstances 
 - Deployment Wizard should apply changes to calculated table partitions even when the option to keep partitions is enabled
-- Fixed an issue where Advanced Properties dialog to existing AS Connection didn’t show full list until reselected
+- Fixed an issue where Advanced Properties dialog to existing AS Connection didn't show full list until reselected
 - Fixed a few issues with clipped UI strings that appeared in some localized builds
 - Fixed a number of issues with PowerQuery integration in 1400 compatibility level AS tabular models
 - Fixed an issue with Report Wizard style templates not showing up correctly
@@ -552,8 +589,8 @@ Build number: 14.0.61704.140
 - Fixed an issue when designing reports in SSDT the tree view of parameters, data sources and datasets would collapse when most changes made 
 - Fixed an issue where Save should save the version of RDL, not the latest version.
 - Fixed an issue where SSDT RS is backing up files when backup is turned off and several other issues.
-- Fixed an issue in Report Builder where an error would be shown when clicking "Split Cells". [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- Fixed an issue where caching could cause incorrect data in a report. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- Fixed an issue in Report Builder where an error would be shown when clicking "Split Cells". [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Fixed an issue where caching could cause incorrect data in a report. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **IS projects:**
 - Fixed an issue that run64bitruntime setting doesn't stick.
@@ -565,7 +602,7 @@ Build number: 14.0.61704.140
 
 **Database projects:**
 - SSDT DACPAC deploy add setting back in for IgnoreColumnOrder [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
-- SSDT failing to compile if STRING_SPLIT is used [Connect item](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- SSDT failing to compile if STRING_SPLIT is used [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
 - Fix issue where DeploymentContributors have access to the public model but the backing schema has not been initialized [Github issue](https://github.com/Microsoft/DACExtensions/issues/8)
 - DacFx temporal fix for FILEGROUP placement
 - Fix for "Unresolved Reference" error for external synonyms. 
@@ -589,9 +626,9 @@ Build number: 14.0.61021.0
 
 Using SqlPackage.exe and the DacFx APIs you can now generate a deployment report, deployment script, and publish to a database all in one action. This is a timesaver for anyone who likes to keep a report of what was published during a deployment. Another benefit is that for Azure scenarios, separate scripts for the master database and the deploy target database are created. Up to now a single script was created which was not useful for repeated deployments.
 
-For SqlPackage’s Publish and Script actions, two new arguments have been added.
+For SqlPackage's Publish and Script actions, two new arguments have been added.
 
-* DeployScriptPath (shortname: dsp). This is an optional path to write the deployment script to. For Azure deployment, if there were TSQL commands to create of modify the DB a master script will be written to the same path but with “Filename_Master.sql” as the output file name.
+* DeployScriptPath (shortname: dsp). This is an optional path to write the deployment script to. For Azure deployment, if there were TSQL commands to create of modify the DB a master script will be written to the same path but with "Filename_Master.sql" as the output file name.
 * DeployReportPath (shortname: drp). This is an optional path to write the deployment report to.
 
 Note that for the Script action, either the existing Output Path arguments or the new script/report-specific arguments should be used, but not both.
@@ -600,11 +637,11 @@ Sample usage:
 
 **Publish Action**
 
-```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 **Script Action**
 
-```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 In DacFx, two new APIs have been added: DacServices.Publish() and DacServices.Script(). These also support performing publish + script + report actions in a single operation. Sample usage:
 
@@ -612,11 +649,11 @@ In DacFx, two new APIs have been added: DacServices.Publish() and DacServices.Sc
 DacServices service = new DacServices(connectionString);
 using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
 var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
 // Call publish and receive deployment script & report in the results
@@ -641,20 +678,20 @@ For more information, please read the [Analysis Services blog post](https://blog
 
 **Database Tools**
 
-* [Connect bug 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) – Columns cannot be selected from CROSS APPLY OPENJSON with explicit schema
-* Fixed – issue with Auto-generated History table indexes, where DacFx dropped index on redeployment
-* Fixed – issue with DacFx batch parser not parsing escaped bracket ‘]’ characters, which caused publish to fail
-* Improved – SqlPackage now includes descriptions for each action in the help output
-* Fixed – The “Remember Password” option in the connection dialog was not being preserved when editing Advanced options and when editing a connection string saved in Publish, Schema Compare and other files
-* Fixed – For connections show in the History tab with IntegratedAuthentication=true, the Authentication field in connection properties was left blank. This now shows “Windows Authentication” as expected
-* Fixed – Changes to the SQL Server Tools Intellisense settings under Tools -> Options -> Text Editor were not being preserved
-* Improved – the Pin/Unpin button in the connection dialog History tab is now more compact, reducing the likelihood of a scrollbar appearing
-* Fixed – several accessibility issues in the connection dialog were fixed.
+* [Connect bug 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) - Columns cannot be selected from CROSS APPLY OPENJSON with explicit schema
+* Fixed - issue with Auto-generated History table indexes, where DacFx dropped index on redeployment
+* Fixed - issue with DacFx batch parser not parsing escaped bracket ']' characters, which caused publish to fail
+* Improved - SqlPackage now includes descriptions for each action in the help output
+* Fixed - The "Remember Password" option in the connection dialog was not being preserved when editing Advanced options and when editing a connection string saved in Publish, Schema Compare and other files
+* Fixed - For connections show in the History tab with IntegratedAuthentication=true, the Authentication field in connection properties was left blank. This now shows "Windows Authentication" as expected
+* Fixed - Changes to the SQL Server Tools Intellisense settings under Tools -> Options -> Text Editor were not being preserved
+* Improved - the Pin/Unpin button in the connection dialog History tab is now more compact, reducing the likelihood of a scrollbar appearing
+* Fixed - several accessibility issues in the connection dialog were fixed.
 
 **Analysis Services & Reporting Services**
 
 * Fixed an issue in SSDT AS tabular designer where clicking the scrollbar thumb in data grid crashed in certain situations
-* Fixed an issue where option to impersonate connection as current user in SSDT AS tabular wasn’t available
+* Fixed an issue where option to impersonate connection as current user in SSDT AS tabular wasn't available
 * Fixed an issue in SSDT AS tabular designer where expanding the formula bar too far could make the project unable to re-open
 * Fixed a crash in SSDT AS tabular designer that would occur on key down if table tab was selected
 * Fixed an issue in SSDT AS projects where Analyze in Excel would not connect to down-level AS server versions
@@ -676,7 +713,7 @@ Build number: 14.0.60918
 
 Schema Compare is now supported in SqlPackage.exe and the Data-Tier Application Framework (DacFx) API. For details, see [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/).
 
-**Analysis Services – Integrated Workspace Mode for SSDT Tabular (SSAS)**
+**Analysis Services - Integrated Workspace Mode for SSDT Tabular (SSAS)**
 
 SSDT Tabular now includes an internal SSAS instance, which SSDT Tabular starts automatically in the background if integrated workspace mode is enabled so that you can add and view tables, columns, and data in the model designer without having to provide an external workspace server instance. Integrated workspace mode does not change how SSDT Tabular works with a workspace server and database. What changes is where SSDT Tabular hosts the workspace database. To enable integrated workspace mode, select the Integrated Workspace option in the Tabular Model Designer dialog box displayed when creating a new tabular project. For existing tabular projects that currently use an explicit workspace server, you can switch to integrated workspace mode by setting the Integrated Workspace Mode parameter to True in the Properties window, which is displayed when you select the Model.bim file in Solution Explorer. For details, see the [Analysis Services blog post](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
 
@@ -687,7 +724,7 @@ SSDT Tabular now includes an internal SSAS instance, which SSDT Tabular starts a
 - [Connect Issue 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648): IsPersistedNullable shows as different in SSDT Comparison
 - [Connect Issue 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735): Identity is reset when importing a BACPAC
 - [Connect Issue 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167): Running SSDT unit tests leaves temp files behind
-- [Connect Issue 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712): Backwards compatibility breakage – AppLocal and Nugetization
+- [Connect Issue 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712): Backwards compatibility breakage - AppLocal and Nugetization
 
 **Analysis Services & Reporting Services**
 
@@ -715,8 +752,8 @@ Build number: 14.0.60812.0
 **What's New?**
 
 - **Release Versioning & Numbering:** Releases are now tagged numerically rather than by month. This aligns with the new SSMS policy and simplifies cases where we have multiple releases or hotfixes in a month. This release is 16.3 which means the third update after the RTM release. Any hotfix will be 16.3.1 and so on, with our next update (planned for next month) being 16.4.
-- **Analysis Services – Tabular Model Explorer:** Tabular Model Explorer lets you conveniently navigate through the various metadata objects in a model, such as data sources, tables, measures, and relationships. It is implemented as a separate tools window that you can display by opening the View menu in Visual Studio, pointing to Other Windows, and then clicking Tabular Model Explorer. The Tabular Model Explorer appears by default in the Solution Explorer area on a separate tab. Tabular Model Explorer organizes the metadata objects in a tree structure that closely resembles the schema of a tabular 1200 model and many more new features.
-- **Database Tools – Always Encrypted**:  This release provides new [Always Encrypted Key management](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) dialogs to easily add Column Master Keys or Column Encryption Keys to your database project, or a live database in SQL Server Object Explorer. This release supports certificates in Windows Certificate Store. In upcoming releases, Azure Key Vault and CNG Providers will be supported.
+- **Analysis Services - Tabular Model Explorer:** Tabular Model Explorer lets you conveniently navigate through the various metadata objects in a model, such as data sources, tables, measures, and relationships. It is implemented as a separate tools window that you can display by opening the View menu in Visual Studio, pointing to Other Windows, and then clicking Tabular Model Explorer. The Tabular Model Explorer appears by default in the Solution Explorer area on a separate tab. Tabular Model Explorer organizes the metadata objects in a tree structure that closely resembles the schema of a tabular 1200 model and many more new features.
+- **Database Tools - Always Encrypted**:  This release provides new [Always Encrypted Key management](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) dialogs to easily add Column Master Keys or Column Encryption Keys to your database project, or a live database in SQL Server Object Explorer. This release supports certificates in Windows Certificate Store. In upcoming releases, Azure Key Vault and CNG Providers will be supported.
     - While creating Column Master Key or Column Encryption Key, you may experience that the changes are not reflected on SQL Server Object Explorer immediately after clicking Update Database. To workaround, refresh the database node in SQL Server Object Explorer.
     - If you try to encrypt a column in a table with data from SQL Server Object Explorer, you may experience a failure. This feature is currently supported only in SSDT database projects and SSMS. Support for SQL Server Object Explorer will be enabled in a later release.
 
@@ -726,7 +763,7 @@ Build number: 14.0.60812.0
     - **SSDT:**
         - Connect bug 1898001 [Fixed a column description issue with 128 character limitation](https://connect.microsoft.com/SQLServer/feedback/details/1898001/column-description-limited-to-128-characters).
         - Fixed an issue where publishing a database from VS did not apply DatabaseServiceObjective property in the publish profile xml.
-        - Connect bug 2900167 [Fixed a unit test issue for incorrectly leaving temp files](http://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind).
+        - Connect bug 2900167 [Fixed a unit test issue for incorrectly leaving temp files](https://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind).
         - Fixed an issue where Retention Period combo box on Database Settings is truncated.
         - Fixed an issue for the missing verification of empty old password on SQL CLR project properties while changing the password.
     - **DACFx:**
@@ -741,7 +778,7 @@ Build number: 14.0.60812.0
         - Fixed a VS crash issue when creating KPIs.
         - Fixed an issue that generated invalid reports for SQL Server 2008 R2, 2012 and 2014.
         - Fixed a hierarchy order issue that caused an infinite loop error for .dwpro project.
-        - Fixed a RS RDL issue where downgrading RDL required a full rebuild which caused user’s confusion.
+        - Fixed a RS RDL issue where downgrading RDL required a full rebuild which caused user's confusion.
         - Fixed a KPI issue where Hide From Client Tools had no effect.
         
 
@@ -761,9 +798,9 @@ Build number: 14.0.60629.0
 
 **Updates and fixes**
 * **Database tools:**
-    * From now on SSDT will never disable Transparent Data Encryption (TDE) on a database. Previously since the default encryption option in a project’s database settings was disabled, it would turn off encryption. With this fix encryption can be enabled but never disabled during publish. 
+    * From now on SSDT will never disable Transparent Data Encryption (TDE) on a database. Previously since the default encryption option in a project's database settings was disabled, it would turn off encryption. With this fix encryption can be enabled but never disabled during publish. 
     * Increased the retry count and resiliency for Azure SQL DB connections during initial connection.
-    * If the default filegroup is not PRIMARY, Import/Publish to to Azure V12 would fail. Now this setting is ignored when publishing.
+    * If the default filegroup is not PRIMARY, Import/Publish to Azure V12 would fail. Now this setting is ignored when publishing.
     * Fixed an issue where when exporting a database with an object with Quoted Identifier on, export validation could fail in some instances.
     * Fixed an issue where the TEXTIMAGE_ON option was incorrectly added for Hekaton table creations where it is not allowed.
     * Fixed an issue where Export took a long time exporting with large amount of data due to a write to the model.xml file after data phase completed caused contents of the .bacpac file to be rewritten.

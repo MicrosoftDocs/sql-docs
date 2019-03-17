@@ -13,13 +13,13 @@ manager: cgronlun
 # Create SSIS and SSRS workflows with R on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to use embedded R and Python script using the language and data science capabilites of SQL Server Machine Learning Services with two important SQL Server features: SQL Server Integration Services (SSIS) and SQL Server Reporting Services SSRS. R and Python libraries in SQL Server provide statistical and predictive functions. SSIS and SSRS provide coordinated ETL transformation and visualizations, respectively. This article explains how to put all of these features together in this workflow pattern:
+This article explains how to use embedded R and Python script using the language and data science capabilities of SQL Server Machine Learning Services with two important SQL Server features: SQL Server Integration Services (SSIS) and SQL Server Reporting Services SSRS. R and Python libraries in SQL Server provide statistical and predictive functions. SSIS and SSRS provide coordinated ETL transformation and visualizations, respectively. This article explains how to put all of these features together in this workflow pattern:
 
 > [!div class="checklist"]
 > * Create a stored procedure that contains executable R or Python
 > * Execute the stored procedure from SSIS or SSRS
 
-The examples in this article are mostly about R and SSIS, but the concepts and steps apply equally to Python. The second section provides guidance and links for SSRS visualizaitons.
+The examples in this article are mostly about R and SSIS, but the concepts and steps apply equally to Python. The second section provides guidance and links for SSRS visualizations.
 
 ## Bring compute power to the data
 
@@ -34,7 +34,7 @@ By using the right combination of SQL and R for different data processing and an
 
 <a name="bkmk_ssis"></a> 
 
-## Use SSIS for data transformation and automation
+## Use SSIS for automation
 
 Data science workflows are highly iterative and involve much transformation of data, including scaling, aggregations, computation of probabilities, and renaming and merging of attributes. Data scientists are accustomed to doing many of these tasks in R, Python, or another language; however, executing such workflows on enterprise data requires seamless integration with ETL tools and processes.
 
@@ -49,7 +49,7 @@ Here are some ideas for how you can automate your data processing and modeling p
 
 ## SSIS example
 
-The following example originates from a now-retired MSDN blog post authored by Jimmy Wong at this URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`.
+The following example originates from a now-retired MSDN blog post authored by Jimmy Wong at this URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
 This example shows you how to automate tasks using SSIS. You create stored procedures with embedded R using SQL Server Management Studio, and then execute those stored procedures from [Execute T-SQL tasks](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in an SSIS package.
 
@@ -87,11 +87,7 @@ begin
 end;
 ```
 
-In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) that executes the stored procedure you just defined.
-
-![Insert data](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Insert data")
-
-The script for SQLStatement is as follows. The script removes existing data, specifies which data to insert, and then calls the stored procedure to provide the data.
+In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) that executes the stored procedure you just defined. The script for **SQLStatement** removes existing data, specifies which data to insert, and then calls the stored procedure to provide the data.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -99,9 +95,11 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-### Generates a model
+![Insert data](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Insert data")
 
-Run the following script in SQL Server Management Studio to creat a table that stores a model. 
+### Generate a model
+
+Run the following script in SQL Server Management Studio to create a table that stores a model. 
 
 ```T-SQL
 Use test-db
@@ -133,9 +131,7 @@ end;
 GO
 ```
 
-In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) to execute the **generate_iris_rx_model** stored procedure. The model is serialized and saved to the ssis_iris_models table.
-
-![Generates a linear model](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Generates a linear model")
+In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) to execute the **generate_iris_rx_model** stored procedure. The model is serialized and saved to the ssis_iris_models table. The script for **SQLStatement** is as follows:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +139,9 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-After this task completes, you can query the ssis_iris_models to see that it contains one binary model.
+![Generates a linear model](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Generates a linear model")
+
+As a checkpoint, after this task completes, you can query the ssis_iris_models to see that it contains one binary model.
 
 ### Predict (score) outcomes using the "trained" model
 
@@ -179,11 +177,11 @@ end;
 
 In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) that executes the **predict_species_length** stored procedure to generate predicted petal length.
 
-![Generate predictions](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "Generate predictions")
-
 ```T-SQL
 exec predict_species_length 'rxLinMod';
 ```
+
+![Generate predictions](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "Generate predictions")
 
 ### Run the solution
 

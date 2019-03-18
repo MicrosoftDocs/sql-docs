@@ -29,16 +29,16 @@ SQL Server 2017 always collects and sends information about the installation exp
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.
 
-## Disable Customer Usage and Diagnostic Data Collection
+## Disable Usage and Diagnostic Data Collection
 
 This option lets you change if SQL Server sends usage and diagnostic data collection to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
 
 > [!IMPORTANT]
-> You can not turn off customer feedback for free editions of SQL Server, Express and Developer.
+> You can not turn off usage and diagnostic data collection for free editions of SQL Server, Express and Developer.
 
 ### On Red Hat, SUSE, and Ubuntu
 
-1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off customer feedback by specifying **false**.
+1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off usage and diagnostic data collection by specifying **false**.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -51,7 +51,7 @@ This option lets you change if SQL Server sends usage and diagnostic data collec
    ```
    
 ### On Docker
-To disable Customer Feedback on docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
+To disable usage and diagnostic data collection on docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

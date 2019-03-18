@@ -106,6 +106,8 @@ Next, in the requests body, pass in the parameters to the app you are calling an
 
 When you send the request, you will get the same output as you did when you ran the app through `mssqlctl app run`:
 ![Postman Run Result](media/big-data-cluster-consume-apps/postman_result.png)
+
+
 You have now successfully called the app through the web service. You can follow similar steps to integrate this web service in your application.
 
 ## Next steps

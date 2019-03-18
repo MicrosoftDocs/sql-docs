@@ -8047,6 +8047,8 @@
         href: ../azure-data-studio/keyboard-shortcuts.md
       - name: Explorer Azure SQL resources
         href: ../azure-data-studio/azure-resource-explorer.md
+      - name: SQL Notebooks
+        href: ../azure-data-studio/sql-notebooks.md        
       - name: Server groups
         href: ../azure-data-studio/server-groups.md
       - name: Source control
@@ -8066,6 +8068,8 @@
         href: ../azure-data-studio/sql-server-2019-extension.md
       - name: SQL Server Agent (preview)
         href: ../azure-data-studio/sql-server-agent-extension.md
+      - name: SQL Server dacpac extension (preview)
+        href: ../azure-data-studio/sql-server-dacpac-extension.md        
       - name: SQL Server Import (preview)
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (preview)

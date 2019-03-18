@@ -142,6 +142,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
       SET DOCKER_EMAIL=<your email address>
       SET DOCKER_PRIVATE_REGISTRY=1
+      SET STORAGE_SIZE=10Gi
       ```
 
    1. Deploy the big data cluster:
@@ -169,6 +170,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_EMAIL="<your email address>"
       export DOCKER_PRIVATE_REGISTRY="1"
+      export STORAGE_SIZE="10Gi"
       ```
 
    1. Deploy the big data cluster:
@@ -181,8 +183,10 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
 
 The following two example notebooks demonstrate training two image classification models on a single node of the Spark cluster using TensorFlow for GPU.
 
-- Notebook **tf5.ipynb** uses CUDA 8, CUDNN 6, and TensorFlow 1.4.0.
-- Notebook **tf7.ipynb** uses CUDA 9, CUDNN 7, and TensorFlow 1.12.0.
+| Notebook download | Description |
+|---|---|
+| [**tf5.ipynb**](https://aka.ms/AA4jdgd) | Uses CUDA 8, CUDNN 6, and TensorFlow 1.4.0.  |
+| [**tf7.ipynb**](https://aka.ms/AA4ixzr) | Uses CUDA 9, CUDNN 7, and TensorFlow 1.12.0. |
 
 Open and run one of these notebooks in Azure Data Studio using the PySpark3 kernel. Unless you have a specific need for an older version of CUDA or TensorFlow, choose CUDA 9/CUDNN 7/TensorFlow 1.12.0. For more information about how to use notebooks with big data clusters, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
 

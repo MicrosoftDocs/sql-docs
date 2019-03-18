@@ -52,7 +52,11 @@
   - name: Install
     items:
     - name: Get Started
-      href: ../big-data-cluster/deploy-get-started.md
+    - items:
+      - name: Deploy a big data cluster
+        href: ../big-data-cluster/deploy-get-started.md
+      - name: Load sample data
+        href: ../big-data-cluster/tutorial-load-sample-data.md
     - name: Install Tools
       items:
       - name: Install big data tools
@@ -73,8 +77,6 @@
         href: ../big-data-cluster/deploy-with-kubeadm.md
       - name: Minikube
         href: ../big-data-cluster/deploy-on-minikube.md
-    - name: Load sample data
-      href: ../big-data-cluster/tutorial-load-sample-data.md
   - name: Concepts
     items:
     - name: Controller

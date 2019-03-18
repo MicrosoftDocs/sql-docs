@@ -13,7 +13,7 @@ ms.custom: seodec18
 ms.reviewer: rothja
 ---
 
-# How to consume an app deployed on SQL Server 2019 big data cluster using a RESTful web service (preview)
+# How to consume an app deployed on SQL Server big data cluster using a RESTful web service
 
 This article describes how to consume an app deployed on a SQL Server 2019 big data cluster using a RESTful web service (preview).
 

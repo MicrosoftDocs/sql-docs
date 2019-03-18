@@ -207,7 +207,7 @@ GO
   
     2.  To add a document property, click in the empty row at the bottom of the list, to the right of the **\***, and enter the values for the new property.  
   
-         For information about these values, see [Search Property List Editor](../../database-engine/search-property-list-editor.md). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
+         For information about these values, see [Search Property List Editor](../../../2014/database-engine/search-property-list-editor.md). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

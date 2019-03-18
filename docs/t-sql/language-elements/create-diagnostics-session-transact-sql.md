@@ -84,7 +84,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|The Service Process ID.|  
   
 ## Remarks  
- Each user is allowed a maximum of 10 concurrent diagnostics sessions. See [sys.pdw_diag_sessions](https://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) for a list of your current sessions, and drop any unneeded sessions using `DROP DIAGNOSTICS SESSION`.  
+ Each user is allowed a maximum of 10 concurrent diagnostics sessions. See [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) for a list of your current sessions, and drop any unneeded sessions using `DROP DIAGNOSTICS SESSION`.  
   
  Diagnostics sessions will continue to collect metadata until dropped.  
   

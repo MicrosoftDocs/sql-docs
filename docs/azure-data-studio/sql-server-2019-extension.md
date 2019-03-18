@@ -3,7 +3,7 @@ title: SQL Server 2019 extension (preview)
 titleSuffix: Azure Data Studio
 description: SQL Server 2019 Preview extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "02/13/2019"
+ms.date: "03/18/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -24,9 +24,9 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|February 13, 2019 |0.10.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|February 13, 2019 |0.10.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|February 13, 2019 |0.10.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|March 18, 2019 |0.11.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|March 18, 2019 |0.11.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|March 18, 2019 |0.11.0
 
 1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 
@@ -37,6 +37,14 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
 
 1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
+
+## Release Notes (v0.11.0)
+  * Jupyter Notebook support, specifically support for the Python3 and Spark kernels, has been moved into Azure Data Studio. This extension is no longer required in order to use Notebooks.
+  * Multiple bug fixes in the External Data wizards:
+    * Oracle type mappings have been updated to match changes shipped in SQL Server 2019 CTP 2.3.
+    * Fixed an issue where new schemas typed into the table mapping controls were being lost.
+    * Fixed an issue where checking a Database node in the table mappings did not result in all tables and views being checked.
+
 
 ## Release Notes (v0.10.2)
 ### SQL Server 2019 support

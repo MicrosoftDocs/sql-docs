@@ -16,6 +16,39 @@ manager: craigg
 
 **[Download and install the latest release!](download.md)**
 
+## March 2019
+
+March 18, 2019 &nbsp; / &nbsp; version: 1.5.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Added [PostgresSQL extension for Azure Data Studio](postgres-extension.md) | Supported features: <br/>&bull; &nbsp; Connection Dialog <br/>&bull; &nbsp; Object Explorer <br/>&bull; &nbsp; Query Editor <br/>&bull; &nbsp; Charting <br/>&bull; &nbsp; Dashboards <br/>&bull; &nbsp; Snippets <br/>&bull; &nbsp; Edit Data <br/>&bull; &nbsp; Notebooks |
+| Added SQL Notebooks | Added SQL Kernel support to built-in Notebook viewer: <br/>&bull; &nbsp; Supports T-SQL <br/>&bull; &nbsp; Support PGSQL |
+| Added PowerShell Extension  | Brings over the [PowerShell extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) experience from VS Code.  |
+| Added SQL Server dacpac extension  | Removes Data-Tier Application Wizard from SQL Server Import extension into a new extension.  |
+| Added Community extension QueryPlan.show | Adds integration support to visualize query plans  |
+| Updated SQL Server 2019 Preview extension | &bull; &nbsp; Jupyter Notebook support, specifically Python3 and Spark kernels, have moved into the core Azure Data Studio tool. <br/>&bull; &nbsp; Bug fixes to External Data Wizard  |
+| Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
+| &nbsp; | &nbsp; |
+
+### Known Issues
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): Clicking Run on Cell Before Kernel is Ready for Spark Results in Fatal Error 
+**Workaround:** Wait until kernels are loaded until running any cells
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): ADS launched from SSMS using SQL auth - prompts user for password 
+**Workaround:** Use Windows Auth for now. 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): Unable to install SQL notebook feature <br/>
+**Workaround:** Follow workaround steps [here](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832). 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio can't be Opened Directly from Downloads Folder (Mac) <br />
+**Workaround:** Restart computer after unzipping the app. Will be investigated. 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Notebook Save As loses connection context <br />
+**Workaround:** Will be fixed in next release. 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Dacpac Extract crashes SqlToolsService if invalid version is used <br/>
+**Workaround:** Restart Azure Data Studio and ensure correct version is used.
+- New Notebook and Open Notebook icons are lost <br/> 
+**Workaround:** The legacy connection type is deprecated. We recommend connecting to the SQL Server endpoint and you’ll get all the actions (New Notebook, Spark Job) as expected. 
+
 ## February 2019
 
 February 13, 2019 &nbsp; / &nbsp; version: 1.4.5

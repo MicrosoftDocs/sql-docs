@@ -78,7 +78,7 @@ IF
    )  
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
-PRINT 'Some items for this order cann't be manufactured in specified number of days or less.' ;  
+PRINT 'Some items for this order cann''t be manufactured in specified number of days or less.' ;  
   
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: "Local Audit for SQL Server Usage Feedback Collection | Microsoft Docs"
+title: "Local Audit for SQL Server Usage and Diagnostic Data Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
-# Local Audit for SQL Server Usage Feedback Collection
+# Local Audit for SQL Server Usage and Diagnostic Data Collection
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## Introduction
 
-Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The Local Audit component of [SQL Server Usage Feedback collection](https://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
+Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The Local Audit component of [SQL Server Usage and Diagnostic Data collection](https://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
 
-As of SQL Server 2016 CU2, Local Audit is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, Local Audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have Local Audit capability for usage feedback collection. 
+As of SQL Server 2016 CU2, Local Audit is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, Local Audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have Local Audit capability for usage and diagnostic data collection. 
 
 ## Prerequisites 
 
@@ -37,18 +37,18 @@ The following are prerequisites to enable Local Audit on each SQL Server instanc
 
 Before turning on Local Audit, a system administrator needs to:
 
-1. Know the SQL Server instance name and the SQL Server CEIP Telemetry service logon account. 
+1. Know the SQL Server instance name and the SQL Server CEIP service logon account. 
 
 1. Configure a new folder for the Local Audit files.
 
-1. Grant permissions to the SQL Server CEIP Telemetry service logon account.
+1. Grant permissions to the SQL Server CEIP service logon account.
 
 1. Create a registry key setting to configure Local Audit target directory. 
 
 
 ### Get the SQL Server CEIP Service Logon Account 
 
-Do the following steps to get the SQL Server CEIP Telemetry service logon account
+Do the following steps to get the SQL Server CEIP service logon account
  
 1. Launch the **Services** console. To do this, select the **Windows Key + R** on your keyboard to open the **Run** dialog box. Next, type in *services.msc* in the text field and select **OK** to launch the **Services** console.  
 
@@ -70,10 +70,10 @@ Create a new folder (Local Audit Directory) where the Local Audit will write the
   |![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per database per instance.|  
 |![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
 |![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of Analysis Services uses the same instance name, create a separate folder for Analysis Services. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the Local Audit to write to the same log file from both instances.| 
-|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CEIP Telemetry service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP Telemetry service logon account|
+|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CEIP service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP service logon account|
 
 
-### Grant permissions to the SQL Server CEIP Telemetry service logon account
+### Grant permissions to the SQL Server CEIP service logon account
   
 1. In **File Explorer**, navigate to the location where the new folder is located.
 
@@ -81,11 +81,11 @@ Create a new folder (Local Audit Directory) where the Local Audit will write the
 
 1. On the **Security tab**, select **Edit** manage Permission.
 
-1. Select **Add** and type the credentials of the SQL Server CEIP Telemetry Service. For example `NT Service\SQLTELEMETRY`.
+1. Select **Add** and type the credentials of the SQL Server CEIP Service. For example `NT Service\SQLTELEMETRY`.
 
 1. Select **Check Names** to validate the name you provided, then select **OK**.
 
-1. On the **Permission** dialog box, choose the Log On account to SQL Server CEIP Telemetry service and select **List folder contents**, **Read** and **Write**.
+1. On the **Permission** dialog box, choose the Log On account to SQL Server CEIP service and select **List folder contents**, **Read** and **Write**.
 
 1. Select **OK** to apply the permission changes immediately. 
   
@@ -297,13 +297,13 @@ Below is an excerpt of a JSON file output of Local Audit.
 ## Frequently Asked Questions
 
 **How do DBAs read the Local Audit log files?**
-These log files are written in JSON format. Each line will be a JSON object representing a piece of telemetry uploaded to Microsoft. The fields names should be self-explanatory.
+These log files are written in JSON format. Each line will be a JSON object representing a piece of usage / diagnostic data uploaded to Microsoft. The fields names should be self-explanatory.
 
-**What happens if the DBA disables Usage Feedback Collection?**
+**What happens if the DBA disables Usage and Diagnostic Data Collection?**
 No Local Audit file will be written.
 
 **What happens if there is not internet connectivity/machine is behind the firewall?**
-SQL Server 2016 usage feedback will not be sent to Microsoft. It will still try to write the local audit logs if configured correctly.
+SQL Server 2016 usage and diagnostic data will not be sent to Microsoft. It will still try to write the local audit logs if configured correctly.
 
 **How do DBAs disable Local Audit?**
 Remove the UserRequestedLocalAuditDirectory registry key entry.
@@ -363,4 +363,4 @@ WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
 ## See Also
-[Local Audit for SSMS Usage Feedback Collection](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
+[Local Audit for SSMS Usage and Diagnostic Data Collection](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)

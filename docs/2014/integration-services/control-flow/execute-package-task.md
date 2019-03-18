@@ -91,7 +91,7 @@ manager: craigg
  For more information, see [Use the Values of Variables and Parameters in a Child Package](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### Accessing Parent Package Variables  
- Child packages can access parent package variables by using the Script task. When you enter the name of the parent package variable on the **Script** page in the **Script Task Editor**, don't include **User:** in the variable name. Otherwise, the child package doesn't locate the variable when you run the parent package. For more information about using the Script task to access parent package variables, see this blog entry, [SSIS: Accessing variables in a parent package](https://go.microsoft.com/fwlink/?LinkId=257729), on consultingblogs.emc.com.  
+ Child packages can access parent package variables by using the Script task. When you enter the name of the parent package variable on the **Script** page in the **Script Task Editor**, don't include **User:** in the variable name. Otherwise, the child package doesn't locate the variable when you run the parent package. For more information about using the Script task to access parent package variables, see this blog entry, [SSIS: Accessing variables in a parent package](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## Configuring the Execute Package Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  

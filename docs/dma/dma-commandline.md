@@ -41,8 +41,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | How to use dmacmd.exe help text        | N
 |`/AssessmentName`     |   Name of the assessment project   | Y
 |`/AssessmentDatabases`     | Space-delimited list of connection strings. Database name (Initial Catalog) is case-sensitive. | Y
-|`/AssessmentSourcePlatform`     | Source platform for the assessment, supported values: SqlOnPrem, RdsSqlServer. Target Readiness Assessment also support Cassandra as source platform. Default is SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | Target platform for the assessment, supported values: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 and SqlServerWindows2017. Target Readiness Assessment also support CosmosDB as target platform. Default is SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | Source platform for the assessment: <br>Supported values for Assessment: SqlOnPrem, RdsSqlServer (default) <br>Supported values for Target Readiness Assessment: SqlOnPrem, RdsSqlServer (default), Cassandra (preview)   | N
+|`/AssessmentTargetPlatform`     | Target platform for the assessment:  <br> Supported values for Assessment: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 and SqlServerWindows2017 (default)  <br> Supported values for Target Readiness Assessment: ManagedSqlServer (default), CosmosDB (preview)   | N
 |`/AssessmentEvaluateFeatureParity`  | Run feature parity rules. If source platform is RdsSqlServer, feature parity evaluation is not supported for target platform AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
 |`/AssessmentEvaluateRecommendations`     | Run feature recommendations        | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendationsis required)

@@ -121,7 +121,7 @@ manager: craigg
   
 -   [DNS Registration with Network Name Resource](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
--   [Windows 2008 R2 Failover Multi-Site Clustering](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)  
+-   [Windows 2008 R2 Failover Multi-Site Clustering](https://blogs.technet.microsoft.com/askcore/2010/02/12/windows-server-2008-failover-clusters-networking-part-1/)  
   
 ##  <a name="ServerInstance"></a> SQL Server Instance Prerequisites and Restrictions  
  Each availability group requires a set of failover partners, known as *availability replicas*, which are hosted by instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A given server instance can be a *stand-alone instance* or a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*failover cluster instance* (FCI).  

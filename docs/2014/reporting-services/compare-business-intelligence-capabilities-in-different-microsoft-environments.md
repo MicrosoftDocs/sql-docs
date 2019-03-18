@@ -58,7 +58,7 @@ manager: kfile
   
 ## More information  
   
--   [Business intelligence capabilities in Excel, SharePoint Online, and Power BI for Office 365](https://technet.microsoft.com/en-us/library/dn198235.aspx).  
+-   [BI capabilities in Excel and Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
 -   For information on requirements to use synonyms, see [Add synonyms to a Power Pivot Excel data model](https://support.office.com/Article/Add-synonyms-to-a-Power-Pivot-Excel-data-model-345f4f5b-5ec2-4998-bc46-a26bdc0810b6?ui=en-US&rs=en-US&ad=US).  
   

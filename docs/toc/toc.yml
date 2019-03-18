@@ -136,7 +136,9 @@
       - name: Exporting ML models with Spark/Mleap
         href: ../big-data-cluster/export-model-with-spark-mleap.md
       - name: Use Sparklyr from RStudio
-        href: ../big-data-cluster/sparklyr-from-RStudio.md  
+        href: ../big-data-cluster/sparklyr-from-RStudio.md
+      - name: GPU support and TensorFlow
+        href: ../big-data-cluster/spark-gpu-tensorflow.md
     - name: Manage SQL Server big data cluster
       items:
       - name: Connect to a big data cluster
@@ -8027,6 +8029,8 @@
         href: ../azure-data-studio/quickstart-sql-database.md
       - name: Connect & query Azure SQL Data Warehouse
         href: ../azure-data-studio/quickstart-sql-dw.md
+      - name: Connect & query PostgreSQL
+        href: ../azure-data-studio/quickstart-postgres.md
     - name: Tutorials
       items:
       - name: T-SQL Editor
@@ -8051,6 +8055,8 @@
         href: ../azure-data-studio/keyboard-shortcuts.md
       - name: Explorer Azure SQL resources
         href: ../azure-data-studio/azure-resource-explorer.md
+      - name: SQL Notebooks
+        href: ../azure-data-studio/sql-notebooks.md        
       - name: Server groups
         href: ../azure-data-studio/server-groups.md
       - name: Source control
@@ -8064,10 +8070,14 @@
     - name: Extensions
       href: ../azure-data-studio/extensions.md
       items:
+      - name: PostgreSQL extension (preview)
+        href: ../azure-data-studio/postgres-extension.md
       - name: SQL Server 2019 (preview)
         href: ../azure-data-studio/sql-server-2019-extension.md
       - name: SQL Server Agent (preview)
         href: ../azure-data-studio/sql-server-agent-extension.md
+      - name: SQL Server dacpac extension (preview)
+        href: ../azure-data-studio/sql-server-dacpac-extension.md        
       - name: SQL Server Import (preview)
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (preview)

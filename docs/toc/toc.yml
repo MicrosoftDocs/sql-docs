@@ -52,7 +52,7 @@
   - name: Install
     items:
     - name: Get Started
-    - items:
+      items:
       - name: Deploy a big data cluster
         href: ../big-data-cluster/deploy-get-started.md
       - name: Load sample data

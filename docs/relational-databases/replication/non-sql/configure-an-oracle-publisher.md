@@ -31,6 +31,7 @@ manager: craigg
 -   Publishing data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
 
 -   Publishing data to and from Oracle has the following restrictions:  
+
   | |2016 or earlier |2017 or later |
   |-------|-------|--------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |

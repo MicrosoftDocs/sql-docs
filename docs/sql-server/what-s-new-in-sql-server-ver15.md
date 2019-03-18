@@ -14,7 +14,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The first section identifies features that are added in the latest preview release. The other sections of this article provide details about all of the features released to date for this [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+
+For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
 **Try [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -231,7 +233,21 @@ The end result is a reduction in extraneous recompilations and CPU-overhead.
 
 In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint, which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
 
-### Scalar UDF inlining (CTP 2.1)
+### UTF-8 support (CTP 2.3)
+
+Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. 
+
+For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
+
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII (Latin) strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
+
+For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
+
+**CTP 2.1** Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
+
+**CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
+
+**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).### Scalar UDF inlining (CTP 2.1)
 
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
@@ -254,6 +270,12 @@ For database compatibility level 140 or lower, error message 2628 remains an opt
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
 
+### Hybrid buffer pool (CTP 2.1)
+
+Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. Since PMEM devices provide very low latency for data access, the engine can forgo making a copy of the data in a "clean pages" area of the buffer pool and simply access the page directly on PMEM. Access is performed using memory mapped I/O, as is the case with enlightenment. This brings performance benefits from avoiding a copy of the page to DRAM, and from the avoidance of the I/O stack of the operating system to access the page on persistent storage. This feature is available on both SQL Server on Windows and SQL Server on Linux.
+
+For more information, see [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md)
+
 ### Static data masking (CTP 2.1)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases. Static data masking helps create a sanitized copy of databases where all sensitive information has been altered in a way that makes the copy sharable with non-production users. Static data masking can be used for development, testing, analytics and business reporting, compliance, troubleshooting, and any other scenario where specific data cannot be copied to different environments.
@@ -275,22 +297,6 @@ Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user dat
    ```sql
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
-
-### UTF-8 support (CTP 2.2)
-
-Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. 
-
-For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
-
-This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII (Latin) strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
-
-For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
-
-**CTP 2.1** Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
-
-**CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
-
-**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).
 
 ### Resumable online index create (CTP 2.0)
 
@@ -367,15 +373,15 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 - **Java language extension (preview)**: Use the Java language extension to execute Java code in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.
 
-### <a id="sqlgraph"></a> SQL Graph features
+### <a id="sqlgraph"></a> SQL Graph features (CTP 2.3)
 
 - **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
 
 - **Match support in `MERGE` DML (CTP 2.0)** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
-- **Edge Constraints (CTP 2.0)** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema. 
+- **Edge constraints (CTP 2.0)** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema. 
 
-  **(CTP 2.3)** Extending this feature further, you can define cascaded delete actions on an Edge Constraint. You can define the actions that the database engine takes when a user deletes the node(s), that a given edge connects.
+  **(CTP 2.3)** Extending this feature further, you can define cascaded delete actions on an edge constraint. You can define the actions that the database engine takes when a user deletes the node(s), that a given edge connects.
 
 ### Database scoped default setting for online and resumable DDL operations (CTP 2.0)
 
@@ -432,12 +438,6 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 > [!NOTE]
 > For this preview release, enlightenment of files on persistent memory devices is only available on Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Windows supports persistent memory devices starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
 
-### Hybrid buffer pool (CTP 2.1)
-
-Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. Since PMEM devices provide very low latency for data access, the engine can forgo making a copy of the data in a "clean pages" area of the buffer pool and simply access the page directly on PMEM. Access is performed using memory mapped I/O, as is the case with enlightenment. This brings performance benefits from avoiding a copy of the page to DRAM, and from the avoidance of the I/O stack of the operating system to access the page on persistent storage. This feature is available on both SQL Server on Windows and SQL Server on Linux.
-
-For more information, see [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md)
-
 ### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
 
 `DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data. In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
@@ -482,6 +482,13 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 
+- **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, and a health monitor.
+
+- **New container registry (CTP 2.1)**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
+
+  - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
+  - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
+
 - **Replication support (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
   Create the following types of publications:
@@ -493,16 +500,9 @@ FROM sys.dm_exec_requests AS d
 
 - **Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
 
-- **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, and a health monitor.
-
 - **OpenLDAP support for third-party AD providers (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
 - **Machine Learning on Linux (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
-
-- **New container registry (CTP 2.1)**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
-
-  - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
-  - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
 ## <a id="mds"></a> Master Data Services 
 

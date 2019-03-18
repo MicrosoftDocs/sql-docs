@@ -123,7 +123,7 @@ Continue reading for more details about these features.
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
 - [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
-- [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SSIS jobs, and more (CTP 2.3)
+- [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more (CTP 2.3)
 - [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
 - Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](../big-data-cluster/hdfs-tiering.md) (CTP 2.3)
 - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
@@ -222,7 +222,7 @@ Query Store now supports the ability to force query execution plans for fast for
 
 ### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
 
-Prior to this feature, when referencing a temporary table with a DML statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
 
 - Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions. 
 - Keep track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions. 
@@ -247,7 +247,9 @@ For more information, see [Collation and Unicode Support](../relational-database
 
 **CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
 
-**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).### Scalar UDF inlining (CTP 2.1)
+**CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).
+
+### Scalar UDF inlining (CTP 2.1)
 
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
@@ -526,7 +528,7 @@ FROM sys.dm_exec_requests AS d
 
   - AAD is now supported. (CTP 2.3)
   - Notebook view UI has moved into Azure Data Studio core. (CTP 2.3)
-  - Added new wizard to create external data sources from HDFS to SQL Server Big Data Cluster. (CTP 2.3)
+  - Added new wizard to create external data sources from Hadoop Distributed File System (HDFS) to SQL Server Big Data Cluster. (CTP 2.3)
   - Improved Notebook viewer UI. (CTP 2.3)
   - Added new Notebook APIs. (CTP 2.3)
   - Added "Reinstall Notebook dependencies" command to assist with Python package updates. (CTP 2.3)

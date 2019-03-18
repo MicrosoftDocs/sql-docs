@@ -185,10 +185,10 @@ The following two example notebooks demonstrate training two image classificatio
 
 | Notebook download | Description |
 |---|---|
-| [**tf5.ipynb**](https://aka.ms/AA4jdgd) | Uses CUDA 8, CUDNN 6, and TensorFlow 1.4.0.  |
-| [**tf7.ipynb**](https://aka.ms/AA4ixzr) | Uses CUDA 9, CUDNN 7, and TensorFlow 1.12.0. |
+| [**tf-cuda8.ipynb**](https://aka.ms/AA4jdgd) | Uses CUDA 8, CUDNN 6, and TensorFlow 1.4.0.  |
+| [**tf-cuda9.ipynb**](https://aka.ms/AA4ixzr) | Uses CUDA 9, CUDNN 7, and TensorFlow 1.12.0. |
 
-Open and run one of these notebooks in Azure Data Studio using the PySpark3 kernel. Unless you have a specific need for an older version of CUDA or TensorFlow, choose CUDA 9/CUDNN 7/TensorFlow 1.12.0. For more information about how to use notebooks with big data clusters, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+Place the appropriate notebook file to your local machine, and then open and run it in Azure Data Studio using the PySpark3 kernel. Unless you have a specific need for an older version of CUDA or TensorFlow, choose CUDA 9/CUDNN 7/TensorFlow 1.12.0. For more information about how to use notebooks with big data clusters, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
 
 > [!NOTE]
 > Note that the notebooks install software in system locations. This is possible because notebooks currently run with root privileges in CTP 2.3.

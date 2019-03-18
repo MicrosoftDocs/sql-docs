@@ -1,6 +1,6 @@
 ---
 title: Customer Usage and Diagnostic Data for SQL Server on Linux | Microsoft Docs
-description: Describes how SQL Server customer feedback is collected and configured on Linux.
+description: Describes how SQL Server customer usage and diagnostic data is collected and configured on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -29,9 +29,9 @@ SQL Server 2017 always collects and sends information about the installation exp
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.
 
-## Disable Customer Feedback
+## Disable Customer Usage and Diagnostic Data Collection
 
-This option lets you change if SQL Server sends feedback to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
+This option lets you change if SQL Server sends usage and diagnostic data collection to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
 
 > [!IMPORTANT]
 > You can not turn off customer feedback for free editions of SQL Server, Express and Developer.
@@ -102,11 +102,11 @@ To disable Customer Feedback on docker, you must have Docker [persist your data]
 
 ::: moniker-end
 
-## Local Audit for SQL Server on Linux Usage Feedback Collection
+## Local Audit for SQL Server on Linux Usage and Diagnostic Data Collection
 
-Microsoft SQL Server 2017 contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of SQL Server Usage Feedback collection can write data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.
+Microsoft SQL Server 2017 contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of SQL Server Usage and Diagnostic Data collection can write data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.
 
-In SQL Server on Linux, Local Audit is configurable at instance level for SQL Server Database Engine. Other SQL Server components and SQL Server Tools do not have Local Audit capability for usage feedback collection.
+In SQL Server on Linux, Local Audit is configurable at instance level for SQL Server Database Engine. Other SQL Server components and SQL Server Tools do not have Local Audit capability for usage and diagnostic data collection.
 
 ### Enable Local Audit
 

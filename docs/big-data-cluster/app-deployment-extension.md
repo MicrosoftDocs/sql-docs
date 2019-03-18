@@ -169,8 +169,7 @@ To delete an app, just click the Trash can button next to the app in the `Deploy
 
 ## Next steps
 
-Explore how to integrate apps deployed on SQL Server big data clusters in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
-You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
+Explore how to integrate apps deployed on SQL Server big data clusters in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
 
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
 

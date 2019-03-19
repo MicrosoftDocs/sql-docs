@@ -3083,6 +3083,17 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/reporting-services/release-notes-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/release-notes-reporting-services",
+            "redirect_document_id": true
+        },
+
+        {
+            "source_path": "docs/reporting-services/application-integration/changelog.md",
+            "redirect_url": "/sql/reporting-services/application-integration/release-notes-ssrs-application-integration",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/release-notes/microsoft-sql-server.md",
             "redirect_url": "/sql/sql-server/sql-server-technical-documentation",
             "redirect_document_id": false

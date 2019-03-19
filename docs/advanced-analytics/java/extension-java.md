@@ -68,7 +68,7 @@ After completing installation, your next step is [Configure external script exec
 
 ### Grant permissions on Linux
 
-You don't need to perform this step if you are using external libraries. The recommended way of working is using external libraries. For help creating an extenral library from your jar file, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
+You don't need to perform this step if you are using external libraries. The recommended way of working is using external libraries. For help creating an external library from your jar file, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
 
 If you are not using external libraries, you need to provide SQL Server with permissions to execute the Java classes in your jar.
 

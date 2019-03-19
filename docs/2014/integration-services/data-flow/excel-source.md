@@ -112,6 +112,6 @@ manager: craigg
   
 -   Blog entry, [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), on dougbert.com.  
   
--   Blog entry, [Using XLSX files in SSIS](https://go.microsoft.com/fwlink/?LinkId=233704), on sqlservergeeks.com.  
+-   Blog entry, [Connecting to Excel (XLSX) in SSIS ](http://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

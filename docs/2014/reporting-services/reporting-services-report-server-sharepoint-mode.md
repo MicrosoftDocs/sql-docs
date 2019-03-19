@@ -140,6 +140,6 @@ manager: kfile
  [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
  [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Quiz: Configuring SSRS 2012 for SharePoint Integration](https://go.microsoft.com/fwlink/?LinkId=306443)  
+ [Quiz: Configuring SSRS 2012 for SharePoint Integration](https://blogs.msdn.microsoft.com/sqlrsteamblog/2013/10/02/ssrs-parameters-authentication-and-sharepoint-integration-test-your-knowledge/)  
   
   

@@ -213,7 +213,7 @@ manager: kfile
   
 -   [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [How to use SSRS parameters with stored procedures](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [SSRS - Report for Stored Procedure with Parameters](http://www.sqlservercentral.com/articles/Reporting+Services+(SSRS)/117321/)  
   
 ## Did this Article Help You? We're Listening  
  What information are you looking for, and did you find it? We're listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  

@@ -13,7 +13,7 @@ ms.custom: seodec18
 ms.reviewer: rothja
 ---
 
-# How to consume an app deployed on SQL Server big data cluster using a RESTful web service
+# Consume an app deployed on SQL Server big data cluster using a RESTful web service
 
 This article describes how to consume an app deployed on a SQL Server 2019 big data cluster using a RESTful web service (preview).
 
@@ -79,7 +79,7 @@ mssqlctl app describe --name addpy --version v1
 
 Note the IP address (`10.1.1.3` in this example) and the port number (`30777`) in the output.
 
-## Generating a JWT access token
+## Generate a JWT access token
 
 In order to access the RESTful web service for the app you have deployed, open the following URL in your browser: `https://[IP]:[PORT]/api/docs/swagger.json` using the IP address and port you retrieved running the `describe` command above. You will have to log in with the same credentials you used for `mssqlctl login`.
 
@@ -93,7 +93,7 @@ Notice the `app` GET method as well as the `token` POST method. Since the authen
 
 The result of this request will give you an JWT `access_token`, which you will need to call the URL to run the app.
 
-## Executing the app using the RESTful web service
+## Execute the app using the RESTful web service
 
 > [!NOTE]
 > If you want, you can open the URL for the `swagger` that was returned when you ran `mssqlctl app describe --name addpy --version [version]` in your browser. You will have to log in with the same credentials you used for `mssqlctl login`. The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method.

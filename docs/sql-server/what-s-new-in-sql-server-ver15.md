@@ -139,7 +139,7 @@ Continue reading for more details about these features.
 
 ## <a id="databaseengine"></a> Database Engine
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
 
 ### New query_post_execution_plan_profile Extended Event (CTP 2.4)
 

@@ -68,22 +68,18 @@ After completing installation, your next step is [Configure external script exec
 
 ### Grant permissions on Linux
 
-To provide SQL Server with permissions to execute the Java classes, you need to set permissions.
+You don't need to perform this step if you are using external libraries. The recommended way of working is using external libraries. For help creating an external library from your jar file, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
 
-To grant read and execute access to jar files or class files, run the following **chmod** command on each class or jar file. We recommend putting your class files in a jar when you work with SQL Server. For help creating a jar, see [How to create a jar file](#create-jar).
+If you are not using external libraries, you need to provide SQL Server with permissions to execute the Java classes in your jar.
+
+To grant read and execute access to jar file, run the following **chmod** command on the jar file. We recommend always putting your class files in a jar when you work with SQL Server. For help creating a jar, see [How to create a jar file](#create-jar).
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
-You also need to give mssql_satellite permissions on the directory or jar file to read/execute.
+You also need to give mssql_satellite permissions the jar file to read/execute.
 
-* If you are calling class files from SQL Server, mssql_satellite will need read/execute permissions on *every* directory in the folder hierarchy, from root down to the direct parent.
 
-* If you are calling a jar file from SQL Server, it is enough to run the command on the jar file itself.
-
-```cmd
-chown mssql_satellite:mssql_satellite <directory>
-```
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -103,19 +99,21 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 4. Finish the installation wizard, and then continue with the next two tasks.
 
-### Add the JAVA_HOME variable
+### Add the JRE_HOME variable
 
-JAVA_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
+JRE_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
-1. Find and copy the JDK/JRE path (for example, `C:\Program Files\Java\jdk1.8.0_201`).
+1. Find and copy the JRE home path (for example, `C:\Program Files\Zulu\zulu-8\jre\`).
 
-    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above.
+    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above. 
+    Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation. 
+    The Java extension will attempt to load the jvm.dll from the path %JRE_HOME%\bin\server.
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 
 3. Click **Environment Variables**.
 
-4. Create a new system variable for `JAVA_HOME` with the value of the JDK/JRE path (found in step 1).
+4. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
 
 5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
 
@@ -125,24 +123,24 @@ JAVA_HOME is an environment variable that specifies the location of the Java int
 
 <a name="perms-nonwindows"></a>
 
-### Grant access to non-default JDK folder (Windows only)
+### Grant access to non-default JRE folder (Windows only)
 
-You can skip this step if you installed the JDK/JRE in the default folder. 
-
-For a non-default folder installation, run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JVM and the Java classpath. The commands will recursively grant access to all files and folders under the given directory path.
+Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
 #### SQLRUserGroup permissions
 
 For a named instance,  append the instance name to SQLRUsergroup (for example, `SQLRUsergroupINSTANCENAME`).
 
 ```cmd
-icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
 ```
+
+You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
 
 #### AppContainer permissions
 
 ```cmd
-icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 ```
 
 <a name="configure-script-execution"></a>
@@ -161,11 +159,11 @@ At this point, you are almost ready to run Java code on Linux or Windows. As a l
 
 To confirm the installation is operational, create and run a [sample application](java-first-sample.md) using the JDK you just installed, placing the files in the classpath you configured earlier.
 
-## Differences in CTP 2.3
+## Differences in CTP 2.4
 
 If you are already familiar with Machine Learning Services, the authorization and isolation model for extensions has changed in this release. For more information, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
 
-## Limitations in CTP 2.3
+## Limitations in CTP 2.4
 
 * The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 
@@ -179,7 +177,8 @@ If you are already familiar with Machine Learning Services, the authorization an
 
 ## How to create a jar file from class files
 
-Navigate to the folder containing your class file and run this command:
+We recommend always packaging your class files into a jar when executing from SQL Server.
+To create a jar from class files, navigate to the folder containing your class file and run this command:
 
 ```cmd
 jar -cf <MyJar.jar> *.class

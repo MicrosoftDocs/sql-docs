@@ -201,9 +201,22 @@ For more information about classpath, see [Set CLASSPATH](howto-call-java-from-s
 
 If you plan to package your classes and dependencies into .jar files, provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter. For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar' on Linux.
 
-## 6 - Set permissions
+## 6 - Create external library
 
-Script execution only succeeds if the process identities have access to your code. 
+By creating an external library, SQL Server will automatically have access to the jar and you do not need to set any special permissions to the classpath.
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## 7 - Set permissions (Skip if you performed step 6)
+
+This step is not needed if you use external libraries. The recommended way of working is to create an external library from you jar. 
+
+If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. 
 
 ### On Linux
 
@@ -228,7 +241,7 @@ Make sure both security identities have 'Read and Execute' permissions on the fo
 
 <a name="call-method"></a>
 
-## 7 - Call *getNgrams()*
+## 8 - Call *getNgrams()*
 
 To call the code from SQL Server, specify the Java method **getNgrams()** in the "script" parameter of sp_execute_external_script. This method belongs to a package called "pkg" and a class file called **Ngram.java**.
 
@@ -242,8 +255,6 @@ This example passes the CLASSPATH parameter to provide the path to the Java file
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -251,8 +262,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -266,11 +276,7 @@ After executing the call, you should get a result set showing the two columns:
 
 ### If you get an error
 
-Rule out any issues related to the classpath. 
-
-+ Classpath should consist of the parent folder and any subfolders, but not the "pkg" subfolder. While the pkg subfolder must exist, it's not supposed to be in classpath value specified in the stored procedure.
-
-+ The "pkg" subfolder should contain the compiled code for all three classes.
++ When you compile your classes, the "pkg" subfolder should contain the compiled code for all three classes.
 
 + The length of classpath cannot exceed the declared value (`DECLARE @myClassPath nvarchar(50)`). If it does, the path is truncated to the first 50 characters and your compiled code will not be loaded. You can do a `SELECT @myClassPath` to check the value. Increase the length if 50 characters is insufficient. 
 

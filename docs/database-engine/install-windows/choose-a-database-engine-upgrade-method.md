@@ -23,7 +23,7 @@ There are several approaches to consider when you are planning to upgrade the [!
   
 -   To download [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
   
--   Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition already installed.  
+-   Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition already installed.  
   
 > [!NOTE]  
 >  You may also consider upgrading the Azure SQL Database or virtualizing your SQL Server environment as part of your upgrade plan. These articles are out of scope for this article, but here are some links:

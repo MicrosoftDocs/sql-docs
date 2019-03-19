@@ -19,7 +19,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
 **Try [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
+
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -30,13 +31,13 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
 - [Database engine](#databaseengine)
-  - New `query_post_execution_plan_profile` Extended Event
-  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query
-  - Transparent data encryption (TDE) scan - suspend and resume
+  - New `query_post_execution_plan_profile` Extended Event.
+  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query.
+  - Transparent data encryption (TDE) scan - suspend and resume.
 
 - [SQL Server Analysis Services](#ssas)
-  - Many-to-many relationships in tabular models. 
-  - Property settings for resource governance. 
+  - Many-to-many relationships in tabular models.
+  - Property settings for resource governance.
 
 <!-----
  Previous CTPs
@@ -122,23 +123,23 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
-- [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
-- [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more (CTP 2.3)
-- [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
-- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](../big-data-cluster/hdfs-tiering.md) (CTP 2.3)
-- Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
-- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md) (CTP 2.2)
-- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
-- Access your big data from HDFS (CTP 2.0)
-- Run Advanced analytics and machine learning with Spark (CTP 2.0)
-- Use Spark streaming to data to SQL data pools (CTP 2.0)
-- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md) (CTP 2.0)
+- [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
+- [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. (CTP 2.3)
+- [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
+- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](../big-data-cluster/hdfs-tiering.md). (CTP 2.3)
+- Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
+- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.2)
+- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes. (CTP 2.0)
+- Access your big data from HDFS. (CTP 2.0)
+- Run Advanced analytics and machine learning with Spark. (CTP 2.0)
+- Use Spark streaming to data to SQL data pools. (CTP 2.0)
+- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md). (CTP 2.0)
  
 [!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> Database Engine
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
 
 ### New query_post_execution_plan_profile Extended Event (CTP 2.4)
 
@@ -302,14 +303,14 @@ Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user dat
 
 ### Resumable online index create (CTP 2.0)
 
-- **Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
+**Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
 
-  Resumable online index create supports the follow scenarios:
-  - Resume an index create operation after an index create failure, such as after a database failover or after running out of disk space.
-  - Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
-  - Create large indexes without using as much log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
+Resumable online index create supports the follow scenarios:
+- Resume an index create operation after an index create failure, such as after a database failover or after running out of disk space.
+- Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
+- Create large indexes without using as much log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
 
-  In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
+In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
 
 With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
@@ -573,9 +574,9 @@ Many-to-many relationships require models be at the 1470 compatibility level, wh
 
 The memory settings described here are already available in Azure Analysis Services. Beginning with CTP 2.4, they are now also supported by [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Analysis Services. 
 
- - **Memory\QueryMemoryLimit** - This memory property can be used to limit memory spools built by DAX queries submitted to the model. 
- - **DbpropMsmdRequestMemoryLimit** - This XMLA property can be used to override the Memory\QueryMemoryLimit server property value for a connection.
- - **OLAP\Query\RowsetSerializationLimit** - This server property limits the number of rows returned in a rowset, protecting server resources from extensive data export usage. This property applies to both applies to both DAX and MDX queries. 
+- **Memory\QueryMemoryLimit** - This memory property can be used to limit memory spools built by DAX queries submitted to the model. 
+- **DbpropMsmdRequestMemoryLimit** - This XMLA property can be used to override the Memory\QueryMemoryLimit server property value for a connection.
+- **OLAP\Query\RowsetSerializationLimit** - This server property limits the number of rows returned in a rowset, protecting server resources from extensive data export usage. This property applies to both applies to both DAX and MDX queries.
 
 These properties can be set by using the latest version of SQL Server Management Studio (SSMS). Additional information for this feature will be provided in the Analysis Services blog.
 
@@ -615,7 +616,7 @@ As of CTP 2.4, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not 
 
 ## Next steps
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md)
+- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
 

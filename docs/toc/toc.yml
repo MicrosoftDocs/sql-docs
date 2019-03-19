@@ -11290,8 +11290,9 @@
         href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
       - name: TransactionLog Event Class
         href: ../relational-databases/event-classes/transactionlog-event-class.md
-        href: ../relational-databases/event-classes/tsql-event-category.md
-        items:
+    - name: T-SQL Event Category
+      href: ../relational-databases/event-classes/tsql-event-category.md
+      items:
       - name: Exec Prepared SQL Event Class
         href: ../relational-databases/event-classes/exec-prepared-sql-event-class.md
       - name: Prepare SQL Event Class

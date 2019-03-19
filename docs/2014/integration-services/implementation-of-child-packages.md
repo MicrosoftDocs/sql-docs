@@ -64,6 +64,6 @@ manager: craigg
   
 -   Blog entry, [SSIS: Accessing variables in a parent package](https://go.microsoft.com/fwlink/?LinkId=257729), on consultingblogs.emc.com.  
   
--   Blog entry, [SSIS: Should you execute child packages in-process or out-of-process?](https://go.microsoft.com/fwlink/?LinkId=220819), on consultingblogs.emc.com.  
+-   Article, [Execute Package Task](https://docs.microsoft.com/en-us/sql/integration-services/control-flow/execute-package-task?view=sql-server-2014).  
   
   

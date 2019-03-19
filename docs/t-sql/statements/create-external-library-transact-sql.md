@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/28/2019
+ms.date: 03/19/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -27,7 +27,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 Uploads R, Python, or Java package files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows platform are supported in SQL Server 2019 CTP 2.3. Support for Linux is planned for a later release.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2019
@@ -42,7 +42,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=  
 {  
     (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    [, PLATFORM = <platform> ])  
 }  
 
 <client_library_specifier> :: = 
@@ -58,12 +58,19 @@ WITH ( LANGUAGE = <language> )
     | varbinary_expression 
 }
 
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
+}
+
 <language> :: = 
 {
       'R'
     | 'Python'
     | 'Java'
 }
+
 ```
 ::: moniker-end
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
@@ -127,13 +134,20 @@ Specifies the content of the package as a hex literal, similar to assemblies.
 
 This option is useful if you need to create a library or alter an existing library (and have the required permissions to do so), but the file system on the server is restricted and you cannot copy the library files to a location that the server can access.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. 
 
-Currently, Windows is the only supported platform.
-
+In SQL Server 2017, Windows is the only supported platform.
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform.
+
+In SQL Server 2019, Windows and Linux are the supported platforms.
+
 **language**
 
 Specifies the language of the package. The value can be `R`, `Python`, or `Java`.
@@ -141,9 +155,12 @@ Specifies the language of the package. The value can be `R`, `Python`, or `Java`
 
 ## Remarks
 
-For the R language, when using a file, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. Currently, only the Windows platform is supported. 
-
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+For the R language, when using a file, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. In SQL Server 2017, only the Windows platform is supported. 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+For the R language, when using a file, packages must be prepared in the form of zipped archive files with the .ZIP extension.  
+
 For the Python language, the package in a .whl or .zip file must be prepared in the form of a zipped archive file. If the package already is a .zip file, it must be included in a new .zip file. Uploading a package as .whl or .zip file directly is currently not supported.
 ::: moniker-end
 
@@ -156,6 +173,8 @@ Libraries uploaded to the instance can be either public or private. If the libra
 Requires the `CREATE EXTERNAL LIBRARY` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to create an external library. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying CREATE EXTERNAL LIBRARY as the privilege.
 
 To modify a library requires the separate permission, `ALTER ANY EXTERNAL LIBRARY`.
+
+To create an external library by using a file path, the user must be a Windows authenticated login or a member of the sysadmin fixed server role.
 
 ## Examples
 
@@ -273,6 +292,26 @@ EXEC sp_execute_external_script
     , @script = N'customJar.MyCLass.myMethod'
     , @input_data_1 = N'SELECT * FROM dbo.MyTable'
 WITH RESULT SETS ((column1 int))
+```
+
+### F. Add an external package for both Windows and Linux
+
+You can specify up to two `<file_spec>`, one for Windows and one for Linux.
+
+```sql
+CREATE EXTERNAL LIBRARY lazyeval 
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.zip', PLATFORM = WINDOWS),
+(CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.tar.gz', PLATFORM = LINUX)
+WITH (LANGUAGE = 'R')
+```
+
+When you use `sp_execute_external_script` to install the package, depending on the platform the SQL Server instance is running on, the library content for that platform will be used.
+
+```sql
+EXECUTE sp_execute_external_script 
+    @LANGUAGE = N'R',
+    @SCRIPT = N'
+library(packageA)
 ```
 ::: moniker-end
 

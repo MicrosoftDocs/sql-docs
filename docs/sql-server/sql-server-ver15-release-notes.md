@@ -28,10 +28,10 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.3
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+## CTP 2.4
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.3 is described in `license_Eval.rtf` with your installation media.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is available only as Evaluation Edition. No other editions are available. Support for CTP releases is described in `license_Eval.rtf` with your installation media.
 
 Limited support may be found at one of the following locations:
 
@@ -43,15 +43,15 @@ Limited support may be found at one of the following locations:
 
 - Or tweet [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
-### Documentation (CTP 2.3)
+### Documentation (CTP 2.4)
 
 - **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
 
-- **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements. 
+- **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements.
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
-### Hardware and software requirements (CTP 2.3)
+### Hardware and software requirements (CTP 2.4)
 
 - **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
 
@@ -69,7 +69,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: N/A
 
-- **Applies to**: SQL Server 2019 CTP 2.3, CTP 2.2, CTP 2.1
+- **Applies to**: SQL Server 2019 CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
 ### UTF-8 collations
 
@@ -78,13 +78,14 @@ Limited support may be found at one of the following locations:
   - Linked Server
   - In-memory OLTP
   - External Table for PolyBase
+  - Always Encrypted
 
   > [!Note]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version supports choice of UTF-8 enabled collations in the UI.
  
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ### SQL Graph
 

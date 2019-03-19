@@ -24,6 +24,8 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
+| CTP 2.4 | Linux support for [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for R, Python, and Java. |
+| | The environment variable that specifies the location of the Java interpreter has changed from `JAVA_HOME` to `JRE_HOME`. |
 | CTP 2.3 | New supported [Java data types](java/java-sql-datatypes.md). |
 | | On Windows only, Java code can be accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. Equivalent functionality will be available on Linux in an upcoming CTP. Learn more: [How to call Java from SQL Server](java/howto-call-java-from-sql.md). |
 | | On Windows only, Python code can be accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. Equivalent functionality will be available on Linux in an upcoming CTP. |

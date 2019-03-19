@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/28/2019
+ms.date: 03/19/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -25,7 +25,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 Modifies the content of an existing external package library.
 
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows platform are supported in SQL Server 2019 CTP 2.3. Support for Linux is planned for a later release.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2019
@@ -40,7 +40,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=
 {
     (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-    [, PLATFORM = WINDOWS )
+    [, PLATFORM = <platform> )
 }
 
 <client_library_specifier> :: =
@@ -54,6 +54,12 @@ WITH ( LANGUAGE = <language> )
 { 
       varbinary_literal 
     | varbinary_expression 
+}
+
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
 }
 
 <language> :: = 
@@ -123,11 +129,17 @@ This option is useful if you have the required permission to alter a library, bu
 
 Instead, you can pass the package contents as a variable in binary format.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. Windows is the only supported platform.
+Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. In SQL Server 2017, Windows is the only supported platform.
 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. In SQL Server 2019, Windows and Linux are the supported platforms.
+
 **language**
 
 Specifies the language of the package. The value can be **R**, **Python**, or **Java**.
@@ -135,9 +147,13 @@ Specifies the language of the package. The value can be **R**, **Python**, or **
 
 ## Remarks
 
-For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. Currently, only the Windows platform is supported.  
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. In SQL Server 2017, only the Windows platform is supported.  
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+For the R language, when using a file, packages must be prepared in the form of zipped archive files with the .ZIP extension. 
+
 For the Python language, the package in a .whl or .zip file must be prepared in the form of a zipped archive file. If the package already is a .zip file, it must be included in a new .zip file. Uploading a package as .whl or .zip file directly is currently not supported.
 ::: moniker-end
 

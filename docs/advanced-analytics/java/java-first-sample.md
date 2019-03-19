@@ -4,7 +4,7 @@ description: Run Java sample code on SQL Server 2019 to learn steps for using th
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/28/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

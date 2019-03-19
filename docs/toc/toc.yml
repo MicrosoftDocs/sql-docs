@@ -105,12 +105,12 @@
           href: ../big-data-cluster/tutorial-query-oracle.md
       - name: HDFS data
         items:
-         - name: Virtualize CSV data
-           href: ../relational-databases/polybase/data-virtualization-csv.md
-         - name: Query HDFS data
-           href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
-         - name: HDFS tiering
-           href: ../big-data-cluster/hdfs-tiering.md  
+        - name: Virtualize CSV data
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: Query HDFS data
+          href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
+        - name: HDFS tiering
+          href: ../big-data-cluster/hdfs-tiering.md  
     - name: Data ingestion
       items:
       - name: Load data with curl

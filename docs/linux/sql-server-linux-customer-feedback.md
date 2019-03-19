@@ -1,5 +1,5 @@
 ---
-title: Customer Usage and Diagnostic Data for SQL Server on Linux | Microsoft Docs
+title: Configure Usage and Diagnostic Data Collection for SQL Server on Linux | Microsoft Docs
 description: Describes how SQL Server customer usage and diagnostic data is collected and configured on Linux.
 author: rothja 
 ms.author: jroth 
@@ -10,7 +10,7 @@ ms.prod: sql
 ms.custom: "sql-linux"
 ms.technology: linux
 ---
-# Customer Usage and Diagnostic Data for SQL Server on Linux
+# Configure Usage and Diagnostic Data Collection for SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

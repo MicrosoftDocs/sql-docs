@@ -117,12 +117,14 @@
         href: ../big-data-cluster/data-ingestion-curl.md
       - name: Restore a database
         href: ../big-data-cluster/data-ingestion-restore-database.md
-    - name: Deploy apps
+    - name: Deploy and consume apps
       items:
-      - name: Use mssqlctl
+      - name: Deploy with mssqlctl
         href: ../big-data-cluster/big-data-cluster-create-apps.md
-      - name: Use VS Code
+      - name: Deploy with VS Code
         href: ../big-data-cluster/app-deployment-extension.md
+      - name: Consume apps
+        href: ../big-data-cluster/big-data-cluster-consume-apps.md
     - name: Big Data/Machine Learning
       items:
       - name: Data wrangling using PROSE Code Accelerator
@@ -11290,8 +11292,9 @@
         href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
       - name: TransactionLog Event Class
         href: ../relational-databases/event-classes/transactionlog-event-class.md
-        href: ../relational-databases/event-classes/tsql-event-category.md
-        items:
+    - name: T-SQL Event Category
+      href: ../relational-databases/event-classes/tsql-event-category.md
+      items:
       - name: Exec Prepared SQL Event Class
         href: ../relational-databases/event-classes/exec-prepared-sql-event-class.md
       - name: Prepare SQL Event Class

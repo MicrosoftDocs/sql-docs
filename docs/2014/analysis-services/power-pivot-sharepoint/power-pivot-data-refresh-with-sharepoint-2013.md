@@ -227,7 +227,7 @@ manager: craigg
 ##  <a name="bkmk_moreinformation"></a> More Information  
  [Troubleshooting PowerPivot Data Refresh](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel Services in SharePoint 2013](https://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<https://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>)).  
+ [Excel Services in SharePoint 2013](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/) (<https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/).  
   
 ## See Also  
  [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   

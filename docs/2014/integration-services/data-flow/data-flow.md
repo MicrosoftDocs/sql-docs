@@ -212,6 +212,6 @@ manager: craigg
 ## Related Content  
  Video, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369), on technet.microsoft.com.  
   
- Curated Answer, [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994), on curatedviews.cloudapp.net.  
+ Curated Answer, [How to Create a Dynamic Connection String in SSIS](http://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html).  
   
   

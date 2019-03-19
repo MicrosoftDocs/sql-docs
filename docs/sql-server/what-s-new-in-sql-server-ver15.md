@@ -39,7 +39,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
   - Many-to-many relationships in tabular models.
   - Property settings for resource governance.
 
-The following sections describe the new features that have been introduced in previous releases of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md).
+The following sections describe the new features that have been introduced in previous releases of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md) .
 
 ## <a id="bigdatacluster"></a>Big data clusters
 

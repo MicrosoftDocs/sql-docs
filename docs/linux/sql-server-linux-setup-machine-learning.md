@@ -4,7 +4,7 @@ description: Learn how to install SQL Server Machine Learning Services (R, Pytho
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 02/28/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -23,7 +23,7 @@ Machine Learning Services is also supported on Linux containers. We do not provi
 
 ## Uninstall previous CTP
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 2.3. Side-by-side installation of multiple versions is not supported.
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 2.4. Side-by-side installation of multiple versions is not supported.
 
 ### 1. Confirm package installation
 
@@ -33,7 +33,7 @@ You might want to check for the existence of a previous installation as a first 
 ls /opt/microsoft/mssql/bin
 ```
 
-### 2. Uninstall CTP 2.0 or 2.1 packages
+### 2. Uninstall previous CTP 2.x packages
 
 Uninstall at the lowest package level. Any upstream package dependent on a lower-level package is automatically uninstalled.
 
@@ -57,7 +57,7 @@ Commands for removing packages appear in the following table.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### 3. Proceed with CTP 2.3 install
+### 3. Proceed with CTP 2.4 install
 
 Install at the highest package level using the instructions in this article for your operating system.
 

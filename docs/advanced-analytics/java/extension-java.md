@@ -35,7 +35,7 @@ You can use your preferred Java 8 distribution. Below are two suggested distribu
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows and Linux | Yes | Yes |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows and Linux | Yes | No |
 
-On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
+On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JRE_HOME.
 
 On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 

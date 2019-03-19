@@ -179,7 +179,7 @@ manager: craigg
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64*|Yes|Yes|Yes**|Yes**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] –bit) Developer (64|Yes|Yes|Yes**|Yes**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -bit) Developer (64|Yes|Yes|Yes**|Yes**|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-bit)|Yes|Yes|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-bit)|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-bit)|Yes|Yes|||  
@@ -237,7 +237,7 @@ manager: craigg
   
 -   Use the cluster's default instance of MSDTC, else  
   
--   Use the local machine’s installed instance of MSDTC  
+-   Use the local machine's installed instance of MSDTC  
   
 > [!IMPORTANT]  
 >  If the MSDTC instance that is installed to the local cluster group of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fails, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not automatically attempt to use the default cluster instance or the local machine instance of MSDTC. You would need to completely remove the failed instance of MSDTC from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] group to use another instance of MSDTC. Likewise, if you create a mapping for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and the mapped instance of MSDTC fails, your distributed transactions will also fail. If you want [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use a different instance of MSDTC, you must either add an instance of MSDTC to the local cluster group of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or delete the mapping.  

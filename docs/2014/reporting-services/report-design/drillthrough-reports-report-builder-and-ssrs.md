@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Drillthrough Reports (Report Builder and SSRS)
   A drillthrough report is a report that a user opens by clicking a link within another report. Drillthrough reports commonly contain details about an item that is contained in an original summary report. For example, in this illustration, the sales summary report lists sales orders and totals. When a user clicks an order number in the summary list, another report opens that contains details about the order.  
@@ -22,7 +22,7 @@ manager: craigg
 > [!NOTE]  
 >  When you are working in Report Builder, you must be connected to a report server to view the drillthrough report that opens when you click the drillthrough link in the main report.  
   
- To get started quickly with drillthrough reports, see [Tutorial: Creating Drillthrough and Main Reports &#40;Report Builder&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Drillthrough report is also featured in two business intelligence solutions, [BI Reporting: Reports and Subscriptions Scenario](http://technet.microsoft.com/bi/ff769487.aspx) and [Corporate Dashboards: Sales Solution](http://technet.microsoft.com/bi/ff643005.aspx)  
+ To get started quickly with drillthrough reports, see [Tutorial: Creating Drillthrough and Main Reports &#40;Report Builder&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Drillthrough report is also featured in two business intelligence solutions, [BI Reporting: Reports and Subscriptions Scenario](https://technet.microsoft.com/bi/ff769487.aspx) and [Corporate Dashboards: Sales Solution](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

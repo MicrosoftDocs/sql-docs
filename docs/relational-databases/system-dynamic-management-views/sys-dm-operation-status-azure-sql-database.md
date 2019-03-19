@@ -2,10 +2,8 @@
 title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
-ms.prod: ""
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_operation_status_TSQL"
@@ -71,11 +69,11 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 -   Delete database  
   
 ## Example  
- Show most recent geo-replication operations associated with database ‘mydb’.  
+ Show most recent geo-replication operations associated with database 'mydb'.  
   
 ```  
 SELECT * FROM sys.dm_ operation_status   
-   WHERE major_resource_id = ‘myddb’   
+   WHERE major_resource_id = 'myddb'   
    ORDER BY start_time DESC;  
 ```  
   

@@ -33,14 +33,14 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetDiagRec(  
-     SQLSMALLINT     HandleType,  
-     SQLHANDLE       Handle,  
-     SQLSMALLINT     RecNumber,  
-     SQLCHAR *       SQLState,  
-     SQLINTEGER *    NativeErrorPtr,  
-     SQLCHAR *       MessageText,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   TextLengthPtr);  
+     SQLSMALLINT     HandleType,  
+     SQLHANDLE       Handle,  
+     SQLSMALLINT     RecNumber,  
+     SQLCHAR *       SQLState,  
+     SQLINTEGER *    NativeErrorPtr,  
+     SQLCHAR *       MessageText,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   TextLengthPtr);  
 ```  
   
 ## Arguments  
@@ -115,7 +115,7 @@ SQLRETURN SQLGetDiagRec(
   
  For a description of the fields of the diagnostic data structure, see [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). For more information, see [Using SQLGetDiagRec and SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) and [Implementing SQLGetDiagRec and SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
- Calling an API other than the one that’s being executed asynchronously will generate HY010 "Function sequence error". However, the error record cannot be retrieved before the asynchronous operation completes.  
+ Calling an API other than the one that's being executed asynchronously will generate HY010 "Function sequence error". However, the error record cannot be retrieved before the asynchronous operation completes.  
   
 ## HandleType Argument  
  Each handle type can have diagnostic information associated with it. The *HandleType* argument denotes the handle type of the *Handle* argument.  

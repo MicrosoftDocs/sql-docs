@@ -20,7 +20,7 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Update Statistics Task** dialog to update [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] information about the data in the tables and indexes. This task resamples the distribution statistics of each index created on user tables in the database. The distribution statistics are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to optimize navigation through tables during the processing of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. To build the distribution statistics automatically, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically samples the data in the corresponding table for each index. This size of the sample is based on the number of rows in the table and the frequency of data modification. Use this option to perform an additional sampling using the specified percentage of data in the tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses this information to create better query plans.  
   
- This task executes the UPDATE STATISTICS statement.  
+This task executes the `UPDATE STATISTICS` statement.  
   
 ## Options  
  **Connection**  
@@ -48,7 +48,8 @@ manager: craigg
   
      Generate a maintenance plan that runs maintenance tasks against only those databases that are selected. At least one database in the list must be selected if this option is chosen.  
   
- **Note** Maintenance plans only run against databases set to compatibility level 80 or higher. Databases set to compatibility level 70 or lower are not displayed.  
+ > [!NOTE]
+ > Maintenance plans only run against databases set to compatibility level 80 or higher. Databases set to compatibility level 70 or lower are not displayed.  
   
  **Object**  
  Limit the **Selection** grid to display tables, views, or both.  
@@ -78,7 +79,7 @@ manager: craigg
  View the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
   
 > [!NOTE]  
->  When the number of objects affected is large, this display can take a considerable amount of time.  
+> When the number of objects affected is large, this display can take a considerable amount of time.  
   
 ## New Connection Dialog Box  
  **Connection name**  
@@ -106,6 +107,6 @@ manager: craigg
  Provide a password to use when authenticating. This option is not available.  
   
 ## See Also  
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-  
-  
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)    
+ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)    
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

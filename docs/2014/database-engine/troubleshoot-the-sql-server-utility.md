@@ -29,11 +29,11 @@ manager: craigg
   
 3.  The instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enroll into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility is also a member of "Domain_1."  
   
-4.  During the enroll operation, connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enroll using “sa”. Specify a proxy account from "Domain_2."  
+4.  During the enroll operation, connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enroll using "sa". Specify a proxy account from "Domain_2."  
   
 5.  Validation succeeds but enrollment fails.  
   
- The workaround for this issue, using the example above, is to connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enroll into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility using “sa” and provide a proxy account from "Domain_1."  
+ The workaround for this issue, using the example above, is to connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enroll into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility using "sa" and provide a proxy account from "Domain_1."  
   
 ## Failed WMI Validation  
  If WMI is not properly configured on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the Create UCP and Enroll Managed Instance operations display a warning, but the operation is not blocked. Additionally, if you change the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent account configuration so that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent does not have permission to required WMI classes, data collection on the affected managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fails to upload to the UCP. This results in gray icons in the UCP.  
@@ -81,12 +81,12 @@ Get-WmiObject Win32_Volume -ErrorAction Stop | Out-Null
 Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null  
 ```  
   
- For more information about troubleshooting WMI, see [Troubleshooting WMI](http://go.microsoft.com/fwlink/?LinkId=178250). Note that queries in these SQL Server Utility operations are running locally, so the DCOM and remote troubleshooting content does not apply.  
+ For more information about troubleshooting WMI, see [Troubleshooting WMI](https://go.microsoft.com/fwlink/?LinkId=178250). Note that queries in these SQL Server Utility operations are running locally, so the DCOM and remote troubleshooting content does not apply.  
   
 ## Failed Data Collection  
  If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility data collection events fail, consider the following possibilities:  
   
--   Do not change any properties of the “Utility Information” collection set on a managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and do not turn data collection on/off manually, as data collection is controlled by a Utility agent job.  
+-   Do not change any properties of the "Utility Information" collection set on a managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and do not turn data collection on/off manually, as data collection is controlled by a Utility agent job.  
   
 -   Failed or unsupported WMI validation. For more information, see the Failed WMI Validation section earlier in this topic.  
   
@@ -118,13 +118,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   The SQL Server Browser service on the UCP should be started and configured to start automatically. If your organization prevents use of the SQL Server Browser service, use the following steps to allow a managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to the UCP:  
   
-    1.  On the Windows taskbar on the managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], click **Start**, then click **Run…**.  
+    1.  On the Windows taskbar on the managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], click **Start**, then click **Run...**.  
   
     2.  Type "cliconfg.exe" in the space provided, then click **OK**.  
   
     3.  If prompted to allow "SQL Client Configuration Utility EXE" to start, click "**Continue**."  
   
-    4.  On the **SQL Server Client Network Utility** dialog box, select the **Alias** tab, then click **Add…**.  
+    4.  On the **SQL Server Client Network Utility** dialog box, select the **Alias** tab, then click **Add...**.  
   
     5.  On the **Add Network Library Configuration** dialog box:  
   

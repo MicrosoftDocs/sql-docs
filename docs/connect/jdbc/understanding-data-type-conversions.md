@@ -21,15 +21,15 @@ To facilitate the conversion of Java programming language data types to [!INCLUD
 
 ## Getter Method Conversions
 
-Based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the following chart contains the JDBC driver’s conversion map for the get\<Type>() methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class, and the supported conversions for the get\<Type> methods of the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.
+Based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the following chart contains the JDBC driver's conversion map for the get\<Type>() methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class, and the supported conversions for the get\<Type> methods of the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
-There are three categories of conversions that are supported by the JDBC driver’s getter methods:
+There are three categories of conversions that are supported by the JDBC driver's getter methods:
 
 - **Non-Lossy (x)**: Conversions for cases where the getter type is the same or smaller than the underlying server type. For example, when calling getBigDecimal on an underlying server decimal column, no conversion is necessary.
 
-- **Converted (y)**: Conversions from numeric server types to Java language types where the conversion is regular and follows Java language conversion rules. For these conversions, precision is always truncated—never rounded—and overflow is handled as modulo of the destination type, which is smaller. For example, calling getInt on an underlying **decimal** column that contains "1.9999" will return "1", or if the underlying **decimal** value is "3000000000" then the **int** value overflows to "-1294967296".
+- **Converted (y)**: Conversions from numeric server types to Java language types where the conversion is regular and follows Java language conversion rules. For these conversions, precision is always truncated-never rounded-and overflow is handled as modulo of the destination type, which is smaller. For example, calling getInt on an underlying **decimal** column that contains "1.9999" will return "1", or if the underlying **decimal** value is "3000000000" then the **int** value overflows to "-1294967296".
 
 - **Data Dependent (z)**: Conversions from underlying character types to numeric types require that the character types contain values that can be converted into that type. No other conversions are performed. If the value is too large for the getter type, the value isn't valid. For example, if getInt is called on a varchar(50) column that contains "53", the value is returned as an **int**; but if the underlying value is "xyz" or "3000000000", an error is thrown.
 
@@ -41,7 +41,7 @@ For the Java typed data passed to the update\<Type>() methods of the [SQLServerR
 
 ![JDBCUpdaterConversions](../../connect/jdbc/media/jdbc_jdbcupdatterconversions.gif "JDBCUpdaterConversions")
 
-There are three categories of conversions supported by the JDBC driver’s updater methods:
+There are three categories of conversions supported by the JDBC driver's updater methods:
 
 - **Non-Lossy (x)**: Conversions for cases where the updater type is the same or smaller than the underlying server type. For example, when calling updateBigDecimal on an underlying server decimal column, no conversion is necessary.
 
@@ -69,7 +69,7 @@ The server tries any conversions and returns errors on failure.
 
 In the case of the **String** data type, if the value exceeds the length of **VARCHAR**, it maps to **LONGVARCHAR**. Similarly, **NVARCHAR** maps to **LONGNVARCHAR** if the value exceeds the supported length of **NVARCHAR**. The same is true for **byte[]**. Values longer than **VARBINARY** become **LONGVARBINARY**.
 
-There are two categories of conversions that are supported by the JDBC driver’s setter methods:
+There are two categories of conversions that are supported by the JDBC driver's setter methods:
 
 - **Non-Lossy (x)**: Conversions for numeric cases where the setter type is the same or smaller than the underlying server type. For example, when calling setBigDecimal on an underlying server **decimal** column, no conversion is necessary. For numeric to character cases, the Java **numeric** data type is converted to a **String**. For example, calling setDouble with a value of "53" on a varchar(50) column produces a character value "53" in that destination column.
 
@@ -98,11 +98,11 @@ For the Java typed data passed to the setObject(\<Type>) methods of the [SQLServ
 
 The setObject method with no specified target type uses the default mapping. In the case of the **String** data type, if the value exceeds the length of **VARCHAR**, it maps to **LONGVARCHAR**. Similarly, **NVARCHAR** maps to **LONGNVARCHAR** if the value exceeds the supported length of **NVARCHAR**. The same is true for **byte[]**. Values longer than **VARBINARY** become **LONGVARBINARY**.
 
-There are three categories of conversions that are supported by the JDBC driver’s setObject methods:
+There are three categories of conversions that are supported by the JDBC driver's setObject methods:
 
 - **Non-Lossy (x)**: Conversions for numeric cases where the setter type is the same or smaller than the underlying server type. For example, when calling setBigDecimal on an underlying server **decimal** column, no conversion is necessary. For numeric to character cases, the Java **numeric** data type is converted to a **String**. For example, calling setDouble with a value of "53" on a varchar(50) column will produce a character value "53" in that destination column.
 
-- **Converted (y)**: Conversions from a Java **numeric** type to an underlying server **numeric** type that is smaller. This conversion is regular and follows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conversion conventions. Precision is always truncated—never rounded—and overflow throws an unsupported conversion error. For example, using updateDecimal with a value of "1.9999" on an underlying integer column results in a "1" in the destination column; but if "3000000000" is passed, the driver throws an error.
+- **Converted (y)**: Conversions from a Java **numeric** type to an underlying server **numeric** type that is smaller. This conversion is regular and follows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conversion conventions. Precision is always truncated-never rounded-and overflow throws an unsupported conversion error. For example, using updateDecimal with a value of "1.9999" on an underlying integer column results in a "1" in the destination column; but if "3000000000" is passed, the driver throws an error.
 
 - **Data Dependent (z)**: Conversions from a Java **String** type to the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type depends on the following conditions: The driver sends the **String** value to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs conversions, if necessary. If the sendStringParametersAsUnicode connection property is set to true and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't allow converting **nvarchar** to **image** and throws an SQLServerException. If the sendStringParametersAsUnicode is set to false and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows converting **varchar** to **image** and doesn't throw an exception.
 

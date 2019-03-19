@@ -46,7 +46,7 @@ SQLRETURN  SQLRateConnection(
  [Input] If *fRequiredTransactionEnlistment* is TRUE, *transId* represents the DTC transaction that the request will enlist. If *fRequiredTransactionEnlistment* is FALSE, *transId* will be ignored.  
   
  *pRating*  
- [Output] *hCandidateConnection*’s reuse rating for the *hRequest*. This rating will be in between 0 and 100 (inclusive).  
+ [Output] *hCandidateConnection*'s reuse rating for the *hRequest*. This rating will be in between 0 and 100 (inclusive).  
   
 ## Returns  
  SQL_SUCCESS, SQL_ERROR, or SQL_INVALID_HANDLE.  

@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: douglasl
+ms.reviewer: genemi
 manager: craigg
 ---
 # JSON Functions (Transact-SQL)

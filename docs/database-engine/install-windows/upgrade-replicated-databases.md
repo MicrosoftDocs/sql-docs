@@ -126,9 +126,9 @@ If you are planning to upgrade your SQL Server instance to SQL 2016 (or greater)
  To ensure replication settings are retained when restoring a backup of a replicated database from a previous version: restore to a server and database with the same names as the server and database at which the backup was taken.  
   
 ## See Also  
- [Administration &#40;Replication&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)  
+ [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)   
- [What's New &#40;Replication&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

@@ -1,67 +1,69 @@
 ---
-title: Create SQL Server data objects using RxSqlServerData (SQL and R deep dive)| Microsoft Docs
+title: Create SQL Server data objects using RevoScaleR RxSqlServerData - SQL Server Machine Learning
+description: Tutorial walkthrough on how to create data objects using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/26/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Create SQL Server data objects using RxSqlServerData (SQL and R deep dive)
+# Create SQL Server data objects using RxSqlServerData (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-By now you have created the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and have the necessary permissions to work with the data. In this step, you create some objects in R that let you work with the data.
+Lesson two is a continuation of database creation: adding tables and loading data. If a DBA created the database and login in [lesson one](deepdive-work-with-sql-server-data-using-r.md), you can add tables using an R IDE like RStudio or a built-in tool like **Rgui**.
 
-## Create the SQL Server data objects
+From R, connect to SQL Server and use **RevoScaleR** functions to perform the folowing tasks:
 
-In this step, you use functions from the **RevoScaleR** package to create and populate two tables. One table is used for training the models, and the other table is used for scoring. Both tables contain simulated credit card fraud data.
+> [!div class="checklist"]
+> * Create tables for training data and predictions
+> * Load tables with data from a local .csv file
 
-To create tables on the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, call the **RxSqlServerData** function.
+Sample data is simulated credit card fraud data (the ccFraud dataset), partitioned into training and scoring datasets. The data file is included in **RevoScaleR**.
 
-> [!TIP]
-> If you're using R Tools for Visual Studio, select **R Tools** from the toolbar and click **Windows** to see options for debugging and viewing R variables.
+Use an R IDE or **Rgui** to complete these taks. Be sure to use the R executables found at this location: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 (either Rgui.exe if you are using that tool, or an R IDE pointing to C:\Program Files\Microsoft\R Client\R_SERVER). Having an [R client workstation](../r/set-up-a-data-science-client.md) with these executables is considered a prerequisite of this tutorial.
 
-### Create the training data table
+## Create the training data table
 
-1. Save the database connection string in an R variable. Here are two examples of valid ODBC connection strings for SQL Server: one using a SQL login, and one for Windows integrated authentication.
+1. Store the database connection string in an R variable. Below are two examples of valid ODBC connection strings for SQL Server: one using a SQL login, and one for Windows integrated authentication. 
+
+   Be sure to modify the server name, user name, and password as appropriate.
 
     **SQL login**
     ```R
-    sqlConnString <- "Driver=SQL Server;Server=instance_name; Database=DeepDive;Uid=user_name;Pwd=password"
+    sqlConnString <- "Driver=SQL Server;Server=<server-name>; Database=RevoDeepDive;Uid=<user_name>;Pwd=<password>"
     ```
 
     **Windows authentication**
     ```R
-    sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=DeepDive;Trusted_Connection=True"
+    sqlConnString <- "Driver=SQL Server;Server=<server-name>;Database=RevoDeepDive;Trusted_Connection=True"
     ```
 
-    Be sure to modify the instance name, database name, user name, and password as appropriate.
-  
 2. Specify the name of the table you want to create, and save it in an R variable.
   
     ```R
     sqlFraudTable <- "ccFraudSmall"
     ```
   
-    Because the instance and database name are already specified as part of the connection string, when you combine the two variables, the *fully qualified* name of the new table becomes _instance.database.schema.ccFraudSmall_.
+    Because the server instance and database name are already specified as part of the connection string, when you combine the two variables, the *fully qualified* name of the new table becomes *instance.database.schema.ccFraudSmall*.
   
-3.  Before instantiating the data source object, add a line specifying an additional parameter, *rowsPerRead*.  The *rowsPerRead* parameter controls how many rows of data are read in each batch.
+3.  Optionally, specify *rowsPerRead* to control how many rows of data are read in each batch.
   
     ```R
     sqlRowsPerRead = 5000
     ```
   
-    Although this parameter is optional, it is important for handling memory usage and efficient computations.  Most of the enhanced analytical functions in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] process data in chunks and store intermediate results, returning the final computations after all of the data has been read.
+    Although this parameter is optional, setting it can result in more efficient computations. Most of the enhanced analytical functions in **RevoScaleR** and **MicrosoftML** process data in chunks. The *rowsPerRead* parameter determines the number of rows in each chunk.
   
-    If the value of this parameter is too large, data access might be slow because you don’t have enough memory to efficiently process such a large chunk of data.  On some systems, if the value of *rowsPerRead* is too small, performance might be slower. Therefore, we recommend that you experiment with this setting on your system when you are working with a large data set.
+    You might need to experiment with this setting to find the right balance. If the value is too large, data access might be slow if there is not enough memory to process data in chunks of that size. Conversely, on some systems, if the value of *rowsPerRead* is too small, performance can also slow down.
   
-    For this walkthrough, use the default batch process size defined by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to control the number of rows in each chunk. Save that value in the variable `sqlRowsPerRead`.
+    As an initial value, use the default batch process size defined by the database engine instance to control the number of rows in each chunk (5,000 rows). Save that value in the variable *sqlRowsPerRead*.
   
-4.  Finally, define a variable for the new data source object, and pass the arguments previously defined to the RxSqlServerData constructor. Note that this only creates the data source object and does not populate it.
+4.  Define a variable for the new data source object, and pass the arguments previously defined to the **RxSqlServerData** constructor. Note that this only creates the data source object and does not populate it. Loading data is a separate step.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -69,7 +71,7 @@ To create tables on the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion
        rowsPerRead = sqlRowsPerRead)
     ```
 
-#### To create the scoring data table
+## Create the scoring data table
 
 Using the same steps, create the table that holds the scoring data using the same process.
 
@@ -79,14 +81,14 @@ Using the same steps, create the table that holds the scoring data using the sam
     sqlScoreTable <- "ccFraudScoreSmall"
     ```
   
-2. Provide that variable as an argument to the RxSqlServerData function to define a second data source object, *sqlScoreDS*.
+2. Provide that variable as an argument to the **RxSqlServerData** function to define a second data source object, *sqlScoreDS*.
   
     ```R
-    sqlScoreDS \<- RxSqlServerData(connectionString = sqlConnString,
+    sqlScoreDS <- RxSqlServerData(connectionString = sqlConnString,
        table = sqlScoreTable, rowsPerRead = sqlRowsPerRead)
     ```
 
-Because you've already defined the connection string and other parameters as variables in the R workspace, it is easy to create new data sources for different tables, views, or queries.
+Because you've already defined the connection string and other parameters as variables in the R workspace, you can reuse it for new data sources representing different tables, views, or queries.
 
 > [!NOTE]
 > The function uses different arguments for defining a data source based on an entire table than for a data source based on a query. This is because the SQL Server database engine must prepare the queries differently. Later in this tutorial, you learn how to create a data source object based on a SQL query.
@@ -95,14 +97,14 @@ Because you've already defined the connection string and other parameters as var
 
 Now that you have created the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, you can load data into them using the appropriate **Rx** function.
 
-The **RevoScaleR** package contains functions that support many different data sources: For text data, use [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) to generate the data source object. There are additional functions for creating data source objects from Hadoop data, ODBC data, and so forth.
+The **RevoScaleR** package contains functions specific to data source types. For text data, use [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) to generate the data source object. There are additional functions for creating data source objects from Hadoop data, ODBC data, and so forth.
 
 > [!NOTE]
 > For this section, you must have **Execute DDL** permissions on the database.
 
 ### Load data into the training table
 
-1. Create an R variable, *ccFraudCsv*, and assign to the variable the file path for the CSV file containing the sample data.
+1. Create an R variable, *ccFraudCsv*, and assign to the variable the file path for the CSV file containing the sample data. This dataset is provided in **RevoScaleR**. The "sampleDataDir" is a keyword on the **rxGetOption** function.
   
     ```R
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
@@ -125,23 +127,22 @@ The **RevoScaleR** package contains functions that support many different data s
   
     The argument *colClasses* is important. You use it to indicate the data type to assign to each column of data loaded from the text file. In this example, all columns are handled as text, except for the named columns, which are handled as integers.
   
-3. At this point, you might want to pause a moment, and view your database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Refresh the list of tables in the database.
+3. At this point, you might want to pause a moment, and view your database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Refresh the list of tables in the database.
   
     You can see that, although the R data objects have been created in your local workspace, the tables have not been created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Also, no data has been loaded from the text file into the R variable.
   
-4. Now, call the function [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) to insert the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
+4. Insert the data by calling the function [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) function.
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
     ```
-  
+    
     Assuming no problems with your connection string, after a brief pause, you should see results like these:
   
-      *Total Rows written: 10000, Total time: 0.466*
-
-      *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
+    *Total Rows written: 10000, Total time: 0.466*
+    *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
-5. Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], refresh the list of tables. To verify that each variable has the correct data types and was imported successfully, you can also right-click the table in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and select **Select Top 1000 Rows**.
+5. Refresh the list of tables. To verify that each variable has the correct data types and was imported successfully, you can also right-click the table in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and select **Select Top 1000 Rows**.
 
 ### Load data into the scoring table
 
@@ -178,7 +179,6 @@ The **RevoScaleR** package contains functions that support many different data s
 Again, if the connection was successful, you should see a message indicating completion and the time required to write the data into the table:
 
 *Total Rows written: 10000, Total time: 0.384*
-
 *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.456 seconds*
 
 ## More about rxDataStep
@@ -187,10 +187,7 @@ Again, if the connection was successful, you should see a message indicating com
 
 Optionally, you can specify transformations on the data, by using R functions in the arguments to **rxDataStep**. Examples of these operations are provided later in this tutorial.
 
-## Next step
+## Next steps
 
-[Query and modify the SQL Server data](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
-
-## Previous step
-
-[Work with SQL Server data using R](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
+> [!div class="nextstepaction"]
+> [Query and modify the SQL Server data](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)

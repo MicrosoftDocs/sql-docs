@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 5.  In the **Registered file** types box, click on your new extension, and then click **Change**.  
   
-6.  In the **Open With** dialog box, click **SSMS – SQL Server Management Studio**, and then click **OK**.  
+6.  In the **Open With** dialog box, click **SSMS - SQL Server Management Studio**, and then click **OK**.  
   
 7.  Click **Close** to close the **Folder Options** dialog box, and then close Windows Explorer.  
   

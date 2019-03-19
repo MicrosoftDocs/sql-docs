@@ -9,9 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, FAQ"
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -45,7 +45,7 @@ FOR JSON PATH
 Every result of a FOR JSON query or the JSON_QUERY function in the column expressions is formatted as a separate nested JSON sub-object and included in the main result.  
 
 ### Prevent double-escaped JSON in FOR JSON output  
- **Question.** I have JSON text stored in a table column. I want to include it in the output of FOR JSON. But FOR JSON escapes all characters in the JSON, so I’m getting a JSON string instead of a nested object, as shown in the following example.  
+ **Question.** I have JSON text stored in a table column. I want to include it in the output of FOR JSON. But FOR JSON escapes all characters in the JSON, so I'm getting a JSON string instead of a nested object, as shown in the following example.  
   
 ```sql  
 SELECT 'Text' AS myText, '{"day":23}' AS myJson  
@@ -71,7 +71,7 @@ FOR JSON PATH
  JSON_QUERY without its optional second parameter returns only the first argument as a result. Since JSON_QUERY always returns valid JSON, FOR JSON knows that this result does not have to be escaped.
 
 ### JSON generated with the WITHOUT_ARRAY_WRAPPER clause is escaped in FOR JSON output  
- **Question.** I’m trying to format a column expression by using FOR JSON and the WITHOUT_ARRAY_WRAPPER option.  
+ **Question.** I'm trying to format a column expression by using FOR JSON and the WITHOUT_ARRAY_WRAPPER option.  
   
 ```sql  
 SELECT 'Text' as myText,  
@@ -126,9 +126,9 @@ WHERE [key] = 'color'
 ```  
 
 ### OPENJSON requires compatibility level 130  
- **Question.** I’m trying to run  OPENJSON in SQL Server 2016 and I’m getting the following error.  
+ **Question.** I'm trying to run  OPENJSON in SQL Server 2016 and I'm getting the following error.  
   
- `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
+ `Msg 208, Level 16, State 1 'Invalid object name OPENJSON'`  
   
  **Answer.** The OPENJSON function is available only under compatibility level 130. If your DB compatibility level is lower than 130, OPENJSON is hidden. Other JSON functions are available at all compatibility levels.  
  
@@ -141,10 +141,6 @@ WHERE [key] = 'color'
  
 ## Learn more about JSON in SQL Server and Azure SQL Database  
   
-### Microsoft blog posts  
-  
-For specific solutions, use cases, and recommendations, see these [blog posts](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
-
 ### Microsoft videos
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:

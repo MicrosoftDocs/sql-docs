@@ -62,7 +62,7 @@ manager: craigg
   
          The relationship of these integer values to the failure condition levels is as follows:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |2|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  
@@ -90,7 +90,7 @@ manager: craigg
   
     -   To set the failover condition level, use the `FailureConditionLevel`*level* parameter, where, *level* is one of the following values:  
   
-        |Value|Level|Automatic Is Failover Initiated When…|  
+        |Value|Level|Automatic Is Failover Initiated When...|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |`OnServerUnresponsive`|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  

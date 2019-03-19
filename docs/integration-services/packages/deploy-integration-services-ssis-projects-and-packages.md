@@ -95,7 +95,7 @@ For more info about the error described in this section and about the permission
   
  To deploy a project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, complete the following tasks:  
   
-1.  Create an SSISDB catalog, if you haven’t already. For more information, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+1.  Create an SSISDB catalog, if you haven't already. For more information, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
   
@@ -288,7 +288,7 @@ Launch the wizard by either:
 
 **OR**
 
- - Search for the executable file **ISDeploymentWizard.exe** under the SQL Server installation folder; for example: “C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”. 
+ - Search for the executable file **ISDeploymentWizard.exe** under the SQL Server installation folder; for example: "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
  > **NOTE:** If you see the **Introduction** page, click **Next** to switch to the **Select Source** page. 
  
@@ -313,7 +313,7 @@ Launch the wizard by either:
 #### Select Source  
  The **Select Source** page in the **Integration Services Deployment Wizard** shows settings specific to the package deployment model when you selected the **Package Deployment** option for the **deployment model**.  
   
- To select the source packages, click **Browse…** button to select the **folder** that contains the packages or type the folder path in the **Packages folder path** textbox and click **Refresh** button at the bottom of the page. Now, you should see all the packages in the specified folder in the list box. By default, all the packages are selected. Click the **checkbox** in the first column to choose which packages you want to be deployed to server.  
+ To select the source packages, click **Browse...** button to select the **folder** that contains the packages or type the folder path in the **Packages folder path** textbox and click **Refresh** button at the bottom of the page. Now, you should see all the packages in the specified folder in the list box. By default, all the packages are selected. Click the **checkbox** in the first column to choose which packages you want to be deployed to server.  
   
  Refer to the **Status** and **Message** columns to verify the status of package. If the status is set to **Ready** or **Warning**, the deployment wizard would not block the deployment process. Whereas, if the status is set to **Error**, the wizard would not proceed further to deploy selected packages. To view the detailed Warning/Error messages, click the link in the **Message** column.  
   
@@ -322,7 +322,7 @@ Launch the wizard by either:
  If the status of all the selected packages is not set to **Error**, the **Next** button will be enabled so that you can continue with the package deployment process.  
   
 #### Select Destination  
- After selecting package sources, click **Next** button to switch to the **Select Destination** page. Packages must be deployed to a project in the SSIS Catalog (SSISDB). Therefore, before deploying packages, please ensure the destination project already exists in the SSIS Catalog. , otherwise create an empty project.In the **Select Destination** page, type the server name in the **Server Name** textbox or click the **Browse…** button to select a server instance. Then click the **Browse…** button next to **Path** textbox to specify the destination project. If the project does not exist, click the **New project…** to create an empty project as the destination project. The project **MUST** be created under a folder.  
+ After selecting package sources, click **Next** button to switch to the **Select Destination** page. Packages must be deployed to a project in the SSIS Catalog (SSISDB). Therefore, before deploying packages, please ensure the destination project already exists in the SSIS Catalog. , otherwise create an empty project.In the **Select Destination** page, type the server name in the **Server Name** textbox or click the **Browse...** button to select a server instance. Then click the **Browse...** button next to **Path** textbox to specify the destination project. If the project does not exist, click the **New project...** to create an empty project as the destination project. The project **MUST** be created under a folder.  
   
 #### Review and deploy  
  Click **Next** on the **Select Destination** page to switch to the **Review** page in the **Integration Services Deployment Wizard**. In the review page, review the summary report about the deployment action. After the verification, click **Deploy** button to perform the deployment action.  
@@ -331,7 +331,7 @@ Launch the wizard by either:
  After the deployment is complete, you should see the **Results** page. In the **Results** page, review results from each step in the deployment process. On the **Results** page, click **Save Report** to save the deployment report or **Close** to the close the wizard.  
 
 ## Create and Map a Server Environment
-  You create a server environment to specify runtime values for packages contained in a project you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
+  You create a server environment to specify runtime values for packages contained in a project you've deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
   
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
@@ -375,7 +375,7 @@ Launch the wizard by either:
 7.  To script the environment, click **Script**. By default, the script displays in a new Query Editor window.  
   
     > [!TIP]  
-    >  You need to click **Script** after you’ve made one or changes to the environment properties, such as adding a variable, and before you click **OK** in the **Environment Properties** dialog box. Otherwise, a script is not generated.  
+    >  You need to click **Script** after you've made one or changes to the environment properties, such as adding a variable, and before you click **OK** in the **Environment Properties** dialog box. Otherwise, a script is not generated.  
   
 8.  Click **OK** to save your changes to the environment properties.  
   
@@ -404,13 +404,13 @@ Launch the wizard by either:
   
  You can also use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to deploy the project and execute the packages. For more information, see the topics in the **See Also** section.  
   
-> [!TIP]  
+> [!TIP]
 >  You can easily generate the Transact-SQL statements for the stored procedures listed in the procedure below, with the exception of catalog.deploy_project, by doing the following:  
->   
+> 
 >  1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the **Integration Services Catalogs** node in Object Explorer and navigate to the package you want to execute.  
 > 2.  Right-click the package, and then click **Execute**.  
 > 3.  As needed, set parameters values, connection manager properties, and options in the **Advanced** tab such as the logging level.  
->   
+> 
 >      For more information about logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
 > 4.  Before clicking **OK** to execute the package, click **Script**. The Transact-SQL appears in a Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -485,7 +485,7 @@ Launch the wizard by either:
   
 -   Confirm that the Distributed Transaction Coordinator (DTC) is started on both servers.  
   
- Call catalog.get_project to return the binary for the project, and then call catalog.deploy_project. The value returned by catalog.get_project is inserted into a table variable of type varbinary(max). The linked server can’t return results that are varbinary(max).  
+ Call catalog.get_project to return the binary for the project, and then call catalog.deploy_project. The value returned by catalog.get_project is inserted into a table variable of type varbinary(max). The linked server can't return results that are varbinary(max).  
   
  In the following example, catalog.get_project returns a binary for the SSISPackages project on the linked server. The catalog.deploy_project deploys the project to the local server, to the folder named DestFolder.  
   
@@ -671,7 +671,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Remove configurations from all packages after conversion**  
  It is recommended that you remove all configurations from the project by selecting this option.  
   
- If you don’t select this option, only the configurations that you selected to replace with parameters are removed.  
+ If you don't select this option, only the configurations that you selected to replace with parameters are removed.  
   
 ###  <a name="createParameters"></a> Set Options on the Create Parameters Page  
  Select the parameter name and scope for each configuration property.  
@@ -704,7 +704,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  The **Set Parameter Details** dialog box also lists the data type of the parameter value and the origin of the parameter.  
   
 ###  <a name="review"></a> Set the Options on the Review page  
- Use the **Review** page to confirm the options that you’ve selected for the conversion of the project.  
+ Use the **Review** page to confirm the options that you've selected for the conversion of the project.  
   
  **Previous**  
  Click to change an option.  

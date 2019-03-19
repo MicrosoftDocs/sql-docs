@@ -56,7 +56,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Compatibility levels|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
+|Compatibility levels|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release. However, we will continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 110<br /><br /> Database compatibility level 120||  
 |XML|Inline XDR Schema Generation|The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode.|XMLDATA|181|  
 |Backup and restore|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
@@ -90,13 +90,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Extended stored procedure programming|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|Use CLR Integration instead.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Extended stored procedures|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig|44<br /><br /> 45<br /><br /> 59|  
 |Functions|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Hash algorithms|The  MD2, MD4, MD5, SHA, and SHA1 algorithms. These are not available under compatibility level 130.|Use SHA2_256 or SHA2_512.|Deprecated hash algorithm||  
+|Hash algorithms|The MD2, MD4, MD5, SHA, and SHA1 algorithms are not available under compatibility level 130.|Use SHA2_256 or SHA2_512.|Deprecated hash algorithm||  
 |High availability|database mirroring|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> If your edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [!INCLUDE[ssHADR](../includes/sshadr-md.md)], use log shipping.|DATABASE_MIRRORING|267|  
 |Index options|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Index options|CREATE TABLE, ALTER TABLE, or CREATE INDEX syntax without parentheses around the options.|Rewrite the statement to use the current syntax.|INDEX_OPTION|33|  
 |Instance options|sp_configure option 'allow updates'|System tables are no longer updatable. Setting has no effect.|sp_configure 'allow updates'|173|  
 |Instance options|sp_configure options:<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|Now automatically configured. Setting has no effect.|sp_configure 'locks'<br /><br /> sp_configure 'open objects'<br /><br /> sp_configure 'set working set size'|174<br /><br /> 175<br /><br /> 176|  
-|Instance options|sp_configure option 'priority boost'|System tables are no longer updatable. Setting has no effect. Use the Windows start /high … program.exe option instead.|sp_configure 'priority boost'|199|  
+|Instance options|sp_configure option 'priority boost'|System tables are no longer updatable. Setting has no effect. Use the Windows start /high ... program.exe option instead.|sp_configure 'priority boost'|199|  
 |Instance options|sp_configure option 'remote proc trans'|System tables are no longer updatable. Setting has no effect.|sp_configure 'remote proc trans'|37|  
 |Linked servers|Specifying the SQLOLEDB provider for linked servers.|SQL Server Native Client (SQLNCLI)|SQLOLEDDB for linked servers|19|  
 |Locking|sp_lock|sys.dm_tran_locks|sp_lock|99|  

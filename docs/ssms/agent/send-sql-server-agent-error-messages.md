@@ -67,7 +67,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 2.  Right-click **SQL Server Agent** and select **Properties**.  
   
-3.  In the **SQL Server Agent Properties –**_server\_name_ dialog box, under **Error log** on the **General** page, , type the user name or computer name to which you want to send error messages in the **Net send recipient** box.  
+3.  In the **SQL Server Agent Properties -**_server\_name_ dialog box, under **Error log** on the **General** page, , type the user name or computer name to which you want to send error messages in the **Net send recipient** box.  
   
 4.  Click **OK**.  
   

@@ -48,7 +48,7 @@ To convert ASE database objects, first select the objects you want to convert, a
     You can also convert individual objects or categories of objects by right-clicking the object or its containing folder, and then selecting **Convert Schema**.  
   
 > [!NOTE]  
-> Some of the SAP ASE system functions do not exactly match the equivalent SQL Server system functions in behavior. To emulate the SAP ASE behavior, SSMA generates User Defined functions in the converted SQL Server database under a schema called ‘s2ss’. Depending on the project settings, some of the SQL Server system functions are replaced with these emulated functions. SSMA creates the following user-defined functions:  
+> Some of the SAP ASE system functions do not exactly match the equivalent SQL Server system functions in behavior. To emulate the SAP ASE behavior, SSMA generates User Defined functions in the converted SQL Server database under a schema called 's2ss'. Depending on the project settings, some of the SQL Server system functions are replaced with these emulated functions. SSMA creates the following user-defined functions:  
   
 ||||  
 |-|-|-|  

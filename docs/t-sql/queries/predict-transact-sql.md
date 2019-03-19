@@ -1,7 +1,7 @@
 ---
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2018"
+ms.date: "12/03/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -14,8 +14,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "PREDICT clause"
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -102,19 +102,6 @@ No permissions are required for `PREDICT`; however, the user needs `EXECUTE` per
 ## Examples
 
 The following examples demonstrate the syntax for calling `PREDICT`.
-
-### Call a stored model and use it for prediction
-
-This example calls an existing logistic regression model stored in table [models_table]. It gets the latest trained model, using a SELECT statement, and then passes the binary model to the PREDICT function. The input values represent features; the output represents the classification assigned by the model.
-
-```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
-DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
-
-SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
-WITH (class string);
-```
 
 ### Using PREDICT in a FROM clause
 

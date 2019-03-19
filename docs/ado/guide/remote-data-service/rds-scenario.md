@@ -19,7 +19,7 @@ manager: craigg
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- The Address Book application is a scenario that shows you how to use Remote Data Service (RDS) to build a simple, data-aware Web application — an online corporate address book. This scenario is useful for Microsoft Visual Basic Scripting Edition (VBScript) and COM programmers who want to learn how to use data-aware ActiveX Controls with RDS, and for more experienced software developers who want to build data-centric Web applications.  
+ The Address Book application is a scenario that shows you how to use Remote Data Service (RDS) to build a simple, data-aware Web application - an online corporate address book. This scenario is useful for Microsoft Visual Basic Scripting Edition (VBScript) and COM programmers who want to learn how to use data-aware ActiveX Controls with RDS, and for more experienced software developers who want to build data-centric Web applications.  
   
  This scenario assumes that you know how to use basic HTML layout tags, use DHTML data binding techniques, and program with ActiveX Controls.  
   

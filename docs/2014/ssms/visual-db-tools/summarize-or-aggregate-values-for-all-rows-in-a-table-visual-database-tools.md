@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "summarizing query results"
@@ -39,7 +39,7 @@ FROM titles
  When you create a single aggregation value for all rows in a table, you display only the aggregate values themselves. For example, if you are totaling the value of the `price` column of the `titles` table, you would not also display individual titles, publisher names, and so on.  
   
 > [!NOTE]  
->  If you are subtotaling — that is, creating groups — you can display column values for each group. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
+>  If you are subtotaling - that is, creating groups - you can display column values for each group. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
   
 ### To aggregate values for all rows  
   

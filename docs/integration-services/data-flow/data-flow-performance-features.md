@@ -177,7 +177,7 @@ manager: craigg
   
 -   Technical article, [Top 10 SQL Server Integration Services Best Practices](https://go.microsoft.com/fwlink/?LinkId=220818), on sqlcat.com.  
   
--   Technical article and sample, [The “Balanced Data Distributor” for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
+-   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
   
 -   Blog post, [Troubleshooting SSIS Package Performance Issues](https://go.microsoft.com/fwlink/?LinkId=238156), on blogs.msdn.com  
   

@@ -473,7 +473,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   The -N switch is used by the client to request an encrypted connection. This option is equivalent to the ADO.net option `ENCRYPT = true`.  
   
--   The –C switch is used by the client to configure it to implicitly the trust server certificate and not validate it. This option is equivalent to the ADO.net option `TRUSTSERVERCERTIFICATE = true`.  
+-   The -C switch is used by the client to configure it to implicitly the trust server certificate and not validate it. This option is equivalent to the ADO.net option `TRUSTSERVERCERTIFICATE = true`.  
   
  The [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service does not support all the `SET` options available on a SQL Server instance. The following options throw an error when the corresponding `SET` option is set to `ON` or `OFF`:  
   
@@ -499,21 +499,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Connect using Windows credentials and encrypt communication:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Connect using Windows credentials and trust server certificate:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -522,28 +522,28 @@ SQLCMD –E –N –C
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -C  
   
 ```  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

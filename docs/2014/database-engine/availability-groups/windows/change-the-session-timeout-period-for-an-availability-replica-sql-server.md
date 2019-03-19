@@ -91,7 +91,7 @@ manager: craigg
      For example, the following command sets the session-timeout period to 15 seconds.  
   
     ```  
-    Set-SqlAvailabilityReplica –SessionTimeout 15 `   
+    Set-SqlAvailabilityReplica -SessionTimeout 15 `   
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   

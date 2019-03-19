@@ -5,14 +5,14 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: performance-monitor
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Errors object"
   - "SQLServer:SQL Errors"
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, SQL Errors Object

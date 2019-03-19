@@ -41,13 +41,13 @@ To install the antivirus software on the physical hosts, exclude the following l
 ## Exclusion List for Virtual Machines (VMs)  
 To install the antivirus software on the VMs, exclude the following list of directories and files. These should not be scanned by the antivirus software.  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain*-AD01** and ***appliance_domain*-AD02**  
+**_appliance_domain_-AD01** and **_appliance_domain_-AD02**  
   
 -   No restrictions  
   
@@ -57,15 +57,15 @@ To install the antivirus software on the VMs, exclude the following list of dire
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_-VMM**  
   
 -   No restrictions  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_-WDS**  
   
 -   No restrictions  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

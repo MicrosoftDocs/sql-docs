@@ -155,7 +155,7 @@ manager: craigg
 > [!NOTE]  
 >  When you click **New**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-#### Data access mode = Table or view – fast load  
+#### Data access mode = Table or view - fast load  
  **Name of the table or view**  
  Select a table or view from the database by using this list, or create a new table by clicking **New**.  
   
@@ -178,7 +178,7 @@ manager: craigg
  Specify whether the destination checks constraints when it loads data. The default value of this property is **true**.  
   
  **Rows per batch**  
- Specify the number of rows in a batch. The default value of this property is **–1**, which indicates that no value has been assigned.  
+ Specify the number of rows in a batch. The default value of this property is **-1**, which indicates that no value has been assigned.  
   
 > [!NOTE]  
 >  Clear the text box in the **OLE DB Destination Editor** to indicate that you do not want to assign a custom value for this property.  
@@ -198,7 +198,7 @@ manager: craigg
  **Variable name**  
  Select the variable that contains the name of the table or view.  
   
-#### Data Access Mode = Table name or view name variable – fast load)  
+#### Data Access Mode = Table name or view name variable - fast load)  
  **Variable name**  
  Select the variable that contains the name of the table or view.  
   
@@ -221,7 +221,7 @@ manager: craigg
  Specify whether the task checks constraints. The default value of this property is **false**.  
   
  **Rows per batch**  
- Specify the number of rows in a batch. The default value of this property is **–1**, which indicates that no value has been assigned.  
+ Specify the number of rows in a batch. The default value of this property is **-1**, which indicates that no value has been assigned.  
   
 > [!NOTE]  
 >  Clear the text box in the **OLE DB Destination Editor** to indicate that you do not want to assign a custom value for this property.  

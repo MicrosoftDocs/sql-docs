@@ -21,7 +21,7 @@ manager: craigg
 ## Adding an OData Connection Manager to an SSIS Package  
  You can add a new OData connection manager to an SSIS package in three ways:  
   
--   Click the **New…** button in the **OData Source Editor**  
+-   Click the **New...** button in the **OData Source Editor**  
   
 -   Right-click the **Connection Managers** folder in **Solution Explorer**, and then click **New Connection Manager**. Select **ODATA** for **Connection manager type**.  
   

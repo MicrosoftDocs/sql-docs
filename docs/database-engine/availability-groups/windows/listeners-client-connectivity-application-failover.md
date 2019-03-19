@@ -1,6 +1,7 @@
 ---
-title: "Listeners, Client Connectivity, Application Failover | Microsoft Docs"
-ms.custom: ""
+title: "Connect to an availability group listener"
+description: "Contains information about connecting to an Always On availability group listener, before and after failover."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Listeners, Client Connectivity, Application Failover
+# Connect to an Always On availability group listener 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic contains information about considerations for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] client connectivity and application-failover functionality.  
   
@@ -133,9 +134,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 -   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> Read-Only Application Intent and Read-Only Routing  
- The application intent connection string property expresses the client application’s request to be directed either to a read-write or read-only version of an availability group database. To use read-only routing, a client must use an application intent of read-only in the connection string when connecting to the availability group listener. Without the read-only application intent, connections to the availability group listener are directed to the database on the primary replica.  
+ The application intent connection string property expresses the client application's request to be directed either to a read-write or read-only version of an availability group database. To use read-only routing, a client must use an application intent of read-only in the connection string when connecting to the availability group listener. Without the read-only application intent, connections to the availability group listener are directed to the database on the primary replica.  
   
- The application intent attribute is stored in the client’s session during login and the instance of SQL Server will then process this intent and determine what to do according to the configuration of the availability group and the current read-write state of the target database in the secondary replica.  
+ The application intent attribute is stored in the client's session during login and the instance of SQL Server will then process this intent and determine what to do according to the configuration of the availability group and the current read-write state of the target database in the secondary replica.  
   
  An example of a connection string for the ADO.NET provider (System.Data.SqlClient) that designates read-only application intent is as follows:  
   
@@ -174,10 +175,10 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="CCBehaviorOnFailover"></a> Behavior of Client Connections on Failover  
  When an availability group failover occurs, existing persistent connections to the availability group are terminated and the client must establish a new connection in order to continue working with the same primary database or read-only secondary database.  While a failover is occurring on the server side, connectivity to the availability group may fail, forcing the client application to retry connecting until the primary is brought fully back online.  
   
- If the availability group comes back online during a client application’s connection attempt but before the connect timeout period, the client driver may successfully connect during one of its internal retry attempts and no error will be surfaced to the application in this case.  
+ If the availability group comes back online during a client application's connection attempt but before the connect timeout period, the client driver may successfully connect during one of its internal retry attempts and no error will be surfaced to the application in this case.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Supporting Availability Group Multi-Subnet Failovers  
- If you are using client libraries that support the MultiSubnetFailover connection option in the connection string, you can optimize availability group failover to a different subnet by setting MultiSubnetFailover to “True” or "Yes", depending on the syntax of the provider you are using.  
+ If you are using client libraries that support the MultiSubnetFailover connection option in the connection string, you can optimize availability group failover to a different subnet by setting MultiSubnetFailover to "True" or "Yes", depending on the syntax of the provider you are using.  
   
 > [!NOTE]  
 >  We recommend this setting for both single and multi-subnet connections to availability groups listeners and to SQL Server Failover Cluster Instance names.  Enabling this option adds additional optimizations, even for single-subnet scenarios.  

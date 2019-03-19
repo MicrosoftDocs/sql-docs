@@ -28,19 +28,19 @@ manager: craigg
   
  TYPE indicates the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition. The following file name segments are used to identify [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions:  
   
--   ENT – Enterprise Edition: Server/Client Access License (CAL) Licensing  
+-   ENT - Enterprise Edition: Server/Client Access License (CAL) Licensing  
   
--   ENTCORE – Enterprise Edition: Core-based Licensing  
+-   ENTCORE - Enterprise Edition: Core-based Licensing  
   
--   BI – Business Intelligence  
+-   BI - Business Intelligence  
   
--   DEV – Developer  
+-   DEV - Developer  
   
--   STD – Standard  
+-   STD - Standard  
   
--   WEB – Web  
+-   WEB - Web  
   
--   EXPR – Express  
+-   EXPR - Express  
   
  LCID is a number, which refers to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] language locale ID.  The following file name segments are used to identify the corresponding [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] languages:  
   
@@ -59,7 +59,7 @@ manager: craigg
 |Russian|RUS|1049|  
   
 ## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Licensing Options  
- For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web site.  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web site.  
   
 ## See Also  
  [Licensing Considerations for SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

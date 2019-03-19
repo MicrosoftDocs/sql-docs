@@ -1,10 +1,10 @@
 ---
-title: Lesson 3 Train and save a model using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
+title: Lesson 3 Train and save a model using R and T-SQL - SQL Server Machine Learning
+description: Tutorial showing how to train, serialize, and save an R model using SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/29/2018  
+ms.date: 11/16/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -25,8 +25,8 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
 
 2. Run the following statement to create the stored procedure **RxTrainLogitModel**. This stored procedure defines the input data and uses **rxLogit** from RevoScaleR to create a logistic regression model.
 
-    ```SQL
-    CREATE PROCEDURE [dbo].[RxTrainLogitModel]
+    ```sql
+    CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
     
     AS
     BEGIN
@@ -37,27 +37,24 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
         from nyctaxi_sample
         tablesample (70 percent) repeatable (98052)
     '
-      -- Insert the trained model into a database table
-      INSERT INTO nyc_taxi_models
+    
       EXEC sp_execute_external_script @language = N'R',
                                       @script = N'
-    
     ## Create model
     logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet)
     summary(logitObj)
     
-    ## Serialize model and put it in data frame
-    trained_model <- data.frame(model=as.raw(serialize(logitObj, NULL)));
+    ## Serialize model 
+    trained_model <- as.raw(serialize(logitObj, NULL));
     ',
       @input_data_1 = @inquery,
-      @output_data_1_name = N'trained_model'
-      ;
-    
+      @params = N'@trained_model varbinary(max) OUTPUT',
+      @trained_model = @trained_model OUTPUT; 
     END
     GO
     ```
 
-    -To ensure that some data is left over to test the model, 70% of the data are randomly selected from the taxi data table for training purposes.
+    - To ensure that some data is left over to test the model, 70% of the data are randomly selected from the taxi data table for training purposes.
 
     - The SELECT query uses the custom scalar function *fnCalculateDistance* to calculate the direct distance between the pick-up and drop-off locations. The results of the query are stored in the default R input variable, `InputDataset`.
   
@@ -65,16 +62,18 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
   
         The binary variable _tipped_ is used as the *label* or outcome column,  and the model is fit using these feature columns:  _passenger_count_, _trip_distance_, _trip_time_in_secs_, and _direct_distance_.
   
-    -   The trained model, saved in the R variable `logitObj`, is serialized and put in a data frame for output to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. That output is inserted into the database table _nyc_taxi_models_, so that you can use it for future predictions.
+    - The trained model, saved in the R variable `logitObj`, is serialized and returned as an output parameter.
 
-## Generate the R model using the stored procedure
+## Train and deploy the R model using the stored procedure
 
 Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
 
-1. To generate the R model, call the stored procedure without any other parameters:
+1. To train and deploy the R model, call the stored procedure and insert it into the database table _nyc_taxi_models_, so that you can use it for future predictions:
 
-    ```SQL
-    EXEC RxTrainLogitModel
+    ```sql
+    DECLARE @model VARBINARY(MAX);
+    EXEC RxTrainLogitModel @model OUTPUT;
+    INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
     ```
 
 2. Watch the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] for messages that would be piped to R's **stdout** stream, like this message: 
@@ -85,12 +84,12 @@ Because the stored procedure already includes a definition of the input data, yo
 
 3.  When the statement has completed, open the table *nyc_taxi_models*. Processing of the data and fitting the model might take a while.
 
-    You can see that one new row has been added, which contains the serialized model in the column _model_.
+    You can see that one new row has been added, which contains the serialized model in the column _model_ and the model name **RxTrainLogit_model** in the column _name_.
 
-    ```
-    model
-    ------
-    0x580A00000002000302020....
+    ```sql
+    model                        name
+    ---------------------------- ------------------
+    0x580A00000002000302020....  RxTrainLogit_model
     ```
 
 In the next step you'll use the trained model to generate predictions.

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Design View
   Use Design view to arrange report items in the report. Design view is sometimes called the design surface or layout view.  

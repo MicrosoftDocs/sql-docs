@@ -125,7 +125,7 @@ cost.
 
 Figure 1. A Typical AlwaysOn Availability Group Configuration
 
-If you don’t need to consider disaster recovery, you don’t need to have
+If you don't need to consider disaster recovery, you don't need to have
 a replica in a second data center. If you need to improve HA, then you
 could have more synchronous replicas in the same primary data center
 with.
@@ -185,7 +185,7 @@ the WSFC feature on each instance. You need administrator permissions.
 3.  Select the **Failover Clustering** checkbox, and then click **Next**
     to finish the installation. See Figure 2.
 
-    If you’re asked for confirmation to **Add features that are required
+    If you're asked for confirmation to **Add features that are required
 for Failover clustering**, click **Add Features**. See Figure 3.
 
     ![Add Roles and Features Wizard, Failover Clustering](media/Fig2_SelectFeatures.png)
@@ -241,13 +241,13 @@ page shows you the validation summary. See Figures 6 and 7.
 7.  On the **Summary** page, check for any warning or error messages.
 
     Errors must be fixed. However, warnings may not be an issue. A warning
-message means that “the tested item might meet the requirement, but
-there is something you should check”. For example, figure 7 shows a
-“validate disk access latency” warning, that may be due to the disk
+message means that "the tested item might meet the requirement, but
+there is something you should check". For example, figure 7 shows a
+"validate disk access latency" warning, that may be due to the disk
 being busy on other tasks temporarily, and you may ignore it. You
 should check the online document for each warning and error message
 for more details. See Figure 7.
- 
+ 
     ![Validate Configuration Wizard, Validating page](media/Fig6_ValidationTests.png)
 
     Figure 6
@@ -489,7 +489,7 @@ replica with read-only access.
     d.  Enter DHCP in the **Network Mode** text box, and then click **Next** to continue.
 
     >[!NOTE] 
-    >Optionally, you can choose “Static IP” as the **Network Mode**
+    >Optionally, you can choose "Static IP" as the **Network Mode**
     >and enter a static IP. You can also enter a port other than 1433. 
 
     ![Configure the Listener](media/Fig18_AvailabilityGroupCreateListener.png)
@@ -540,7 +540,7 @@ lists other options.
     asynchronous replica. This is to verify that failover happens
     correctly without issues.
 
- The AlwaysOn setup is completed.
+ The AlwaysOn setup is completed.
 
 For more information about AlwaysOn Availability Group, see [SQL Server
 2016 AlwaysOn Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).

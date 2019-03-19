@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication data validation [SQL Server replication], partitions"
@@ -29,9 +28,9 @@ manager: craigg
  When the Merge Agent validates a partition, in addition to validating the partition against the values returned by any functions used in filtering expressions, the agent also checks whether the snapshot was generated prior to changes that invalidate it, such as metadata cleanup operations or schema changes. If a partitioned snapshot is too old, the Merge Agent will return an error and you must regenerate a partitioned snapshot for that Subscriber based on a current regular snapshot.  
   
 ## See Also  
- [Administration &#40;Replication&#41;](administration/administration-replication.md)   
+ [Replication Administration FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
  [Reinitialize Subscriptions](reinitialize-subscriptions.md)   
- [Validate Replicated Data](validate-replicated-data.md)  
+ [Validate Replicated Data](validate-data-at-the-subscriber.md)  
   
   

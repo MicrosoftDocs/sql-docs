@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 author: stevestein
@@ -50,7 +50,7 @@ manager: craigg
   
 4.  Right-click the job where you want to modify the target server and select **Properties**.  
   
-5.  In the **Job Properties –***job_name* dialog box, under **Select a page**, select **Targets**. For more information on the available options on this page, see [Job Properties: New Job &#40;Targets Page&#41;](job-properties-new-job-targets-page.md).  
+5.  In the **Job Properties -**_job_name_ dialog box, under **Select a page**, select **Targets**. For more information on the available options on this page, see [Job Properties: New Job &#40;Targets Page&#41;](job-properties-new-job-targets-page.md).  
   
 6.  When finished, click **OK**.  
   

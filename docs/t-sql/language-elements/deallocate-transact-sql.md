@@ -33,49 +33,48 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
 ## Arguments  
  *cursor_name*  
- Is the name of an already declared cursor. If both a global and a local cursor exist with *cursor_name* as their name, *cursor_name* refers to the global cursor if GLOBAL is specified and to the local cursor if GLOBAL is not specified.  
+ Is the name of an already declared cursor. If both a global and a local cursor exist with *cursor_name* as their name, *cursor_name* refers to the global cursor if `GLOBAL` is specified and to the local cursor if `GLOBAL` is not specified.  
   
  @*cursor_variable_name*  
  Is the name of a **cursor** variable. @*cursor_variable_name* must be of type **cursor**.  
   
 ## Remarks  
- Statements that operate on cursors use either a cursor name or a cursor variable to refer to the cursor. DEALLOCATE removes the association between a cursor and the cursor name or cursor variable. If a name or variable is the last one referencing the cursor, the cursor is deallocated and any resources used by the cursor are freed. Scroll locks used to protect the isolation of fetches are freed at DEALLOCATE. Transaction locks used to protect updates, including positioned updates made through the cursor, are held until the end of the transaction.  
+Statements that operate on cursors use either a cursor name or a cursor variable to refer to the cursor. `DEALLOCATE` removes the association between a cursor and the cursor name or cursor variable. If a name or variable is the last one referencing the cursor, the cursor is deallocated and any resources used by the cursor are freed. Scroll locks used to protect the isolation of fetches are freed at `DEALLOCATE`. Transaction locks used to protect updates, including positioned updates made through the cursor, are held until the end of the transaction.  
   
- The DECLARE CURSOR statement allocates and associates a cursor with a cursor name.  
+The `DECLARE CURSOR` statement allocates and associates a cursor with a cursor name.  
   
-```  
+```sql  
 DECLARE abc SCROLL CURSOR FOR  
 SELECT * FROM Person.Person;  
 ```  
   
- After a cursor name is associated with a cursor, the name cannot be used for another cursor of the same scope (GLOBAL or LOCAL) until this cursor has been deallocated.  
+After a cursor name is associated with a cursor, the name cannot be used for another cursor of the same scope (global or local) until this cursor has been deallocated.  
   
  A cursor variable is associated with a cursor using one of two methods:  
   
--   By name using a SET statement that sets a cursor to a cursor variable.  
+-   By name using a `SET` statement that sets a cursor to a cursor variable.  
   
-    ```  
+    ```sql  
     DECLARE @MyCrsrRef CURSOR;  
     SET @MyCrsrRef = abc;  
     ```  
   
 -   A cursor can also be created and associated with a variable without having a cursor name defined.  
   
-    ```  
+    ```sql  
     DECLARE @MyCursor CURSOR;  
     SET @MyCursor = CURSOR LOCAL SCROLL FOR  
     SELECT * FROM Person.Person;  
     ```  
   
- A DEALLOCATE @*cursor_variable_name* statement removes only the reference of the named variable to the cursor. The variable is not deallocated until it goes out of scope at the end of the batch, stored procedure, or trigger. After a DEALLOCATE @*cursor_variable_name* statement, the variable can be associated with another cursor using the SET statement.  
+ A `DEALLOCATE <@cursor_variable_name>` statement removes only the reference of the named variable to the cursor. The variable is not deallocated until it goes out of scope at the end of the batch, stored procedure, or trigger. After a `DEALLOCATE <@cursor_variable_name>` statement, the variable can be associated with another cursor using the SET statement.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -90,15 +89,15 @@ SET @MyCursor = CURSOR LOCAL SCROLL FOR
 GO  
 ```  
   
- A cursor variable does not have to be explicitly deallocated. The variable is implicitly deallocated when it goes out of scope.  
+A cursor variable does not have to be explicitly deallocated. The variable is implicitly deallocated when it goes out of scope.  
   
 ## Permissions  
- DEALLOCATE permissions default to any valid user.  
+ Permissions for `DEALLOCATE` default to any valid user.  
   
 ## Examples  
  The following script shows how cursors persist until the last name or until the variable referencing them has been deallocated.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create and open a global named cursor that  

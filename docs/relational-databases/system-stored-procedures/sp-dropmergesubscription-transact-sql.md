@@ -5,8 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropmergesubscription_TSQL"
@@ -38,16 +37,16 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the publication name. *publication* is **sysname**, with a default of NULL. The publication must already exist and conform to the rules for identifiers.  
   
- [ **@subscriber=**] **'***subscriber***'**  
+ [ **@subscriber=**] **'**_subscriber_**'**  
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
   
- [ **@subscriber_db=** ] **'***subscriber_db***'**  
+ [ **@subscriber_db=** ] **'**_subscriber_db_**'**  
  Is the name of the subscription database. *subscription_database*is **sysname**, with a default of NULL.  
   
- [ **@subscription_type=** ] **'***subscription_type***'**  
+ [ **@subscription_type=** ] **'**_subscription_type_**'**  
  Is the type of subscription. *subscription_type*is **nvarchar(15)**, and can be one of these values.  
   
 |Value|Description|  

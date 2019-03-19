@@ -33,7 +33,7 @@ manager: kfile
   
 1.  Locate the database to be moved in the left or right pane of SSMS.  
   
-2.  Right-click on the database and select **Detach…**  
+2.  Right-click on the database and select **Detach...**  
   
 3.  Assign a password to the database to be detached, then click **OK** to execute the detach command.  
   
@@ -41,9 +41,9 @@ manager: kfile
   
 5.  Locate the **Databases** folder in the left or right pane of SSMS.  
   
-6.  Right-click on the **Databases** folder and select **Attach…**  
+6.  Right-click on the **Databases** folder and select **Attach...**  
   
-7.  In the **folder** text box, type the new location of the database folder. Alternatively, you can use the browse button (**…**) to locate the database folder.  
+7.  In the **folder** text box, type the new location of the database folder. Alternatively, you can use the browse button (**...**) to locate the database folder.  
   
 8.  Select the **ReadWrite** mode for the database.  
   

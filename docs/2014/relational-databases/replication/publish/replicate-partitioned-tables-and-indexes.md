@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "09/10/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned indexes [SQL Server], replicating"

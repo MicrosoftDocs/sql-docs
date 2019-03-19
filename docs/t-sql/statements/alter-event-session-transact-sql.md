@@ -31,7 +31,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 ALTER EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -138,20 +137,20 @@ ON SERVER
 |STARTUP_STATE = { ON &#124; **OFF** }|Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts.<br /><br /> If STARTUP_STATE=ON the event session will only start if  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is stopped and then restarted.<br /><br /> ON= Event session is started at startup.<br /><br /> **OFF** = Event session is NOT started at startup.|  
   
 ## Remarks  
- The ADD and DROP arguments cannot be used in the same statement.  
+ The `ADD` and `DROP` arguments cannot be used in the same statement.  
   
 ## Permissions  
- Requires the ALTER ANY EVENT SESSION permission.  
+ Requires the `ALTER ANY EVENT SESSION` permission.  
   
 ## Examples  
  The following example starts an event session, obtains some live session statistics, and then adds two events to the existing session.  
   
-```  
+```sql  
 -- Start the event session  
-ALTER EVENT SESSION test_session  
-ON SERVER  
+ALTER EVENT SESSION test_session ON SERVER  
 STATE = start;  
 GO  
+
 -- Obtain live session statistics   
 SELECT * FROM sys.dm_xe_sessions;  
 SELECT * FROM sys.dm_xe_session_events;  

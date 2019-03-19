@@ -49,7 +49,7 @@ manager: craigg
 ###  <a name="BKMK_Relational"></a> Relational vs. OLAP Mining Models  
  The next important option that you have is whether to use a relational data source, or to base your model on multidimensional (OLAP) data.  
   
- The Data Mining Wizard branches into two paths at this point, depending on whether your data source is relational or in a cube. Everything else except the data selection process is the same—the choice of algorithm, the ability to add a holdout data set, etc.—but selecting cube data is a bit more complex than using relational data. (You also get some additional options at the end if you create a model based on a cube.)  
+ The Data Mining Wizard branches into two paths at this point, depending on whether your data source is relational or in a cube. Everything else except the data selection process is the same-the choice of algorithm, the ability to add a holdout data set, etc.-but selecting cube data is a bit more complex than using relational data. (You also get some additional options at the end if you create a model based on a cube.)  
   
  See the following topics for a walkthrough of each option in more detail:  
   

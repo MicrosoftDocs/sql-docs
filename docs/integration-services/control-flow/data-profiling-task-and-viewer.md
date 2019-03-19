@@ -43,7 +43,7 @@ manager: craigg
   
 -   The distribution of values in the City column.  
   
--   The strength of the functional dependency of the State column on the Zip column—that is, the state should always be the same for a given zip value.  
+-   The strength of the functional dependency of the State column on the Zip column-that is, the state should always be the same for a given zip value.  
   
  The statistics that a data profile provides gives you the information that you need in order to effectively minimize the quality issues that might occur from using the source data.  
   

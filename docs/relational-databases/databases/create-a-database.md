@@ -76,7 +76,7 @@ manager: craigg
   
 4.  To create the database by accepting all default values, click **OK**; otherwise, continue with the following optional steps.  
   
-5.  To change the owner name, click (**…**) to select another owner.  
+5.  To change the owner name, click (**...**) to select another owner.  
   
     > [!NOTE]  
     >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], all user databases are full-text enabled.  

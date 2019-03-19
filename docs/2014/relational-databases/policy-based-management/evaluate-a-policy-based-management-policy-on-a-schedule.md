@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, evaluate policy"
@@ -47,7 +47,7 @@ manager: craigg
   
 5.  Right-click the policy whose schedule you what to evaluate and select **Properties**.  
   
-6.  On the **Open Policy –***policy_name* dialog box, in the **Evaluation Mode** list, select **On schedule**.  
+6.  On the **Open Policy -**_policy_name_ dialog box, in the **Evaluation Mode** list, select **On schedule**.  
   
 7.  Under **Schedule**, click either **Pick** to specify an existing schedule or **New** to create a new schedule.  
   

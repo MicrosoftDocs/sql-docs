@@ -69,18 +69,18 @@ manager: kfile
  Extended Event tracing is enabled using a similar XMLA create object script command as shown below:  
   
 ```  
-<Execute …>  
+<Execute ...>  
    <Command>  
-      <Batch …>  
-         <Create …>  
+      <Batch ...>  
+         <Create ...>  
             <ObjectDefinition>  
                <Trace>  
                   <ID>trace_id</ID>  
                   <Name>trace_name</Name>  
                   <ddl300_300:XEvent>  
-                     <event_session …>  
+                     <event_session ...>  
                         <event package="AS" name="AS_event">  
-                           <action package="PACKAGE0" …/>  
+                           <action package="PACKAGE0" .../>  
                         </event>  
                         <target package="PACKAGE0" name="asynchronous_file_target">  
                            <parameter name="filename" value="data_filename.xel"/>  
@@ -122,8 +122,8 @@ manager: kfile
 ```  
 <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">  
    <Command>  
-      <Batch …>  
-         <Delete …>  
+      <Batch ...>  
+         <Delete ...>  
             <Object>  
                <TraceID>trace_id</TraceID>  
             </Object>  

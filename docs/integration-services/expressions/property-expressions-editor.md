@@ -29,7 +29,7 @@ manager: craigg
 > [!NOTE]  
 >  The names of user-defined and system variables are case-sensitive.  
   
- **Expression (…)**  
+ **Expression (...)**  
  Click the ellipsis to open the **Expression Builder** dialog box. For more information, see [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
  **Delete**  

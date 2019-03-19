@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure a Native Mode Report Server for Local Administration (SSRS)
-  Deploying a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+  Deploying a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -156,7 +156,7 @@ ms.author: maghan
   
 -   When you attempt to deploy report items to the local report server, you see an error message similar to the following in the **Error List** window:  
   
-    -   The permissions granted to user ‘Domain\\<user name\>’ are insufficient for performing this operation.  
+    -   The permissions granted to user 'Domain\\<user name\>' are insufficient for performing this operation.  
   
  **To run with elevated permissions each time you open SSDT:**  
   

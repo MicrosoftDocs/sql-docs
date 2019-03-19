@@ -57,8 +57,8 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 4.  Right-click the job where you want to delete steps and select **Properties**.  
   
-5.  In the **Job Properties –***job_name* dialog box, under **Select a page**, select **Steps**.  
-  
+5.  In the **Job Properties -**_job_name_ dialog box, under **Select a page**, select **Steps**.  
+
 6.  Under **Job step list**, select the job step you want to delete and click **Delete**.  
   
 7.  When finished, click **OK**.  

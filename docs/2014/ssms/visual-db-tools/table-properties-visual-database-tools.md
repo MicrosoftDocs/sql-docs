@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.tabledesigner"
@@ -38,7 +38,7 @@ manager: craigg
  Shows the name of the data source of the selected table.  
   
  **Description**  
- Shows a description of the selected table. To see the entire description, or to edit it, click the description and then click the ellipses **(…)** to the right of the property.  
+ Shows a description of the selected table. To see the entire description, or to edit it, click the description and then click the ellipses **(...)** to the right of the property.  
   
  **Schema**  
  Shows the name of the schema to which this table belongs. (Applies only to Microsoft SQL Server.)  

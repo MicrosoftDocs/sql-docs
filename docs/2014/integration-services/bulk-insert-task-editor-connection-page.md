@@ -54,7 +54,7 @@ manager: craigg
   
 ### Format = Use File  
  **FormatFile**  
- Type the path of the format file or click the ellipsis button **(…)** to locate the format file.  
+ Type the path of the format file or click the ellipsis button **(...)** to locate the format file.  
   
 ### Format = Specify  
  `RowDelimiter`  

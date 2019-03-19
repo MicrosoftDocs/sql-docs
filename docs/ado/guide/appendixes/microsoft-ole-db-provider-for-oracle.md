@@ -18,7 +18,7 @@ manager: craigg
 ---
 # Microsoft OLE DB Provider for Oracle Overview
 > [!IMPORTANT]
->  This feature will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Instead, use Oracle’s OLE DB provider.
+>  This feature will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Instead, use Oracle's OLE DB provider.
 
  The Microsoft OLE DB Provider for Oracle allows ADO to access Oracle databases.
 

@@ -46,7 +46,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  To specify connection information, use the stored procedure [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). You can also use the **Login for Updatable Subscriptions** page of the New Subscription Wizard, which calls **sp_link_publication**. Under certain conditions, this stored procedure can fail if the Subscriber is running [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) or later, and the Publisher is running an earlier version. If the stored procedure fails in this scenario, upgrade the Publisher to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 or later.  
   
- For more information, see [Create an Updatable Subscription to a Transactional Publication](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) and [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+ For more information, see [Create an Updatable Subscription to a Transactional Publication](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) and [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
 >  The account specified for the connection should only be granted permission to insert, update, and delete data on the views that replication creates in the publication database; it should not be given any additional permissions. Grant permissions on views in the publication database that are named in the form **syncobj_***\<HexadecimalNumber>* to the account you configured at each Subscriber.  
@@ -72,6 +72,6 @@ manager: craigg
 ## See Also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

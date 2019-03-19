@@ -26,8 +26,8 @@ manager: craigg
   
  The XML validation functionality scales easily for large XML documents and large numbers of errors. Since the output file itself is in XML format, you can query and analyze the output. For example, if the output contains a large number of errors, you can group the errors by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, as described in this topic.  
   
-> [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. The property is also available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+> [!NOTE]
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. The property is also available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ## Sample output for XML that's valid  
  Here is a sample output file with validation results for a valid XML file.  
@@ -91,7 +91,7 @@ SELECT col.value('@line','INT') AS line
 FROM @XML.nodes('/root/messages/error') AS tab(col)  
 )  
 SELECT * FROM rs;  
--- WHERE error LIKE ‘%whatever_string%’  
+-- WHERE error LIKE '%whatever_string%'  
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  

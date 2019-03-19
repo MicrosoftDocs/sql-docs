@@ -1,21 +1,21 @@
 ---
-title: Troubleshoot data collection for machine learning - SQL Server
+title: Troubleshoot data collection for machine learning - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
 # Troubleshoot data collection for machine learning
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes data collection methods you should use when attempting to resolve problems on your own or with the help of Microsoft customer support. 
+This article describes data collection methods you should use when attempting to resolve problems on your own or with the help of Microsoft customer support.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R and Python)
-
 
 ## SQL Server version and edition
 
@@ -43,13 +43,13 @@ It's possible to upgrade the R Server components separately from the SQL Server 
 
 The easiest way to determine the R version is to get the runtime properties by running a statement such as the following:
 
-```SQL
+```sql
 exec sp_execute_external_script
        @language = N'R'
        , @script = N'
 # Transform R version properties to data.frame
 OutputDataSet <- data.frame(
-  property_name = c("R.version", "Revo.version"), 
+  property_name = c("R.version", "Revo.version"),
   property_value = c(R.Version()$version.string, Revo.version$version.string),
   stringsAsFactors = FALSE)
 # Retrieve properties like R.home, libPath & default packages
@@ -63,7 +63,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 ```
 
-> [!TIP] 
+> [!TIP]
 > If R Services is not working, try running only the R script portion from RGui.
 
 As a last resort, you can open files on the server to determine the installed version. To do so, locate the rlauncher.config file to get the location of the R runtime and the current working directory. We recommend that you make and open a copy of the file so that you don't accidentally change any properties.
@@ -86,23 +86,21 @@ To get the R version and RevoScaleR versions, open an R command prompt, or open 
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-
-The R console displays the version information on startup. For example, the following version represents the default configuration for SQL Server 2017 CTP 2.0:
+The R console displays the version information on startup. For example, the following version represents the default configuration for SQL Server 2017:
 
     *Microsoft R Open 3.3.3*
-    
-    *The enhanced R distribution from Microsoft*
-    
-    *Microsoft packages Copyright (C) 2017 Microsoft*
-    
-    *Loading Microsoft R Server packages, version 9.1.0.*
 
+    *The enhanced R distribution from Microsoft*
+
+    *Microsoft packages Copyright (C) 2017 Microsoft*
+
+    *Loading Microsoft R Server packages, version 9.1.0.*
 
 ## Python versions
 
 There are several ways to get the Python version. The easiest way is to run this statement from Management Studio or any other SQL query tool:
 
-```SQL
+```sql
 -- Get Python runtime properties:
 exec sp_execute_external_script
        @language = N'Python'
@@ -119,10 +117,9 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 If Machine Learning Services is not running, you can determine the installed Python version by looking at the pythonlauncher.config file. We recommend that you make and open a copy of the file so that you don't accidentally change any properties.
 
-1. For SQL Server 2017 only: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. For SQL Server 2017 only: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
 2. Get the value for **PYTHONHOME**.
 3. Get the value of the current working directory.
-
 
 > [!NOTE]
 > If you have installed both Python and R in SQL Server 2017, the working directory and the pool of worker accounts are shared for the R and Python languages.
@@ -131,7 +128,7 @@ If Machine Learning Services is not running, you can determine the installed Pyt
 
 Check to see whether more than one copy of the R libraries is installed on the computer. This duplication can happen if:
 
-* During setup you select both R Services (In-Database) and R Server (Standalone). 
+* During setup you select both R Services (In-Database) and R Server (Standalone).
 * You install Microsoft R Client in addition to SQL Server.
 * A different set of R libraries was installed by using R Tools for Visual Studio, R Studio, Microsoft R Client, or another R IDE.
 * The computer hosts multiple instances of SQL Server, and more than one instance uses machine learning.
@@ -144,16 +141,16 @@ If you find that multiple libraries or runtimes are installed, make sure that yo
 
 The errors that you see when you attempt to run R code can come from any of the following sources:
 
-- SQL Server database engine, including the stored procedure sp_execute_external_script
-- The SQL Server Trusted Launchpad 
-- Other components of the extensibility framework, including R and Python launchers and satellite processes
-- Providers, such as Microsoft Open Database Connectivity (ODBC)
-- R language
+* SQL Server database engine, including the stored procedure sp_execute_external_script
+* The SQL Server Trusted Launchpad
+* Other components of the extensibility framework, including R and Python launchers and satellite processes
+* Providers, such as Microsoft Open Database Connectivity (ODBC)
+* R language
 
 When you work with the service for the first time, it can be difficult to tell which messages originate from which services. We recommend that you capture not only the exact message text, but the context in which you saw the message. Note the client software that you're using to run machine learning code:
 
-- Are you using Management Studio? An external application?
-- Are you running R code in a remote client, or directly in a stored procedure?
+* Are you using Management Studio? An external application?
+* Are you running R code in a remote client, or directly in a stored procedure?
 
 ## SQL Server log files
 
@@ -167,13 +164,12 @@ Get the most recent SQL Server ERRORLOG. The complete set of error logs consists
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.SQL2016\MSSQL\Log\ExtensibilityLog`
 
-> [!NOTE] 
+> [!NOTE]
 > The exact folder name differs depending on the instance name.
-
 
 ## Errors returned by sp_execute_external_script
 
-Get the complete text of errors that are returned, if any, when you run the sp_execute_external_script command. 
+Get the complete text of errors that are returned, if any, when you run the sp_execute_external_script command.
 
 To remove R or Python problems from consideration, you can run this script, which starts the R or Python runtime and passes data back and forth.
 
@@ -209,9 +205,9 @@ You can get these logs from the following default locations:
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
-> [!NOTE] 
+> [!NOTE]
 > The exact folder name differs based on the instance name. Depending on your configuration, the folder might be on a different drive.
 
 For example, the following log messages are related to the extensibility framework:
@@ -220,26 +216,26 @@ For example, the following log messages are related to the extensibility framewo
   
   This might indicate that the worker accounts that run external scripts cannot access the instance.
 
-* *InitializePhysicalUsersPool Failed* 
+* *InitializePhysicalUsersPool Failed*
   
   This message might mean that your security settings are preventing setup from creating the pool of worker accounts that are needed to run external scripts.
 
-* *Security Context Manager initialization failed* 
+* *Security Context Manager initialization failed*
 
 * *Satellite Session Manager initialization failed*
 
 ## System events
 
-1. Open Windows Event Viewer, and search the **System Event** log for messages that include the string *Launchpad*. 
+1. Open Windows Event Viewer, and search the **System Event** log for messages that include the string *Launchpad*.
 2. Open the ExtLaunchErrorlog file, and look for the string *ErrorCode*. Review the message that's associated with the ErrorCode.
 
-For example, the following messages are common system errors that are related to the SQL Server extensibility framework: 
+For example, the following messages are common system errors that are related to the SQL Server extensibility framework:
 
 * *The SQL Server Launchpad (MSSQLSERVER) service failed to start due to the following error:  <text>*
 
-* *The service did not respond to the start or control request in a timely fashion.* 
+* *The service did not respond to the start or control request in a timely fashion.*
 
-* *A timeout was reached (120000 milliseconds) while waiting for the SQL Server Launchpad (MSSQLSERVER) service to connect.* 
+* *A timeout was reached (120000 milliseconds) while waiting for the SQL Server Launchpad (MSSQLSERVER) service to connect.*
 
 ## Dump files
 
@@ -249,8 +245,7 @@ If you are knowledgeable about debugging, you can use the dump files to analyze 
 2. Open the bootstrap log subfolder that is specific to extensibility.
 3. If you need to submit a support request, add the entire contents of this folder to a zipped file. For example, C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log\LOG\ExtensibilityLog.
   
-The exact location might differ on your system, and it might be on a drive other than your C drive. Be sure to get the logs for the instance where machine learning is installed. 
-
+The exact location might differ on your system, and it might be on a drive other than your C drive. Be sure to get the logs for the instance where machine learning is installed.
 
 ## Configuration settings
 
@@ -281,11 +276,11 @@ For individual user accounts:
 3. To enable script execution, create roles or add users to the following roles, as necessary:
 
    - All but *db_owner*: Require EXECUTE ANY EXTERNAL SCRIPT.
-   - *db_datawriter*: To write results from R or Python. 
-   - *db_ddladmin*: To create new objects. 
-   - *db_datareader*: To read data that's used by R or Python code. 
+   - *db_datawriter*: To write results from R or Python.
+   - *db_ddladmin*: To create new objects.
+   - *db_datareader*: To read data that's used by R or Python code.
 4. Note whether you changed any default startup accounts when you installed SQL Server 2016.
-5. If a user needs to install new R packages or use R packages that were installed by other users, you might need to enable package management on the instance and then assign additional permissions. For more information, see [Enable or disable R package management](r\r-package-how-to-enable-or-disable.md).
+5. If a user needs to install new R packages or use R packages that were installed by other users, you might need to enable package management on the instance and then assign additional permissions. For more information, see [Enable or disable R package management](r/r-package-how-to-enable-or-disable.md).
 
 ### What folders are subject to locking by antivirus software?
 
@@ -302,7 +297,6 @@ Because it might not be possible to exclude all folders that are needed by the S
 1. To determine whether SQL Server supports remote connections, see [Configure remote server connections](../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md).
 
 2. Determine whether a firewall rule has been created for SQL Server. For security reasons, in a default installation, it might not be possible for remote R or Python client to connect to the instance. For more information, see [Troubleshooting connecting to SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
-
 
 ## See also
 

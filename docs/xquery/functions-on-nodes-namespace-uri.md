@@ -89,8 +89,8 @@ WHERE ProductModelID=19
 ```  
 <p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
 <p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
-  <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
-…  
+  <p3:i xmlns:p3="http://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
+...  
 ```  
   
  You can change the namespace URI in the previous query to `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. You will then receive all the element node children of the <`ProductDescription`> element whose namespace URI part of the expanded QName is `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  

@@ -1,14 +1,16 @@
 ---
-title: Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server 
-description: Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Debug/Diagnose Spark Applications 
+titleSuffix: SQL Server 2019 big data clusters
+description: Use Spark History Server to debug and diagnose Spark applications running on SQL Server 2019 big data clusters.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ""
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 # Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server
 
@@ -35,31 +37,31 @@ Select job ID then click **Data** on the tool menu to get the data view.
 
 + Check the **Inputs**, **Outputs**, and **Table Operations** by selecting the tabs separately.
 
-    ![Data tabs](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Spark History Server data tabs](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + Copy all rows by clicking button **Copy**.
 
-    ![Data copy](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![Copy all rows](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + Save all data as CSV file by clicking button **csv**.
 
-    ![Data save](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![Save data as CSV files](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + Search by entering keywords in field **Search**, the search result will display immediately.
 
-    ![Data search](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![Search with keywords](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + Click the column header to sort table, click the plus sign to expand a row to show more details, or click the minus sign to collapse a row.
 
-    ![Data table](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![Data table functionality](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + Download single file by clicking button **Partial Download** that place at the right, then the selected file is downloaded to local place. If the file does not exist any more, it will open a new tab to show the error messages.
 
-    ![Data download row](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![Download a data row](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + Copy full path or relative path by selecting the **Copy Full Path**, **Copy Relative Path** that expands from download menu. For azure data lake storage files, **Open in Azure Storage Explorer** will launch Azure Storage Explorer. And locate to the exact folder when signing in.
 
-    ![Data copy path](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![Copy a full or relative path](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + Click the number below the table to navigate pages when too many rows to display in one page. 
 
@@ -161,7 +163,7 @@ Click **Data Skew** tab, the corresponding skewed tasks are displayed based on t
 
     ![Data skew section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **Skew Chart** – When a row in the skew stage table is selected, the skew chart displays more task distributions details based on data read and execution time. The skewed tasks are marked in red and the normal tasks are marked in blue. For performance consideration, the chart only displays up to 100 sample tasks. The task details are displayed in right bottom panel.
++ **Skew Chart** - When a row in the skew stage table is selected, the skew chart displays more task distributions details based on data read and execution time. The skewed tasks are marked in red and the normal tasks are marked in blue. For performance consideration, the chart only displays up to 100 sample tasks. The task details are displayed in right bottom panel.
 
     ![Data skew section3](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 
@@ -177,7 +179,7 @@ The **Time Skew** tab displays skewed tasks based on task execution time.
 ### Executor Usage Analysis
 The Executor Usage Graph visualizes the Spark job actual executor allocation and running status.  
 
-+ Click **Executor Usage Analysis**, then we draft four types curves about executor usage. They include **Allocated Executors**, **Running Executors**, **idle Executors**, and **Max Executor Instances**. Regarding allocated executors, each "Executor added" or "Executor removed" event will increase or decrease the allocated executors. You can check "Event Timeline" in the “Jobs" tab for more comparison.
++ Click **Executor Usage Analysis**, then we draft four types curves about executor usage. They include **Allocated Executors**, **Running Executors**, **idle Executors**, and **Max Executor Instances**. Regarding allocated executors, each "Executor added" or "Executor removed" event will increase or decrease the allocated executors. You can check "Event Timeline" in the "Jobs" tab for more comparison.
 
     ![Executors tab](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
 

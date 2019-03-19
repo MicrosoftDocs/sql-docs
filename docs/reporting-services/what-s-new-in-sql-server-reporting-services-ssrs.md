@@ -1,14 +1,12 @@
 ---
 title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "09/06/2018"
+author: markingmyname
+ms.author: maghan
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
-
-
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
+ms.date: 02/28/2019
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
@@ -28,7 +26,7 @@ To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## SQL Server 2019 preview Reporting Services
 
-[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services isn’t available for CTP 2.1. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services isn't available for CTP 2.3. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -56,7 +54,7 @@ In Report Builder and SQL Server Data Tools, you can now create native DAX queri
  
 Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
-* Download [SQL Server 2016 Report Builder](https://go.microsoft.com/fwlink/?LinkId=734968).
+* Download [SQL Server Report Builder](https://go.microsoft.com/fwlink/?LinkId=734968).
 * Download [SQL Server Data Tools - Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
 > **Note**: You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
@@ -189,7 +187,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 [What's New in Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Backward Compatibility](reporting-services-backward-compatibility.md)   
-[Reporting Services Features Supported by the Editions of SQL Server 2016](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Reporting Services Features supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 [Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 

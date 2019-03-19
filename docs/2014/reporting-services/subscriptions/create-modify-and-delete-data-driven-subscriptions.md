@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Create, Modify, and Delete a Data-Driven Subscription
   A data-driven subscription is a query-based subscription that gets the data values used for processing the subscription at run time. When the subscription is triggered, a query is processed to get up-to-date information about recipients, report delivery options, rendering formats, and parameter settings. The query results are combined with the subscription definition to create a dynamic subscription that uses data you already maintain in an employee database, a customer database, or any other database that contains information that can be used as subscriber data.  
@@ -92,7 +92,7 @@ manager: craigg
 ##  <a name="bkmk_run_subscription"></a> Run a subscription  
  You configure the conditions for subscription processing. You can configure a schedule, or you can trigger the subscription to coincide with updates to a report execution snapshot.  
   
- ![note](../media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the “Script: Run (fire) a single subscription” section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![note](../media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the "Script: Run (fire) a single subscription" section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Schedule and conditions for running a data-driven subscriptions is the same as processing for standard subscriptions.  
   

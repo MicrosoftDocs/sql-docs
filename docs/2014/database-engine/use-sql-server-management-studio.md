@@ -20,7 +20,7 @@ manager: craigg
   
  SSMS combines the features of Enterprise Manager, Query Analyzer, and Analysis Manager, included in previous releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], into a single environment. In addition, SSMS works with all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] such as [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Developers get a familiar experience, and database administrators get a single comprehensive utility that combines easy-to-use graphical tools with rich scripting capabilities.  
   
- Download and install SSMS from the [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
+ Download and install SSMS from the [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## In This Section  
  [Features in SQL Server Management Studio](features-in-sql-server-management-studio.md)  

@@ -40,7 +40,7 @@ On Linux, POSIX primitives are owned by the user creating them and their default
    sudo su mssql
    ```
 
-2. Add the mssql user to the vdiuser’s group, and the vdiuser to the mssql group.
+2. Add the mssql user to the vdiuser's group, and the vdiuser to the mssql group.
    
    Execute the following commands:
 
@@ -76,8 +76,8 @@ This chapter contains descriptions of each of the client functions. The descript
 
 | Parameters | Argument | Explanation
 | ----- | ----- | ------ |
-| | **name** | This identifies the virtual device set. The rules for names used by CreateFileMapping() must be followed. Any character except backslash (\) may be used. This is a character string. Prefixing the string with the user’s product or company name and database name is recommended. |
-| |**cfg** | This is the configuration for the virtual device set. For more information, see “Configuration” later in this document.
+| | **name** | This identifies the virtual device set. The rules for names used by CreateFileMapping() must be followed. Any character except backslash (\) may be used. This is a character string. Prefixing the string with the user's product or company name and database name is recommended. |
+| |**cfg** | This is the configuration for the virtual device set. For more information, see "Configuration" later in this document.
 
 | Return Values | Argument | Explanation
 | ----- | ----- | ------ |
@@ -101,7 +101,7 @@ This chapter contains descriptions of each of the client functions. The descript
 | Parameters | Argument | Explanation
 | ----- | ----- | ------ |
 | | **timeout** | This is the time-out in milliseconds. Use INFINITE or any negative integer to prevent time-out.
-| | **cfg** | Upon successful execution, this contains the configuration selected by the server. For more information, see “Configuration” later in this document.
+| | **cfg** | Upon successful execution, this contains the configuration selected by the server. For more information, see "Configuration" later in this document.
 
 | Return Values | Argument | Explanation
 | ----- | ----- | ------ |
@@ -157,7 +157,7 @@ If this function does not succeed, then a null value is returned through the ppV
 | ----- | ----- | ------ |
 | |**timeout** |This is the time to wait, in milliseconds. Use INFINTE to wait indefinitely. Use 0 to poll for a command. VD_E_TIMEOUT is returned if no command is currently available . If the time-out occurs, the client decides the next action.
 | |**Timeout** |This is the time to wait, in milliseconds. Use INFINTE or a negative value to wait indefinitely. Use 0 to poll for a command. VD_E_TIMEOUT is returned if no command is available before the timeout expires. If the timeout occurs, the client decides the next action.
-| |**ppCmd** |When a command is successfully returned, the parameter returns the address of a command to execute. The memory returned is read-only. When the command is completed, this pointer is passed to the CompleteCommand routine. For details about each command, see “Commands” later in this document.
+| |**ppCmd** |When a command is successfully returned, the parameter returns the address of a command to execute. The memory returned is read-only. When the command is completed, this pointer is passed to the CompleteCommand routine. For details about each command, see "Commands" later in this document.
 		
 | Return Values | Argument | Explanation
 | ----- | ----- | ------ |
@@ -171,7 +171,7 @@ When this routine must block to wait for a command, the thread is left in an Ale
 
 ## ClientVirtualDevice::CompleteCommand
 
-**Purpose**	This function is used to notify SQL Server that a command has finished. Completion information appropriate for the command should be returned. For more information, see “Commands” later in this document.
+**Purpose**	This function is used to notify SQL Server that a command has finished. Completion information appropriate for the command should be returned. For more information, see "Commands" later in this document.
 
 **Syntax** 
 
@@ -187,7 +187,7 @@ When this routine must block to wait for a command, the thread is left in an Ale
 | Parameters | Argument | Explanation
 | ----- | ----- | ------ |
 | |**pCmd** |This is the address of a command previously returned from ClientVirtualDevice::GetCommand.
-| |**completionCode** |This is a status code that indicates the completion status. This parameter must be returned for all commands. The code returned should be appropriate to the command being performed. ERROR_SUCCESS is used in all cases to denote a successfully executed command. For the complete list of possible codes, see the file, vdierror.h. A list of typical status codes for each command appears in “Commands” later in this document.
+| |**completionCode** |This is a status code that indicates the completion status. This parameter must be returned for all commands. The code returned should be appropriate to the command being performed. ERROR_SUCCESS is used in all cases to denote a successfully executed command. For the complete list of possible codes, see the file, vdierror.h. A list of typical status codes for each command appears in "Commands" later in this document.
 | |**bytesTransferred** |This is the number of successfully transferred bytes. This is returned only for data transfer commands Read and Write.
 | |**position** |This is a response to the GetPosition   command only.
 		
@@ -218,7 +218,7 @@ When this routine must block to wait for a command, the thread is left in an Ale
 | ----- | ----- | ------ |
 | |**NOERROR**|The Abort notification was successfully posted.
 
-**Remarks** At any time, the client may choose to abort the BACKUP or RESTORE operation. This routine signals that all operations should cease. The state of the overall virtual device set enters an Abnormally Terminated state. No further commands are returned on any devices. All uncompleted commands are automatically completed, returning ERROR_OPERATION_ABORTED as a completion code. The client should call ClientVirtualDeviceSet::Close after it has safely terminated any outstanding use of buffers provided to the client. For more information, see “Abnormal Termination” earlier in this document.
+**Remarks** At any time, the client may choose to abort the BACKUP or RESTORE operation. This routine signals that all operations should cease. The state of the overall virtual device set enters an Abnormally Terminated state. No further commands are returned on any devices. All uncompleted commands are automatically completed, returning ERROR_OPERATION_ABORTED as a completion code. The client should call ClientVirtualDeviceSet::Close after it has safely terminated any outstanding use of buffers provided to the client. For more information, see "Abnormal Termination" earlier in this document.
 
 ## ClientVirtualDeviceSet::Close
 
@@ -243,7 +243,7 @@ When this routine must block to wait for a command, the thread is left in an Ale
 **Remarks**	The invocation of Close is a client declaration that all resources used by the virtual device set should be released. The client must ensure that all activity involving data buffers and virtual devices is terminated before invoking Close. All virtual device interfaces returned by OpenDevice are invalidated by Close.
 The client is permitted to issue a Create call on the virtual device set interface after the Close call is returned. Such a call would create a new virtual device set for a subsequent BACKUP or RESTORE operation.
 If Close is called when one or more virtual devices are still open, VD_E_OPEN is returned. In this case, SignalAbort is internally triggered, to ensure a proper shutdown if possible. VDI resources are released. The client should wait for a VD_E_CLOSE indication on each device before invoking ClientVirtualDeviceSet::Close. If the client knows that the virtual device set is already in an Abnormally Terminated state, then it should not expect a VD_E_CLOSE indication from GetCommand, and may invoke ClientVirtualDeviceSet::Close as soon as activity on the shared buffers is terminated.
-For more information, see “Abnormal Termination” earlier in this document.
+For more information, see "Abnormal Termination" earlier in this document.
 
 ## ClientVirtualDeviceSet::OpenInSecondary
 
@@ -292,6 +292,7 @@ For more information, see “Abnormal Termination” earlier in this document.
 | |**NOERROR** |The function succeeded.
 | |**VD_E_PROTOCOL** |The virtual device set is not currently open.
 | |**VD_E_INVALID** |The pBuffer is not a valid address.
+
 Remarks	The process that invokes the GetBufferHandle function is responsible for invoking ClientVirtualDevice::CompleteCommand when the data transfer is complete.
 
 ## ClientVirtualDeviceSet::MapBufferHandle

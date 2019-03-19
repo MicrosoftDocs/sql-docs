@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "displaying deleted rows"
   - "UPDATE statement [SQL Server], OUTPUT clause"
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # OUTPUT Clause (Transact-SQL)
@@ -209,7 +209,7 @@ DELETE Sales.ShoppingCartItem
 ## Parallelism
  An OUTPUT clause that returns results to the client will always use a serial plan.
 
-In the context of a database set to compatibility level 130 or higher, if an INSERT...SELECT operation uses a WITH (TABLOCK) hint for the SELECT statement and also uses OUTPUT…INTO to insert into a temporary or user table, then the target table for the INSERT…SELECT will be eligible for parallelism depending on the subtree cost.  The target table referenced in the OUTPUT INTO clause will not be eligible for parallelism. 
+In the context of a database set to compatibility level 130 or higher, if an INSERT...SELECT operation uses a WITH (TABLOCK) hint for the SELECT statement and also uses OUTPUT...INTO to insert into a temporary or user table, then the target table for the INSERT...SELECT will be eligible for parallelism depending on the subtree cost.  The target table referenced in the OUTPUT INTO clause will not be eligible for parallelism. 
  
 ## Triggers  
  Columns returned from OUTPUT reflect the data as it is after the INSERT, UPDATE, or DELETE statement has completed but before triggers are executed.  

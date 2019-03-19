@@ -55,7 +55,7 @@ manager: craigg
  When you use a custom provider to store BLOBs outside of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure that you protect the stored BLOBs with permissions and encryption options that are appropriate to the storage medium used by the custom provider.  
   
 ### Credential store symmetric key  
- If a provider requires the setup and use of a secret stored within the credential store, RBS uses a symmetric key to encrypt the  provider secrets which a client may use to gain authorization to the provider’s blob store.  
+ If a provider requires the setup and use of a secret stored within the credential store, RBS uses a symmetric key to encrypt the  provider secrets which a client may use to gain authorization to the provider's blob store.  
   
 -   RBS 2016 uses an **AES_128** symmetric key. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] does not allow the creation of new **TRIPLE_DES** keys except for backwards compatibility reasons. For more information, see [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
@@ -65,7 +65,7 @@ manager: craigg
 `SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` If the output from that statement shows that **TRIPLE_DES** is still used, then you should rotate this key.  
   
 ### Rotating the symmetric key  
- When using RBS, you should periodically rotate the credential store symmetric key. This is a common security best practice to meet organizational security policies.  One way to rotate the RBS credential store symmetric key, is to use the [script below](#Key_rotation) in the RBS database.  You can also use this script to migrate to stronger encryption strength properties, such as algorithm or key length. Backup your database prior to key rotation.  At the script’s conclusion, it has some verification steps.  
+ When using RBS, you should periodically rotate the credential store symmetric key. This is a common security best practice to meet organizational security policies.  One way to rotate the RBS credential store symmetric key, is to use the [script below](#Key_rotation) in the RBS database.  You can also use this script to migrate to stronger encryption strength properties, such as algorithm or key length. Backup your database prior to key rotation.  At the script's conclusion, it has some verification steps.  
 If your security policies require different key properties (e.g., algorithm or key length) from the ones provided, then the script may be used as a template. Modify the key properties in two places: 1) the creation of the temporary key 2) the creation of the permanent key.  
   
 ##  <a name="rbsresources"></a> RBS resources  

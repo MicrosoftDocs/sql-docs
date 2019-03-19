@@ -5,7 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], monitoring"
@@ -70,7 +69,7 @@ manager: craigg
  When a cleanup is performed, the low watermark for all capture instances is initially updated in a single transaction. It then tries to remove obsolete entries from the change tables and the cdc.lsn_time_mapping table. The configurable threshold value limits how many entries are deleted in any single statement. Failure to perform the delete on any individual table will not prevent the operation from being attempted on the remaining tables.  
   
 ### Cleanup Job Customization  
- For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases’ change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
+ For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases' change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
   
 ##  <a name="Monitor"></a> Monitor the Change Data Capture Process  
  Monitoring the change data capture process lets you determine if changes are being written correctly and with a reasonable latency to the change tables. Monitoring can also help you to identify any errors that might occur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) and [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Configure Report Manager (Native Mode)
   Report Manager is a Web front end application used to view reports, manage report server content, and grant user access to a native mode report server. Report Manager is installed with the Report Server Web service within the same report server instance and optionally configured if you select the **Install in the default native mode configuration** option in Setup. You can also configure Report Manager as a post-installation task. This topic provides information about the following Report Manager configuration scenarios:  
@@ -49,7 +49,7 @@ manager: craigg
   
 -   You must have a minimally configured report server. For more information about minimally configuring a report server, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](configure-a-report-server-reporting-services-native-mode.md).  
   
--   Your report server must run in native mode. You cannot use Report Manager with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a ‘migration’. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
+-   Your report server must run in native mode. You cannot use Report Manager with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a 'migration'. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 -   You must also have Internet Explorer 7.0 or later with scripting enabled. For more information, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   

@@ -87,10 +87,10 @@ NATURAL PREDICTION JOIN
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29…|0.25…|  
-|Water Bottle|2866|0.19…|0.17…|  
-|Patch kit|2113|0.14…|0.13…|  
-|Mountain Tire Tube|1992|0.133…|0.12…|  
+|Sport-100|4334|0.29...|0.25...|  
+|Water Bottle|2866|0.19...|0.17...|  
+|Patch kit|2113|0.14...|0.13...|  
+|Mountain Tire Tube|1992|0.133...|0.12...|  
   
  **Note** This example is provided only to illustrate the usage of TopPercent. Depending on the size of your data set, this query might take a long time to run.  
   

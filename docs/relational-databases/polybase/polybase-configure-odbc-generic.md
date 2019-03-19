@@ -27,13 +27,13 @@ First download and install the ODBC driver of the data source you want to connec
 
 ![PolyBase scale-out groups](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-  > **IMPORTANT!**
-  >
-  > In order to improve query performance make sure that the driver has connection pooling enabled. This can be accomplished from the "ODBC Data Source Administrator".
-
+> **IMPORTANT!**
+> 
+> In order to improve query performance make sure that the driver has connection pooling enabled. This can be accomplished from the "ODBC Data Source Administrator".
+> 
 > **Note**
 > 
->The name of the driver (example circled above) will need to be specified when creating the external data source (Step 3 below).
+> The name of the driver (example circled above) will need to be specified when creating the external data source (Step 3 below).
 
 ## Create an External Table
 
@@ -78,7 +78,8 @@ These objects will be created in this section:
     CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH ( 
     LOCATION = odbc://<ODBC server address>[:<port>],
-    CONNECTION_OPTIONS = 'SSL=0;sslAllowInvalidCertificates=1;Driver={<Name of Installed Driver>};HOST=%s;AUTHMECH=0',
+    CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
+    ServerNode = <name of server  address>:<Port>',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = credential_name
     );

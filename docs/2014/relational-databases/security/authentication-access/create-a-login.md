@@ -61,19 +61,19 @@ manager: craigg
   
 1.  In Object Explorer, expand the folder of the server instance in which you want to create the new login.  
   
-2.  Right-click the **Security** folder, point to **New**, and select **Login…**.  
+2.  Right-click the **Security** folder, point to **New**, and select **Login...**.  
   
-3.  In the **Login – New** dialog box, on the **General** page, enter the name of a user in the **Login name** box. Alternately, click **Search…** to open the **Select User or Group** dialog box.  
+3.  In the **Login - New** dialog box, on the **General** page, enter the name of a user in the **Login name** box. Alternately, click **Search...** to open the **Select User or Group** dialog box.  
   
-     If you click **Search…**:  
+     If you click **Search...**:  
   
-    1.  Under **Select this object type**, click **Object Types…** to open the **Object Types** dialog box and select any or all of the following: **Built-in security principals**, **Groups**, and **Users**. **Built-in security principals** and **Users** are selected by default. When finished, click **OK**.  
+    1.  Under **Select this object type**, click **Object Types...** to open the **Object Types** dialog box and select any or all of the following: **Built-in security principals**, **Groups**, and **Users**. **Built-in security principals** and **Users** are selected by default. When finished, click **OK**.  
   
-    2.  Under **From this location**, click **Locations…** to open the **Locations** dialog box and select one of the available server locations. When finished, click **OK**.  
+    2.  Under **From this location**, click **Locations...** to open the **Locations** dialog box and select one of the available server locations. When finished, click **OK**.  
   
-    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Click **Advanced…** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Click **Advanced...** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Click **OK**.  
   
@@ -104,7 +104,7 @@ manager: craigg
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### Additional Options  
- The **Login – New** dialog box also offers options on four additional pages: **Server Roles**, **User Mapping**, **Securables**, and **Status**.  
+ The **Login - New** dialog box also offers options on four additional pages: **Server Roles**, **User Mapping**, **Securables**, and **Status**.  
   
 ### Server Roles  
  The **Server Roles** page lists all possible roles that can be assigned to the new login. The following options are available:  
@@ -140,7 +140,7 @@ manager: craigg
  The **User Mapping** page lists all possible databases and the database role memberships on those databases that can be applied to the login. The databases selected determine the role memberships that are available for the login. The following options are available on this page:  
   
  **Users mapped to this login**  
- Select the databases that this login can access. When you select a database, its valid database roles are displayed in the **Database role membership for:** *database_name* pane.  
+ Select the databases that this login can access. When you select a database, its valid database roles are displayed in the **Database role membership for:** _database_name_ pane.  
   
  **Map**  
  Allow the login to access the databases listed below.  
@@ -154,10 +154,10 @@ manager: craigg
  **Default Schema**  
  Specifies the default schema of the user. When a user is first created, its default schema is **dbo**. It is possible to specify a default schema that does not yet exist. You cannot specify a default schema for a user that is mapped to a Windows group, a certificate, or an asymmetric key.  
   
- **Guest account enabled for:**  *database_name*  
+ **Guest account enabled for:**  _database_name_  
  Read-only attribute indicating whether the Guest account is enabled on the selected database. Use the **Status** page of the **Login Properties** dialog box of the Guest account to enable or disable the Guest account.  
   
- **Database role membership for:**  *database_name*  
+ **Database role membership for:**  _database_name_  
  Select the roles for the user in the specified database. All users are members of the **public** role in every database and cannot be removed. For more information about database roles, see [Database-Level Roles](database-level-roles.md).  
   
 ### Securables  
@@ -170,24 +170,24 @@ manager: craigg
   
 1.  Click **Search**.  
   
-2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects…**, **All objects of the types…**, or **The server***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server**_server_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Selecting **The server***server_name* automatically fills the upper grid with all of that servers' securable objects.  
+    >  Selecting **The server**_server_name_ automatically fills the upper grid with all of that servers' securable objects.  
   
-3.  If you select **Specific objects…**:  
+3.  If you select **Specific objects...**:  
   
-    1.  In the **Select Objects** dialog box, under **Select these object types**, click **Object Types…**.  
+    1.  In the **Select Objects** dialog box, under **Select these object types**, click **Object Types...**.  
   
     2.  In the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Under **Enter the object names to select (examples)**, click **Browse…**.  
+    3.  Under **Enter the object names to select (examples)**, click **Browse...**.  
   
     4.  In the **Browse for Objects** dialog box, select any of the available objects of the type that you selected in the **Select Object Types** dialog box, and then click **OK**.  
   
     5.  In the **Select Objects** dialog box, click **OK**.  
   
-4.  If you select **All objects of the types…**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  If you select **All objects of the types...**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Name**  
  The name of each principal or securable that is added to the grid.  

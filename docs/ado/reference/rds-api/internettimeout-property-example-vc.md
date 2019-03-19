@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/20/2017"
 ms.reviewer: ""
 ms.topic: conceptual
 dev_langs: 
@@ -22,7 +22,7 @@ manager: craigg
   
  This example demonstrates the [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) property, which exists on the [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) and [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objects. In this case, the **InternetTimeout** property is demonstrated on the **DataControl** object and the timeout is set to 20 seconds.  
   
-```  
+```cpp
 // BeginInternetTimeoutCpp  
 #import "c:\Program Files\Common Files\System\ADO\msado15.dll" \  
     no_namespace rename("EOF", "EndOfFile")  

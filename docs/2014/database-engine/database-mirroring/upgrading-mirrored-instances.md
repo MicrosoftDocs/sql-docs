@@ -107,7 +107,7 @@ manager: craigg
 4.  Upgrade each server instance that is now the mirror server in all mirroring sessions in which it is a partner. You might have to update multiple servers at this point.  
   
     > [!IMPORTANT]  
-    >  In a complex mirroring configuration, some server instance might still be the original principal server in one or more mirroring sessions. Repeat steps 2–4 for those server instances until all instances involved are upgraded.  
+    >  In a complex mirroring configuration, some server instance might still be the original principal server in one or more mirroring sessions. Repeat steps 2-4 for those server instances until all instances involved are upgraded.  
   
 5.  Resume the mirroring session.  
   

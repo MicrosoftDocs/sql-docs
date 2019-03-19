@@ -60,7 +60,7 @@ manager: craigg
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, click **Save***table_name*.  
+8.  On the **File** menu, click **Save**_table_name_.  
   
 #### To rename an index by using Object Explorer  
   
@@ -74,7 +74,7 @@ manager: craigg
   
 5.  Right-click the index you want to rename and select **Rename**.  
   
-6.  Type the index’s new name and press Enter.  
+6.  Type the index's new name and press Enter.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -39,16 +39,16 @@ When an application calls **SQLExecute** or **SQLExecDirect**, the driver retrie
   
  The following terms are used in the tables:  
   
--   **Byte length of data** — Number of bytes of SQL data available to send to the data source, whether or not the data will be truncated before it is sent to the data source. For string data, this does not include space for the null-termination character.  
+-   **Byte length of data** - Number of bytes of SQL data available to send to the data source, whether or not the data will be truncated before it is sent to the data source. For string data, this does not include space for the null-termination character.  
   
--   **Column byte length** — Number of bytes required to store the data at the data source.  
+-   **Column byte length** - Number of bytes required to store the data at the data source.  
   
--   **Character byte length** — Maximum number of bytes needed to display data in character form. This is as defined for each SQL data type in [Display Size](../../../odbc/reference/appendixes/display-size.md), except character byte length is in bytes, while the display size is in characters.  
+-   **Character byte length** - Maximum number of bytes needed to display data in character form. This is as defined for each SQL data type in [Display Size](../../../odbc/reference/appendixes/display-size.md), except character byte length is in bytes, while the display size is in characters.  
   
--   **Number of digits** — Number of characters used to represent a number, including the minus sign, decimal point, and exponent (if needed).  
+-   **Number of digits** - Number of characters used to represent a number, including the minus sign, decimal point, and exponent (if needed).  
   
 -   **Words in**   
-     ***italics***  — Elements of the SQL grammar. For the syntax of grammar elements, see [Appendix C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***italics***  - Elements of the SQL grammar. For the syntax of grammar elements, see [Appendix C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  This section contains the following topics.  
   

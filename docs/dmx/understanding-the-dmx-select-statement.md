@@ -27,7 +27,7 @@ manager: kfile
   
 -   Copy mining models.  
   
- Each of these tasks uses a different set of data, which we’ll call a *data domain*. You define the data domain in the **FROM** clause of the statement.  
+ Each of these tasks uses a different set of data, which we'll call a *data domain*. You define the data domain in the **FROM** clause of the statement.  
   
 -   You want to find objects in the data mining model itself, such as the rule that defines a set of data, or a formula used to make predictions.  
   

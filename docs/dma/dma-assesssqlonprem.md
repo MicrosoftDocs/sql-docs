@@ -2,7 +2,7 @@
 title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---
@@ -43,7 +43,7 @@ The following step-by-step instructions help you perform your first assessment f
    When you're assessing your source SQL Server instance for migrating to on-premises SQL Server or to SQL Server hosted on Azure VM targets, you can choose one or both of the following assessment report types:
 
     -   **Compatibility Issues**
-    -   **New features’ recommendation**
+    -   **New features' recommendation**
 
     ![Select an assessment report type for SQL Server target](../dma/media/AssessmentTypes.png)
 

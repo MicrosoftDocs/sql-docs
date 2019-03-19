@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database restores [SQL Server], recovery-only"
   - "recovery [SQL Server], without restoring data"
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Recover a Database Without Restoring Data (Transact-SQL)
@@ -59,7 +59,7 @@ RESTORE DATABASE AdventureWorks2012
   
  The [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) syntax for a recovery-only file restore is:  
   
- RESTORE DATABASE *database_name* { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY  
   
  **Example**  
   

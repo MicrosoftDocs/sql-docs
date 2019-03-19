@@ -55,29 +55,29 @@ You may want to write your own handler if you are an IIS server administrator wh
   
 ```cpp
 [  
-  uuid(D80DE8B3-0001-11d1-91E6-00C04FBBBFB3),  
-  version(1.0)  
+  uuid(D80DE8B3-0001-11d1-91E6-00C04FBBBFB3),  
+  version(1.0)  
 ]  
 library MSDFHDL  
 {  
-    importlib("stdole32.tlb");  
-    importlib("stdole2.tlb");  
+    importlib("stdole32.tlb");  
+    importlib("stdole2.tlb");  
   
-    // TLib : Microsoft ActiveX Data Objects 2.0 Library  
-    // {00000200-0000-0010-8000-00AA006D2EA4}  
-    #ifdef IMPLIB  
-    importlib("implib\\x86\\release\\ado\\msado15.dll");  
-    #else  
-    importlib("msado20.dll");  
-    #endif  
+    // TLib : Microsoft ActiveX Data Objects 2.0 Library  
+    // {00000200-0000-0010-8000-00AA006D2EA4}  
+    #ifdef IMPLIB  
+    importlib("implib\\x86\\release\\ado\\msado15.dll");  
+    #else  
+    importlib("msado20.dll");  
+    #endif  
   
-    [  
-      odl,  
-      uuid(D80DE8B5-0001-11d1-91E6-00C04FBBBFB3),  
-      version(1.0)  
-    ]  
-    interface IDataFactoryHandler : IUnknown  
-    {  
+    [  
+      odl,  
+      uuid(D80DE8B5-0001-11d1-91E6-00C04FBBBFB3),  
+      version(1.0)  
+    ]  
+    interface IDataFactoryHandler : IUnknown  
+    {  
 HRESULT _stdcall GetRecordset(  
       [in] BSTR conn,  
       [in] BSTR args,  
@@ -90,7 +90,7 @@ HRESULT _stdcall GetRecordset(
       [in] BSTR conn,  
       [in] BSTR args,  
       [in] _Recordset *pRS);  
-    };  
+    };  
 };  
 ```  
   

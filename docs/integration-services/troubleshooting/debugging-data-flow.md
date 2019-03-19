@@ -34,7 +34,7 @@ manager: craigg
   
  A data viewer can display data in a grid. Using a grid, you select the columns to display. The values for the selected columns display in a tabular format.  
   
- You can also include multiple data viewers on a path. You can display the same data in different formats—for example, create a chart view and a grid view of the data—or create different data viewers for different columns of data.  
+ You can also include multiple data viewers on a path. You can display the same data in different formats-for example, create a chart view and a grid view of the data-or create different data viewers for different columns of data.  
   
  When you add a data viewer to a path, [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer adds a data viewer icon to the design surface of the **Data Flow** tab, next to the path. Transformations that can have multiple outputs, such as the Conditional Split transformation, can include a data viewer on each path.  
   
@@ -83,9 +83,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - the sum of all the rows sent by the component  
   
--   **wall_clock_time_ms** – the total elapsed execution time, in milliseconds, for each component  
+-   **wall_clock_time_ms** - the total elapsed execution time, in milliseconds, for each component  
   
--   **num_rows_per_millisecond** – the number of rows per millisecond sent by each component  
+-   **num_rows_per_millisecond** - the number of rows per millisecond sent by each component  
   
  The **HAVING** clause is used to prevent a divide-by-zero error in the calculations.  
   

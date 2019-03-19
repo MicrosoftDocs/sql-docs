@@ -27,8 +27,8 @@ manager: craigg
  The following query returns the product model IDs and weights, if they exist, from the product catalog description. The query constructs XML that has the following form:  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -89,7 +89,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
  For product models whose catalog descriptions include front-angle and small-size pictures, the query constructs XML that has the following form:  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  
@@ -211,9 +211,9 @@ WHERE ProductModelID=19
   <p2:Maintenance>...  </p2:Maintenance>  
   <p3:wheel xmlns:p3="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p3:wheel>  
   <p4:saddle xmlns:p4="https://www.adventure-works.com/schemas/OtherFeatures">  
-    <p5:i xmlns:p5="https://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
+    <p5:i xmlns:p5="http://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
   <p6:pedal xmlns:p6="https://www.adventure-works.com/schemas/OtherFeatures">  
-    <p7:b xmlns:p7="https://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
+    <p7:b xmlns:p7="http://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
    ...  
 ```  
   
@@ -307,7 +307,7 @@ ProductModelID Result
 -------------- ------------------------------------------  
 28     <Prod ProductModelID="28">  
         <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-       <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
+       <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
          A TRUE multi-sport bike that offers streamlined riding and a  
          revolutionary design. Aerodynamic design lets you ride with the   
          pros, and the gearing will conquer hilly roads.</p1:p>  

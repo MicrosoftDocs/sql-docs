@@ -29,11 +29,11 @@ manager: craigg
 ## Components  
  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW has the following components:  
   
--   **SAP BW Source**—The SAP BW source is a data flow source component that lets you extract data from an SAP Netweaver BW version 7 system.  
+-   **SAP BW Source**-The SAP BW source is a data flow source component that lets you extract data from an SAP Netweaver BW version 7 system.  
   
--   **SAP BW Destination**—The SAP BW destination is a data flow destination component that lets you load data into an SAP Netweaver BW version 7 system.  
+-   **SAP BW Destination**-The SAP BW destination is a data flow destination component that lets you load data into an SAP Netweaver BW version 7 system.  
   
--   **SAP BW Connection Manager**—The SAP BW connection manager connects either an SAP BW source or SAP BW destination to an SAP Netweaver BW version 7 system.  
+-   **SAP BW Connection Manager**-The SAP BW connection manager connects either an SAP BW source or SAP BW destination to an SAP Netweaver BW version 7 system.  
   
  For a walkthrough that demonstrates how to configure and use the SAP BW connection manager, source, and destination, see the white paper, [Using SQL Server Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). This white paper also shows how to configure the required objects in SAP BW.  
   

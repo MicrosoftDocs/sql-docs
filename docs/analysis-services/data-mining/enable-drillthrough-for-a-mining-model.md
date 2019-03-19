@@ -18,7 +18,7 @@ manager: kfile
   
 -   Drillthrough permissions on the model enable you to drill through from the model, even if you do not have permissions on the structure.  
   
--   Drillthrough permissions on the structure provide the additional ability to include structure columns in drillthrough queries from the model, by using the [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) function. You can also query the training and test cases in the structure by using the SELECT… FROM \<structure>.CASES syntax.  
+-   Drillthrough permissions on the structure provide the additional ability to include structure columns in drillthrough queries from the model, by using the [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) function. You can also query the training and test cases in the structure by using the SELECT... FROM \<structure>.CASES syntax.  
   
  **Caching of training cases** Drillthrough works by retrieving information about the training cases in the mining structure. This information is cached when the structure is processed. Therefore, if you choose to clear all cached data by changing the <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> property to **ClearAfterProcessing**, drillthrough will not work.  
   

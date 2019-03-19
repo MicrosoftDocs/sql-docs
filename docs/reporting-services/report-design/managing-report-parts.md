@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Managing Report Parts
   Report parts can be reused in paginated reports, by multiple users and in multiple reports. Users can search for report parts on the server and add them to a report.  Users can also be informed of updates to the report part on the server, and republish new versions of a report part. Those report authoring actions can be affected by and controlled by reporting services security permissions.  This topic reviews report part properties and behavior after they are on the server.  
@@ -80,7 +80,7 @@ ms.author: maggies
     > [!IMPORTANT]  
     >  In each of these steps, ensure that the report parts are being reused in reports from trusted locations and users.  
   
--   Report parts use the same permission policies as the existing “Resource” item type. Within a folder, there is no differentiation between traditional resource items and report parts from a security inheritance perspective. The report part will inherit the same permission policy as the images in the same folder. When this distinction is needed, item level security can be configured for the desired report parts. Or, you can put report parts should be in separate folders that have the correct permissions configured.  
+-   Report parts use the same permission policies as the existing "Resource" item type. Within a folder, there is no differentiation between traditional resource items and report parts from a security inheritance perspective. The report part will inherit the same permission policy as the images in the same folder. When this distinction is needed, item level security can be configured for the desired report parts. Or, you can put report parts should be in separate folders that have the correct permissions configured.  
   
 ## See Also  
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   

@@ -37,16 +37,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'***table_server'*  
+ [ **@table_server =** ] **'**_table_server'_  
  Is the name of the linked server from which to return primary key information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'***table_name***'**  
+ [ **@table_name =** ] **'**_table_name_**'**  
  Is the name of the table for which to provide primary key information. *table_name*is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'***table_schema***'**  
+ [ **@table_schema =** ] **'**_table_schema_**'**  
  Is the table schema. *table_schema* is **sysname**, with a default of NULL. In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment, this corresponds to the table owner.  
   
- [ **@table_catalog =** ] **'***table_catalog***'**  
+ [ **@table_catalog =** ] **'**_table_catalog_**'**  
  Is the name of the catalog in which the specified *table_name* resides. In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment, this corresponds to the database name. *table_catalog* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

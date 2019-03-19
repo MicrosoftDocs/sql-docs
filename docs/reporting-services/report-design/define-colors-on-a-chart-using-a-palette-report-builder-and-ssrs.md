@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Define Colors on a Chart Using a Palette (Report Builder and SSRS)
   You can change the color palette for a chart by selecting a pre-defined palette or defining a custom palette. Custom palettes are report-specific.  
@@ -38,7 +38,7 @@ ms.author: maggies
   
 3.  In the **Chart** section, for the **Palette** property, select **Custom**.  
   
-4.  In the CustomPaletteColors property, click the Edit Collection (**…**) button. The **ReportColorExpression Collection Editor** opens.  
+4.  In the CustomPaletteColors property, click the Edit Collection (**...**) button. The **ReportColorExpression Collection Editor** opens.  
   
 5.  Click **Add** to add a color. Select a color from the drop-down list or select Expression and specify a hex value for a specific color, such as ff6600 for "Orange".  
   

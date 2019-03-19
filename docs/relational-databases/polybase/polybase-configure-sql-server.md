@@ -60,7 +60,7 @@ These objects are created in this section:
     */  
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
     WITH ( 
-    LOCATION = sqlserver://SqlServer,
+    LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = SQLServerCredentials
     );

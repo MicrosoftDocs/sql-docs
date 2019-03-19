@@ -2,8 +2,8 @@
 title: "sys.dm_pdw_sql_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -29,7 +29,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |error_id|**nvarchar(36)**|Unique identifier of the error associated with this query distribution, if any.|See error_id in [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Set to NULL if no error occurred.|  
 |start_time|**datetime**|Time at which query distribution started execution.|Smaller or equal to current time and greater or equal to start_time of the query step this query distribution belongs to|  
 |end_time|**datetime**|Time at which this query distribution completed execution, was cancelled, or failed.|Greater or equal to start time, or set to NULL if the query distribution is ongoing or queued.|  
-|total_elapsed_time|**int**|Represents the time the query distribution has been running, in milliseconds.|Greater or equal to 0. Equal to the delta of start_time and end_time for completed, failed, or cancelled query distributions.<br /><br /> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning “The maximum value has been exceeded.”<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
+|total_elapsed_time|**int**|Represents the time the query distribution has been running, in milliseconds.|Greater or equal to 0. Equal to the delta of start_time and end_time for completed, failed, or cancelled query distributions.<br /><br /> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded."<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
 |row_count|**bigint**|Number of rows changed or read by this query distribution.|-1 for operations that do not change or return data, such as CREATE TABLE and DROP TABLE.|  
 |spid|**int**|Session id on the SQL Server instance running the query distribution.||  
 |command|**nvarchar(4000)**|Full text of command for this query distribution.|Any valid query or request string.|  

@@ -1,6 +1,6 @@
 ---
-title: Install SQL Server 2016 R Services (In-Database) | Microsoft Docs
-description: R in SQL Server is available when you install SQL Server 2016 R Services on Windows.
+title: Install SQL Server 2016 R Services (In-Database) - SQL Server Machine Learning
+description: Add R programming language support to a database engine on SQL Server 2016 R Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
   
@@ -23,6 +23,8 @@ In SQL Server 2017, R integration is offered in [Machine Learning Services](../r
 
 + A database engine instance is required. You cannot install just R, although you can add it incrementally to an existing instance.
 
++ For business continuity, [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for R Services. You have to install R Services, and configure packages, on each node.
+
 + Do not install R Services on a failover cluster. The security mechanism used for isolating R processes is not compatible with a Windows Server failover cluster environment.
 
 + Do not install R Services on a domain controller. The R Services portion of setup will fail.
@@ -34,7 +36,7 @@ In SQL Server 2017, R integration is offered in [Machine Learning Services](../r
   + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
   + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
   
-If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Running older and newer versions of RevoScaleR and other proprietary packages is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Running older and newer versions of RevoScaleR and other proprietary packages is not supported. For help with removing previous versions, see [Upgrade and Installation FAQ for SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the additional post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run R jobs on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
@@ -86,6 +88,19 @@ For local installations, you must run Setup as an administrator. If you install 
 
 7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
+## Set environment variables
+
+For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+
+1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+
+2. Create a new User or System variable. 
+
+  + Set variable name to `MKL_CBWR`
+  + Set the variable value to `AUTO`
+
+This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
+
 <a name="bkmk_enableFeature"></a>
 
 ##  Enable script execution
@@ -99,14 +114,14 @@ For local installations, you must run Setup as an administrator. If you install 
   
 2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
 
-   ```SQL
+   ```sql
    sp_configure
    ```
     The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
      
 3. To enable the external scripting feature, run the following statement:
   
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -127,7 +142,7 @@ Use the following steps to verify that all components used to launch external sc
 
 1. In SQL Server Management Studio, open a new query window, and run the following command:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -139,7 +154,7 @@ Use the following steps to verify that all components used to launch external sc
 
     Open a new **Query** window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then run a script such as the following:
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
 	OutputDataSet <- InputDataSet;

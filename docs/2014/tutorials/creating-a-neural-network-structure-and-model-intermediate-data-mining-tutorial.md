@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "discretization [Analysis Services]"
@@ -16,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Creating a Neural Network Structure and Model (Intermediate Data Mining Tutorial)
   To create a data mining model, you must first use the Data Mining Wizard to create a new mining structure based on the new data source view. In this task you will use the wizard to create a mining structure, and at the same time create an associated mining model that is based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm.  
@@ -82,7 +81,7 @@ manager: craigg
     |TotalOperators|Do not use|  
     |WageType|Input|  
   
-     Note that multiple predictable columns have been selected. One of the strengths of the neural network algorithm is that it can analyze all possible combinations of input and output attributes. You wouldn’t want to do this for a large data set, as it could exponentially increase processing time..  
+     Note that multiple predictable columns have been selected. One of the strengths of the neural network algorithm is that it can analyze all possible combinations of input and output attributes. You wouldn't want to do this for a large data set, as it could exponentially increase processing time..  
   
 12. On the **Specify Columns' Content and Data Type** page, verify that the grid contains the columns, content types, and data types as shown in the following table, and then click **Next**.  
   
@@ -118,7 +117,7 @@ manager: craigg
   
  As a result, when you process the model the outputs might be grouped differently than you expect. For example, if you use clustering to identify the best groups of values, the algorithm divides the values in ServiceGrade into ranges such as this one: 0.0748051948 - 0.09716216215. Although this grouping is mathematically accurate, such ranges might not be as meaningful to business users.  
   
- In this step, to make the result more intuitive, you’ll group the numerical values differently, creating copies of the numerical data column.  
+ In this step, to make the result more intuitive, you'll group the numerical values differently, creating copies of the numerical data column.  
   
 ### How Discretization Works  
  Analysis Services provides a variety of methods for binning or processing numerical data. The following table illustrates the differences between the results when the output attribute ServiceGrade has been processed three different ways:  
@@ -177,7 +176,7 @@ manager: craigg
  Alternatively, rather than using the numeric values, you could add a separate derived column that classifies the service grades into predefined target ranges, such as **Best** (ServiceGrade \<= 0.05), **Acceptable** (0.10 > ServiceGrade > 0.05), and **Poor** (ServiceGrade >= 0.10).  
   
 ###  <a name="bkmk_newColumn"></a> Create a Copy of a Column and Change the Discretization Method  
- You’ll make a copy of the mining column that contains the target attribute, ServiceGrade and change the way the numbers are grouped. You can create multiple copies of any column in a mining structure, including the predictable attribute.  
+ You'll make a copy of the mining column that contains the target attribute, ServiceGrade and change the way the numbers are grouped. You can create multiple copies of any column in a mining structure, including the predictable attribute.  
   
  For this tutorial, you will use the Equal Areas method of discretization, and specify four buckets. The groupings that result from this method are fairly close to the target values of interest to your business users.  
   

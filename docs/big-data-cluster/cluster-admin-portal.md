@@ -1,15 +1,18 @@
 ---
-title: Monitor SQL Server big data clusters (preview) with the cluster administration portal | Microsoft Docs
+title: Cluster administration portal
+titleSuffix: SQL Server 2019 big data clusters
 description: Learn how to use the cluster administration portal to monitor SQL Server 2019 big data clusters (preview).
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
-# Introduction to the cluster administration portal
+# How to use the cluster administration portal to monitor a SQL Server big data cluster
 
 If you want to monitor or troubleshoot your SQL Server 2019 big data cluster (preview), use the cluster administration portal.
 
@@ -24,10 +27,10 @@ The cluster administration portal allows you to:
 
 Follow the [quickstart to deploy your big data cluster](quickstart-big-data-cluster-deploy.md) until you get to the **cluster administration portal** section. Once you have the big data cluster running with mssqlctl, follow these instructions:
 
-Once the controller pod is running, you can use the cluster administration portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+Once the controller pod is running, you can use the cluster administration portal to monitor the deployment. You can access the portal using the external IP address and port number for the `endpoint-service-proxy` (for example: **https://\<ip-address\>:30777/portal**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 
 > [!NOTE]
-> For CTP 2.1, There is a security warning when accessing the web page since it is using auto-generated SSL certificates.
+> For CTP 2.3, There is a security warning when accessing the web page since it is using auto-generated SSL certificates.
 
 ## Overview
 

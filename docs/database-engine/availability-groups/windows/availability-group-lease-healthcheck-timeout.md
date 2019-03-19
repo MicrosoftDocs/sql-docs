@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Availability Group Lease Health Check Timeout | Microsoft Docs"
-ms.custom: ""
+title: "Mechanics of the availability group lease health check timeout"
+description: "Mechanics and guidelines for the lease, cluster, and health check times for Always On availability groups."
+ms.custom: "seodec18"
 ms.date: "05/02/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Mechanics and guidelines of lease, cluster, and health check timeouts 
+# Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 
 Differences in hardware, software, and cluster configurations as well as different application requirements for uptime and performance require specific configuration for lease, cluster, and health check timeout values. Certain applications and workloads require more aggressive monitoring to limit downtime following hard failures. Others require more tolerance for transient network issues and waits from high resource usage and are okay with slower failovers. 
 
@@ -33,13 +34,13 @@ If health detection fails to report an update to the resource DLL for multiple i
 
 ## Lease mechanism  
 
-Unlike other failover mechanisms, The SQL server instance plays an active role in the lease mechanism. When bringing the AG online as the primary replica, the SQL Server instance spawns a dedicated lease worker thread for the AG. The lease worker shares a small region of memory with the resource host containing lease renewal and lease stop events. The lease worker and resource host work in a circular fashion, signaling their respective lease renewal event and then sleeping, waiting for the other party to signal its own lease renewal event or the stop event. Both the resource host and the SQL Server lease thread maintain a time-to-live value, which is updated each time the thread wakes up after being signaled by the other thread. If the time-to-live is reached while waiting for the signal, the lease expires and then replica transitions to the resolving state for that specific AG. If the lease stop event is signaled, then the replica transitions to a resolving role. 
+Unlike other failover mechanisms, the SQL Server instance plays an active role in the lease mechanism. The lease mechanism is used as a Looks-Alive validation between the Cluster resource host and the SQL Server process. The mechanism is used to ensure that the two sides (the Cluster Service and SQL Server service) are in frequent contact, checking each other's state and ultimately preventing a split-brain scenario.  When bringing the AG online as the primary replica, the SQL Server instance spawns a dedicated lease worker thread for the AG. The lease worker shares a small region of memory with the resource host containing lease renewal and lease stop events. The lease worker and resource host work in a circular fashion, signaling their respective lease renewal event and then sleeping, waiting for the other party to signal its own lease renewal event or stop event. Both the resource host and the SQL Server lease thread maintain a time-to-live value, which is updated each time the thread wakes up after being signaled by the other thread. If the time-to-live is reached while waiting for the signal, the lease expires and then replica transitions to the resolving state for that specific AG. If the lease stop event is signaled, then the replica transitions to a resolving role. 
 
 ![image](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 The lease mechanism enforces synchronization between SQL Server and Windows Server Failover Cluster. When a failover command, is issued the cluster service makes an offline call to the resource DLL of the current primary replica. The resource DLL first attempts to take the AG offline  using a stored procedure. If this stored procedure fails or times-out, the failure is reported back to the cluster service, which then issues a terminate command. The terminate again attempts to execute the same stored procedure, but the cluster this time does not wait for the resource DLL to report success or failure before bringing the AG online on a new replica. If this second procedure call fails, then the resource host will have to rely on the lease mechanism to take the instance offline. When the resource DLL is called to take the AG offline, the resource DLL signals the lease stop event, waking up the SQL Server lease worker thread to take the AG offline. Even if this stop event is not signaled, the lease will expire, and the replica will transition to the resolving state. 
 
-The lease is primarily a synchronization mechanism between the primary instance and the cluster, but it can also create failure conditions where there was otherwise no need to fail over. For example, high CPU or tempdb pressure can starve the lease worker thread, preventing lease renewal from the SQL instance and causing a failover. 
+The lease is primarily a synchronization mechanism between the primary instance and the cluster, but it can also create failure conditions where there was otherwise no need to fail over. For example, high CPU, out-of-memory conditions (low virtual memory, process paging), SQL process failing to respond while generating a memory dump, system-wide hang, cluster (WSFC) going offline  (e.g due to quorum loss) can prevent lease renewal from the SQL instance and causing a failover. 
 
 ## Guidelines for cluster timeout values 
 
@@ -51,7 +52,7 @@ The default settings are optimized for quickly reacting to symptoms of hard fail
 
 The primary function of the lease mechanism is to take the SQL Server resource in the case that the cluster service cannot communicate with the instance while performing a failover to another node. When the cluster performs the offline operation on the AG cluster resource, the cluster service makes an RPC call to rhs.exe to take the resource offline. The resource DLL uses stored procedures to tell SQL Server to take the AG offline, but this stored procedure could fail or timeout. The resource host also stops its own lease renewal thread during the offline call. In the worst-case, SQL Server will cause the lease to expire in ½ \* LeaseTimeout and transition the instance to a resolving state. Failovers can be initiated by multiple different parties, but it is vitally important that the view of the cluster state is consistent across the cluster and across SQL Server instances. For example, imagine a scenario where the primary instance loses connection with the rest of the cluster. Each node in the cluster will determine a failure at similar times due to the cluster timeout values, but only the primary node can interact with the primary SQL Server instance to force it to give up the primary role. 
 
-From the primary node’s perspective, the cluster service will have lost quorum and the service will begin to terminate itself. The cluster service will issue an RPC call to the resource host to terminate the process. This terminate call is responsible for taking the AG offline on the SQL Server instance. This offline call is done via T-SQL, but cannot guarantee that the connection will be successfully established between SQL and the resource DLL. 
+From the primary node's perspective, the cluster service will have lost quorum and the service will begin to terminate itself. The cluster service will issue an RPC call to the resource host to terminate the process. This terminate call is responsible for taking the AG offline on the SQL Server instance. This offline call is done via T-SQL, but cannot guarantee that the connection will be successfully established between SQL and the resource DLL. 
 
 From the perspective of the rest of the cluster, there is currently no primary replica and it will vote and establish a single new primary for the remaining nodes in the cluster. If stored procedure that was called by the resource DLL, fails or times-out, the cluster could be vulnerable to a split brain scenario. 
 
@@ -117,14 +118,14 @@ The lease mechanism is controlled by a single value specific to each AG in a WSF
    ![Properties](media/availability-group-lease-healthcheck-timeout/image3.png) 
 
 
-   Depending on the AG’s configuration there may be additional resources for listeners, shared disks, file shares, etc., these resources do not require any additional configuration. 
+   Depending on the AG's configuration there may be additional resources for listeners, shared disks, file shares, etc., these resources do not require any additional configuration. 
 
    
 ### Health Check Values 
 
 Two values control the Always On health check: FailureConditionLevel and HealthCheckTimeout. The FailureConditionLevel indicates the tolerance level to specific failure conditions reported by `sp_server_diagnostics` and the HealthCheckTimeout configures the time the resource DLL can go without receiving an update from `sp_server_diagnostics`. The update interval for `sp_server_diagnostics` is always HealthCheckTimeout / 3. 
 
-To configure the failover condition level, use the `FAILURE_CONDITION_LEVEL = <n>` option of the `CREATE` or `ALTER` `AVAILABILITY GROUP` statement, where `<n>` is an integer between 1 and 5. The following command sets the failure condition level to 1 for AG ‘AG1’: 
+To configure the failover condition level, use the `FAILURE_CONDITION_LEVEL = <n>` option of the `CREATE` or `ALTER` `AVAILABILITY GROUP` statement, where `<n>` is an integer between 1 and 5. The following command sets the failure condition level to 1 for AG 'AG1': 
 
 ```sql
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 
@@ -146,6 +147,13 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | Timeout setting | Purpose | Between | Uses | IsAlive & LooksAlive | Causes | Outcome 
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | Lease timeout </br> **Default: 20000** | Prevent splitbrain | Primary to Cluster </br> (HADR) | [Windows event objects](/windows/desktop/Sync/event-objects)| Used in both | OS hang, low virtual memory, generating dump, pegged CPU, WSFC down (loss of quorum) | AG resource offline-online, failover |  
+ | Session timeout </br> **Default: 10000** | Inform of communication issue between Primary and Secondary | Secondary to Primary </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Used in neither | Network communication, </br> Issues on secondary - down, OS hang, resource contention | Secondary - DISCONNECTED | 
+ |HealthCheck timeout  </br> **Default: 30000** | Indicate timeout while trying to determine health of the Primary replica | Cluster to Primary </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, OS hang, low virtual memory, working set trim, generating dump, WSFC (loss of quroum), scheduler issues (dead locked schedulers)| AG resouce Offline-oline or Failover, FCI restart/failover |  
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## See Also    
 

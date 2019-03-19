@@ -88,19 +88,19 @@ You can stop or restart the SQL Server service as needed using the following com
 
 ## Access the log files
    
-The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in ‘superuser’ mode to browse this directory.
+The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in 'superuser' mode to browse this directory.
 
 The installer logs here: /var/opt/mssql/setup-< time stamp representing time of install>
-You can browse the errorlog files with any UTF-16 compatible tool like ‘vim’ or ‘cat’ like this: 
+You can browse the errorlog files with any UTF-16 compatible tool like 'vim' or 'cat' like this: 
 
    ```bash
    sudo cat errorlog
    ```
 
-If you prefer, you can also convert the files to UTF-8 to read them with ‘more’ or ‘less’ with the following command:
+If you prefer, you can also convert the files to UTF-8 to read them with 'more' or 'less' with the following command:
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## Extended events
 
@@ -113,7 +113,7 @@ Look for dumps in the log directory in Linux. Check under the /var/opt/mssql/log
 For Core dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
 For SQL dumps 
    ```bash

@@ -7,8 +7,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.windows"
 helpviewer_keywords: 
   - "Windows dialog box"
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
@@ -35,4 +33,3 @@ Saves the selected window. Not all windows can be saved.
   
 **Close Windows**  
 Closes the selected documents and windows in the list.  
-  

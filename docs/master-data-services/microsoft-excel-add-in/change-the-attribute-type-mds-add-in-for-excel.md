@@ -51,7 +51,7 @@ manager: craigg
   
 -   Changes the data type of the attribute.  
   
--   Generates a copy of the attribute with the suffix “_old” that contains the previous values. This is called a deprecated attribute.  
+-   Generates a copy of the attribute with the suffix "_old" that contains the previous values. This is called a deprecated attribute.  
   
 ## See Also  
  [Attributes &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   

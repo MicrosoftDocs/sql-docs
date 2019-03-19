@@ -1,5 +1,5 @@
 ---
-title: Tips for using R packages installed in user libraries on SQL Server | Microsoft Docs
+title: Tips for using R packages installed in user libraries - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -62,7 +62,7 @@ This does not work when running R solutions in SQL Server, because R packages mu
 
 + Modify your code to run in a shared environment.
 
-+ Avoid installing packages as part of a solution. If you don’t have permissions to install packages, the code will fail. Even if you do have permissions to install packages, you should do so separately from other code that you want to execute.
++ Avoid installing packages as part of a solution. If you don't have permissions to install packages, the code will fail. Even if you do have permissions to install packages, you should do so separately from other code that you want to execute.
 
 + Check your code to make sure that there are no calls to uninstalled packages.
 

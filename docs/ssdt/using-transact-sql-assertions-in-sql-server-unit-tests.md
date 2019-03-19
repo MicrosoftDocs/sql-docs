@@ -66,12 +66,12 @@ where:
   
 @ErrorMessage is any user-defined error message. You can format this message string similar to the printf_s function.  
   
-@ErrorSeverity is a user-defined severity level from 0 – 18.  
+@ErrorSeverity is a user-defined severity level from 0 - 18.  
   
 > [!NOTE]  
 > The values '0' and '10' for the severity level do not cause the SQL Server unit test to fail. You can use any other value in the range 0 - 18 to cause the test to fail.  
   
-@ErrorState is an arbitrary integer from 1 – 127. You can use this integer to differentiate between occurrences of a single error that is raised at different locations in the code.  
+@ErrorState is an arbitrary integer from 1 - 127. You can use this integer to differentiate between occurrences of a single error that is raised at different locations in the code.  
   
 For more information, see [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). An example of using RAISERROR in a SQL Server unit test is provided in the topic, [How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   

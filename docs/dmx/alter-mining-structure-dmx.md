@@ -137,7 +137,7 @@ USING <algorithm> [(<parameter list>)]
  The syntax of the parameter list is as follows:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
 ## Example 1: Add a Model to a Structure  

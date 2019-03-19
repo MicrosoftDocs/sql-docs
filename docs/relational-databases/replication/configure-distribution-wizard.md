@@ -31,6 +31,6 @@ manager: craigg
 ## See Also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

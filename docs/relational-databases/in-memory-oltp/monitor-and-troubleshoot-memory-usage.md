@@ -123,7 +123,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ##  <a name="bkmk_Monitoring"></a> Monitoring Memory Usage  
   
 ###  <a name="bkmk_UsingSSMS"></a> Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer as described [here](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer. You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.  
   
 #### Consumption at the database level  
  You can monitor memory use at the database level as follows.  

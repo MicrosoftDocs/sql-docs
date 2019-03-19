@@ -69,7 +69,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -218,7 +218,7 @@ ALTER INDEX { index_name | ALL }
   
 1.  Does not use the sort order.  
   
-2.  Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is “offline” and unavailable during the rebuild, even when using NOLOCK, RCSI, or SI.  
+2.  Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is "offline" and unavailable during the rebuild, even when using NOLOCK, RCSI, or SI.  
   
 3.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original columnstore index.  
   
@@ -650,7 +650,7 @@ In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, you may still 
   
 To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is “offline” and unavailable during the rebuild.  
+1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is "offline" and unavailable during the rebuild.  
   
 2.  Defragments the columnstore by physically deleting rows that have been logically deleted from the table; the deleted bytes are reclaimed on the physical media.  
   
@@ -717,7 +717,7 @@ Online index rebuild is specified as resumable using the RESUMABLE = ON option.
 -  Re-executing the original ALTER INDEX REBUILD statement with the same parameters resumes a paused index rebuild operation. You can also resume a paused index rebuild operation by executing the ALTER INDEX RESUME statement.
 -  The SORT_IN_TEMPDB=ON option is not supported for resumable index 
 -  The DDL command with RESUMABLE=ON cannot be executed inside an explicit transaction
-(cannot be part of begin tran … commit  block).
+(cannot be part of begin tran ... commit  block).
 -  Only index operations that are paused are resumable.
 -  When resuming an index operation that is paused, you can change the MAXDOP value to a new value.  If MAXDOP is not specified when resuming an  index operation that is paused, the last MAXDOP value is taken. IF the MAXDOP option is not specified at all for index rebuild operation, the default value is taken.
 - To pause immediately the index operation, you can stop the ongoing command (Ctrl-C) or you can execute the ALTER INDEX PAUSE command or the KILL *session_id* command. Once the command is paused it can be resumed using RESUME option.
@@ -730,7 +730,7 @@ The following functionality is disabled for resumable index rebuild operations
    -	Rebuilding an index that is disabled is not supported with RESUMABLE=ON
    -	ALTER INDEX REBUILD ALL command
    -	ALTER TABLE using index rebuild  
-   -	DDL command with “RESUMEABLE = ON” cannot be executed inside an explicit transaction (cannot be part of begin tran … commit  block)
+   -	DDL command with "RESUMEABLE = ON" cannot be executed inside an explicit transaction (cannot be part of begin tran ... commit  block)
    -	Rebuild an index that has computed or TIMESTAMP column(s) as key columns.
 -	In case the base table contains LOB column(s) resumable clustered index rebuild requires a Sch-M lock in the Starting of this operation
    -	The SORT_IN_TEMPDB=ON option is not supported for resumable index 
@@ -765,7 +765,7 @@ The following restrictions apply to partitioned indexes:
 -   The ALTER INDEX \<index> ... REBUILD WITH ... syntax rebuilds all partitions of the index.  
   
 ## Statistics  
- When you execute **ALTER INDEX ALL …** on a table, only the statistics associates with indexes are updated. Automatic or manual statistics created on the table (instead of an index) are not updated.  
+ When you execute **ALTER INDEX ALL ...** on a table, only the statistics associates with indexes are updated. Automatic or manual statistics created on the table (instead of an index) are not updated.  
   
 ## Permissions  
  To execute ALTER INDEX, at a minimum, ALTER permission on the table or view is required.  
@@ -837,7 +837,6 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
@@ -883,7 +882,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### C. Compress all OPEN AND CLOSED delta rowgroups into the columnstore  
  **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- The command REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) compreses each OPEN and CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This empties the deltastore and forces all rows to get compressed into the columnstore. This is useful especially after performing many insert operations since these operations store the rows in one or more delta rowgroups.  
+ The command REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) compresses each OPEN and CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This empties the deltastore and forces all rows to get compressed into the columnstore. This is useful especially after performing many insert operations since these operations store the rows in one or more delta rowgroups.  
   
  REORGANIZE combines rowgroups to fill rowgroups up to a maximum number of rows \<= 1,024,576. Therefore, when you compress all OPEN and CLOSED rowgroups you won't end up with lots of compressed rowgroups that only have a few rows in them. You want rowgroups to be as full as possible to reduce the compressed size and improve query performance.  
   
@@ -1030,10 +1029,10 @@ REBUILD WITH
 ```  
   
 ### C. Reorganizing an index with LOB compaction  
- The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the WITH (LOB_COMPACTION) option is not required because the default value is ON.  
+ The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the WITH (LOB_COMPACTION = ON) option is not required because the default value is ON.  
   
 ```sql  
-ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
+ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);  
 ```  
   
 ### D. Setting options on an index  

@@ -1,7 +1,7 @@
 ---
 title: "datetimeoffset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/23/2017"
+ms.date: "07/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -75,7 +75,7 @@ The following table lists the supported ISO 8601 string literal formats for **da
 A time zone offset specifies the zone offset from UTC for a **time** or **datetime** value. The time zone offset can be represented as [+|-] hh:mm:
 -   hh is two digits that range from 00 to 14 and represent the number of hours in the time zone offset.  
 -   mm is two digits, ranging from 00 to 59, that represent the number of additional minutes in the time zone offset.  
--   \+ (plus) or – (minus) is the mandatory sign for a time zone offset. This indicates whether the time zone offset is added or subtracted from the UTC time to obtain the local time. The valid range of time zone offset is from -14:00 to +14:00.  
+-   \+ (plus) or - (minus) is the mandatory sign for a time zone offset. This indicates whether the time zone offset is added or subtracted from the UTC time to obtain the local time. The valid range of time zone offset is from -14:00 to +14:00.  
   
 The time zone offset range follows the W3C XML standard for XSD schema definition and is slightly different from the SQL 2003 standard definition, 12:59 to +14:00.
   

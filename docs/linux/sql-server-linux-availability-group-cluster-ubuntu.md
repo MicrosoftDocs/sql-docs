@@ -1,13 +1,14 @@
 ---
-title: Configure Ubuntu Cluster for SQL Server Availability Group | Microsoft Docs
-description: 
+title: Configure Ubuntu Cluster for SQL Server Availability Group
+titleSuffix: SQL Server
+description: Learn about creating availability group clusters for Ubuntu
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ---
@@ -92,7 +93,7 @@ sudo systemctl enable pacemaker
 
 1. Remove any existing cluster configuration from all nodes. 
 
-   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  Starting corosync generates a template '/etc/cluster/corosync.conf' file.  To have next steps succeed this file should not exist – so the workaround is to stop pacemaker / corosync and delete '/etc/cluster/corosync.conf', and then next steps complete successfully. 'pcs cluster destroy' does the same thing, and you can use it as a one time initial cluster setup step.
+   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  Starting corosync generates a template '/etc/cluster/corosync.conf' file.  To have next steps succeed this file should not exist - so the workaround is to stop pacemaker / corosync and delete '/etc/cluster/corosync.conf', and then next steps complete successfully. 'pcs cluster destroy' does the same thing, and you can use it as a one time initial cluster setup step.
    
    The following command removes any existing cluster configuration files and stops all cluster services. This permanently destroys the cluster. Run it as a first step in a pre-production environment. Note that 'pcs cluster destroy' disabled the pacemaker service and needs to be reenabled. Run the following command on all nodes.
    
@@ -118,7 +119,7 @@ The following command creates a three-node cluster. Before you run the script, r
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

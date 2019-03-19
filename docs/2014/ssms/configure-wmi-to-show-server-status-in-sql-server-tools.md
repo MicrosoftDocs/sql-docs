@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "WMI Provider for Server Events, setting permissions"
@@ -31,7 +31,7 @@ manager: craigg
   
 6.  Add a group or user to the **Group or user names** box and select it.  
   
-7.  In the **Permissions for***\<group or user>* box, select the **Allow** column, for the **Remote Enable** permission, for users whom you wish to remotely detect the service status.  
+7.  In the **Permissions for**_\<group or user>_ box, select the **Allow** column, for the **Remote Enable** permission, for users whom you wish to remotely detect the service status.  
   
 ## See Also  
  [Start, Stop, or Pause the SQL Server Agent Service](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

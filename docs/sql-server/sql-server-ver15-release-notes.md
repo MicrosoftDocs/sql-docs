@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -12,7 +12,6 @@ manager: craigg
 monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # SQL Server 2019 preview release notes
-
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
@@ -29,10 +28,10 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.1 (November 2018)
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+## CTP 2.3
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.1 is described in license_Eval.rtf with your installation media.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.3 is described in `license_Eval.rtf` with your installation media.
 
 Limited support may be found at one of the following locations:
 
@@ -44,7 +43,7 @@ Limited support may be found at one of the following locations:
 
 - Or tweet [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
-### Documentation (CTP 2.1)
+### Documentation (CTP 2.3)
 
 - **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
 
@@ -52,7 +51,7 @@ Limited support may be found at one of the following locations:
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
-### Hardware and software requirements
+### Hardware and software requirements (CTP 2.3)
 
 - **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
 
@@ -64,58 +63,28 @@ Limited support may be found at one of the following locations:
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
-### Floating point results
+### Updated compiler
 
-- **Issue and customer impact**: SQL Server 2019 preview uses an updated compiler to build SQL Server. In some cases code compiled with the new compiler can return floating point numeric values that are different from previous versions of SQL Server. Behavior change will be restricted to new compatibility level (150) in a future CTP.
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of CTP 2.3 release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](http://aka.ms/sqlfeedback) immediately.
 
 - **Workaround**: N/A
 
-- **Applies to**: SQL Server 2019 CTP 2.1
-
-### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
-
-- **Issue and customer impact**: After SSISB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
-
-  `Cannot continue the execution because the session is in the kill state.`
-
-- **Workaround**: Stop and restart the SQL Server instance and switch SSISDB back to multi-user mode. 
-
-- **Applies to**: SQL Server 2019 preview CTP 2.1
-
-
-### UDF Inlining 
-
-- **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
-  
-- **Workaround**: Disable UDF inlining for such UDFs using the `INLINE = OFF` setting.
-
-- **Applies to**: SQL Server 2019 CTP 2.1
-
-### Lightweight query profiling infrastructure
-
-- **Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
-
-  > [!NOTE]
-  > Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 and CTP 2.0.
+- **Applies to**: SQL Server 2019 CTP 2.3, CTP 2.2, CTP 2.1
 
 ### UTF-8 collations
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
-  - SQL Server Replication
   - Linked Server
   - In-memory OLTP
   - External Table for PolyBase
 
-    Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
-
+  > [!Note]
+  > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version supports choice of UTF-8 enabled collations in the UI.
+ 
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ### SQL Graph
 
@@ -123,7 +92,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
 ### Always Encrypted with secure enclaves
 
@@ -131,33 +100,23 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3, 2.2, CTP 2.1, 2.0.
 
-### SQL Server Integration Service - Fuzzy Lookup Transformation
+### System Dynamic Management Views
 
-- **Issue / customer impact**: The Fuzzy Lookup Transformation would fail with following error if it's set to reuse index:
+- **Issue and customer impact**: The system table-valued function [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) returns random values in the `dependency` column.
 
-  `The specified delimiters do not match the delimiters used to build the pre-existing match index "...". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.`
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
 
-- **Workaround**: N/A
+### SQL Server Analysis Services (SSAS)
 
-- **More information**: N/A  
+- **Issue and customer impact**: For tabular models with dynamic security, under some circumstances a user can see data from another user belonging to the same role.
 
-- **Applies To**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
+  **Scenario**: There are at least 2 roles in the model. One of the roles doesn't have any dynamic security expression that contains `USERNAME` or `USERPRINCIPALNAME`. The second role with dynamic row-level security is defined for user A and user B by using expressions that contain `USERNAME` or `USERPRINCIPLENAME`. User A and user B can connect and query data, however, user B may see data secured only for user A under certain circumstances.
 
-## CTP 2.0 (September 2018)
+- **Workaround**: Add a dummy measure in the model. For example `[DummyMeasure] := UserName()`. This ensures that dynamic expressions are evaluated for the row level security expressions.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
-
-### SQL Server Integration Services (SSIS) Transfer Database Task
-
-- **Issue and customer impact**:  When a `Transfer Database Task` is configured to transfer a database in `Database Online` mode, it may fail with the following error:
-
-  >The Execute method on the task returned error code 0x80131500 (An error occurred while transferring data. See the inner exception for details.). The Execute method must succeed, and indicate the result using an "out" parameter.
-
-- **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

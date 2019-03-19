@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Migrate a table and data to memory-optimized (if there are no unsupported features).  
     
- For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## Walkthrough Using the Memory-Optimization Advisor  
  In **Object Explorer**, right click the table you want to convert, and select **Memory-Optimization Advisor**. This will display the welcome page for the **Table Memory Optimization Advisor**.  
@@ -91,7 +91,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ### Review Primary Key Conversion  
  The next screen is **Review Primary Key Conversion**. The Memory-Optimization Advisor will detect if there are one or more primary keys in the table, and populates the list of columns based on the primary key metadata. Otherwise, if you wish to migrate to a durable memory-optimized table, you must create a primary key.  
   
- If a primary key doesn’t exist and the table is being migrated to a non-durable table, this screen will not appear.  
+ If a primary key doesn't exist and the table is being migrated to a non-durable table, this screen will not appear.  
   
  For textual columns (columns with types **char**, **nchar**, **varchar**, and **nvarchar**) you must select an appropriate collation. In-Memory OLTP only supports BIN2 collations for columns on a memory-optimized table and it does not support collations with supplementary characters. See [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) for information on the collations supported and the potential impact of a change in collation.  
   
@@ -114,7 +114,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ### Review Index Conversion  
  The next page is **Review Index Conversion**. The Memory-Optimization Advisor will detect if there are one or more indexes in the table, and populates the list of columns and data type. The parameters you can configure in the **Review Index Conversion** page are similar to the previous, **Review Primary Key Conversion** page.  
   
- If the table only has a primary key and it’s being migrated to a durable table, this screen will not appear.  
+ If the table only has a primary key and it's being migrated to a durable table, this screen will not appear.  
   
  After you make a decision for every index in your table, click **Next**.  
   

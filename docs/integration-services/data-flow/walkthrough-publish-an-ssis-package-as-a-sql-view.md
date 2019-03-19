@@ -237,7 +237,7 @@ GO
  The syntax for OPENQUERY function is:  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Folder, Project, and Package parameters are mandatory. Use32BitRuntime, Timeout and Parameters are optional.  
@@ -250,15 +250,15 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  The following list specifies the special characters allowed in the query clause:  
   
--   Single Quote (‘) – This is supported by the standard OPENQUERY. If you want to use the single quote in the query clause, use two single quotes (‘’).  
+-   Single Quote (') - This is supported by the standard OPENQUERY. If you want to use the single quote in the query clause, use two single quotes ('').  
   
--   Double-Quote (“) – The parameters part of the query is enclosed in double-quotes. If a parameter value itself contains a double-quote, use the escape character. For example: \”.  
+-   Double-Quote (") - The parameters part of the query is enclosed in double-quotes. If a parameter value itself contains a double-quote, use the escape character. For example: \".  
   
--   Left and right square brackets ([ and ]) – These characters are used to indicate leading/rear spaces. For example, “[ some spaces ]” represents the string “ some spaces ” with one leading space and one trailing space. If these characters themselves are used in the query clause, they must be escaped. For example: \\[ and \\].  
+-   Left and right square brackets ([ and ]) - These characters are used to indicate leading/rear spaces. For example, "[ some spaces ]" represents the string " some spaces " with one leading space and one trailing space. If these characters themselves are used in the query clause, they must be escaped. For example: \\[ and \\].  
   
--   Forward Slash (\\) – Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
+-   Forward Slash (\\) - Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
   
- Forward Slash (\\) – Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
+ Forward Slash (\\) - Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
   
 ## See Also  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   

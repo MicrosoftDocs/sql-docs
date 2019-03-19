@@ -55,7 +55,7 @@ FOR XML EXPLICIT;
   
  This is the partial result:  
   
- `<Employee xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `EmpID="1" AddressID="249">`  
   

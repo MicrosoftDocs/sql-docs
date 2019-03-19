@@ -33,8 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -178,7 +177,7 @@ ON SERVER
  Specifies options to use with the event session.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value.  
+ Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount cannot exceed 2 GB (less than 2048 MB). However, using memory  values in GB range is not recommended.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Specifies the event retention mode to use for handling event loss.  
@@ -226,7 +225,7 @@ ON SERVER
  Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts.  
   
 > [!NOTE]  
->  If STARTUP_STATE = ON, the event session will only start if SQL Server is stopped and then restarted.  
+> If `STARTUP_STATE = ON`, the event session will only start if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is stopped and then restarted.  
   
  ON  
  The event session is started at startup.  
@@ -235,15 +234,15 @@ ON SERVER
  The event session is not started at startup.  
   
 ## Remarks  
- The order of precedence for the logical operators is NOT (highest), followed by AND, followed by OR.  
+The order of precedence for the logical operators is `NOT` (highest), followed by `AND`, followed by `OR`.  
   
 ## Permissions  
- Requires the ALTER ANY EVENT SESSION permission.  
+Requires the `ALTER ANY EVENT SESSION` permission.  
   
 ## Examples  
  The following example shows how to create an event session named `test_session`. This example adds two events and uses the Event Tracing for Windows target.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

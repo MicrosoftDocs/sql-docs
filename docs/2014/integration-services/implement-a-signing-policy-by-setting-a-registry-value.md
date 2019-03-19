@@ -37,7 +37,7 @@ manager: craigg
 |3|Block invalid and untrusted signatures and unsigned packages<br /><br /> This setting also blocks self-generated signatures.|  
   
 > [!NOTE]  
->  The recommended setting for `BlockedSignatureStates` is 3. This setting provides the greatest protection against unsigned packages or signatures that are either not valid or untrusted. However, the recommended setting may not be appropriate in all circumstances. For more information about signing digital assets, see the topic, "[Introduction to Code Signing](http://go.microsoft.com/fwlink/?LinkId=51414)," in the MSDN Library.  
+>  The recommended setting for `BlockedSignatureStates` is 3. This setting provides the greatest protection against unsigned packages or signatures that are either not valid or untrusted. However, the recommended setting may not be appropriate in all circumstances. For more information about signing digital assets, see the topic, "[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)," in the MSDN Library.  
   
 ### To implement a signing policy for packages  
   

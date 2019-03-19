@@ -63,7 +63,7 @@ manager: craigg
   
     -   Double-click the SAP BW connection manager.  
   
-         —or—  
+         -or-  
   
     -   Right-click the SAP BW connection manager, and then select **Edit**.  
   

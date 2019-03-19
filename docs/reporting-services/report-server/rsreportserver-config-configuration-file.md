@@ -25,20 +25,22 @@ The RSReportServer.config is located in the following folders, depending on the 
 
 
   
-### Native mode report server  
+### Native mode report server 
 
  
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### SharePoint mode report server
+### SharePoint mode report server 
 
 > [!NOTE]
 > SharePoint integrated mode is not available with the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services.
@@ -53,14 +55,14 @@ For more information on editing the file, see [Modify a Reporting Services Confi
  The following table provides information about general configuration settings that appear in the first part of the file. Settings are presented in the order in which they appear in the configuration file. The last column of the table indicates if the setting applies to a Native mode report server **(N)** or a SharePoint mode report server **(S)** or both.  
   
 > [!NOTE]  
->  In this topic, “maximum integer” refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  In this topic, "maximum integer" refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|Specifies the connection string to the database server that hosts the report server database. This value is encrypted and is added to the configuration file when you create the report server database. For SharePoint, the database connection information is taken from the SharePoint configuration database.|N,S|  
 |**ConnectionType**|Specifies the type of credentials that the report server uses to connect to the report server database. Valid values are **Default** and **Impersonate**. **Default** is specified if the report server is configured to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or the service account to connect to the report server database. **Impersonate** is specified if the report server uses a Windows account to connect to the report server database.|N|  
 |**LogonUser, LogonDomain, LogonCred**|Stores the domain, user name, and password of a domain account that is used by a report server to connect to a report server database. Values for **LogonUser**, **LogonDomain**, and **LogonCred** are created when the report server connection is configured to use a domain account. For more information about a report server database connection, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|An identifier for the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. This value specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name. By default, this value is **MSRS12***\<instancename>*. Do not modify this setting. The following is an example of the complete value: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> The following is an example of SharePoint mode:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|An identifier for the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. This value specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name. By default, this value is **MSRS12**_\<instancename>_. Do not modify this setting. The following is an example of the complete value: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> The following is an example of SharePoint mode:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|An identifier for the report server installation that Setup creates. This value is set to a GUID. Do not modify this setting.|N|  
 |**SecureConnectionLevel**|Specifies the degree to which Web service calls must us Secure Sockets Layer (SSL). This setting is used for both the Report Server Web service and the web portal. This value is set when you configure a URL to use HTTP or HTTPS in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. In SQL Server 2008 R2, SecureConnectionLevel is made an on/off switch. For earlier versions than SQL Server 2008 R2 the valid values range are from 0 through 3, where 0 is least secure. For more information, see [ConfigurationSetting Method - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) and [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
 |**DisableSecureFormsAuthenticationCookie**|Default value is False.<br /><br /> Specifies whether to disable the forcing of the cookie used for form and custom authentication to be marked secure. Starting with SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will automatically mark forms authentication cookies used with custom authentication extensions, as a secure cookie when sent to the client. By changing this property, report server administrators and custom security extension authors can revert to the previous behavior which allowed the custom security extension author to determine whether to mark the cookie as a secure cookie. It is recommended that secure cookies are used for forms authentication to help prevent network sniffing and replay attacks.|N|  

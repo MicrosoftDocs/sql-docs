@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
@@ -13,7 +12,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # SSIS Catalog
-  The `SSISDB` catalog is the central point for working with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) projects that you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server operations.  
+  The `SSISDB` catalog is the central point for working with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) projects that you've deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server operations.  
   
  The objects that are stored in the `SSISDB` catalog include projects, packages, parameters, environments, and operational history.  
   
@@ -21,7 +20,7 @@ manager: craigg
   
  To maintain the `SSISDB` database, it is recommended that you apply standard enterprise policies for managing user databases. For information about creating maintenance plans, see [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- The `SSISDB` catalog and the `SSISDB` database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../../powershell/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
+ The `SSISDB` catalog and the `SSISDB` database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../../powershell/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
   
  For more information about viewing operations data, see [Monitoring for Package Executions and Other Operations](../performance/monitor-running-packages-and-other-operations.md).  
   
@@ -137,7 +136,7 @@ manager: craigg
 |Property Name (**Catalog Properties** dialog box)|Property Name (database view)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Encryption Algorithm Name|ENCRYPTION_ALGORITHM|  
-|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED​|  
+|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED|  
 |Retention Period (days)|RETENTION_WINDOW|  
 |Periodically Remove Old Versions|VERSION_CLEANUP_ENABLED|  
 |Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|  
@@ -278,10 +277,10 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
+-   Blog entry, [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
   
--   Blog entry, [SSIS Catalog Access Control Tips](http://go.microsoft.com/fwlink/?LinkId=246669), on blogs.msdn.com.  
+-   Blog entry, [SSIS Catalog Access Control Tips](https://go.microsoft.com/fwlink/?LinkId=246669), on blogs.msdn.com.  
   
--   Blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=254267), on blogs.msdn.com.  
+-   Blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267), on blogs.msdn.com.  
   
   

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # New Data Source Page (Report Manager)
   Use the New Data Source page to create a shared data source item. A shared data source defines a connection to an external data source. With a shared data source, you can create and maintain the settings for the data source connection separately from the reports, models, and data-driven subscriptions that use the data source.  
@@ -40,7 +40,7 @@ manager: craigg
  **Data source type**  
  Specify the data processing extension that is used to process data from the data source. Report server includes data processing extensions for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC, and OLE DB. Additional data processing extensions may be available from third-party vendors.  
   
- For more information about remote and non-SQL data source support, see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) ( HYPERLINK "http://go.microsoft.com/fwlink/?linkid=232473" http://go.microsoft.com/fwlink/?linkid=232473) and [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ For more information about remote and non-SQL data source support, see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( HYPERLINK "<https://go.microsoft.com/fwlink/?linkid=232473>" <https://go.microsoft.com/fwlink/?linkid=232473>) and [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  **Connection string**  
  Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file.  

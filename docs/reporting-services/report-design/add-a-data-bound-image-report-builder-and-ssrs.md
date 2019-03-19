@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Add a Data-Bound Image (Report Builder and SSRS)
   A report can include a reference to an image that is stored in a database. Such an image is known as a *data-bound image*. The pictures that appear alongside product names in a product list are examples of data-bound images.  
@@ -35,7 +35,7 @@ ms.author: maggies
   
 7.  In **Use this Field**, select the field that contains images in your report.  
   
-8.  In **Use this MIME type**, select the MIME type, or file format, of the image—for example, bmp.  
+8.  In **Use this MIME type**, select the MIME type, or file format, of the image-for example, bmp.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

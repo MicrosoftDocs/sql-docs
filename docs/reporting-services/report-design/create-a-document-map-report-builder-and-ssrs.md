@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Create a Document Map (Report Builder and SSRS)
@@ -24,7 +24,7 @@ A document map provides a set of navigational links to report items in a rendere
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Document Maps and Rendering Extensions  
- The document map is intended for use in the HTML rendering extension—for example, in Preview and the Report Viewer. Other rendering extensions have different ways of articulating a document map:  
+ The document map is intended for use in the HTML rendering extension-for example, in Preview and the Report Viewer. Other rendering extensions have different ways of articulating a document map:  
   
 -   PDF renders a document map as the Bookmarks pane.  
   

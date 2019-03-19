@@ -1,5 +1,5 @@
 ---
-title: Lesson 1 Explore and visualize data using Python and T-SQL (SQL Server Machine Learning) | Microsoft Docs
+title: Lesson 1 Explore and visualize data using Python and T-SQL - SQL Server Machine Learning
 description: Tutorial showing how to embed Python in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
@@ -26,7 +26,7 @@ First, take a minute to browse the data schema, as we've made some changes to ma
 
 **Taxi identifiers**
 
-The _medallion_ column represents the taxi’s unique ID number.
+The _medallion_ column represents the taxi's unique ID number.
 
 The _hack_license_ column contains the taxi driver's license number (anonymized).
 
@@ -72,7 +72,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     - The Python script is fairly simple: **matplotlib** `figure` objects are used to make the histogram and scatter plot, and these objects are then serialized using the `pickle` library.
     - The Python graphics object is serialized to a **pandas** DataFrame for output.
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -130,13 +130,13 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 
 2. Now run the stored procedure with no arguments to generate a plot from the data hard-coded as the input query.
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. The results should be something like this:
   
-	```
+	```sql
     plot
     0xFFD8FFE000104A4649...
 	0xFFD8FFE000104A4649...

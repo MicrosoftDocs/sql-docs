@@ -116,11 +116,11 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
  **Options** - If you want the wizard to save scripts to a location of your choice, select **Save scripts to a specific location**. You can later run the scripts against either an instance of the Database Engine, or against [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. If you want the wizard to publish your database objects to a remote Web hosting provider, select **Publish to Web service**.  
   
- **Save Scripts to a Specific Location** – save one or more Transact-SQL script files to a location you specify.  
+ **Save Scripts to a Specific Location** - save one or more Transact-SQL script files to a location you specify.  
 
   ![Save](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **Save to file** - Save the script to one or more .sql files. Click the browse button (**…**) to specify a name and location for the file. Select the **Overwrite existing file** check box to replace the file if one already exists with the same name. Click **Single file** or **Single file per object** to specify how the scripts should be generated. Click **Unicode text** or **ANSI text** to specify the kind of text that should be used in the script.  
+-   **Save to file** - Save the script to one or more .sql files. Click the browse button (**...**) to specify a name and location for the file. Select the **Overwrite existing file** check box to replace the file if one already exists with the same name. Click **Single file** or **Single file per object** to specify how the scripts should be generated. Click **Unicode text** or **ANSI text** to specify the kind of text that should be used in the script.  
   
 -   **Save to Clipboard** - Save the Transact-SQL script to the Clipboard.  
   
@@ -143,7 +143,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
  **Options** - Specify advanced options by selecting a value from the list of available settings to the right of each option.  
   
- **General** – The following options apply to the entire script.  
+ **General** - The following options apply to the entire script.  
   
 -   **ANSI Padding** - Includes **ANSI PADDING ON** in the script. The default is **True**.  
   
@@ -193,7 +193,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
 -   **Script change tracking** - Scripts change tracking if it is enabled on the origin database or tables in the origin database. The default is **False**. For more information, see [About Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
--   **Script check constraints** – Adds **CHECK** constraints to the script. The default is **True**. **CHECK** constraints require data that is entered into a table to meet some specified condition. For more information, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+-   **Script check constraints** - Adds **CHECK** constraints to the script. The default is **True**. **CHECK** constraints require data that is entered into a table to meet some specified condition. For more information, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 -   **Script data compression options** - Scripts data compression options if they are configured on the origin database or tables in the origin database. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md). The default is **False**.  
   
@@ -233,7 +233,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
  **Options** - Specify advanced options by selecting a value from the list of available settings to the right of each option.  
   
- **General** – The following options apply to the entire publication.  
+ **General** - The following options apply to the entire publication.  
   
 1.  **Convert UDDTs to base types** - When **True**, user-defined data types (UDDT) are converted into the underlying base data types that were used to create them. Use **True** when the UDDT does not exist in the database where the script will be run. When **False**, UDDTs are used. The default is **False**.  
   
@@ -259,7 +259,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
 12. **Types of data to publish** - Selects what should be scripted: **Data only**, **Schema Only**, or both. The default is **Schema and Data**.  
   
- **Publishing Options** – Specifies whether to use transactions when publishing to the Web host provider.  
+ **Publishing Options** - Specifies whether to use transactions when publishing to the Web host provider.  
   
 1.  **Publish using transaction** - Uses transactions when publishing to a remote Web hosting provider. If the target database cannot complete the publishing, the transactions are rolled back. The default is **True**.  
   
@@ -334,7 +334,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
  
 ## Generating Scripts on Azure SQL Data Warehouse  
 
-If the syntax generated when using “Script As…” does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+If the syntax generated when using "Script As..." does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
 
 ### How to set default scripting options to SQL Data Warehouse  
 

@@ -74,7 +74,7 @@ You can set most properties of tasks and containers by using the **Properties** 
 5.  In the **Properties** window, update the property value.  
   
     > [!NOTE]  
-    >  Most properties can be set by typing a value directly in the text box, or by selecting a value from a list. However, some properties are more complex and have a custom property editor. To set the property, click in the text box, and then click the build **(…)** button to open the custom editor.  
+    >  Most properties can be set by typing a value directly in the text box, or by selecting a value from a list. However, some properties are more complex and have a custom property editor. To set the property, click in the text box, and then click the build **(...)** button to open the custom editor.  
   
 6.  Optionally, create property expressions to dynamically update the properties of the task or container. For more information, see [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   

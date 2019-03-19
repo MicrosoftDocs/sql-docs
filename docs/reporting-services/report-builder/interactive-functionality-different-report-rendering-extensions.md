@@ -8,8 +8,8 @@ ms.technology: report-builder
 
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Interactive Functionality - Different Report Rendering Extensions
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides features for interacting with a paginated report at run time. Not all of the report rendering formats support the full range of interactive features. Use the following table to understand how each interactive feature works in specific formats.  

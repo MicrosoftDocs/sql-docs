@@ -6,6 +6,11 @@ experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server - Installation and Upgrade
 description: Find the content that will help you install or upgrade your SQL Server and related services. 
 ms.topic: hub-page
+ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ---
@@ -13,7 +18,7 @@ featureFlags:
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -23,7 +28,7 @@ featureFlags:
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Download SQL Server</span>
+                                    <span class="likeAnH3">Try SQL Server 2019 (preview)</span>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +155,7 @@ featureFlags:
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Install SQL Server Reporting Services (SSRS)</h3>
-                                                    <p>A solution for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that’s viewing them in web browser, on their mobile device, or as an email in their in-box. </p>
+                                                    <p>A solution for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that's viewing them in web browser, on their mobile device, or as an email in their in-box. </p>
                                                 </div>
                                             </div>
                                         </div>

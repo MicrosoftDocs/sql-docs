@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 >  Unicode compression is not supported for **nvarchar(max)** data even if it is stored in row. However, this data type can still benefit from page compression.  
   
 ## Upgrading from Earlier Versions of SQL Server  
- When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Unicode compression–related changes are not made to any database object, compressed or uncompressed. After the database is upgraded, objects are affected as follows:  
+ When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Unicode compression-related changes are not made to any database object, compressed or uncompressed. After the database is upgraded, objects are affected as follows:  
   
 -   If the object is not compressed, no changes are made and the object continues to function as it did previously.  
   

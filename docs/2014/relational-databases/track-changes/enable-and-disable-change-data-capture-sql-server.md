@@ -5,7 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], enabling tables"
@@ -136,7 +135,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  If change data capture is enabled on a table with an existing primary key, and the *@index_name* parameter is not used to identify an alternative unique index, the change data capture feature will use the primary key. Subsequent changes to the primary key will not be allowed without first disabling change data capture for the table. This is true regardless of whether support for net changes queries was requested when change data capture was configured. If there is no primary key on a table at the time it is enabled for change data capture, the subsequent addition of a primary key is ignored by change data capture. Because change data capture will not use a primary key that is created after the table was enabled, the key and key columns can be removed without restrictions.  
   
 ## Disable Change Data Capture for a Table  

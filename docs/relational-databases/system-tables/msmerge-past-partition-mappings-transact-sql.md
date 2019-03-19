@@ -5,8 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "MSmerge_past_partition_mappings"
@@ -30,7 +29,7 @@ manager: craigg
 |**publication_number**|**smallint**|The publication number, which is stored in **sysmergepublications**.|  
 |**tablenick**|**int**|The nickname of the published table.|  
 |**rowguid**|**uniqueidentifier**|The row identifier for the given row.|  
-|**partition_id**|**int**|The ID of the partition the row belongs to. The value is –1 if the row change is relevant to all Subscribers.|  
+|**partition_id**|**int**|The ID of the partition the row belongs to. The value is -1 if the row change is relevant to all Subscribers.|  
 |**generation**|**bigint**|The value of the generation in which the partition change occurred.|  
 |**reason**|**tinyint**|Internal-use only.|  
   

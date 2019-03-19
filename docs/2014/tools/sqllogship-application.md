@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sqllogship"
@@ -25,29 +24,29 @@ manager: craigg
   
 sqllogship  
 -server  
-instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [ –verboselevellevel ] [ –logintimeouttimeout_value ] [ -querytimeouttimeout_value ]  
+instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [ -verboselevellevel ] [ -logintimeouttimeout_value ] [ -querytimeouttimeout_value ]  
 ```  
   
 ## Arguments  
- **-server** *instance_name*  
+ **-server** _instance_name_  
  Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where the operation will run. The server instance to specify depends on which log-shipping operation is being specified. For **-backup**, *instance_name* must be the name of the primary server in a log shipping configuration. For **-copy** or **-restore**, *instance_name* must be the name of a secondary server in a log shipping configuration.  
   
- **-backup** *primary_id*  
+ **-backup** _primary_id_  
  Performs a backup operation for the primary database whose primary ID is specified by *primary_id*. You can obtain this ID by selecting it from the [log_shipping_primary_databases](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql) system table or by using the [sp_help_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql) stored procedure.  
   
  The backup operation creates the log backup in the backup directory. The **sqllogship** application then cleans out any old backup files, based on the file retention period. Next, the application logs history for the backup operation on the primary server and the monitor server. Finally, the application runs [sp_cleanup_log_shipping_history](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql), which cleans out old history information, based on the retention period.  
   
- **-copy** *secondary_id*  
+ **-copy** _secondary_id_  
  Performs a copy operation to copy backups from the specified secondary server for the secondary database, or databases, whose secondary ID is specified by *secondary_id*. You can obtain this ID by selecting it from the [log_shipping_secondary](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql) system table or by using the [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) stored procedure.  
   
  The operation copies the backup files from the backup directory to the destination directory. The **sqllogship** application then logs the history for the copy operation on the secondary server and the monitor server.  
   
- **-restore** *secondary_id*  
+ **-restore** _secondary_id_  
  Performs a restore operation on the specified secondary server for the secondary database, or databases, whose secondary ID is specified by *secondary_id*. You can obtain this ID by using the **sp_help_log_shipping_secondary_database** stored procedure.  
   
  Any backup files in the destination directory that were created after the most recent restore point are restored to the secondary database, or databases. The **sqllogship** application then cleans out any old backup files, based on the file retention period. Next, the application logs history for the restore operation on the secondary server and the monitor server. Finally, the application runs **sp_cleanup_log_shipping_history**, which cleans out old history information, based on the retention period.  
   
- **–verboselevel** *level*  
+ **-verboselevel** _level_  
  Specifies the level of messages added to the log shipping history. *level* is one of the following integers:  
   
 |Level|Description|  
@@ -58,11 +57,11 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |**3**|Output informational messages, warnings, and error-handling messages. This is the default value.|  
 |4|Output all debugging and tracing messages.|  
   
- **–logintimeout** *timeout_value*  
- Specifies the amount of time allotted for attempting to log in to the server instance before the attempt times out. The default is 15 seconds. *timeout_value* is **int***.*  
+ **-logintimeout** _timeout_value_  
+ Specifies the amount of time allotted for attempting to log in to the server instance before the attempt times out. The default is 15 seconds. *timeout_value* is **int**_._  
   
- **-querytimeout** *timeout_value*  
- Specifies the amount of time allotted for starting the specified operation before the attempt times out. The default is no timeout period. *timeout_value* is **int***.*  
+ **-querytimeout** _timeout_value_  
+ Specifies the amount of time allotted for starting the specified operation before the attempt times out. The default is no timeout period. *timeout_value* is **int**_._  
   
 ## Remarks  
  We recommend that you use the backup, copy, and restore jobs to perform the backup, copy and restore when possible. To start these jobs from a batch operation or other application, call the [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) stored procedure.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"
@@ -31,23 +30,23 @@ manager: craigg
 |0..*|Zero or more|  
 |1..2|One or two|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  To elaborate further:  
->   
+> 
 >  1.  A virtual machine is allocated one or more virtual processors.  
 > 2.  One or more virtual processors are allocated to exactly one virtual machine.  
 > 3.  Zero or one virtual processor is mapped to zero or more logical processors. When the virtual processor to logical processor mapping is:  
->   
+> 
 >      -   One-to-zero, it represents an unbound logical processor not used by the guest operating systems.  
 >     -   One-to-many, it represents an overcommit.  
 >     -   Zero-to-many, it represents the absence of virtual machine on the host system, so no logical processors are used by VMs.  
 > 4.  A socket is mapped to zero or more cores. When the socket to core mapping is:  
->   
+> 
 >      -   One-to-zero, it represents an empty socket (no chip installed).  
 >     -   One-to-one, it represents a single-core chip installed into the socket (very rare these days).  
 >     -   One-to-many, it represents a multi-core ship installed into the socket (typical values are 2,4,8).  
 > 5.  A core is mapped to one or two logical processors. When the core to logical processor mapping is:  
->   
+> 
 >      -   One-to-one, hyperthreading is off.  
 >     -   One-to-two, hyperthreading is on.  
   
@@ -89,7 +88,7 @@ manager: craigg
   
  <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. There are no limits under the Core-based Server Licensing model.  
   
- In a virtualized environment, the compute capacity limit is based on the number of logical processors, not cores, because the processor architecture is not visible to the guest applications.  For example, a server with four sockets populated with quad-core processors and the ability to enable two hyperthreads per core contains 32 logical processors with hyperthreading enabled but only 16 logical processors with hyperthreading disabled. These logical processors can be mapped to virtual machines on the server with the virtual machines’ compute load on that logical processor mapped into a thread of execution on the physical processor in the host server.  
+ In a virtualized environment, the compute capacity limit is based on the number of logical processors, not cores, because the processor architecture is not visible to the guest applications.  For example, a server with four sockets populated with quad-core processors and the ability to enable two hyperthreads per core contains 32 logical processors with hyperthreading enabled but only 16 logical processors with hyperthreading disabled. These logical processors can be mapped to virtual machines on the server with the virtual machines' compute load on that logical processor mapped into a thread of execution on the physical processor in the host server.  
   
  You may want to disable hyperthreading when the performance per virtual processor is important. One can enable or disable hyperthreading using a BIOS setting for the processor during the BIOS setup, but it is typically a server scoped operation that will impact all workloads running on the server. This may suggest separating workloads that will run in virtualized environments from those that would benefit from the hyperthreading performance boost in a physical operating system environment.  
   

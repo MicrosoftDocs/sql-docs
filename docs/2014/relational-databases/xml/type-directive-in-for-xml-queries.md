@@ -37,7 +37,7 @@ FOR XML AUTO, TYPE;
   
  This is the partial result:  
   
- `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez"/>`  
+ `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez"/>`  
   
  `<Person.Person BusinessEntityID="2" FirstName="Terri" LastName="Duffy"/>`  
   
@@ -55,8 +55,8 @@ SET @x = (
           FirstName,   
           LastName,   
           AdditionalContactInfo.query('  
-declare namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace aci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
               //act:telephoneNumber/act:number') as MorePhoneNumbers  
    FROM Person.Person  
    FOR XML AUTO, TYPE);  
@@ -73,31 +73,31 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT (SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-DECLARE namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
-DECLARE namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+DECLARE namespace aci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+DECLARE namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumbers  
 FROM Person.Person  
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- The inner `SELECT … FOR XML` query returns an `xml` type result to which the outer `SELECT` applies the `query()` method to the `xml` type. Note the `TYPE` directive specified.  
+ The inner `SELECT ... FOR XML` query returns an `xml` type result to which the outer `SELECT` applies the `query()` method to the `xml` type. Note the `TYPE` directive specified.  
   
  This is the result:  
   
- `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez">`  
+ `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez">`  
   
  `<PhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">111-111-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">111-111-1111</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">112-111-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">112-111-1111</act:number>`  
   
  `</PhoneNumbers>`  
   
  `</Person.Person>`  
   
- In the following query, the `value()` method of the `xml` data type is used to retrieve a value from the XML result returned by the `SELECT…FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](/sql/t-sql/xml/value-method-xml-data-type).  
+ In the following query, the `value()` method of the `xml` data type is used to retrieve a value from the XML result returned by the `SELECT...FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](/sql/t-sql/xml/value-method-xml-data-type).  
   
 ```  
 USE AdventureWorks2012;  
@@ -105,13 +105,13 @@ GO
 DECLARE @FirstPhoneFromAdditionalContactInfo varchar(40);  
 SELECT @FirstPhoneFromAdditionalContactInfo =   
  ( SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace aci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
    //act:telephoneNumber/act:number  
    ') AS PhoneNumbers  
    FROM Person.Person Contact  
    FOR XML AUTO, TYPE).value('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
   /Contact[@BusinessEntityID="1"][1]/PhoneNumbers[1]/act:number[1]', 'varchar(40)'  
  )  
 SELECT @FirstPhoneFromAdditionalContactInfo;  

@@ -45,7 +45,7 @@ manager: craigg
 |`WriteEnabled`|Indicates whether dimension writebacks are available (subject to security permissions).|  
   
 > [!NOTE]  
->  For more information about setting values for the ErrorConfiguration and UnknownMember properties when working with null values and other data integrity issues, see [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  For more information about setting values for the ErrorConfiguration and UnknownMember properties when working with null values and other data integrity issues, see [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## See Also  
  [Attributes and Attribute Hierarchies](attributes-and-attribute-hierarchies.md)   

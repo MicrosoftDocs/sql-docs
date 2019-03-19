@@ -1,7 +1,7 @@
 ---
 title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -43,7 +43,7 @@ The following are the main command-line tools:
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** is a command-line utility that automates several database development tasks. macOS and Linux versions of sqlpackage are currently in preview. | Windows, macOS, and Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** provides cmdlets for working with SQL| Windows, macOS, and Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt. | Windows, macOS, and Linux|
-|[**bcp**](../2014/tools/bcp-utility.md)|The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.|Windows, macOS, and Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.|Windows, macOS, and Linux|
 |[**mssql-scripter (preview)**](https://github.com/Microsoft/mssql-scripter)|**mssql-scripter** is a multi-platform command line experience for scripting SQL Server databases|Windows, macOS, and Linux|
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql-conf** configures SQL Server running on Linux.|Linux|
 

@@ -112,7 +112,7 @@ The `sys.dm_db_page_info` dynamic management function returns page information l
 `sys.dm_db_page_info` can be used in place of the `DBCC PAGE` statement in many cases, but it returns only the page header information, not the body of the page. `DBCC PAGE` will still be needed for use cases where the entire contents of the page are required.
 
 ## Using in Conjunction With Other DMVs
-One of the important use cases of `sys.dm_db_page_info` is to join it with other DMVs that expose page information.  To facilitate this use case, a new column called `page_resource` has been added which exposes page information in an 8-byte hex format. This column has been added to `sys.dm_exec_processes` and `sys.sysprocesses` and will be added to other DMVs in the future as needed.
+One of the important use cases of `sys.dm_db_page_info` is to join it with other DMVs that expose page information.  To facilitate this use case, a new column called `page_resource` has been added which exposes page information in an 8-byte hex format. This column has been added to `sys.dm_exec_requests` and `sys.sysprocesses` and will be added to other DMVs in the future as needed.
 
 A new function, `sys.fn_PageResCracker`, takes the `page_resource` as input and outputs a single row that contains `database_id`, `file_id` and `page_id`.  This function can then be used to facilitate joins between `sys.dm_exec_requests` or `sys.sysprocesses` and `sys.dm_db_page_info`.
 
@@ -122,7 +122,7 @@ Requires the `VIEW DATABASE STATE` permission in the database.
 ## Examples  
   
 ### A. Displaying all the properties of a page
-The following query returns one row with all the page information for a given `database_id`, `file_id`, `page_id` combination with default mode (‘LIMITED’)
+The following query returns one row with all the page information for a given `database_id`, `file_id`, `page_id` combination with default mode ('LIMITED')
 
 ```sql
 SELECT *  

@@ -1,6 +1,6 @@
 ---
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
-ms.date: "5/03/2017"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -15,15 +15,17 @@ ms.author: "harinid"
 manager: "craigg"
 ---
 # Post-migration Validation and Optimization Guide
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 
-# Common Performance Scenarios 
+## Common Performance Scenarios
+
 Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specific to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
 ## <a name="CEUpgrade"></a> Query regressions due to change in CE version
-​
+
 **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
 When migrating from an older version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest available, a workload may be exposed to the risk of performance regression.
@@ -102,7 +104,7 @@ Some examples of non-SARGable predicates:
 3. Reason out the usefulness of the following constructs:
   -   Functions being used as predicates;
   -   Wildcard searches;
-  -   Complex expressions based on columnar data – evaluate the need to instead create persisted computed columns, which can be indexed;
+  -   Complex expressions based on columnar data - evaluate the need to instead create persisted computed columns, which can be indexed;
 
 > [!NOTE] 
 > All of the above can be done programmatically.
@@ -122,6 +124,7 @@ Table Valued Functions return a table data type that can be an alternative to vi
 > For MSTVFs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses a fixed estimation of 1 for the number of rows expected to be returned by an MSTVF (starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] that fixed estimation is 100 rows).
 
 ### Steps to resolve
+
 1.	If the Multi-Statement TVF is single statement only, convert to Inline TVF.
 
     ```sql
@@ -138,7 +141,8 @@ Table Valued Functions return a table data type that can be an alternative to vi
     RETURN
     END
     ```
-    To 
+
+    The inline format example is displayed next.
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -154,7 +158,8 @@ Table Valued Functions return a table data type that can be an alternative to vi
 
 2.	If more complex, consider using intermediate results stored in Memory-Optimized tables or temporary tables.
 
-##  <a name="Additional_Reading"></a> Additional Reading  
+##  <a name="Additional_Reading"></a> Additional Reading
+
  [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [User-Defined Functions](../relational-databases/user-defined-functions/user-defined-functions.md)  

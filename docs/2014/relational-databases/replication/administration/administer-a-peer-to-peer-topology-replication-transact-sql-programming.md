@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -57,7 +56,7 @@ manager: craigg
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
 ## See Also  
- [Administration &#40;Replication&#41;](administration-replication.md)   
+ [Replication Administration FAQ](frequently-asked-questions-for-replication-administrators.md)   
  [Back Up and Restore of SQL Server Databases](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
   

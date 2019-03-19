@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Format Text in a Text Box (Report Builder and SSRS)
   You can format any part of the text within a text box independently, and mix placeholder text and static text in one text box. This ability to mix formats and add placeholder text enables you to create mail merges or templates for text in your report. Any expression can be defined and formatted separately using a placeholder.  
@@ -45,7 +45,7 @@ ms.author: maggies
   
 2.  On the **Insert** tab, click **Text Box**. Click in the list, and then drag to create a box that is the size you want.  
   
-3.  Type a label in the text box — for example, **My Field**:.  
+3.  Type a label in the text box - for example, **My Field**:.  
   
 4.  Drag a field from your dataset into the text box. A placeholder is created for your field.  
   

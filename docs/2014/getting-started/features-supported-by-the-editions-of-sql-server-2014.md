@@ -19,10 +19,12 @@ ms.author: genemi
 manager: craigg
 ---
 # Features Supported by the Editions of SQL Server 2014
-  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
-> **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](http://go.microsoft.com/fwlink/?LinkId=190955).  
-  
+
+
+  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+
+ > **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
+> 
 > **NOTE:** For features supported by Evaluation and Developer editions see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise feature set.  
   
  To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
@@ -164,7 +166,7 @@ manager: craigg
 |SQL Configuration Manager|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |SQL CMD (Command Prompt tool)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Yes|Yes|Yes|Yes|Yes|Yes||  
-|Distributed Replay – Admin Tool|Yes|Yes|Yes|Yes|Yes|Yes||  
+|Distributed Replay - Admin Tool|Yes|Yes|Yes|Yes|Yes|Yes||  
 |Distributed Replay - Client|Yes|No|Yes|Yes||||  
 |Distributed Replay - Controller|Yes (Enterprise supports up to 16 clients,  Developer supports only 1 client)|No|Yes (1 client support only)|Yes (1 client support only)||||  
 |SQL Profiler|Yes|Yes|Yes|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
@@ -187,7 +189,7 @@ manager: craigg
 |Dedicated admin connection|Yes|Yes|Yes|Yes|Yes (under trace flag)|Yes (under trace flag)|Yes (under trace flag)|  
 |PowerShell scripting support|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |SysPrep support<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|Support for Data-tier application component operations – extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Support for Data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Policy automation (check on schedule and change)|Yes|Yes|Yes|Yes||||  
 |Performance data collector|Yes|Yes|Yes|Yes||||  
 |Able to enroll  as a managed instance in a multi-instance management|Yes|Yes|Yes|Yes||||  
@@ -442,7 +444,7 @@ manager: craigg
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Yes|Yes||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Yes|Yes||||||  
   
-> [!NOTE]  
+> [!NOTE]
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] is an Excel addin and does not depend on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] is required for sharing and collaborating with [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks in SharePoint and this capability is available as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise and Business Intelligence editions.  
 > 2.  The above table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these features can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

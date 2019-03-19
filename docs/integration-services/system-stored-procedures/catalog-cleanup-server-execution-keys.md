@@ -60,9 +60,9 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## Remarks  
  SQL Server 2012 Service Pack 2 added the SERVER_OPERATION_ENCRYPTION_LEVEL property to the **internal.catalog_properties** table. This property has two possible values:  
   
--   **PER_EXECUTION (1)** – The certificate and symmetric key used for protecting sensitive execution parameters and execution logs are created for each execution. This is the default value. You may run into performance issues (deadlocks, failed maintenance jobs etc…) in a production environment because certificate/keys are generated for each execution. However, this setting provides a higher level of security than the other value (2).  
+-   **PER_EXECUTION (1)** - The certificate and symmetric key used for protecting sensitive execution parameters and execution logs are created for each execution. This is the default value. You may run into performance issues (deadlocks, failed maintenance jobs etc...) in a production environment because certificate/keys are generated for each execution. However, this setting provides a higher level of security than the other value (2).  
   
--   **PER_PROJECT (2)** – The certificate and symmetric key used for protecting sensitive parameters are created for each project. This gives you a better performance than the PER_EXECUTION level because the key and certificate are generated once for a project rather than for each execution.  
+-   **PER_PROJECT (2)** - The certificate and symmetric key used for protecting sensitive parameters are created for each project. This gives you a better performance than the PER_EXECUTION level because the key and certificate are generated once for a project rather than for each execution.  
   
  You have to run the [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) stored procedure before you can change the SERVER_OPERATION_ENCRYPTION_LEVEL from 1 to 2 (or) from 2 to 1. Before running this stored procedure, do the following things:  
   

@@ -44,7 +44,7 @@ manager: craigg
   
  **Support**. Support means the number of cases or rows of input data that have this item. For example, if an itemset contains two items that are found in a shopping cart, the number in the **Support** column indicates how many times that combination of items occurred in the source data.  
   
- **Size**. By changing itemset size, you can control the length of the lists of itemsets. If you don’t want to see single products in the list, change the option, **Minimum itemset size**, to 2 or more.  Restricting the list by increasing the minimum size of itemsets lets you look for very specific patterns. This might be useful if you are working with a very large set of data.  
+ **Size**. By changing itemset size, you can control the length of the lists of itemsets. If you don't want to see single products in the list, change the option, **Minimum itemset size**, to 2 or more.  Restricting the list by increasing the minimum size of itemsets lets you look for very specific patterns. This might be useful if you are working with a very large set of data.  
   
  You can filter the number of itemsets that are displayed in the tab by changing the **Minimum support** and **Maximum rows** values. If you increase the **Minimum Support** value, the list will show fewer itemsets, but the itemsets will be the more common ones in the input data. Whether common is the same as important is another question, which you can explore using the **Rules** tab.  
   
@@ -85,17 +85,17 @@ manager: craigg
   
  *Probability* represents the fraction of cases in the dataset that contain the targeted combination of items. Probability is similar to the statistical concept of *confidence*, and gives you an indication of how likely the result of a rule is to occur. You can change the value of **Minimum probability** in this pane to filter the rules that are displayed.  
   
- The value for **Minimum probability** that you initially see is the threshold value that was used by the algorithm when building the model. After the model is complete, you can’t decrease this value, but you can increase it to show only the higher probability items.  
+ The value for **Minimum probability** that you initially see is the threshold value that was used by the algorithm when building the model. After the model is complete, you can't decrease this value, but you can increase it to show only the higher probability items.  
   
  *Importance* is designed to measure the usefulness of a rule. A rule that is very common might be so ubiquitous that is has little information value. The greater the importance, the more valuable the rule is for predicting the outcome. In the [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) tool, importance can be combined with the price of items to determine the bundles that are potentially most valuable in terms of sales.  
   
 ##### Explore the rules list  
   
-1.  Try clicking the column headings — **Probability**, **Importance**, and **Rule** — to see how the data changes.  
+1.  Try clicking the column headings - **Probability**, **Importance**, and **Rule** - to see how the data changes.  
   
 2.  Use the **Filter Rule** option to type in values and focus on targeted rules.  
   
-     For example, if you want to see all the rules that predict what customers are likely to purchase along with gloves, type “gloves” in the text box and refresh the pane.  
+     For example, if you want to see all the rules that predict what customers are likely to purchase along with gloves, type "gloves" in the text box and refresh the pane.  
   
      The **Filter Itemset** option also displays a list of the filters that you have used previously.  
   
@@ -105,7 +105,7 @@ manager: craigg
   
 5.  Set the value for the **Maximum rows** option to 100, and then click **Copy to Excel**.  
   
-     Note that changing this value doesn’t have any effect on the amount of data in the model; it simply controls the number of rows in the display list. This option can be useful when working with very large models.  
+     Note that changing this value doesn't have any effect on the amount of data in the model; it simply controls the number of rows in the display list. This option can be useful when working with very large models.  
   
  [Back to Top](#BKMK_ViewerTabs)  
   
@@ -118,13 +118,13 @@ manager: craigg
   
 1.  Click the **Find** button and use the **Find Node** dialog box to type an item of interest.  
   
-     For example, type “gloves” and then maximize the graph in the window so that you can easily see the results.  
+     For example, type "gloves" and then maximize the graph in the window so that you can easily see the results.  
   
      The node that contains the item is highlighted, while the arrows pointing to the node represent a rule that connects the items.  
   
-     The direction of the arrow tells you the direction of the rule. For example, if someone who buys gloves is also likely to buy a vest, the arrow will start from the “glove” node and terminate on the “vest” node.  
+     The direction of the arrow tells you the direction of the rule. For example, if someone who buys gloves is also likely to buy a vest, the arrow will start from the "glove" node and terminate on the "vest" node.  
   
-     To get additional statistics about this rule, you can click the **Rules** tab and look for a rule with the description, “Glove - Existing” -> “Vest – Existing.”)  
+     To get additional statistics about this rule, you can click the **Rules** tab and look for a rule with the description, "Glove - Existing" -> "Vest - Existing.")  
   
 2.  Click and drag the slider at the left of the viewer.  
   
@@ -132,7 +132,7 @@ manager: craigg
   
 3.  Click **Copy to Excel** to copy a snapshot of the current window to Excel.  
   
-     You won’t be able to work with the graph that you copy into Excel; if you need an interactive network graph, use the [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
+     You won't be able to work with the graph that you copy into Excel; if you need an interactive network graph, use the [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
   
  [Back to Top](#BKMK_ViewerTabs)  
   

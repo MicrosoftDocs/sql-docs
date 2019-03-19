@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying data types"
@@ -51,7 +50,7 @@ manager: craigg
   
 3.  In the **Column Properties** tab, click the grid cell for the **Data Type** property and choose a new data type from the drop-down list.  
   
-4.  On the **File** menu, click **Save***table name*.  
+4.  On the **File** menu, click **Save**_table name_.  
   
 > [!NOTE]  
 >  When you modify the data type of a column, Table Designer applies the default length of the data type you selected, even if you have already specified another. Always set the data type length for to the desired value after specifying the data type.  

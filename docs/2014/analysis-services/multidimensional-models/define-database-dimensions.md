@@ -37,7 +37,7 @@ manager: craigg
   
 |Tab|Description|  
 |---------|-----------------|  
-|**Dimension Structure**|Use this tab to work with the structure of a dimension—to examine or create the data source view schema for a dimension, to work with attributes, and to organize attributes in user-defined hierarchies.|  
+|**Dimension Structure**|Use this tab to work with the structure of a dimension-to examine or create the data source view schema for a dimension, to work with attributes, and to organize attributes in user-defined hierarchies.|  
 |**Attribute Relationships**|Use this tab to create, modify, or delete the attribute relationships of a dimension.|  
 |**Translations**|Use this tab to add and edit translations of dimension metadata in different languages.|  
 |**Browser**|Use this tab to examine the members of a processed dimension and to review translations of dimension metadata.|  

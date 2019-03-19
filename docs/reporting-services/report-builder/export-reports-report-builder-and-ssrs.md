@@ -4,19 +4,14 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-builder
-
-
 ms.topic: conceptual
-f1_keywords: 
-  - "10437"
-ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Export Reports (Report Builder and SSRS)
 
-  You can export a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report to another file format, such as PowerPoint, Image, PDF, [!INCLUDE[ofprword](../../includes/ofprword-md.md)], or [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] or export the report by generating an Atom service document, listing the Atom-compliant data feeds available from the report. You can export your report from Report Builder, Report Designer ([!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]), or the report server.  
+  You can export a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report to another file format, such as PowerPoint, Image, PDF, [!INCLUDE[ofprword](../../includes/ofprword-md.md)], or [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] or export the report by generating an Atom service document, listing the Atom-compliant data feeds available from the report. You can export your report from Report Builder, Report Designer ( [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]), or the report server.  
   
  Export a report to do the following:  
   

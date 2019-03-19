@@ -1,6 +1,7 @@
 ---
-title: "Troubleshoot: Changes on primary not reflected on secondary replica (Always On Availability Groups-SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Determine why changes aren't visible on secondary replica for an availability group - SQL Server"
+ms.description: "Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group." 
+ms.custom: ag-guide,seodec18 
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# Troubleshoot: Changes on the primary replica are not reflected on the secondary replica
+# Determine why changes from primary replica are not reflected on secondary replica for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The client application completes an update on the primary replica successfully, but querying the secondary replica shows that the change is not reflected. This case assumes that your availability has a healthy synchronization state. In most cases, this behavior resolves itself after a few minutes.  
   

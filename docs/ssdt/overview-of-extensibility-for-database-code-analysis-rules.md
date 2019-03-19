@@ -30,7 +30,7 @@ A custom code analysis rule class inherits from [SqlCodeAnalysisRule](https://ms
   
 -   Metadata about the rule itself.  
   
--   The Dac.Model.TSqlModel representing the database’s schema, including all the model elements, relationships between these and any properties of the elements.  
+-   The Dac.Model.TSqlModel representing the database's schema, including all the model elements, relationships between these and any properties of the elements.  
   
 -   For rules that examine specific elements the Dac.Model.TSqlObject representing that schema element in the model is included in the context.  
   

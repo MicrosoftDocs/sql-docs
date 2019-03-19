@@ -5,7 +5,6 @@ ms.date: "11/10/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, msdb database"

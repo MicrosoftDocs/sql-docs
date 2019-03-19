@@ -19,6 +19,7 @@ manager: craigg
 ---
 # Start the SQL Server Import and Export Wizard
 
+
 Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the ways described in this topic to import data from and export data to any supported data source.
 
 > [!IMPORTANT]

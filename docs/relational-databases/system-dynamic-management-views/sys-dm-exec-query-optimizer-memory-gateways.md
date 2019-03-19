@@ -35,7 +35,7 @@ Returns the current status of resource semaphores used to throttle concurrent qu
 |**active_count**|**int**|The currently active count of compiles in this gate|
 |**waiter_count**|**int**|The number of waiters in this gate|
 |**threshold_factor**|**bigint**|Threshold factor which defines the maximum memory portion used by query optimization.  For the small gateway, threshold_factor indicates the maximum optimizer memory usage in bytes for one query before it is required to gain an access in the small gateway.  For the medium and big gateway, threshold_factor shows the portion of total server memory available for this gate. It is used as a divisor when calculating the memory usage threshold for the gate.|
-|**threshold**|**bigint**|Next threshold memory in bytes.  The query is required to gain an access to this gateway if its memory consumption reaches this threshold.  “-1” if the query is not required to gain an access to this gateway.|
+|**threshold**|**bigint**|Next threshold memory in bytes.  The query is required to gain an access to this gateway if its memory consumption reaches this threshold.  "-1" if the query is not required to gain an access to this gateway.|
 |**is_active**|**bit**|Whether the query is required to pass the current gate or not.|
 
 

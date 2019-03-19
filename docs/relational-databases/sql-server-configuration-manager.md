@@ -5,7 +5,7 @@ ms.date: "07/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: configure
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "protocols [SQL Server], managing"
@@ -26,6 +26,7 @@ manager: craigg
 # SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a tool to manage the services associated with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], to configure the network protocols used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and to manage the network connectivity configuration from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client computers. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console snap-in that is available from the Start menu, or can be added to any other [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console display. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) uses the **SQLServerManager\<version>.msc** file (such as **SQLServerManager13.msc** for [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) to open Configuration Manager. Here are the paths to the last four versions when Windows in installed on the C drive.  
   
 |||  
@@ -35,9 +36,9 @@ manager: craigg
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
 |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-> [!NOTE]  
+> [!NOTE]
 >  Because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a snap-in for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console program and not a stand-alone program, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager does not appear as an application in newer versions of Windows.  
->   
+> 
 >  -   **Windows 10**:  
 >          To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, on the **Start Page**, type SQLServerManager13.msc (for [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]). For previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] replace 13 with a smaller number. Clicking SQLServerManager13.msc opens the Configuration Manager. To pin the Configuration Manager to the Start Page or Task Bar, right-click SQLServerManager13.msc, and then click **Open file location**. In the Windows File Explorer, right-click SQLServerManager13.msc, and then click **Pin to Start** or **Pin to taskbar**.  
 > -   **Windows 8**:  
@@ -67,11 +68,11 @@ manager: craigg
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager allows you to create or remove an alias, change the order in which protocols are uses, or view properties for a server alias, including:  
   
--   Server Alias — The server alias used for the computer to which the client is connecting.  
+-   Server Alias - The server alias used for the computer to which the client is connecting.  
   
--   Protocol — The network protocol used for the configuration entry.  
+-   Protocol - The network protocol used for the configuration entry.  
   
--   Connection Parameters — The parameters associated with the connection address for the network protocol configuration.  
+-   Connection Parameters - The parameters associated with the connection address for the network protocol configuration.  
   
  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager also allows you to view information about failover cluster instances, though Cluster Administrator should be used for some actions such as starting and stopping the services.  
   

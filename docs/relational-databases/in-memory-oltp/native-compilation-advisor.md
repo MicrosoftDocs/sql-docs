@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  In a given interpreted stored procedure, the NCA allows you to identify all the features that are not supported in native modules. The NCA provides documentation links to work-arounds or solutions.  
   
- For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## Walkthrough Using the Native Compilation Advisor  
  In **Object Explorer**, right click the stored procedure you want to convert, and select **Native Compilation Advisor**. This will display the welcome page for the **Stored Procedure Native Compilation Advisor**. Click **Next** to continue.  

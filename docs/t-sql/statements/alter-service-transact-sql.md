@@ -46,7 +46,7 @@ ALTER SERVICE service_name
  *service_name*  
  Is the name of the service to change. Server, database, and schema names cannot be specified.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Specifies the new queue for this service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] moves all messages for this service from the current queue to the new queue.  
   
  ADD CONTRACT *contract_name*  

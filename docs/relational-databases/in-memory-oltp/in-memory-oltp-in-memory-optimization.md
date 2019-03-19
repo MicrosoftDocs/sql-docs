@@ -77,7 +77,7 @@ For a more detailed overview of In-Memory OLTP and a review of scenarios that se
 
 -   What's new for In-Memory OLTP in SQL Server 2016 [Part 1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) and [Part 2](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
--   [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)  
+-   [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)  
   
 -   [In-Memory OLTP Blog](https://go.microsoft.com/fwlink/?LinkId=311696)  
   

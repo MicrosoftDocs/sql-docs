@@ -29,16 +29,16 @@ manager: craigg
 ```  
   
 BOOL SQLDriverToDataSource(  
-     UDWORD     fOption,  
-     SWORD      fSqlType,  
-     PTR        rgbValueIn,  
-     SDWORD     cbValueIn,  
-     PTR        rgbValueOut,  
-     SDWORD     cbValueOutMax,  
-     SDWORD *   pcbValueOut,  
-     UCHAR *    szErrorMsg,  
-     SWORD      cbErrorMsgMax,  
-     SWORD *    pcbErrorMsg);  
+     UDWORD     fOption,  
+     SWORD      fSqlType,  
+     PTR        rgbValueIn,  
+     SDWORD     cbValueIn,  
+     PTR        rgbValueOut,  
+     SDWORD     cbValueOutMax,  
+     SDWORD *   pcbValueOut,  
+     UCHAR *    szErrorMsg,  
+     SWORD      cbErrorMsgMax,  
+     SWORD *    pcbErrorMsg);  
 ```  
   
 ## Arguments  

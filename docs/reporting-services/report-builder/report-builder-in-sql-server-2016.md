@@ -1,6 +1,6 @@
 ---
-title: "Report Builder in SQL Server 2016 | Microsoft Docs"
-ms.date: 03/30/2017
+title: "Report Builder in SQL Server | Microsoft Docs"
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-builder
@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "overview of Report Builder"
   - "getting started"
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
-# Report Builder in SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a tool for authoring paginated reports, for business users who prefer to work in a stand-alone environment instead of using Report Designer in Visual Studio.  When you design a paginated report, you're creating a report definition that specifies where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes the report definition you have specified, retrieves the data, and combines it with the report layout to generate the report. You can preview your report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and publish your report to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode, where others can run it.  
+# Report Builder in SQL Server
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a tool for authoring paginated reports, for business users who prefer to work in a stand-alone environment instead of using Report Designer in Visual Studio.  When you design a paginated report, you're creating a report definition that specifies where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes the report definition you have specified, retrieves the data, and combines it with the report layout to generate the report. You can preview your report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Then publish your report to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or in SharePoint integrated mode (2016 and earlier). You can also publish a paginated report to the Power BI service. Read more about [paginated reports in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Preview).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -67,7 +67,7 @@ ms.author: maggies
   
   [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)
 
-  [What's New in Reporting Services and Report Builder for SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  [What's New in SQL Server Reporting Services and Report Builder](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Describes the new features in this version of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
   [Tutorial: Creating a Quick Chart Report Offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Introduces [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and the wizards available to help you create reports. The tutorial provides a set of data for you to work with so you do not need to connect to a data source to get started.  

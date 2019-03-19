@@ -37,8 +37,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
   
@@ -220,7 +218,7 @@ OUTPUT Clause
  *execute_statement*  
  Is any valid EXECUTE statement that returns data with SELECT or READTEXT statements. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- The RESULT SETS options of the EXECUTE statement cannot be specified in an INSERT…EXEC statement.  
+ The RESULT SETS options of the EXECUTE statement cannot be specified in an INSERT...EXEC statement.  
   
  If *execute_statement* is used with INSERT, each result set must be compatible with the columns in the table or in *column_list*.  
   
@@ -290,7 +288,7 @@ OUTPUT Clause
   
  Indicates the approximate number of rows of data in the binary data stream. For more information, see [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
->  [!NOTE]
+> [!NOTE]
 >  A syntax error is raised if a column list is not provided.  
 
 ## Remarks  
@@ -301,7 +299,7 @@ For information specific to inserting data into SQL graph tables, see [INSERT (S
   
 ### Best Practices for Bulk Importing Data  
   
-#### Using INSERT INTO…SELECT to Bulk Import Data with Minimal Logging  
+#### Using INSERT INTO...SELECT to Bulk Import Data with Minimal Logging  
  You can use `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` to efficiently transfer a large number of rows from one table, such as a staging table, to another table with minimal logging. Minimal logging can improve the performance of the statement and reduce the possibility of the operation filling the available transaction log space during the transaction.  
   
  Minimal logging for this statement has the following requirements:  
@@ -316,7 +314,7 @@ For information specific to inserting data into SQL graph tables, see [INSERT (S
   
 Rows that are inserted into a heap as the result of an insert action in a MERGE statement may also be minimally logged.  
   
- Unlike the BULK INSERT statement, which holds a less restrictive Bulk Update lock, INSERT INTO…SELECT with the TABLOCK hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using parallel insert operations.  
+ Unlike the BULK INSERT statement, which holds a less restrictive Bulk Update lock, INSERT INTO...SELECT with the TABLOCK hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using parallel insert operations.  
   
 #### Using OPENROWSET and BULK to Bulk Import Data  
  The OPENROWSET function can accept the following table hints, which provide bulk-load optimizations with the INSERT statement:  
@@ -374,7 +372,7 @@ These optimizations are similar to those available with the BULK INSERT command.
     ```  
   
 ## Error Handling  
- You can implement error handling for the INSERT statement by specifying the statement in a TRY…CATCH construct.  
+ You can implement error handling for the INSERT statement by specifying the statement in a TRY...CATCH construct.  
   
  If an INSERT statement violates a constraint or rule, or if it has a value incompatible with the data type of the column, the statement fails and an error message is returned.  
   
@@ -400,7 +398,7 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
 ## Security  
  During a linked server connection, the sending server provides a login name and password to connect to the receiving server on its behalf. For this connection to work, you must create a login mapping between the linked servers by using [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
- When you use OPENROWSET(BULK…), it is important to understand how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handles impersonation. For more information, see "Security Considerations" in [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ When you use OPENROWSET(BULK...), it is important to understand how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handles impersonation. For more information, see "Security Considerations" in [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### Permissions  
  INSERT permission is required on the target table.  
@@ -415,10 +413,10 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
 |--------------|------------------------------|  
 |[Basic syntax](#BasicSyntax)|INSERT • table value constructor|  
 |[Handling column values](#ColumnValues)|IDENTITY • NEWID • default values • user-defined types|  
-|[Inserting data from other tables](#OtherTables)|INSERT…SELECT • INSERT…EXECUTE • WITH common table expression • TOP • OFFSET FETCH|  
+|[Inserting data from other tables](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • WITH common table expression • TOP • OFFSET FETCH|  
 |[Specifying target objects other than standard tables](#TargetObjects)|Views • table variables|  
 |[Inserting rows into a remote table](#RemoteTables)|Linked server • OPENQUERY rowset function • OPENDATASOURCE rowset function|  
-|[Bulk loading data from tables or data files](#BulkLoad)|INSERT…SELECT • OPENROWSET function|  
+|[Bulk loading data from tables or data files](#BulkLoad)|INSERT...SELECT • OPENROWSET function|  
 |[Overriding the default behavior of the query optimizer by using hints](#TableHints)|Table hints|  
 |[Capturing the results of the INSERT statement](#CaptureResults)|OUTPUT clause|  
   
@@ -531,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
  Examples in this section demonstrate methods of inserting rows from one table into another table.  
   
 #### H. Using the SELECT and EXECUTE options to insert data from other tables  
- The following example shows how to insert data from one table into another table by using INSERT…SELECT or INSERT…EXECUTE. Each is based on a multi-table SELECT statement that includes an expression and a literal value in the column list.  
+ The following example shows how to insert data from one table into another table by using INSERT...SELECT or INSERT...EXECUTE. Each is based on a multi-table SELECT statement that includes an expression and a literal value in the column list.  
   
  The first INSERT statement uses a SELECT statement to derive the data from the source tables (`Employee`, `SalesPerson`, and `Person`) in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and store the result set in the `EmployeeSales` table. The second INSERT statement uses the EXECUTE clause to call a stored procedure that contains the SELECT statement, and the third INSERT uses the EXECUTE clause to reference the SELECT statement as a literal string.  
   
@@ -806,7 +804,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  Examples in this section demonstrate two methods to bulk load data into a table by using the INSERT statement.  
   
 #### Q. Inserting data into a heap with minimal logging  
- The following example creates a new table (a heap) and inserts data from another table into it using minimal logging. The example assumes that the recovery model of the `AdventureWorks2012` database is set to FULL. To ensure minimal logging is used, the recovery model of the `AdventureWorks2012` database is set to BULK_LOGGED before rows are inserted and reset to FULL after the INSERT INTO…SELECT statement. In addition, the TABLOCK hint is specified for the target table `Sales.SalesHistory`. This ensures that the statement uses minimal space in the transaction log and performs efficiently.  
+ The following example creates a new table (a heap) and inserts data from another table into it using minimal logging. The example assumes that the recovery model of the `AdventureWorks2012` database is set to FULL. To ensure minimal logging is used, the recovery model of the `AdventureWorks2012` database is set to BULK_LOGGED before rows are inserted and reset to FULL after the INSERT INTO...SELECT statement. In addition, the TABLOCK hint is specified for the target table `Sales.SalesHistory`. This ensures that the statement uses minimal space in the transaction log and performs efficiently.  
   
 ```sql
 -- Create the target heap.  

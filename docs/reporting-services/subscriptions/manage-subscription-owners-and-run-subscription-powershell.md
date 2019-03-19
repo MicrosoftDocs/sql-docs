@@ -239,7 +239,7 @@ ForEach ($item in $items)
 ```  
   
 ##  <a name="bkmk_list_for_1_report"></a> Script: List all subscriptions associated with a specific report  
- This script lists all of the subscriptions associated with a specific report. The report path syntax is different SharePoint mode which requires a full URL. In the syntax examples, the report name used is “title only”, which contains a space and therefore requires the single quotes around the report name.  
+ This script lists all of the subscriptions associated with a specific report. The report path syntax is different SharePoint mode which requires a full URL. In the syntax examples, the report name used is "title only", which contains a space and therefore requires the single quotes around the report name.  
   
  **Native mode syntax:**  
   
@@ -333,7 +333,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  For more information on the configuration file, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
- The script includes delay logic “`Start-Sleep -s 6`” so there is time after the event fires, for the updated status to be available with the ListSubscription method.  
+ The script includes delay logic "`Start-Sleep -s 6`" so there is time after the event fires, for the updated status to be available with the ListSubscription method.  
   
  **Native mode syntax:**  
   

@@ -27,13 +27,13 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
 -   Salesperson  
   
--   Geography (natural hierarchy) — Continents, Countries, States, and so on  
+-   Geography (natural hierarchy) - Continents, Countries, States, and so on  
   
--   Quarters — Quarters, Months, Days  
+-   Quarters - Quarters, Months, Days  
   
 -   Years  
   
--   Measures — Sales, PercentChange, BudgetedSales  
+-   Measures - Sales, PercentChange, BudgetedSales  
   
 -   Products  
   
@@ -56,7 +56,7 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
  The x-axis has two nested dimensions: Salesperson and Geography. From Geography, four members are selected: Seattle, Boston, USA-South, and Japan. Two members are selected from Salesperson: Valentine and Nash. This yields a total of eight positions on this axis (8 = 4*2).  
   
- Each coordinate is represented as a position with two members — one from the Salesperson dimension and another from the Geography dimension:  
+ Each coordinate is represented as a position with two members - one from the Salesperson dimension and another from the Geography dimension:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  

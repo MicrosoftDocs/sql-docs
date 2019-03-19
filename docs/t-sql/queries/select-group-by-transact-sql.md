@@ -1,7 +1,7 @@
 ---
 title: "GROUP BY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "03/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -85,6 +85,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -328,7 +329,7 @@ The GROUP BY clause supports all GROUP BY features that are included in the SQL-
   
 -   Grouping sets are not allowed in the GROUP BY clause unless they are part of an explicit GROUPING SETS list. For example, `GROUP BY Column1, (Column2, ...ColumnN`) is allowed in the standard but not in Transact-SQL.  Transact-SQL supports `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` and `GROUP BY Column1, Column2, ... ColumnN`, which are semantically equivalent. These are semantically equivalent to the previous `GROUP BY` example. This is to avoid the possibility that `GROUP BY Column1, (Column2, ...ColumnN`) might be misinterpreted as `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, which are not semantically equivalent.  
   
--   Grouping sets are not allowed inside grouping sets. For example, `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` is allowed in the SQL-2006 standard but not in Transact-SQL. Transact-SQL allows `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` or `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, which are semantically equivalent to the first GROUP BY example and have a more clear syntax.  
+-   Grouping sets are not allowed inside grouping sets. For example, `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` is allowed in the SQL-2006 standard but not in Transact-SQL. Transact-SQL allows `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` or `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, which are semantically equivalent to the first GROUP BY example and have a more clear syntax.  
   
 -   GROUP BY [ALL/DISTINCT] is only allowed in a simple GROUP BY clause that contains column expressions. It is not allowed with the GROUPING SETS, ROLLUP, CUBE, WITH CUBE or WITH ROLLUP constructs. ALL is the default and is implicit. It is also only allowed in the backwards compatible syntax.
   

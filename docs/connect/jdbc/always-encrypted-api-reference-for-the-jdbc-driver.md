@@ -31,11 +31,12 @@ manager: craigg
 |New connection string keyword:<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled enables Always Encrypted functionality for the connection and columnEncryptionSetting=Disabled disables it. Accepted values are Enabled/Disabled. The default is Disabled.|  
 |New methods:<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|Allows you to set/update/remove a list of trusted key paths for a database server. If while processing an application query the driver receives a key path that's not on the list, the query will fail. This property provides additional protection against security attacks that involve a compromised SQL Server sending fake key paths, which may lead to leaking key store credentials.|  
 |New method:<br /><br /> `public static Map<String, List\<String>> getColumnEncryptionTrustedMasterKeyPaths()`|Returns a list of trusted key paths for a database server.|  
-|New method:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Allows you to register custom key store providers. It's a dictionary that maps key store provider names to key store provider implementations.<br /><br /> To use the JVM key store, you need to instantiate a SQLServerColumnEncryptionJVMKeyStoreProvider object with JVM keystore credentials and register it with the driver. The name for this provider must be ‘MSSQL_JVM_KEYSTORE’.<br /><br /> To use the Azure Key Vault store, you need to instantiate a SQLServerColumnEncryptionAzureKeyStoreProvider object and register it with the driver. The name for this provider must be ‘AZURE_KEY_VAULT’.|
+|New method:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Allows you to register custom key store providers. It's a dictionary that maps key store provider names to key store provider implementations.<br /><br /> To use the JVM key store, you need to instantiate a SQLServerColumnEncryptionJVMKeyStoreProvider object with JVM keystore credentials and register it with the driver. The name for this provider must be 'MSSQL_JVM_KEYSTORE'.<br /><br /> To use the Azure Key Vault store, you need to instantiate a SQLServerColumnEncryptionAzureKeyStoreProvider object and register it with the driver. The name for this provider must be 'AZURE_KEY_VAULT'.|
 |`public final boolean getSendTimeAsDatetime()`|Returns the setting of the sendTimeAsDatetime connection property.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Modifies the setting of the sendTimeAsDatetime connection property.|
 
  **SQLServerConnectionPoolProxy Class**
+ 
 |Name|Description|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | Returns the setting of the sendTimeAsDatetime connection property.|
@@ -146,6 +147,7 @@ manager: craigg
 
   
 New types in **microsoft.sql.Types** class
+
 |Name|Description|  
 |----------|-----------------|  
 |DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Use these types as the target SQL types when sending parameter values to **encrypted** datetime, smalldatetime, money, smallmoney, uniqueidentifier columns using `setObject()/updateObject()` API methods.|  
@@ -153,7 +155,7 @@ New types in **microsoft.sql.Types** class
   
  **SQLServerStatementColumnEncryptionSetting Enum**  
   
- Specifies how data will be sent and received when reading and writing encrypted columns. Depending on your specific query, performance impact may be reduced by bypassing the Always Encrypted driver’s processing when non-encrypted columns are being used. Note that these settings can't be used to bypass encryption and gain access to plaintext data.  
+ Specifies how data will be sent and received when reading and writing encrypted columns. Depending on your specific query, performance impact may be reduced by bypassing the Always Encrypted driver's processing when non-encrypted columns are being used. Note that these settings can't be used to bypass encryption and gain access to plaintext data.  
   
  **Syntax**  
   

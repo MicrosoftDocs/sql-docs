@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Cleanse Data in a Composite Domain
@@ -17,13 +17,13 @@ manager: craigg
 ##  <a name="Mapping"></a> Mapping a Composite Domain to the Source Data  
  There are two ways in which you can map your source data to a composite domain:  
   
--   The source data is a single field (let’s say Full Name), which is mapped to a composite domain.  
+-   The source data is a single field (let's say Full Name), which is mapped to a composite domain.  
   
     -   If the composite domain is mapped to a reference data service, the source data will be sent as is to the reference data service for correction and parsing.  
   
     -   If the composite domain is not mapped to a reference data service, will be parsed based on the parsing method defined for the composite domain. For more information about specifying a parsing method for composite domains, see [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)  
   
--   The source data consists of multiple fields (let’s say First Name, Middle Name, and Last Name), which are mapped to individual domains within a composite domain.  
+-   The source data consists of multiple fields (let's say First Name, Middle Name, and Last Name), which are mapped to individual domains within a composite domain.  
   
  For an example of how to map composite domains to source data, see [Attach a Domain or Composite Domain to Reference Data](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
@@ -32,7 +32,7 @@ manager: craigg
   
  Consider the following example: there is a composite domain, Product, with three individual domains: ProductName, CompanyName, and ProductVersion. Create the following definitive cross-domain rule:  
   
- IF Domain ‘CompanyName’ Value contains *Microsoft* and Domain ‘ProductName’ Value is equal to *Office* and ‘ProductVersion’ Value is equal to *2010* THEN Domain ‘ProductName’ Value is equal to *Microsoft Office 2010*.  
+ IF Domain 'CompanyName' Value contains *Microsoft* and Domain 'ProductName' Value is equal to *Office* and 'ProductVersion' Value is equal to *2010* THEN Domain 'ProductName' Value is equal to *Microsoft Office 2010*.  
   
  When this cross-domain rule runs, the source data (ProductName) gets corrected to the following after the cleansing activity:  
   
@@ -48,7 +48,7 @@ manager: craigg
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- When you test the definitive *Then* cross-domain rule, **Value is equal to**, the **Test Composite Domain Rule** dialog box contains a new column, **Correct To**, which displays the correct data. In a cleansing data quality project, this definitive cross-domain rule changes the data with 100% confidence, and the **Reason** column displays the following message: Corrected by Rule ‘*\<Cross-Domain Rule Name>*’. For more information about cross domain rules, see [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ When you test the definitive *Then* cross-domain rule, **Value is equal to**, the **Test Composite Domain Rule** dialog box contains a new column, **Correct To**, which displays the correct data. In a cleansing data quality project, this definitive cross-domain rule changes the data with 100% confidence, and the **Reason** column displays the following message: Corrected by Rule '*\<Cross-Domain Rule Name>*'. For more information about cross domain rules, see [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  The definitive cross-domain rule will not work for composite domains that are attached to reference data service.  

@@ -33,12 +33,12 @@ manager: craigg
 ```  
   
 SQLRETURN SQLNativeSql(  
-     SQLHDBC        ConnectionHandle,  
-     SQLCHAR *      InStatementText,  
-     SQLINTEGER     TextLength1,  
-     SQLCHAR *      OutStatementText,  
-     SQLINTEGER     BufferLength,  
-     SQLINTEGER *   TextLength2Ptr);  
+     SQLHDBC        ConnectionHandle,  
+     SQLCHAR *      InStatementText,  
+     SQLINTEGER     TextLength1,  
+     SQLCHAR *      OutStatementText,  
+     SQLINTEGER     BufferLength,  
+     SQLINTEGER *   TextLength2Ptr);  
 ```  
   
 ## Arguments  

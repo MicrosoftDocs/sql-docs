@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 1: Defining a Matching Policy
@@ -50,7 +47,7 @@ manager: craigg
   
 10. Click **Add a new domain element** from the toolbar again.  
   
-11. Select **Supplier Name** domain, select **Similar** for **Similarity**, and Type **70** for the **Weight**.  Here, you are specifying that supplier names do not need to be identical but can be similar for the records to be considered as a match. The weight indicates the contribution of this field’s score to the overall matching score.  
+11. Select **Supplier Name** domain, select **Similar** for **Similarity**, and Type **70** for the **Weight**.  Here, you are specifying that supplier names do not need to be identical but can be similar for the records to be considered as a match. The weight indicates the contribution of this field's score to the overall matching score.  
   
 12. Repeat previous two steps to add **Contact Email** domain with **30** for the **Weight**.  
   

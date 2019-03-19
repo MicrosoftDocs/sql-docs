@@ -116,9 +116,9 @@ manager: craigg
   
  ![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- Workbook owners or authors must have **Contribute** permission to schedule data refresh on a workbook. Users with Contribute permissions can open and edit the workbook’s data refresh configuration page to specify the credentials and schedule information used to refresh the data.  
+ Workbook owners or authors must have **Contribute** permission to schedule data refresh on a workbook. Users with Contribute permissions can open and edit the workbook's data refresh configuration page to specify the credentials and schedule information used to refresh the data.  
   
- So, users that only have **View** or **Read** permission levels, will not be able to access the refresh button. The refresh button is visible but disabled. For more information, see [User permissions and permission levels in SharePoint 2013](http://technet.microsoft.com/library/cc721640.aspx).  
+ So, users that only have **View** or **Read** permission levels, will not be able to access the refresh button. The refresh button is visible but disabled. For more information, see [User permissions and permission levels in SharePoint 2013](https://technet.microsoft.com/library/cc721640.aspx).  
   
 ##  <a name="switch"></a> Switch to Theater View or Gallery View  
  Preview varies depending on how you configure the view for the library. In Gallery view, you can hover the mouse pointer over individual worksheets in the workbook to bring a sheet into focus in the preview area.  

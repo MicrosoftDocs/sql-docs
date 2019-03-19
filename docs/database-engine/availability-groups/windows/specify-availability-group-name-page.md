@@ -1,6 +1,7 @@
 ---
-title: "Specify Availability Group Options Page (New Availability Group Wizard/Add Database Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Specify Availability Group Options Page (Availability Group Wizard) - SQL Server | Microsoft Docs"
+ms.description: "Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Specify Availability Group Options Page
+# Specify Availability Group Options Page for an Always On Availability Group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes the options of the **Specify Availability Group Name** page. This topic is used by both the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

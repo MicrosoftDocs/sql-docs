@@ -13,7 +13,7 @@ manager: kfile
 # Database Consistency Checker (DBCC) for Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC provides on-demand database validation for Multidimensional and Tabular databases on an Analysis Services instance. You can execute DBCC in an MDX or XMLA query window in SQL Server Management Studio (SSMS) and trace the DBCC output in either SQL Server Profiler or xEvent sessions in SSMS.  
-The command takes an object definition and returns either an empty result set or detailed error information if the object is corrupted.   In this article, you’ll learn how to run the command, interpret results, and address any problems that arise.  
+The command takes an object definition and returns either an empty result set or detailed error information if the object is corrupted.   In this article, you'll learn how to run the command, interpret results, and address any problems that arise.  
   
  For Tabular databases, consistency checks performed by DBCC are equivalent to the built-in validation that occurs automatically every time you reload, synchronize, or restore  a database.  In contrast, consistency checks for Multidimensional databases happen only when you run DBCC on demand.  
   
@@ -29,7 +29,7 @@ The command takes an object definition and returns either an empty result set or
  DBCC for Analysis Services will execute on any Analysis Services database at any compatibility level, as long as the database is running on a  SQL Server 2016 instance. Just make sure you're using the right command syntax for each database type.  
   
 > [!NOTE]  
->  If you’re familiar with [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), you’ll quickly notice that the DBCC in Analysis Services has a much narrower scope. DBCC in Analysis Services is a single command that reports exclusively on data corruption across the database or on individual objects. If you have other tasks in mind, such as collecting information, try using AMO PowerShell or XMLA scripts instead.
+>  If you're familiar with [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), you'll quickly notice that the DBCC in Analysis Services has a much narrower scope. DBCC in Analysis Services is a single command that reports exclusively on data corruption across the database or on individual objects. If you have other tasks in mind, such as collecting information, try using AMO PowerShell or XMLA scripts instead.
   
 ## Permission requirements  
  You must be an Analysis Services database or server administrator (a member of the server role) to run the command. See [Grant database permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) or [Grant server admin rights to an  Analysis Services instance](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) for instructions.  
@@ -66,7 +66,7 @@ The command takes an object definition and returns either an empty result set or
   
 ```  
   
- To run DBCC on objects higher up the object chain, delete any lower-level object ID elements you don’t need:  
+ To run DBCC on objects higher up the object chain, delete any lower-level object ID elements you don't need:  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

@@ -41,7 +41,7 @@ manager: craigg
   
 1.  In Object Explorer, right-click an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instance object, database, or database object, and then click **Facets**.  
   
-2.  In the **View Facets –***object_name* dialog box, in the **Facet** list, select a facet to view its properties. For more information on the available options in this dialog box, see [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
+2.  In the **View Facets -**_object_name_ dialog box, in the **Facet** list, select a facet to view its properties. For more information on the available options in this dialog box, see [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
   
 3.  When finished, click **OK**.  
   

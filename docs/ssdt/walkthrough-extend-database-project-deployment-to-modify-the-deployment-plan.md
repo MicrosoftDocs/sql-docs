@@ -52,7 +52,7 @@ To create a deployment contributor, you must perform the following tasks:
   
 1.  Create a Visual C# or Visual Basic class library project named MyOtherDeploymentContributor.  
   
-2.  Rename the file “Class1.cs” to “SqlRestartableScriptContributor.cs.”  
+2.  Rename the file "Class1.cs" to "SqlRestartableScriptContributor.cs."  
   
 3.  In Solution Explorer, right-click the project node and then click **Add Reference**.  
   
@@ -185,7 +185,7 @@ Next, start to add code to the class.
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -362,7 +362,7 @@ Next, start to add code to the class.
     |IsStatementEscaped|Define the IsStatementEscaped method. This method determines whether the type of model element requires the statement to be wrapped in an EXEC sp_executesql statement before it can be enclosed within an IF statement. Key types, methods, and properties include the following: TSqlObject.ObjectType, ModelTypeClass, and the TypeClass property for the following model types: Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
     |CreateBatchCompleteInsert|Define the CreateBatchCompleteInsert method. This method creates the INSERT statement that will be added to the deployment script to track progress of script execution. Key types, methods, and properties include the following: InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource, and RowValue.|  
     |CreateIfNotExecutedStatement|Define the CreateIfNotExecutedStatement method. This method generates an IF statement that checks to see if the temporary batches executes table indicates that this batch has already been executed. Key types, methods, and properties include the following: IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression, and BooleanNotExpression.|  
-    |GetStepInfo|Define the GetStepInfo method. This method extracts information about the model element used to create the step’s script, in addition to the step name. Types and methods of interest include the following: [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), and [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
+    |GetStepInfo|Define the GetStepInfo method. This method extracts information about the model element used to create the step's script, in addition to the step name. Types and methods of interest include the following: [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), and [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
     |GetElementName|Creates a formatted name for a TSqlObject.|  
   
 1.  Add the following code to define the helper methods:  
@@ -666,9 +666,9 @@ You must always update the SQL project file to specify the ID of the contributor
   
     1.  Navigate to %Program Files%\MSBuild.  
   
-    2.  Create a new folder “MyContributors” where your targets files will be stored.  
+    2.  Create a new folder "MyContributors" where your targets files will be stored.  
   
-    3.  Create a new file “MyContributors.targets” inside this directory, add the following text to it and save the file:  
+    3.  Create a new file "MyContributors.targets" inside this directory, add the following text to it and save the file:  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -691,17 +691,17 @@ You must always update the SQL project file to specify the ID of the contributor
 After you have followed one of these approaches, you can use MSBuild to pass in the parameters for command-line builds.  
   
 > [!NOTE]  
-> You must always update the "DeploymentContributors" property to specify your contributor ID. This is the same ID used in the “ExportDeploymentPlanModifier” attribute in your contributor source file. Without this your contributor will not be run when building the project. The “ContributorArguments” property needs to be updated only if you have arguments required for your contributor to run.  
+> You must always update the "DeploymentContributors" property to specify your contributor ID. This is the same ID used in the "ExportDeploymentPlanModifier" attribute in your contributor source file. Without this your contributor will not be run when building the project. The "ContributorArguments" property needs to be updated only if you have arguments required for your contributor to run.  
   
 ## Deploy the Database Project  
   
 #### To deploy your SQL project and generate a deployment report  
   
--   Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the Publish… option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the “Publish…” dialog to generate a deployment script.  
+-   Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the Publish... option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the "Publish..." dialog to generate a deployment script.  
   
     1.  Open Visual Studio and open the solution containing your SQL Project.  
   
-    2.  Right-click on the project in Solution Explorer and choose the **Publish…** option.  
+    2.  Right-click on the project in Solution Explorer and choose the **Publish...** option.  
   
     3.  Set the server name and database name to publish to.  
   

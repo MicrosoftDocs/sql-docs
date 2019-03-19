@@ -85,7 +85,7 @@ manager: craigg
   
 -   1300, productE  
   
- The new data is appended to the end of the raw file, and the sorted keys (PK) are out of order. In addition, the append operation didn’t change the file metadata (sort information). If you read the file by using the Raw File source, the component indicates that the file is still sorted on PK even though the data in the file is no longer in the correct order.  
+ The new data is appended to the end of the raw file, and the sorted keys (PK) are out of order. In addition, the append operation didn't change the file metadata (sort information). If you read the file by using the Raw File source, the component indicates that the file is still sorted on PK even though the data in the file is no longer in the correct order.  
   
  To keep the sorted keys in the correct order while appending data, you can design the package data flow as follows:  
   
@@ -99,7 +99,7 @@ manager: craigg
   
 5.  Write to RawFile2 by using the Raw File destination.  
   
-     RawFile1 is locked because it’s being read from, in the data flow.  
+     RawFile1 is locked because it's being read from, in the data flow.  
   
 6.  Replace RawFile1 with RawFile2.  
   

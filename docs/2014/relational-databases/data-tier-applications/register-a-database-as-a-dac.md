@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.registerdacwizard.registerdac.f1"
@@ -46,7 +46,7 @@ manager: craigg
   
 2.  Expand the **Databases** node.  
   
-3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application…**  
+3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   
@@ -95,7 +95,7 @@ manager: craigg
  **Cancel** - Terminates the wizard without registering the DAC.  
   
 ### Validating Objects  
- **Checking**  *SchemaName* **.** *ObjectName* **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. *SchemaName***.***ObjectName* identify which object is currently being verified.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. _SchemaName_**.**_ObjectName_ identify which object is currently being verified.  
   
  **\< Previous** - Returns you to the **Set Properties** page to change your entries.  
   

@@ -5,14 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: performance-monitor
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Wait Statistics object"
   - "SQLServer:Wait Statistics"
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Wait Statistics Object

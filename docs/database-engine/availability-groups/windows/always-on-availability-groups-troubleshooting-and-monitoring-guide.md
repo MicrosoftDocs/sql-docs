@@ -1,6 +1,7 @@
 ---
-title: "Always On Availability Groups troubleshooting and monitoring guide (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "A reference for monitoring and troubleshooting Always On availability groups"
+description: "This guide serves as a reference page to help you get started on monitoring and troubleshooting some of the common issues found with Always On availability groups."
+ms.custom: "ag-guide, seodec18"
 ms.date: "05/10/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +17,6 @@ manager: craigg
  
  Because availability groups are an integrated technology, many problems you encounter may be symptoms of other issues in your database system. Some issues are caused by settings within an availability group, such as an availability database being suspended. Other issues can include problems with other aspects of SQL Server, such as SQL Server settings, database file deployments, and systemic performance issues unrelated to availability. Still other problems can exist outside of SQL Server, such as network I/O, TCP/IP, Active Directory, and Windows Server Failover Clustering (WSFC) issues. Often, problems that surface in an availability group, replica, or database require you to troubleshoot multiple technologies to identify the root cause.  
   
-
   
 ##  <a name="BKMK_SCENARIOS"></a> Troubleshooting scenarios  
  The following table contains links to the common troubleshooting scenarios for availability groups. They are categorized by their scenario types, such as configuration, client connectivity, failover, and performance.  
@@ -49,7 +49,7 @@ manager: craigg
 |[Always On ring buffers](always-on-ring-buffers.md)|Record alerts within the SQL Server system for internal diagnostics, and can be used to debug issues related to the availability groups.|  
   
 ##  <a name="BKMK_MONITOR"></a> Monitoring availability groups  
- The ideal time to troubleshoot an availability group is before a problem necessitates a failover, whether automatic or manual. This can be done by monitoring the availability group’s performance metrics and sending alerts when the availability replicas are performing outside the bounds of your service-level agreement (SLA). For example, if a synchronous secondary replica has performance issues that cause the estimated failover time to increase, you do not want to wait until an automatic failover occurs and you find out that the failover time exceeds your recovery time objective.  
+ The ideal time to troubleshoot an availability group is before a problem necessitates a failover, whether automatic or manual. This can be done by monitoring the availability group's performance metrics and sending alerts when the availability replicas are performing outside the bounds of your service-level agreement (SLA). For example, if a synchronous secondary replica has performance issues that cause the estimated failover time to increase, you do not want to wait until an automatic failover occurs and you find out that the failover time exceeds your recovery time objective.  
   
  Because availability groups are a high availability and disaster recovery solution, the most important performance metrics to monitor are the estimated failover time, which affects your recovery time objective (RTO), and the potential data loss in a disaster, which affects your recovery point objective (RPO). You can gather these metrics from the data that SQL Server exposes at any given time, so you can be alerted of a problem in the High Availability Disaster Recovery (HADR) capabilities of your system before actual failure events occur. Therefore, it is important to familiarize yourself with the data synchronization process of availability groups and gather the metrics accordingly.  
   

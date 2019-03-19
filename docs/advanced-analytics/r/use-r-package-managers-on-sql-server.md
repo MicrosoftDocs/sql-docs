@@ -1,6 +1,6 @@
 ---
-title: Install new R packages on SQL Server Machine Learning Services| Microsoft Docs
-description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database)
+title: Use R package managers - SQL Server Machine Learning Services
+description: Use standard R commands like install.packages to add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
 

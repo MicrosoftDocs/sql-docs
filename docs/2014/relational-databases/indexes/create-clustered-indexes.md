@@ -74,13 +74,13 @@ manager: craigg
   
 1.  In Object Explorer, expand the table on which you want to create a clustered index.  
   
-2.  Right-click the **Indexes** folder, point to **New Index**, and select **Clustered Index…**.  
+2.  Right-click the **Indexes** folder, point to **New Index**, and select **Clustered Index...**.  
   
 3.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-4.  Under **Index key columns**, click **Add…**.  
+4.  Under **Index key columns**, click **Add...**.  
   
-5.  In the **Select Columns from***table_name* dialog box, select the check box of the table column to be added to the clustered index.  
+5.  In the **Select Columns from**_table_name_ dialog box, select the check box of the table column to be added to the clustered index.  
   
 6.  Click **OK**.  
   
@@ -90,7 +90,7 @@ manager: craigg
   
 1.  In Object Explorer, expand the database on which you want to create a table with a clustered index.  
   
-2.  Right-click the **Tables** folder and click **New Table…**.  
+2.  Right-click the **Tables** folder and click **New Table...**.  
   
 3.  Create a new table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../tables/create-tables-database-engine.md).  
   
@@ -106,7 +106,7 @@ manager: craigg
   
 9. Click **Close**.  
   
-10. On the **File** menu, click **Save***table_name*.  
+10. On the **File** menu, click **Save**_table_name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

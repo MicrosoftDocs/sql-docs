@@ -33,8 +33,8 @@ manager: craigg
 ```  
   
 BOOL SQLWriteDSNToIni(  
-     LPCSTR   lpszDSN,  
-     LPCSTR   lpszDriver);  
+     LPCSTR   lpszDSN,  
+     LPCSTR   lpszDriver);  
 ```  
   
 ## Arguments  

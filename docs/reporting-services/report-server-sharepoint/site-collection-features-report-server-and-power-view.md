@@ -28,7 +28,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
  "SharePoint web app 80 does not have root site collection"  
   
- The message is found in the add-in installation log, named “RS_SP_#.log” where # is an incrementing number. The log file is found in the current users Temp folder, for example C:\Users\\[user name]\AppData\Local\Temp. For more information on logging options with the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ The message is found in the add-in installation log, named "RS_SP_#.log" where # is an incrementing number. The log file is found in the current users Temp folder, for example C:\Users\\[user name]\AppData\Local\Temp. For more information on logging options with the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
 
 ## Activate the Report Server and Power View integration site collection features
   

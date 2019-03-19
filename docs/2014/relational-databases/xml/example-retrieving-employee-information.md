@@ -20,7 +20,7 @@ manager: craigg
   
 ```  
 <Employee EmpID="1" >  
-  <Name FName="Ken" LName="Sánchez" />  
+  <Name FName="Ken" LName="S??nchez" />  
 </Employee>  
 ...  
 ```  
@@ -81,7 +81,7 @@ FOR XML EXPLICIT;
   
  `<Employee EmpID="1">`  
   
- `<Name FName="Ken" LName="Sánchez" />`  
+ `<Name FName="Ken" LName="S??nchez" />`  
   
  `</Employee>`  
   
@@ -103,7 +103,7 @@ FOR XML EXPLICIT;
   
  `1   NULL    1                NULL         NULL`  
   
- `2   1       1                Ken          Sánchez`  
+ `2   1       1                Ken          S??nchez`  
   
  `1   NULL    2                NULL         NULL`  
   

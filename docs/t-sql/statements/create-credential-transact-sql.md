@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CREATE CREDENTIAL statement"
   - "credentials [SQL Server], CREATE CREDENTIAL statement"
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
@@ -91,7 +91,7 @@ GO
 ```  
   
 ### B. Creating a Credential for EKM  
- The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM’s Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:  
+ The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM's Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:  
   
 ```  
 CREATE CREDENTIAL CredentialForEKM  
@@ -144,12 +144,14 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
   
 > [!IMPORTANT]  
 >  THE **CREDENTIAL NAME** argument requires that the name match the container path, start with https and not contain a trailing forward slash. The **IDENTITY** argument requires the name, *SHARED ACCESS SIGNATURE*. The **SECRET** argument requires the shared access signature token.  
+>
+>  The **SHARED ACCESS SIGNATURE secret** should not have the leading **?**.
   
 ```  
 USE master  
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.  
    WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-   , SECRET = 'sharedaccesssignature' –- this is the shared access signature token   
+   , SECRET = 'sharedaccesssignature' -- this is the shared access signature token   
 GO    
 ```  
   

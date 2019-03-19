@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   From Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], run the following query:  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -56,7 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     -   The SQL Trace column maps to one of the data fields that is associated with the Extended Events event.  
   
         > [!NOTE]  
-        >  Each Extended Events event has a default set of data fields that are automatically included in the result set.  
+        > Each Extended Events event has a default set of data fields that are automatically included in the result set.  
   
     -   The action column does not have a meaningful Extended Events equivalent. An example of this is the EventClass column in SQL Trace. This column is not needed in Extended Events because the event name serves the same purpose.  
   

@@ -89,7 +89,7 @@ To view the migration messages, make sure that the Output pane is visible. Other
 4.  Right-click **Schemas** in Sybase Metadata Explorer, and then click **Migrate Data**. You can also migrate data for individual objects or categories of objects: Right-click the object or its parent folder, and select the **Migrate Data** option.  
   
     > [!NOTE]  
-    > If the SSMA for Sybase Extension Pack is not installed on the instance of SQL Server, and if **Server Side Data Migration Engine** is selected, then while migrating the data to the target database, the following error is encountered: ‘SSMA Data Migration components were not found on SQL Server, server-side data migration will not be possible. Please check if Extension Pack is installed correctly’. Click **Cancel** to terminate the data migration.  
+    > If the SSMA for Sybase Extension Pack is not installed on the instance of SQL Server, and if **Server Side Data Migration Engine** is selected, then while migrating the data to the target database, the following error is encountered: 'SSMA Data Migration components were not found on SQL Server, server-side data migration will not be possible. Please check if Extension Pack is installed correctly'. Click **Cancel** to terminate the data migration.  
   
 5.  In the **Connect to Sybase ASE** dialog box, enter the connection credentials, and then click **Connect**. For more information on connecting to Sybase ASE, see [Connect to Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   

@@ -67,7 +67,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## Remarks  
  The following table describes the effect of using one, two, or three parameters.  
   
-|This parameter list…|Has this result…|  
+|This parameter list...|Has this result...|  
 |--------------------------|----------------------|  
 |*table_id*|When invoked with only the *table_id* parameter, sp_fulltext_keymappings returns all full-text key (Key) values from the specified base table, along with the DocId that corresponds to each key. This includes keys that are pending delete.<br /><br /> This function is useful for troubleshooting a variety of issues. It is particularly useful for seeing the full-text index content when the selected full-text key is not of an integer data type. This involves joining the results of sp_fulltext_keymappings with the results of **sys.dm_fts_index_keywords_by_document**. For more information, see [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> In general, however, we recommend that, if possible, you execute sp_fulltext_keymappings with parameters that specify a specific full-text key or DocId. This is much more efficient than returning an entire key map, especially for a very large table for which the performance cost of returning the entire key map might be substantial.|  
 |*table_id*, *docid*|If only the *table_id* and *docid* are specified, *docid* must be nonNULL and specify a valid DocId in the specified table. This function is useful to isolate the custom full-text key from the base table that corresponds to the DocId of a particular full-text index.|  

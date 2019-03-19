@@ -10,7 +10,7 @@ ms.topic: "language-reference"
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: douglasl
+ms.reviewer: genemi
 manager: craigg
 ---
 # JSON_MODIFY (Transact-SQL)
@@ -30,7 +30,7 @@ JSON_MODIFY ( expression , path , newValue )
  *expression*  
  An expression. Typically the name of a variable or a column that contains JSON text.  
   
- **JSON_MODIFY** returns an error if *expression* doesn’t contain valid JSON.  
+ **JSON_MODIFY** returns an error if *expression* doesn't contain valid JSON.  
   
  *path*  
  A JSON path expression that specifies the property to update.
@@ -73,9 +73,9 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
 |Existing value|Path exists|Lax mode|Strict mode|  
 |--------------------|-----------------|--------------|-----------------|  
 |Not NULL|Yes|Update the existing value.|Update the existing value.|  
-|Not NULL|No|Try to create a new key:value pair on the specified path.<br /><br /> This may fail. For example, if you specify the path `$.user.setting.theme`, JSON_MODIFY does not insert the key `theme` if the `$.user` or `$.user.settings` objects do not exist, or if settings is an array or a scalar value.|Error – INVALID_PROPERTY|  
+|Not NULL|No|Try to create a new key:value pair on the specified path.<br /><br /> This may fail. For example, if you specify the path `$.user.setting.theme`, JSON_MODIFY does not insert the key `theme` if the `$.user` or `$.user.settings` objects do not exist, or if settings is an array or a scalar value.|Error - INVALID_PROPERTY|  
 |NULL|Yes|Delete the existing property.|Set the existing value to null.|  
-|NULL|No|No action. The first argument is returned as the result.|Error – INVALID_PROPERTY|  
+|NULL|No|No action. The first argument is returned as the result.|Error - INVALID_PROPERTY|  
   
  In lax mode, JSON_MODIFY tries to create a new key:value pair, but in some cases it might fail.  
   
@@ -201,7 +201,7 @@ PRINT @product
 }
 ```  
   
- If you don’t cast the new value to a numeric type, JSON_MODIFY treats it as text and surrounds it with double quotes.  
+ If you don't cast the new value to a numeric type, JSON_MODIFY treats it as text and surrounds it with double quotes.  
   
 ### Example - Increment a value  
  The following example shows how to increment the value of a property in JSON text with the JSON_MODIFY function. First you can take the value of the existing property and insert it as a new key:value pair. Then you can delete the old key by setting the value of the old property to NULL.  

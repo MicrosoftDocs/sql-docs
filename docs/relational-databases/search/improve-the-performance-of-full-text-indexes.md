@@ -1,10 +1,8 @@
 ---
 title: "Improve the Performance of Full-Text Indexes | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,8 +13,9 @@ helpviewer_keywords:
   - "full-text search [SQL Server], performance"
   - "batches [SQL Server], full-text search"
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -77,8 +76,8 @@ The crawl log file follows the following naming scheme:
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 The variable parts of the crawl log file name are the following.
--   <**DatabaseID**> - The ID of a database. <**dbid**> is a five digit number with leading zeros.  
--   <**FullTextCatalogID**> - Full-text catalog ID. <**catid**> is a five digit number with leading zeros.  
+-   \<**DatabaseID**> - The ID of a database. <**dbid**> is a five digit number with leading zeros.  
+-   <**FullTextCatalogID**> - Full-text catalog ID. \<**catid**> is a five digit number with leading zeros.  
 -   <**n**> - Is an integer that indicates one or more crawl logs of the same full-text catalog exist.  
   
  For example, `SQLFT0000500008.2` is the crawl log file for a database with database ID = 5, and full-text catalog ID = 8. The 2 at the end of the file name indicates that there are two crawl log files for this database/catalog pair.  
@@ -126,23 +125,23 @@ The variable parts of the crawl log file name are the following.
   
 For essential information about the following formulas, see the notes that follow the table.  
   
-|Platform|Estimating fdhost.exe memory requirements in MB—*F*^1|Formula for calculating max server memory—*M*^2|  
+|Platform|Estimating fdhost.exe memory requirements in MB-*F*^1|Formula for calculating max server memory-*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Number of crawl ranges* * 50|*M* =minimum(*T*, 2000) – F – 500|  
-|x64|*F* = *Number of crawl ranges* * 10 * 8|*M* = *T* – *F* – 500|  
+|x86|*F* = *Number of crawl ranges* * 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *Number of crawl ranges* * 10 * 8|*M* = *T* - *F* - 500|  
 
 **Notes about the formulas**
-1.  If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as *T***–** sigma**(***F*i**)**.  
+1.  If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as _T_**-** sigma**(**_F_i**)**.  
 2.  500 MB is an estimate of the memory required by other processes in the system. If the system is doing additional work, increase this value accordingly.  
 3.  .*ism_size* is assumed to be 8 MB for x64 platforms.  
   
  #### Example: Estimate the memory requirements of fdhost.exe  
   
- This example is for an 64-bit computer that has 8GM of RAM and 4 dual core processors. The first calculation estimates of memory needed by fdhost.exe—*F*. The number of crawl ranges is `8`.  
+ This example is for an 64-bit computer that has 8GM of RAM and 4 dual core processors. The first calculation estimates of memory needed by fdhost.exe-*F*. The number of crawl ranges is `8`.  
   
  `F = 8*10*8=640`  
   
- The next calculation obtains the optimal value for **max server memory**—*M*. The total physical memory available on this system in MB—*T*—is `8192`.  
+ The next calculation obtains the optimal value for **max server memory**-*M*. The total physical memory available on this system in MB-*T*-is `8192`.  
   
  `M = 8192-640-500=7052`  
   
@@ -169,7 +168,7 @@ The performance of full populations is not optimal when the average CPU consumpt
      To find out whether a page wait time is high, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
     ```  
-    Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
+    SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
     ```  
   
      The following table describes the wait types of interest here.  

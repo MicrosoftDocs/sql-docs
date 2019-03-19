@@ -17,13 +17,13 @@ manager: craigg
   
  You can also use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to deploy the project and execute the packages. For more information, see the topics in the **See Also** section.  
   
-> [!TIP]  
+> [!TIP]
 >  You can easily generate the Transact-SQL statements for the stored procedures listed in the procedure below, with the exception of catalog.deploy_project, by doing the following:  
->   
+> 
 >  1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the **Integration Services Catalogs** node in Object Explorer and navigate to the package you want to execute.  
 > 2.  Right-click the package, and then click **Execute**.  
 > 3.  As needed, set parameters values, connection manager properties, and options in the **Advanced** tab such as the logging level.  
->   
+> 
 >      For more information about logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
 > 4.  Before clicking **OK** to execute the package, click **Script**. The Transact-SQL appears in a Query Editor window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -98,7 +98,7 @@ manager: craigg
   
 -   Confirm that the Distributed Transaction Coordinator (DTC) is started on both servers.  
   
- Call catalog.get_project to return the binary for the project, and then call catalog.deploy_project. The value returned by catalog.get_project is inserted into a table variable of type varbinary(max). The linked server can’t return results that are varbinary(max).  
+ Call catalog.get_project to return the binary for the project, and then call catalog.deploy_project. The value returned by catalog.get_project is inserted into a table variable of type varbinary(max). The linked server can't return results that are varbinary(max).  
   
  In the following example, catalog.get_project returns a binary for the SSISPackages project on the linked server. The catalog.deploy_project deploys the project to the local server, to the folder named DestFolder.  
   

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Compare Business Intelligence Capabilities In Different Microsoft Environments
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence can be deployed in a number of different environments including [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with SharePoint Server, SharePoint Online, and Power BI for Office 365. This topic compares the components and features supported in each environment.  
@@ -38,7 +38,7 @@ manager: craigg
   
  **<sup>2</sup>**  [Power BI Q&A: Optimize a Power BI workbook (cloud modeling)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).  
   
- **<sup>3</sup>**  [Introducing new forecasting capabilities in Power View for Office 365](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
+ **<sup>3</sup>**  [Introducing new forecasting capabilities in Power View for Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
   
 ## View and browse BI data, reports, and dashboards  
   
@@ -54,7 +54,7 @@ manager: craigg
   
  **<sup>2</sup>**  [PowerPivot Workbooks as a Data Source](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
- **<sup>3</sup>**  [Mobile Support across Business Intelligence (BI) Tools](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) and [Planning for Reporting Services and Power View Browser Support (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx).  
+ **<sup>3</sup>**  [Mobile Support across Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) and [Planning for Reporting Services and Power View Browser Support (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   
 ## More information  
   
@@ -64,13 +64,13 @@ manager: craigg
   
 -   [Office Online, Pick your enterprise social network: Yammer or Newsfeed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
--   [Power BI for Office 365](http://www.microsoft.com/powerbi/default.aspx).  
+-   [Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx).  
   
--   [Power BI pricing](http://www.microsoft.com/powerBI/pricing.aspx).  
+-   [Power BI pricing](https://www.microsoft.com/powerBI/pricing.aspx).  
   
--   [Compare a BI Center site to Power BI for Office 365 sites](http://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
+-   [Compare a BI Center site to Power BI for Office 365 sites](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
   
--   [Introducing Microsoft BI Reporting and Analysis Tools](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Introducing Microsoft BI Reporting and Analysis Tools](https://go.microsoft.com/fwlink/p/?LinkId=617093)  
   
 ## Community Content  
  [Microsoft self-service BI on premise vs cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  

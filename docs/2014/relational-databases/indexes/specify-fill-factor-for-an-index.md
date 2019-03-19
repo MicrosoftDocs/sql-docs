@@ -59,11 +59,11 @@ manager: craigg
   
 #### To specify a fill factor by using Table Designer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index’s fill factor.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index's fill factor.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Right-click the table on which you want to specify an index’s fill factor and select **Design**.  
+3.  Right-click the table on which you want to specify an index's fill factor and select **Design**.  
   
 4.  On the **Table Designer** menu, click **Indexes/Keys**.  
   
@@ -73,15 +73,15 @@ manager: craigg
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, select **Save***table_name*.  
+8.  On the **File** menu, select **Save**_table_name_.  
   
 #### To specify a fill factor in an index by using Object Explorer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index’s fill factor.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index's fill factor.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table on which you want to specify an index’s fill factor.  
+3.  Click the plus sign to expand the table on which you want to specify an index's fill factor.  
   
 4.  Click the plus sign to expand the **Indexes** folder.  
   

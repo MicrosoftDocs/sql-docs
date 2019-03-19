@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying primary keys"
@@ -52,9 +51,9 @@ manager: craigg
     |Rename the primary key|Type a new name in the **Name** box. Make sure that your new name does not duplicate a name in the **Selected Primary/Unique Key or Index** list.|  
     |Set the clustered option|To create a clustered index for the primary key, select **Create as CLUSTERED**, and select the option from the drop-down list box. Only one clustered index can exist per table. If this option is not available for your index, you must first clear this setting on the existing clustered index.<br /><br /> If this option is not selected, a unique nonclustered index is created.|  
     |Define a fill factor|Expand the **Fill Specification** category and type an integer from 0 to 100 in the **Fill factor** box. For more information about fill factors and their uses, see [Specify Fill Factor for an Index](../indexes/specify-fill-factor-for-an-index.md).|  
-    |Change the column order|Select **Columns**, and then click the ellipses **(…)** to the right of the property. In the  **Index Columns** dialog box, remove the columns from the primary key. Then add the columns back in the order you want. To remove a column from the key, simply remove the column name from the **Column** name list.|  
+    |Change the column order|Select **Columns**, and then click the ellipses **(...)** to the right of the property. In the  **Index Columns** dialog box, remove the columns from the primary key. Then add the columns back in the order you want. To remove a column from the key, simply remove the column name from the **Column** name list.|  
   
-4.  On the **File** menu, click **Save***table name*.  
+4.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a primary key**  

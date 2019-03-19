@@ -60,7 +60,7 @@ manager: craigg
   
 3.  Expand the **Databases** node.  
   
-4.  Right click the database you want to deploy, select **Tasks**, and then select **Deploy Database to SQL Azure…**  
+4.  Right click the database you want to deploy, select **Tasks**, and then select **Deploy Database to SQL Azure...**  
   
 5.  Complete the Wizard dialogs:  
   
@@ -81,22 +81,22 @@ manager: craigg
   
 -   **Next** - Proceeds to the **Deployment Settings** page.  
   
--   **Cancel** – Cancels the operation and closes the Wizard.  
+-   **Cancel** - Cancels the operation and closes the Wizard.  
   
 ##  <a name="Deployment_settings"></a> Deployment Settings Page  
  Use this page to specify the destination server and to provide details about your new database.  
   
  **Local host:**  
   
--   **Server connection** – Specify server connection details and then click **Connect** to verify the connection.  
+-   **Server connection** - Specify server connection details and then click **Connect** to verify the connection.  
   
--   **New database name** – Specify a name for the new database.  
+-   **New database name** - Specify a name for the new database.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] database settings:**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] edition** – Select the edition of [!INCLUDE[ssSDS](../../includes/sssds-md.md)] from the drop-down menu.  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] edition** - Select the edition of [!INCLUDE[ssSDS](../../includes/sssds-md.md)] from the drop-down menu.  
   
--   **Maximum database size** – Select the maximum database size from the drop-down menu.  
+-   **Maximum database size** - Select the maximum database size from the drop-down menu.  
   
  **Other settings:**  
   
@@ -116,7 +116,7 @@ manager: craigg
 ## Using a .Net Framework Application  
  **To deploy a database using the DacStoreExport() and Import() methods in a .Net Framework application.**  
   
- To view a code example, download the DAC sample application on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ To view a code example, download the DAC sample application on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Create a SMO Server object and set it to the instance or server that contains the database to be deployed.  
   

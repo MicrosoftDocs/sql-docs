@@ -5,14 +5,14 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: performance-monitor
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Broker Activation"
   - "Broker Activation object"
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Broker Activation Object

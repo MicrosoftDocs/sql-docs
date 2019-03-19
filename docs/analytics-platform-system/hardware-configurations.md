@@ -37,14 +37,14 @@ The minimum configuration for an HPE appliance has 2 Compute nodes. You can add 
 ## <a name="section2"></a>Multi-rack configurations  
 To add capacity to PDW you can add Data Scale Units, along with additional Rack & Network components as necessary to provide the proper power, networking, and rack infrastructure. Each additional Rack & Network requires a passive host.  
   
-Each hardware vendor specifies the number of Data Scale units you can add given the capacity of your appliance. We recommend adding enough Data Scale units to see at least a 20 percent uplift in performance. For example, adding one Data Scale unit to an appliance that already has 20 Data Scale units might result in a negligible performance gain. The net gain wouldn’t be worth the cost and effort.  
+Each hardware vendor specifies the number of Data Scale units you can add given the capacity of your appliance. We recommend adding enough Data Scale units to see at least a 20 percent uplift in performance. For example, adding one Data Scale unit to an appliance that already has 20 Data Scale units might result in a negligible performance gain. The net gain wouldn't be worth the cost and effort.  
   
 ### Scale out example - HPE  
 This diagram shows a 3 rack HP appliance that contains 20 Compute nodes.  
   
 ![HPE appliance with 20 Compute nodes](media/scale-out-hpe.png "HPE appliance with 20 Compute nodes")  
   
-### Scale Out Example – DELL, Quanta  
+### Scale Out Example - DELL, Quanta  
 This diagram shows a 3 rack DELL or Quanta appliance that contains 21 Compute nodes.  
   
 ![Dell appliance with 21 Compute nodes](media/scale-out-dell.png "Dell appliance with 21 Compute nodes")  

@@ -67,7 +67,7 @@ If job steps that use proxy accounts fail when downloading them from the master 
   
 2.  Click the plus sign to expand **SQL Server Agent**.  
   
-3.  Right-click the **Jobs** folder and select **New Job…**.  
+3.  Right-click the **Jobs** folder and select **New Job...**.  
   
 4.  In the **New Job** dialog box, on the **General** page, modify the general properties of the job. For more information on the available options on this page, see [Job Properties - New Job &#40;General Page&#41;](../../ssms/agent/job-properties-new-job-general-page.md)  
   

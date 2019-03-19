@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Choosing Between URL Access and SOAP
   Integrating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into custom applications can be challenging. The challenge, however, is not the complexity of the programming model or APIs, but the many possible ways to integrate it. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] was designed from the ground up as a developer platform, and as such, it is built with programming flexibility in mind. With flexibility comes the need to make important decisions about integrating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation and management functionality into your existing business applications.  
@@ -45,7 +45,7 @@ Reporting Services programming supports a wide range of scenarios.
   
  In the majority of cases, URL access and SOAP calls are both required to meet your reporting needs. SOAP is used when initially connecting to the report server database and presenting the available list of reports in a user interface and URL access is used to actually access and navigate individual reports.  
   
- For an example of combining URL access and the Web service to provide integrated reporting, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For an example of combining URL access and the Web service to provide integrated reporting, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Integrating Reporting Services into Applications](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

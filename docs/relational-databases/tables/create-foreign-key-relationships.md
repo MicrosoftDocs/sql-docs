@@ -71,7 +71,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     
 4.  Click the relationship in the **Selected Relationship** list.    
     
-5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**…**) to the right of the property.    
+5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**...**) to the right of the property.    
     
 6.  In the **Tables and Columns** dialog box, in the **Primary Key** drop-down list, choose the table that will be on the primary-key side of the relationship.    
     
@@ -99,7 +99,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         REFERENCES Sales.SalesReason (SalesReasonID)     
         ON DELETE CASCADE    
         ON UPDATE CASCADE    
-    );GO    
+    );
+    GO    
     
     ```    
     

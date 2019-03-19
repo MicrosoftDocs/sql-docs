@@ -15,7 +15,7 @@ ms.author: maghan
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-You can control if snapshots are created for a report by selecting the **ellipsis (…)** of a report, selecting **Manage** and selecting **Caching** or **History Snapshots**.  
+You can control if snapshots are created for a report by selecting the **ellipsis (...)** of a report, selecting **Manage** and selecting **Caching** or **History Snapshots**.  
   
 > [!NOTE]
 > The SQL Server Agent service needs to be started.  

@@ -7,8 +7,6 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ErrorList"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -84,5 +82,3 @@ manager: craigg
   
  **Project**  
  Displays the name of the project that includes the script file.  
-  
-  

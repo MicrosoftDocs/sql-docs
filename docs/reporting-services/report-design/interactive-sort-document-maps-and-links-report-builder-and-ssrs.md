@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Interactive Sort, Document Maps, and Links (Report Builder and SSRS)
   In Web-based environments, you can add a number of features that let your users interact with reports. Your users can change the sort order of values in your report, show or hide items in the report, or click links that go to other reports or Web pages. You can also add a table of contents or document map. Your report users can click items in the table of contents or document map to jump to areas within a report.  

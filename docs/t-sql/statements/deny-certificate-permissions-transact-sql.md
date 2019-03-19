@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "DENY statement, certificates"
   - "denying permissions [SQL Server], certificates"
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Certificate Permissions (Transact-SQL)
@@ -42,7 +42,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be denied on a certificate. Listed below.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  Specifies the certificate on which the permission is being denied. The scope qualifier "::" is required.  
   
  *database_principal*  

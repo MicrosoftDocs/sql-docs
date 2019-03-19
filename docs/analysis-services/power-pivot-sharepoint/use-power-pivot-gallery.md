@@ -147,9 +147,9 @@ manager: kfile
 ### Document Type is Not Supported  
  The **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery Document** content type is not supported. If you enable the **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery Document** content type for a document library, and attempt to create a new document of that type, you will see an error message similar to one of the following:  
   
--   ‘New Document’ requires a Microsoft Sharepoint Foundation-compatible application and web browser. To add a document to this document library, click the ‘Upload Document’ button.  
+-   'New Document' requires a Microsoft Sharepoint Foundation-compatible application and web browser. To add a document to this document library, click the 'Upload Document' button.  
   
--   "The Internet address 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' is not valid."“Microsoft Excel cannot access the file 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. There are several possible reasons:  
+-   "The Internet address 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' is not valid.""Microsoft Excel cannot access the file 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. There are several possible reasons:  
   
  The **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery Document** content type is not automatically added to document libraries,  You will not encounter this issue unless you manually enable the unsupported content type.  
   

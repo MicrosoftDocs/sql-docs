@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ---
 # Relative and Absolute Scrolling
-Most of the scrolling options in **SQLFetchScroll** position the cursor relative to the current position or to an absolute position. **SQLFetchScroll** supports fetching the next, prior, first, and last rowsets, as well as relative fetching (fetch the rowset *n* rows from the start of the current rowset) and absolute fetching (fetch the rowset starting at row *n*). If *n* is negative in an absolute fetch, rows are counted from the end of the result set. Thus, an absolute fetch of row –1 means to fetch the rowset that starts with the last row in the result set.  
+Most of the scrolling options in **SQLFetchScroll** position the cursor relative to the current position or to an absolute position. **SQLFetchScroll** supports fetching the next, prior, first, and last rowsets, as well as relative fetching (fetch the rowset *n* rows from the start of the current rowset) and absolute fetching (fetch the rowset starting at row *n*). If *n* is negative in an absolute fetch, rows are counted from the end of the result set. Thus, an absolute fetch of row -1 means to fetch the rowset that starts with the last row in the result set.  
   
  Dynamic cursors detect rows inserted into and deleted from the result set, so there is no easy way for dynamic cursors to retrieve the row at a particular number other than reading from the start of the result set, which is likely to be slow. Furthermore, absolute fetching is not very useful in dynamic cursors because row numbers change as rows are inserted and deleted; therefore, successively fetching the same row number can yield different rows.  
   
@@ -28,7 +28,7 @@ Most of the scrolling options in **SQLFetchScroll** position the cursor relative
 |--------------------------|-------------------------------------|  
 |Page up|SQL_FETCH_PRIOR|  
 |Page down|SQL_FETCH_NEXT|  
-|Line up|SQL_FETCH_RELATIVE with *FetchOffset* equal to –1|  
+|Line up|SQL_FETCH_RELATIVE with *FetchOffset* equal to -1|  
 |Line down|SQL_FETCH_RELATIVE with *FetchOffset* equal to 1|  
 |Scroll box at top|SQL_FETCH_FIRST|  
 |Scroll box at bottom|SQL_FETCH_LAST|  

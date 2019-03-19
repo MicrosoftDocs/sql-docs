@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.common.extendedproperties.f1"
@@ -28,7 +27,7 @@ manager: craigg
  View or specify the extended properties for the object. Each extended property consists of a name/value pair of metadata associated with the object.  
   
  **Browse button**  
- Click the browse (…) button after **Value** to open the **Value for Extended Property Dialog Box** dialog box. Type or view the value of the extended property in this larger location.  
+ Click the browse (...) button after **Value** to open the **Value for Extended Property Dialog Box** dialog box. Type or view the value of the extended property in this larger location.  
   
  **Delete**  
  Removes the selected extended property.  

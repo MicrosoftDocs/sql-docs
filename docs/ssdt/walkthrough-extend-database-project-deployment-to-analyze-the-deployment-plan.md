@@ -52,7 +52,7 @@ To create a deployment contributor, you must perform the following tasks:
   
 1.  Create a Visual Basic or Visual C# class library project named MyDeploymentContributor.  
   
-2.  Rename the file “Class1.cs” to “DeploymentUpdateReportContributor.cs.”  
+2.  Rename the file "Class1.cs" to "DeploymentUpdateReportContributor.cs."  
   
 3.  In Solution Explorer, right-click the project node and then click **Add Reference**.  
   
@@ -86,7 +86,7 @@ To create a deployment contributor, you must perform the following tasks:
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -108,7 +108,7 @@ To create a deployment contributor, you must perform the following tasks:
   
     ```  
   
-    In this case the first parameter to the attribute should be a unique identifier – this will be used to identify your contributor in project files. A best practice is to combine your library’s namespace - in this walkthrough, MyDeploymentContributor - with the class name - in this walkthrough, DeploymentUpdateReportContributor - to produce the identifier.  
+    In this case the first parameter to the attribute should be a unique identifier - this will be used to identify your contributor in project files. A best practice is to combine your library's namespace - in this walkthrough, MyDeploymentContributor - with the class name - in this walkthrough, DeploymentUpdateReportContributor - to produce the identifier.  
   
 3.  Next, add the following member that you will use to enable this provider to accept a command-line parameter:  
   
@@ -520,7 +520,7 @@ To create a deployment contributor, you must perform the following tasks:
     |-----------------|--------------------|  
     |Class members|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport method|XmlWriter and XmlWriterSettings|  
-    |ReportPlanOperations method|Types of interest include the following: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />There are a number of other steps – see the API documentation for a full list of steps.|  
+    |ReportPlanOperations method|Types of interest include the following: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />There are a number of other steps - see the API documentation for a full list of steps.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -565,7 +565,7 @@ To test your deployment contributor, you must perform the following tasks:
 -   Deploy the project by using MSBuild and providing the appropriate parameter.  
   
 ### Add Properties to the SQL Project (.sqlproj) File  
-You must always update the SQL project file to specify the ID of the contributors you wish to run. In addition because this contributor expects a “GenerateUpdateReport” argument this must be specified as a contributor argument.  
+You must always update the SQL project file to specify the ID of the contributors you wish to run. In addition because this contributor expects a "GenerateUpdateReport" argument this must be specified as a contributor argument.  
   
 You can do this in one of two ways. You can manually modify the .sqlproj file to add the required arguments. You might choose to do this if your contributor does not have any contributor arguments required for configuration, or if you do not intend to reuse the contributor across a large number of projects. If you choose this option, add the following statements to the .sqlproj file after the first Import node in the file:  
   
@@ -580,9 +580,9 @@ The second method is to create a targets file containing the required contributo
   
 1.  Navigate to %Program Files%\MSBuild.  
   
-2.  Create a new folder “MyContributors” where your targets files will be stored.  
+2.  Create a new folder "MyContributors" where your targets files will be stored.  
   
-3.  Create a new file “MyContributors.targets” inside this directory, add the following text to it and save the file:  
+3.  Create a new file "MyContributors.targets" inside this directory, add the following text to it and save the file:  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -604,16 +604,16 @@ The second method is to create a targets file containing the required contributo
 After you have followed one of these approaches, you can use MSBuild to pass in the parameters for command-line builds.  
   
 > [!NOTE]  
-> You must always update the "DeploymentContributors" property to specify your contributor ID. This is the same ID used in the “ExportDeploymentPlanExecutor” attribute in your contributor source file. Without this your contributor will not be run when building the project. The “ContributorArguments” property needs to be updated only if you have arguments required for your contributor to run.  
+> You must always update the "DeploymentContributors" property to specify your contributor ID. This is the same ID used in the "ExportDeploymentPlanExecutor" attribute in your contributor source file. Without this your contributor will not be run when building the project. The "ContributorArguments" property needs to be updated only if you have arguments required for your contributor to run.  
   
 ### Deploy the Database Project  
-Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the “Publish…” option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the “Publish…” dialog to generate a deployment script.  
+Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the "Publish..." option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the "Publish..." dialog to generate a deployment script.  
   
 ##### To deploy your SQL project and generate a deployment report  
   
 1.  Open Visual Studio and open the solution containing your SQL Project.  
   
-2.  Select your project and hit “F5” to do a debug deployment. Note: since the ContributorArguments element is set to only be included if the configuration is “Debug”, for now the deployment report is only generated for debug deployments. To change this, remove the Condition="'$(Configuration)' == 'Debug'" statement from the ContributorArguments definition.  
+2.  Select your project and hit "F5" to do a debug deployment. Note: since the ContributorArguments element is set to only be included if the configuration is "Debug", for now the deployment report is only generated for debug deployments. To change this, remove the Condition="'$(Configuration)' == 'Debug'" statement from the ContributorArguments definition.  
   
 3.  Output such as the following should be present in the output window:  
   

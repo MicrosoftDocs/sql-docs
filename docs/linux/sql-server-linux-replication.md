@@ -10,7 +10,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.custom: "sql-linux"
 ms.technology: linux
-ms.workload: "On Demand"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server Replication on Linux

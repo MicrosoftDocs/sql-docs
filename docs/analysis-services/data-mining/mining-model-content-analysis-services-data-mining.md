@@ -154,7 +154,7 @@ manager: kfile
   
  For example, in a classification tree, the support value indicates the number of cases that have the described combination of attributes.  
   
- In a decision tree, the sum of support at each level of a tree sums to the support of its parent node. For example, if a model containing 1200 cases is divided equally by gender, and then subdivided equally by three values for Income—Low, Medium, and High—the child nodes of node (2), which are nodes (4), (5) and (6), always sum to the same number of cases as node (2).  
+ In a decision tree, the sum of support at each level of a tree sums to the support of its parent node. For example, if a model containing 1200 cases is divided equally by gender, and then subdivided equally by three values for Income-Low, Medium, and High-the child nodes of node (2), which are nodes (4), (5) and (6), always sum to the same number of cases as node (2).  
   
 |Node ID and node attributes|Support count|  
 |---------------------------------|-------------------|  
@@ -232,7 +232,7 @@ manager: kfile
   
 -   **Node probability** is always less than or equal to **marginal probability**.  
   
- For example, if the population of all customers in a decision tree is split equally by gender (and no values are missing), the probability of the child nodes should be .5. However, suppose that each of the nodes for gender is divided equally by income levels—High, Medium, and Low. In this case the MARGINAL_PROBABILITY score for each child node should always be .33 but the NODE_PROBABILTY value will be the product of all probabilities leading to that node and thus always less than the MARGINAL_PROBABILITY value.  
+ For example, if the population of all customers in a decision tree is split equally by gender (and no values are missing), the probability of the child nodes should be .5. However, suppose that each of the nodes for gender is divided equally by income levels-High, Medium, and Low. In this case the MARGINAL_PROBABILITY score for each child node should always be .33 but the NODE_PROBABILTY value will be the product of all probabilities leading to that node and thus always less than the MARGINAL_PROBABILITY value.  
   
 |Level of node/attribute and value|Marginal probability|Node probability|  
 |----------------------------------------|--------------------------|----------------------|  

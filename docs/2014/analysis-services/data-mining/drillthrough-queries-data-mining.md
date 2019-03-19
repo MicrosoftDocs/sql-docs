@@ -23,7 +23,7 @@ manager: craigg
   
 -   Drilling through to the **model cases**  
   
-     Drillthrough to model cases is used when you want to go from a specific pattern in the model—such as a cluster or branch of a decision tree—and view details about the individual cases.  
+     Drillthrough to model cases is used when you want to go from a specific pattern in the model-such as a cluster or branch of a decision tree-and view details about the individual cases.  
   
 -   Drilling through to the **structure cases**  
   

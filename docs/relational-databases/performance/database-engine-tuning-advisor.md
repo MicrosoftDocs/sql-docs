@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dta.general.f1"
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Database Engine Tuning Advisor
@@ -26,7 +26,7 @@ manager: craigg
 -   Manage storage space  
   
 ## Database Engine Tuning Advisor Benefits  
- Optimizing query performance can be difficult without a full understanding the database structure and the queries that are run against the database. The Database Engine Tuning Advisor can make this task easier by analyzing the current query plan cache or by analyzing a workload of [!INCLUDE[tsql](../../includes/tsql-md.md)] queries that you create and recommending an appropriate physical design. For more advanced database administrators, DTA exposes a powerful mechanism to perform exploratory what-if analysis of different physical design alternatives. The DTA can provide the following information.  
+ Optimizing query performance can be difficult without a full understanding the database structure and the queries that are run against the database. The **Database Engine Tuning Advisor (DTA)** can make this task easier by analyzing the current query plan cache or by analyzing a workload of [!INCLUDE[tsql](../../includes/tsql-md.md)] queries that you create and recommending an appropriate physical design. For more advanced database administrators, DTA exposes a powerful mechanism to perform exploratory what-if analysis of different physical design alternatives. The DTA can provide the following information.  
   
 -   Recommend the best mix of rowstore and [columnstore](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md) indexes for databases by using the query optimizer to analyze queries in a workload.  
   
@@ -44,10 +44,10 @@ manager: craigg
 
 -   Consider alternatives in which you supply possible design choices in the form of hypothetical configurations for Database Engine Tuning Advisor to evaluate.
 
--  Tune workloads from a variety of sources including SQL Server Query Store, Plan Cache, SQL Server Profiler Trace file or table, or a .SQL file.
+-   Tune workloads from a variety of sources including SQL Server Query Store, Plan Cache, SQL Server Profiler Trace file or table, or a .SQL file.
 
   
- The Database Engine Tuning Advisor is designed to handle the following types of query workloads.  
+The Database Engine Tuning Advisor is designed to handle the following types of query workloads:  
   
 -   Online transaction processing (OLTP) queries only  
   
@@ -60,22 +60,22 @@ manager: craigg
 -   Update-heavy workloads (more data modifications than queries)  
   
 ## DTA Components and Concepts  
- Database Engine Tuning Advisor Graphical User Interface  
+ **Database Engine Tuning Advisor Graphical User Interface**  
  An easy-to-use interface in which you can specify the workload and select various tuning options.  
   
  **dta** Utility  
  The command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
   
- workload  
+ **workload**  
  A Transact-SQL script file, trace file, or trace table that contains a representative workload for the databases you want to tune. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can specify the plan cache as the workload.  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can [specify the Query Store as the workload](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
- XML input file  
- An XML-formatted file that Database Engine Tuning Advisor can use to tune workloads. The XML input file supports advanced tuning options that are not available in either the GUI or **dta** utility.  
+ **XML input file**  
+ A XML-formatted file that Database Engine Tuning Advisor can use to tune workloads. The XML input file supports advanced tuning options that are not available in either the GUI or **dta** utility.  
   
 ## Limitations and Restrictions  
  The Database Engine Tuning Advisor has the following limitations and restrictions.  
   
--   It cannot add or drop unique indexes or indexes that enforce PRIMARY KEY or UNIQUE constraints.  
+-   It cannot add or drop unique indexes or indexes that enforce `PRIMARY KEY` or `UNIQUE` constraints.  
   
 -   It cannot analyze a database that is set to single-user mode.  
   

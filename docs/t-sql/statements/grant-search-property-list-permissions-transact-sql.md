@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], search property lists"
   - "GRANT statement, search property list permissions"
 ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -42,7 +42,7 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   
- ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
  Specifies the search property list on which the permission is being granted. The scope qualifier **::** is required.  
   
  **To view the existing search property lists**  

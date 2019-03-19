@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dqs.dm.refdata.f1"
   - "sql12.dqs.dm.refcatalog.f1"
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Attach a Domain or Composite Domain to Reference Data
@@ -20,9 +20,9 @@ manager: craigg
 > [!WARNING]  
 >  The composite domain attached to a reference data service is available in the domains drop-down list while mapping domains to the columns in the reference data service schema. Do not map the composite domain to a column in the reference data service schema; you must only map individual domains within a composite domain to the appropriate columns in the reference data service schema. Otherwise, it will result in an error.  
   
- A reference data service schema can have a mandatory column that must be mapped with appropriate domain should you choose to use the reference data service. The mandatory column in a reference data schema is identified with “(M)” against the column name. For example, **AddressLine** is the mandatory schema column in **Melissa Data – Address Data** and **CompanyName** is the mandatory schema column in **Digital Trowel Inc. – Us companies and professional data for SQL users**.  
+ A reference data service schema can have a mandatory column that must be mapped with appropriate domain should you choose to use the reference data service. The mandatory column in a reference data schema is identified with "(M)" against the column name. For example, **AddressLine** is the mandatory schema column in **Melissa Data - Address Data** and **CompanyName** is the mandatory schema column in **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- In this topic, we will create four domains: **Address Line**, **City**, **State**, and **Zip**, under a composite domain, **Address Verification**, attach the composite domain to the **Melissa Data – Address Check** reference data service, and then map the individual domains within the composite domain to appropriate columns in the reference data service schema.  
+ In this topic, we will create four domains: **Address Line**, **City**, **State**, and **Zip**, under a composite domain, **Address Verification**, attach the composite domain to the **Melissa Data - Address Check** reference data service, and then map the individual domains within the composite domain to appropriate columns in the reference data service schema.  
   
 ## Before You Begin  
   
@@ -52,9 +52,9 @@ manager: craigg
   
 8.  In the **Online Reference Data Providers Catalog** dialog box:  
   
-    1.  Under **DataMarket Data Quality Services**, select the **Melissa Data – Address Check** box.  
+    1.  Under **DataMarket Data Quality Services**, select the **Melissa Data - Address Check** box.  
   
-    2.  Map the columns of the Melissa Data – Address Check reference data service with the appropriate domains (Address Line, City, State, and Zip). You map the columns by selecting a reference data service column in the **RDS Schema** column, and then selecting the appropriate domain in the **Domain** column. To add more rows in the table, click the **Add Schema Entry** icon.  
+    2.  Map the columns of the Melissa Data - Address Check reference data service with the appropriate domains (Address Line, City, State, and Zip). You map the columns by selecting a reference data service column in the **RDS Schema** column, and then selecting the appropriate domain in the **Domain** column. To add more rows in the table, click the **Add Schema Entry** icon.  
   
     3.  Click **OK** to save the changes, and close the **Online Reference Data Providers Catalog** dialog box.  
   

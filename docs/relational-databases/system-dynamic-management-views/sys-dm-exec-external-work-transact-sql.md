@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |step_index|**int**|The request this worker is performing.|See *step_index* in  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |dms_step_index|**int**|Step in the DMS plan that this worker is executing.|See [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
 |compute_node_id|**int**|The node the worker is running on.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|type|**nvarchar(60)**|The type of external work.|‘File Split’|  
+|type|**nvarchar(60)**|The type of external work.|'File Split'|  
 |work_id|**int**|ID of the actual split.|Greater than or equal to 0.|  
 |input_name|**nvarchar(4000)**|Name of the input to be read|File name when using Hadoop.|  
 |read_location|**bigint**|Offset or read location.|Offset of the file to read.|  

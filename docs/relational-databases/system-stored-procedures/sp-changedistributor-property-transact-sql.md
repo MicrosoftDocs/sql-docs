@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_changedistributor_property_TSQL"
@@ -34,7 +33,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## Arguments  
- [ **@property=**]  **'***property***'**  
+ [ **@property=**]  **'**_property_**'**  
  Is the property for a given Distributor. *property* is **sysname**, and can be one of these values.  
   
 |Value|Description|  
@@ -42,7 +41,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|Maximum number of minutes that an agent can run without logging a progress message.|  
 |NULL (default)|All available *property* values are printed.|  
   
- [ **@value=**]  **'***value***'**  
+ [ **@value=**]  **'**_value_**'**  
  Is the value for the given Distributor property. *value* is **varchar(255)**, with a default of NULL.  
   
 ## Return Code Values  

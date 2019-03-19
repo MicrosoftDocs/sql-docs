@@ -113,7 +113,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  You can use the parameter list to adjust the performance and functionality of a mining model. The syntax of the parameter list is as follows:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
  For a list of the parameters that are associated with each algorithm, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  

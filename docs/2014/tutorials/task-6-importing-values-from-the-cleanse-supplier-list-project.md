@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 6: Importing Values from the Cleanse Supplier List Project
-  In this task, you import the data quality knowledge gathered during the cleansing process. See [Importing Cleansing Project Values into a Domain](http://msdn.microsoft.com/library/hh479581.aspx) topic for more details. You also export the knowledge base into a DQS file before publishing the updated **Suppliers** knowledge base.  
+  In this task, you import the data quality knowledge gathered during the cleansing process. See [Importing Cleansing Project Values into a Domain](https://msdn.microsoft.com/library/hh479581.aspx) topic for more details. You also export the knowledge base into a DQS file before publishing the updated **Suppliers** knowledge base.  
   
 1.  In the main page of **DQS Client**, click **right-arrow** next to **Suppliers** under **Recent Knowledge Bases** and click **Domain Management**.  
   
@@ -34,7 +31,7 @@ manager: craigg
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
-6.  Repeat the previous step of importing project values for the **Country** domain and notice that a new entry is added for correcting **United State** to **United States** (with ‘s’).  
+6.  Repeat the previous step of importing project values for the **Country** domain and notice that a new entry is added for correcting **United State** to **United States** (with 's').  
   
     |Value|Correct To|  
     |-----------|----------------|  
@@ -53,7 +50,7 @@ manager: craigg
   
 10. Navigate to the Tutorial folder, type **Suppliers.dqs** for the **file name**, and click **Save**. You can use this DQS file to create a new knowledge base based on it.  
   
-11. Click **OK** to close the **Export Knowledge Base – Suppliers** message box.  
+11. Click **OK** to close the **Export Knowledge Base - Suppliers** message box.  
   
 12. Click **Finish** to finish the activity.  
   

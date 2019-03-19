@@ -1,7 +1,7 @@
 ---
 title: "Replication Subscribers and AlwaysOn Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "01/16/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: high-availability
@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Replication Subscribers and AlwaysOn Availability Groups (SQL Server)
-  When an AlwaysOn availability group containing a database that is a replication subscriber fails over, the replication subscription might fail. For transactional subscribers, the distribution agent will continue to replicate automatically if the subscription is using the name of the availability group listener of the subscriber. For merge subscribers, a replication administrator must manually reconfigure the subscriber, by recreating the subscription.  
+  When an AlwaysOn availability group containing a database that is a replication subscriber fails over, the replication subscription might fail. For transactional replication push subscribers, the distribution agent will continue to replicate automatically after a failover if the subscription was created using the AG listener name. For transactional replication pull subscribers, the distribution agent will continue to replicate automatically after a failover, if the subscription was created using the AG listener name and the original subscriber server is up and running. This is because the distribution agent jobs only get created on the original subscriber (primary replica of the AG). For merge subscribers, a replication administrator must manually reconfigure the subscriber, by recreating the subscription.  
   
 ## What is Supported  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication supports the automatic failover of the publisher, the automatic failover of transactional subscribers, and the manual failover of merge subscribers. The failover of a distributor on an availability database is not supported. AlwaysOn cannot be combined with Websync and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact scenarios.  
@@ -51,7 +51,7 @@ manager: craigg
   
     4.  Change the `-Subscriber` parameter to the subscriber's availability group listener name.  
   
- When you create your subscription following these steps, then you won’t have to do anything after a failover.  
+ When you create your subscription following these steps, then you won't have to do anything after a failover.  
   
 ## Creating a Transactional Replication Push Subscription  
   

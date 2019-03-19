@@ -34,7 +34,7 @@ manager: craigg
 ## Syntax  
   
 ```sql  
-managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
+managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
 ##  <a name="Arguments"></a> Arguments  
@@ -63,7 +63,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
  Requires membership in the **db_backupoperator** database role with **ALTER ANY CREDENTIAL** permissions. The user should not be denied **VIEW ANY DEFINITION** permissions.  
   
 ## Examples  
- The following example returns the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration for ‘TestDB’  
+ The following example returns the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration for 'TestDB'  
   
  For each code snippet, select 'tsql' in the language attribute field.  
   

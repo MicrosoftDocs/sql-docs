@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "tutorials [Reporting Services]"
   - "reports [Reporting Services], creating"
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Create a Basic Table Report (SSRS Tutorial)
   This tutorial is designed to help you create a basic table report based on the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database using Report Designer. You can also use Report Builder or the Report Wizard to create reports. In this tutorial, you will create a report project, set up connection information, define a query, add a Table data region, group and total some fields, and preview the report.  
@@ -27,7 +27,7 @@ manager: craigg
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database engine.  
   
--   The [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  For more information, see [Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. For more information about support for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sample databases and sample code for [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], see [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391) on the CodePlex Web site.  
+-   The [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  For more information, see [Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).. For more information about support for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sample databases and sample code for [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], see [Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) on the CodePlex Web site.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   

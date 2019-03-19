@@ -28,14 +28,14 @@ manager: craigg
  In this example, your application never directly connected to the data source; IIS did. And IIS accessed the data by means of ADO.  
   
 > [!NOTE]
->  The client/server application does not have to be based on the Internet or an intranet (that is, Web-based) — it could consist solely of compiled programs on a local area network. However, the typical case is a Web-based application.  
+>  The client/server application does not have to be based on the Internet or an intranet (that is, Web-based) - it could consist solely of compiled programs on a local area network. However, the typical case is a Web-based application.  
   
  Because some visual control, such as a grid, check box, or list, may use the returned information, the returned information must be easily used by a visual control.  
   
  You want a simple and efficient application-programming interface that supports three-tier systems, and returns information as easily as if it had been retrieved on a two-tier system. Remote Data Service (RDS) is this interface.  
   
 ## The Solution  
- RDS defines a programming model — the sequence of activities necessary to gain access to and update a data source — to gain access to data through an intermediary, such as Internet Information Services (IIS). The programming model summarizes the entire functionality of RDS.  
+ RDS defines a programming model - the sequence of activities necessary to gain access to and update a data source - to gain access to data through an intermediary, such as Internet Information Services (IIS). The programming model summarizes the entire functionality of RDS.  
   
 ## See Also  
  [Basic RDS Programming Model](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   

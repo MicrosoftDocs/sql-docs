@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "logging,severity levels"
   - "configure severity levels"
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Configure Severity Levels for DQS Log Files
@@ -64,7 +64,7 @@ manager: craigg
   
  The log severity setting specified at the activity level determines the log severity setting of all the modules that constitute the activity. However, if there is any conflict between the log severity settings at the activity and module levels, the severity settings at the module level are considered.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   By default, the **Microsoft.Ssdqs.Core.Startup** module is preconfigured in the **Advanced** section with the severity level set as **Info**. This is done to enable logging of events of severity Info and higher (Warn, Error, and Fatal) that are related to starting and stopping of DQS services.  
 > -   You should configure log severity levels at the module level only if you are an advanced DQS user who is familiar with the DQS system assemblies.  
   

@@ -45,7 +45,7 @@ manager: craigg
   
 2.  Expand the **Databases** node.  
   
-3.  Right-click the node for the database from which the DAC is to be extracted, point to **Tasks**, and then select **Extract Data-tier Application…**  
+3.  Right-click the node for the database from which the DAC is to be extracted, point to **Tasks**, and then select **Extract Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "file restores [SQL Server], simple recovery model"
   - "file restores [SQL Server], Transact-SQL restore sequence"
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # File Restores (Simple Recovery Model)
@@ -63,13 +63,13 @@ manager: craigg
   
  The restore sequence contains only two [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The first statement restores a secondary file, file `A`, which is restored using WITH NORECOVERY. The second operation restores two other files, `B` and `C` which are restored using WITH RECOVERY from a different backup device:  
   
-1.  RESTORE DATABASE *database* FILE **=***name_of_file_A*  
+1.  RESTORE DATABASE *database* FILE **=**_name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY**;**  
   
-2.  RESTORE DATABASE *database* FILE **=***name_of_file_B***,***name_of_file_C*  
+2.  RESTORE DATABASE *database* FILE **=**_name_of_file_B_**,**_name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   

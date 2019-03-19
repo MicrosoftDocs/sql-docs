@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
@@ -50,6 +49,6 @@ manager: craigg
   
 ## See Also  
  [Tutorials for SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [TechNet WIKI: SQL Server 2012 Samples](http://go.microsoft.com/fwlink/?linkID=220734)  
+ [TechNet WIKI: SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

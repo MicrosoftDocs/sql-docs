@@ -550,7 +550,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 4.  In the **Test Conditions** pane, click **Expected Schema** in the list, and then click **Add Test Condition**.  
   
-5.  In the **Properties** window, in the **Configuration** property, click the browse button ('**…**').  
+5.  In the **Properties** window, in the **Configuration** property, click the browse button ('**...**').  
   
 6.  In the **Configuration for expectedSchemaCondition1** dialog box, specify a connection to your database. For example, if you used the default deployment location, which is LocalDB, you would click **New Connection** specify **(LocalDB)\Projects**. Then, choose the name of the database.  
   
@@ -615,7 +615,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 13. In the **Test Conditions** pane, click **Data Checksum** in the list, and then click **Add Test Condition**.  
   
-14. In the **Properties** window, in the **Configuration** property, click the browse button ('**…**').  
+14. In the **Properties** window, in the **Configuration** property, click the browse button ('**...**').  
   
 15. In the **Configuration for checksumCondition1** dialog box, specify a connection to your database.  
   
@@ -962,7 +962,7 @@ To create and verify a negative test, you must perform the following tasks:
     You specify that you expect to see a specific exception. You can optionally specify a specific error number. If you do not add this attribute, the unit test will fail, and a message appears in the Test Results window  
   
     > [!IMPORTANT]  
-    > Currently, Visual Studio 2012 does not support the ExpectedSqlException attribute. For information to work around this, see [Unable to Run "Expected Failure" Database Unit Test](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Currently, Visual Studio 2012 does not support the ExpectedSqlException attribute. For information to work around this, see [Unable to Run "Expected Failure" Database Unit Test](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  On the File menu, click Save SqlServerUnitTests1.cs.  
   

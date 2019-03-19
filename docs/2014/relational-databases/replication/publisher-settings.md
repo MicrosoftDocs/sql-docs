@@ -1,11 +1,10 @@
 ---
-title: "Publisher Settings | Microsoft Docs"
+title: "SQL Server Replication 'Publisher Settings' dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.publishersettings.f1"
@@ -16,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Publisher Settings
+# SQL Server Replication 'Publisher Settings' dialog box
   The **Publisher Settings** dialog box allows you to change settings for Publishers that have been added to the left pane in Replication Monitor.  
   
 ## Options  

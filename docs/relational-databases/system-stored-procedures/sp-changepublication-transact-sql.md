@@ -5,8 +5,7 @@ ms.date: "08/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_changepublication"
@@ -37,13 +36,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+ [ **@publication =** ] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with a default of NULL.  
   
- [ **@property =** ] **'***property***'**  
+ [ **@property =** ] **'**_property_**'**  
  Is the publication property to change. *property* is **nvarchar(255)**.  
   
- [ **@value =** ] **'***value***'**  
+ [ **@value =** ] **'**_value_**'**  
  Is the new property value. *value* is **nvarchar(255)**, with a default of NULL.  
   
  This table describes the properties of the publication that can be changed and restrictions on the values for those properties.  
@@ -54,8 +53,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Anonymous subscriptions cannot be created for the given publication. Cannot be changed for peer-to-peer publications.|  
 |**allow_initialize_from_backup**|**true**|Subscribers can initialize a subscription to this publication from a backup rather than an initial snapshot. This property cannot be changed for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Subscribers must use the initial snapshot. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
-|**allow_partition_switch**|**true**|ALTER TABLE…SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|ALTER TABLE…SWITCH statements cannot be executed against the published database.|  
+|**allow_partition_switch**|**true**|ALTER TABLE...SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE...SWITCH statements cannot be executed against the published database.|  
 |**allow_pull**|**true**|Pull subscriptions are allowed for the given publication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Pull subscriptions are not allowed for the given publication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 |**allow_push**|**true**|Push subscriptions are allowed for the given publication.|  
@@ -98,8 +97,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**snapshot**|Publishes only scheduled synchronization events.|  
 |**replicate_ddl**|**1**|Data definition language (DDL) statements executed at the publisher are replicated. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**0**|DDL statements are not replicated. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications. Replication of schema changes cannot be disabled when using peer-to-peer replication.|  
-|**replicate_partition_switch**|**true**|ALTER TABLE…SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to TRUE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|ALTER TABLE…SWITCH statements should not be replicated to Subscribers.|  
+|**replicate_partition_switch**|**true**|ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to TRUE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE...SWITCH statements should not be replicated to Subscribers.|  
 |**retention**||**int** representing the retention period, in hours, for subscription activity. If a subscription is not active within the retention period, it is removed.|  
 |**snapshot_in_defaultfolder**|**true**|Snapshot files are stored in the default snapshot folder. If *alt_snapshot_folder*is also specified, snapshot files are stored in both the default and alternate locations.|  
 ||**false**|Snapshot files are stored in the alternate location specified by *alt_snapshot_folder*.|  
@@ -125,8 +124,8 @@ See the Remarks section for the properties that, when changed, require the gener
   - **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
   - **1** specifies that changes to the article cause the existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
-[ **@publisher** = ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+[ **@publisher** = ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
   > [!NOTE]  
   >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

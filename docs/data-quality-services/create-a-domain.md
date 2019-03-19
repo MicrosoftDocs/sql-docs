@@ -5,14 +5,13 @@ ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.createdomain.f1"
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Domain

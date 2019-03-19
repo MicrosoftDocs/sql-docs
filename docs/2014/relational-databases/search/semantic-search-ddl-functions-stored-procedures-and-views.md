@@ -51,7 +51,7 @@ manager: craigg
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Install and Configure Semantic Search](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Install and Configure Semantic Search](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> System Views – Catalog Views  
+##  <a name="cv"></a> System Views - Catalog Views  
   
 |Object|More Information|  
 |------------|----------------------|  
@@ -59,7 +59,7 @@ manager: craigg
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[Install and Configure Semantic Search](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[Install and Configure Semantic Search](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> System Views – Dynamic Management Views  
+##  <a name="dmv"></a> System Views - Dynamic Management Views  
   
 |Object|More Information|  
 |------------|----------------------|  

@@ -108,7 +108,7 @@ ms.author: maghan
     > [!NOTE]  
     >  Depending on your permissions, you might be able to type the e-mail address you want the report delivered to. To specify multiple e-mail addresses, separate them with a semicolon (;). You can also type additional e-mail addresses in the **Cc**, **Bcc**, and **Reply-To** text boxes. This requires that you have permission to manage all subscriptions.  
   
-7.  **Subject**: Defaults to “@ReportName was executed at @ExecutionTime”. You can edit the subject but note that the @ReportName and @ExecutionTime are the only global variables supported in the **Subject** field.  
+7.  **Subject**: Defaults to "@ReportName was executed at @ExecutionTime". You can edit the subject but note that the @ReportName and @ExecutionTime are the only global variables supported in the **Subject** field.  
   
 8.  Select the delivery options as follows:  
   
@@ -157,7 +157,7 @@ ms.author: maghan
 >  A report server administrator cannot manage from one place all the individual subscriptions that are in use on a given report server. However, report server administrators can access each individual subscription to modify or delete it.  
   
 ##  <a name="bkmk_delete_subscription"></a> To Delete a Subscription  
- To delete a subscription”  
+ To delete a subscription"  
   
 1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   

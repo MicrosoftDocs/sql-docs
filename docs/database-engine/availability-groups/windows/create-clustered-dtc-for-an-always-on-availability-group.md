@@ -1,6 +1,7 @@
 ---
-title: "Create Clustered DTC for an Always On Availability Group | Microsoft Docs"
-ms.custom: ""
+title: "Create Clustered DTC resource for an availability group"
+description: "This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group."
+ms.custom: "seodec18"
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +13,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Create Clustered DTC for an Always On Availability Group
+# Create Clustered DTC resource for an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -110,7 +111,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## 3.  Configure **in-doubt xact resolution** 
-This script will configure the **in-doubt xact resolution** server configuration option to “presume commit” for in-doubt transactions.  Run the following T-SQL script in SQL Server Management Studio (SSMS) against `SQLNODE1` in **SQLCMD mode**.
+This script will configure the **in-doubt xact resolution** server configuration option to "presume commit" for in-doubt transactions.  Run the following T-SQL script in SQL Server Management Studio (SSMS) against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /*******************************************************************
@@ -314,21 +315,21 @@ GO
 ```
 
 > [!IMPORTANT]
-You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
->
+> You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
-SET (DTC_Support = Per_DB)  
->
->However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
+> SET (DTC_Support = Per_DB)  
+> 
+> However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
  
 ## <a name="ClusterDTC"></a>8.	Prepare cluster resources
 
-This script will prepare the DTC dependent resources: Disk and IP.  The shared storage will be added to the Windows Cluster.  Network resources will be created and then the DTC will be created and made as a resource to the Availability Group.  Run the following PowerShell Script on `SQLNODE1`.
+This script will prepare the DTC dependent resources: Disk and IP.  The shared storage will be added to the Windows Cluster.  Network resources will be created and then the DTC will be created and made as a resource to the Availability Group.  Run the following PowerShell Script on `SQLNODE1`. Thanks [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) for the script!
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -581,4 +582,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> The `USE AG1` statement must be executed to ensure the database context is set to `AG1`.  Otherwise, you will receive the following error message: “Transaction context in use by another session.”
+> The `USE AG1` statement must be executed to ensure the database context is set to `AG1`.  Otherwise, you will receive the following error message: "Transaction context in use by another session."

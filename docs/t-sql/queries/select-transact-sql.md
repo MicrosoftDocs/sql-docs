@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "row retrieval [SQL Server]"
   - "queries [SQL Server], results"
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -166,7 +166,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- This example returns only the rows for `DimEmployee` that have an `EndDate` that is not NULL and a `MaritalStatus` of ‘M’ (married).  
+ This example returns only the rows for `DimEmployee` that have an `EndDate` that is not NULL and a `MaritalStatus` of 'M' (married).  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

@@ -5,15 +5,14 @@ ms.date: "11/22/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.testcdrule.f1"
   - "sql13.dqs.dm.cdrules.f1"
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Cross-Domain Rule
@@ -24,7 +23,7 @@ manager: craigg
   
  The If clause and Then clause of a cross-domain rule are each defined for one of the single domains in the composite domain. Each clause must be defined for a different single domain. A cross-domain rule must relate to multiple single domains; you cannot define a simple domain rule (for only a single domain) for a composite domain. You would do so by defining a domain rule for a single domain. The If clause and the Then clause can each contain one or more conditions.  
   
- A cross-domain rule that has definitive conditions will apply the rules logic to synonyms of the value in the conditions, as well the values themselves. The definitive conditions for the If and Then clauses are Value is equal to, Value is not equal to, Value is in, or Value is not in. For example, suppose that you have the following cross-domain rule for a composite domain: “For ‘City’, if Value is equal to ‘Los Angeles’, then for ‘State’, Value is equal to ‘CA’. “If ‘Los Angeles’ and ‘LA’ are synonyms, this rule will return correct for ‘Los Angeles CA’ and ‘LA CA’ and in error for ‘Los Angeles WA’ and ‘LA WA’.  
+ A cross-domain rule that has definitive conditions will apply the rules logic to synonyms of the value in the conditions, as well the values themselves. The definitive conditions for the If and Then clauses are Value is equal to, Value is not equal to, Value is in, or Value is not in. For example, suppose that you have the following cross-domain rule for a composite domain: "For 'City', if Value is equal to 'Los Angeles', then for 'State', Value is equal to 'CA'. "If 'Los Angeles' and 'LA' are synonyms, this rule will return correct for 'Los Angeles CA' and 'LA CA' and in error for 'Los Angeles WA' and 'LA WA'.  
   
  Apart from just letting you know about the validity of a cross-domain rule, the definitive *Then* clause in a cross-domain rule, **Value is equal to**, also corrects the data during the data-cleansing activity. For more information, see [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) in [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   

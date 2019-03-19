@@ -81,7 +81,7 @@ To view migration messages, make sure that the Output pane is visible. Otherwise
 4.  Right-click **Schemas** in DB2 Metadata Explorer, and then click **Migrate Data**. You can also migrate data for individual objects or categories of objects: Right-click the object or its parent folder; select the **Migrate Data** option.  
   
     > [!NOTE]  
-    > If the SSMA for DB2 Extension Pack is not installed on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and if **Server Side Data Migration Engine** is selected, then while migrating the data to the target database, the following error is encountered: ‘SSMA Data Migration components were not found on SQL Server, server-side data migration will not be possible. Please check if Extension Pack is installed correctly’. Click **Cancel** to terminate the data migration.  
+    > If the SSMA for DB2 Extension Pack is not installed on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and if **Server Side Data Migration Engine** is selected, then while migrating the data to the target database, the following error is encountered: 'SSMA Data Migration components were not found on SQL Server, server-side data migration will not be possible. Please check if Extension Pack is installed correctly'. Click **Cancel** to terminate the data migration.  
   
 5.  In the **Connect to DB2** dialog box, enter the connection credentials, and then click **Connect**. For more information on connecting to DB2, see [Connecting to DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   

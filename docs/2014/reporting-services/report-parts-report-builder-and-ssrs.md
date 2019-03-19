@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Report Parts (Report Builder and SSRS)
   Report items such as tables, matrices, charts, and images can be published as *report parts*. Report parts are report items that have been published separately to a report server and that can be reused in other reports. Report parts have an .rsc file extension.  
@@ -21,7 +21,7 @@ manager: craigg
   
  The report part that you add to your report maintains a relationship to the instance of the report part on the site or server by means of a unique ID. After you add report parts from a site or server to a report, you can modify them, independent of the original report part on the site or server. You can accept updates that others have made to the report part on the site or server, and you can save the modified report part back to the site or server, either adding a new report part or writing over the original, if you have sufficient permissions.  
   
- To quickly get started with report parts, see the videos [Report Builder 3 Report Parts in SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) and [How Do I: Create Reusable Report Parts with SQL Server Report Builder](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ To quickly get started with report parts, see the videos [Report Builder 3 Report Parts in SQL Server 2008 R2](https://technet.microsoft.com/edge/Video/ff711300) and [How Do I: Create Reusable Report Parts with SQL Server Report Builder](https://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Life Cycle of a Report Part  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -86,12 +86,12 @@ manager: craigg
  The easiest way to create a report is to add an existing report part, like a table or chart, to your report from the Report Part Gallery. After you add it to your report, you can modify it as much as you need, or accept updates from the server. Changing the report item in your report will not affect the instance of the report part published on the site or server, nor will it break the relationship between the instance in the report and on the site or server. If you have sufficient permissions, you can save the updated copy back to the site or server. If someone else modifies the copy on the site or server, you can decide to keep your copy as it is, or you can update it to be like the copy on the site or server.  
   
 ### Searching for Report Parts  
- You look for report parts to add to your report in the Report Part Gallery. You can filter the report parts by all or part of the name of the part, who created it, who last modified it, when it was last modified, where it’s stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
+ You look for report parts to add to your report in the Report Part Gallery. You can filter the report parts by all or part of the name of the part, who created it, who last modified it, when it was last modified, where it's stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
   
  You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Browse for Report Parts and Set a Default Folder &#40;Report Builder and SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### What Comes with a Report Part  
- When you add a report part to your report, you are also adding everything it must have to work. For example, any object that displays data is dependent on a dataset – a query and a connection to a data source. It may also have one or more parameters. All of the items it is dependent on are its *dependencies*, and all of them, or pointers to them, are included with the report part when you add it to your report. The dataset and parameters are listed in the Report Data pane of your report.  
+ When you add a report part to your report, you are also adding everything it must have to work. For example, any object that displays data is dependent on a dataset - a query and a connection to a data source. It may also have one or more parameters. All of the items it is dependent on are its *dependencies*, and all of them, or pointers to them, are included with the report part when you add it to your report. The dataset and parameters are listed in the Report Data pane of your report.  
   
  The dataset for the report part may be embedded in the report part, or it may be a separate, shared dataset that the report part points to. If it is embedded in the report part, you may be able to modify it. If it is a shared dataset, it is a separate object that you would need permissions for. For more information about shared and embedded datasets, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
@@ -146,7 +146,7 @@ manager: craigg
  [Report Parts and Datasets in Report Builder](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Troubleshoot Report Parts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Managing Report Parts](report-design/managing-report-parts.md)   
- [Report Builder 3 Report Parts in SQL Server 2008 R2 (video)](http://technet.microsoft.com/edge/Video/ff711300)   
- [How Do I: Create Reusable Report Parts with SQL Server Report Builder (video)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [Report Builder 3 Report Parts in SQL Server 2008 R2 (video)](https://technet.microsoft.com/edge/Video/ff711300)   
+ [How Do I: Create Reusable Report Parts with SQL Server Report Builder (video)](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

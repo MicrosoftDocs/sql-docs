@@ -1,6 +1,6 @@
 ---
 title: Appliance Network configuration - Analytics Platform System | Microsoft Docs
-description: The Analytics Platform System (APS) appliance is built and configured with a fix set of IP addresses throughout all servers and applicable devices from the IHV’s factory floor. Upon delivery of the appliance, the external (Ethernet) IP addressed must be reconfigured to match the specific customer’s data center requirements.  
+description: The Analytics Platform System (APS) appliance is built and configured with a fix set of IP addresses throughout all servers and applicable devices from the IHV's factory floor. Upon delivery of the appliance, the external (Ethernet) IP addressed must be reconfigured to match the specific customer's data center requirements.  
 author: mzaman1 
 manager: craigg
 ms.prod: sql
@@ -12,7 +12,7 @@ ms.reviewer: martinle
 ---
 
 # Appliance Network configuration for Analytics Platform System
-The Analytics Platform System (APS) appliance is built and configured with a fix set of IP addresses throughout all servers and applicable devices from the IHV’s factory floor. Upon delivery of the appliance, the external (Ethernet) IP addressed must be reconfigured to match the specific customer’s data center requirements.  
+The Analytics Platform System (APS) appliance is built and configured with a fix set of IP addresses throughout all servers and applicable devices from the IHV's factory floor. Upon delivery of the appliance, the external (Ethernet) IP addressed must be reconfigured to match the specific customer's data center requirements.  
   
 > [!NOTE]  
 > PDW V1 required 8 IP external (*Customer Facing*) addresses to provide external connectivity to each of the control rack nodes. PDW 2012 (V2) enhanced network communications by exposing every component of the appliance externally via IP addresses. This approach provides a more robust design which reduces costs, and increases flexibility, and enhances data movement, data loading, and Hadoop integration. The number of IP addresses required depends upon the number of nodes in the appliance. To accommodate this larger block of IP addresses, the customer should set up a separate subnet for PDW. Within this subnet, there will be sufficient IP address space (up to 250 addresses) to accommodate the components of up to 5 PDW racks.  

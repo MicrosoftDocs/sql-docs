@@ -2,7 +2,7 @@
 title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to migrate SQL Server databases to other SQL Server or Azure databases
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, overview"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---
@@ -23,6 +23,9 @@ The Data Migration Assistant (DMA) helps you upgrade to a modern data platform b
 > [!NOTE] 
 > For large migrations (in terms of number and size of databases), we recommend that you use the [Azure Database Migration Service](/azure/dms/dms-overview), which can migrate databases at scale.
   
+## Get Data Migration Assistant
+To install DMA, download the latest version of the tool from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595), and then run the **DataMigrationAssistant.msi** file.
+
 ## Capabilities
 - Assess on-premises SQL Server instance(s) migrating to Azure SQL database(s). The assessment workflow helps you to detect the following issues that can affect Azure SQL database migration and provides detailed guidance on how to resolve them.
 
@@ -51,6 +54,9 @@ The Data Migration Assistant (DMA) helps you upgrade to a modern data platform b
 
 - After a successful migration, applications can connect to the target SQL Server databases seamlessly.
 
+## Prerequisites
+To run an assessment, you have to be a member of the SQL Server **sysadmin** role.
+
 ## Supported source and target versions
 DMA replaces all previous versions of SQL Server Upgrade Advisor and should be used for upgrades for most SQL Server versions. Supported source and target versions are:
 
@@ -70,9 +76,6 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2017 on Windows and Linux
 - Azure SQL Database
 - Azure SQL Database Managed Instance
-
-## Installation
-To install DMA, download the latest version of the tool from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595), and then run the **DataMigrationAssistant.msi** file.
 
 ## See also
 [Assess your SQL Server Migration](../dma/dma-assesssqlonprem.md)     

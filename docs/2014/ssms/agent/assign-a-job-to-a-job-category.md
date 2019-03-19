@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], assigning"
@@ -43,7 +43,7 @@ manager: craigg
   
 4.  Right-click the job you want to edit and select **Properties**.  
   
-5.  In the **Job Properties -***job_name* dialog box, in the **Category** list, select the job category you want to assign to the job.  
+5.  In the **Job Properties -**_job_name_ dialog box, in the **Category** list, select the job category you want to assign to the job.  
   
 6.  Click **OK**.  
   

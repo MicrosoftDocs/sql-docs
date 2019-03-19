@@ -5,12 +5,11 @@ ms.date: "10/01/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Reference Data Services in DQS
@@ -47,7 +46,7 @@ manager: craigg
  You can perform these activities in the **Reference Data** tab of the **Configuration** screen in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ##  <a name="Direct"></a> Using Reference Data Directly from the Third Party Reference Data Providers  
- If you are not connected to the Internet and therefore cannot use Marketplace, DQS also supports direct connection to data providers that are available within your organization’s network. To use reference data from direct online third-party reference data providers, you have to create a record for the data provider in DQS.  
+ If you are not connected to the Internet and therefore cannot use Marketplace, DQS also supports direct connection to data providers that are available within your organization's network. To use reference data from direct online third-party reference data providers, you have to create a record for the data provider in DQS.  
   
 ##  <a name="HowToCleanse"></a> How to Cleanse Data by Using the Reference Data  
  Cleansing your data in DQS using reference data includes the following three steps:  

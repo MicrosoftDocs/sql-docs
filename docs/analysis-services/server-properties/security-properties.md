@@ -1,5 +1,5 @@
 ---
-title: "Security Properties | Microsoft Docs"
+title: "Analysis Services Security Properties | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services

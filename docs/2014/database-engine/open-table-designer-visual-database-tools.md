@@ -28,7 +28,7 @@ manager: craigg
      The **Table Designer** menu is added to the main menu and the designer panes open.  
   
 > [!NOTE]  
->  If you are connected to a SQL Azure database, the new table option will launch a create table template script. Edit the parameters, then run the script to create a new table. For more information, see [SQL Azure Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
+>  If you are connected to a SQL Azure database, the new table option will launch a create table template script. Edit the parameters, then run the script to create a new table. For more information, see [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
 ### Open an existing table  
   

@@ -89,7 +89,7 @@ To view migration messages, make sure that the Output pane is visible. Otherwise
 4.  Right-click **Schemas** in MySQL Metadata Explorer, and then click **Migrate Data**. You can also migrate data for individual objects or categories of objects: Right-click the object or its parent folder; select the **Migrate Data** option.  
   
     > [!NOTE]  
-    > If the SSMA for MySQL Extension Pack is not installed on the instance of SQL Server, and if **Server Side Data Migration Engine** is selected, then while migrating the data to the target database, the following error is encountered: ‘SSMA Data Migration components were not found on SQL Server, server-side data migration will not be possible. Please check if Extension Pack is installed correctly’. Click **Cancel** to terminate the data migration.  
+    > If the SSMA for MySQL Extension Pack is not installed on the instance of SQL Server, and if **Server Side Data Migration Engine** is selected, then while migrating the data to the target database, the following error is encountered: 'SSMA Data Migration components were not found on SQL Server, server-side data migration will not be possible. Please check if Extension Pack is installed correctly'. Click **Cancel** to terminate the data migration.  
   
 5.  In the **Connect to MySQL** dialog box, enter the connection credentials, and then click **Connect**. For more information on connecting to MySQL, see [Connect to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   

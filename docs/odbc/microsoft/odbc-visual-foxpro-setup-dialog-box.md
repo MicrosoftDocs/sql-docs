@@ -54,7 +54,7 @@ The **ODBC Visual FoxPro Setup** dialog box enables you to add or change a Visua
  When this check box is selected, the driver opens the Visual FoxPro database exclusively when you access data using the data source. Other users cannot access the database or the tables in the database while the database is opened exclusively. Tables within the exclusively opened database are opened as SHARED. To open a table exclusively, use the [SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md) command. This check box is disabled when **Database type** is set to **Free Table directory**.  
   
  **Null**  
- Determines whether columns created with ALTER TABLE and CREATE TABLE allow null values. If you set Null ON, INSERT – SQL inserts a null value into any column not included in an INSERT – SQL... VALUE clause. A blank is inserted if Null is OFF. You can also control this option through a passed connection string as in the following code:  
+ Determines whether columns created with ALTER TABLE and CREATE TABLE allow null values. If you set Null ON, INSERT - SQL inserts a null value into any column not included in an INSERT - SQL... VALUE clause. A blank is inserted if Null is OFF. You can also control this option through a passed connection string as in the following code:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  

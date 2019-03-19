@@ -117,7 +117,7 @@ manager: craigg
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
- **SQL Server Always On Team Blogs—Monitoring Always On Health with PowerShell:**  
+ **SQL Server Always On Team Blogs-Monitoring Always On Health with PowerShell:**  
   
 -   [Part 1: Basic Cmdlet Overview](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
   

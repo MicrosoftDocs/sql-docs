@@ -57,13 +57,13 @@ manager: craigg
   
 1.  In Object Explorer, expand  the **Security** folder.  
   
-2.  Right-click the **Credentials** folder and select **New Credential…**.  
+2.  Right-click the **Credentials** folder and select **New Credential...**.  
   
 3.  In the **New Credential** dialog box, in the **Credential Name** box, type a name for the credential.  
   
 4.  In the **Identity** box, type the name of the account used for outgoing connections (when leaving the context of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Typically, this will be a Windows user account, but the identity can be an account of another type.  
   
-     Alternately, click the ellipsis **(…)** to open the **Select User or Group** dialog box.  
+     Alternately, click the ellipsis **(...)** to open the **Select User or Group** dialog box.  
   
 5.  In the **Password** and **Confirm password** boxes, type the password of the account specified in the **Identity** box. If **Identity** is a Windows user account, this is the Windows password. The **Password** can be blank, if no password is required.  
   

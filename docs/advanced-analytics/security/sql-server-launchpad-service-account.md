@@ -1,5 +1,5 @@
 ---
-title: SQL Server Launchpad service account configuration | Microsoft Docs
+title: SQL Server Launchpad service account configuration - SQL Server Machine Learning Services
 description: How to modify the SQL Server Launchpad service account used for external script execution on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -59,10 +59,12 @@ The following table lists the advanced settings for [!INCLUDE[ssCurrent](../../i
 
 |**Setting name**|**Type**|**Description**|
 |----|----|----|
-|JOB\_CLEANUP\_ON\_EXIT|Integer |This is an internal setting only – do not change this value. </br></br>Specifies whether the temporary working folder created for each external runtime session should be cleaned up after the session is completed. This setting is useful for debugging. </br></br>Supported values are **0** (Disabled) or **1** (Enabled). </br></br>The default is 1, meaning log files are removed on exit.|
+|JOB\_CLEANUP\_ON\_EXIT|Integer |This is an internal setting only - do not change this value. </br></br>Specifies whether the temporary working folder created for each external runtime session should be cleaned up after the session is completed. This setting is useful for debugging. </br></br>Supported values are **0** (Disabled) or **1** (Enabled). </br></br>The default is 1, meaning log files are removed on exit.|
 |TRACE\_LEVEL|Integer |Configures the trace verbosity level of  MSSQLLAUNCHPAD for debugging purposes. This affects trace files in the path specified by the LOG_DIRECTORY setting. </br></br>Supported values are: **1** (Error), **2** (Performance), **3** (Warning), **4**  (Information). </br></br>The default is 1, meaning output errors only.|
 
 All settings take the form of a key-value pair, with each setting on a separate line. For example, to change the trace level, you would add the line `Default: TRACE_LEVEL=4`.
+
+<a name="bkmk_EnforcePolicy"></a>
 
 ## Enforcing password policy
 

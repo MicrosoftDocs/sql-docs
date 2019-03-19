@@ -32,7 +32,7 @@ manager: craigg
  Select to set this catalog as the default catalog for new full-text catalogs.  
   
  **Accent sensitivity**  
- Indicates whether the catalog is sensitive or insensitive to diacritical marks, such as a tilde (**~**), acute accent mark (**´**), or umlaut (**¨**). If you select **Insensitive**, diacritical marks are ignored in the full-text indexes that are associated with this full-text catalog. For information about diacritical marks, see[Diacritical Mark](http://go.microsoft.com/fwlink/?LinkId=154091) in the MSN Encarta Encyclopedia.  
+ Indicates whether the catalog is sensitive or insensitive to diacritical marks, such as a tilde (**~**), acute accent mark (**´**), or umlaut (**¨**). If you select **Insensitive**, diacritical marks are ignored in the full-text indexes that are associated with this full-text catalog. For information about diacritical marks, see[Diacritical Mark](https://go.microsoft.com/fwlink/?LinkId=154091) in the MSN Encarta Encyclopedia.  
   
 ## See Also  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

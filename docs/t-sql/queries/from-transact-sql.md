@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], FROM clause"
   - "derived tables"
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -704,7 +704,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than ‘SO5000’:  
+ A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than 'SO5000':  
   
 ```sql
 -- Uses AdventureWorks  
@@ -804,7 +804,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### R. Using a derived table  
- The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name ‘Smith’.  
+ The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name 'Smith'.  
   
 ```sql
 -- Uses AdventureWorks  

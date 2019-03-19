@@ -40,7 +40,7 @@ manager: craigg
   
 ### SourceType = Direct Input  
  **Source**  
- Type the DDL statements or click the ellipsis **(…)** and then type the statements in the **DDL Statements** dialog box.  
+ Type the DDL statements or click the ellipsis **(...)** and then type the statements in the **DDL Statements** dialog box.  
   
 ### SourceType = File Connection  
  **Source**  

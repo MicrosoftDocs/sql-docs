@@ -56,7 +56,7 @@ The BOM may be misinterpreted under the following conditions:
 * The first field in the data file is non-character
 
 Consider whether any of the following workarounds may be available for your *specific* situation:
-* Don’t use a format file.  An example of this workaround is provided below, see [Using bcp and Unicode Character Format to Import Data without a Format File](#bcp_widechar_import),
+* Don't use a format file.  An example of this workaround is provided below, see [Using bcp and Unicode Character Format to Import Data without a Format File](#bcp_widechar_import),
 
 * Use the **-c** switch instead of **-w**,
 
@@ -157,7 +157,7 @@ REM Review results is SSMS
 ```
 
 ### **Using bcp and Unicode Character Format to Import Data with a Non-XML Format File**<a name="bcp_widechar_import_fmt"></a>
-**-w** and **-f** switches and **IN** command.  A workaround will need to be used since this example involves bcp, a format file, Unicode character, and the first data field in the data file is non-character.  See [Special Considerations for Using Unicode Character Format, bcp, and a Format File](#special_considerations), above.  The data file `myWidechar.bcp` will be altered by adding an additional record as a “dummy” record which will  then be skipped with the `-F 2` switch.
+**-w** and **-f** switches and **IN** command.  A workaround will need to be used since this example involves bcp, a format file, Unicode character, and the first data field in the data file is non-character.  See [Special Considerations for Using Unicode Character Format, bcp, and a Format File](#special_considerations), above.  The data file `myWidechar.bcp` will be altered by adding an additional record as a "dummy" record which will  then be skipped with the `-F 2` switch.
 
 At a command prompt, enter the following commands and follow the modification steps:
 ```

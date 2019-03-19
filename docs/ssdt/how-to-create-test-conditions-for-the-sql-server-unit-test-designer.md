@@ -172,7 +172,7 @@ The class for the custom test condition inherits from the base [TestCondition](h
   
 |Attribute Parameter|Position|Description|  
 |-----------------------|------------|---------------|  
-|DisplayName|1|Identifies the string in the “Test Conditions” combo box. This name must be unique. If two conditions have the same display name, the first condition found will be shown to the user, and a warning will be shown in the Visual Studio Error Manager.|  
+|DisplayName|1|Identifies the string in the "Test Conditions" combo box. This name must be unique. If two conditions have the same display name, the first condition found will be shown to the user, and a warning will be shown in the Visual Studio Error Manager.|  
 |ImplementingType|2|This is used to uniquely identify the extension. You need to change this to match the type you are placing the attribute on. This example uses the type **ResultSetColumnCountCondition** so use **typeof(ResultSetColumnCountCondition)**. If your type is **NewTestCondition**, use **typeof(NewTestCondition)**.|  
   
 In this example, you add two properties. Users of the custom test condition can use the ResultSet property to specify for which result set the column count should be verified. Then, users can use the Count property to specify the expected column count.  

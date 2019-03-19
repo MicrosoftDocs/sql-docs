@@ -23,7 +23,7 @@ ms.author: owend
 manager: craigg
 ---
 # Choosing Data for Data Mining
-  As you start data mining, you might ask “How much data do I need?” or “Are there any special requirements I should know about when cleaning or formatting my data?”  
+  As you start data mining, you might ask "How much data do I need?" or "Are there any special requirements I should know about when cleaning or formatting my data?"  
   
  In particular, people new to data mining often run into problems with Excel data, such as needing to format data consistently within columns, cleaning up missing values, or binning numbers. This section also lists data requirements for specific kinds of models.  
   
@@ -63,7 +63,7 @@ manager: craigg
 ### How Much Data Do I Need?  
  A rule of thumb is to never have less than 50-100 rows of data for the simplest models types and scenarios. For example, if you are predicting a single attribute using a Naïve Bayes model and the data set is well-formed, you might be able to generate fairly accurate predictions using 50-100 rows of data.  
   
- For association models, you typically need much more data – a thousand rows might not suffice if you are analyzing many attributes, such as associations among products. If your data set is too big or too small, you can sometimes achieve better results by collapsing rows into categories. For example, instead of analyzing associations among individual products, you could categorize the products.  
+ For association models, you typically need much more data - a thousand rows might not suffice if you are analyzing many attributes, such as associations among products. If your data set is too big or too small, you can sometimes achieve better results by collapsing rows into categories. For example, instead of analyzing associations among individual products, you could categorize the products.  
   
  If you have a data set of a reasonable size, focus more on data quality rather than adding more and more data. After a point, all the patterns that are statistically valid will have been found, and adding more data does not improve their validity. Conversely, as you add more data sometimes you can introduce accidental correlations.  
   
@@ -107,7 +107,7 @@ manager: craigg
 ##  <a name="bkmk_CommonDataProblems"></a> Common Data Problems  
   
 ### Excel Number Formats  
- Excel is an easy tool to use because it is forgiving – you can put just about any kind of data anywhere! However, before you begin to look for patterns and analyze correlations, you need to impose some structure or constraints on your data.  
+ Excel is an easy tool to use because it is forgiving - you can put just about any kind of data anywhere! However, before you begin to look for patterns and analyze correlations, you need to impose some structure or constraints on your data.  
   
  By default, when you import numeric data into [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, the numbers are stored in a decimal format with two decimal places. If this is not an appropriate number format, you should change to another numeric format, or change the number of decimal places.  
   
@@ -174,7 +174,7 @@ manager: craigg
   
  For example, if a column contains numbers that repeat in a specific interval to indicate the days of the week, you might specify the content type of that column as `Cyclical`.  
   
- You don’t have to worry about content types if you use the wizards and tools provided in this add-ins. However, if you use the [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md) modeling option to add a new model to existing data, you might get an error relating to content types.  
+ You don't have to worry about content types if you use the wizards and tools provided in this add-ins. However, if you use the [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md) modeling option to add a new model to existing data, you might get an error relating to content types.  
   
  The reason is that some types of model require a certain kind of data (such as a time stamp). The tools process these columns according to specific requirements and also add a content type property. Therefore, if you re-use the data with a completely different algorithm, you might need to change the data type or content type.  
   
@@ -200,7 +200,7 @@ manager: craigg
   
  Typically the key column is a numeric or text identifier that should not be used for analysis, only for tracking records. The exceptions are time series keys and sequence keys.  
   
- **Nested table keys** are used only when you get data from an external data source that has been defined as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source view. For more information about nested tables, see [http://msdn.microsoft.com/library/ms175659.aspx](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **Nested table keys** are used only when you get data from an external data source that has been defined as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source view. For more information about nested tables, see [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  This content type can be used with the following data types: `Date`, `Double`, `Long`, and `Text`.  
   

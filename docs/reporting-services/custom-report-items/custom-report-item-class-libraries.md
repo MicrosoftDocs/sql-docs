@@ -41,7 +41,7 @@ ms.author: maghan
 |**Style**|The style properties for the custom report item.|  
 |**Adornment**|An adornment window used for interactive editing of the control.|  
 |**Site**|The **ISite** of the component.|  
-|**DesignerVerbCollection**|An array of custom verbs for the control’s shortcut menu.|  
+|**DesignerVerbCollection**|An array of custom verbs for the control's shortcut menu.|  
   
 #### Public Methods  
   

@@ -43,9 +43,9 @@ UUID id = ((ISQLServerConnection)con).getClientConnectionId();
   
 ```  
 SQLServerConnectionPoolDataSource ds = new SQLServerConnectionPoolDataSource();  
-ds.setUser("…");  
-ds.setPassword("…");  
-ds.setServerName("…");  
+ds.setUser("...");  
+ds.setPassword("...");  
+ds.setServerName("...");  
 PooledConnection pcon= ds.getPooledConnection();  
 Connection cn = pcon.getConnection();  
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  

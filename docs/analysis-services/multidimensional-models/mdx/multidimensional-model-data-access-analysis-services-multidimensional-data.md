@@ -83,6 +83,6 @@ manager: kfile
  [Connect to Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Developing with XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Tabular Model Data Access](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

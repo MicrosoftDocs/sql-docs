@@ -30,7 +30,7 @@ manager: craigg
   
 2.  Navigate to the following directory: /server/wgt_tech/server/windowsNT.  
   
-3.  To download patches most relevant for Windows 95, Windows 98 and Windows NT/Windows 2000, navigate to the subdirectory for your version of Oracle — 7.3 or 8.0. The two subdirectories are /73patchsets and /80patchsets.  
+3.  To download patches most relevant for Windows 95, Windows 98 and Windows NT/Windows 2000, navigate to the subdirectory for your version of Oracle - 7.3 or 8.0. The two subdirectories are /73patchsets and /80patchsets.  
   
 4.  To download patches for Oracle's network technology, either SQL*Net or Net8, navigate to the following directory: /network.  
   

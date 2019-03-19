@@ -84,10 +84,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     |||  
     |-|-|  
-    |1 – 9|5|  
-    |10 – 19|9|  
-    |20 – 28|13|  
-    |29 – 38|17|  
+    |1 - 9|5|  
+    |10 - 19|9|  
+    |20 - 28|13|  
+    |29 - 38|17|  
   
      For **nchar** and **nvarchar** data types, the storage value is always two times the value in **Length**.  
   

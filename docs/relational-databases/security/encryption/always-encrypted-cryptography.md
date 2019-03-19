@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Keys, Key Stores and Key Encryption Algorithms  
  Always Encrypted uses two types of keys: Column master keys and column encryption keys.  
   
- A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client’s control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../includes/msconame-md.md)] key store providers for [Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
+ A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client's control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../includes/msconame-md.md)] key store providers for [Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
   
  A column encryption key (CEK), is a content encryption key (i.e. a key used to protect data) that is protected by a CMK.  
   
@@ -63,7 +63,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
 ```  
   
  The HMAC value truncation is performed in order to fit 1 block of data as needed for the IV.    
-As a result, deterministic encryption always produces the same ciphertext for a given plaintext values, which enables inferring whether two plaintext values are equal by comparing their corresponding ciphertext values. This limited information disclosure allows the database system to support equality comparison on encrypted column values.  
+As a result, deterministic encryption always produces the same ciphertext for a given plaintext value, which enables inferring whether two plaintext values are equal by comparing their corresponding ciphertext values. This limited information disclosure allows the database system to support equality comparison on encrypted column values.  
   
  Deterministic encryption is more effective in concealing patterns, compared to alternatives, such as using a pre-defined IV value.  
   

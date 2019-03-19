@@ -19,7 +19,7 @@ manager: craigg
   
 |||  
 |-|-|  
-|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Do you want to try out SQL Server 2016? Sign up for Microsoft Azure, and then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with  SQL Server 2016 already installed. You can delete the Virtual Machine when you’re finished.|  
+|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Do you want to try out SQL Server 2016? Sign up for Microsoft Azure, and then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with  SQL Server 2016 already installed. You can delete the Virtual Machine when you're finished.|  
   
  To use [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], you define a heavily accessed table as memory optimized. Memory-optimized-tables are fully transactional, durable, and are accessed using [!INCLUDE[tsql](../../../includes/tsql-md.md)] in the same way as disk-based tables. A query can reference both memory-optimized tables and disk-based tables. A transaction can update data in memory-optimized tables and disk-based tables. Stored procedures that only reference memory-optimized tables can be natively compiled into machine code for further performance improvements. The [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine is designed for extremely high session concurrency for OLTP type of transactions driven from a highly scaled-out middle-tier. To achieve this, it uses latch-free data structures and optimistic, multi-version concurrency control. The result is predictable, sub-millisecond low latency and high throughput with linear scaling for database transactions. The actual performance gain depends on many factors, but 5-to-20 times performance improvements are common.  
   
@@ -33,7 +33,7 @@ manager: craigg
 |Low latency.|Require low latency business transactions which typical database solutions cannot achieve.|Eliminate contention.<br /><br /> Minimize code execution time.<br /><br /> Low latency code execution.<br /><br /> Efficient data retrieval.|  
 |Session state management.|Frequent insert, update and point lookups.<br /><br /> High scale load from numerous stateless web servers.|Eliminate contention.<br /><br /> Efficient data retrieval.<br /><br /> Optional IO reduction or removal, when using non-durable tables|  
   
- For more information about scenarios where [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] will result in the greatest performance gains, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
+ For more information about scenarios where [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] will result in the greatest performance gains, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] will improve performance best in OLTP with short-running transactions.  
   
@@ -49,7 +49,7 @@ manager: craigg
   
 -   Optimistic concurrency control that eliminates logical locks.  
   
--   Lock free objects that eliminate all physical locks and latches. Threads that perform transactional work don’t use locks or latches for concurrency control.  
+-   Lock free objects that eliminate all physical locks and latches. Threads that perform transactional work don't use locks or latches for concurrency control.  
   
 -   Natively compiled stored procedures, which have significantly better performance than interpreted stored procedures, when accessing a memory-optimized table.  
   
@@ -78,13 +78,13 @@ manager: craigg
   
  More information about [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] is available on:  
   
--   [Microsoft® SQL Server® 2014 Product Guide](http://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft?? SQL Server?? 2014 Product Guide](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
--   [In-Memory OLTP Blog](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [In-Memory OLTP Blog](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
--   [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [SQL Server In-Memory OLTP Internals Overview](http://msdn.microsoft.com/library/dn720242.aspx)  
+-   [SQL Server In-Memory OLTP Internals Overview](https://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## See Also  
  [Database Features](../database-features.md)  

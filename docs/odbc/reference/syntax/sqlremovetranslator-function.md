@@ -33,8 +33,8 @@ manager: craigg
 ```  
   
 BOOL SQLRemoveTranslator(  
-     LPCSTR    lpszTranslator,  
-     LPDWORD   lpdwUsageCount);  
+     LPCSTR    lpszTranslator,  
+     LPDWORD   lpdwUsageCount);  
 ```  
   
 ## Arguments  

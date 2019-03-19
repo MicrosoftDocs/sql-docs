@@ -37,10 +37,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+ [ **@rolename =** ] **'**_role_**'**  
  Is the name of the application role. *Role* is **sysname**, with no default. *role* must exist in the current database.  
   
- [ **@newpwd =** ] **'***password***'**  
+ [ **@newpwd =** ] **'**_password_**'**  
  Is the new password for the application role. *password* is **sysname**, with no default. *password* cannot be NULL.  
   
 > [!IMPORTANT]  

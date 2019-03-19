@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Right-click the view you wish to rename and select **Rename**.  
   
-3.  Enter the view’s new name.  
+3.  Enter the view's new name.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To rename a view**  
@@ -67,6 +67,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) and [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Renaming a View  
- Ensure that all objects, scripts, and applications that reference the view’s old name now use the new name.  
+ Ensure that all objects, scripts, and applications that reference the view's old name now use the new name.  
   
   

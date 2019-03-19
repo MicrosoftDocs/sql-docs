@@ -1,5 +1,6 @@
 ---
-title: Use third-party Active Directory providers with SQL Server on Linux | Microsoft Docs
+title: Use third-party Active Directory providers with SQL Server on Linux
+titleSuffix: SQL Server
 description: This tutorial provides the configuration steps for Active Directory authentication with third-party providers
 author: dylan-MSFT
 ms.date: 07/25/2018
@@ -7,7 +8,7 @@ ms.author: dygray
 manager: mikehab
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AD authentication"

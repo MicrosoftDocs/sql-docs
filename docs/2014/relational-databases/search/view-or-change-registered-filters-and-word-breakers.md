@@ -72,7 +72,7 @@ manager: craigg
   
      **To install and load Microsoft Filter Pack IFilters**  
   
-    -   [How to register Microsoft Filter Pack IFilters with SQL Server](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [How to register Microsoft Filter Pack IFilters with SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  Use **sp_fulltext_service** to load newly installed word breakers and filters in the server instance, as follows:  
   

@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Add a Filter (Report Builder and SSRS)
   Add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations or display. Filters are applied at run time first on the dataset, and then on the data region, and then on the group, in top-down order for group hierarchies. In a table, matrix, or list, filters for row groups, column groups, and adjacent groups are applied independently. In a chart, filters for category groups and series groups are applied independently.  
@@ -27,7 +27,7 @@ ms.author: maggies
   
 1.  Open a report in **Design** view.  
   
-2.  Select the data region on the design surface, and then right-click *\<data region>***Properties**. For a gauge, select **Gauge Panel Properties**. The *\<data region>***Properties** dialog box opens.  
+2.  Select the data region on the design surface, and then right-click _\<data region>_**Properties**. For a gauge, select **Gauge Panel Properties**. The _\<data region>_**Properties** dialog box opens.  
   
     > [!NOTE]  
     >  On a Tablix data region, right-click the corner cell or a row or column handle, and then click **Tablix Properties**.  

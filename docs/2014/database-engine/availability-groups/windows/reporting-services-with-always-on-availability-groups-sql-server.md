@@ -19,18 +19,18 @@ manager: craigg
   
  A key benefit of using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data sources is to leverage readable secondary replicas as a reporting data source while, at the same time the secondary replicas are providing a failover for a primary database.  
   
- For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [AlwaysOn FAQ for SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [AlwaysOn FAQ for SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
   
    
   
 ##  <a name="bkmk_requirements"></a> Requirements for using Reporting Services and AlwaysOn Availability Groups  
  To use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], you need to download and install a hotfix for .Net 3.5 SP1. The hotfix adds support to SQL Client for AG features and support of the connection string properties **ApplicationIntent** and **MultiSubnetFailover**. If the Hotfix is not installed on each computer that hosts a report server, then users attempting to preview reports will see an error message similar to the following, and the error message will be written to the report server trace log:  
   
-> **Error message:** “Keyword not supported ‘applicationintent’”  
+> **Error message:** "Keyword not supported 'applicationintent'"  
   
- The message occurs when you include one of the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] properties in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] connection string, but the server does not recognize the property. The noted error message will be seen when you click the ‘Test Connection’ button in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] user interfaces and when you preview the report if remote errors are enabled on the report servers.  
+ The message occurs when you include one of the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] properties in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] connection string, but the server does not recognize the property. The noted error message will be seen when you click the 'Test Connection' button in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] user interfaces and when you preview the report if remote errors are enabled on the report servers.  
   
- For more information on the required hotfix, see [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=242896).  
+ For more information on the required hotfix, see [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896).  
   
  For information on other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requirements, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -62,7 +62,7 @@ manager: craigg
   
 -   **SharePoint Mode:** Use SharePoint configuration pages within the document libraries for reports that are already published to a SharePoint server.  
   
--   **Report Design:** [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new reports. See the ‘Report Design’ section in this topic or more information.  
+-   **Report Design:** [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new reports. See the 'Report Design' section in this topic or more information.  
   
  **Additional Resources:**  
   
@@ -78,7 +78,7 @@ manager: craigg
   
 -   Geographic location and distance between the primary and secondary replicas. For example the delay is typically larger if the secondary replicas are in a different data center than if they were in the same building as the primary replica.  
   
--   Configuration of the availability mode for each replica. The availability mode determines whether the primary replica waits to commit transactions on a database until a secondary replica has written the transaction to disk. For more information, see the ‘Availability Modes’ section of [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+-   Configuration of the availability mode for each replica. The availability mode determines whether the primary replica waits to commit transactions on a database until a secondary replica has written the transaction to disk. For more information, see the 'Availability Modes' section of [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
  When using a read-only secondary as a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data source, it is important to ensure that data update latency meets the needs of the report users.  
   
@@ -89,7 +89,7 @@ manager: craigg
   
 -   **Remote or server mode preview:** If after publishing reports to the report server or using preview in [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)], you see an error similar to the following, it is an indication you are previewing reports against the report server and the .Net Framework 3.5 SP1 Hotfix for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] has not been installed on the report server.  
   
-> **Error message:** “Keyword not supported ‘applicationintent’”  
+> **Error message:** "Keyword not supported 'applicationintent'"  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Report Server Databases and Availability Groups  
  Reporting Services offers limited support for using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with report server databases. The report server databases can be configured in AG to be part of a replica; however [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] will not automatically use a different replica for the report server databases when a failover occurs.  
@@ -116,11 +116,11 @@ manager: craigg
   
 -   ReportServerTempDB  
   
- Native mode does not support or use the Alerting databases and related features. You configure native mode report servers in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager. For SharePoint mode you configure the service application database name to be the name of the “client access point” you created as part of the SharePoint configuration. For more information on configuring SharePoint with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
+ Native mode does not support or use the Alerting databases and related features. You configure native mode report servers in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager. For SharePoint mode you configure the service application database name to be the name of the "client access point" you created as part of the SharePoint configuration. For more information on configuring SharePoint with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165).  
   
-> [!NOTE]  
+> [!NOTE]
 >  SharePoint mode report servers use a synchronization process between the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application databases and the SharePoint content databases. It is important to maintain the report server databases and content databases together. You should consider configuring them in the same availability groups so they failover and recover as a set. Consider the following scenario:  
->   
+> 
 >  -   You restore or failover to a copy of the content database that has not received the same recent updates that the report server database has received.  
 > -   The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] synchronization process will detect differences between the list of items in the content database and the report server databases.  
 > -   The synchronization process will delete or update items in the content database.  
@@ -132,7 +132,7 @@ manager: craigg
   
 -   **Primary Replica:** Configure the report server databases to be part of a single availability group and create a primary replica that includes all of the report server databases.  
   
--   **Secondary Replicas:** Create one or more secondary replicas. The common approach to copying the databases from the primary replica to the secondary replica(s) is to restore the databases to each secondary replica using ‘RESTORE WITH NORECOVERY’. For more information on creating secondary replicas and verifying data synchronization is working, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+-   **Secondary Replicas:** Create one or more secondary replicas. The common approach to copying the databases from the primary replica to the secondary replica(s) is to restore the databases to each secondary replica using 'RESTORE WITH NORECOVERY'. For more information on creating secondary replicas and verifying data synchronization is working, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 -   **Report Server Credentials:** You need to create the appropriate report server credentials on the secondary replicas that you created on the primary. The exact steps depend on what type of authentication you are using in your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] environment; Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service account, Windows user account, or SQL Server authentication. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   

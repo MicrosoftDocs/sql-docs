@@ -44,7 +44,7 @@ manager: craigg
   
 |Status|Description|  
 |------------|-----------------|  
-|Error|One or more values in the row don’t meet system requirements like length or data type. The value is not updated in the MDS repository.|  
+|Error|One or more values in the row don't meet system requirements like length or data type. The value is not updated in the MDS repository.|  
 |New Row|The values in the row have not yet been published to the MDS repository.|  
 |Read Only|The logged in user has Read-only permissions to one or more values in the row and the value(s) cannot be updated.|  
 |Unchanged|No values in the row have been changed in the worksheet. This does not mean the values in the repository have not changed; to get the latest data in the sheet, in the **Connect and Load** group, click **Load or Refresh**.<br /><br /> This is the default setting for each row.|  

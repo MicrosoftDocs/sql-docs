@@ -5,7 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "moving system databases"
@@ -153,11 +152,11 @@ manager: craigg
   
 3.  In the **SQL Server (***instance_name***) Properties** dialog box, click the **Startup Parameters** tab.  
   
-4.  In the **Existing parameters** box, select the –d parameter to move the master data file. Click **Update** to save the change.  
+4.  In the **Existing parameters** box, select the -d parameter to move the master data file. Click **Update** to save the change.  
   
      In the **Specify a startup parameter** box, change the parameter to the new path of the master database.  
   
-5.  In the **Existing parameters** box, select the –l parameter to move the master log file. Click **Update** to save the change.  
+5.  In the **Existing parameters** box, select the -l parameter to move the master log file. Click **Update** to save the change.  
   
      In the **Specify a startup parameter** box, change the parameter to the new path of the master database.  
   

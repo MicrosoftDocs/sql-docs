@@ -33,8 +33,8 @@ manager: craigg
 ```  
   
 BOOL ConfigTranslator(  
-     HWND     hwndParent,  
-     DWORD *  pvOption);  
+     HWND     hwndParent,  
+     DWORD *  pvOption);  
 ```  
   
 ## Arguments  

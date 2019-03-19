@@ -31,7 +31,7 @@ manager: craigg
   
  Both roles install application, configuration, and deployment files that enable a PowerPivot for SharePoint to run in a SharePoint farm. Specifying either role will cause Setup to check for hardware and software requirements necessary for SharePoint integration.  
   
- The existing farm option assumes that a SharePoint farm is already in place. The new farm option assumes that you will create a new farm; it supports the addition of a Database Engine instance in the command line syntax so that you can use the Database Engine instance as the farm’s database server.  
+ The existing farm option assumes that a SharePoint farm is already in place. The new farm option assumes that you will create a new farm; it supports the addition of a Database Engine instance in the command line syntax so that you can use the Database Engine instance as the farm's database server.  
   
  In contrast with the previous releases, all server configuration tasks are performed as post-installation tasks. If you are automating installation and configuration steps, you can use PowerShell to configure the server. For more information, see [PowerPivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
   

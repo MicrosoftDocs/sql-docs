@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newsubwizard.agentnameagentsecurity.f1"
@@ -49,8 +48,8 @@ manager: craigg
 ## See Also  
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
  [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)   
- [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
+ [SQL Server Replication Security](security/view-and-modify-replication-security-settings.md)  
   
   

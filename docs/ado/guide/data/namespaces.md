@@ -27,12 +27,12 @@ The XML persistence format in ADO uses the following four namespaces.
 |rs|Refers to the namespace containing elements and attributes specific to ADO Recordset properties and attributes.|  
 |z|Refers to the schema of the current rowset.|  
   
- A client should not add its own tags to these namespaces, as defined by the specification. For example, a client should not define a namespace as "urn:schemas-microsoft-com:rowset" and then write out something such as "rs:MyOwnTag." To learn more about namespaces, see the [W3C Namespaces in XML Recommendation](https://www.w3.org/TR/REC-xml-names/).  
+ A client should not add its own tags to these namespaces, as defined by the specification. For example, a client should not define a namespace as "urn:schemas-microsoft-com:rowset" and then write out something such as "rs:MyOwnTag." To learn more about namespaces, see the [W3C Namespaces in XML Recommendation](http://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
 >  The ID for the schema tag must be "RowsetSchema," and the namespace used to refer to the schema of the current rowset must point to "#RowsetSchema."  
   
- Note that the prefix of the namespace — the part between the colon and the equal sign — is arbitrary.  
+ Note that the prefix of the namespace - the part between the colon and the equal sign - is arbitrary.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

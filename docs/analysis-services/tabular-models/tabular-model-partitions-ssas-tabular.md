@@ -1,5 +1,5 @@
 ---
-title: "Tabular Model Partitions | Microsoft Docs"
+title: "Analysis Services tabular model partitions | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -29,7 +29,7 @@ manager: kfile
 ##  <a name="bkmk_benefits"></a> Benefits  
  Effective model design utilizes partitions to eliminate unnecessary processing and subsequent processor load on Analysis Services servers, while at the same time, making certain that data is processed and refreshed often enough to reflect the most recent data from data sources.  
   
- For example, a tabular model can have a Sales table which includes sales data for the current 2011 fiscal year and each of the previous fiscal years. The model’s Sales table has the following three partitions:  
+ For example, a tabular model can have a Sales table which includes sales data for the current 2011 fiscal year and each of the previous fiscal years. The model's Sales table has the following three partitions:  
   
 |Partition|Data from|  
 |---------------|---------------|  
@@ -41,9 +41,9 @@ manager: kfile
   
  There is no need to process data in the Sales2010-2001 partition nightly; however, because sales data for the previous ten fiscal years can still occasionally change because of product returns and other adjustments, it must still be processed regularly, thus data in the Sales2010-2001 partition is processed monthly. Data in the SalesOld partition never changes therefore only processed annually.  
   
- When entering the 2012 fiscal year, a new Sales2012 partition is added to the mode’s Sales table. The Sales2011 partition can then be merged with the Sales2010-2001 partition and renamed to Sales2011-2002. Data from the 2001 fiscal year is eliminated from the new Sales2011-2002 partition and moved into the SalesOld partition. All partitions are then processed to reflect changes.  
+ When entering the 2012 fiscal year, a new Sales2012 partition is added to the mode's Sales table. The Sales2011 partition can then be merged with the Sales2010-2001 partition and renamed to Sales2011-2002. Data from the 2001 fiscal year is eliminated from the new Sales2011-2002 partition and moved into the SalesOld partition. All partitions are then processed to reflect changes.  
   
- How you implement a partition strategy for your organization’s tabular models will largely be dependent on your particular model data processing needs and available resources.  
+ How you implement a partition strategy for your organization's tabular models will largely be dependent on your particular model data processing needs and available resources.  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
  In order to create, manage, and process partitions in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must have the appropriate Analysis Services permissions defined in a security role. Each security role has one of the following permissions:  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
@@ -35,7 +34,7 @@ manager: craigg
   
 7.  In the **New Database** dialog box, enter **SalesOrdersReplica** in the **Database name** box, click **OK**, and then click **Next**.  
   
-8.  On the Merge Agent Security page, click the ellipsis (**…**) button, enter \<*Machine_Name>***\repl_merge** in the **Process account** box, supply the password for this account, click **OK**, click **Next**, and then click **Next** again.  
+8.  On the Merge Agent Security page, click the ellipsis (**...**) button, enter \<_Machine_Name>_**\repl_merge** in the **Process account** box, supply the password for this account, click **OK**, click **Next**, and then click **Next** again.  
   
 9. On the Initialize Subscriptions page, select **At first synchronization** from the **Initialize When** list, click **Next**, and then click **Next** again.  
   
@@ -47,7 +46,7 @@ manager: craigg
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Databases**, **SalesOrdersReplica**, and **Security**, right-click **Users**, and then select **New User**.  
   
-2.  On the **General** page, enter \<*Machine_Name>***\repl_merge** in the **User name** box, click the ellipsis (**…**) button, click **Browse**, select \<*Machine_Name>***\repl_merge**, click **OK**, click **Check Names**, and then click **OK**.  
+2.  On the **General** page, enter \<_Machine_Name>_**\repl_merge** in the **User name** box, click the ellipsis (**...**) button, click **Browse**, select \<_Machine_Name>_**\repl_merge**, click **OK**, click **Check Names**, and then click **OK**.  
   
 3.  In **Database role membership**, select **db_owner**, and then click **OK** to create the user.  
   

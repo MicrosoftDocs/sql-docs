@@ -124,7 +124,7 @@ manager: craigg
   
 -   Variable assignment in the SELECT list.  
   
--   WHERE … AND  
+-   WHERE ... AND  
   
  <sup>1</sup> ORDER BY and TOP are supported in natively compiled stored procedures, with some restrictions:  
   
@@ -138,7 +138,7 @@ manager: craigg
   
     ```tsql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  However, a constant in the `TOP` clause results in better performance compared to using a variable.  

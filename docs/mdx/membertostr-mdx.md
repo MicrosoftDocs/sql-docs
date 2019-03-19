@@ -13,7 +13,7 @@ manager: kfile
 # MemberToStr (MDX)
 
 
-  Returns a Multidimensional Expressions (MDX)–formatted string that corresponds to a specified member.  
+  Returns a Multidimensional Expressions (MDX)-formatted string that corresponds to a specified member.  
   
 ## Syntax  
   
@@ -27,7 +27,7 @@ MemberToStr(Member_Expression)
  A valid Multidimensional Expressions (MDX) expression that returns a member.  
   
 ## Remarks  
- This function returns a string containing the uniquename of a member. It is usually used to pass a member’s uniquename to an external function.  
+ This function returns a string containing the uniquename of a member. It is usually used to pass a member's uniquename to an external function.  
   
 ## Example  
  The following example returns the string [Geography].[Geography].[Country].&[United States] :  

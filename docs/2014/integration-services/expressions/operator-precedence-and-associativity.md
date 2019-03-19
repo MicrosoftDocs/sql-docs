@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "associativity [Integration Services]"
@@ -23,10 +22,10 @@ manager: craigg
 |Operator symbol|Type of Operation|Associativity|  
 |---------------------|-----------------------|-------------------|  
 |( )|Expression|Left to right|  
-|–, !, ~|Unary|Right to left|  
+|-, !, ~|Unary|Right to left|  
 |casts|Unary|Right to left|  
 |*, / ,%|Multiplicative|Left to right|  
-|+, –|Additive|Left to right|  
+|+, -|Additive|Left to right|  
 |\<, >, \<=, >=|Relational|Left to right|  
 |==, !=|Equality|Left to right|  
 |&|Bitwise AND|Left to right|  

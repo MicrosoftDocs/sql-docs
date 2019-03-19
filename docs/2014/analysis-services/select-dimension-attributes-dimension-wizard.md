@@ -49,7 +49,7 @@ manager: craigg
 |----------|--------------|  
 |A dimension contains a parent-child hierarchy and **Enable Browsing** is not selected|The wizard leaves the `AttributeHierarchyEnabled` property set to `True`, and sets the `AttributeHierarchyVisible` attribute to `False` for the key attribute.|  
 |A table in a dimension contains a foreign key to a table that is not in the dimension|The wizard selects the foreign key as an attribute to be included, but will not select **Enable Browsing**. If you keep these settings, the `AttributeHiearchyEnabled` property of the attribute will be set to `True`, and the `AttributeHieararchyVisible` property will be set to `False`.|  
-|A dimension contains snowflake tables that are reached through nullable foreign key columns<br /><br /> —and—<br /><br /> Enable Browsing for the attribute that is based on the key of the snowflake table is not selected|The wizard will create the new attribute that has the `AttributeHiearchyEnabled` property set to `True`, and the `AttributeHieararchyVisible` property set to `False`.|  
+|A dimension contains snowflake tables that are reached through nullable foreign key columns<br /><br /> -and-<br /><br /> Enable Browsing for the attribute that is based on the key of the snowflake table is not selected|The wizard will create the new attribute that has the `AttributeHiearchyEnabled` property set to `True`, and the `AttributeHieararchyVisible` property set to `False`.|  
   
  **Attribute Type**  
  (Optional) Set the type for the attribute. The default value is **Regular**. The attribute type provides guidance to client applications on what information the attribute might contain.  

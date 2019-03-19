@@ -20,9 +20,9 @@ manager: craigg
 ## Options  
  Use the radio buttons to specify whether to upgrade the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and its shared components, or to upgrade only the shared components. Shared components in this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] release are the following:  
   
--   Management Tools – Basic  
+-   Management Tools - Basic  
   
--   Management Tools – Complete  
+-   Management Tools - Complete  
   
 -   Client Tools Connectivity  
   

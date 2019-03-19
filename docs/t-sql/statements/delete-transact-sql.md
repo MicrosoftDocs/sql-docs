@@ -167,7 +167,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Use the @@ROWCOUNT function to return the number of deleted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## Error Handling  
- You can implement error handling for the DELETE statement by specifying the statement in a TRY…CATCH construct.  
+ You can implement error handling for the DELETE statement by specifying the statement in a TRY...CATCH construct.  
   
  The DELETE statement may fail if it violates a trigger or tries to remove a row referenced by data in another table with a FOREIGN KEY constraint. If the DELETE removes multiple rows, and any one of the removed rows violates a trigger or constraint, the statement is canceled, an error is returned, and no rows are removed.  
   

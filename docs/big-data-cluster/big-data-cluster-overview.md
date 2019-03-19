@@ -1,19 +1,21 @@
 ---
-title: What are SQL Server 2019 big data clusters? | Microsoft Docs
+title: What are big data clusters?
+titleSuffix: SQL Server 2019 big data clusters
 description: Learn about SQL Server 2019 big data clusters (preview) that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
-
 # What are SQL Server 2019 big data clusters?
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server big data clusters allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
-For more information about new features and known issues for latest release, see the [release notes](big-data-cluster-release-notes.md).
+For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -67,16 +69,17 @@ A SQL Server big data cluster is a cluster of Linux containers orchestrated by [
 Kubernetes is an open source container orchestrator, which can scale container deployments according to need. The following table defines some important Kubernetes terminology:
 
 |||
-|--|--|
+|:--|:--|
 | **Cluster** | A Kubernetes cluster is a set of machines, known as nodes. One node controls the cluster and is designated the master node; the remaining nodes are worker nodes. The Kubernetes master is responsible for distributing work between the workers, and for monitoring the health of the cluster. |
 | **Node** | A node runs containerized applications. It can be either a physical machine or a virtual machine. A Kubernetes cluster can contain a mixture of physical machine and virtual machine nodes. |
-| **Pod** | A pod is the atomic deployment unit of Kubernetes. A pod is a logical group of one or more containers—and associated resources—needed to run an application. Each pod runs on a node; a node can run one or more pods. The Kubernetes master automatically assigns pods to nodes in the cluster. |
+| **Pod** | A pod is the atomic deployment unit of Kubernetes. A pod is a logical group of one or more containers-and associated resources-needed to run an application. Each pod runs on a node; a node can run one or more pods. The Kubernetes master automatically assigns pods to nodes in the cluster. |
+| &nbsp; ||
 
 In SQL Server big data clusters, Kubernetes is responsible for the state of the SQL Server big data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
-### big data clusters architecture
+### Big data clusters architecture
 
-Nodes in the cluster are arranged into three logical planes: the control plane, the compute pane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Server big data cluster is hosting pods for components of at least one plane.
+Nodes in the cluster are arranged into three logical planes: the control plane, the compute plane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Server big data cluster is hosting pods for components of at least one plane.
 
 ![Architecture overview](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -86,7 +89,7 @@ The control plane provides management and security for the cluster. It contains 
 
 ### <a id="computeplane"></a> Compute plane
 
-The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into *compute pools* for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as HDFS, Oracle, MongoDB, or Teradata.
+The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into *compute pools* for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources-such as HDFS, Oracle, MongoDB, or Teradata.
 
 ### <a id="dataplane"></a> Data plane
 

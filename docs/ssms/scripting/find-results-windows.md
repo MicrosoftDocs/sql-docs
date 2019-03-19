@@ -7,9 +7,7 @@ ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.findresults1"
-  - "findresultswindow"
+f1_keywords:
   - "vs.findresults2"
 helpviewer_keywords: 
   - "Find Results Windows dialog box"
@@ -93,5 +91,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  and might conclude with this line of statistics:  
   
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
-  
-  

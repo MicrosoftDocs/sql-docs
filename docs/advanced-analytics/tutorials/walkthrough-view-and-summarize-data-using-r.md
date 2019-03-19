@@ -1,38 +1,29 @@
 ---
-title: View and summarize data using R (walkthrough)| Microsoft Docs
+title: View and summarize SQL Server data using R functions - SQL Server Machine Learning
+description: Tutorial showing how to visualize and generate statistical summaries using R functions for in-database analytics on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/02/2018  
+ms.date: 11/26/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# View and summarize data using R
+# View and summarize SQL Server data using R (walkthrough)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Now let's work with the same data using R code. In this lesson, you learn how to use the functions in the **RevoScaleR** package.
+This lesson introduces you to functions in the **RevoScaleR** package and steps you through the following tasks:
 
-An R script is provided with this walkthrough that includes all the code needed to create the data object, generate summaries, and build models. The R script file, **RSQL_RWalkthrough.R**, can be found in the location where you installed the script files.
-
-+ If you are experienced with R, you can run the script all at once.
-+ For people learning to use RevoScaleR, this tutorial goes through the script line by line.
-+ To run individual lines from the script, you can highlight a line or lines in the file and press Ctrl + ENTER.
-
-> [!TIP]
-> Save your R workspace in case you want to complete the rest of the walkthrough later.  That way the data objects and other variables are ready for re-use.
+> [!div class="checklist"]
+> * Connect to SQL Server
+> * Define a query that has the data you need, or specify a table or view
+> * Define one or more compute contexts to use when running R code
+> * Optionally, define transformations that are applied to the data source while it is being read from the source
 
 ## Define a SQL Server compute context
 
-Microsoft R makes it easy to get data from  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use in your R code. The process is as follows:
-  
-- Create a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance
-- Define a query that has the data you need, or specify a table or view
-- Define one or more compute contexts to use when running R code
-- Optionally, define transformations that are applied to the data source while it is being read from the source
-
-The following steps are all part of the R code and should be run in an R environment. We used Microsoft R Client, because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools.
+Run the following R statements in an R environment on the client workstation. This section assumes a [data science workstation with Microsoft R Client](../r/set-up-a-data-science-client.md), because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools. For example, you can use Rgui.exe to run the R script in this section.
 
 1. If the **RevoScaleR** package is  not already loaded, run this line of R code:
 
@@ -44,13 +35,15 @@ The following steps are all part of the R code and should be run in an R environ
      
      If you get an error, make sure that your R development environment is using a library that includes the RevoScaleR package. Use a command such as `.libPaths()` to view the current library path.
 
-2. Create the connection string for SQL Server and save it in an R variable, _connStr_.
+2. Create the connection string for SQL Server and save it in an R variable, *connStr*.
+
+   You must change the placeholder "your_server_name" to a valid SQL Server instance name. For the server name, you might be able to use only the instance name, or you might need to fully qualify the name, depending on your network.
     
+   For SQL Server authentication, the connection syntax is as follows:
+
     ```R
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Uid=your-sql-login;Pwd=your-login-password"
     ```
-
-    For the server name, you might be able to use only the instance name, or you might need to fully qualify the name, depending on your network.
 
     For Windows authentication, the syntax is a bit different:
     
@@ -58,7 +51,7 @@ The following steps are all part of the R code and should be run in an R environ
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Trusted_Connection=True"
     ```
 
-    The R script available for download uses SQL logins only. Generally, we recommend that you use Windows authentication where possible, to avoid saving passwords in your R code. However, to ensure that the code in this tutorial matches the code downloaded from Github, we'll use a SQL login for the rest of the walkthrough.
+    Generally, we recommend that you use Windows authentication where possible, to avoid saving passwords in your R code.
 
 3. Define variables to use in creating a new *compute context*. After you create the compute context object, you can use it to run R code on the SQL Server instance.
 
@@ -70,10 +63,9 @@ The following steps are all part of the R code and should be run in an R environ
 
     - R uses a temporary directory when serializing R objects back and forth between your workstation and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer. You can specify the local directory that is used as *sqlShareDir*, or accept the default.
   
-    - Use *sqlWait* to indicate whether you want R to wait for results from the server.  For a discussion of waiting vs. non-waiting jobs, see [Distributed and parallel computing with ScaleR in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
+    - Use *sqlWait* to indicate whether you want R to wait for results from the server.  For a discussion of waiting versus non-waiting jobs, see [Distributed and parallel computing with RevoScaleR in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
   
     - Use the argument *sqlConsoleOutput* to indicate that you don't want to see output from the R console.
-
 
 4. You call the [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) constructor to create the compute context object with the variables and connection strings already defined, and save the new object in the R variable *sqlcc*.
   
@@ -87,14 +79,14 @@ The following steps are all part of the R code and should be run in an R environ
     rxSetComputeContext(sqlcc)
     ```
 
-    + `rxSetComputeContext` returns the previously active compute context invisibly so that you can use it
-    + `rxGetComputeContext` returns the active compute context
+    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) returns the previously active compute context invisibly so that you can use it
+    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)  returns the active compute context
     
-    Note that setting a compute context only affects operations that use functions in the **RevoScaleR** package; the compute context does not affect the way that open source R operations are performed.
+    Note that setting a compute context only affects operations that use functions in the **RevoScaleR** package; the compute context does not affect the way that open-source R operations are performed.
 
 ## Create a data source using RxSqlServer
 
-In Microsoft R, a *data source* is an object you create using RevoScaleR functions. The data source object specifies some set of data that you want to use for a task, such as model training or feature extraction. You can get data from a variety of sources; for the list of currently supported sources, see [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
+When using the Microsoft R libraries like RevoScaleR and MicrosoftML, a *data source* is an object you create using RevoScaleR functions. The data source object specifies some set of data that you want to use for a task, such as model training or feature extraction. You can get data from a variety of sources including SQL Server. For the list of currently supported sources, see [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
 
 Earlier you defined a connection string, and saved that information in an R variable. You can re-use that connection information to specify the data you want to get.
 
@@ -120,7 +112,7 @@ Earlier you defined a connection string, and saved that information in an R vari
     
     + The argument  *colClasses* specifies the column types to use when moving the data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and R.  This is important because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses different data types than R, and more data types. For more information, see [R Libraries and Data Types](../r/r-libraries-and-data-types.md).
   
-    + The argument *rowsPerRead* is important for managing memory usage and efficient computations.  Most of the enhanced analytical functions in[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] process data in chunks and accumulate intermediate results, returning the final computations after all of the data has been read.  By adding the *rowsPerRead* parameter, you can control how many rows of data are read into each chunk for processing.  If the value of this parameter is too large, data access might be slow because you don’t have enough memory to efficiently process such a large chunk of data.  On some systems, setting *rowsPerRead* to an excessively small value can also provide slower performance.
+    + The argument *rowsPerRead* is important for managing memory usage and efficient computations.  Most of the enhanced analytical functions in[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] process data in chunks and accumulate intermediate results, returning the final computations after all of the data has been read.  By adding the *rowsPerRead* parameter, you can control how many rows of data are read into each chunk for processing.  If the value of this parameter is too large, data access might be slow because you don't have enough memory to efficiently process such a large chunk of data.  On some systems, setting *rowsPerRead* to an excessively small value can also provide slower performance.
 
 3. At this point, you've created the *inDataSource* object, but it doesn't contain any data. The data is not pulled from the SQL query into the local environment until you run a function such as [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) or [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
 
@@ -142,7 +134,7 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
 
     **Results**
     
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: integer
@@ -175,9 +167,9 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
   
     **Results**
 
-    If the rxSummary function runs successfuly, you should see results like these, followed by a list of statistics by category. 
+    If the rxSummary function runs successfully, you should see results like these, followed by a list of statistics by category. 
 
-    ```
+    ```R
     rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
@@ -185,7 +177,7 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
 
 ### Bonus exercise on big data
 
-Try defining a new query string with all the rows. we recommend you set up a new data source object for this experiment. You might also try changing the *rowsToRead* parameter to see how it affects throughput.
+Try defining a new query string with all the rows. We recommend you set up a new data source object for this experiment. You might also try changing the *rowsToRead* parameter to see how it affects throughput.
 
 ```R
 bigDataQuery  <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
@@ -211,10 +203,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 > 
 > Another option is to monitor R jobs running on SQL Server using these [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-## Next lesson
+## Next steps
 
-[Create graphs and plots using R](walkthrough-create-graphs-and-plots-using-r.md)
-
-## Previous lesson
-
-[Explore the data using SQL](walkthrough-view-and-explore-the-data.md)
+> [!div class="nextstepaction"]
+> [Create graphs and plots using R](walkthrough-create-graphs-and-plots-using-r.md)

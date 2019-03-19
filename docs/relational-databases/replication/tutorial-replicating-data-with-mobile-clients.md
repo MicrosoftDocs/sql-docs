@@ -245,7 +245,7 @@ In this section, you add a subscription to the merge publication that you create
 For more information, see:  
 - [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Create a pull subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Snapshots for merge publications with parameterized filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Snapshots for merge publications with parameterized filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## Synchronize the subscription to the merge publication
 

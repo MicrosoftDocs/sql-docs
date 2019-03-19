@@ -36,7 +36,7 @@ manager: craigg
  If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse button **(…)** and locate the package to copy.  
+ Type the package path, or click the browse button **(...)** and locate the package to copy.  
   
 ## See Also  
  [Save Copy of Package](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   

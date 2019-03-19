@@ -23,7 +23,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ODBC Functions and the Visual FoxPro ODBC Driver
-The topics in this section provide a brief summary of ODBC API functions and any Visual FoxPro–specific details.  
+The topics in this section provide a brief summary of ODBC API functions and any Visual FoxPro-specific details.  
   
 > [!NOTE]  
 >  For general information about ODBC functions, see [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md) in "ODBC Programmer's Guide".  

@@ -36,7 +36,7 @@ manager: craigg
   
 2.  Type a name for the hierarchy.  
   
- You can drag additional columns into your hierarchy’s parent level, which copies the columns. Drop the child level to place it where you want it to appear in the hierarchy.  
+ You can drag additional columns into your hierarchy's parent level, which copies the columns. Drop the child level to place it where you want it to appear in the hierarchy.  
   
 > [!NOTE]  
 >  The Create Hierarchy command is disabled in the context menu if you multi-select a measure along with one or more columns or you select columns from multiple tables.  

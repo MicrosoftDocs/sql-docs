@@ -17,13 +17,13 @@ This article explains how to determine the polling frequency for Analytics Platf
 ## To Determine the Polling Frequency  
 Since PDW does not currently support proactive notifications when alerts occur, the monitoring solution needs to continuously poll the appliance DLLs.  Internally, PDW polls the components at different intervals:  
   
--   Cluster – 60 seconds  
+-   Cluster - 60 seconds  
   
--   Heartbeat – 60 seconds  
+-   Heartbeat - 60 seconds  
   
--   All other components – five minutes  
+-   All other components - five minutes  
   
--   Performance counters – three seconds  
+-   Performance counters - three seconds  
   
 A common interval to poll for alerts, which is also used by System Center, is **every 15 minutes**.  Obviously, you could query more or less frequently, but it is not recommended to poll less than every six hours.  
   

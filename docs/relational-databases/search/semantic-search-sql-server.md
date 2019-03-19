@@ -1,10 +1,8 @@
 ---
 title: "Semantic Search (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,8 +11,9 @@ helpviewer_keywords:
   - "statistical semantic search [SQL Server]"
   - "statistical semantic search [SQL Server], overview"
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # Semantic Search (SQL Server)

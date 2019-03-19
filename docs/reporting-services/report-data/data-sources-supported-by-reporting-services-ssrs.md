@@ -64,7 +64,7 @@ ms.author: maghan
  For more information about custom data processing extensions, see [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). For more information about standard [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data providers, see the <xref:System.Data> namespace.   
   
 ## Platform Support for Report Data Sources  
- The data sources you can use in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment vary by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] version, and by platform. For more information about features, see [Reporting Services Features Supported by the Editions of SQL Server 2016](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). The table later in this topic provides information about supported data sources by version and by platform.  
+ The data sources you can use in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment vary by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] version, and by platform. For more information about features, see [Reporting Services Features Supported by the Editions of SQL Server](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). The table later in this topic provides information about supported data sources by version and by platform.  
   
  Platform considerations for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data sources are separate for the report authoring client and the report server.  
   
@@ -125,7 +125,7 @@ ms.author: maghan
 ## Reporting Services Data Processing Extensions  
  The following data processing extensions are automatically installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. For more information and to verify the installation, see [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md) and [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
  For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  

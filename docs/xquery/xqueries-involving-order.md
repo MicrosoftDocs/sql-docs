@@ -70,7 +70,7 @@ WHERE ProductModelID=7
               MachineHours="2"  LaborHours="1.75" LotSize="1">  
   <Steps>  
    <Step>Assemble all frame components following blueprint 1299.</Step>  
-     …  
+     ...  
   </Steps>  
  </Location>  
 </ManuStep>    

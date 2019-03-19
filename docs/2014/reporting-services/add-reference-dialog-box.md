@@ -12,9 +12,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Edit References dialog box"
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Add Reference Dialog Box
   Use the **Add Reference** dialog box to add references to a custom assembly or [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] component to your report. After you add an assembly reference, you can write expressions or embedded custom code that includes fully qualified references to classes or methods in the assembly or component. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) or [Add an Assembly Reference to a Report &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

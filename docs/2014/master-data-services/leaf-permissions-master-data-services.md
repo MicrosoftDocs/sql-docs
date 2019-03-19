@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attribute groups [Master Data Services], permissions"
@@ -36,7 +35,7 @@ manager: craigg
 |**Deny**|Leaf members for the entity are not displayed.|  
   
 ## Attribute Permissions  
- Attribute permissions apply to the attribute’s values for the specific entity. Users with attribute permissions only cannot add or remove members.  
+ Attribute permissions apply to the attribute's values for the specific entity. Users with attribute permissions only cannot add or remove members.  
   
 |Permission|Description|  
 |----------------|-----------------|  

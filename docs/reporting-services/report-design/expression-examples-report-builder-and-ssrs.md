@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "dates [Reporting Services], expressions"
   - "expressions [Reporting Services], examples"
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Expression Examples (Report Builder and SSRS)
 Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports to control content and report appearance. Expressions are written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], and can use built-in functions, custom code, report and group variables, and user-defined variables. Expressions begin with an equal sign (=). For more information about the expression editor and the types of references that you can include, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), and [Add an Expression &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -161,7 +161,7 @@ To learn how to write expressions that use many of the functions and operators a
 -   The following expression generates the interval years between SellStartDate and LastReceiptDate. These fields are in two different datasets, DataSet1 and DataSet2. The [First Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), which is an aggregate function, returns the first value of SellStartDate in DataSet1 and the first value of LastReceiptDate in DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   The **DatePart** function returns an Integer value containing the specified component of a given Date value.The following expression returns the year for the first value of the SellStartDate in DataSet1. The dataset scope is specified because there are multiple datasets in the report.  
@@ -225,7 +225,7 @@ To learn how to write expressions that use many of the functions and operators a
      The following example does the same as the above example, as well as displays a text string prior to the list of selected values.  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -240,7 +240,7 @@ To learn how to write expressions that use many of the functions and operators a
   
 ### Lookup  
   
--   By specifying a key field, you can use the **Lookup** function to retrieve a value from a dataset for a one-to-one relationship, for example, a key-value pair. The following expression displays the product name from a dataset (“Product”), given the product identifier to match on:  
+-   By specifying a key field, you can use the **Lookup** function to retrieve a value from a dataset for a one-to-one relationship, for example, a key-value pair. The following expression displays the product name from a dataset ("Product"), given the product identifier to match on:  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -539,7 +539,7 @@ To learn how to write expressions that use many of the functions and operators a
     End Function  
     ```  
   
-     The following expression shows how to call this custom code from a text box, for the “ColumnGroupByYear” container (group or data region).  
+     The following expression shows how to call this custom code from a text box, for the "ColumnGroupByYear" container (group or data region).  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

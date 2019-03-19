@@ -227,7 +227,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|Indicates when bitmap filters have been disabled in a query.|  
 |213|Database Suspect Data Page|Indicates when a page is added to the **suspect_pages** table in **msdb**.|  
 |214|CPU threshold exceeded|Indicates when the Resource Governor detects a query has exceeded the CPU threshold value (REQUEST_MAX_CPU_TIME_SEC).|  
-|215|Indicates when a LOGON trigger or Resource Governor classifier function starts execution.|Indicates when a LOGON trigger or Resource Governor classifier function starts execution.|  
+|215|PreConnect:Starting|Indicates when a LOGON trigger or Resource Governor classifier function starts execution.|  
 |216|PreConnect:Completed|Indicates when a LOGON trigger or Resource Governor classifier function completes execution.|  
 |217|Plan Guide Successful|Indicates that SQL Server successfully produced an execution plan for a query or batch that contained a plan guide.|  
 |218|Plan Guide Unsuccessful|Indicates that SQL Server could not produce an execution plan for a query or batch that contained a plan guide. SQL Server attempted to generate an execution plan for this query or batch without applying the plan guide. An invalid plan guide may be the cause of this problem. You can validate the plan guide by using the sys.fn_validate_plan_guide system function.|  

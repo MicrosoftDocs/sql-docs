@@ -19,19 +19,19 @@ The schema section is required. As the previous example shows, ADO writes out de
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
-    xmlns:rs="urn:schemas-microsoft-com:rowset"  
-    xmlns:z="#RowsetSchema">  
-  <s:Schema id="RowsetSchema">  
-    <s:ElementType name="row" content="eltOnly">  
-      <s:AttributeType name="ShipperID"/>  
-      <s:AttributeType name="CompanyName"/>  
-      <s:AttributeType name="Phone"/>  
-      <s:Extends type="rs:rowbase"/>  
-    </s:ElementType>  
-  </s:Schema>  
-  <rs:data>  
+    xmlns:rs="urn:schemas-microsoft-com:rowset"  
+    xmlns:z="#RowsetSchema">  
+  <s:Schema id="RowsetSchema">  
+    <s:ElementType name="row" content="eltOnly">  
+      <s:AttributeType name="ShipperID"/>  
+      <s:AttributeType name="CompanyName"/>  
+      <s:AttributeType name="Phone"/>  
+      <s:Extends type="rs:rowbase"/>  
+    </s:ElementType>  
+  </s:Schema>  
+  <rs:data>  
 ...  
-  </rs:data>  
+  </rs:data>  
 </xml>  
 ```  
   
@@ -73,31 +73,31 @@ The schema section is required. As the previous example shows, ADO writes out de
   
 ```  
 <s:Schema id="RowsetSchema">  
-  <s:ElementType name="row" content="eltOnly">  
-    <s:attribute type="s1"/>  
-    <s:attribute type="CompanyName"/>  
-    <s:attribute type="s3"/>  
-    <s:extends type="rs:rowbase"/>  
-  </s:ElementType>  
-  <s:AttributeType name="s1" rs:name="ShipperID" rs:number="1"   
-    rs:maydefer="true" rs:writeunknown="true">  
-    <s:datatype dt:type="i4" dt:maxLength="4" rs:precision="10"   
-      rs:fixedlength="true" rs:maybenull="true"/>  
-  </s:AttributeType>  
+  <s:ElementType name="row" content="eltOnly">  
+    <s:attribute type="s1"/>  
+    <s:attribute type="CompanyName"/>  
+    <s:attribute type="s3"/>  
+    <s:extends type="rs:rowbase"/>  
+  </s:ElementType>  
+  <s:AttributeType name="s1" rs:name="ShipperID" rs:number="1"   
+    rs:maydefer="true" rs:writeunknown="true">  
+    <s:datatype dt:type="i4" dt:maxLength="4" rs:precision="10"   
+      rs:fixedlength="true" rs:maybenull="true"/>  
+  </s:AttributeType>  
 </s:Schema>  
 <rs:data>  
-  <z:row s1="1" CompanyName="Speedy Express" s3="(503) 555-9831"/>  
+  <z:row s1="1" CompanyName="Speedy Express" s3="(503) 555-9831"/>  
 </rs:data>  
 ```  
   
  Similarly, because there is no alias defined for `CompanyName` in the previous example, `CompanyName` must be used consistently throughout the document.  
   
 ## Data Types  
- You can apply a data type to a column with the dt:type attribute. For the definitive guide to allowed XML types, see the Data Types section of the [W3C XML-Data specification](https://www.w3.org/TR/1998/NOTE-XML-data/). You can specify a data type in two ways: either specify the dt:type attribute directly on the column definition itself or use the s:datatype construct as a nested element of the column definition. For example,  
+ You can apply a data type to a column with the dt:type attribute. For the definitive guide to allowed XML types, see the Data Types section of the [W3C XML-Data specification](http://www.w3.org/TR/1998/NOTE-XML-data/). You can specify a data type in two ways: either specify the dt:type attribute directly on the column definition itself or use the s:datatype construct as a nested element of the column definition. For example,  
   
 ```  
 <s:AttributeType name="Phone" >  
-  <s:datatype dt:type="string"/>  
+  <s:datatype dt:type="string"/>  
 </s:AttributeType>  
 ```  
   
@@ -116,20 +116,20 @@ The schema section is required. As the previous example shows, ADO writes out de
 ```  
 <!-- 1. String with no max length -->  
 <s:AttributeType name="title_id"/>  
-<!—or -->  
+<!-or -->  
 <s:AttributeType name="title_id" dt:type="string"/>  
   
-<!—- 2. Fixed length string with max length of 6 -->  
+<!-- 2. Fixed length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
-    <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
+    <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
 </s:AttributeType>  
   
-<!—- 3. Variable length string with max length of 6 -->  
+<!-- 3. Variable length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
-    <s:datatype dt:type="string" dt:maxLength="6" />  
+    <s:datatype dt:type="string" dt:maxLength="6" />  
 </s:AttributeType>  
   
-<!—- 4. Integer -->  
+<!-- 4. Integer -->  
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   
@@ -140,10 +140,10 @@ The schema section is required. As the previous example shows, ADO writes out de
   
 ```  
 <s:AttributeType name="ShipperID">  
-  <s:datatype dt:type="int" dt:maxLength="4"/>  
+  <s:datatype dt:type="int" dt:maxLength="4"/>  
 </s:AttributeType>  
 <s:AttributeType name="CompanyName">  
-  <s:datatype dt:type="string" dt:maxLength="40" rs:maybenull="true"/>  
+  <s:datatype dt:type="string" dt:maxLength="40" rs:maybenull="true"/>  
 </s:AttributeType>  
 ```  
   

@@ -32,12 +32,13 @@ helpviewer_keywords:
   - "inflectional forms [full-text search]"
   - "prefix searches [full-text search]"
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   Searches for precise or fuzzy (less precise) matches to single words and phrases, words within a certain distance of one another, or weighted matches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS is a predicate used in the [WHERE clause](../../t-sql/queries/where-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types.  
   
@@ -100,9 +101,9 @@ CONTAINS (
 <custom_proximity_term> ::=   
   NEAR (   
      {  
-        { <simple_term> | <prefix_term> } [ ,…n ]  
+        { <simple_term> | <prefix_term> } [ ,...n ]  
      |  
-        ( { <simple_term> | <prefix_term> } [ ,…n ] )   
+        ( { <simple_term> | <prefix_term> } [ ,...n ] )   
       [, <maximum_distance> [, <match_order> ] ]  
      }  
        )   
@@ -287,10 +288,10 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  \<match_order> takes one of the following values:  
   
  **TRUE**  
- Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A … B`.  
+ Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A ... B`.  
   
  **FALSE**  
- Ignores the specified order. For example,  `NEAR(A,B)` would match both `A … B` and `B … A`.  
+ Ignores the specified order. For example,  `NEAR(A,B)` would match both `A ... B` and `B ... A`.  
   
  This is the default.  
   

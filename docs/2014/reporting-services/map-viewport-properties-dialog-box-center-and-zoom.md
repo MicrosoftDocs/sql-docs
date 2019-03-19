@@ -11,9 +11,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1"
   - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Map Viewport Properties Dialog Box, Center and Zoom
   Select **Center and Zoom** for the **Map Viewport Properties** dialog box to set the center view and zoom factor for a map. After you specify a map data source and the boundaries of the map that you want to include in your report, you can specify the view center and the zoom factor to further control the map display. Options change depending on which method you use to specify the center and zoom values. Click the **Expression** (*fx*) button to edit an expression that sets the value of the option.  

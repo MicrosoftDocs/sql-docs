@@ -29,7 +29,7 @@ manager: craigg
  Select a Web method from the list for the task to execute.  
   
  **WebMethodDocumentation**  
- Type a description of Web method, or the click the browse button **(…)** and then type the description in the **Web Method Documentation** dialog box.  
+ Type a description of Web method, or the click the browse button **(...)** and then type the description in the **Web Method Documentation** dialog box.  
   
  **Name**  
  Lists the names of the inputs to the Web method.  

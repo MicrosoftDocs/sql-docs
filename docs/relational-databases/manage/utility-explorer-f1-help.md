@@ -146,7 +146,7 @@ manager: craigg
   
     -   Green down arrow - The health state for at least one filegroup or log file group is underutilized, and no filegroup or log file group is overutilized.  
   
-    -   Red up arrow - The health state for at least one filegroup or the log file group is overutilized. Note that if a database is in “emergency” state, the health state will display overutilized log file space.  
+    -   Red up arrow - The health state for at least one filegroup or the log file group is overutilized. Note that if a database is in "emergency" state, the health state will display overutilized log file space.  
   
      To view or change the file space policy limits, click on the **Storage Utilization** tab.  
   
@@ -210,7 +210,7 @@ manager: craigg
   
 -   Green down arrow - File space utilization for at least one data file in the filegroup is underutilized, and no files in the filegroup are overutilized.  
   
--   Red up arrow - File space utilization for all data files in the filegroup are overutilized. Note that if a database is in “emergency” state, the health state will display overutilized log file space.  
+-   Red up arrow - File space utilization for all data files in the filegroup are overutilized. Note that if a database is in "emergency" state, the health state will display overutilized log file space.  
   
  To view files by volume, select the **Volume** radio button in the **Group files by:** selection. The graph of storage utilization history displays file space used by all data files and all log files on the storage volume. Expand the tree to view details for individual database data files and log files.  
   

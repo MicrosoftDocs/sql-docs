@@ -41,9 +41,9 @@ To create a new shared dataset, you can do the following.
 To manage an existing shared dataset, you can do the following.  
   
 > [!NOTE]
-> If you don’t see the shared dataset in the folder, make sure you are viewing datasets. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Datasets** is checked.  
+> If you don't see the shared dataset in the folder, make sure you are viewing datasets. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Datasets** is checked.  
   
-1.  Select the **ellipsis (…)** for the dataset you want to manage.  
+1.  Select the **ellipsis (...)** for the dataset you want to manage.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   

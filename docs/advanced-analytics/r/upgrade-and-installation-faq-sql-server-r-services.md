@@ -1,5 +1,5 @@
 ---
-title: Upgrade and installation FAQ for SQL Server Machine Learning | Microsoft Docs
+title: Upgrade and installation frequently asked questions (FAQ) - SQL Server Machine Learning Services
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -98,7 +98,7 @@ If you installed a pre-release version of Microsoft R Server, you must uninstall
 
 ## R Services and R Server (Standalone) side-by-side errors 
 
-In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time sometimes caused setup to fail with an “access denied” message. This issue was fixed in Service Pack 1 for SQL Server 2016.
+In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time sometimes caused setup to fail with an "access denied" message. This issue was fixed in Service Pack 1 for SQL Server 2016.
 
 If you encountered this error, and need to upgrade these features, perform a slipstream installation of SQL Server 2016 with SP1. There are two ways to resolve the issue, both of which require uninstalling and reinstalling.
 

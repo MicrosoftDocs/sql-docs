@@ -60,11 +60,11 @@ manager: craigg
   
     1.  Select or clear the check boxes of any elements you wish to add or remove.  
   
-    2.  Right-click within the diagram pane, select **Add Table…**, and then select the additional columns you want to add to the view from the **Add Table** dialog box.  
+    2.  Right-click within the diagram pane, select **Add Table...**, and then select the additional columns you want to add to the view from the **Add Table** dialog box.  
   
     3.  Right-click the title bar of the table you wish to remove and select **Remove**.  
   
-4.  On the **File** menu, click **Save***view name*.  
+4.  On the **File** menu, click **Save**_view name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

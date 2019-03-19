@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.output"
 helpviewer_keywords: 
   - "Output Window [Transact-SQL]"
   - "Output Window [SQL Server Management Studio]"
@@ -34,5 +32,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
-  

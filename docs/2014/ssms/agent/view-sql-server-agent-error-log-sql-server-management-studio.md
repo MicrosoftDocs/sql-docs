@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], SQL Server Agent"
@@ -64,7 +64,7 @@ manager: craigg
   
 4.  Right-click the error log you want to view and select **View Agent Log**.  
   
-     The following options are available in the **Log File Viewer –***server_name* dialog box:  
+     The following options are available in the **Log File Viewer -**_server_name_ dialog box:  
   
      **Load Log**  
      Open a dialog box where you can specify a log file to load.  

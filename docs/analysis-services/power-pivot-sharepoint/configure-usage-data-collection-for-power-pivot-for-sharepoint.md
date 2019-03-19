@@ -80,9 +80,9 @@ manager: kfile
 ##  <a name="jobs"></a> Configure the timer jobs used in usage data collection  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server health and usage data is moved to different locations in the usage data collection system through two timer jobs.:  
   
--   The “Microsoft SharePoint Foundation Usage Data Import” timer job moves [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usage to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application database.  
+-   The "Microsoft SharePoint Foundation Usage Data Import" timer job moves [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usage to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application database.  
   
--   The “[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard Processing timer job” the data to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is the source of data for built-in administrative reports.  
+-   The "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard Processing timer job" the data to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is the source of data for built-in administrative reports.  
   
  If you need to refresh the administrative reports that appear in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard more frequently, follow these steps.  
   

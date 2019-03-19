@@ -1,12 +1,15 @@
 ---
-title: How to ingest data into a SQL Server data pool with Transact-SQL | Microsoft Docs
+title: Ingest data into a SQL Server data pool
+titleSuffix: SQL Server 2019 big data clusters
 description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview) with the sp_data_pool_table_insert_data stored procedure.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # Tutorial: Ingest data into a SQL Server data pool with Transact-SQL
@@ -25,17 +28,17 @@ In this tutorial, you learn how to:
 
 ## <a id="prereqs"></a> Prerequisites
 
-* [Deploy a big data cluster on Kubernetes](deployment-guidance.md).
-* [Install Azure Data Studio and the SQL Server 2019 extension](deploy-big-data-tools.md).
-* [Load sample data into the cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big data tools](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Create an external table in the data pool
 
 The following steps create an external table in the data pool named **web_clickstream_clicks_data_pool**. This table can then be used as a location for ingesting data into the big data cluster.
 
-1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
+1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](connect-to-big-data-cluster.md#master).
 
 1. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
 
@@ -61,7 +64,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.1, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 2.3, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Load data
 

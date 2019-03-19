@@ -88,7 +88,7 @@ manager: craigg
      If you want to use nested tables in an external data source, you must use the [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) modeling options to create a mining structure and mining model that is saved on the server. Excel does not support nested tables.  
   
 ## Feature Selection  
- Depending on the data set, the algorithm might apply *feature selection*, to weed out columns that aren’t useful, and to determine which columns of data are statistically significant in relation to the outcome.  
+ Depending on the data set, the algorithm might apply *feature selection*, to weed out columns that aren't useful, and to determine which columns of data are statistically significant in relation to the outcome.  
   
  Each algorithm uses slightly different methods of feature selection (such as entropy, or various information scores) to determine which trends are important and which differences can be discarded.  
   

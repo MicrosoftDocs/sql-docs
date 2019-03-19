@@ -65,7 +65,7 @@ FOR XML PATH;
   
  `<First>Ken</First>`  
   
- `<Last>Sánchez</Last>`  
+ `<Last>S??nchez</Last>`  
   
  `</EmpName>`  
   

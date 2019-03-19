@@ -87,7 +87,7 @@ WHERE CatalogDescription is not null
   </p2:Maintenance>  
   <there-is-more/>  
 </Product>   
-…  
+...  
 ```  
   
 ## See Also  

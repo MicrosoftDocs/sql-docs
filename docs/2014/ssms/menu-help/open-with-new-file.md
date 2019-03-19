@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.openwith"
 helpviewer_keywords: 
   - "Open With dialog box"
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
@@ -39,5 +37,3 @@ manager: craigg
   
 ## See Also  
  [Associate File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  
-  

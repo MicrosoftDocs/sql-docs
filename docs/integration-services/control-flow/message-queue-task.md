@@ -147,17 +147,17 @@ manager: craigg
   
 #### MessageType = Data file message  
  **DataFileMessage**  
- Type the path of the data file, or click the ellipsis **(…)** and then locate the file.  
+ Type the path of the data file, or click the ellipsis **(...)** and then locate the file.  
   
 #### MessageType = Variable message  
  **VariableMessage**  
- Type the variable names, or click the ellipsis **(…)** and then select the variables. Variables are separated by commas.  
+ Type the variable names, or click the ellipsis **(...)** and then select the variables. Variables are separated by commas.  
   
  **Related Topics:** Select Variables  
   
 #### MessageType = String message  
  **StringMessage**  
- Type the string message, or click the ellipsis **(…)** and then type the message in the **Enter String Message** dialog box.  
+ Type the string message, or click the ellipsis **(...)** and then type the message in the **Enter String Message** dialog box.  
   
 ## Message Queue Task Editor (Receive Page)
   Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) messages.  
@@ -186,7 +186,7 @@ manager: craigg
   
 #### MessageType = Data file message  
  **SaveFileAs**  
- Type the path of the file to use, or click the ellipsis button **(…)** and then locate the file.  
+ Type the path of the file to use, or click the ellipsis button **(...)** and then locate the file.  
   
  **Overwrite**  
  Indicate whether to overwrite the data in an existing file when saving the contents of a data file message. The default is **False**.  
@@ -207,7 +207,7 @@ manager: craigg
   
 ##### Filter = From package  
  **Identifier**  
- If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
+ If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(...)** and then specify the package.  
   
  **Related Topics:** [Select a Package](../../integration-services/control-flow/select-a-package.md)  
   
@@ -221,7 +221,7 @@ manager: craigg
 |**From package**|The message receives only messages from the specified package. Selecting the value displays the dynamic option, **Identifier**.|  
   
  **Variable**  
- Type the variable name, or click \<**New variable…**> and then configure a new variable.  
+ Type the variable name, or click \<**New variable...**> and then configure a new variable.  
   
  **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -233,7 +233,7 @@ manager: craigg
   
 ##### Filter = From package  
  **Identifier**  
- If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
+ If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(...)** and then specify the package.  
   
  **Related Topics:** [Select a Package](../../integration-services/control-flow/select-a-package.md)  
   
@@ -266,7 +266,7 @@ manager: craigg
  Unless the **Compare** option is set to **None**, provide the string to which the message is compared.  
   
  **Variable**  
- Type the name of the variable to hold the received message, or click \<**New variable…**> and then configure a new variable.  
+ Type the name of the variable to hold the received message, or click \<**New variable...**> and then configure a new variable.  
   
  **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

@@ -1,16 +1,15 @@
 ---
 title: "Monitor and troubleshoot data migration (Stretch Database) | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, monitoring"
   - "monitoring Stretch Database"
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Monitor and troubleshoot data migration (Stretch Database)
@@ -32,7 +31,7 @@ manager: craigg
  Open the dynamic management view **sys.dm_db_rda_migration_status** to see how many batches and rows of data have been migrated. For more info, see [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 ##  <a name="Firewall"></a> Troubleshoot data migration  
- **Rows from my Stretch-enabled table are not being migrated to Azure. What’s the problem?**  
+ **Rows from my Stretch-enabled table are not being migrated to Azure. What's the problem?**  
  There are several problems that can affect migration. Check the following things.  
   
 -   Check network connectivity for the SQL Server computer.  

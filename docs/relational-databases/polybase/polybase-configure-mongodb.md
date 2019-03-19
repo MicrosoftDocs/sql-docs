@@ -136,6 +136,7 @@ Object address will be flattened as below:
 * Nested field restaurant.address.zipcode becomes restaurant.address_zipcode
 
 Array grades will be flattened as below:
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |A |2|
@@ -146,7 +147,7 @@ Array grades will be flattened as below:
 
 ## Cosmos DB Connection
 
-Using the Cosmos DB mongo api and the Mongo DB PolyBase connector you can create an external table of a **Cosmos DB instance**. This accomplished by following the same steps listed above. Make sure the Database scoped credential, Sever address, port, and location string reflect that of the Cosmos DB server. 
+Using the Cosmos DB mongo api and the Mongo DB PolyBase connector you can create an external table of a **Cosmos DB instance**. This accomplished by following the same steps listed above. Make sure the Database scoped credential, Server address, port, and location string reflect that of the Cosmos DB server. 
 
 ## Next steps
 

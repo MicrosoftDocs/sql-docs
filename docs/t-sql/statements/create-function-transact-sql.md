@@ -45,9 +45,6 @@ manager: craigg
 # CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
-
 Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
@@ -267,7 +264,7 @@ RETURNS return_data_type
   
 ## Arguments
 *OR ALTER*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Conditionally alters the function only if it already exists. 
  
@@ -291,7 +288,7 @@ RETURNS return_data_type
  Specify a parameter name by using an at sign (@) as the first character. The parameter name must comply with the rules for identifiers. Parameters are local to the function; the same parameter names can be used in other functions. Parameters can take the place only of constants; they cannot be used instead of table names, column names, or the names of other database objects.  
   
 > [!NOTE]  
-> ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
+> ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the `INSERT` or `UPDATE` statement succeeds.  
   
  [ *type_schema_name*. ] *parameter_data_type*  
  Is the parameter data type, and optionally the schema to which it belongs. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types and user-defined table types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, user-defined table types and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a parameter data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  
@@ -333,14 +330,6 @@ Is a default value for the parameter. If a *default* value is defined, the funct
   
  <a name="mstvf"></a> In MSTVFs, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
   
-> [!WARNING]  
-> Joining to an MSTVF in a **FROM** clause is possible, but can result in poor performance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to use all the optimized techniques on some statements that can be included in a MSTVF, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
-
-> [!IMPORTANT]
-> MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions.    
-> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], optimizing an execution plan that uses MSTVFs can leverage interleaved execution, which results in using actual cardinality instead of the above heuristics.     
-> For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
-  
  *select_stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).  
   
@@ -348,7 +337,7 @@ Is a default value for the parameter. If a *default* value is defined, the funct
  Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Specifies the assembly and method to which the created function name shall refer.  
   
@@ -377,7 +366,7 @@ In a typical example, for MyFood.DLL, in which all types are in the MyFood names
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.  
   
@@ -401,7 +390,7 @@ In a typical example, for MyFood.DLL, in which all types are in the MyFood names
  Specifies that the function will have one or more of the following options.  
   
  ENCRYPTION  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -414,7 +403,7 @@ In a typical example, for MyFood.DLL, in which all types are in the MyFood names
   
 -   The function is dropped.  
   
--   The function is modified by using the ALTER statement with the SCHEMABINDING option not specified.  
+-   The function is modified by using the `ALTER` statement with the `SCHEMABINDING` option not specified.  
   
 A function can be schema bound only if the following conditions are true:  
   
@@ -426,10 +415,10 @@ A function can be schema bound only if the following conditions are true:
   
 -   The function and the objects it references belong to the same database.  
   
--   The user who executed the CREATE FUNCTION statement has REFERENCES permission on the database objects that the function references.  
+-   The user who executed the `CREATE FUNCTION` statement has `REFERENCES` permission on the database objects that the function references.  
   
 RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
-Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
+Specifies the **OnNULLCall** attribute of a scalar function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
   
 If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in \<method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions. 
   
@@ -437,9 +426,9 @@ EXECUTE AS Clause
 Specifies the security context under which the user-defined function is executed. Therefore, you can control which user account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the function.  
   
 > [!NOTE]  
->  EXECUTE AS cannot be specified for inline table-valued functions.
+> `EXECUTE AS` cannot be specified for inline table-valued functions.
   
- For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
 
 INLINE = { ON | OFF }  
 Specifies whether this scalar UDF should be inlined or not. This clause applies only to scalar user-defined functions. The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If `INLINE=ON` is specified but the UDF is found to be non-inlineable, an error will be thrown. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
@@ -462,7 +451,8 @@ Specifies whether this scalar UDF should be inlined or not. This clause applies 
   
  The COLLATE clause can be used to change the collations only of columns of the **char**, **varchar**, **nchar**, and **nvarchar** data types.  
   
- COLLATE cannot be specified for CLR table-valued functions.  
+ > [!NOTE]
+ > `COLLATE` cannot be specified for CLR table-valued functions.  
   
  ROWGUIDCOL  
  Indicates that the new column is a row globally unique identifier column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. The ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column.  
@@ -539,12 +529,15 @@ Specifies whether this scalar UDF should be inlined or not. This clause applies 
  Specifies whether page locks are allowed. The default is ON.  
   
 ## Best Practices  
- If a user-defined function is not created with the SCHEMABINDING clause, changes that are made to underlying objects can affect the definition of the function and produce unexpected results when it is invoked. We recommend that you implement one of the following methods to ensure that the function does not become outdated because of changes to its underlying objects:  
+If a user-defined function is not created with the `SCHEMABINDING` clause, changes that are made to underlying objects can affect the definition of the function and produce unexpected results when it is invoked. We recommend that you implement one of the following methods to ensure that the function does not become outdated because of changes to its underlying objects:  
   
--   Specify the WITH SCHEMABINDING clause when you are creating the function. This ensures that the objects referenced in the function definition cannot be modified unless the function is also modified.  
+-   Specify the `WITH SCHEMABINDING` clause when you are creating the function. This ensures that the objects referenced in the function definition cannot be modified unless the function is also modified.  
   
 -   Execute the [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) stored procedure after modifying any object that is specified in the definition of the function.  
   
+> [!IMPORTANT]  
+> For more information and performance considerations about inline table-valued functions (inline TVFs) and multi-statement table-valued functions (MSTVFs), see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
+
 ## Data Types  
  If parameters are specified in a CLR function, they should be [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types as defined previously for *scalar_parameter_data_type*. For information about comparing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types to CLR integration data types or [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
@@ -561,26 +554,26 @@ Specifies whether this scalar UDF should be inlined or not. This clause applies 
  For more information about how to program CLR functions, see [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## General Remarks  
- Scalar-valued functions can be invoked where scalar expressions are used. This includes computed columns and CHECK constraint definitions. Scalar-valued functions can also be executed by using the [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) statement. Scalar-valued functions must be invoked by using at least the two-part name of the function. For more information about multipart names, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Table-valued functions can be invoked where table expressions are allowed in the FROM clause of SELECT, INSERT, UPDATE, or DELETE statements. For more information, see [Execute User-defined Functions](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ Scalar functions can be invoked where scalar expressions are used. This includes computed columns and CHECK constraint definitions. Scalar functions can also be executed by using the [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) statement. Scalar functions must be invoked by using at least the two-part name of the function (*<schema>.<function>*). For more information about multipart names, see [Transact-SQL Syntax Conventions (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Table-valued functions can be invoked where table expressions are allowed in the `FROM` clause of `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statements. For more information, see [Execute User-defined Functions](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## Interoperability  
  The following statements are valid in a function:  
   
 -   Assignment statements.  
-  
--   Control-of-Flow statements except TRY...CATCH statements.  
-  
--   DECLARE statements defining local data variables and local cursors.  
-  
--   SELECT statements that contain select lists with expressions that assign values to local variables.  
-  
--   Cursor operations referencing local cursors that are declared, opened, closed, and deallocated in the function. Only FETCH statements that assign values to local variables using the INTO clause are allowed; FETCH statements that return data to the client are not allowed.  
-  
--   INSERT, UPDATE, and DELETE statements modifying local table variables.  
-  
--   EXECUTE statements calling extended stored procedures.  
-  
--   For more information, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+
+-   Control-of-Flow statements except `TRY...CATCH` statements.  
+
+-   `DECLARE` statements defining local data variables and local cursors.  
+
+-   `SELECT` statements that contain select lists with expressions that assign values to local variables.  
+
+-   Cursor operations referencing local cursors that are declared, opened, closed, and deallocated in the function. Only `FETCH` statements that assign values to local variables using the `INTO` clause are allowed; `FETCH` statements that return data to the client are not allowed.  
+
+-   `INSERT`, `UPDATE`, and `DELETE` statements modifying local table variables.  
+
+-   `EXECUTE` statements calling extended stored procedures.  
+
+For more information, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ### Computed Column Interoperability  
  Functions have the following properties. The values of these properties determine whether functions can be used in computed columns that can be persisted or indexed.  
@@ -597,19 +590,17 @@ Specifies whether this scalar UDF should be inlined or not. This clause applies 
   
  To display the current values for these properties, use [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
- Functions must be created with schema binding to be deterministic.  
+> [!IMPORTANT]
+> Functions must be created with `SCHEMABINDING` to be deterministic.  
   
- A computed column that invokes a user-defined function can be used in an index when the user-defined function has the following property values:  
+A computed column that invokes a user-defined function can be used in an index when the user-defined function has the following property values:  
   
 -   **IsDeterministic** = true  
-  
 -   **IsSystemVerified** = true (unless the computed column is persisted)  
-  
--   **UserDataAccess** = false  
-  
+-   **UserDataAccess** = false    
 -   **SystemDataAccess** = false  
   
- For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
+For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
 ### Calling Extended Stored Procedures from Functions  
  The extended stored procedure, when it is called from inside a function, cannot return result sets to the client. Any ODS APIs that return result sets to the client will return FAIL. The extended stored procedure could connect back to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; however, it should not try to join the same transaction as the function that invoked the extended stored procedure.  
@@ -619,44 +610,44 @@ Specifies whether this scalar UDF should be inlined or not. This clause applies 
 ## Limitations and Restrictions  
  User-defined functions cannot be used to perform actions that modify the database state.  
   
- User-defined functions cannot contain an OUTPUT INTO clause that has a table as its target.  
+ User-defined functions cannot contain an `OUTPUT INTO` clause that has a table as its target.  
   
  The following [!INCLUDE[ssSB](../../includes/sssb-md.md)] statements cannot be included in the definition of a [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined function:  
   
--   BEGIN DIALOG CONVERSATION  
+-   `BEGIN DIALOG CONVERSATION`  
   
--   END CONVERSATION  
+-   `END CONVERSATION`  
   
--   GET CONVERSATION GROUP  
+-   `GET CONVERSATION GROUP`  
   
--   MOVE CONVERSATION  
+-   `MOVE CONVERSATION`  
   
--   RECEIVE  
+-   `RECEIVE`  
   
--   SEND  
+-   `SEND`  
   
- User-defined functions can be nested; that is, one user-defined function can call another. The nesting level is incremented when the called function starts execution, and decremented when the called function finishes execution. User-defined functions can be nested up to 32 levels. Exceeding the maximum levels of nesting causes the whole calling function chain to fail. Any reference to managed code from a [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined function counts as one level against the 32-level nesting limit. Methods invoked from within managed code do not count against this limit.  
+User-defined functions can be nested; that is, one user-defined function can call another. The nesting level is incremented when the called function starts execution, and decremented when the called function finishes execution. User-defined functions can be nested up to 32 levels. Exceeding the maximum levels of nesting causes the whole calling function chain to fail. Any reference to managed code from a [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined function counts as one level against the 32-level nesting limit. Methods invoked from within managed code do not count against this limit.  
   
 ### Using Sort Order in CLR Table-valued Functions  
- When using the ORDER clause in CLR table-valued functions, follow these guidelines:  
+When using the `ORDER` clause in CLR table-valued functions, follow these guidelines:  
   
 -   You must ensure that results are always ordered in the specified order. If the results are not in the specified order, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will generate an error message when the query is executed.  
   
--   If an ORDER clause is specified, the output of the table-valued function must be sorted according to the collation of the column (explicit or implicit). For example, if the column collation is Chinese (either specified in the DDL for the table-valued function or obtained from the database collation), the returned results must be sorted according to Chinese sorting rules.  
+-   If an `ORDER` clause is specified, the output of the table-valued function must be sorted according to the collation of the column (explicit or implicit). For example, if the column collation is Chinese (either specified in the DDL for the table-valued function or obtained from the database collation), the returned results must be sorted according to Chinese sorting rules.  
   
--   The ORDER clause, if specified, is always verified by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] while returning results, whether or not it is used by the query processor to perform further optimizations. Only use the ORDER clause if you know it is useful to the query processor.  
+-   The `ORDER` clause, if specified, is always verified by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] while returning results, whether or not it is used by the query processor to perform further optimizations. Only use the `ORDER` clause if you know it is useful to the query processor.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor takes advantage of the ORDER clause automatically in following cases:  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor takes advantage of the `ORDER` clause automatically in following cases:  
   
-    -   Insert queries where the ORDER clause is compatible with an index.  
+    -   Insert queries where the `ORDER` clause is compatible with an index.  
   
-    -   ORDER BY clauses that are compatible with the ORDER clause.  
+    -   `ORDER BY` clauses that are compatible with the `ORDER` clause.  
   
-    -   Aggregates, where GROUP BY is compatible with ORDER clause.  
+    -   Aggregates, where `GROUP BY` is compatible with `ORDER` clause.  
   
-    -   DISTINCT aggregates where the distinct columns are compatible with the ORDER clause.  
+    -   `DISTINCT` aggregates where the distinct columns are compatible with the `ORDER` clause.  
   
- The ORDER clause does not guarantee ordered results when a SELECT query is executed, unless ORDER BY is also specified in the query. See [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) for information on how to query for columns included in the sort-order for table-valued functions.  
+The `ORDER` clause does not guarantee ordered results when a SELECT query is executed, unless `ORDER BY` is also specified in the query. See [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) for information on how to query for columns included in the sort-order for table-valued functions.  
   
 ## Metadata  
  The following table lists the system catalog views that you can use to return metadata about user-defined functions.  
@@ -669,14 +660,17 @@ Specifies whether this scalar UDF should be inlined or not. This clause applies 
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Displays the underlying objects referenced by a function.|  
   
 ## Permissions  
- Requires CREATE FUNCTION permission in the database and ALTER permission on the schema in which the function is being created. If the function specifies a user-defined type, requires EXECUTE permission on the type.  
+ Requires `CREATE FUNCTION` permission in the database and `ALTER` permission on the schema in which the function is being created. If the function specifies a user-defined type, requires `EXECUTE` permission on the type.  
   
 ## Examples  
-  
+
+> [!NOTE]
+> For more examples and performance considerations about UDFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
+
 ### A. Using a scalar-valued user-defined function that calculates the ISO week  
  The following example creates the user-defined function `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, `SET DATEFIRST 1` must be invoked before the function is called.  
   
- The example also shows using the [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) clause to specify the security context in which a stored procedure can be executed. In the example, the option `CALLER` specifies that the procedure will be executed in the context of the user that calls it. The other options that you can specify are SELF, OWNER, and *user_name*.  
+ The example also shows using the [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) clause to specify the security context in which a stored procedure can be executed. In the example, the option `CALLER` specifies that the procedure will be executed in the context of the user that calls it. The other options that you can specify are `SELF`, `OWNER`, and *user_name*.  
   
  Here is the function call. Notice that `DATEFIRST` is set to `1`.  
   
@@ -789,7 +783,7 @@ GO
 ### D. Creating a CLR function  
  The example creates CLR function `len_s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  
@@ -823,10 +817,11 @@ JOIN sys.objects AS o ON m.object_id = o.object_id
 GO  
 ```  
   
- The definition of functions created by using the ENCRYPTION option cannot be viewed by using sys.sql_modules; however, other information about the encrypted functions is displayed.  
+ The definition of functions created by using the `ENCRYPTION` option cannot be viewed by using sys.sql_modules; however, other information about the encrypted functions is displayed.  
   
 ## See Also  
- [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
+ [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
@@ -834,7 +829,6 @@ GO
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
+ [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
   
  
-

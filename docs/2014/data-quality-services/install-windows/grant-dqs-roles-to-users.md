@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Grant DQS Roles to Users
@@ -28,13 +28,13 @@ manager: craigg
   
 3.  Right-click the **Security** folder, point to **New**, and then click **Login**.  
   
-4.  In the **Login – New** dialog box, specify the name of a Windows user in the **Login name** box, specify the type of authentication as **Windows authentication**, and click **Search** to validate the user.  
+4.  In the **Login - New** dialog box, specify the name of a Windows user in the **Login name** box, specify the type of authentication as **Windows authentication**, and click **Search** to validate the user.  
   
 5.  After the user is validated, click the **User Mapping** page in the left pane.  
   
 6.  In the right pane, select the check box under the **Map** column for the **DQS_MAIN** database, and then select the **dqs_administrator**, **dqs_kb_editor**, or **dqs_kb_operator** check box in the **Database role membership for: DQS_MAIN** pane, depending on the access level needed for the user. For information about the three DQS roles, see [DQS Security](../dqs-security.md).  
   
-7.  In the **Login – New** dialog box, click **OK** to apply the changes.  
+7.  In the **Login - New** dialog box, click **OK** to apply the changes.  
   
     > [!NOTE]  
     >  If you grant the **dqs_administrator** role to a user, apply the changes, and then recheck the user permissions, the other two DQS roles check boxes (**dq_kb_editor** and **dqs_kb_operator**) are also selected.  

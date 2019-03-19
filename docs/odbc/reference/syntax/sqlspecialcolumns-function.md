@@ -37,16 +37,16 @@ manager: craigg
 ```  
   
 SQLRETURN SQLSpecialColumns(  
-     SQLHSTMT      StatementHandle,  
-     SQLSMALLINT   IdentifierType,  
-     SQLCHAR *     CatalogName,  
-     SQLSMALLINT   NameLength1,  
-     SQLCHAR *     SchemaName,  
-     SQLSMALLINT   NameLength2,  
-     SQLCHAR *     TableName,  
-     SQLSMALLINT   NameLength3,  
-     SQLSMALLINT   Scope,  
-     SQLSMALLINT   Nullable);  
+     SQLHSTMT      StatementHandle,  
+     SQLSMALLINT   IdentifierType,  
+     SQLCHAR *     CatalogName,  
+     SQLSMALLINT   NameLength1,  
+     SQLCHAR *     SchemaName,  
+     SQLSMALLINT   NameLength2,  
+     SQLCHAR *     TableName,  
+     SQLSMALLINT   NameLength3,  
+     SQLSMALLINT   Scope,  
+     SQLSMALLINT   Nullable);  
 ```  
   
 ## Arguments  
@@ -162,7 +162,7 @@ SQLRETURN SQLSpecialColumns(
 |SCOPE (ODBC 1.0)|1|Smallint|Actual scope of the rowid. Contains one of the following values:<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL is returned when *IdentifierType* is SQL_ROWVER. For a description of each value, see the description of *Scope* in "Syntax," earlier in this section.|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar not NULL|Column name. The driver returns an empty string for a column that does not have a name.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint not NULL|SQL data type. This can be an ODBC SQL data type or a driver-specific SQL data type. For a list of valid ODBC SQL data types, see [SQL Data Types](../../../odbc/reference/appendixes/sql-data-types.md). For information about driver-specific SQL data types, see the driver's documentation.|  
-|TYPE_NAME (ODBC 1.0)|4|Varchar not NULL|Data source–dependent data type name; for example, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY", or "CHAR ( ) FOR BIT DATA".|  
+|TYPE_NAME (ODBC 1.0)|4|Varchar not NULL|Data source-dependent data type name; for example, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY", or "CHAR ( ) FOR BIT DATA".|  
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|The size of the column on the data source. For more information concerning column size, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Integer|The length in bytes of data transferred on an **SQLGetData** or **SQLFetch** operation if SQL_C_DEFAULT is specified. For numeric data, this size may be different than the size of the data stored on the data source. This value is the same as the COLUMN_SIZE column for character or binary data. For more information, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|The decimal digits of the column on the data source. NULL is returned for data types where decimal digits are not applicable. For more information concerning decimal digits, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  

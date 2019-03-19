@@ -45,7 +45,7 @@ manager: craigg
   
  To unpack the tar file, move it to the directory where you want the driver installed and type the following command:  
   
- `tar –xf sqljdbc_<version>_<language>.tar`  
+ `tar -xf sqljdbc_<version>_<language>.tar`  
   
 ## See Also  
  [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

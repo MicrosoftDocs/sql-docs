@@ -68,7 +68,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 5.  Refresh the browser then click **Activate** for the **Report Server Integration Feature**.  
   
-     ![rs_reportserver_integration_deactive](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+     ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="bkmk_enable_content_management"></a> To enable content type management for a single document library (SharePoint 2013)  
   

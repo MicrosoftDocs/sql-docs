@@ -55,7 +55,7 @@ The management packs must be installed. See [Install the SCOM Management Packs &
   
 1.  Right-click the **Management Packs** node, and then click **Import Management Packs**.  
   
-2.  Choose **Add from disk**….  
+2.  Choose **Add from disk**....  
   
     ![Right-click Management Packs](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW.png "SCOM_PDW")  
   

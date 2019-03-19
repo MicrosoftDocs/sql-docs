@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 7: Viewing Updates Made using Master Data Manager in Excel
@@ -23,7 +20,7 @@ manager: craigg
   
      ![Excel - Refresh Button on Master Data Tab](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel - Refresh Button on Master Data Tab")  
   
-3.  Notice that **names** show up (California, New York etc…) for the **State** field along with their **codes**.  
+3.  Notice that **names** show up (California, New York etc...) for the **State** field along with their **codes**.  
   
      ![Excel - Updated State Codes and Names](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel - Updated State Codes and Names")  
   

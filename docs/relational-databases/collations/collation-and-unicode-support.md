@@ -115,7 +115,7 @@ A locale is a set of information that is associated with a location or a culture
  Sort order specifies how data values are sorted. This affects the results of data comparison. Data is sorted by using collations, and it can be optimized by using indexes.    
     
 ##  <a name="Unicode_Defn"></a> Unicode Support    
-Unicode is a standard for mapping code points to characters. Because it is designed to cover all the characters of all the languages of the world, there is no need for different code pages to handle different sets of characters. If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. 
+Unicode is a standard for mapping code points to characters. Because it is designed to cover all the characters of all the languages of the world, there is no need for different code pages to handle different sets of characters. If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. 
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] does not change the behavior of previously existing Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**).   
@@ -141,15 +141,20 @@ To use the UTF-8 collations available in [!INCLUDE[sql-server-2019](../../includ
     
     -   Version 100 collations    
     
-    -   Version 140 collations    
+    -   Version 140 collations   
+    
+    -   BIN2<sup>1</sup> binary collation
     
 -   The UTF8 flag cannot be applied to:    
     
     -   Version 90 collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS)    
     
-    -   The BIN or BIN2 binary collations    
+    -   The BIN or BIN2<sup>2</sup> binary collations    
     
-    -   The SQL\* collations       
+    -   The SQL\* collations  
+    
+<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It is a good practice to standardize the collation that is used on systems across your organization, and deploy Unicode servers and clients wherever possible.    
     

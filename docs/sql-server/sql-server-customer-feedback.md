@@ -23,7 +23,7 @@ Specifically, Microsoft does not send any of the following types of information 
 
 The following sample scenario includes feature usage information that helps improve the product.
 
-SQL Server 2017 supports ColumnStore indexes to enable fast analytics scenarios. ColumnStore indexes combine a traditional “B-tree” index structure for newly inserted data with a special column-oriented compressed structure to compress data and speed query execution. The product contains heuristics to migrate data from the B-tree structure to the compressed structure in the background, thereby speeding up future query results.
+SQL Server 2017 supports ColumnStore indexes to enable fast analytics scenarios. ColumnStore indexes combine a traditional "B-tree" index structure for newly inserted data with a special column-oriented compressed structure to compress data and speed query execution. The product contains heuristics to migrate data from the B-tree structure to the compressed structure in the background, thereby speeding up future query results.
 
 If the background operation does not keep pace with the rate at which data is inserted, query performance may be slower than expected. To improve the product, Microsoft collects information about how well SQL Server is keeping up with the automatic data compression process. The product team uses this information to fine-tune the frequency and parallelism of the code that performs compression. This query is run occasionally to collect this information so that we (Microsoft) can evaluate the data movement rate. This helps us optimize the product heuristics.  
 
@@ -58,9 +58,9 @@ After setup, the usage data collection setting for SQL Server components and ins
 
 To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage feedback and serious errors that are collected for instances and components that are installed on that computer.
 
-For paid versions, use the “Usage Reports” check boxes to manage sending usage feedback to Microsoft.
+For paid versions, use the "Usage Reports" check boxes to manage sending usage feedback to Microsoft.
 
-For paid or free versions, use the “Error Reports” check boxes to manage sending feedback on serious errors and crash dumps to Microsoft.
+For paid or free versions, use the "Error Reports" check boxes to manage sending feedback on serious errors and crash dumps to Microsoft.
 
 ## Set registry subkeys on the server
 
@@ -89,13 +89,13 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
     Entry type DWORD: 0 is opt out; 1 is opt in
 
 > [!NOTE]
-> {Major Version} refers to the version of SQL Server—for example, 140 for SQL Server 2017
+> {Major Version} refers to the version of SQL Server-for example, 140 for SQL Server 2017
 
-- For SQL Server Management Studio:
+- For SQL Server Management Studio 17:
   
-    Subkey = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    RegEntry name = CustomerFeedback
+    RegEntry name = UserFeedbackOptIn
 
     Entry type DWORD: 0 is opt out; 1 is opt in
 
@@ -109,6 +109,13 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 
     Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage data collection.
 
+- For SQL Server Management Studio 18:
+    
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    RegEntry name = UserFeedbackOptIn
+
+    Entry type DWORD: 0 is opt out; 1 is opt in
 ## Set registry subkeys for crash dump collection
 
 Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Enterprise customers can configure Group Policy settings on the server to opt in or out of crash dump collection. This is done by configuring a registry-based policy. The relevant registry subkeys and settings are as follows: 
@@ -142,7 +149,7 @@ Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Ent
 Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 crash dump collection. 
 
 ## Crash dump collection for SSMS
-SSMS doesn’t collect its own crash dump. Any crash dump that's related to SSMS is collected as part of Windows Error Reporting.
+SSMS doesn't collect its own crash dump. Any crash dump that's related to SSMS is collected as part of Windows Error Reporting.
 
 The procedure to turn this feature on or off is dependent on the OS version. To turn the feature on or off, follow the steps in the appropriate article for your Windows version.
  

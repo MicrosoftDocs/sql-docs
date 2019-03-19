@@ -2,7 +2,7 @@
 title: "Configure settings for Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---
@@ -65,7 +65,7 @@ Starting with Data Migration Assistant v2.0, if you experience this problem you 
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 

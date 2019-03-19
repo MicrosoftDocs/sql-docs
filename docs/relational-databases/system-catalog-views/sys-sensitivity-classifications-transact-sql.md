@@ -7,8 +7,8 @@ ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""
 ms.manager: craigg
-ms.author: giladm
-author: giladmit
+ms.author: arib
+author: vainolo
 f1_keywords:
   - "sys.sensitivity_classifications "
 dev_langs:
@@ -67,10 +67,13 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
                          and sys.sensitivity_classifications.minor_id = sys.all_columns.column_id
 ```
 
+## Permissions  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
 ## See Also  
 
-[ADD SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [Getting started with SQL Information Protection](https://aka.ms/sqlip)

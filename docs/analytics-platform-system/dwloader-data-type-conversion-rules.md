@@ -98,7 +98,7 @@ Dwloader supports the following data formats for the input data that it is loadi
   
 Details:  
   
--   To separate month, day and year values, you can use ' – ', ' / ', or ' . '. For simplicity, the table uses only the ' – ' separator.  
+-   To separate month, day and year values, you can use ' - ', ' / ', or ' . '. For simplicity, the table uses only the ' - ' separator.  
   
 -   To specify the month as text use three or more characters. Months with 1 or 2 characters will be interpreted as a number.  
   

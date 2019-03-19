@@ -57,7 +57,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 4.  Right-click the job whose schedule you want to edit and select **Properties**.  
   
-5.  In the **Job Properties –**_job\_name_ dialog box, under **Select a page**, select **Schedules**. For more information on the available options on this page, see [Job Properties - New Job &#40;Schedules Page&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5.  In the **Job Properties -**_job\_name_ dialog box, under **Select a page**, select **Schedules**. For more information on the available options on this page, see [Job Properties - New Job &#40;Schedules Page&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
 6.  When finished, click **OK**.  
   

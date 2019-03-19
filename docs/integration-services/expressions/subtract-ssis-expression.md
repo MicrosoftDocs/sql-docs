@@ -22,7 +22,7 @@ manager: craigg
   
 ```  
   
-numeric_expression1 – numeric_expression2  
+numeric_expression1 - numeric_expression2  
   
 ```  
   

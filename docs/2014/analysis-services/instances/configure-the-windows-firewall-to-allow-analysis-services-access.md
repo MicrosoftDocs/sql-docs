@@ -29,7 +29,7 @@ manager: craigg
   
 -   For [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, do not open ports in Windows Firewall. As an add-in to SharePoint, the service uses ports configured for SharePoint and makes only local connections to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that loads and queries [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models.  
   
--   For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances running on Windows Azure Virtual Machines, use alternate instructions for configuring server access. See [SQL Server Business Intelligence in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
+-   For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances running on Windows Azure Virtual Machines, use alternate instructions for configuring server access. See [SQL Server Business Intelligence in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
  Although the default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] listens on TCP port 2383, you can configure the server to listen on a different fixed port, connecting to the server in this format: \<servername>:\<portnumber>.  
   
@@ -60,7 +60,7 @@ manager: craigg
   
 -   Start Task Manager and then click **Services** to get the PID of the `MSOLAP$InstanceName`.  
   
--   Run `netstat –ao –p TCP` from the command line to view the TCP port information for that PID.  
+-   Run `netstat -ao -p TCP` from the command line to view the TCP port information for that PID.  
   
 -   Verify the port by using SQL Server Management Studio and connect to an Analysis Services server in this format: \<IPAddress>:\<portnumber>.  
   
@@ -198,7 +198,7 @@ manager: craigg
   
 1.  Determine an available TCP/IP port to use.  
   
-     To view a list of reserved and registered ports that you should avoid using, see [Port Numbers (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469). To view a list of ports that are already in use on your system, open a command prompt window and type `netstat –a –p TCP` to display a list of the TCP ports that are open on the system.  
+     To view a list of reserved and registered ports that you should avoid using, see [Port Numbers (IANA)](https://go.microsoft.com/fwlink/?LinkID=198469). To view a list of ports that are already in use on your system, open a command prompt window and type `netstat -a -p TCP` to display a list of the TCP ports that are open on the system.  
   
 2.  After you determine which port to use, specify the port by either editing the `Port` configuration setting in the msmdsrv.ini file or in the General properties page of an Analysis Services instance in SQL Server Management Studio.  
   
@@ -209,7 +209,7 @@ manager: craigg
 5.  Verify by connecting locally (in Management Studio) and then remotely from a client application on another computer. To use Management Studio, connect to an Analysis Services default instance by specifying a server name in this format: \<servername>:\<portnumber>. For a named instance, specify the server name as \<servername>\\<instancename\>.  
   
 ##  <a name="bkmk_cluster"></a> Port configuration for an Analysis Services cluster  
- An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] failover cluster always listens on TCP port 2383, regardless of whether you installed it as a default instance or named instance. Dynamic port assignments are not used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] when it is installed on a Windows failover cluster. Be sure to open TCP 2383 on every node running [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in the cluster. For more information about clustering [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] failover cluster always listens on TCP port 2383, regardless of whether you installed it as a default instance or named instance. Dynamic port assignments are not used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] when it is installed on a Windows failover cluster. Be sure to open TCP 2383 on every node running [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in the cluster. For more information about clustering [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ##  <a name="bkmk_powerpivot"></a> Port configuration for PowerPivot for SharePoint  
  Server architecture for [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is fundamentally different depending on which version of SharePoint you are using.  
@@ -224,7 +224,7 @@ manager: craigg
   
  **SharePoint 2010**  
   
- If you are using SharePoint 2010, you do not need to open ports in Windows Firewall. SharePoint opens the ports that it requires, and add-ins such as PowerPivot for SharePoint operate within the SharePoint environment. In a PowerPivot for SharePoint 2010 installation, the PowerPivot System Service has exclusive use of the local SQL Server Analysis Services (PowerPivot) service instance that is installed with it on the same computer. It uses local connections, not network connections, to access the local Analysis Services engine service that loads, queries, and processes PowerPivot data on the SharePoint server. To request PowerPivot data from client applications, requests are routed through ports that are opened by SharePoint Setup (specifically, inbound rules are defined to allow access to SharePoint – 80, SharePoint Central Administration v4, SharePoint Web Services, and SPUserCodeV4). Because PowerPivot web services run within a SharePoint farm, the SharePoint firewall rules are sufficient for remote access to PowerPivot data in a SharePoint farm.  
+ If you are using SharePoint 2010, you do not need to open ports in Windows Firewall. SharePoint opens the ports that it requires, and add-ins such as PowerPivot for SharePoint operate within the SharePoint environment. In a PowerPivot for SharePoint 2010 installation, the PowerPivot System Service has exclusive use of the local SQL Server Analysis Services (PowerPivot) service instance that is installed with it on the same computer. It uses local connections, not network connections, to access the local Analysis Services engine service that loads, queries, and processes PowerPivot data on the SharePoint server. To request PowerPivot data from client applications, requests are routed through ports that are opened by SharePoint Setup (specifically, inbound rules are defined to allow access to SharePoint - 80, SharePoint Central Administration v4, SharePoint Web Services, and SPUserCodeV4). Because PowerPivot web services run within a SharePoint farm, the SharePoint firewall rules are sufficient for remote access to PowerPivot data in a SharePoint farm.  
   
 ## See Also  
  [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

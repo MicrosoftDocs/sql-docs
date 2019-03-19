@@ -1,11 +1,10 @@
 ---
-title: "Debug a Business Logic Handler (Replication Programming) | Microsoft Docs"
+title: "Debug a Business Logic Handler | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -26,7 +25,7 @@ manager: craigg
   
 ### To debug a business logic handler on a local computer  
   
-1.  Configure publishing and distribution, create a publication, and create a subscription to the publication. For more information, see [Configure Publishing and Distribution](configure-publishing-and-distribution.md) and [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configure publishing and distribution, create a publication, and create a subscription to the publication. For more information, see [Configure Publishing and Distribution](configure-publishing-and-distribution.md) and [Create a Publication](publish/create-a-publication.md).  
   
 2.  Create and register a business logic handler. For more information, see [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
   

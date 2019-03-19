@@ -1,5 +1,5 @@
 ---
-title: "Test a model in DirectQuery mode | Microsoft Docs"
+title: "Test an Analysis Services tabular model in DirectQuery mode | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

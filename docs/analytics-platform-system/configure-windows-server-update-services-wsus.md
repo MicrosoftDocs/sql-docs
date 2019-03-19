@@ -50,7 +50,7 @@ To configure WSUS, you need to:
   
     1.  In the **Server Manager Dashboard**, on the **Tools** menu, click **Windows Server Update Services**.  
   
-    2.  In the left pane of the **Update Services** window, click to expand the Virtual Machine Management node server (***appliance_domain*-VMM**), and then click **Options**.  
+    2.  In the left pane of the **Update Services** window, click to expand the Virtual Machine Management node server (**_appliance_domain_-VMM**), and then click **Options**.  
   
     3.  In the **Options** pane, click **WSUS Server Configuration Wizard** to launch the configuration wizard.  
   
@@ -176,7 +176,7 @@ After configuring WSUS for Analytics Platform System, the next step is to group 
   
     ![Add a computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
-2.  Enter the name “APS” for the computer group, and then click **Add**.  
+2.  Enter the name "APS" for the computer group, and then click **Add**.  
   
     ![Enter name for your new computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
   

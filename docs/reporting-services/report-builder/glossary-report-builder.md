@@ -8,8 +8,8 @@ ms.technology: report-builder
 
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 # Glossary (Report Builder)
   
@@ -151,7 +151,7 @@ ms.author: maggies
 |gauge|A gauge is a data region that presents data as a range with an indicator pointing to a specific value within the range.|  
 |gauge panel|The gauge panel is the encompassing outer element that contains one or more radial and linear gauges.  Use the gauge panel to define properties that apply for all gauges in a gauge panel.|  
 |gauge pointer|A gauge pointer is a needle, marker, or bar that indicates the current value on the gauge.  A gauge pointer is always attached to a gauge scale.|  
-|gauge range|A gauge range is a colored area that represents a “critical zone,” always bound by a start value and an end value, on the gauge scale.|  
+|gauge range|A gauge range is a colored area that represents a "critical zone," always bound by a start value and an end value, on the gauge scale.|  
 |gauge scale|A gauge scale is the range of values, bound by a minimum and a maximum, shown on the gauge.  Typically, a gauge scale contains gauge labels and gauge tick marks to give accurate readings of what the gauge pointer is showing.|  
 |geodesic data|Data that specifies points, lines, or areas on a curved surface.|  
 |geography data|A SQL Server spatial data type that represents data in a round-earth coordinate system,  such as GPS latitude and longitude coordinates.|  
@@ -182,7 +182,7 @@ ms.author: maggies
 |KPI|See Other Term: key performance indicator|  
 |label field|A report dataset field that identifies a label for a corresponding key field. Parameters and data regions can display the label for a key field instead of the value.|  
 |latency|The amount of time that elapses when a data change is completed at one server and when that change appears at another server.|  
-|latitude|The latitude coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from –90.0 through +90.0.|  
+|latitude|The latitude coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from -90.0 through +90.0.|  
 |layer|In a map report item, a layer specifies type and presentation of a single type of spatial data. A map report item is a container for multiple layers.|  
 |LCID|A number that identifies a Windows-based locale.|  
 |legend|In a report chart, map, or gauge data region, an element that provides a guide between the display presentation of data and the underlying data values.|  
@@ -195,7 +195,7 @@ ms.author: maggies
 |log file|A file or set of files that contain records of the modifications made in a database.|  
 |logical name|A name used by SQL Server to identify a file.|  
 |logical operators|The operators AND, OR, and NOT. Used to connect search conditions in WHERE clauses.|  
-|longitude|A coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from –180.0 through +180.0.|  
+|longitude|A coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from -180.0 through +180.0.|  
 |many-to-many relationship|A relationship between two tables in which rows in each table have multiple matching rows in the related table. For example, each sales invoice can contain multiple products, but each product can appear on multiple sales invoices.|  
 |many-to-one relationship|A relationship between two tables in which one row in one table can relate to many rows in another table.|  
 |map|A report item that is a container for titles, various types of legends, and map layers.|  

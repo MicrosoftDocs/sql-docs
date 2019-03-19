@@ -37,10 +37,10 @@ A compute node contains the SQL Server instance that assists with scale-out quer
 
 When querying external SQL Server, Oracle or Teradata instances, partitioned tables will benefit from scale-out reads. Each node in a PolyBase scale-out group can spin up to 8 readers to read external data. And each reader is assigned one partition to read in the external table. 
 
-For e.g., let’s say you have an external SQL Server table with 12 monthly partitions and a 3-node PolyBase scale-out group, each node will use 4 PolyBase readers to process each of the 12 partitions. This is illustrated in the image below. 
+For e.g., let's say you have an external SQL Server table with 12 monthly partitions and a 3-node PolyBase scale-out group, each node will use 4 PolyBase readers to process each of the 12 partitions. This is illustrated in the image below. 
 
 > [!NOTE]
- that this is different from scale-out reads over Hadoop. 
+>  that this is different from scale-out reads over Hadoop. 
 
 ![PolyBase scale-out groups](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase scale-out groups")
   

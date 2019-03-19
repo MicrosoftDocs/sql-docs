@@ -1,11 +1,10 @@
 ---
 title: "Replication Distribution Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "29/10/2018"
+ms.date: 10/29/2018
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Distribution Agent, executables"
@@ -84,43 +83,43 @@ manager: craigg
  **-?**  
  Prints all available parameters.  
   
- **-Publisher** *server_name*[**\\***i**nstance_name*]  
- Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  Is the name of the Publisher database.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  Is the name of the Subscriber database.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  Is the path to the folder that contains the initial snapshot for a subscription.  
   
- **-BcpBatchSize** *bcp_batch_size*  
+ **-BcpBatchSize** _bcp_batch_size_  
  Is the number of rows to send in a bulk copy operation. When performing a **bcp in** operation, the batch size is the number of rows to send to the server as one transaction, and also the number of rows that must be sent before the Distribution Agent logs a **bcp** progress message. When performing a **bcp out** operation, a fixed batch size of **1000** is used.  
   
- **-CommitBatchSize** *commit_batch_size*  
+ **-CommitBatchSize** _commit_batch_size_  
  Is the number of transactions to be issued to the Subscriber before a COMMIT statement is issued. The default is 100.  
   
- **-CommitBatchThreshold**  *commit_batch_threshold*  
+ **-CommitBatchThreshold**  _commit_batch_threshold_  
  Is the number of replication commands to be issued to the Subscriber before a COMMIT statement is issued. The default is 1000.  
   
  **-Continuous**  
  Specifies whether the agent attempts to poll replicated transactions continually. If specified, the agent polls replicated transactions from the source at polling intervals, even if there are no transactions pending.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  Is the path of the agent definition file. An agent definition file contains command prompt arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values containing arbitrary characters.  
   
- **-Distributor** *distributor*  
+ **-Distributor** _distributor_  
  Is the Distributor name. For Distributor (push) distribution, the name defaults to the name of the local Distributor.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  Is the Distributor login name.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  Is the Distributor password.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
@@ -136,29 +135,29 @@ manager: craigg
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
  
  > [!NOTE]  
- >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
 
- For more information, see [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
+ For more information, see [SQL Server Replication Security](../security/view-and-modify-replication-security-settings.md).  
   
- **-ErrorFile** *error_path_and_file_name*  
+ **-ErrorFile** _error_path_and_file_name_  
  Is the path and file name of the error file generated by the Distribution Agent. This file is generated at any point where failure occurred while applying replication transactions at the Subscriber; errors that occur at the Publisher or Distributor are not logged in this file. This file contains the failed replication transactions and associated error messages. When not specified, the error file is generated in the current directory of the Distribution Agent. The error file name is the name of the Distribution Agent with an .err extension. If the specified file name exists, error messages are appended to the file. This parameter can be a maximum of 256 Unicode characters.  
   
- **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
+ **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  Specifies the path and file name for the extended events XML configuration file. The extended events configuration file allows you to configure sessions and enable events for tracking.  
   
  **-FileTransferType** [ **0**| **1**]  
  Specifies the file transfer type. A value of **0** indicates UNC (universal naming convention), and a value of **1** indicates FTP (file transfer protocol).  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  Is the network address of the FTP service for the Distributor. When not specified, **DistributorAddress** is used. If **DistributorAddress** is not specified, **Distributor** is used.  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  Is the user password used to connect to the FTP service.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  Is the port number of the FTP service for the Distributor. When not specified, the default port number for FTP service (21) is used.  
   
- **-FtpUserName**  *ftp_user_name*  
+ **-FtpUserName**  _ftp_user_name_  
  Is the user name used to connect to the FTP service. When not specified, **anonymous** is used.  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
@@ -171,25 +170,25 @@ manager: craigg
 |**2**|Insert new history records unless the record is for such things as idle messages or long-running job messages, in which case update the previous records.|  
 |**3**|Always insert new records, unless it is for idle messages.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  Is the host name used when connecting to the Publisher. This parameter can be a maximum of 128 Unicode characters.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Is the number of seconds before the history thread checks if any of the existing connections is waiting for a response from the server. This value can be decreased to avoid having the checkup agent mark the Distribution Agent as suspect when executing a long-running batch. The default is **300** seconds.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  Is the number of seconds before the login times out. The default is **15** seconds.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  Specifies the number of bulk copy operations that can be performed in parallel. The maximum number of threads and ODBC connections that exist simultaneously is the lesser of **MaxBcpThreads** or the number of bulk copy requests that appear in the synchronization transaction in the distribution database. **MaxBcpThreads** must have a value greater than **0** and has no hard-coded upper limit. The default is **2** times the number of processors, up to a maximum value of **8**. When applying a snapshot that was generated at the Publisher using the concurrent snapshot option, one thread is used, regardless of the number you specify for **MaxBcpThreads**.  
   
- **-MaxDeliveredTransactions** *number_of_transactions*  
+ **-MaxDeliveredTransactions** _number_of_transactions_  
  Is the maximum number of push or pull transactions applied to Subscribers in one synchronization. A value of **0** indicates that the maximum is an infinite number of transactions. Other values can be used by Subscribers to shorten the duration of a synchronization being pulled from a Publisher.  
   
 > [!NOTE]  
 >  If -MaxDeliveredTransactions and -Continuous are both specified, the Distribution Agent delivers the specified number of transactions and then stops (even though -Continuous is specified). You must restart the Distribution Agent after the job completes.  
   
- **-MessageInterval**  *message_interval*  
+ **-MessageInterval**  _message_interval_  
  Is the time interval used for history logging. A history event is logged when one of these parameters is reached:  
   
 -   The **TransactionsPerHistory** value is reached after the last history event is logged.  
@@ -198,43 +197,43 @@ manager: craigg
   
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
   
- **-OledbStreamThreshold** *oledb_stream_threshold*  
- Specifies the minimum size, in bytes, for binary large object data above which the data will be bound as a stream. You must specify **–UseOledbStreaming** to use this parameter. Values can range from 400 to 1048576 bytes, with a default of 16384 bytes.  
+ **-OledbStreamThreshold** _oledb_stream_threshold_  
+ Specifies the minimum size, in bytes, for binary large object data above which the data will be bound as a stream. You must specify **-UseOledbStreaming** to use this parameter. Values can range from 400 to 1048576 bytes, with a default of 16384 bytes.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Specifies whether the output should be verbose. If the verbose level is **0**, only error messages are printed. If the verbose level is **1**, all the progress report messages are printed. If the verbose level is **2** (default), all error messages and progress report messages are printed, which is useful for debugging.  
   
- **-PacketSize** *packet_size*  
+ **-PacketSize** _packet_size_  
  Is the packet size, in bytes. The default is 4096 (bytes).  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  Is how often, in seconds, the distribution database is queried for replicated transactions. The default is 5 seconds.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
- **-Publication**  *publication*  
+ **-Publication**  _publication_  
  Is the name of the publication. This parameter is only valid if the publication is set to always have a snapshot available for new or reinitialized subscriptions.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  Is the number of seconds before the query times out. The default is 1800 seconds.  
   
- **-QuotedIdentifier** *quoted_identifier*  
+ **-QuotedIdentifier** _quoted_identifier_  
  Specifies the quoted identifier character to use. The first character of the value indicates the value the Distribution Agent uses. If **QuotedIdentifier** is used with no value, the Distribution Agent uses a space. If **QuotedIdentifier** is not used, the Distribution Agent uses whatever quoted identifier the Subscriber supports.  
   
- **-SkipErrors** *native_error_id* [**:***...n*]  
+ **-SkipErrors** _native_error_id_ [**:**_...n_]  
  Is a colon-separated list that specifies the error numbers to be skipped by this agent.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  Is the path to the Jet database (.mdb file) if **SubscriberType** is **2** (allows a connection to a Jet database without an ODBC Data Source Name (DSN)).  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  Is the Subscriber login name. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  Is the Subscriber password. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -261,14 +260,14 @@ manager: craigg
 > [!NOTE]  
 >  Subscriptionstreams do not work for articles configured to deliver [!INCLUDE[tsql](../../../includes/tsql-md.md)]. To use subscriptionstreams, configure articles to deliver stored procedure calls instead.  
   
- **-SubscriptionTableName** *subscription_table*  
+ **-SubscriptionTableName** _subscription_table_  
  Is the name of the subscription table generated or used at the given Subscriber. When not specified, the [MSreplication_subscriptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-subscriptions-transact-sql) table is used. Use this option for database management systems (DBMS) that do not support long file names.  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
  Specifies the subscription type for distribution. A value of **0** indicates a push subscription, a value of **1** indicates a pull subscription, and a value of **2** indicates an anonymous subscription.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Specifies the transaction interval for history logging. If the number of committed transactions after the last instance of history logging is greater than this option, a history message is logged. The default is 100. A value of **0** indicates infinite **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
+ Specifies the transaction interval for history logging. If the number of committed transactions after the last instance of history logging is greater than this option, a history message is logged. The default is 100. A value of **0** indicates infinite **TransactionsPerHistory**. See the preceding **-MessageInterval**parameter.  
   
  **-UseDTS**  
  Must be specified as a parameter for a publication that allows data transformation.  

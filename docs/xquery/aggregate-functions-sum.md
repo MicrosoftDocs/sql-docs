@@ -110,7 +110,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   Sequences that mix types across base type boundaries are not supported.  
   
--   The sum((xs:double(“INF”), xs:double(“-INF”))) raises a domain error.  
+-   The sum((xs:double("INF"), xs:double("-INF"))) raises a domain error.  
   
 ## See Also  
  [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  

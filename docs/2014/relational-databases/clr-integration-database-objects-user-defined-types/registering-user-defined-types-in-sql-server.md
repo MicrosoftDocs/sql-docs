@@ -77,7 +77,7 @@ WITH PERMISSION_SET = SAFE;
 ```  
 USE AdventureWorks;  
 CREATE ASSEMBLY Point  
-FROM 0xfeac4 … 21ac78  
+FROM 0xfeac4 ... 21ac78  
 ```  
   
 ### Using CREATE TYPE  

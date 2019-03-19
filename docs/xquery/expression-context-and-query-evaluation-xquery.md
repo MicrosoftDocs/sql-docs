@@ -25,9 +25,9 @@ manager: craigg
 
   The context of an expression is the information that is used to analyze and evaluate it. Following are the two phases in which XQuery is evaluated:  
   
--   **Static context** – This is the query compilation phase. Based on the information available, errors are sometimes raised during this static analysis of the query.  
+-   **Static context** - This is the query compilation phase. Based on the information available, errors are sometimes raised during this static analysis of the query.  
   
--   **Dynamic context** – This is the query execution phase. Even if a query has no static errors, such as errors during query compilation, the query may return errors during its execution.  
+-   **Dynamic context** - This is the query execution phase. Even if a query has no static errors, such as errors during query compilation, the query may return errors during its execution.  
   
 ## Static Context  
  Static context initialization refers to the process of putting together all the information for static analysis of the expression. As part of static context initialization, the following is completed:  
@@ -79,7 +79,7 @@ manager: craigg
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
@@ -127,7 +127,7 @@ manager: craigg
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  

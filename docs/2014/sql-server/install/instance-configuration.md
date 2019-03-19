@@ -1,11 +1,10 @@
 ---
 title: "Instance Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-04"
+ms.date: 05/04/2016
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 f1_keywords: 
   - "instance configuration, Setup"
@@ -32,9 +31,9 @@ manager: craigg
  For more information, see [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## Options  
- Failover cluster instances only — Specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster network name. This name identifies the failover cluster instance on the network.  
+ Failover cluster instances only - Specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster network name. This name identifies the failover cluster instance on the network.  
   
- Default or Named instance — Consider the following information when you decide whether to install a default or named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Default or Named instance - Consider the following information when you decide whether to install a default or named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   If you plan to install a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a database server, it should be a default instance.  
   

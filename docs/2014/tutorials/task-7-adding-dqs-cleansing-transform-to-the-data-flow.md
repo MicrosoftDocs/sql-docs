@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Task 7: Adding DQS Cleansing Transform to the Data Flow
-  In this task, you add DQS Cleansing Transform to the data flow to cleanse the input supplier data by using DQS. See **[DQS Cleansing Transform](http://msdn.microsoft.com/library/ee677619.aspx)** for more details about the transform.  
+  In this task, you add DQS Cleansing Transform to the data flow to cleanse the input supplier data by using DQS. See **[DQS Cleansing Transform](https://msdn.microsoft.com/library/ee677619.aspx)** for more details about the transform.  
   
 1.  Right-click **DQS Cleansing** in the **Data Flow** tab, and click **Rename**. Type **Cleanse Supplier Data**, and press **ENTER**.  
   

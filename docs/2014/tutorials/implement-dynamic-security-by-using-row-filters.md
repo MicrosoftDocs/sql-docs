@@ -4,20 +4,19 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Implement Dynamic Security by Using Row Filters
   In this supplemental lesson, you will create an additional role that implements dynamic security. Dynamic security provides row-level security based on the user name or login id of the user currently logged on. To learn more, see [Roles &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  To implement dynamic security, you must add a table to your model containing the Windows user names of those users that can create a connection to the model as a data source and browse model objects and data. The model you create using this tutorial is in the context of Adventure Works Corp.; however, in order to complete this lesson, you must add a table containing users from your own domain. You will not need the passwords for the user names that will be added. To create an Employee Security table, with a small sample of users from your own domain, you will use the Paste feature, pasting employee data from an Excel spreadsheet. In a real-world scenario, the table containing user names you add to a model would typically use a table from an actual database as a data source; for example, a real dimEmployee table.  
   
- In order to implement dynamic security, you will use two new DAX functions: [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx) and [LOOKUPVALUE Function &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). These functions, applied in a row filter formula, are defined in a new role. Using the LOOKUPVALUE function, the formula specifies a value from the Employee Security table and then passes that value to the USERNAME function, which specifies the user name of the user logged on belongs to this role. The user can then browse only data specified by the role’s row filters. In this scenario, you will specify that sales employees can only browse internet sales data for the sales territories in which they are a member.  
+ In order to implement dynamic security, you will use two new DAX functions: [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx) and [LOOKUPVALUE Function &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). These functions, applied in a row filter formula, are defined in a new role. Using the LOOKUPVALUE function, the formula specifies a value from the Employee Security table and then passes that value to the USERNAME function, which specifies the user name of the user logged on belongs to this role. The user can then browse only data specified by the role's row filters. In this scenario, you will specify that sales employees can only browse internet sales data for the sales territories in which they are a member.  
   
  In order to complete this supplemental lesson, you will complete a series of tasks. Those tasks that are unique to this Adventure Works tabular model scenario, but would not necessarily apply to a real-world scenario are identified as such. Each task includes additional information describing the purpose of the task.  
   
@@ -115,7 +114,7 @@ manager: craigg
      Notice the Active property for this relationship is False, meaning it is inactive. This is because the Internet Sales table already has another active relationship that is used in measures.  
   
 ## Hide the Employee Security Table from Client Applications  
- In this task, you will hide the Employee Security table, keeping it from appearing in a client application’s field list. Keep in-mind that hiding a table does not secure it. Users can still query Employee Security table data if they know how. In order to secure the Employee Security table data, preventing users from being able to query any of its data, you will apply a filter in a later task.  
+ In this task, you will hide the Employee Security table, keeping it from appearing in a client application's field list. Keep in-mind that hiding a table does not secure it. Users can still query Employee Security table data if they know how. In order to secure the Employee Security table data, preventing users from being able to query any of its data, you will apply a filter in a later task.  
   
 #### To hide the Employee Table from client applications  
   

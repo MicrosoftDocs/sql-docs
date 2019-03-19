@@ -1,25 +1,26 @@
 ---
-title: Create new SQL Server table using rxDataStep (SQL and R deep dive)| Microsoft Docs
+title: Create new SQL Server table using RevoScaleR rxDataStep - SQL Server Machine Learning
+description: Tutorial walkthrough on how to create a SQL Server table using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Create new SQL Server table using rxDataStep (SQL and R deep dive)
+# Create new SQL Server table using rxDataStep (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this lesson, you learn how to move data between in-memory data frames, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] context, and local files.
 
 > [!NOTE]
 > This lesson uses a different data set. The Airline Delays dataset is a public dataset that is widely used for machine learning experiments. The data files used in this example are available in the same directory as other product samples.
 
-## Create SQL Server table from local data
+## Load data from a local XDF file
 
 In the first half of this tutorial, you used the **RxTextData** function to import data into R from a text file, and then used the **RxDataStep** function to move the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -31,7 +32,6 @@ The XDF format is an XML standard developed for high-dimensional data and is the
 
 1. Set the compute context to the local workstation. **DDL permissions are needed for this step.**
 
-  
     ```R
     rxSetComputeContext("local")
     ```
@@ -52,67 +52,64 @@ The XDF format is an XML standard developed for high-dimensional data and is the
 
 **Results**
 
-*Var 1: ArrDelay, Type: integer, Low/High: (-86, 1490)*
-
-*Var 2: CRSDepTime, Type: numeric, Storage: float32, Low/High: (0.0167, 23.9833)*
-
-*Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Saturday Sunday*
+```R
+Var 1: ArrDelay, Type: integer, Low/High: (-86, 1490)
+Var 2: CRSDepTime, Type: numeric, Storage: float32, Low/High: (0.0167, 23.9833)
+Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Saturday Sunday
+```
 
 > [!NOTE]
 > 
-> Did you notice that you did not need to call any other functions to load the data into the XDF file, and could call **rxGetVarInfo** on the data immediately? That's because XDF is the default interim storage method for RevoScaleR. In addition to XDF files, the **rxGetVarInfo** function now supports multiple source types.
-  
-4. Put this data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, storing _DayOfWeek_ as an integer with values from 1 to 7.
-  
-    To do this, first define a SQL Server data source.
+> Did you notice that you did not need to call any other functions to load the data into the XDF file, and could call **rxGetVarInfo** on the data immediately? That's because XDF is the default interim storage method for **RevoScaleR**. In addition to XDF files, the **rxGetVarInfo** function now supports multiple source types.
+
+## Move contents to SQL Server
+
+With the XDF data source created in the local R session, you can now move this data into a database table, storing *DayOfWeek* as an integer with values from 1 to 7.
+
+1. Define a SQL Server data source object, specifying a table to contain the data, and connection to the remote server.
   
     ```R
     sqlServerAirDemo <- RxSqlServerData(table = "AirDemoSmallTest", connectionString = sqlConnString)
     ```
   
-5. Check whether a table with the same name already exists, and delete the table if it exists.
+2. As a precaution, include a step that checks whether a table with the same name already exists, and delete the table if it exists. An existing table of the same names prevents a new one from being created.
   
     ```R
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-6. Create the table and load the data using **rxDataStep**. This function moves data between two already defined data sources and can optionally transform the data en route.
+3. Load the data into the table using **rxDataStep**. This function moves data between two already defined data sources and can optionally transform the data en route.
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
-            transforms = list( DayOfWeek = as.integer(DayOfWeek),
-            rowNum = .rxStartRow : (.rxStartRow + .rxNumRows - 1) ),
-            overwrite = TRUE )
+        transforms = list( DayOfWeek = as.integer(DayOfWeek),
+        rowNum = .rxStartRow : (.rxStartRow + .rxNumRows - 1) ),
+        overwrite = TRUE )
     ```
   
     This is a fairly large table, so wait until you see a final status message like this one: *Rows Read: 200000, Total Rows Processed: 600000*.
      
-7. Set the compute context back to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
+## Load data from a SQL table
 
-    ```R
-    rxSetComputeContext(sqlCompute)
-    ```
-  
-8. Create a new SQL Server data source, using a simple SQL query on the new table. This definition adds factor levels for the *DayOfWeek* column, using the *colInfo* argument to **RxSqlServerData**.
+Once data exists in the table, you can load it by using a simple SQL query. 
+
+1. Create a new SQL Server data source. The input is a query on the new table you just created and loaded with data. This definition adds factor levels for the *DayOfWeek* column, using the *colInfo* argument to **RxSqlServerData**.
   
     ```R
-    SqlServerAirDemo <- RxSqlServerData(
+    sqlServerAirDemo2 <- RxSqlServerData(
         sqlQuery = "SELECT * FROM AirDemoSmallTest",
         connectionString = sqlConnString,
         rowsPerRead = 50000,
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-9. Call **rxSummary** once more to review a summary of the data in your query.
+2. Call **rxSummary** once more to review a summary of the data in your query.
   
     ```R
-    rxSummary(~., data = sqlServerAirDemo)
+    rxSummary(~., data = sqlServerAirDemo2)
     ```
 
-## Next step
+## Next steps
 
-[Perform chunking analysis using rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
-## Previous step
-
-[Load data into memory using rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
+> [!div class="nextstepaction"]
+> [Perform chunking analysis using rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

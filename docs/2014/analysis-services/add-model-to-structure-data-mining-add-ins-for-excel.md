@@ -31,11 +31,11 @@ manager: craigg
   
      **Tip**: If you are not sure which mining structure contains the data you need, use the **Document Model** wizard to view the columns and basic statistics about the data.  
   
-     If you can’t find a mining structure, check the connection that you are currently using. You might need to open a connection to a different server.  
+     If you can't find a mining structure, check the connection that you are currently using. You might need to open a connection to a different server.  
   
 3.  In the **Select Mining Algorithm** dialog box, choose a mining algorithm to use in the new mining model.  
   
-     Notice that the dialog box provides a lot more options than you’ll see in the wizards. You can create a model using any algorithm supported on your [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, provided your data is compatible.  
+     Notice that the dialog box provides a lot more options than you'll see in the wizards. You can create a model using any algorithm supported on your [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, provided your data is compatible.  
   
 4.  We recommend that you also click the **Parameters** button to open the **Algorithm Parameters** dialog box and customize parameters on the algorithm. This option is the easiest way to create custom mining models.  
   
@@ -53,7 +53,7 @@ manager: craigg
   
     -   **Do not use**. Indicates that the data should not be used in the model, even if present in the structure.  
   
-7.  Click the browse **(…)** button to open the **Set Column Model Flags** dialog box.  
+7.  Click the browse **(...)** button to open the **Set Column Model Flags** dialog box.  
   
      Take a minute to verify that the usage of each data column is appropriate for the model. This is an important step for preventing errors when you try to process the model.  
   
@@ -84,12 +84,12 @@ manager: craigg
 |Option|Comments|  
 |------------|--------------|  
 |**Select Structure or Model** dialog box|Choose en existing mining structure to use as the basis for building a new model.  The structure you pick must be located on the current connection. If not, change connections using the [Connect to Source Data &#40;Data Mining Client for Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md) tool.|  
-|**Select Mining Algorithm** dialog Box|The list of data mining algorithms depends on which server you are connected to. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides different algorithms in the Standard and Enterprise editions. Your administrator also might have added custom algorithms.<br /><br /> If you can’t see any algorithms, verify that you are connected to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Select Mining Algorithm** dialog Box|The list of data mining algorithms depends on which server you are connected to. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides different algorithms in the Standard and Enterprise editions. Your administrator also might have added custom algorithms.<br /><br /> If you can't see any algorithms, verify that you are connected to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Algorithm Parameters** Dialog Box|In these settings, you can customize each algorithm using parameters specific to the analytical method. You can also set a seed to ensure that the results of the model can be reproduced across multiple training passes.<br /><br /> For more information, see [Algorithm Parameters &#40;SQL Server Data Mining Add-ins&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Set Column Model Flags** Dialog Box|Modeling flags can improve your model by specifying how missing data is to be handled. For more information, see [Modeling Flags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md).|  
   
 ###  <a name="Bkmk_mdlcolumn"></a> Setting Column Usage  
- When you add a new model to an existing mining structure, you must specify how the model will use each of the columns of data in the mining structure. You’ll probably observe that the options in this wizard are far more detailed than the options on the mining structure. Why?  
+ When you add a new model to an existing mining structure, you must specify how the model will use each of the columns of data in the mining structure. You'll probably observe that the options in this wizard are far more detailed than the options on the mining structure. Why?  
   
  The reason is that when you create a model and a structure together using a wizard, many of the options that control how data is used by the algorithm are set automatically. However, when you add a new model to an existing, you need to see these options manually, and specify whether data should be used for analysis, whether the data type is correct, and so forth.  
   
@@ -103,7 +103,7 @@ manager: craigg
   
      Clustering models can be built with no predictable value, but other models generally require that you specify a single column for prediction.  
   
--   The composition of the data is incompatible with the algorithm you’ve chosen.  
+-   The composition of the data is incompatible with the algorithm you've chosen.  
   
      Some types of analysis require data that is carefully structured according to unique rules. Examples are forecasting models and association models. You can easily add new models of the same type, perhaps with customizations, but the data might not work with other algorithms.  
   

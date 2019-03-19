@@ -155,7 +155,7 @@ manager: craigg
 |**ReportAndStop**|Report the error and stop processing.|  
   
  **Error log path**  
- Type the path of the error log, or click the **browse(…)** button to select a destination.  
+ Type the path of the error log, or click the **browse(...)** button to select a destination.  
   
  **Browse (...)**  
  Select a path for the error log.  

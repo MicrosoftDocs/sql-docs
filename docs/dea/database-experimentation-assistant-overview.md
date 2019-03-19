@@ -2,7 +2,7 @@
 title: Overview of the Database Experimentation Assistant solution for SQL Server upgrades
 description: Overview of Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/22/2018
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -32,7 +32,7 @@ For a 19-minute introduction to DEA and a demonstration, watch the following vid
 
 ## Get DEA
 
-To install DEA, [download](https://www.microsoft.com/en-us/download/details.aspx?id=54090) the latest version of the tool. Then, run the **DatabaseExperimentationAssistant.exe** file.
+To install DEA, [download](https://www.microsoft.com/download/details.aspx?id=54090) the latest version of the tool. Then, run the **DatabaseExperimentationAssistant.exe** file.
 
 ## Solution architecture for comparing workloads
 
@@ -86,7 +86,7 @@ DEA has an internet-enabled feature that can send telemetry information to Micro
 
 You can decide which events are collected. You also decide whether collected events are sent to Microsoft. There are four types of events:
 
-*   **TraceEvent**: Usage events for the application (for example, “triggered stop capture”).
+*   **TraceEvent**: Usage events for the application (for example, "triggered stop capture").
 *   **Exception**: Exception thrown during application usage.
 *   **DiagnosticEvent**: An event log to assist with diagnosis when problems occur (*not* sent to Microsoft).
 *   **FeedbackEvent**: User feedback that's submitted through the application.
@@ -99,7 +99,7 @@ These steps show you how to choose which events are collected and whether the ev
 4.  To stop saving local copies of events, set the value of **TraceLoggerEnabled** to **false**. To start saving local copies again, set the value to **true**.
 5.  To stop sending events to Microsoft, set the value of **AppInsightsLoggerEnabled** to **false**. To start sending events to Microsoft again, set the value to **true**.
 
-DEA is governed by the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement​).
+DEA is governed by the [Microsoft Privacy Statement](https://aka.ms/dea-privacy).
 
 ## Next steps
 

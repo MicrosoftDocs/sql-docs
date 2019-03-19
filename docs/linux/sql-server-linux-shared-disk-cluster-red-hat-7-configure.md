@@ -56,7 +56,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> At setup time, a Server Master Key is generated for the SQL Server instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
+> At setup time, a Server Master Key is generated for the SQL Server instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it's a local account, its identity isn't shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
 
 1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker uses this account to verify which node is running SQL Server. 
 
@@ -268,7 +268,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo firewall-cmd --reload
    ```
 
-   > If you’re using another firewall that doesn’t have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
+   > If you're using another firewall that doesn't have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
@@ -279,7 +279,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   ​
+    
 
 2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
@@ -287,7 +287,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo passwd hacluster
    ```
 
-   ​
+    
 
 3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
 
@@ -308,8 +308,8 @@ At this point both instances of SQL Server are configured to run with the databa
 1. On one of the nodes, create the cluster.
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -364,7 +364,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo pcs status 
    ```
 
-   The following examples shows the results when Pacemaker has succesfully started a clustered instance of SQL Server. 
+   The following examples shows the results when Pacemaker has successfully started a clustered instance of SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

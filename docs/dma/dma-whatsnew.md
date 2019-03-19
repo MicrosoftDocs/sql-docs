@@ -1,7 +1,7 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -11,7 +11,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, new features"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---
@@ -43,7 +43,7 @@ The v4.0 release of DMA introduces the Azure SQL Database SKU recommendations fe
 For additional detail, see the article [Identify the right Azure SQL Database SKU for your on-premises database](dma-sku-recommend-sql-db.md).
 
 ## DMA v3.6
-The v3.6 release of DMA introduces “Auto fix” for the schema objects that are impacted by the most common migration blockers.
+The v3.6 release of DMA introduces "Auto fix" for the schema objects that are impacted by the most common migration blockers.
 
 This release provides autofix for the following migration blocker and behavior change issues:
 - The schema objects that use Unqualified Join syntax.
@@ -72,11 +72,11 @@ The v3.3 release of DMA enables migration of an on-premises SQL Server instance 
 ### Specifying the back-up path
 Linux and Windows use different path formats. As a result, migrating to SQL Server 2017 on Linux requires that the user provide both the Windows and Linux versions of the path to the location of the physical file. You can provide both versions of the path in different ways depending on the location of the physical file.
 If the physical back-up file is on a computer running:
-- Linux, use a ‘samba’ share to share the file with other computers on the network.
-- Windows, use the ‘mnt’ command to mount the share onto the computer running Linux.
+- Linux, use a 'samba' share to share the file with other computers on the network.
+- Windows, use the 'mnt' command to mount the share onto the computer running Linux.
 
 > [!NOTE]
-> Details of using a ‘samba’ share or the ‘mnt’ command are beyond the scope of this article.
+> Details of using a 'samba' share or the 'mnt' command are beyond the scope of this article.
 
 ### Migrating Windows logins
 While the migration of Active Directory (AD) logins is officially supported by SQL Server 2017 on Linux, it requires additional configuration to work successfully. Refer to the article [Active Directory Authentication with SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) for detailed information about setting up Active Directory logins on SQL Server 2017 on Linux. After performing the required configuration, the setup is complete and you can migrate Active Directory logins as usual. Standard SQL Authentication works as expected without any additional setup.

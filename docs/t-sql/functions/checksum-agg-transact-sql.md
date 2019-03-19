@@ -50,7 +50,7 @@ Returns the checksum of all *expression* values as **int**.
 ## Remarks  
 `CHECKSUM_AGG` can detect changes in a table.
   
-The `CHECKSUM_AGG` result does not depend on the order of the rows in the table. Also, `CHECKSUM_AGG` functions allow the use of the DISTINCT keyword and the GROUP BY clause.
+The `CHECKSUM_AGG` result does not depend on the order of the rows in the table. Also, `CHECKSUM_AGG` functions allow the use of the `DISTINCT` keyword and the `GROUP BY` clause.
   
 If an expression list value changes, the list checksum value list will also probably change. However, a small possibility exists that the calculated checksum will not change.
   
@@ -61,6 +61,7 @@ These examples use `CHECKSUM_AGG` to detect changes in the `Quantity` column of 
   
 ```sql
 --Get the checksum value before the column value is changed.  
+
 SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
 FROM Production.ProductInventory;  
 GO  
@@ -68,7 +69,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ------------------------  
 262  
 ```  
@@ -78,6 +79,7 @@ UPDATE Production.ProductInventory
 SET Quantity=125  
 WHERE Quantity=100;  
 GO  
+
 --Get the checksum of the modified column.  
 SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
 FROM Production.ProductInventory;  
@@ -85,13 +87,14 @@ FROM Production.ProductInventory;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ------------------------  
 287  
 ```  
   
 ## See also
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
-  
   

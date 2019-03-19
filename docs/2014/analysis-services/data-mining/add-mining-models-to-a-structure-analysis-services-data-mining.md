@@ -23,7 +23,7 @@ manager: craigg
  When you use the Data Mining Wizard to create a new mining model, by default you must always create a mining structure first. The wizard then gives you the option to add an initial mining model to the structure. However, you don't need to create a model right away. If you create the structure only, you do not need to make a decision about which column to use as the predictable attribute, or how to use the data in a particular model. Instead, you just set up the general data structure that you want to use in future, and later you can use [Data Mining Designer](data-mining-designer.md) to add new mining models that are based on the structure.  
   
 > [!NOTE]  
->  In DMX, the CREATE MINING MODEL statement  begins with the mining model. That is, you define your choice of mining model, and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically generates the underlying structure. Later you can continue to add new mining models to that structure, by using the ALTER STRUCTURE… ADD MODEL statement.  
+>  In DMX, the CREATE MINING MODEL statement  begins with the mining model. That is, you define your choice of mining model, and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically generates the underlying structure. Later you can continue to add new mining models to that structure, by using the ALTER STRUCTURE... ADD MODEL statement.  
   
 ## Choosing an Algorithm  
  When you add a new model to an existing structure, the first thing you should do is select a data mining algorithm to use in that model. Choosing the algorithm is important because each algorithm performs a different type of analysis and has different requirements.  

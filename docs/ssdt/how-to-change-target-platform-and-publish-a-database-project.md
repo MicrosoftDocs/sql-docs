@@ -23,7 +23,7 @@ SSDT also makes this task simple by being aware of your target platform and auto
 > [!WARNING]  
 > The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
   
-### To change a project’s target platform  
+### To change a project's target platform  
   
 1.  Right-click your project in **Solution Explorer** and select **Properties**. Click the **Project Settings** tab on the left to access the **Project Settings** property page.  
   
@@ -57,7 +57,7 @@ SSDT also makes this task simple by being aware of your target platform and auto
   
 6.  You can also save the publish settings in a profile, so that you can reuse the same settings for future publish operations. To do so, click the **Save Profile As** button in the **Publish Database** dialog box. In the future, you can click the **Load Profile** button when you want to reload existing settings.  
   
-7.  Notice the messages in the **Data Tools Operations** window. Click on “View Preview” link to the right of **Creating publish preview…** This will open the deployment preview report. If your project’s target platform is not identical to the database server where the project is published to, SSDT will issue a warning in this report.  For example, if your project’s target platform is Microsoft SQL Server 2012 and you are attempting to publish the project to a SQL Server 2008 R2 server instance, you will see the following warning in the **Output** window:  
+7.  Notice the messages in the **Data Tools Operations** window. Click on "View Preview" link to the right of **Creating publish preview...** This will open the deployment preview report. If your project's target platform is not identical to the database server where the project is published to, SSDT will issue a warning in this report.  For example, if your project's target platform is Microsoft SQL Server 2012 and you are attempting to publish the project to a SQL Server 2008 R2 server instance, you will see the following warning in the **Output** window:  
   
 **A project which specifies Microsoft SQL Server 2012 as the target platform may experience compatibility issues with SQL Server 2008**    If such project contains entities (for example, a Sequence object) that are introduced in Microsoft SQL Server 2012, the publishing operation will fail.  
   

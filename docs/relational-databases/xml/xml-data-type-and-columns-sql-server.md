@@ -55,9 +55,9 @@ manager: craigg
   
 -   Native storage as **xml** data type  
   
-     The data is stored in an internal representation that preserves the XML content of the data. This internal representation includes information about the containment hierarchy, document order, and element and attribute values. Specifically, the InfoSet content of the XML data is preserved. For more information about InfoSet, visit [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). The InfoSet content may not be an identical copy of the text XML, because the following information is not retained: insignificant white spaces, order of attributes, namespace prefixes, and XML declaration.  
+     The data is stored in an internal representation that preserves the XML content of the data. This internal representation includes information about the containment hierarchy, document order, and element and attribute values. Specifically, the InfoSet content of the XML data is preserved. For more information about InfoSet, visit [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). The InfoSet content may not be an identical copy of the text XML, because the following information is not retained: insignificant white spaces, order of attributes, namespace prefixes, and XML declaration.  
   
-     For typed **xml** data type, an **xml** data type bound to XML schemas, the post-schema validation InfoSet (PSVI) adds type information to the InfoSet and is encoded in the internal representation. This improves parsing speed significantly. For more information, see the W3C XML Schema specifications at [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) and [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
+     For typed **xml** data type, an **xml** data type bound to XML schemas, the post-schema validation InfoSet (PSVI) adds type information to the InfoSet and is encoded in the internal representation. This improves parsing speed significantly. For more information, see the W3C XML Schema specifications at [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) and [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapping between XML and relational storage  
   

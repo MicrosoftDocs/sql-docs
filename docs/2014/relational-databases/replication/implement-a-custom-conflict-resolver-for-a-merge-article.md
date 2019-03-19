@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -65,7 +64,7 @@ manager: craigg
 2.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying **@publication**, **@article**, a value of **resolver_info** for **@property**, and the name of the stored procedure that implements the conflict resolver logic for **@value**.  
   
 ##  <a name="COM"></a> Using a COM-based Custom Resolver  
- The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and resolve conflicts that occur during the merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLL), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Such a COM–based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
+ The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and resolve conflicts that occur during the merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLL), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Such a COM-based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
   
 #### To create and register a COM-based custom conflict resolver  
   
@@ -113,7 +112,7 @@ manager: craigg
   
 #### Viewing a Sample Custom Resolver  
   
-1.  A sample is available in the SQL Server 2000 sample files. Download the **sql2000samples.cab** from [Updated Samples for SQL Server 2000 Service Pack 3](http://www.microsoft.com/download/details.aspx?id=8560). This downloads 8 files amounting to 6.9 MB.  
+1.  A sample is available in the SQL Server 2000 sample files. Download the **sql2000samples.cab** from [Updated Samples for SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). This downloads 8 files amounting to 6.9 MB.  
   
 2.  Extract the files from downloaded compressed .cab file.  
   

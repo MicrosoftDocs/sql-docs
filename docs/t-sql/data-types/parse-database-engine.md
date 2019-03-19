@@ -1,7 +1,7 @@
 ---
 title: "Parse (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -80,7 +80,7 @@ hierarchyidRepresentation    StringRepresentation
 The following code snippet calls the Parse() method:
   
 ```sql
-string input = “/1/2/”;  
+string input = "/1/2/";  
 SqlHierarchyId.Parse(input);  
 ```  
   

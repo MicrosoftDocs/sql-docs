@@ -2,7 +2,7 @@
 title: "Upgrade on-premises SQL Server to SQL Server or SQL Server on Azure VMs using the Data Migration Assistant | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to upgrade an on-premises SQL Server to a later version of SQL Server or to SQL Server on Azure VMs
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, on-premises SQL Server"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---
@@ -68,7 +68,7 @@ This article provides step-by-step instructions for upgrading SQL Server on-prem
 
 3. Enter a shared location that the source and target SQL Server instances have access to, in the **Share location options** box.
 
-4. If you can’t provide a shared location that both the source and target SQL Servers have access to, select **Copy the database backups to a different location that the target server can read and restore from**. Then, enter a value for the **Location for backups for restore option** box. 
+4. If you can't provide a shared location that both the source and target SQL Servers have access to, select **Copy the database backups to a different location that the target server can read and restore from**. Then, enter a value for the **Location for backups for restore option** box. 
 
    Make sure that the user account running Data Migration Assistant has read privileges to the backup location and write privileges to the location from which the target server restores.
 

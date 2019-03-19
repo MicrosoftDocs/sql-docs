@@ -64,7 +64,7 @@ This walks through the steps of configuring a PolyBase Group using:
   
 ## Select one SQL Server as head node  
   
-After setup is complete, both machines can function as PolyBase Group head nodes. In this example, we will choose “MSSQLSERVER” on PQTH4A-CMP01 as the head node.
+After setup is complete, both machines can function as PolyBase Group head nodes. In this example, we will choose "MSSQLSERVER" on PQTH4A-CMP01 as the head node.
   
 ## Add other SQL Server instances as compute nodes  
   

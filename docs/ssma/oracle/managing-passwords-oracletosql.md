@@ -28,15 +28,15 @@ Use the following procedure to implement a secure connection:
   
 Specify a valid password using one of the following three methods:  
   
-1.  **Clear Text:** Type the database password in the value attribute of the ‘password’ node. It is found under the server definition node in the Server section of the script file or server connection file.  
+1.  **Clear Text:** Type the database password in the value attribute of the 'password' node. It is found under the server definition node in the Server section of the script file or server connection file.  
   
-    Passwords in clear text are not secure. Therefore, you will encounter the following warning message in the console output: *“Server &lt;server-id&gt; password is provided in non-secure clear text form, SSMA Console application provides an option to protect the password through encryption, please see –securepassword option in SSMA help file for more information.”*  
+    Passwords in clear text are not secure. Therefore, you will encounter the following warning message in the console output: *"Server &lt;server-id&gt; password is provided in non-secure clear text form, SSMA Console application provides an option to protect the password through encryption, please see -securepassword option in SSMA help file for more information."*  
   
     **Encrypted Passwords:** The specified password, in this case, is stored in an encrypted form on the local machine in ProtectedStorage.ssma.  
   
     -   **Securing Passwords**  
   
-        -   Execute the `SSMAforOracleConsole.exe` with the `–securepassword` and add switch at command line passing the server connection or script file containing the password node in the server definition section.  
+        -   Execute the `SSMAforOracleConsole.exe` with the `-securepassword` and add switch at command line passing the server connection or script file containing the password node in the server definition section.  
   
         -   At prompt, the user is asked to enter the database password and confirm it.  
   
@@ -46,7 +46,7 @@ Specify a valid password using one of the following three methods:
             
                 Specify password
                 
-                C:\SSMA\SSMAforOracleConsole.EXE –securepassword –add all –s "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml"
+                C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml"
                 
                 Enter password for server_id 'XXX_1': xxxxxxx
                 
@@ -54,7 +54,7 @@ Specify a valid password using one of the following three methods:
             
             Example 2:
             
-                C:\SSMA\SSMAforOracleConsole.EXE –securepassword –add "source_1,target_1" –c "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ServersConnectionFileSample.xml" – v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml" -o
+                C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
                 Enter password for server_id 'source_1': xxxxxxx
                 
@@ -66,20 +66,20 @@ Specify a valid password using one of the following three methods:
     
     -   **Removing Encrypted Passwords**  
   
-        Execute the `SSMAforOracleConsole.exe` with the`–securepassword` and `–remove` switch at command line passing the server ids, to remove the encrypted passwords from the protected storage file present on the local machine.  
+        Execute the `SSMAforOracleConsole.exe` with the`-securepassword` and `-remove` switch at command line passing the server ids, to remove the encrypted passwords from the protected storage file present on the local machine.  
         
         Example:  
         
-            C:\SSMA\SSMAforOracleConsole.EXE –securepassword –remove all
-            C:\SSMA\SSMAforOracleConsole.EXE –securepassword –remove "source_1,target_1"  
+            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
+            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove "source_1,target_1"  
   
     -   **Listing Server Ids whose passwords are encrypted**  
   
-        Execute the `SSMAforOracleConsole.exe` with the `–securepassword` and `–list` switch at command line to list all the server ids whose passwords have been encrypted.  
+        Execute the `SSMAforOracleConsole.exe` with the `-securepassword` and `-list` switch at command line to list all the server ids whose passwords have been encrypted.  
   
         Example:  
         
-            C:\SSMA\SSMAforOracleConsole.EXE –securepassword –list  
+            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  
   
     > [!NOTE]  
     > 1.  The password in clear text mentioned in script or server connection file takes precedence over the encrypted password in secured file.  
@@ -92,13 +92,13 @@ Example:
 
     Export password
     
-    Enter password for protecting the exported file C:\SSMA\SSMAforOracleConsole.EXE –securepassword –export all "machine1passwords.file"
+    Enter password for protecting the exported file C:\SSMA\SSMAforOracleConsole.EXE -securepassword -export all "machine1passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforOracleConsole.EXE –p –e "OracleDB_1_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforOracleConsole.EXE -p -e "OracleDB_1_1,Sql_1" "machine2passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
@@ -108,13 +108,13 @@ Example:
 
     Import an encrypted password
     
-    Enter password for protecting the imported file C:\SSMA\SSMAforOracleConsole.EXE –securepassword –import all "machine1passwords.file"
+    Enter password for protecting the imported file C:\SSMA\SSMAforOracleConsole.EXE -securepassword -import all "machine1passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforOracleConsole.EXE –p –i "OracleDB_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforOracleConsole.EXE -p -i "OracleDB_1,Sql_1" "machine2passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     

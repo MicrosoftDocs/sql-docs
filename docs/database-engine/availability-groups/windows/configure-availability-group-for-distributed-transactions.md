@@ -1,7 +1,8 @@
 ---
-title: "Configure availability group for distributed transactions | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/22/2018"
+title: "Configure distributed transactions for an availability group"
+description: "Describes how to configure distributed transactions for databases within an Always On availability group. "
+ms.custom: "seodec18"
+ms.date: "02/06/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure availability group for distributed transactions
+# Configure distributed transactions for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group. This article explains how to configure an availability group for distributed transactions  
@@ -81,7 +82,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->On [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] you cannot alter an availability group for distributed transactions. To change the setting drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
+>Starting with [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] versions before Service Pack 2, you need to drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
 
 ## <a name="distTran"/>Distributed transactions - technical concepts
 
@@ -186,4 +187,4 @@ For more information about resolving in-doubt transactions, see [Resolve Transac
 
 [Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[How It Works: Session/SPID (–2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[How It Works: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

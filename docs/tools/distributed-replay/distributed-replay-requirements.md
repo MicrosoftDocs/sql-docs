@@ -34,7 +34,7 @@ manager: craigg
   
 -   A single trace file that has the `.trc` extension.  
   
--   A set of rollover trace files that follow the file rollover naming convention, for example: `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, … `<TraceFile>_n.trc`.  
+-   A set of rollover trace files that follow the file rollover naming convention, for example: `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, ... `<TraceFile>_n.trc`.  
   
 ### Input Trace Events and Columns  
  The input trace data must contain specific events and columns to be replayed by Distributed Replay. The **TSQL_Replay** template in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] contains all of the required events and columns, in addition to extra information. For more information about that template, see [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  

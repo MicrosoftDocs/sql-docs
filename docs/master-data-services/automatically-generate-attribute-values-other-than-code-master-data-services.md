@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
@@ -17,7 +16,7 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity’s attribute values when you want an integer to be automatically assigned as the value each time business rules are applied.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity's attribute values when you want an integer to be automatically assigned as the value each time business rules are applied.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -48,11 +47,11 @@ manager: craigg
   
 9. In the **Components** pane, expand the **Actions** node.  
   
-10. In the Default Value node, click **defaults to a generated value** and drag it to the **THEN** pane’s **Actions** label.  
+10. In the Default Value node, click **defaults to a generated value** and drag it to the **THEN** pane's **Actions** label.  
   
 11. In the **Attributes** pane, click the attribute with the value you want to generated and drag it to the **Edit Action** pane's **Select attribute** label.  
   
-12. Type a value in the **Start with** and **Increment by** boxes. If members already exist, the value will be set based on the highest existing value. For example, if the highest existing value is 299 and you set **Increment by** to **1**, the next member’s value will be set to 300.  
+12. Type a value in the **Start with** and **Increment by** boxes. If members already exist, the value will be set based on the highest existing value. For example, if the highest existing value is 299 and you set **Increment by** to **1**, the next member's value will be set to 300.  
   
 13. In the **Edit Action** pane, click **Save item**.  
   

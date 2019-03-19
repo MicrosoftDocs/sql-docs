@@ -41,9 +41,9 @@ SELECT * FROM $System.<schemaRowset>
  DMV queries are an alternative to running XML/A Discover commands. For most administrators, writing a DMV query is simpler because the query syntax is based on SQL. In addition, the result set is returned in a tabular format that is easier to read and copy from.  
   
 ##  <a name="bkmk_ex"></a> Examples and Scenarios  
- A DMV query can help you answer questions about active sessions and connections, and which objects are consuming the most CPU or memory at a specific point in time. This section provides examples for scenarios where DMV queries are most commonly used. You can also review the [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) for additional insights into using DMV queries to monitor a server instance.  
+ A DMV query can help you answer questions about active sessions and connections, and which objects are consuming the most CPU or memory at a specific point in time. This section provides examples for scenarios where DMV queries are most commonly used. You can also review the [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) for additional insights into using DMV queries to monitor a server instance.  
   
- `Select * from $System.discover_object_activity` /** This query reports on object activity since the service last started. For example queries based on this DMV, see [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
+ `Select * from $System.discover_object_activity` /** This query reports on object activity since the service last started. For example queries based on this DMV, see [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
   
  `Select * from $System.discover_object_memory_usage` /** This query reports on memory consumption by object.  
   
@@ -93,7 +93,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  If a DMV is not available for a given rowset, the server returns the following error: “The \<schemarowset> request type was not recognized by the server". All other errors point to problems with the syntax.  
+>  If a DMV is not available for a given rowset, the server returns the following error: "The \<schemarowset> request type was not recognized by the server". All other errors point to problems with the syntax.  
   
 |Rowset|Description|  
 |------------|-----------------|  
@@ -158,8 +158,8 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_SETS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Returns a list of set that are defined in the current connection.|  
   
 ## See Also  
- [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [New SYSTEMRESTRICTEDSCHEMA Function for Restricted Rowsets and DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [New SYSTEMRESTRICTEDSCHEMA Function for Restricted Rowsets and DMVs](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

@@ -5,8 +5,7 @@ ms.date: "10/28/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "MSdistribution_agents_TSQL"

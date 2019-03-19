@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], roles"
@@ -46,6 +45,6 @@ manager: craigg
   
 ## See Also  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md)  
   
   

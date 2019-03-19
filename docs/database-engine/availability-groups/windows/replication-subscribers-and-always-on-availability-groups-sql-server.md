@@ -1,7 +1,7 @@
 ---
 title: "Replication Subscribers and Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/08/2018"
+ms.date: "01/16/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -18,10 +18,10 @@ manager: craigg
 # Replication Subscribers and Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  When an Always On availability group containing a database that is a replication subscriber fails over, the replication subscription might fail. For transactional subscribers, the distribution agent will continue to replicate automatically if the subscription is using the name of the availability group listener of the subscriber. For merge subscribers, a replication administrator must manually reconfigure the subscriber, by recreating the subscription.  
+  When an Always On availability group containing a database that is a replication subscriber fails over, the replication subscription might fail. For transactional replication push subscribers, the distribution agent will continue to replicate automatically after a failover if the subscription was created using the AG listener name. For transactional replication pull subscribers, the distribution agent will continue to replicate automatically after a failover, if the subscription was created using the AG listener name and the original subscriber server is up and running. This is because the distribution agent jobs only get created on the original subscriber (primary replica of the AG). For merge subscribers, a replication administrator must manually reconfigure the subscriber, by recreating the subscription.  
   
 ## What is Supported  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication supports the automatic failover of the publisher and the automatic failover of transactional subscribers. The failover of a distributor on an availability database is not supported. Merge subscribers can be part of an availability group, however manual actions are required to configure the new susbcriber after a failover. Availability Groups cannot be combined with Websync and ssNoVersion Compact scenarios.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication supports the automatic failover of the publisher and the automatic failover of transactional subscribers. Merge subscribers can be part of an availability group, however manual actions are required to configure the new susbcriber after a failover. Availability Groups cannot be combined with Websync and SQL Server Compact scenarios.  
   
 ## How to Create Transactional Subscription in an Always On Environment  
  For transactional replication, use the following steps to configure and failover a subscriber availability group:  
@@ -45,7 +45,7 @@ manager: craigg
   
     4.  Change the `-Subscriber` parameter to the subscriber's availability group listener name.  
   
- When you create your subscription following these steps, then you won’t have to do anything after a failover.  
+ When you create your subscription following these steps, then you won't have to do anything after a failover.  
   
 ## Creating a Transactional Replication Push Subscription  
   

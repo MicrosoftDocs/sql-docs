@@ -38,7 +38,7 @@ manager: craigg
  XQuery supports quantified expressions in the following form:  
   
 ```  
-( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
+( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
  You can use these expressions in a query to explicitly apply either existential or universal quantification to an expression over one or several sequences. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the expression in the `satisfies` clause has to result in one of the following: a node sequence, an empty sequence, or a Boolean value. The effective Boolean value of the result of that expression will be used in the quantification. The existential quantification that uses **some** will return True if at least one of the values bound by the quantifier has a True result in the satisfy expression. The universal quantification that uses **every** must have True for all values bound by the quantifier.  

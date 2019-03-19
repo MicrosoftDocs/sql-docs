@@ -1,28 +1,25 @@
 ---
-title: Tutorial for in-database analytics using R and SQL Server Machine Learning | Microsoft Docs
+title: Tutorial for in-database analytics using R - SQL Server Machine Learning
 description: Learn how to embed R programming language code in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/29/2018  
+ms.date: 12/18/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Tutorial: In-Database R analytics for SQL developers
+# Tutorial: R data analytics for SQL developers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this tutorial for SQL programmers, learn about R integration by building and deploying an R-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. 
+In this tutorial for SQL programmers, learn about R integration by building and deploying an R-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. You'll use T-SQL, SQL Server Management Studio, and a database engine instance with [Machine Learning Services]([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and the R language support
 
-This tutorial introduces you to R functions used in a data modeling workflow. Steps include data exploration, building and training a binary classification model, and model deployment. You'll use sample data from the New York City Taxi and Limosine Commission, and the model you will build predicts whether a trip is likely to result in a tip based on the time of day, distance travelled, and pick-up location. All of the R code used in this tutorial is wrapped in stored procedures that you create and run in Management Studio.
+This tutorial introduces you to R functions used in a data modeling workflow. Steps include data exploration, building and training a binary classification model, and model deployment. The model you will build predicts whether a trip is likely to result in a tip based on the time of day, distance travelled, and pick-up location. 
 
+All of the R code used in this tutorial is wrapped in stored procedures that you create and run in Management Studio.
 
-> [!NOTE]
-> 
-> This tutorial is available in both R and Python. For the Python version, see [In-database analytics for Python developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
-
-## Overview
+## Background for SQL developers
 
 The process of building a machine learning solution is a complex one that can involve multiple tools, and the coordination of subject matter experts across several phases:
 
@@ -31,9 +28,9 @@ The process of building a machine learning solution is a complex one that can in
 + training and tuning the model
 + deployment to production
 
-Development and testing of the actual code is best performed using a dedicated development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Development and testing of the actual code is best performed using a dedicated R development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-Whether you are a SQL programmer new to R, or an R developer new to SQL, this multi-part tutorial is introduces a typical workflow for conducting in-database analytics with R and SQL Server. 
+The purpose of this multi-part tutorial is an introduction to a typical workflow for migrating "finished R code" to  SQL Server. 
 
 - [Lesson 1: Explore and visualize data shape and distribution by calling R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
@@ -63,4 +60,4 @@ This tutorial assumes familiarity with basic database operations such as creatin
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Set up the NYC Taxi database](demo-data-nyctaxi-in-sql.md)
+> [Explore and visualize data using R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)

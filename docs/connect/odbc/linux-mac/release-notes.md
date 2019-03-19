@@ -14,6 +14,16 @@ manager: kenvh
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS
+
+**New distributions supported**: SuSE 15, Ubuntu 18.10, macOS 10.14
+
+**Features Added**:
+
+- Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode, for more information see [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md)
+- Ability to stream input parameters against Always Encrypted columns, for more information see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA distributed transactions, for more information see [Using XA Transactions](../use-xa-with-dtc.md)
+
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS
 
 **New distributions supported**:

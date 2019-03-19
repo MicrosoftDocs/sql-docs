@@ -49,7 +49,7 @@ manager: craigg
   
 6.  On the **Select Decision Tree** page, choose an individual tree to display.  
   
-     A tree models the interactions that lead to a particular outcome you’ve modeled; therefore, even if your model contains multiple outcomes, you can display only one tree at a time.  
+     A tree models the interactions that lead to a particular outcome you've modeled; therefore, even if your model contains multiple outcomes, you can display only one tree at a time.  
   
 7.  In the **Select Decision Tree** dialog box, you can also set these rendering options:  
   

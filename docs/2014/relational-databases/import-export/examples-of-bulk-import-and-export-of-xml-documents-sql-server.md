@@ -49,7 +49,7 @@ manager: craigg
 -   E. [Bulk exporting XML data](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Bulk importing XML data as a binary byte stream  
- When you bulk import XML data from a file that contains an encoding declaration that you want to apply, specify the SINGLE_BLOB option in the OPENROWSET(BULK…) clause. The SINGLE_BLOB option makes sure that the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports the data according to the encoding scheme specified in the XML declaration.  
+ When you bulk import XML data from a file that contains an encoding declaration that you want to apply, specify the SINGLE_BLOB option in the OPENROWSET(BULK...) clause. The SINGLE_BLOB option makes sure that the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports the data according to the encoding scheme specified in the XML declaration.  
   
 #### Sample Table  
  To test example A, you must create sample table `T`.  
@@ -145,7 +145,7 @@ GO
   
  To work around this problem, you can import XML data from a data file that contains a DTD by using the `OPENROWSET(BULK...)` function and then specifying the `CONVERT` option in the `SELECT` clause of the command. The basic syntax for the command is:  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### Sample Data File  
  Before you can test this bulk import example, create a file (`C:\temp\Dtdfile.xml`) that contains the following sample instance:  

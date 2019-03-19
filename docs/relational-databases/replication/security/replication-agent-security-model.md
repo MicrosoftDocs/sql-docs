@@ -24,7 +24,7 @@ manager: craigg
 ---
 # Replication Agent Security Model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Manage Logins and Passwords in Replication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+  The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
   
 > [!IMPORTANT]  
 >  When a member of the **sysadmin** fixed server role configures replication, replication agents can be configured to impersonate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. This is done by not specifying a login and password for a replication agent; however, we do not recommend this approach. Instead, as a security best practice, we recommend that you specify an account for each agent that has the minimum permissions that are described in the section "Permissions That Are Required by Agents" later in this topic.  
@@ -68,8 +68,8 @@ manager: craigg
 |Log Reader Agent|**\<Publisher>-\<PublicationDatabase>-\<integer>**|  
 |Merge Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
 |Merge Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
-|Distribution Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>***|  
-|Distribution Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>***\*|  
+|Distribution Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Distribution Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|  
 |Distribution Agent for push subscriptions to non-SQL Server Subscribers|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
 |Queue Reader Agent|**[\<Distributor>].\<integer>**|  
   
@@ -88,7 +88,7 @@ manager: craigg
   
 ## See Also  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

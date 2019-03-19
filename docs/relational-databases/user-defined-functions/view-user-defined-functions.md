@@ -49,7 +49,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To show a user-defined function’s properties  
+#### To show a user-defined function's properties  
   
 1.  In **Object Explorer**, click the plus sign next to the database that contains the function to which you want to view the properties, and then click the plus sign to expand the **Programmability** folder.  
   
@@ -65,7 +65,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  Right-click the function of which you want to view the properties and select **Properties**.  
   
-     The following properties appear in the **Function Properties –** *function_name* dialog box.  
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
      **Database**  
      The name of the database containing this function.  

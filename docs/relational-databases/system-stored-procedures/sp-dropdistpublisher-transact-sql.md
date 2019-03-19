@@ -5,8 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropdistpublisher"
@@ -35,7 +34,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'**_publisher_**'**  
  Is the Publisher to drop. *publisher* is **sysname**, with no default.  
   
  [ **@no_checks=** ] *no_checks*  

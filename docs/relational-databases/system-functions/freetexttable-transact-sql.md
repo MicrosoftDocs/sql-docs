@@ -75,7 +75,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  LANGUAGE *language_term*  
  Is the language whose resources will be used for word breaking, stemming, and thesaurus and stopword removal as part of the query. This parameter is optional and can be specified as a string, integer, or hexadecimal value corresponding to the locale identifier (LCID) of a language. If *language_term* is specified, the language it represents will be applied to all elements of the search condition. If no value is specified, the column full-text language is used.  
   
- If documents of different languages are stored together as binary large objects (BLOBs) in a single column, the locale identifier (LCID) of a given document determines what language is used to index its content. When querying such a column, specifying *LANGUAGE**language_term* can increase the probability of a good match.  
+ If documents of different languages are stored together as binary large objects (BLOBs) in a single column, the locale identifier (LCID) of a given document determines what language is used to index its content. When querying such a column, specifying *LANGUAGE language_term* can increase the probability of a good match.  
   
  When specified as a string, *language_term* corresponds to the **alias** column value in the [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) compatibility view.  The string must be enclosed in single quotation marks, as in '*language_term*'. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hexadecimal value of the LCID. The hexadecimal value must not exceed eight digits, including leading zeros.  
   
@@ -120,7 +120,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### B. Using FREETEXT in an INNER JOIN  
- The following example returns the category name and description of all categories that relate to `sweet`, `candy`, `bread`, `dry`, or `meat`.  
+ The following example returns the description and rank of any products with a description that matches the meaning of `high level of performance`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,7 +156,7 @@ ORDER BY RANK DESC;
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  The LANGUAGE *language_term* paramete*r* is not required to use the *top_n_by_rank* parameter*.*  
   
 ## See Also  

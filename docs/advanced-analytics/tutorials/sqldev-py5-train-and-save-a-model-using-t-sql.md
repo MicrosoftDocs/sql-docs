@@ -1,5 +1,6 @@
 ---
-title: Train and save a Python model using T-SQL | Microsoft Docs
+title: Train and save a Python model using T-SQL - SQL Server Machine Learning
+description: Python tutorial showing how to train and save a model using Transact-SQL on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -25,7 +26,7 @@ You load the modules and call the necessary functions to create and train the mo
 
     This stored procedure should already be created for you, but you can run the following code to create it:
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
     GO
 
@@ -43,20 +44,10 @@ You load the modules and call the necessary functions to create and train the mo
 
 2. To divide your data using a custom split, run the stored procedure, and type an integer that represents the percentage of data allocated to the training set. For example, the following statement would allocate 60% of data to the training set.
 
-    ```SQL
+    ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
-
-## Add a name column in nyc_taxi_models
-
-Scripts in this tutorial store a model name as a label for generated models. The model name is used in queries to select a revoscalepy or SciKit model.
-
-1. In Management Studio, open the **nyc_taxi_models** table.
-
-2. Right-click **Columns** and click **New Column**. Set the column name to *name*, with a type **nchar(250)**, and allow nulls.
-
-    ![Name column for storing model names](media/sqldev-python-newcolumn.png)
 
 ## Build a logistic regression model
 
@@ -73,7 +64,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
 
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure **PyTrainScikit**.  The stored procedure contains a definition of the input data, so you don't need to provide an input query.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
@@ -112,7 +103,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
 
 2. Run the following SQL statements to insert the trained model into table nyc\_taxi_models.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
@@ -132,11 +123,11 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
 
 This stored procedure uses the new **revoscalepy** package, which is a new package for Python. It contains objects, transformation, and algorithms similar to those provided for the R language's **RevoScaleR** package. 
 
-By using **revoscalepy**, you can create remote compute contexts, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more. For more information, see [what is revoscalepy?](../python/what-is-revoscalepy.md)
+By using **revoscalepy**, you can create remote compute contexts, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more. For more information, see [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md) and [revoscalepy function reference](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure _TrainTipPredictionModelRxPy_.  Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
     GO
 
@@ -177,7 +168,7 @@ By using **revoscalepy**, you can create remote compute contexts, move data betw
 
 2. Run the stored procedure as follows to insert the trained **revoscalepy** model into the table *nyc_taxi_models*.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);

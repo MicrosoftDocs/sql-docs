@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 ---
 
 # Start Report Builder
@@ -61,7 +61,7 @@ ms.author: maggies
 
 ## Next steps
 
-[Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+[Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

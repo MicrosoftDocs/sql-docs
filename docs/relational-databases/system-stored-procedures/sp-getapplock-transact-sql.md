@@ -86,7 +86,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  Only a member of the database principal specified in the @DbPrincipal parameter can acquire application locks that specify that principal. Members of the dbo and db_owner roles are implicitly considered members of all roles.  
   
- Locks can be explicitly released with sp_releaseapplock. When an application calls sp_getapplock multiple times for the same lock resource, sp_releaseapplock must be called the same number of times to release the lock.  
+ Locks can be explicitly released with sp_releaseapplock. When an application calls sp_getapplock multiple times for the same lock resource, sp_releaseapplock must be called the same number of times to release the lock.  When a lock is opened with the `Transaction` lock owner, that lock is released when the transaction is committed or rolled back.
   
  If sp_getapplock is called multiple times for the same lock resource, but the lock mode that is specified in any of the requests is not the same as the existing mode, the effect on the resource is a union of the two lock modes. In most cases, this means the lock mode is promoted to the stronger of the lock modes, the existing mode, or the newly requested mode. This stronger lock mode is held until the lock is ultimately released even if lock release calls have occurred before that time. For example, in the following sequence of calls, the resource is held in `Exclusive` mode instead of in `Shared` mode.  
   

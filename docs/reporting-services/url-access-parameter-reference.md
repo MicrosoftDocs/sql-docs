@@ -113,7 +113,7 @@ ms.author: maghan
   
 -   *Stylesheet*: Specifies a style sheet to be applied to the HTML Viewer.  
   
--   Device Information Setting: Specifies a device information setting in the form of `rc:tag=value`, where *tag* is the name of a device information setting specific to the rendering extension that is currently used (see the description for the *Format* parameter). For example, you can use the *OutputFormat* device information setting for the IMAGE rendering extension to render the report to a JPEG image using the following parameters in the URL access string: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Device Information Setting: Specifies a device information setting in the form of `rc:tag=value`, where *tag* is the name of a device information setting specific to the rendering extension that is currently used (see the description for the *Format* parameter). For example, you can use the *OutputFormat* device information setting for the IMAGE rendering extension to render the report to a JPEG image using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Report Server Commands (rs:)  
  Report server commands are prefixed with *rs:* and are used to target the report server:  
@@ -306,7 +306,7 @@ ms.author: maghan
   
 -   *AsyncRender*: Controls whether a report is rendered asynchronously. The default value is **true**, which specifies that a report be rendered asynchronously. The value must be a Boolean value of **true** or **false**.  
   
--   *ParamMode*: Controls how the Report Viewer Web Part’s parameter prompt area is displayed in full-page view. The default value is **Full**. Valid values are:  
+-   *ParamMode*: Controls how the Report Viewer Web Part's parameter prompt area is displayed in full-page view. The default value is **Full**. Valid values are:  
   
     -   **Full**: display the parameter prompt area.  
   
@@ -320,7 +320,7 @@ ms.author: maghan
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: Controls how the Report Viewer Web Part’s document map area is displayed in full-page view. The default value is **Full**. Valid values are:  
+-   *DocMapMode*: Controls how the Report Viewer Web Part's document map area is displayed in full-page view. The default value is **Full**. Valid values are:  
   
     -   **Full**: display the document map area.  
   
@@ -328,7 +328,7 @@ ms.author: maghan
   
     -   **Hidden**: hide the document map area.  
   
--   *DockToolBar*: Controls whether the Report Viewer Web Part’s toolbar is docked to the top or bottom. Valid values are **Top** and **Bottom**. The default value is **Top**.  
+-   *DockToolBar*: Controls whether the Report Viewer Web Part's toolbar is docked to the top or bottom. Valid values are **Top** and **Bottom**. The default value is **Top**.  
   
      For example in **SharePoint** mode, to dock the toolbar to the bottom.  
   
@@ -336,7 +336,7 @@ ms.author: maghan
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: Controls which toolbar items are displayed. This is a bitwise enumeration value. To include a toolbar item, add the item’s value to the total value. For example: for no Actions menu, use rv:ToolBarItemsDisplayMode=63 (or 0x3F), which is 1+2+4+8+16+32; for Actions menu items only, use rv:ToolBarItemsDisplayMode=960 (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:  
+-   *ToolBarItemsDisplayMode*: Controls which toolbar items are displayed. This is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example: for no Actions menu, use rv:ToolBarItemsDisplayMode=63 (or 0x3F), which is 1+2+4+8+16+32; for Actions menu items only, use rv:ToolBarItemsDisplayMode=960 (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:  
   
     -   1 (0x1): the **Back** button  
   

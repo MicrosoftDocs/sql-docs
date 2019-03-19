@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Formatting Pointers on a Gauge (Report Builder and SSRS)
   A gauge pointer indicates the current value of the gauge. By default, when a field is added, the values that are contained in the field are aggregated into one value that is shown by the pointer on the gauge. You can add multiple pointers to the gauge to point at multiple values on the same scale, or add multiple scales and a pointer for every scale you have added. After you add a field to a gauge, you must set the maximum and minimum values on the corresponding scale to give context to the pointer value. You also have the option of setting the minimum and maximum values on a range, which shows a critical area on the scale.  
@@ -33,7 +33,7 @@ manager: craigg
 ##  <a name="DisplayingMultiple"></a> Displaying Multiple Pointers on the Gauge  
  You can add multiple pointers to the gauge to point at multiple values on the same scale. This can be useful for showing a low and a high value at the same time. To specify more than one pointer on the gauge for the same scale, right-click anywhere inside the gauge and click **Add Pointer** on the shortcut menu. Alternatively, you can add a scale by right-clicking anywhere in the gauge and clicking **Add Scale**. Then you can add a new pointer, and it will automatically be associated with the last scale.  
   
- When pointers overlap, the drawing order of the pointers is determined by the order in which they are added to the gauge. You cannot reorder the drawing order of the pointers by changing the order of the fields in the data pane. To change the order of drawing for multiple pointers, open the Properties pane and click **Pointers (…)**. Then, change the order of the pointers in the Pointer collection.  
+ When pointers overlap, the drawing order of the pointers is determined by the order in which they are added to the gauge. You cannot reorder the drawing order of the pointers by changing the order of the fields in the data pane. To change the order of drawing for multiple pointers, open the Properties pane and click **Pointers (...)**. Then, change the order of the pointers in the Pointer collection.  
   
   
 ##  <a name="SettingGradients"></a> Setting Gradients on a Needle Cap  

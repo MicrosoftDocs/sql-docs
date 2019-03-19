@@ -2,7 +2,7 @@
 title: "Migrate SQL Server logins with Data Migration Assistant | Microsoft Docs"
 description: Learn how to migrate SQL Server logins with Data Migration Assistant
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -25,9 +25,9 @@ This article provides an overview of migrating SQL Server logins using Data Migr
 
 - You can migrate the logins based on a Windows principal (such as a domain user or a Windows domain group). You can also migrate logins created based on SQL authentication, also called SQL Server logins.
 
-- Data Migration Assistant currently doesn’t support the logins associated with a stand-alone security certificate (logins mapped to certificate), a stand-alone asymmetric key (logins mapped to asymmetric key), and logins mapped to credentials.
+- Data Migration Assistant currently doesn't support the logins associated with a stand-alone security certificate (logins mapped to certificate), a stand-alone asymmetric key (logins mapped to asymmetric key), and logins mapped to credentials.
 
-- Data Migration Assistant doesn’t move the **sa** login and server principles with names enclosed by double hash marks (\#\#), which are for internal use only.
+- Data Migration Assistant doesn't move the **sa** login and server principles with names enclosed by double hash marks (\#\#), which are for internal use only.
 
 - By default, Data Migration Assistant selects all the qualified logins to migrate. Optionally, you can select specific logins to migrate. When Data Migration Assistant migrates all qualified logins, the login-user mapping remains intact in the databases that are migrated. 
 

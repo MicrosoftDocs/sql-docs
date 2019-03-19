@@ -35,18 +35,18 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## Arguments  
  *progid*  
- Is the programmatic identifier (ProgID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'***OLEComponent***.***Object***'**  
+ Is the programmatic identifier (ProgID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'**_OLEComponent_**.**_Object_**'**  
   
  *OLEComponent* is the component name of the OLE Automation server, and *Object* is the name of the OLE object. The specified OLE object must be valid and must support the **IDispatch** interface.  
   
  For example, SQLDMO.SQLServer is the ProgID of the SQL-DMO **SQLServer** object. SQL-DMO has a component name of SQLDMO, the **SQLServer** object is valid, and (like all SQL-DMO objects) the **SQLServer** object supports **IDispatch**.  
   
  *clsid*  
- Is the class identifier (CLSID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'{***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'**. The specified OLE object must be valid and must support the **IDispatch** interface.  
+ Is the class identifier (CLSID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'{**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'**. The specified OLE object must be valid and must support the **IDispatch** interface.  
   
  For example, {00026BA1-0000-0000-C000-000000000046} is the CLSID of the SQL-DMO **SQLServer** object.  
   
- *objecttoken* **OUTPUT**  
+ _objecttoken_ **OUTPUT**  
  Is the returned object token, and must be a local variable of data type **int**. This object token identifies the created OLE object and is used in calls to the other OLE Automation stored procedures.  
   
  *context*  

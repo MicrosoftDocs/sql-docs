@@ -30,7 +30,7 @@ manager: craigg
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
--   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)DROP INDEX  
+-   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
   
 ##  <a name="func"></a> System Functions  
   
@@ -44,11 +44,11 @@ manager: craigg
   
 -   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
-##  <a name="cat"></a> System Views – Catalog Views  
+##  <a name="cat"></a> System Views - Catalog Views  
   
 -   [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
   
-##  <a name="dmv"></a> System Views – Dynamic Management Views  
+##  <a name="dmv"></a> System Views - Dynamic Management Views  
   
 -   [sys.dm_filestream_file_io_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql.md)  
   

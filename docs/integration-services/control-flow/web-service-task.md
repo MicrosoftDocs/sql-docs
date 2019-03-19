@@ -78,7 +78,7 @@ manager: craigg
   
 ### Options  
  **HTTPConnection**  
- Select a connection manager in the list, or click \<**New connection…**> to create a new connection manager.  
+ Select a connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
   
 > [!IMPORTANT]  
 >  The HTTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
@@ -86,7 +86,7 @@ manager: craigg
  **Related Topics:**  [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Server Page&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(…)** and locate this file.  
+ Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(...)** and locate this file.  
   
  If you have already manually downloaded the WSDL file to the computer, select this file. However, if the WSDL file has not yet been downloaded, follow these steps:  
   
@@ -131,7 +131,7 @@ manager: craigg
  Select a Web method from the list for the task to execute.  
   
  **WebMethodDocumentation**  
- Type a description of Web method, or the click the browse button **(…)** and then type the description in the **Web Method Documentation** dialog box.  
+ Type a description of Web method, or the click the browse button **(...)** and then type the description in the **Web Method Documentation** dialog box.  
   
  **Name**  
  Lists the names of the inputs to the Web method.  
@@ -164,13 +164,13 @@ manager: craigg
   
 #### OutputType = File Connection  
  **File**  
- Select a File connection manager in the list or click \<**New Connection…**> to create a new connection manager.  
+ Select a File connection manager in the list or click \<**New Connection...**> to create a new connection manager.  
   
  **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### OutputType = Variable  
  **Variable**  
- Select a variable in the list or click \<**New Variable…**> to create a new variable.  
+ Select a variable in the list or click \<**New Variable...**> to create a new variable.  
   
  **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

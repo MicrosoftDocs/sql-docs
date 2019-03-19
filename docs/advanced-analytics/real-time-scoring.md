@@ -1,5 +1,5 @@
 ---
-title: Real-time scoring in SQL Server machine learning | Microsoft Docs
+title: Real-time scoring using sp_rxPredict stored procedure - SQL Server Machine Learning Services
 description: Generate predictions using sp_rxPredict, scoring data inputs against a pre-trained model written in R on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +10,6 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-
 # Real-time scoring with sp_rxPredict in SQL Server machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -18,7 +17,7 @@ Real-time scoring uses the [sp_rxPredict](https://docs.microsoft.com//sql/relati
 
 ## How real-time scoring works
 
-Real-time scoring is supported in both SQL Server 2017 and SQL Server 2016, on [supported model types](#bkmk_py_supported_algos) for linear and logistic regression and decision tree modeling. It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
+Real-time scoring is supported in both SQL Server 2017 and SQL Server 2016, on specific model types based on RevoScaleR or MicrosoftML functions such as  [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
 
 Because a trained model can be used for scoring without having to call an external language runtime, the overhead of multiple processes is reduced. This supports much faster prediction performance for production scoring scenarios. Because the data never leaves SQL Server, results can be generated and inserted into a new table without any data translation between R and SQL.
 
@@ -173,7 +172,7 @@ You call sp\_rxPredict as you would any other stored procedure. In the current r
 
 Because the binary format is the same that is used by the PREDICT function, you can use the models and data table from the preceding example.
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

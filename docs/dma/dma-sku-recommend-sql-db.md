@@ -2,7 +2,7 @@
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---
@@ -21,13 +21,10 @@ manager: craigg
 
 The task of migrating your databases to the cloud is a complicated and time-consuming, involving a number of variables. Picking the right Azure database target and SKU for your database can be challenging. Our goal with the Database Migration Assistant (DMA) is to address these questions and to make your database migration experience simple and effective.
 
-This article focuses primarily on DMA’s Azure SQL Database SKU recommendations feature, which allows you to identify the minimum recommended Azure SQL Database SKU based on performance counters collected from the computer(s) hosting your databases. This feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to provision all your databases to Azure in bulk.
+This article focuses primarily on DMA's Azure SQL Database SKU recommendations feature, which allows you to identify the minimum recommended Azure SQL Database SKU based on performance counters collected from the computer(s) hosting your databases. This feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to provision all your databases to Azure in bulk.
 
 > [!NOTE] 
 > This functionality is currently available only via the Command Line Interface (CLI). Support for this feature via the DMA user interface will be added in an upcoming release.
-
-> [!IMPORTANT]
-> SKU recommendations for Azure SQL Database are currently available for migrations from SQL Server 2016 or later.
 
 The following instructions help you determine Azure SQL Database SKU recommendations and provision the associated databases to Azure, by using Data Migration Assistant.
 
@@ -61,7 +58,7 @@ You don't need to perform this task for each database individually. The performa
     .\SkuRecommendationDataCollectionScript.ps1
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 10
+     -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
     
@@ -130,8 +127,8 @@ The TSV output file will contain the columns shown in the following graphic:
 
 A description of each column follows.
 
-- **DatabaseName** – The name of your database.
-- **MetricName** – Whether or not a metric was executed.
+- **DatabaseName** - The name of your database.
+- **MetricName** - Whether or not a metric was executed.
 - **MetricType** - Recommended Azure SQL Database tier.
 - **MetricValue** - Recommended Azure SQL Database SKU.
 - **SQLMiEquivalentCores** - If you choose to go for Azure SQL Database Managed Instance, you can use this value for core count.
@@ -147,11 +144,11 @@ The HTML file contains this information in a graphical format. You can use the H
 With just a few clicks, you can use the recommendations from the previous step to provision target databases in Azure to which you can migrate your databases. You can also make changes to the recommendations by updating the HTML file as follows.
 
 1. Open the HTML file and enter the following information:
-    - **Subscription ID** – The subscription ID of the Azure subscription to which you want to provision the databases.
-    - **Region** – The region in which to provision databases. Make sure your subscription supports the select region.
-    - **Resource Group** – The resource group to which you want to deploy the databases. Enter a resource group that exists.
-    - **Server Name** – The Azure SQL Database server to which you want the databases deployed. If you enter a server name that doesn't exist, it will be created.
-    - **Admin Username\Password** – The server admin username and password.
+    - **Subscription ID** - The subscription ID of the Azure subscription to which you want to provision the databases.
+    - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
+    - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
+    - **Server Name** - The Azure SQL Database server to which you want the databases deployed. If you enter a server name that doesn't exist, it will be created.
+    - **Admin Username\Password** - The server admin username and password.
 
 2. Review recommendations for each database, and modify the pricing tier, compute level, and max data size as needed. Be sure to deselect any databases that you do not currently want to provision.
 

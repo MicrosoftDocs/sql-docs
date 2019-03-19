@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Unique numeric id associated with the node. Key for this view.|Unique across scale-out cluster regardless of type.|  
-|type|**nvarchar(32)**|Type of the node.|'COMPUTE', ‘HEAD’|  
+|type|**nvarchar(32)**|Type of the node.|'COMPUTE', 'HEAD'|  
 |name|**nvarchar(32)**|Logical name of the node.|Any string of appropriate length.|  
 |address|**nvarchar(32)**|P address of this node.|IP address range|  
   

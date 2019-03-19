@@ -27,7 +27,7 @@ manager: craigg
 >  Windows does not enable **Extended Protection** by default. For information about how to enable **Extended Protection** in Windows, see [Extended Protection for Authentication](https://support.microsoft.com/kb/968389).  
   
 ## Description of Extended Protection  
- **Extended Protection** uses service binding and channel binding to help prevent an authentication relay attack. In an authentication relay attack, a client that can perform NTLM authentication (for example, Windows Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, a .NET SqlClient application, etc.), connects to an attacker (for example, a malicious CIFS file server). The attacker uses the client’s credentials to masquerade as the client and authenticate to a service (for example, an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service).  
+ **Extended Protection** uses service binding and channel binding to help prevent an authentication relay attack. In an authentication relay attack, a client that can perform NTLM authentication (for example, Windows Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, a .NET SqlClient application, etc.), connects to an attacker (for example, a malicious CIFS file server). The attacker uses the client's credentials to masquerade as the client and authenticate to a service (for example, an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service).  
   
  There are two variations of this attack:  
   
@@ -41,7 +41,7 @@ manager: craigg
  Service binding addresses luring attacks by requiring a client to send a signed service principal name (SPN) of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service that the client intends to connect to. As part of the authentication response, the service validates that the SPN received in the packet matches its own SPN. If a client is lured to connect to an attacker, the client will include the signed SPN of the attacker. The attacker cannot relay the packet to authenticate to the real [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service as the client, because it would include the SPN of the attacker. Service binding incurs a one-time, negligible cost, but it does not address spoofing attacks. Service Binding occurs when a client application does not use encryption to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### Channel Binding  
- Channel binding establishes a secure channel (Schannel) between a client and an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. The service verifies the authenticity of the client by comparing the client’s channel binding token (CBT) specific to that channel, with its own CBT. Channel binding addresses both luring and spoofing attacks. However, it incurs a larger runtime cost, because it requires Transport Layer Security (TLS) encryption of all the session traffic. Channel Binding occurs when a client application uses encryption to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], regardless of whether encryption is enforced by the client or by the server.  
+ Channel binding establishes a secure channel (Schannel) between a client and an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. The service verifies the authenticity of the client by comparing the client's channel binding token (CBT) specific to that channel, with its own CBT. Channel binding addresses both luring and spoofing attacks. However, it incurs a larger runtime cost, because it requires Transport Layer Security (TLS) encryption of all the session traffic. Channel Binding occurs when a client application uses encryption to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], regardless of whether encryption is enforced by the client or by the server.  
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 and SSL 3.0. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail.  
@@ -81,7 +81,7 @@ manager: craigg
   
 1.  On the **Start** menu, choose **All Programs**, point to **Microsoft SQL Server** and then click **SQL Server Configuration Manager**.  
   
-2.  Expand **SQL Server Network Configuration**, and then right-click **Protocols for** *\<*InstanceName*>*, and then click **Properties**.  
+2.  Expand **SQL Server Network Configuration**, and then right-click **Protocols for** _\<_InstanceName*>*, and then click **Properties**.  
   
 3.  For both channel binding and service binding, on the **Advanced** tab, set **Extended Protection** to the appropriate setting.  
   

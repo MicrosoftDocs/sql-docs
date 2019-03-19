@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "ProtocolDLL Property (ClientNetworkProtocol Class)"
@@ -22,7 +20,7 @@ ms.author: carlrab
 manager: craigg
 ---
 # ProtocolDLL Property (ClientNetworkProtocol Class)
-  Gets the name of the .dll file required by the network protocol specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
+  Gets the name of the .dll file required by the network protocol specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## Syntax  
   
@@ -42,6 +40,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

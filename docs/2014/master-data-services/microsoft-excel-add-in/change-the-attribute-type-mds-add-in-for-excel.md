@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
@@ -46,7 +45,7 @@ manager: craigg
   
 -   Change the data type of the attribute.  
   
--   Generate a copy of the attribute with the suffix “_old” that does not contain any value. This is called a **deprecated** attribute.  
+-   Generate a copy of the attribute with the suffix "_old" that does not contain any value. This is called a **deprecated** attribute.  
   
  However, all the existing dependencies on the original attribute will point to the deprecated attribute, and not to the changed one.  
   

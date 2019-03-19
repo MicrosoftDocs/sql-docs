@@ -2,13 +2,14 @@
 title: "DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
-ms.prod: ""
+ms.prod: sql
+ms.technology: data-warehouse
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
@@ -83,7 +84,7 @@ AND pdw_node_id = 201001
 order by request_id, [dms_step_index], [distribution_id];  
 ```  
   
-Based on the results of the preceding query, use the sql_spid and pdw_node_id as parameters to DBCC PDW_SHOWEXEUCTIONPLAN. For example, the following command shows the execution plan for pdw_node_id 201001 and sql_spid 375.
+Based on the results of the preceding query, use the sql_spid and pdw_node_id as parameters to DBCC PDW_SHOWEXECUTIONPLAN. For example, the following command shows the execution plan for pdw_node_id 201001 and sql_spid 375.
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  

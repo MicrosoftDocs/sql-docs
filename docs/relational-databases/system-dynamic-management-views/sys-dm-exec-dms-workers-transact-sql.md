@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |compute_node_id|**int**|Node that the worker is running on.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|||  
 |type|**nvarcha(32)**|||  
-|status|**nvarchar(32)**|Status of this step|‘Pending', ‘Running', ‘Complete', ‘Failed', ‘UndoFailed', ‘PendingCancel', ‘Cancelled', ‘Undone', ‘Aborted'|  
+|status|**nvarchar(32)**|Status of this step|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  

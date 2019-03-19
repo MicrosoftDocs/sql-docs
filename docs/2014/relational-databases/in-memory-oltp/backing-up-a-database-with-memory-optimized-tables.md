@@ -15,7 +15,7 @@ manager: craigg
   Memory-optimized tables are backed up as part of regular database backups. As for disk-based tables, the CHECKSUM of data and delta file pairs is validated as part of the database backup to detect storage corruption.  
   
 > [!NOTE]  
->  During a backup, if you detect a CHECKSUM error in one or more files in a memory-optimized filegroup, you will not be able to restore and restart the database. In that situation, you must, restore your database with the last known good backup. If you don’t have a backup, you can export the data from memory-optimized tables and disk-based tables and reload after you drop and recreate the database.  
+>  During a backup, if you detect a CHECKSUM error in one or more files in a memory-optimized filegroup, you will not be able to restore and restart the database. In that situation, you must, restore your database with the last known good backup. If you don't have a backup, you can export the data from memory-optimized tables and disk-based tables and reload after you drop and recreate the database.  
   
  A full backup of a database with one or more memory-optimized tables consists of the allocated storage for disk-based tables (if any), the active transaction log, and the data and delta file pairs (also known as checkpoint file pairs) for memory-optimized tables. However, as described in [Durability for Memory-Optimized Tables](memory-optimized-tables.md), the storage used by memory-optimized tables can be much larger than its size in memory, and it affects the size of the database backup.  
   
@@ -38,7 +38,7 @@ manager: craigg
 ### Estimating Size of Full Database Backup  
   
 > [!IMPORTANT]  
->  It’s recommended that you not use the BackupSizeInBytes value to estimate the backup size for In-Memory OLTP.  
+>  It's recommended that you not use the BackupSizeInBytes value to estimate the backup size for In-Memory OLTP.  
   
  The first workload scenario is for (mostly) insert. In this scenario, most data files will be in the Active state, fully loaded, and with very few deleted rows. The size of database backup up will be close to the size of data in memory.  
   

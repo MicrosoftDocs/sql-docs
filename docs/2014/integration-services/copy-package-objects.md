@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "control flow [Integration Services], copying objects"
@@ -31,7 +30,7 @@ manager: craigg
 4.  Select the control flow or data flow items to copy. You can either select items one at a time by pressing the Shift key and clicking the item or select items as a group by dragging the pointer across the items you want to select.  
   
     > [!IMPORTANT]  
-    >  The precedence constraints and paths that connect items are not selected automatically when you select the two items that they connect. To copy an ordered workflow—a segment of control flow or data flow—make sure to also copy the precedence constrains and the paths.  
+    >  The precedence constraints and paths that connect items are not selected automatically when you select the two items that they connect. To copy an ordered workflow-a segment of control flow or data flow-make sure to also copy the precedence constrains and the paths.  
   
 5.  Right-click a selected item and click **Copy**.  
   

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # rsconfig Utility (SSRS)
   The **rsconfig.exe** utility encrypts and stores connection and account values in the RSReportServer.config file. Encrypted values include report server database connection information and account values used for unattended report processing.  
@@ -26,13 +26,13 @@ manager: craigg
 ```  
   
       rsconfig {-?}  
-{–cconnection}  
-{–eunattendedaccount}  
-{–mcomputername}  
-{–iinstancename}  
-{–sservername}  
-{–ddatabasename}  
-{–aauthmethod}  
+{-cconnection}  
+{-eunattendedaccount}  
+{-mcomputername}  
+{-iinstancename}  
+{-sservername}  
+{-ddatabasename}  
+{-aauthmethod}  
 {-uusername}  
 {-ppassword}  
 {-ttrace}  

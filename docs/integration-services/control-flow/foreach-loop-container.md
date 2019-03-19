@@ -149,7 +149,7 @@ This procedure describes how to configure a Foreach Loop container, including pr
   
     -   To use the Foreach SMO enumerator, select an existing ADO.NET connection or click **New connection** in the **Connection** list, and then either type the string to use or click **Browse**. If you click **Browse**, in the **Select SMO Enumeration** dialog box, select the object type to enumerate and the enumeration type, and click **OK**.  
   
-6.  Optionally, click the browse button **(…)** in the **Expressions** text box on the **Collection** page to create expressions that update property values. For more information, see [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Optionally, click the browse button **(...)** in the **Expressions** text box on the **Collection** page to create expressions that update property values. For more information, see [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  The properties listed in the **Property** list vary by enumerator.  
@@ -207,7 +207,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 |**Foreach ADLS File Enumerator**|Enumerate files in the specified Data Lake Store directory. Selecting this value displays the dynamic options in the section, **Foreach ADLS File Enumerator**.|
   
  **Expressions**  
- Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(…)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
+ Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(...)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
   
  **Related Topics:**  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md), [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md), [Expression Builder](../../integration-services/expressions/expression-builder.md)  
   
@@ -234,11 +234,11 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  Specify the files to enumerate.  
   
 > [!NOTE]  
->  Use wildcard characters (*) to specify the files to include in the collection. For example, to include files with names that contain “abc”, use the following filter: \*abc\*.  
+>  Use wildcard characters (*) to specify the files to include in the collection. For example, to include files with names that contain "abc", use the following filter: \*abc\*.  
 >   
 >  When you specify a file name extension, the enumerator also returns files that have the same extension with additional characters appended. (This is the same behavior as that of the **dir** command in the operating system, which also compares 8.3 file names for backward compatibility.) This behavior of the enumerator could cause unexpected results. For example, you want to enumerate only Excel 2003 files, and you specify "*.xls". However, the enumerator also returns Excel 2007 files because those files have the extension, ".xlsx".  
 >   
->  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (…) to add the property expression.  
+>  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (...) to add the property expression.  
   
  **Fully qualified**  
  Select to retrieve the fully qualified path of file names. If wildcard characters are specified in the Files option, then the fully qualified paths that are returned match the filter.  
@@ -341,7 +341,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **DocumentSource**  
- If **DocumentSourceType** is set to **Direct input**, provide the XML code, or click the ellipsis (…) button to provide XML by using the **Document Source Edito**r dialog box.  
+ If **DocumentSourceType** is set to **Direct input**, provide the XML code, or click the ellipsis (...) button to provide XML by using the **Document Source Edito**r dialog box.  
   
  If **DocumentSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   

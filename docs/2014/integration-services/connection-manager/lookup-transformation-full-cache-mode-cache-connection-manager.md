@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation [Integration Services]"
@@ -56,7 +55,7 @@ manager: craigg
   
 -   [Sequence Container](../control-flow/sequence-container.md)  
   
- For a video that demonstrates how to implement a Lookup transformation in Full Cache mode using the Cache connection manager, see [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131031).  
+ For a video that demonstrates how to implement a Lookup transformation in Full Cache mode using the Cache connection manager, see [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### To implement a Lookup transformation in full cache mode in one package by using Cache connection manager and a data source in the data flow  
   

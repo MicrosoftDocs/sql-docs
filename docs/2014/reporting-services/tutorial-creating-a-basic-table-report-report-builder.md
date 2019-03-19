@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Tutorial: Creating a Basic Table Report (Report Builder)
   This tutorial teaches you to create a basic table report based on sample sales data. The following illustration shows the report you will create.  

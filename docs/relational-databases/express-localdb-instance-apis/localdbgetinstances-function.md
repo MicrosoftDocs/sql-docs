@@ -35,10 +35,10 @@ HRESULT LocalDBGetInstances(
   
 ## Parameters  
  *pInstanceNames*  
- [Output] When this function returns, contains the names of both named and default LocalDB instances on the user’s workstation.  
+ [Output] When this function returns, contains the names of both named and default LocalDB instances on the user's workstation.  
   
  *lpdwNumberOfInstances*  
- [Input/Output] On input, contains the number of slots for instance names in the *pInstanceNames* buffer. On output, contains the number of LocalDB instances found on the user’s workstation.  
+ [Input/Output] On input, contains the number of slots for instance names in the *pInstanceNames* buffer. On output, contains the number of LocalDB instances found on the user's workstation.  
   
 ## Returns  
  S_OK  

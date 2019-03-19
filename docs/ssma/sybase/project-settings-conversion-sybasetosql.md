@@ -54,7 +54,7 @@ Specifies how to handle empty or blank strings within CONVERT or CAST expression
   
 -   Select **Simple conversion** to convert the expressions without any correction.  
   
--   If **Empty string as zero numeric** is selected, then string parameter {s} will be replaced with case ltrim(rtrim({s})) WHEN “” THEN 0 else {s} END EXPRESSION  
+-   If **Empty string as zero numeric** is selected, then string parameter {s} will be replaced with case ltrim(rtrim({s})) WHEN "" THEN 0 else {s} END EXPRESSION  
   
 When you select a conversion mode in the Mode box, SSMA applies the following setting:  
   
@@ -65,7 +65,7 @@ When you select a conversion mode in the Mode box, SSMA applies the following se
 **Concatenation of NULL**  
 This setting specifies how to convert string concatenation with NULL. The following options can be set for this particular setting:  
   
--   **Wrap with ISNULL function:** If this option is set, every non-constant ‘string_expression’ in concatenation will be wrapped with ISNULL(string_expression) and NULLs will be replaced with empty string.  
+-   **Wrap with ISNULL function:** If this option is set, every non-constant 'string_expression' in concatenation will be wrapped with ISNULL(string_expression) and NULLs will be replaced with empty string.  
   
 -   **Keep current syntax**  
   
@@ -136,7 +136,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Full Mode:** Consider NULL values  
   
 **Format strings**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure no longer supports the *format_string* argument in PRINT and RAISERROR statements. The *format_string* variable supported putting replaceable parameters directly in the string, and then replacing the parameters at runtime. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires the full string by using either a string literal, or a string built by using a variable. For more information, see the “PRINT ([!INCLUDE[tsql](../../includes/tsql-md.md)])” topic in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure no longer supports the *format_string* argument in PRINT and RAISERROR statements. The *format_string* variable supported putting replaceable parameters directly in the string, and then replacing the parameters at runtime. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires the full string by using either a string literal, or a string built by using a variable. For more information, see the "PRINT ( [!INCLUDE[tsql](../../includes/tsql-md.md)])" topic in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 When SSMA encounters a *format_string* argument, it can either build a string literal using the variables or create a new variable and build a string by using that variable.  
   
@@ -308,7 +308,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **CHARINDEX function**  
 In ASE, CHARINDEX returns NULL only if all input expressions are NULL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure will return NULL if any input expression is NULL.  
   
--   To use the ASE behavior, select **Replace function**. All calls to CHARINDEX function is substituted with a call to either CHARINDEX_VARCHAR or  CHARINDEX_NVARCHAR user defined function based on the type of parameters passed (created in the user database under the schema name ‘s2ss’) to emulate the Sybase ASE behavior.  
+-   To use the ASE behavior, select **Replace function**. All calls to CHARINDEX function is substituted with a call to either CHARINDEX_VARCHAR or  CHARINDEX_NVARCHAR user defined function based on the type of parameters passed (created in the user database under the schema name 's2ss') to emulate the Sybase ASE behavior.  
   
 -   To use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure behavior, select **Keep current syntax**.  
   
@@ -343,7 +343,7 @@ ASE supports an optional *user_id* argument to the INDEX_COL function; however, 
 **INDEX_COLORDER function**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure does not have an INDEX_COLORDER system function.  
   
--   To use the ASE behavior, select **Convert function**. All calls to INDEX_COLORDER function is substituted with a call to a user defined function with same name INDEX_COLORDER (created in the user database under the schema name ‘s2ss’) which emulates the Sybase ASE behavior.  
+-   To use the ASE behavior, select **Convert function**. All calls to INDEX_COLORDER function is substituted with a call to a user defined function with same name INDEX_COLORDER (created in the user database under the schema name 's2ss') which emulates the Sybase ASE behavior.  
   
 -   To print an error message every time that INDEX_COLORDER is encountered, select **Mark with error**. SSMA will not convert references to the function, and will mark the statement with error comments.  
   
@@ -394,7 +394,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **REPLICATE function**  
 The REPLICATE function repeats a string the specified number of times. In ASE, if you specify to repeat the string zero times, the result is null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, the result is an empty string.  
   
--   To use the ASE behavior, select **Replace function**. All calls to REPLICATE function is substituted with a call to either REPLICATE_VARCHAR or REPLICATE_NVARCHAR user defined function based on the type of parameters passed (created in the user database under the schema name ‘s2ss’) to emulate the Sybase ASE behavior.  
+-   To use the ASE behavior, select **Replace function**. All calls to REPLICATE function is substituted with a call to either REPLICATE_VARCHAR or REPLICATE_NVARCHAR user defined function based on the type of parameters passed (created in the user database under the schema name 's2ss') to emulate the Sybase ASE behavior.  
   
 -   To use the default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure behavior, select **Replace Function**.  
   
@@ -416,7 +416,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **SUBSTRING function**  
 In ASE, the function `SUBSTRING(expression, start, length)` returns NULL if a start value greater than the number of characters in expression is specified, or if length equals zero. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, the equivalent expression returns an empty string.  
   
--   To use the ASE behavior, select **Replace function**. All calls to SUBSTRING function is substituted with a call to SUBSTRING_VARCHAR or SUBSTRING_NVARCHAR or SUBSTRING_VARBINARY user defined function based on the type of parameters passed (created in the user database under the schema name ‘s2ss’) to emulate the Sybase ASE behavior.  
+-   To use the ASE behavior, select **Replace function**. All calls to SUBSTRING function is substituted with a call to SUBSTRING_VARCHAR or SUBSTRING_NVARCHAR or SUBSTRING_VARBINARY user defined function based on the type of parameters passed (created in the user database under the schema name 's2ss') to emulate the Sybase ASE behavior.  
   
 -   To use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] / SQL Azure behavior, select **Keep current syntax**.  
   

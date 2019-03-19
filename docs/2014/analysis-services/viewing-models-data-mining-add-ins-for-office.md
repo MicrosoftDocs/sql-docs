@@ -28,7 +28,7 @@ manager: craigg
   
      [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
--   Use the **Document Model** wizard to generate a summary of the model’s metadata and the model’s content.  
+-   Use the **Document Model** wizard to generate a summary of the model's metadata and the model's content.  
   
      [Documenting Mining Models &#40;Data Mining Add-ins for Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   

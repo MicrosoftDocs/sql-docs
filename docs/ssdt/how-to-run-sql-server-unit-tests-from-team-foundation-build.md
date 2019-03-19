@@ -87,7 +87,7 @@ Typically, when you create a build definition to run unit tests, you specify one
   
 2.  Select a test.  
   
-3.  In the properties pane, click **Test Categories** and then click the ellipsis (…) in the right-most column.  
+3.  In the properties pane, click **Test Categories** and then click the ellipsis (...) in the right-most column.  
   
 4.  In the **Test Category** window, in the **Add New Category** box, type a name for your new test category.  
   
@@ -246,7 +246,7 @@ In this procedure, you check in all the files of your solution. These files incl
   
 5.  In the navigation bar, click **Process**.  
   
-6.  In the **Required** group, in **Items to Build**, click the browse (…) button.  
+6.  In the **Required** group, in **Items to Build**, click the browse (...) button.  
   
 7.  In the **Build Project List Editor** dialog box, click **Add**.  
   
@@ -256,7 +256,7 @@ In this procedure, you check in all the files of your solution. These files incl
   
 9. Click **OK**.  
   
-10. In the **Basic** group, in **Automated Tests**, specify the tests that you want to run. By default, the tests that are contained in files named *test\*.dll from your solution will be run.  
+10. In the **Basic** group, in **Automated Tests**, specify the tests that you want to run. By default, the tests that are contained in files named \*test\*.dll from your solution will be run.  
   
 11. On the **File** menu, click **Save** *ProjectName*.  
   

@@ -24,6 +24,8 @@ There are two main workflows you can use to contribute:
 | [Edit in your browser](#githubui) | Good for small, quick edits of any article. |
 | [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions to docs.microsoft.com. |
 
+All public contributions are validated by the SQL content team for technical accuracy and consistency. 
+
 ## <a id="githubui"></a> Edit in your browser
 
 You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. The complete process is documented in the article, [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). The following video demonstrates the end-to-end process for submitting changes in your browser:

@@ -26,7 +26,7 @@ When you have finished designing your query, you can run it.
   
 2.  Right-click anywhere in the query window, and select **Execute SQL** from the shortcut menu.  
   
-    –or–  
+    -or-  
   
     Press CTRL+R.  
   

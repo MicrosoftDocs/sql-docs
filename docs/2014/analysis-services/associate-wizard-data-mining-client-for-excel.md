@@ -74,7 +74,7 @@ manager: craigg
   
          Drillthrough is useful, for example, if you want to click on a particular itemset and see the source data.  
   
-    -   **Use temporary model**. Select this option if you don’t want the model saved on the server. Temporary models are deleted when you close Excel.  
+    -   **Use temporary model**. Select this option if you don't want the model saved on the server. Temporary models are deleted when you close Excel.  
   
 9. The wizard analyzes all possible combinations and creates a report that contains the itemsets and rules.  
   

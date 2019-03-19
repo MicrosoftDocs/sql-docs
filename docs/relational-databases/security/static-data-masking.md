@@ -8,7 +8,7 @@ ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: egranet
-ms.author: esgranet
+ms.author: aliceku
 manager: ajayj
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -82,7 +82,7 @@ The replacement is done at the storage level. As a result, it is not possible to
 
 Below is a step-by-step guide to run Static Data Masking. 
  
-1. Launch SQL Server Management studio. Connect to your database. In the **Object Explorer** pane on the left side, expand the Databases folder. Right click on the database you wish to mask. Left click on **Tasks**. Left click on **Mask database… (Preview)**.
+1. Launch SQL Server Management studio. Connect to your database. In the **Object Explorer** pane on the left side, expand the Databases folder. Right click on the database you wish to mask. Left click on **Tasks**. Left click on **Mask database... (Preview)**.
  
  ![Task Menu](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -98,7 +98,7 @@ Below is a step-by-step guide to run Static Data Masking.
  
  ![Masking functions dropdown](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- NOTE: Most of these masking functions have additional configuration parameters. For Shuffle masking, Static Data Masking provides a   default parameter. For Group Shuffle masking, Single value masking, and String Composite masking, the user has to provide configuration parameters. To change or provide configuration parameters, click on the **Configure…** option and specify an (alternative) value for the parameter in the dialog box that pops up. Detailed descriptions of each masking function are provided in [Masking Functions](#masking-functions).
+ NOTE: Most of these masking functions have additional configuration parameters. For Shuffle masking, Static Data Masking provides a   default parameter. For Group Shuffle masking, Single value masking, and String Composite masking, the user has to provide configuration parameters. To change or provide configuration parameters, click on the **Configure...** option and specify an (alternative) value for the parameter in the dialog box that pops up. Detailed descriptions of each masking function are provided in [Masking Functions](#masking-functions).
  
  ![Masking functions configuration button](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -116,7 +116,7 @@ Below is a step-by-step guide to run Static Data Masking.
  
  ![Configuration file](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
-6. Static Data Masking will create a folder in the user’s **Documents** folder named Static Data Masking and place log files inside. The log files can be useful for debugging purposes. The name of the log file is indicated at the bottom of the configuration window. 
+6. Static Data Masking will create a folder in the user's **Documents** folder named Static Data Masking and place log files inside. The log files can be useful for debugging purposes. The name of the log file is indicated at the bottom of the configuration window. 
   
  
 7. (SQL Server only) If you operate Static Data Masking on an on-premise database, Static Data Masking will perform a backup/restore operation. In **Step 2: Clone .BAK file Location**, provide the location on the server where the backup file will be stored. 
@@ -129,7 +129,7 @@ NULL masking replaces all the values in the column with NULL. If the column does
 
 ### Single-value masking
 
-Single-value masking replaces all the values in the column with a single fixed value, this value is specified by the user. The format of the input must be convertible to whatever the type of the selected column is. To specify the value, click on **Configure…**, and provide a value and then click **Okay**. 
+Single-value masking replaces all the values in the column with a single fixed value, this value is specified by the user. The format of the input must be convertible to whatever the type of the selected column is. To specify the value, click on **Configure...**, and provide a value and then click **Okay**. 
 
 ![Single-value masking parameter](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 

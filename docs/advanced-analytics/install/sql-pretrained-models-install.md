@@ -1,5 +1,5 @@
 ---
-title: Install pre-trained machine learning models on SQL Server | Microsoft Docs
+title: Install pre-trained machine learning models - SQL Server Machine Learning
 description: Add pre-trained models for sentiment analysis and image featurization to SQL Server 2017 Machine Learning Services (R or Python) or SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -47,7 +47,7 @@ The install paths for R and Python models are as follows:
 
 + For R: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ For Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
++ For Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
 Model file names are listed below:
 
@@ -99,7 +99,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 2. Paste in the following R script at the command prompt.
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -121,7 +121,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 3. Press Enter to view the sentiment scores. Output should be as follows:
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -163,7 +163,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 3. Press Enter to print the scores. Output should be as follows:
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH
@@ -202,7 +202,7 @@ The configuration of each network was based on the following reference implement
 
 For more information about the algorithms used in these deep learning models, and how they are implemented and trained using CNTK, see these articles:
 
-+ [Microsoft Researchers’ Algorithm Sets ImageNet Challenge Milestone](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
++ [Microsoft Researchers' Algorithm Sets ImageNet Challenge Milestone](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [Microsoft Computational Network Toolkit offers most efficient distributed deep learning computational performance](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 

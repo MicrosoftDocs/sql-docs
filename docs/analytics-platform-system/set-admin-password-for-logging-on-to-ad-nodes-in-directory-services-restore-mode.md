@@ -16,7 +16,7 @@ Directory Services Restore Mode (DSRM) is a boot mode for repairing or recoverin
   
 ## <a name="HowToDSRM"></a>To reset the administrator password  
   
-1.  Open a Command Prompt window on an appliance AD node ***appliance_domain*–AD*xx***virtual machine.  
+1.  Open a Command Prompt window on an appliance AD node <strong>_appliance_domain_-AD_xx_</strong>virtual machine.  
   
 2.  At the command prompt, type `ntdsutil`.  
   
@@ -26,7 +26,7 @@ Directory Services Restore Mode (DSRM) is a boot mode for repairing or recoverin
   
 5.  At the prompt, type the new password.  
   
-6.  Repeat steps 1 – 5 above for each appliance AD virtual machine.  
+6.  Repeat steps 1 - 5 above for each appliance AD virtual machine.  
   
     > [!WARNING]  
     > Analytics Platform System does not support the dollar sign character ($) in the domain administrator or local administrator passwords. A password containing a dollar sign will validate and be usable but can block upgrade and maintenance activities.  

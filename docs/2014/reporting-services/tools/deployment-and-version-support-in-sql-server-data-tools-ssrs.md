@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Deployment and Version Support in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supports the following scenarios:  
@@ -36,7 +36,7 @@ manager: craigg
   
 -   OutputPath is a build property that identifies the path of folders to store the report definition used in build verification, deployment, and preview of reports.  
   
--   ErrorLevel is a build property that identifies the severity of the build issues that are reported as errors. Issues with severity levels less than or equal to the value of ErrorLevel are reported as errors; otherwise, the issues are reported as warnings. For more information, see The “Report Validation and Error Levels” section in [Design Reports with Report Designer &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel is a build property that identifies the severity of the build issues that are reported as errors. Issues with severity levels less than or equal to the value of ErrorLevel are reported as errors; otherwise, the issues are reported as warnings. For more information, see The "Report Validation and Error Levels" section in [Design Reports with Report Designer &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion is a deployment property that identifies the expected version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] that is installed on the target report server specified in the TargetServerURL property.  
   
@@ -65,7 +65,7 @@ manager: craigg
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] RDLC Report Designer|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2005 RDL schema|Not supported|Does not support 2008 RDL schema.|  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Viewer controls|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2008 RDL not supported in local mode|N/A|Can view 2008 RDL reports on [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in server mode.|  
   
- For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
+ For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## See Also  
  [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md)  

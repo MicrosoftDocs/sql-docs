@@ -16,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor [SQL Server], starting"
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Start and Use the Database Engine Tuning Advisor
@@ -239,16 +239,16 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  To modify the number of events to use for analysis, specify the **–n** option. The following example increases the number of cache entries to 2,000.  
+2.  To modify the number of events to use for analysis, specify the **-n** option. The following example increases the number of cache entries to 2,000.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  To analyze events for all databases in the instance, specify the **-ipf** option.  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### To tune a database by using a workload and dta utility default settings  

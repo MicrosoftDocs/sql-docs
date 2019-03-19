@@ -52,7 +52,7 @@ A URL specifies the location of a target stored on a local or networked computer
  Context can also be defined by opening a **Record** or **Recordset** object that represents a directory, because these objects already have an implicitly or explicitly declared **Connection** object that specifies context.  
   
 ## Scoped Operations  
- The context also defines scope—that is, the directory and its subdirectories that can participate in subsequent operations. The **Record** object has several scoped methods that operate on a directory and all its subdirectories. These methods include [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), and [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ The context also defines scope-that is, the directory and its subdirectories that can participate in subsequent operations. The **Record** object has several scoped methods that operate on a directory and all its subdirectories. These methods include [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), and [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
   
 ## Relative URLs as Command Text  
  You can specify a command to be executed on the data source by typing a string in the *CommandText* parameter of the **Connection** object's [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) method, and in the *Source* parameter of the **Recordset** object's [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method.  

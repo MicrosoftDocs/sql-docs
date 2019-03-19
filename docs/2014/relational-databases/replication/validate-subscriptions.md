@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.validate.subscriptions.f1"
@@ -30,6 +29,6 @@ manager: craigg
  Click to access the **Subscription Validation Options** dialog box, which allows you to specify whether to use row count validation or binary checksum validation.  
   
 ## See Also  
- [Validate Replicated Data](validate-replicated-data.md)  
+ [Validate Replicated Data](validate-data-at-the-subscriber.md)  
   
   

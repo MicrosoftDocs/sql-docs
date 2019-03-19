@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 -   Temporal table with a user-defined history table created beforehand: you create a history table that fits best your needs and then reference that table during temporal table creation.  
   
 ## Creating a temporal table with an anonymous history table  
- Creating a temporal table with an "anonymous" history table is a convenient option for quick object creation, especially in prototypes and test environments. It is also the simplest way to create a temporal table since it doesn’t require any parameter in **SYSTEM_VERSIONING** clause. In the example below, a new table is created with system-versioning enabled without defining the name of the history table.  
+ Creating a temporal table with an "anonymous" history table is a convenient option for quick object creation, especially in prototypes and test environments. It is also the simplest way to create a temporal table since it doesn't require any parameter in **SYSTEM_VERSIONING** clause. In the example below, a new table is created with system-versioning enabled without defining the name of the history table.  
   
 ```  
 CREATE TABLE Department   

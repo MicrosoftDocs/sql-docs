@@ -61,7 +61,7 @@ manager: craigg
   
 3.  Expand the **Data-tier Applications** node.  
   
-4.  Right-click the DAC to be deleted, and then select **Delete Data-tier Application…**  
+4.  Right-click the DAC to be deleted, and then select **Delete Data-tier Application...**  
   
 5.  Complete the wizard dialogs:  
   

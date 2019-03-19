@@ -28,13 +28,13 @@ manager: kfile
   
      Note the location. An empty database storage location indicates that the database folder is located in the server data folder.  
   
-2.  Right-click the database and select **Detach…**  
+2.  Right-click the database and select **Detach...**  
   
 3.  Assign a password to the database to be detached, and then click **OK** to execute the detach command.  
   
-4.  In Object Explorer, right-click the **Databases** folder and select **Attach…**  
+4.  In Object Explorer, right-click the **Databases** folder and select **Attach...**  
   
-5.  In the **folder** text box, type the original location of the database folder. Alternatively, you can use the browse button (**…**) to locate the database folder.  
+5.  In the **folder** text box, type the original location of the database folder. Alternatively, you can use the browse button (**...**) to locate the database folder.  
   
 6.  Select the read/write mode for the database.  
   
@@ -87,7 +87,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      Note the location. An empty database storage location indicates that the database folder is located in the server data folder.  
   
-2.  Right-click the database and select **Detach…**  
+2.  Right-click the database and select **Detach...**  
   
 3.  Open a new XMLA tab in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   

@@ -18,7 +18,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # Validate a DAC Package
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   It is a good practice to review the contents of a DAC package before deploying it in production, and to validate the upgrade actions before upgrading an existing DAC. This is especially true when deploying packages that were not developed in your organization.  
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
@@ -33,15 +33,15 @@ manager: craigg
   
  **View a DAC in SQL Server Developer Tools**  
   
-1.  Open the **File** menu, select **New**, and then select **Project…**.  
+1.  Open the **File** menu, select **New**, and then select **Project...**.  
   
 2.  Select the **SQL Server** project template, and specify a **Name**, **Location**, and **Solution name**.  
   
-3.  In **Solution Explorer**, right click the project node and select **Properties…**.  
+3.  In **Solution Explorer**, right click the project node and select **Properties...**.  
   
 4.  On the **Project Settings** tab, in the **Output Types** section, select the **Data-tier Application (.dacpac File)** check box, and then close the properties dialog.  
   
-5.  In **Solution Explorer**, right click the project node and select **Import Data-tier Application…**.  
+5.  In **Solution Explorer**, right click the project node and select **Import Data-tier Application...**.  
   
 6.  Use **Solution Explorer** to open all of the files in the DAC, such as the server selection policy and the pre- and post-deployment scripts.  
   

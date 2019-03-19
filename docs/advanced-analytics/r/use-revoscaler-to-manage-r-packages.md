@@ -1,5 +1,5 @@
 ---
-title: How to use RevoScaleR functions to find or install R packages on SQL Server | Microsoft Docs
+title: How to use RevoScaleR functions to find or install R packages - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -176,7 +176,7 @@ Package synchronization works on a per database and per user basis. For more inf
 
 Run this command from Management Studio or another tool that supports T-SQL, to get a list of installed packages on the current instance, using `rxInstalledPackages` in a stored procedure.
 
-```SQL
+```sql
 EXEC sp_execute_external_script 
   @language=N'R', 
   @script=N'
@@ -187,7 +187,7 @@ EXEC sp_execute_external_script
 
 The `rxSqlLibPaths` function can be used to determine the active library used by SQL Server Machine Learning Services. This script can return only the library path for the current server. 
 
-```SQL
+```sql
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
 exec sp_execute_external_script 
   @language = N'R',

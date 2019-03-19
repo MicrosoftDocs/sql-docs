@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # DatabaseLogonAccount Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the logon account that the report server uses when connecting to the report server database. Read only.  

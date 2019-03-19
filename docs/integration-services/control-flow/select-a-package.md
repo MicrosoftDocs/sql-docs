@@ -51,7 +51,7 @@ manager: craigg
   
 ### Location = DTSX file  
  **File name**  
- Provide the path of a package or click the browse button **(…)** and locate the package.  
+ Provide the path of a package or click the browse button **(...)** and locate the package.  
   
 ## See Also  
  [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a command-line installation from the SQL Server setup program. This topic contains several examples of command-line installations that are specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For a complete description of the command-line options available for all SQL Server components, see [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). This topic does not describe command-line options for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products. For information on command installation of the add-in, see [Install the add-in using the installation file rsSharePoint.msi](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).  

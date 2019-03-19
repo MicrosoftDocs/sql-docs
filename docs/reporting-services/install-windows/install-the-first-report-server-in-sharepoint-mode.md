@@ -53,11 +53,11 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
  **Installation and registering the Reporting Services Service:**  
   
--   The current account during the installation (referred to as the ‘setup’ account) of Reporting Services in SharePoint mode needs to have administrative rights in the local computer. If you are installing Reporting Services after SharePoint is installed and the ‘setup’ account is also a member of the SharePoint farm administrators group, the Reporting Services installation will register the Reporting Services service for you. If you install Reporting Services before SharePoint is installed or the ‘setup’ account is not a member of the farm administrators group, you register the service manually. See the section [Step 2: Register and Start the Reporting Services SharePoint Service](#bkmk_install_SSRS_sharedservice).  
+-   The current account during the installation (referred to as the 'setup' account) of Reporting Services in SharePoint mode needs to have administrative rights in the local computer. If you are installing Reporting Services after SharePoint is installed and the 'setup' account is also a member of the SharePoint farm administrators group, the Reporting Services installation will register the Reporting Services service for you. If you install Reporting Services before SharePoint is installed or the 'setup' account is not a member of the farm administrators group, you register the service manually. See the section [Step 2: Register and Start the Reporting Services SharePoint Service](#bkmk_install_SSRS_sharedservice).  
   
  **Creating Reporting Services Service Applications**  
   
--   Following installation and registering the Reporting Services service, create one or more Reporting Services service applications. The “SharePoint farm service account “ needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) or for SharePoint 2016, see [Account permissions and security settings in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Following installation and registering the Reporting Services service, create one or more Reporting Services service applications. The "SharePoint farm service account " needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) or for SharePoint 2016, see [Account permissions and security settings in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      It is security best practice that SharePoint farm administrator accounts are not also local operating system administrator accounts. If you add a farm admin account to the local administrators group as part of your installation process, it is recommended you remove the account from the local administrators group after installation is complete.  
   
@@ -103,7 +103,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 2.  Select **Installation** in the left side of the wizard and then select **New SQL Server stand-alone installation or add features to an existing installation**.  
 
-3.  If you see the **Product Key** page, type your key or accept the default of the ‘Enterprise Evaluation’ edition.  
+3.  If you see the **Product Key** page, type your key or accept the default of the 'Enterprise Evaluation' edition.  
   
      Select **Next**.  
   
@@ -117,7 +117,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 6.  On the **Instal Setup Files** page, depending on what is already installed on your computer, you might see the following message:  
   
-    -   “One or more affected files have operations pending. You must restart your computer after the setup process is completed.”  
+    -   "One or more affected files have operations pending. You must restart your computer after the setup process is completed."  
   
     -   Select **Next**.  
   
@@ -125,7 +125,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
  
 8. Select the following on the **Feature Selection** page:  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **Reporting Services add-in for SharePoint Products**.  
   
@@ -217,7 +217,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 3.  The status of the Reporting Services service will change from **Stopped** to **Started**. If the Reporting Services service is not in the list, use PowerShell to install the service.  
   
     > [!NOTE]  
-    >  If the Reporting Services service stays in the **Starting** status and does not change to **Started**, verify the ‘SharePoint 2013 Administration’ service is started in Windows Server Manager.  
+    >  If the Reporting Services service stays in the **Starting** status and does not change to **Started**, verify the 'SharePoint 2013 Administration' service is started in Windows Server Manager.  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> Step 3: Create a Reporting Services service application  
  This section provides the steps to create a service application and a description of the properties, if you are reviewing an existing service application.  
@@ -251,7 +251,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
  ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") For information on using PowerShell to create a Reporting Services service application, see:  
   
--   See the following section [Windows PowerShell script for Steps 1–4](#bkmk_full_script).  
+-   See the following section [Windows PowerShell script for Steps 1-4](#bkmk_full_script).  
   
 -   Topic [To create a Reporting Services Service Application using PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
@@ -279,14 +279,14 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
  This procedure is completed per site collection. For more information, see [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
   
-##  <a name="bkmk_full_script"></a> Windows PowerShell script for steps 1–4  
+##  <a name="bkmk_full_script"></a> Windows PowerShell script for steps 1-4  
  The PowerShells script in this section are the equivalent of completing steps 1 to 4 in the previous sections. The script completes the following:  
   
 -   Installs Reporting Services service and service proxy, and starts the service.  
   
--   Creates a service proxy named “Reporting Services”.  
+-   Creates a service proxy named "Reporting Services".  
   
--   Creates a Reporting Services service application named “Reporting Services Application”.  
+-   Creates a Reporting Services service application named "Reporting Services Application".  
   
 -   Enables the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature for a site collection.  
   
@@ -294,9 +294,9 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 -   Update the **-Account** for the service proxy. The account needs to be a managed service account in the SharePoint farm. For more information, see the SharePoint topic [Plan for administrative and service accounts in SharePoint 2013](https://technet.microsoft.com/library/cc263445.aspx).  
   
--   Update the **–DatabaseServer** parameter for the service application. This parameter is the database engine instance  
+-   Update the **-DatabaseServer** parameter for the service application. This parameter is the database engine instance  
   
--   Update the **–url** parameter of the site that you want the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature enabled.  
+-   Update the **-url** parameter of the site that you want the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature enabled.  
   
  **To use the script:**  
   
@@ -313,7 +313,7 @@ $starttime=Get-Date
 write-host -foregroundcolor DarkGray StartTime>> $starttime   
   
 Write-Host -ForegroundColor Green "Import the SharePoint PowerShell snappin"  
-Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
+Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
   
 Write-Host -ForegroundColor Green "Install SSRS Service and Service Proxy, and start the service"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
@@ -392,7 +392,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  For SharePoint 2016, you will need to create, and configure, an Excel Services Application. For more information, see the following:  
   
--   The section “Configure Excel Services for Analysis Services integration” in [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   The section "Configure Excel Services for Analysis Services integration" in [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 -   [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 
@@ -423,7 +423,7 @@ Also, the application pool security account used by the Reporting Services servi
 
 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

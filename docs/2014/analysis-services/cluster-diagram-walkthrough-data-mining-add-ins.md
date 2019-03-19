@@ -67,9 +67,9 @@ manager: craigg
   
 7.  Leave the option, **Number of rows in the chart**, as 5.  
   
-     This option doesn’t change the number of clusters in the model; it simply limits the number of attributes that can be displayed as features of each cluster.  
+     This option doesn't change the number of clusters in the model; it simply limits the number of attributes that can be displayed as features of each cluster.  
   
-     However, the option acts as a filter on the chart data, so you can’t increase the number of items later.  
+     However, the option acts as a filter on the chart data, so you can't increase the number of items later.  
   
 8.  Click **Advanced**.  
   

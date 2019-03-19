@@ -22,7 +22,7 @@ Aliases can make it easier to work with table names. Using aliases is helpful wh
   
 -   You want to make the statement in the [SQL Pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) shorter and easier to read.  
   
--   You refer to the table name often in your query — such as in qualifying column names — and want to be sure you stay within a specific character-length limit for your query. (Some databases impose a maximum length for queries.)  
+-   You refer to the table name often in your query - such as in qualifying column names - and want to be sure you stay within a specific character-length limit for your query. (Some databases impose a maximum length for queries.)  
   
 -   You are working with multiple instances of the same table (such as in a self-join) and need a way to refer to one instance or the other.  
   

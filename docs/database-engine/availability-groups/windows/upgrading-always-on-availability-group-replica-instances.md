@@ -61,6 +61,11 @@ Observe the following guidelines when performing server upgrades or updates in o
 -   Do not upgrade the primary replica instance before upgrading or updating any other secondary replica instance. An upgraded primary replica can no longer ship logs to any secondary replica whose [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instance that has not yet been upgraded to the same version. When data movement to a secondary replica is suspended, no automatic failover can occur for that replica, and your availability databases are vulnerable to data loss.  
   
 -   Before failing over an AG, verify that the synchronization state of the failover target is SYNCHRONIZED.  
+
+  > [!WARNING]
+  > Installing a new instance or new version of SQL Server to a server that has an older version of SQL Server installed  may inadvertently **cause an outage for any availability group that is hosted by the older version of SQL Server.** This is because during the installation of the instance or version of SQL Server, the SQL Server high availability module (RHS.EXE) gets upgraded. This results in a temporary interruption of your existing availability groups in the primary role on the server. Therefore, it is highly recommended that you do one of the following when installing a newer version of SQL Server to a system already hosting an older version of SQL Server with an availability group:
+  > - Install the new version of SQL Server during a maintenance window. 
+  > - Failover the availability group to the secondary replica so it is not primary during the installation of the new SQL Server instance. 
   
 ## Rolling Upgrade Process  
  In practice, the exact process depends on factors such as the deployment topology of your AGs and the commit mode of each replica. But in the simplest scenario, a rolling upgrade is a multi-stage process that in its simplest form involves the following steps:  
@@ -185,7 +190,7 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 
 >[!IMPORTANT]
 >- Verify synchronization between every step. Before proceeding to the next step, confirm that your synchronous-commit replicas are synchronized within the availability group, and that your global primary is synchronized with the forwarder in the distributed AG. 
->- **Recommendation**: Every time you verify synchronization, refresh both the database node and the distributed AG node in SQL Server Management Studio. After everything is synchronized, save a screenshot of the states of each replica. This will help you keep track of what step you’re on, provide evidence that everything was working correctly before the next step, and assist you with troubleshooting if anything goes wrong. 
+>- **Recommendation**: Every time you verify synchronization, refresh both the database node and the distributed AG node in SQL Server Management Studio. After everything is synchronized, save a screenshot of the states of each replica. This will help you keep track of what step you're on, provide evidence that everything was working correctly before the next step, and assist you with troubleshooting if anything goes wrong. 
 
 
 ### Diagram example for a rolling upgrade of a distributed availability group
@@ -217,7 +222,7 @@ If a third replica existed in each availability group, it would be upgraded befo
 
 >[!IMPORTANT]
 >- Verify synchronization between every step. Before proceeding to the next step, confirm that your synchronous-commit replicas are synchronized within the availability group, and that your global primary is synchronized with the forwarder in the distributed AG. 
->- Recommendation: Every time you verify synchronization, refresh both the database node and the Distributed AG node in SQL Server Management Studio. If After everything is synchronized, then take a screenshot and save it. This will help you keep track of what step you’re on, provide evidence that everything was working correctly before the next step, and assist you with troubleshooting if anything goes wrong. 
+>- Recommendation: Every time you verify synchronization, refresh both the database node and the Distributed AG node in SQL Server Management Studio. If After everything is synchronized, then take a screenshot and save it. This will help you keep track of what step you're on, provide evidence that everything was working correctly before the next step, and assist you with troubleshooting if anything goes wrong. 
 
 
 ## Special steps for change data capture or replication

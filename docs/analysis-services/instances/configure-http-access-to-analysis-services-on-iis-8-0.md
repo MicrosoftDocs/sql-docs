@@ -105,6 +105,8 @@ manager: kfile
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  The IIS manager might not be able to connect to the Analysis Services in the current version if the Database is a backup from a previous one. This is caused by changes in the MSMDPUMP and should be solved by copying the msmdpump.dll file from the previous working version.
   
 ##  <a name="bkmk_appPool"></a> Step 2: Create an application pool and virtual directory in IIS  
  Next, create an application pool and an endpoint to the pump.  
@@ -161,7 +163,7 @@ manager: kfile
   
  You can also use Anonymous authentication in a production environment if your users do not have Windows user accounts, but follow best practices by locking down permissions on the host system, as called out in this article: [Enable Anonymous Authentication (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Be sure that authentication is set on the virtual directory, and not on the parent web site, to further reduce the level of account access.  
   
- When Anonymous is enabled, any user connection to the HTTP endpoint is allowed to connect as the anonymous user. You won’t be able to audit individual user connections, nor use the user identity to select data from a model. As you can see, using Anonymous impacts everything from model design, to data refresh and access. However, if users do not have a Windows user login to start with, using the Anonymous account might be your only option.  
+ When Anonymous is enabled, any user connection to the HTTP endpoint is allowed to connect as the anonymous user. You won't be able to audit individual user connections, nor use the user identity to select data from a model. As you can see, using Anonymous impacts everything from model design, to data refresh and access. However, if users do not have a Windows user login to start with, using the Anonymous account might be your only option.  
   
 #### Set the authentication type and add a script map  
   
@@ -182,7 +184,7 @@ manager: kfile
   
 5.  Disable **Anonymous Authentication** if you are using Windows or Basic authentication. When Anonymous authentication is enabled, IIS will always use it first, even if other authentication methods are enabled.  
   
-     Under Anonymous authentication, the pump (msmdpump.dll) runs as the user account you established for anonymous user. There is no distinction between the user connecting to IIS and the user connecting to Analysis Services. By default, IIS uses the IUSR account, but you can change it to a domain user account that has network permissions. You’ll need this capability if IIS and Analysis Services are on different computers.  
+     Under Anonymous authentication, the pump (msmdpump.dll) runs as the user account you established for anonymous user. There is no distinction between the user connecting to IIS and the user connecting to Analysis Services. By default, IIS uses the IUSR account, but you can change it to a domain user account that has network permissions. You'll need this capability if IIS and Analysis Services are on different computers.  
   
      For instructions on how to configure credentials for Anonymous authentication, see [Anonymous Authentication](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication).  
   

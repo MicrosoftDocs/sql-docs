@@ -66,7 +66,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## Examples  
   
 ### A. Using SUSER_SID  
- The followng example returns the security identification number (SID) for the current security context.  
+ The following example returns the security identification number (SID) for the current security context.  
   
 ```  
 SELECT SUSER_SID();  

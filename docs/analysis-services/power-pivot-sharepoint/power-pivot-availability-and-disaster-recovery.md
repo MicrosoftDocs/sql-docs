@@ -73,7 +73,7 @@ manager: kfile
   
 ||Comments|  
 |-|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] synchronous mirroring in a farm for availability.|Supported but not recommended. The recommendation is to use Always On in Synchronous – commit mode.|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] synchronous mirroring in a farm for availability.|Supported but not recommended. The recommendation is to use Always On in Synchronous - commit mode.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in Synchronous-Commit mode|Supported and recommended.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] asynchronous mirroring or log-shipping to another farm for disaster recovery.|Supported.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] with asynchronous-commit for disaster recovery|Supported|  
@@ -92,8 +92,6 @@ manager: kfile
 -   [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [Plan for disaster recovery (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
-  
--   [SQL Server Cloud backup and recovery white paper](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
 -   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](http://www.microsoft.com/download/details.aspx?id=40740)  
   

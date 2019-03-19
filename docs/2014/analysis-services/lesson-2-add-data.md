@@ -49,7 +49,7 @@ manager: craigg
   
 8.  In the **Select Tables and Views** page, select the check box for the following tables: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, and **FactInternetSales**.  
   
-9. We want to give the tables in the model more easily understood names. Click on the cell in the **Friendly Name** column for **DimCustomer**. Rename the table by removing “Dim” from DimCustomer.  
+9. We want to give the tables in the model more easily understood names. Click on the cell in the **Friendly Name** column for **DimCustomer**. Rename the table by removing "Dim" from DimCustomer.  
   
 10. Rename the other tables:  
   
@@ -67,7 +67,7 @@ manager: craigg
  Now that you have connected to the database, selected the tables to import, and given the tables friendly names, go to the next section, [Filter the Table Data prior to Importing](#FilterData).  
   
 ##  <a name="FilterData"></a> Filter the Table Data  
- The DimCustomer table that you are importing from the database contains a subset of the data from the original SQL Server Adventure Works database. You will filter out some of the columns from the DimCustomer table that aren’t necessary. When possible, you will want to filter out data that will not be used in order to save in-memory space used by the model.  
+ The DimCustomer table that you are importing from the database contains a subset of the data from the original SQL Server Adventure Works database. You will filter out some of the columns from the DimCustomer table that aren't necessary. When possible, you will want to filter out data that will not be used in order to save in-memory space used by the model.  
   
 #### To filter the table data prior to importing  
   
@@ -86,7 +86,7 @@ manager: craigg
   
 3.  Verify that all other columns are checked, and then click **OK**.  
   
-     Notice the words **Applied filters** are now displayed in the **Filter Details** column in the **Customer** row; if you click on that link you’ll see a text description of the filters you just applied.  
+     Notice the words **Applied filters** are now displayed in the **Filter Details** column in the **Customer** row; if you click on that link you'll see a text description of the filters you just applied.  
   
 4.  Filter the remaining tables by clearing the checkboxes for the following columns in each table:  
   

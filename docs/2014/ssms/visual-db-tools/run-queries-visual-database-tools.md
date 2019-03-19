@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], executing"
@@ -23,7 +23,7 @@ manager: craigg
   
 2.  Right-click anywhere in the query window, and select **Execute SQL** from the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Press CTRL+R.  
   

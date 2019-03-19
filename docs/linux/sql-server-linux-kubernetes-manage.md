@@ -31,7 +31,7 @@ To fail over or move a primary replica to a different node in an availability gr
 
   Update the file for your environment.
 
-  - Replace `<containerName>` with the name of the expected availability group target.
+  - Replace `<containerName>` with the pod name (e.g. mssql2-0) of the expected availability group target.
   - If the availability group isn't in the `ag1` namespace, replace `ag1` with the namespace.
 
   This file defines a failover job named `manual-failover`.
@@ -57,7 +57,7 @@ To fail over or move a primary replica to a different node in an availability gr
   The following example returns the status of the job named `manual-failover`.
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. Delete the manual failover job. 
@@ -70,7 +70,7 @@ To fail over or move a primary replica to a different node in an availability gr
   The following command deletes the job.
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## Rotate credentials

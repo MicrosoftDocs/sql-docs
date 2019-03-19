@@ -40,7 +40,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'**_schedule_name_**'**  
  The name of the schedule to delete. *schedule_name* is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  

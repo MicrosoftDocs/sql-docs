@@ -99,7 +99,7 @@ You may instantly deploy this App through the code lens `Deploy App` in the `spe
 
 ![Deploy App Button](media/vs-extension/deploy_app_lightning.png)
 
-![Deploy App Codelens](media/vs-extension/deploy_app_codelens.png)
+![Deploy App CodeLens](media/vs-extension/deploy_app_codelens.png)
 
 You will be notified when the app is ready for consumption based on the state of the app in the sidebar:
 

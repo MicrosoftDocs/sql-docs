@@ -249,7 +249,7 @@ spec.yaml
 
 ## Describe an app
 
-The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
+The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner. See [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
 
 ```json
 {
@@ -289,6 +289,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## Next steps
 
-You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
+Explore how to integrate apps deployed on SQL Server big data clusters in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

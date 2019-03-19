@@ -193,7 +193,7 @@ manager: craigg
  The default value for this property is false, which indicates the server will not automatically create the log table and will not log query events.  
   
 > [!NOTE]  
->  For more information about configuring the query log, see [Configuring the Analysis Services Query Log](https://go.microsoft.com/fwlink/?LinkId=81890).  
+>  For more information about configuring the query log, see [Log operations in Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/log-operations-in-analysis-services?view=sql-server-2014).  
   
 ## Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

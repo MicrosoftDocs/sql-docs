@@ -112,6 +112,6 @@ manager: craigg
   
 -   Blog entry, [SSIS: Should you execute child packages in-process or out-of-process?](https://go.microsoft.com/fwlink/?LinkId=220819), on consultingblogs.emc.com.  
   
--   Blog entry, [SSIS: Accessing variables in a parent package](https://go.microsoft.com/fwlink/?LinkId=257729), on consultingblogs.emc.com.  
+-   Blog entry, [SSIS: Accessing variables in a parent package](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), on andyleonard.blog. 
   
   

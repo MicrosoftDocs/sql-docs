@@ -65,7 +65,7 @@ There are multiple ways to create a certificate that is a valid column master ke
 
 ### Create a self-signed certificate using PowerShell
 
-Use the [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) cmdlet to create a self-signed certificate. The following example shows how to generate a certificate that can be used as a column master key for Always Encrypted.
+Use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet to create a self-signed certificate. The following example shows how to generate a certificate that can be used as a column master key for Always Encrypted.
 
 ```
 New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -88,7 +88,7 @@ If your column master key is a certificate stored in the *local machine* certifi
 If your column master key is a certificate stored in the *current user* certificate store location, you need to export the certificate with the private key and import it to the current user certificate store location of all user accounts running applications that are expected to encrypt or decrypt data stored in encrypted columns, or tools for configuring Always Encrypted and managing Always Encrypted keys (on all machines containing those applications/tools). No permission configuration is required - after logging on to a machine, a user can access all certificates in their current user certificate store location.
 
 #### Using PowerShell
-Use the [Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) and [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) cmdlets to import and export a certificate.
+Use the [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) and [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlets to import and export a certificate.
 
 #### Using Microsoft Management Console 
 

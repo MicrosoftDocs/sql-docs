@@ -65,7 +65,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |||  
 |-|-|  
 |Tool|Purpose|  
-|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Creates certificates.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|Creates certificates.|  
 |[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Creates strong names for symmetric keys.|  
   
 ## Related Tasks  

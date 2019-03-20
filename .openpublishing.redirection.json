@@ -3073,7 +3073,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/reporting-services/reporting-services-release-notes.md",
+            "source_path": "docs/reporting-services/change-log-sql-server-reporting-services.md",
             "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-release-notes/",
             "redirect_document_id": false
         },

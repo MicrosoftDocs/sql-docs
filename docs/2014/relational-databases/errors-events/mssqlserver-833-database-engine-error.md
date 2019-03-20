@@ -48,6 +48,6 @@ manager: craigg
 > [!NOTE]  
 >  Disk access can be slowed by an antivirus program. To increase access speed, exclude the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files that are specified in the error message from active virus scans.  
   
- For more information about I/O errors, see [Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370) and the Knowledge Base article at [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us).  
+ For more information about I/O errors, see [Microsoft SQL Server I/O Basics, Chapter 2](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)) and the Knowledge Base article at [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us).  
   
   

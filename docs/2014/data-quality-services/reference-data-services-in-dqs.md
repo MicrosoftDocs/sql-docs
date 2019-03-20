@@ -49,7 +49,7 @@ manager: craigg
   
 1.  **Configuring the reference data provider details in DQS**: Before you can use reference data in DQS, you must configure reference data service details in DQS.  
   
-    1.  If you are using Marketplace, provide a valid Marketplace account key, browse to the [Data Quality Services](https://docs.microsoft.com/sql/data-quality-services/data-quality-services?view=sql-server-2014) data category in Marketplace, and subscribe to the required providers.  
+    1.  If you are using Marketplace, provide a valid Marketplace account key, browse to the [Data Quality Services](../data-quality-services/data-quality-services.md) data category in Marketplace, and subscribe to the required providers.  
   
     2.  If you are using a direct online reference data provider, you must add direct reference data provider details in DQS before you can use it.  
   

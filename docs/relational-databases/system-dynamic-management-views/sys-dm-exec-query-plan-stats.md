@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date:03/25/2019
+ms.date: 03/25/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects

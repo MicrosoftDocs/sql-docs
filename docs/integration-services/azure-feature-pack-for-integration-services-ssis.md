@@ -11,8 +11,8 @@ f1_keywords:
   - "SQL13.SSIS.AZURE.F1"
   - "SQL14.SSIS.AZURE.F1"
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Feature Pack for Integration Services (SSIS)

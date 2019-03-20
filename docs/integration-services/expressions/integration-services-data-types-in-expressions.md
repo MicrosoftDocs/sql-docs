@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], data types"
   - "data types [Integration Services], expressions"
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Data Types in Expressions

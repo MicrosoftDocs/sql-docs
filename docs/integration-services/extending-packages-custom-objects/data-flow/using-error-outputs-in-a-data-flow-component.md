@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "error outputs [Integration Services]"
   - "asynchronous error outputs [Integration Services]"
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Using Error Outputs in a Data Flow Component

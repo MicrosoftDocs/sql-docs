@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Cache connection manager"
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Cache Connection Manager

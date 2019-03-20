@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "exponential functions"
   - "EXP function"
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # EXP (SSIS Expression)

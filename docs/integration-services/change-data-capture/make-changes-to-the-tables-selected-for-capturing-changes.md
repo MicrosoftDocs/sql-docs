@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "makChanToTab"
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Make Changes to the Tables Selected for Capturing Changes

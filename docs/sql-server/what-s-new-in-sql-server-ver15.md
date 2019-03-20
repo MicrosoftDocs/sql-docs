@@ -65,9 +65,10 @@ The following sections describe the new features that have been introduced in pr
 
 ### New query_post_execution_plan_profile Extended Event (CTP 2.4)
 
-The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. For more information, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
+The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. For more information, see [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
 
 #### Example 1 - Extended Event session using standard profiling
+
 ```sql
 CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
 ADD EVENT sqlserver.query_post_execution_showplan(
@@ -81,6 +82,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 ```
 
 #### Example 2 - Extended Event session using lightweight profiling
+
 ```sql
 CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
 ADD EVENT sqlserver.query_post_execution_plan_profile(
@@ -95,15 +97,15 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 ### New DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
-The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example: 
+The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
 
 ```sql
-SELECT *    
-FROM sys.dm_exec_cached_plans    
-CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)    
-WHERE objtype ='Trigger';   
-GO 
-```      
+SELECT *
+FROM sys.dm_exec_cached_plans
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
+WHERE objtype ='Trigger';
+GO
+```
 
 This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
 
@@ -127,8 +129,7 @@ To show the current state of the encryption scan, `encryption_scan_state` has be
 
 ### Accelerated database recovery (CTP 2.3)
 
-[Accelerated database recovery](http://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery
-) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. As of CTP 2.3, accelerated database recovery can be enabled per-database using the following syntax:
+[Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. As of CTP 2.3, accelerated database recovery can be enabled per-database using the following syntax:
 
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
@@ -234,7 +235,7 @@ Resumable online index create supports the follow scenarios:
 
 In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
 
-With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -348,7 +349,7 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 [Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field in the audit log called `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [Add sensitivity classification](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
 
 >[!NOTE]
->There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+>There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](/azure/sql-database/sql-database-data-discovery-and-classification/#subheading-3).
 
 ### Expanded support for persistent memory devices (CTP 2.0)
 
@@ -476,7 +477,7 @@ FROM sys.dm_exec_requests AS d
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 
-- [**SQL Server PowerShell module**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
+- [**SQL Server PowerShell module**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 
   - Upgrade from 21.0 to 21.1 to support SMO v150.
   - Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.
@@ -492,7 +493,7 @@ This feature allows many-to-many relationships between tables where both columns
 
 Many-to-many relationships require models be at the 1470 compatibility level, which is currently supported only in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 and later. For this CTP 2.4 release, many-to-many relationships can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
 
-### Memory settings for resource governance 
+### Memory settings for resource governance (CTP 2.4)
 
 The memory settings described here are already available in Azure Analysis Services. Beginning with CTP 2.4, they are now also supported by [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Analysis Services. 
 
@@ -540,6 +541,6 @@ As of CTP 2.4, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not 
 
 - [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

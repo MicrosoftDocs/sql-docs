@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Analysis Services Processing task"
   - "processing objects [Integration Services]"
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Analysis Services Processing Task

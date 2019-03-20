@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.dts.designer.afpdelcltask.f1"
   - "sql14.dts.designer.afpdelcltask.f1"
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure HDInsight Delete Cluster Task

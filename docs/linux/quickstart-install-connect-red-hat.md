@@ -19,7 +19,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019 on Red Hat Enterprise Linux (RHEL) 7.3+. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 on Red Hat Enterprise Linux (RHEL). You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -34,7 +34,7 @@ In this quickstart, you install SQL Server 2019 preview on Red Hat Enterprise Li
 
 ## Prerequisites
 
-You must have a RHEL 7.3 or 7.4 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.3, 7.4, 7.5, or 7.6 machine with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Variables Window dialog box"
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Variables Window

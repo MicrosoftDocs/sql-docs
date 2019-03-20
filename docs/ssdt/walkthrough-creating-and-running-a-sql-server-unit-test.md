@@ -962,7 +962,7 @@ To create and verify a negative test, you must perform the following tasks:
     You specify that you expect to see a specific exception. You can optionally specify a specific error number. If you do not add this attribute, the unit test will fail, and a message appears in the Test Results window  
   
     > [!IMPORTANT]  
-    > Currently, Visual Studio 2012 does not support the ExpectedSqlException attribute. For information to work around this, see [Unable to Run "Expected Failure" Database Unit Test](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Currently, Visual Studio 2012 does not support the ExpectedSqlException attribute. For information to work around this, see [Unable to Run "Expected Failure" Database Unit Test](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test).  
   
 3.  On the File menu, click Save SqlServerUnitTests1.cs.  
   

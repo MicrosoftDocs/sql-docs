@@ -70,7 +70,7 @@ manager: kfile
   
 -   [Compare a BI Center site to Power BI for Office 365 sites](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
   
--   [Analysis and reporting with Microsoft business intelligence (BI) tools](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting)  
+-   [Analysis and reporting with Microsoft business intelligence (BI) tools](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
 ## Community Content  
  [Microsoft self-service BI on premise vs cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  

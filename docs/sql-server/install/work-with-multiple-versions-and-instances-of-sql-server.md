@@ -22,12 +22,25 @@ ms.author: mathoma
 manager: craigg
 ---
 # Work with Multiple Versions and Instances of SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and ::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ::: moniker-end ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"::: moniker-end on the same computer. You can also upgrade earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer where earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions are already installed. For supported upgrade scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
+You can install multiple instances of SQL Server, or install SQL Server on a computer where earlier SQL Server versions are already installed.
+
+The following SQL Server related items are compatible with the installation of multiple instances on the same computer:
+
+- Database Engine
+
+- Analysis Services
+
+::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+- Reporting Services
+::: moniker-end
+
+You can upgrade earlier versions of SQL Server on a computer where other SQL Server versions are already installed. For supported upgrade scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
   
 ## Version Components and Numbering
+
  The following concepts are useful in understanding the behavior of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for side-by-side instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
  The standard product version format for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is MM.nn.bbbb.rr where each segment is defined as:
@@ -49,16 +62,19 @@ manager: craigg
  Examples: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser and Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer.
   
 ### Components shared across all instances of the same major version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions that have the same major version share some components across all instances. If the shared components are selected during upgrade, the existing components are upgraded to the latest version.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions that have the same major version share some components across all instances. If the shared components are selected during upgrade, the existing components are upgraded to the latest version.
   
- Examples: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
+Examples: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
   
 ### Components shared across minor versions
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions that have the same major.minor version shared components.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions that have the same major.minor version shared components.
   
- Example: Setup support files.
+Example: Setup support files.
   
 ### Components specific to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
 Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components or services are specific to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance.
   
 Examples: [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -72,6 +88,7 @@ Examples: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnove
 For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact installation, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). For more information about how to uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, see [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
 ## Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Side-By-Side with Previous Versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
 You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer that is already running instances of an earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version. If a default instance already exists on the computer, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be installed as a named instance.  
   
 > [!CAUTION]  
@@ -92,13 +109,15 @@ The following table shows side-by-side support for [!INCLUDE[ssSQL15](../../incl
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|  
 
 ## Preventing IP Address Conflicts
+
 When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance is installed side by side with a standalone instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], take care to avoid TCP port number conflicts on the IP addresses. Conflicts usually occur when two instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are both configured to use the default TCP port (1433). To avoid conflicts, configure one instance to use a non-default fixed port. Configuring a fixed port is usually easiest on the standalone instance. Configuring the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to use different ports will prevent an unexpected IP Address/TCP port conflict that blocks an instance startup when a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance fails to the standby node.
   
 ## See Also
-[Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
-[Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
-[Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
-[Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
-[Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
-[Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
+
+[Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+[Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+[Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)
+[Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+[Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+[Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)

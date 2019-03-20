@@ -2,7 +2,7 @@
 title: "UTF-8 Support in OLE DB Driver for SQL Server| Microsoft Docs"
 description: "UTF-8 Support in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "02/11/2019"
+ms.date: 03/25/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

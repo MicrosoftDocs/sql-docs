@@ -61,7 +61,7 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
   
 -   You must be connected to the server instance that hosts the current primary replica.  
 
--   If using a SQL Login, make sure the account is configured correctly. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group (SQL Server)](../../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md#SSauthentication).
+-   If using a SQL Login, make sure the account is configured correctly. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group (SQL Server)](../../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md).
   
 ###  <a name="RORReplicaProperties"></a> What Replica Properties Do you Need to Configure to Support Read-Only Routing?  
   

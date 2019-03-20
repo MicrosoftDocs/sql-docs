@@ -38,8 +38,9 @@ PolyBase in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] can now read dat
 - Teradata
 - MongoDB
 - Compatible ODBC generic types
-  > **Note**
-  > PolyBase can allow connection to external data sources using third party ODBC drivers. These drivers are not provided along with PolyBase and may not work as intended. For more information, visit our [guide](../../relational-databases/polybase/polybase-configure-odbc-generic.md) for PolyBase ODBC generic configuration.  
+  
+> [!NOTE]
+> PolyBase can allow connection to external data sources using third party ODBC drivers. These drivers are not provided along with PolyBase and may not work as intended. For more information, visit our [guide](../../relational-databases/polybase/polybase-configure-odbc-generic.md) for PolyBase ODBC generic configuration.  
 
 ## PolyBase in big data clusters vs. PolyBase in stand-alone instances
 
@@ -55,6 +56,5 @@ The following table highlights the PolyBase features available in [!INCLUDE[sssq
 |Create external table on a SQL Server storage pool | X| |
 |Scale-out query execution | X| X|
 
-> **Note**
->
+> [!NOTE]
 >The table does not describe the functionality available in the latest [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP. For the available features, please reference the release notes. For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).

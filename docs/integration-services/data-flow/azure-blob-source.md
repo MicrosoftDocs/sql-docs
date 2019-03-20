@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.dts.designer.afpblobsrc.f1"
   - "sql14.dts.designer.afpblobsrc.f1"
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Blob Source

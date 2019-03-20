@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "largest integer less than or equal to expression"
   - "FLOOR function [SSIS]"
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # FLOOR (SSIS Expression)

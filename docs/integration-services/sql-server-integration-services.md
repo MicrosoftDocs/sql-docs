@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DTS [Integration Services], about Integration Services"
   - "data integration [Integration Services]"
   - "Data Transformation Services"
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQL Server Integration Services

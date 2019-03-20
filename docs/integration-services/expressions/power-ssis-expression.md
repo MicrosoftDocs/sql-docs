@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "POWER function"
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # POWER (SSIS Expression)

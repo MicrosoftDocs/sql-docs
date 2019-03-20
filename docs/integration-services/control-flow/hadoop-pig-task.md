@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadooppigtask.f1"
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Hadoop Pig Task

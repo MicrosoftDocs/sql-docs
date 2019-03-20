@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "service [Integration Services]"
   - "SQL Server Integration Services, service"
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Service (SSIS Service)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "datasets [Integration Services], multiple outputs"
   - "multiple transformations"
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Multicast Transformation

@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+           "source_path": "docs/relational-databases/database-features.md",
+           "redirect_url": "/sql/relational-databases/databases/databases",
+           "redirect_document_id": false 
+        },       
+        {
             "source_path": "docs/relational-databases/polybase/polybase-type-mapping.md",
             "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
             "redirect_document_id": false 
@@ -3073,14 +3078,19 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/reporting-services/reporting-services-release-notes.md",
-            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-release-notes/",
-            "redirect_document_id": false
+            "source_path": "docs/reporting-services/change-log-sql-server-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/release-notes-reporting-services/",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
             "redirect_url": "/sql/reporting-services/security/grant-user-access-to-a-report-server",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/application-integration/changelog.md",
+            "redirect_url": "/sql/reporting-services/application-integration/release-notes-ssrs-application-integration",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/release-notes/microsoft-sql-server.md",

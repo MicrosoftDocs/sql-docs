@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "containers [Integration Services], Task Host"
   - "Task Host container"
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Task Host Container

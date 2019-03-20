@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/19/2019
+ms.date:03/25/201903/19/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql

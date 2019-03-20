@@ -1,7 +1,7 @@
 ---
 title: "Trace Flags (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/10/2019
+ms.date:03/25/201903/10/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

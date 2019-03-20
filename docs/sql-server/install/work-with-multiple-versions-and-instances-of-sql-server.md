@@ -27,7 +27,7 @@ manager: craigg
 
 You can install multiple instances of SQL Server, or install SQL Server on a computer where earlier SQL Server versions are already installed.
 
-The following SQL Server related items are compatible with the installation of multiple instances on the same computer:
+The following SQL Server-related items are compatible with the installation of multiple instances on the same computer:
 
 - Database Engine
 
@@ -98,7 +98,7 @@ You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a c
   
 The following table shows side-by-side support for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:
   
-|Existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|side-by-side support|  
+|Existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|side by side support|  
 |--------------------------------------------------|----------------------------|  
 |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32-bit)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64-bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] <br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
 

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], identifiers"
   - "qualified identifiers [Integration Services]"
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Identifiers (SSIS)

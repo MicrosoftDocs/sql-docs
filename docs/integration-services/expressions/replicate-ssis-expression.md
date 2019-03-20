@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "REPLICATE function"
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # REPLICATE (SSIS Expression)

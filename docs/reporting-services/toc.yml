@@ -6,8 +6,8 @@
   items:
   - name: What's new in Reporting Services
     href: ../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md
-  - name: Change log
-    href: ../reporting-services/change-log-sql-server-reporting-services.md
+  - name: Release notes for SSRS 2017 and later
+    href: ../reporting-services/release-notes-reporting-services.md
   - name: Reporting Services Concepts (SSRS)
     href: ../reporting-services/reporting-services-concepts-ssrs.md
   - name: Reporting Services Features and Tasks
@@ -1624,8 +1624,8 @@
       href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md
     - name: Report Viewer support
       href: ../reporting-services/application-integration/reportviewer-controls-support.md
-    - name: Report Viewer controls changelog
-      href: ../reporting-services/application-integration/changelog.md
+    - name: Release Notes for the Report Viewer controls of SSRS
+      href: ../reporting-services/application-integration/release-notes-ssrs-application-integration.md
   - name: Integrating Reporting Services directly
     items:
     - name: Choosing Between URL Access and SOAP

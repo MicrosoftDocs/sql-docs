@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "datasets [Integration Services], normalized data"
   - "less normalized data set [Integration Services]"
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Pivot Transformation

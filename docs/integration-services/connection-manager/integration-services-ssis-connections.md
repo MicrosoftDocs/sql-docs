@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "connections [Integration Services]"
   - "SQL Server Integration Services packages, connections"
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Connections

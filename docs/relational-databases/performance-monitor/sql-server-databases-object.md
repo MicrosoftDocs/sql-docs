@@ -64,7 +64,7 @@ manager: craigg
 |**Log Pool Total Active Log Size**|Current total active log stored in the shared cache buffer manager in bytes.|
 |**Log Pool Total Shared Pool Size**|Current total memory usage of the shared cache buffer manager in bytes.|
 |**Log Shrinks**|Total number of log shrinks for this database.|  
-|**Log Truncations**|The number of times the transaction log has been shrunk.|  
+|**Log Truncations**|The number of times the transaction log has been truncated (in Simple Recovery Model).|  
 |**Percent Log Used**|Percentage of space in the log that is in use.|  
 |**Repl. Pending Xacts**|Number of transactions in the transaction log of the publication database marked for replication, but not yet delivered to the distribution database.|  
 |**Repl. Trans. Rate**|Number of transactions per second read out of the transaction log of the publication database and delivered to the distribution database.|  

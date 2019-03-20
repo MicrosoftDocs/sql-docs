@@ -3,13 +3,12 @@ title: "Connect to a Flat File Data Source (SQL Server Import and Export Wizard)
 ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect to a Flat File Data Source (SQL Server Import and Export Wizard)

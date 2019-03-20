@@ -3,13 +3,12 @@ title: "Connect to an Access Data Source (SQL Server Import and Export Wizard) |
 ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect to an Access Data Source (SQL Server Import and Export Wizard)

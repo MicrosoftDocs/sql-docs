@@ -37,7 +37,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## Arguments  
- **@dbname** = _database_name_**'**  
+ **@dbname** = *database_name*
  Signifies the name of the database to run the garbage collector on.  
   
 > [!NOTE]  

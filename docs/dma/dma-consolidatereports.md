@@ -1,8 +1,8 @@
----
+﻿---
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
-ms.date: "02/27/2019"
+ms.date: "03/19/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 ---
@@ -32,15 +32,15 @@ The following step-by-step instructions help you use the Data Migration Assistan
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
     - [Azure PowerShell Modules](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Download and extract:
-    - The [DMA Reports Power BI template](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip).
-    - The [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip).
+    - The [DMA Reports Power BI template](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
+    - The [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
 
 ## Loading the PowerShell modules
 Saving the PowerShell modules into the PowerShell modules directory enables you to call the modules without the need to explicitly load them before use.
 
 To load the modules, perform the following steps:
 1. Navigate to C:\Program Files\WindowsPowerShell\Modules, and then create a folder named **DataMigrationAssistant**.
-2. Open the [PowerShell-Modules](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip), and then save them into the folder you created.
+2. Open the [PowerShell-Modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip), and then save them into the folder you created.
 
       ![PowerShell Modules](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -98,6 +98,7 @@ The parameters associated with the dmaDataCollector function are described in th
 |Parameter  |Description |
 |---------|---------|
 |**getServerListFrom** | Your inventory. Possible values are **SqlServer** and **CSV**.<br/>For more info, see [Create an inventory of SQL Servers](#create-inventory). |
+|**csvPath** | The path to your CSV inventory file.  Used only when **getServerListFrom** is set to  **CSV**. |
 |**serverName**	| The SQL Server instance name of the inventory when using **SqlServer** in the **getServerListFrom** parameter. |
 |**databaseName** | The database hosting the inventory table. |
 |**AssessmentName**	| The name of the DMA assessment. |

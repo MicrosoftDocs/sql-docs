@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "transformations [Integration Services], components"
   - "Script component [Integration Services], examples"
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Parsing Non-Standard Text File Formats with the Script Component

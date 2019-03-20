@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date:03/25/2019"03/20/2017"
+ms.date:03/25/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

@@ -4,7 +4,7 @@ description: Install, configure, and validate the Java language extension on SQL
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date:03/25/201902/19/2019
+ms.date:03/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

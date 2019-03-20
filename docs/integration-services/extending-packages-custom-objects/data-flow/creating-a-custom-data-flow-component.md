@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data flow components [Integration Services]"
   - "data flow components [Integration Services], developing"
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Creating a Custom Data Flow Component

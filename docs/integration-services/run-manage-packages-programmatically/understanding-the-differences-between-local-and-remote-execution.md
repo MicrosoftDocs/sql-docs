@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "packages [Integration Services], running"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Understanding the Differences between Local and Remote Execution

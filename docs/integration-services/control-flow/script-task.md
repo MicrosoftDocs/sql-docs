@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], about Script task"
   - "Script task [Integration Services]"
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Script Task

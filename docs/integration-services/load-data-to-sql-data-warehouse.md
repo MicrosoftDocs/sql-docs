@@ -8,7 +8,7 @@ ms.technology: integration-services
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
-ms.author: douglasl
+ms.author: janinez
 author: douglaslMS
 manager: craigg-msft
 ---

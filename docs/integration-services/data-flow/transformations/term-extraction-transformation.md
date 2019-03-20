@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "term extractions [Integration Services]"
   - "stemming words [Integration Services]"
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Term Extraction Transformation

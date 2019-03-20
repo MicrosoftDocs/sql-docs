@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "manSer"
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Manage a CDC Service

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "PrimeOutput method"
   - "data flow components [Integration Services], transformation components"
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing a Custom Transformation Component with Asynchronous Outputs

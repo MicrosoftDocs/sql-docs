@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "examples [Integration Services]"
   - "SSIS Script task, examples"
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Script Task Examples

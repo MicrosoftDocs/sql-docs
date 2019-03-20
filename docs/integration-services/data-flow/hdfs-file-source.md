@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hdfsfilesrc.f1"
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # HDFS File Source

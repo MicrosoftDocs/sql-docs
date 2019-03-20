@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Data Reader task [Integration Services]"
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # WMI Data Reader Task

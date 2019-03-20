@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Script component [Integration Services], examples"
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing Specific Types of Script Components

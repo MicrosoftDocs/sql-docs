@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Script component [Integration Services], connecting to data sources"
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connecting to Data Sources in the Script Component

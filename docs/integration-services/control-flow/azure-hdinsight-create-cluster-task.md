@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.dts.designer.afpcreatecltask.f1"
   - "sql14.dts.designer.afpcreatecltask.f1"
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure HDInsight Create Cluster Task

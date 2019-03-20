@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.ssis.ssms.isoperations.executions.f1"
   - "sql13.ssis.ssms.isoperations.general.f1"
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Monitor Running Packages and Other Operations

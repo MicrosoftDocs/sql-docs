@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.ssis.designer.parameter.f1"
   - "sql13.dts.designer.parameterwindow.f1"
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Package and Project Parameters

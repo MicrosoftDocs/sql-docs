@@ -93,7 +93,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
 ### Always Encrypted with secure enclaves
 
@@ -101,23 +101,13 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3, 2.2, CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
 
 ### System Dynamic Management Views
 
 - **Issue and customer impact**: The system table-valued function [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) returns random values in the `dependency` column.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
-
-### SQL Server Analysis Services (SSAS)
-
-- **Issue and customer impact**: For tabular models with dynamic security, under some circumstances a user can see data from another user belonging to the same role.
-
-  **Scenario**: There are at least 2 roles in the model. One of the roles doesn't have any dynamic security expression that contains `USERNAME` or `USERPRINCIPALNAME`. The second role with dynamic row-level security is defined for user A and user B by using expressions that contain `USERNAME` or `USERPRINCIPLENAME`. User A and user B can connect and query data, however, user B may see data secured only for user A under certain circumstances.
-
-- **Workaround**: Add a dummy measure in the model. For example `[DummyMeasure] := UserName()`. This ensures that dynamic expressions are evaluated for the row level security expressions.
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

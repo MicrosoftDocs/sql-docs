@@ -70,7 +70,7 @@ If you have many objects, you might want to use the **Advanced Object Selection*
 For more information about filtering, see the Options section of [Advanced Object Selection (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## Connect to SQL Server Page  
-On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page, you specify connection properties, and then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Connect to SQL Server](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page, you specify connection properties, and then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Connect to SQL Server](connect-to-sql-server-accesstosql.md)  
   
 > [!IMPORTANT]  
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** and the migration starts.  

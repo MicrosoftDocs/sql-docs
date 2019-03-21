@@ -112,7 +112,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Firewall documentation:**
--   [RHEL](https://access.redhat.com/documentation/en-usred_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### Install [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] packages for availability

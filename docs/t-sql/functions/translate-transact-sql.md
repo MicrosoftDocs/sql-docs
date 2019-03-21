@@ -39,7 +39,7 @@ TRANSLATE ( inputString, characters, translations)
  Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing characters that should be replaced. *characters* can be any character data type.
 
 *translations*   
- Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the replacment characters. *translations* must be the same data type and length as *characters*.
+ Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the replacement characters. *translations* must be the same data type and length as *characters*.
 
 ## Return Types
 

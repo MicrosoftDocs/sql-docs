@@ -13849,6 +13849,16 @@
             "source_path": "docs/powershell/sql-server-powershell-license-terms.md",
             "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-powershell-license-terms",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssdt/install-sql-server-data-tools.md",
+            "redirect_url": "sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssdt/removing-sql-server-data-tools-components.md",
+            "redirect_url": "sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_document_id": false
         }
     ]
 }

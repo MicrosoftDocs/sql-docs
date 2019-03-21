@@ -142,7 +142,7 @@ To create a SQL Server credential, follow these steps:
     The script will look like the following code.  
   
     ```sql   
-    \* Example:
+    /* Example:
     USE master  
     CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] 
     WITH IDENTITY='SHARED ACCESS SIGNATURE'   

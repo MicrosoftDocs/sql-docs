@@ -32,18 +32,21 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
 
    If you are unisntalling mssqlctl corresponding to CTP version 2.2 or lower run:
+
    ```powershell
    pip3 uninstall mssqlctl
    ```
-   
-   For CTP2.3 or higher run:
+
+   For CTP2.3 or higher run (replace `ctp-2.3` in the command with the version of mssqlctl you are uninstalling):
+
    ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
+
 1. Install **mssqlctl** with the following command:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl installation
@@ -67,11 +70,13 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
 
    If you are unisntalling mssqlctl corresponding to CTP version 2.2 or lower run:
+
    ```bash
    pip3 uninstall mssqlctl
    ```
-   
-   For CTP2.3 or higher run:
+
+   For CTP2.3 or higher run (replace `ctp-2.3` in the command with the version of mssqlctl you are uninstalling):
+
    ```bash
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
@@ -79,7 +84,7 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

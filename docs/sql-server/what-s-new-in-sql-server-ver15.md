@@ -30,6 +30,10 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
+- [Big data cluster](#bigdatacluster)
+  - Guidance on GPU support for running deep learning with TensorFlow in Spark.
+  - Spark runtime upgrade to Spark 2.4.
+
 - [Database engine](#databaseengine)
   - New `query_post_execution_plan_profile` Extended Event.
   - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries.
@@ -45,6 +49,8 @@ The following sections describe the new features that have been introduced in pr
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
+- [GPU support for running deep learning with TensorFlow in Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
+- Spark runtime upgrade to Spark 2.4. (CTP 2.4)
 - [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. (CTP 2.3)
 - [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)

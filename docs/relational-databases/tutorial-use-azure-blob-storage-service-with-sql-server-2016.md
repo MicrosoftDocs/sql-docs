@@ -143,12 +143,11 @@ To create a SQL Server credential, follow these steps:
   
     ```sql   
     \* Example:
-     USE master  
-     CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] 
-     WITH IDENTITY='SHARED ACCESS SIGNATURE'   
-     , SECRET = 'sharedaccesssignature' 
-    GO  
-    */
+    USE master  
+    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] 
+    WITH IDENTITY='SHARED ACCESS SIGNATURE'   
+    , SECRET = 'sharedaccesssignature' 
+    GO */
     
     USE master  
     CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 

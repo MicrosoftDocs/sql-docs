@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
-ms.date: "03/08/2019"
+ms.date: "03/21/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -830,9 +830,9 @@ ALTER DATABASE database_name
       | SERVICE_OBJECTIVE = {
             'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500'
           | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000'
-          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c'
-          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c'
-          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+          | 'DW3000' | 'DW6000' | 'DW500c' | 'DW1000c' | 'DW1500c'
+          | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c'
+          | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
 
@@ -847,16 +847,16 @@ Renames the database with the name specified as *new_database_name*.
 MAXSIZE
 The default is 245,760 GB (240 TB).
 
-**Applies to:** Optimized for Elasticity performance tier
+**Applies to:** Optimized for Compute Gen1
 
 The maximum allowable size for the database. The database cannot grow beyond MAXSIZE.
 
-**Applies to:** Optimized for Compute performance tier
+**Applies to:** Optimized for Compute Gen2
 
-The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE.Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
+The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
 SERVICE_OBJECTIVE
-Specifies the performance level. For more information about service objectives for [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], see [Performance Tiers](https://azure.microsoft.com/documentation/articles/performance-tiers/).
+Specifies the performance level. For more information about service objectives for SQL Data Warehouse, see [Data Warehouse Units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## Permissions
 
@@ -872,8 +872,6 @@ The owner of the database cannot alter the database unless the owner is a member
 The current database must be a different database than the one you are altering, therefore **ALTER must be run while connected to the master database**.
 
 SQL Data Warehouse is set to COMPATIBILITY_LEVEL 130 and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
-
-To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
 ## Limitations and Restrictions
 

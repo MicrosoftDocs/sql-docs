@@ -37,7 +37,7 @@ manager: craigg
   
  The export process sets the DAC version to 1.0.0.0 and the DAC description in the export file to an empty string. If the database was deployed from a DAC, the DAC definition in the export file contains the name given to the original DAC, otherwise the DAC name is set to the database name.  
   
- There is a sample application in the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs that can be used to test exporting and importing DACs and databases. For instructions on how to download and use the sample, see [Database Import and Export for Windows Azure SQL Database](https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export.md).  
+ There is a sample application in the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs that can be used to test exporting and importing DACs and databases. For instructions on how to download and use the sample, see [Database Import and Export for Windows Azure SQL Database](/sql/relational-databases/import-export/overview-import-export.md).  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  A DAC or database can only be exported from a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  

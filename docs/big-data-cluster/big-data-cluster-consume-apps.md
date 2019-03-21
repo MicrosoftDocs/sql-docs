@@ -81,7 +81,7 @@ Note the IP address (`10.1.1.3` in this example) and the port number (`30777`) i
 
 ## Generate a JWT access token
 
-In order to access the RESTful web service for the app you have deployed you first to generate a JWT Access token. Open the following URL in your browser: `https://[IP]:[PORT]/api/docs/swagger.json` using the IP address and port you retrieved running the `describe` command above. You will have to log in with the same credentials you used for `mssqlctl login`.
+In order to access the RESTful web service for the app you have deployed you first have to generate a JWT Access token. Open the following URL in your browser: `https://[IP]:[PORT]/api/docs/swagger.json` using the IP address and port you retrieved running the `describe` command above. You will have to log in with the same credentials you used for `mssqlctl login`.
 
 Paste the contents of the `swagger.json` into the [Swagger Editor](https://editor.swagger.io) to understand what methods are available:
 

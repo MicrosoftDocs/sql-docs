@@ -169,7 +169,7 @@ manager: craigg
   
 -   Technical article, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), on technet.microsoft.com  
   
--   Technical article, [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), on sqlcat.com  
+-   Technical article, [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf), in _SQLCAT's Guide to BI and Analytics_
   
 -   Technical article, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=220816), on msdn.microsoft.com.  
   

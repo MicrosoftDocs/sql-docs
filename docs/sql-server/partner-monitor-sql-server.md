@@ -57,7 +57,7 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
-[sentryone_datasheet]:https://www.sentryone.com/platform 
+[sentryone_datasheet]:https://www.sentryone.com/products/sentryone-platform/database-performance-monitoring
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->

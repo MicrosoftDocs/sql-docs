@@ -25,7 +25,7 @@ The following sections describe the new features and known issues for big data c
 
 | New feature | Details |
 |:---|:---|
-| GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](spark-gpu-tensorflow.md) |
+| Guidance on GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](spark-gpu-tensorflow.md) |
 | Spark runtime upgrade to Spark 2.4. | |
 
 ### Known issues

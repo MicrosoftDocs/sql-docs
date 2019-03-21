@@ -31,7 +31,7 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
 - [Big data cluster](#bigdatacluster)
-  - GPU support for running deep learning with TensorFlow in Spark.
+  - Guidance on GPU support for running deep learning with TensorFlow in Spark.
   - Spark runtime upgrade to Spark 2.4.
 
 - [Database engine](#databaseengine)

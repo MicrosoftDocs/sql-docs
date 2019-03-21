@@ -13852,12 +13852,12 @@
         },
         {
             "source_path": "docs/ssdt/install-sql-server-data-tools.md",
-            "redirect_url": "sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/ssdt/removing-sql-server-data-tools-components.md",
-            "redirect_url": "sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
             "redirect_document_id": false
         }
     ]

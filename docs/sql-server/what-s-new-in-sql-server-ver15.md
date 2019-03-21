@@ -32,8 +32,8 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 - [Database engine](#databaseengine)
   - New `query_post_execution_plan_profile` Extended Event.
-  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for any query.
-  - Transparent data encryption (TDE) scan - suspend and resume.
+  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries.
+  - Transparent Data Encryption (TDE) scan - suspend and resume.
 
 - [SQL Server Analysis Services](#ssas)
   - Many-to-many relationships in tabular models.
@@ -75,7 +75,7 @@ ADD EVENT sqlserver.query_post_execution_showplan(
     ACTION(sqlos.task_time, sqlserver.database_id, 
     sqlserver.database_name, sqlserver.query_hash_signed, 
     sqlserver.query_plan_hash_signed, sqlserver.sql_text))
-ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanOld.xel')
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
 WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
@@ -97,7 +97,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 ### New DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
-The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
+The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats.md) and [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
 
 ```sql
 SELECT *
@@ -109,23 +109,23 @@ GO
 
 This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
 
-### Transparent data encryption (TDE) scan - suspend and resume (CTP 2.4)
+### Transparent Data Encryption (TDE) scan - suspend and resume (CTP 2.4)
 
-In order to enable TDE on a database, SQL Server must perform an encryption scan which reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk.  To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
+In order to enable [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) on a database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] must perform an encryption scan which reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk. To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
 
 Use the following syntax to pause the TDE encryption scan:
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 ```
 
 Similarly, the following syntax resumes the TDE encryption scan:
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
-To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view . There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the SQL Server instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
+To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
 
 ### Accelerated database recovery (CTP 2.3)
 

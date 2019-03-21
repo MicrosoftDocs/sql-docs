@@ -93,9 +93,9 @@ To view migration messages, make sure that the Output pane is visible. Otherwise
   
 5.  In the **Connect to MySQL** dialog box, enter the connection credentials, and then click **Connect**. For more information on connecting to MySQL, see [Connect to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
-    If the target database is SQL Server, then, enter the connection credentials in the **Connect to SQL Server** dialog box, and click **Connect**. For more information on connecting to SQL Server, see [Connect to SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    If the target database is SQL Server, then, enter the connection credentials in the **Connect to SQL Server** dialog box, and click **Connect**. For more information on connecting to SQL Server, see [Connect to SQL Server](../../ssma/mysql/connect-to-sql-server-accesstosql.md)  
   
-    If the target database is SQL Azure, then enter the connection credentials in the **Connect to SQL Azure** dialog box, and click **Connect**. For more information on connecting to SQL Azure, see [Connect to Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
+    If the target database is SQL Azure, then enter the connection credentials in the **Connect to SQL Azure** dialog box, and click **Connect**. For more information on connecting to SQL Azure, see [Connect to Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/access/connect-to-azure-sql-db-mysqltosql.md)  
   
     Messages will appear in the **Output** pane. When the migration is complete, the **Data Migration Report** appears. If any data did not migrate, click the row that contains the errors, and then click **Details**. When you are finished with the report, click **Close**. For more information on Data Migration Report, see [Data Migration Report (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   

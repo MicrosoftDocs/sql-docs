@@ -19,6 +19,10 @@ This article lists the updates and know issues for the most recent releases of S
 
 ## <a id="ctp24"></a> CTP 2.4 (March)
 
+The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.4.
+
+### New features
+
 | New feature | Details |
 |:---|:---|
 | GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](spark-gpu-tensorflow.md) |
@@ -110,6 +114,8 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
 - AKS logs may contain SA password for big data cluster deployments.
 
 ## <a id="ctp23"></a> CTP 2.3 (February)
+
+The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.3.
 
 ### New features
 

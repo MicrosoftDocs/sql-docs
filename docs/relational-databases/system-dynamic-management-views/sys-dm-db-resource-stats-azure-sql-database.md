@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/14/2018"
+ms.date: "03/21/2019"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "language-reference"

@@ -91,10 +91,6 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**$(ESCAPE_NONE(**_token\_name_**))**|Replaces token without escaping any characters in the string. This macro is provided to support backward compatibility in environments where token replacement strings are only expected from trusted users. For more information, see "Updating Job Steps to Use Macros," later in this topic.|  
   
 ## Updating Job Steps to Use Macros  
-Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, job steps that contain tokens without escape macros will fail and return an error message indicating the job step contains one or more tokens that must be updated with a macro before the job can run.  
-  
-A script is provided with [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base article 915845: [SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845).You can use this script to update all of your job steps that use tokens with the **ESCAPE_NONE** macro. After using this script, we recommend that you review your job steps that use tokens as soon as possible, and replace the **ESCAPE_NONE** macro with an escape macro that is appropriate for the job step context.  
-  
 The following table describes how token replacement is handled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. To turn alert token replacement on or off, right-click **SQL Server Agent** in Object Explorer, select **Properties**, and on the **Alert System** page, select or clear the **Replace tokens for all job responses to alerts** check box.  
   
 |Token syntax|Alert token replacement on|Alert token replacement off|  

@@ -25,7 +25,7 @@ This C# code example should be considered a proof of concept only. The sample co
 The method **SqlConnection.Open** is used to connect to your SQL database.  
 
 
-```C#  
+```csharp
     // C# , ADO.NET  
     using System;
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -68,7 +68,7 @@ The method SqlCommand.ExecuteReader:
   
   
   
-```C#  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -156,7 +156,7 @@ This example demonstrates how to:
   
   
   
-```C#  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  

@@ -170,6 +170,16 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 However, after a restart, SQL Server does not start listening on the **servertcpport** until the first distributed transaction. In this case, you would not see SQL Server listening on port 51999 in this example until the first distributed transaction.
 
+## Configure authentication on RPC communication for MSDTC
+
+MSDTC for SQL Server on Linux does not use authentication on RPC communication by default. However, when the host machine is joined to an Active Directory (AD) domain, it is possible to configure MSDTC to use authenticated RPC communication using following **mssql-conf** settings:
+
+| Setting | Description |
+|---|---|
+| **distributedtransaction.allowonlysecurerpccalls**          | Configure secure only RPC calls for distributed transactions. |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configure security only RPC calls for distributed transactions. |
+| **distributedtransaction.turnoffrpcsecurity**               | Enable or disable RPC security for distributed transactions. |
+
 ## Next steps
 
 For more information about SQL Server on Linux, see [SQL Server on Linux](sql-server-linux-overview.md).

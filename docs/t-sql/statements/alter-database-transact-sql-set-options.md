@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sql
 
 Sets database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL Database. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with whichyou're working.
+Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you're working.
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -543,7 +543,7 @@ SINGLE_USER
 
 Specifies that only one user at a time can access the database. If you specify SINGLE_USER and other users connect to the database, the ALTER DATABASE statement is blocked until all users disconnect from the specified database. To override this behavior, see the WITH \<termination> clause.
 
-The database remains in SINGLE_USER mode even if the user that set the option logs off. At that point, a different user, but only one, can connect to the database.
+The database remains in SINGLE_USER mode even if the user that set the option signs out. At that point, a different user, but only one, can connect to the database.
 
 Before you set the database to SINGLE_USER, verify the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF. When set to ON, the background thread used to update statistics takes a connection against the database, and you will be unable to access the database in single-user mode. To view the status of this option, query the is_auto_update_stats_async_on column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. If the option is set to ON, perform the following tasks:
 

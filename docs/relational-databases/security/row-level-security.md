@@ -78,7 +78,7 @@ RLS supports two types of security predicates.
   
  Block predicates have the following behavior:  
   
-- Block predicates for UPDATE are split into separate operations for BEFORE and AFTER. Consequently, you cannot, for example, block users from updating a row to have a value higher than the current one. If this kind of logic is required, you must use triggers with the [DELETED and INSERTED](../triggers/use-the-inserted-and-deleted-tables) intermediate tables to reference the old and new values together.  
+- Block predicates for UPDATE are split into separate operations for BEFORE and AFTER. Consequently, you cannot, for example, block users from updating a row to have a value higher than the current one. If this kind of logic is required, you must use triggers with the [DELETED and INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) intermediate tables to reference the old and new values together.  
   
 - The optimizer will not check an AFTER UPDATE block predicate if none of the columns used by the predicate function were changed. For example: Alice should not be able to change a salary to be greater than 100,000, but she should be able to change the address of an employee whose salary is already greater than 100,000 (the columns referenced in the predicate were not changed).  
   

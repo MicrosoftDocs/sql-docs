@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.reviewissues.f1"
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Review Data Type Mapping (SQL Server Import and Export Wizard)

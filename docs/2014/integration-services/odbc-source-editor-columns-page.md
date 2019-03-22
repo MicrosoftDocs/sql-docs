@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcsource.columns.f1"
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ODBC Source Editor (Columns Page)

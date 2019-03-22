@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "transactions [Integration Services], multiple"
   - "multiple transactions"
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Multiple Transactions

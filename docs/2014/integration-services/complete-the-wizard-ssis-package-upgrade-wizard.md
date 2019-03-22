@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.completewizard.f1"
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Complete the Wizard (SSIS Package Upgrade Wizard)

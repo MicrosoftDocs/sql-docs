@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "parameters [Integration Services]"
   - "OLE DB Command transformation"
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure the OLE DB Command Transformation

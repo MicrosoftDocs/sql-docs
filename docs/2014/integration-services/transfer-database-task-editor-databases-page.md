@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Database Task Editor"
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transfer Database Task Editor (Databases Page)

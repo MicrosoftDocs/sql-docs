@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Analysis Services Execute DDL task"
   - "DDL"
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Analysis Services Execute DDL Task

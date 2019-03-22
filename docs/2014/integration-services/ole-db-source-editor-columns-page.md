@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "OLE DB Source Editor"
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OLE DB Source Editor (Columns Page)

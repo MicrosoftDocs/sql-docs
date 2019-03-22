@@ -168,7 +168,7 @@ Query the **sys.database_query_store_options** view to determine the current opt
 For more information about setting options by using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Option Management](#OptionMgmt).  
   
 ## <a name="Related"></a> Related Views, Functions, and Procedures  
- View and manage Query Storethrough [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or by using the following views and procedures.  
+ View and manage Query Store through [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or by using the following views and procedures.  
 
 ### Query Store Functions  
  Functions help operations with the Query Store. 

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SSIS, scripting"
   - "scripts [Integration Services], about scripting"
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Extending Packages with Scripting

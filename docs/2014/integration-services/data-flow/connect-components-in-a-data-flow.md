@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "components [Integration Services], connections"
   - "connections [Integration Services], data flow components"
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect Components in a Data Flow

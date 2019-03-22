@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SSIS projects, adding"
   - "projects [Integration Services], adding"
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add or Remove an Integration Services Project in a Solution

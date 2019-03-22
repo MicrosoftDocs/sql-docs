@@ -95,7 +95,11 @@ It is important to configure the firewall before configuring port routing in the
 
 ## Configure port routing
 
-Configure the Linux server routing table so that RPC communication on port 135 is redirected to SQL Server's **network.rpcport**. Configuration mechanism for port forwarding on different distribution may differ. On distributions that do not use **firewalld** service, **iptable** rules are an efficient mechanism to achieve this. Examples of such distrubutions are Ubuntu 16.04 and SUSE Enterprise Linux v12. The **iptable** rules may not persist during reboots, so the following commands also provide instructions for restoring the rules after a reboot.
+Configure the Linux server routing table so that RPC communication on port 135 is redirected to SQL Server's **network.rpcport**. Configuration mechanism for port forwarding on different distribution may differ. The following sections provide guidance for Ubuntu, SUS Enterprise Linux (SLES), and Red Hat Enterprise Linux (RHEL).
+
+### Port routing in Ubuntu and SLES
+
+Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are an efficient mechanism to achieve port routing. The **iptable** rules may not persist during reboots, so the following commands also provide instructions for restoring the rules after a reboot.
 
 1. Create routing rules for port 135. In the following example, port 135 is directed to the RPC port, 13500, defined in the previous section. Replace `<ipaddress>` with the IP address of your server.
 
@@ -138,9 +142,9 @@ The **iptables-save** and **iptables-restore** commands, along with `rc.local`/`
 > sudo iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done
 > ```
 
-### Red Hat Enterprise Linux
+### Port routing in RHEL
 
-On distributions that use firewalld service, such as Red Hat Enterprise Linux, the same service can be used for both opening the port on the server and internal port forwarding. For example, on Red Hat Enterprise Linux, you should use firewalld service (via firewall-cmd configuration utility with -add-forward-port or similar options) to create and manage persistent port forwarding rules instead of using iptables.
+On distributions that use **firewalld** service, such as Red Hat Enterprise Linux, the same service can be used for both opening the port on the server and internal port forwarding. For example, on Red Hat Enterprise Linux, you should use **firewalld** service (via **firewall-cmd** configuration utility with `-add-forward-port` or similar options) to create and manage persistent port forwarding rules instead of using iptables.
 
 ```bash
 sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500

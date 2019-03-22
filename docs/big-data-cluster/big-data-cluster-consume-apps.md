@@ -96,9 +96,9 @@ The result of this request will give you an JWT `access_token`, which you will n
 ## Execute the app using the RESTful web service
 
 > [!NOTE]
-> If you want, you can open the URL for the `swagger` that was returned when you ran `mssqlctl app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. You will have to log in with the same credentials you used for `mssqlctl login`. The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method.
+> If you want, you can open the URL for the `swagger` that was returned when you ran `mssqlctl app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. You will have to log in with the same credentials you used for `mssqlctl login`. The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method. Also note the Base URL displayed at the top.
 
-You can use your favorite tool to call the `run` method (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`), passing in the parameters in the body of your POST request as json. In this example we will use [Postman](https://www.getpostman.com/). Before making the call, you will need to set the `Authorization` to `Bearer Token` and paste in the token you retrieved earlier. This will set a header on your request. See the screenshot below.
+You can use your favorite tool to call the `run` method (`https://[IP]:30778/api/app/[appname]/[version]/run`), passing in the parameters in the body of your POST request as json. In this example we will use [Postman](https://www.getpostman.com/). Before making the call, you will need to set the `Authorization` to `Bearer Token` and paste in the token you retrieved earlier. This will set a header on your request. See the screenshot below.
 
 ![Postman Run Headers](media/big-data-cluster-consume-apps/postman_run_1.png)
 

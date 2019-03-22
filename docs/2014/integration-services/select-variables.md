@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select Variables dialog box"
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select Variables

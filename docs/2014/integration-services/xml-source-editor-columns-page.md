@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "XML Source Editor"
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # XML Source Editor (Columns Page)

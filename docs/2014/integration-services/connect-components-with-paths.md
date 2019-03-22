@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "components [Integration Services], connections"
   - "connections [Integration Services], data flow components"
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect Components with Paths

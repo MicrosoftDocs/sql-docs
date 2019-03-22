@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Lookup Transformation Editor"
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Lookup Transformation Editor (Advanced Page)

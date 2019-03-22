@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Text File log provider"
   - "SQL Server log provider"
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Logging

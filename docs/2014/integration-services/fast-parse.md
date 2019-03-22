@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "fast parse [Integration Services]"
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Fast Parse

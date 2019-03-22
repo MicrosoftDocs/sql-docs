@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Integration Services service, configuring"
   - "services [Integration Services], configuring"
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Manage the Integration Services Service

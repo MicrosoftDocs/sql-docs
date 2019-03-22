@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Mining Query Transformation Editor"
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Mining Query Transformation Editor (Query Tab)

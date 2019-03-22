@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Compact, destination"
   - "inserting data"
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQL Server Compact Edition Destination

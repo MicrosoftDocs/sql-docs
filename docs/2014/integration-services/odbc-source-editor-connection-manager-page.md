@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcsource.connection.f1"
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ODBC Source Editor (Connection Manager Page)

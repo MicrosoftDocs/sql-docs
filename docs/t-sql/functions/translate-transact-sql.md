@@ -16,11 +16,11 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters specified in the third argument.
 
@@ -39,7 +39,7 @@ TRANSLATE ( inputString, characters, translations)
  Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing characters that should be replaced. *characters* can be any character data type.
 
 *translations*   
- Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the replacment characters. *translations* must be the same data type and length as *characters*.
+ Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the replacement characters. *translations* must be the same data type and length as *characters*.
 
 ## Return Types
 

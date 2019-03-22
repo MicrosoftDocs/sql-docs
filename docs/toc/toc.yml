@@ -16346,7 +16346,7 @@
           href: ../t-sql/queries/freetext-transact-sql.md
         - name: IS NULL
           href: ../t-sql/queries/is-null-transact-sql.md
-    - name: Statments
+    - name: Statements
       href: ../t-sql/statements/statements.md
       items:
       - name: General

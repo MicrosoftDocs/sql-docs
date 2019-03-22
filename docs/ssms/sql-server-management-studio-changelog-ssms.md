@@ -140,7 +140,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of SQL Azure databases
   - Added support for recently added vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.
   - Exposing AUTOGROW_ALL_FILES config option  for Filegroups in SSMS
-  - Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (For details, see https://blogs.msdn.microsoft.  com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
+  - Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (For details, see https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
   - SQL Editor honors the CTRL+D shortcut to duplicate lines (For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
   - New menu and key bindings to creates files: CTRL+ALT+N. CTRL+N will continue to create a new query. Note: if you are migrating from "SSMS 18.0 Preview 1", you must reset the user settings from "**Tools | Import Export Settings | Reset all settings**".
   - "New Firewall Rule" dialog now allow the user to specify a rule name, instead of automatically generating one on behalf of the user (For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039)=

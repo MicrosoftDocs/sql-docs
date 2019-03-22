@@ -16,12 +16,11 @@ ms.author: mathoma
 manager: craigg
 ---
 # Errors and Events Reference (Database Engine)
-  The [Events and Errors Message Center](https://go.microsoft.com/fwlink/?LinkId=47660) on TechNet is the primary source of information on error messages for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It improves the customer experience when searching for information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error messages, as well as other Microsoft products by enabling customers to perform full-text searches and filter results based on product, version, source, and numeric or symbolic identifier. Additionally, the new interface provides support across multiple languages. The Center will be continually updated with new troubleshooting information on frequently encountered errors.  
-  
- Future enhancements to the Events and Errors Message Center will make troubleshooting content available in downloadable form, giving you access to it from a computer that is not connected to the Internet.  
+
+This section contains selected Database Engine error messages that need further explanation.
   
 ## In This Section  
- [Database Engine Events and Errors](database-engine-events-and-errors.md0  
+ [Database Engine Events and Errors](database-engine-events-and-errors.md)
  Describes the format of [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages and explains how to view error messages and return error messages to applications.  
   
  Provides an explanation of [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages, possible causes, and any actions you can take to correct the problem.  

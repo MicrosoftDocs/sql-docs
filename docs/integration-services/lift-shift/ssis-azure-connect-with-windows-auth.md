@@ -1,7 +1,7 @@
 ---
 title: "Access data stores and file shares with Windows authentication | Microsoft Docs"
 description: Learn how to configure SSIS catalog in Azure SQL Database and Azure-SSIS Integration Runtime in Azure Data Factory to run packages that access data stores and file shares with Windows authentication.
-ms.date: "3/20/2018"
+ms.date: "3/22/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -92,7 +92,8 @@ To access a SQL Server on premises from packages running in Azure, do the follow
 
 1.  In SQL Server Configuration Manager, enable TCP/IP protocol.
 2.  Allow access through Windows firewall. For more info, see [Configure Windows firewall to access SQL Server](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
-3.  Join your Azure-SSIS IR to a VNet that is connected to the SQL Server on premises.  For more info, see [Join Azure-SSIS IR to a VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Then use `catalog.set_execution_credential` to provide credentials as described in this article.
+3.  Join your Azure-SSIS IR to a VNet that is connected to the SQL Server on premises.  For more info, see [Join Azure-SSIS IR to a VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+4.  Use SSISDB `catalog.set_execution_credential` stored procedure to provide credentials as described in this article.
 
 ## Connect to a file share on premises 
 To check whether you can connect to a file share on premises, do the following things:
@@ -112,7 +113,8 @@ To check whether you can connect to a file share on premises, do the following t
 To access a file share on premises from packages running in Azure, do the following things:
 
 1.  Allow access through Windows firewall.
-2.  Join your Azure-SSIS IR to a VNet that is connected to the file share on premises.  For more info, see [Join Azure-SSIS IR to a VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Then use `catalog.set_execution_credential` to provide credentials as described in this article.
+2.  Join your Azure-SSIS IR to a VNet that is connected to the file share on premises.  For more info, see [Join Azure-SSIS IR to a VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+3.  Use SSISDB `catalog.set_execution_credential` stored procedure to provide credentials as described in this article.
 
 ## Connect to a file share on Azure VM
 To access a file share on Azure VM from packages running in Azure, do the following things:

@@ -45,10 +45,10 @@ manager: craigg
 For SQL Server to load an SSL certificate, the certificate must meet the following conditions:
 
 - The certificate must be in either the local computer certificate store or the current user certificate store.
-- The current system time must be after the Valid from property of the certificate and before the Valid to property of the certificate.
-- The certificate must be meant for server authentication. This requires the Enhanced Key Usage property of the certificate to specify Server Authentication (1.3.6.1.5.5.7.3.1).
-- The certificate must be created by using the KeySpec option of AT_KEYEXCHANGE. Usually, the certificate's key usage property (KEY_USAGE) will also include key encipherment (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- The Subject property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. If SQL Server is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
+- The current system time must be after the **Valid from** property of the certificate and before the Valid to property of the certificate.
+- The certificate must be meant for server authentication. This requires the **Enhanced Key Usage** property of the certificate to specify **Server Authentication (1.3.6.1.5.5.7.3.1)**.
+- The certificate must be created by using the **KeySpec** option of **AT_KEYEXCHANGE**. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
+- The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. If SQL Server is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
 - SQL Server 2008 R2 and the SQL Server 2008 R2 Native Client support wildcard certificates. Other clients might not support wildcard certificates. For more information, see the client documentation and [KB258858](http://support.microsoft.com/kb/258858).
  
 ##  <a name="Provision"></a> To provision (install) a certificate on the server  

@@ -79,7 +79,7 @@ Once the installation succeeds, you will find a notification in the Task History
 
 |Kernel|Description
 |:-----|:-----
-| SQL Kernel | Write SQL Code against your SQL Server.
+| SQL Kernel | Write SQL Code targeted at your relational database.
 |PySpark3 and PySpark Kernel| Write Python code using Spark compute from the cluster.
 |Spark Kernel|Write Scala and R code using Spark compute from the cluster.
 |Python Kernel|Write Python code for local development.

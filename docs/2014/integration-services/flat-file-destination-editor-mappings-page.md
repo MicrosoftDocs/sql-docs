@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Flat File Destination Editor"
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Flat File Destination Editor (Mappings Page)

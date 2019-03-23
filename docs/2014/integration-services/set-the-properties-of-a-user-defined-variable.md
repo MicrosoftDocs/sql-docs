@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "modifying variables"
   - "variables [Integration Services], properties"
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Set the Properties of a User-Defined Variable

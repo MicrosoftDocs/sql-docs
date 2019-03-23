@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdcsource.errorhandling.f1"
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # CDC Source Editor (Error Output Page)

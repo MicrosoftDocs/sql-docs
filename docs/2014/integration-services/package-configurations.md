@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "direct configurations [Integration Services]"
   - "packages [Integration Services], configurations"
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package Configurations

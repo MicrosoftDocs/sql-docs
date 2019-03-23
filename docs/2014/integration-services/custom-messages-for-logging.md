@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SSIS packages, logs"
   - "custom messages for logging [Integration Services]"
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Custom Messages for Logging

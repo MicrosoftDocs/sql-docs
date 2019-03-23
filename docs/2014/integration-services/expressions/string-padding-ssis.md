@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], string padding"
   - "string padding"
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # String Padding (SSIS)

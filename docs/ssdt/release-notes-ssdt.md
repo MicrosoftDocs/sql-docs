@@ -1,53 +1,85 @@
 ---
-title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
+title: "Release notes for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2018"
+ms.date: 09/28/2018
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
-# Changelog for SQL Server Data Tools (SSDT)
+# Release notes for SQL Server Data Tools (SSDT)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
-  
-For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
+These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 
-## SSDT for Visual Studio 2017 (15.9.0)
-Build Number: 14.0.16186.0  
-Release date: January 28, 2019
+For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).
+
+<!--
+Hello.  We have switched to a newer standardized format for Release Notes articles.
+Basically we have switched from bullet lists to a 2-column table.
+And we have shortened the H2 titles, to reduce wrapping in the rightNav.
+And we have renamed the .md file to the standard format, from 'changelog-for-sql-server-data-tools-ssdt.md' to 'release-notes-ssdt.md'.
+The presently latest H2 section (## 15.9.0) has been converted to the new format.
+But the older sections are too numerous and long to warrant conversion.
+
+REQUEST_1:  Please use the newer 2-column table format from now onward, for each new release section.
+
+REQUEST_2:  Please consider whether it is time to erase perhaps the oldest 25% of these H2 sections.
+Or maybe move all but the latest 9 (of 25) H2 sections to a new file perhaps named 'release-notes-history-ssdt.md', and link to it from the bottom of this file.
+
+For questions, contact CraigG or SStein or GeneMi.
+
+GeneMi , 2019/03/22.
+
+P.S.  There is no need to keep this large HTML comment indefinitely.
+-->
+
+## 15.9.0,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; January 28, 2019  
+_Build Number:_ &nbsp; 14.0.16186.0  
+_SSDT for Visual Studio 2017._
 
 ### What's New?
-**SSIS:**
-1. Add Power Query Source (Preview) for SSIS in ADF 2017.
-2. Add support for SQL Server 2012 back.
-3. Add Oracle source and destination for SQL Server 2019.
-4. Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions.
-5. Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1.
-6. Fix an issue that, in some cases, saving the package causes Visual Studio to crash. 
-7. Fix an issue that, in some cases, the package cannot be executed when protection level is EncryptSensitiveWithPassword and target server version is earlier than SQL Server 2017.
-8. Fix an issue that annotations with default font are not displayed in SSDT.
-9. ISDeploymentWizard supports SQL auth, Azure Active Directory integrated auth, and Azure Active Directory password auth in command-line mode.
 
-### Known issues:
+#### SSIS
 
-- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
-- Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance.
-- Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance.
-- Power Query Source is not localized.
+| New item | Details |
+| :------- | :------ |
+| Add Power Query Source (Preview) for SSIS in ADF 2017. | &nbsp; |
+| Add back the support for SQL Server 2012. | &nbsp; |
+| Add Oracle source and destination for SQL Server 2019. | &nbsp; |
+| Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions. | &nbsp; |
+| Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1. | &nbsp; |
+| Fix an issue that, in some cases, saving the package causes Visual Studio to crash. | &nbsp; |
+| Fix an issue that, in some cases, the package cannot be executed. | This problem occurred when both of the following conditions are true:<br/><br/>&bull; &nbsp; Protection level is EncryptSensitiveWithPassword.<br/>&bull; &nbsp; Target server version is earlier than SQL Server 2017. |
+| Fix an issue that annotations with default font are not displayed in SSDT. | &nbsp; |
+| ISDeploymentWizard supports SQL authentication, Azure Active Directory integrated authentication, and Azure Active Directory password authentication in command-line mode. | &nbsp; |
+| &nbsp; | &nbsp; |
 
+### Known issues
 
-## SSDT for Visual Studio 2017 (15.8.2)
-Build Number: 14.0.16182.0  
-Release date: November 5, 2018  
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
+| SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
+| Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source is not localized. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+## 15.8.2,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; November 5, 2018  
+_Build Number:_ &nbsp; 14.0.16182.0  
+_SSDT for Visual Studio 2017._
 
 ### What's New?
 **SSIS:**
@@ -59,10 +91,11 @@ Fixed an issue that deploying SSIS project which contains packages containing Sc
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 - SSDT for Visual Studio 2017 (15.8.2) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
+## 15.8.1,&nbsp; SSDT for VS 2017
 
-## SSDT for Visual Studio 2017 (15.8.1)
-Build Number: 14.0.16179.0  
-Release date: September 27, 2018  
+_Released:_ &nbsp; September 27, 2018  
+_Build number:_ &nbsp; 14.0.16179.0  
+_SSDT for Visual Studio 2017._
 
 ### What's New?
 
@@ -78,9 +111,11 @@ Release date: September 27, 2018
 - SSDT for Visual Studio 2017 (15.8.1) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
 
-## SSDT for Visual Studio 2017 (15.8)
-Build Number: 14.0.16174.0  
-Release date: September 05, 2018  
+## 15.8,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; September 5, 2018  
+_Build number:_ &nbsp; 14.0.16174.0  
+_SSDT for Visual Studio 2017._
 
 ### What's New?
 
@@ -99,13 +134,12 @@ Release date: September 05, 2018
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
+## 15.7.1,&nbsp; SSDT for VS 2017
 
+_Released:_ &nbsp; July 2, 2018  
+_Build number:_ &nbsp; 14.0.16167.0  
+_SSDT for Visual Studio 2017._
 
-
-## SSDT for Visual Studio 2017 (15.7.1)
-Build number: 14.0.16167.0  
-Release date: July 02, 2018  
-  
 ### What's New?
 
 **SSIS:**
@@ -123,12 +157,12 @@ Release date: July 02, 2018
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 - When installing SSDT on Windows 10 and choosing "Install new SQL Server Data Tools for Visual Studio 2017 instance", the installation will fail on "The requested metafile operation is not supported". Please reboot the machine and launch SSDT installer again to continue the installation.
 
+## 15.7.0,&nbsp; SSDT for VS 2017
 
+_Released:_ &nbsp; June 4, 2018  
+_Build number:_ &nbsp; 14.0.16165.0  
+_SSDT for Visual Studio 2017._
 
-## SSDT for Visual Studio 2017 (15.7.0)
-Build number: 14.0.16165.0  
-Release date: June 4, 2018  
-  
 ### What's New?
 
 **SSIS:**
@@ -148,11 +182,12 @@ Release date: June 4, 2018
 
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
+## 15.6.0,&nbsp; SSDT for VS 2017
 
-## SSDT for Visual Studio 2017 (15.6.0)
-Build number: 14.0.16162.0  
-Release date: April 10, 2018
-  
+_Released:_ &nbsp; April 10, 2018  
+_Build number:_ &nbsp; 14.0.16162.0  
+_SSDT for Visual Studio 2017._
+
 ### What's New?
 
 **SSIS:**
@@ -176,11 +211,11 @@ Release date: April 10, 2018
 ### Known issues:
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
+## 15.5.2,&nbsp; SSDT for VS 2017
 
+_Build number:_ &nbsp; 14.0.16156.0  
+_SSDT for Visual Studio 2017._
 
-## SSDT for Visual Studio 2017 (15.5.2)
-Build number: 14.0.16156.0
-  
 ### What's New?
 
 **SSIS**
@@ -199,12 +234,11 @@ Build number: 14.0.16156.0
 ### Known issues
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
+## 15.5.1,&nbsp; SSDT for VS 2017
 
+_Build number:_ &nbsp; 14.0.16148.0  
+_SSDT for Visual Studio 2017._
 
-
-## SSDT for Visual Studio 2017 (15.5.1)
-Build number: 14.0.16148.0
-  
 ### What's New?
 
 Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the following bug fixes to the installer:
@@ -214,9 +248,11 @@ Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the
 
 In addition to these two bug fixes, the following details for 15.5.0 still apply to 15.5.1
 
-## SSDT for Visual Studio 2017 (15.5.0)
-Build number: 14.0.16146.0
-  
+## 15.5.0,&nbsp; SSDT for VS 2017
+
+_Build number:_ &nbsp; 14.0.16146.0  
+_SSDT for Visual Studio 2017._
+
 ### What's New?
 
 SSDT for Visual Studio 2017 (15.5.0) moves from preview to general availability (GA).
@@ -240,10 +276,10 @@ SSDT for Visual Studio 2017 (15.5.0) moves from preview to general availability 
 **Integration Services (IS)**
 SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
+## 17.3,&nbsp; SSDT for VS 2015
 
-
-## SSDT 17.4 for Visual Studio 2015
-Build number: 14.0.61712.050
+_Build number:_ &nbsp; 14.0.61712.050  
+_SSDT for Visual Studio 2015._
 
 ### What's New?
 
@@ -289,9 +325,10 @@ Build number: 14.0.61712.050
 - Fixed an issue where some tasks/components are not localized well.
 - Fixed an issue where CDC components break after applying a SQL fix for CDC that adds \__$command\_id column.
 
+## 15.4.0 (preview),&nbsp; SSDT for VS 2017
 
-## SSDT for Visual Studio 2017 (15.4.0 preview)
-Build number: 14.0.16134.0
+_Build number:_ &nbsp; 14.0.16134.0  
+_SSDT for Visual Studio 2017._
   
 ### What's New?
 
@@ -321,8 +358,10 @@ This release provides a standalone web installer for SQL Server Database, Analys
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
 
-## SSDT 17.3 for Visual Studio 2015
-Build number: 14.0.61709.290
+## 17.30,&nbsp; SSDT for VS 2015
+
+_Build number:_ &nbsp; 14.0.61709.290  
+_SSDT for Visual Studio 2015._
 
 ### What's New?
 
@@ -412,8 +451,10 @@ Build number: 14.0.61709.290
 
 - Fixed an issue with compile and build of RDLC in VS 2017
 
-## SSDT for Visual Studio 2017 (15.3.0 preview)
-Build number: 14.0.16121.0
+## 15.3.0 (preview),&nbsp; SSDT for VS 2017
+
+_Build number:_ &nbsp; 14.0.16121.0  
+_SSDT for Visual Studio 2017._
   
 ### What's New?
 
@@ -425,12 +466,13 @@ This preview is the first version of SSDT for Visual Studio 2017. This release i
 - The installer is not localized.
 - SSIS is not localized.
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutofProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 - SSIS Packages containing 3rd party extensions cannot be switched to target other server versions.
 
 
-## SSDT 17.2 for Visual Studio 2015
-Build number: 14.0.61707.300
+## 17.2,&nbsp; SSDT for VS 2015
+
+_Build number:_ &nbsp; 14.0.61707.300  
+_SSDT for Visual Studio 2015._
 
 ### What's New?
 
@@ -476,9 +518,10 @@ Build number: 14.0.61707.300
 - Fixed an issue where some tasks/components/wizards are not localized
 - Changed latest *TargetServerVersion* from "SQL Server vNext" to "SQL Server 2017"
 
+## 17.10,&nbsp; SSDT for VS 2015
 
-## SSDT 17.1 for Visual Studio 2015
-Build number: 14.0.61705.170
+_Build number:_ &nbsp; 14.0.61705.170  
+_SSDT for Visual Studio 2015._
 
 ### What's New?
 **AS projects:**
@@ -501,14 +544,19 @@ Build number: 14.0.61705.170
 - Fixed an issue where the DSV diagram in multi-dimensional models could stop rendering if changing view quickly between different DSVs
 
 ## DacFx 17.1
+
 - Fixed an issue when encrypting a column with memory-optimized tables with other identity columns
 - SQLDOM support for CATALOG_COLLATION option for CREATE DATABASE
 
-## DacFx 17.0.1 
+## DacFx 17.0.1
+
 - Fix for issue with databases with an asymmetric key by an HSM with an EKM provider [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
 
-## SSDT 17.0 for Visual Studio 2015 (supports up to SQL Server 2017)
-Build number: 14.0.61704.140
+## 17.0,&nbsp; SSDT for VS 2015
+
+_Build number:_ &nbsp; 14.0.61704.140  
+_SSDT for Visual Studio 2015._  
+_Supports up to SQL Server 2017._
 
 ### What's New?
 **Database projects:**
@@ -608,11 +656,12 @@ Build number: 14.0.61704.140
 - Fix for "Unresolved Reference" error for external synonyms. 
 - Always Encrypted: Online encryption does not disable change tracking on cancellation and does not work properly if change tracking has not been cleaned prior to start encryption
 
+## 16.5,&nbsp; SSDT for VS 2015
 
-## SSDT 16.5 for Visual Studio 2015 (supports up to SQL Server 2016)
-Released: October 20, 2016
-
-Build number: 14.0.61021.0
+_Released:_ &nbsp; October 20, 2016  
+_Build number:_ &nbsp; 14.0.61021.0  
+_SSDT for Visual Studio 2015._  
+_Supports up to SQL Server 2016._
 
 **What's New?**
 
@@ -700,14 +749,11 @@ For more information, please read the [Analysis Services blog post](https://blog
 
 * Fixed Connect bug [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks): Move Multiple Integration Service Package Tasks
 
+## 16.4, SSDT for VS 2015
 
-
-
-
-## SSDT 16.4 for Visual Studio 2015 (for SQL Server 2016)
-Released: September 20, 2016
-
-Build number: 14.0.60918
+_Released:_ &nbsp; September 20, 2016  
+_Build number:_ &nbsp; 14.0.60918  
+_For SQL Server 2016._
 
 **What's New?**
 
@@ -742,12 +788,11 @@ SSDT Tabular now includes an internal SSAS instance, which SSDT Tabular starts a
 * Fixed an issue in SSDT AS to add measures and KPI values to the current perspective selected in the editor.
 * Fixed an issue in SSDT where data import into AS project from SQL Azure didn't support schema types other than "dbo".
 
+## 16.3,&nbsp; SSDT for VS 2015
 
-
-## SSDT 16.3 for Visual Studio 2015 (for SQL Server 2016)
-Released: August 15, 2016
-
-Build number: 14.0.60812.0  
+_Released:_ &nbsp; August 15, 2016  
+_Build number:_ &nbsp; 14.0.60812.0  
+_For SQL Server 2016._
 
 **What's New?**
 
@@ -780,19 +825,17 @@ Build number: 14.0.60812.0
         - Fixed a hierarchy order issue that caused an infinite loop error for .dwpro project.
         - Fixed a RS RDL issue where downgrading RDL required a full rebuild which caused user's confusion.
         - Fixed a KPI issue where Hide From Client Tools had no effect.
-        
 
- 
-  
-## SSDT July for Visual Studio 2015 (for SQL Server 2016)  
-Released: June 30, 2016  
-  
-Build number: 14.0.60629.0  
-  
+## July 2016,&nbsp; SSDT for VS 2015
+
+_Released:_ &nbsp; June 30, 2016  
+_Build number:_ &nbsp; 14.0.60629.0  
+_For SQL Server 2016._
+
 **What's New?**  
-* **Always Encrypted support:** For Databases that contain Always Encrypted columns, this release adds full support for Always Encrypted through our core APIs and command line tool (SqlPackage.exe). You can build and publish database projects with full support for all Always Encrypted features.  
-* **Temporal Tables enhanced support:** Simplified the experience by unlinking temporal tables before alterations and re-linking once these have completed. This means that Temporal Tables have parity with other table types (standard, in-memory) in terms of the operations that are supported. 
-* **SqlPackage.exe and installation changes:** Changes to isolate SSDT from SQL Server engine and SSMS updates. For details, see [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
+- **Always Encrypted support:** For Databases that contain Always Encrypted columns, this release adds full support for Always Encrypted through our core APIs and command line tool (SqlPackage.exe). You can build and publish database projects with full support for all Always Encrypted features.  
+- **Temporal Tables enhanced support:** Simplified the experience by unlinking temporal tables before alterations and re-linking once these have completed. This means that Temporal Tables have parity with other table types (standard, in-memory) in terms of the operations that are supported. 
+- **SqlPackage.exe and installation changes:** Changes to isolate SSDT from SQL Server engine and SSMS updates. For details, see [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
 
  
 
@@ -827,15 +870,14 @@ Build number: 14.0.60629.0
     * Fixed issue in 1200 compatibility level models calculated table UI when using default formatting for column type to allow changing the formatting type from the UI. 
     
 
-## SSDT June for Visual Studio 2015 (for SQL Server 2016)  
-Released: June 1, 2016  
-  
-Build number: 14.0.60525.0 
+## June 2016,&nbsp; SSDT for VS 2015
+
+_Released:_ &nbsp; June 1, 2016  
+_Build number:_ &nbsp; 14.0.60525.0  
+_For SQL Server 2016._
 
 SSDT General Availability (GA) is now released. The SSDT GA update for June 2016 adds support for the latest updates of SQL Server 2016 RTM, and various bug fixes. For details, see [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/).
 
-  
-  
 ## Additional Resources
   
 [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  

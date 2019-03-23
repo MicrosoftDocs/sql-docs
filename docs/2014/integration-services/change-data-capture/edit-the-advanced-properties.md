@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "advanced"
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Edit the Advanced Properties

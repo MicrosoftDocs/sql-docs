@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Jobs Task Editor"
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transfer Jobs Task Editor (General Page)

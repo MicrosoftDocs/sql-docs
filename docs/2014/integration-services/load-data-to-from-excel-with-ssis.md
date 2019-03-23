@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.custom: ""
 ms.technology: integration-services
 ms.topic: conceptual
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)

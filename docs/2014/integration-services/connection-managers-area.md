@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.connectionstray.f1"
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connection Managers Area

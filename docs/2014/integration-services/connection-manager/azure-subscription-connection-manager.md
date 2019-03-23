@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.afpsubscrconn.f1"
   - "sql11.dts.designer.afpsubscrconn.f1"
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Subscription Connection Manager

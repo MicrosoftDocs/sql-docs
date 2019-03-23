@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "notifications [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Notify Operator Task

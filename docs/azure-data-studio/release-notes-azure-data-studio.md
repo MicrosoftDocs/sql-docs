@@ -3,7 +3,7 @@ title: Release notes
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
 ms.custom: "seodec18"
-ms.date: "03/06/2019"
+ms.date: "03/22/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -15,6 +15,17 @@ manager: craigg
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## March 2019 (Hotfix)
+
+March 22, 2019 &nbsp; / &nbsp; version: 1.5.2 &nbsp; / &nbsp; Hotfix release
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fixed a few issues discovered in 1.5.1. | See [March Hotfix Release, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Fixed issue where user could not close notebook opened from the “Open Notebook” task in the Dashboard <br/>&bull; &nbsp; Fixed issue where Notebook JSON has extra } after save <br/>&bull; &nbsp; Fixed issue where notebook grids were not responding to theme changes <br/>&bull; &nbsp; Fixed issue where full notebook path was shown in the tab header. Now only the filename is shown. |
+| &nbsp; | &nbsp; |
 
 ## March 2019
 

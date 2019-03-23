@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services, programming"
   - "packages [Integration Services], programming"
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developer&#39;s Guide (Integration Services)

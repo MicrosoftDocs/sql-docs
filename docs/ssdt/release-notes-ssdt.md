@@ -21,6 +21,26 @@ These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-d
 
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).
 
+<!--
+Hello.  We have switched to a newer standardized format for Release Notes articles.
+Basically we have switched from bullet lists to a 2-column table.
+And we have shortened the H2 titles, to reduce wrapping in the rightNav.
+And we have renamed the .md file to the standard format, from 'changelog-for-sql-server-data-tools-ssdt.md' to 'release-notes-ssdt.md'.
+The presently latest H2 section (## 15.9.0) has been converted to the new format.
+But the older sections are too numerous and long to warrant conversion.
+
+REQUEST_1:  Please use the newer 2-column table format from now onward, for each new release section.
+
+REQUEST_2:  Please consider whether it is time to erase perhaps the oldest 25% of these H2 sections.
+Or maybe move all but the latest 9 (of 25) H2 sections to a new file perhaps named 'release-notes-history-ssdt.md', and link to it from the bottom of this file.
+
+For questions, contact CraigG or SStein or GeneMi.
+
+GeneMi , 2019/03/22.
+
+P.S.  There is no need to keep this large HTML comment indefinitely.
+-->
+
 ## 15.9.0,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; January 28, 2019  

@@ -2778,6 +2778,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/ssdt/changelog-for-sql-server-data-tools-ssdt.md",
+            "redirect_url": "https://docs.microsoft.com/sql/ssdt/release-notes-ssdt",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/ssms/sql-server-management-studio-ssms-release-candidate.md",
             "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
             "redirect_document_id": false

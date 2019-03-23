@@ -8432,8 +8432,8 @@
     items:
     - name: Download SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Changelog for SSDT
-      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Release notes for SSDT
+      href: ../ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
     - name: Azure Active Directory support

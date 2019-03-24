@@ -120,21 +120,21 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## Arguments
 
-*database_name*
+*database_name*     
 Is the name of the database to be modified.
 
 > [!NOTE]
 > This option is not available in a Contained Database.
 
-CURRENT
+CURRENT     
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 Designates that the current database in use should be altered.
 
-MODIFY NAME **=**_new_database_name_
+MODIFY NAME **=**_new_database_name_     
 Renames the database with the name specified as *new_database_name*.
 
-COLLATE *collation_name*
+COLLATE *collation_name*    
 Specifies the collation for the database. *collation_name* can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
@@ -144,25 +144,24 @@ When creating databases with other than the default collation, the data in the d
 
 For more information about the Windows and SQL collation names, see [COLLATE](~/t-sql/statements/collations.md).
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=**      
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 For more information see [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).
 
-**\<file_and_filegroup_options>::=**
+**\<file_and_filegroup_options>::=**     
 For more information, see [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 ## Remarks
-
 To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
 To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
 The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
 
-The state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. If a filegroup is offline, any try to access the filegroup by an SQL statement will fail with an error. When you build query plans for SELECT statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the SELECT statements fail. Additionally, any INSERT, UPDATE, or DELETE statement that modifies a table with any index in an offline filegroup will fail.
+The state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. If a filegroup is offline, any try to access the filegroup by an SQL statement will fail with an error. When you build query plans for SELECT statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the SELECT statements fail. Additionally, any `INSERT`, `UPDATE`, or `DELETE` statement that modifies a table with any index in an offline filegroup will fail.
 
-When a database is in the RESTORING state, most ALTER DATABASE statements will fail. The exception is setting database mirroring options. A database may be in the RESTORING state during an active restore operation or when a restore operation of a database or log file fails because of a corrupted backup file.
+When a database is in the RESTORING state, most `ALTER DATABASE` statements will fail. The exception is setting database mirroring options. A database may be in the RESTORING state during an active restore operation or when a restore operation of a database or log file fails because of a corrupted backup file.
 
 The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options.
 
@@ -174,11 +173,11 @@ The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnover
 |COLLATE|MODIFY FILEGROUP READ_ONLY|
 |READ_ONLY|PAGE_VERIFY|
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
 
-The procedure cache is also flushed in the following scenarios:
+The plan cache is also flushed in the following scenarios:
 
-- A database has the AUTO_CLOSE database option set to ON. When no user connection references or uses the database, the background task tries to close and shut down the database automatically.
+- A database has the `AUTO_CLOSE` database option set to ON. When no user connection references or uses the database, the background task tries to close and shut down the database automatically.
 - You run several queries against a database that has default options. Then, the database is dropped.
 - A database snapshot for a source database is dropped.
 - You successfully rebuild the transaction log for a database.
@@ -192,17 +191,16 @@ Before you apply a different collation to a database, make sure that the followi
 - You are the only one currently using the database.
 - No schema-bound object depends on the collation of the database.
 
-  If the following objects, which depend on the database collation, exist in the database, the ALTER DATABASE*database_name*COLLATE statement will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message for each object blocking the ALTER action:
+If the following objects, which depend on the database collation, exist in the database, the ALTER DATABASE*database_name*COLLATE statement will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message for each object blocking the `ALTER` action:
 
   - User-defined functions and views created with SCHEMABINDING
   - Computed columns
   - CHECK constraints
   - Table-valued functions that return tables with character columns with collations inherited from the default database collation
   
-    Dependency information for non-schema-bound entities is automatically updated when the database collation is changed.
+Dependency information for non-schema-bound entities is automatically updated when the database collation is changed.
 
 Changing the database collation does not create duplicates among any system names for the database objects. If duplicate names result from the changed collation, the following namespaces may cause the failure of a database collation change:
-
 - Object names such as a procedure, table, trigger, or view
 - Schema names
 - Principals such as a group, role, or user
@@ -219,7 +217,7 @@ You can use catalog views, system functions, and system stored procedures to ret
 
 ## Permissions
 
-Requires ALTER permission on the database.
+Requires `ALTER` permission on the database.
 
 ## Examples
 
@@ -287,13 +285,13 @@ In Azure SQL Database, use this statement to modify a database on a single datab
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 
-ALTER DATABASE
+ALTER DATABASE     
 The current article provides the syntax and related information for changing the name and the collation of a database.
 
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)      
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.
 
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)       
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.
 
 ## Syntax
@@ -370,16 +368,13 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## Arguments
 
-*database_name*
-
+*database_name*      
 Is the name of the database to be modified.
 
-CURRENT
-
+CURRENT        
 Designates that the current database in use should be altered.
 
-MODIFY NAME **=**_new_database_name_
-
+MODIFY NAME **=**_new_database_name_      
 Renames the database with the name specified as *new_database_name*. The following example changes the name of a database `db1` to `db2`:
 
 ```sql
@@ -387,8 +382,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
-
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])      
 Changes the service tier of the database.
 
 The following example changes edition to `premium`:
@@ -398,10 +392,10 @@ ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ```
 
-EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.
+> [!IMPORTANT]
+> EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
-
+MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)       
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed.
 
 > [!NOTE]
@@ -494,8 +488,7 @@ The following rules apply to MAXSIZE and EDITION arguments:
 - If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 500 MB.
 - If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>)
-
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>)      
 Specifies the performance level. The following example changes service objective of a premium database to `P6`:
 
 ```sql
@@ -513,8 +506,7 @@ ALTER DATABASE current
 
 For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
-
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)       
 To add an existing database to an elastic pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the elastic pool. You can also use this option to change the database to a different elastic pool within the same server. For more information, see [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). To remove a database from an elastic pool, use ALTER DATABASE to set the SERVICE_OBJECTIVE to a single database performance level.
 
 > [!NOTE]
@@ -527,36 +519,30 @@ Creates a geo-replication secondary database with the same name on a partner ser
 > [!IMPORTANT]
 > The Hyperscale service tier does not currently support geo-replication.
 
-WITH ALLOW_CONNECTIONS { **ALL** | NO }
-
+WITH ALLOW_CONNECTIONS { **ALL** | NO }     
 When ALLOW_CONNECTIONS is not specified, it is set to ALL by default. If it is set ALL, it is a read-only database that allows all logins with the appropriate permissions to connect.
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }
 
 When SERVICE_OBJECTIVE is not specified, the secondary database is created at the same service level as the primary database. When SERVICE_OBJECTIVE is specified, the secondary database is created at the specified level. This option supports creating geo-replicated secondaries with less expensive service levels. The SERVICE_OBJECTIVE specified must be within the same edition as the source. For example, you cannot specify S0 if the edition is premium.
 
-ELASTIC_POOL (name = \<elastic_pool_name>)
-
+ELASTIC_POOL (name = \<elastic_pool_name>)      
 When ELASTIC_POOL is not specified, the secondary database is not created in an elastic pool. When ELASTIC_POOL is specified, the secondary database is created in the specified pool.
 
 > [!IMPORTANT]
 > The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server.
 
-REMOVE SECONDARY ON SERVER \<partner_server_name>
-
+REMOVE SECONDARY ON SERVER \<partner_server_name>     
 Removes the specified geo-replicated secondary database on the specified server. The command is executed on the master database on the server hosting the primary database.
 
 > [!IMPORTANT]
 > The user executing the REMOVE SECONDARY command must be DBManager on the primary server.
 
-FAILOVER
-
+FAILOVER      
 Promotes the secondary database in geo-replication partnership on which the command is executed to become the primary and demotes the current primary to become the new secondary. As part of this process, the geo-replication mode is temporarily switched from asynchronous mode to synchronous mode. During the failover process:
 
 1. The primary stops taking new transactions.
-
 2. All outstanding transactions are flushed to the secondary.
-
 3. The secondary becomes the primary and begins asynchronous geo-replication with the old primary / the new secondary.
 
 This sequence ensures that no data loss occurs. The period during which both databases are unavailable is on the order of 0-25 seconds while the roles are switched. The total operation should take no longer than about one minute. If the primary database is unavailable when this command is issued, the command fails with an error message indicating that the primary database is not available. If the failover process does not complete and appears stuck, you can use the force failover command and accept data loss - and then, if you need to recover the lost data, call devops (CSS) to recover the lost data.
@@ -564,26 +550,23 @@ This sequence ensures that no data loss occurs. The period during which both dat
 > [!IMPORTANT]
 > The user executing the FAILOVER command must be DBManager on both the primary server and the secondary server.
 
-FORCE_FAILOVER_ALLOW_DATA_LOSS
-
+FORCE_FAILOVER_ALLOW_DATA_LOSS      
 Promotes the secondary database in geo-replication partnership on which the command is executed to become the primary and demotes the current primary to become the new secondary. Use this command only when the current primary is no longer available. It is designed for disaster recovery only, when restoring availability is critical, and some data loss is acceptable.
 
 During a forced failover:
-
 1. The specified secondary database immediately becomes the primary database and begins accepting new transactions.
 2. When the original primary can reconnect with the new primary, an incremental backup is taken on the original primary, and the original primary becomes a new secondary.
 3. To recover data from this incremental backup on the old primary, the user engages devops/CSS.
 4. If there are additional secondaries, they are automatically reconfigured to become secondaries of the new primary. This process is asynchronous and there may be a delay until this process completes. Until the reconfiguration has completed, the secondaries continue to be secondaries of the old primary.
 
 > [!IMPORTANT]
-> The user executing the FORCE_FAILOVER_ALLOW_DATA_LOSS command must be DBManager on both the primary server and the secondary server.
+> The user executing the `FORCE_FAILOVER_ALLOW_DATA_LOSS` command must be belong to the `dbmanager` role on both the primary server and the secondary server.
 
 ## Remarks
-
 To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+The `ALTER DATABASE` statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
 
 Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
 
@@ -603,7 +586,7 @@ Only the server-level principal login (created by the provisioning process) or m
 ## Examples
 
 ### A. Check the edition options and change them
-
+Sets an edition and max size for database db1:
 ```sql
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
         ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
@@ -613,7 +596,6 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ```
 
 ### B. Moving a database to a different elastic pool
-
 Moves an existing database into a pool named pool1:
 
 ```sql
@@ -622,7 +604,6 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 ```
 
 ### C. Add a Geo-Replication Secondary
-
 Creates a readable secondary database db1 on server `secondaryserver` of the db1 on the local server.
 
 ```sql
@@ -632,7 +613,6 @@ WITH ( ALLOW_CONNECTIONS = ALL )
 ```
 
 ### D. Remove a Geo-Replication Secondary
-
 Removes the secondary database db1 on server `secondaryserver`.
 
 ```sql
@@ -641,7 +621,6 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ```
 
 ### E. Failover to a Geo-Replication Secondary
-
 Promotes a secondary database db1 on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`.
 
 ```sql
@@ -649,7 +628,6 @@ ALTER DATABASE db1 FAILOVER
 ```
 
 ### F. Update a single database to service tier S0 (standard edition, performance level 0)
-
 Updates a single database to the standard edition (service tier) with a performance level of S0 and a maximum size of 250 GB.
 
 ```sql
@@ -689,16 +667,16 @@ In Azure SQL Database managed instance, use this statement to set database optio
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 
-ALTER DATABASE  
+ALTER DATABASE    
 The current article provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatibility level.  
   
-[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) 
+[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)     
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
   
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)    
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
 ## Syntax
@@ -741,38 +719,32 @@ ALTER DATABASE { database_name | CURRENT }
 ```
 ## Arguments
 
-*database_name*
-
+*database_name*      
 Is the name of the database to be modified.
 
-CURRENT
-
+CURRENT     
 Designates that the current database in use should be altered.
 
 ## Remarks
-
 To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+The `ALTER DATABASE` statement must run in auto-commit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
 
 Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
 
-The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.
+The plan cache is also flushed when several queries are executed against a database that has default options. Then, the database is dropped.
 
 ## Viewing Database Information
-
 You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
 
 ## Permissions
-
 Only the server-level principal login (created by the provisioning process) or members of the `dbcreator` database role can alter a database.
 
 > [!IMPORTANT]
 > The owner of the database cannot alter the database unless they are a member of the `dbcreator` role.
 
 ## Examples
-
 The following examples show you how to set automatic tuning and how to add a file in a managed instance.
 
 ```sql
@@ -838,13 +810,13 @@ ALTER DATABASE database_name
 
 ## Arguments
 
-*database_name*
+*database_name*     
 Specifies the name of the database to be modified.
 
-MODIFY NAME = *new_database_name*
+MODIFY NAME = *new_database_name*    
 Renames the database with the name specified as *new_database_name*.
 
-MAXSIZE
+MAXSIZE    
 The default is 245,760 GB (240 TB).
 
 **Applies to:** Optimized for Compute Gen1
@@ -855,7 +827,7 @@ The maximum allowable size for the database. The database cannot grow beyond MAX
 
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
-SERVICE_OBJECTIVE
+SERVICE_OBJECTIVE      
 Specifies the performance level. For more information about service objectives for SQL Data Warehouse, see [Data Warehouse Units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## Permissions
@@ -875,11 +847,11 @@ SQL Data Warehouse is set to COMPATIBILITY_LEVEL 130 and cannot be changed. For 
 
 ## Limitations and Restrictions
 
-To run ALTER DATABASE, the database must be online and cannot be in a paused state.
+To run `ALTER DATABASE`, the database must be online and cannot be in a paused state.
 
-The ALTER DATABASE statement must run in autocommit mode, which is the default transaction management mode. This is set in the connection settings.
+The `ALTER DATABASE` statement must run in auto-commit mode, which is the default transaction management mode. This is set in the connection settings.
 
-The ALTER DATABASE statement cannot be part of a user-defined transaction.
+The `ALTER DATABASE` statement cannot be part of a user-defined transaction.
 
 You cannot change the database collation.
 
@@ -956,39 +928,39 @@ ALTER DATABASE database_name
 
 ## Arguments
 
-*database_name*
+*database_name*        
 The name of the database to be modified. To display a list of databases on the appliance, use [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-AUTOGROW = { ON | OFF }
+AUTOGROW = { ON | OFF }        
 Updates the AUTOGROW option. When AUTOGROW is ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatically increases the allocated space for replicated tables, distributed tables, and the transaction log as necessary to accommodate growth in storage requirements. When AUTOGROW is OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] returns an error if replicated tables, distributed tables, or the transaction log exceeds the maximum size setting.
 
-REPLICATED_SIZE = *size* [GB]
+REPLICATED_SIZE = *size* [GB]         
 Specifies the new maximum gigabytes per Compute node for storing all of the replicated tables in the database being altered. If you are planning for appliance storage space, you will need to multiply REPLICATED_SIZE by the number of Compute nodes in the appliance.
 
-DISTRIBUTED_SIZE = *size* [GB]
+DISTRIBUTED_SIZE = *size* [GB]        
 Specifies the new maximum gigabytes per database for storing all of the distributed tables in the database being altered. The size is distributed across all of the Compute nodes in the appliance.
 
-LOG_SIZE = *size* [GB]
+LOG_SIZE = *size* [GB]         
 Specifies the new maximum gigabytes per database for storing all of the transaction logs in the database being altered. The size is distributed across all of the Compute nodes in the appliance.
 
-ENCRYPTION { ON | OFF }
+ENCRYPTION { ON | OFF }         
 Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] when [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
-SET AUTO_CREATE_STATISTICS { ON | OFF }
+SET AUTO_CREATE_STATISTICS { ON | OFF }        
 When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a histogram in an existing statistics object.
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade.
 
 For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md)
 
-SET AUTO_UPDATE_STATISTICS { ON | OFF }
+SET AUTO_UPDATE_STATISTICS { ON | OFF }       
 When the automatic update statistics option, AUTO_UPDATE_STATISTICS, is ON, the query optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. Statistics become out-of-date after operations insert, update, delete, or merge change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade.
 
 For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
 
-SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }        
 The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the CREATE STATISTICS statement.
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade.
@@ -996,19 +968,16 @@ Default is ON for new databases created after upgrading to AU7. The default is O
 For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
 
 ## Permissions
-
-Requires the ALTER permission on the database.
+Requires the `ALTER` permission on the database.
 
 ## Error Messages
 
-If auto-stats is disabled and you try to alter the statistics settings, PDW gives the error "This option is not supported in PDW." The system administrator can enable auto-stats by enabling the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
+If auto-stats is disabled and you try to alter the statistics settings, PDW outputs the error `This option is not supported in PDW`. The system administrator can enable auto-stats by enabling the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
 
 ## General Remarks
-
-The values for REPLICATED_SIZE, DISTRIBUTED_SIZE, and LOG_SIZE can be greater than, equal to, or less than the current values for the database.
+The values for `REPLICATED_SIZE`, `DISTRIBUTED_SIZE`, and `LOG_SIZE` can be greater than, equal to, or less than the current values for the database.
 
 ## Limitations and Restrictions
-
 Grow and shrink operations are approximate. The resulting actual sizes can vary from the size parameters.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.
@@ -1016,15 +985,12 @@ Grow and shrink operations are approximate. The resulting actual sizes can vary 
 The statistics settings only work if the administrator has enable auto-stats. If you are an administrator, use the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) to enable or disable auto-stats.
 
 ## Locking Behavior
-
 Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](../language-elements/use-transact-sql.md) statement on the database.
 
 ## Performance
-
 Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take several hours or more.
 
 ## Determining Encryption Progress
-
 Use the following query to determine progress of database transparent data encryption as a percent:
 
 ```sql

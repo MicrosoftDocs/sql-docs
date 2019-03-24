@@ -157,7 +157,7 @@ To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-t
 
 To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+The `ALTER DATABASE` statement must run in auto-commit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
 
 The state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. If a filegroup is offline, any try to access the filegroup by an SQL statement will fail with an error. When you build query plans for SELECT statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the SELECT statements fail. Additionally, any `INSERT`, `UPDATE`, or `DELETE` statement that modifies a table with any index in an offline filegroup will fail.
 
@@ -566,25 +566,22 @@ During a forced failover:
 To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-The `ALTER DATABASE` statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+The `ALTER DATABASE` statement must run in auto-commit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.
 
 ## Viewing Database Information
-
 You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
 
 ## Permissions
-
 Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.
 
 > [!IMPORTANT]
 > The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.
 
 ## Examples
-
 ### A. Check the edition options and change them
 Sets an edition and max size for database db1:
 ```sql

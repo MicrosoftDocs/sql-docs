@@ -18,6 +18,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Extended Events Equivalents to SQL Trace Event Classes
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   If you want to use Extended Events to collect event data that is equivalent to SQL Trace event classes and columns, it is useful to understand how the SQL Trace events map to Extended Events events and actions.  
@@ -40,11 +41,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
       tc.name            AS 'SQL Trace Column',
       am.xe_action_name  AS 'Extended Events action'
    FROM
-                      sys.trace_events         te
-      LEFT OUTER JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
-      LEFT OUTER JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
-      LEFT OUTER JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
-      LEFT OUTER JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
+                sys.trace_events         te
+      LEFT JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
+      LEFT JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
+      LEFT JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
+      LEFT JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
    ORDER BY te.name, tc.name
    ```
 
